@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Nosūti aicināt saikni ar…</string>
+    <string name="action_ViewFile">Skatīt %s ar…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup ir atslēgts. Vai jūs vēlaties, lai pielāgotu dublēšanas iestatījumus un saglabāt šo atgādinājumu?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s ir daudz jaunāko ierīci vai atslēgu, vai esat pārliecināts, ka jūs vēlaties izmantot šo vecāku vienu?</string>
+    <string name="ask_FileExistsOverwrite">Faila nosaukums %s jau eksistē. Pārrakstīt?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Bez Google konta, jūs tikai varētu nosūtīt, nav saņemt ziņas. Vai vēlaties pievienot Google kontu?</string>
+    <string name="ask_QuitConfirmation">Atmest? Vai esat pārliecināts?</string>
+    <string name="ask_SendErrorData">Mēs gribētu jūsu palīdzību uzlabojot SafeSlinger. Vai jūs vēlētos, lai automātiski nosūtītu kļūdas mums?</string>
+
+    <string name="btn_Accept">Akceptēt</string>
+    <string name="btn_BeginExchangeProximity">Sākt Exchange</string>
+    <string name="btn_Cancel">Atcelt</string>
+    <string name="btn_Close">Aizvērt</string>
+    <string name="btn_Continue">Turpināt</string>
+    <string name="btn_discard">Izmest</string>
+    <string name="btn_Done">Gatavots</string>
+    <string name="btn_Exit">Iziet</string>
+    <string name="btn_Import">Imports</string>
+    <string name="btn_Introduce">Iepazīstināt</string>
+    <string name="btn_Match">Nākamais</string>
+    <string name="btn_No">Nē</string>
+    <string name="btn_NoMatch">Nē Match</string>
+    <string name="btn_NotRemind">Aizmirst</string>
+    <string name="btn_OK">labi</string>
+    <string name="btn_Refuse">Atteikties</string>
+    <string name="btn_Remind">Atgādināt</string>
+    <string name="btn_Save">Glābt</string>
+    <string name="btn_SelectFile">Pievienot pielikumu</string>
+    <string name="btn_SendFile">Sūtīt</string>
+    <string name="btn_Yes">Jā</string>
+
+    <string name="choice_10mins">10 minūtes</string>
+    <string name="choice_1hour">1 stunda</string>
+    <string name="choice_1min">1 minūte</string>
+    <string name="choice_20mins">20 minūtes</string>
+    <string name="choice_2hours">2 stundas</string>
+    <string name="choice_3mins">3 minūtes</string>
+    <string name="choice_40mins">40 minūtes</string>
+    <string name="choice_4hours">4 stundas</string>
+    <string name="choice_5mins">5 minūtes</string>
+    <string name="choice_8hours">8 stundas</string>
+    <string name="choice_auto_storage">Noklusējuma Storage</string>
+    <string name="choice_external_storage">Ārējās atmiņas ierīces</string>
+    <string name="choice_internal_storage">Iekšējās atmiņas</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d lietotāji</string>
+    <string name="choice_SaveDirectory">Saglabāt Directory</string>
+    <string name="choice_SaveFile">Saglabāt failu</string>
+    <string name="choice_Up">Augšup</string>
+
+    <string name="error_AllMembersMustUpgrade">Daži dalībnieki izmanto vecāku versiju, visi dalībnieki ir vismaz izmantot %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Visiem dalībniekiem ir jauninājums, daži izmanto vecākas galvenās formātus.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Visiem dalībniekiem ir jauninājums, daži izmanto vecākas push reģistrācijas formātus.</string>
+    <string name="error_AudioPlayerDecodeError">Audio atskaņotājs dekodēšanas kļūda.</string>
+    <string name="error_AudioPlayerError">Nevar atskaņot ierakstu.</string>
+    <string name="error_AudioRecorderEncodeError">Audio ieraksti kodēšanas kļūda.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofons nepieciešamās atļaujas. Lūdzu, dodieties uz iOS iestatījumus, lai ļautu Mikrofona atļaujas.</string>
+    <string name="error_BackupNotFound">Nav rezerves, lai atjaunotu.</string>
+    <string name="error_BackupNotSupportedDevice">Ierīce neatbalsta backup atjaunot.</string>
+    <string name="error_BadCopyProtectUpgrade">Sakarā ar kļūdu Android 4.1, jums būs atinstalēt un pārinstalēt SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Google konts ir nepieciešams. Lūdzu, atveriet konta pārvaldnieks un pievienot Google kontu.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Reģistrācija nav autentiskums, lūdzu, mēģiniet vēlreiz manuāli vēlāk.</string>
+    <string name="error_C2DMRegInvalidSender">Reģistrācija nav pieejama šī versija, lūdzu, pārbaudiet atjaunināto versiju.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Nepareiza ierīces reģistrāciju ar Google. Šī ierīce pašlaik neatbalsta push ziņapmaiņu.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Push reģistrācijas pakalpojums nav pieejams, plānošana mēģiniet vēlreiz %d sekundēs.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Pārāk daudzi pieteikumi ir reģistrēti Push. Lūdzu, atinstalēt dažas citas programmas un mēģiniet vēlreiz.</string>
+    <string name="error_CannotSendEmptyFile">Nevar nosūtīt tukšu pielikumu.</string>
+    <string name="error_CannotSendFilesOver">Nevar nosūtīt pielikumus lielāki par %d baitu izmēru.</string>
+    <string name="error_CannotSendNullFile">Nevar nosūtīt null pielikumu.</string>
+    <string name="error_contactCreationFailure">Kontaktpunktu izveide neizdevās.</string>
+    <string name="error_ContactInsertFailed">Kontakts ievietot neizdevās.</string>
+    <string name="error_ContactNameMissing">Šī kontaktpersona trūkst vārdu, lūdzu rediģēt.</string>
+    <string name="error_ContactNameMissing2">Šī kontaktpersona trūkst vārdu, lūdzu, vēlreiz izvēlēties.</string>
+    <string name="error_ContactUpdateFailed">Kontakts atjaunināšana neizdevās.</string>
+    <string name="error_CorrectYourInternetConnection">Internets nav pieejams, pārbaudiet iestatījumus.</string>
+    <string name="error_couldNotExtractPrivateKey">Nevar iegūt privāto atslēgu.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Apmaiņas taimauts pārsniegts. Atkal sāk apmaiņu.</string>
+    <string name="error_FeatureIsNotSupport">%1$s neatbalsta %2$s šajā laikā.</string>
+    <string name="error_FileSave">Nevar saglabāt %s.</string>
+    <string name="error_FileStorageUnavailable">Failu glabāšana nav pieejama.</string>
+    <string name="error_HttpCode">Servera HTTP kļūda: %d</string>
+    <string name="error_InvalidCommitVerify">Nepareizi dati atrodami apmaiņā. Atkal sāk apmaiņu.</string>
+    <string name="error_InvalidCommonUserId">Ievadiet pozitīvu skaitli.</string>
+    <string name="error_InvalidContactName">Derīgas kontaktpersonas vārds ir nepieciešama.</string>
+    <string name="error_InvalidIncomingMessage">Bad ienākošā ziņojuma formātā.</string>
+    <string name="error_InvalidMsg">Slikta ziņa formātā.</string>
+    <string name="error_InvalidRecipient">Nederīgs saņēmējs.</string>
+    <string name="error_LocalGroupCommitDiffer">Jūs ziņoja atšķirību frāzes. Atkal sāk apmaiņu.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Peer Galvenais formāts ir nederīgs.</string>
+    <string name="error_MessageSignatureVerificationFails">Paraksts pārbaude neizdevās.</string>
+    <string name="error_minPassphraseRequire">Passphrases vajadzīgas vismaz %d rakstzīmes.</string>
+    <string name="error_MinUsersRequired">Vismaz %d biedriem ir pienākums apmainīties ar datiem.</string>
+    <string name="error_MissingNdk">SafeSlinger neatklāja NDK atbalstu par šo ierīci, kas ir nepieciešams.</string>
+    <string name="error_MoreDataThanUsers">Negaidītas dati atrodami apmaiņā. Atkal sāk apmaiņu.</string>
+    <string name="error_MultipleSendNotSupported">Jūs mēģināt nosūtīt vairākus objektus. Šajā laikā, SafeSlinger atbalsta tikai nosūtot vienu posteni laikā.</string>
+    <string name="error_NoEmailAccount">E-pasta konts nav iestatīšana!</string>
+    <string name="error_noPassPhrase">Nē parole ievadīti.</string>
+    <string name="error_NoWordListSelected">Jums ir jāizvēlas viena no frāzēm pirms turpināt.</string>
+    <string name="error_OtherGroupCommitDiffer">Kāds ziņoja atšķirība frāzes. Atkal sāk apmaiņu.</string>
+    <string name="error_OutOfMemoryError">Atmiņa ir pārāk zema, lai pabeigtu šo darbību.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases nesakrīt.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Jūs esat pārsniedzis ziņu kvotu šim saņēmējam. Lūdzu, mēģiniet vēlreiz vēlāk.</string>
+    <string name="error_PushMsgInvalidRegistration">Ka saņēmējam ir pazudis vai slikti push reģistrāciju. Jums vajadzētu pārtraukt sūtīt ziņojumus uz šo ierīci.</string>
+    <string name="error_PushMsgMessageNotFound">Ziņa beidzies.</string>
+    <string name="error_PushMsgMessageTooBig">Ziņa ir pārāk liels. Samazinātu izmēru ziņojuma.</string>
+    <string name="error_PushMsgNotRegistered">Šī saņēmēja push reģistrācija vairs nav spēkā. Saņēmējs var būt atinstalēta SafeSlinger vai izslēgts paziņojumus. Jums vajadzētu pārtraukt sūtīt ziņojumus uz šo ierīci.</string>
+    <string name="error_PushMsgNotSucceed">Radāskļūda, sazinoties ar push paziņojumu pakalpojumu.</string>
+    <string name="error_PushMsgQuotaExceeded">Jūs esat pārsniedzis ziņu kvotu šai ierīcei. Lūdzu, mēģiniet vēlreiz vēlāk.</string>
+    <string name="error_PushMsgServiceFail">Paziņošanas pakalpojums nav pieejams šajā laikā. Lūdzu, mēģiniet, lai nosūtītu ziņu vēlāk.</string>
+    <string name="error_RecoderError">Nevar sagatavot audio ieraksti.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Lai sāktu, \' Sling Keys \' ar citu tālruni, tajā pašā laikā.</string>
+    <string name="error_selectDataToSend">Jums ir nepieciešama arestu vai īsziņu nosūtīt.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Nav atbildes no servera.</string>
+    <string name="error_ShareFileDelError">Nevar noņemt koplietojamo failu.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Taimauts gaida daži grupas dalībnieki, lai pievienotu datus.</string>
+    <string name="error_UnableFindPubKey">Nespēj saskaņot publisko atslēgu uz privāto atslēgu šifrēšanas sniedzējs.</string>
+    <string name="error_UnableToSaveMessageInDB">Nevar saglabāt ziņu bāzē.</string>
+    <string name="error_UnableToSaveRecipientInDB">Nevar saglabāt saņēmēja datu bāzē.</string>
+    <string name="error_UnableToUpdateMessageInDB">Nevar atjaunināt ziņu datubāzi.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Nevar atjaunināt adresāta datu bāzi.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger kļūdu, lūdzu, restartējiet.</string>
+    <string name="error_VcardParseFailure">Kontaktinformācija tika formatēts pareizi.</string>
+    <string name="error_WebCancelledByUser">Lietotājs atcēla servera pieprasījumu.</string>
+
+    <string name="help_find">Izmantojiet šo ekrānu, lai uzstādītu savu vārdu, telefonu un e-pastu, lai apmainītos ar citiem. Pieskarieties \' Done \' pogu, kad pabeigta.</string>
+    <string name="help_home">Lai apmainītos ar identitātes datiem, nodrošinātu, ka visi lietotāji ir tuvumā, vai pa tālruni. Ka \' sāk biržas \' pogu apmainīsies tikai pārbaudīt kontaktu datus.</string>
+    <string name="help_identity_menu">\n\nJūs varat mainīt arī personiskos datus par savu identitāti šajā ekrānā, pieskaroties uz pogas ar savu vārdu. Tas parādīs izvēlni, kas ļauj jums \' Edit \' savu kontaktinformāciju, \' Izveidot jaunu \' kontaktu, vai \' izmantot citu \' kontaktu.</string>
+    <string name="help_Messages">Šis ekrāns parāda visas iepriekšējās ziņas un pielikumus, kas joprojām ir pieejams lejupielādei.</string>
+    <string name="help_passphrase">Izmantojiet šo ekrānu, lai pieteiktos uz pieteikumu ar savu ieejas frāzi.</string>
+    <string name="help_PickRecip">Kontakti ar SafeSlinger taustiņi ir parādīti šeit, izvēlieties vienu, lai nosūtītu savu ziņojumu.</string>
+    <string name="help_save">Kad pabeigts,protokols atklās sarakstu datu apmaiņa identitātes. Izvēlētos kontaktus vēlaties saglabāt, un nospiediet \' Import \'.</string>
+    <string name="help_SecureIntroduction">Šis ekrāns ļauj jums izvēlēties divus cilvēkus esat siksnu atslēgas, pirms droši sūtīt savus taustiņus, lai viens otru. Vienkārši nospiediet \' ieviest \', kad gatavs.</string>
+    <string name="help_Send">Šis ekrāns ļauj jums izvēlēties dažus datus un saņēmējam nosūtīt. Vienkārši nospiediet \' Nosūtīt \', kad gatavs.</string>
+    <string name="help_size">Atlasiet to cilvēku skaitu, kuri mēģina datu apmaiņu kopā un nospiediet \' OK \'.</string>
+    <string name="help_userid">Šis numurs šajā ekrānā tiek izmantota, lai radītu unikālu lietotāju grupai. Pārskatīt skaitļus attiecībā uz visu lietotāju ekrāniem, tad visiem lietotājiem vajadzētu ievadīt pašu zemāko numuru un nospiediet \' OK \'.</string>
+    <string name="help_verify">Tagad jums ir jāatbilst vienam no šiem 3 vārdu frāzes ar visiem lietotājiem. Katram lietotājam ir jāizvēlas pašu kopējo frāzi, un nospiediet \' Next \'.</string>
+
+    <string name="iOS_contactError">Kontakti nepieciešamās atļaujas. Lūdzu, dodieties uz iOS iestatījumus, lai ļautu Kontakti atļaujas.</string>
+    <string name="iOS_errorpushtoken">Push reģistrācija ir pazudis.</string>
+    <string name="iOS_notificationError1">Paziņojumi nepieciešamās atļaujas. Lūdzu, dodieties uz iOS iestatījumus, lai ļautu Paziņojumi atļaujas.</string>
+    <string name="iOS_notificationError2">%s nepieciešamās atļaujas. Lūdzu, dodieties uz iOS iestatījumus, lai ļautu Paziņojumi atļaujas.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger nav optimizēta iOS 5.x ierīcēm. SafeSlinger prasa iOS 6 vai augstāku.</string>
+
+    <string name="label_ago">%s atpakaļ</string>
+    <string name="label_backupCompleteDate">Pēdējā Backup Pabeigts</string>
+    <string name="label_backupRequestDate">Pēdējā Backup pieprasījums</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Pieskarties, lai pārskatītu savu %d ziņojumus</string>
+    <string name="label_ComposeHint">Sacerēt Ziņa</string>
+    <string name="label_ContactEmail">Jūsu e-pasts</string>
+    <string name="label_ContactName">Tavs vārds</string>
+    <string name="label_ContactPhone">Jūsu tālrunis</string>
+    <string name="label_days">%d dienas</string>
+    <string name="label_Device">Ierīce:</string>
+    <string name="label_DeviceInSendOnlyMode">Sūtīt tikai mode</string>
+    <string name="label_DisabledExchSourceKeyChange">Jūsu galvenais ir mainījusies: Sling atslēgas vēlreiz.</string>
+    <string name="label_Draft">PROJEKTS</string>
+    <string name="label_EnabledKeyFormatDeprecated">Galvenais formāts novecojis: Sling atslēgas vēlreiz.</string>
+    <string name="label_exchanged">apmainījās</string>
+    <string name="label_expired">beidzies</string>
+    <string name="label_expires">beidzas %s</string>
+    <string name="label_expiresIn">beidzas</string>
+    <string name="label_FileNameHint">Faila nosaukums</string>
+    <string name="label_FindInstruct">Ievadiet savu personisko informāciju. Šie dati tiks droši zināma tikai ar cilvēkiem, kuriem jūs izvēlēties, lai dalīties ar jums.</string>
+    <string name="label_FirstName">Vārds</string>
+    <string name="label_Home">Pārbaudiet Vienumi, ko vēlaties dalīties un pieskarieties \' Sākt Exchange \', kad citi ir gatavi apmainīt.</string>
+    <string name="label_hometag">Mājas</string>
+    <string name="label_hours">%d stundas</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud ir iespējots. Pieskarieties \' Done \' pogu, kad pabeigta.</string>
+    <string name="label_InstNoMessages">Nekādas ziņas. Jūs varat nosūtīt ziņu no \' nosūtīt vēstuli \' pogu uz sākuma izvēlnē.</string>
+    <string name="label_InstNoMessagesAndroid">Nekādas ziņas. Jūs varat nosūtīt ziņu no \' Rakstīt \' tab.</string>
+    <string name="label_InstNoRecipients">Nav saņēmēji. Atrast citu SafeSlinger lietotāju tuvumā un pieskarties cilni Sling atslēgas \', lai dalītos atslēgas.</string>
+    <string name="label_InstNoSharedFile">Nav koplietojamo failu. Savienot ierīci ar iTunes un velciet failus uz koplietojamo mapi.</string>
+    <string name="label_InstRecipients">Izvēlēties adresātu nosūtīt ziņojumu:</string>
+    <string name="label_InstSendInvite">Izvēlēties saņēmējus ieviest droši:</string>
+    <string name="label_InstSharedFile">Izvēlieties pievienojamo failu:</string>
+    <string name="label_introduced">ieviesa</string>
+    <string name="label_Key">Taustiņš:</string>
+    <string name="label_LastName">Uzvārds</string>
+    <string name="label_Me">Mani</string>
+    <string name="label_messageIntroduceNameToYou">Es vēlētos iepazīstināt %s ar jums.</string>
+    <string name="label_MeToSender">Me (līdz %s):</string>
+    <string name="label_minutes">%d minūtes</string>
+    <string name="label_mobiletag">Mobils</string>
+    <string name="label_MostRecentOnly">Pēdējā tikai</string>
+    <string name="label_MsgSendUpdate">Mani atjauninātās SafeSlinger pilnvaras tiek pievienoti.</string>
+    <string name="label_None">Neviens</string>
+    <string name="label_NumericModeHint">Non-angļu</string>
+    <string name="label_numsharedfiles">%d Faili Share:</string>
+    <string name="label_OldThreads">Vecie diegi</string>
+    <string name="label_othertag">Cits</string>
+    <string name="label_PassHintBackoff">Otrreiz izskatīt</string>
+    <string name="label_PassHintChange">Atjaunināts parole</string>
+    <string name="label_PassHintCreate">Izveidot ieejas frāzi</string>
+    <string name="label_PassHintEnter">Parole</string>
+    <string name="label_PassHintRepeat">Atkārtot parole</string>
+    <string name="label_passPhraseCacheTtl">Parole Cache</string>
+    <string name="label_PassPhraseIsCached">Parole kešatmiņā</string>
+    <string name="label_phoneOnly">tikai pa tālruni</string>
+    <string name="label_Photo">Foto</string>
+    <string name="label_PromptInstruct">Šis numurs tiek izmantota, lai radītu unikālu lietotāju grupai. Salīdzināt, un pēc tam ievadiet mazāko skaitu starp visiem lietotājiem.</string>
+    <string name="label_PublicKeyID">Galvenais ID</string>
+    <string name="label_PushTokenID">Push reģistrācija ID</string>
+    <string name="label_ReceivedNItems">saņēma %d objektus</string>
+    <string name="label_RemindBackupDelay">Backup Atgādinājums</string>
+    <string name="label_ReportedInactive">Ziņots neaktīvu %s.</string>
+    <string name="label_restoreCompleteDate">Pēdējā atjaunošana Pabeigts</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup aizkavēta</string>
+    <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
+    <string name="label_SaveAccount">Ietaupīt kontu</string>
+    <string name="label_SaveInstruct">Apmaiņa pabeigta! Atlasīt biedru datus, lai saglabātu savu adrešu grāmatu:</string>
+    <string name="label_seconds">%d sekundes</string>
+    <string name="label_selectLabel">Izvēlieties etiķeti</string>
+    <string name="label_SelectRecip">Izvēlēties adresātu</string>
+    <string name="label_sendErrorData">Nosūtīt kļūdu dati</string>
+    <string name="label_SendFrom">No:</string>
+    <string name="label_SendTo">Līdz:</string>
+    <string name="label_ShowHintAtLaunch">Parādīt Šis mājienu nākamreiz.</string>
+    <string name="label_step_1">Step 1</string>
+    <string name="label_step_2">Step 2</string>
+    <string name="label_step_3">Step 3</string>
+    <string name="label_step_4">Step 4</string>
+    <string name="label_step_5">Step 5</string>
+    <string name="label_TapToDecryptFile">Pieskarieties, lai atšifrētu failu</string>
+    <string name="label_TapToDecryptMessage">Pieskarieties, lai atšifrētu</string>
+    <string name="label_TapToDownloadFile">Pieskarieties, lai lejupielādētu failu</string>
+    <string name="label_TapToDownloadMessage">Pieskarieties, lai lejupielādētu ziņu</string>
+    <string name="label_TapToOpenFile">Pieskarieties, lai atvērtu failu</string>
+    <string name="label_TapToResumeDraft">Pieskarieties, lai atsāktu ziņojuma projektu</string>
+    <string name="label_TapToSendCredentialUpdate">Pieskarieties un turiet, lai nosūtītu akreditācijas atjauninājumu.</string>
+    <string name="label_targetAccountLabel">Kontakti konts</string>
+    <string name="label_TouchToConfigureBackupSettings">Jums var pēc izvēles ļaut SafeSlinger iCloud backup iOS iestatījumi. Pieskarieties \' Done \' pogu, kad pabeigta.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Touch konfigurēt dublēšanas iestatījumus.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Touch konfigurēt kešatmiņas noildzes iestatījumus.</string>
+    <string name="label_undefinedTypeLabel">Nezināms</string>
+    <string name="label_UnknownSender">Šifrēta Sūtītājs</string>
+    <string name="label_UserIdHint">Zemākais</string>
+    <string name="label_UserName">Lietotāja vārds</string>
+    <string name="label_VerifyInstruct">Visi telefoni ir jāatbilst vienam no 3 vārdu frāzes. Salīdzināt, un pēc tam izvēlēties atbilstošu frāzi.</string>
+    <string name="label_worktag">Darbs</string>
+
+    <string name="menu_About">Par</string>
+    <string name="menu_Change">Maiņa</string>
+    <string name="menu_ChangePassphrase">Izmaiņas parole</string>
+    <string name="menu_CreateNew">Izveidot jaunas</string>
+    <string name="menu_delete">Izdzēst</string>
+    <string name="menu_deleteThread">Dzēst diskusija \'%s\'</string>
+    <string name="menu_Details">Skatīt Detail</string>
+    <string name="menu_DownloadDirectory">Download Directory</string>
+    <string name="menu_Edit">Rediģēt</string>
+    <string name="menu_FileManager">Failu pārvaldnieks</string>
+    <string name="menu_Help">Palīdzēt</string>
+    <string name="menu_Introduction">Ievads</string>
+    <string name="menu_License">Licence</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_messageCopyText">Teksta kopēšana</string>
+    <string name="menu_messageForward">Uz priekšu</string>
+    <string name="menu_Remove">Noņemt</string>
+    <string name="menu_SelectShareApp">Sūtīt pieteikumu</string>
+    <string name="menu_sendFeedback">Sūtīt atsauksmes</string>
+    <string name="menu_SendUpdate">Nosūtīt atjauninājumu</string>
+    <string name="menu_Settings">Iestatījumi</string>
+    <string name="menu_ShowTutorial">Rādīt Tutorial</string>
+    <string name="menu_TagComposeMessage">Sacerēt</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">Ziņas</string>
+    <string name="menu_UseAnother">Izmantot citu</string>
+
+    <string name="prog_CollectingOthersCommitVerify">gaida, lai pārbaudītu no visiem dalībniekiem…</string>
+    <string name="prog_CollectingOthersItems">gaida visiem lietotājiem, lai pievienotos…</string>
+    <string name="prog_ConstructingGroupKey">būvējot grupas atslēgu…</string>
+    <string name="prog_decrypting">atšifrēšanas…</string>
+    <string name="prog_encrypting">šifrējot…</string>
+    <string name="prog_FileSent">ziņa nosūtīta, gaidot atbildi…</string>
+    <string name="prog_findingKey">atrast atslēgu…</string>
+    <string name="prog_GeneratingKey">radot atslēgu, tas var aizņemt kādu laiku…</string>
+    <string name="prog_generatingSignature">radot parakstu…</string>
+    <string name="prog_loadingContent">satura ielādi…</string>
+    <string name="prog_ReceivingFile">saņem šifrētu failu…</string>
+    <string name="prog_RequestingFile">pieprasa šifrētu failu…</string>
+    <string name="prog_RequestingMessage">pieprasa šifrētu ziņojumu…</string>
+    <string name="prog_RequestingPushReg">lūdz push reģistrāciju…</string>
+    <string name="prog_RequestingUserId">pieprasot dalību…</string>
+    <string name="prog_SavingContactsToAddressBook">atjaunināšana adrešu grāmatas…</string>
+    <string name="prog_SavingContactsToKeyDatabase">atjaunināt galveno datu bāzi…</string>
+    <string name="prog_SearchingForBackup">meklējot rezerves…</string>
+    <string name="prog_SendingFile">nosūtot šifrētu %s…</string>
+    <string name="prog_verifyingIntegrity">pārbaudot integritāti…</string>
+    <string name="prog_verifyingSignature">pārbaudot parakstu…</string>
+
+    <string name="section_advanced">Uzlabots</string>
+    <string name="section_backup">Rezerves</string>
+    <string name="section_general">Vispārējs</string>
+
+    <string name="state_BackupRestored">Backup atjaunot.</string>
+    <string name="state_FileDeleted">Svītrots failu %s.</string>
+    <string name="state_FileSent">Ziņa nosūtīta.</string>
+    <string name="state_MessageSavedAsDraft">Ziņa saglabāta kā melnrakstu.</string>
+    <string name="state_MessagesDeleted">%d ziņojumi svītrots.</string>
+    <string name="state_PassphraseUpdated">Parole atjaunināts.</string>
+    <string name="state_RecipientsDeleted">%d saņēmēji svītrots.</string>
+    <string name="state_SomeContactsImported">%s kontakti importēts.</string>
+    <string name="state_TextCopiedToClipboard">Teksts iekopēts starpliktuvē.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger ir paredzēts, lai viegli dalīties identitātes datus, personīgi vai pa tālruni, autentiskums, privātā un neskarts. Katra persona jums dalīties ar rada drošu end-to-end kanālu, lai nosūtītu ziņojumus.\n\nFeatures:\n- kontaktinformāciju viegli apmainīties ar citiem\n- Jau linga teksti, fotogrāfijas, neko!\n- Spēcīga kriptogrāfija aizsargā jūsu informāciju\n\ne-pasts: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Valodas, ko sniedz:</string>
+    <string name="text_Requirements">Prasības:\n1. Jāuzstāda uz vismaz 2 ierīcēm.\n2. Interneta pieslēgums ir aktīvs.</string>
+    <string name="text_ShortPromotion">Droši Sling kontakti, teksti, fotogrāfijas, neko!</string>
+
+    <string name="title_About">Par</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_ChooseDirectory">Izvēlieties direktorijs</string>
+    <string name="title_ChooseFileLoad">Izvēlieties savu Pielikums</string>
+    <string name="title_comments">Komentāri/Jautājumi</string>
+    <string name="title_Error">Kļūda</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys palīgs</string>
+    <string name="title_FileOptions">Stiprinājuma opcijas</string>
+    <string name="title_find">Setup</string>
+    <string name="title_home">Sākt Exchange</string>
+    <string name="title_HomePanel">Mājas</string>
+    <string name="title_MessageDetail">Ziņa</string>
+    <string name="title_Messages">Ziņas</string>
+    <string name="title_MyIdentity">Mana identitāte</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Ziņojums pieejams</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Ziņojumi Pieejamie</string>
+    <string name="title_passphrase">Parole</string>
+    <string name="title_photoalbum">Foto albums</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Saņēmēji</string>
+    <string name="title_Question">Jautājums</string>
+    <string name="title_RecipientDetail">Saņēmējs Detail</string>
+    <string name="title_save">End Exchange</string>
+    <string name="title_SaveFileAs">Saglabājiet failu</string>
+    <string name="title_SecureIntroduction">Droša Ievads</string>
+    <string name="title_SecureIntroductionInvite">Nodrošināt Ievads ielūgumu!</string>
+    <string name="title_SelectSource">Sūtīšanas iespējas:</string>
+    <string name="title_SendFile">Sūtīt</string>
+    <string name="title_sharingfolder">Koplietošanas mapi</string>
+    <string name="title_size">Cik daudz lietotāju apmaiņā?</string>
+    <string name="title_soundrecoder">Sound Recorder</string>
+    <string name="title_TextInviteMsg">SafeSlinger ielūgums</string>
+    <string name="title_Threads">Pavedieni</string>
+    <string name="title_userid">Grupēšana</string>
+    <string name="title_verify">Pārbaudīt</string>
+    <string name="title_Warn">Brīdinājums</string>
+
+</resources>

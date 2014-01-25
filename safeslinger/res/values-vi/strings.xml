@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Gửi lời mời liên kết với…</string>
+    <string name="action_ViewFile">Xem %s với…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Sao lưu bị vô hiệu hóa. Bạn có muốn điều chỉnh cài đặt sao lưu và nhắc nhở giữ này?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s có một thiết bị mới hơn hoặc phím, bạn có chắc bạn muốn sử dụng một cũ này?</string>
+    <string name="ask_FileExistsOverwrite">Tên tập tin %s đã tồn tại. Ghi đè không?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Nếu không có một tài khoản Google, bạn sẽ chỉ có thể gửi, nhận tin nhắn không. Bạn có muốn thêm một tài khoản Google?</string>
+    <string name="ask_QuitConfirmation">Bỏ thuốc lá? Bạn có chắc chắn?</string>
+    <string name="ask_SendErrorData">Chúng tôi muốn giúp đỡ của bạn cải thiện SafeSlinger. Bạn có muốn tự động gửi bất kỳ lỗi nào với chúng ta?</string>
+
+    <string name="btn_Accept">Chấp nhận</string>
+    <string name="btn_BeginExchangeProximity">Bắt đầu giao dịch</string>
+    <string name="btn_Cancel">Hủy bỏ</string>
+    <string name="btn_Close">Đóng cửa</string>
+    <string name="btn_Continue">Tiếp tục</string>
+    <string name="btn_discard">Loại bỏ</string>
+    <string name="btn_Done">Done</string>
+    <string name="btn_Exit">Ra</string>
+    <string name="btn_Import">Nhập khẩu</string>
+    <string name="btn_Introduce">Giới thiệu</string>
+    <string name="btn_Match">Tiếp theo</string>
+    <string name="btn_No">Không</string>
+    <string name="btn_NoMatch">Không có trận đấu</string>
+    <string name="btn_NotRemind">Quên</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Từ chối</string>
+    <string name="btn_Remind">Nhắc nhở</string>
+    <string name="btn_Save">Tiết kiệm</string>
+    <string name="btn_SelectFile">Thêm đính kèm</string>
+    <string name="btn_SendFile">Gửi</string>
+    <string name="btn_Yes">Vâng</string>
+
+    <string name="choice_10mins">10 phút</string>
+    <string name="choice_1hour">1 giờ</string>
+    <string name="choice_1min">1 phút</string>
+    <string name="choice_20mins">20 phút</string>
+    <string name="choice_2hours">2 giờ</string>
+    <string name="choice_3mins">3 phút</string>
+    <string name="choice_40mins">40 phút</string>
+    <string name="choice_4hours">4 giờ</string>
+    <string name="choice_5mins">5 phút</string>
+    <string name="choice_8hours">8 giờ</string>
+    <string name="choice_auto_storage">Mặc định lưu trữ</string>
+    <string name="choice_external_storage">Lưu trữ gắn ngoài</string>
+    <string name="choice_internal_storage">Lưu trữ nội bộ</string>
+    <string name="choice_nolimit">Không có giới hạn</string>
+    <string name="choice_NumUsers">%d người dùng</string>
+    <string name="choice_SaveDirectory">Lưu mục</string>
+    <string name="choice_SaveFile">Lưu tập tin</string>
+    <string name="choice_Up">Lên</string>
+
+    <string name="error_AllMembersMustUpgrade">Một số thành viên đang sử dụng một phiên bản cũ, tất cả các thành viên phải sử dụng ít nhất %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Tất cả các thành viên phải nâng cấp, một số đang sử dụng định dạng chính trở lên.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tất cả các thành viên phải nâng cấp, một số đang sử dụng định dạng đăng ký đẩy cũ.</string>
+    <string name="error_AudioPlayerDecodeError">Âm thanh máy nghe nhạc lỗi giải mã.</string>
+    <string name="error_AudioPlayerError">Không thể chơi ghi âm.</string>
+    <string name="error_AudioRecorderEncodeError">Âm thanh lỗi mã hóa ghi.</string>
+    <string name="error_AudioRecorderPermissionError">Cho phép micro yêu cầu. Xin vui lòng đến iOS Settings để kích hoạt tính năng cho phép Microphone.</string>
+    <string name="error_BackupNotFound">Không có sao lưu để khôi phục lại.</string>
+    <string name="error_BackupNotSupportedDevice">Thiết bị không hỗ trợ khôi phục sao lưu.</string>
+    <string name="error_BadCopyProtectUpgrade">Do một lỗi trong Android 4.1, bạn sẽ có gỡ bỏ cài đặt và cài đặt lại SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Một tài khoản Google được yêu cầu. Hãy mở quản lý tài khoản và thêm một tài khoản Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Đăng ký không được xác thực, xin vui lòng thử lại bằng tay sau đó.</string>
+    <string name="error_C2DMRegInvalidSender">Đăng ký là không có sẵn cho phiên bản này, xin vui lòng kiểm tra các phiên bản cập nhật.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Đăng ký thiết bị không đúng với Google. Thiết bị này hiện không hỗ trợ tin nhắn push.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Dịch vụ đăng ký đẩy không có sẵn, lập kế hoạch thử lại trong %d giây.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Quá nhiều ứng dụng đã được đăng ký cho Push. Xin vui lòng gỡ bỏ cài đặt một số ứng dụng khác và thử lại.</string>
+    <string name="error_CannotSendEmptyFile">Không thể gửi file đính kèm sản phẩm nào.</string>
+    <string name="error_CannotSendFilesOver">Không thể gửi file đính kèm lớn hơn %d byte.</string>
+    <string name="error_CannotSendNullFile">Không thể gửi tập tin đính kèm một null.</string>
+    <string name="error_contactCreationFailure">Tạo liên lạc không thành công.</string>
+    <string name="error_ContactInsertFailed">Liên hệ với chèn thất bại.</string>
+    <string name="error_ContactNameMissing">Liên hệ này là thiếu một cái tên, xin vui lòng chỉnh sửa.</string>
+    <string name="error_ContactNameMissing2">Liên hệ này là thiếu một cái tên, xin vui lòng chọn lại.</string>
+    <string name="error_ContactUpdateFailed">Cập nhật liên lạc không thành công.</string>
+    <string name="error_CorrectYourInternetConnection">Internet không có sẵn, kiểm tra các thiết lập của bạn.</string>
+    <string name="error_couldNotExtractPrivateKey">Không thể trích xuất khóa riêng.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Trao đổi thời gian chờ vượt quá. Bắt đầu trao đổi một lần nữa.</string>
+    <string name="error_FeatureIsNotSupport">%1$s không được hỗ trợ trên %2$s tại thời điểm này.</string>
+    <string name="error_FileSave">Không thể lưu %s.</string>
+    <string name="error_FileStorageUnavailable">Lưu trữ tập tin là không có sẵn.</string>
+    <string name="error_HttpCode">Máy chủ HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Dữ liệu không chính xác được tìm thấy trong trao đổi. Bắt đầu trao đổi một lần nữa.</string>
+    <string name="error_InvalidCommonUserId">Xin vui lòng nhập một số nguyên dương.</string>
+    <string name="error_InvalidContactName">Một tên liên lạc hợp lệ.</string>
+    <string name="error_InvalidIncomingMessage">Xấu dạng tin nhắn gửi đến.</string>
+    <string name="error_InvalidMsg">Định dạng tin nhắn xấu.</string>
+    <string name="error_InvalidRecipient">Người nhận không hợp lệ.</string>
+    <string name="error_LocalGroupCommitDiffer">Bạn đã báo cáo một sự khác biệt trong các cụm từ. Bắt đầu trao đổi một lần nữa.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Định dạng quan trọng ngang hàng là không hợp lệ.</string>
+    <string name="error_MessageSignatureVerificationFails">Xác minh chữ ký thất bại.</string>
+    <string name="error_minPassphraseRequire">Passphrase cần ít nhất %d ký tự.</string>
+    <string name="error_MinUsersRequired">Có ít nhất %d thành viên được yêu cầu trao đổi dữ liệu.</string>
+    <string name="error_MissingNdk">SafeSlinger đã không phát hiện hỗ trợ NDK trên thiết bị này, đó là cần thiết.</string>
+    <string name="error_MoreDataThanUsers">Dữ liệu bất ngờ tìm thấy trong trao đổi. Bắt đầu trao đổi một lần nữa.</string>
+    <string name="error_MultipleSendNotSupported">Bạn đang cố gắng để gửi cho nhiều mặt hàng. Tại thời điểm này, SafeSlinger chỉ hỗ trợ gửi một mục tại một thời điểm.</string>
+    <string name="error_NoEmailAccount">Tài khoản email không được thiết lập!</string>
+    <string name="error_noPassPhrase">Không có cụm từ mật khẩu được nhập vào.</string>
+    <string name="error_NoWordListSelected">Bạn phải chọn một trong những cụm từ trước khi tiếp tục.</string>
+    <string name="error_OtherGroupCommitDiffer">Một người nào đó báo cáo một sự khác biệt trong các cụm từ. Bắt đầu trao đổi một lần nữa.</string>
+    <string name="error_OutOfMemoryError">Bộ nhớ quá thấp để hoàn thành hoạt động này.</string>
+    <string name="error_passPhrasesDoNotMatch">Cụm mật khẩu không phù hợp.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Bạn đã vượt quá hạn ngạch thông báo cho người nhận. Vui lòng thử lại sau.</string>
+    <string name="error_PushMsgInvalidRegistration">Người nhận có một đăng ký đẩy thiếu hoặc xấu. Bạn nên ngừng gửi tin nhắn cho thiết bị này.</string>
+    <string name="error_PushMsgMessageNotFound">Tin nhắn hết hạn.</string>
+    <string name="error_PushMsgMessageTooBig">Thông điệp này là quá lớn. Giảm kích thước của tin nhắn.</string>
+    <string name="error_PushMsgNotRegistered">Đăng ký đẩy mà người nhận không còn giá trị. Người nhận có thể gỡ bỏ cài đặt SafeSlinger hoặc tắt thông báo. Bạn nên ngừng gửi tin nhắn cho thiết bị này.</string>
+    <string name="error_PushMsgNotSucceed">Có một lỗi giao tiếp với các dịch vụ push thông báo.</string>
+    <string name="error_PushMsgQuotaExceeded">Bạn đã vượt quá hạn ngạch nhắn cho thiết bị này. Vui lòng thử lại sau.</string>
+    <string name="error_PushMsgServiceFail">Dịch vụ thông báo là không có thời gian này. Hãy cố gắng để gửi tin nhắn sau đó.</string>
+    <string name="error_RecoderError">Không có thể chuẩn bị ghi âm thanh.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Để bắt đầu, \' Sling Keys với một điện thoại khác cùng một lúc.</string>
+    <string name="error_selectDataToSend">Bạn cần một file đính kèm hoặc một tin nhắn văn bản để gửi.</string>
+    <string name="error_ServerAppMessage">Server: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server: \'%s\'</string>
+    <string name="error_ServerNotResponding">Không có phản hồi từ máy chủ.</string>
+    <string name="error_ShareFileDelError">Không thể loại bỏ các tập tin chia sẻ.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Thời gian chờ đợi đối với một số thành viên trong nhóm để thêm dữ liệu.</string>
+    <string name="error_UnableFindPubKey">Không thể để phù hợp với khóa công khai để khóa riêng trong nhà cung cấp mật mã.</string>
+    <string name="error_UnableToSaveMessageInDB">Không thể lưu vào cơ sở dữ liệu tin nhắn.</string>
+    <string name="error_UnableToSaveRecipientInDB">Không thể lưu vào cơ sở dữ liệu người nhận.</string>
+    <string name="error_UnableToUpdateMessageInDB">Không thể cập nhật cơ sở dữ liệu tin nhắn.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Không thể cập nhật cơ sở dữ liệu người nhận.</string>
+    <string name="error_UncaughtExceptionOccured">Lỗi SafeSlinger, hãy khởi động lại.</string>
+    <string name="error_VcardParseFailure">Dữ liệu liên lạc đã được định dạng chính xác.</string>
+    <string name="error_WebCancelledByUser">Người sử dụng bị hủy bỏ yêu cầu máy chủ.</string>
+
+    <string name="help_find">Sử dụng màn hình này để thiết lập tên của bạn, điện thoại và email để trao đổi với người khác. Bấm vào nút \' Done \' khi hoàn tất.</string>
+    <string name="help_home">Trao đổi dữ liệu nhận dạng, đảm bảo tất cả người dùng đang ở gần hoặc trên điện thoại. Nút \' Bắt đầu giao dịch \' sẽ trao đổi chỉ có dữ liệu liên lạc kiểm tra.</string>
+    <string name="help_identity_menu">\n\nBạn cũng có thể thay đổi dữ liệu cá nhân về danh tính của bạn trên màn hình này bằng cách khai thác vào nút có tên của bạn. Điều này sẽ hiển thị một menu cho phép bạn \'Chỉnh sửa\' liên lạc của bạn, \'Tạo mới \' liên lạc, hoặc \' Sử dụng Một \' liên lạc.</string>
+    <string name="help_Messages">Màn hình này hiển thị tất cả các thông điệp qua, và file đính kèm vẫn có sẵn để tải về.</string>
+    <string name="help_passphrase">Sử dụng màn hình này để đăng nhập vào ứng dụng với cụm từ mật khẩu của bạn.</string>
+    <string name="help_PickRecip">Liên hệ với các phím SafeSlinger được hiển thị ở đây, hãy chọn một để gửi thông điệp của bạn.</string>
+    <string name="help_save">Khi hoàn tất, giao thức sẽ tiết lộ một danh sách các dữ liệu nhận dạng trao đổi. Chọn số liên lạc bạn muốn lưu và nhấn \' nhập \'.</string>
+    <string name="help_SecureIntroduction">Màn hình này cho phép bạn chọn hai người bạn đã đeo chìa khóa với trước khi gửi an toàn các khóa của họ với nhau. Chỉ cần nhấn \' Giới thiệu \' khi đã sẵn sàng.</string>
+    <string name="help_Send">Màn hình này cho phép bạn chọn một số dữ liệu và một người nhận gửi đến. Chỉ cần nhấn \'Gửi\' khi đã sẵn sàng.</string>
+    <string name="help_size">Chọn số lượng người đang cố gắng để trao đổi dữ liệu với nhau và nhấn \'OK\'.</string>
+    <string name="help_userid">Con số này trên màn hình này được sử dụng để tạo ra một nhóm duy nhất của người sử dụng. Xem xét các con số trên tất cả các người sử dụng màn hình, sau đó tất cả người dùng cần nhập số thấp nhất cùng và bấm \'OK\'.</string>
+    <string name="help_verify">Bây giờ, bạn phải phù hợp với một trong những cụm từ 3 từ với tất cả người dùng. Mỗi người sử dụng phải chọn cụm từ phổ biến như nhau, và nhấn \'Next\'.</string>
+
+    <string name="iOS_contactError">Liên hệ phép yêu cầu. Xin vui lòng đến iOS Settings để cho phép Liên hệ quyền.</string>
+    <string name="iOS_errorpushtoken">Đăng ký đẩy là mất tích.</string>
+    <string name="iOS_notificationError1">Thông báo cho phép yêu cầu. Xin vui lòng đến iOS Settings để kích hoạt tính năng thông báo cho phép.</string>
+    <string name="iOS_notificationError2">Cho phép %s yêu cầu. Xin vui lòng đến iOS Settings để kích hoạt tính năng thông báo cho phép.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger không được tối ưu hóa cho các thiết bị iOS 5.x. SafeSlinger đòi hỏi iOS 6 hoặc cao hơn.</string>
+
+    <string name="label_ago">%s trước</string>
+    <string name="label_backupCompleteDate">Sao lưu cuối cùng đã hoàn thành</string>
+    <string name="label_backupRequestDate">Sao lưu cuối cùng Yêu cầu</string>
+    <string name="label_backupURL">Sao lưu URL</string>
+    <string name="label_ClickForNMsgs">Nhấn để xem xét %d tin nhắn của bạn</string>
+    <string name="label_ComposeHint">Soạn tin nhắn</string>
+    <string name="label_ContactEmail">Email của bạn</string>
+    <string name="label_ContactName">Tên của bạn</string>
+    <string name="label_ContactPhone">Điện thoại của bạn</string>
+    <string name="label_days">%d ngày</string>
+    <string name="label_Device">Thiết bị:</string>
+    <string name="label_DeviceInSendOnlyMode">Chế độ gửi chỉ</string>
+    <string name="label_DisabledExchSourceKeyChange">Chìa khóa của bạn đã thay đổi: Sling phím một lần nữa.</string>
+    <string name="label_Draft">DỰ THẢO</string>
+    <string name="label_EnabledKeyFormatDeprecated">Định dạng chính phản đối: Sling phím một lần nữa.</string>
+    <string name="label_exchanged">trao đổi</string>
+    <string name="label_expired">hết hạn</string>
+    <string name="label_expires">hết hạn %s</string>
+    <string name="label_expiresIn">hết hạn trong</string>
+    <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Vui lòng nhập thông tin cá nhân của bạn. Dữ liệu này sẽ chỉ được chia sẻ một cách an toàn với những người mà bạn chọn để chia sẻ nó với.</string>
+    <string name="label_FirstName">Tên đầu tiên</string>
+    <string name="label_Home">Kiểm tra các mục mà bạn muốn chia sẻ và khai thác \'Bắt đầu giao dịch \' khi những người khác đã sẵn sàng để trao đổi.</string>
+    <string name="label_hometag">Quê hương</string>
+    <string name="label_hours">%d giờ</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud được kích hoạt. Bấm vào nút \' Done \' khi hoàn tất.</string>
+    <string name="label_InstNoMessages">Không có tin nhắn. Bạn có thể gửi một tin nhắn từ nút \' Soạn tin nhắn \' trên menu chủ.</string>
+    <string name="label_InstNoMessagesAndroid">Không có tin nhắn. Bạn có thể gửi một tin nhắn từ tab \' Soạn.</string>
+    <string name="label_InstNoRecipients">Không có người nhận. Tìm một người dùng khác SafeSlinger gần đó và chạm vào tab \' Sling Keys để chia sẻ phím.</string>
+    <string name="label_InstNoSharedFile">Tập tin không được chia sẻ. Kết nối điện thoại với iTunes và kéo tập tin vào thư mục chia sẻ.</string>
+    <string name="label_InstRecipients">Chọn một người nhận để gửi tin nhắn đến:</string>
+    <string name="label_InstSendInvite">Chọn người nhận để giới thiệu một cách an toàn:</string>
+    <string name="label_InstSharedFile">Chọn một tập tin đính kèm:</string>
+    <string name="label_introduced">giới thiệu</string>
+    <string name="label_Key">Chính:</string>
+    <string name="label_LastName">Họ</string>
+    <string name="label_Me">Tôi</string>
+    <string name="label_messageIntroduceNameToYou">Tôi muốn giới thiệu %s cho bạn.</string>
+    <string name="label_MeToSender">Tôi (để %s):</string>
+    <string name="label_minutes">%d phút</string>
+    <string name="label_mobiletag">Di động</string>
+    <string name="label_MostRecentOnly">Gần đây nhất chỉ</string>
+    <string name="label_MsgSendUpdate">Thông tin SafeSlinger cập nhật của tôi được gắn.</string>
+    <string name="label_None">Không ai</string>
+    <string name="label_NumericModeHint">Không phải tiếng Anh</string>
+    <string name="label_numsharedfiles">%d tập tin để chia sẻ:</string>
+    <string name="label_OldThreads">Chủ đề cũ</string>
+    <string name="label_othertag">Khác</string>
+    <string name="label_PassHintBackoff">Thử lại</string>
+    <string name="label_PassHintChange">Cụm mật khẩu được cập nhật</string>
+    <string name="label_PassHintCreate">Tạo ra cụm mật khẩu</string>
+    <string name="label_PassHintEnter">Cụm từ mật khẩu</string>
+    <string name="label_PassHintRepeat">Lặp lại cụm mật khẩu</string>
+    <string name="label_passPhraseCacheTtl">Cache mật khẩu</string>
+    <string name="label_PassPhraseIsCached">Lưu trữ mật khẩu</string>
+    <string name="label_phoneOnly">điện thoại chỉ</string>
+    <string name="label_Photo">Hình ảnh</string>
+    <string name="label_PromptInstruct">Con số này được sử dụng để tạo ra một nhóm duy nhất của người sử dụng. So sánh, và sau đó nhập số thấp nhất trong số tất cả người dùng.</string>
+    <string name="label_PublicKeyID">ID chính</string>
+    <string name="label_PushTokenID">Đẩy ID đăng ký</string>
+    <string name="label_ReceivedNItems">nhận được %d mặt hàng</string>
+    <string name="label_RemindBackupDelay">Sao lưu Reminder</string>
+    <string name="label_ReportedInactive">Báo cáo %s không hoạt động.</string>
+    <string name="label_restoreCompleteDate">Khôi phục cuối cùng đã hoàn thành</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger sao lưu bị trì hoãn</string>
+    <string name="label_safeslingered">(SafeSlinger Trao đổi trực tiếp)</string>
+    <string name="label_SaveAccount">Tài khoản tiết kiệm</string>
+    <string name="label_SaveInstruct">Ngoại tệ Hoàn thành! Chọn dữ liệu thành viên để lưu vào sổ địa chỉ của bạn:</string>
+    <string name="label_seconds">%d giây</string>
+    <string name="label_selectLabel">Chọn nhãn</string>
+    <string name="label_SelectRecip">Chọn người nhận</string>
+    <string name="label_sendErrorData">Lỗi gửi dữ liệu</string>
+    <string name="label_SendFrom">Từ:</string>
+    <string name="label_SendTo">Để:</string>
+    <string name="label_ShowHintAtLaunch">Hiện gợi ý này thời gian tới.</string>
+    <string name="label_step_1">Bước 1</string>
+    <string name="label_step_2">Bước 2</string>
+    <string name="label_step_3">Bước 3</string>
+    <string name="label_step_4">Bước 4</string>
+    <string name="label_step_5">Bước 5</string>
+    <string name="label_TapToDecryptFile">Bấm để giải mã tập tin</string>
+    <string name="label_TapToDecryptMessage">Bấm để giải mã</string>
+    <string name="label_TapToDownloadFile">Bấm để tải về tập tin</string>
+    <string name="label_TapToDownloadMessage">Bấm để tải về tin nhắn</string>
+    <string name="label_TapToOpenFile">Bấm để mở tập tin</string>
+    <string name="label_TapToResumeDraft">Bấm để tiếp tục dự thảo tin nhắn</string>
+    <string name="label_TapToSendCredentialUpdate">Chạm và giữ để gửi bản cập nhật có khả năng.</string>
+    <string name="label_targetAccountLabel">Liên hệ Tài khoản</string>
+    <string name="label_TouchToConfigureBackupSettings">Bạn có thể tùy chọn cho phép SafeSlinger iCloud sao lưu trong iOS Settings. Bấm vào nút \' Done \' khi hoàn tất.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Chạm vào để cấu hình các thiết lập sao lưu.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Chạm vào để cấu hình các thiết lập thời gian chờ bộ nhớ cache.</string>
+    <string name="label_undefinedTypeLabel">Chưa biết</string>
+    <string name="label_UnknownSender">Tên người gửi mã hóa</string>
+    <string name="label_UserIdHint">Thấp nhất</string>
+    <string name="label_UserName">Tên người dùng</string>
+    <string name="label_VerifyInstruct">Tất cả điện thoại phải phù hợp với một trong những cụm từ 3 từ. So sánh, và sau đó chọn cụm từ phù hợp.</string>
+    <string name="label_worktag">Công việc</string>
+
+    <string name="menu_About">Về</string>
+    <string name="menu_Change">Thay đổi</string>
+    <string name="menu_ChangePassphrase">Thay đổi cụm mật khẩu</string>
+    <string name="menu_CreateNew">Tạo mới</string>
+    <string name="menu_delete">Xóa</string>
+    <string name="menu_deleteThread">Xóa đề \'%s\'</string>
+    <string name="menu_Details">Xem chi tiết</string>
+    <string name="menu_DownloadDirectory">Tải về thư mục</string>
+    <string name="menu_Edit">Chỉnh sửa</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_Help">Giúp</string>
+    <string name="menu_Introduction">Giới thiệu</string>
+    <string name="menu_License">Giấy phép</string>
+    <string name="menu_Logout">Đăng xuất</string>
+    <string name="menu_messageCopyText">Sao chép văn bản</string>
+    <string name="menu_messageForward">Về phía trước</string>
+    <string name="menu_Remove">Hủy bỏ</string>
+    <string name="menu_SelectShareApp">Gửi ứng dụng</string>
+    <string name="menu_sendFeedback">Gửi phản hồi</string>
+    <string name="menu_SendUpdate">Gửi Cập nhật</string>
+    <string name="menu_Settings">Thiết lập</string>
+    <string name="menu_ShowTutorial">Hiển thị Hướng dẫn</string>
+    <string name="menu_TagComposeMessage">Soạn</string>
+    <string name="menu_TagExchange">Sling phím</string>
+    <string name="menu_TagListMessages">Tin nhắn</string>
+    <string name="menu_UseAnother">Sử dụng khác</string>
+
+    <string name="prog_CollectingOthersCommitVerify">chờ đợi để xác minh từ tất cả các thành viên…</string>
+    <string name="prog_CollectingOthersItems">chờ đợi cho tất cả người dùng tham gia…</string>
+    <string name="prog_ConstructingGroupKey">xây dựng chính nhóm…</string>
+    <string name="prog_decrypting">giải mã…</string>
+    <string name="prog_encrypting">mã hóa…</string>
+    <string name="prog_FileSent">tin nhắn gửi đi, chờ đợi phản ứng…</string>
+    <string name="prog_findingKey">tìm kiếm chính…</string>
+    <string name="prog_GeneratingKey">tạo quan trọng, điều này có thể mất một thời gian…</string>
+    <string name="prog_generatingSignature">tạo chữ ký…</string>
+    <string name="prog_loadingContent">tải nội dung…</string>
+    <string name="prog_ReceivingFile">nhận tập tin được mã hóa…</string>
+    <string name="prog_RequestingFile">yêu cầu tập tin được mã hóa…</string>
+    <string name="prog_RequestingMessage">yêu cầu thông điệp được mã hóa…</string>
+    <string name="prog_RequestingPushReg">yêu cầu đăng ký đẩy…</string>
+    <string name="prog_RequestingUserId">yêu cầu thành viên…</string>
+    <string name="prog_SavingContactsToAddressBook">sổ địa chỉ đang cập nhật…</string>
+    <string name="prog_SavingContactsToKeyDatabase">cập nhật cơ sở dữ liệu quan trọng…</string>
+    <string name="prog_SearchingForBackup">tìm kiếm sao lưu…</string>
+    <string name="prog_SendingFile">gửi %s mã hóa…</string>
+    <string name="prog_verifyingIntegrity">xác minh tính toàn vẹn…</string>
+    <string name="prog_verifyingSignature">xác minh chữ ký…</string>
+
+    <string name="section_advanced">Nâng cao</string>
+    <string name="section_backup">Sao lưu</string>
+    <string name="section_general">Chung</string>
+
+    <string name="state_BackupRestored">Sao lưu phục hồi.</string>
+    <string name="state_FileDeleted">Xóa tập tin %s.</string>
+    <string name="state_FileSent">Tin nhắn gửi.</string>
+    <string name="state_MessageSavedAsDraft">Tin nhắn lưu lại dưới dạng dự thảo.</string>
+    <string name="state_MessagesDeleted">%d tin nhắn bị xóa.</string>
+    <string name="state_PassphraseUpdated">Cụm từ mật khẩu được cập nhật.</string>
+    <string name="state_RecipientsDeleted">%d người nhận xóa.</string>
+    <string name="state_SomeContactsImported">Địa chỉ liên lạc %s nhập khẩu.</string>
+    <string name="state_TextCopiedToClipboard">Sao chép văn bản vào clipboard.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger được thiết kế để dễ dàng chia sẻ dữ liệu nhận dạng, trực tiếp hoặc qua điện thoại, chứng thực, tư nhân, và nguyên vẹn. Mỗi người bạn chia sẻ với tạo ra một kênh end-to-end an toàn để gửi tin nhắn.\n\ntính năng:\n- Dễ dàng trao đổi thông tin liên lạc với những người khác\n- an toàn sling văn bản, hình ảnh, bất cứ điều gì!\n- mật mã mạnh mẽ bảo vệ thông tin của bạn\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Ngôn ngữ được cung cấp bởi:</string>
+    <string name="text_Requirements">Yêu cầu:\n1. Phải được cài đặt trên tối thiểu là 2 thiết bị.\n2. Kết nối Internet phải được hoạt động.</string>
+    <string name="text_ShortPromotion">Địa chỉ liên lạc an toàn sling, văn bản, hình ảnh, bất cứ điều gì!</string>
+
+    <string name="title_About">Về</string>
+    <string name="title_camera">Máy ảnh</string>
+    <string name="title_ChooseDirectory">Chọn thư mục</string>
+    <string name="title_ChooseFileLoad">Chọn tập tin đính kèm của bạn</string>
+    <string name="title_comments">Ý kiến ​​/ câu hỏi</string>
+    <string name="title_Error">Lôi</string>
+    <string name="title_ExchangeWalkthrough">Sling phím Trợ lý</string>
+    <string name="title_FileOptions">Tùy chọn tập tin đính kèm</string>
+    <string name="title_find">Thiết lập</string>
+    <string name="title_home">Bắt đầu giao dịch</string>
+    <string name="title_HomePanel">Quê hương</string>
+    <string name="title_MessageDetail">Tin nhắn</string>
+    <string name="title_Messages">Tin nhắn</string>
+    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger tin nhắn có sẵn</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Tin nhắn có sẵn</string>
+    <string name="title_passphrase">Cụm từ mật khẩu</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Thư viện ảnh</string>
+    <string name="title_PickRecipient">Người nhận</string>
+    <string name="title_Question">Câu hỏi</string>
+    <string name="title_RecipientDetail">Người nhận chi tiết</string>
+    <string name="title_save">End Exchange</string>
+    <string name="title_SaveFileAs">Lưu tập tin như</string>
+    <string name="title_SecureIntroduction">An toàn Giới thiệu</string>
+    <string name="title_SecureIntroductionInvite">Đảm bảo Giới thiệu Lời mời!</string>
+    <string name="title_SelectSource">Tùy chọn gửi:</string>
+    <string name="title_SendFile">Gửi</string>
+    <string name="title_sharingfolder">Chia sẻ thư mục</string>
+    <string name="title_size">Làm thế nào nhiều người sử dụng trong việc trao đổi?</string>
+    <string name="title_soundrecoder">Ghi âm thanh</string>
+    <string name="title_TextInviteMsg">Lời mời SafeSlinger</string>
+    <string name="title_Threads">Chủ đề</string>
+    <string name="title_userid">Nhóm</string>
+    <string name="title_verify">Tra</string>
+    <string name="title_Warn">Cảnh báo</string>
+
+</resources>

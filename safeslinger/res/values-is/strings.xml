@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Senda bjóða tengil með…</string>
+    <string name="action_ViewFile">Skoða %s með…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Afritun er óvirk. Viltu breyta öryggisafrit stillingar og halda þetta minnisatriði?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s hefur fleiri nýlegar tæki eða lykill, þú ert viss um að þú viljir nota þessa eldri einn?</string>
+    <string name="ask_FileExistsOverwrite">Skrá nafn %s er þegar til. Skrifa yfir?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Án Google reikning sem þú verður bara að vera fær um að senda, ekki tekið við skilaboðum. Viltu bæta við Google reikning?</string>
+    <string name="ask_QuitConfirmation">Hætta? Ertu viss?</string>
+    <string name="ask_SendErrorData">Okkur langar að hjálpa bæta SafeSlinger. Viltu senda sjálfkrafa einhverjar villur okkur?</string>
+
+    <string name="btn_Accept">Samþykkja</string>
+    <string name="btn_BeginExchangeProximity">Byrja Exchange</string>
+    <string name="btn_Cancel">Hætta</string>
+    <string name="btn_Close">Loka</string>
+    <string name="btn_Continue">Halda áfram</string>
+    <string name="btn_discard">Fargið</string>
+    <string name="btn_Done">Lokið</string>
+    <string name="btn_Exit">Hætta</string>
+    <string name="btn_Import">Innflutningur</string>
+    <string name="btn_Introduce">Kynntu</string>
+    <string name="btn_Match">Næsta</string>
+    <string name="btn_No">Nei</string>
+    <string name="btn_NoMatch">Engin Match</string>
+    <string name="btn_NotRemind">Gleyma</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Neita</string>
+    <string name="btn_Remind">Minna</string>
+    <string name="btn_Save">Vista</string>
+    <string name="btn_SelectFile">Bæta við viðhengi</string>
+    <string name="btn_SendFile">Senda</string>
+    <string name="btn_Yes">Já</string>
+
+    <string name="choice_10mins">10 mínútur</string>
+    <string name="choice_1hour">1 klukkustund</string>
+    <string name="choice_1min">1 mínútu</string>
+    <string name="choice_20mins">20 mínútur</string>
+    <string name="choice_2hours">2 klukkustundir</string>
+    <string name="choice_3mins">3 mínútur</string>
+    <string name="choice_40mins">40 mínútur</string>
+    <string name="choice_4hours">4 klst</string>
+    <string name="choice_5mins">5 mínútur</string>
+    <string name="choice_8hours">8 klukkustundir</string>
+    <string name="choice_auto_storage">Sjálfgefið Bílskúr</string>
+    <string name="choice_external_storage">Ytri Bílskúr</string>
+    <string name="choice_internal_storage">Innri Bílskúr</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d notendur</string>
+    <string name="choice_SaveDirectory">Vista Directory</string>
+    <string name="choice_SaveFile">Vista skrá</string>
+    <string name="choice_Up">Up</string>
+
+    <string name="error_AllMembersMustUpgrade">Sumir meðlimir eru að nota eldri útgáfu, allir meðlimir verða að minnsta kosti að nota %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Allir meðlimir verða að uppfæra, sumir eru að nota eldri lykill snið.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Allir meðlimir verða að uppfæra, sumir eru að nota eldri ýta skráning snið.</string>
+    <string name="error_AudioPlayerDecodeError">Hljóð spilari umskráningu villa.</string>
+    <string name="error_AudioPlayerError">Getur ekki spilað upptökuna.</string>
+    <string name="error_AudioRecorderEncodeError">Audio Recorder kóðun villa.</string>
+    <string name="error_AudioRecorderPermissionError">Hljóðnema leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Hljóðnemi heimildir.</string>
+    <string name="error_BackupNotFound">Engin afrit til að endurheimta.</string>
+    <string name="error_BackupNotSupportedDevice">Tækið styður ekki afrit aftur.</string>
+    <string name="error_BadCopyProtectUpgrade">Vegna galla í Android 4.1, þú vilja hafa uninstall og setja aftur SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Google reikningur er krafist. Vinsamlegast opna reikning framkvæmdastjóri og bæta við Google reikning.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Skráning ekki staðfest, reyndu aftur handvirkt síðar.</string>
+    <string name="error_C2DMRegInvalidSender">Skráning er ekki í boði fyrir þessa útgáfu, vinsamlegast stöðva fyrir endurnýja útgáfa.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Rangt tæki skráning hjá Google. Þetta tæki styður ekki ýta skilaboð.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Ýta skráning þjónusta er ekki í boði, tímasetningu reyna í %d sekúndur.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Of mörg forrit eru skráðir í Push. Vinsamlegast uninstall einhverjum öðrum forritum og reyndu aftur.</string>
+    <string name="error_CannotSendEmptyFile">Get ekki sent tóma viðhengi.</string>
+    <string name="error_CannotSendFilesOver">Hægt að senda viðhengi meiri en %d bæti að stærð.</string>
+    <string name="error_CannotSendNullFile">Get ekki sent núll viðhengi.</string>
+    <string name="error_contactCreationFailure">Viltu samband við sköpun mistókst.</string>
+    <string name="error_ContactInsertFailed">Viltu samband við innskotið mistókst.</string>
+    <string name="error_ContactNameMissing">Þetta samband vantar nafn, vinsamlegast breyta.</string>
+    <string name="error_ContactNameMissing2">Þetta samband vantar nafn, vinsamlegast veldu aftur.</string>
+    <string name="error_ContactUpdateFailed">Samband Uppfærsla mistókst.</string>
+    <string name="error_CorrectYourInternetConnection">Internet er ekki í boði, athuga stillingar þínar.</string>
+    <string name="error_couldNotExtractPrivateKey">Gat ekki dregið persónulegur lykill.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange tími yfir. Byrja skipti aftur.</string>
+    <string name="error_FeatureIsNotSupport">%1$s er ekki studd á %2$s á þessum tíma.</string>
+    <string name="error_FileSave">Ekki tókst að vista %s.</string>
+    <string name="error_FileStorageUnavailable">Skrá geymsla er ekki í boði.</string>
+    <string name="error_HttpCode">Server HTTP Villa: %d</string>
+    <string name="error_InvalidCommitVerify">Röng gögn fundust í skiptum. Byrja skipti aftur.</string>
+    <string name="error_InvalidCommonUserId">Vinsamlegast sláðu inn jákvæða heiltölu.</string>
+    <string name="error_InvalidContactName">A gilt nafn er krafist.</string>
+    <string name="error_InvalidIncomingMessage">Bad komandi sniði skilaboð.</string>
+    <string name="error_InvalidMsg">Bad sniði skilaboð.</string>
+    <string name="error_InvalidRecipient">Ógilt viðtakandi.</string>
+    <string name="error_LocalGroupCommitDiffer">Þú hefur greint mun á setningar. Byrja skipti aftur.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Snið lykill jafningi er ógild.</string>
+    <string name="error_MessageSignatureVerificationFails">Undirskrift Staðfesting brást.</string>
+    <string name="error_minPassphraseRequire">Passphrases þurfa að minnsta kosti %d stafi.</string>
+    <string name="error_MinUsersRequired">Að minnsta kosti %d meðlimir þurfa að skiptast á upplýsingum.</string>
+    <string name="error_MissingNdk">SafeSlinger ekki uppgötva NDK stuðning á þessu tæki, sem er krafist.</string>
+    <string name="error_MoreDataThanUsers">Óvæntar gögn fundust í skiptum. Byrja skipti aftur.</string>
+    <string name="error_MultipleSendNotSupported">Þú ert að reyna að senda marga hluti. Á þessum tíma, SafeSlinger styður aðeins senda eitt atriði í einu.</string>
+    <string name="error_NoEmailAccount">Email reikningur er ekki skipulag!</string>
+    <string name="error_noPassPhrase">Engin lykilorð slegið inn.</string>
+    <string name="error_NoWordListSelected">Þú verður að velja eitt af þeim orðasamböndum áður en farið er.</string>
+    <string name="error_OtherGroupCommitDiffer">Einhver greint mun á setningar. Byrja skipti aftur.</string>
+    <string name="error_OutOfMemoryError">Minni er of lágt til að ljúka þessari aðgerð.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases passa ekki.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Þú hefur farið yfir skilaboð kvóta fyrir þessi viðtakanda. Reyndu aftur síðar.</string>
+    <string name="error_PushMsgInvalidRegistration">Netfangið er vantar eða slæmt ýta skráningu. Þú ættir að hætta að senda skilaboð til þessa tækis.</string>
+    <string name="error_PushMsgMessageNotFound">Skilaboð útrunnið.</string>
+    <string name="error_PushMsgMessageTooBig">Skilaboðin eru of stór. Draga úr the stærð af the skilaboð.</string>
+    <string name="error_PushMsgNotRegistered">Ýta skráning Netfangið er ekki lengur gild. Viðtakandi kann hafir uninstalled SafeSlinger eða slökkt tilkynningar. Þú ættir að hætta að senda skilaboð til þessa tækis.</string>
+    <string name="error_PushMsgNotSucceed">Það kom upp villa í samskiptum við ýta tilkynningu þjónustu.</string>
+    <string name="error_PushMsgQuotaExceeded">Þú hefur farið yfir skilaboð kvóta fyrir þetta tæki. Reyndu aftur síðar.</string>
+    <string name="error_PushMsgServiceFail">Tilkynning er ekki í boði að þessu sinni. Vinsamlegast reyndu að senda skilaboðin síðar.</string>
+    <string name="error_RecoderError">Getur ekki undirbúa hljóð upptökutæki.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Til að byrja, \' Sling Keys með annan síma á sama tíma.</string>
+    <string name="error_selectDataToSend">Þú þarft viðhengi eða textaskilaboð til að senda.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Ekkert svar frá miðlara.</string>
+    <string name="error_ShareFileDelError">Getur ekki fjarlægt sameiginlega skrá.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Tími sem bíður fyrir sumir meðlimir hópsins að bæta við gögnum.</string>
+    <string name="error_UnableFindPubKey">Ófær um að passa dreifilykil gagnvart einkalykil í dulritunarstjórneiningunni té.</string>
+    <string name="error_UnableToSaveMessageInDB">Get ekki vistað í textasvæði skilaboðanna gagnagrunninum.</string>
+    <string name="error_UnableToSaveRecipientInDB">Get ekki vistað til viðtakanda gagnagrunninum.</string>
+    <string name="error_UnableToUpdateMessageInDB">Ófær um að uppfæra skilaboð gagnagrunninn.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Ófær um að uppfæra viðtakanda gagnagrunninn.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger villa, vinsamlegast endurræsa.</string>
+    <string name="error_VcardParseFailure">Tengiliðagögn var sniðinn rangt.</string>
+    <string name="error_WebCancelledByUser">Notandi hætti beiðni miðlara.</string>
+
+    <string name="help_find">Notaðu þennan skjá til að setja nafn þitt, síma og tölvupóst til að skiptast á við aðra. Tappa á hnappinn \' gert\' þegar því er lokið.</string>
+    <string name="help_home">Að skiptast á persónuskilríki gögn skal gæta allir notendur eru nálægt eða í símanum. Hnappinn \' BEGIN skipti \' munu skiptast users.cpp tengiliðagögn.</string>
+    <string name="help_identity_menu">\n\nÞú getur líka breyst persónuleg gögn um persónuupplýsingar þínar á þessum skjá með því að slá á hnappinn með nafni þínu. Þetta birtir valmynd sem gerir þér kleift að \' Breyta\' þinn snerting, \' Búa til nýjan \' tengilið eða \' Nota annar\' tengilið.</string>
+    <string name="help_Messages">Þessi skjár sýnir öll fyrri skilaboð og viðhengi sem eru enn í boði fyrir niðurhal.</string>
+    <string name="help_passphrase">Notaðu þennan skjá til tenging til the umsókn með lykilorð þitt.</string>
+    <string name="help_PickRecip">Tengiliði með SafeSlinger lykla sjást hér, velja einn til að senda skilaboð til.</string>
+    <string name="help_save">Þegar þessu er lokið, siðareglur mun koma í ljós lista yfir sjálfsmynd gögn skiptanna. Veldu tengiliðina sem þú vilt vista og ýta á \' innflutningur\'.</string>
+    <string name="help_SecureIntroduction">Þessi skjár gerir þér kleift að velja tvo menn sem þú hefur slöngði takkana með áður að tryggilega senda takka þeirra við hvert annað. Einfaldlega ýta \' Kynntu \' þegar tilbúin.</string>
+    <string name="help_Send">Þessi skjár gerir þér kleift að velja nokkur gögn og viðtakandinn að senda til. Einfaldlega ýta á \'Senda\' þegar tilbúin.</string>
+    <string name="help_size">Veldu fjölda fólks sem eru að reyna að skiptast á gögnum saman og ýta á \' OK \'.</string>
+    <string name="help_userid">Þessi tala á þessum skjá er notaður til að búa til einstaka hóp notenda. Endurskoða tölurnar á alla notendur skjái, þá allir notendur ættu að slá inn sömu lægsta númer og ýttu á \'OK\'.</string>
+    <string name="help_verify">Nú verður þú að passa einn af þessum 3-orð orðasambönd með öllum notendum. Sérhver notandi verður að velja sama sameiginlega setningu og ýta á \' Næsta\'.</string>
+
+    <string name="iOS_contactError">Tengiliði leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Tengiliðir heimildir.</string>
+    <string name="iOS_errorpushtoken">Ýta skráning vantar.</string>
+    <string name="iOS_notificationError1">Tilkynningar leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Tilkynningar heimildir.</string>
+    <string name="iOS_notificationError2">%s leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Tilkynningar heimildir.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger er ekki bjartsýni fyrir iOS 5.x tæki. SafeSlinger krefst iOS 6 eða hærri.</string>
+
+    <string name="label_ago">%s síðan</string>
+    <string name="label_backupCompleteDate">Síðasta Backup Lokið</string>
+    <string name="label_backupRequestDate">Síðasta Backup Beiðni</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Snerta til að endurskoða %d skilaboð</string>
+    <string name="label_ComposeHint">Semja skilaboð</string>
+    <string name="label_ContactEmail">Þinn Email</string>
+    <string name="label_ContactName">Nafn þitt</string>
+    <string name="label_ContactPhone">Sími þinn</string>
+    <string name="label_days">%d dagar</string>
+    <string name="label_Device">Tæki:</string>
+    <string name="label_DeviceInSendOnlyMode">Senda eingöngu háttur</string>
+    <string name="label_DisabledExchSourceKeyChange">Lykillinn hefur breyst: Sling Takkar aftur.</string>
+    <string name="label_Draft">Drög</string>
+    <string name="label_EnabledKeyFormatDeprecated">Lykill snið vanþóknun: Sling Takkar aftur.</string>
+    <string name="label_exchanged">skipst</string>
+    <string name="label_expired">útrunnið</string>
+    <string name="label_expires">rennur %s</string>
+    <string name="label_expiresIn">rennur út í</string>
+    <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Vinsamlegast sláðu inn persónulegar upplýsingar þínar. Þessi gögn munu aðeins vera tryggilega hluti við einstaklinga sem þú velur að deila henni með.</string>
+    <string name="label_FirstName">Fornafn</string>
+    <string name="label_Home">Athuga hluti sem þú vilt deila og tappa \'Byrja á húsum \' þegar aðrir eru tilbúnir til að skiptast á.</string>
+    <string name="label_hometag">Forsíða</string>
+    <string name="label_hours">%d klst</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud er virkt. Tappa á hnappinn \' gert\' þegar því er lokið.</string>
+    <string name="label_InstNoMessages">Engin skilaboð. Þú getur sent skilaboð frá \'Skrifa skilaboð \' hnappinn á aðalvalmyndinni.</string>
+    <string name="label_InstNoMessagesAndroid">Engin skilaboð. Þú getur sent skilaboð úr \'Skrifa \' flipanum.</string>
+    <string name="label_InstNoRecipients">Engir viðtakendur. Finna annan SafeSlinger notanda nágrenninu og snerta á flipann \' Sling Keys að deila lykla.</string>
+    <string name="label_InstNoSharedFile">Ekki hluti skrá. Tengja tækið við iTunes og draga skrár til the hluti mappa.</string>
+    <string name="label_InstRecipients">Velja viðtakanda til að senda skilaboð til:</string>
+    <string name="label_InstSendInvite">Velja viðtakendur að kynna tryggilega:</string>
+    <string name="label_InstSharedFile">Velja skrá til að hengja:</string>
+    <string name="label_introduced">kynnt</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Last Name</string>
+    <string name="label_Me">Me</string>
+    <string name="label_messageIntroduceNameToYou">Mig langar að kynna %s til þín.</string>
+    <string name="label_MeToSender">Me (að %s):</string>
+    <string name="label_minutes">%d mínútur</string>
+    <string name="label_mobiletag">Farsími</string>
+    <string name="label_MostRecentOnly">Nýjustu aðeins</string>
+    <string name="label_MsgSendUpdate">Uppfært mínir SafeSlinger persónuskilríki eru í viðhengi.</string>
+    <string name="label_None">Enginn</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_numsharedfiles">%d skrár í hlut:</string>
+    <string name="label_OldThreads">Old Málefni</string>
+    <string name="label_othertag">Annað</string>
+    <string name="label_PassHintBackoff">Reyna</string>
+    <string name="label_PassHintChange">Uppfært lykilorð</string>
+    <string name="label_PassHintCreate">Búa lykilorð</string>
+    <string name="label_PassHintEnter">Lykilorð</string>
+    <string name="label_PassHintRepeat">Endurtaka lykilorð</string>
+    <string name="label_passPhraseCacheTtl">Lykilorð Cache</string>
+    <string name="label_PassPhraseIsCached">Lykilorð Geymd</string>
+    <string name="label_phoneOnly">sími-aðeins</string>
+    <string name="label_Photo">Photo</string>
+    <string name="label_PromptInstruct">Þetta númer er notað til að búa til einstaka hóp notenda. Bera saman, og síðan slá lægsta fjölda meðal allra notenda.</string>
+    <string name="label_PublicKeyID">Key ID</string>
+    <string name="label_PushTokenID">Push Skráning ID</string>
+    <string name="label_ReceivedNItems">fékk %d atriði</string>
+    <string name="label_RemindBackupDelay">Backup Áminning</string>
+    <string name="label_ReportedInactive">Greint óvirkt %s.</string>
+    <string name="label_restoreCompleteDate">Síðasta Endurheimta Lokið</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger öryggisafrit seinkað</string>
+    <string name="label_safeslingered">(SafeSlinger Bein Exchange)</string>
+    <string name="label_SaveAccount">Vista reikning</string>
+    <string name="label_SaveInstruct">Exchange lokið! Veldu aðildarfélög gögn til að spara við netfangalistann þinn:</string>
+    <string name="label_seconds">%d sekúndur</string>
+    <string name="label_selectLabel">Velja flokk</string>
+    <string name="label_SelectRecip">Velja móttakanda</string>
+    <string name="label_sendErrorData">Senda villu Gögn</string>
+    <string name="label_SendFrom">From:</string>
+    <string name="label_SendTo">Til:</string>
+    <string name="label_ShowHintAtLaunch">Sýna þetta vísbending næst.</string>
+    <string name="label_step_1">Skref 1</string>
+    <string name="label_step_2">Step 2</string>
+    <string name="label_step_3">Step 3</string>
+    <string name="label_step_4">Step 4</string>
+    <string name="label_step_5">Skref 5</string>
+    <string name="label_TapToDecryptFile">Pikkaðu til að hallmæla skrá</string>
+    <string name="label_TapToDecryptMessage">Pikkaðu til að hallmæla</string>
+    <string name="label_TapToDownloadFile">Pikkaðu til að sækja skrána</string>
+    <string name="label_TapToDownloadMessage">Bankaðu til að sækja skilaboðin</string>
+    <string name="label_TapToOpenFile">Bankaðu til að opna skrá</string>
+    <string name="label_TapToResumeDraft">Bankaðu á til að halda áfram skilaboð drög</string>
+    <string name="label_TapToSendCredentialUpdate">Bankaðu og haltu til að senda persónuskilríki uppfærslu.</string>
+    <string name="label_targetAccountLabel">Tengiliðir reikning</string>
+    <string name="label_TouchToConfigureBackupSettings">Þú gætir mögulega gera SafeSlinger iCloud öryggisafrit í iOS Stillingar. Tappa á hnappinn \' gert\' þegar því er lokið.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Snerta til að stilla öryggisafrit stillingar.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Snerta til að stilla skyndiminni hve langan tíma netaðgerðir stillingar.</string>
+    <string name="label_undefinedTypeLabel">Unknown</string>
+    <string name="label_UnknownSender">Brengla Sendandi</string>
+    <string name="label_UserIdHint">Lægsta</string>
+    <string name="label_UserName">User Name</string>
+    <string name="label_VerifyInstruct">Allir símar verða að passa eitt af 3-orð orðasambönd. Bera saman, og þá velja samsvarandi setningu.</string>
+    <string name="label_worktag">Vinna</string>
+
+    <string name="menu_About">Um</string>
+    <string name="menu_Change">Breyting</string>
+    <string name="menu_ChangePassphrase">Breyta lykilorð</string>
+    <string name="menu_CreateNew">Búa til nýtt</string>
+    <string name="menu_delete">Eyða</string>
+    <string name="menu_deleteThread">Eyða Thread \'%s\'</string>
+    <string name="menu_Details">Skoða Detail</string>
+    <string name="menu_DownloadDirectory">Sækja Directory</string>
+    <string name="menu_Edit">Breyta</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_Help">Hjálp</string>
+    <string name="menu_Introduction">Inngangur</string>
+    <string name="menu_License">Leyfi</string>
+    <string name="menu_Logout">Útskrá</string>
+    <string name="menu_messageCopyText">Afrita texta</string>
+    <string name="menu_messageForward">Forward</string>
+    <string name="menu_Remove">Fjarlægja</string>
+    <string name="menu_SelectShareApp">Senda umsókn</string>
+    <string name="menu_sendFeedback">Senda á síðunni</string>
+    <string name="menu_SendUpdate">Senda uppfæra</string>
+    <string name="menu_Settings">Stillingar</string>
+    <string name="menu_ShowTutorial">Sýna Tutorial</string>
+    <string name="menu_TagComposeMessage">Semja</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">Skilaboð</string>
+    <string name="menu_UseAnother">Nota annað</string>
+
+    <string name="prog_CollectingOthersCommitVerify">bíða eftir staðfestingu frá öllum meðlimum…</string>
+    <string name="prog_CollectingOthersItems">bíða eftir alla notendur til að taka þátt…</string>
+    <string name="prog_ConstructingGroupKey">byggja lyklahópinn…</string>
+    <string name="prog_decrypting">Afkóðun…</string>
+    <string name="prog_encrypting">dulkóða…</string>
+    <string name="prog_FileSent">skilaboð send, Beðið eftir svari…</string>
+    <string name="prog_findingKey">finna takkann…</string>
+    <string name="prog_GeneratingKey">búa takkann, þetta getur tekið smá stund…</string>
+    <string name="prog_generatingSignature">búa undirskrift…</string>
+    <string name="prog_loadingContent">hleðsla efni…</string>
+    <string name="prog_ReceivingFile">fá dulkóðuð skrá…</string>
+    <string name="prog_RequestingFile">biðja dulkóðuð skrá…</string>
+    <string name="prog_RequestingMessage">biðja dulkóðað skeyti…</string>
+    <string name="prog_RequestingPushReg">óskar ýta skráningu…</string>
+    <string name="prog_RequestingUserId">óskar aðildar…</string>
+    <string name="prog_SavingContactsToAddressBook">uppfæra heimilisfang bók…</string>
+    <string name="prog_SavingContactsToKeyDatabase">uppfæra lykilgagnagrunn…</string>
+    <string name="prog_SearchingForBackup">leita fyrir afrit…</string>
+    <string name="prog_SendingFile">senda dulkóðuð %s…</string>
+    <string name="prog_verifyingIntegrity">staðfesta áreiðanleika…</string>
+    <string name="prog_verifyingSignature">staðfesta undirskrift…</string>
+
+    <string name="section_advanced">Advanced</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">General</string>
+
+    <string name="state_BackupRestored">Backup aftur.</string>
+    <string name="state_FileDeleted">Eytt skrá %s.</string>
+    <string name="state_FileSent">Skilaboð send.</string>
+    <string name="state_MessageSavedAsDraft">Skilaboð vistuð sem drög.</string>
+    <string name="state_MessagesDeleted">%d Skilaboðum er eytt.</string>
+    <string name="state_PassphraseUpdated">Lykilorð uppfærð.</string>
+    <string name="state_RecipientsDeleted">%d viðtakendur eytt.</string>
+    <string name="state_SomeContactsImported">%s tengiliðir fluttir inn.</string>
+    <string name="state_TextCopiedToClipboard">Texti afritaður í klemmuspjald.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger er hannað til auðveldlega deila sjálfsmynd gögn, í eigin persónu eða í gegnum síma, staðfest, einka, og ósnortinn. Hver einstaklingur sem þú deilir með skapar öruggt endir-til-endir rás til að senda skilaboð.\n\nFeatures:\n- Auðveldlega skiptast snerting upplýsingar með öðrum\n- Öruggur Sling textar, myndir, neitt!\n- Sterk dulmál ver þínar\n\nemail: %2$s\nvefur: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Tungumál veittar af:</string>
+    <string name="text_Requirements">Kröfur:\n1. Verður að vera uppsett á amk 2 tæki.\n2. An Internet tenging þarf að vera virkt.</string>
+    <string name="text_ShortPromotion">Tryggilega Sling tengiliði, texta, myndir, nokkuð!</string>
+
+    <string name="title_About">Um</string>
+    <string name="title_camera">Myndavél</string>
+    <string name="title_ChooseDirectory">Veldu möppu</string>
+    <string name="title_ChooseFileLoad">Veldu Viðhengi</string>
+    <string name="title_comments">Athugasemdir/spurningar</string>
+    <string name="title_Error">Villa</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys Aðstoðarmaður</string>
+    <string name="title_FileOptions">Viðhengi Valkostir</string>
+    <string name="title_find">Skipulag</string>
+    <string name="title_home">Byrja Exchange</string>
+    <string name="title_HomePanel">Forsíða</string>
+    <string name="title_MessageDetail">Skilaboð</string>
+    <string name="title_Messages">Skilaboð</string>
+    <string name="title_MyIdentity">Identity minn</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Skilaboð Laus</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Skilaboð Laus</string>
+    <string name="title_passphrase">Lykilorð</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Viðtakendur</string>
+    <string name="title_Question">Spurning</string>
+    <string name="title_RecipientDetail">Viðtakanda Detail</string>
+    <string name="title_save">Endir Exchange</string>
+    <string name="title_SaveFileAs">Vista Skrá Eins</string>
+    <string name="title_SecureIntroduction">Örugg Inngangur</string>
+    <string name="title_SecureIntroductionInvite">Öruggur Inngangur boðskort!</string>
+    <string name="title_SelectSource">Sending options:</string>
+    <string name="title_SendFile">Senda</string>
+    <string name="title_sharingfolder">Hlutdeild Mappa</string>
+    <string name="title_size">Hversu margir notendur í skiptum?</string>
+    <string name="title_soundrecoder">Hljóð Upptökutæki</string>
+    <string name="title_TextInviteMsg">SafeSlinger Boð</string>
+    <string name="title_Threads">Þræði</string>
+    <string name="title_userid">Flokkun</string>
+    <string name="title_verify">Staðfesta</string>
+    <string name="title_Warn">Viðvörun</string>
+
+</resources>

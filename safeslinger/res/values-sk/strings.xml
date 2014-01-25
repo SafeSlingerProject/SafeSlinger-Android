@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Poslať pozvať spojenie s…</string>
+    <string name="action_ViewFile">Zobraziť %s s…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup je zakázané. Chcete upraviť nastavenia zálohovania a udržať túto pripomienku?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s má novšie zariadenie alebo klávesy, sú si istí, že chcete použiť tento staršie jedného?</string>
+    <string name="ask_FileExistsOverwrite">Názov súboru %s už existuje. Prepísať?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Bez účtu Google, budete môcť len odosielať, nie je schopný prijímať správy. Ak chcete pridať účet Google?</string>
+    <string name="ask_QuitConfirmation">Ukončite? Si si istý?</string>
+    <string name="ask_SendErrorData">Radi by sme vašu pomoc zlepšenie SafeSlinger. Chceli by ste, aby sa automaticky poslať nejaké chyby na nás?</string>
+
+    <string name="btn_Accept">Prijať</string>
+    <string name="btn_BeginExchangeProximity">Začnite Exchange</string>
+    <string name="btn_Cancel">Zrušiť</string>
+    <string name="btn_Close">Zavrieť</string>
+    <string name="btn_Continue">Pokračovať</string>
+    <string name="btn_discard">Vyradiť</string>
+    <string name="btn_Done">Hotový</string>
+    <string name="btn_Exit">Výjazd</string>
+    <string name="btn_Import">Dovoz</string>
+    <string name="btn_Introduce">Zaviesť</string>
+    <string name="btn_Match">Ďalšie</string>
+    <string name="btn_No">Nie</string>
+    <string name="btn_NoMatch">No Match</string>
+    <string name="btn_NotRemind">Zabudnúť</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Odmietnuť</string>
+    <string name="btn_Remind">Pripomenúť</string>
+    <string name="btn_Save">Uložiť</string>
+    <string name="btn_SelectFile">Pridať prílohu</string>
+    <string name="btn_SendFile">Odoslať</string>
+    <string name="btn_Yes">Áno</string>
+
+    <string name="choice_10mins">10 minút</string>
+    <string name="choice_1hour">1 hodina</string>
+    <string name="choice_1min">1 minúta</string>
+    <string name="choice_20mins">20 minút</string>
+    <string name="choice_2hours">2 hodiny</string>
+    <string name="choice_3mins">3 minúty</string>
+    <string name="choice_40mins">40 minút</string>
+    <string name="choice_4hours">4 hodiny</string>
+    <string name="choice_5mins">5 minút</string>
+    <string name="choice_8hours">8 hodín</string>
+    <string name="choice_auto_storage">Default Storage</string>
+    <string name="choice_external_storage">Externé úložisko</string>
+    <string name="choice_internal_storage">Interné úložisko</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d užívatelia</string>
+    <string name="choice_SaveDirectory">Uložiť Directory</string>
+    <string name="choice_SaveFile">Uložiť súbor</string>
+    <string name="choice_Up">Hore</string>
+
+    <string name="error_AllMembersMustUpgrade">Niektorí členovia používate staršiu verziu, všetci členovia musia byť aspoň použiť %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Všetci členovia sa musia aktualizovať, niektoré sú s použitím starších kľúčových formátov.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Všetci členovia sa musia aktualizovať, niektoré sú s použitím starších formátov registračné Push.</string>
+    <string name="error_AudioPlayerDecodeError">Audio chybe dekódovanie prehrávač.</string>
+    <string name="error_AudioPlayerError">Nedajú prehrávať záznam.</string>
+    <string name="error_AudioRecorderEncodeError">Audio Chyba kódovania rekordér.</string>
+    <string name="error_AudioRecorderPermissionError">Povolenie mikrofónu nutné. Prosím, choďte na iOS nastavenie povoliť oprávnenia mikrofón.</string>
+    <string name="error_BackupNotFound">Žiadna záloha obnoviť.</string>
+    <string name="error_BackupNotSupportedDevice">Zariadenie nepodporuje obnovenie zálohy.</string>
+    <string name="error_BadCopyProtectUpgrade">Kvôli chybe v Android 4.1, budete musieť odinštalovať a znovu nainštalovať SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Je nutné účet Google. Prosím, otvorte správcu účtu a pridanie konta Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Registrácia nie je dôveryhodný, skúste to znova neskôr ručne.</string>
+    <string name="error_C2DMRegInvalidSender">Registrácia nie je k dispozícii pre túto verziu, skontrolujte, či nie je k dispozícii aktualizovaná verzia.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Nesprávna registrácia zariadenie s firmou Google. Toto zariadenie v súčasnej dobe nepodporuje Push správy.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Push registrácia služba nie je k dispozícii, plánovanie opakovanie v %d sekúnd.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Príliš mnoho aplikácií sú registrované pre Push. Prosím odinštalujte niektoré ďalšie aplikácie a skúste znova.</string>
+    <string name="error_CannotSendEmptyFile">Nemožno odoslať prázdny prílohu.</string>
+    <string name="error_CannotSendFilesOver">Nemôžete odosielať prílohy väčší ako %d bajtov vo veľkosti.</string>
+    <string name="error_CannotSendNullFile">Nemožno odoslať null prílohu.</string>
+    <string name="error_contactCreationFailure">Kontaktné vytvorenie zlyhalo.</string>
+    <string name="error_ContactInsertFailed">Kontaktné vloženie zlyhalo.</string>
+    <string name="error_ContactNameMissing">Tento kontakt chýba názov, upravte.</string>
+    <string name="error_ContactNameMissing2">Tento kontakt chýba meno, prosím, vyberte znovu.</string>
+    <string name="error_ContactUpdateFailed">Kontaktné aktualizácia zlyhala.</string>
+    <string name="error_CorrectYourInternetConnection">Internet nie je k dispozícii, skontrolujte nastavenie.</string>
+    <string name="error_couldNotExtractPrivateKey">Nemožno extrahovať súkromný kľúč.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange limit prekročený. Začnite na výmenu znova.</string>
+    <string name="error_FeatureIsNotSupport">%1$s nie je podporovaný %2$s v tomto okamihu.</string>
+    <string name="error_FileSave">Nemožno uložiť %s.</string>
+    <string name="error_FileStorageUnavailable">Ukladanie súborov nie je k dispozícii.</string>
+    <string name="error_HttpCode">Server HTTP Chyba: %d</string>
+    <string name="error_InvalidCommitVerify">Nesprávne údaje nájdené výmenou. Začnite na výmenu znova.</string>
+    <string name="error_InvalidCommonUserId">Prosím, zadajte kladné celé číslo.</string>
+    <string name="error_InvalidContactName">Je potrebný platný názov kontaktu.</string>
+    <string name="error_InvalidIncomingMessage">Bad formát prichádzajúce správy.</string>
+    <string name="error_InvalidMsg">Zlý formát správy.</string>
+    <string name="error_InvalidRecipient">Neplatný príjemcu.</string>
+    <string name="error_LocalGroupCommitDiffer">Ste vykázala rozdiel v fráz. Začnite na výmenu znova.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Formát kľúča peer je neplatný.</string>
+    <string name="error_MessageSignatureVerificationFails">Overenie podpisu sa nepodarilo.</string>
+    <string name="error_minPassphraseRequire">Prístupové heslá vyžadujú aspoň %d znakov.</string>
+    <string name="error_MinUsersRequired">Sú potrebné minimálne %d členov pre výmenu dát.</string>
+    <string name="error_MissingNdk">SafeSlinger nezistil podporu NDK na tomto zariadení, ktoré je potrebné.</string>
+    <string name="error_MoreDataThanUsers">Neočakávané údaje nájdené výmenou. Začnite na výmenu znova.</string>
+    <string name="error_MultipleSendNotSupported">Pokúšate sa odoslať viac položiek. V tomto okamihu, SafeSlinger podporuje iba odosielanie jednu položku naraz.</string>
+    <string name="error_NoEmailAccount">E-mailový účet nie je inštalácia!</string>
+    <string name="error_noPassPhrase">No prístupové heslo zadať.</string>
+    <string name="error_NoWordListSelected">Musíte vybrať jednu z viet pred pokračovaním.</string>
+    <string name="error_OtherGroupCommitDiffer">Niekto hlásil rozdiel v fráz. Začnite na výmenu znova.</string>
+    <string name="error_OutOfMemoryError">Pamäť je príliš nízka na dokončenie tejto operácie.</string>
+    <string name="error_passPhrasesDoNotMatch">Prístupové heslá sa nezhodujú.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Prekročili ste kvótu správy pre daného príjemcu. Skúste to znova neskôr.</string>
+    <string name="error_PushMsgInvalidRegistration">Že príjemca má chýbajúce alebo zlé registráciu tlačidla. Mali by ste prestať posielať správy na toto zariadenie.</string>
+    <string name="error_PushMsgMessageNotFound">Správa vypršala.</string>
+    <string name="error_PushMsgMessageTooBig">Správa je príliš veľká. Zmenšenie veľkosti správy.</string>
+    <string name="error_PushMsgNotRegistered">Registrácia tlak Tá príjemca už nie je platný. Príjemca môže odinštalovať SafeSlinger alebo vypnutie upozornení. Mali by ste prestať posielať správy na toto zariadenie.</string>
+    <string name="error_PushMsgNotSucceed">Nastala chyba pri komunikácii so oznamovacej Push služby.</string>
+    <string name="error_PushMsgQuotaExceeded">Prekročili ste kvótu správy pre tento prístroj. Skúste to znova neskôr.</string>
+    <string name="error_PushMsgServiceFail">Oznámenie služba nie je k dispozícii tentoraz. Prosím, skúste odoslať správu neskôr.</string>
+    <string name="error_RecoderError">Nemožno pripraviť záznamník zvuku.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Ak chcete začať, \' Sling klávesy \' s iným telefónom súčasne.</string>
+    <string name="error_selectDataToSend">Musíte prílohu alebo textovú správu poslať.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Žiadna odpoveď zo servera.</string>
+    <string name="error_ShareFileDelError">Nemožno odstrániť zdieľaný súbor.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Časový limit čakania na niektorých členov skupiny pridať dáta.</string>
+    <string name="error_UnableFindPubKey">Nemožno, aby zodpovedali verejný kľúč k súkromnému kľúču v kryptografických poskytovateľ.</string>
+    <string name="error_UnableToSaveMessageInDB">Nemožno uložiť do databázy správ.</string>
+    <string name="error_UnableToSaveRecipientInDB">Nemožno uložiť do databázy príjemcov.</string>
+    <string name="error_UnableToUpdateMessageInDB">Nemožno aktualizovať databázu správu.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Nemožno aktualizovať databázu príjemcu.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger chyba, reštartujte prosím.</string>
+    <string name="error_VcardParseFailure">Kontaktné údaje formátovanie nesprávne.</string>
+    <string name="error_WebCancelledByUser">Užívateľ zrušil požiadavku servera.</string>
+
+    <string name="help_find">Na tejto obrazovke môžete nastaviť svoje meno, telefón, e-mail a vymieňať si s ostatnými. Po dokončení kliknite na tlačidlo \' Hotovo \'.</string>
+    <string name="help_home">Pre výmenu dát identity, zabezpečenie všetci užívatelia sú v blízkosti alebo na telefóne. Tlačidlo \' začnú burzy budú vymieňať iba zaškrtnuté kontaktné údaje.</string>
+    <string name="help_identity_menu">\n\nMôžete tiež zmeniť osobné údaje týkajúce sa vašej identity na tejto obrazovke kliknutím na tlačidlo s vaším menom. Tým sa zobrazí ponuka umožňujúca \' Upraviť \' svoj ​​kontakt, \' Vytvoriť nový \' kontakt, alebo \' Použiť \' Ďalší kontakt.</string>
+    <string name="help_Messages">Táto obrazovka zobrazuje všetky minulé správy a prílohy, ktoré sú stále k dispozícii na stiahnutie.</string>
+    <string name="help_passphrase">Na tejto obrazovke pre prihlásenie do aplikácie so svojím prístupovým heslom.</string>
+    <string name="help_PickRecip">Tu sú zobrazené kontakty s SafeSlinger kľúčov, vyberte jednu odoslať správu.</string>
+    <string name="help_save">Po dokončení, bude protokol odhalí zoznam údajov o totožnosti vymenené. Vyberte kontakty, ktoré chcete uložiť, a stlačte tlačidlo \' Importovať \'.</string>
+    <string name="help_SecureIntroduction">Táto obrazovka umožňuje vybrať dvoch ľudí, ktoré ste si prehodil kľúče s predtým bezpečne posielať svoje kľúče k sebe. Stačí stlačiť \' Zaviesť \', keď pripravení.</string>
+    <string name="help_Send">Táto obrazovka umožňuje vybrať niektoré údaje a príjemcu odoslať. Jednoducho stlačte \' Odoslať \', keď pripravení.</string>
+    <string name="help_size">Vyberte počet ľudí, ktorí sa snažia pre výmenu dát dohromady a stlačte tlačidlo \' OK \'.</string>
+    <string name="help_userid">Toto číslo sa na tejto obrazovke sa používa na vytvorenie unikátnej skupinu užívateľov. Prečítajte si čísla na všetkých užívateľov obrazoviek, potom by všetci používatelia mali zadať rovnakú najnižšie číslo a stlačte tlačidlo \' OK \'.</string>
+    <string name="help_verify">Teraz musíte zodpovedať jeden z týchto 3-slovo frázy so všetkými užívateľmi. Každý užívateľ musí zvoliť rovnaký spoločný frázu a stlačte tlačidlo \' Ďalej\'.</string>
+
+    <string name="iOS_contactError">Kontakty povolenie. Prosím, choďte na iOS nastavenie povoliť Kontakty oprávnenia.</string>
+    <string name="iOS_errorpushtoken">Registrácia push chýba.</string>
+    <string name="iOS_notificationError1">Upozornenie povolenie. Prosím, choďte na iOS nastavenie povoliť Upozornenie oprávnenia.</string>
+    <string name="iOS_notificationError2">Povolenie %s nutné. Prosím, choďte na iOS nastavenie povoliť Upozornenie oprávnenia.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger nie je optimalizovaný pre iOS 5.x zariadení. SafeSlinger vyžaduje iOS 6 alebo vyššej.</string>
+
+    <string name="label_ago">%s pred</string>
+    <string name="label_backupCompleteDate">Posledný Zálohovanie dokončené</string>
+    <string name="label_backupRequestDate">Posledný Backup Dopyt</string>
+    <string name="label_backupURL">Zálohovanie URL</string>
+    <string name="label_ClickForNMsgs">Dotknite sa, aby preskúmali svoje %d správ</string>
+    <string name="label_ComposeHint">Napísať správu</string>
+    <string name="label_ContactEmail">Váš e-mail</string>
+    <string name="label_ContactName">Vaše meno</string>
+    <string name="label_ContactPhone">Váš telefón</string>
+    <string name="label_days">%d dni</string>
+    <string name="label_Device">Device:</string>
+    <string name="label_DeviceInSendOnlyMode">Poslať len režim</string>
+    <string name="label_DisabledExchSourceKeyChange">Váš kľúč zmenil: Sling kľúče znova.</string>
+    <string name="label_Draft">NÁVRH</string>
+    <string name="label_EnabledKeyFormatDeprecated">Kľúč formát nepoužíva: Sling kľúče znova.</string>
+    <string name="label_exchanged">k výmene</string>
+    <string name="label_expired">expirovaný</string>
+    <string name="label_expires">vyprší %s</string>
+    <string name="label_expiresIn">vyprší v</string>
+    <string name="label_FileNameHint">Meno súboru</string>
+    <string name="label_FindInstruct">Prosím, zadajte svoje osobné údaje. Tieto dáta budú iba bezpečne zdieľané s jednotlivcami, ktorého sa budete chcieť zdieľať.</string>
+    <string name="label_FirstName">Meno</string>
+    <string name="label_Home">Skontrolujte položky, ktoré chcete zdieľať, a kliknite na tlačidlo \' Begin Exchange \', keď ostatné sú pripravené k výmene.</string>
+    <string name="label_hometag">Domáce</string>
+    <string name="label_hours">%d hodín</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud je povolené. Po dokončení kliknite na tlačidlo \' Hotovo\'.</string>
+    <string name="label_InstNoMessages">Žiadne správy. Môžete poslať správu pomocou tlačidla \' Napísať správu \' na hlavné menu.</string>
+    <string name="label_InstNoMessagesAndroid">Žiadne správy. Môžete poslať správu z \' Compose \' karte.</string>
+    <string name="label_InstNoRecipients">Žiadne príjemcovi. Nájsť ďalšie užívateľa SafeSlinger okolia a kliknite na kartu \' Sling Keys zdieľať kľúče.</string>
+    <string name="label_InstNoSharedFile">Žiadny zdieľaný súbor. Pripojte svoje zariadenie s iTunes a pretiahnuť súbory do zdieľaného priečinka.</string>
+    <string name="label_InstRecipients">Vyberte príjemcu poslať správu:</string>
+    <string name="label_InstSendInvite">Vyberte príjemcu bezpečne zaviesť:</string>
+    <string name="label_InstSharedFile">Vyberte súbor, ktorý chcete pripojiť:</string>
+    <string name="label_introduced">predstavil</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Priezvisko</string>
+    <string name="label_Me">Ma</string>
+    <string name="label_messageIntroduceNameToYou">Chcel by som predstaviť %s na vás.</string>
+    <string name="label_MeToSender">Me (do %s):</string>
+    <string name="label_minutes">%d minút</string>
+    <string name="label_mobiletag">Mobilné</string>
+    <string name="label_MostRecentOnly">Najnovšie iba</string>
+    <string name="label_MsgSendUpdate">Moja aktualizované poverenia SafeSlinger sú pripojené.</string>
+    <string name="label_None">Žiadny</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_numsharedfiles">%d súbory zdieľať:</string>
+    <string name="label_OldThreads">Staré témy</string>
+    <string name="label_othertag">Ďalšie</string>
+    <string name="label_PassHintBackoff">Skúsiť znova</string>
+    <string name="label_PassHintChange">Aktualizované Prístupové heslo</string>
+    <string name="label_PassHintCreate">Vytvorte prístupové heslo</string>
+    <string name="label_PassHintEnter">Prístupové heslo</string>
+    <string name="label_PassHintRepeat">Opakujte Prístupové heslo</string>
+    <string name="label_passPhraseCacheTtl">Prístupové heslo Cache</string>
+    <string name="label_PassPhraseIsCached">Prístupové heslo uložené vo vyrovnávacej pamäti</string>
+    <string name="label_phoneOnly">telefón iba</string>
+    <string name="label_Photo">Fotografie</string>
+    <string name="label_PromptInstruct">Toto číslo sa používa na vytvorenie unikátnej skupinu užívateľov. Porovnajte, a potom zadajte najnižšie číslo medzi všetkými užívateľmi.</string>
+    <string name="label_PublicKeyID">ID kľúča</string>
+    <string name="label_PushTokenID">Stlačte Registračné ID</string>
+    <string name="label_ReceivedNItems">dostal %d položiek</string>
+    <string name="label_RemindBackupDelay">Backup Reminder</string>
+    <string name="label_ReportedInactive">Hlásené neaktívne %s.</string>
+    <string name="label_restoreCompleteDate">Posledné obnovenie dokončené</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger zálohy odložené</string>
+    <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
+    <string name="label_SaveAccount">Uložte účet</string>
+    <string name="label_SaveInstruct">Výmena Complete! Vyberte členské dáta uložiť do adresára:</string>
+    <string name="label_seconds">%d sekúnd</string>
+    <string name="label_selectLabel">Vybrať štítok</string>
+    <string name="label_SelectRecip">Vyberte príjemcu</string>
+    <string name="label_sendErrorData">Poslať chyba dát</string>
+    <string name="label_SendFrom">Od:</string>
+    <string name="label_SendTo">Ak chcete:</string>
+    <string name="label_ShowHintAtLaunch">Zobraziť na túto radu nabudúce.</string>
+    <string name="label_step_1">Krok 1</string>
+    <string name="label_step_2">Krok 2</string>
+    <string name="label_step_3">Krok 3</string>
+    <string name="label_step_4">Krok 4</string>
+    <string name="label_step_5">Krok 5</string>
+    <string name="label_TapToDecryptFile">Kliknutím na tlačidlo dešifrovať súbor</string>
+    <string name="label_TapToDecryptMessage">Kliknite pre dešifrovanie</string>
+    <string name="label_TapToDownloadFile">Kliknutím na tlačidlo stiahnuť súbor</string>
+    <string name="label_TapToDownloadMessage">Kliknutím na tlačidlo Prevziať správu</string>
+    <string name="label_TapToOpenFile">Klepnutím otvoríte súbor</string>
+    <string name="label_TapToResumeDraft">Kliknutím na tlačidlo obnovíte správy návrh</string>
+    <string name="label_TapToSendCredentialUpdate">Kliknutím a pridržaním odoslanie poverenia aktualizáciu.</string>
+    <string name="label_targetAccountLabel">Kontakty účet</string>
+    <string name="label_TouchToConfigureBackupSettings">Môžete voliteľne aktivovať SafeSlinger iCloud zálohovanie v iOS Nastavenie. Po dokončení kliknite na tlačidlo \' Hotovo\'.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Dotknite sa na konfiguráciu nastavení zálohovania.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Dotknite sa na konfiguráciu nastavenie časového limitu vyrovnávacej pamäte.</string>
+    <string name="label_undefinedTypeLabel">Neznáme</string>
+    <string name="label_UnknownSender">Šifrované Sender</string>
+    <string name="label_UserIdHint">Najnižšia</string>
+    <string name="label_UserName">Užívateľské meno</string>
+    <string name="label_VerifyInstruct">Všetky telefóny musia zodpovedať jednej z 3-slovo frázy. Porovnajte, a potom vybrať zodpovedajúce výraz.</string>
+    <string name="label_worktag">Práce</string>
+
+    <string name="menu_About">O</string>
+    <string name="menu_Change">Zmena</string>
+    <string name="menu_ChangePassphrase">Zmena Prístupové heslo</string>
+    <string name="menu_CreateNew">Vytvoriť nový</string>
+    <string name="menu_delete">Vymazať</string>
+    <string name="menu_deleteThread">Zmazať téme \'%s\'</string>
+    <string name="menu_Details">Zobraziť detail</string>
+    <string name="menu_DownloadDirectory">Stiahnite si adresár</string>
+    <string name="menu_Edit">Upraviť</string>
+    <string name="menu_FileManager">Správca súborov</string>
+    <string name="menu_Help">Pomoc</string>
+    <string name="menu_Introduction">Úvod</string>
+    <string name="menu_License">Licencie</string>
+    <string name="menu_Logout">Odhlásenia</string>
+    <string name="menu_messageCopyText">Kópia Text</string>
+    <string name="menu_messageForward">Vpred</string>
+    <string name="menu_Remove">Odstrániť</string>
+    <string name="menu_SelectShareApp">Odoslať aplikácie</string>
+    <string name="menu_sendFeedback">Odoslať spätnú väzbu</string>
+    <string name="menu_SendUpdate">Poslať Aktualizovať</string>
+    <string name="menu_Settings">Nastavenie</string>
+    <string name="menu_ShowTutorial">Zobraziť Tutorial</string>
+    <string name="menu_TagComposeMessage">Skladať</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">Správy</string>
+    <string name="menu_UseAnother">Použite Ďalšie</string>
+
+    <string name="prog_CollectingOthersCommitVerify">čaká na overenie všetkých členov…</string>
+    <string name="prog_CollectingOthersItems">čaká na všetkých používateľov sa pripojiť…</string>
+    <string name="prog_ConstructingGroupKey">budovanie skupinové kľúče…</string>
+    <string name="prog_decrypting">dešifrovanie…</string>
+    <string name="prog_encrypting">šifrovanie…</string>
+    <string name="prog_FileSent">správa odoslaná, čaká na odpoveď…</string>
+    <string name="prog_findingKey">nájsť kľúč…</string>
+    <string name="prog_GeneratingKey">generovanie kľúča, môže to chvíľu trvať…</string>
+    <string name="prog_generatingSignature">generovanie podpisu…</string>
+    <string name="prog_loadingContent">obsah sa načítava…</string>
+    <string name="prog_ReceivingFile">dostane zašifrovaný súbor…</string>
+    <string name="prog_RequestingFile">žiada zašifrovaný súbor…</string>
+    <string name="prog_RequestingMessage">požaduje šifrované správy…</string>
+    <string name="prog_RequestingPushReg">žiadostí o zápis Push…</string>
+    <string name="prog_RequestingUserId">žiadajúce o členstvo…</string>
+    <string name="prog_SavingContactsToAddressBook">Adresa aktualizácie kniha…</string>
+    <string name="prog_SavingContactsToKeyDatabase">aktualizovať databázu kľúčov…</string>
+    <string name="prog_SearchingForBackup">hľadanie zálohovanie…</string>
+    <string name="prog_SendingFile">odosielanie šifrované %s…</string>
+    <string name="prog_verifyingIntegrity">overenie integrity…</string>
+    <string name="prog_verifyingSignature">overenie podpisu…</string>
+
+    <string name="section_advanced">Pokročilý</string>
+    <string name="section_backup">Zálohovanie</string>
+    <string name="section_general">Všeobecný</string>
+
+    <string name="state_BackupRestored">Backup obnoviť.</string>
+    <string name="state_FileDeleted">Zmazaný súbor %s.</string>
+    <string name="state_FileSent">Správa bola odoslaná.</string>
+    <string name="state_MessageSavedAsDraft">Správa uložená ako koncept.</string>
+    <string name="state_MessagesDeleted">%d správy vymazané.</string>
+    <string name="state_PassphraseUpdated">Prístupové heslo aktualizované.</string>
+    <string name="state_RecipientsDeleted">%d príjemcovi vymazané.</string>
+    <string name="state_SomeContactsImported">%s kontakty importovať.</string>
+    <string name="state_TextCopiedToClipboard">Text skopírovaný do schránky.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger je navrhnutý tak, aby ľahko zdieľať dáta identity, osobne alebo po telefóne, overený, súkromie a neporušený. Každá osoba zdieľate s vytvára zabezpečený kanál end-to-end pre odosielanie správ.\n\nVlastnosti:\n- Jednoduchá výmena informácií o kontaktoch s ostatnými\n- Bezpečne praku texty, fotografie, čokoľvek!\n- Silné šifrovanie chráni vaše informácie\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Jazyky poskytované:</string>
+    <string name="text_Requirements">Požiadavky:\n1. Musí byť nainštalovaný na minimálne 2 zariadenia.\n2. Pripojenie k Internetu musí byť aktívny.</string>
+    <string name="text_ShortPromotion">Bezpečne Sling kontakty, texty, fotky, čokoľvek!</string>
+
+    <string name="title_About">O</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_ChooseDirectory">Zvoľte adresár</string>
+    <string name="title_ChooseFileLoad">Vyberte si svoj ​​prílohu</string>
+    <string name="title_comments">Komentáre/otázky</string>
+    <string name="title_Error">Chyba</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys asistent</string>
+    <string name="title_FileOptions">Možnosti pripojenia</string>
+    <string name="title_find">Nastavenie</string>
+    <string name="title_home">Začnite Exchange</string>
+    <string name="title_HomePanel">Domáce</string>
+    <string name="title_MessageDetail">Správa</string>
+    <string name="title_Messages">Správy</string>
+    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Správa dispozícii</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Správy dispozícii</string>
+    <string name="title_passphrase">Prístupové heslo</string>
+    <string name="title_photoalbum">Fotoalbum</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Príjemcovia</string>
+    <string name="title_Question">Otázka</string>
+    <string name="title_RecipientDetail">Príjemca Detail</string>
+    <string name="title_save">Koniec Exchange</string>
+    <string name="title_SaveFileAs">Uložte súbor ako</string>
+    <string name="title_SecureIntroduction">Bezpečné Úvod</string>
+    <string name="title_SecureIntroductionInvite">Secure Úvod Pozvanie!</string>
+    <string name="title_SelectSource">Odoslanie možnosti:</string>
+    <string name="title_SendFile">Odoslať</string>
+    <string name="title_sharingfolder">Zdieľanie zložky</string>
+    <string name="title_size">Koľko užívateľov na výmenu?</string>
+    <string name="title_soundrecoder">Záznam zvuku</string>
+    <string name="title_TextInviteMsg">SafeSlinger Pozvánka</string>
+    <string name="title_Threads">Témy</string>
+    <string name="title_userid">Zoskupenie</string>
+    <string name="title_verify">Overiť si</string>
+    <string name="title_Warn">Varovanie</string>
+
+</resources>

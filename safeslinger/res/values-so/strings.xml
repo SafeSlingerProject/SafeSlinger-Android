@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Send kugu marti- link leh…</string>
+    <string name="action_ViewFile">View %s leh…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Kaabta naafo yahay. Ma rabtaa in aad qabsato goobaha raad raac iyo xusuusin this hayn?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s leeyahay qalab dheeraad ah oo dhawaan ama muhiimka ah, aad hubto in aad rabto in aad isticmaasho ka mid ah tan ka weyn?</string>
+    <string name="ask_FileExistsOverwrite">File name %s horay u jirta. Overwrite?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Iyadoo aan Account a Google waxay noqon doontaa in aad awoodi kartid inaad soo dirto, ma heli fariimaha. Ma rabtaa in aad ku darto account Google a?</string>
+    <string name="ask_QuitConfirmation">Jooji? Waa inaad hubiso?</string>
+    <string name="ask_SendErrorData">Waxaan jeclaan lahaa in aad caawinaad hagaajinta SafeSlinger. Would you like to si toos ah wixii qaladaad ah aad noo soo dirayso?</string>
+
+    <string name="btn_Accept">Oggolow</string>
+    <string name="btn_BeginExchangeProximity">Ku bilow Exchange</string>
+    <string name="btn_Cancel">Cancel</string>
+    <string name="btn_Close">Close</string>
+    <string name="btn_Continue">Continue</string>
+    <string name="btn_discard">Daadi</string>
+    <string name="btn_Done">QABTAY</string>
+    <string name="btn_Exit">Exit</string>
+    <string name="btn_Import">Soodejineed</string>
+    <string name="btn_Introduce">Isbar</string>
+    <string name="btn_Match">Next</string>
+    <string name="btn_No">No</string>
+    <string name="btn_NoMatch">Match No</string>
+    <string name="btn_NotRemind">Forget</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Diiddo</string>
+    <string name="btn_Remind">Xasuusi</string>
+    <string name="btn_Save">Save</string>
+    <string name="btn_SelectFile">Add Attachment</string>
+    <string name="btn_SendFile">Send</string>
+    <string name="btn_Yes">Haa</string>
+
+    <string name="choice_10mins">10 daqiiqo</string>
+    <string name="choice_1hour">1 saac</string>
+    <string name="choice_1min">1 daqiiqo</string>
+    <string name="choice_20mins">20 daqiiqo</string>
+    <string name="choice_2hours">2 hours</string>
+    <string name="choice_3mins">3 daqiiqo</string>
+    <string name="choice_40mins">40 daqiiqo</string>
+    <string name="choice_4hours">4 hours</string>
+    <string name="choice_5mins">5 daqiiqo</string>
+    <string name="choice_8hours">8 hours</string>
+    <string name="choice_auto_storage">Kaydinta Default</string>
+    <string name="choice_external_storage">Kaydinta External</string>
+    <string name="choice_internal_storage">Kaydinta Gudaha</string>
+    <string name="choice_nolimit">Limit No</string>
+    <string name="choice_NumUsers">%d users</string>
+    <string name="choice_SaveDirectory">Save Directory</string>
+    <string name="choice_SaveFile">Save the file</string>
+    <string name="choice_Up">Up</string>
+
+    <string name="error_AllMembersMustUpgrade">Xubnaha qaarkood waxay isticmaalayaan version waayeel ah; dhammaan xubnaha waa in ugu yaraan ay isticmaalaan %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Dhammaan xubnaha waa in la tayogeliyo, qaar baa isticmaalaya qaabab ka weyn oo muhiim ah.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Dhammaan xubnaha waa in la tayogeliyo, qaar baa isticmaalaya qaabab diiwaangelinta riix ka weyn.</string>
+    <string name="error_AudioPlayerDecodeError">Kelmadaha qalad ciyaaryahanka Audio.</string>
+    <string name="error_AudioPlayerError">Ma ciyaari karaa wax lagu qoro.</string>
+    <string name="error_AudioRecorderEncodeError">Qaladka sida ey recorder Audio.</string>
+    <string name="error_AudioRecorderPermissionError">Ogolaansho Manbar loo baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Manbar.</string>
+    <string name="error_BackupNotFound">No raad raac ah si loo soo celiyo.</string>
+    <string name="error_BackupNotSupportedDevice">Device taageeraan uusan raad raac celiyo.</string>
+    <string name="error_BadCopyProtectUpgrade">Maaddaama ay kutaan ah ee Android 4.1, waxaad yeelan doontaa uninstall iyo dib SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Account Google A waxaa loo baahan yahay. Fadlan furi maamulaha account markaasna ku dar xisaabta ku Google a.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Diiwaan-gelinta oo aan lagana sugaa, fadlan retry joogu u dambe.</string>
+    <string name="error_C2DMRegInvalidSender">Diiwaangelinta aan la heli karin, waayo version this, fadlan hubi for version ah updated.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Diiwaan-gelinta qalab khalad ah ula Google. Qalabkani waxa hadda ma taageeri Fariin riix.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Adeegga diiwaangelinta riixdo ma laga heli karo, jadwal retry in %d seconds.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Codsiyada aad u tiro badan diiwaan gashan riixdo. Fadlan uninstall qaar ka mid ah codsiyada kale oo retry.</string>
+    <string name="error_CannotSendEmptyFile">Ma diri karaa lifaaqa madhan.</string>
+    <string name="error_CannotSendFilesOver">Ma diri karaa attachments ka badan yahay %d bytes ee size.</string>
+    <string name="error_CannotSendNullFile">Ma diri karaa lifaaqa ah null.</string>
+    <string name="error_contactCreationFailure">Contact abuurista guuldareystay.</string>
+    <string name="error_ContactInsertFailed">Kala xiriir INSERT guuldareystay.</string>
+    <string name="error_ContactNameMissing">Kala soo xiriir Tan waxaa ka maqan magac, fadlan xaalkaa.</string>
+    <string name="error_ContactNameMissing2">Kala soo xiriir Tan waxaa ka maqan magac, fadlan reselect.</string>
+    <string name="error_ContactUpdateFailed">Update Contact guuldareystay.</string>
+    <string name="error_CorrectYourInternetConnection">Internet ma laga heli karo, hubi goobaha aad.</string>
+    <string name="error_couldNotExtractPrivateKey">Ma soo saaro kari muhiimka ah ee gaarka loo leeyahay.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Exchange dhaafto. Ku bilow sarrifku mar kale.</string>
+    <string name="error_FeatureIsNotSupport">%1$s Ha isku on %2$s waqtigan.</string>
+    <string name="error_FileSave">Awoodin in uu badbaadiyo %s.</string>
+    <string name="error_FileStorageUnavailable">File kaydinta aan la heli karin.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Xogtu khaldan laga helay beddelkeeda. Ku bilow sarrifku mar kale.</string>
+    <string name="error_InvalidCommonUserId">Fadlan qor abyoonaha togan.</string>
+    <string name="error_InvalidContactName">A magaca xiriir ansax ah ayaa loo baahan yahay.</string>
+    <string name="error_InvalidIncomingMessage">Format fariin soo galeysa Bad.</string>
+    <string name="error_InvalidMsg">Format fariin Bad.</string>
+    <string name="error_InvalidRecipient">Qaataha Invalid.</string>
+    <string name="error_LocalGroupCommitDiffer">Waxaad la sheegay inay kala duwan yihiin jumlado. Ku bilow sarrifku mar kale.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Habka ugu muhiimsan ee isku faca aanay sax ahayn.</string>
+    <string name="error_MessageSignatureVerificationFails">Cadaynta Saxiixa guuldareystay.</string>
+    <string name="error_minPassphraseRequire">Passphrases u baahan characters ugu yaraan %d.</string>
+    <string name="error_MinUsersRequired">Ugu yaraan %d xubnood oo waxaa looga baahan yahay in ay isu dhaafsadaan xogta.</string>
+    <string name="error_MissingNdk">SafeSlinger ma ogaan karaa taageero NDK on qalab this, taas oo loo baahan yahay.</string>
+    <string name="error_MoreDataThanUsers">Xog -filaan ah oo laga helay beddelkeeda. Ku bilow sarrifku mar kale.</string>
+    <string name="error_MultipleSendNotSupported">Waxaad isku dayaya inay soo diraan items kala duwan. Wakhtigan, SafeSlinger kaliya taageertaa diraya ka mid ah item waqti.</string>
+    <string name="error_NoEmailAccount">Account Email ma aha computer!</string>
+    <string name="error_noPassPhrase">Passphrase No galay.</string>
+    <string name="error_NoWordListSelected">Waa in aad ka dooro mid ka mid ah jumlado ka hor u socdaa.</string>
+    <string name="error_OtherGroupCommitDiffer">Qof la sheegay in farqi jumlado. Ku bilow sarrifku mar kale.</string>
+    <string name="error_OutOfMemoryError">Memory waa mid aad u yar yahay si uu dhammeeyo qalliinka this.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases ma u dhigma.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Waxaad sii badnayeen soo qaato fariinta for qaataha in. Fadlan dambe retry.</string>
+    <string name="error_PushMsgInvalidRegistration">Qaataha In uu leeyahay diiwaan-gelinta a riix maqan ama xun. Waa in aad joojiso fariimaha si qalab this diraya.</string>
+    <string name="error_PushMsgMessageNotFound">Message dhacay.</string>
+    <string name="error_PushMsgMessageTooBig">Farriinta waa mid aad u weyn. Iska yaree size ee fariinta.</string>
+    <string name="error_PushMsgNotRegistered">Diiwaangelinta riix qaataha in uu dib dambe waa ansax ah. Qaataha ayaa waxaa kahara laga yaabaa in SafeSlinger ama demiyaa ogeysiin. Waa in aad joojiso fariimaha si qalab this diraya.</string>
+    <string name="error_PushMsgNotSucceed">Waxaa jiray qalad ah la xidhiidhka adeegga wargelinta riix uu.</string>
+    <string name="error_PushMsgQuotaExceeded">Waxaad sii badnayeen soo qaato fariinta aallada this. Fadlan dambe retry.</string>
+    <string name="error_PushMsgServiceFail">Adeegga Notification aan la heli karin waqtigan. Fadlan isku day in aad soo dirto fariin uu mar dambe.</string>
+    <string name="error_RecoderError">Ma ku diyaarin karaa recorder maqal ah.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Si aad u bilaabaan, \' shakaalka Furayaasha \' with phone kale waqti isku mid ah.</string>
+    <string name="error_selectDataToSend">Waxaad u baahan tahay lifaaq ama fariin qoraal u soo diri a.</string>
+    <string name="error_ServerAppMessage">Message Server: \' %s \'</string>
+    <string name="error_ServerAppMessageCStr">Message Server: \' %s \'</string>
+    <string name="error_ServerNotResponding">No jawaab ka soo server.</string>
+    <string name="error_ShareFileDelError">Ma ka saari kartaa faylka la wadaago.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout sugaya xubnaha kooxda qaar ka mid ah ku darto xogta.</string>
+    <string name="error_UnableFindPubKey">Awoodi waayay inuu ku muhiimka ah ee dadweynaha si ay ugu muhiimsan ee gaarka loo leeyahay ee bixiye -xegeeno.</string>
+    <string name="error_UnableToSaveMessageInDB">Awoodin in uu badbaadiyo in ay database fariinta.</string>
+    <string name="error_UnableToSaveRecipientInDB">Awoodin in uu badbaadiyo in ay database qaataha.</string>
+    <string name="error_UnableToUpdateMessageInDB">Awoodin in ay cusboonaysiiso database fariinta.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Awoodin in ay cusboonaysiiso database qaataha.</string>
+    <string name="error_UncaughtExceptionOccured">Qalad SafeSlinger, fadlan la bilaabi.</string>
+    <string name="error_VcardParseFailure">Xogta Contact ahaa Fedaral si qaldan.</string>
+    <string name="error_WebCancelledByUser">User kansal server codsi.</string>
+
+    <string name="help_find">Isticmaal screen this to dhigay magacaaga, telefoon, email iyo aad kalka kuwa kale. Qasabadda \' qabtay \' button markaad dhamaysid.</string>
+    <string name="help_home">Si aad isu dhaafsadaan xogta aqoonsiga, si loo hubiyo dhamaan isticmaalayaasha u dhow ama telefoonka ku yihiin. \' Ka bilow Exchange \' The badhanka beddelan doonaa oo keliya xogta xiriir la hubiyaa.</string>
+    <string name="help_identity_menu">\n\nWaxa kale oo aad beddeli kartaa macluumaadka shakhsiyeed oo ku saabsan aqoonsiga on screen this haray adigoo on badhanka leh magacaaga. Tani waxay muujiyaan doonaa menu a kuu oggolaadaan in aad \' Edit \' xidhiidhka aad, \' Create New \' xiriir, ama \' Isticmaal kale oo \' xiriir.</string>
+    <string name="help_Messages">Shaashada Tan waxay ku tusaysaa oo dhan farriimaha la soo dhaafay, iyo lifaaqyada in weli waxaa laga heli karaa for download.</string>
+    <string name="help_passphrase">Isticmaal shaashada si login codsiga aad u passphrase.</string>
+    <string name="help_PickRecip">La xiriirida furayaasha SafeSlinger halkan bandhigay, dooro mid u soo dirto fariin ay u.</string>
+    <string name="help_save">Marka ay dhammaadaan, maamuuska u muujin doonaa liiska data aqoonsiga ku badelay. Dooro xiriirrada aad rabtid in aad ku badbaadin iyo taabo \' Soodejineed \'.</string>
+    <string name="help_SecureIntroduction">Shaashada kuu ogolaanayaa inaad xulo laba qof oo aad wadhfiyey ayuu furayaasha leh ka hor si ammaan ah u diri furayaasha ay si midba midka kale. Simply riix \' Isbar \' marka uu diyaar.</string>
+    <string name="help_Send">Shaashada kuu ogolaanayaa inaad dooro qaar ka mid ah macluumaadka iyo qaataha ah in ay u dirto. Simply riix \' Send \' marka uu diyaar.</string>
+    <string name="help_size">Dooro tirada dadka waxa ay isku dayaysaa in ay wada beddelan xogta iyo taabo \' OK \'.</string>
+    <string name="help_userid">Tani tirada on screen this waxaa loo isticmaalaa si loo abuuro koox gaar ah ee isticmaala. Dib u eeg lambarada ku qoran oo dhan isticmaala \' screens, ka dibna dhamaan isticmaalayaasha waa in la galo tiro isku mid ah ugu hooseeya iyo saxaafadda \' OK \'.</string>
+    <string name="help_verify">Haddaba, waa in aad mid ka mid ah ereyadan 3 - hadalka oo dhan isticmaala. User kastaa waa inuu ka dooro weedha ah, isla markaana caadi ah, oo saxaafadda \' Next \'.</string>
+
+    <string name="iOS_contactError">Contacts ogolaansho looga baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Contacts.</string>
+    <string name="iOS_errorpushtoken">Diiwaangelinta riixdo maqan yahay.</string>
+    <string name="iOS_notificationError1">Ogolaansho Notifications loo baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Notifications.</string>
+    <string name="iOS_notificationError2">Ogolaansho %s loo baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Notifications.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger aan la optimized for qalabka 5.x arrimo. SafeSlinger u baahan tahay arrimo 6 ama wax ka sareeya.</string>
+
+    <string name="label_ago">%s ago</string>
+    <string name="label_backupCompleteDate">Kaabta Last Dhameystiray</string>
+    <string name="label_backupRequestDate">Request ee kaabta Last</string>
+    <string name="label_backupURL">Kaabta URL</string>
+    <string name="label_ClickForNMsgs">Taabanina inay dib u eegaan %d farriimo aad</string>
+    <string name="label_ComposeHint">-ridi Message</string>
+    <string name="label_ContactEmail">Your Email</string>
+    <string name="label_ContactName">Your Name</string>
+    <string name="label_ContactPhone">Your Phone</string>
+    <string name="label_days">%d maalmood</string>
+    <string name="label_Device">Device:</string>
+    <string name="label_DeviceInSendOnlyMode">Mode soo dir - kaliya</string>
+    <string name="label_DisabledExchSourceKeyChange">Your fure is bedeshay: shakaalka Furayaasha mar kale.</string>
+    <string name="label_Draft">MABDAI\'GA</string>
+    <string name="label_EnabledKeyFormatDeprecated">Format Key maxay HIV: shakaalka Furayaasha mar kale.</string>
+    <string name="label_exchanged">ku badelay</string>
+    <string name="label_expired">muddadooda</string>
+    <string name="label_expires">dhicin %s</string>
+    <string name="label_expiresIn">ku egyahay</string>
+    <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Fadlan qor macluumaadkaaga shakhsiyeed. Xogtan oo kaliya in lagu ammaan ah lala wadaagi doonaa shaqsiyaadka kii aad doorato inaad la wadaagto.</string>
+    <string name="label_FirstName">Magaca Hore</string>
+    <string name="label_Home">Hubi alaabta aad rabto in aad la wadaagto hormariyo \' Ka bilow Exchange \' dadka kale marka ay diyaar u yihiin in ay isu dhaafsadaan.</string>
+    <string name="label_hometag">Home</string>
+    <string name="label_hours">%d saacadood</string>
+    <string name="label_iCloudEnable">SafeSlinger oodaa laguusoo. Qasabadda \' qabtay \' button markaad dhamaysid.</string>
+    <string name="label_InstNoMessages">No fariimaha. Waxaa laga yaabaa inaad soo dirto fariin ka timid \' -ridi Message \' button on menu Home.</string>
+    <string name="label_InstNoMessagesAndroid">No fariimaha. Waxaa laga yaabaa inaad fariin ka soo tab \' koobanahay \' diri.</string>
+    <string name="label_InstNoRecipients">Qaata No. Find user kale SafeSlinger dhow iyo taaban tab \' shakaalka Furayaasha \' si ay u wadaagaan furayaasha.</string>
+    <string name="label_InstNoSharedFile">File No la wadaago. Connect qalab aad ula Lugood iyo files jiidid si buugyaraha la wadaago.</string>
+    <string name="label_InstRecipients">Soo qaado qaataha ah u soo dirto fariin to:</string>
+    <string name="label_InstSendInvite">Soo qaado qaata in ay si ammaan ah ku bilaabi:</string>
+    <string name="label_InstSharedFile">Soo qaado faylka ay u soo lifaaq:</string>
+    <string name="label_introduced">soo bandhigay</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Name Last</string>
+    <string name="label_Me">Me</string>
+    <string name="label_messageIntroduceNameToYou">Waxaan jeclaan lahaa in aan soo saarno %s in aad.</string>
+    <string name="label_MeToSender">Me ( si %s ):</string>
+    <string name="label_minutes">%d daqiiqo</string>
+    <string name="label_mobiletag">Mobile</string>
+    <string name="label_MostRecentOnly">Most Recent kaliya</string>
+    <string name="label_MsgSendUpdate">Updated shahaadooyinkooda My SafeSlinger ku lifaaqan yihiin.</string>
+    <string name="label_None">None</string>
+    <string name="label_NumericModeHint">Non- Ingiriisi</string>
+    <string name="label_numsharedfiles">%d Files si Share:</string>
+    <string name="label_OldThreads">Old Threads</string>
+    <string name="label_othertag">Other</string>
+    <string name="label_PassHintBackoff">Retry</string>
+    <string name="label_PassHintChange">Passphrase Updated</string>
+    <string name="label_PassHintCreate">Create an Passphrase</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Passphrase Repeat</string>
+    <string name="label_passPhraseCacheTtl">Cache Passphrase</string>
+    <string name="label_PassPhraseIsCached">Cached Passphrase</string>
+    <string name="label_phoneOnly">phone - kaliya</string>
+    <string name="label_Photo">Photo</string>
+    <string name="label_PromptInstruct">Lambarka waxa loo isticmaalay si loo abuuro koox gaar ah ee isticmaala. Is barbar dhig, ka dibna ku qor lambarka ugu hooseeya oo dhan isticmaala.</string>
+    <string name="label_PublicKeyID">ID Key</string>
+    <string name="label_PushTokenID">ID Registration riixdo</string>
+    <string name="label_ReceivedNItems">helay %d items</string>
+    <string name="label_RemindBackupDelay">Xusuusinta ee kaabta</string>
+    <string name="label_ReportedInactive">Reported %s aan firfircooneyn.</string>
+    <string name="label_restoreCompleteDate">Last Celinta Dhameystiray</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger raad raac dib u</string>
+    <string name="label_safeslingered">( SafeSlinger Direct Exchange )</string>
+    <string name="label_SaveAccount">Save the Account</string>
+    <string name="label_SaveInstruct">Exchange Buuxi! Dooro xogta xubin ka ah si loo badbaadiyo si aad buugga cinwaankiisu yahay:</string>
+    <string name="label_seconds">%d seconds</string>
+    <string name="label_selectLabel">Select calaamad</string>
+    <string name="label_SelectRecip">Select Qaate</string>
+    <string name="label_sendErrorData">Send Error Data</string>
+    <string name="label_SendFrom">From:</string>
+    <string name="label_SendTo">To:</string>
+    <string name="label_ShowHintAtLaunch">Tus guud-mar this time soo socda.</string>
+    <string name="label_step_1">Tallaabada 1</string>
+    <string name="label_step_2">Tallaabada 2</string>
+    <string name="label_step_3">Tallaabada 3</string>
+    <string name="label_step_4">Tallaabada 4</string>
+    <string name="label_step_5">Talaabada 5</string>
+    <string name="label_TapToDecryptFile">Qasabada si decrypt file</string>
+    <string name="label_TapToDecryptMessage">Qasabada si decrypt</string>
+    <string name="label_TapToDownloadFile">Qasabada si file</string>
+    <string name="label_TapToDownloadMessage">Qasabada si download fariin</string>
+    <string name="label_TapToOpenFile">Qasabada in la furo file</string>
+    <string name="label_TapToResumeDraft">Tuubada si ay u bilaabaan qabyada farriin</string>
+    <string name="label_TapToSendCredentialUpdate">Qasabada iyo Qabsada soo diri update shahaadada aqoonsiga.</string>
+    <string name="label_targetAccountLabel">Contacts Account</string>
+    <string name="label_TouchToConfigureBackupSettings">Waxaad optionally awood laga yaabaa in raad raac SafeSlinger oodaa in Settings arrimo. Qasabadda \' qabtay \' button markaad dhamaysid.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Taabanina reserved goobaha raad raac ah.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Taabanina reserved cache goobaha timeout.</string>
+    <string name="label_undefinedTypeLabel">Unknown</string>
+    <string name="label_UnknownSender">Qofka dirayo laga fiirsado ka</string>
+    <string name="label_UserIdHint">Ugu horeyay</string>
+    <string name="label_UserName">User Name</string>
+    <string name="label_VerifyInstruct">All telefoonada waa dhigma mid ka mid ah jumlado 3 - hadalka. Is barbar dhig, ka dibna ka qaadan weedhani ku habboon ee.</string>
+    <string name="label_worktag">Work</string>
+
+    <string name="menu_About">About</string>
+    <string name="menu_Change">Change</string>
+    <string name="menu_ChangePassphrase">Change Passphrase</string>
+    <string name="menu_CreateNew">Create an New</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_deleteThread">Delete Thread \' %s \'</string>
+    <string name="menu_Details">View Detail</string>
+    <string name="menu_DownloadDirectory">Download Directory</string>
+    <string name="menu_Edit">Edit</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_Help">Ka caawi</string>
+    <string name="menu_Introduction">Hordhac</string>
+    <string name="menu_License">License</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_messageCopyText">Copy Text</string>
+    <string name="menu_messageForward">Forward</string>
+    <string name="menu_Remove">Ka saar</string>
+    <string name="menu_SelectShareApp">Send Application</string>
+    <string name="menu_sendFeedback">Send Feedback</string>
+    <string name="menu_SendUpdate">Send Update</string>
+    <string name="menu_Settings">Settings</string>
+    <string name="menu_ShowTutorial">Show Tutorial</string>
+    <string name="menu_TagComposeMessage">-ridi</string>
+    <string name="menu_TagExchange">Shakaalka Furayaasha</string>
+    <string name="menu_TagListMessages">Messages</string>
+    <string name="menu_UseAnother">Isticmaal kale oo</string>
+
+    <string name="prog_CollectingOthersCommitVerify">sugeyso xaqiijinta dhammaan xubnaha…</string>
+    <string name="prog_CollectingOthersItems">sugaya oo dhan isticmaala si ay ugu biiraan…</string>
+    <string name="prog_ConstructingGroupKey">dhismaha muhiimka ah ee kooxda…</string>
+    <string name="prog_decrypting">Version…</string>
+    <string name="prog_encrypting">encrypting…</string>
+    <string name="prog_FileSent">fariin u diray, oo sugaya jawaab…</string>
+    <string name="prog_findingKey">helida muhiimka ah ee…</string>
+    <string name="prog_GeneratingKey">abuurid muhiimka ah, taasi waxay qaadan kartaa halka a…</string>
+    <string name="prog_generatingSignature">abuurid saxiixa…</string>
+    <string name="prog_loadingContent">content loading…</string>
+    <string name="prog_ReceivingFile">qaata file potilasasiamies.terveyskeskus…</string>
+    <string name="prog_RequestingFile">codsanayo file potilasasiamies.terveyskeskus…</string>
+    <string name="prog_RequestingMessage">codsanayo fariin potilasasiamies.terveyskeskus…</string>
+    <string name="prog_RequestingPushReg">codsanayo diiwaangelinta riix…</string>
+    <string name="prog_RequestingUserId">codsanayo xubin ka…</string>
+    <string name="prog_SavingContactsToAddressBook">Buugga cinwaanka u geliso…</string>
+    <string name="prog_SavingContactsToKeyDatabase">machadku muhiimka ah ee…</string>
+    <string name="prog_SearchingForBackup">Boogaadin raad raac…</string>
+    <string name="prog_SendingFile">diraya %s potilasasiamies.terveyskeskus…</string>
+    <string name="prog_verifyingIntegrity">xaqiijin karo sharafta…</string>
+    <string name="prog_verifyingSignature">xaqiijin karo saxiixa…</string>
+
+    <string name="section_advanced">Advanced</string>
+    <string name="section_backup">Kaabta</string>
+    <string name="section_general">General</string>
+
+    <string name="state_BackupRestored">Kaabta dib loo soo celiyo.</string>
+    <string name="state_FileDeleted">Tirtiray file %s.</string>
+    <string name="state_FileSent">Know u diray.</string>
+    <string name="state_MessageSavedAsDraft">Message badbaadiyey sida qabyada ah.</string>
+    <string name="state_MessagesDeleted">%d farriimo la tirtiray.</string>
+    <string name="state_PassphraseUpdated">Passphrase updated.</string>
+    <string name="state_RecipientsDeleted">%d qaata tirtiro.</string>
+    <string name="state_SomeContactsImported">Contacts %s laga keeno.</string>
+    <string name="state_TextCopiedToClipboard">Texte soo guuriyeen in ay choriomeningitis.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger waxaa loogu talagalay inay si fudud u wadaagaan xogta aqoonsiga, in qof ama telefoon, lagana sugaa, kuwa gaarka ah, iyo dhawrsan. Qof kasta oo aad la wadaagto abuuraa qaab ammaan ah dhamaadka -ka- dhamaadka soo dirin fariimo.\n\nFeatures:\n- Si fudud, warbixin xiriirka dadka kale\n- sugan loo dhaadhacay wadhafka tuuristiisa qoraallada, photos, wax!\n- cryptography Strong difaacaa macluumaadkaaga\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Luqadaha bixisay by:</string>
+    <string name="text_Requirements">Shuruudaha:\n1. Waa in lagu dhejiyaa on ugu yaraan 2 qalabka.\n2. Internet waa in ay ahaadaan kuwo firfircoon.</string>
+    <string name="text_ShortPromotion">Qoraallada sugan loo dhaadhacay wadhafka, photos, wax!</string>
+
+    <string name="title_About">About</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_ChooseDirectory">Dooro Directory</string>
+    <string name="title_ChooseFileLoad">Dooro Your Attachment</string>
+    <string name="title_comments">Comments / Questions</string>
+    <string name="title_Error">Error</string>
+    <string name="title_ExchangeWalkthrough">Shakaalka Furayaasha Kaaliyaha</string>
+    <string name="title_FileOptions">Qabsashada Options</string>
+    <string name="title_find">Daaro</string>
+    <string name="title_home">Ku bilow Exchange</string>
+    <string name="title_HomePanel">Home</string>
+    <string name="title_MessageDetail">Message</string>
+    <string name="title_Messages">Messages</string>
+    <string name="title_MyIdentity">My Aqoonsiga</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Message Available</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages Available</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Dadka hela</string>
+    <string name="title_Question">Su\'aasha</string>
+    <string name="title_RecipientDetail">Detail Qaate</string>
+    <string name="title_save">End Exchange</string>
+    <string name="title_SaveFileAs">Save File Sida</string>
+    <string name="title_SecureIntroduction">Secure Hordhac</string>
+    <string name="title_SecureIntroductionInvite">Xafido Casuumaad Hordhac!</string>
+    <string name="title_SelectSource">Diritaanka Options:</string>
+    <string name="title_SendFile">Send</string>
+    <string name="title_sharingfolder">Wadaagista Folder</string>
+    <string name="title_size">Imisa dadka isticmaala ee isweydaarsiga?</string>
+    <string name="title_soundrecoder">Recorder Sound</string>
+    <string name="title_TextInviteMsg">Casuumaad SafeSlinger</string>
+    <string name="title_Threads">Threads</string>
+    <string name="title_userid">Kooxeeyada</string>
+    <string name="title_verify">Hubi</string>
+    <string name="title_Warn">Warning</string>
+
+</resources>

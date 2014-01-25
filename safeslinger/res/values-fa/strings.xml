@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">ارسال لینک با دعوت…</string>
+    <string name="action_ViewFile">مشاهده %s با…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">پشتیبان گیری از کار افتاده است. آیا شما می خواهید برای تنظیم تنظیمات نسخه پشتیبان تهیه و حفظ این یادآوری ؟</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s تا به دستگاه های جدید تر و یا کلید ، آیا شما مطمئن هستید که می خواهید به استفاده از این بزرگتر ؟</string>
+    <string name="ask_FileExistsOverwrite">نام فایل %s حال حاضر وجود دارد. بازنویسی ؟</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">بدون یک حساب Google شما فقط قادر به ارسال، NOT دریافت پیام خواهد بود. آیا شما می خواهید برای اضافه کردن یک حساب گوگل ؟</string>
+    <string name="ask_QuitConfirmation">ترک ؟ آیا مطمئن هستید؟</string>
+    <string name="ask_SendErrorData">ما می خواهم به کمک شما بهبود SafeSlinger می خواهم. آیا می خواهید به طور خودکار ارسال هر گونه خطا به ما؟</string>
+
+    <string name="btn_Accept">پذیرفتن</string>
+    <string name="btn_BeginExchangeProximity">شروع اوراق بهادار</string>
+    <string name="btn_Cancel">لغو کردن</string>
+    <string name="btn_Close">نزدیک</string>
+    <string name="btn_Continue">ادامه</string>
+    <string name="btn_discard">دور انداختن</string>
+    <string name="btn_Done">انجام شده</string>
+    <string name="btn_Exit">خروج</string>
+    <string name="btn_Import">واردات</string>
+    <string name="btn_Introduce">معرفی</string>
+    <string name="btn_Match">بعد</string>
+    <string name="btn_No">بدون</string>
+    <string name="btn_NoMatch">بدون در نظر گرفتن</string>
+    <string name="btn_NotRemind">فراموش کردن</string>
+    <string name="btn_OK">خوب</string>
+    <string name="btn_Refuse">رد کردن</string>
+    <string name="btn_Remind">یادآوری</string>
+    <string name="btn_Save">جویی در هزینه</string>
+    <string name="btn_SelectFile">اضافه کردن فایل پیوست</string>
+    <string name="btn_SendFile">ارسال</string>
+    <string name="btn_Yes">بله</string>
+
+    <string name="choice_10mins">10 دقیقه</string>
+    <string name="choice_1hour">1 ساعت</string>
+    <string name="choice_1min">1 دقیقه</string>
+    <string name="choice_20mins">20 دقیقه</string>
+    <string name="choice_2hours">2 ساعت</string>
+    <string name="choice_3mins">3 دقیقه</string>
+    <string name="choice_40mins">40 دقیقه</string>
+    <string name="choice_4hours">4 ساعت</string>
+    <string name="choice_5mins">5 دقیقه</string>
+    <string name="choice_8hours">8 ساعت</string>
+    <string name="choice_auto_storage">به طور پیش فرض ذخیره سازی</string>
+    <string name="choice_external_storage">انباره خارجی</string>
+    <string name="choice_internal_storage">حافظه داخلی</string>
+    <string name="choice_nolimit">بدون محدودیت</string>
+    <string name="choice_NumUsers">کاربران %d</string>
+    <string name="choice_SaveDirectory">راهنمای صرفه جویی</string>
+    <string name="choice_SaveFile">فایل را ذخیره کنید</string>
+    <string name="choice_Up">بالا</string>
+
+    <string name="error_AllMembersMustUpgrade">برخی از اعضای با استفاده از نسخه قدیمی تر و همه اعضای حداقل باید استفاده %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">همه اعضا باید ارتقاء داده شده، برخی از آنها با استفاده از فرمت های کلیدی مسن تر.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">همه اعضا باید ارتقاء داده شده، برخی از آنها با استفاده از فرمت های قدیمی تر فشار ثبت نام.</string>
+    <string name="error_AudioPlayerDecodeError">پخش کننده های صوتی خطا در رمزگشایی.</string>
+    <string name="error_AudioPlayerError">می توانید ضبط ندارد.</string>
+    <string name="error_AudioRecorderEncodeError">صوتی خطا را پشتیبانی می کند ضبط.</string>
+    <string name="error_AudioRecorderPermissionError">اجازه میکروفن مورد نیاز است. به تنظیمات در iOS لطفا برای فعال کردن مجوز میکروفون.</string>
+    <string name="error_BackupNotFound">بدون پشتیبان برای بازگرداندن.</string>
+    <string name="error_BackupNotSupportedDevice">دستگاه را پشتیبانی نمی کند نسخه پشتیبان تهیه بازگرداند.</string>
+    <string name="error_BadCopyProtectUpgrade">با توجه به اشکال در آندروید 4.1 ، شما حذف و نصب مجدد SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">یک حساب Google نیاز است. لطفا مدیر حسابباز کردن و اضافه کردن یک حساب گوگل.</string>
+    <string name="error_C2DMRegAuthenticationFailed">عضویت تصدیق نیست، لطفا بعدا دوباره امتحان کنید به صورت دستی.</string>
+    <string name="error_C2DMRegInvalidSender">ثبت نام در دسترس است برای این نسخه نیست، لطفا یک نسخه به روز شده را بررسی کنید.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">ثبت نام دستگاه نادرست با Google. این دستگاه در حال حاضر پیام های فشار را پشتیبانی نمی کند.</string>
+    <string name="error_C2DMRegServiceNotAvailable">خدمات ثبت فشار در دسترس نیست ، برنامه ریزی سعی مجدد در %d ثانیه صورت گرفت.</string>
+    <string name="error_C2DMRegTooManyRegistrations">بیش از حد بسیاری از برنامه های کاربردی برای فشار ثبت شده است. لطفا حذف برخی از برنامه های کاربردی دیگر و دوباره سعی کنید.</string>
+    <string name="error_CannotSendEmptyFile">آیا می توانم یک پیوست خالی ارسال کنید.</string>
+    <string name="error_CannotSendFilesOver">آیا می توانم فایل پیوست در بیشتر از %d کلمه در ادامه متن در اندازه ارسال کنید.</string>
+    <string name="error_CannotSendNullFile">آیا می توانم یک دلبستگی تهی ارسال کنید.</string>
+    <string name="error_contactCreationFailure">تماس با ناموفق.</string>
+    <string name="error_ContactInsertFailed">تماس با درج شکست خورده است.</string>
+    <string name="error_ContactNameMissing">این تماس از دست رفته است یک نام ، لطفا ویرایش کنید.</string>
+    <string name="error_ContactNameMissing2">این تماس از دست رفته است یک نام ، لطفا reselect.</string>
+    <string name="error_ContactUpdateFailed">تماس با به روز رسانی شکست خورده است.</string>
+    <string name="error_CorrectYourInternetConnection">اینترنت در دسترس نیست ، تنظیمات خود را چک کنید.</string>
+    <string name="error_couldNotExtractPrivateKey">ممکن است کلید خصوصی را استخراج نیست.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">فاصله تبادل بیش از حد. دوباره آغاز ارز.</string>
+    <string name="error_FeatureIsNotSupport">%1$s در %2$s در این زمان پشتیبانی نمی شود.</string>
+    <string name="error_FileSave">قادر به ذخیره %s.</string>
+    <string name="error_FileStorageUnavailable">ذخیره سازی فایل در دسترس نیست.</string>
+    <string name="error_HttpCode">خطا در سرور HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">داده های نادرست موجود در ارز. دوباره آغاز ارز.</string>
+    <string name="error_InvalidCommonUserId">لطفا یک عدد صحیح مثبت را وارد کنید.</string>
+    <string name="error_InvalidContactName">نام تماس معتبر مورد نیاز است.</string>
+    <string name="error_InvalidIncomingMessage">بد قالب پیام های دریافتی.</string>
+    <string name="error_InvalidMsg">قالب پیام بد.</string>
+    <string name="error_InvalidRecipient">گیرنده نامعتبر است.</string>
+    <string name="error_LocalGroupCommitDiffer">شما تفاوت در عبارات را گزارش کرده اند. دوباره آغاز ارز.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">فرمت کلیدی همکار نامعتبر است.</string>
+    <string name="error_MessageSignatureVerificationFails">امضا تأیید نشد.</string>
+    <string name="error_minPassphraseRequire">عبارت گذر نیاز به حداقل %d حرف می باشد.</string>
+    <string name="error_MinUsersRequired">حداقل %d عضو ملزم به تبادل اطلاعات.</string>
+    <string name="error_MissingNdk">SafeSlinger را پشتیبانی NDK در این دستگاه تشخیص نیست ، که مورد نیاز است.</string>
+    <string name="error_MoreDataThanUsers">داده های غیر منتظره که در ارز. دوباره آغاز ارز.</string>
+    <string name="error_MultipleSendNotSupported">شما اقدام به ارسال چند مورد. در این زمان، SafeSlinger تنها پشتیبانی از ارسال یک موضوع در یک زمان.</string>
+    <string name="error_NoEmailAccount">حساب ایمیل است راه اندازی نشده است!</string>
+    <string name="error_noPassPhrase">بدون کلمه عبور وارد شده است.</string>
+    <string name="error_NoWordListSelected">شما باید یکی از عبارات قبل از اقدام انتخاب کنید.</string>
+    <string name="error_OtherGroupCommitDiffer">کسی گزارش تفاوت در عبارات. دوباره آغاز ارز.</string>
+    <string name="error_OutOfMemoryError">حافظه بسیار کم است برای تکمیل این عملیات است.</string>
+    <string name="error_passPhrasesDoNotMatch">عبارت گذر نیست.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">شما سهمیه پیامکه دریافت کننده فراتر رفته است. لطفا بعدا دوباره امتحان کنید.</string>
+    <string name="error_PushMsgInvalidRegistration">این گیرنده دارای ثبت نام فشار گم شده و یا بد است. شما باید با ارسال پیام به این دستگاه را متوقف کند.</string>
+    <string name="error_PushMsgMessageNotFound">پیام منقضی شده است.</string>
+    <string name="error_PushMsgMessageTooBig">ارسال بیش از حد بزرگ است. کاهش حجم از پیام.</string>
+    <string name="error_PushMsgNotRegistered">ثبت نام فشاری که دریافت کننده است دیگر معتبر نیست. دریافت کننده ممکن است SafeSlinger حذف و یا خاموش اطلاعیه ها. شما باید با ارسال پیام به این دستگاه را متوقف کند.</string>
+    <string name="error_PushMsgNotSucceed">خطا در برقراری ارتباط با خدمات اطلاع رسانی فشار وجود دارد.</string>
+    <string name="error_PushMsgQuotaExceeded">شما سهمیه پیامبرای این دستگاه فراتر رفته است. لطفا بعدا دوباره امتحان کنید.</string>
+    <string name="error_PushMsgServiceFail">خدمات اطلاع رسانی این زمان در دسترس نیست. لطفا سعی کنید برای ارسال یک پیام شد.</string>
+    <string name="error_RecoderError">می توانید ضبط صدا آماده نیست.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">برای شروع، \' کلید رسن با تلفن دیگر در همان زمان.</string>
+    <string name="error_selectDataToSend">شما باید یک ضمیمه یا یک پیام متنی برای ارسال.</string>
+    <string name="error_ServerAppMessage">سرور پیام: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">سرور پیام: \'%s\'</string>
+    <string name="error_ServerNotResponding">هیچ پاسخی از سرور.</string>
+    <string name="error_ShareFileDelError">می توانید فایل را به اشتراک گذاشته شده را حذف کنید.</string>
+    <string name="error_TimeoutWaitingForAllMembers">پایان زمان انتظار برای برخی از اعضای گروه به اضافه کردن اطلاعات.</string>
+    <string name="error_UnableFindPubKey">قادر به مطابقت با کلید عمومی به کلید خصوصی در ارائه دهنده سری ومخفی.</string>
+    <string name="error_UnableToSaveMessageInDB">قادر به ذخیره به پایگاه داده پیام.</string>
+    <string name="error_UnableToSaveRecipientInDB">قادر به ذخیره به پایگاه داده دریافت کننده.</string>
+    <string name="error_UnableToUpdateMessageInDB">قادر به به روز رسانی پایگاه داده پیام.</string>
+    <string name="error_UnableToUpdateRecipientInDB">قادر به به روز رسانی پایگاه داده های دریافت کننده.</string>
+    <string name="error_UncaughtExceptionOccured">خطا SafeSlinger ، لطفا راه اندازی مجدد.</string>
+    <string name="error_VcardParseFailure">اطلاعات تماس با اشتباه فرمت شده است.</string>
+    <string name="error_WebCancelledByUser">کاربر لغو درخواست سرور.</string>
+
+    <string name="help_find">با استفاده از این صفحه نمایش برای تنظیم نام، تلفن، ایمیل و به تبادل با دیگران است. شیر \' انجام \' را فشار دهید که به پایان رسید.</string>
+    <string name="help_home">برای تبادل اطلاعات هویت، اطمینان از تمام کاربران در نزدیکی و یا بر روی تلفن. دکمه \' شروع بورس خواهد تنها اطلاعات تماس چک مبادله.</string>
+    <string name="help_identity_menu">\n\nشما همچنین ممکن است داده های شخصی در مورد هویت خود را در این صفحه نمایش با ضربه زدن بر روی دکمه با نام خود را تغییر دهید. این منو به شما این امکان \'ویرایش\' تماس با شما، \' ایجاد جدید \' تماس، و یا \'استفاده از یکی دیگر از تماس صفحه نمایش.</string>
+    <string name="help_Messages">این صفحه نمایش تمام پیام های گذشته، و فایل پیوست در که هنوز هم برای دانلود در دسترس است.</string>
+    <string name="help_passphrase">با استفاده از این صفحه برای ورود به برنامه با عبارت عبور شما.</string>
+    <string name="help_PickRecip">تماس با کلید های SafeSlinger در اینجا نمایش داده می شود ، یکی را انتخاب کنید برای ارسال پیام خود را به.</string>
+    <string name="help_save">هنگامی که به پایان رسید، پروتکل یک لیست از داده هویت رد و بدل شده را نشان دهد. انتخاب مخاطبین می خواهید برای ذخیره و فشار \' واردات \'.</string>
+    <string name="help_SecureIntroduction">این صفحه نمایش به شما اجازه انتخاب دو نفر شما کلید با قبل از پرتاب به ایمن کلید خود را به یکدیگر ارسال کنند. به سادگی فشار دهید \' معرفی \' هنگامی که آماده شده است.</string>
+    <string name="help_Send">این صفحه نمایش شما اجازه می دهد تا انتخاب کنید برخی از داده ها و یک گیرنده برای ارسال به. به سادگی فشار دهید \'ارسال\' هنگامی که آماده شده است.</string>
+    <string name="help_size">تعداد زیادی از مردم که در حال تلاش برای تبادل اطلاعات با هم و فشار \' OK \' را انتخاب کنید.</string>
+    <string name="help_userid">این تعداد در این صفحه نمایش استفاده می شود برای ایجاد یک گروه منحصر به فرد از کاربران. بررسی اعداد بر روی تمام کاربران OK \' \' صفحه نمایش ، پس از آن همه کاربران باید به همان تعداد پایین ترین و مطبوعات را وارد کنید.</string>
+    <string name="help_verify">در حال حاضر، شما باید یکی از این عبارات 3 کلمه با تمام کاربران هماهنگ باشد. هر کاربر باید که عبارت معمول همان ، و مطبوعات \' بعدی \' را انتخاب کنید.</string>
+
+    <string name="iOS_contactError">اطلاعات تماس مجوز مورد نیاز است. به تنظیمات در iOS لطفا برای فعال کردن تماس مجوز.</string>
+    <string name="iOS_errorpushtoken">ثبت نام فشار از دست رفته است.</string>
+    <string name="iOS_notificationError1">اطلاعیه مجوز مورد نیاز است. به تنظیمات در iOS لطفا برای فعال کردن اعلان مجوز.</string>
+    <string name="iOS_notificationError2">اجازه %s مورد نیاز است. به تنظیمات در iOS لطفا برای فعال کردن اعلان مجوز.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger است برای دستگاه های iOS 5.x بهینه سازی شده است. SafeSlinger نیاز به در iOS 6 و یا بالاتر است.</string>
+
+    <string name="label_ago">%s پیش</string>
+    <string name="label_backupCompleteDate">تاریخ و زمان آخرین پشتیبان گیری های انجام شده</string>
+    <string name="label_backupRequestDate">آخرین درخواست پشتیبان گیری</string>
+    <string name="label_backupURL">URL پشتیبان گیری</string>
+    <string name="label_ClickForNMsgs">به بررسی %d پیام های خود را لمس کنید</string>
+    <string name="label_ComposeHint">نوشتن پیام</string>
+    <string name="label_ContactEmail">آدرس ایمیل شما</string>
+    <string name="label_ContactName">نام شما</string>
+    <string name="label_ContactPhone">تلفن شما</string>
+    <string name="label_days">%d روز</string>
+    <string name="label_Device">دستگاه:</string>
+    <string name="label_DeviceInSendOnlyMode">ارسال حالت فقط</string>
+    <string name="label_DisabledExchSourceKeyChange">کلید شما تغییر کرده است: کلید رسن دوباره.</string>
+    <string name="label_Draft">DRAFT</string>
+    <string name="label_EnabledKeyFormatDeprecated">فرمت های کلیدی توصیه نمی شود: کلید های زنجیر است.</string>
+    <string name="label_exchanged">رد و بدل</string>
+    <string name="label_expired">سپری</string>
+    <string name="label_expires">منقضی %s</string>
+    <string name="label_expiresIn">منقضی می شود در</string>
+    <string name="label_FileNameHint">نام پرونده</string>
+    <string name="label_FindInstruct">لطفا اطلاعات شخصی خود را وارد کنید. این داده ها تنها خواهد شد و ایمن با افراد که شما انتخاب می کنید به اشتراک گذاری آن با به اشتراک گذاشته.</string>
+    <string name="label_FirstName">نام</string>
+    <string name="label_Home">چک کردن آیتم های شما می خواهید برای به اشتراک گذاشتن و شیر \' شروع اوراق بهادار \' هنگامی که دیگران آماده به تبادل می باشد.</string>
+    <string name="label_hometag">خانه</string>
+    <string name="label_hours">%d ساعت</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud را فعال کنید. شیر \' انجام \' را فشار دهید که به پایان رسید.</string>
+    <string name="label_InstNoMessages">بدون پیام. شما ممکن است یک پیام را از \' ایجاد پیام \' را فشار دهید در منوی اصلی ارسال می کند.</string>
+    <string name="label_InstNoMessagesAndroid">بدون پیام. شما ممکن است یک پیام از تب \' نوشتن \' ارسال کنید.</string>
+    <string name="label_InstNoRecipients">بدون دریافت کنندگان. یافتن کاربر دیگری SafeSlinger نزدیک و لمس تب \' زنجیر کلید \' برای به اشتراک گذاشتن کلید.</string>
+    <string name="label_InstNoSharedFile">فایل بدون به اشتراک گذاشته. دستگاه خود را با iTunes و فایل های کشیدن به پوشه به اشتراک گذاشته وصل کنید.</string>
+    <string name="label_InstRecipients">انتخاب یک گیرنده برای ارسال یک پیام به:</string>
+    <string name="label_InstSendInvite">انتخاب دریافت کنندگان به معرفی و ایمن:</string>
+    <string name="label_InstSharedFile">انتخاب یک فایل به ضمیمه:</string>
+    <string name="label_introduced">معرفی</string>
+    <string name="label_Key">های کلیدی:</string>
+    <string name="label_LastName">نام خانوادگی</string>
+    <string name="label_Me">به من</string>
+    <string name="label_messageIntroduceNameToYou">من می خواهم به شما معرفی %s به شما.</string>
+    <string name="label_MeToSender">من (به %s):</string>
+    <string name="label_minutes">دقیقه %d</string>
+    <string name="label_mobiletag">سیار</string>
+    <string name="label_MostRecentOnly">جدید ترین تنها</string>
+    <string name="label_MsgSendUpdate">به روز شده در اعتبار SafeSlinger من وصل شده است.</string>
+    <string name="label_None">هیچ یک</string>
+    <string name="label_NumericModeHint">غیر انگلیسی</string>
+    <string name="label_numsharedfiles">%d فایل به اشتراک بگذارید:</string>
+    <string name="label_OldThreads">قدیمی موضوع ها</string>
+    <string name="label_othertag">دیگر</string>
+    <string name="label_PassHintBackoff">دوباره امتحان کنید</string>
+    <string name="label_PassHintChange">به روز شده در کلمه عبور</string>
+    <string name="label_PassHintCreate">ایجاد کلمه عبور</string>
+    <string name="label_PassHintEnter">کلمه عبور</string>
+    <string name="label_PassHintRepeat">کلمه عبور را تکرار کنید</string>
+    <string name="label_passPhraseCacheTtl">کش عبارت عبور</string>
+    <string name="label_PassPhraseIsCached">ذخیره کلمه عبور</string>
+    <string name="label_phoneOnly">تلفن تنها</string>
+    <string name="label_Photo">عکس</string>
+    <string name="label_PromptInstruct">این عدد استفاده می شود برای ایجاد یک گروه منحصر به فرد از کاربران. مقایسه ، و سپس وارد کمترین تعداد در میان همه کاربران.</string>
+    <string name="label_PublicKeyID">ID کلیدی</string>
+    <string name="label_PushTokenID">فشار ID ثبت نام</string>
+    <string name="label_ReceivedNItems">%d مورد دریافت</string>
+    <string name="label_RemindBackupDelay">یادآوری پشتیبان گیری</string>
+    <string name="label_ReportedInactive">گزارش %s غیر فعال.</string>
+    <string name="label_restoreCompleteDate">تاریخ و زمان آخرین بازگرداندن های انجام شده</string>
+    <string name="label_SafeSlingerBackupDelayed">نسخه پشتیبان تهیه SafeSlinger به تاخیر افتاد</string>
+    <string name="label_safeslingered">(تبادل مستقیم SafeSlinger)</string>
+    <string name="label_SaveAccount">صرفه جویی در حساب</string>
+    <string name="label_SaveInstruct">تبادل کامل! اطلاعات عضو انتخاب را برای نجات به کتاب آدرس خود را:</string>
+    <string name="label_seconds">%d ثانیه</string>
+    <string name="label_selectLabel">انتخاب برچسب</string>
+    <string name="label_SelectRecip">انتخاب گیرنده</string>
+    <string name="label_sendErrorData">ارسال خطا در اطلاعات</string>
+    <string name="label_SendFrom">از:</string>
+    <string name="label_SendTo">به:</string>
+    <string name="label_ShowHintAtLaunch">نمایش این اشاره به زمان آینده.</string>
+    <string name="label_step_1">مرحله 1</string>
+    <string name="label_step_2">مرحله 2</string>
+    <string name="label_step_3">مرحله 3</string>
+    <string name="label_step_4">مرحله 4</string>
+    <string name="label_step_5">مرحله 5</string>
+    <string name="label_TapToDecryptFile">برای رمزگشایی فایل شیر</string>
+    <string name="label_TapToDecryptMessage">برای رمزگشایی شیر</string>
+    <string name="label_TapToDownloadFile">دانلود فایل شیر</string>
+    <string name="label_TapToDownloadMessage">دانلود پیام ضربه بزنید</string>
+    <string name="label_TapToOpenFile">برای باز کردن فایل های شیر</string>
+    <string name="label_TapToResumeDraft">برای از سر گیری پیش نویس پیام ضربه بزنید</string>
+    <string name="label_TapToSendCredentialUpdate">شیر و نگه دارید و برای ارسال به روز رسانی اعتبار.</string>
+    <string name="label_targetAccountLabel">اطلاعات تماس حساب</string>
+    <string name="label_TouchToConfigureBackupSettings">شما به صورت اختیاری ممکن است نسخه پشتیبان تهیه SafeSlinger iCloud در تنظیمات در iOS را فعال کنید. شیر \' انجام \' را فشار دهید که به پایان رسید.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">برای پیکربندی تنظیمات نسخه پشتیبان تهیه لمس کنید.</string>
+    <string name="label_TouchToConfigureCacheTimeout">برای پیکربندی تنظیمات ایست کش را لمس کنید.</string>
+    <string name="label_undefinedTypeLabel">ناشناخته</string>
+    <string name="label_UnknownSender">فرستنده رمزگذاری</string>
+    <string name="label_UserIdHint">پایین ترین</string>
+    <string name="label_UserName">نام کاربر</string>
+    <string name="label_VerifyInstruct">همه تلفن باید یکی از عبارات 3 کلمه. مقایسه ، و سپس عبارت تطبیق انتخاب کنید.</string>
+    <string name="label_worktag">کار</string>
+
+    <string name="menu_About">در حدود</string>
+    <string name="menu_Change">تغییر</string>
+    <string name="menu_ChangePassphrase">تغییر کلمه عبور</string>
+    <string name="menu_CreateNew">ایجاد جدید</string>
+    <string name="menu_delete">حذف کردن</string>
+    <string name="menu_deleteThread">حذف موضوع \'%s\'</string>
+    <string name="menu_Details">مشاهده جزئیات</string>
+    <string name="menu_DownloadDirectory">دانلود راهنمای</string>
+    <string name="menu_Edit">ویرایش</string>
+    <string name="menu_FileManager">مدیریت فایل</string>
+    <string name="menu_Help">کمک</string>
+    <string name="menu_Introduction">معرفی</string>
+    <string name="menu_License">پروانه</string>
+    <string name="menu_Logout">خروج از سیستم</string>
+    <string name="menu_messageCopyText">کپی متن</string>
+    <string name="menu_messageForward">به جلو</string>
+    <string name="menu_Remove">برداشتن</string>
+    <string name="menu_SelectShareApp">ارسال درخواست</string>
+    <string name="menu_sendFeedback">ارسال نظرات</string>
+    <string name="menu_SendUpdate">ارسال به روز رسانی</string>
+    <string name="menu_Settings">تنظیمات</string>
+    <string name="menu_ShowTutorial">نمایش فیلم آموزشی</string>
+    <string name="menu_TagComposeMessage">سرودن</string>
+    <string name="menu_TagExchange">کلید رسن</string>
+    <string name="menu_TagListMessages">پیام</string>
+    <string name="menu_UseAnother">یکی دیگر از استفاده</string>
+
+    <string name="prog_CollectingOthersCommitVerify">انتظار برای تایید از همه اعضای…</string>
+    <string name="prog_CollectingOthersItems">انتظار برای همه کاربران برای پیوستن به…</string>
+    <string name="prog_ConstructingGroupKey">ساخت کلید گروه…</string>
+    <string name="prog_decrypting">رمز گشایی…</string>
+    <string name="prog_encrypting">رمزنگاری…</string>
+    <string name="prog_FileSent">پیام فرستاده شده ، در انتظار پاسخ…</string>
+    <string name="prog_findingKey">پیدا کردن کلید…</string>
+    <string name="prog_GeneratingKey">کلید تولید ، این می تواند در حالی که…</string>
+    <string name="prog_generatingSignature">تولید امضا…</string>
+    <string name="prog_loadingContent">محتوای در حال بارگذاری…</string>
+    <string name="prog_ReceivingFile">دریافت فایل رمزگذاری شده…</string>
+    <string name="prog_RequestingFile">درخواست فایل رمزگذاری شده…</string>
+    <string name="prog_RequestingMessage">درخواست پیام رمز شده…</string>
+    <string name="prog_RequestingPushReg">درخواست ثبت نام فشار…</string>
+    <string name="prog_RequestingUserId">درخواست عضویت در…</string>
+    <string name="prog_SavingContactsToAddressBook">کتاب آدرس به روز رسانی…</string>
+    <string name="prog_SavingContactsToKeyDatabase">به روز رسانی پایگاه داده های کلیدی…</string>
+    <string name="prog_SearchingForBackup">جستجو برای پشتیبان گیری…</string>
+    <string name="prog_SendingFile">ارسال %s رمزگذاری…</string>
+    <string name="prog_verifyingIntegrity">بررسی یکپارچگی…</string>
+    <string name="prog_verifyingSignature">تایید امضا…</string>
+
+    <string name="section_advanced">پیشرفته</string>
+    <string name="section_backup">پشتیبان</string>
+    <string name="section_general">عمومی</string>
+
+    <string name="state_BackupRestored">پشتیبان گیری دوباره بازسازی شد.</string>
+    <string name="state_FileDeleted">%s فایل حذف شده.</string>
+    <string name="state_FileSent">پیام ارسال می شود.</string>
+    <string name="state_MessageSavedAsDraft">پیام های ذخیره شده به عنوان پیش نویس است.</string>
+    <string name="state_MessagesDeleted">%d پیام های حذف شده است.</string>
+    <string name="state_PassphraseUpdated">عبارت عبور به روز شد.</string>
+    <string name="state_RecipientsDeleted">%d دریافت کنندگان حذف شده است.</string>
+    <string name="state_SomeContactsImported">اطلاعات تماس %s وارد شده است.</string>
+    <string name="state_TextCopiedToClipboard">متن کپی شده به کلیپ بورد.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger طراحی شده است تا به راحتی اطلاعات هویت به اشتراک گذاری ، حضوری و یا از طریق تلفن، تصدیق ، خصوصی ، و دست نخورده. هر شخصی که شما با به اشتراک گذاشتن یک کانال امن پایان به پایان برای ارسال پیام ایجاد می کند.\n\nویژگی ها:\n- به راحتی اطلاعات تماس تبادل با دیگران\n- ایمن فلاخن متن ها، عکس ها، هر چیزی! %2$s\nوب:: %3$s\n- رمزنگاری قوی اطلاعات خود را\n\nایمیل به محافظت</string>
+    <string name="text_LanguagesProvidedBy">زبان های ارائه شده توسط:</string>
+    <string name="text_Requirements">مورد نیاز:\n1. باید در حداقل 2 دستگاه نصب شده است.\n2. اتصال به اینترنت باید فعال باشد.</string>
+    <string name="text_ShortPromotion">تماس با امنیت فلاخن ، متن ها، عکس ها، هر چیزی!</string>
+
+    <string name="title_About">در حدود</string>
+    <string name="title_camera">دوربین</string>
+    <string name="title_ChooseDirectory">انتخاب یک دایرکتوری</string>
+    <string name="title_ChooseFileLoad">را انتخاب کنید فایل پیوست شما</string>
+    <string name="title_comments">نظرات/سوالات</string>
+    <string name="title_Error">خطا</string>
+    <string name="title_ExchangeWalkthrough">زنجیر کلید ، معاون</string>
+    <string name="title_FileOptions">تنظیمات فایل پیوست</string>
+    <string name="title_find">برپایی</string>
+    <string name="title_home">شروع اوراق بهادار</string>
+    <string name="title_HomePanel">خانه</string>
+    <string name="title_MessageDetail">پیام</string>
+    <string name="title_Messages">پیام</string>
+    <string name="title_MyIdentity">هویت من</string>
+    <string name="title_NotifyFileAvailable">پیام SafeSlinger موجود</string>
+    <string name="title_NotifyMulFileAvailable">%d پیام های SafeSlinger موجود</string>
+    <string name="title_passphrase">کلمه عبور</string>
+    <string name="title_photoalbum">آلبوم عکس</string>
+    <string name="title_photolibary">گالری عکس</string>
+    <string name="title_PickRecipient">دریافت کنندگان</string>
+    <string name="title_Question">سوال</string>
+    <string name="title_RecipientDetail">جزئیات گیرنده</string>
+    <string name="title_save">تبادل پایان</string>
+    <string name="title_SaveFileAs">ذخیره فایل به عنوان</string>
+    <string name="title_SecureIntroduction">مقدمه امن</string>
+    <string name="title_SecureIntroductionInvite">امن مقدمه دعوت!</string>
+    <string name="title_SelectSource">ارسال گزینه ها:</string>
+    <string name="title_SendFile">ارسال</string>
+    <string name="title_sharingfolder">به اشتراک گذاری پوشه</string>
+    <string name="title_size">چگونه بسیاری از کاربران در تبادل ؟</string>
+    <string name="title_soundrecoder">ضبط صدا</string>
+    <string name="title_TextInviteMsg">دعوت SafeSlinger</string>
+    <string name="title_Threads">موضوع ها</string>
+    <string name="title_userid">گروه بندی</string>
+    <string name="title_verify">تایید</string>
+    <string name="title_Warn">هشدار</string>
+
+</resources>

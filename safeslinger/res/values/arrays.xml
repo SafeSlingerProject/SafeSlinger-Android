@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <!-- 'Me, Myself, ...': this is a list of single words that are not real names for people, and should be filtered out to prevent people from exchanging names referring to themselves in the third person. There is no size restriction to this list. -->
+    <string-array name="invalid_contact_names" translatable="false">
+        <item>Me</item>
+        <item>Myself</item>
+        <item>Name</item>
+        <item>My</item>
+        <item>Contact</item>
+        <item>ICE</item>
+        <item>I.C.E.</item>
+        <item>Test</item>
+        <item>Sample</item>
+        <item>Person</item>
+    </string-array>
+
+    <!-- NOTE: if you change anything about this array, you must make the corresponding change to pass_phrase_cache_ttl_values below. -->
+    <string-array name="pass_phrase_cache_ttl_entries">
+        <item>@string/choice_1min</item>
+        <item>@string/choice_3mins</item>
+        <item>@string/choice_5mins</item>
+        <item>@string/choice_10mins</item>
+        <item>@string/choice_20mins</item>
+        <item>@string/choice_40mins</item>
+        <item>@string/choice_1hour</item>
+        <item>@string/choice_2hours</item>
+        <item>@string/choice_4hours</item>
+        <item>@string/choice_8hours</item>
+        <item>@string/choice_nolimit</item>
+    </string-array>
+
+    <!-- NOTE: if you change anything about this array, you must make the corresponding change to pass_phrase_cache_ttl_entries above. -->
+    <string-array name="pass_phrase_cache_ttl_values" translatable="false">
+        <item>60</item>
+        <item>180</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>2400</item>
+        <item>3600</item>
+        <item>7200</item>
+        <item>14400</item>
+        <item>28800</item>
+        <item>31536000</item>
+    </string-array>
+
+</resources>

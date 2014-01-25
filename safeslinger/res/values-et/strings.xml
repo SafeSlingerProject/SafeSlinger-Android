@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Saada kutsuda link koos…</string>
+    <string name="action_ViewFile">Vaata %s koos…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup on keelatud. Kas te soovite kohandada backup seaded ja hoida see meeldetuletus?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s onuuemate seade või võti, oled sa kindel, et tahad seda kasutada vanemale?</string>
+    <string name="ask_FileExistsOverwrite">Faili nimi %s juba olemas. Kirjutan üle?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">IlmaGoogle konto siis ainult oleks võimalik saata, ei saada sõnumeid. Kas soovite lisada Google\'i kontot?</string>
+    <string name="ask_QuitConfirmation">Lõpeta? Oled sa kindel?</string>
+    <string name="ask_SendErrorData">Soovime Teie abi parandamisel SafeSlinger. Tahate automaatselt saata kõik vead meile?</string>
+
+    <string name="btn_Accept">Aktsepteerima</string>
+    <string name="btn_BeginExchangeProximity">Alustada Exchange</string>
+    <string name="btn_Cancel">Tühistama</string>
+    <string name="btn_Close">Lähedal</string>
+    <string name="btn_Continue">Jätkama</string>
+    <string name="btn_discard">Ära viskama</string>
+    <string name="btn_Done">Tehtud</string>
+    <string name="btn_Exit">Väljapääs</string>
+    <string name="btn_Import">Import</string>
+    <string name="btn_Introduce">Kehtestama</string>
+    <string name="btn_Match">Järgmine</string>
+    <string name="btn_No">Ei</string>
+    <string name="btn_NoMatch">Ei sobi</string>
+    <string name="btn_NotRemind">Unustama</string>
+    <string name="btn_OK">korras</string>
+    <string name="btn_Refuse">Keelduma</string>
+    <string name="btn_Remind">Meenutama</string>
+    <string name="btn_Save">Päästma</string>
+    <string name="btn_SelectFile">Lisa manus</string>
+    <string name="btn_SendFile">Saatma</string>
+    <string name="btn_Yes">Jah</string>
+
+    <string name="choice_10mins">10 minutit</string>
+    <string name="choice_1hour">1 tund</string>
+    <string name="choice_1min">1 minut</string>
+    <string name="choice_20mins">20 minutit</string>
+    <string name="choice_2hours">2 tunni</string>
+    <string name="choice_3mins">3 minutit</string>
+    <string name="choice_40mins">40 minutit</string>
+    <string name="choice_4hours">4 tundi</string>
+    <string name="choice_5mins">5 minutit</string>
+    <string name="choice_8hours">8 tundi</string>
+    <string name="choice_auto_storage">Vaikimisi Storage</string>
+    <string name="choice_external_storage">External Storage</string>
+    <string name="choice_internal_storage">Internal Storage</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d kasutajad</string>
+    <string name="choice_SaveDirectory">Save Directory</string>
+    <string name="choice_SaveFile">Salvesta fail</string>
+    <string name="choice_Up">Üles</string>
+
+    <string name="error_AllMembersMustUpgrade">Mõned liikmed kasutate vanemat versiooni, kõik liikmed peavad vähemalt kasutada %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Kõik liikmed peavad uuendama, mõned kasutavad vanemad võti formaate.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Kõik liikmed peavad uuendama, mõned kasutavad vanemad lükke registreerimine formaate.</string>
+    <string name="error_AudioPlayerDecodeError">Audio mängija dekodeerimine viga.</string>
+    <string name="error_AudioPlayerError">Ei saa mängida salvestus.</string>
+    <string name="error_AudioRecorderEncodeError">Audio Recorder kodeerimine viga.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofon õigusi. Palun minge iOS Settings võimaldada Mikrofon õigused.</string>
+    <string name="error_BackupNotFound">Ei backup taastada.</string>
+    <string name="error_BackupNotSupportedDevice">Seade ei toeta backup taastada.</string>
+    <string name="error_BadCopyProtectUpgrade">Tänuviga Android 4.1, siis on uninstall ja uuesti SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Google konto vajalik. Palun avada kontohalduri ja lisadaGoogle konto.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Registreerimine ei ole tõestatud, palun proovige uuesti hiljem käsitsi.</string>
+    <string name="error_C2DMRegInvalidSender">Registreerimine ei ole võimalik seda versiooni, palun kontrolligeuuendatud versioon.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Vale seade registreerimine Google. See seade ei toeta praegu push funktsioon.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Push registreerimise teenust pole saadaval, ajakava uuesti sisse %d sekundit.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Liiga palju taotlusi on registreeritud Push. Palun eemaldada mõned teised rakendused ja proovige uuesti.</string>
+    <string name="error_CannotSendEmptyFile">Ei saa saata tühja manusena.</string>
+    <string name="error_CannotSendFilesOver">Ei saa Kirjuta manuseid suurem kui %d baiti suurus.</string>
+    <string name="error_CannotSendNullFile">Ei saa saatanull manusena.</string>
+    <string name="error_contactCreationFailure">Kontakt loomine nurjus.</string>
+    <string name="error_ContactInsertFailed">Kontakt insert ebaõnnestus.</string>
+    <string name="error_ContactNameMissing">See kontakt puudubnimi, siis muutke.</string>
+    <string name="error_ContactNameMissing2">See kontakt puudubnimi, siis valige uuesti.</string>
+    <string name="error_ContactUpdateFailed">Kontakt värskendamine nurjus.</string>
+    <string name="error_CorrectYourInternetConnection">Internet ei ole, kontrollige oma seadeid.</string>
+    <string name="error_couldNotExtractPrivateKey">Ei saanud lahti isiklik võti.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ületatud. Alustada vahetamist uuesti.</string>
+    <string name="error_FeatureIsNotSupport">%1$s ei toeta %2$s seekord.</string>
+    <string name="error_FileSave">Ei saa salvestada %s.</string>
+    <string name="error_FileStorageUnavailable">Faili salvestamine ei ole võimalik.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Valeandmeid leitud vahetada. Alustada vahetamist uuesti.</string>
+    <string name="error_InvalidCommonUserId">Palun sisesta positiivne täisarv.</string>
+    <string name="error_InvalidContactName">Kehtiv kontaktisiku nime on vaja.</string>
+    <string name="error_InvalidIncomingMessage">Bad sissetuleva sõnumi formaati.</string>
+    <string name="error_InvalidMsg">Bad sõnumi formaati.</string>
+    <string name="error_InvalidRecipient">Vale saaja.</string>
+    <string name="error_LocalGroupCommitDiffer">Sa teatasiderinevus väljendeid. Alustada vahetamist uuesti.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Peer-võtme vorming ei sobi.</string>
+    <string name="error_MessageSignatureVerificationFails">Allkirja tõendamine ebaõnnestus.</string>
+    <string name="error_minPassphraseRequire">Paroolid on vaja vähemalt %d tähemärki.</string>
+    <string name="error_MinUsersRequired">Vähemalt %d nõutakse, et vahetada andmeid.</string>
+    <string name="error_MissingNdk">SafeSlinger ei tuvastanud Ndk toetust selle seadmega, mis on vajalik.</string>
+    <string name="error_MoreDataThanUsers">Ootamatu leitud andmete vahetus. Alustada vahetamist uuesti.</string>
+    <string name="error_MultipleSendNotSupported">Püüad saata mitu üksust. Sel ajal, SafeSlinger toetab ainult saates üks kirje korraga.</string>
+    <string name="error_NoEmailAccount">E-posti konto ei ole setup!</string>
+    <string name="error_noPassPhrase">No parool sisestada.</string>
+    <string name="error_NoWordListSelected">Sa pead valima ühelaused enne jätkamist.</string>
+    <string name="error_OtherGroupCommitDiffer">Keegi teataserinevus väljendeid. Alustada vahetamist uuesti.</string>
+    <string name="error_OutOfMemoryError">Mälu on liiga madal, et seda toimingut lõpule viia.</string>
+    <string name="error_passPhrasesDoNotMatch">Paroolid ei kattu.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Olete ületanud sõnum kvoodist et saaja. Palun proovige hiljem uuesti.</string>
+    <string name="error_PushMsgInvalidRegistration">Et saaja onkadunud või halb push registreerimist. Te peaksite lõpetama saatmine seadmega.</string>
+    <string name="error_PushMsgMessageNotFound">Sõnum aegunud.</string>
+    <string name="error_PushMsgMessageTooBig">Sõnum on liiga suur. Vähendadasuurustsõnumit.</string>
+    <string name="error_PushMsgNotRegistered">Et saaja push registreerimine ei ole enam kehtiv. Saaja võib olla paigaldamata SafeSlinger või välja lülitatud teated. Te peaksite lõpetama saatmine seadmega.</string>
+    <string name="error_PushMsgNotSucceed">Tekkis viga suhtlemiselpush teavituse.</string>
+    <string name="error_PushMsgQuotaExceeded">Olete ületanud sõnum kvoot käesoleva seadmega. Palun proovige hiljem uuesti.</string>
+    <string name="error_PushMsgServiceFail">Teavitamine ei teeninda seekord. Palun proovige sõnumi saatmine.</string>
+    <string name="error_RecoderError">Ei saa valmistadaaudio recorder.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Et alustada, \' Sling Keys \' teise telefoni samal ajal.</string>
+    <string name="error_selectDataToSend">Sa peadarestimine või tekstsõnumi saata.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">No vastust server.</string>
+    <string name="error_ShareFileDelError">Ei saa eemaldada jagatud faili.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout ootab mõned grupi liikmed andmeid lisada.</string>
+    <string name="error_UnableFindPubKey">Ei saa sobitada avalik võti isikliku võtmega krüpto poole.</string>
+    <string name="error_UnableToSaveMessageInDB">Ei saa salvestada sõnumi andmebaasi.</string>
+    <string name="error_UnableToSaveRecipientInDB">Ei saa salvestada saaja andmebaasi.</string>
+    <string name="error_UnableToUpdateMessageInDB">Saa uuendadasõnum andmebaasis.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Saa uuendada saaja andmebaasi.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger viga, palun taaskäivitage.</string>
+    <string name="error_VcardParseFailure">Kontakt andmed vormindatud valesti.</string>
+    <string name="error_WebCancelledByUser">Kasutaja tühistatud server taotluse.</string>
+
+    <string name="help_find">Kasutage seda ekraani, et määrata oma nimi, telefoninumber ja e-posti, et vahetada teistega. Puuduta\' Valmis \' nuppu, kui olete lõpetanud.</string>
+    <string name="help_home">Vahetada identiteedi andmed, et kõik kasutajad on lähedal või telefoni teel. \' Alustada Exchange \'nuppu vahetavad ainultkontrollitud kontaktandmed.</string>
+    <string name="help_identity_menu">\n\nVõite muuta isikuandmeid oma identiteeti selle ekraani puudutades nuppu oma nimi. See avab menüü, mis võimaldab teil \' Edit \' oma kontakt, \' Loo uus \' kontakt või \' kasutada muud kontaktid.</string>
+    <string name="help_Messages">See ekraan kuvab kõik viimase sõnumeid ja manuseid, mis on veel saadaval allalaadimiseks.</string>
+    <string name="help_passphrase">Kasutage seda ekraani login taotluse koos oma parool.</string>
+    <string name="help_PickRecip">Kontaktid SafeSlinger võtmed kuvatakse siin, valida üks, et saata sõnum.</string>
+    <string name="help_save">Kui olete lõpetanud,protokoll paljastab nimekirjaidentiteedi andmeid vahetada. Valige kontaktid, mida soovite salvestada ja vajutage \' Import \'.</string>
+    <string name="help_SecureIntroduction">See ekraan võimaldab valida kaks inimest olete tropitavad võtmeid enne turvaliselt saata oma võtmed üksteist. Lihtsalt vajuta \' Hakata \', kui oled valmis.</string>
+    <string name="help_Send">See ekraan võimaldab teil valida mõned andmed jasaaja saatma. Lihtsalt vajuta \' Saada \', kui oled valmis.</string>
+    <string name="help_size">Vali hulk inimesi, kes üritavad vahetada andmeid koos ja vajuta \' OK \'.</string>
+    <string name="help_userid">See number on see ekraan on kasutatud, et luua ainulaadne kasutajate rühm. Vaadake numbreid kõik kasutaja ekraanid, siis kõik kasutajad peaksid kandma sama väikseim number ja vajutage \' OK \'.</string>
+    <string name="help_verify">Nüüd peate sobitada üks neist 3-sõna laused logima. Iga kasutaja peab valima sama levinud fraas ja vajutage \'Next\'.</string>
+
+    <string name="iOS_contactError">Kontaktid õigusi. Palun minge iOS Seaded võimaldada Kontaktid õigused.</string>
+    <string name="iOS_errorpushtoken">Push registreerimiseks puudub.</string>
+    <string name="iOS_notificationError1">Teated õigusi. Palun minge iOS Settings võimaldada Teated õigused.</string>
+    <string name="iOS_notificationError2">%s õigusi. Palun minge iOS Settings võimaldada Teated õigused.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger ei ole optimeeritud iOS 5.x seadmeid. SafeSlinger eeldab iOS 6 või kõrgem.</string>
+
+    <string name="label_ago">%s tagasi</string>
+    <string name="label_backupCompleteDate">Viimati Backup Valmis</string>
+    <string name="label_backupRequestDate">Viimati Backup Request</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Puuduta vaadata oma %d sõnumeid</string>
+    <string name="label_ComposeHint">Koosta sõnum</string>
+    <string name="label_ContactEmail">Sinu e-post</string>
+    <string name="label_ContactName">Teie nimi</string>
+    <string name="label_ContactPhone">Telefoni</string>
+    <string name="label_days">%d päeva</string>
+    <string name="label_Device">Seade:</string>
+    <string name="label_DeviceInSendOnlyMode">Saada režiimis</string>
+    <string name="label_DisabledExchSourceKeyChange">Sinu võti on muutunud: Sling Keys uuesti.</string>
+    <string name="label_Draft">PROJEKT</string>
+    <string name="label_EnabledKeyFormatDeprecated">Key formaat taunitud: Sling Keys uuesti.</string>
+    <string name="label_exchanged">vahetada</string>
+    <string name="label_expired">lõppenud</string>
+    <string name="label_expires">aegub %s</string>
+    <string name="label_expiresIn">aegub</string>
+    <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Palun sisesta oma isikuandmeid. Neid andmeid ainult turvaliselt jagada üksikisikute kellele soovite jagada seda.</string>
+    <string name="label_FirstName">Eesnimi</string>
+    <string name="label_Home">Kontrolli üksused, mida soovite jagada ning puudutage \' Alustada vahetus \' kui teised on valmis vahetama.</string>
+    <string name="label_hometag">Kodu</string>
+    <string name="label_hours">%d tundi</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud on lubatud. Puuduta\' Valmis \' nuppu, kui olete lõpetanud.</string>
+    <string name="label_InstNoMessages">Ei sõnumeid. Võite saata sõnum\' Koosta sõnum \' nuppu Home menüü.</string>
+    <string name="label_InstNoMessagesAndroid">Ei sõnumeid. Võite saata sõnum\' komponeerida \' tab.</string>
+    <string name="label_InstNoRecipients">Ühtegi saajat. Leia veel SafeSlinger kasutaja lähedal ja puudutada \' Sling Keys \' tab jagada võtmed.</string>
+    <string name="label_InstNoSharedFile">No jagatud faili. Ühendage seade iTunesiga ja lohista failid jagatud kausta.</string>
+    <string name="label_InstRecipients">Pickadressaadil saata sõnum:</string>
+    <string name="label_InstSendInvite">Pick saajate tutvustada kindlalt:</string>
+    <string name="label_InstSharedFile">Valifaili lisada:</string>
+    <string name="label_introduced">sisse</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Perekonnanimi</string>
+    <string name="label_Me">Mind</string>
+    <string name="label_messageIntroduceNameToYou">Tahaksin tutvustada %s teile.</string>
+    <string name="label_MeToSender">Me (kuni %s):</string>
+    <string name="label_minutes">%d minutit</string>
+    <string name="label_mobiletag">Mobiilne</string>
+    <string name="label_MostRecentOnly">Viimased ainult</string>
+    <string name="label_MsgSendUpdate">Minu uuendatud SafeSlinger volikirja lisatud.</string>
+    <string name="label_None">Mitte ükski</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_numsharedfiles">%d Files jagada:</string>
+    <string name="label_OldThreads">Vana teemad</string>
+    <string name="label_othertag">Muu</string>
+    <string name="label_PassHintBackoff">Uuesti</string>
+    <string name="label_PassHintChange">Uuendatud Passphrase</string>
+    <string name="label_PassHintCreate">Loo Passphrase</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Korda Passphrase</string>
+    <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
+    <string name="label_PassPhraseIsCached">Passphrase puhverdatud</string>
+    <string name="label_phoneOnly">ainult telefonitsi</string>
+    <string name="label_Photo">Foto</string>
+    <string name="label_PromptInstruct">See number on kasutatud, et luua ainulaadne kasutajate rühm. Võrdle ja sisestage väikseima arvu seas kõikidele kasutajatele.</string>
+    <string name="label_PublicKeyID">Key ID</string>
+    <string name="label_PushTokenID">Push registreerimisnime</string>
+    <string name="label_ReceivedNItems">saanud %d esemeid</string>
+    <string name="label_RemindBackupDelay">Backup Meeldetuletus</string>
+    <string name="label_ReportedInactive">Teatas passiivne %s.</string>
+    <string name="label_restoreCompleteDate">Viimati taastamine Lõpetatud</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup hilineb</string>
+    <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
+    <string name="label_SaveAccount">Säästa konto</string>
+    <string name="label_SaveInstruct">Exchange valmis! Valige kasutaja andmeid salvestada oma aadressiraamatusse:</string>
+    <string name="label_seconds">%d sekundit</string>
+    <string name="label_selectLabel">Valige silt</string>
+    <string name="label_SelectRecip">Vali adressaat</string>
+    <string name="label_sendErrorData">Saada Error Andmed</string>
+    <string name="label_SendFrom">From:</string>
+    <string name="label_SendTo">To:</string>
+    <string name="label_ShowHintAtLaunch">Näita seda vihjet järgmine kord.</string>
+    <string name="label_step_1">Samm 1</string>
+    <string name="label_step_2">Step 2</string>
+    <string name="label_step_3">Samm 3</string>
+    <string name="label_step_4">Samm 4</string>
+    <string name="label_step_5">Samm 5</string>
+    <string name="label_TapToDecryptFile">Puuduta dekrüpteerida fail</string>
+    <string name="label_TapToDecryptMessage">Puuduta dekrüpteerida</string>
+    <string name="label_TapToDownloadFile">Puuduta laadida faili</string>
+    <string name="label_TapToDownloadMessage">Puuduta laadida sõnum</string>
+    <string name="label_TapToOpenFile">Puudutage, et avada fail</string>
+    <string name="label_TapToResumeDraft">Puuduta jätkamiseks sõnum eelnõu</string>
+    <string name="label_TapToSendCredentialUpdate">Puuduta ja hoia saata mandaat uuendatud.</string>
+    <string name="label_targetAccountLabel">Kontaktid konto</string>
+    <string name="label_TouchToConfigureBackupSettings">Sul võib vajadusel võimaldada SafeSlinger iCloud backup iOS Settings. Puuduta\' Valmis \' nuppu, kui olete lõpetanud.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Touch konfigureerida backup seaded.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Touch konfigureerida cache timeout seaded.</string>
+    <string name="label_undefinedTypeLabel">Tundmatu</string>
+    <string name="label_UnknownSender">Krüpteeritud Sender</string>
+    <string name="label_UserIdHint">Madalaim</string>
+    <string name="label_UserName">Kasutajanimi</string>
+    <string name="label_VerifyInstruct">Kõik telefonid peab vastama üks 3-fraasid. Võrdle ja seejärel valida sobitamine fraas.</string>
+    <string name="label_worktag">Töö</string>
+
+    <string name="menu_About">Kohta</string>
+    <string name="menu_Change">Muutus</string>
+    <string name="menu_ChangePassphrase">Muuda Passphrase</string>
+    <string name="menu_CreateNew">Loo uus</string>
+    <string name="menu_delete">Kustutama</string>
+    <string name="menu_deleteThread">Kustuta teema \'%s\'</string>
+    <string name="menu_Details">Vaata detaile</string>
+    <string name="menu_DownloadDirectory">Lae alla kataloog</string>
+    <string name="menu_Edit">Edit</string>
+    <string name="menu_FileManager">Failihaldur</string>
+    <string name="menu_Help">Aitama</string>
+    <string name="menu_Introduction">Sissejuhatus</string>
+    <string name="menu_License">Litsents</string>
+    <string name="menu_Logout">Logi välja</string>
+    <string name="menu_messageCopyText">Kopeeri tekst</string>
+    <string name="menu_messageForward">Edasi</string>
+    <string name="menu_Remove">Eemaldama</string>
+    <string name="menu_SelectShareApp">Saada taotlus</string>
+    <string name="menu_sendFeedback">Saada tagasiside</string>
+    <string name="menu_SendUpdate">Saada Uuenda</string>
+    <string name="menu_Settings">Seaded</string>
+    <string name="menu_ShowTutorial">Show Treening</string>
+    <string name="menu_TagComposeMessage">Koostama</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">Sõnumid</string>
+    <string name="menu_UseAnother">Kasutage teist</string>
+
+    <string name="prog_CollectingOthersCommitVerify">ootab kontrollimine kõigi liikmete…</string>
+    <string name="prog_CollectingOthersItems">ootab kõiki kasutajaid liituma…</string>
+    <string name="prog_ConstructingGroupKey">ehitamise Grupivõtme…</string>
+    <string name="prog_decrypting">dekrüpteerimiseks…</string>
+    <string name="prog_encrypting">krüptimine…</string>
+    <string name="prog_FileSent">saadetud, ootab vastust…</string>
+    <string name="prog_findingKey">leida võti…</string>
+    <string name="prog_GeneratingKey">Võtme genereerimine, see võib aega võtta…</string>
+    <string name="prog_generatingSignature">teeniva allkiri…</string>
+    <string name="prog_loadingContent">sisu laadimiseks…</string>
+    <string name="prog_ReceivingFile">saavad krüptitud faili…</string>
+    <string name="prog_RequestingFile">taotleva krüptitud faili…</string>
+    <string name="prog_RequestingMessage">taotleva krüptida…</string>
+    <string name="prog_RequestingPushReg">taotleva push registreerimine…</string>
+    <string name="prog_RequestingUserId">esitanud liikmeks…</string>
+    <string name="prog_SavingContactsToAddressBook">ajakohastamise aadressiraamatu…</string>
+    <string name="prog_SavingContactsToKeyDatabase">ajakohastamise peamine andmebaas…</string>
+    <string name="prog_SearchingForBackup">otsides backup…</string>
+    <string name="prog_SendingFile">saates krüpteeritud %s…</string>
+    <string name="prog_verifyingIntegrity">kontrollida terviklikkuse…</string>
+    <string name="prog_verifyingSignature">kontrollida allkirja…</string>
+
+    <string name="section_advanced">Edasijõudnud</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">Üldine</string>
+
+    <string name="state_BackupRestored">Backup taastada.</string>
+    <string name="state_FileDeleted">Kustutatud faili %s.</string>
+    <string name="state_FileSent">Sõnum saadetud.</string>
+    <string name="state_MessageSavedAsDraft">Sõnum salvestatakse mustandina.</string>
+    <string name="state_MessagesDeleted">%d sõnumeid kustutada.</string>
+    <string name="state_PassphraseUpdated">Passphrase uuendatud.</string>
+    <string name="state_RecipientsDeleted">%d saajad välja.</string>
+    <string name="state_SomeContactsImported">%s kontakte importida.</string>
+    <string name="state_TextCopiedToClipboard">Tekst kopeeritakse lõikelauale.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger eesmärk on lihtsalt jagada identiteedi andmed, isiklikult või telefoni teel, kinnitatud, era-ja puutumatu. Iga inimene jagate loob turvalise end-to-end kanal sõnumite saatmiseks.\n\nOmadused:\n- kergesti vahetada kontaktandmeid teistega\n- Tellige pilduma tekstid, fotod, midagi!\n- Tugev krüptograafia kaitseb teie andmed\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Keeled, mida pakuvad:</string>
+    <string name="text_Requirements">Nõuded:\n1. Tuleb paigaldada vähemalt 2 seadmeid.\n2. Internetiühendus peab olema aktiivne.</string>
+    <string name="text_ShortPromotion">Turvaliseks pilduma kontaktid, teksti, fotosid, midagi!</string>
+
+    <string name="title_About">Kohta</string>
+    <string name="title_camera">Kaamera</string>
+    <string name="title_ChooseDirectory">Vali kataloog</string>
+    <string name="title_ChooseFileLoad">Vali Attachment</string>
+    <string name="title_comments">Kommentaarid/küsimused</string>
+    <string name="title_Error">Viga</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
+    <string name="title_FileOptions">Attachment juurde</string>
+    <string name="title_find">Seade</string>
+    <string name="title_home">Alustada Exchange</string>
+    <string name="title_HomePanel">Kodu</string>
+    <string name="title_MessageDetail">Sõnum</string>
+    <string name="title_Messages">Sõnumid</string>
+    <string name="title_MyIdentity">Minu identiteet</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Sõnum Saadaval</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages Saadaval</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Toetuse saajad</string>
+    <string name="title_Question">Küsimus</string>
+    <string name="title_RecipientDetail">Saaja Detail</string>
+    <string name="title_save">End Exchange</string>
+    <string name="title_SaveFileAs">Salvesta fail nimega</string>
+    <string name="title_SecureIntroduction">Secure Sissejuhatus</string>
+    <string name="title_SecureIntroductionInvite">Turvaline Sissejuhatus Invitation!</string>
+    <string name="title_SelectSource">Saatmise valikud:</string>
+    <string name="title_SendFile">Saatma</string>
+    <string name="title_sharingfolder">Jagamine Folder</string>
+    <string name="title_size">Mitu kasutajat vahetada?</string>
+    <string name="title_soundrecoder">Sound Recorder</string>
+    <string name="title_TextInviteMsg">SafeSlinger Invitation</string>
+    <string name="title_Threads">Teemad</string>
+    <string name="title_userid">Rühmitamine</string>
+    <string name="title_verify">Kontrollima</string>
+    <string name="title_Warn">Hoiatus</string>
+
+</resources>

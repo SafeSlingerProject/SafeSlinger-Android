@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Dërgo ftoj lidhje me…</string>
+    <string name="action_ViewFile">Shiko %s me…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup është me aftësi të kufizuara. A doni të rregulluar parametrat backup dhe për të mbajtur këtë kujtesë?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s ka një pajisje më e afërt apo kyç, a jeni i sigurt që ju dëshironi të përdorni këtë një të vjetër?</string>
+    <string name="ask_FileExistsOverwrite">Emri i dokumentit %s tashmë ekziston. Mbishkruaj?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Pa një Llogari Google ju do të jetë në gjendje të dërgojë, nuk merrni mesazhe vetëm. A doni të shtoni një llogari Google?</string>
+    <string name="ask_QuitConfirmation">Quit? A jeni i sigurt?</string>
+    <string name="ask_SendErrorData">Ne do të donim për ndihmën tuaj përmirësimin SafeSlinger. Doni të dërgoni automatikisht ndonjë gabim për ne?</string>
+
+    <string name="btn_Accept">Pranoj</string>
+    <string name="btn_BeginExchangeProximity">Filloni Exchange</string>
+    <string name="btn_Cancel">Anuloj</string>
+    <string name="btn_Close">Afër</string>
+    <string name="btn_Continue">Vazhdoj</string>
+    <string name="btn_discard">Heq dorë nga</string>
+    <string name="btn_Done">E bërë</string>
+    <string name="btn_Exit">Dalje</string>
+    <string name="btn_Import">Import</string>
+    <string name="btn_Introduce">Futja</string>
+    <string name="btn_Match">Tjetër</string>
+    <string name="btn_No">Jo</string>
+    <string name="btn_NoMatch">Nuk ka ndeshje</string>
+    <string name="btn_NotRemind">Harroj</string>
+    <string name="btn_OK">në rregull</string>
+    <string name="btn_Refuse">Refuzoj</string>
+    <string name="btn_Remind">I kujtoj</string>
+    <string name="btn_Save">Ruaj</string>
+    <string name="btn_SelectFile">Shto Attachment</string>
+    <string name="btn_SendFile">Dërgoj</string>
+    <string name="btn_Yes">Po</string>
+
+    <string name="choice_10mins">10 minuta</string>
+    <string name="choice_1hour">1 orë</string>
+    <string name="choice_1min">1 minutë</string>
+    <string name="choice_20mins">20 minuta</string>
+    <string name="choice_2hours">2 orë</string>
+    <string name="choice_3mins">3 minuta</string>
+    <string name="choice_40mins">40 minuta</string>
+    <string name="choice_4hours">4 orë</string>
+    <string name="choice_5mins">5 minuta</string>
+    <string name="choice_8hours">8 orë</string>
+    <string name="choice_auto_storage">Default Storage</string>
+    <string name="choice_external_storage">Storage e jashtme</string>
+    <string name="choice_internal_storage">Magazinimi i brendshëm</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d users</string>
+    <string name="choice_SaveDirectory">Ruaj Directory</string>
+    <string name="choice_SaveFile">Save fotografi</string>
+    <string name="choice_Up">Lart</string>
+
+    <string name="error_AllMembersMustUpgrade">Disa anëtarë janë duke përdorur një version të vjetër, të gjithë anëtarët duhet të paktën të përdorni %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Të gjithë anëtarët duhet të përmirësuar, disa janë duke përdorur formate të vjetër kyçe.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Të gjithë anëtarët duhet të përmirësuar, disa janë përdorur formatet më të vjetër të regjistrimit shtytje.</string>
+    <string name="error_AudioPlayerDecodeError">Audio player deshifrim gabim.</string>
+    <string name="error_AudioPlayerError">Nuk mund të luajë regjistrimin.</string>
+    <string name="error_AudioRecorderEncodeError">Audio gabim regjistrues encoding.</string>
+    <string name="error_AudioRecorderPermissionError">Leje Mikrofoni nevojshme. Ju lutem shkoni në iOS Settings për të mundësuar leje mikrofon.</string>
+    <string name="error_BackupNotFound">Asnjë rezervë për të rivendosur.</string>
+    <string name="error_BackupNotSupportedDevice">Pajisje nuk mbeshtet backup rivendosur.</string>
+    <string name="error_BadCopyProtectUpgrade">Për shkak të një bug në Android 4.1, ju do të keni uninstall dhe reinstall SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Një llogari Google është e nevojshme. Ju lutemi të hapur menaxherin e llogarisë dhe të shtoni një llogari Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Regjistrimi nuk vërtetuar, ju lutem provoni përsëri më vonë me dorë.</string>
+    <string name="error_C2DMRegInvalidSender">Regjistrimi nuk është në dispozicion për këtë version, ju lutem kontrolloni për një version të përditësuar.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Regjistrimi gabuar pajisjen me Google. Kjo pajisje aktualisht nuk mbeshtet mesazheve shtytje.</string>
+    <string name="error_C2DMRegServiceNotAvailable">International regjistrimin Push nuk është në dispozicion, caktimin rigjykuar në %d sekonda.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Shumë aplikacione janë regjistruar për Push. Ju lutem uninstall disa aplikacione të tjera dhe rigjykuar.</string>
+    <string name="error_CannotSendEmptyFile">Nuk mund të dërgoni një shtojcë bosh.</string>
+    <string name="error_CannotSendFilesOver">Nuk mund të dërgoni të bashkëngjitni skedarë më të mëdha se %d bytes në madhësi.</string>
+    <string name="error_CannotSendNullFile">Nuk mund të dërgoni një shtojcë null.</string>
+    <string name="error_contactCreationFailure">Krijimi Kontakt dështuar.</string>
+    <string name="error_ContactInsertFailed">Kontakt insert dështuar.</string>
+    <string name="error_ContactNameMissing">Ky kontakt mungon një emër, ju lutem redaktoni.</string>
+    <string name="error_ContactNameMissing2">Ky kontakt mungon një emër, ju lutem rizgjidhni.</string>
+    <string name="error_ContactUpdateFailed">Kontakt azhornimi i dështuar.</string>
+    <string name="error_CorrectYourInternetConnection">Internet nuk është në dispozicion, kontrolloni parametrat tuaj.</string>
+    <string name="error_couldNotExtractPrivateKey">Nuk mund të ekstrakt çelësin privat.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Exchange tejkaluar. Filloni shkëmbimin përsëri.</string>
+    <string name="error_FeatureIsNotSupport">%1$s nuk është i mbështetur në %2$s në këtë kohë.</string>
+    <string name="error_FileSave">Në pamundësi për të shpëtuar %s.</string>
+    <string name="error_FileStorageUnavailable">File storage nuk është në dispozicion.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Të dhëna të pasakta gjetur në këmbim. Filloni shkëmbimin përsëri.</string>
+    <string name="error_InvalidCommonUserId">Ju lutem, jepni një numër i plotë pozitiv.</string>
+    <string name="error_InvalidContactName">Një emër i vlefshëm kontakti është e nevojshme.</string>
+    <string name="error_InvalidIncomingMessage">Bad hyrje format mesazh.</string>
+    <string name="error_InvalidMsg">Mesazhi i keq format.</string>
+    <string name="error_InvalidRecipient">Marrësit e pavlefshme.</string>
+    <string name="error_LocalGroupCommitDiffer">Ju kanë raportuar një ndryshim në frazat. Filloni shkëmbimin përsëri.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Formati peer kyçi është i pavlefshëm.</string>
+    <string name="error_MessageSignatureVerificationFails">Verifikimi Nënshkrimi dështuar.</string>
+    <string name="error_minPassphraseRequire">Passphrases kërkojnë të paktën %d karaktere.</string>
+    <string name="error_MinUsersRequired">Një minimum prej %d anëtarëve janë të nevojshme për shkëmbimin e të dhënave.</string>
+    <string name="error_MissingNdk">SafeSlinger nuk ka zbuluar përkrahje NDK për këtë pajisje, e cila është e nevojshme.</string>
+    <string name="error_MoreDataThanUsers">Të dhënat e papritura gjetur në këmbim. Filloni shkëmbimin përsëri.</string>
+    <string name="error_MultipleSendNotSupported">Ju jeni duke u përpjekur për të dërguar artikuj të shumta. Në këtë kohë, SafeSlinger mbështet vetëm duke dërguar një artikull në një kohë.</string>
+    <string name="error_NoEmailAccount">Llogaria Email nuk është setup!</string>
+    <string name="error_noPassPhrase">Nuk ka passphrase hyrë.</string>
+    <string name="error_NoWordListSelected">Ju duhet të zgjidhni një nga frazat e para se të vazhdoni.</string>
+    <string name="error_OtherGroupCommitDiffer">Dikush njoftoi një ndryshim në frazat. Filloni shkëmbimin përsëri.</string>
+    <string name="error_OutOfMemoryError">Memory është shumë i ulët për të përfunduar këtë operacion.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases nuk përputhen.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Ju keni tejkaluar kuotën mesazh për atë marrësit. Ju lutem provoni përsëri më vonë.</string>
+    <string name="error_PushMsgInvalidRegistration">Që përfituesi ka një regjistrim të humbur apo të keqe shtytje. Ju duhet të ndaluar dërgimin e mesazheve në këtë pajisje.</string>
+    <string name="error_PushMsgMessageNotFound">Mesazh skaduar.</string>
+    <string name="error_PushMsgMessageTooBig">Mesazhi është shumë i madh. Të zvogëluar madhësinë e mesazhit.</string>
+    <string name="error_PushMsgNotRegistered">Regjistrimi i shtyjnë që marrësit nuk është më e vlefshme. Marrësi mund të uninstalled SafeSlinger apo fikur njoftime. Ju duhet të ndaluar dërgimin e mesazheve në këtë pajisje.</string>
+    <string name="error_PushMsgNotSucceed">Pati një gabim gjatë lidhjes me shërbimin e njoftimit shtytje.</string>
+    <string name="error_PushMsgQuotaExceeded">Ju keni tejkaluar kuotën mesazh për këtë pajisje. Ju lutem provoni përsëri më vonë.</string>
+    <string name="error_PushMsgServiceFail">Shërbimi Njoftimi nuk është në dispozicion këtë herë. Ju lutemi provoni të dërguar mesazhin më vonë.</string>
+    <string name="error_RecoderError">Nuk mund të përgatitur regjistrues audio.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Për të filluar, \' Sling Keys \' me një telefon tjetër në të njëjtën kohë.</string>
+    <string name="error_selectDataToSend">Ju duhet një shtojcë ose një mesazh me tekst të dërguar.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Nuk ka përgjigje nga serveri.</string>
+    <string name="error_ShareFileDelError">Nuk mund të hiqni fotografi të përbashkët.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout duke pritur për disa anëtarë të grupit të shtoni të dhëna.</string>
+    <string name="error_UnableFindPubKey">Në pamundësi që të shkojë me çelësin publik të kyç privat në ofrues të shifruar.</string>
+    <string name="error_UnableToSaveMessageInDB">Në pamundësi për të ruajtur në bazën e të dhënave mesazhit.</string>
+    <string name="error_UnableToSaveRecipientInDB">Në pamundësi për të ruajtur në bazën e të dhënave marrësit.</string>
+    <string name="error_UnableToUpdateMessageInDB">Në pamundësi për të rinovuar bazën e të dhënave mesazh.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Në pamundësi për të rinovuar bazën e të dhënave marrësit.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger gabim, ju lutem rinisni.</string>
+    <string name="error_VcardParseFailure">Të dhënat e kontaktit u formatuar gabimisht.</string>
+    <string name="error_WebCancelledByUser">User anuluar kërkesën server.</string>
+
+    <string name="help_find">Përdoreni këtë ekran për të vendosur emrin tuaj, telefon, dhe email për të shkëmbyer me të tjerët. Tap butonin \' Done \' kur mbaruar.</string>
+    <string name="help_home">Të shkëmbejnë të dhëna të identitetit, të sigurojë të gjithë përdoruesit janë të afërt ose në telefon. Butonin \' fillojnë Shkëmbim \' do të shkëmbejnë vetëm të dhëna të kontrolluar kontaktit.</string>
+    <string name="help_identity_menu">\n\nJu gjithashtu mund të ndryshojë të dhënat personale për identitetin tuaj në këtë ekran nga përgjimi mbi butonin me emrin tuaj. Kjo do të shfaq një menu që ju lejon të \' Edit \' kontakt tuaj, \'Krijo të re\' kontakt, ose \' Përdor Një tjetër \' kontakt.</string>
+    <string name="help_Messages">Ky ekran tregon të gjitha mesazhet e kaluara dhe të bashkëngjitni skedarë që janë ende në dispozicion për shkarkim.</string>
+    <string name="help_passphrase">Përdoreni këtë ekran për të hyni brënda për aplikimin me fjalëkalim tuaj.</string>
+    <string name="help_PickRecip">Kontaktet me çelësat SafeSlinger janë shfaqur këtu, zgjidhni një për të dërguar mesazhin tuaj për të.</string>
+    <string name="help_save">Kur përfundoi, protokolli do të zbulojë një listë të të dhënave të identitetit të shkëmbyera. Zgjidhni kontaktet që dëshironi të ruani dhe të shtypni \' Import \'.</string>
+    <string name="help_SecureIntroduction">Ky ekran ju lejon të zgjidhni dy njerëz që keni hodhi me hobenë çelësat me të para se të sigurt të dërguar çelësat e tyre për njëri-tjetrin. Thjesht shtypni \' Prezantoni \' kur gati.</string>
+    <string name="help_Send">Ky ekran ju lejon të zgjidhni disa të dhëna dhe një marrës për të dërguar për të. Thjesht shtypni \' Send \' kur gati.</string>
+    <string name="help_size">Zgjidhni numrin e njerëzve që janë duke u përpjekur për të shkëmbejnë të dhëna së bashku dhe të shtypni \' OK \'.</string>
+    <string name="help_userid">Ky numër në këtë ekran është përdorur për të krijuar një grup të veçantë të përdoruesve. Rishikimi numrat në të gjithë përdoruesve ekranet, atëherë të gjithë përdoruesit duhet të hyjnë të njëjtin numër më të ulët dhe shtypni \' OK \'.</string>
+    <string name="help_verify">Tani, ju duhet të përputhen me një nga këto fraza 3-fjalë me të gjithë përdoruesit. Çdo përdorues duhet të zgjidhni të njëjtën frazë të përbashkët, dhe shtypni \' Next \'.</string>
+
+    <string name="iOS_contactError">Leje Kontaktet e kërkuar. Ju lutem shkoni në iOS Settings për të mundësuar Kontakte leje.</string>
+    <string name="iOS_errorpushtoken">Regjistrimi shtytje mungon.</string>
+    <string name="iOS_notificationError1">Leje Njoftimet e nevojshme. Ju lutem shkoni në iOS Settings për të mundësuar njoftime leje.</string>
+    <string name="iOS_notificationError2">Leje %s nevojshme. Ju lutem shkoni në iOS Settings për të mundësuar njoftime leje.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger nuk është e optimizuar për pajisje iOS 5.x. SafeSlinger kërkon iOS 6 ose më të larta.</string>
+
+    <string name="label_ago">%s më parë</string>
+    <string name="label_backupCompleteDate">Rikthim i fundit Kompletuar</string>
+    <string name="label_backupRequestDate">Kërkesë fundit Backup</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Prekni për të shqyrtuar %d mesazhet</string>
+    <string name="label_ComposeHint">Shkruaj mesazh</string>
+    <string name="label_ContactEmail">Email juaj</string>
+    <string name="label_ContactName">Emri juaj</string>
+    <string name="label_ContactPhone">Telefoni juaj</string>
+    <string name="label_days">%d ditë</string>
+    <string name="label_Device">Device:</string>
+    <string name="label_DeviceInSendOnlyMode">Send-vetëm mënyrë</string>
+    <string name="label_DisabledExchSourceKeyChange">Kyç juaj ka ndryshuar: Sling Keys përsëri.</string>
+    <string name="label_Draft">DRAFT</string>
+    <string name="label_EnabledKeyFormatDeprecated">Formati Key deprecated: Sling Keys përsëri.</string>
+    <string name="label_exchanged">shkëmbyen</string>
+    <string name="label_expired">i skaduar</string>
+    <string name="label_expires">skadon %s</string>
+    <string name="label_expiresIn">skadon në</string>
+    <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Ju lutemi shkruani të dhënat tuaja personale. Këto të dhëna do të ndahen vetëm të sigurt me individë të cilët ju zgjidhni për të ndarë atë me të.</string>
+    <string name="label_FirstName">Emër</string>
+    <string name="label_Home">Kontrolloni sendet që ju dëshironi për të ndarë dhe trokitje e lehtë \' Filloni Exchange \' kur të tjerët janë të gatshëm për të shkëmbyer.</string>
+    <string name="label_hometag">Shtëpi</string>
+    <string name="label_hours">%d orë</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud është aktivizuar. Tap butonin \' Done \' kur mbaruar.</string>
+    <string name="label_InstNoMessages">Nuk ka mesazhe. Ju mund të dërgoni një mesazh nga \'Sillne mesazh \' button në menu shtëpi.</string>
+    <string name="label_InstNoMessagesAndroid">Nuk ka mesazhe. Ju mund të dërgoni një mesazh nga tab \' compose \'.</string>
+    <string name="label_InstNoRecipients">Nuk marrësit. Gjej një përdorues SafeSlinger afër dhe kontakt skedën \' hobe Keys për të ndarë çelësat.</string>
+    <string name="label_InstNoSharedFile">Nuk ka fotografi të përbashkët. Lidhu pajisjen tuaj me iTunes dhe fotografi Tërhiqni për dosje të përbashkët.</string>
+    <string name="label_InstRecipients">Zgjidh një marrës për të dërguar një mesazh për të:</string>
+    <string name="label_InstSendInvite">Pick marrësit për të futur të sigurt:</string>
+    <string name="label_InstSharedFile">Zgjidh një skedar të bashkëngjitni:</string>
+    <string name="label_introduced">futur</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Mbiemër</string>
+    <string name="label_Me">Mua</string>
+    <string name="label_messageIntroduceNameToYou">Unë do të doja të prezantoj %s për ju.</string>
+    <string name="label_MeToSender">Mua (të %s):</string>
+    <string name="label_minutes">%d minuta</string>
+    <string name="label_mobiletag">I lëvizshëm</string>
+    <string name="label_MostRecentOnly">Të fundit vetëm</string>
+    <string name="label_MsgSendUpdate">E mia më të kredencialet SafeSlinger janë bashkangjitur.</string>
+    <string name="label_None">Asnjë</string>
+    <string name="label_NumericModeHint">Jo-Anglisht</string>
+    <string name="label_numsharedfiles">%d Files për Share:</string>
+    <string name="label_OldThreads">Temat e vjetra</string>
+    <string name="label_othertag">Tjetër</string>
+    <string name="label_PassHintBackoff">Rigjykoj</string>
+    <string name="label_PassHintChange">Fjalëkalim përditësua</string>
+    <string name="label_PassHintCreate">Krijo fjalëkalim</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Përsëriteni fjalëkalim</string>
+    <string name="label_passPhraseCacheTtl">Cache passphrase</string>
+    <string name="label_PassPhraseIsCached">Cached passphrase</string>
+    <string name="label_phoneOnly">telefon-vetëm</string>
+    <string name="label_Photo">Foto</string>
+    <string name="label_PromptInstruct">Ky numër është përdorur për të krijuar një grup të veçantë të përdoruesve. Krahaso, dhe pastaj shkruani numrin më të ulët në mesin e të gjithë përdoruesit.</string>
+    <string name="label_PublicKeyID">ID Key</string>
+    <string name="label_PushTokenID">Push ID Regjistrimi</string>
+    <string name="label_ReceivedNItems">pranuar %d artikuj</string>
+    <string name="label_RemindBackupDelay">Reminder backup</string>
+    <string name="label_ReportedInactive">Raportuar %s joaktiv.</string>
+    <string name="label_restoreCompleteDate">Rikthe fundit Kompletuar</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup vonuar</string>
+    <string name="label_safeslingered">(SafeSlinger Exchange Direct)</string>
+    <string name="label_SaveAccount">Ruaj Llogari</string>
+    <string name="label_SaveInstruct">Shkëmbim Complete! Zgjidhni të dhënave anëtare për të ruajtur në librin tuaj adresën:</string>
+    <string name="label_seconds">%d seconds</string>
+    <string name="label_selectLabel">Zgjidh etiketë</string>
+    <string name="label_SelectRecip">Marrësi Zgjidh</string>
+    <string name="label_sendErrorData">Dërgo dhënave gabim</string>
+    <string name="label_SendFrom">Nga:</string>
+    <string name="label_SendTo">Për:</string>
+    <string name="label_ShowHintAtLaunch">Trego këtë aluzion herën tjetër.</string>
+    <string name="label_step_1">Hapi 1</string>
+    <string name="label_step_2">Hapi 2</string>
+    <string name="label_step_3">Hapi 3</string>
+    <string name="label_step_4">Hapi 4</string>
+    <string name="label_step_5">Hapi 5</string>
+    <string name="label_TapToDecryptFile">Trokitni lehtë për të decrypt fotografi</string>
+    <string name="label_TapToDecryptMessage">Trokitni lehtë për të decrypt</string>
+    <string name="label_TapToDownloadFile">Trokitje e lehtë për të shkarkuar fotografi</string>
+    <string name="label_TapToDownloadMessage">Trokitje e lehtë për të shkarkuar mesazh</string>
+    <string name="label_TapToOpenFile">Takoni për të hapur dosjen</string>
+    <string name="label_TapToResumeDraft">Trokitni lehtë për të rifilluar mesazh draft</string>
+    <string name="label_TapToSendCredentialUpdate">Trokitje e lehtë dhe të mbajë për të dërguar përditësim kredenciale.</string>
+    <string name="label_targetAccountLabel">Kontakte Llogaria</string>
+    <string name="label_TouchToConfigureBackupSettings">Ju mund të opsionale të mundësojë backup SafeSlinger iCloud në iOS Settings. Tap butonin \' Done \' kur mbaruar.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Prekni për të konfiguroni parametrat backup.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Prekni të konfiguroni cilësimet cache timeout.</string>
+    <string name="label_undefinedTypeLabel">I panjohur</string>
+    <string name="label_UnknownSender">Dërguesi i mbyllur</string>
+    <string name="label_UserIdHint">Më i ulët</string>
+    <string name="label_UserName">Emri i përdoruesit</string>
+    <string name="label_VerifyInstruct">Të gjithë telefonat duhet të përputhen një nga 3-fjalë frazat. Krahaso, dhe pastaj të vini frazën përputhen.</string>
+    <string name="label_worktag">Punë</string>
+
+    <string name="menu_About">Për</string>
+    <string name="menu_Change">Ndryshim</string>
+    <string name="menu_ChangePassphrase">Ndryshimi fjalëkalim</string>
+    <string name="menu_CreateNew">Krijo re</string>
+    <string name="menu_delete">Fshij</string>
+    <string name="menu_deleteThread">Fshij Temë \'%s\'</string>
+    <string name="menu_Details">Shiko Detail</string>
+    <string name="menu_DownloadDirectory">Download Direktoria</string>
+    <string name="menu_Edit">Redaktoj</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_Help">Ndihmë</string>
+    <string name="menu_Introduction">Paraqitje</string>
+    <string name="menu_License">Leje</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_messageCopyText">Copy Text</string>
+    <string name="menu_messageForward">Përpara</string>
+    <string name="menu_Remove">Heq</string>
+    <string name="menu_SelectShareApp">Dërgo Aplikimi</string>
+    <string name="menu_sendFeedback">Dergo Reagimin</string>
+    <string name="menu_SendUpdate">Dërgo Update</string>
+    <string name="menu_Settings">Cilësimet</string>
+    <string name="menu_ShowTutorial">Trego tutorial</string>
+    <string name="menu_TagComposeMessage">Kompozoj</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">Mesazhet</string>
+    <string name="menu_UseAnother">Përdorimi Një tjetër</string>
+
+    <string name="prog_CollectingOthersCommitVerify">duke pritur për verifikim nga të gjithë anëtarët…</string>
+    <string name="prog_CollectingOthersItems">duke pritur për të gjithë përdoruesit për t\'u bashkuar me…</string>
+    <string name="prog_ConstructingGroupKey">ndërtimin kyç grup…</string>
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">encrypting…</string>
+    <string name="prog_FileSent">mesazh i dërguar, në pritje të përgjigjes…</string>
+    <string name="prog_findingKey">gjetur çelësin…</string>
+    <string name="prog_GeneratingKey">gjeneruar çelësin, kjo mund të marrë një kohë…</string>
+    <string name="prog_generatingSignature">gjenerimin e nënshkrimit…</string>
+    <string name="prog_loadingContent">Përmbajtja në ngarkim…</string>
+    <string name="prog_ReceivingFile">marrjen skedar të koduar…</string>
+    <string name="prog_RequestingFile">kërkuar skedar të koduar…</string>
+    <string name="prog_RequestingMessage">kërkuar mesazh të koduar…</string>
+    <string name="prog_RequestingPushReg">kërkon regjistrimin shtytje…</string>
+    <string name="prog_RequestingUserId">duke kërkuar anëtarësimin e…</string>
+    <string name="prog_SavingContactsToAddressBook">libri i adresave përditësimin…</string>
+    <string name="prog_SavingContactsToKeyDatabase">përditësimin e bazës së të dhënave kyç…</string>
+    <string name="prog_SearchingForBackup">kërkoni për backup…</string>
+    <string name="prog_SendingFile">dërgimin %s koduar…</string>
+    <string name="prog_verifyingIntegrity">verifikuar integritetin…</string>
+    <string name="prog_verifyingSignature">verifikimin e nënshkrimit…</string>
+
+    <string name="section_advanced">I përparuar</string>
+    <string name="section_backup">Rezervë</string>
+    <string name="section_general">I përgjithshëm</string>
+
+    <string name="state_BackupRestored">Backup rivendosur.</string>
+    <string name="state_FileDeleted">Deleted %s fotografi.</string>
+    <string name="state_FileSent">Mesazhi dërguar.</string>
+    <string name="state_MessageSavedAsDraft">Mesazh ruhen si projekt.</string>
+    <string name="state_MessagesDeleted">%d mesazhe fshihet.</string>
+    <string name="state_PassphraseUpdated">Passphrase updated.</string>
+    <string name="state_RecipientsDeleted">%d marrësit fshihet.</string>
+    <string name="state_SomeContactsImported">Kontaktet %s importuar.</string>
+    <string name="state_TextCopiedToClipboard">Tekst kopjuar në Clipboard.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger është projektuar të lehtë të ndajnë të dhëna të identitetit, personalisht ose me telefon, vërtetuar, private, dhe të paprekur. Çdo person i ndani me të krijon një kanal të sigurtë fund-te-fund për të dërguar mesazhe.\n\nFeatures:\n- Easily shkëmbejnë informacionin e kontaktit me të tjerët\n- kėtu hobe tekste, fotografi, asgjë!\n- cryptography fortë mbron të dhënat tuaja\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Gjuhë të ofruara nga:</string>
+    <string name="text_Requirements">Kërkesat:\n1. Duhet të jetë i instaluar në një minimum prej 2 pajisjeve.\n2. Një lidhje në Internet duhet të jetë aktive.</string>
+    <string name="text_ShortPromotion">Kontakte të sigurt hobe, tekste, foto, çdo gjë!</string>
+
+    <string name="title_About">Për</string>
+    <string name="title_camera">Aparat fotografik</string>
+    <string name="title_ChooseDirectory">Zgjidhni Direktoria</string>
+    <string name="title_ChooseFileLoad">Zgjidhni Bashkangjit juaj</string>
+    <string name="title_comments">Komente/Pyetje</string>
+    <string name="title_Error">Gabim</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys Ndihmës</string>
+    <string name="title_FileOptions">Attachment Options</string>
+    <string name="title_find">Setup</string>
+    <string name="title_home">Filloni Exchange</string>
+    <string name="title_HomePanel">Shtëpi</string>
+    <string name="title_MessageDetail">Mesazh</string>
+    <string name="title_Messages">Mesazhet</string>
+    <string name="title_MyIdentity">Identiteti im</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Mesazh Available</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Mesazhet dispozicion</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Biblioteka Foto</string>
+    <string name="title_PickRecipient">Marrësit</string>
+    <string name="title_Question">Pyetje</string>
+    <string name="title_RecipientDetail">Marrësi Detail</string>
+    <string name="title_save">Shkëmbim fundi</string>
+    <string name="title_SaveFileAs">Save File As</string>
+    <string name="title_SecureIntroduction">Hyrje Sigurt</string>
+    <string name="title_SecureIntroductionInvite">Sigurt Hyrje Ftesë!</string>
+    <string name="title_SelectSource">Dërgimi Options:</string>
+    <string name="title_SendFile">Dërgoj</string>
+    <string name="title_sharingfolder">Ndarja Folder</string>
+    <string name="title_size">Sa përdoruesit në këmbim?</string>
+    <string name="title_soundrecoder">Sound Recorder</string>
+    <string name="title_TextInviteMsg">SafeSlinger Ftesë</string>
+    <string name="title_Threads">Threads</string>
+    <string name="title_userid">Grupim</string>
+    <string name="title_verify">Verifikoj</string>
+    <string name="title_Warn">Paralajmërim</string>
+
+</resources>

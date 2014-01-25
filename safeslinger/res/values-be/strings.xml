@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Адправіць запрасіць сувязь з…</string>
+    <string name="action_ViewFile">Паглядзець %s з…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Рэзервовае капіраванне адключаная. Вы хочаце, каб наладзіць параметры рэзервовага капіявання і трымаць гэта напамін?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s мае ​​больш свежы прылада або ключ, вы ўпэўненыя, што вы хочаце выкарыстоўваць гэты стары сябар?</string>
+    <string name="ask_FileExistsOverwrite">Імя файла %s ўжо існуе. Перапісаць?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Без рахунак Google, вы зможаце толькі адпраўляць, НЕ прымаць паведамленні. Хочаце дадаць уліковы запіс Google?</string>
+    <string name="ask_QuitConfirmation">Выйсці? Вы ўпэўненыя?</string>
+    <string name="ask_SendErrorData">Мы хацелі б вашай дапамогі паляпшэнне SafeSlinger. Хочаце аўтаматычна адпраўляць любыя памылкі для нас?</string>
+
+    <string name="btn_Accept">Прымаць</string>
+    <string name="btn_BeginExchangeProximity">Пачніце Абмен</string>
+    <string name="btn_Cancel">Адмяніць</string>
+    <string name="btn_Close">Блізка</string>
+    <string name="btn_Continue">Працягваць</string>
+    <string name="btn_discard">Адкідаць</string>
+    <string name="btn_Done">Зроблены</string>
+    <string name="btn_Exit">Выхад</string>
+    <string name="btn_Import">Імпарт</string>
+    <string name="btn_Introduce">Ўводзіць</string>
+    <string name="btn_Match">Наступны</string>
+    <string name="btn_No">Няма</string>
+    <string name="btn_NoMatch">Няма Матч</string>
+    <string name="btn_NotRemind">Забываць</string>
+    <string name="btn_OK">добра</string>
+    <string name="btn_Refuse">Адмаўляцца</string>
+    <string name="btn_Remind">Нагадваць</string>
+    <string name="btn_Save">Эканоміць</string>
+    <string name="btn_SelectFile">Дадаць ўкладанне</string>
+    <string name="btn_SendFile">Паслаць</string>
+    <string name="btn_Yes">Ды</string>
+
+    <string name="choice_10mins">10 хвілін</string>
+    <string name="choice_1hour">1:00</string>
+    <string name="choice_1min">1 хвіліна</string>
+    <string name="choice_20mins">20 хвілін</string>
+    <string name="choice_2hours">2:00</string>
+    <string name="choice_3mins">3 хвіліны</string>
+    <string name="choice_40mins">40 хвілін</string>
+    <string name="choice_4hours">4:00</string>
+    <string name="choice_5mins">5 хвілін</string>
+    <string name="choice_8hours">8:00</string>
+    <string name="choice_auto_storage">Сховішча па змаўчанні</string>
+    <string name="choice_external_storage">Знешнія назапашвальнікі</string>
+    <string name="choice_internal_storage">Ёмістасць ўнутранай сістэмы захоўвання</string>
+    <string name="choice_nolimit">Няма Абмежаванне</string>
+    <string name="choice_NumUsers">%d карыстальнікаў</string>
+    <string name="choice_SaveDirectory">Захаваць Даведнік</string>
+    <string name="choice_SaveFile">Захаваць файл</string>
+    <string name="choice_Up">Уверх</string>
+
+    <string name="error_AllMembersMustUpgrade">Некаторыя члены карыстаецеся старую версію, усе члены павінны па крайняй меры выкарыстаць %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Усе члены павінны абнавіць, некаторыя выкарыстоўваюць старыя ключавыя фарматы.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Усе члены павінны абнавіць, некаторыя выкарыстоўваюць старыя фарматы рэгістрацыі штуршок.</string>
+    <string name="error_AudioPlayerDecodeError">Аўдыё плэер памылка дэкадавання.</string>
+    <string name="error_AudioPlayerError">Не ўдаецца прайграць запіс.</string>
+    <string name="error_AudioRecorderEncodeError">Аўдыё памылка кадавання рэкордэр.</string>
+    <string name="error_AudioRecorderPermissionError">Дазвол Мікрафон патрабуецца. Калі ласка, перайдзіце ў меню Налады iOS для забеспячэння дазволу мікрафон.</string>
+    <string name="error_BackupNotFound">Няма рэзервовага капіявання для аднаўлення.</string>
+    <string name="error_BackupNotSupportedDevice">Прылада не падтрымлівае аднаўлення рэзервовай копіі.</string>
+    <string name="error_BadCopyProtectUpgrade">З-за памылкі ў Android 4.1, вы будзеце мець выдаліць і пераўсталяваць SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Уліковы запіс Google не патрабуецца. Калі ласка, адкрыйце мэнэджару і дадаць уліковы запіс Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Рэгістрацыя не прайшоў праверку сапраўднасці, паўторыце спробу пазней ўручную.</string>
+    <string name="error_C2DMRegInvalidSender">Рэгістрацыя абсалютна недаступная для гэтай версіі, калі ласка, праверце для абноўленай версіі.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Рэгістрацыя Няправільнае прылада з Google. Гэта прылада ў цяперашні час не падтрымлівае штуршок паведамленнямі.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Націсніце рэгістрацыйная служба не даступная, планаванне паўтарыць у %d секунд.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Занадта шмат прыкладання рэгіструюцца для Push. Калі ласка, выдаліце ​​некаторыя іншыя прыкладання і паспрабуйце ізноў.</string>
+    <string name="error_CannotSendEmptyFile">Не можаце адправіць пустое ўкладанне.</string>
+    <string name="error_CannotSendFilesOver">Не можаце адпраўляць ўкладання, якія перавышаюць %d байт.</string>
+    <string name="error_CannotSendNullFile">Не атрымоўваецца адправіць пустое ўкладанне.</string>
+    <string name="error_contactCreationFailure">Стварэнне Кантакт не ўдалося.</string>
+    <string name="error_ContactInsertFailed">Кантактная ўстаўка не ўдалася.</string>
+    <string name="error_ContactNameMissing">Гэты кантакт адсутнічае імя, калі ласка рэдагавання.</string>
+    <string name="error_ContactNameMissing2">Гэты кантакт адсутнічае імя, калі ласка паўторна.</string>
+    <string name="error_ContactUpdateFailed">Звязацца абнаўленне не ўдалося.</string>
+    <string name="error_CorrectYourInternetConnection">Інтэрнэт не даступны, праверце налады.</string>
+    <string name="error_couldNotExtractPrivateKey">Не атрымалася атрымаць сакрэтны ключ.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Абмен таймаўт перавышаны. Пачніце абмен зноў.</string>
+    <string name="error_FeatureIsNotSupport">%1$s ня падтрымліваецца на %2$s ў гэты час.</string>
+    <string name="error_FileSave">Немагчыма захаваць %s.</string>
+    <string name="error_FileStorageUnavailable">Захоўванне файлаў не даступны.</string>
+    <string name="error_HttpCode">Сервер Памылка HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">Няправільныя дадзеныя, знойдзеныя ў выніку абменных аперацый. Пачніце абмен зноў.</string>
+    <string name="error_InvalidCommonUserId">Калі ласка, увядзіце станоўчае цэлае лік.</string>
+    <string name="error_InvalidContactName">Дапушчальнае імя кантакту не патрабуецца.</string>
+    <string name="error_InvalidIncomingMessage">Дрэнны які ўваходзіць фармат паведамлення.</string>
+    <string name="error_InvalidMsg">Дрэнны фармат паведамлення.</string>
+    <string name="error_InvalidRecipient">Няправільны атрымальнік.</string>
+    <string name="error_LocalGroupCommitDiffer">Вы заявілі розніцу ў фразы. Пачніце абмен зноў.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Ключ фармату аднагодкаў з\'яўляецца несапраўдным.</string>
+    <string name="error_MessageSignatureVerificationFails">Подпіс верыфікацыя не ўдалася.</string>
+    <string name="error_minPassphraseRequire">Сакрэтныя фразы патрабуюць па меншай меры %d знакаў.</string>
+    <string name="error_MinUsersRequired">Мінімум %d членаў абавязаны абменьвацца дадзенымі.</string>
+    <string name="error_MissingNdk">SafeSlinger не знайшлі падтрымкі NDK на гэтай прыладзе, якое патрабуецца.</string>
+    <string name="error_MoreDataThanUsers">Нечаканыя дадзеныя, знойдзеныя ў выніку абменных аперацый. Пачніце абмен зноў.</string>
+    <string name="error_MultipleSendNotSupported">Вы спрабуеце адправіць некалькі элементаў. У гэты час, SafeSlinger падтрымлівае адпраўку аднаго элемента за адзін раз толькі.</string>
+    <string name="error_NoEmailAccount">Уліковы запіс электроннай пошты не настроены!</string>
+    <string name="error_noPassPhrase">Няма фраза не ўвайшла.</string>
+    <string name="error_NoWordListSelected">Вы павінны выбраць адзін з фраз, перш чым прыступіць.</string>
+    <string name="error_OtherGroupCommitDiffer">Хтосьці паведаміў розніцу ў фразы. Пачніце абмен зноў.</string>
+    <string name="error_OutOfMemoryError">Памяць з\'яўляецца занадта нізкім для завяршэння гэтай аперацыі.</string>
+    <string name="error_passPhrasesDoNotMatch">Сакрэтныя фразы не супадаюць.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Вы перавысілі квоту паведамленні для гэтага атрымальніка. Калі ласка, паўторыце спробу пазней.</string>
+    <string name="error_PushMsgInvalidRegistration">Гэта атрымальнік мае адсутнічае або няспраўны рэгістрацыі штуршок. Вы павінны спыніць адпраўку паведамленні на гэтай прыладзе.</string>
+    <string name="error_PushMsgMessageNotFound">Паведамленне мінуў.</string>
+    <string name="error_PushMsgMessageTooBig">Паведамленне занадта вялікі. Паменшыце памер паведамленні.</string>
+    <string name="error_PushMsgNotRegistered">Ня штуршок рэгістрацыі, якія атрымальніка больш не сапраўдны. Атрымальнік можа выдалілі SafeSlinger або выключаны паведамлення. Вы павінны спыніць адпраўку паведамленні на гэтай прыладзе.</string>
+    <string name="error_PushMsgNotSucceed">Быў памылка пры сувязі са службай Push Notification.</string>
+    <string name="error_PushMsgQuotaExceeded">Вы перавысілі квоту паведамленні для гэтага прылады. Калі ласка, паўторыце спробу пазней.</string>
+    <string name="error_PushMsgServiceFail">Сэрвіс апавяшчэнняў не даступная на гэты раз. Калі ласка, паспрабуйце адправіць паведамленне пазней.</string>
+    <string name="error_RecoderError">Не можаце падрыхтаваць аўдыё-рэкордэр.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Для пачатку, \' Sling \' ключы з іншага тэлефона ў той жа час.</string>
+    <string name="error_selectDataToSend">Вам трэба ўкладанне або тэкставае паведамленне, каб адправіць.</string>
+    <string name="error_ServerAppMessage">Паведамленне Сервер: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Паведамленне Сервер: \'%s\'</string>
+    <string name="error_ServerNotResponding">Няма адказу ад сервера.</string>
+    <string name="error_ShareFileDelError">Немагчыма выдаліць агульны файл.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Тайм-аўт у чаканні некаторыя члены групы, каб дадаць дадзеныя.</string>
+    <string name="error_UnableFindPubKey">Немагчыма, каб адпавядаць адкрыты ключ сакрэтным ключом у крыпта-правайдэра.</string>
+    <string name="error_UnableToSaveMessageInDB">Немагчыма захаваць у базе дадзеных паведамленняў.</string>
+    <string name="error_UnableToSaveRecipientInDB">Немагчыма захаваць у базе дадзеных атрымальніка.</string>
+    <string name="error_UnableToUpdateMessageInDB">Не атрымалася абнавіць базу дадзеных паведамленняў.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Не атрымалася абнавіць базу дадзеных атрымальнікаў.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger памылка, перазагрузіце.</string>
+    <string name="error_VcardParseFailure">Кантактныя дадзеныя адфарматыраваная няправільна.</string>
+    <string name="error_WebCancelledByUser">Карыстальнік адмяніў запыт сервера.</string>
+
+    <string name="help_find">Выкарыстоўвайце гэты экран, каб усталяваць ваша імя, тэлефон, і адрас электроннай пошты для абмену з іншымі. Націсніце кнопку \' Гатова\', калі скончыце.</string>
+    <string name="help_home">Для абмену дадзенымі пасведчанняў, гарантаваць, што ўсе карыстальнікі знаходзяцца непадалёк або па тэлефоне. Кнопка \'пачаць Exchange? Абмянялі толькі правераныя кантактныя дадзеныя.</string>
+    <string name="help_identity_menu">\n\nВы таксама можаце змяніць асабістыя дадзеныя аб вашай асобы на гэтым экране, націснуўшы на кнопку з вашым імем. Гэта адлюструе меню, якое дазваляе \' Edit \' ваш кантакт, \'Стварыць новы \' кантакт, або « Выкарыстоўвайце іншы \' кантакт.</string>
+    <string name="help_Messages">На гэтым экране адлюстроўваецца ўсе мінулыя паведамленні і ўкладанні, якія ўсё яшчэ даступныя для запампоўкі.</string>
+    <string name="help_passphrase">Выкарыстоўвайце гэты экран для ўваходу ў дадатак з вашым пароль.</string>
+    <string name="help_PickRecip">Кантакты з SafeSlinger ключоў адлюстроўваюцца тут, то выберыце яго, каб адправіць паведамленне.</string>
+    <string name="help_save">Калі скончыце, пратакол пакажа спіс ідэнтыфікацыйных дадзеных абменьваюцца. Выберыце кантакты, якія вы хочаце захаваць і націсніце \' Імпарт\'.</string>
+    <string name="help_SecureIntroduction">Гэты экран дазваляе выбраць адзін з двух людзей, якіх вы перакінуў ключы з да бяспечна адпраўляць свае ключы адзін да аднаго. Проста націсніце \' Увесці \', калі будзеце гатовыя.</string>
+    <string name="help_Send">Гэты экран дазваляе выбраць некаторыя дадзеныя і атрымальніка для адпраўкі. Проста націсніце \'Даслаць\', калі будзеце гатовыя.</string>
+    <string name="help_size">Выберыце колькасць людзей, якія спрабуюць абменьвацца дадзенымі сябар з сябрам і націсніце « OK ».</string>
+    <string name="help_userid">Гэты лік на гэтым экране выкарыстоўваецца, каб стварыць унікальны групу карыстальнікаў. Праглядзіце нумары на ўсіх карыстальнікаў экранаў, то ўсе карыстальнікі павінны ўвесці той жа самы нізкі нумар і націсніце « OK ».</string>
+    <string name="help_verify">Цяпер вы павінны адпавядаць аднаму з гэтых фраз 3-слоў з усімі карыстальнікамі. Кожны карыстальнік павінен выбраць адзін і той жа агульны фразу і націсніце « Далей».</string>
+
+    <string name="iOS_contactError">Кантакты дазволу патрабуецца. Калі ласка, перайдзіце ў меню Налады iOS, каб дазволіць Кантакты дазволу.</string>
+    <string name="iOS_errorpushtoken">Рэгістрацыя Націсніце адсутнічае.</string>
+    <string name="iOS_notificationError1">Апавяшчэнні дазвол патрабуецца. Калі ласка, перайдзіце ў меню Налады iOS, каб дазволіць Апавяшчэнні дазволу.</string>
+    <string name="iOS_notificationError2">Дазвол %s патрабуецца. Калі ласка, перайдзіце ў меню Налады iOS, каб дазволіць Апавяшчэнні дазволу.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger ня аптымізаваны для iOS 5.x прылад. SafeSlinger патрабуецца iOS 6 або вышэй.</string>
+
+    <string name="label_ago">%s назад</string>
+    <string name="label_backupCompleteDate">Апошні Рэзервовае капіраванне завершана</string>
+    <string name="label_backupRequestDate">Апошні Рэзервовае капіраванне Запыт</string>
+    <string name="label_backupURL">Рэзервовае капіраванне URL</string>
+    <string name="label_ClickForNMsgs">Націсніце, каб праглядзець свае %d паведамленняў</string>
+    <string name="label_ComposeHint">Напісаць паведамленне</string>
+    <string name="label_ContactEmail">Ваш E-mail</string>
+    <string name="label_ContactName">Ваша імя</string>
+    <string name="label_ContactPhone">Ваш тэлефон</string>
+    <string name="label_days">%d дзён</string>
+    <string name="label_Device">Прылады:</string>
+    <string name="label_DeviceInSendOnlyMode">Рэжым Адаслаць толькі</string>
+    <string name="label_DisabledExchSourceKeyChange">Ваш ключ змяніўся: Сьлінг Keys зноў.</string>
+    <string name="label_Draft">ПРАЕКТ</string>
+    <string name="label_EnabledKeyFormatDeprecated">Ключ фармат састарэлым: Сьлінг Keys зноў.</string>
+    <string name="label_exchanged">абмен</string>
+    <string name="label_expired">мінулы</string>
+    <string name="label_expires">мінае %s</string>
+    <string name="label_expiresIn">заканчваецца ў</string>
+    <string name="label_FileNameHint">Назва файла</string>
+    <string name="label_FindInstruct">Калі ласка, увядзіце вашу асабістую інфармацыю. Гэтыя дадзеныя будуць надзейна падзяляе толькі з асоб, якіх вы вырашыце падзяліцца ім з.</string>
+    <string name="label_FirstName">Імя</string>
+    <string name="label_Home">Праверыць тавары, якія вы хочаце падзяліцца, і націсніце \'Пачаць Абмен \', калі іншыя гатовыя абмяняць.</string>
+    <string name="label_hometag">Дадому</string>
+    <string name="label_hours">%d гадзін</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud ўключана. Націсніце кнопку \' Гатова\', калі скончыце.</string>
+    <string name="label_InstNoMessages">Няма паведамленняў. Вы можаце адправіць паведамленне з дапамогай кнопкі \'Стварыць паведамленне \' на галоўным меню.</string>
+    <string name="label_InstNoMessagesAndroid">Няма паведамленняў. Вы можаце адправіць паведамленне з \' Compose \' на ўкладцы.</string>
+    <string name="label_InstNoRecipients">Няма атрымальнікі. Знайсці іншага карыстальніка SafeSlinger побач і перайдзіце на ўкладку \' Sling \' ключы падзяліцца ключы.</string>
+    <string name="label_InstNoSharedFile">Няма агульны файл. Падлучыце прылада з ITunes і перацягнуць файлы ў агульную тэчку.</string>
+    <string name="label_InstRecipients">Выберыце атрымальніка, каб адправіць паведамленне, каб:</string>
+    <string name="label_InstSendInvite">Выберыце атрымальнікаў ўвесці надзейна:</string>
+    <string name="label_InstSharedFile">Выберыце файл для далучэння:</string>
+    <string name="label_introduced">ўведзеныя</string>
+    <string name="label_Key">Ключ:</string>
+    <string name="label_LastName">Прозвішча</string>
+    <string name="label_Me">Мяне</string>
+    <string name="label_messageIntroduceNameToYou">Я хацеў бы прадставіць %s да вас.</string>
+    <string name="label_MeToSender">Мяне (у %s):</string>
+    <string name="label_minutes">%d хвілін</string>
+    <string name="label_mobiletag">Мабільны</string>
+    <string name="label_MostRecentOnly">Апошні толькі</string>
+    <string name="label_MsgSendUpdate">Мае абноўлены уліковыя SafeSlinger прыкладаюцца.</string>
+    <string name="label_None">Ні адзін</string>
+    <string name="label_NumericModeHint">Нумары для Англійская</string>
+    <string name="label_numsharedfiles">%d Файлы падзяліцца:</string>
+    <string name="label_OldThreads">Старыя тэмы</string>
+    <string name="label_othertag">Іншы</string>
+    <string name="label_PassHintBackoff">Паўтарыць</string>
+    <string name="label_PassHintChange">Абноўлена Ключавая фраза</string>
+    <string name="label_PassHintCreate">Стварэнне парольную фразу</string>
+    <string name="label_PassHintEnter">Ключавая фраза</string>
+    <string name="label_PassHintRepeat">Паўтарыце Ключавая фраза</string>
+    <string name="label_passPhraseCacheTtl">Ключавая фраза Кэш</string>
+    <string name="label_PassPhraseIsCached">Ключавая фраза ў кэшы</string>
+    <string name="label_phoneOnly">тэлефон толькі для</string>
+    <string name="label_Photo">Фота</string>
+    <string name="label_PromptInstruct">Гэты нумар выкарыстоўваецца для стварэння унікальнага групу карыстальнікаў. Параўнаць, а затым увядзіце найменшую колькасць сярод усіх карыстальнікаў.</string>
+    <string name="label_PublicKeyID">Ідэнтыфікатар ключа</string>
+    <string name="label_PushTokenID">Націсніце рэгістрацыі ID</string>
+    <string name="label_ReceivedNItems">атрымаў %d пунктаў</string>
+    <string name="label_RemindBackupDelay">Рэзервовае капіраванне напамін</string>
+    <string name="label_ReportedInactive">Паведамляецца неактыўны %s.</string>
+    <string name="label_restoreCompleteDate">Апошні Аднаўленне Завершана</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger рэзервовага капіявання з затрымкай</string>
+    <string name="label_safeslingered">(SafeSlinger Прамы абмен)</string>
+    <string name="label_SaveAccount">Захаваць запіс</string>
+    <string name="label_SaveInstruct">Абмен Complete! Выберыце дадзеныя-члены захаваць у адраснай кнізе:</string>
+    <string name="label_seconds">%d секунд</string>
+    <string name="label_selectLabel">Выберыце этыкеткі</string>
+    <string name="label_SelectRecip">Выберыце Атрымальнік</string>
+    <string name="label_sendErrorData">Адправіць Памылка дадзеных</string>
+    <string name="label_SendFrom">Ад:</string>
+    <string name="label_SendTo">Каму:</string>
+    <string name="label_ShowHintAtLaunch">Паказаць гэтую падказку ў наступны раз.</string>
+    <string name="label_step_1">Крок 1</string>
+    <string name="label_step_2">Крок 2</string>
+    <string name="label_step_3">Крок 3</string>
+    <string name="label_step_4">Крок 4</string>
+    <string name="label_step_5">Крок 5</string>
+    <string name="label_TapToDecryptFile">Націсніце, каб расшыфраваць файл</string>
+    <string name="label_TapToDecryptMessage">Націсніце, каб расшыфраваць</string>
+    <string name="label_TapToDownloadFile">Націсніце, каб спампаваць файл</string>
+    <string name="label_TapToDownloadMessage">Націсніце, каб спампаваць паведамленне</string>
+    <string name="label_TapToOpenFile">Націсніце, каб адкрыць файл</string>
+    <string name="label_TapToResumeDraft">Націсніце, каб аднавіць паведамленне праект</string>
+    <string name="label_TapToSendCredentialUpdate">Націсніце і ўтрымлівайце, каб адправіць уліковых абнаўленне.</string>
+    <string name="label_targetAccountLabel">Кантакты рахунак</string>
+    <string name="label_TouchToConfigureBackupSettings">Вы, магчыма, можа дазволіць SafeSlinger iCloud рэзервовую копію ў наладах iOS. Націсніце кнопку \' Гатова\', калі скончыце.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Націсніце, каб усталяваць налады рэзервовага капіявання.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Націсніце, каб наладзіць параметры часу чакання кэша.</string>
+    <string name="label_undefinedTypeLabel">Невядомы</string>
+    <string name="label_UnknownSender">Зашыфраваныя Адпраўнік</string>
+    <string name="label_UserIdHint">Нізкая</string>
+    <string name="label_UserName">Імя карыстальніка</string>
+    <string name="label_VerifyInstruct">Усе тэлефоны павінны адпавядаць аднаму з фраз 3-слоў. Параўнайце, а затым выбраць адпаведны фразу.</string>
+    <string name="label_worktag">Праца</string>
+
+    <string name="menu_About">Аб</string>
+    <string name="menu_Change">Змена</string>
+    <string name="menu_ChangePassphrase">Змяніць Ключавая фраза</string>
+    <string name="menu_CreateNew">Стварыць новы</string>
+    <string name="menu_delete">Выдаляць</string>
+    <string name="menu_deleteThread">Выдаліць тэмы \'%s\'</string>
+    <string name="menu_Details">Падрабязны</string>
+    <string name="menu_DownloadDirectory">Спампаваць Даведнік</string>
+    <string name="menu_Edit">Рэдагаваць</string>
+    <string name="menu_FileManager">Файлавы мэнэджар</string>
+    <string name="menu_Help">Дапамажыце</string>
+    <string name="menu_Introduction">Ўвядзенне</string>
+    <string name="menu_License">Ліцэнзія</string>
+    <string name="menu_Logout">Выхад</string>
+    <string name="menu_messageCopyText">Капіяваць тэкст</string>
+    <string name="menu_messageForward">Наперад</string>
+    <string name="menu_Remove">Выдаляць</string>
+    <string name="menu_SelectShareApp">Адправіць Ужыванне</string>
+    <string name="menu_sendFeedback">Адправіць водгук</string>
+    <string name="menu_SendUpdate">Адправіць абнаўленне</string>
+    <string name="menu_Settings">Налады</string>
+    <string name="menu_ShowTutorial">Паказаць Падручнік</string>
+    <string name="menu_TagComposeMessage">Складаць</string>
+    <string name="menu_TagExchange">Сьлінг Ключы</string>
+    <string name="menu_TagListMessages">Паведамлення</string>
+    <string name="menu_UseAnother">Выкарыстоўвайце Іншы</string>
+
+    <string name="prog_CollectingOthersCommitVerify">чакае праверкі ад усіх членаў…</string>
+    <string name="prog_CollectingOthersItems">чакае ўсё карыстальнікі далучыцца…</string>
+    <string name="prog_ConstructingGroupKey">пабудовы групавы ключ…</string>
+    <string name="prog_decrypting">расшыфроўкі…</string>
+    <string name="prog_encrypting">шыфравання…</string>
+    <string name="prog_FileSent">паведамленне пасланы, чакаецца адказ…</string>
+    <string name="prog_findingKey">знайсці ключ…</string>
+    <string name="prog_GeneratingKey">генерацыі ключа, гэта можа заняць некаторы час…</string>
+    <string name="prog_generatingSignature">фарміравання подпісы…</string>
+    <string name="prog_loadingContent">загрузка кантэнту…</string>
+    <string name="prog_ReceivingFile">атрымання зашыфраванага файла…</string>
+    <string name="prog_RequestingFile">з просьбай зашыфраваны файл…</string>
+    <string name="prog_RequestingMessage">з просьбай зашыфраванае паведамленне…</string>
+    <string name="prog_RequestingPushReg">з просьбай штуршок рэгістрацыі…</string>
+    <string name="prog_RequestingUserId">з просьбай сяброўства…</string>
+    <string name="prog_SavingContactsToAddressBook">абнаўленне адраснай кнігі…</string>
+    <string name="prog_SavingContactsToKeyDatabase">абнаўлення базы дадзеных ключоў…</string>
+    <string name="prog_SearchingForBackup">пошук для рэзервовага капіявання…</string>
+    <string name="prog_SendingFile">адпраўкі зашыфраванага %s…</string>
+    <string name="prog_verifyingIntegrity">праверкі цэласнасці…</string>
+    <string name="prog_verifyingSignature">праверкі подпісы…</string>
+
+    <string name="section_advanced">Прасунуты</string>
+    <string name="section_backup">Рэзервовы</string>
+    <string name="section_general">Агульны</string>
+
+    <string name="state_BackupRestored">Рэзервовае капіраванне адноўлена.</string>
+    <string name="state_FileDeleted">Аддалены файл %s.</string>
+    <string name="state_FileSent">Адасланы.</string>
+    <string name="state_MessageSavedAsDraft">Паведамленне захоўваецца як чарнавік.</string>
+    <string name="state_MessagesDeleted">%d паведамленні, выдаленыя.</string>
+    <string name="state_PassphraseUpdated">Ключавая фраза абнаўляецца.</string>
+    <string name="state_RecipientsDeleted">%d атрымальнікаў выдаленыя.</string>
+    <string name="state_SomeContactsImported">%s кантакты імпартуюцца.</string>
+    <string name="state_TextCopiedToClipboard">Тэкст скапіяваны ў буфер абмену.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger прызначаны для лёгка сумеснае выкарыстанне ідэнтыфікацыйных дадзеных, асабіста або па тэлефоне, праверка сапраўднасці, прыватныя і некранутымі. Кожны чалавек, якому вы падзяліцца з стварае абаронены канал канца ў канец, каб адпраўляць паведамленні.\n\nАсаблівасці:\n- Лёгка абменьвацца кантактнай інфармацыяй з іншымі\n- Надзейна сьлінг тэксты, фота, нічога!\n- Моцная крыптаграфія абараняе вашу інфармацыю\n\nэлектронная пошта: %2$s\nвэб: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Мовы, прадастаўленыя:</string>
+    <string name="text_Requirements">Патрабаванні:\n1. Павінен быць усталяваны на мінімум 2 прылады.\n2. Інтэрнэт-злучэнне павінна быць актыўным.</string>
+    <string name="text_ShortPromotion">Надзейна сьлінг кантакты, тэксты, фота, нічога!</string>
+
+    <string name="title_About">Аб</string>
+    <string name="title_camera">Камера</string>
+    <string name="title_ChooseDirectory">Выбраць дырэкторыю</string>
+    <string name="title_ChooseFileLoad">Выберы свой Укладанняў</string>
+    <string name="title_comments">Каментары/Пытанні</string>
+    <string name="title_Error">Памылка</string>
+    <string name="title_ExchangeWalkthrough">Сьлінг Ключы памочнік</string>
+    <string name="title_FileOptions">Attachment Options</string>
+    <string name="title_find">Ўстаноўка</string>
+    <string name="title_home">Пачніце Абмен</string>
+    <string name="title_HomePanel">Дадому</string>
+    <string name="title_MessageDetail">Паведамленне</string>
+    <string name="title_Messages">Паведамлення</string>
+    <string name="title_MyIdentity">Мой стыль</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Паведамленне Даступны</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Допісы Даступныя</string>
+    <string name="title_passphrase">Ключавая фраза</string>
+    <string name="title_photoalbum">Фотаальбом</string>
+    <string name="title_photolibary">Бібліятэка фатаграфій</string>
+    <string name="title_PickRecipient">Атрымальнікі</string>
+    <string name="title_Question">Пытанне</string>
+    <string name="title_RecipientDetail">Атрымальнік Падрабязна</string>
+    <string name="title_save">Канец біржы</string>
+    <string name="title_SaveFileAs">Save File As</string>
+    <string name="title_SecureIntroduction">Бяспечны Увядзенне</string>
+    <string name="title_SecureIntroductionInvite">Бяспеку Увядзенне Запрашэнне!</string>
+    <string name="title_SelectSource">Параметры адпраўкі:</string>
+    <string name="title_SendFile">Паслаць</string>
+    <string name="title_sharingfolder">Агульнага доступу да тэчак</string>
+    <string name="title_size">Колькі карыстальнікаў у абмене?</string>
+    <string name="title_soundrecoder">Дыктафон</string>
+    <string name="title_TextInviteMsg">SafeSlinger Запрашэнне</string>
+    <string name="title_Threads">Тэмы</string>
+    <string name="title_userid">Групоўка</string>
+    <string name="title_verify">Праверыць</string>
+    <string name="title_Warn">Папярэджанне</string>
+
+</resources>

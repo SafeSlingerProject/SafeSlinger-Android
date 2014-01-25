@@ -1,0 +1,22 @@
+Android-vcard: Java vCard library
+
+version 1.4 (2011-09-25)
+    * added maven pom.xml file (issue #7, thanks arthur.vuillard)
+    * fixed a NullPointerException that would be thrown with CUSTOM and OTHER
+      email types (issue #10, thanks jarno.jrw.fi)
+    * fixed a bug in VCardComposer.foldingString() that leaves strings untouched
+      that don't end in a linefeed (issue #8, thanks jarno.jrw.fi)
+
+version 1.3 (2010-04-07)
+    * patched to handle LANGUAGE codes properly - it crashed on vcards from
+      MS Outlook (issue #3, thanks csabhe)
+
+version 1.2 (2010-02-12)
+    * moved project to a custom namespace (issue #2)
+
+version 1.1 (2009-11-30):
+    * synchronized with new upstream code
+    * fixed issue #1
+
+version 1.0 (2009-07-03):
+    * initial release

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Trimite invita legătură cu…</string>
+    <string name="action_ViewFile">Vezi %s cu…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup este dezactivat. Vrei pentru a regla setările de rezervă și să păstreze acest memento?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s are un dispozitiv mai recent sau cheie, ești sigur că doriți să utilizați acest unul mai mare?</string>
+    <string name="ask_FileExistsOverwrite">Nume de fișier %s există deja. Suprascrie?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Fără un cont Google, veți putea trimite, nu primi mesaje numai. Vrei să adăugați un cont Google?</string>
+    <string name="ask_QuitConfirmation">Renuntat? Ești sigur?</string>
+    <string name="ask_SendErrorData">Am dori de ajutorul tau îmbunătățirea SafeSlinger. Ai vrea sa trimiti automat orice erori la noi?</string>
+
+    <string name="btn_Accept">Accepta</string>
+    <string name="btn_BeginExchangeProximity">Începe Exchange</string>
+    <string name="btn_Cancel">Anula</string>
+    <string name="btn_Close">Închide</string>
+    <string name="btn_Continue">Continua</string>
+    <string name="btn_discard">Renunța</string>
+    <string name="btn_Done">Terminat</string>
+    <string name="btn_Exit">Ieșire</string>
+    <string name="btn_Import">Import</string>
+    <string name="btn_Introduce">Introduce</string>
+    <string name="btn_Match">Următor</string>
+    <string name="btn_No">Nu</string>
+    <string name="btn_NoMatch">Nu Match</string>
+    <string name="btn_NotRemind">Uita</string>
+    <string name="btn_OK">bine</string>
+    <string name="btn_Refuse">Refuza</string>
+    <string name="btn_Remind">Reaminti</string>
+    <string name="btn_Save">Salva</string>
+    <string name="btn_SelectFile">Adauga Attachment</string>
+    <string name="btn_SendFile">Trimite</string>
+    <string name="btn_Yes">Da</string>
+
+    <string name="choice_10mins">10 minute</string>
+    <string name="choice_1hour">1 oră</string>
+    <string name="choice_1min">1 minute</string>
+    <string name="choice_20mins">20 minute</string>
+    <string name="choice_2hours">2 oră</string>
+    <string name="choice_3mins">3 minute</string>
+    <string name="choice_40mins">40 minute</string>
+    <string name="choice_4hours">4 oră</string>
+    <string name="choice_5mins">5 minute</string>
+    <string name="choice_8hours">8 oră</string>
+    <string name="choice_auto_storage">Implicit de stocare</string>
+    <string name="choice_external_storage">De stocare extern</string>
+    <string name="choice_internal_storage">De stocare intern</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d de utilizatori</string>
+    <string name="choice_SaveDirectory">Save Directory</string>
+    <string name="choice_SaveFile">Salvați fișierul</string>
+    <string name="choice_Up">În sus</string>
+
+    <string name="error_AllMembersMustUpgrade">Unii membri sunt, folosind o versiune mai veche, toți membrii trebuie cel puțin să folosească %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Toți membrii trebuie să faceți upgrade, unele sunt folosind formate cheie in varsta.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Toți membrii trebuie să faceți upgrade, unele sunt folosind formate mai mari de înregistrare împinge.</string>
+    <string name="error_AudioPlayerDecodeError">Audio jucător eroare de decodare.</string>
+    <string name="error_AudioPlayerError">Nu se poate reda înregistrarea.</string>
+    <string name="error_AudioRecorderEncodeError">Audio eroare de codare recorder.</string>
+    <string name="error_AudioRecorderPermissionError">Permisiunea microfon necesar. Vă rugăm să mergeți la iOS Settings pentru a permite permisiuni microfon.</string>
+    <string name="error_BackupNotFound">Nu de rezervă pentru a restaura.</string>
+    <string name="error_BackupNotSupportedDevice">Dispozitivul nu are suport de backup restaurare.</string>
+    <string name="error_BadCopyProtectUpgrade">Din cauza unui bug în Android 4.1, va avea dezinstalați și reinstalați SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Este necesar un cont Google. Vă rugăm să deschideți managerul de cont și de a adăuga un cont Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Înregistrare autentificată nu, vă rugăm să încercați din nou manual mai târziu.</string>
+    <string name="error_C2DMRegInvalidSender">Înregistrare nu este disponibilă pentru această versiune, vă rugăm să verificați pentru o versiune actualizată.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Înregistrare de dispozitiv incorect cu Google. Acest aparat nu acceptă în prezent mesaje împinge.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Servicii de înregistrare împinge nu este disponibil, programarea încercați din nou în %d secunde.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Prea multe cereri sunt înregistrate pentru Push. Vă rugăm să dezinstalați unele alte aplicații și încercați din nou.</string>
+    <string name="error_CannotSendEmptyFile">Nu se poate trimite un atașament gol.</string>
+    <string name="error_CannotSendFilesOver">Nu se poate trimite atasamente mai mari de %d de bytes in dimensiune.</string>
+    <string name="error_CannotSendNullFile">Nu se poate trimite un atașament nul.</string>
+    <string name="error_contactCreationFailure">Creare de contact nu a reușit.</string>
+    <string name="error_ContactInsertFailed">A lua legatura cu inserție a eșuat.</string>
+    <string name="error_ContactNameMissing">Acest contact lipsește un nume, vă rog să editați.</string>
+    <string name="error_ContactNameMissing2">Acest contact lipsește un nume, selectați din nou.</string>
+    <string name="error_ContactUpdateFailed">Actualizare de contact nu a reușit.</string>
+    <string name="error_CorrectYourInternetConnection">Internet nu este disponibil, verificați setările.</string>
+    <string name="error_couldNotExtractPrivateKey">Nu a putut extrage cheia privată.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Schimb timeout depășit. Inceput din nouschimb.</string>
+    <string name="error_FeatureIsNotSupport">%1$s nu este acceptat pe %2$s în acest moment.</string>
+    <string name="error_FileSave">În imposibilitatea de a salva %s.</string>
+    <string name="error_FileStorageUnavailable">De stocare de fișiere nu este disponibil.</string>
+    <string name="error_HttpCode">Server Eroare HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">Date incorecte găsite în schimb. Inceput din nouschimb.</string>
+    <string name="error_InvalidCommonUserId">Vă rugăm să introduceți un număr întreg pozitiv.</string>
+    <string name="error_InvalidContactName">Este necesar un nume de contact valid.</string>
+    <string name="error_InvalidIncomingMessage">Format de mesaj de intrare rău.</string>
+    <string name="error_InvalidMsg">Format de mesaj rău.</string>
+    <string name="error_InvalidRecipient">Destinatar invalid.</string>
+    <string name="error_LocalGroupCommitDiffer">Ai raportat o diferență în fraze. Inceput din nouschimb.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Formatul cheie la egal la egal este invalid.</string>
+    <string name="error_MessageSignatureVerificationFails">Verificarea semnăturii a eșuat.</string>
+    <string name="error_minPassphraseRequire">Passphrases nevoie de cel puțin %d de caractere.</string>
+    <string name="error_MinUsersRequired">Sunt necesare un minim de %d de membri pentru a face schimb de date.</string>
+    <string name="error_MissingNdk">SafeSlinger nu a detectat suport NDK pe acest dispozitiv, care este necesară.</string>
+    <string name="error_MoreDataThanUsers">Date neașteptate găsite în schimb. Inceput din nouschimb.</string>
+    <string name="error_MultipleSendNotSupported">Vă sunt încercarea de a trimite mai multe elemente. În acest moment, SafeSlinger suporta doar trimiterea de un singur element la un moment dat.</string>
+    <string name="error_NoEmailAccount">Cont de e-mail nu este de configurare!</string>
+    <string name="error_noPassPhrase">Nici o frază de acces a intrat.</string>
+    <string name="error_NoWordListSelected">Trebuie să selectați una dintre frazele înainte de a începe.</string>
+    <string name="error_OtherGroupCommitDiffer">Cineva a raportat o diferență în fraze. Inceput din nouschimb.</string>
+    <string name="error_OutOfMemoryError">De memorie este prea mic pentru a finaliza această operație.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases nu se potrivesc.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Ați depășit cota mesaj pentru destinatar. Vă rugăm să încercați din nou mai târziu.</string>
+    <string name="error_PushMsgInvalidRegistration">Că destinatarul are o înregistrare apăsare lipsă sau rău. Tu ar trebui să oprească trimiterea de mesaje la acest aparat.</string>
+    <string name="error_PushMsgMessageNotFound">Mesaj expirat.</string>
+    <string name="error_PushMsgMessageTooBig">Mesajul este prea mare. Reducerea dimensiuniimesajului.</string>
+    <string name="error_PushMsgNotRegistered">Înregistrare împinge că destinatar nu mai este valabilă. Destinatarul poate fi dezinstalat SafeSlinger sau oprit notificări. Tu ar trebui să oprească trimiterea de mesaje la acest aparat.</string>
+    <string name="error_PushMsgNotSucceed">Nu a fost o eroare de comunicare cu serviciul de notificare prin împingere.</string>
+    <string name="error_PushMsgQuotaExceeded">Ați depășit cota mesaj pentru acest dispozitiv. Vă rugăm să încercați din nou mai târziu.</string>
+    <string name="error_PushMsgServiceFail">Serviciu de notificare nu este disponibil pentru moment. Vă rugăm să încercați să trimiteți mesajul mai târziu.</string>
+    <string name="error_RecoderError">Nu se poate pregăti de înregistrare audio.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Pentru a începe, \' Sling Taste \' cu un alt telefon în același timp.</string>
+    <string name="error_selectDataToSend">Aveți nevoie de un atașament sau un mesaj text pentru a trimite.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Nici un răspuns de la serverul.</string>
+    <string name="error_ShareFileDelError">Nu se poate elimina fișierul partajat.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout de așteptare pentru unii membrii grupului pentru a adăuga date.</string>
+    <string name="error_UnableFindPubKey">În imposibilitatea de a se potrivi cheie publică a cheii private în furnizor de cripto.</string>
+    <string name="error_UnableToSaveMessageInDB">Imposibilitatea de a salva baza de date mesajului.</string>
+    <string name="error_UnableToSaveRecipientInDB">Imposibilitatea de a salva baza de date destinatar.</string>
+    <string name="error_UnableToUpdateMessageInDB">Imposibil pentru a actualiza baza de date de mesaje.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Imposibil pentru a actualiza baza de date destinatar.</string>
+    <string name="error_UncaughtExceptionOccured">Eroare SafeSlinger, vă rugăm să reporniți.</string>
+    <string name="error_VcardParseFailure">Datele de contact a fost formatat incorect.</string>
+    <string name="error_WebCancelledByUser">Utilizatorul a anulat cererea de server.</string>
+
+    <string name="help_find">Utilizați acest ecran pentru a seta numele, telefon, e-mail și de a face schimb cu ceilalți. Apăsați butonul \' Done \' când ați terminat.</string>
+    <string name="help_home">Pentru a face schimb de date de identitate, asigura toți utilizatorii sunt în apropiere sau la telefon. Butonul \' Începeți Exchange \' vor schimba doar datele de contact verificate.</string>
+    <string name="help_identity_menu">\n\nPuteți schimba, de asemenea, date cu caracter personal cu privire la identitatea pe acest ecran apăsând pe butonul cu numele tău. Aceasta va afișa un meniu care vă permite să \' Edit \' contact, \' Creare \' de contact, sau \' folosiți un alt \' de contact.</string>
+    <string name="help_Messages">Acest ecran afișează toate mesajele trecute, și accesorii, care sunt încă disponibile pentru descărcare.</string>
+    <string name="help_passphrase">Utilizați acest ecran pentru a vă conecta la aplicarea cu fraza de autentificare.</string>
+    <string name="help_PickRecip">Contacte cu chei SafeSlinger sunt afișate aici, selectați unul pentru a trimite mesajul.</string>
+    <string name="help_save">Când ați terminat, protocolul va dezvălui o listă cu datele de identitate schimbate. Selectați contactele pe care doriți să salvați și apăsați pe \' Import \'.</string>
+    <string name="help_SecureIntroduction">Acest ecran vă permite să selectați doi oameni ai funii cu chei, înainte de a trimite în siguranță cheile de la fiecare alte. Pur și simplu apăsați \' Introducerea \', atunci când este gata.</string>
+    <string name="help_Send">Acest ecran vă permite să selectați câteva date și un destinatar pentru a trimite la. Pur și simplu apăsați pe \' Trimite \', atunci când este gata.</string>
+    <string name="help_size">Selectați numărul de persoane care încearcă să facă schimb de date împreună și apăsați pe \' OK \'.</string>
+    <string name="help_userid">Acest număr pe acest ecran este folosit pentru a crea un grup unic de utilizatori. Revizuiți numerele de pe toate ecranele utilizatorilor, atunci toți utilizatorii ar trebui să intre același număr mai mic și apăsați \' OK \'.</string>
+    <string name="help_verify">Acum, trebuie să se potrivească una dintre aceste fraze de 3 cuvinte cu toți utilizatorii. Fiecare utilizator trebuie să selectați aceeași frază comun, și apăsați \'Next\'.</string>
+
+    <string name="iOS_contactError">Contacte permisiunea necesară. Vă rugăm să mergeți la iOS Settings pentru a permite Contacte permisiuni.</string>
+    <string name="iOS_errorpushtoken">Înregistrare împinge lipsește.</string>
+    <string name="iOS_notificationError1">Permisiunea notificări necesar. Vă rugăm să mergeți la iOS Settings pentru a permite Notificari permisiuni.</string>
+    <string name="iOS_notificationError2">Permisiunea %s necesar. Vă rugăm să mergeți la iOS Settings pentru a permite Notificari permisiuni.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger nu este optimizat pentru dispozitive iOS 5.x. SafeSlinger necesită iOS 6 sau mai mare.</string>
+
+    <string name="label_ago">%s în urmă</string>
+    <string name="label_backupCompleteDate">Ultima Backup Finalizat</string>
+    <string name="label_backupRequestDate">Ultima cerere de backup</string>
+    <string name="label_backupURL">URL-ul de backup</string>
+    <string name="label_ClickForNMsgs">Atingeți pentru a revizui de %d de mesaje</string>
+    <string name="label_ComposeHint">Compune Mesaj</string>
+    <string name="label_ContactEmail">E-mail-ul</string>
+    <string name="label_ContactName">Numele tau</string>
+    <string name="label_ContactPhone">Dvs. de telefon</string>
+    <string name="label_days">%d zile</string>
+    <string name="label_Device">Dispozitiv:</string>
+    <string name="label_DeviceInSendOnlyMode">Modul doar-Trimite</string>
+    <string name="label_DisabledExchSourceKeyChange">Cheia sa schimbat: Sling Keys din nou.</string>
+    <string name="label_Draft">PROIECT</string>
+    <string name="label_EnabledKeyFormatDeprecated">Format cheie depreciate: Sling Keys din nou.</string>
+    <string name="label_exchanged">schimbate</string>
+    <string name="label_expired">expirat</string>
+    <string name="label_expires">expiră %s</string>
+    <string name="label_expiresIn">expiră în</string>
+    <string name="label_FileNameHint">Nume fișier</string>
+    <string name="label_FindInstruct">Vă rugăm să introduceți informațiile dvs. personale. Aceste date vor fi comunicate numai în siguranță cu persoane fizice care alegeți să-l împărtășească cu.</string>
+    <string name="label_FirstName">Nume</string>
+    <string name="label_Home">Verificați elementele pe care doriți să împărtășiți și atingeți \' Inceput de schimb valutar \', atunci când alții sunt gata să facă schimb.</string>
+    <string name="label_hometag">Acasă</string>
+    <string name="label_hours">%d oră</string>
+    <string name="label_iCloudEnable">SafeSlinger icloud este activat. Apăsați butonul \' Done \' când ați terminat.</string>
+    <string name="label_InstNoMessages">Nu sunt mesaje. Puteți trimite un mesaj de la butonul \' Compune Mesaj \' din meniul Acasă.</string>
+    <string name="label_InstNoMessagesAndroid">Nu sunt mesaje. Puteți trimite un mesaj din fila \' Compose \'.</string>
+    <string name="label_InstNoRecipients">Nu sunt destinatari. Găsi un alt utilizator SafeSlinger în apropiere și atingeți fila \' Sling Taste \' pentru a partaja chei.</string>
+    <string name="label_InstNoSharedFile">Dosarul nr comun. Conectați dispozitivul cu iTunes și fișiere glisați în folderul partajat.</string>
+    <string name="label_InstRecipients">Alegeți un destinatar pentru a trimite un mesaj la:</string>
+    <string name="label_InstSendInvite">Alege beneficiarii de a introduce în siguranță:</string>
+    <string name="label_InstSharedFile">Alegeți un fișier pentru a atașa:</string>
+    <string name="label_introduced">a introdus</string>
+    <string name="label_Key">Cheie:</string>
+    <string name="label_LastName">Nume</string>
+    <string name="label_Me">Mă</string>
+    <string name="label_messageIntroduceNameToYou">Aș dori să prezint %s pentru tine.</string>
+    <string name="label_MeToSender">Me (la %s):</string>
+    <string name="label_minutes">%d minute</string>
+    <string name="label_mobiletag">Mobil</string>
+    <string name="label_MostRecentOnly">Cele mai recente numai</string>
+    <string name="label_MsgSendUpdate">My actualizate acreditări SafeSlinger sunt atașate.</string>
+    <string name="label_None">Nici unul</string>
+    <string name="label_NumericModeHint">Non-engleză</string>
+    <string name="label_numsharedfiles">%d Files to Share:</string>
+    <string name="label_OldThreads">Vechi Subiecte</string>
+    <string name="label_othertag">Alte</string>
+    <string name="label_PassHintBackoff">Încercați din nou</string>
+    <string name="label_PassHintChange">Passphrase actualizat</string>
+    <string name="label_PassHintCreate">Crea Passphrase</string>
+    <string name="label_PassHintEnter">Frază de acces</string>
+    <string name="label_PassHintRepeat">Passphrase repeta</string>
+    <string name="label_passPhraseCacheTtl">Cache frază de acces</string>
+    <string name="label_PassPhraseIsCached">Cache frază de acces</string>
+    <string name="label_phoneOnly">doar-telefon</string>
+    <string name="label_Photo">Fotografie</string>
+    <string name="label_PromptInstruct">Acest număr este folosit pentru a crea un grup unic de utilizatori. Comparație, apoi introduceți numărul cel mai mic în rândul tuturor utilizatorilor.</string>
+    <string name="label_PublicKeyID">ID cheie</string>
+    <string name="label_PushTokenID">Push Înregistrare ID</string>
+    <string name="label_ReceivedNItems">primit %d de articole</string>
+    <string name="label_RemindBackupDelay">Memento de rezervă</string>
+    <string name="label_ReportedInactive">Raportat %s inactiv.</string>
+    <string name="label_restoreCompleteDate">Ultima restaurare Finalizat</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger rezervă întârziat</string>
+    <string name="label_safeslingered">(SafeSlinger directă Exchange)</string>
+    <string name="label_SaveAccount">Salvați cont</string>
+    <string name="label_SaveInstruct">Completați schimb! Selectați datelor membre pentru a salva în agenda dvs.:</string>
+    <string name="label_seconds">%d secunde</string>
+    <string name="label_selectLabel">Selectați eticheta</string>
+    <string name="label_SelectRecip">Selectați destinatar</string>
+    <string name="label_sendErrorData">Trimite Eroare de date</string>
+    <string name="label_SendFrom">De la:</string>
+    <string name="label_SendTo">Pentru a:</string>
+    <string name="label_ShowHintAtLaunch">Arată acest indiciu data viitoare.</string>
+    <string name="label_step_1">Pasul 1</string>
+    <string name="label_step_2">Pasul 2</string>
+    <string name="label_step_3">Pasul 3</string>
+    <string name="label_step_4">Pasul 4</string>
+    <string name="label_step_5">Pasul 5</string>
+    <string name="label_TapToDecryptFile">Atingeți pentru a decripta fișier</string>
+    <string name="label_TapToDecryptMessage">Atingeți pentru a decripta</string>
+    <string name="label_TapToDownloadFile">Apăsați pentru a descărca fișierul</string>
+    <string name="label_TapToDownloadMessage">Apăsați pentru a descărca un mesaj</string>
+    <string name="label_TapToOpenFile">Apăsați pentru a deschide fișierul</string>
+    <string name="label_TapToResumeDraft">Atingeți pentru a relua proiectul de mesaj</string>
+    <string name="label_TapToSendCredentialUpdate">Apăsați și țineți apăsat pentru a trimite actualizări credential.</string>
+    <string name="label_targetAccountLabel">Contacte cont</string>
+    <string name="label_TouchToConfigureBackupSettings">Puteți activa opțional SafeSlinger icloud de rezervă în iOS Settings. Apăsați butonul \' Done \' când ați terminat.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Atingeți pentru a configura setările de rezervă.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Atingeți pentru a configura setările de expirare cache.</string>
+    <string name="label_undefinedTypeLabel">Necunoscut</string>
+    <string name="label_UnknownSender">Expeditor criptate</string>
+    <string name="label_UserIdHint">Cel mai mic</string>
+    <string name="label_UserName">Nume utilizator</string>
+    <string name="label_VerifyInstruct">Toate telefoanele trebuie să se potrivească una dintre frazele de 3-cuvânt. Compara, și apoi alege fraza de potrivire.</string>
+    <string name="label_worktag">Muncă</string>
+
+    <string name="menu_About">Despre</string>
+    <string name="menu_Change">Schimbare</string>
+    <string name="menu_ChangePassphrase">Schimbare Passphrase</string>
+    <string name="menu_CreateNew">Crearea de noi</string>
+    <string name="menu_delete">Șterge</string>
+    <string name="menu_deleteThread">Sterge subiect \'%s\'</string>
+    <string name="menu_Details">Vezi Detalii</string>
+    <string name="menu_DownloadDirectory">Descărcați Directory</string>
+    <string name="menu_Edit">Edita</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_Help">Ajutor</string>
+    <string name="menu_Introduction">Introducere</string>
+    <string name="menu_License">Licență</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_messageCopyText">Copie Text</string>
+    <string name="menu_messageForward">Înainte</string>
+    <string name="menu_Remove">Îndepărta</string>
+    <string name="menu_SelectShareApp">Trimite Cerere</string>
+    <string name="menu_sendFeedback">Trimiteți feedback</string>
+    <string name="menu_SendUpdate">Trimite Actualizare</string>
+    <string name="menu_Settings">Setări</string>
+    <string name="menu_ShowTutorial">Arată Tutorial</string>
+    <string name="menu_TagComposeMessage">Compune</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">Mesaje</string>
+    <string name="menu_UseAnother">Utilizați un alt</string>
+
+    <string name="prog_CollectingOthersCommitVerify">de așteptare pentru verificare de la toți membrii…</string>
+    <string name="prog_CollectingOthersItems">de așteptare pentru toți utilizatorii să se alăture…</string>
+    <string name="prog_ConstructingGroupKey">construirea cheie grup…</string>
+    <string name="prog_decrypting">decriptarea…</string>
+    <string name="prog_encrypting">criptarea…</string>
+    <string name="prog_FileSent">mesaj trimis, în așteptarea răspuns…</string>
+    <string name="prog_findingKey">cheie găsirea…</string>
+    <string name="prog_GeneratingKey">cheie generatoare, aceasta poate dura un timp…</string>
+    <string name="prog_generatingSignature">generatoare de semnătură…</string>
+    <string name="prog_loadingContent">încărcarea de conținut…</string>
+    <string name="prog_ReceivingFile">primirea de fișiere criptate…</string>
+    <string name="prog_RequestingFile">solicită fișier criptat…</string>
+    <string name="prog_RequestingMessage">solicită mesaj criptat…</string>
+    <string name="prog_RequestingPushReg">solicită înregistrarea împinge…</string>
+    <string name="prog_RequestingUserId">dorește să devină membru…</string>
+    <string name="prog_SavingContactsToAddressBook">Adresa actualizarea carte…</string>
+    <string name="prog_SavingContactsToKeyDatabase">actualizarea bazei de date cheie…</string>
+    <string name="prog_SearchingForBackup">căutarea de rezervă…</string>
+    <string name="prog_SendingFile">trimiterea %s criptate…</string>
+    <string name="prog_verifyingIntegrity">verificarea integrității…</string>
+    <string name="prog_verifyingSignature">verificarea semnătură…</string>
+
+    <string name="section_advanced">Avansat</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">General</string>
+
+    <string name="state_BackupRestored">Backup restaurat.</string>
+    <string name="state_FileDeleted">Eliminat %s fișier.</string>
+    <string name="state_FileSent">Mesajul a fost trimis.</string>
+    <string name="state_MessageSavedAsDraft">Mesaj salvat ca schiță.</string>
+    <string name="state_MessagesDeleted">%d de mesaje șterse.</string>
+    <string name="state_PassphraseUpdated">Passphrase actualizate.</string>
+    <string name="state_RecipientsDeleted">%d de destinatari șterse.</string>
+    <string name="state_SomeContactsImported">Contactele %s importate.</string>
+    <string name="state_TextCopiedToClipboard">Textul copiat în clipboard.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger este conceput pentru a partaja cu ușurință date de identitate, în persoană sau la telefon, autentificat, privat, și intact. Fiecare persoană vă împărtășesc cu creeaza un canal securizat end-to-end pentru a trimite mesaje.\n\nCaracteristici:\n- schimb cu ușurință informații de contact cu alte persoane\n- sling Sigur texte, fotografii, nimic!\n- criptografie puternică protejează informațiile dvs.\n\nde e-mail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Limbi furnizate de:</string>
+    <string name="text_Requirements">Cerințe:\n1. Trebuie să fie instalat pe un minim de 2 dispozitive.\n2. O conexiune la Internet trebuie să fie activ.</string>
+    <string name="text_ShortPromotion">Contacte în siguranță lanț, texte, fotografii, nimic!</string>
+
+    <string name="title_About">Despre</string>
+    <string name="title_camera">Aparat foto</string>
+    <string name="title_ChooseDirectory">Alegeți Directory</string>
+    <string name="title_ChooseFileLoad">Alege atașamentul dvs.</string>
+    <string name="title_comments">Comentarii/Intrebari</string>
+    <string name="title_Error">Eroare</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
+    <string name="title_FileOptions">Opțiuni de prindere</string>
+    <string name="title_find">Setup</string>
+    <string name="title_home">Începe Exchange</string>
+    <string name="title_HomePanel">Acasă</string>
+    <string name="title_MessageDetail">Mesaj</string>
+    <string name="title_Messages">Mesaje</string>
+    <string name="title_MyIdentity">Identitatea mea</string>
+    <string name="title_NotifyFileAvailable">Mesaj SafeSlinger Disponibil</string>
+    <string name="title_NotifyMulFileAvailable">%d de SafeSlinger Mesajele disponibile</string>
+    <string name="title_passphrase">Frază de acces</string>
+    <string name="title_photoalbum">Album foto</string>
+    <string name="title_photolibary">Biblioteca de imagini</string>
+    <string name="title_PickRecipient">Destinatarii</string>
+    <string name="title_Question">Întrebare</string>
+    <string name="title_RecipientDetail">Destinatar Detaliu</string>
+    <string name="title_save">Schimb de final</string>
+    <string name="title_SaveFileAs">Save File Ca</string>
+    <string name="title_SecureIntroduction">Introducere Secure</string>
+    <string name="title_SecureIntroductionInvite">Secure Introducere Invitatie!</string>
+    <string name="title_SelectSource">Trimiterea Opțiuni:</string>
+    <string name="title_SendFile">Trimite</string>
+    <string name="title_sharingfolder">Partajarea Folder</string>
+    <string name="title_size">Cât de mulți utilizatori în schimbul?</string>
+    <string name="title_soundrecoder">Sound Recorder</string>
+    <string name="title_TextInviteMsg">SafeSlinger Invitație</string>
+    <string name="title_Threads">Fire</string>
+    <string name="title_userid">Gruparea</string>
+    <string name="title_verify">Verifica</string>
+    <string name="title_Warn">Avertizare</string>
+
+</resources>

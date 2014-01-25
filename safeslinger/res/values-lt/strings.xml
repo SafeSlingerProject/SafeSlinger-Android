@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Siųsti pakviesti ryšį su…</string>
+    <string name="action_ViewFile">Peržiūrėti %s su…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Atsarginė yra išjungtas. Ar norite reguliuoti atsarginės nustatymus ir išsaugoti šį priminimą?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s turi naujesnį prietaisą arba raktą, jūs tikrai norite naudoti senesnę vieną?</string>
+    <string name="ask_FileExistsOverwrite">Failo vardas %s jau egzistuoja. Perrašyti?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Be \'Google\' paskyrą galėsite siųsti, pranešimų negauna tik. Ar norite pridėti \'Google\' paskyrą?</string>
+    <string name="ask_QuitConfirmation">Mesti rūkyti? Ar tikrai?</string>
+    <string name="ask_SendErrorData">Norėtume jūsų pagalbos gerinant SafeSlinger. Norite automatiškai siųsti bet kokias klaidas mums?</string>
+
+    <string name="btn_Accept">Priimti</string>
+    <string name="btn_BeginExchangeProximity">Pradžia birža</string>
+    <string name="btn_Cancel">Atšaukti</string>
+    <string name="btn_Close">Arti</string>
+    <string name="btn_Continue">Tęsti</string>
+    <string name="btn_discard">Išmesti</string>
+    <string name="btn_Done">Padirbtas</string>
+    <string name="btn_Exit">Išeiti</string>
+    <string name="btn_Import">Importas</string>
+    <string name="btn_Introduce">Pristatyti</string>
+    <string name="btn_Match">Kitas</string>
+    <string name="btn_No">Ne</string>
+    <string name="btn_NoMatch">Nėra atitikmens</string>
+    <string name="btn_NotRemind">Pamiršti</string>
+    <string name="btn_OK">gerai</string>
+    <string name="btn_Refuse">Atsisakyti</string>
+    <string name="btn_Remind">Priminti</string>
+    <string name="btn_Save">Sutaupyti</string>
+    <string name="btn_SelectFile">Pridėti priedą</string>
+    <string name="btn_SendFile">Siųsti</string>
+    <string name="btn_Yes">Taip</string>
+
+    <string name="choice_10mins">10 minučių</string>
+    <string name="choice_1hour">1 valanda</string>
+    <string name="choice_1min">1 minutę</string>
+    <string name="choice_20mins">20 minučių</string>
+    <string name="choice_2hours">2 valandos</string>
+    <string name="choice_3mins">3 minutės</string>
+    <string name="choice_40mins">40 minučių</string>
+    <string name="choice_4hours">4 valandos</string>
+    <string name="choice_5mins">5 minutės</string>
+    <string name="choice_8hours">8 valandos</string>
+    <string name="choice_auto_storage">Įprasta saugojimas</string>
+    <string name="choice_external_storage">Išorinės saugyklos</string>
+    <string name="choice_internal_storage">Vidaus saugojimas</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d vartotojų</string>
+    <string name="choice_SaveDirectory">Išsaugoti katalogas</string>
+    <string name="choice_SaveFile">Išsaugokite failą</string>
+    <string name="choice_Up">Į viršų</string>
+
+    <string name="error_AllMembersMustUpgrade">Kai kurie nariai naudojate senesnę versiją, visi nariai turi bent jau naudoti %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Visi nariai turi atnaujinti, kai naudojate senesnius pagrindinius formatus.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Visi nariai turi atnaujinti, kai naudojate senesnius push registracijos formatus.</string>
+    <string name="error_AudioPlayerDecodeError">Audio grotuvas dekodavimo klaida.</string>
+    <string name="error_AudioPlayerError">Nepavyko paleisti įrašą.</string>
+    <string name="error_AudioRecorderEncodeError">Garso įrašymo kodavimo klaida.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofonas leidimo nereikia. Prašome eiti į iOS Nustatymai kad Mikrofonai teises.</string>
+    <string name="error_BackupNotFound">Atsarginės atkurti.</string>
+    <string name="error_BackupNotSupportedDevice">Įrenginys nepalaiko atsarginės atkurti.</string>
+    <string name="error_BadCopyProtectUpgrade">Dėl to, kad \'Android 4.1 klaidą, jums reikės pašalinti ir iš naujo įdiegti SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">\'Google\' paskyros. Prašome atidaryti vadybininką ir pridėti,, Google \' paskyrą.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Registracija n ÷ ra patvirtintas, prašome pabandyti vėliau rankiniu būdu.</string>
+    <string name="error_C2DMRegInvalidSender">Registracija yra neprieinama šią versiją, prašome patikrinti atnaujinu.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Neteisingas prietaiso registracija \'Google\'. Šis įrenginys šiuo metu nepalaiko push pranešimų.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Push registracijos paslauga nėra, planavimas bandykite dar kartą %d sekundžių.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Per daug programų yra įregistruota Push. Prašome pašalinti kai kurias kitas programas ir bandykite dar kartą.</string>
+    <string name="error_CannotSendEmptyFile">Negaliu siųsti tuščią priedą.</string>
+    <string name="error_CannotSendFilesOver">Negali siųsti priedus didesnis nei %d baitų dydžio.</string>
+    <string name="error_CannotSendNullFile">Negalima siųsti null priedą.</string>
+    <string name="error_contactCreationFailure">Susisiekite kūrimas nepavyko.</string>
+    <string name="error_ContactInsertFailed">Susisiekite įterpti nepavyko.</string>
+    <string name="error_ContactNameMissing">Šis kontaktas trūksta vardą, prašome redaguoti.</string>
+    <string name="error_ContactNameMissing2">Šis kontaktas trūksta vardą, prašome iš naujo pasirinkti.</string>
+    <string name="error_ContactUpdateFailed">Susisiekite atnaujinimas nepavyko.</string>
+    <string name="error_CorrectYourInternetConnection">Interneto nėra, patikrinkite nustatymus.</string>
+    <string name="error_couldNotExtractPrivateKey">Nepavyko išgauti privatų raktą.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Valiutų Viršytas. Vėl pradėti keistis.</string>
+    <string name="error_FeatureIsNotSupport">%1$s nepalaiko %2$s šiuo metu.</string>
+    <string name="error_FileSave">Nepavyko išsaugoti %s.</string>
+    <string name="error_FileStorageUnavailable">Failų saugykla nėra.</string>
+    <string name="error_HttpCode">Serveris HTTP klaida: %d</string>
+    <string name="error_InvalidCommitVerify">Neteisingi duomenys rasta mainais. Vėl pradėti keistis.</string>
+    <string name="error_InvalidCommonUserId">Prašome įvesti teigiamą sveikąjį skaičių.</string>
+    <string name="error_InvalidContactName">Galioja kontaktinė pavadinimas.</string>
+    <string name="error_InvalidIncomingMessage">Blogas gaunama žinutė formatas.</string>
+    <string name="error_InvalidMsg">Blogas žinut.</string>
+    <string name="error_InvalidRecipient">Neteisingas gavėjas.</string>
+    <string name="error_LocalGroupCommitDiffer">Jūs pranešė frazes skirtumą. Vėl pradėti keistis.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Tarpusavio rakto formatas yra neteisingas.</string>
+    <string name="error_MessageSignatureVerificationFails">Parašo tikrinimas nepavyko.</string>
+    <string name="error_minPassphraseRequire">Slaptažodžiai turi mažiausiai %d ženklų.</string>
+    <string name="error_MinUsersRequired">%d nariams reikia ne mažiau kaip keistis duomenimis.</string>
+    <string name="error_MissingNdk">SafeSlinger neaptiko NDK paramą šiuo prietaisu, kuris yra būtinas.</string>
+    <string name="error_MoreDataThanUsers">Netikėti duomenys rasta mainais. Vėl pradėti keistis.</string>
+    <string name="error_MultipleSendNotSupported">Bandote siųsti kelis elementus. Šiuo metu SafeSlinger palaiko tik siunčiant vieną daiktą vienu metu.</string>
+    <string name="error_NoEmailAccount">Pašto dėžutę nėra setup!</string>
+    <string name="error_noPassPhrase">Neįvestas slaptažodis.</string>
+    <string name="error_NoWordListSelected">Jūs turite pasirinkti vieną iš frazių, prieš tęsiant.</string>
+    <string name="error_OtherGroupCommitDiffer">Kažkas pranešė frazes skirtumą. Vėl pradėti keistis.</string>
+    <string name="error_OutOfMemoryError">Atmintis yra per mažas baigti šią operaciją.</string>
+    <string name="error_passPhrasesDoNotMatch">Slaptažodžiai nesutampa.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Jūs viršijote pranešimo kvotą šiam gavėjui. Bandykite dar kartą vėliau.</string>
+    <string name="error_PushMsgInvalidRegistration">Kad gavėjas turi arba jis blogas push registraciją. Jūs turite nustoti siųsti pranešimus į šį prietaisą.</string>
+    <string name="error_PushMsgMessageNotFound">Pranešimas pasibaigęs.</string>
+    <string name="error_PushMsgMessageTooBig">Pranešimas yra per didelis. Sumažinti pranešimo dydį.</string>
+    <string name="error_PushMsgNotRegistered">Kad gavėjo stumti registracija nebegalioja. Gavėjas gali būti pašalinta SafeSlinger arba išjungtas pranešimus. Jūs turite nustoti siųsti pranešimus į šį prietaisą.</string>
+    <string name="error_PushMsgNotSucceed">Nebuvo bendrauti su push pranešimą apieklaidą.</string>
+    <string name="error_PushMsgQuotaExceeded">Jūs viršijote pranešimo kvotą šiam prietaisui. Bandykite dar kartą vėliau.</string>
+    <string name="error_PushMsgServiceFail">Pranešimas paslauga neprieinama šiuo metu. Prašome bandyti siųsti jūsų pranešimą vėliau.</string>
+    <string name="error_RecoderError">Negali parengti diktofoną.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Norėdami pradėti, \' diržas Keys \' su kitu telefonu tuo pačiu metu.</string>
+    <string name="error_selectDataToSend">Jūs turite priedą arba teksto žinutę siųsti duomenis.</string>
+    <string name="error_ServerAppMessage">Serverio pranešimas: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Serverio pranešimas: \'%s\'</string>
+    <string name="error_ServerNotResponding">Jokio atsakymo iš serverio.</string>
+    <string name="error_ShareFileDelError">Negali pašalinti bendrą bylą.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Pertrauka laukia kai grupės nariai pridėti duomenis.</string>
+    <string name="error_UnableFindPubKey">Nepavyko suderinti viešąjį raktą į privataus rakto kriptografijos paslaugų teikėjas.</string>
+    <string name="error_UnableToSaveMessageInDB">Nepavyko įrašyti laiško bazę.</string>
+    <string name="error_UnableToSaveRecipientInDB">Nepavyko išsaugoti gavėjos duomenų bazę.</string>
+    <string name="error_UnableToUpdateMessageInDB">Nepavyko atnaujinti pranešimo duomenų bazę.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Nepavyko atnaujinti gavėjo duomenų bazę.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger klaida, prašome iš naujo.</string>
+    <string name="error_VcardParseFailure">Kontaktiniai duomenys buvo suformatuotas neteisingai.</string>
+    <string name="error_WebCancelledByUser">Vartotojas atšauktas serverio prašymą.</string>
+
+    <string name="help_find">Naudokite šį ekraną nustatyti savo vardą, pavardę, telefoną, elektroninio pašto keistis su kitais. Bakstelėkite \' Done \' mygtuką, kai baigsite.</string>
+    <string name="help_home">Keistis tapatybės duomenis, užtikrinti, kad visi vartotojai yra netoliese arba telefonu. \'Pradėti keistis\' mygtuką keisis tik pažymėtus kontaktinius duomenis.</string>
+    <string name="help_identity_menu">\n\nJūs taip pat gali pakeisti asmens duomenis apie savo tapatybę šiame ekrane paliesdami mygtuką su jūsų vardu. Tai bus rodomas meniu leidžia jums \' Redaguoti \' adresatą \' Sukurti naują\' ryšį arba \' naudoti kitą \' kontaktą.</string>
+    <string name="help_Messages">Šis ekranas rodo visus ankstesnius pranešimus ir priedus, kurie yra vis dar prieinami atsisiųsti.</string>
+    <string name="help_passphrase">Naudokite šį ekraną prisijungti prie paraiškos su savo slaptafraze.</string>
+    <string name="help_PickRecip">Kontaktai su SafeSlinger raktus Čia rodoma, pasirinkite siųsti jūsų pranešimą.</string>
+    <string name="help_save">Kai baigsite,protokolas bus atskleisti tapatybės duomenų, kuriais keičiamasi, sąrašą. Pasirinkite adresatus, kuriuos norite išsaugoti, ir paspauskite \' Importuoti \'.</string>
+    <string name="help_SecureIntroduction">Šis ekranas leidžia jums pasirinkti vieną iš dviejų žmonių, jūs neišmes raktus, kol saugiai siųsti savo raktus tarpusavyje. Tiesiog paspauskite \' Įvesti \', kai pasirengusi.</string>
+    <string name="help_Send">Šis ekranas leidžia Jums pasirinkti tam tikrus duomenis ir gavėją siųsti. Tiesiog paspauskite \'Siųsti\', kai pasirengusi.</string>
+    <string name="help_size">Pasirinkite žmonių, kurie bando kartu keistis duomenimis ir paspauskite \'Gerai\' numerį.</string>
+    <string name="help_userid">Šis skaičius šiame ekrane yra naudojamas sukurti unikalų vartotojų grupę. Nuolat peržiūrėti visų vartotojų numerių \' ekranus, tuomet visi vartotojai turi įvesti tą patį mažiausią numerį ir paspauskite \' OK \'.</string>
+    <string name="help_verify">Dabar jūs turi atitikti vieną iš šių 3-žodžių frazes su visiems vartotojams. Kiekvienas vartotojas turi pasirinkti tą patį bendrą frazę ir spauskite \' Next \'.</string>
+
+    <string name="iOS_contactError">Kontaktai leidimo nereikia. Prašome eiti į iOS Nustatymai kad Kontaktai leidimus.</string>
+    <string name="iOS_errorpushtoken">Push registracijos nėra.</string>
+    <string name="iOS_notificationError1">Pranešimai leidimo nereikia. Prašome eiti į iOS Nustatymai kad informaciniai pranešimai leidimus.</string>
+    <string name="iOS_notificationError2">%s leidimo nereikia. Prašome eiti į iOS Nustatymai kad informaciniai pranešimai leidimus.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger nėra optimizuota iOS 5.x prietaisus. SafeSlinger reikalauja iOS 6 arba naujesnė.</string>
+
+    <string name="label_ago">%s atgal</string>
+    <string name="label_backupCompleteDate">Paskutinis Atsarginė Baigtas</string>
+    <string name="label_backupRequestDate">Paskutinis Atsarginė užklausa</string>
+    <string name="label_backupURL">Atsarginė URL</string>
+    <string name="label_ClickForNMsgs">Palieskite peržiūrėti savo %d pranešimus</string>
+    <string name="label_ComposeHint">Rašyti žinutę</string>
+    <string name="label_ContactEmail">Jūsų elektroninis paštas</string>
+    <string name="label_ContactName">Jūsų vardas</string>
+    <string name="label_ContactPhone">Jūsų telefonas</string>
+    <string name="label_days">%d dienų</string>
+    <string name="label_Device">Įrenginys:</string>
+    <string name="label_DeviceInSendOnlyMode">Siųsti tik režimas</string>
+    <string name="label_DisabledExchSourceKeyChange">Jūsų raktas pasikeitė: diržas klavišus dar kartą.</string>
+    <string name="label_Draft">PROJEKTAS</string>
+    <string name="label_EnabledKeyFormatDeprecated">Rakto formatas pasmerkta: diržas klavišus dar kartą.</string>
+    <string name="label_exchanged">keičiamasi</string>
+    <string name="label_expired">pasibaigęs</string>
+    <string name="label_expires">baigiasi %s</string>
+    <string name="label_expiresIn">baigiasi</string>
+    <string name="label_FileNameHint">Failo vardas</string>
+    <string name="label_FindInstruct">Prašome įvesti savo asmeninę informaciją. Šie duomenys bus saugiai dalijamasi tik su asmenimis, kuriems norite pasidalinti ja su.</string>
+    <string name="label_FirstName">Vardas</string>
+    <string name="label_Home">Patikrinkite elementus norite dalintis ir bakstelėkite \' Pradžia \' Exchange \', kai kiti yra pasiruošę keistis.</string>
+    <string name="label_hometag">Namai</string>
+    <string name="label_hours">%d valandos</string>
+    <string name="label_iCloudEnable">SafeSlinger icloud yra įjungtas. Bakstelėkite \' Done \' mygtuką, kai baigsite.</string>
+    <string name="label_InstNoMessages">Nėra pranešimų. Galite siųsti iš \'Rašyti žinutę \' mygtuką pranešimą pagrindiniame meniu.</string>
+    <string name="label_InstNoMessagesAndroid">Nėra pranešimų. Galite siųsti pranešimą iš \'Rašykite \' skiltyje.</string>
+    <string name="label_InstNoRecipients">Nėra gavėjai. Surasti kitą SafeSlinger vartotoją netoliese ir palieskite \' diržas Keys \' skirtuką praleisite raktus.</string>
+    <string name="label_InstNoSharedFile">Nėra bendro failas. Prijunkite savo prietaisą su iTunes ir vilkite failus į bendrai naudojamą aplanką.</string>
+    <string name="label_InstRecipients">Pasirinkite gavėją siųsti žinutę:</string>
+    <string name="label_InstSendInvite">Pasirinkite gavėjus pristatyti saugiai:</string>
+    <string name="label_InstSharedFile">Pasirinkite failą, kurį norite pridėti:</string>
+    <string name="label_introduced">pristatė</string>
+    <string name="label_Key">Raktas:</string>
+    <string name="label_LastName">Pavardė</string>
+    <string name="label_Me">Mane</string>
+    <string name="label_messageIntroduceNameToYou">Norėčiau pristatyti %s jums.</string>
+    <string name="label_MeToSender">Me (su %s):</string>
+    <string name="label_minutes">%d minučių</string>
+    <string name="label_mobiletag">Mobilus</string>
+    <string name="label_MostRecentOnly">Naujausia tik</string>
+    <string name="label_MsgSendUpdate">Mano atnaujintas SafeSlinger įgaliojimas pridedamas.</string>
+    <string name="label_None">Nė vienas</string>
+    <string name="label_NumericModeHint">Ne anglų kalba</string>
+    <string name="label_numsharedfiles">%d failai Pasidalinkite:</string>
+    <string name="label_OldThreads">Senos temos</string>
+    <string name="label_othertag">Kitas</string>
+    <string name="label_PassHintBackoff">Bandyti dar kartą</string>
+    <string name="label_PassHintChange">Atnaujinta Slaptafrazė</string>
+    <string name="label_PassHintCreate">Sukurti slaptafrazę</string>
+    <string name="label_PassHintEnter">Slaptažodis</string>
+    <string name="label_PassHintRepeat">Pakartokite slapta frazė</string>
+    <string name="label_passPhraseCacheTtl">Slaptažodis talpyklos</string>
+    <string name="label_PassPhraseIsCached">Slaptažodis būtų išsaugotas</string>
+    <string name="label_phoneOnly">telefonas tik</string>
+    <string name="label_Photo">Nuotrauka</string>
+    <string name="label_PromptInstruct">Šis skaičius yra naudojamas sukurti unikalų vartotojų grupę. Palyginti, o tada įveskite mažiausią skaičių tarp visų vartotojų.</string>
+    <string name="label_PublicKeyID">Rakto ID</string>
+    <string name="label_PushTokenID">Push Registracija ID</string>
+    <string name="label_ReceivedNItems">gavo %d daiktų</string>
+    <string name="label_RemindBackupDelay">Atsarginė priminimas</string>
+    <string name="label_ReportedInactive">Pranešė neaktyvus %s.</string>
+    <string name="label_restoreCompleteDate">Paskutinis Atkurti Baigtas</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger atsarginės atidėtas</string>
+    <string name="label_safeslingered">(SafeSlinger Tiesioginis birža)</string>
+    <string name="label_SaveAccount">Sutaupykite paskyrą</string>
+    <string name="label_SaveInstruct">Valiutų baigtas! Pasirinkite valstybes duomenis įrašyti į adresų knygą:</string>
+    <string name="label_seconds">%d sekundžių</string>
+    <string name="label_selectLabel">Pasirinkite etiketė</string>
+    <string name="label_SelectRecip">Pasirinkite Gavėjas</string>
+    <string name="label_sendErrorData">Siųsti klaida duomenis</string>
+    <string name="label_SendFrom">Nuo:</string>
+    <string name="label_SendTo">Į:</string>
+    <string name="label_ShowHintAtLaunch">Rodyti Tai užuomina kitą kartą.</string>
+    <string name="label_step_1">1 žingsnis</string>
+    <string name="label_step_2">2 žingsnis</string>
+    <string name="label_step_3">3 žingsnis</string>
+    <string name="label_step_4">4 žingsnis</string>
+    <string name="label_step_5">5 žingsnis</string>
+    <string name="label_TapToDecryptFile">Bakstelėkite iššifruoti failą</string>
+    <string name="label_TapToDecryptMessage">Bakstelėkite iššifruoti</string>
+    <string name="label_TapToDownloadFile">Bakstelėkite atsisiųsti failą</string>
+    <string name="label_TapToDownloadMessage">Bakstelėkite atsisiųsti pranešimą</string>
+    <string name="label_TapToOpenFile">Palieskite, kad atidarytumėte failą</string>
+    <string name="label_TapToResumeDraft">Bakstelėkite atnaujinti pranešimo projektą</string>
+    <string name="label_TapToSendCredentialUpdate">Palieskite ir palaikykite, jei norite siųsti kredencialų atnaujinimą.</string>
+    <string name="label_targetAccountLabel">Kontaktai paskyra</string>
+    <string name="label_TouchToConfigureBackupSettings">Galite pasirinktinai leisti SafeSlinger icloud atsarginę iOS nustatymai. Bakstelėkite \' Done \' mygtuką, kai baigsite.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Palieskite sukonfigūruoti atsarginės nustatymus.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Palieskite konfigūruoti talpyklos timeout parametrus.</string>
+    <string name="label_undefinedTypeLabel">Nežinomas</string>
+    <string name="label_UnknownSender">Koduotas Siuntėjas</string>
+    <string name="label_UserIdHint">Mažiausia</string>
+    <string name="label_UserName">Vartotojo vardas</string>
+    <string name="label_VerifyInstruct">Visi telefonai turi atitikti vieną iš 3 žodžių frazes. Palyginti, o tada pasirinkti atitikimo frazę.</string>
+    <string name="label_worktag">Darbas</string>
+
+    <string name="menu_About">Apie</string>
+    <string name="menu_Change">Pokytis</string>
+    <string name="menu_ChangePassphrase">Pakeisti slapta frazė</string>
+    <string name="menu_CreateNew">Sukurti naują</string>
+    <string name="menu_delete">Panaikinti</string>
+    <string name="menu_deleteThread">Ištrinti Temos \'%s\'</string>
+    <string name="menu_Details">Peržiūrėti Išsamiau</string>
+    <string name="menu_DownloadDirectory">Download Directory</string>
+    <string name="menu_Edit">Redaguoti</string>
+    <string name="menu_FileManager">Failų tvarkyklė</string>
+    <string name="menu_Help">Padėti</string>
+    <string name="menu_Introduction">Įvadas</string>
+    <string name="menu_License">Licencija</string>
+    <string name="menu_Logout">Atsijungti</string>
+    <string name="menu_messageCopyText">Kopijuoti tekstas</string>
+    <string name="menu_messageForward">Pirmyn</string>
+    <string name="menu_Remove">Pašalinti</string>
+    <string name="menu_SelectShareApp">Siųsti taikymas</string>
+    <string name="menu_sendFeedback">Siųsti atsiliepimą</string>
+    <string name="menu_SendUpdate">Siųsti update</string>
+    <string name="menu_Settings">Nustatymai</string>
+    <string name="menu_ShowTutorial">Rodyti Susipažinkite</string>
+    <string name="menu_TagComposeMessage">Sukomponuoti</string>
+    <string name="menu_TagExchange">Sling raktai</string>
+    <string name="menu_TagListMessages">Pranešimai</string>
+    <string name="menu_UseAnother">Naudokite Kitas</string>
+
+    <string name="prog_CollectingOthersCommitVerify">laukia patikrinimo iš visų narių…</string>
+    <string name="prog_CollectingOthersItems">laukia visi vartotojai prisijungti…</string>
+    <string name="prog_ConstructingGroupKey">statant grupės raktą…</string>
+    <string name="prog_decrypting">iškodavimo…</string>
+    <string name="prog_encrypting">šifravimo…</string>
+    <string name="prog_FileSent">žinutė išsiųsta, laukiama atsakymo…</string>
+    <string name="prog_findingKey">rasti raktą…</string>
+    <string name="prog_GeneratingKey">generuoti raktą, tai gali užtrukti…</string>
+    <string name="prog_generatingSignature">generuoti parašas…</string>
+    <string name="prog_loadingContent">pakrovimo turinys…</string>
+    <string name="prog_ReceivingFile">gauti užšifruotą failą…</string>
+    <string name="prog_RequestingFile">Prašančioji užšifruotos…</string>
+    <string name="prog_RequestingMessage">Prašančioji užšifruotos žinutės…</string>
+    <string name="prog_RequestingPushReg">Prašančioji push registracija…</string>
+    <string name="prog_RequestingUserId">Prašančioji narystę…</string>
+    <string name="prog_SavingContactsToAddressBook">atnaujinimas adresų knygelę…</string>
+    <string name="prog_SavingContactsToKeyDatabase">atnaujinti pagrindinę duomenų bazę…</string>
+    <string name="prog_SearchingForBackup">ieškoti atsarginės…</string>
+    <string name="prog_SendingFile">siųsti šifruotą %s…</string>
+    <string name="prog_verifyingIntegrity">patikrinti vientisumą…</string>
+    <string name="prog_verifyingSignature">Tikrinant parašą…</string>
+
+    <string name="section_advanced">Pažangus</string>
+    <string name="section_backup">Atsarginė</string>
+    <string name="section_general">Bendras</string>
+
+    <string name="state_BackupRestored">Atsarginė atstatytas.</string>
+    <string name="state_FileDeleted">Ištrintas failas %s.</string>
+    <string name="state_FileSent">Pranešimas išsiųstas.</string>
+    <string name="state_MessageSavedAsDraft">Pranešimas išsaugotas kaip juodraštis.</string>
+    <string name="state_MessagesDeleted">%d pranešimai ištrinti.</string>
+    <string name="state_PassphraseUpdated">Slaptažodis atnaujintas.</string>
+    <string name="state_RecipientsDeleted">%d gavėjai ištrintas.</string>
+    <string name="state_SomeContactsImported">%s kontaktai importuojami.</string>
+    <string name="state_TextCopiedToClipboard">Tekstas nukopijuotas į iškarpinę.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger skirtas lengvai dalintis tapatybės duomenis, asmeniškai arba telefonu, autentiškumą, privatus, ir sveika. Kiekvienas asmuo, pasidalinti su sukuriamas saugus \'end-to-end kanalą siųsti pranešimus.\n\nĮranga:\n- Lengvai keistis kontaktinę informaciją su kitais\n- Saugiai diržas tekstų, nuotraukų, nieko!\n- Stiprus kriptografija apsaugo jūsų informacija\n\npaštas: %2$s\nsvetainė: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Teikiamos kalbos:</string>
+    <string name="text_Requirements">Reikalavimai:\n1. Turi būti sumontuoti ant 2 prietaisus minimumo.\n2. Interneto ryšys turi būti aktyvus.</string>
+    <string name="text_ShortPromotion">Saugiai diržas kontaktai, tekstai, nuotraukos, nieko!</string>
+
+    <string name="title_About">Apie</string>
+    <string name="title_camera">Fotoaparatas</string>
+    <string name="title_ChooseDirectory">Pasirinkite katalogas</string>
+    <string name="title_ChooseFileLoad">Pasirinkite Priedas</string>
+    <string name="title_comments">Pastabos/Klausimai</string>
+    <string name="title_Error">Klaida</string>
+    <string name="title_ExchangeWalkthrough">Diržas klavišai asistentas</string>
+    <string name="title_FileOptions">Priedas parinktys</string>
+    <string name="title_find">Sąranka</string>
+    <string name="title_home">Pradžia birža</string>
+    <string name="title_HomePanel">Namai</string>
+    <string name="title_MessageDetail">Pranešimas</string>
+    <string name="title_Messages">Pranešimai</string>
+    <string name="title_MyIdentity">Mano tapatybė</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Pranešimas Prieinamas</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Pranešimai bylos</string>
+    <string name="title_passphrase">Slaptažodis</string>
+    <string name="title_photoalbum">Albumas</string>
+    <string name="title_photolibary">Nuotraukų biblioteka</string>
+    <string name="title_PickRecipient">Gavėjai</string>
+    <string name="title_Question">Klausimas</string>
+    <string name="title_RecipientDetail">Gavėjas Išsamiau</string>
+    <string name="title_save">Pabaiga birža</string>
+    <string name="title_SaveFileAs">Išsaugokite failą As</string>
+    <string name="title_SecureIntroduction">Saugus Įvadas</string>
+    <string name="title_SecureIntroductionInvite">Saugus Įvadas Tu!</string>
+    <string name="title_SelectSource">Siuntimo parinktys:</string>
+    <string name="title_SendFile">Siųsti</string>
+    <string name="title_sharingfolder">Dalijimasis Byla</string>
+    <string name="title_size">Kiek vartotojų biržoje?</string>
+    <string name="title_soundrecoder">Garso įrašymo</string>
+    <string name="title_TextInviteMsg">SafeSlinger kvietimas</string>
+    <string name="title_Threads">Temos</string>
+    <string name="title_userid">Grupavimas</string>
+    <string name="title_verify">Patikrinti</string>
+    <string name="title_Warn">Įspėjimas</string>
+
+</resources>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">שיקן פאַרבעטן לינק מיט…</string>
+    <string name="action_ViewFile">מיינונג %s מיט…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">באַקקופּ איז פאַרקריפּלט. צי איר ווילן צו סטרויערן באַקקופּ סעטטינגס און האַלטן דעם דערמאָנונג?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s האט אַ מער פריש מיטל אָדער שליסל, זענען איר זיכער איר ווילן צו נוצן דעם עלטער איינער?</string>
+    <string name="ask_FileExistsOverwrite">טעקע נאָמען %s שוין יגזיסס. אָווועררייט?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">אָן אַ Google אַקאַונט איר וועט בלויז קענען צו שיקן, נישט באַקומען אַרטיקלען. צי איר ווילן צו לייגן אַ Google חשבון?</string>
+    <string name="ask_QuitConfirmation">פאַרלאָזן? זענען איר זיכער?</string>
+    <string name="ask_SendErrorData">מיר \'ד ווי דיין הילף ימפּרוווינג SafeSlinger. וואָלט איר ווי צו אויטאָמאַטיש שיקן קיין ערראָרס צו אונדז?</string>
+
+    <string name="btn_Accept">אָננעמען</string>
+    <string name="btn_BeginExchangeProximity">נעמען עקסטשאַנגע</string>
+    <string name="btn_Cancel">באָטל מאַכן</string>
+    <string name="btn_Close">נאָענט</string>
+    <string name="btn_Continue">פאָרזעצן</string>
+    <string name="btn_discard">אַוועקוואַרפן</string>
+    <string name="btn_Done">דאַן</string>
+    <string name="btn_Exit">אַרויסגאַנג</string>
+    <string name="btn_Import">אַרייַנפיר</string>
+    <string name="btn_Introduce">באַקענען</string>
+    <string name="btn_Match">ווייַטער</string>
+    <string name="btn_No">קיין</string>
+    <string name="btn_NoMatch">ניט קיין גלייַכן</string>
+    <string name="btn_NotRemind">פאַרגעסן</string>
+    <string name="btn_OK">גוט</string>
+    <string name="btn_Refuse">אָפּזאָגן</string>
+    <string name="btn_Remind">דערמאָנען</string>
+    <string name="btn_Save">ראַטעווען</string>
+    <string name="btn_SelectFile">לייג אַטטאַטשמענט</string>
+    <string name="btn_SendFile">שיקן</string>
+    <string name="btn_Yes">יאָ</string>
+
+    <string name="choice_10mins">10 מינוט</string>
+    <string name="choice_1hour">1 שעה</string>
+    <string name="choice_1min">1 מינוט</string>
+    <string name="choice_20mins">20 מינוט</string>
+    <string name="choice_2hours">2 שעה</string>
+    <string name="choice_3mins">3 מינוט</string>
+    <string name="choice_40mins">40 מינוט</string>
+    <string name="choice_4hours">4 שעה</string>
+    <string name="choice_5mins">5 מינוט</string>
+    <string name="choice_8hours">8 שעה</string>
+    <string name="choice_auto_storage">פעליקייַט סטאָרידזש</string>
+    <string name="choice_external_storage">פונדרויסנדיק סטאָרידזש</string>
+    <string name="choice_internal_storage">אינערלעכער סטאָרידזש</string>
+    <string name="choice_nolimit">קיין לימיט</string>
+    <string name="choice_NumUsers">%d וסערס</string>
+    <string name="choice_SaveDirectory">היט דירעקטארי</string>
+    <string name="choice_SaveFile">היט טעקע</string>
+    <string name="choice_Up">אַרויף</string>
+
+    <string name="error_AllMembersMustUpgrade">עטלעכע מיטגלידער זענען ניצן אַ עלטער ווערסיע, אַלע מיטגלידער מוזן בייַ מינדסטער נוצן %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">אַלע מיטגלידער מוזן אַפּגרייד, עטלעכע זענען ניצן עלטער שליסל פֿאָרמאַטירונגען.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">אַלע מיטגלידער מוזן אַפּגרייד, עטלעכע זענען ניצן עלטער שטופּן רעגיסטראַציע פֿאָרמאַטירונגען.</string>
+    <string name="error_AudioPlayerDecodeError">אַודיאָ שפּילער דיקאָודינג טעות.</string>
+    <string name="error_AudioPlayerError">קענען ניט שפּילן די רעקאָרדינג.</string>
+    <string name="error_AudioRecorderEncodeError">אַודיאָ רעקאָרדער קאָדירונג טעות.</string>
+    <string name="error_AudioRecorderPermissionError">מיקראָפאָן דערלויבעניש פארלאנגט. ביטע גיין צו יאָס סעטטינגס צו געבן מייקראַפאָון פּערמישאַנז.</string>
+    <string name="error_BackupNotFound">ניט קיין באַקקופּ צו ומקערן.</string>
+    <string name="error_BackupNotSupportedDevice">מיטל טוט ניט שטיצן באַקקופּ ומקערן.</string>
+    <string name="error_BadCopyProtectUpgrade">רעכט צו אַ זשוק אין אַנדרויד 4.1, איר וועט האָבן נעם אַוועק און ריינסטאַל SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">אַ Google חשבון איז פארלאנגט. ביטע עפענען די חשבון פאַרוואַלטער און לייגן אַ Google חשבון.</string>
+    <string name="error_C2DMRegAuthenticationFailed">רעגיסטראַציע ניט אָטענטאַקייטאַד, ביטע רעטרי מאַניואַלי שפּעטער.</string>
+    <string name="error_C2DMRegInvalidSender">רעגיסטראַציע איז ניט פאַראַנען פֿאַר דעם ווערסיע, ביטע טשעק פֿאַר אַ דערהייַנטיקט ווערסיע.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">פאַלש מיטל רעגיסטראַציע מיט Google. דעם מיטל טוט ניט דערווייַל שטיצן שטופּן מעסידזשינג.</string>
+    <string name="error_C2DMRegServiceNotAvailable">שטופּן רעגיסטראַציע דינסט ניט פאַראַנען, סקעדזשולינג רעטרי אין %d סעקונדעס.</string>
+    <string name="error_C2DMRegTooManyRegistrations">אויך פילע אַפּלאַקיישאַנז זענען רעגיסטרירט פֿאַר פּוש. ביטע נעם אַוועק עטלעכע אנדערע אַפּלאַקיישאַנז און רעטרי.</string>
+    <string name="error_CannotSendEmptyFile">קענען ניט שיקן אַ ליידיק אַטאַטשמאַנט.</string>
+    <string name="error_CannotSendFilesOver">קענען ניט שיקן אַטאַטשמאַנץ גרעסער ווי %d ביטעס אין פאָרמאַט.</string>
+    <string name="error_CannotSendNullFile">קענען ניט שיקן אַ נאַל אַטאַטשמאַנט.</string>
+    <string name="error_contactCreationFailure">קאָנטאַקט שאַפונג אַנדערש.</string>
+    <string name="error_ContactInsertFailed">קאָנטאַקט אַרייַנלייגן אַנדערש.</string>
+    <string name="error_ContactNameMissing">דעם קאָנטאַקט איז פעלנדיק אַ נאָמען, ביטע רעדאַגירן.</string>
+    <string name="error_ContactNameMissing2">דעם קאָנטאַקט איז פעלנדיק אַ נאָמען, ביטע רעסעלעקט.</string>
+    <string name="error_ContactUpdateFailed">קאָנטאַקט דערהייַנטיקן ניט אַנדערש.</string>
+    <string name="error_CorrectYourInternetConnection">אינטערנעט ניט פאַראַנען, טשעק דיין סעטטינגס.</string>
+    <string name="error_couldNotExtractPrivateKey">קען ניט עקסטראַקט פּריוואַט שליסל.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">וועקסל טיימאַוט יקסידיד. אָנהייבן דער וועקסל ווידער.</string>
+    <string name="error_FeatureIsNotSupport">%1$s איז ניט געשטיצט אויף %2$s אין דעם צייַט.</string>
+    <string name="error_FileSave">ניט געקענט צו ראַטעווען %s.</string>
+    <string name="error_FileStorageUnavailable">טעקע סטאָרידזש איז ניט בנימצא.</string>
+    <string name="error_HttpCode">סערווירער הטטפּ טעות: %d</string>
+    <string name="error_InvalidCommitVerify">פאַלש דאַטן געפונען אין וועקסל. נעמען די וועקסל ווידער.</string>
+    <string name="error_InvalidCommonUserId">ביטע אַרייַן אַ positive ינטאַדזשער.</string>
+    <string name="error_InvalidContactName">א גילטיק קאָנטאַקט נאָמען איז פארלאנגט.</string>
+    <string name="error_InvalidIncomingMessage">שלעכט ינקאַמינג אָנזאָג פֿאָרמאַט.</string>
+    <string name="error_InvalidMsg">שלעכט אָנזאָג פֿאָרמאַט.</string>
+    <string name="error_InvalidRecipient">פאַרקריפּלט באַקומער.</string>
+    <string name="error_LocalGroupCommitDiffer">איר האָבן געמאלדן אַ חילוק אין פראַסעס. נעמען די וועקסל ווידער.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">די ייַנקוקנ שליסל פֿאָרמאַט איז פאַרקריפּלט.</string>
+    <string name="error_MessageSignatureVerificationFails">כסימע וועראַפאַקיישאַן אַנדערש.</string>
+    <string name="error_minPassphraseRequire">פּאַסספראַסעס דאַרפן בייַ מינדסטער %d אותיות.</string>
+    <string name="error_MinUsersRequired">אַ מינימום פון %d מיטגלידער זענען פארלאנגט צו וועקסל דאַטן.</string>
+    <string name="error_MissingNdk">SafeSlinger האט ניט דעטעקט נדק שטיצן אויף דעם מיטל, וואָס איז פארלאנגט.</string>
+    <string name="error_MoreDataThanUsers">אומגעריכט דאַטן געפונען אין עקסטשאַנגע. נעמען די וועקסל ווידער.</string>
+    <string name="error_MultipleSendNotSupported">איר זענען אַטעמפּטינג צו שיקן קייפל זאכן. אין דעם צייַט, SafeSlinger בלויז שטיצט שיקט איינער פּונקט אין אַ צייַט.</string>
+    <string name="error_NoEmailAccount">Email חשבון איז ניט סעטאַפּ!</string>
+    <string name="error_noPassPhrase">ניט קיין פּאַסספראַסע אריין.</string>
+    <string name="error_NoWordListSelected">איר מוזן אויסקלייַבן איינער פון די פראַסעס איידער פּראַסידינג.</string>
+    <string name="error_OtherGroupCommitDiffer">עמעצער געמאלדן אַ חילוק אין פראַסעס. נעמען די וועקסל ווידער.</string>
+    <string name="error_OutOfMemoryError">זיקאָרן איז אויך נידעריק צו פאַרענדיקן דעם אָפּעראַציע.</string>
+    <string name="error_passPhrasesDoNotMatch">פּאַסספראַסעס טאָן ניט גלייַכן.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">איר האָבן יקסידיד די אָנזאָג קוואָטע פֿאַר אַז באַקומער. ביטע רעטרי שפּעטער.</string>
+    <string name="error_PushMsgInvalidRegistration">אַז באַקומער האט אַ פעלנדיק אָדער שלעכט שטופּן רעגיסטראַציע. איר זאָל האַלטן שיקט אַרטיקלען צו דעם מיטל.</string>
+    <string name="error_PushMsgMessageNotFound">אָנזאָג אויסגעגאנגען.</string>
+    <string name="error_PushMsgMessageTooBig">דער אָנזאָג איז אויך גרויס. רעדוצירן די גרייס פון דעם אָנזאָג.</string>
+    <string name="error_PushMsgNotRegistered">אַז באַקומער ס שטופּן רעגיסטראַציע איז ניט מער גילטיק. די באַקומער זאל האָבן ונינסטאַללעד סאַפעסלינגער אָדער פארקערט אַוועק נאָוטאַפאַקיישאַנז. איר זאָל האַלטן שיקט אַרטיקלען צו דעם מיטל.</string>
+    <string name="error_PushMsgNotSucceed">עס איז געווען אַ טעות קאַמיונאַקייטינג מיט די שטויס אָנזאָג דינסט.</string>
+    <string name="error_PushMsgQuotaExceeded">איר האָבן יקסידיד די אָנזאָג קוואָטע פֿאַר דעם מיטל. ביטע רעטרי שפּעטער.</string>
+    <string name="error_PushMsgServiceFail">אָנזאָג דינסט איז ניט פאַראַנען דעם צייַט. ביטע פּרובירן צו שיקן דעם אָנזאָג שפּעטער.</string>
+    <string name="error_RecoderError">קענען ניט צוגרייטן די אַודיאָ מאַגנעטאָפאָן.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">צו אָנהייבן, \' וואַרפלקע קיז \' מיט אנדערן טעלעפאָנירן אין דער זעלביקער צייַט.</string>
+    <string name="error_selectDataToSend">איר דאַרפֿן אַ אַטאַטשמאַנט אָדער אַ טעקסט אָנזאָג צו שיקן.</string>
+    <string name="error_ServerAppMessage">סערווירער אָנזאָג: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">סערווירער אָנזאָג: \'%s\'</string>
+    <string name="error_ServerNotResponding">ניט קיין ענטפער פון סערווירער.</string>
+    <string name="error_ShareFileDelError">קענען ניט צונעמען די שערד טעקע.</string>
+    <string name="error_TimeoutWaitingForAllMembers">טיימאַוט ווארטן פֿאַר עטלעכע גרופּע מיטגלידער צו לייגן דאַטן.</string>
+    <string name="error_UnableFindPubKey">געקענט צו גלייַכן ציבור שליסל צו פּריוואַט שליסל אין קריפּטאָ שפּייַזער.</string>
+    <string name="error_UnableToSaveMessageInDB">ניט געקענט צו ראַטעווען צו די אָנזאָג דאַטאַבאַסע.</string>
+    <string name="error_UnableToSaveRecipientInDB">ניט געקענט צו ראַטעווען צו די באַקומער דייטאַבייס.</string>
+    <string name="error_UnableToUpdateMessageInDB">געקענט צו דערהייַנטיקן די אָנזאָג דאַטאַבאַסע.</string>
+    <string name="error_UnableToUpdateRecipientInDB">געקענט צו דערהייַנטיקן די באַקומער דייטאַבייס.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger טעות, ביטע ריסטאַרט.</string>
+    <string name="error_VcardParseFailure">קאָנטאַקט דאַטן איז פאָרמאַטטעד ינקערעקטלי.</string>
+    <string name="error_WebCancelledByUser">באַניצער קאַנסאַלד סערווירער בעטן.</string>
+
+    <string name="help_find">נוצן דעם עקראַן צו שטעלן אייער נאָמען, טעלעפאָנירן, און email צו וועקסל מיט אנדערע. צאַפּן די \' דאַן \' קנעפּל ווען פאַרטיק.</string>
+    <string name="help_home">צו וועקסל אידענטיטעט דאַטן, ענשור אַלע וסערס זענען נירביי אָדער אויף די טעלעפאָנירן. די \' אָנהייבן עקסטשאַנגע \' קנעפּל וועט וועקסל בלויז די אָפּגעשטעלט קאָנטאַקט דאַטן.</string>
+    <string name="help_identity_menu"> נוולן נוולן איר קען אויך טוישן פּערזענלעך דאַטן וועגן אייער אידענטיטעט אויף דעם עקראַן דורך טאַפּינג אויף די קנעפּל מיט דיין נאָמען. דעם וועט אַרויסווייַזן אַ מעניו אַלאַוינג איר צו \' רעדאַגירן \' דיין קאָנטאַקט, \' שאַפֿן ניו \' ​​קאָנטאַקט, אָדער \' ניצן אן אנדער \' קאָנטאַקט.</string>
+    <string name="help_Messages">דעם פאַרשטעלן דיספּלייז אַלע פאַרגאַנגענהייַט אַרטיקלען, און אַטאַטשמאַנץ אַז זענען נאָך פאַראַנען פֿאַר אָפּלאָדירן.</string>
+    <string name="help_passphrase">נוצן דעם עקראַן צו לאָגין צו די אַפּלאַקיישאַן מיט אייער פּאַסספראַסע.</string>
+    <string name="help_PickRecip">קאָנטאַקטן מיט SafeSlinger שליסלען זענען געוויזן דאָ, אויסקלייַבן איינער צו שיקן דיין אָנזאָג צו.</string>
+    <string name="help_save">ווען פאַרטיק, די פּראָטאָקאָל וועט אַנטדעקן אַ רשימה פון די אידענטיטעט דאַטן פארביטן. אויסקלייַבן די קאָנטאַקטן איר ווינטשן צו ראַטעווען און דרוק \' ימפּאָרט \'.</string>
+    <string name="help_SecureIntroduction">דעם פאַרשטעלן אַלאַוז איר צו אויסקלייַבן צוויי מענטשן איר האָבן סלאַנג שליסלען מיט איידער צו סיקיורלי שיקן זייער שליסלען צו יעדער אנדערער. פשוט דריקן \' ינטראָדוסע \' ווען גרייט.</string>
+    <string name="help_Send">דעם פאַרשטעלן אַלאַוז איר צו אויסקלייַבן עטלעכע דאַטע און אַ באַקומער צו שיקן צו. פשוט דריקן \' שיקן \' ווען גרייט.</string>
+    <string name="help_size">אויסקלייַבן די נומער פון מענטשן וואס זענען אַטעמפּטינג צו וועקסל דאַטן צוזאַמען און דריקן \' גוט \'.</string>
+    <string name="help_userid">דעם נומער אויף דעם פאַרשטעלן איז געניצט צו שאַפֿן אַ יינציק גרופּע פון ​​ניצערס. איבערבליק די נומערן אויף אַלע ניצערס \' סקרינז, דעמאָלט אַלע ניצערס זאָל אַרייַן די זעלבע לאָואַסט נומער און דרוקן \' גוט \'.</string>
+    <string name="help_verify">איצט, איר מוזן גלייַכן איינער פון די 3-וואָרט פראַסעס מיט אַלע ניצערס. יעדער באַניצער מוזן אויסקלייַבן דער זעלביקער פּראָסט פראַזע, און דריקן \' ווייַטער \'.</string>
+
+    <string name="iOS_contactError">קאָנטאַקטן דערלויבעניש פארלאנגט. ביטע גיין צו יאָס סעטטינגס צו געבן קאָנטאַקטן פּערמישאַנז.</string>
+    <string name="iOS_errorpushtoken">שטופּן רעגיסטראַציע איז פעלנדיק.</string>
+    <string name="iOS_notificationError1">נאָוטאַפאַקיישאַנז דערלויבעניש פארלאנגט. ביטע גיין צו יאָס סעטטינגס צו געבן נאָטיפיקאַטיאָנס פּערמישאַנז.</string>
+    <string name="iOS_notificationError2">%s דערלויבעניש פארלאנגט. ביטע גיין צו יאָס סעטטינגס צו געבן נאָטיפיקאַטיאָנס פּערמישאַנז.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger איז ניט אָפּטימיזעד פֿאַר יאָס 5.קס דיווייסאַז. SafeSlinger ריקווייערז יאָס 6 אָדער העכער.</string>
+
+    <string name="label_ago">%s צוריק</string>
+    <string name="label_backupCompleteDate">לעצטע באַקקופּ געענדיקט</string>
+    <string name="label_backupRequestDate">לעצטע באַקקופּ בעטן</string>
+    <string name="label_backupURL">באַקקופּ URL</string>
+    <string name="label_ClickForNMsgs">פאַרבינדן צו אָפּשאַצונג דיין %d אַרטיקלען</string>
+    <string name="label_ComposeHint">קאַמפּאָוז מעסעדזש</string>
+    <string name="label_ContactEmail">אייער בליצפּאָסט</string>
+    <string name="label_ContactName">אייער נאָמען</string>
+    <string name="label_ContactPhone">אייער טעלעפאָנירן</string>
+    <string name="label_days">%d טעג</string>
+    <string name="label_Device">מיטל:</string>
+    <string name="label_DeviceInSendOnlyMode">שיקן-בלויז מאָדע</string>
+    <string name="label_DisabledExchSourceKeyChange">דיין שליסל האט געביטן: וואַרפלקע קיז ווידער.</string>
+    <string name="label_Draft">פּלאַן</string>
+    <string name="label_EnabledKeyFormatDeprecated">שליסל פֿאָרמאַט דעפּראַקייטאַד: וואַרפלקע קיז ווידער.</string>
+    <string name="label_exchanged">פארביטן</string>
+    <string name="label_expired">אויסגעגאנגען</string>
+    <string name="label_expires">יקספּייערז %s</string>
+    <string name="label_expiresIn">יקספּייערז אין</string>
+    <string name="label_FileNameHint">טעקע נאָמען</string>
+    <string name="label_FindInstruct">ביטע אַרייַן אייער פּערזענלעך אינפֿאָרמאַציע. דעם דאַטן וועט נאָר זיין סיקיורלי שערד מיט מענטשן וועמען איר קלייַבן צו טיילן עס מיט.</string>
+    <string name="label_FirstName">ערשטער נאָמען</string>
+    <string name="label_Home">טשעק זאכן איר ווינטשן צו טיילן און צאַפּן \' אָנהייבן עקסטשאַנגע \' ווען אנדערע זענען גרייט צו בייַט.</string>
+    <string name="label_hometag">היים</string>
+    <string name="label_hours">%d שעה</string>
+    <string name="label_iCloudEnable">סאַפעסלינגער יקלאָוד איז ענייבאַלד. צאַפּן די \' דאַן \' קנעפּל ווען פאַרטיק.</string>
+    <string name="label_InstNoMessages">ניט קיין אַרטיקלען. איר קען שיקן אַ אָנזאָג פון די \' קאַמפּאָוז מעסעדזש \' קנעפּל אויף די היים מעניו.</string>
+    <string name="label_InstNoMessagesAndroid">ניט קיין אַרטיקלען. איר קען שיקן אַ אָנזאָג פון די \' קאַמפּאָוז \' קוויטל.</string>
+    <string name="label_InstNoRecipients">ניט קיין ריסיפּיאַנץ. געפינען אן אנדער SafeSlinger באַניצער נירביי און פאַרבינדן די \' וואַרפלקע קיז \' קוויטל צו טיילן שליסלען.</string>
+    <string name="label_InstNoSharedFile">ניט קיין שערד טעקע. פאַרבינדן דיין מיטל מיט יטונעס און שלעפּן טעקעס צו די שערד טעקע.</string>
+    <string name="label_InstRecipients">קלייַבן אַ באַקומער צו שיקן אַ אָנזאָג צו:</string>
+    <string name="label_InstSendInvite">קלייַבן ריסיפּיאַנץ צו באַקענען סיקיורלי:</string>
+    <string name="label_InstSharedFile">קלייַבן אַ טעקע צו צוטשעפּען:</string>
+    <string name="label_introduced">באַקענענ</string>
+    <string name="label_Key">שליסל:</string>
+    <string name="label_LastName">לעצטע נאָמען</string>
+    <string name="label_Me">מיר</string>
+    <string name="label_messageIntroduceNameToYou">איך וואָלט ווי צו באַקענען %s צו איר.</string>
+    <string name="label_MeToSender">מיר (צו %s):</string>
+    <string name="label_minutes">%d מינוט</string>
+    <string name="label_mobiletag">רירעוודיק</string>
+    <string name="label_MostRecentOnly">רובֿ פריש בלויז</string>
+    <string name="label_MsgSendUpdate">מיין דערהייַנטיקט SafeSlinger קראַדענטשאַלז זענען אַטאַטשט.</string>
+    <string name="label_None">גאָרניט</string>
+    <string name="label_NumericModeHint">ניט-ענגליש</string>
+    <string name="label_numsharedfiles">%d פילעס צו ייַנטיילן:</string>
+    <string name="label_OldThreads">אַלט פֿעדעם</string>
+    <string name="label_othertag">אַנדערער</string>
+    <string name="label_PassHintBackoff">רעטרי</string>
+    <string name="label_PassHintChange">דערהייַנטיקט פּאַסספראַסע</string>
+    <string name="label_PassHintCreate">שאַפֿן פּאַסספראַסע</string>
+    <string name="label_PassHintEnter">פּאַסספראַסע</string>
+    <string name="label_PassHintRepeat">איבערחזרן פּאַסספראַסע</string>
+    <string name="label_passPhraseCacheTtl">פּאַסספראַסע קאַש</string>
+    <string name="label_PassPhraseIsCached">פּאַסספראַסע קאַשט</string>
+    <string name="label_phoneOnly">טעלעפאָנירן-בלויז</string>
+    <string name="label_Photo">פאָטאָ</string>
+    <string name="label_PromptInstruct">דעם נומער איז געניצט צו שאַפֿן אַ יינציק גרופּע פון ​​ניצערס. פאַרגלייַכן, און דעמאָלט אַרייַן די לאָואַסט נומער צווישן אַלע ניצערס.</string>
+    <string name="label_PublicKeyID">שליסל שייַן</string>
+    <string name="label_PushTokenID">שטופּן רעגיסטרירן שייַן</string>
+    <string name="label_ReceivedNItems">באקומען %d זאכן</string>
+    <string name="label_RemindBackupDelay">באַקקופּ רימיינדער</string>
+    <string name="label_ReportedInactive">געמאלדן ינאַקטיוו %s.</string>
+    <string name="label_restoreCompleteDate">לעצטע ריסטאָר געענדיקט</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger באַקקופּ דילייד</string>
+    <string name="label_safeslingered">(SafeSlinger דירעקט עקסטשאַנגע)</string>
+    <string name="label_SaveAccount">היט אַקאַונט</string>
+    <string name="label_SaveInstruct">וועקסל גאַנץ! אויסקלייַבן מיטגליד דאַטן צו ראַטעווען צו דיין אַדרעס בוך:</string>
+    <string name="label_seconds">%d סעקונדעס</string>
+    <string name="label_selectLabel">אויסקלייַבן פירמע</string>
+    <string name="label_SelectRecip">אויסקלייַבן רעסיפּיענט</string>
+    <string name="label_sendErrorData">שיקן טעות דאַטע</string>
+    <string name="label_SendFrom">פון:</string>
+    <string name="label_SendTo">צו:</string>
+    <string name="label_ShowHintAtLaunch">ווייַזן דעם אָנצוהערעניש ווייַטער צייַט.</string>
+    <string name="label_step_1">שריט 1</string>
+    <string name="label_step_2">שריט 2</string>
+    <string name="label_step_3">שריט 3</string>
+    <string name="label_step_4">שריט 4</string>
+    <string name="label_step_5">שריט 5</string>
+    <string name="label_TapToDecryptFile">צאַפּן צו דעקריפּט טעקע</string>
+    <string name="label_TapToDecryptMessage">צאַפּן צו דעקריפּט</string>
+    <string name="label_TapToDownloadFile">צאַפּן צו אָפּלאָדירן טעקע</string>
+    <string name="label_TapToDownloadMessage">צאַפּן צו אָפּלאָדירן אָנזאָג</string>
+    <string name="label_TapToOpenFile">צאַפּן צו עפענען טעקע</string>
+    <string name="label_TapToResumeDraft">צאַפּן צו נעמענ זיכ ווידער אָנזאָג פּלאַן</string>
+    <string name="label_TapToSendCredentialUpdate">צאַפּן און האַלטן צו שיקן קראַדענשאַל דערהייַנטיקן.</string>
+    <string name="label_targetAccountLabel">קאָנטאַקטן אַקאַונט</string>
+    <string name="label_TouchToConfigureBackupSettings">איר קען אָפּטיאָנאַללי געבן סאַפעסלינגער יקלאָוד באַקקופּ אין יאָס סעטטינגס. צאַפּן די \' דאַן \' קנעפּל ווען פאַרטיק.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">פאַרבינדן צו קאַנפיגיער באַקקופּ סעטטינגס.</string>
+    <string name="label_TouchToConfigureCacheTimeout">פאַרבינדן צו קאַנפיגיער קאַש טיימאַוט סעטטינגס.</string>
+    <string name="label_undefinedTypeLabel">ומבאַקאַנט</string>
+    <string name="label_UnknownSender">ינקריפּטיד סענדער</string>
+    <string name="label_UserIdHint">לאָוועסט</string>
+    <string name="label_UserName">באַניצער נאָמען</string>
+    <string name="label_VerifyInstruct">אַלע פאָנעס מוזן גלייַכן איינער פון די 3-וואָרט פראַסעס. פאַרגלייַכן, און דעמאָלט קלייַבן די ריכטן פראַזע.</string>
+    <string name="label_worktag">אַרבעט</string>
+
+    <string name="menu_About">וועגן</string>
+    <string name="menu_Change">טוישן</string>
+    <string name="menu_ChangePassphrase">טוישן פּאַסספראַסע</string>
+    <string name="menu_CreateNew">שאַפֿן ניו</string>
+    <string name="menu_delete">ויסמעקן</string>
+    <string name="menu_deleteThread">דיליט פֿאָדעם \'%s\'</string>
+    <string name="menu_Details">מיינונג דעטאַל</string>
+    <string name="menu_DownloadDirectory">אראפקאפיע דירעקטארי</string>
+    <string name="menu_Edit">ויסרעדאַגירן</string>
+    <string name="menu_FileManager">טעקע מאַנאַגער</string>
+    <string name="menu_Help">הילף</string>
+    <string name="menu_Introduction">הקדמה</string>
+    <string name="menu_License">דערלויבעניש</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_messageCopyText">קאָפּיע טעקסט</string>
+    <string name="menu_messageForward">פאָרויס</string>
+    <string name="menu_Remove">באַזייַטיקן</string>
+    <string name="menu_SelectShareApp">שיקן אַפּפּליקאַטיאָן</string>
+    <string name="menu_sendFeedback">שיקן באַמערקונגען</string>
+    <string name="menu_SendUpdate">שיקן דערהייַנטיקן</string>
+    <string name="menu_Settings">סעטטינגס</string>
+    <string name="menu_ShowTutorial">ווייַזן טוטאָריאַל</string>
+    <string name="menu_TagComposeMessage">קאַמפּאָוז</string>
+    <string name="menu_TagExchange">וואַרפלקע קיז</string>
+    <string name="menu_TagListMessages">אַרטיקלען</string>
+    <string name="menu_UseAnother">נוצן אן אנדער</string>
+
+    <string name="prog_CollectingOthersCommitVerify">ווארטן פֿאַר וועראַפאַקיישאַן פון אַלע מיטגלידער…</string>
+    <string name="prog_CollectingOthersItems">ווארטן פֿאַר אַלע ניצערס צו פאַרבינדן…</string>
+    <string name="prog_ConstructingGroupKey">קאַנסטראַקטינג גרופּע שליסל…</string>
+    <string name="prog_decrypting">דעקריפּטינג…</string>
+    <string name="prog_encrypting">ענקריפּטינג…</string>
+    <string name="prog_FileSent">אָנזאָג געשיקט, אַווייטינג ענטפער…</string>
+    <string name="prog_findingKey">געפונען שליסל…</string>
+    <string name="prog_GeneratingKey">דזשענערייטינג שליסל, דעם קענען נעמען אַ בשעת…</string>
+    <string name="prog_generatingSignature">דזשענערייטינג כסימע…</string>
+    <string name="prog_loadingContent">לאָודינג צופרידן…</string>
+    <string name="prog_ReceivingFile">ריסיווינג ינקריפּטיד טעקע…</string>
+    <string name="prog_RequestingFile">ריקוועסטינג ינקריפּטיד טעקע…</string>
+    <string name="prog_RequestingMessage">ריקוועסטינג ינקריפּטיד אָנזאָג…</string>
+    <string name="prog_RequestingPushReg">ריקוועסטינג שטופּן רעגיסטראַציע…</string>
+    <string name="prog_RequestingUserId">ריקוועסטינג מיטגלידערשאַפֿט…</string>
+    <string name="prog_SavingContactsToAddressBook">אַפּדייטינג אַדרעס בוך…</string>
+    <string name="prog_SavingContactsToKeyDatabase">אַפּדייטינג שליסל דאַטאַבאַסע…</string>
+    <string name="prog_SearchingForBackup">שאַרף פֿאַר באַקקופּ…</string>
+    <string name="prog_SendingFile">שיקט ינקריפּטיד %s…</string>
+    <string name="prog_verifyingIntegrity">וועראַפייינג אָרנטלעכקייַט…</string>
+    <string name="prog_verifyingSignature">וועראַפייינג כסימע…</string>
+
+    <string name="section_advanced">אַוואַנסירטע</string>
+    <string name="section_backup">באַקקופּ</string>
+    <string name="section_general">אַלגעמיין</string>
+
+    <string name="state_BackupRestored">באַקקופּ געזונט.</string>
+    <string name="state_FileDeleted">אויסגעמעקט טעקע %s.</string>
+    <string name="state_FileSent">אָנזאָג געשיקט.</string>
+    <string name="state_MessageSavedAsDraft">אָנזאָג געהאלפן ווי פּלאַן.</string>
+    <string name="state_MessagesDeleted">%d אַרטיקלען אויסגעמעקט.</string>
+    <string name="state_PassphraseUpdated">פּאַסספראַסע דערהייַנטיקט.</string>
+    <string name="state_RecipientsDeleted">%d ריסיפּיאַנץ אויסגעמעקט.</string>
+    <string name="state_SomeContactsImported">%s קאָנטאַקטן ימפּאָרטיד.</string>
+    <string name="state_TextCopiedToClipboard">טעקסט קאַפּיד צו קליפּבאָרד.</string>
+
+    <string name="text_About">%1$s נוולן נוולן SafeSlinger איז דיזיינד צו לייכט טיילן אידענטיטעט דאַטן, אין מענטש אָדער איבער די טעלעפאָנירן, אָטענטאַקייטאַד, פּריוואַט, און בעשאָלעם. יעדער מענטש איר טיילן מיט קריייץ אַ זיכער סוף-צו-סוף קאַנאַל צו שיקן אַרטיקלען. נוולן נוולן פֿעיִקייטן: נוולן - לייכט וועקסל קאָנטאַקט אינפֿאָרמאַציע מיט אנדערע נוולן - סיקיורלי וואַרפלקע טעקסטן, פאָטאָס, עפּעס! נוולן - שטאַרק קריפּטאָגראַפי פּראַטעקץ דיין אינפֿאָרמאַציע נוולן נוולן Email: %2$s נוולן וועב: %3$s</string>
+    <string name="text_LanguagesProvidedBy">שפּראַכן צוגעשטעלט דורך:</string>
+    <string name="text_Requirements">באדערפענישן: נוולן 1. מוזן זיין אינסטאַלירן אויף אַ מינימום פון 2 דיווייסאַז. נוולן 2. אַן אינטערנעץ קשר מוזן זיין אַקטיוו.</string>
+    <string name="text_ShortPromotion">סיקיורלי וואַרפלקע קאָנטאַקטן, טעקסטן, פאָטאָס, עפּעס!</string>
+
+    <string name="title_About">וועגן</string>
+    <string name="title_camera">אַפּאַראַט</string>
+    <string name="title_ChooseDirectory">קלייַבן דירעקטארי</string>
+    <string name="title_ChooseFileLoad">קלייַבן אייער אַטטאַטשמענט</string>
+    <string name="title_comments">באַמערקונגען/פֿראגן</string>
+    <string name="title_Error">גרייַז</string>
+    <string name="title_ExchangeWalkthrough">וואַרפלקע קיז אַססיסטאַנט</string>
+    <string name="title_FileOptions">אַטטאַטשמענט אָפּציעס</string>
+    <string name="title_find">סעטאַפּ</string>
+    <string name="title_home">נעמען עקסטשאַנגע</string>
+    <string name="title_HomePanel">היים</string>
+    <string name="title_MessageDetail">אָנזאָג</string>
+    <string name="title_Messages">אַרטיקלען</string>
+    <string name="title_MyIdentity">מיין אידענטיטעט</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger מעסעדזש פאַראַנען</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger אַרטיקלען פאַראַנען</string>
+    <string name="title_passphrase">פּאַסספראַסע</string>
+    <string name="title_photoalbum">פאָטאָ אַלבום</string>
+    <string name="title_photolibary">פאָטאָ ביבליאָטעק</string>
+    <string name="title_PickRecipient">ריסיפּיאַנץ</string>
+    <string name="title_Question">פרעגן</string>
+    <string name="title_RecipientDetail">באַקומער דעטאַל</string>
+    <string name="title_save">סוף עקסטשאַנגע</string>
+    <string name="title_SaveFileAs">היט טעקע ווי</string>
+    <string name="title_SecureIntroduction">זיכער הקדמה</string>
+    <string name="title_SecureIntroductionInvite">זיכער אַרייַנפֿיר ינוויטאַטיאָן!</string>
+    <string name="title_SelectSource">שיקט אָפּציעס:</string>
+    <string name="title_SendFile">שיקן</string>
+    <string name="title_sharingfolder">ייַנטיילונג פאָלדער</string>
+    <string name="title_size">ווי פילע ניצערס אין דער וועקסל?</string>
+    <string name="title_soundrecoder">סאָונד רעקאָרדער</string>
+    <string name="title_TextInviteMsg">SafeSlinger ינוויטאַטיאָן</string>
+    <string name="title_Threads">פֿעדעם</string>
+    <string name="title_userid">גרופּינג</string>
+    <string name="title_verify">באַשטעטיקן</string>
+    <string name="title_Warn">ווארענונג</string>
+
+</resources>

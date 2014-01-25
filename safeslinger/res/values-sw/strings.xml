@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Kutuma kuwakaribisha kiungo na…</string>
+    <string name="action_ViewFile">View %s na…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup ni walemavu. Je, unataka kuzoea mazingira ya Backup na kuweka kumbukumbu hii?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s ina kifaa zaidi ya hivi karibuni au muhimu, ni Una uhakika unataka kutumia moja hii wakubwa?</string>
+    <string name="ask_FileExistsOverwrite">Jina la faili %s tayari ipo. Overwrite?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Bila Akaunti ya Google utakuwa tu kuwa na uwezo wa kutuma, NOT ujumbe kupokea. Je, unataka kuongeza akaunti Google?</string>
+    <string name="ask_QuitConfirmation">Kuacha? Una uhakika?</string>
+    <string name="ask_SendErrorData">Tunatarajia msaada wako kuboresha SafeSlinger. Ungependa moja kwa moja kutuma makosa yoyote kwetu?</string>
+
+    <string name="btn_Accept">Kukubali</string>
+    <string name="btn_BeginExchangeProximity">Kuanza Exchange</string>
+    <string name="btn_Cancel">Kufuta</string>
+    <string name="btn_Close">Karibu</string>
+    <string name="btn_Continue">Kuendelea</string>
+    <string name="btn_discard">Tupa</string>
+    <string name="btn_Done">Done</string>
+    <string name="btn_Exit">Toka</string>
+    <string name="btn_Import">Import</string>
+    <string name="btn_Introduce">Kuanzisha</string>
+    <string name="btn_Match">Ijayo</string>
+    <string name="btn_No">No</string>
+    <string name="btn_NoMatch">No mechi</string>
+    <string name="btn_NotRemind">Kusahau</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Kukataa</string>
+    <string name="btn_Remind">Kuwakumbusha</string>
+    <string name="btn_Save">Ila</string>
+    <string name="btn_SelectFile">Kuongeza Attachment</string>
+    <string name="btn_SendFile">Kutuma</string>
+    <string name="btn_Yes">Ndiyo</string>
+
+    <string name="choice_10mins">dakika 10</string>
+    <string name="choice_1hour">saa 1</string>
+    <string name="choice_1min">1 dakika</string>
+    <string name="choice_20mins">dakika 20</string>
+    <string name="choice_2hours">masaa 2</string>
+    <string name="choice_3mins">dakika 3</string>
+    <string name="choice_40mins">dakika 40</string>
+    <string name="choice_4hours">masaa 4</string>
+    <string name="choice_5mins">dakika 5</string>
+    <string name="choice_8hours">masaa 8</string>
+    <string name="choice_auto_storage">Uhifadhi Default</string>
+    <string name="choice_external_storage">Uhifadhi nje</string>
+    <string name="choice_internal_storage">Ndani Uhifadhi</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d watumiaji</string>
+    <string name="choice_SaveDirectory">Hifadhi Directory</string>
+    <string name="choice_SaveFile">Ila faili</string>
+    <string name="choice_Up">Up</string>
+
+    <string name="error_AllMembersMustUpgrade">Baadhi ya wanachama ni kutumia toleo la wazee; wanachama wote lazima angalau kutumia %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Wanachama wote lazima kuboresha, baadhi ni kutumia miundo wakubwa muhimu.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Wanachama wote lazima kuboresha, baadhi ni kutumia wakubwa miundo usajili kushinikiza.</string>
+    <string name="error_AudioPlayerDecodeError">Audio mchezaji decoding makosa.</string>
+    <string name="error_AudioPlayerError">Hawezi kucheza kurekodi.</string>
+    <string name="error_AudioRecorderEncodeError">Audio kinasa encoding makosa.</string>
+    <string name="error_AudioRecorderPermissionError">Kipaza sauti ruhusa inahitajika. Tafadhali kwenda iOS Settings ili kuwawezesha ruhusa kipaza sauti.</string>
+    <string name="error_BackupNotFound">No Backup kurejesha.</string>
+    <string name="error_BackupNotSupportedDevice">Kifaa haina msaada Backup kurejesha.</string>
+    <string name="error_BadCopyProtectUpgrade">Kutokana na mdudu katika Android 4.1, utakuwa na kufuta na reinstall SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Akaunti Google inahitajika. Tafadhali kufungua akaunti meneja na kuongeza akaunti Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Usajili si kuthibitishwa, tafadhali jaribu tena manually baadaye.</string>
+    <string name="error_C2DMRegInvalidSender">Usajili si kutosha kwa ajili ya toleo hili, tafadhali angalia kwa ajili ya toleo upya.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Sio sahihi kifaa usajili na Google. Kifaa hii haina sasa kusaidia kushinikiza ujumbe.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Usajili huduma kushinikiza haipatikani, jaribu tena ratiba katika sekunde %d.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Maombi mengi sana wamejiandikisha kwa ajili ya Push. Tafadhali kufuta baadhi ya matumizi mengine na tena.</string>
+    <string name="error_CannotSendEmptyFile">Hawawezi kupeleka attachment tupu.</string>
+    <string name="error_CannotSendFilesOver">Hawawezi kupeleka attachments zaidi ya %d ka katika kawaida.</string>
+    <string name="error_CannotSendNullFile">Hawawezi kupeleka null attachment.</string>
+    <string name="error_contactCreationFailure">Kuwasiliana kuundwa kwa alishindwa.</string>
+    <string name="error_ContactInsertFailed">Kuwasiliana kuingiza alishindwa.</string>
+    <string name="error_ContactNameMissing">Kuwasiliana na hii ni kukosa jina, tafadhali hariri.</string>
+    <string name="error_ContactNameMissing2">Kuwasiliana na hii ni kukosa jina, tafadhali reselect.</string>
+    <string name="error_ContactUpdateFailed">Kuwasiliana update alishindwa.</string>
+    <string name="error_CorrectYourInternetConnection">Internet haipatikani, kuangalia mazingira yako.</string>
+    <string name="error_couldNotExtractPrivateKey">Je, si kutafuta ufunguo binafsi.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ulizidi. Kuanza kubadilishana tena.</string>
+    <string name="error_FeatureIsNotSupport">%1$s si mkono juu ya %2$s kwa wakati huu.</string>
+    <string name="error_FileSave">Hawawezi kuokoa %s.</string>
+    <string name="error_FileStorageUnavailable">Faili kuhifadhi haipatikani.</string>
+    <string name="error_HttpCode">Server Error HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">Data sahihi kupatikana katika kubadilishana. Kuanza kubadilishana tena.</string>
+    <string name="error_InvalidCommonUserId">Tafadhali kuingia sifuri.</string>
+    <string name="error_InvalidContactName">Halali jina kuwasiliana inahitajika.</string>
+    <string name="error_InvalidIncomingMessage">Bad zinazoingia ujumbe format.</string>
+    <string name="error_InvalidMsg">Ujumbe Bad format.</string>
+    <string name="error_InvalidRecipient">Mpokeaji batili.</string>
+    <string name="error_LocalGroupCommitDiffer">Una taarifa tofauti katika maneno. Kuanza kubadilishana tena.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Rika muhimu format ni batili.</string>
+    <string name="error_MessageSignatureVerificationFails">Ukaguzi sahihi alishindwa.</string>
+    <string name="error_minPassphraseRequire">Nywilanahau huhitaji herufi angalau %d.</string>
+    <string name="error_MinUsersRequired">Chini ya %d wanachama wanatakiwa kubadilishana data.</string>
+    <string name="error_MissingNdk">SafeSlinger hakuwa kuchunguza NDK msaada kwenye kifaa hiki, ambayo inahitajika.</string>
+    <string name="error_MoreDataThanUsers">Data isiyotarajiwa kupatikana katika kubadilishana. Kuanza kubadilishana tena.</string>
+    <string name="error_MultipleSendNotSupported">Wewe ni kujaribu kutuma vitu mbalimbali. Kwa wakati huu, SafeSlinger inasaidia tu kutuma bidhaa moja kwa wakati mmoja.</string>
+    <string name="error_NoEmailAccount">Akaunti ya barua pepe ni si kuanzisha!</string>
+    <string name="error_noPassPhrase">No passphrase aliingia.</string>
+    <string name="error_NoWordListSelected">Lazima kuchagua moja ya maneno kabla ya kuendelea.</string>
+    <string name="error_OtherGroupCommitDiffer">Mtu taarifa tofauti katika maneno. Kuanza kubadilishana tena.</string>
+    <string name="error_OutOfMemoryError">Kumbukumbu ni ya chini sana kwa kukamilisha kazi hii.</string>
+    <string name="error_passPhrasesDoNotMatch">Nywilanahau si mechi.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Umepitisha ujumbe upendeleo kwa mpokeaji. Tafadhali jaribu tena baadaye.</string>
+    <string name="error_PushMsgInvalidRegistration">Mpokeaji ambayo ina missing au mbaya kushinikiza usajili. Unapaswa kuacha kutuma ujumbe kwa kifaa hiki.</string>
+    <string name="error_PushMsgMessageNotFound">Ujumbe muda wake.</string>
+    <string name="error_PushMsgMessageTooBig">Ujumbe ni kubwa mno. Kupunguza ukubwa wa ujumbe.</string>
+    <string name="error_PushMsgNotRegistered">Kwamba mpokeaji kushinikiza usajili ni halali tena. Mpokeaji anaweza kuwa uninstalled SafeSlinger au akageuka mbali kuarifiwa. Unapaswa kuacha kutuma ujumbe kwa kifaa hiki.</string>
+    <string name="error_PushMsgNotSucceed">Kulikuwa na hitilafu kuwasiliana na huduma kushinikiza taarifa.</string>
+    <string name="error_PushMsgQuotaExceeded">Umepitisha ujumbe upendeleo kwa kifaa hiki. Tafadhali jaribu tena baadaye.</string>
+    <string name="error_PushMsgServiceFail">Taarifa huduma si inapatikana wakati huu. Tafadhali jaribu kutuma ujumbe baadaye.</string>
+    <string name="error_RecoderError">Je, si kuandaa kinasa sauti.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Kuanza, \' Kombeo Keys \' na simu nyingine kwa wakati mmoja.</string>
+    <string name="error_selectDataToSend">Unahitaji attachment au ujumbe wa maandishi kutuma.</string>
+    <string name="error_ServerAppMessage">Server Ujumbe: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Ujumbe: \'%s\'</string>
+    <string name="error_ServerNotResponding">Hakuna jibu kutoka kwa seva.</string>
+    <string name="error_ShareFileDelError">Je, si kuondoa faili pamoja.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Ngoja ukisubiri kwa baadhi ya wanakikundi kuongeza data.</string>
+    <string name="error_UnableFindPubKey">Hawawezi mechi muhimu ya umma kwa ufunguo binafsi katika mtoa crypto.</string>
+    <string name="error_UnableToSaveMessageInDB">Hawawezi kuokoa database ujumbe.</string>
+    <string name="error_UnableToSaveRecipientInDB">Hawawezi kuokoa kwa mpokeaji database.</string>
+    <string name="error_UnableToUpdateMessageInDB">Haikuweza kusasisha orodha ya ujumbe.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Haikuweza kusasisha mpokeaji database.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger makosa, tafadhali upya.</string>
+    <string name="error_VcardParseFailure">Kuwasiliana data ilikuwa mpangilio kimakosa.</string>
+    <string name="error_WebCancelledByUser">Mtumiaji kufutwa ombi server.</string>
+
+    <string name="help_find">Kutumia screen hii kuweka jina lako, simu, na email ya kubadilishana na wengine. Bomba \' Done \' button wakati kumaliza.</string>
+    <string name="help_home">Kubadilishana data utambulisho, kuhakikisha watumiaji wote ni jirani au kwa simu. Button \' Kuanza Exchange \' itakuwa kubadilishana tu kuchunguzwa data mawasiliano.</string>
+    <string name="help_identity_menu">\n\nUnaweza pia kubadilisha data binafsi kuhusu utambulisho wako wa juu ya screen hii na kugonga kifungo kwa jina lako. Hii kuonyesha orodha ya kuruhusu wewe \'Edit\' kuwasiliana yako, Kujenga New \' mawasiliano, au \' Matumizi nyingine \' kuwasiliana.</string>
+    <string name="help_Messages">Screen hii inaonyesha ujumbe wote siku za nyuma, na attachments kwamba bado ni inapatikana kwa shusha.</string>
+    <string name="help_passphrase">Kutumia screen hii ya kuingia kwa maombi na passphrase yako.</string>
+    <string name="help_PickRecip">Mawasiliano na SafeSlinger funguo ni kuonyeshwa hapa, teua mmoja kwa kutuma ujumbe wako.</string>
+    <string name="help_save">Baada ya kumaliza, itifaki itaonyesha orodha ya data utambulisho kubadilishana. Kuchagua mawasiliano unataka kuokoa na waandishi wa \' Import \'.</string>
+    <string name="help_SecureIntroduction">Screen hii utapata kuchagua watu wawili una slung funguo na kabla ya salama kutuma funguo zao kwa kila mmoja. Tu vyombo vya habari \' kuanzisha\' wakati tayari.</string>
+    <string name="help_Send">Screen hii utapata kuchagua baadhi data na mpokeaji kutuma. Tu vyombo vya habari \'Send \' wakati tayari.</string>
+    <string name="help_size">Kuchagua idadi ya watu ambao ni kujaribu kubadilishana data pamoja na vyombo vya habari \'OK\'.</string>
+    <string name="help_userid">Idadi hii juu ya screen hii ni kutumika kwa kuunda kundi kipekee ya watumiaji. Kupitia idadi ya watumiaji wote \' skrini, kisha watumiaji wote wanapaswa kuingia idadi sawa ya chini na vyombo vya habari \' OK \'.</string>
+    <string name="help_verify">Sasa, lazima mechi moja ya hizi 3-neno maneno na watumiaji wote. Kila user lazima kuchagua moja ya kawaida maneno, na vyombo vya habari \'Next \'.</string>
+
+    <string name="iOS_contactError">Mawasiliano ruhusa inahitajika. Tafadhali kwenda iOS Settings ili kuwawezesha Mawasiliano ruhusa.</string>
+    <string name="iOS_errorpushtoken">Push usajili ni kukosa.</string>
+    <string name="iOS_notificationError1">Kuarifiwa ruhusa inahitajika. Tafadhali kwenda iOS Settings ili kuwawezesha Notifications ruhusa.</string>
+    <string name="iOS_notificationError2">%s ruhusa inahitajika. Tafadhali kwenda iOS Settings ili kuwawezesha Notifications ruhusa.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger si optimized kwa iOS 5.x vifaa. SafeSlinger inahitaji iOS 6 au zaidi.</string>
+
+    <string name="label_ago">%s iliyopita</string>
+    <string name="label_backupCompleteDate">Mwisho Backup Kukamilika</string>
+    <string name="label_backupRequestDate">Mwisho Backup Ombi</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Kugusa kupitia yako ujumbe %d</string>
+    <string name="label_ComposeHint">Kutunga Ujumbe</string>
+    <string name="label_ContactEmail">Yako ya barua pepe</string>
+    <string name="label_ContactName">Jina lako</string>
+    <string name="label_ContactPhone">Simu yako</string>
+    <string name="label_days">siku %d</string>
+    <string name="label_Device">Kifaa:</string>
+    <string name="label_DeviceInSendOnlyMode">Mode kutuma-tu</string>
+    <string name="label_DisabledExchSourceKeyChange">Muhimu yako imebadilika: Kombeo Keys tena.</string>
+    <string name="label_Draft">DRAFT</string>
+    <string name="label_EnabledKeyFormatDeprecated">Format muhimu chenye lawama: Kombeo Keys tena.</string>
+    <string name="label_exchanged">kubadilishana</string>
+    <string name="label_expired">ya muda wake</string>
+    <string name="label_expires">muda wake %s</string>
+    <string name="label_expiresIn">muda wake katika</string>
+    <string name="label_FileNameHint">Jina faili</string>
+    <string name="label_FindInstruct">Tafadhali kuingia habari yako binafsi. Data hii tu kuwa salama pamoja na watu binafsi ambao kuchagua kushiriki kwa.</string>
+    <string name="label_FirstName">Jina la kwanza</string>
+    <string name="label_Home">Kuangalia vitu unataka kushiriki na bomba \' Kuanza Exchange \' wakati wengine ni tayari kubadilishana.</string>
+    <string name="label_hometag">Nyumbani</string>
+    <string name="label_hours">masaa %d</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud ni kuwezeshwa. Bomba \' Done \' button wakati kumaliza.</string>
+    <string name="label_InstNoMessages">No ujumbe. Unaweza kutuma ujumbe kutoka kwa \' Compose Ujumbe \' button juu ya Home menu.</string>
+    <string name="label_InstNoMessagesAndroid">No ujumbe. Unaweza kutuma ujumbe kutoka kwa \' Compose \' tab.</string>
+    <string name="label_InstNoRecipients">Hakuna wapokeaji. Kupata mtumiaji mwingine SafeSlinger karibu na kugusa tab \' Kombeo Keys \' kushiriki funguo.</string>
+    <string name="label_InstNoSharedFile">No pamoja file. Kuunganisha kifaa chako kwa iTunes na Drag files kwa folder pamoja.</string>
+    <string name="label_InstRecipients">Pick mpokeaji kutuma ujumbe kwa:</string>
+    <string name="label_InstSendInvite">Pick mpokeaji kuanzisha salama:</string>
+    <string name="label_InstSharedFile">Kuchukua file ambatisha:</string>
+    <string name="label_introduced">ilianzisha</string>
+    <string name="label_Key">Muhimu:</string>
+    <string name="label_LastName">Jina la Mwisho</string>
+    <string name="label_Me">Me</string>
+    <string name="label_messageIntroduceNameToYou">Ningependa kuanzisha %s na wewe.</string>
+    <string name="label_MeToSender">Me (kwa %s):</string>
+    <string name="label_minutes">dakika %d</string>
+    <string name="label_mobiletag">Simu ya Mkono</string>
+    <string name="label_MostRecentOnly">Hivi karibuni tu</string>
+    <string name="label_MsgSendUpdate">My updated sifa SafeSlinger ni masharti.</string>
+    <string name="label_None">Hakuna</string>
+    <string name="label_NumericModeHint">Mashirika yasiyo ya Kiingereza</string>
+    <string name="label_numsharedfiles">%d Files Kushiriki:</string>
+    <string name="label_OldThreads">Old Threads</string>
+    <string name="label_othertag">Nyingine</string>
+    <string name="label_PassHintBackoff">Retry</string>
+    <string name="label_PassHintChange">Updated passphrase</string>
+    <string name="label_PassHintCreate">Kujenga passphrase</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Kurudia passphrase</string>
+    <string name="label_passPhraseCacheTtl">Cache passphrase</string>
+    <string name="label_PassPhraseIsCached">Passphrase cached</string>
+    <string name="label_phoneOnly">simu-tu</string>
+    <string name="label_Photo">Picha</string>
+    <string name="label_PromptInstruct">Idadi hii ni kutumika kujenga kundi kipekee ya watumiaji. Kulinganisha, na kisha kuingia idadi ya chini kabisa kati ya watumiaji wote.</string>
+    <string name="label_PublicKeyID">ID muhimu</string>
+    <string name="label_PushTokenID">Push Usajili ID</string>
+    <string name="label_ReceivedNItems">kupokea vitu %d</string>
+    <string name="label_RemindBackupDelay">Mawaidha Backup</string>
+    <string name="label_ReportedInactive">Taarifa isiyokuwa %s.</string>
+    <string name="label_restoreCompleteDate">Mwisho kurejesha Kukamilika</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger Backup kuchelewa</string>
+    <string name="label_safeslingered">(SafeSlinger moja kwa moja Exchange)</string>
+    <string name="label_SaveAccount">Ila Akaunti</string>
+    <string name="label_SaveInstruct">Exchange kamili! Kuchagua data mwanachama kuokoa anwani yako ya kitabu:</string>
+    <string name="label_seconds">sekunde %d</string>
+    <string name="label_selectLabel">Chagua studio</string>
+    <string name="label_SelectRecip">Chagua mpokeaji</string>
+    <string name="label_sendErrorData">Kutuma Error Data</string>
+    <string name="label_SendFrom">From:</string>
+    <string name="label_SendTo">Kwa:</string>
+    <string name="label_ShowHintAtLaunch">Kuonyesha ladha hii wakati ujao.</string>
+    <string name="label_step_1">Hatua ya 1</string>
+    <string name="label_step_2">Hatua ya 2</string>
+    <string name="label_step_3">Hatua ya 3</string>
+    <string name="label_step_4">Hatua ya 4</string>
+    <string name="label_step_5">Hatua ya 5</string>
+    <string name="label_TapToDecryptFile">Bomba decrypt file</string>
+    <string name="label_TapToDecryptMessage">Bomba decrypt</string>
+    <string name="label_TapToDownloadFile">Bomba kupakua faili</string>
+    <string name="label_TapToDownloadMessage">Bomba kushusha ujumbe</string>
+    <string name="label_TapToOpenFile">Bomba kufungua faili</string>
+    <string name="label_TapToResumeDraft">Bomba na kuanza ujumbe rasimu ya</string>
+    <string name="label_TapToSendCredentialUpdate">Bomba na kushikilia kutuma credential update.</string>
+    <string name="label_targetAccountLabel">Akaunti mawasiliano</string>
+    <string name="label_TouchToConfigureBackupSettings">Unaweza hiari kuwawezesha SafeSlinger iCloud Backup katika iOS vipimo. Bomba \' Done \' button wakati kumaliza.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Kugusa na configure mazingira ya ziada.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Kugusa na configure mazingira timeout cache.</string>
+    <string name="label_undefinedTypeLabel">Haijulikani</string>
+    <string name="label_UnknownSender">Encrypted Sender</string>
+    <string name="label_UserIdHint">Chini</string>
+    <string name="label_UserName">Jina la mtumiaji</string>
+    <string name="label_VerifyInstruct">Zote za lazima mechi moja ya 3-neno maneno. Kulinganisha, na kisha kuchukua vinavyolingana maneno.</string>
+    <string name="label_worktag">Kazi</string>
+
+    <string name="menu_About">Kuhusu</string>
+    <string name="menu_Change">Mabadiliko ya</string>
+    <string name="menu_ChangePassphrase">Mabadiliko ya passphrase</string>
+    <string name="menu_CreateNew">Kujenga New</string>
+    <string name="menu_delete">Kufuta</string>
+    <string name="menu_deleteThread">Kufuta Thread \'%s\'</string>
+    <string name="menu_Details">View Detail</string>
+    <string name="menu_DownloadDirectory">Shusha Directory</string>
+    <string name="menu_Edit">Edit</string>
+    <string name="menu_FileManager">Picha Meneja</string>
+    <string name="menu_Help">Msaada</string>
+    <string name="menu_Introduction">Kuanzishwa</string>
+    <string name="menu_License">Leseni</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_messageCopyText">Nakala Nakala</string>
+    <string name="menu_messageForward">Mbele</string>
+    <string name="menu_Remove">Kuondoa</string>
+    <string name="menu_SelectShareApp">Kutuma maombi</string>
+    <string name="menu_sendFeedback">Tuma Maoni</string>
+    <string name="menu_SendUpdate">Kutuma Mwisho</string>
+    <string name="menu_Settings">Mazingira</string>
+    <string name="menu_ShowTutorial">Show Tutorial</string>
+    <string name="menu_TagComposeMessage">Kutunga</string>
+    <string name="menu_TagExchange">Kombeo Keys</string>
+    <string name="menu_TagListMessages">Ujumbe</string>
+    <string name="menu_UseAnother">Kutumia nyingine</string>
+
+    <string name="prog_CollectingOthersCommitVerify">kusubiri kwa ajili ya ukaguzi kutoka kwa wanachama wote…</string>
+    <string name="prog_CollectingOthersItems">kusubiri kwa watumiaji wote kujiunga na…</string>
+    <string name="prog_ConstructingGroupKey">ujenzi wa kundi muhimu…</string>
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">encrypting…</string>
+    <string name="prog_FileSent">ujumbe alimtuma, wanasubiri majibu…</string>
+    <string name="prog_findingKey">kutafuta muhimu…</string>
+    <string name="prog_GeneratingKey">kuzalisha muhimu, hii inaweza kuchukua muda…</string>
+    <string name="prog_generatingSignature">kuzalisha sahihi…</string>
+    <string name="prog_loadingContent">kupakia maudhui ya…</string>
+    <string name="prog_ReceivingFile">kupokea file encrypted…</string>
+    <string name="prog_RequestingFile">kuomba file encrypted…</string>
+    <string name="prog_RequestingMessage">kuomba ujumbe ambao umefungiwa…</string>
+    <string name="prog_RequestingPushReg">kuomba kushinikiza usajili…</string>
+    <string name="prog_RequestingUserId">kuomba uanachama…</string>
+    <string name="prog_SavingContactsToAddressBook">kitabu uboreshaji anwani…</string>
+    <string name="prog_SavingContactsToKeyDatabase">kuhuisha database muhimu…</string>
+    <string name="prog_SearchingForBackup">kwa ajili ya kutafuta Backup…</string>
+    <string name="prog_SendingFile">kutuma encrypted %s…</string>
+    <string name="prog_verifyingIntegrity">kuhakikisha uadilifu…</string>
+    <string name="prog_verifyingSignature">kuhakikisha sahihi…</string>
+
+    <string name="section_advanced">Juu</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">General</string>
+
+    <string name="state_BackupRestored">Backup kurejeshwa.</string>
+    <string name="state_FileDeleted">Ilifutwa file %s.</string>
+    <string name="state_FileSent">Ujumbe alimtuma.</string>
+    <string name="state_MessageSavedAsDraft">Ujumbe umehifadhiwa kama rasimu.</string>
+    <string name="state_MessagesDeleted">%d ujumbe deleted.</string>
+    <string name="state_PassphraseUpdated">Passphrase updated.</string>
+    <string name="state_RecipientsDeleted">%d wapokeaji deleted.</string>
+    <string name="state_SomeContactsImported">Mawasiliano %s nje.</string>
+    <string name="state_TextCopiedToClipboard">Nakala kunakiliwa kwa clipboard.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger ni iliyoundwa na kushiriki kwa urahisi data utambulisho, katika mtu au juu ya simu, kuthibitishwa, binafsi, na intact. Kila mtu kushiriki na inajenga salama hadi mwisho-mwisho channel kutuma ujumbe.\n\nSifa:\n- Urahisi kubadilishana mawasiliano ya habari na wengine\n- Salama kombeo maandiko, photos, kitu chochote!\n- Nguvu cryptography kulinda taarifa yako\n\nemail: %2$s\nmtandao: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Lugha zinazotolewa na:</string>
+    <string name="text_Requirements">Mahitaji:\n1. Lazima kuwa imewekwa kwenye kiwango cha chini ya 2 vifaa.\n2. Uhusiano Internet lazima kuwa hai.</string>
+    <string name="text_ShortPromotion">Mawasiliano Salama kombeo, maandiko, photos, kitu chochote!</string>
+
+    <string name="title_About">Kuhusu</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_ChooseDirectory">Kuchagua Directory</string>
+    <string name="title_ChooseFileLoad">Kuchagua Attachment yako</string>
+    <string name="title_comments">Maoni/Maswali</string>
+    <string name="title_Error">Makosa</string>
+    <string name="title_ExchangeWalkthrough">Kombeo Keys Msaidizi</string>
+    <string name="title_FileOptions">Attachment vingine</string>
+    <string name="title_find">Kuanzisha</string>
+    <string name="title_home">Kuanza Exchange</string>
+    <string name="title_HomePanel">Nyumbani</string>
+    <string name="title_MessageDetail">Ujumbe</string>
+    <string name="title_Messages">Ujumbe</string>
+    <string name="title_MyIdentity">Utambulisho wangu</string>
+    <string name="title_NotifyFileAvailable">Ujumbe SafeSlinger Available</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Ujumbe Available</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Picha Library</string>
+    <string name="title_PickRecipient">Wapokeaji</string>
+    <string name="title_Question">Swali</string>
+    <string name="title_RecipientDetail">Mpokeaji Detail</string>
+    <string name="title_save">Mwisho Exchange</string>
+    <string name="title_SaveFileAs">Kuokoa faili kama</string>
+    <string name="title_SecureIntroduction">Salama Utangulizi</string>
+    <string name="title_SecureIntroductionInvite">Salama Utangulizi Mwaliko!</string>
+    <string name="title_SelectSource">Kutuma vingine:</string>
+    <string name="title_SendFile">Kutuma</string>
+    <string name="title_sharingfolder">Kugawana Folder</string>
+    <string name="title_size">Jinsi watumiaji wengi katika kubadilishana?</string>
+    <string name="title_soundrecoder">Sauti Recorder</string>
+    <string name="title_TextInviteMsg">SafeSlinger Mwaliko</string>
+    <string name="title_Threads">Threads</string>
+    <string name="title_userid">Kambi</string>
+    <string name="title_verify">Kuhakiki</string>
+    <string name="title_Warn">Onyo</string>
+
+</resources>

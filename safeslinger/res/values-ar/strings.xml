@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">إرسال دعوة الارتباط مع…</string>
+    <string name="action_ViewFile">عرض %s مع…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">تم تعطيل النسخ الاحتياطي. هل ترغب في ضبط إعدادات النسخ الاحتياطي والحفاظ على هذا التذكير ؟</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s ديه جهاز أكثر حداثة أو مفتاح ، هل أنت متأكد من أنك تريد استخدام هذا واحد من كبار السن ؟</string>
+    <string name="ask_FileExistsOverwrite">اسم الملف %s موجود بالفعل. الكتابة ؟</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">دون حساب Google سوف تكون قادرا على إرسال ، وليس استقبال الرسائل فقط. هل تريد إضافة حساب Google ؟</string>
+    <string name="ask_QuitConfirmation">الإقلاع عن التدخين ؟ هل أنت متأكد؟</string>
+    <string name="ask_SendErrorData">نود مساعدتكم تحسين SafeSlinger. هل ترغب في إرسال أية أخطاء تلقائيا لنا؟</string>
+
+    <string name="btn_Accept">تقبل</string>
+    <string name="btn_BeginExchangeProximity">بدء صرف</string>
+    <string name="btn_Cancel">إلغاء</string>
+    <string name="btn_Close">قريب</string>
+    <string name="btn_Continue">استمر</string>
+    <string name="btn_discard">نبذ</string>
+    <string name="btn_Done">منجز</string>
+    <string name="btn_Exit">خروج</string>
+    <string name="btn_Import">استيراد</string>
+    <string name="btn_Introduce">أعرض</string>
+    <string name="btn_Match">التالي</string>
+    <string name="btn_No">لا</string>
+    <string name="btn_NoMatch">لا المباراة</string>
+    <string name="btn_NotRemind">ننسى</string>
+    <string name="btn_OK">حسنا</string>
+    <string name="btn_Refuse">رفض</string>
+    <string name="btn_Remind">ذكر</string>
+    <string name="btn_Save">حفظ</string>
+    <string name="btn_SelectFile">إضافة المرفقات</string>
+    <string name="btn_SendFile">إرسال</string>
+    <string name="btn_Yes">نعم</string>
+
+    <string name="choice_10mins">10 دقيقة</string>
+    <string name="choice_1hour">1 ساعة</string>
+    <string name="choice_1min">1 دقيقة</string>
+    <string name="choice_20mins">20 دقيقة</string>
+    <string name="choice_2hours">2 ساعات</string>
+    <string name="choice_3mins">3 دقائق</string>
+    <string name="choice_40mins">40 دقيقة</string>
+    <string name="choice_4hours">4 ساعات</string>
+    <string name="choice_5mins">5 دقائق</string>
+    <string name="choice_8hours">8 ساعات</string>
+    <string name="choice_auto_storage">التخزين الافتراضي</string>
+    <string name="choice_external_storage">التخزين الخارجية</string>
+    <string name="choice_internal_storage">التخزين الداخلية</string>
+    <string name="choice_nolimit">لا حدود</string>
+    <string name="choice_NumUsers">%d المستخدمين</string>
+    <string name="choice_SaveDirectory">حفظ الدليل</string>
+    <string name="choice_SaveFile">حفظ الملف</string>
+    <string name="choice_Up">فوق</string>
+
+    <string name="error_AllMembersMustUpgrade">بعض أعضاء تستخدم نسخة قديمة ؛ يجب على جميع أعضاء على الأقل استخدام %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">يجب على جميع أعضاء ترقية ، تستخدم بعض الأشكال الرئيسية القديمة.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">يجب على جميع أعضاء الترقية ، وبعض كبار السن تستخدم صيغ تسجيل دفعة.</string>
+    <string name="error_AudioPlayerDecodeError">الصوت الخطأ فك لاعب.</string>
+    <string name="error_AudioPlayerError">لا يمكن ان تلعب التسجيل.</string>
+    <string name="error_AudioRecorderEncodeError">الصوت خطأ ترميز مسجل.</string>
+    <string name="error_AudioRecorderPermissionError">إذن الميكروفون المطلوبة. يرجى الدخول إلى إعدادات دائرة الرقابة الداخلية لتمكين أذونات ميكروفون.</string>
+    <string name="error_BackupNotFound">لم النسخ الاحتياطي لاستعادة.</string>
+    <string name="error_BackupNotSupportedDevice">الجهاز لا يدعم استعادة النسخ الاحتياطي.</string>
+    <string name="error_BadCopyProtectUpgrade">بسبب وجود خطأ في الروبوت 4.1 ، سيكون لديك إلغاء و إعادة تثبيت SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">مطلوب حساب Google. يرجى فتح مدير حساب وإضافة حساب Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">تسجيل غير مصادقة ، يرجى إعادة المحاولة في وقت لاحق يدويا.</string>
+    <string name="error_C2DMRegInvalidSender">تسجيل غير متوفرة لهذا الإصدار ، يرجى التحقق من إصدار محدث.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">تسجيل الجهاز غير صحيحة مع جوجل. لا يدعم هذا الجهاز حاليا دفع المراسلة.</string>
+    <string name="error_C2DMRegServiceNotAvailable">خدمة تسجيل دفع غير متوفرة، جدولة إعادة المحاولة في %d ثانية.</string>
+    <string name="error_C2DMRegTooManyRegistrations">يتم تسجيل عدد كبير جدا من طلبات دفع. يرجى إلغاء تثبيت بعض التطبيقات الأخرى وإعادة المحاولة.</string>
+    <string name="error_CannotSendEmptyFile">لا يمكن إرسال المرفقات فارغة.</string>
+    <string name="error_CannotSendFilesOver">لا يمكن إرسال المرفقات أكبر من %d بايت في الحجم.</string>
+    <string name="error_CannotSendNullFile">لا يمكن إرسال المرفقات فارغة.</string>
+    <string name="error_contactCreationFailure">فشل إنشاء الاتصال.</string>
+    <string name="error_ContactInsertFailed">فشل الاتصال إدراج.</string>
+    <string name="error_ContactNameMissing">هذا الاتصال مفقود اسما ، يرجى تحريرها.</string>
+    <string name="error_ContactNameMissing2">هذا الاتصال مفقود اسما ، يرجى إعادة تحديد.</string>
+    <string name="error_ContactUpdateFailed">فشل التحديث للإتصال به.</string>
+    <string name="error_CorrectYourInternetConnection">الإنترنت غير متوفرة ، والتحقق من الإعدادات الخاصة بك.</string>
+    <string name="error_couldNotExtractPrivateKey">لا يمكن استخراج المفتاح الخاص.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">تجاوز الصرف المهلة. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_FeatureIsNotSupport">غير معتمد %1$s على %2$s في هذا الوقت.</string>
+    <string name="error_FileSave">غير قادر على حفظ %s.</string>
+    <string name="error_FileStorageUnavailable">تخزين الملفات غير متوفر.</string>
+    <string name="error_HttpCode">خطأ HTTP الملقم: %d</string>
+    <string name="error_InvalidCommitVerify">بيانات غير صحيحة وجدت في الصرف. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_InvalidCommonUserId">الرجاء إدخال عدد صحيح موجب.</string>
+    <string name="error_InvalidContactName">مطلوب صالحة اسم جهة الاتصال.</string>
+    <string name="error_InvalidIncomingMessage">سوء تنسيق رسالة واردة.</string>
+    <string name="error_InvalidMsg">شكل رسالة سيئة.</string>
+    <string name="error_InvalidRecipient">المتلقي غير صالحة.</string>
+    <string name="error_LocalGroupCommitDiffer">كنت قد ذكرت اختلاف في العبارات. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">شكل مفتاح الأقران غير صالح.</string>
+    <string name="error_MessageSignatureVerificationFails">فشل التحقق من التوقيع.</string>
+    <string name="error_minPassphraseRequire">مرور، تتطلب ما لا يقل عن %d حرفا.</string>
+    <string name="error_MinUsersRequired">وثمة حاجة إلى الحد الأدنى من %d أعضاء يتم فيها تبادل البيانات.</string>
+    <string name="error_MissingNdk">لم SafeSlinger لم يكشف دعم NDK على هذا الجهاز ، والذي هو مطلوب.</string>
+    <string name="error_MoreDataThanUsers">البيانات غير متوقعة وجدت في الصرف. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_MultipleSendNotSupported">تحاول لإرسال عناصر متعددة. في هذا الوقت، SafeSlinger يدعم فقط بإرسال عنصر واحد في وقت واحد.</string>
+    <string name="error_NoEmailAccount">حساب البريد الإلكتروني ليست الإعداد!</string>
+    <string name="error_noPassPhrase">إدخال أي عبارة المرور.</string>
+    <string name="error_NoWordListSelected">يجب عليك اختيار واحدة من العبارات قبل المتابعة.</string>
+    <string name="error_OtherGroupCommitDiffer">ذكرت شخص اختلاف في العبارات. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_OutOfMemoryError">الذاكرة منخفضة جدا لإكمال هذه العملية.</string>
+    <string name="error_passPhrasesDoNotMatch">مرور، لا تتطابق.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">كنت قد تجاوزت الحصص رسالة ل ذلك المستلم. يرجى إعادة المحاولة في وقت لاحق.</string>
+    <string name="error_PushMsgInvalidRegistration">أن المتلقي لديه تسجيل دفعة مفقود أو سيئة. يجب عليك التوقف عن إرسال الرسائل إلى هذا الجهاز.</string>
+    <string name="error_PushMsgMessageNotFound">انتهت الرسالة.</string>
+    <string name="error_PushMsgMessageTooBig">الرسالة كبير جدا. تقليل حجم الرسالة.</string>
+    <string name="error_PushMsgNotRegistered">تسجيل دفعة بأن المستلم لم يعد صالحا. المتلقي قد SafeSlinger إلغاء أو إيقاف الإخطارات. يجب عليك التوقف عن إرسال الرسائل إلى هذا الجهاز.</string>
+    <string name="error_PushMsgNotSucceed">كان هناك خطأ في الاتصال مع خدمة إعلام دفع.</string>
+    <string name="error_PushMsgQuotaExceeded">كنت قد تجاوزت الحصص رسالة لهذا الجهاز. يرجى إعادة المحاولة في وقت لاحق.</string>
+    <string name="error_PushMsgServiceFail">خدمة الإعلام ليست متاحة هذا الوقت. يرجى المحاولة لإرسال الرسالة في وقت لاحق.</string>
+    <string name="error_RecoderError">لا يمكن إعداد مسجل الصوت.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">للبدء، \' مفاتيح الرافعة \' مع هاتف آخر في نفس الوقت.</string>
+    <string name="error_selectDataToSend">تحتاج مرفق أو رسالة نصية لإرسال.</string>
+    <string name="error_ServerAppMessage">الخادم رسالة: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">الخادم رسالة: \'%s\'</string>
+    <string name="error_ServerNotResponding">أي رد من الخادم.</string>
+    <string name="error_ShareFileDelError">لا يمكن إزالة ملف مشترك.</string>
+    <string name="error_TimeoutWaitingForAllMembers">مهلة الانتظار لبعض أعضاء المجموعة لإضافة البيانات.</string>
+    <string name="error_UnableFindPubKey">غير قادر على تطابق المفتاح العام ل مفتاح التشفير الخاص في مزود.</string>
+    <string name="error_UnableToSaveMessageInDB">غير قادر على حفظ ل قاعدة بيانات الرسائل.</string>
+    <string name="error_UnableToSaveRecipientInDB">غير قادر على حفظ ل قاعدة البيانات المستلم.</string>
+    <string name="error_UnableToUpdateMessageInDB">قادر على تحديث قاعدة بيانات الرسائل.</string>
+    <string name="error_UnableToUpdateRecipientInDB">قادر على تحديث قاعدة البيانات المستلم.</string>
+    <string name="error_UncaughtExceptionOccured">الخطأ SafeSlinger ، يرجى إعادة تشغيل.</string>
+    <string name="error_VcardParseFailure">تم تنسيقها جهة الاتصال بشكل غير صحيح.</string>
+    <string name="error_WebCancelledByUser">إلغاء طلب المعلن الخادم.</string>
+
+    <string name="help_find">استخدام هذه الشاشة لتحديد اسمك ، والهاتف ، والبريد الإلكتروني لتبادل مع الآخرين. اضغط على زر \'تم\' عند الانتهاء.</string>
+    <string name="help_home">لتبادل البيانات الهوية ، وضمان جميع المستخدمين في مكان قريب أو على الهاتف. سوف زر \' بيغن الصرافة تبادل البيانات فقط الاتصال فحصها.</string>
+    <string name="help_identity_menu"> غير متوافر غير متوافر يمكنك أيضا تغيير البيانات الشخصية حول الهوية الخاصة بك على هذه الشاشة من خلال النقر على زر مع اسمك. وهذا عرض قائمة مما يتيح لك \'تحرير \' الاتصال الخاصة بك، \'إنشاء جديد \' الاتصال، أو \' استخدام آخر \' للإتصال به.</string>
+    <string name="help_Messages">يعرض هذه الشاشة كل الرسائل الماضية، و المرفقات التي لا تزال متاحة للتنزيل.</string>
+    <string name="help_passphrase">استخدام هذه الشاشة لتسجيل الدخول إلى التطبيق مع عبارة المرور.</string>
+    <string name="help_PickRecip">يتم عرض الاتصالات مع مفاتيح SafeSlinger هنا ، حدد واحد لإرسال رسالة ل.</string>
+    <string name="help_save">عند الانتهاء ، سوف تكشف عن وجود بروتوكول قائمة بيانات الهوية تبادلها. حدد جهات الاتصال التي ترغب في حفظ واضغط على \'استيراد\'.</string>
+    <string name="help_SecureIntroduction">هذه الشاشة تسمح لك لاختيار شخصين لديك مفاتيح مع متدلي قبل أن ترسل بشكل آمن المفاتيح الخاصة بهم إلى بعضها البعض. ببساطة اضغط على \' إدخال \' عندما تصبح جاهزة.</string>
+    <string name="help_Send">هذه الشاشة تسمح لك لاختيار بعض البيانات و مستلم لإرسالها إلى. ببساطة اضغط على \' إرسال \' عندما تصبح جاهزة.</string>
+    <string name="help_size">حدد عدد من الناس الذين يحاولون لتبادل البيانات معا واضغط على \'موافق\'.</string>
+    <string name="help_userid">ويستخدم هذا الرقم على هذه الشاشة لإنشاء مجموعة فريدة من نوعها للمستخدمين. مراجعة الأرقام على جميع المستخدمين شاشات ، ثم كل المستخدمين يجب إدخال نفس أقل عدد واضغط على \'موافق\'.</string>
+    <string name="help_verify">الآن ، يجب أن تتطابق مع واحدة من هذه العبارات 3 الكلمة مع جميع المستخدمين. يجب على كل مستخدم اختيار نفس العبارة الشائعة ، ثم اضغط على \'التالي\'.</string>
+
+    <string name="iOS_contactError">اتصالات الإذن المطلوب. يرجى الدخول إلى إعدادات دائرة الرقابة الداخلية لتمكين اتصالات الأذونات.</string>
+    <string name="iOS_errorpushtoken">تسجيل دفع مفقود.</string>
+    <string name="iOS_notificationError1">إذن الإخطارات المطلوبة. يرجى الدخول إلى إعدادات دائرة الرقابة الداخلية لتمكين أذونات الإخطارات.</string>
+    <string name="iOS_notificationError2">إذن %s المطلوبة. يرجى الدخول إلى إعدادات دائرة الرقابة الداخلية لتمكين أذونات الإخطارات.</string>
+    <string name="iOS_oldOSWarn">لم يتم تحسين SafeSlinger لأجهزة دائرة الرقابة الداخلية 5.X. يتطلب دائرة الرقابة الداخلية SafeSlinger 6 أو أعلى.</string>
+
+    <string name="label_ago">منذ %s</string>
+    <string name="label_backupCompleteDate">النسخ الاحتياطي المكتملة مشاركة</string>
+    <string name="label_backupRequestDate">مشاركة طلب النسخ الاحتياطي</string>
+    <string name="label_backupURL">URL النسخ الاحتياطي</string>
+    <string name="label_ClickForNMsgs">لمس لمراجعة %d رسائلك</string>
+    <string name="label_ComposeHint">يؤلف رسالة</string>
+    <string name="label_ContactEmail">البريد الالكتروني</string>
+    <string name="label_ContactName">اسمك</string>
+    <string name="label_ContactPhone">الهاتف</string>
+    <string name="label_days">%d أيام</string>
+    <string name="label_Device">الجهاز:</string>
+    <string name="label_DeviceInSendOnlyMode">وضع ترسل فقط</string>
+    <string name="label_DisabledExchSourceKeyChange">لقد تغير المفتاح الخاص بك: مفاتيح الرافعة مرة أخرى.</string>
+    <string name="label_Draft">مشروع</string>
+    <string name="label_EnabledKeyFormatDeprecated">شكل مفتاح إهمال: مفاتيح الرافعة مرة أخرى.</string>
+    <string name="label_exchanged">تبادل</string>
+    <string name="label_expired">منتهية الصلاحية</string>
+    <string name="label_expires">تنتهي %s</string>
+    <string name="label_expiresIn">تنتهي في</string>
+    <string name="label_FileNameHint">اسم الملف</string>
+    <string name="label_FindInstruct">الرجاء إدخال المعلومات الشخصية الخاصة بك. لن يتم تقاسم هذه البيانات بشكل آمن مع الأفراد الذين اخترت مشاركتها مع.</string>
+    <string name="label_FirstName">الاسم الأول</string>
+    <string name="label_Home">تحقق العناصر التي ترغب في المشاركة والاستفادة من \' بيغن الصرافة عند الآخرين مستعدون لتبادل.</string>
+    <string name="label_hometag">منزل</string>
+    <string name="label_hours">%d ساعة</string>
+    <string name="label_iCloudEnable">يتم تمكين SafeSlinger iCloud. اضغط على زر\' تم\' عند الانتهاء.</string>
+    <string name="label_InstNoMessages">لا توجد رسائل. يمكنك إرسال رسالة من على زر \' أكتب رسالة \' في القائمة الرئيسية.</string>
+    <string name="label_InstNoMessagesAndroid">لا توجد رسائل. يمكنك إرسال رسالة من علامة التبويب \' يؤلف \'.</string>
+    <string name="label_InstNoRecipients">لا المتلقين. البحث عن مستخدم آخر SafeSlinger القريبة و تلمس علامة التبويب \' الرافعة مفاتيح \' لتبادل المفاتيح.</string>
+    <string name="label_InstNoSharedFile">الملف لم المشتركة. توصيل الجهاز مع اي تيونز والملفات اسحب إلى مجلد مشترك.</string>
+    <string name="label_InstRecipients">اختيار مستلم لإرسال رسالة إلى:</string>
+    <string name="label_InstSendInvite">اختيار المتلقين لإدخال آمن:</string>
+    <string name="label_InstSharedFile">اختيار ملف إلى إرفاق ما يلي:</string>
+    <string name="label_introduced">قدم</string>
+    <string name="label_Key">مفتاح:</string>
+    <string name="label_LastName">اسم العائلة</string>
+    <string name="label_Me">أنا</string>
+    <string name="label_messageIntroduceNameToYou">أود أن أعرض %s لك.</string>
+    <string name="label_MeToSender">لي (ل %s):</string>
+    <string name="label_minutes">%d دقيقة</string>
+    <string name="label_mobiletag">متنقل</string>
+    <string name="label_MostRecentOnly">أحدث فقط</string>
+    <string name="label_MsgSendUpdate">وترد لي تحديث بيانات الاعتماد SafeSlinger.</string>
+    <string name="label_None">لا شيء</string>
+    <string name="label_NumericModeHint">غير الإنجليزية</string>
+    <string name="label_numsharedfiles">%d مشاركة الملفات إلى:</string>
+    <string name="label_OldThreads">المواضيع القديمة</string>
+    <string name="label_othertag">آخر</string>
+    <string name="label_PassHintBackoff">أعد المحاولة</string>
+    <string name="label_PassHintChange">تحديث عبارة المرور</string>
+    <string name="label_PassHintCreate">إنشاء عبارة المرور</string>
+    <string name="label_PassHintEnter">عبارة المرور</string>
+    <string name="label_PassHintRepeat">تكرار عبارة المرور</string>
+    <string name="label_passPhraseCacheTtl">الكاش عبارة المرور</string>
+    <string name="label_PassPhraseIsCached">عبارة المرور المخزنة مؤقتا</string>
+    <string name="label_phoneOnly">الهاتف فقط</string>
+    <string name="label_Photo">صور</string>
+    <string name="label_PromptInstruct">ويستخدم هذا الرقم لإنشاء مجموعة فريدة من نوعها للمستخدمين. مقارنة، ثم أدخل أقل عدد بين جميع المستخدمين.</string>
+    <string name="label_PublicKeyID">مفتاح معرف</string>
+    <string name="label_PushTokenID">دفع ID التسجيل</string>
+    <string name="label_ReceivedNItems">تلقى %d البنود</string>
+    <string name="label_RemindBackupDelay">تذكير النسخ الاحتياطي</string>
+    <string name="label_ReportedInactive">ذكرت %s غير نشط.</string>
+    <string name="label_restoreCompleteDate">مشاركة استعادة المكتملة</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger احتياطية تأخير</string>
+    <string name="label_safeslingered">(SafeSlinger تبادل مباشر)</string>
+    <string name="label_SaveAccount">حفظ الحساب</string>
+    <string name="label_SaveInstruct">تبادل أكمل! تحديد بيانات الأعضاء لإنقاذ ل دفتر العناوين الخاص بك:</string>
+    <string name="label_seconds">%d ثانية</string>
+    <string name="label_selectLabel">حدد التسمية</string>
+    <string name="label_SelectRecip">حدد مستلم</string>
+    <string name="label_sendErrorData">إرسال البيانات خطأ</string>
+    <string name="label_SendFrom">من:</string>
+    <string name="label_SendTo">إلى:</string>
+    <string name="label_ShowHintAtLaunch">عرض هذا التلميح في المرة القادمة.</string>
+    <string name="label_step_1">الخطوة 1</string>
+    <string name="label_step_2">الخطوة 2</string>
+    <string name="label_step_3">الخطوة 3</string>
+    <string name="label_step_4">الخطوة 4</string>
+    <string name="label_step_5">الخطوة 5</string>
+    <string name="label_TapToDecryptFile">اضغط على فك تشفير الملف</string>
+    <string name="label_TapToDecryptMessage">اضغط على فك تشفير</string>
+    <string name="label_TapToDownloadFile">اضغط لتحميل الملف</string>
+    <string name="label_TapToDownloadMessage">اضغط لتحميل الرسالة</string>
+    <string name="label_TapToOpenFile">اضغط لفتح الملف</string>
+    <string name="label_TapToResumeDraft">اضغط لاستئناف مشروع رسالة</string>
+    <string name="label_TapToSendCredentialUpdate">انقر مع الاستمرار لإرسال التحديث الاعتماد.</string>
+    <string name="label_targetAccountLabel">اتصالات الحساب</string>
+    <string name="label_TouchToConfigureBackupSettings">قد قمت بتمكين اختياريا SafeSlinger iCloud احتياطية في إعدادات دائرة الرقابة الداخلية. اضغط على زر\' تم\' عند الانتهاء.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">لمس لتكوين إعدادات النسخ الاحتياطي.</string>
+    <string name="label_TouchToConfigureCacheTimeout">لمس لتكوين إعدادات مهلة ذاكرة التخزين المؤقت.</string>
+    <string name="label_undefinedTypeLabel">غير معروف</string>
+    <string name="label_UnknownSender">المرسل مشفرة</string>
+    <string name="label_UserIdHint">أدنى</string>
+    <string name="label_UserName">اسم المستخدم</string>
+    <string name="label_VerifyInstruct">يجب على جميع الهواتف مباراة واحدة من العبارات 3 كلمة. مقارنة، ومن ثم اختيار عبارة مطابقة.</string>
+    <string name="label_worktag">عمل</string>
+
+    <string name="menu_About">حول</string>
+    <string name="menu_Change">تغيير</string>
+    <string name="menu_ChangePassphrase">تغيير عبارة المرور</string>
+    <string name="menu_CreateNew">خلق جديد</string>
+    <string name="menu_delete">حذف</string>
+    <string name="menu_deleteThread">حذف الموضوع \'%s\'</string>
+    <string name="menu_Details">عرض التفاصيل</string>
+    <string name="menu_DownloadDirectory">تحميل الدليل</string>
+    <string name="menu_Edit">تحرير</string>
+    <string name="menu_FileManager">إدارة الملفات</string>
+    <string name="menu_Help">مساعدة</string>
+    <string name="menu_Introduction">مقدمة</string>
+    <string name="menu_License">ترخيص</string>
+    <string name="menu_Logout">تسجيل الخروج</string>
+    <string name="menu_messageCopyText">نسخ النص</string>
+    <string name="menu_messageForward">إلى الأمام</string>
+    <string name="menu_Remove">نزع</string>
+    <string name="menu_SelectShareApp">إرسال التطبيق</string>
+    <string name="menu_sendFeedback">إرسال ملاحظات</string>
+    <string name="menu_SendUpdate">إرسال تحديث</string>
+    <string name="menu_Settings">إعدادات</string>
+    <string name="menu_ShowTutorial">المعرض التعليمي</string>
+    <string name="menu_TagComposeMessage">تشكل</string>
+    <string name="menu_TagExchange">حبال مفاتيح</string>
+    <string name="menu_TagListMessages">رسائل</string>
+    <string name="menu_UseAnother">استخدام آخر</string>
+
+    <string name="prog_CollectingOthersCommitVerify">في انتظار التحقق من جميع أعضاء…</string>
+    <string name="prog_CollectingOthersItems">في انتظار لجميع المستخدمين للانضمام…</string>
+    <string name="prog_ConstructingGroupKey">بناء مجموعة المفتاح…</string>
+    <string name="prog_decrypting">فك شفرة…</string>
+    <string name="prog_encrypting">تشفير…</string>
+    <string name="prog_FileSent">أرسلت رسالة ، في انتظار استجابة…</string>
+    <string name="prog_findingKey">العثور على المفتاح…</string>
+    <string name="prog_GeneratingKey">توليد مفتاح ، وهذا يمكن أن يستغرق بعض الوقت…</string>
+    <string name="prog_generatingSignature">توليد التوقيع…</string>
+    <string name="prog_loadingContent">تحميل المحتوى…</string>
+    <string name="prog_ReceivingFile">تلقي ملف مشفر…</string>
+    <string name="prog_RequestingFile">طلب ملف مشفر…</string>
+    <string name="prog_RequestingMessage">طلب رسالة مشفرة…</string>
+    <string name="prog_RequestingPushReg">طلب تسجيل دفع…</string>
+    <string name="prog_RequestingUserId">طلب عضوية…</string>
+    <string name="prog_SavingContactsToAddressBook">دفتر العناوين تحديث…</string>
+    <string name="prog_SavingContactsToKeyDatabase">تحديث قاعدة البيانات الرئيسية…</string>
+    <string name="prog_SearchingForBackup">البحث عن النسخ الاحتياطي…</string>
+    <string name="prog_SendingFile">إرسال مشفرة %s…</string>
+    <string name="prog_verifyingIntegrity">التحقق من سلامة…</string>
+    <string name="prog_verifyingSignature">التحقق من التوقيع…</string>
+
+    <string name="section_advanced">متقدم</string>
+    <string name="section_backup">دعم</string>
+    <string name="section_general">عام</string>
+
+    <string name="state_BackupRestored">النسخ الاحتياطي المستعادة.</string>
+    <string name="state_FileDeleted">حذف %s الملف.</string>
+    <string name="state_FileSent">الرسالة المرسلة.</string>
+    <string name="state_MessageSavedAsDraft">رسالة حفظ كمسودة.</string>
+    <string name="state_MessagesDeleted">%d الرسائل المحذوفة.</string>
+    <string name="state_PassphraseUpdated">عبارة المرور التي تم تحديثها.</string>
+    <string name="state_RecipientsDeleted">حذف %d المتلقين.</string>
+    <string name="state_SomeContactsImported">الاتصالات %s المستوردة.</string>
+    <string name="state_TextCopiedToClipboard">النص المنسوخ إلى الحافظة.</string>
+
+    <string name="text_About">تم تصميم %1$s غير متوافر غير متوافر SafeSlinger لتبادل البيانات بسهولة الهوية، في شخص أو عبر الهاتف، مصادقة ، والخاصة، و سليمة. كل شخص كنت تشارك مع يخلق نهاية إلى نهاية قناة آمنة لإرسال الرسائل. غير متوافر غير متوافر الميزات: - غير متوافر تبادل المعلومات بسهولة الاتصال مع الآخرين غير متوافر - حبال غرفتك النصوص والصور و أي شيء! غير متوافر - التشفير قوي يحمي معلوماتك غير متوافر غير متوافر البريد الإلكتروني: %2$s غير متوافر على شبكة الإنترنت: %3$s</string>
+    <string name="text_LanguagesProvidedBy">اللغات التي تقدمها:</string>
+    <string name="text_Requirements">المتطلبات: غير متوافر 1. يجب أن تكون مثبتة على الحد الأدنى من الأجهزة 2. غير متوافر 2. يجب أن يكون اتصال إنترنت نشط.</string>
+    <string name="text_ShortPromotion">اتصالات حبال بشكل آمن ، والنصوص ، والصور ، أي شيء!</string>
+
+    <string name="title_About">حول</string>
+    <string name="title_camera">كاميرا</string>
+    <string name="title_ChooseDirectory">اختيار الدليل</string>
+    <string name="title_ChooseFileLoad">اختيار تمسككم</string>
+    <string name="title_comments">تعليقات/أسئلة</string>
+    <string name="title_Error">خطأ</string>
+    <string name="title_ExchangeWalkthrough">حبال مفاتيح مساعد</string>
+    <string name="title_FileOptions">خيارات المرفقات</string>
+    <string name="title_find">الإعداد</string>
+    <string name="title_home">بدء صرف</string>
+    <string name="title_HomePanel">منزل</string>
+    <string name="title_MessageDetail">رسالة</string>
+    <string name="title_Messages">رسائل</string>
+    <string name="title_MyIdentity">هويتي</string>
+    <string name="title_NotifyFileAvailable">رسالة SafeSlinger متاح</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger الرسائل المتوفرة</string>
+    <string name="title_passphrase">عبارة المرور</string>
+    <string name="title_photoalbum">الصورة الألبوم</string>
+    <string name="title_photolibary">مكتبة الصور</string>
+    <string name="title_PickRecipient">المستلمين</string>
+    <string name="title_Question">سؤال</string>
+    <string name="title_RecipientDetail">المتلقي التفاصيل</string>
+    <string name="title_save">نهاية صرافة</string>
+    <string name="title_SaveFileAs">حفظ ملف باسم</string>
+    <string name="title_SecureIntroduction">مقدمة آمن</string>
+    <string name="title_SecureIntroductionInvite">تأمين مقدمة دعوة!</string>
+    <string name="title_SelectSource">إرسال خيارات:</string>
+    <string name="title_SendFile">إرسال</string>
+    <string name="title_sharingfolder">تقاسم المجلد</string>
+    <string name="title_size">كيفية العديد من المستخدمين في الصرف؟</string>
+    <string name="title_soundrecoder">مسجل الصوت</string>
+    <string name="title_TextInviteMsg">SafeSlinger دعوة</string>
+    <string name="title_Threads">المواضيع</string>
+    <string name="title_userid">تجمع</string>
+    <string name="title_verify">تحقق من</string>
+    <string name="title_Warn">تحذير</string>
+
+</resources>

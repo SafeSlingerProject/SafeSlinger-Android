@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/section_general" >
+        <Preference
+            android:key="showAbout"
+            android:title="@string/menu_About" >
+        </Preference>
+        <Preference
+            android:key="showLicense"
+            android:title="@string/menu_License" >
+        </Preference>
+        <Preference
+            android:key="changePassphrase"
+            android:title="@string/menu_ChangePassphrase" >
+        </Preference>
+
+        <edu.cmu.cylab.starslinger.model.IntegerListPreference
+            android:entries="@array/pass_phrase_cache_ttl_entries"
+            android:entryValues="@array/pass_phrase_cache_ttl_values"
+            android:key="passPhraseCacheTtl"
+            android:persistent="false"
+            android:title="@string/label_passPhraseCacheTtl" />
+
+        <CheckBoxPreference
+            android:key="ShowWalkthrough"
+            android:persistent="false"
+            android:title="@string/menu_ShowTutorial" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/section_backup" >
+        <CheckBoxPreference
+            android:key="RemindBackupDelay"
+            android:persistent="false"
+            android:title="@string/label_RemindBackupDelay" />
+
+        <Preference
+            android:key="backupRequestDate"
+            android:persistent="false"
+            android:title="@string/label_backupRequestDate" />
+        <Preference
+            android:key="backupCompleteDate"
+            android:persistent="false"
+            android:title="@string/label_backupCompleteDate" />
+        <Preference
+            android:key="restoreCompleteDate"
+            android:persistent="false"
+            android:title="@string/label_restoreCompleteDate" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/section_advanced" >
+        <Preference
+            android:key="downloadDirectory"
+            android:title="@string/menu_DownloadDirectory" >
+        </Preference>
+
+        <ListPreference
+            android:dialogTitle="@string/menu_FileManager"
+            android:key="fileManagerRootDir"
+            android:title="@string/menu_FileManager" />
+
+        <Preference
+            android:key="PushRegistrationIdDirect"
+            android:persistent="false"
+            android:title="@string/label_PushTokenID" />
+        <Preference
+            android:key="KeyIdString"
+            android:persistent="false"
+            android:title="@string/label_PublicKeyID" />
+
+        <EditTextPreference
+            android:inputType="textCapWords|textPersonName"
+            android:key="ContactName"
+            android:persistent="false"
+            android:privateImeOptions="nm"
+            android:title="@string/label_ContactName" />
+        <EditTextPreference
+            android:inputType="phone"
+            android:key="ContactPhone"
+            android:persistent="false"
+            android:privateImeOptions="nm"
+            android:title="@string/label_ContactPhone" />
+        <EditTextPreference
+            android:inputType="textEmailAddress"
+            android:key="ContactEmail"
+            android:persistent="false"
+            android:privateImeOptions="nm"
+            android:title="@string/label_ContactEmail" />
+
+        <ListPreference
+            android:dialogTitle="@string/label_targetAccountLabel"
+            android:key="keyTempListContactSyncAccount"
+            android:title="@string/label_targetAccountLabel" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

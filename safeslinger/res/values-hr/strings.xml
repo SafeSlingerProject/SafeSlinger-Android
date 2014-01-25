@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Pošalji Pozivamo vezu sa…</string>
+    <string name="action_ViewFile">Pogledaj %s s…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup je onemogućen. Želite li podesiti sigurnosne postavke i držati ovaj podsjetnik?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s ima novije uređaj ili tipke, jeste li sigurni da želite koristiti ovaj stariji?</string>
+    <string name="ask_FileExistsOverwrite">Naziv datoteke %s već postoji. Prebrisati?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Bez Google računa samo ćete biti u mogućnosti poslati, ne prima poruke. Želite li dodati Google račun?</string>
+    <string name="ask_QuitConfirmation">Prestanite? Jeste li sigurni?</string>
+    <string name="ask_SendErrorData">Mi smo željeli vašu pomoć poboljšanje SafeSlinger. Želite li automatski poslati bilo kakve pogreške kako bi nas?</string>
+
+    <string name="btn_Accept">Prihvatiti</string>
+    <string name="btn_BeginExchangeProximity">Započnite Exchange</string>
+    <string name="btn_Cancel">Otkazati</string>
+    <string name="btn_Close">Blizu</string>
+    <string name="btn_Continue">Nastaviti</string>
+    <string name="btn_discard">Odbaciti</string>
+    <string name="btn_Done">Pospremljen</string>
+    <string name="btn_Exit">Izlaz</string>
+    <string name="btn_Import">Uvoz</string>
+    <string name="btn_Introduce">Uvesti</string>
+    <string name="btn_Match">Sljedeći</string>
+    <string name="btn_No">Ne</string>
+    <string name="btn_NoMatch">Bez odgovarajuće</string>
+    <string name="btn_NotRemind">Zaboraviti</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Odbiti</string>
+    <string name="btn_Remind">Podsjetiti</string>
+    <string name="btn_Save">Spasiti</string>
+    <string name="btn_SelectFile">Dodaj Prilog</string>
+    <string name="btn_SendFile">Poslati</string>
+    <string name="btn_Yes">Da</string>
+
+    <string name="choice_10mins">10 minuta</string>
+    <string name="choice_1hour">1 sat</string>
+    <string name="choice_1min">1 minuta</string>
+    <string name="choice_20mins">20 minuta</string>
+    <string name="choice_2hours">2 sata</string>
+    <string name="choice_3mins">3 minute</string>
+    <string name="choice_40mins">40 minuta</string>
+    <string name="choice_4hours">4 sata</string>
+    <string name="choice_5mins">5 min</string>
+    <string name="choice_8hours">8 sati</string>
+    <string name="choice_auto_storage">Default Storage</string>
+    <string name="choice_external_storage">Vanjski Storage</string>
+    <string name="choice_internal_storage">Interna pohrana</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d korisnik</string>
+    <string name="choice_SaveDirectory">Spremi imenik</string>
+    <string name="choice_SaveFile">Spremite datoteku</string>
+    <string name="choice_Up">Gore</string>
+
+    <string name="error_AllMembersMustUpgrade">Neki članovi koriste stariju verziju, svi članovi barem mora koristiti %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Svi članovi moraju nadograditi, neki koriste starije ključnih formata.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Svi članovi moraju nadograditi, neki koriste starije registracijskih formate gurati.</string>
+    <string name="error_AudioPlayerDecodeError">Audio player pogreška dekodiranje.</string>
+    <string name="error_AudioPlayerError">Ne mogu igrati na snimanje.</string>
+    <string name="error_AudioRecorderEncodeError">Audio pogreška snimač kodiranja.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofon dopuštenje potrebno. Molimo otiđite na iOS Settings omogućiti mikrofon dozvole.</string>
+    <string name="error_BackupNotFound">Ne backup vratiti.</string>
+    <string name="error_BackupNotSupportedDevice">Uređaj ne podržava backup vratiti.</string>
+    <string name="error_BadCopyProtectUpgrade">Zbog greške u Androidu 4.1, imat ćete deinstalirati i ponovno instalirati SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Potreban jeGoogle račun. Molimo otvoriti račun upravitelja i dodati Google račun.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Registracija nije ovjerena, pokušajte ponovo ručno kasnije.</string>
+    <string name="error_C2DMRegInvalidSender">Registracija nije dostupan za ovu verziju, provjerite ažuriranu verziju.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Netočna registraciju uređaj s Google. Ovaj uređaj trenutno ne podržava gurati poruka.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Push registraciju usluga nije dostupna, raspoređivanje ponovo za %d sekundi.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Previše aplikacije su registrirani za Push. Molimo deinstalirati neke druge aplikacije i pokušajte ponovno.</string>
+    <string name="error_CannotSendEmptyFile">Ne možete poslati praznu privitak.</string>
+    <string name="error_CannotSendFilesOver">Ne možete slati privitke veće od %d bajtova u veličini.</string>
+    <string name="error_CannotSendNullFile">Ne možete poslati null privitak.</string>
+    <string name="error_contactCreationFailure">Stvaranje Kontakt uspjelo.</string>
+    <string name="error_ContactInsertFailed">Kontakt umetak nije uspio.</string>
+    <string name="error_ContactNameMissing">Taj kontakt nedostaje ime, molim te urediti.</string>
+    <string name="error_ContactNameMissing2">Taj kontakt nedostaje ime, molim te ponovni.</string>
+    <string name="error_ContactUpdateFailed">Kontakt ažuriranje nije uspjelo.</string>
+    <string name="error_CorrectYourInternetConnection">Internet nije dostupan, provjeriti svoje postavke.</string>
+    <string name="error_couldNotExtractPrivateKey">Nije moguće izvući privatni ključ.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Razmjena timeout premašen. Opet početi razmjenu.</string>
+    <string name="error_FeatureIsNotSupport">%1$s nije podržan na %2$s u ovom trenutku.</string>
+    <string name="error_FileSave">Nemoguće spremiti %s.</string>
+    <string name="error_FileStorageUnavailable">Pohranu datoteka nije dostupna.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Pogrešni podaci nalaze u zamjenu. Opet početi razmjenu.</string>
+    <string name="error_InvalidCommonUserId">Unesite prirodan broj.</string>
+    <string name="error_InvalidContactName">Važeće ime kontakta je potrebno.</string>
+    <string name="error_InvalidIncomingMessage">Bad formata poruka koja dolazi.</string>
+    <string name="error_InvalidMsg">Format Bad poruka.</string>
+    <string name="error_InvalidRecipient">Nevažeći primatelj.</string>
+    <string name="error_LocalGroupCommitDiffer">Ti su izvijestili razliku u frazama. Opet početi razmjenu.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Peer ključni oblik nije ispravan.</string>
+    <string name="error_MessageSignatureVerificationFails">Ovjera potpisa nije uspjela.</string>
+    <string name="error_minPassphraseRequire">Passphrases potrebno najmanje %d znakova.</string>
+    <string name="error_MinUsersRequired">Najmanje %d članova moraju razmjenjivati ​​podatke.</string>
+    <string name="error_MissingNdk">SafeSlinger nisu otkrili NDK podršku na ovom uređaju, koji je potreban.</string>
+    <string name="error_MoreDataThanUsers">Neočekivani podaci nalaze u zamjenu. Opet početi razmjenu.</string>
+    <string name="error_MultipleSendNotSupported">Pokušavate poslati više stavki. U ovom trenutku, SafeSlinger podržava samo slanje jednu stavku na vrijeme.</string>
+    <string name="error_NoEmailAccount">E-mail račun nije dobro postavljen!</string>
+    <string name="error_noPassPhrase">Ne lozinka ušao.</string>
+    <string name="error_NoWordListSelected">Morate odabrati jednu od fraze prije nego što nastavite.</string>
+    <string name="error_OtherGroupCommitDiffer">Netko je prijavio razliku u frazama. Opet početi razmjenu.</string>
+    <string name="error_OutOfMemoryError">Memorija je preniska završiti ovu operaciju.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases ne podudaraju.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Vi ste premašili kvotu poruka za taj primatelja. Molimo pokušajte kasnije.</string>
+    <string name="error_PushMsgInvalidRegistration">To primatelj nestalu ili loše registraciju gurati. Trebali bi prestati slati poruke na ovom uređaju.</string>
+    <string name="error_PushMsgMessageNotFound">Poruka istekao.</string>
+    <string name="error_PushMsgMessageTooBig">Poruka je prevelika. Smanjiti veličinu poruke.</string>
+    <string name="error_PushMsgNotRegistered">Taj primatelja guranje registracija više ne vrijedi. Primatelj je možda deinstaliran SafeSlinger ili isključen obavijesti. Trebali bi prestati slati poruke na ovom uređaju.</string>
+    <string name="error_PushMsgNotSucceed">Došlo jedo pogreške u komunikaciji s uslugom guranje obavijesti.</string>
+    <string name="error_PushMsgQuotaExceeded">Vi ste premašili kvotu poruka za ovaj uređaj. Molimo pokušajte kasnije.</string>
+    <string name="error_PushMsgServiceFail">Obavijest usluga nije dostupna ovaj put. Molimo pokušajte kasnije poslati poruku.</string>
+    <string name="error_RecoderError">Ne može pripremiti audio snimač.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Za početak, \' Sling Ključevi \' s drugog telefona u isto vrijeme.</string>
+    <string name="error_selectDataToSend">Trebate privitak ili tekstualnu poruku poslati.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Nema odgovora od poslužitelja.</string>
+    <string name="error_ShareFileDelError">Ne možete ukloniti zajedničku sliku.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout čeka neki članovi grupe dodati podatke.</string>
+    <string name="error_UnableFindPubKey">Nije moguće odgovarati javni ključ privatnim ključem u kripto usluga.</string>
+    <string name="error_UnableToSaveMessageInDB">Nije moguće spremanje u bazu podataka poruke.</string>
+    <string name="error_UnableToSaveRecipientInDB">Nije moguće spremanje u bazu podataka primatelja.</string>
+    <string name="error_UnableToUpdateMessageInDB">Nije moguće ažuriranje podataka poruke.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Nije moguće ažurirati bazu podataka primatelja.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger pogreška, molim te ponovno pokrenuti.</string>
+    <string name="error_VcardParseFailure">Kontakt podaci su pogrešno formatirana.</string>
+    <string name="error_WebCancelledByUser">Korisnik je otkazao zahtjev poslužitelja.</string>
+
+    <string name="help_find">Koristite ovaj ekran postaviti vaše ime, telefon i e-mail za razmjenu s drugima. Dodirnite \' Done \' gumb kad ste gotovi.</string>
+    <string name="help_home">Razmjenjivati ​​podatke o identitetu, osigurali svi korisnici su u blizini ili na telefon. Gumb \'Počnite razmjenu\' će razmjenjivati ​​samo podatke provjeriti kontakt.</string>
+    <string name="help_identity_menu">\n\nVi svibanj također promijeniti osobne podatke o svom identitetu na ovom zaslonu pritiskom na gumb sa svojim imenom. Tako će se prikazati izbornik omogućuje vam da \' Uredi \' tvoj dodir, \' Stvaranje novog\' kontakt, ili \' Koristite Još jedan\' dodir.</string>
+    <string name="help_Messages">Ovaj ekran prikazuje sve prošlost poruke i privitke koje su još uvijek dostupna za preuzimanje.</string>
+    <string name="help_passphrase">Koristite ovaj zaslon za prijavu na aplikaciju s vašom zaporkom.</string>
+    <string name="help_PickRecip">Kontakti s SafeSlinger tipke su prikazani ovdje, odaberite jednu poslati svoju poruku.</string>
+    <string name="help_save">Kad je završio,protokol će otkriti popis podataka o identitetu razmijenjeni. Odaberite kontakte koje želite spremiti i pritisnite \' uvoz \'.</string>
+    <string name="help_SecureIntroduction">Ovaj ekran omogućuje vam da odaberete dvije osobe koje su se prebacio tipke sa prije sigurno poslati svoje ključeve međusobno. Jednostavno pritisnuti \' uvesti \' kada je spreman.</string>
+    <string name="help_Send">Ovaj ekran omogućuje vam da odaberete neke podatke i primatelja za slanje. Jednostavno pritisnite \' Pošalji \' kada je spreman.</string>
+    <string name="help_size">Odaberite broj ljudi koji su pokušavali da razmjenjuju podatke zajedno i pritisnite \' OK \'.</string>
+    <string name="help_userid">Taj broj na zaslonu se koristi za stvaranje jedinstvene skupinu korisnika. Pregledajte brojeve za sve korisnike \' ekranima, onda svi korisnici bi trebali ući u istu najmanji broj i pritisnite \' OK \'.</string>
+    <string name="help_verify">Sada, morate odgovarati jedan od tih 3-riječ fraza sa svim korisnicima. Svaki korisnik mora odabrati isti zajednički izraz, i pritisnite \' Next \'.</string>
+
+    <string name="iOS_contactError">Kontakti dopuštenje potrebno. Molimo otiđite na iOS Settings omogućiti Kontakti dozvole.</string>
+    <string name="iOS_errorpushtoken">Registracija Push nedostaje.</string>
+    <string name="iOS_notificationError1">Obavijesti dopuštenje potrebno. Molimo otiđite na iOS Settings uključivanja obavijesti dozvole.</string>
+    <string name="iOS_notificationError2">%s dopuštenje potrebno. Molimo otiđite na iOS Settings uključivanja obavijesti dozvole.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger nije optimiziran za iOS 5.x uređaja. SafeSlinger zahtijeva iOS 6 ili noviji.</string>
+
+    <string name="label_ago">%s prije</string>
+    <string name="label_backupCompleteDate">Zadnja Backup Završeni</string>
+    <string name="label_backupRequestDate">Zadnja Backup Zahtjev</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Dodirnite za pregled svoje %d poruke</string>
+    <string name="label_ComposeHint">Nova poruka</string>
+    <string name="label_ContactEmail">Vaš e-mail</string>
+    <string name="label_ContactName">Vaše ime</string>
+    <string name="label_ContactPhone">Vaš telefon</string>
+    <string name="label_days">%d dana</string>
+    <string name="label_Device">Uređaj:</string>
+    <string name="label_DeviceInSendOnlyMode">Pošalji načinu rada samo</string>
+    <string name="label_DisabledExchSourceKeyChange">Vaš ključ promijenio: Sling Keys opet.</string>
+    <string name="label_Draft">NACRT</string>
+    <string name="label_EnabledKeyFormatDeprecated">Ključ formata zastarjelo: Sling Keys opet.</string>
+    <string name="label_exchanged">razmjenjuju</string>
+    <string name="label_expired">istekao</string>
+    <string name="label_expires">istječe %s</string>
+    <string name="label_expiresIn">istječe</string>
+    <string name="label_FileNameHint">Naziv datoteke</string>
+    <string name="label_FindInstruct">Molimo unesite svoje osobne podatke. Ovi podaci će biti sigurno dijeliti samo s pojedincima koje ste izabrali za podijeliti.</string>
+    <string name="label_FirstName">Ime</string>
+    <string name="label_Home">Provjerite stavke koje želite podijeliti i dodirnite \'Počnite Exchange \', kada su drugi spremni na razmjenu.</string>
+    <string name="label_hometag">Dom</string>
+    <string name="label_hours">%d sati</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud omogućena. Dodirnite \' Done \' gumb kad ste gotovi.</string>
+    <string name="label_InstNoMessages">Nema poruka. Možete poslati poruku iz \' nova poruka \' gumb na početnom izborniku.</string>
+    <string name="label_InstNoMessagesAndroid">Nema poruka. Možete poslati poruku iz \'Nova \' kartici.</string>
+    <string name="label_InstNoRecipients">Nema primatelji. Nađi još SafeSlinger korisnika blizini i dodirnite karticu \' Sling Ključevi \' podijeliti ključeve.</string>
+    <string name="label_InstNoSharedFile">Ne dijeli sliku. Povežite uređaj s iTunes i povucite datoteke u mape.</string>
+    <string name="label_InstRecipients">Pick primatelja da pošalje poruku:</string>
+    <string name="label_InstSendInvite">Odaberite primatelje uvesti sigurno:</string>
+    <string name="label_InstSharedFile">Izaberite datoteku priložiti:</string>
+    <string name="label_introduced">uveo</string>
+    <string name="label_Key">Ključ:</string>
+    <string name="label_LastName">Prezime</string>
+    <string name="label_Me">Mene</string>
+    <string name="label_messageIntroduceNameToYou">Ja bih upoznati %s vama.</string>
+    <string name="label_MeToSender">Me (do %s):</string>
+    <string name="label_minutes">%d minuta</string>
+    <string name="label_mobiletag">Mobilan</string>
+    <string name="label_MostRecentOnly">Najnovija samo</string>
+    <string name="label_MsgSendUpdate">Moje ažurirane SafeSlinger vjerodajnice su u prilogu.</string>
+    <string name="label_None">Nijedan</string>
+    <string name="label_NumericModeHint">Non-Engleski</string>
+    <string name="label_numsharedfiles">%d datoteke za dijeljenje:</string>
+    <string name="label_OldThreads">Stari Teme</string>
+    <string name="label_othertag">Drugi</string>
+    <string name="label_PassHintBackoff">Ponovo suditi</string>
+    <string name="label_PassHintChange">Obnovljeno lozinka</string>
+    <string name="label_PassHintCreate">Stvaranje Passphrase</string>
+    <string name="label_PassHintEnter">Lozinka</string>
+    <string name="label_PassHintRepeat">Ponovite lozinka</string>
+    <string name="label_passPhraseCacheTtl">Šifra Cache</string>
+    <string name="label_PassPhraseIsCached">Šifra Cached</string>
+    <string name="label_phoneOnly">telefon samo</string>
+    <string name="label_Photo">Fotografija</string>
+    <string name="label_PromptInstruct">Taj broj se koristi za stvaranje jedinstvene skupinu korisnika. Usporedite, a zatim ući u najmanji broj među svim korisnicima.</string>
+    <string name="label_PublicKeyID">Key ID</string>
+    <string name="label_PushTokenID">Push Registracija ID</string>
+    <string name="label_ReceivedNItems">dobila %d predmeta</string>
+    <string name="label_RemindBackupDelay">Backup Podsjetnik</string>
+    <string name="label_ReportedInactive">Izvijestio je neaktivno %s.</string>
+    <string name="label_restoreCompleteDate">Zadnja Vraćanje Završeni</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup odgođen</string>
+    <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
+    <string name="label_SaveAccount">Spremanje račun</string>
+    <string name="label_SaveInstruct">Razmjena Ispunite! Odaberite podatke Člana spremiti u svoj adresar:</string>
+    <string name="label_seconds">%d sekundi</string>
+    <string name="label_selectLabel">Odaberite oznaka</string>
+    <string name="label_SelectRecip">Odaberite Primatelj</string>
+    <string name="label_sendErrorData">Pošalji greška podataka</string>
+    <string name="label_SendFrom">Od:</string>
+    <string name="label_SendTo">Da:</string>
+    <string name="label_ShowHintAtLaunch">Pokazati ovaj savjet sljedeći put.</string>
+    <string name="label_step_1">Korak 1.</string>
+    <string name="label_step_2">Korak 2</string>
+    <string name="label_step_3">Korak 3</string>
+    <string name="label_step_4">Korak 4</string>
+    <string name="label_step_5">Korak 5</string>
+    <string name="label_TapToDecryptFile">Dodirnite dešifrirati datoteku</string>
+    <string name="label_TapToDecryptMessage">Dodirnite za dekriptiranje</string>
+    <string name="label_TapToDownloadFile">Dodirnite za preuzimanje datoteka</string>
+    <string name="label_TapToDownloadMessage">Dodirnite preuzeti poruku</string>
+    <string name="label_TapToOpenFile">Dodirnite za otvaranje datoteke</string>
+    <string name="label_TapToResumeDraft">Dodirnite za povratak nacrt poruke</string>
+    <string name="label_TapToSendCredentialUpdate">Dodirnite i držite poslati vjerodajnica ažuriranja.</string>
+    <string name="label_targetAccountLabel">Kontakti račun</string>
+    <string name="label_TouchToConfigureBackupSettings">Možete po želji omogućiti SafeSlinger iCloud backup u iOS Settings. Dodirnite \' Done \' gumb kad ste gotovi.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Dodirnite konfigurirati sigurnosne postavke.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Dodirnite za podešavanje postavki cachea timeout.</string>
+    <string name="label_undefinedTypeLabel">Nepoznat</string>
+    <string name="label_UnknownSender">Šifrirani Sender</string>
+    <string name="label_UserIdHint">Najniža</string>
+    <string name="label_UserName">Korisničko ime</string>
+    <string name="label_VerifyInstruct">Svi telefoni moraju odgovarati jednom od 3-riječi izraze. Usporedite, a zatim odabrati odgovarajući izraz.</string>
+    <string name="label_worktag">Rad</string>
+
+    <string name="menu_About">Oko</string>
+    <string name="menu_Change">Promjena</string>
+    <string name="menu_ChangePassphrase">Promjena lozinka</string>
+    <string name="menu_CreateNew">Stvori novo</string>
+    <string name="menu_delete">Izbrisati</string>
+    <string name="menu_deleteThread">Brisanje teme \'%s\'</string>
+    <string name="menu_Details">Pogledaj detalj</string>
+    <string name="menu_DownloadDirectory">Preuzetim</string>
+    <string name="menu_Edit">Uredi</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_Help">Pomoći</string>
+    <string name="menu_Introduction">Uvod</string>
+    <string name="menu_License">Licenca</string>
+    <string name="menu_Logout">Odjava</string>
+    <string name="menu_messageCopyText">Kopiraj tekst</string>
+    <string name="menu_messageForward">Naprijed</string>
+    <string name="menu_Remove">Ukloniti</string>
+    <string name="menu_SelectShareApp">Pošalji prijavu</string>
+    <string name="menu_sendFeedback">Pošalji povratnu informaciju</string>
+    <string name="menu_SendUpdate">Pošalji ažurirano</string>
+    <string name="menu_Settings">Postavke</string>
+    <string name="menu_ShowTutorial">Pokaži lekciju</string>
+    <string name="menu_TagComposeMessage">Sastaviti</string>
+    <string name="menu_TagExchange">Nošene Keys</string>
+    <string name="menu_TagListMessages">Poruke</string>
+    <string name="menu_UseAnother">Koristite Drugi</string>
+
+    <string name="prog_CollectingOthersCommitVerify">čeka verifikaciju od svih članova…</string>
+    <string name="prog_CollectingOthersItems">čeka svim korisnicima da se pridruže…</string>
+    <string name="prog_ConstructingGroupKey">izgradnju grupni ključ…</string>
+    <string name="prog_decrypting">dešifriranja…</string>
+    <string name="prog_encrypting">kriptiranje…</string>
+    <string name="prog_FileSent">poslana poruka, čeka odgovor…</string>
+    <string name="prog_findingKey">pronalaženje ključ…</string>
+    <string name="prog_GeneratingKey">generira ključ, to može potrajati…</string>
+    <string name="prog_generatingSignature">generiranje potpis…</string>
+    <string name="prog_loadingContent">učitavanje sadržaja…</string>
+    <string name="prog_ReceivingFile">primanje šifrirane datoteke…</string>
+    <string name="prog_RequestingFile">traži šifriranu datoteku…</string>
+    <string name="prog_RequestingMessage">traži šifriranu poruku…</string>
+    <string name="prog_RequestingPushReg">traži guranje registraciju…</string>
+    <string name="prog_RequestingUserId">traži članstvo…</string>
+    <string name="prog_SavingContactsToAddressBook">ažuriranje adresara…</string>
+    <string name="prog_SavingContactsToKeyDatabase">ažuriranje ključnu bazu podataka…</string>
+    <string name="prog_SearchingForBackup">u potrazi za backup…</string>
+    <string name="prog_SendingFile">slanje šifrirane %s…</string>
+    <string name="prog_verifyingIntegrity">provjeru integriteta…</string>
+    <string name="prog_verifyingSignature">provjere potpisa…</string>
+
+    <string name="section_advanced">Napredan</string>
+    <string name="section_backup">Rezerva</string>
+    <string name="section_general">Opći</string>
+
+    <string name="state_BackupRestored">Backup obnovljena.</string>
+    <string name="state_FileDeleted">Izbrisati datoteku %s.</string>
+    <string name="state_FileSent">Poruka je poslana.</string>
+    <string name="state_MessageSavedAsDraft">Poruka spremljena kao skicu.</string>
+    <string name="state_MessagesDeleted">%d Poruke izbrisane.</string>
+    <string name="state_PassphraseUpdated">Lozinka izmijenjena.</string>
+    <string name="state_RecipientsDeleted">%d primatelji izbrisani.</string>
+    <string name="state_SomeContactsImported">%s kontakti uvozi.</string>
+    <string name="state_TextCopiedToClipboard">Tekst kopiran u clipboard.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger je osmišljen kako bi se lako dijeliti podatke o identitetu, osobno ili putem telefona, ovjerena, privatno, i netaknuti. Svaka osoba koju dijele s stvara siguran kanal end-to-end za slanje poruka.\n\nZnačajke:\n- Lako razmjenjivati ​​podatke za kontakt s drugima\n- Sigurno remen tekstovi, fotografije, ništa!\n- Snažna kriptografija štiti vaše podatke\n\ne-mail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Jezici koje pruža:</string>
+    <string name="text_Requirements">Zahtjevi:\n1. Mora biti instaliran na minimalno 2 uređaja.\n2. Internet priključak mora biti aktivan.</string>
+    <string name="text_ShortPromotion">Sigurno Sling kontakti, tekstovi, fotografije, ništa!</string>
+
+    <string name="title_About">Oko</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_ChooseDirectory">Izbor mape</string>
+    <string name="title_ChooseFileLoad">Izaberite svoju Prilog</string>
+    <string name="title_comments">Komentari/Pitanja</string>
+    <string name="title_Error">Pogreška</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys pomoćnik</string>
+    <string name="title_FileOptions">Opcije Prilog</string>
+    <string name="title_find">Postava</string>
+    <string name="title_home">Započnite Exchange</string>
+    <string name="title_HomePanel">Dom</string>
+    <string name="title_MessageDetail">Poruka</string>
+    <string name="title_Messages">Poruke</string>
+    <string name="title_MyIdentity">Moj identitet</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Poruka Dostupan</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Poruke Slobodne</string>
+    <string name="title_passphrase">Lozinka</string>
+    <string name="title_photoalbum">Foto Album</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Primatelji</string>
+    <string name="title_Question">Pitanje</string>
+    <string name="title_RecipientDetail">Primatelj Detalj</string>
+    <string name="title_save">Kraj Exchange</string>
+    <string name="title_SaveFileAs">Spremi datoteku kao</string>
+    <string name="title_SecureIntroduction">Sigurna Uvod</string>
+    <string name="title_SecureIntroductionInvite">Osigurajte Uvod poziv!</string>
+    <string name="title_SelectSource">Opcije slanja:</string>
+    <string name="title_SendFile">Poslati</string>
+    <string name="title_sharingfolder">Dijeljenje mape</string>
+    <string name="title_size">Koliko korisnika u zamjenu?</string>
+    <string name="title_soundrecoder">Sound Recorder</string>
+    <string name="title_TextInviteMsg">SafeSlinger Poziv</string>
+    <string name="title_Threads">Teme</string>
+    <string name="title_userid">Grupiranje</string>
+    <string name="title_verify">Provjeriti</string>
+    <string name="title_Warn">Upozorenje</string>
+
+</resources>

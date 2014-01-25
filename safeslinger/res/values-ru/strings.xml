@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Отправить приглашение связи с…</string>
+    <string name="action_ViewFile">Просмотр %s с…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Irina Fudrow</string>
+
+    <string name="ask_BackupDisabledRemindLater">Резервное копирование отключено. Вы хотите настроить параметры резервного копирования и продолжать получать напоминание?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s имеет более позднее устройство или ключ. Подтвердите, что вы хотите использовать раннюю версию.</string>
+    <string name="ask_FileExistsOverwrite">Имя файла %s уже существует. Переписать?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Без аккаунта Google вы сможете посылать, но не сможете получать сообщения. Хотите добавить аккаунт Google?</string>
+    <string name="ask_QuitConfirmation">Выйти? Вы уверены?</string>
+    <string name="ask_SendErrorData">Не могли бы вы помочь нам улучшить SafeSlinger? Согласны ли вы автоматически отправлять нам любые ошибки?</string>
+
+    <string name="btn_Accept">Принять</string>
+    <string name="btn_BeginExchangeProximity">Начать обмен</string>
+    <string name="btn_Cancel">Отменить</string>
+    <string name="btn_Close">Закрыть</string>
+    <string name="btn_Continue">Продолжить</string>
+    <string name="btn_discard">Отменить</string>
+    <string name="btn_Done">Закончено</string>
+    <string name="btn_Exit">Выход</string>
+    <string name="btn_Import">Импортировать</string>
+    <string name="btn_Introduce">Представить</string>
+    <string name="btn_Match">Далее</string>
+    <string name="btn_No">Нет</string>
+    <string name="btn_NoMatch">Нет совпадений</string>
+    <string name="btn_NotRemind">Забыть</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Отказать</string>
+    <string name="btn_Remind">Напомнить</string>
+    <string name="btn_Save">Сохранить</string>
+    <string name="btn_SelectFile">Прикрепить файл</string>
+    <string name="btn_SendFile">Отправить</string>
+    <string name="btn_Yes">Да</string>
+
+    <string name="choice_10mins">10 минут</string>
+    <string name="choice_1hour">1 час</string>
+    <string name="choice_1min">1 минута</string>
+    <string name="choice_20mins">20 минут</string>
+    <string name="choice_2hours">2 часа</string>
+    <string name="choice_3mins">3 минуты</string>
+    <string name="choice_40mins">40 минут</string>
+    <string name="choice_4hours">4 часа</string>
+    <string name="choice_5mins">5 минут</string>
+    <string name="choice_8hours">8 часов</string>
+    <string name="choice_auto_storage">Хранилище по умолчанию</string>
+    <string name="choice_external_storage">Внешние накопители</string>
+    <string name="choice_internal_storage">Емкость внутренней системы хранения</string>
+    <string name="choice_nolimit">Без временного ограничения</string>
+    <string name="choice_NumUsers">Пользователей - %d</string>
+    <string name="choice_SaveDirectory">Сохранить Справочник</string>
+    <string name="choice_SaveFile">Сохранить файл</string>
+    <string name="choice_Up">Вверх</string>
+
+    <string name="error_AllMembersMustUpgrade">Некоторые члены используют старую версию, все должны как минимум использовать %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Все члены должны обновить, некоторые используют устаревшие форматы ключей.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Все члены должны обновить, некоторые используют устаревшие форматы ID уведомлений.</string>
+    <string name="error_AudioPlayerDecodeError">Ошибка раскодирования проигрывания звука.</string>
+    <string name="error_AudioPlayerError">Не удается воспроизвести запись.</string>
+    <string name="error_AudioRecorderEncodeError">Ошибка кодирования звукозаписи.</string>
+    <string name="error_AudioRecorderPermissionError">Разрешение Микрофон требуется. Пожалуйста, перейдите в меню Настройки iOS для обеспечения разрешения микрофон.</string>
+    <string name="error_BackupNotFound">Нет резервной копии для восстановления.</string>
+    <string name="error_BackupNotSupportedDevice">Устройство не поддерживает восстановление резервной копии.</string>
+    <string name="error_BadCopyProtectUpgrade">В связи с ошибкой в ​​Android 4.1, вам придется удалить и переустановить SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Необходим аккаунт Google. Пожалуйста, откройте управление аккаунтами и добавьте аккаунт Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Регистрация не прошла проверку подлинности, повторите попытку позже вручную.</string>
+    <string name="error_C2DMRegInvalidSender">Регистрация не доступна для этой версии, пожалуйста, проверьте есть ли новая версия.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Неправильная регистрация устройства с Google. Это устройство в настоящее время не поддерживает уведомления.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Служба регистрации уведомлений не доступна, повторить через %d секунд.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Слишком много приложений, зарегистрированных для уведомлений. Пожалуйста, удалите некоторые другие приложения и повторите попытку.</string>
+    <string name="error_CannotSendEmptyFile">Не удается отправить пустой файл.</string>
+    <string name="error_CannotSendFilesOver">Не удается отправить файл размером более чем %d байт.</string>
+    <string name="error_CannotSendNullFile">Не удается отправить пустой файл.</string>
+    <string name="error_contactCreationFailure">Не удалось создать контакт.</string>
+    <string name="error_ContactInsertFailed">Не удалось добавить контакт.</string>
+    <string name="error_ContactNameMissing">У этого контакта отсутствует имя, пожалуйста отредактируйте.</string>
+    <string name="error_ContactNameMissing2">У этого контакта отсутствует имя, пожалуйста выберите снова.</string>
+    <string name="error_ContactUpdateFailed">Не удалось обновить контакт.</string>
+    <string name="error_CorrectYourInternetConnection">Интернет не доступен, проверьте настройки.</string>
+    <string name="error_couldNotExtractPrivateKey">Невозможно получить закрытый ключ.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Время ожидания про обмене превышено, начать обмен заново.</string>
+    <string name="error_FeatureIsNotSupport">%1$s не поддерживается на %2$s в это время.</string>
+    <string name="error_FileSave">Невозможно сохранить %s.</string>
+    <string name="error_FileStorageUnavailable">Хранилище файлов недоступно.</string>
+    <string name="error_HttpCode">HTTP oшибка сервера: %d</string>
+    <string name="error_InvalidCommitVerify">Неправильные данные, найденные в результате обменных операций. Начните обмен снова.</string>
+    <string name="error_InvalidCommonUserId">Пожалуйста, введите целое положительное число.</string>
+    <string name="error_InvalidContactName">Требуется правильное имя для контакта.</string>
+    <string name="error_InvalidIncomingMessage">Неправильный формат входящего сообщения.</string>
+    <string name="error_InvalidMsg">Неправильный формат сообщения.</string>
+    <string name="error_InvalidRecipient">Недопустимый получатель.</string>
+    <string name="error_LocalGroupCommitDiffer">Вы заявили разницу в фразы. Начните обмен снова.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Неправильный формат общего ключа.</string>
+    <string name="error_MessageSignatureVerificationFails">Проверка подписи не удалась.</string>
+    <string name="error_minPassphraseRequire">Секретные фразы требуют по крайней мере %d символов.</string>
+    <string name="error_MinUsersRequired">Для обмена данными необходимо как минимум %d членов.</string>
+    <string name="error_MissingNdk">SafeSlinger не обнаружил необходимой NDK поддержки на этом устройстве.</string>
+    <string name="error_MoreDataThanUsers">Неожиданные данные, найденные в результате обменных операций. Начните обмен снова.</string>
+    <string name="error_MultipleSendNotSupported">Вы пытаетесь отправить несколько приложений. В данное время, SafeSlinger поддерживает отправку только одного приложения за один раз.</string>
+    <string name="error_NoEmailAccount">Учетная запись электронной почты не настроен!</string>
+    <string name="error_noPassPhrase">Отсутствует секретная фраза.</string>
+    <string name="error_NoWordListSelected">Вы должны выбрать одну из фраз, прежде чем продолжить.</string>
+    <string name="error_OtherGroupCommitDiffer">Кто-то сообщил разницу в фразы. Начните обмен снова.</string>
+    <string name="error_OutOfMemoryError">Слишком мало памяти для выполнения этой команды.</string>
+    <string name="error_passPhrasesDoNotMatch">Секретные фразы не совпадают.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Вы превысили квоту сообщений для этого получателя. Пожалуйста, повторите попытку позже.</string>
+    <string name="error_PushMsgInvalidRegistration">У получателя отсутствует или неисправно ID уведомлений. Рекомендуется прекратить отправку сообщений на это устройство.</string>
+    <string name="error_PushMsgMessageNotFound">Срок сообщения истек.</string>
+    <string name="error_PushMsgMessageTooBig">Сообщение слишком велико. Уменьшите размер сообщения.</string>
+    <string name="error_PushMsgNotRegistered">ID уведомлений у этого получателя больше не является действительным. Возможно, получатель удалил SafeSlinger или отключил уведомления. Рекомендуется прекратить отправку сообщений на это устройство.</string>
+    <string name="error_PushMsgNotSucceed">Произошла ошибка при сообщении с системой уведомлений</string>
+    <string name="error_PushMsgQuotaExceeded">Вы превысили квоту сообщений для данного устройства. Пожалуйста, повторите попытку позже.</string>
+    <string name="error_PushMsgServiceFail">Служба уведомлений не доступна в данный момент. Пожалуйста, попробуйте отправить сообщение позднее.</string>
+    <string name="error_RecoderError">Не удается подготовить запись звука.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Чтобы начать, обменяйтесь ключами с другим телефоном в то же время.</string>
+    <string name="error_selectDataToSend">Необходим файл или СМС для отправки.</string>
+    <string name="error_ServerAppMessage">Сообщение сервера: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Сообщение сервера: \'%s\'</string>
+    <string name="error_ServerNotResponding">Сервер не отвечает.</string>
+    <string name="error_ShareFileDelError">Невозможно удалить общий файл.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Истек срок ожидания того, что некоторые члены группы добавят данные.</string>
+    <string name="error_UnableFindPubKey">Кодирование общего ключа не соответствует кодированию закрытого ключа.</string>
+    <string name="error_UnableToSaveMessageInDB">Не удается сохранить в базу данных сообщений.</string>
+    <string name="error_UnableToSaveRecipientInDB">Не удается сохранить в базу данных получателей.</string>
+    <string name="error_UnableToUpdateMessageInDB">Не удается обновить базу данных сообщений.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Не удается обновить базу данных получателей.</string>
+    <string name="error_UncaughtExceptionOccured">Ошибка в запуске SafeSlinger. Пожалуйста, перезапустите.</string>
+    <string name="error_VcardParseFailure">Контактные данные отформатирована неправильно.</string>
+    <string name="error_WebCancelledByUser">Пользователь отменил запрос к серверу.</string>
+
+    <string name="help_find">Используйте этот экран, чтобы ввести имя, номер телефона и электронную почту для обмена с другими. Нажмите кнопку \'Готово\', когда закончите.</string>
+    <string name="help_home">Для обмена идентификационными данными, убедитесь, что все пользователи находятся рядом или у телефона. Кнопка «Начать обмен» будет использовать для обмена только проверенные контактные данные.</string>
+    <string name="help_identity_menu">Вы можете изменить ваши личные данные на этом экране, нажав на кнопку с вашим именем. На экране появится меню, позволяющее \'Изменить\' ваш контакт,\'Создать новый\' контакт, или \'Использовать другой \'контакт.</string>
+    <string name="help_Messages">На этом экране отображаются все предыдущие сообщения, а также файлы, которые все еще доступны для скачивания.</string>
+    <string name="help_passphrase">Используйте этот экран для входа в приложение с вашей секретной фразой.</string>
+    <string name="help_PickRecip">Контакты с ключами SafeSlinger отображены здесь. Выберите один, чтобы отправить сообщение.</string>
+    <string name="help_save">Когда закончите, протокол покажет список обмененных идентификационных данных. Выберите контакты, которые вы хотите сохранить и нажмите кнопку \'Импортировать’.</string>
+    <string name="help_SecureIntroduction">Этот экран позволяет выбрать двух человек, с которыми вы обменялись ключами, чтобы безопасно отправить ключи друг другу. Просто нажмите кнопку \'Представить\', когда будете готовы.</string>
+    <string name="help_Send">Этот экран позволяет выбрать данные и их получателя. Нажмите на кнопку \'Отправить\' когда будете готовы.</string>
+    <string name="help_size">Выберите количество людей, которые пытаются обмениваться данными друг с другом, и нажмите \'OK\'.</string>
+    <string name="help_userid">Это число на экране используется для создания уникальной группы пользователей. Рассмотрите номера на экранах всех пользователей, затем все пользователи должны ввести самый низкий номер и нажать \'OK’</string>
+    <string name="help_verify">Теперь вы должны соотнести одну из фраз из 3х слов со всеми пользователями. Каждый пользователь должен выбрать ту же общую фразу и нажать ‘Далее’.</string>
+
+    <string name="iOS_contactError">Контакты разрешения требуется. Пожалуйста, перейдите в меню Настройки iOS, чтобы позволить Контакты разрешения.</string>
+    <string name="iOS_errorpushtoken">Отсутсвует ID уведомлений.</string>
+    <string name="iOS_notificationError1">Уведомления разрешение требуется. Пожалуйста, перейдите в меню Настройки iOS, чтобы позволить Уведомления разрешения.</string>
+    <string name="iOS_notificationError2">Разрешение %s требуется. Пожалуйста, перейдите в меню Настройки iOS, чтобы позволить Уведомления разрешения.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger не оптимизирован для iOS 5.x устройств. SafeSlinger требуется iOS 6 или выше.</string>
+
+    <string name="label_ago">%s назад</string>
+    <string name="label_backupCompleteDate">Последнее резервное копирование завершено</string>
+    <string name="label_backupRequestDate">Последний запрос для резервного копирования</string>
+    <string name="label_backupURL">URL резервного копирования</string>
+    <string name="label_ClickForNMsgs">Нажмите чтобы просмотреть сообщения. Непросмотренных сообщений - %d</string>
+    <string name="label_ComposeHint">Составьте сообщение</string>
+    <string name="label_ContactEmail">Ваш e-mail</string>
+    <string name="label_ContactName">Ваше имя</string>
+    <string name="label_ContactPhone">Ваш телефон</string>
+    <string name="label_days">Дней -\'%d </string>
+    <string name="label_Device">Устройство:</string>
+    <string name="label_DeviceInSendOnlyMode">Только в режиме отправлений</string>
+    <string name="label_DisabledExchSourceKeyChange">Ваш ключ изменился. Обменяйтесь ключами снова.</string>
+    <string name="label_Draft">ЧЕРНОВИК</string>
+    <string name="label_EnabledKeyFormatDeprecated">Устаревший формат ключа. Обменяйтесь ключами снова.</string>
+    <string name="label_exchanged">обмененный</string>
+    <string name="label_expired">истекший</string>
+    <string name="label_expires">истекает %s</string>
+    <string name="label_expiresIn">истекает в</string>
+    <string name="label_FileNameHint">Имя файла</string>
+    <string name="label_FindInstruct">Пожалуйста, введите ваши личные данные. Эти данные будут безопасно переданы лишь тем, с кем вы решите поделиться ими.</string>
+    <string name="label_FirstName">Имя</string>
+    <string name="label_Home">Проверьте данные, которыми вы хотите поделиться, и нажмите «Начать обмен», когда другие готовы к обмену.</string>
+    <string name="label_hometag">Домашний</string>
+    <string name="label_hours">%d часов</string>
+    <string name="label_iCloudEnable">Резервное копирование iCloud включено. Нажмите кнопку\' Готово\', когда закончите.</string>
+    <string name="label_InstNoMessages">Нет сообщений. Вы можете отправить сообщение из ‘Составьте сообщение’ в главном меню.</string>
+    <string name="label_InstNoMessagesAndroid">Нет сообщений. Вы можете оправить сообщение из ‘Составить’ на закладке.</string>
+    <string name="label_InstNoRecipients">Нет получателей. Чтобы обменяться ключами, найдите другого пользователя SafeSlinger поблизости и нажмите на закладку ‘Обменяться ключами\'.</string>
+    <string name="label_InstNoSharedFile">Нет общих файлов. Подключите устройство к iTunes и перетащите файлы в общую папку.</string>
+    <string name="label_InstRecipients">Выберите получателя для отправки сообщения.</string>
+    <string name="label_InstSendInvite">Выберите получателей для защищенного представления.</string>
+    <string name="label_InstSharedFile">Выберите файл для прикрепления к сообщению.</string>
+    <string name="label_introduced">Представлен</string>
+    <string name="label_Key">Ключ</string>
+    <string name="label_LastName">Фамилия</string>
+    <string name="label_Me">Я</string>
+    <string name="label_messageIntroduceNameToYou">Я хочу вам представить %s.</string>
+    <string name="label_MeToSender">Я (к %s)</string>
+    <string name="label_minutes">%d минут</string>
+    <string name="label_mobiletag">Мобильный</string>
+    <string name="label_MostRecentOnly">Только самые недавние</string>
+    <string name="label_MsgSendUpdate">Мои обновленные данные SafeSlinger приложены.</string>
+    <string name="label_None">Никто</string>
+    <string name="label_NumericModeHint">Не на английском языке</string>
+    <string name="label_numsharedfiles">%d файлов для обмена</string>
+    <string name="label_OldThreads">Старые обсуждения</string>
+    <string name="label_othertag">Другой</string>
+    <string name="label_PassHintBackoff">Повторить</string>
+    <string name="label_PassHintChange">Секретная фраза обновлена</string>
+    <string name="label_PassHintCreate">Создать секретную фразу</string>
+    <string name="label_PassHintEnter">Секретная фраза</string>
+    <string name="label_PassHintRepeat">Повторите секретную фразу</string>
+    <string name="label_passPhraseCacheTtl">Кэш секретной фразы</string>
+    <string name="label_PassPhraseIsCached">Кэшировать секретную фразу</string>
+    <string name="label_phoneOnly">Только телефон</string>
+    <string name="label_Photo">Фото</string>
+    <string name="label_PromptInstruct">Этот номер используется для создания уникальной группы пользователей. Сравните, затем введите наименьший номер среди всех пользователей.</string>
+    <string name="label_PublicKeyID">ID ключа</string>
+    <string name="label_PushTokenID">ID системы уведомлений</string>
+    <string name="label_ReceivedNItems">Полученных файлов -%d</string>
+    <string name="label_RemindBackupDelay">Напоминание о резервном копировании</string>
+    <string name="label_ReportedInactive">Неактивных - %s</string>
+    <string name="label_restoreCompleteDate">Последнее восстановление завершено</string>
+    <string name="label_SafeSlingerBackupDelayed">Резервное копирование SafeSlinger отложено</string>
+    <string name="label_safeslingered">(SafeSlinger прямой обмен)</string>
+    <string name="label_SaveAccount">Сохранить аккаунт</string>
+    <string name="label_SaveInstruct">Обмен завершен! Выберите данные члена, чтобы сохранить в адресной книге:</string>
+    <string name="label_seconds">%d секунд</string>
+    <string name="label_selectLabel">Выберите метку</string>
+    <string name="label_SelectRecip">Выберите получателя</string>
+    <string name="label_sendErrorData">Отправлять данные об ошибках</string>
+    <string name="label_SendFrom">От:</string>
+    <string name="label_SendTo">Для:</string>
+    <string name="label_ShowHintAtLaunch">В следующий раз показать подсказку.</string>
+    <string name="label_step_1">Шаг 1</string>
+    <string name="label_step_2">Шаг 2</string>
+    <string name="label_step_3">Шаг 3</string>
+    <string name="label_step_4">Шаг 4</string>
+    <string name="label_step_5">Шаг 5</string>
+    <string name="label_TapToDecryptFile">Нажмите, чтобы расшифровать файл</string>
+    <string name="label_TapToDecryptMessage">Нажмите, чтобы расшифровать</string>
+    <string name="label_TapToDownloadFile">Нажмите, чтобы скачать файл</string>
+    <string name="label_TapToDownloadMessage">Нажмите, чтобы загрузить сообщение</string>
+    <string name="label_TapToOpenFile">Нажмите, чтобы открыть файл</string>
+    <string name="label_TapToResumeDraft">Нажмите, чтобы вернуться к черновику сообщения</string>
+    <string name="label_TapToSendCredentialUpdate">Нажмите и удерживайте для отправки обновления удостоверения.</string>
+    <string name="label_targetAccountLabel">Аккаунт контактов</string>
+    <string name="label_TouchToConfigureBackupSettings">Вы, возможно, может позволить SafeSlinger iCloud резервную копию в настройках iOS. Нажмите кнопку\' Готово\', когда закончите.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Нажмите, чтобы настроить параметры резервного копирования.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Нажмите, чтобы настроить параметры тайм-аута кэш.</string>
+    <string name="label_undefinedTypeLabel">Неизвестный</string>
+    <string name="label_UnknownSender">Зашифрованный отправитель</string>
+    <string name="label_UserIdHint">Самый низкий</string>
+    <string name="label_UserName">Имя пользователя</string>
+    <string name="label_VerifyInstruct">У всех телефонов должна совпасть одна из фраз из трех слов. Сравните и выберите совпавшую фразу.</string>
+    <string name="label_worktag">Рабочий</string>
+
+    <string name="menu_About">О</string>
+    <string name="menu_Change">Изменить</string>
+    <string name="menu_ChangePassphrase">Изменить секретную фразу</string>
+    <string name="menu_CreateNew">Создать новый</string>
+    <string name="menu_delete">Удалить</string>
+    <string name="menu_deleteThread">Удалить обсуждение %s</string>
+    <string name="menu_Details">Подробнее</string>
+    <string name="menu_DownloadDirectory">Скачать Справочник</string>
+    <string name="menu_Edit">Редактировать</string>
+    <string name="menu_FileManager">Управление файлами</string>
+    <string name="menu_Help">Помощь</string>
+    <string name="menu_Introduction">Представление</string>
+    <string name="menu_License">Лицензия</string>
+    <string name="menu_Logout">Выйти</string>
+    <string name="menu_messageCopyText">Копировать текст</string>
+    <string name="menu_messageForward">Вперед</string>
+    <string name="menu_Remove">Удалить</string>
+    <string name="menu_SelectShareApp">Отправить программу</string>
+    <string name="menu_sendFeedback">Отправить отзыв</string>
+    <string name="menu_SendUpdate">Отправить обновление</string>
+    <string name="menu_Settings">Настройки</string>
+    <string name="menu_ShowTutorial">Показать руководство</string>
+    <string name="menu_TagComposeMessage">Составить</string>
+    <string name="menu_TagExchange">Обменяться ключами</string>
+    <string name="menu_TagListMessages">Сообщения</string>
+    <string name="menu_UseAnother">Используйте другой</string>
+
+    <string name="prog_CollectingOthersCommitVerify">ожидается подтверждение от всех членов…</string>
+    <string name="prog_CollectingOthersItems">ожидаем, чтобы присоединились все пользователи…</string>
+    <string name="prog_ConstructingGroupKey">создание общего ключа…</string>
+    <string name="prog_decrypting">расшифровка…</string>
+    <string name="prog_encrypting">шифрование…</string>
+    <string name="prog_FileSent">сообщение послано, ожидается ответ…</string>
+    <string name="prog_findingKey">поиск ключа…</string>
+    <string name="prog_GeneratingKey">ключ создается, это может занять некоторое время…</string>
+    <string name="prog_generatingSignature">создается подпись…</string>
+    <string name="prog_loadingContent">загрузка содержимого…</string>
+    <string name="prog_ReceivingFile">получаем зашифрованный файл…</string>
+    <string name="prog_RequestingFile">запрашивается зашифрованный файл…</string>
+    <string name="prog_RequestingMessage">запрашивается зашифрованное сообщение…</string>
+    <string name="prog_RequestingPushReg">запрашивается регистрация уведомлений…</string>
+    <string name="prog_RequestingUserId">запрашивается членство…</string>
+    <string name="prog_SavingContactsToAddressBook">обновляется адресная книга…</string>
+    <string name="prog_SavingContactsToKeyDatabase">обновляется база данных ключей…</string>
+    <string name="prog_SearchingForBackup">поиск резервной копии…</string>
+    <string name="prog_SendingFile">%s отправляется зашифрованно…</string>
+    <string name="prog_verifyingIntegrity">проверка целостности…</string>
+    <string name="prog_verifyingSignature">проверка подписи…</string>
+
+    <string name="section_advanced">Дополнительные настройки</string>
+    <string name="section_backup">Резервное копирование</string>
+    <string name="section_general">Общие настройки</string>
+
+    <string name="state_BackupRestored">Резервное копирование восстановлено.</string>
+    <string name="state_FileDeleted">Файл %s удален.</string>
+    <string name="state_FileSent">Сообщение отправлено.</string>
+    <string name="state_MessageSavedAsDraft">Сообщение сохранено как черновик.</string>
+    <string name="state_MessagesDeleted">Удалено %d сообщений.</string>
+    <string name="state_PassphraseUpdated">Секретная фраза обновлена.</string>
+    <string name="state_RecipientsDeleted">Удалено %d получателей.</string>
+    <string name="state_SomeContactsImported">Импортировано %s контактов.</string>
+    <string name="state_TextCopiedToClipboard">Текст скопирован в буфер обмена.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger предназначен для легкого обмена идентификационными данными, лично или по телефону, оставляя их приваными и неповрежденными. Каждый человек, которому вы поделиться с создает защищенный канал конца в конец, чтобы отправлять сообщения.\n\nОсобенности\n– Легкий обмен контактной информацией с другими\n- Надежно слинг тексты, фото, ничего!\n- Надежное шифрование защищает вашу информацию\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Переводы предоставлены:</string>
+    <string name="text_Requirements">Требования:\n1. Должен быть установлен на минимум 2 устройства.\n2. Интернет-соединение должно быть активным.</string>
+    <string name="text_ShortPromotion">Надежно слинг тексты, фото, ничего!</string>
+
+    <string name="title_About">О</string>
+    <string name="title_camera">Камера</string>
+    <string name="title_ChooseDirectory">Выберите каталог</string>
+    <string name="title_ChooseFileLoad">Выберите файл</string>
+    <string name="title_comments">Комментарии/вопросы</string>
+    <string name="title_Error">Ошибка</string>
+    <string name="title_ExchangeWalkthrough">SafeSlinger помощь</string>
+    <string name="title_FileOptions">Параметры файла</string>
+    <string name="title_find">Установка</string>
+    <string name="title_home">Начать обмен</string>
+    <string name="title_HomePanel">Основной экран</string>
+    <string name="title_MessageDetail">Сообщение</string>
+    <string name="title_Messages">Сообщения</string>
+    <string name="title_MyIdentity">Моя личность</string>
+    <string name="title_NotifyFileAvailable">Доступно сообщение SafeSligner</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Сообщения Доступные</string>
+    <string name="title_passphrase">Секретная фраза</string>
+    <string name="title_photoalbum">Фотоальбом</string>
+    <string name="title_photolibary">Фото библиотека</string>
+    <string name="title_PickRecipient">Получатели</string>
+    <string name="title_Question">Вопрос</string>
+    <string name="title_RecipientDetail">Детали получателя</string>
+    <string name="title_save">Закончить обмен</string>
+    <string name="title_SaveFileAs">Сохранить файл как</string>
+    <string name="title_SecureIntroduction">Безопасное представление</string>
+    <string name="title_SecureIntroductionInvite">Приглашение к безопасному представлению!</string>
+    <string name="title_SelectSource">Параметры отправки:</string>
+    <string name="title_SendFile">Послать</string>
+    <string name="title_sharingfolder">Доступ к общим папкам</string>
+    <string name="title_size">Сколько пользователей в обмене?</string>
+    <string name="title_soundrecoder">Запись звука</string>
+    <string name="title_TextInviteMsg">Приглашение SafeSlinger</string>
+    <string name="title_Threads">Обсуждения</string>
+    <string name="title_userid">Группировка</string>
+    <string name="title_verify">Проверить</string>
+    <string name="title_Warn">Предупреждение</string>
+
+</resources>

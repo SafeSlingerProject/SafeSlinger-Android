@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Enviar convidar vincle amb…</string>
+    <string name="action_ViewFile">Veure %s amb…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Còpia de seguretat està desactivat. Vols que ajustar la configuració de còpia de seguretat i mantenir aquest recordatori?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s té un dispositiu o clau més recent, estàs segur que voleu utilitzar aquest vell?</string>
+    <string name="ask_FileExistsOverwrite">Ja existeix el nom del fitxer %s. Sobreescriure?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Sense un compte de Google que només serà capaç d\'enviar, no rep missatges. Vols afegir un compte de Google?</string>
+    <string name="ask_QuitConfirmation">¿ Sortir? Està segur?</string>
+    <string name="ask_SendErrorData">Vostè pot ajudar-nos a millorar l\'ajuda SafeSlinger. Li agradaria enviar automàticament qualsevol error que nosaltres?</string>
+
+    <string name="btn_Accept">Acceptar</string>
+    <string name="btn_BeginExchangeProximity">Comenceu Canvi</string>
+    <string name="btn_Cancel">Cancel</string>
+    <string name="btn_Close">Prop</string>
+    <string name="btn_Continue">Continuar</string>
+    <string name="btn_discard">Descartar</string>
+    <string name="btn_Done">Fet</string>
+    <string name="btn_Exit">Sortida</string>
+    <string name="btn_Import">Importació</string>
+    <string name="btn_Introduce">Introduir</string>
+    <string name="btn_Match">Pròxim</string>
+    <string name="btn_No">No</string>
+    <string name="btn_NoMatch">No Match</string>
+    <string name="btn_NotRemind">Oblidar</string>
+    <string name="btn_OK">Bé</string>
+    <string name="btn_Refuse">Rebutjar</string>
+    <string name="btn_Remind">Recordar</string>
+    <string name="btn_Save">Guardar</string>
+    <string name="btn_SelectFile">Arxiu adjunt</string>
+    <string name="btn_SendFile">Enviar</string>
+    <string name="btn_Yes">Sí</string>
+
+    <string name="choice_10mins">10 minuts</string>
+    <string name="choice_1hour">1 hora</string>
+    <string name="choice_1min">1 minut</string>
+    <string name="choice_20mins">20 minuts</string>
+    <string name="choice_2hours">2 hores</string>
+    <string name="choice_3mins">3 minuts</string>
+    <string name="choice_40mins">40 minuts</string>
+    <string name="choice_4hours">4 hores</string>
+    <string name="choice_5mins">5 minuts</string>
+    <string name="choice_8hours">8 hores</string>
+    <string name="choice_auto_storage">Emmagatzematge per defecte</string>
+    <string name="choice_external_storage">Dipòsit extern</string>
+    <string name="choice_internal_storage">Emmagatzematge intern</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d usuaris</string>
+    <string name="choice_SaveDirectory">Guardar Directori</string>
+    <string name="choice_SaveFile">Desa arxiu</string>
+    <string name="choice_Up">Fins</string>
+
+    <string name="error_AllMembersMustUpgrade">Alguns membres estan utilitzant una versió més antiga, tots els membres han, almenys, utilitzar %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Tots els membres han de actualitzar, alguns estan utilitzant grans formats de clau.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tots els membres han de actualitzar, alguns estan utilitzant els formats de registre d\'empenta grans.</string>
+    <string name="error_AudioPlayerDecodeError">Error de descodificació d\'àudio del jugador.</string>
+    <string name="error_AudioPlayerError">No es pot reproduir l\'enregistrament.</string>
+    <string name="error_AudioRecorderEncodeError">Error de codificació d\'àudio gravadora.</string>
+    <string name="error_AudioRecorderPermissionError">Micròfon permís requerit. Si us plau, aneu a Configuració de iOS per permetre permisos de micròfon.</string>
+    <string name="error_BackupNotFound">Sense seguretat per restaurar.</string>
+    <string name="error_BackupNotSupportedDevice">El dispositiu no admet la còpia de seguretat de restauració.</string>
+    <string name="error_BadCopyProtectUpgrade">A causa d\'un error en Android 4.1, haurà de desinstal · lar i tornar a instal lar SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Es requereix un compte de Google. Si us plau, obriu l\'administrador del compte i afegir un compte de Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">El registre no autenticat, si us plau torni a provar manualment més tard.</string>
+    <string name="error_C2DMRegInvalidSender">El registre no està disponible per a aquesta versió, comproveu per una versió actualitzada.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Registre del dispositiu incorrecte amb Google. Aquest dispositiu no admet actualment la missatgeria d\'empenta.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Servei de registre d\'empenta no està disponible, la programació de reintent en %d segons.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Hi ha massa aplicacions estan registrats per Push. Si us plau, desinstal algunes altres aplicacions i torneu a intentar.</string>
+    <string name="error_CannotSendEmptyFile">No es pot enviar un arxiu adjunt buit.</string>
+    <string name="error_CannotSendFilesOver">No es poden enviar fitxers adjunts de més de %d bytes de mida.</string>
+    <string name="error_CannotSendNullFile">No es pot enviar un arxiu adjunt nul.</string>
+    <string name="error_contactCreationFailure">Creació Contacte fallar.</string>
+    <string name="error_ContactInsertFailed">Contacte inserció fallar.</string>
+    <string name="error_ContactNameMissing">Aquest contacte li cal un nom, si us plau editar.</string>
+    <string name="error_ContactNameMissing2">Aquest contacte li cal un nom, si us plau torneu a seleccionar.</string>
+    <string name="error_ContactUpdateFailed">Contacte actualització va fallar.</string>
+    <string name="error_CorrectYourInternetConnection">Internet no està disponible, comproveu la configuració.</string>
+    <string name="error_couldNotExtractPrivateKey">No s\'ha pogut extreure la clau privada.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Tipus excedit. Comença l\'intercanvi de nou.</string>
+    <string name="error_FeatureIsNotSupport">%1$s no s\'admet en %2$s en aquest moment.</string>
+    <string name="error_FileSave">No es pot guardar %s.</string>
+    <string name="error_FileStorageUnavailable">Emmagatzematge de fitxers no està disponible.</string>
+    <string name="error_HttpCode">Servidor HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Dades incorrectes que es troben en l\'intercanvi. Comença l\'intercanvi de nou.</string>
+    <string name="error_InvalidCommonUserId">Introduïu un enter positiu.</string>
+    <string name="error_InvalidContactName">Es requereix un nom de contacte vàlid.</string>
+    <string name="error_InvalidIncomingMessage">Format de missatge entrant està malament.</string>
+    <string name="error_InvalidMsg">Format de missatges incorrectes.</string>
+    <string name="error_InvalidRecipient">Destinatari no vàlid.</string>
+    <string name="error_LocalGroupCommitDiffer">Assenyalat una diferència en les frases. Comença l\'intercanvi de nou.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">El format de la clau de parells no és vàlida.</string>
+    <string name="error_MessageSignatureVerificationFails">La verificació de signatures fracassar.</string>
+    <string name="error_minPassphraseRequire">Les paraules de pas requereixen almenys %d caràcters.</string>
+    <string name="error_MinUsersRequired">Un mínim de %d membres estan obligats a intercanviar dades.</string>
+    <string name="error_MissingNdk">SafeSlinger no va detectar suport NDK en aquest dispositiu, que es requereix.</string>
+    <string name="error_MoreDataThanUsers">Dades inesperats que es troben en l\'intercanvi. Comença l\'intercanvi de nou.</string>
+    <string name="error_MultipleSendNotSupported">Està intentant enviar diversos articles. En aquest moment, SafeSlinger només admet l\'enviament d\'un element a la vegada.</string>
+    <string name="error_NoEmailAccount">Compte de correu electrònic no és trampa!</string>
+    <string name="error_noPassPhrase">No va entrar contrasenya.</string>
+    <string name="error_NoWordListSelected">Heu de seleccionar una de les frases abans.</string>
+    <string name="error_OtherGroupCommitDiffer">Algú ha informat una diferència en frases. Comença l\'intercanvi de nou.</string>
+    <string name="error_OutOfMemoryError">La memòria és massa baixa per completar aquesta operació.</string>
+    <string name="error_passPhrasesDoNotMatch">Les paraules de pas no coincideixen.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">S\'ha superat la quota missatge per a aquest destinatari. Torneu-ho de nou més tard.</string>
+    <string name="error_PushMsgInvalidRegistration">Aquest destinatari té un registre d\'empenta que falta o dolenta. Vostè ha de deixar d\'enviar missatges a aquest dispositiu.</string>
+    <string name="error_PushMsgMessageNotFound">Missatge expirar.</string>
+    <string name="error_PushMsgMessageTooBig">El missatge és massa gran. Reduir la mida del missatge.</string>
+    <string name="error_PushMsgNotRegistered">Registre d\'empenta Aquest destinatari no és vàlid. El destinatari pot haver desinstal SafeSlinger o desactivat les notificacions. Vostè ha de deixar d\'enviar missatges a aquest dispositiu.</string>
+    <string name="error_PushMsgNotSucceed">S\'ha produït un error en comunicar-se amb el servei de notificació d\'inserció.</string>
+    <string name="error_PushMsgQuotaExceeded">S\'ha superat la quota de missatge per a aquest dispositiu. Torneu-ho de nou més tard.</string>
+    <string name="error_PushMsgServiceFail">Servei de notificació no està disponible en aquesta ocasió. Si us plau, intenti enviar el missatge més tard.</string>
+    <string name="error_RecoderError">No es pot preparar la gravadora d\'àudio.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Per començar, \' Sling Keys amb un altre telèfon a la vegada.</string>
+    <string name="error_selectDataToSend">Cal un arxiu adjunt o un missatge de text per enviar.</string>
+    <string name="error_ServerAppMessage">Missatge del servidor: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Missatge del servidor: \'%s\'</string>
+    <string name="error_ServerNotResponding">No hi ha resposta del servidor.</string>
+    <string name="error_ShareFileDelError">No es pot suprimir el fitxer compartit.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Temps d\'espera d\'espera d\'alguns membres del grup per afegir dades.</string>
+    <string name="error_UnableFindPubKey">No s\'ha pogut coincidir amb la clau pública a la clau privada en el proveïdor de xifrat.</string>
+    <string name="error_UnableToSaveMessageInDB">No es pot desar la base de dades de missatges.</string>
+    <string name="error_UnableToSaveRecipientInDB">No es pot desar la base de dades de destinataris.</string>
+    <string name="error_UnableToUpdateMessageInDB">No es pot actualitzar la base de dades de missatges.</string>
+    <string name="error_UnableToUpdateRecipientInDB">No es pot actualitzar la base de dades de destinataris.</string>
+    <string name="error_UncaughtExceptionOccured">Error SafeSlinger, si us plau reinicieu.</string>
+    <string name="error_VcardParseFailure">Dades de contacte va ser un format incorrecte.</string>
+    <string name="error_WebCancelledByUser">L\'usuari cancel · lar la sol · licitud del servidor.</string>
+
+    <string name="help_find">Utilitzeu aquesta pantalla per configurar el seu nom, telèfon i correu electrònic per intercanviar amb altres. Premeu el botó \'Fet \' quan hagi acabat.</string>
+    <string name="help_home">Per a l\'intercanvi de dades d\'identitat, assegureu-vos que tots els usuaris estan a prop o per telèfon. El botó \'Començar Canvi \' canviarà únicament les dades de contacte controlades.</string>
+    <string name="help_identity_menu">\n\nTambé pot canviar les dades personals sobre la seva identitat en aquesta pantalla prement sobre el botó amb el seu nom. Això mostrarà un menú que us permet \' Edita\' contacte \'Crea nou\' contacte, o «Utilització Un altre \' contacte.</string>
+    <string name="help_Messages">Aquesta pantalla mostra tots els missatges anteriors i annexos que encara estan disponibles per a baixar.</string>
+    <string name="help_passphrase">Utilitzeu aquesta pantalla per iniciar sessió en l\'aplicació amb la contrasenya.</string>
+    <string name="help_PickRecip">Es mostren els contactes amb tecles SafeSlinger aquí, escollir un per enviar el missatge.</string>
+    <string name="help_save">En acabar, el protocol revelarà una llista de les dades d\'identitat intercanviats. Seleccioneu els contactes que voleu desar i seleccioneu \' Importa \'.</string>
+    <string name="help_SecureIntroduction">Aquesta pantalla us permet seleccionar dues persones que han penjades les claus amb abans d\'enviar amb seguretat les seves claus entre si. Només ha de prémer \'Introduir \' quan estigui llest.</string>
+    <string name="help_Send">Aquesta pantalla us permet seleccionar algunes dades i un destinatari per enviar a. Només ha de prémer \'Enviar\' quan estigui llest.</string>
+    <string name="help_size">Seleccioneu el nombre de persones que estan tractant d\'intercanviar dades entre si i premi \' D\'acord\'.</string>
+    <string name="help_userid">Aquest número en aquesta pantalla s\'utilitza per crear un grup únic d\'usuaris. Revisi els números de tots els usuaris \' pantalles, tots els usuaris han d\'introduir el mateix nombre més baix i premi \' D\'acord\'.</string>
+    <string name="help_verify">Ara, ha de coincidir amb una d\'aquestes frases de 3 paraules amb tots els usuaris. Cada usuari ha de seleccionar la mateixa frase comuna, i premi \' Següent \'.</string>
+
+    <string name="iOS_contactError">Contactes permís requerit. Si us plau, aneu a Configuració de iOS per permetre Contactes permisos.</string>
+    <string name="iOS_errorpushtoken">Registre d\'empenta no es troba.</string>
+    <string name="iOS_notificationError1">Notificacions permís requerit. Si us plau, aneu a Configuració de iOS per permetre Notificacions permisos.</string>
+    <string name="iOS_notificationError2">%s permís requerit. Si us plau, aneu a Configuració de iOS per permetre Notificacions permisos.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger no està optimitzat per a dispositius iOS 5.x. SafeSlinger requereix iOS 6 o superior.</string>
+
+    <string name="label_ago">fa %s</string>
+    <string name="label_backupCompleteDate">Última còpia de seguretat Completat</string>
+    <string name="label_backupRequestDate">Last Request de còpia de seguretat</string>
+    <string name="label_backupURL">URL de suport</string>
+    <string name="label_ClickForNMsgs">Toc per veure els teus missatges %d</string>
+    <string name="label_ComposeHint">Compondre Missatge</string>
+    <string name="label_ContactEmail">El seu correu electrònic</string>
+    <string name="label_ContactName">El seu nom</string>
+    <string name="label_ContactPhone">El teu Telèfon</string>
+    <string name="label_days">%d dies</string>
+    <string name="label_Device">Dispositiu:</string>
+    <string name="label_DeviceInSendOnlyMode">Mode Enviar només</string>
+    <string name="label_DisabledExchSourceKeyChange">La seva clau ha canviat: Sling claus de nou.</string>
+    <string name="label_Draft">PROJECTE</string>
+    <string name="label_EnabledKeyFormatDeprecated">Format de la clau en desús: Sling claus de nou.</string>
+    <string name="label_exchanged">intercanviat</string>
+    <string name="label_expired">espirat</string>
+    <string name="label_expires">expira %s</string>
+    <string name="label_expiresIn">expira el</string>
+    <string name="label_FileNameHint">Nom del fitxer</string>
+    <string name="label_FindInstruct">Si us plau, introdueixi la seva informació personal. Aquestes dades només amb seguretat es proporcionarà persones a que triï per compartir-lo.</string>
+    <string name="label_FirstName">Nom</string>
+    <string name="label_Home">Seleccioneu els elements que desitja compartir i toc \' Begin Canvi \' quan els altres estan disposats a intercanviar.</string>
+    <string name="label_hometag">Casa</string>
+    <string name="label_hours">%d hores</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud està habilitada. Premeu el botó\' Fet \' quan hagi acabat.</string>
+    <string name="label_InstNoMessages">No hi ha missatges. Vostè pot enviar un missatge des del botó \' Redactar missatge \' al menú Inici.</string>
+    <string name="label_InstNoMessagesAndroid">No hi ha missatges. Vostè pot enviar un missatge des de la pestanya \' Redactar \'.</string>
+    <string name="label_InstNoRecipients">Cap destinatari. Troba un altre usuari SafeSlinger prop i tocar la pestanya \' Sling Keys compartir claus.</string>
+    <string name="label_InstNoSharedFile">No arxiu compartit. Connecteu el dispositiu amb iTunes i arrossegar els arxius a la carpeta compartida.</string>
+    <string name="label_InstRecipients">Tria un destinatari per enviar un missatge a:</string>
+    <string name="label_InstSendInvite">Trieu els destinataris per introduir de forma segura:</string>
+    <string name="label_InstSharedFile">Tria un arxiu per adjuntar:</string>
+    <string name="label_introduced">introduït</string>
+    <string name="label_Key">Clau:</string>
+    <string name="label_LastName">Cognom</string>
+    <string name="label_Me">Em</string>
+    <string name="label_messageIntroduceNameToYou">M\'agradaria presentar %s a vostè.</string>
+    <string name="label_MeToSender">Em (per %s):</string>
+    <string name="label_minutes">%d minuts</string>
+    <string name="label_mobiletag">Mòbil</string>
+    <string name="label_MostRecentOnly">Més recent només</string>
+    <string name="label_MsgSendUpdate">Els meus credencials actualitzades SafeSlinger s\'adjunten.</string>
+    <string name="label_None">Cap</string>
+    <string name="label_NumericModeHint">Non-Anglès</string>
+    <string name="label_numsharedfiles">%d fitxers per compartir:</string>
+    <string name="label_OldThreads">Vells Temes</string>
+    <string name="label_othertag">Un altre</string>
+    <string name="label_PassHintBackoff">Torneu a provar</string>
+    <string name="label_PassHintChange">Actualitzat Frase</string>
+    <string name="label_PassHintCreate">Crear Frase</string>
+    <string name="label_PassHintEnter">Contrasenya</string>
+    <string name="label_PassHintRepeat">Repetir frase de pas</string>
+    <string name="label_passPhraseCacheTtl">Memòria cau de claus</string>
+    <string name="label_PassPhraseIsCached">Frase de memòria cau</string>
+    <string name="label_phoneOnly">-únic telèfon</string>
+    <string name="label_Photo">Foto</string>
+    <string name="label_PromptInstruct">Aquest número s\'utilitza per crear un grup únic d\'usuaris. Compari, a continuació, introduïu el número més baix entre tots els usuaris.</string>
+    <string name="label_PublicKeyID">Identificador de clau</string>
+    <string name="label_PushTokenID">Premi ID de registre</string>
+    <string name="label_ReceivedNItems">rebut %d articles</string>
+    <string name="label_RemindBackupDelay">Recordatori de Backup</string>
+    <string name="label_ReportedInactive">Reportat %s inactiu.</string>
+    <string name="label_restoreCompleteDate">Darrera Restaurar Completat</string>
+    <string name="label_SafeSlingerBackupDelayed">Backup SafeSlinger retardada</string>
+    <string name="label_safeslingered">(SafeSlinger directe Exchange)</string>
+    <string name="label_SaveAccount">Estalvia Compte</string>
+    <string name="label_SaveInstruct">Intercanvi Complete! Seleccionar dades dels membres per salvar la llibreta d\'adreces:</string>
+    <string name="label_seconds">%d segons</string>
+    <string name="label_selectLabel">Seleccioneu una etiqueta</string>
+    <string name="label_SelectRecip">Seleccioneu un destinatari</string>
+    <string name="label_sendErrorData">Error d\'enviament de dades</string>
+    <string name="label_SendFrom">De:</string>
+    <string name="label_SendTo">A:</string>
+    <string name="label_ShowHintAtLaunch">Mostra aquest missatge la propera vegada.</string>
+    <string name="label_step_1">Pas 1</string>
+    <string name="label_step_2">Pas 2</string>
+    <string name="label_step_3">Pas 3</string>
+    <string name="label_step_4">Pas 4</string>
+    <string name="label_step_5">Pas 5</string>
+    <string name="label_TapToDecryptFile">Toc per desencriptar arxius</string>
+    <string name="label_TapToDecryptMessage">Toc per desxifrar</string>
+    <string name="label_TapToDownloadFile">Polse per a descarregar el fitxer</string>
+    <string name="label_TapToDownloadMessage">Polse per a descarregar el missatge</string>
+    <string name="label_TapToOpenFile">Toc per obrir el fitxer</string>
+    <string name="label_TapToResumeDraft">Premi per reprendre el projecte de missatge</string>
+    <string name="label_TapToSendCredentialUpdate">Premeu per enviar l\'actualització de credencials.</string>
+    <string name="label_targetAccountLabel">Contactes Compte</string>
+    <string name="label_TouchToConfigureBackupSettings">És possible que l\'opció d\'habilitar la còpia de seguretat SafeSlinger iCloud a Configuració de iOS. Premeu el botó\' Fet \' quan hagi acabat.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Toc per a configurar les opcions de còpia de seguretat.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Toc per configurar els paràmetres de temps d\'espera de memòria cau.</string>
+    <string name="label_undefinedTypeLabel">Desconegut</string>
+    <string name="label_UnknownSender">Remitent xifrada</string>
+    <string name="label_UserIdHint">Menor</string>
+    <string name="label_UserName">Nom d\'usuari</string>
+    <string name="label_VerifyInstruct">Tots els telèfons han de coincidir amb una de les frases de 3 paraules. Compari, i després recollir la frase corresponent.</string>
+    <string name="label_worktag">Treball</string>
+
+    <string name="menu_About">Sobre</string>
+    <string name="menu_Change">Canvi</string>
+    <string name="menu_ChangePassphrase">Canviar Contrasenya</string>
+    <string name="menu_CreateNew">Crear nou</string>
+    <string name="menu_delete">Esborrar</string>
+    <string name="menu_deleteThread">Eliminar tema \'%s\'</string>
+    <string name="menu_Details">Veure Detall</string>
+    <string name="menu_DownloadDirectory">Directori</string>
+    <string name="menu_Edit">Edita</string>
+    <string name="menu_FileManager">Gestor d\'arxius</string>
+    <string name="menu_Help">Ajudar</string>
+    <string name="menu_Introduction">Introducció</string>
+    <string name="menu_License">Llicència</string>
+    <string name="menu_Logout">Sortir</string>
+    <string name="menu_messageCopyText">Copiar text</string>
+    <string name="menu_messageForward">Endavant</string>
+    <string name="menu_Remove">Eliminar</string>
+    <string name="menu_SelectShareApp">Enviar Sol · licitud</string>
+    <string name="menu_sendFeedback">Envieu les vostres</string>
+    <string name="menu_SendUpdate">Enviar actualització</string>
+    <string name="menu_Settings">Configuració</string>
+    <string name="menu_ShowTutorial">Mostra Tutorial</string>
+    <string name="menu_TagComposeMessage">Compondre</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">Missatges</string>
+    <string name="menu_UseAnother">Utilitzeu altra</string>
+
+    <string name="prog_CollectingOthersCommitVerify">l\'espera de la verificació de tots els membres…</string>
+    <string name="prog_CollectingOthersItems">esperant que tots els usuaris s\'uneixin…</string>
+    <string name="prog_ConstructingGroupKey">la construcció de clau de grup…</string>
+    <string name="prog_decrypting">desxifrar…</string>
+    <string name="prog_encrypting">xifrar…</string>
+    <string name="prog_FileSent">missatge enviat, esperant resposta…</string>
+    <string name="prog_findingKey">trobant clau…</string>
+    <string name="prog_GeneratingKey">la generació de clau, pot trigar molt de temps…</string>
+    <string name="prog_generatingSignature">la generació de la signatura…</string>
+    <string name="prog_loadingContent">càrrega de continguts…</string>
+    <string name="prog_ReceivingFile">rebre arxius xifrats…</string>
+    <string name="prog_RequestingFile">sol · licitant arxiu encriptat…</string>
+    <string name="prog_RequestingMessage">sol · licitant missatge xifrat…</string>
+    <string name="prog_RequestingPushReg">sol · licitant el registre d\'empenta…</string>
+    <string name="prog_RequestingUserId">que sol · liciti ser membre…</string>
+    <string name="prog_SavingContactsToAddressBook">llibreta d\'adreces actualització…</string>
+    <string name="prog_SavingContactsToKeyDatabase">actualització de base de dades clau…</string>
+    <string name="prog_SearchingForBackup">la recerca de la còpia de seguretat…</string>
+    <string name="prog_SendingFile">enviant %s encriptat…</string>
+    <string name="prog_verifyingIntegrity">la verificació de la integritat…</string>
+    <string name="prog_verifyingSignature">la verificació de la signatura…</string>
+
+    <string name="section_advanced">Avançat</string>
+    <string name="section_backup">Reserva</string>
+    <string name="section_general">General</string>
+
+    <string name="state_BackupRestored">Còpia de seguretat restaurada.</string>
+    <string name="state_FileDeleted">Suprimit %s arxiu.</string>
+    <string name="state_FileSent">Missatge enviat.</string>
+    <string name="state_MessageSavedAsDraft">Missatge guardat com esborrany.</string>
+    <string name="state_MessagesDeleted">%d missatges eliminats.</string>
+    <string name="state_PassphraseUpdated">Contrasenya actualitzada.</string>
+    <string name="state_RecipientsDeleted">%d destinataris eliminen.</string>
+    <string name="state_SomeContactsImported">Contactes %s importats.</string>
+    <string name="state_TextCopiedToClipboard">Text copiat al porta-retalls.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger està dissenyat per compartir fàcilment les dades d\'identitat, en persona o per telèfon, autenticat, privat, i intacte. Cada persona amb la qual comparteixes amb crea un canal segur d\'extrem a extrem per enviar missatges.\n\nCaracterístiques:\n- Fàcil intercanvi d\'informació de contacte amb altres\n- profunda textos, fotos, qualsevol cosa amb seguretat!\n- Criptografia sòlida protegeix la vostra informació\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Idiomes proporcionades per:</string>
+    <string name="text_Requirements">Requisits:\n1. Ha d\'instal · lar en un mínim de 2 dispositius.\n2. Una connexió a Internet ha d\'estar activa.</string>
+    <string name="text_ShortPromotion">Contactes de forma segura profunda, textos, fotos, qualsevol cosa!</string>
+
+    <string name="title_About">Sobre</string>
+    <string name="title_camera">Cambra</string>
+    <string name="title_ChooseDirectory">Triar directori</string>
+    <string name="title_ChooseFileLoad">Esculli la seva accessori</string>
+    <string name="title_comments">Comentaris/Preguntes</string>
+    <string name="title_Error">Error</string>
+    <string name="title_ExchangeWalkthrough">Sling Tecles Auxiliar</string>
+    <string name="title_FileOptions">Opcions de dades adjunts</string>
+    <string name="title_find">Disposició</string>
+    <string name="title_home">Comenceu Canvi</string>
+    <string name="title_HomePanel">Casa</string>
+    <string name="title_MessageDetail">Missatge</string>
+    <string name="title_Messages">Missatges</string>
+    <string name="title_MyIdentity">La meva Identitat</string>
+    <string name="title_NotifyFileAvailable">Missatge SafeSlinger Disponible</string>
+    <string name="title_NotifyMulFileAvailable">%d Missatges SafeSlinger disponibles</string>
+    <string name="title_passphrase">Contrasenya</string>
+    <string name="title_photoalbum">Àlbum de fotos</string>
+    <string name="title_photolibary">Fototeca</string>
+    <string name="title_PickRecipient">Destinataris</string>
+    <string name="title_Question">Pregunta</string>
+    <string name="title_RecipientDetail">Detall de destinataris</string>
+    <string name="title_save">Fi de canvi</string>
+    <string name="title_SaveFileAs">Desa arxiu com</string>
+    <string name="title_SecureIntroduction">Introducció Secure</string>
+    <string name="title_SecureIntroductionInvite">Asseguri Introducció Invitació!</string>
+    <string name="title_SelectSource">Opcions d\'enviament:</string>
+    <string name="title_SendFile">Enviar</string>
+    <string name="title_sharingfolder">Ús compartit de carpetes</string>
+    <string name="title_size">Quants usuaris en l\'intercanvi?</string>
+    <string name="title_soundrecoder">Gravadora de sons</string>
+    <string name="title_TextInviteMsg">Invitació SafeSlinger</string>
+    <string name="title_Threads">Temes</string>
+    <string name="title_userid">Agrupament</string>
+    <string name="title_verify">Verificar</string>
+    <string name="title_Warn">Notes</string>
+
+</resources>

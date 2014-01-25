@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Anfon gwahodd cyswllt gyda…</string>
+    <string name="action_ViewFile">Gweld %s gyda…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup yn anabl. Ydych chi eisiau i addasu gosodiadau wrth gefn ac yn cadw nodyn atgoffa hwn?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s mae ganddo ddyfais neu allweddol yn fwy diweddar, a ydych yn sicr eich bod am ddefnyddio un hŷn hyn?</string>
+    <string name="ask_FileExistsOverwrite">Enw ffeil %s yn bodoli eisoes. Ysgrifennu dros?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Heb Cyfrif Google, byddwch ond yn gallu anfon, NID derbyn negeseuon. Ydych chi eisiau ychwanegu cyfrif Google?</string>
+    <string name="ask_QuitConfirmation">Quit? A ydych yn sicr?</string>
+    <string name="ask_SendErrorData">Hoffem gael eich help i wella SafeSlinger. A fyddech yn hoffi i anfon unrhyw wallau yn awtomatig i ni?</string>
+
+    <string name="btn_Accept">Derbyn</string>
+    <string name="btn_BeginExchangeProximity">Dechrau Cyfnewid</string>
+    <string name="btn_Cancel">Diddymu</string>
+    <string name="btn_Close">Close</string>
+    <string name="btn_Continue">Parhau</string>
+    <string name="btn_discard">Taflu</string>
+    <string name="btn_Done">Wedi\'i wneud</string>
+    <string name="btn_Exit">Gadael</string>
+    <string name="btn_Import">Mewnforio</string>
+    <string name="btn_Introduce">Cyflwyno</string>
+    <string name="btn_Match">Nesaf</string>
+    <string name="btn_No">Nac oes</string>
+    <string name="btn_NoMatch">Dim Match</string>
+    <string name="btn_NotRemind">Anghofiwch</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Gwrthod</string>
+    <string name="btn_Remind">Atgoffwch</string>
+    <string name="btn_Save">Achub</string>
+    <string name="btn_SelectFile">Ychwanegu Atodiad</string>
+    <string name="btn_SendFile">Anfon</string>
+    <string name="btn_Yes">Ydw</string>
+
+    <string name="choice_10mins">10 munud</string>
+    <string name="choice_1hour">1 awr</string>
+    <string name="choice_1min">1 munud</string>
+    <string name="choice_20mins">20 munud</string>
+    <string name="choice_2hours">2 awr</string>
+    <string name="choice_3mins">3 munud</string>
+    <string name="choice_40mins">40 munud</string>
+    <string name="choice_4hours">4 awr</string>
+    <string name="choice_5mins">5 munud</string>
+    <string name="choice_8hours">8 awr</string>
+    <string name="choice_auto_storage">Storio ddiofyn</string>
+    <string name="choice_external_storage">Storio allanol</string>
+    <string name="choice_internal_storage">Storio mewnol</string>
+    <string name="choice_nolimit">Dim Cyfyngiad</string>
+    <string name="choice_NumUsers">defnyddwyr %d</string>
+    <string name="choice_SaveDirectory">Cyfeiriadur Achub</string>
+    <string name="choice_SaveFile">Arbed y ffeil</string>
+    <string name="choice_Up">Up</string>
+
+    <string name="error_AllMembersMustUpgrade">Mae rhai aelodau yn defnyddio fersiwn hŷn; rhaid i bob aelod o leiaf yn defnyddio %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Rhaid i bob aelod uwchraddio, mae rhai yn defnyddio fformatau allweddol hŷn.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Rhaid i bob aelod uwchraddio, mae rhai yn defnyddio fformatau cofrestru gwthio hŷn.</string>
+    <string name="error_AudioPlayerDecodeError">Chwaraewr gwall datgodio sain.</string>
+    <string name="error_AudioPlayerError">Does dim modd chwarae y recordiad.</string>
+    <string name="error_AudioRecorderEncodeError">Gwall amgodio recordydd sain.</string>
+    <string name="error_AudioRecorderPermissionError">Caniatâd Meicroffon angen. Os gwelwch yn dda ewch at Gosodiadau iOS i alluogi caniatâd Meicroffon.</string>
+    <string name="error_BackupNotFound">Dim wrth gefn i adfer.</string>
+    <string name="error_BackupNotSupportedDevice">Nid yw dyfais yn cefnogi backup adfer.</string>
+    <string name="error_BadCopyProtectUpgrade">O ganlyniad i nam yn Android 4.1, bydd gennych uninstall a reinstall SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Mae angen cyfrif Google. Os gwelwch yn dda agor y rheolwr cyfrif ac ychwanegu cyfrif Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Cofrestru Nid ddilyswyd, os gwelwch yn dda retry llaw ddiweddarach.</string>
+    <string name="error_C2DMRegInvalidSender">Nid yw cofrestru ar gael ar gyfer y fersiwn hwn, os gwelwch yn dda edrych am fersiwn wedi ei ddiweddaru.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Cofrestru dyfais Anghywir gyda Google. Nid yw\'r ddyfais ar hyn o bryd yn cefnogi negeseuon gwthio.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Gwasanaeth cofrestru Push nad yw ar gael, amserlennu ailgeisio mewn eiliadau %d.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Mae gormod o geisiadau yn cael eu cofrestru ar gyfer Push. Os gwelwch yn dda uninstall rhai ceisiadau eraill a ceisio eto.</string>
+    <string name="error_CannotSendEmptyFile">Methu anfon atodiad wag.</string>
+    <string name="error_CannotSendFilesOver">Methu ag anfon atodiadau fwy na bytes %d o ran maint.</string>
+    <string name="error_CannotSendNullFile">Methu anfon atodiad null.</string>
+    <string name="error_contactCreationFailure">Methu creu cyswllt.</string>
+    <string name="error_ContactInsertFailed">Cyswllt mewnosoder methu.</string>
+    <string name="error_ContactNameMissing">Mae\'r cyswllt hwn ar goll enw, os gwelwch yn dda golygu.</string>
+    <string name="error_ContactNameMissing2">Mae\'r cyswllt hwn ar goll enw, os gwelwch yn dda yn ailddewis.</string>
+    <string name="error_ContactUpdateFailed">Diweddariad Cyswllt methu.</string>
+    <string name="error_CorrectYourInternetConnection">Rhyngrwyd ar gael, gwiriwch eich gosodiadau.</string>
+    <string name="error_couldNotExtractPrivateKey">Methu echdynnu allwedd breifat.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Goramser Cyfnewid rhagori. Dechreuwch y cyfnewid eto.</string>
+    <string name="error_FeatureIsNotSupport">Nid %1$s yn cael ei gefnogi ar %2$s ar hyn o bryd.</string>
+    <string name="error_FileSave">Methu cadw %s.</string>
+    <string name="error_FileStorageUnavailable">Nid yw storio ffeiliau ar gael.</string>
+    <string name="error_HttpCode">Gweinydd Gwall HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">Data anghywir a geir yn gyfnewid. Dechreuwch y cyfnewid eto.</string>
+    <string name="error_InvalidCommonUserId">Os gwelwch yn dda fynd i mewn i cyfanrif positif.</string>
+    <string name="error_InvalidContactName">Mae angen enw cyswllt dilys.</string>
+    <string name="error_InvalidIncomingMessage">Fformat neges sy\'n dod i mewn drwg.</string>
+    <string name="error_InvalidMsg">Fformat neges wael.</string>
+    <string name="error_InvalidRecipient">Derbynnydd annilys.</string>
+    <string name="error_LocalGroupCommitDiffer">Yr ydych wedi nodi gwahaniaeth mewn ymadroddion. Dechreuwch y cyfnewid eto.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Y fformat allweddol cyfoedion yn annilys.</string>
+    <string name="error_MessageSignatureVerificationFails">Wedi methu dilysu llofnod.</string>
+    <string name="error_minPassphraseRequire">Cyfrineiriau a gwneud yn ofynnol cymeriadau o leiaf %d.</string>
+    <string name="error_MinUsersRequired">Mae\'n ofynnol o leiaf %d o aelodau i gyfnewid data.</string>
+    <string name="error_MissingNdk">Nid oedd SafeSlinger ganfod cymorth NDK ar y ddyfais hon, sydd ei angen.</string>
+    <string name="error_MoreDataThanUsers">Data annisgwyl a geir yn gyfnewid. Dechreuwch y cyfnewid eto.</string>
+    <string name="error_MultipleSendNotSupported">Rydych yn ceisio anfon eitemau lluosog. Ar hyn o bryd, SafeSlinger ond yn cefnogi anfon un eitem ar y tro.</string>
+    <string name="error_NoEmailAccount">Nid yw cyfrif e-bost yn setup!</string>
+    <string name="error_noPassPhrase">Dim cyfrinair gofnodi.</string>
+    <string name="error_NoWordListSelected">Rhaid i chi ddewis un o\'r ymadroddion cyn symud ymlaen.</string>
+    <string name="error_OtherGroupCommitDiffer">Rhywun adroddwyd gwahaniaeth mewn ymadroddion. Dechreuwch y cyfnewid eto.</string>
+    <string name="error_OutOfMemoryError">Cof yn rhy isel i gwblhau\'r gwaith hwn.</string>
+    <string name="error_passPhrasesDoNotMatch">Nid yw cyfrineiriau yn cyd-fynd.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Yr ydych wedi rhagori ar y cwota neges ar gyfer y derbynnydd. Os gwelwch yn dda retry yn ddiweddarach.</string>
+    <string name="error_PushMsgInvalidRegistration">Mae hynny\'n derbynnydd Mae cofrestriad gwthio goll neu ddrwg. Dylech roi\'r gorau i anfon negeseuon i\'r ddyfais yma.</string>
+    <string name="error_PushMsgMessageNotFound">Neges dod i ben.</string>
+    <string name="error_PushMsgMessageTooBig">Mae\'r neges yn rhy fawr. Lleihau maint y neges.</string>
+    <string name="error_PushMsgNotRegistered">Nid yw cofrestru gwthio bod derbynnydd yn ddilys. Efallai y bydd y derbynnydd wedi uninstalled SafeSlinger neu ddiffodd hysbysiadau. Dylech roi\'r gorau i anfon negeseuon i\'r ddyfais yma.</string>
+    <string name="error_PushMsgNotSucceed">Roedd gwall cyfathrebu â\'r gwasanaeth hysbysu gwthio.</string>
+    <string name="error_PushMsgQuotaExceeded">Yr ydych wedi rhagori ar y cwota neges ar gyfer y ddyfais hon. Os gwelwch yn dda retry yn ddiweddarach.</string>
+    <string name="error_PushMsgServiceFail">Nid yw\'r gwasanaeth Hysbysu ar gael y tro hwn. Os gwelwch yn dda ceisio anfon y neges yn ddiweddarach.</string>
+    <string name="error_RecoderError">Methu paratoi\'r recordydd sain.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">I ddechrau, \' Keys Sling \' gyda ffôn arall ar yr un pryd.</string>
+    <string name="error_selectDataToSend">Mae angen atodiad neu neges destun i anfon chi.</string>
+    <string name="error_ServerAppMessage">Gweinydd Neges: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Gweinydd Neges: \'%s\'</string>
+    <string name="error_ServerNotResponding">Dim ymateb gan y gweinydd.</string>
+    <string name="error_ShareFileDelError">Methu cael gwared ar y ffeil a rennir.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Aros ar gyfer rhai aelodau\'r grŵp i ychwanegu data Goramser.</string>
+    <string name="error_UnableFindPubKey">Methu cydweddu ag allwedd gyhoeddus i allwedd breifat yn ddarparwr crypto.</string>
+    <string name="error_UnableToSaveMessageInDB">Methu cadw at y gronfa ddata neges.</string>
+    <string name="error_UnableToSaveRecipientInDB">Methu cadw at y gronfa ddata derbynnydd.</string>
+    <string name="error_UnableToUpdateMessageInDB">Methu i ddiweddaru\'r gronfa ddata neges.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Methu i ddiweddaru\'r gronfa ddata derbynnydd.</string>
+    <string name="error_UncaughtExceptionOccured">Gwall SafeSlinger, os gwelwch yn dda ailgychwyn.</string>
+    <string name="error_VcardParseFailure">Data cyswllt ei fformatio anghywir.</string>
+    <string name="error_WebCancelledByUser">Ganslo Defnyddiwr cais gweinydd.</string>
+
+    <string name="help_find">Defnyddiwch y sgrin hon i osod eich enw, ffôn, ac e-bost i gyfnewid gydag eraill. Tap y botwm \' Done \' ar ôl gorffen.</string>
+    <string name="help_home">I gyfnewid data hunaniaeth, sicrhau bod yr holl ddefnyddwyr yn gerllaw neu ar y ffôn. Bydd y botwm \' Dechrau Exchange \' cyfnewid dim ond y data cyswllt gwirio.</string>
+    <string name="help_identity_menu">\n\nGallwch hefyd newid data personol am eich hunaniaeth ar y sgrin hon drwy fanteisio ar y botwm gyda\'ch enw. Bydd hyn yn dangos bwydlen sy\'n eich galluogi i \'Edit\' eich cyswllt, \' Creu Newydd \' cyswllt, neu \' Defnyddiwch Arall\' cyswllt.</string>
+    <string name="help_Messages">Mae\'r sgrin hon yn dangos pob neges yn y gorffennol, ac atodiadau sydd yn dal ar gael i\'w llwytho i lawr.</string>
+    <string name="help_passphrase">Defnyddiwch y sgrin hon i fewngofnodi i\'r cais gyda\'ch cyfrin-ymadrodd.</string>
+    <string name="help_PickRecip">Cysylltiadau gydag allweddi SafeSlinger yn cael eu harddangos yma, dewiswch un i anfon eich neges at.</string>
+    <string name="help_save">Pan fyddwch wedi gorffen, bydd y protocol yn datgelu rhestr o\'r data hunaniaeth cyfnewid. Dewiswch y cysylltiadau yr hoffech i arbed a phwyso \' Mewnforio \'.</string>
+    <string name="help_SecureIntroduction">Mae\'r sgrin hon yn caniatáu i chi ddewis dau berson yr ydych wedi slung allweddi gyda blaen i anfon eu allweddi yn ddiogel i\'w gilydd. Yn syml, pwyswch \' Cyflwyno\' pan fydd yn barod.</string>
+    <string name="help_Send">Mae\'r sgrin hon yn eich galluogi i ddewis rhywfaint o ddata a derbynnydd i\'w hanfon at. Yn syml, pwyswch \' Anfon \' pan fydd yn barod.</string>
+    <string name="help_size">Dewiswch y nifer o bobl sy\'n ceisio i gyfnewid data at ei gilydd a phwyswch \'OK \'.</string>
+    <string name="help_userid">Mae\'r rhif hwn ar y sgrin yn cael ei ddefnyddio i greu grwp unigryw o ddefnyddwyr. Adolygu\'r ar yr holl rifau defnyddwyr sgriniau, yna dylai pob defnyddiwr fynd i mewn i\'r un nifer isaf a dewish \' OK\'.</string>
+    <string name="help_verify">Nawr, mae\'n rhaid i chi gyd-fynd un o\'r ymadroddion 3-air â\'r holl ddefnyddwyr. Rhaid i bob defnyddiwr ddewis yr un ymadrodd cyffredin, a dewish \' Nesaf\'.</string>
+
+    <string name="iOS_contactError">Caniatâd Cysylltiadau gofynnol. Os gwelwch yn dda ewch at Gosodiadau iOS i alluogi caniatâd Cysylltiadau.</string>
+    <string name="iOS_errorpushtoken">Cofrestru gwthio ar goll.</string>
+    <string name="iOS_notificationError1">Caniatâd Hysbysiadau gofynnol. Os gwelwch yn dda ewch at Gosodiadau iOS i alluogi caniatâd Hysbysiadau.</string>
+    <string name="iOS_notificationError2">Caniatâd %s angen. Os gwelwch yn dda ewch at Gosodiadau iOS i alluogi caniatâd Hysbysiadau.</string>
+    <string name="iOS_oldOSWarn">Nid SafeSlinger ei optimeiddio ar gyfer dyfeisiau iOS 5.x. SafeSlinger gwneud yn ofynnol i iOS 6 neu uwch.</string>
+
+    <string name="label_ago">%s yn ôl</string>
+    <string name="label_backupCompleteDate">Backup diwethaf Cwblhawyd</string>
+    <string name="label_backupRequestDate">Cais Backup ddiwethaf</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Cyffwrdd i adolygu eich negeseuon %d</string>
+    <string name="label_ComposeHint">Cyfansoddi Neges</string>
+    <string name="label_ContactEmail">Eich E-bost</string>
+    <string name="label_ContactName">Eich Enw</string>
+    <string name="label_ContactPhone">Eich Ffôn</string>
+    <string name="label_days">%d diwrnod</string>
+    <string name="label_Device">Dyfais:</string>
+    <string name="label_DeviceInSendOnlyMode">Anfon-unig ddull</string>
+    <string name="label_DisabledExchSourceKeyChange">Eich allwedd wedi newid: Allweddi Sling eto.</string>
+    <string name="label_Draft">DRAFFT</string>
+    <string name="label_EnabledKeyFormatDeprecated">Fformat allweddol anghymeradwyo: Allweddi Sling eto.</string>
+    <string name="label_exchanged">cyfnewid</string>
+    <string name="label_expired">wedi dod i ben</string>
+    <string name="label_expires">yn dod i ben %s</string>
+    <string name="label_expiresIn">dod i ben yn</string>
+    <string name="label_FileNameHint">Enw Ffeil</string>
+    <string name="label_FindInstruct">Rhowch eich gwybodaeth bersonol. Bydd y data hwn yn cael ei rhannu yn ddiogel gydag unigolion yr ydych yn dewis ei rannu gyda.</string>
+    <string name="label_FirstName">Enw Cyntaf</string>
+    <string name="label_Home">Gwiriwch eitemau ydych yn dymuno i rannu a tap \' Dechrau Cyfnewid \' pan fo eraill yn barod i gyfnewid.</string>
+    <string name="label_hometag">Cartref</string>
+    <string name="label_hours">%d awr</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud yn cael ei alluogi. Tap y botwm \' Done \' ar ôl gorffen.</string>
+    <string name="label_InstNoMessages">Dim negeseuon. Efallai y byddwch yn anfon neges gan y botwm \' Cyfansoddi Neges \' ar y ddewislen Gartref.</string>
+    <string name="label_InstNoMessagesAndroid">Dim negeseuon. Efallai y byddwch yn anfon neges gan y tab \' Compose \'.</string>
+    <string name="label_InstNoRecipients">Dim derbynwyr. Dod o hyd i ddefnyddiwr arall SafeSlinger gerllaw a chyffwrdd y tab \' Sling Keys \' i rannu allweddi.</string>
+    <string name="label_InstNoSharedFile">Dim ffeil rhannu. Cysylltu eich dyfais gyda iTunes a ffeiliau llusgo i\'r ffolder a rennir.</string>
+    <string name="label_InstRecipients">Dewiswch derbynnydd i anfon neges at:</string>
+    <string name="label_InstSendInvite">Dewiswch derbynwyr i gyflwyno yn ddiogel:</string>
+    <string name="label_InstSharedFile">Dewiswch ffeil i\'w atodi:</string>
+    <string name="label_introduced">cyflwyno</string>
+    <string name="label_Key">Allweddol:</string>
+    <string name="label_LastName">Cyfenw</string>
+    <string name="label_Me">Me</string>
+    <string name="label_messageIntroduceNameToYou">Hoffwn i gyflwyno %s i chi.</string>
+    <string name="label_MeToSender">Me (i %s):</string>
+    <string name="label_minutes">%d munud</string>
+    <string name="label_mobiletag">Symudol</string>
+    <string name="label_MostRecentOnly">Mae\'r rhan fwyaf diweddar yn unig</string>
+    <string name="label_MsgSendUpdate">Fy cymwysterau SafeSlinger diweddaru ynghlwm.</string>
+    <string name="label_None">Dim</string>
+    <string name="label_NumericModeHint">Heb fod yn Saesneg</string>
+    <string name="label_numsharedfiles">%d Rengau at Rhannu:</string>
+    <string name="label_OldThreads">Hen Trywyddau</string>
+    <string name="label_othertag">Arall</string>
+    <string name="label_PassHintBackoff">Ceisio eto</string>
+    <string name="label_PassHintChange">Diweddarwyd cyfrin-ymadrodd</string>
+    <string name="label_PassHintCreate">Creu cyfrin-ymadrodd</string>
+    <string name="label_PassHintEnter">Chyfrinair</string>
+    <string name="label_PassHintRepeat">Cyfrin-ymadrodd ailadrodd</string>
+    <string name="label_passPhraseCacheTtl">Cache cyfrinair</string>
+    <string name="label_PassPhraseIsCached">Cached cyfrinair</string>
+    <string name="label_phoneOnly">ffôn-yn-unig</string>
+    <string name="label_Photo">Llun</string>
+    <string name="label_PromptInstruct">Mae\'r rhif hwn yn cael ei ddefnyddio i greu grwp unigryw o ddefnyddwyr. Cymharu, ac yna rhowch y nifer isaf ymysg holl ddefnyddwyr.</string>
+    <string name="label_PublicKeyID">ID allweddol</string>
+    <string name="label_PushTokenID">Push ID Cofrestru</string>
+    <string name="label_ReceivedNItems">Derbyniodd eitemau %d</string>
+    <string name="label_RemindBackupDelay">Nodyn Atgoffa wrth gefn</string>
+    <string name="label_ReportedInactive">Adroddwyd %s anweithgar.</string>
+    <string name="label_restoreCompleteDate">Adfer ddiwethaf Cwblhawyd</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger wrth gefn oedi wrth</string>
+    <string name="label_safeslingered">(SafeSlinger Cyfnewid Uniongyrchol)</string>
+    <string name="label_SaveAccount">Arbed Cyfrif</string>
+    <string name="label_SaveInstruct">Cyfnewid Cwblhau! Dewiswch data aelod i arbed ar eich llyfr cyfeiriadau:</string>
+    <string name="label_seconds">eiliad %d</string>
+    <string name="label_selectLabel">Dewiswch label</string>
+    <string name="label_SelectRecip">Dewis Derbynnydd</string>
+    <string name="label_sendErrorData">Anfon Gwall Data</string>
+    <string name="label_SendFrom">From:</string>
+    <string name="label_SendTo">At:</string>
+    <string name="label_ShowHintAtLaunch">Dangos awgrym hwn y tro nesaf.</string>
+    <string name="label_step_1">Cam 1</string>
+    <string name="label_step_2">Cam 2</string>
+    <string name="label_step_3">Cam 3</string>
+    <string name="label_step_4">Cam 4</string>
+    <string name="label_step_5">Cam 5</string>
+    <string name="label_TapToDecryptFile">Tap i dadgryptio ffeil</string>
+    <string name="label_TapToDecryptMessage">Tap i dadgryptio</string>
+    <string name="label_TapToDownloadFile">Tap i lawrlwytho ffeil</string>
+    <string name="label_TapToDownloadMessage">Tap i lawrlwytho neges</string>
+    <string name="label_TapToOpenFile">Tap agor y ffeil</string>
+    <string name="label_TapToResumeDraft">Tap i ailddechrau drafft neges</string>
+    <string name="label_TapToSendCredentialUpdate">Tap a dal i anfon diweddariad credential.</string>
+    <string name="label_targetAccountLabel">Cyfrif Cysylltiadau</string>
+    <string name="label_TouchToConfigureBackupSettings">Efallai y byddwch optionally galluogi SafeSlinger iCloud wrth gefn mewn Lleoliadau iOS. Tap y botwm \' Done \' ar ôl gorffen.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Cyffwrdd i ffurfweddu gosodiadau wrth gefn.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Cyffwrdd i ffurfweddu y gosodiadau goramser cache.</string>
+    <string name="label_undefinedTypeLabel">Anhysbys</string>
+    <string name="label_UnknownSender">Anfonwr amgryptio</string>
+    <string name="label_UserIdHint">Isaf</string>
+    <string name="label_UserName">Enw defnyddiwr</string>
+    <string name="label_VerifyInstruct">Rhaid i bob ffonau gyfateb un o\'r 3-gair ymadroddion. Cymharu, ac yna dewis y frawddeg syn cyfateb.</string>
+    <string name="label_worktag">Gwaith</string>
+
+    <string name="menu_About">Amdanom ni</string>
+    <string name="menu_Change">Newid</string>
+    <string name="menu_ChangePassphrase">Newid cyfrin-ymadrodd</string>
+    <string name="menu_CreateNew">Creu Newydd</string>
+    <string name="menu_delete">Dileu</string>
+    <string name="menu_deleteThread">Dileu Thread \'%s\'</string>
+    <string name="menu_Details">Gweld Manylion</string>
+    <string name="menu_DownloadDirectory">Download Directory</string>
+    <string name="menu_Edit">Golygu</string>
+    <string name="menu_FileManager">Rheolwr ffeil</string>
+    <string name="menu_Help">Help</string>
+    <string name="menu_Introduction">Cyflwyniad</string>
+    <string name="menu_License">Trwydded</string>
+    <string name="menu_Logout">Allgofnodi</string>
+    <string name="menu_messageCopyText">Copi testun</string>
+    <string name="menu_messageForward">Ymlaen</string>
+    <string name="menu_Remove">Dileu</string>
+    <string name="menu_SelectShareApp">Anfon Cais</string>
+    <string name="menu_sendFeedback">Anfon Adborth</string>
+    <string name="menu_SendUpdate">Anfon Diweddariad</string>
+    <string name="menu_Settings">Gosodiadau</string>
+    <string name="menu_ShowTutorial">Dangos Tiwtorial</string>
+    <string name="menu_TagComposeMessage">Cyfansoddi</string>
+    <string name="menu_TagExchange">Allweddi sling</string>
+    <string name="menu_TagListMessages">Negeseuon</string>
+    <string name="menu_UseAnother">Defnyddiwch arall</string>
+
+    <string name="prog_CollectingOthersCommitVerify">aros ar gyfer dilysu gan bob aelod…</string>
+    <string name="prog_CollectingOthersItems">aros ar gyfer pob defnyddwyr i ymuno…</string>
+    <string name="prog_ConstructingGroupKey">adeiladu allweddol y grŵp…</string>
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">amgryptio…</string>
+    <string name="prog_FileSent">neges a anfonwyd, yn aros am ymateb…</string>
+    <string name="prog_findingKey">dod o hyd i allwedd…</string>
+    <string name="prog_GeneratingKey">cynhyrchu allweddol, gall hyn gymryd amser…</string>
+    <string name="prog_generatingSignature">cynhyrchu llofnod…</string>
+    <string name="prog_loadingContent">cynnwys loading…</string>
+    <string name="prog_ReceivingFile">derbyn ffeil amgryptio…</string>
+    <string name="prog_RequestingFile">gofyn am y ffeil wedi\'i amgryptio…</string>
+    <string name="prog_RequestingMessage">gofyn am neges wedi ei amgryptio…</string>
+    <string name="prog_RequestingPushReg">gofyn am gofrestru gwthio…</string>
+    <string name="prog_RequestingUserId">gofyn am aelodaeth…</string>
+    <string name="prog_SavingContactsToAddressBook">cyfeiriad diweddaru llyfr…</string>
+    <string name="prog_SavingContactsToKeyDatabase">diweddaru cronfa ddata allweddol…</string>
+    <string name="prog_SearchingForBackup">chwilio am gefn…</string>
+    <string name="prog_SendingFile">anfon %s amgryptio…</string>
+    <string name="prog_verifyingIntegrity">gwirio cywirdeb…</string>
+    <string name="prog_verifyingSignature">dilysu llofnod…</string>
+
+    <string name="section_advanced">Uwch</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">Cyffredinol</string>
+
+    <string name="state_BackupRestored">Backup adfer.</string>
+    <string name="state_FileDeleted">%s ffeiliau wedi\'u dileu.</string>
+    <string name="state_FileSent">Neges a anfonir.</string>
+    <string name="state_MessageSavedAsDraft">Neges gadw fel drafft.</string>
+    <string name="state_MessagesDeleted">%d negeseuon dileu.</string>
+    <string name="state_PassphraseUpdated">Cyfrin-ymadrodd diweddaru.</string>
+    <string name="state_RecipientsDeleted">Derbynwyr %d ddileu.</string>
+    <string name="state_SomeContactsImported">Cysylltiadau %s fewnforio.</string>
+    <string name="state_TextCopiedToClipboard">Testun gopïo i\'r clipfwrdd.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger wedi ei gynllunio i rannu data hunaniaeth yn hawdd, yn bersonol neu dros y ffôn, a ddilyswyd, preifat, ac yn gyfan. Mae pob person yr ydych yn rhannu gyda creu sianel ddiogel pen-i-ben i anfon negeseuon.\n\nNodweddion:\n- cyfnewid gwybodaeth gyswllt Hawdd ag eraill\n- Ddiogel sling testunau, lluniau, unrhyw beth!\n- cryptograffeg cryf yn diogelu eich gwybodaeth\n\ne-bost: %2$s\ngwefan: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Ieithoedd ddarperir gan:</string>
+    <string name="text_Requirements">Gofynion:\n1. Rhaid gosod ar o leiaf 2 ddyfeisiau.\n2. Rhaid i cysylltiad Rhyngrwyd fod yn egnïol.</string>
+    <string name="text_ShortPromotion">Cysylltiadau Ddiogel sling, testunau, lluniau, unrhyw beth!</string>
+
+    <string name="title_About">Amdanom ni</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_ChooseDirectory">Dewis Cyfeiriadur</string>
+    <string name="title_ChooseFileLoad">Dewiswch eich Ymlyniad</string>
+    <string name="title_comments">Sylwadau/Cwestiynau</string>
+    <string name="title_Error">Gwall</string>
+    <string name="title_ExchangeWalkthrough">Cynorthwy-ydd Keys Sling</string>
+    <string name="title_FileOptions">Opsiynau ymlyniad</string>
+    <string name="title_find">Setup</string>
+    <string name="title_home">Dechrau Cyfnewid</string>
+    <string name="title_HomePanel">Cartref</string>
+    <string name="title_MessageDetail">Neges</string>
+    <string name="title_Messages">Negeseuon</string>
+    <string name="title_MyIdentity">Fy Hunaniaeth</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Neges ar gael</string>
+    <string name="title_NotifyMulFileAvailable">%d Negeseuon SafeSlinger gael</string>
+    <string name="title_passphrase">Cyfrin-ymadrodd</string>
+    <string name="title_photoalbum">Albwm Lluniau</string>
+    <string name="title_photolibary">Llyfrgell Luniau</string>
+    <string name="title_PickRecipient">Derbynwyr</string>
+    <string name="title_Question">Cwestiwn</string>
+    <string name="title_RecipientDetail">Manylion derbynnydd</string>
+    <string name="title_save">Cyfnewid End</string>
+    <string name="title_SaveFileAs">Save File Fel</string>
+    <string name="title_SecureIntroduction">Cyflwyniad diogel</string>
+    <string name="title_SecureIntroductionInvite">Sicrhau Cyflwyniad Gwahoddiad!</string>
+    <string name="title_SelectSource">Anfon Dewisiadau:</string>
+    <string name="title_SendFile">Anfon</string>
+    <string name="title_sharingfolder">Rhannu Plygell</string>
+    <string name="title_size">Faint o ddefnyddwyr yn y cyfnewid?</string>
+    <string name="title_soundrecoder">Recorder sain</string>
+    <string name="title_TextInviteMsg">SafeSlinger Gwahoddiad</string>
+    <string name="title_Threads">Trywyddau</string>
+    <string name="title_userid">Grwpio</string>
+    <string name="title_verify">Gwirio</string>
+    <string name="title_Warn">Rhybudd</string>
+
+</resources>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Kirim mengundang link dengan…</string>
+    <string name="action_ViewFile">Lihat %s dengan…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup dinonaktifkan. Apakah Anda ingin menyesuaikan pengaturan backup dan menjaga pengingat ini?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s memiliki perangkat atau tombol yang lebih baru, apakah Anda yakin Anda ingin menggunakan salah satu yang lebih tua ini?</string>
+    <string name="ask_FileExistsOverwrite">File name %s sudah ada. Timpa?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Tanpa Akun Google Anda hanya akan dapat mengirim, TIDAK menerima pesan. Apakah Anda ingin menambahkan akun Google?</string>
+    <string name="ask_QuitConfirmation">Keluar? Apakah Anda yakin?</string>
+    <string name="ask_SendErrorData">Kami ingin membantu Anda meningkatkan SafeSlinger. Apakah Anda ingin secara otomatis mengirim kesalahan apapun kepada kami?</string>
+
+    <string name="btn_Accept">Menerima</string>
+    <string name="btn_BeginExchangeProximity">Mulailah Bursa</string>
+    <string name="btn_Cancel">Membatalkan</string>
+    <string name="btn_Close">Dekat</string>
+    <string name="btn_Continue">Terus</string>
+    <string name="btn_discard">Membuang</string>
+    <string name="btn_Done">Matang</string>
+    <string name="btn_Exit">Keluar</string>
+    <string name="btn_Import">Impor</string>
+    <string name="btn_Introduce">Memperkenalkan</string>
+    <string name="btn_Match">Berikutnya</string>
+    <string name="btn_No">Tidak</string>
+    <string name="btn_NoMatch">Tidak ada Pertandingan</string>
+    <string name="btn_NotRemind">Lupa</string>
+    <string name="btn_OK">oke</string>
+    <string name="btn_Refuse">Menolak</string>
+    <string name="btn_Remind">Mengingatkan</string>
+    <string name="btn_Save">Menyimpan</string>
+    <string name="btn_SelectFile">Tambahkan Lampiran</string>
+    <string name="btn_SendFile">Mengirim</string>
+    <string name="btn_Yes">Ya</string>
+
+    <string name="choice_10mins">10 menit</string>
+    <string name="choice_1hour">1 jam</string>
+    <string name="choice_1min">1 menit</string>
+    <string name="choice_20mins">20 menit</string>
+    <string name="choice_2hours">2 jam</string>
+    <string name="choice_3mins">3 menit</string>
+    <string name="choice_40mins">40 menit</string>
+    <string name="choice_4hours">4 jam</string>
+    <string name="choice_5mins">5 menit</string>
+    <string name="choice_8hours">8 jam</string>
+    <string name="choice_auto_storage">Memori default</string>
+    <string name="choice_external_storage">Penyimpanan Eksternal</string>
+    <string name="choice_internal_storage">Penyimpanan internal</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">pengguna %d</string>
+    <string name="choice_SaveDirectory">Simpan Directory</string>
+    <string name="choice_SaveFile">Simpan file</string>
+    <string name="choice_Up">Naik</string>
+
+    <string name="error_AllMembersMustUpgrade">Beberapa anggota yang menggunakan versi lama, semua anggota harus setidaknya menggunakan %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Semua anggota harus meng-upgrade, beberapa menggunakan format kunci yang lebih tua.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Semua anggota harus meng-upgrade, beberapa menggunakan lebih tua format pendaftaran push.</string>
+    <string name="error_AudioPlayerDecodeError">Audio player kesalahan decoding.</string>
+    <string name="error_AudioPlayerError">Tidak dapat memutar rekaman.</string>
+    <string name="error_AudioRecorderEncodeError">Audio recorder error encoding.</string>
+    <string name="error_AudioRecorderPermissionError">Izin mikrofon diperlukan. Silakan pergi ke iOS Pengaturan untuk mengaktifkan izin Microphone.</string>
+    <string name="error_BackupNotFound">Tidak ada cadangan untuk mengembalikan.</string>
+    <string name="error_BackupNotSupportedDevice">Perangkat tidak mendukung backup restore.</string>
+    <string name="error_BadCopyProtectUpgrade">Karena bug di Android 4.1, Anda akan memiliki uninstall dan menginstal ulang SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Sebuah account Google diperlukan. Silakan buka account manager dan menambahkan akun Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Pendaftaran tidak dikonfirmasi, silakan coba lagi secara manual nanti.</string>
+    <string name="error_C2DMRegInvalidSender">Registrasi tidak tersedia untuk versi ini, silakan cek untuk versi terbaru.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Pendaftaran perangkat yang tidak benar dengan Google. Perangkat ini saat ini tidak mendukung mendorong messaging.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Layanan pendaftaran mendorong tidak tersedia, penjadwalan coba lagi dalam %d detik.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Terlalu banyak aplikasi yang terdaftar untuk Push. Silakan uninstall beberapa aplikasi lain dan coba lagi.</string>
+    <string name="error_CannotSendEmptyFile">Tidak dapat mengirim lampiran kosong.</string>
+    <string name="error_CannotSendFilesOver">Tidak dapat mengirim lampiran lebih besar dari %d byte dalam ukuran.</string>
+    <string name="error_CannotSendNullFile">Tidak dapat mengirim lampiran null.</string>
+    <string name="error_contactCreationFailure">Penciptaan Contact gagal.</string>
+    <string name="error_ContactInsertFailed">Hubungi insert gagal.</string>
+    <string name="error_ContactNameMissing">Kontak ini hilang nama, silakan edit.</string>
+    <string name="error_ContactNameMissing2">Kontak ini hilang nama, silahkan pilih ulang.</string>
+    <string name="error_ContactUpdateFailed">Update Contact gagal.</string>
+    <string name="error_CorrectYourInternetConnection">Internet tidak tersedia, periksa pengaturan Anda.</string>
+    <string name="error_couldNotExtractPrivateKey">Tidak dapat mengekstrak kunci pribadi.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Bursa batas waktu terlampaui. Mulailah pertukaran lagi.</string>
+    <string name="error_FeatureIsNotSupport">%1$s tidak didukung pada %2$s saat ini.</string>
+    <string name="error_FileSave">Tidak dapat menyimpan %s.</string>
+    <string name="error_FileStorageUnavailable">Penyimpanan file tidak tersedia.</string>
+    <string name="error_HttpCode">Server HTTP Kesalahan: %d</string>
+    <string name="error_InvalidCommitVerify">Data yang salah ditemukan dalam pertukaran. Mulailah pertukaran lagi.</string>
+    <string name="error_InvalidCommonUserId">Masukkan bilangan bulat positif.</string>
+    <string name="error_InvalidContactName">Sebuah nama kontak yang valid diperlukan.</string>
+    <string name="error_InvalidIncomingMessage">Format pesan yang masuk buruk.</string>
+    <string name="error_InvalidMsg">Format pesan yang buruk.</string>
+    <string name="error_InvalidRecipient">Penerima tidak valid.</string>
+    <string name="error_LocalGroupCommitDiffer">Anda telah melaporkan perbedaan dalam frase. Mulailah pertukaran lagi.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Peer Format kunci tidak valid.</string>
+    <string name="error_MessageSignatureVerificationFails">Signature verifikasi gagal.</string>
+    <string name="error_minPassphraseRequire">Passphrases membutuhkan setidaknya %d karakter.</string>
+    <string name="error_MinUsersRequired">Minimal %d anggota yang diperlukan untuk pertukaran data.</string>
+    <string name="error_MissingNdk">SafeSlinger tidak mendeteksi dukungan NDK pada perangkat ini, yang diperlukan.</string>
+    <string name="error_MoreDataThanUsers">Data tak terduga ditemukan dalam pertukaran. Mulailah pertukaran lagi.</string>
+    <string name="error_MultipleSendNotSupported">Anda mencoba untuk mengirim beberapa item. Pada saat ini, SafeSlinger hanya mendukung mengirim satu item pada suatu waktu.</string>
+    <string name="error_NoEmailAccount">Email account tidak setup!</string>
+    <string name="error_noPassPhrase">Tidak ada passphrase yang dimasukkan.</string>
+    <string name="error_NoWordListSelected">Anda harus memilih salah satu frasa sebelum melanjutkan.</string>
+    <string name="error_OtherGroupCommitDiffer">Seseorang melaporkan perbedaan dalam frase. Mulailah pertukaran lagi.</string>
+    <string name="error_OutOfMemoryError">Memory terlalu rendah untuk menyelesaikan operasi ini.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases tidak cocok.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Anda telah melebihi kuota pesan untuk penerima. Coba lagi nanti.</string>
+    <string name="error_PushMsgInvalidRegistration">Penerima itu memiliki hilang atau buruk pendaftaran push. Anda harus berhenti mengirim pesan ke perangkat ini.</string>
+    <string name="error_PushMsgMessageNotFound">Pesan kedaluwarsa.</string>
+    <string name="error_PushMsgMessageTooBig">Pesan terlalu besar. Kurangi ukuran pesan.</string>
+    <string name="error_PushMsgNotRegistered">Itu penerima pendaftaran mendorong tidak lagi valid. Penerima mungkin telah dihapus SafeSlinger atau dimatikan pemberitahuan. Anda harus berhenti mengirim pesan ke perangkat ini.</string>
+    <string name="error_PushMsgNotSucceed">Ada kesalahan berkomunikasi dengan layanan push notification.</string>
+    <string name="error_PushMsgQuotaExceeded">Anda telah melebihi kuota pesan untuk perangkat ini. Coba lagi nanti.</string>
+    <string name="error_PushMsgServiceFail">Pemberitahuan layanan tidak tersedia saat ini. Silakan coba untuk mengirim pesan nanti.</string>
+    <string name="error_RecoderError">Tidak dapat mempersiapkan perekam audio.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Untuk memulai, \' Sling Keys \' dengan ponsel lain pada waktu yang sama.</string>
+    <string name="error_selectDataToSend">Anda perlu lampiran atau pesan teks untuk mengirim.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Tidak ada respon dari server.</string>
+    <string name="error_ShareFileDelError">Tidak dapat menghapus file bersama.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout menunggu beberapa anggota kelompok untuk menambah data.</string>
+    <string name="error_UnableFindPubKey">Tidak dapat mencocokkan kunci publik untuk kunci pribadi di penyedia kripto.</string>
+    <string name="error_UnableToSaveMessageInDB">Tidak dapat menyimpan ke database pesan.</string>
+    <string name="error_UnableToSaveRecipientInDB">Tidak dapat menyimpan ke database penerima.</string>
+    <string name="error_UnableToUpdateMessageInDB">Tidak dapat memperbarui database pesan.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Tidak dapat memperbarui database penerima.</string>
+    <string name="error_UncaughtExceptionOccured">Error SafeSlinger, silakan restart.</string>
+    <string name="error_VcardParseFailure">Data kontak diformat salah.</string>
+    <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan server.</string>
+
+    <string name="help_find">Gunakan layar ini untuk mengatur nama, telepon, dan email untuk bertukar dengan orang lain. Tekan \' Selesai \' tombol ketika selesai.</string>
+    <string name="help_home">Untuk bertukar data identitas, memastikan semua pengguna berada di dekatnya atau di telepon. Tombol \' Mulai Efek \' akan bertukar hanya data kontak diperiksa.</string>
+    <string name="help_identity_menu">\n\nAnda juga dapat mengubah data pribadi tentang identitas Anda pada layar ini dengan menekan tombol dengan nama Anda. Ini akan menampilkan menu yang memungkinkan Anda untuk \'Edit \' kontak Anda, \' Create New \' kontak, atau \' Gunakan lagi \' kontak.</string>
+    <string name="help_Messages">Layar ini menampilkan semua pesan masa lalu, dan lampiran yang masih tersedia untuk di-download.</string>
+    <string name="help_passphrase">Gunakan layar ini untuk login ke aplikasi dengan passphrase Anda.</string>
+    <string name="help_PickRecip">Kontak dengan kunci SafeSlinger ditampilkan di sini, pilih salah satu untuk mengirim pesan ke.</string>
+    <string name="help_save">Setelah selesai, protokol akan mengungkapkan daftar data identitas dipertukarkan. Pilih kontak yang ingin Anda simpan dan tekan \' Impor \'.</string>
+    <string name="help_SecureIntroduction">Layar ini memungkinkan Anda untuk memilih dua orang yang telah tersandang kunci dengan sebelumnya untuk aman mengirim kunci mereka satu sama lain. Cukup tekan \' Memperkenalkan \' ketika siap.</string>
+    <string name="help_Send">Layar ini memungkinkan Anda untuk memilih beberapa data dan penerima untuk mengirim ke. Cukup tekan \'Kirim \' ketika siap.</string>
+    <string name="help_size">Pilih jumlah orang yang berusaha untuk pertukaran data bersama-sama dan tekan \' OK \'.</string>
+    <string name="help_userid">Jumlah ini di layar ini digunakan untuk membuat grup yang unik dari pengguna. Tinjau angka-angka pada semua pengguna \'layar, maka semua pengguna harus memasukkan nomor terendah yang sama dan tekan\' OK \'.</string>
+    <string name="help_verify">Sekarang, Anda harus cocok dengan frasa 3-kata ini dengan semua pengguna. Setiap pengguna harus memilih frase umum yang sama, dan tekan \' Next\'.</string>
+
+    <string name="iOS_contactError">Kontak izin yang diperlukan. Silakan pergi ke iOS Pengaturan untuk mengaktifkan izin Kontak.</string>
+    <string name="iOS_errorpushtoken">Dorong pendaftaran hilang.</string>
+    <string name="iOS_notificationError1">Pemberitahuan izin yang diperlukan. Silakan pergi ke iOS Pengaturan untuk mengaktifkan Pemberitahuan izin.</string>
+    <string name="iOS_notificationError2">Izin %s diperlukan. Silakan pergi ke iOS Pengaturan untuk mengaktifkan Pemberitahuan izin.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger tidak dioptimalkan untuk perangkat iOS 5.x. SafeSlinger membutuhkan iOS 6 atau lebih tinggi.</string>
+
+    <string name="label_ago">%s lalu</string>
+    <string name="label_backupCompleteDate">Backup terakhir Selesai</string>
+    <string name="label_backupRequestDate">Terakhir Backup Permintaan</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Sentuh untuk meninjau pesan %d Anda</string>
+    <string name="label_ComposeHint">Susun pesan</string>
+    <string name="label_ContactEmail">Email Anda</string>
+    <string name="label_ContactName">Nama Anda</string>
+    <string name="label_ContactPhone">Telepon Anda</string>
+    <string name="label_days">%d hari</string>
+    <string name="label_Device">Perangkat:</string>
+    <string name="label_DeviceInSendOnlyMode">Kirim-mode hanya</string>
+    <string name="label_DisabledExchSourceKeyChange">Kunci Anda telah berubah: Sling Keys lagi.</string>
+    <string name="label_Draft">DRAFT</string>
+    <string name="label_EnabledKeyFormatDeprecated">Format kunci usang: Sling Keys lagi.</string>
+    <string name="label_exchanged">dipertukarkan</string>
+    <string name="label_expired">kadaluarsa</string>
+    <string name="label_expires">berakhir %s</string>
+    <string name="label_expiresIn">berakhir pada</string>
+    <string name="label_FileNameHint">Nama file</string>
+    <string name="label_FindInstruct">Masukkan informasi pribadi Anda. Data ini hanya akan aman berbagi dengan orang-orang yang Anda memilih untuk berbagi dengan.</string>
+    <string name="label_FirstName">Nama Depan</string>
+    <string name="label_Home">Memeriksa barang-barang yang Anda ingin berbagi dan tekan \' Mulai Efek \' ketika orang lain siap untuk bertukar.</string>
+    <string name="label_hometag">Rumah</string>
+    <string name="label_hours">%d jam</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud diaktifkan. Tekan \' Selesai \' tombol ketika selesai.</string>
+    <string name="label_InstNoMessages">Tidak ada pesan. Anda dapat mengirim pesan dari \' Compose Message\' tombol pada menu Home.</string>
+    <string name="label_InstNoMessagesAndroid">Tidak ada pesan. Anda dapat mengirim pesan dari \' Compose \' tab.</string>
+    <string name="label_InstNoRecipients">Tidak ada penerima. Cari pengguna SafeSlinger lain di dekatnya dan menyentuh tab \' Sling Keys \' untuk berbagi kunci.</string>
+    <string name="label_InstNoSharedFile">File yang ada bersama. Hubungkan perangkat Anda dengan iTunes dan file drag untuk folder bersama.</string>
+    <string name="label_InstRecipients">Pilih penerima untuk mengirim pesan ke:</string>
+    <string name="label_InstSendInvite">Pilih penerima untuk memperkenalkan aman:</string>
+    <string name="label_InstSharedFile">Pilih file yang akan dilampirkan:</string>
+    <string name="label_introduced">diperkenalkan</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Nama Belakang</string>
+    <string name="label_Me">Saya</string>
+    <string name="label_messageIntroduceNameToYou">Saya ingin memperkenalkan %s kepada Anda.</string>
+    <string name="label_MeToSender">Me (ke %s):</string>
+    <string name="label_minutes">%d menit</string>
+    <string name="label_mobiletag">Mobil</string>
+    <string name="label_MostRecentOnly">Terbaru hanya</string>
+    <string name="label_MsgSendUpdate">My diperbarui kredensial SafeSlinger yang terpasang.</string>
+    <string name="label_None">Tak satupun</string>
+    <string name="label_NumericModeHint">Non-Inggris</string>
+    <string name="label_numsharedfiles">%d Files untuk Berbagi:</string>
+    <string name="label_OldThreads">Thread Old</string>
+    <string name="label_othertag">Lain</string>
+    <string name="label_PassHintBackoff">Mencoba kembali</string>
+    <string name="label_PassHintChange">Diperbarui Passphrase</string>
+    <string name="label_PassHintCreate">Buat Passphrase</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Ulangi Passphrase</string>
+    <string name="label_passPhraseCacheTtl">Frasa Sandi Cache</string>
+    <string name="label_PassPhraseIsCached">Cache passphrase</string>
+    <string name="label_phoneOnly">telepon hanya</string>
+    <string name="label_Photo">Foto</string>
+    <string name="label_PromptInstruct">Nomor ini digunakan untuk membuat grup yang unik dari pengguna. Bandingkan, dan kemudian masukkan nomor terendah di antara semua pengguna.</string>
+    <string name="label_PublicKeyID">Key ID</string>
+    <string name="label_PushTokenID">Dorong Pendaftaran ID</string>
+    <string name="label_ReceivedNItems">menerima %d item</string>
+    <string name="label_RemindBackupDelay">Backup Reminder</string>
+    <string name="label_ReportedInactive">Dilaporkan %s tidak aktif.</string>
+    <string name="label_restoreCompleteDate">Terakhir Kembalikan Selesai</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup tertunda</string>
+    <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
+    <string name="label_SaveAccount">Simpan Akun</string>
+    <string name="label_SaveInstruct">Bursa Lengkap! Pilih Data anggota untuk menyimpan ke buku alamat Anda:</string>
+    <string name="label_seconds">%d detik</string>
+    <string name="label_selectLabel">Pilih label</string>
+    <string name="label_SelectRecip">Pilih Penerima</string>
+    <string name="label_sendErrorData">Kirim Kesalahan data</string>
+    <string name="label_SendFrom">Dari:</string>
+    <string name="label_SendTo">Untuk:</string>
+    <string name="label_ShowHintAtLaunch">Tampilkan petunjuk ini waktu berikutnya.</string>
+    <string name="label_step_1">Langkah 1</string>
+    <string name="label_step_2">Langkah 2</string>
+    <string name="label_step_3">Langkah 3</string>
+    <string name="label_step_4">Langkah 4</string>
+    <string name="label_step_5">Langkah 5</string>
+    <string name="label_TapToDecryptFile">Ketuk untuk mendekripsi berkas</string>
+    <string name="label_TapToDecryptMessage">Ketuk untuk mendekripsi</string>
+    <string name="label_TapToDownloadFile">Ketuk untuk men-download file</string>
+    <string name="label_TapToDownloadMessage">Tekan untuk men-download pesan</string>
+    <string name="label_TapToOpenFile">Tekan untuk membuka file</string>
+    <string name="label_TapToResumeDraft">Tekan untuk melanjutkan pesan konsep</string>
+    <string name="label_TapToSendCredentialUpdate">Tekan dan tahan untuk mengirimkan update credential.</string>
+    <string name="label_targetAccountLabel">Akun kontak</string>
+    <string name="label_TouchToConfigureBackupSettings">Anda opsional dapat mengaktifkan SafeSlinger iCloud backup di iOS Settings. Tekan \' Selesai \' tombol ketika selesai.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Sentuh untuk mengkonfigurasi pengaturan backup.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Sentuh untuk mengkonfigurasi pengaturan timeout Cache.</string>
+    <string name="label_undefinedTypeLabel">Diketahui</string>
+    <string name="label_UnknownSender">Dienkripsi Pengirim</string>
+    <string name="label_UserIdHint">Terendah</string>
+    <string name="label_UserName">Nama pengguna</string>
+    <string name="label_VerifyInstruct">Semua telepon harus sesuai dengan salah satu frase 3 kata. Bandingkan, dan kemudian memilih frase yang cocok.</string>
+    <string name="label_worktag">Pekerjaan</string>
+
+    <string name="menu_About">Tentang</string>
+    <string name="menu_Change">Perubahan</string>
+    <string name="menu_ChangePassphrase">Ubah Passphrase</string>
+    <string name="menu_CreateNew">Buat New</string>
+    <string name="menu_delete">Hapus</string>
+    <string name="menu_deleteThread">Hapus Thread \'%s\'</string>
+    <string name="menu_Details">Lihat Detail</string>
+    <string name="menu_DownloadDirectory">Ambil Directory</string>
+    <string name="menu_Edit">Sunting</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_Help">Membantu</string>
+    <string name="menu_Introduction">Pengantar</string>
+    <string name="menu_License">Lisensi</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_messageCopyText">Copy Teks</string>
+    <string name="menu_messageForward">Depan</string>
+    <string name="menu_Remove">Menghapus</string>
+    <string name="menu_SelectShareApp">Kirim Aplikasi</string>
+    <string name="menu_sendFeedback">Beri Tanggapan</string>
+    <string name="menu_SendUpdate">Kirim pembaruan</string>
+    <string name="menu_Settings">Pengaturan</string>
+    <string name="menu_ShowTutorial">Tampilkan Tutorial</string>
+    <string name="menu_TagComposeMessage">Menyusun</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">Pesan</string>
+    <string name="menu_UseAnother">Gunakan lain</string>
+
+    <string name="prog_CollectingOthersCommitVerify">menunggu verifikasi dari semua anggota…</string>
+    <string name="prog_CollectingOthersItems">menunggu untuk semua pengguna untuk bergabung…</string>
+    <string name="prog_ConstructingGroupKey">membangun kunci grup…</string>
+    <string name="prog_decrypting">mendekripsi…</string>
+    <string name="prog_encrypting">mengenkripsi…</string>
+    <string name="prog_FileSent">pesan terkirim, menunggu tanggapan…</string>
+    <string name="prog_findingKey">kunci menemukan…</string>
+    <string name="prog_GeneratingKey">kunci menghasilkan, ini bisa memakan waktu cukup lama…</string>
+    <string name="prog_generatingSignature">menghasilkan tanda tangan…</string>
+    <string name="prog_loadingContent">memuat konten…</string>
+    <string name="prog_ReceivingFile">menerima file yang dienkripsi…</string>
+    <string name="prog_RequestingFile">meminta file yang dienkripsi…</string>
+    <string name="prog_RequestingMessage">meminta pesan terenkripsi…</string>
+    <string name="prog_RequestingPushReg">meminta mendorong pendaftaran…</string>
+    <string name="prog_RequestingUserId">meminta keanggotaan…</string>
+    <string name="prog_SavingContactsToAddressBook">buku alamat memperbarui…</string>
+    <string name="prog_SavingContactsToKeyDatabase">memperbarui basis data kunci…</string>
+    <string name="prog_SearchingForBackup">mencari cadangan…</string>
+    <string name="prog_SendingFile">mengirimkan dienkripsi %s…</string>
+    <string name="prog_verifyingIntegrity">memverifikasi integritas…</string>
+    <string name="prog_verifyingSignature">memverifikasi tanda tangan…</string>
+
+    <string name="section_advanced">Maju</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">Umum</string>
+
+    <string name="state_BackupRestored">Backup dipulihkan.</string>
+    <string name="state_FileDeleted">Dihapus %s berkas.</string>
+    <string name="state_FileSent">Pesan terkirim.</string>
+    <string name="state_MessageSavedAsDraft">Pesan disimpan sebagai draf.</string>
+    <string name="state_MessagesDeleted">%d pesan dihapus.</string>
+    <string name="state_PassphraseUpdated">Passphrase diperbarui.</string>
+    <string name="state_RecipientsDeleted">%d penerima dihapus.</string>
+    <string name="state_SomeContactsImported">Kontak %s impor.</string>
+    <string name="state_TextCopiedToClipboard">Teks disalin ke clipboard.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger dirancang untuk dengan mudah berbagi data identitas, secara langsung atau melalui telepon, dikonfirmasi, swasta, dan utuh. Setiap orang yang Anda berbagi dengan menciptakan saluran aman end-to-end untuk mengirim pesan.\n\nFitur:\n- Mudah bertukar informasi kontak dengan orang lain\n- Aman sling teks, foto, apa saja!\n- kriptografi yang kuat melindungi informasi Anda\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Bahasa yang disediakan oleh:</string>
+    <string name="text_Requirements">Persyaratan:\n1. Harus diinstal pada minimal 2 perangkat.\n2. Koneksi Internet harus aktif.</string>
+    <string name="text_ShortPromotion">Kontak Aman sling, teks, foto, apa saja!</string>
+
+    <string name="title_About">Tentang</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_ChooseDirectory">Pilih Directory</string>
+    <string name="title_ChooseFileLoad">Pilih Lampiran Anda</string>
+    <string name="title_comments">Komentar/Pertanyaan</string>
+    <string name="title_Error">Kesalahan</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys Asisten</string>
+    <string name="title_FileOptions">Lampiran Pilihan</string>
+    <string name="title_find">Pengaturan</string>
+    <string name="title_home">Mulailah Bursa</string>
+    <string name="title_HomePanel">Rumah</string>
+    <string name="title_MessageDetail">Pesan</string>
+    <string name="title_Messages">Pesan</string>
+    <string name="title_MyIdentity">Identitas saya</string>
+    <string name="title_NotifyFileAvailable">Pesan SafeSlinger Tersedia</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Pesan Tersedia</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Penerima</string>
+    <string name="title_Question">Pertanyaan</string>
+    <string name="title_RecipientDetail">Penerima Detil</string>
+    <string name="title_save">Akhir Bursa</string>
+    <string name="title_SaveFileAs">Simpan File Sebagai</string>
+    <string name="title_SecureIntroduction">Pendahuluan aman</string>
+    <string name="title_SecureIntroductionInvite">Aman Pendahuluan Undangan!</string>
+    <string name="title_SelectSource">Mengirim Options:</string>
+    <string name="title_SendFile">Mengirim</string>
+    <string name="title_sharingfolder">Berbagi Folder</string>
+    <string name="title_size">Berapa banyak pengguna di bursa?</string>
+    <string name="title_soundrecoder">Perekam suara</string>
+    <string name="title_TextInviteMsg">SafeSlinger Undangan</string>
+    <string name="title_Threads">Threads</string>
+    <string name="title_userid">Pengelompokan</string>
+    <string name="title_verify">Memeriksa</string>
+    <string name="title_Warn">Peringatan</string>
+
+</resources>

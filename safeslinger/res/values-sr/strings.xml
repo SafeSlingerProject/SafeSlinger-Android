@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Пошаљи позвати везу са…</string>
+    <string name="action_ViewFile">Погледај %s са…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Бацкуп је онемогућен. Да ли желите да прилагодите поставке бацкуп и задржати овај подсетник?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s има новију уређај или тастер, да ли сте сигурни да желите да користите ову старију један?</string>
+    <string name="ask_FileExistsOverwrite">Име датотеке %s већ постоји. Оверврите?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Без Гоогле налог можете само да ће бити у могућности да шаљете, примате поруке НЕ. Да ли желите да додате Гоогле налог?</string>
+    <string name="ask_QuitConfirmation">Куит? Да ли сте сигурни?</string>
+    <string name="ask_SendErrorData">Волели бисмо вашу помоћ побољшање SafeSlinger. Желите ли да аутоматски пошаље било какве грешке на нас?</string>
+
+    <string name="btn_Accept">Прихватити</string>
+    <string name="btn_BeginExchangeProximity">Бегин Екцханге</string>
+    <string name="btn_Cancel">Отказати</string>
+    <string name="btn_Close">Близу</string>
+    <string name="btn_Continue">Наставити</string>
+    <string name="btn_discard">Одбацити</string>
+    <string name="btn_Done">Готово</string>
+    <string name="btn_Exit">Излаз</string>
+    <string name="btn_Import">Увоз</string>
+    <string name="btn_Introduce">Увести</string>
+    <string name="btn_Match">Следећи</string>
+    <string name="btn_No">Не</string>
+    <string name="btn_NoMatch">Нема Победник</string>
+    <string name="btn_NotRemind">Заборавити</string>
+    <string name="btn_OK">у реду</string>
+    <string name="btn_Refuse">Одбити</string>
+    <string name="btn_Remind">Подсетити</string>
+    <string name="btn_Save">Сачувати</string>
+    <string name="btn_SelectFile">Додај прилог</string>
+    <string name="btn_SendFile">Послати</string>
+    <string name="btn_Yes">Да</string>
+
+    <string name="choice_10mins">10 минута</string>
+    <string name="choice_1hour">1 сат</string>
+    <string name="choice_1min">1 минут</string>
+    <string name="choice_20mins">20 минута</string>
+    <string name="choice_2hours">2 сата</string>
+    <string name="choice_3mins">3 минута</string>
+    <string name="choice_40mins">40 минута</string>
+    <string name="choice_4hours">4 сата</string>
+    <string name="choice_5mins">5 минута</string>
+    <string name="choice_8hours">8 сати</string>
+    <string name="choice_auto_storage">Уобичајено складиштење</string>
+    <string name="choice_external_storage">Спољни складиштење</string>
+    <string name="choice_internal_storage">Интерна складиштење</string>
+    <string name="choice_nolimit">Но Лимит</string>
+    <string name="choice_NumUsers">%d корисника</string>
+    <string name="choice_SaveDirectory">Сачувај Директоријум</string>
+    <string name="choice_SaveFile">Сачувајте датотеку</string>
+    <string name="choice_Up">Горе</string>
+
+    <string name="error_AllMembersMustUpgrade">Неки чланови користе старију верзију, сви чланови морају да користе најмање %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Сви чланови морају надоградњу, неки користе старије кључне формате.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Сви чланови морају надоградњу, неки користе старије формате регистрације пусх.</string>
+    <string name="error_AudioPlayerDecodeError">Аудио грешка декодирање играч.</string>
+    <string name="error_AudioPlayerError">Не могу да играм снимак.</string>
+    <string name="error_AudioRecorderEncodeError">Аудио рекордер кодирање грешка.</string>
+    <string name="error_AudioRecorderPermissionError">Микрофон дозвола потребна. Молимо идите на иОС поставке како бисте омогућили дозволе микрофон.</string>
+    <string name="error_BackupNotFound">Нема подршке за враћање.</string>
+    <string name="error_BackupNotSupportedDevice">Уређај не подржава враћање резервне копије.</string>
+    <string name="error_BadCopyProtectUpgrade">Због грешке у Андроид 4.1, имаћете деинсталирање и поново SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Је потребанГоогле налог. Молимо отворите менаџер налога и додате Гоогле налог.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Регистрација није оверена, покушајте поново касније ручно.</string>
+    <string name="error_C2DMRegInvalidSender">Регистрација није доступан за ову верзију, молимо вас да проверите ажурирану верзију.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Погрешан упис уређај са Гоогле. Овај уређај тренутно не подржава пусх порука.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Гурај регистрација сервис није доступан, заказивање поново за %d секунди.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Превише апликације су регистровани за Пусх. Молимо деинсталирате неке друге апликације и покушајте поново.</string>
+    <string name="error_CannotSendEmptyFile">Не можете послати празну прилог.</string>
+    <string name="error_CannotSendFilesOver">Не можете послати прилоге веће од %d бајтова у величини.</string>
+    <string name="error_CannotSendNullFile">Не могу послати нулл прилог.</string>
+    <string name="error_contactCreationFailure">Контакт стварање није успело.</string>
+    <string name="error_ContactInsertFailed">Контакт уметак није успело.</string>
+    <string name="error_ContactNameMissing">Овај контакт недостаје име, молимо Вас да измените.</string>
+    <string name="error_ContactNameMissing2">Овај контакт недостаје име, молим вас поново изаберите.</string>
+    <string name="error_ContactUpdateFailed">Контакт ажурирање није успело.</string>
+    <string name="error_CorrectYourInternetConnection">Интернет није доступан, проверите поставке.</string>
+    <string name="error_couldNotExtractPrivateKey">Није могуће извуче приватни кључ.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Екцханге тимеоут премашио. Почните размену поново.</string>
+    <string name="error_FeatureIsNotSupport">%1$s није подржан на %2$s у овом тренутку.</string>
+    <string name="error_FileSave">Није могуће сачувати %s.</string>
+    <string name="error_FileStorageUnavailable">Фајл складиштење није доступан.</string>
+    <string name="error_HttpCode">Сервер ХТТП грешка: %d</string>
+    <string name="error_InvalidCommitVerify">Нетачни подаци налазе у размени. Почните размену поново.</string>
+    <string name="error_InvalidCommonUserId">Унесите позитиван цео број.</string>
+    <string name="error_InvalidContactName">Потребна је важећа контакт име.</string>
+    <string name="error_InvalidIncomingMessage">Лош долазних порука формату.</string>
+    <string name="error_InvalidMsg">Лош формат поруке.</string>
+    <string name="error_InvalidRecipient">Неважећи прималац.</string>
+    <string name="error_LocalGroupCommitDiffer">Ви сте пријавили разлике у фразама. Почните размену поново.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Кључ вршњачко формат је неважећи.</string>
+    <string name="error_MessageSignatureVerificationFails">Провера потписа није успело.</string>
+    <string name="error_minPassphraseRequire">Пасспхрасес захтевају најмање %d карактера.</string>
+    <string name="error_MinUsersRequired">Најмање %d чланова морају да размењују податке.</string>
+    <string name="error_MissingNdk">SafeSlinger не открије подршку НДК на овом уређају, који је потребан.</string>
+    <string name="error_MoreDataThanUsers">Неочекивани подаци налазе у размени. Почните размену поново.</string>
+    <string name="error_MultipleSendNotSupported">Покушавате да пошаљете више ставки. У овом тренутку, само подржава слање SafeSlinger једну по једну ставку време.</string>
+    <string name="error_NoEmailAccount">Е-маил налог није намештаљка!</string>
+    <string name="error_noPassPhrase">Не приступну фразу ушао.</string>
+    <string name="error_NoWordListSelected">Морате да изаберете једну од фраза пре него што наставите.</string>
+    <string name="error_OtherGroupCommitDiffer">Неко је пријавио разлику у фразама. Почните размену поново.</string>
+    <string name="error_OutOfMemoryError">Меморија је сувише низак да заврши ову операцију.</string>
+    <string name="error_passPhrasesDoNotMatch">Пасспхрасес не подударају.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Прекорачили сте квоту за тај примаоца поруке. Покушајте поново касније.</string>
+    <string name="error_PushMsgInvalidRegistration">То прималац има недостаје или лош пуш регистрацију. Требало би да престану да шаљу поруке овог уређаја.</string>
+    <string name="error_PushMsgMessageNotFound">Порука истекао.</string>
+    <string name="error_PushMsgMessageTooBig">Порука је превелика. Смањите величину поруке.</string>
+    <string name="error_PushMsgNotRegistered">Пусх регистрација Тај примаоца више не важи. Прималац можда деинсталира СафеСлингер или искључен обавештења. Требало би да престану да шаљу поруке овог уређаја.</string>
+    <string name="error_PushMsgNotSucceed">Дошло је до грешке у комуникацији са воки обавештења услугу.</string>
+    <string name="error_PushMsgQuotaExceeded">Прекорачили сте квоту поруке за овај уређај. Покушајте поново касније.</string>
+    <string name="error_PushMsgServiceFail">Обавештење услуга није доступна овај пут. Покушајте да пошаљете поруку касније.</string>
+    <string name="error_RecoderError">Не можете да припремите аудио рекордер.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">За почетак, \' слинг Кључа\' са другог телефона у исто време.</string>
+    <string name="error_selectDataToSend">Треба прилога или текстуалну поруку послати.</string>
+    <string name="error_ServerAppMessage">Сервер Мессаге: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Сервер Мессаге: \'%s\'</string>
+    <string name="error_ServerNotResponding">Нема одговора од сервера.</string>
+    <string name="error_ShareFileDelError">Не можете да уклоните дељене датотеке.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Истекло чека неки чланови групе да додате податке.</string>
+    <string name="error_UnableFindPubKey">У немогућности да се подударају јавни кључ приватним кључем крипто провајдера.</string>
+    <string name="error_UnableToSaveMessageInDB">Није могуће сачувати у бази података поруку.</string>
+    <string name="error_UnableToSaveRecipientInDB">Није могуће сачувати у бази података примаоца.</string>
+    <string name="error_UnableToUpdateMessageInDB">Није могуће ажурирати базу података поруку.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Није могуће ажурирати базу података о примаоцу.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger грешка, молим вас поново.</string>
+    <string name="error_VcardParseFailure">Контакт подаци су неправилно форматирана.</string>
+    <string name="error_WebCancelledByUser">Корисник је отказао захтев сервера.</string>
+
+    <string name="help_find">Користите овај екран да бисте подесили своје име, телефон и е-маил за размену са другима. Додирните дугме \' Доне \' када завршите.</string>
+    <string name="help_home">За размену личних података, обезбедити сви корисници су у близини или на телефон. Дугме \' Бегин Берзе\' ће размењивати само проверене контакт податке.</string>
+    <string name="help_identity_menu">\n\nТакође можете променити личне податке о свом идентитету на овом екрану додиром на дугме са вашим именом. Ово ће приказати мени који вам омогућава да \' Измени \' свој контакт, \' Цреате нев\' контакт, или \' Користи још један\' контакт.</string>
+    <string name="help_Messages">Овај екран приказује све досадашње поруке и прилоге који су још увек доступни за преузимање.</string>
+    <string name="help_passphrase">Користите овај екран да се улогујете на апликацију са вашег пасфразу.</string>
+    <string name="help_PickRecip">Контакти са SafeSlinger тастери су овде приказани, изаберите један да пошаљете поруку.</string>
+    <string name="help_save">Када завршите,протокол ће открити листу личних података размењених. Изаберите контакте које желите да сачувате и притисните \'Увоз \'.</string>
+    <string name="help_SecureIntroduction">Овај екран омогућава вам да изаберете две особе које сте спојлером кључеве са раније да безбедно шаљу своје кључеве једни другима. Једноставно притисните \' Увести \' када спремна.</string>
+    <string name="help_Send">Овај екран омогућава вам да изаберете неке податке и примаоца да пошаље у. Једноставно притисните \' Пошаљи \' када спремна.</string>
+    <string name="help_size">Изаберите број људи који покушавају да размењују податке заједно и притисните \'ОК\'.</string>
+    <string name="help_userid">Овај број на овом екрану се користи да створи јединствену групу корисника. Прегледајте бројеве на свим корисничким екранима, онда сви корисници треба да унесете исти најмањи број и притисните \' ОК \'.</string>
+    <string name="help_verify">Сада, ви мора да одговара један од ових 3-речи фразе са свим корисницима. Сваки корисник мора изабрати исту заједничку фразу и притисните \' Нект \'.</string>
+
+    <string name="iOS_contactError">Контакти дозвола потребна. Молимо идите на иОС поставке како бисте омогућили Контакти дозволе.</string>
+    <string name="iOS_errorpushtoken">Регистрација Гурај недостаје.</string>
+    <string name="iOS_notificationError1">Обавештења дозвола потребна. Молимо идите на иОС поставке како бисте омогућили Обавештења дозволе.</string>
+    <string name="iOS_notificationError2">%s дозвола потребна. Молимо идите на иОС поставке како бисте омогућили Обавештења дозволе.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger није оптимизован за иОС 5.к уређаје. SafeSlinger захтева иОС 6 или више.</string>
+
+    <string name="label_ago">%s пре</string>
+    <string name="label_backupCompleteDate">Последњи Бацкуп Завршен</string>
+    <string name="label_backupRequestDate">Последњи Бацкуп Захтев</string>
+    <string name="label_backupURL">Бацкуп УРЛ адреса</string>
+    <string name="label_ClickForNMsgs">Додирните да прегледате своје поруке %d</string>
+    <string name="label_ComposeHint">Нова порука</string>
+    <string name="label_ContactEmail">Ваша е-маил</string>
+    <string name="label_ContactName">Ваше име</string>
+    <string name="label_ContactPhone">Ваш телефон</string>
+    <string name="label_days">%d дана</string>
+    <string name="label_Device">Уређај:</string>
+    <string name="label_DeviceInSendOnlyMode">Пошаљите само режим</string>
+    <string name="label_DisabledExchSourceKeyChange">Ваш кључ је променио: Слинг Кеис поново.</string>
+    <string name="label_Draft">НАЦРТ</string>
+    <string name="label_EnabledKeyFormatDeprecated">Кључна формату депрецатед: Слинг Кеис поново.</string>
+    <string name="label_exchanged">разменили</string>
+    <string name="label_expired">издахнут</string>
+    <string name="label_expires">истиче %s</string>
+    <string name="label_expiresIn">истиче у</string>
+    <string name="label_FileNameHint">Филе Наме</string>
+    <string name="label_FindInstruct">Молимо Вас да унесете своје личне податке. Ови подаци ће бити безбедно деле само са појединцима којима сте изабрали да га поделим са.</string>
+    <string name="label_FirstName">Име</string>
+    <string name="label_Home">Проверите ставке које желите да делите и додирните \' Бегин Екцханге \' када су други спремни да размене.</string>
+    <string name="label_hometag">Дом</string>
+    <string name="label_hours">%d сати</string>
+    <string name="label_iCloudEnable">СафеСлингер иЦлоуд је омогућен. Додирните дугме \' Доне \' када завршите.</string>
+    <string name="label_InstNoMessages">Нема порука. Можете послати поруку са \' Цомпосе Мессаге \' дугме на главном менију.</string>
+    <string name="label_InstNoMessagesAndroid">Нема порука. Можете послати поруку на картици \' Цомпосе \'.</string>
+    <string name="label_InstNoRecipients">Нема прималаца. Пронађи још SafeSlinger корисника близини и додирните картицу \' Слинг Кеис \' да деле кључеве.</string>
+    <string name="label_InstNoSharedFile">Не дели фајл. Повежите свој уређај са иТунес и превлачити фајлове на дељеном фолдеру.</string>
+    <string name="label_InstRecipients">Изаберите примаоца да пошаље поруку:</string>
+    <string name="label_InstSendInvite">Изаберите примаоце на безбедно увести:</string>
+    <string name="label_InstSharedFile">Изаберите датотеку да приложите:</string>
+    <string name="label_introduced">увео</string>
+    <string name="label_Key">Кључ:</string>
+    <string name="label_LastName">Презиме</string>
+    <string name="label_Me">Ме</string>
+    <string name="label_messageIntroduceNameToYou">Желео бих да представим %s вама.</string>
+    <string name="label_MeToSender">Ја (на %s):</string>
+    <string name="label_minutes">%d минута</string>
+    <string name="label_mobiletag">Мобилни</string>
+    <string name="label_MostRecentOnly">Најновије само</string>
+    <string name="label_MsgSendUpdate">Моји упдатед SafeSlinger акредитиви су везани.</string>
+    <string name="label_None">Ниједан</string>
+    <string name="label_NumericModeHint">Не-енглески</string>
+    <string name="label_numsharedfiles">%d датотеке на Схаре:</string>
+    <string name="label_OldThreads">Старе теме</string>
+    <string name="label_othertag">Други</string>
+    <string name="label_PassHintBackoff">Поново судити</string>
+    <string name="label_PassHintChange">Ажурирано фразу</string>
+    <string name="label_PassHintCreate">Направи Пасспхрасе</string>
+    <string name="label_PassHintEnter">Фразу</string>
+    <string name="label_PassHintRepeat">Поновите фразу</string>
+    <string name="label_passPhraseCacheTtl">Фразу кеш</string>
+    <string name="label_PassPhraseIsCached">Фразу Сачувано</string>
+    <string name="label_phoneOnly">телефон-само</string>
+    <string name="label_Photo">Фотографија</string>
+    <string name="label_PromptInstruct">Овај број се користи да створи јединствену групу корисника. Упореди, а затим унесите најмањи број међу свим корисницима.</string>
+    <string name="label_PublicKeyID">ИД кључа</string>
+    <string name="label_PushTokenID">Гурај Регистрација ИД</string>
+    <string name="label_ReceivedNItems">примио %d ставки</string>
+    <string name="label_RemindBackupDelay">Бацкуп Подсетник</string>
+    <string name="label_ReportedInactive">Пријављено неактиван %s.</string>
+    <string name="label_restoreCompleteDate">Последњи Ресторе Завршен</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger бекап одложено</string>
+    <string name="label_safeslingered">(SafeSlinger директну размену)</string>
+    <string name="label_SaveAccount">Сачувајте рачун</string>
+    <string name="label_SaveInstruct">Екцханге Цомплете! Изаберите податке чланице да сачувате у свој адресар:</string>
+    <string name="label_seconds">%d секунди</string>
+    <string name="label_selectLabel">Избор ознака</string>
+    <string name="label_SelectRecip">Изаберите примаоца</string>
+    <string name="label_sendErrorData">Сенд Дата еррор</string>
+    <string name="label_SendFrom">Из:</string>
+    <string name="label_SendTo">За:</string>
+    <string name="label_ShowHintAtLaunch">Покажите тог наговештаја следећи пут.</string>
+    <string name="label_step_1">Корак 1</string>
+    <string name="label_step_2">Корак 2</string>
+    <string name="label_step_3">Корак 3</string>
+    <string name="label_step_4">Корак 4</string>
+    <string name="label_step_5">Корак 5</string>
+    <string name="label_TapToDecryptFile">Додирните да дешифрује фајл</string>
+    <string name="label_TapToDecryptMessage">Додирните да дешифрује</string>
+    <string name="label_TapToDownloadFile">Додирните да бисте преузели датотеку</string>
+    <string name="label_TapToDownloadMessage">Додирните да бисте преузели поруку</string>
+    <string name="label_TapToOpenFile">Притисните да бисте отворили датотеку</string>
+    <string name="label_TapToResumeDraft">Додирните да бисте наставили поруку нацрт</string>
+    <string name="label_TapToSendCredentialUpdate">Додирните и задржите да бисте послали акредитива упдате.</string>
+    <string name="label_targetAccountLabel">Контакти налог</string>
+    <string name="label_TouchToConfigureBackupSettings">Можда евентуално омогућити СафеСлингер иЦлоуд бацкуп у иОС Сеттингс. Додирните дугме \' Доне \' када завршите.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Додирните да бисте конфигурисали поставке бацкуп.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Додирните да бисте конфигурисали поставке кеша тајмаут.</string>
+    <string name="label_undefinedTypeLabel">Непознат</string>
+    <string name="label_UnknownSender">Шифровани Сендер</string>
+    <string name="label_UserIdHint">Најнижи</string>
+    <string name="label_UserName">Корисничко име</string>
+    <string name="label_VerifyInstruct">Сви телефони мора да одговара један од 3-речи фразе. Упореди, а затим изабрати одговарајући израз.</string>
+    <string name="label_worktag">Рад</string>
+
+    <string name="menu_About">Око</string>
+    <string name="menu_Change">Промена</string>
+    <string name="menu_ChangePassphrase">Промена фразу</string>
+    <string name="menu_CreateNew">Цреате Нев</string>
+    <string name="menu_delete">Избрисати</string>
+    <string name="menu_deleteThread">Брисање тема \'%s\'</string>
+    <string name="menu_Details">Погледај Детаљ</string>
+    <string name="menu_DownloadDirectory">Довнлоад директоријум</string>
+    <string name="menu_Edit">Уреди</string>
+    <string name="menu_FileManager">Филе Манагер</string>
+    <string name="menu_Help">Упомоћ</string>
+    <string name="menu_Introduction">Увод</string>
+    <string name="menu_License">Лиценца</string>
+    <string name="menu_Logout">Одјава</string>
+    <string name="menu_messageCopyText">Копирање текста</string>
+    <string name="menu_messageForward">Напред</string>
+    <string name="menu_Remove">Уклонити</string>
+    <string name="menu_SelectShareApp">Пошаљи Пријаву</string>
+    <string name="menu_sendFeedback">Пошаљи повратну информацију</string>
+    <string name="menu_SendUpdate">Пошаљи Ажурирај</string>
+    <string name="menu_Settings">Подешавања</string>
+    <string name="menu_ShowTutorial">Покажи Водич</string>
+    <string name="menu_TagComposeMessage">Саставити</string>
+    <string name="menu_TagExchange">Слинг Тастери</string>
+    <string name="menu_TagListMessages">Поруке</string>
+    <string name="menu_UseAnother">Користите Други</string>
+
+    <string name="prog_CollectingOthersCommitVerify">чека верификацију од свих чланова…</string>
+    <string name="prog_CollectingOthersItems">чека свим корисницима да се придруже…</string>
+    <string name="prog_ConstructingGroupKey">изградње кључ групе…</string>
+    <string name="prog_decrypting">дешифровања…</string>
+    <string name="prog_encrypting">криптовање…</string>
+    <string name="prog_FileSent">порука послата, чека одговор…</string>
+    <string name="prog_findingKey">проналажење кључ…</string>
+    <string name="prog_GeneratingKey">генерисање кључ, то може да потраје…</string>
+    <string name="prog_generatingSignature">генерисање потписа…</string>
+    <string name="prog_loadingContent">учитавање садржаја…</string>
+    <string name="prog_ReceivingFile">прима шифровану датотеку…</string>
+    <string name="prog_RequestingFile">тражећи шифровану датотеку…</string>
+    <string name="prog_RequestingMessage">тражећи шифровану поруку…</string>
+    <string name="prog_RequestingPushReg">тражи пусх регистрацију…</string>
+    <string name="prog_RequestingUserId">тражи чланство…</string>
+    <string name="prog_SavingContactsToAddressBook">ажурирање адресар…</string>
+    <string name="prog_SavingContactsToKeyDatabase">ажурирање базе података кључну…</string>
+    <string name="prog_SearchingForBackup">у потрази за бацкуп…</string>
+    <string name="prog_SendingFile">слање шифровану %s…</string>
+    <string name="prog_verifyingIntegrity">проверу интегритета…</string>
+    <string name="prog_verifyingSignature">провере потписа…</string>
+
+    <string name="section_advanced">Напредан</string>
+    <string name="section_backup">Резерва</string>
+    <string name="section_general">Генерал</string>
+
+    <string name="state_BackupRestored">Бацкуп обновљена.</string>
+    <string name="state_FileDeleted">Избрисан фајл %s.</string>
+    <string name="state_FileSent">Порука је послата.</string>
+    <string name="state_MessageSavedAsDraft">Порука сачувана као нацрт.</string>
+    <string name="state_MessagesDeleted">%d порука бришу.</string>
+    <string name="state_PassphraseUpdated">Фразу ажуриран.</string>
+    <string name="state_RecipientsDeleted">%d прималаца избрисан.</string>
+    <string name="state_SomeContactsImported">%s контакти увезени.</string>
+    <string name="state_TextCopiedToClipboard">Текст копиран у клипборд.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger је дизајниран да се лако деле личне податке, лично или преко телефона, аутентичан, приватно, и нетакнут. Свака особа коју делите са ствара сигуран канал енд-то-енд за слање поруке.\n\nКарактеристике: - Лако\nразмењују информације о контакту са другима\n- Безбедно ремен текстови, фотографије, било шта!\n- Јака Криптографија штити ваше информације\n\nмаил: %2$s\nВеб: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Језици које пружа:</string>
+    <string name="text_Requirements">Захтеви:\n1. Мора бити инсталиран на минимум 2 уређаја.\n2.. Интернет конекција мора бити активна.</string>
+    <string name="text_ShortPromotion">Безбедно слинг контакти, текстови, фотографије, било шта!</string>
+
+    <string name="title_About">Око</string>
+    <string name="title_camera">Камера</string>
+    <string name="title_ChooseDirectory">Изаберите директоријум</string>
+    <string name="title_ChooseFileLoad">Изаберите Ваш прилог</string>
+    <string name="title_comments">Коментари/питања</string>
+    <string name="title_Error">Грешка</string>
+    <string name="title_ExchangeWalkthrough">Слинг Тастери асистент</string>
+    <string name="title_FileOptions">Аттацхмент опције</string>
+    <string name="title_find">Намештаљка</string>
+    <string name="title_home">Бегин Екцханге</string>
+    <string name="title_HomePanel">Дом</string>
+    <string name="title_MessageDetail">Порука</string>
+    <string name="title_Messages">Поруке</string>
+    <string name="title_MyIdentity">Мој идентитет</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Порука Доступно</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Поруке Доступне</string>
+    <string name="title_passphrase">Фразу</string>
+    <string name="title_photoalbum">Фото албума</string>
+    <string name="title_photolibary">Фото библиотека</string>
+    <string name="title_PickRecipient">Примаоци</string>
+    <string name="title_Question">Питање</string>
+    <string name="title_RecipientDetail">Прималац Детаљ</string>
+    <string name="title_save">Крај Екцханге</string>
+    <string name="title_SaveFileAs">Саве Филе Ас</string>
+    <string name="title_SecureIntroduction">Сигурна Увод</string>
+    <string name="title_SecureIntroductionInvite">Осигурајте Увод позив!</string>
+    <string name="title_SelectSource">Слање Опције:</string>
+    <string name="title_SendFile">Послати</string>
+    <string name="title_sharingfolder">Дељење директоријума</string>
+    <string name="title_size">Колико корисника у замену?</string>
+    <string name="title_soundrecoder">Соунд Рецордер</string>
+    <string name="title_TextInviteMsg">Позив SafeSlinger</string>
+    <string name="title_Threads">Теме</string>
+    <string name="title_userid">Груписање</string>
+    <string name="title_verify">Верификовати</string>
+    <string name="title_Warn">Упозорење</string>
+
+</resources>

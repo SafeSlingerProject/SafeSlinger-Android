@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Thumela ameme ukuxhumana nge…</string>
+    <string name="action_ViewFile">Buka %s nge…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup ikhubazekile. Ingabe ufuna ukulungisa izilungiselelo ubuye ugcine lokhu sikhumbuzo?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s has a idivaysi more yamuva noma esemqoka, ingabe uyaqiniseka ufuna ukusebenzisa lolu eyodwa osekhulile?</string>
+    <string name="ask_FileExistsOverwrite">Ifayela Igama %s selivele likhona. Ngaphezulu?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Ngaphandle Akhawunti ye-Google uyobe kuphela ukwazi ukuthumela, HHAYI thola imiyalezo. Ingabe ufuna ukufaka i- akhawunti ye-Google?</string>
+    <string name="ask_QuitConfirmation">Ukuyeka? Ingabe uyaqiniseka?</string>
+    <string name="ask_SendErrorData">Singathanda usizo lwakho ekuthuthukiseni SafeSlinger. Ungathanda ukuthumela ngokuzenzakalelayo noma yimaphi amaphutha kithi?</string>
+
+    <string name="btn_Accept">Yamukela</string>
+    <string name="btn_BeginExchangeProximity">Qala Exchange</string>
+    <string name="btn_Cancel">Khansela</string>
+    <string name="btn_Close">Vala</string>
+    <string name="btn_Continue">Qhubeka</string>
+    <string name="btn_discard">Lahla</string>
+    <string name="btn_Done">Done</string>
+    <string name="btn_Exit">Phuma</string>
+    <string name="btn_Import">Ukungenisa</string>
+    <string name="btn_Introduce">Ukwethula</string>
+    <string name="btn_Match">Next</string>
+    <string name="btn_No">No</string>
+    <string name="btn_NoMatch">Ayikho Match</string>
+    <string name="btn_NotRemind">Khohlwa</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Benqabe</string>
+    <string name="btn_Remind">Khumbuza</string>
+    <string name="btn_Save">Londoloza</string>
+    <string name="btn_SelectFile">Engeza Isinamathiseli</string>
+    <string name="btn_SendFile">Thumela</string>
+    <string name="btn_Yes">Yebo</string>
+
+    <string name="choice_10mins">10 imizuzu</string>
+    <string name="choice_1hour">1 ihora</string>
+    <string name="choice_1min">ngomzuzu 1</string>
+    <string name="choice_20mins">imizuzu 20</string>
+    <string name="choice_2hours">2 amahora</string>
+    <string name="choice_3mins">imizuzu 3</string>
+    <string name="choice_40mins">imizuzu 40</string>
+    <string name="choice_4hours">4 hours</string>
+    <string name="choice_5mins">amaminithi 5</string>
+    <string name="choice_8hours">8 hours</string>
+    <string name="choice_auto_storage">Okuzenzakalelayo Isitoreji</string>
+    <string name="choice_external_storage">Isitoreji lwangaphandle</string>
+    <string name="choice_internal_storage">Isitoreji sangaphakathi</string>
+    <string name="choice_nolimit">Ayikho Limit</string>
+    <string name="choice_NumUsers">abasebenzisi %d</string>
+    <string name="choice_SaveDirectory">Londoloza Directory</string>
+    <string name="choice_SaveFile">Yonga ifayela</string>
+    <string name="choice_Up">Up</string>
+
+    <string name="error_AllMembersMustUpgrade">Amanye amalungu basebenzisa inguqulo endala; wonke amalungu kumele okungenani isebenzise %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Wonke amalunga kufanele kuthuthukiswe, abanye besebenzisa izakhiwo key asebekhulile.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Wonke amalunga kufanele kuthuthukiswe, abanye besebenzisa omdala push lokubhalisa amafomethi.</string>
+    <string name="error_AudioPlayerDecodeError">Audio umdlali emagama Iphutha.</string>
+    <string name="error_AudioPlayerError">Iyehluleka ukudlala ukuqopha.</string>
+    <string name="error_AudioRecorderEncodeError">Audio rekhoda ukuqonda Iphutha.</string>
+    <string name="error_AudioRecorderPermissionError">Microphone imvume edingekayo. Sicela uye ku -iOS Izilungiselelo ukuvumela Microphone izimvume.</string>
+    <string name="error_BackupNotFound">Ayikho isipele ukubuyisela.</string>
+    <string name="error_BackupNotSupportedDevice">Idivayisi ayisekeli isipele buyisela.</string>
+    <string name="error_BadCopyProtectUpgrade">Ngenxa ungenwe ku Android 4.1, kuyomelwe khipha bese faka SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">I -akhawunti yakwa-Google liyadingeka. Sicela uvule imenenja akhawunti bese wengeza i-akhawunti ye-Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Ukubhalisa hhayi ugunyazwe, sicela uzame ngesandla kamuva.</string>
+    <string name="error_C2DMRegInvalidSender">Ukubhalisa akutholakali kulolu version, sicela uhlole i- version olusha.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Idivayisi ukubhaliswa engalungile ne Google. Le divaysi akakweseki push imiyalezo.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Ukubhalisa push service ayitholakali, ukuhlela uzame %d imizuzwana.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Izicelo eziningi Too babhaliselwa Push. Sicela ukhiphe ezinye izinhlelo zokusebenza kanye uzame.</string>
+    <string name="error_CannotSendEmptyFile">Awukwazi ukuthumela i okunamathiselwe angenalutho.</string>
+    <string name="error_CannotSendFilesOver">Awukwazi ukuthumela okunamathiselwe omkhulu kunoJohane %d bytes ngosayizi.</string>
+    <string name="error_CannotSendNullFile">Awukwazi ukuthumela i- okunamathiselwe null.</string>
+    <string name="error_contactCreationFailure">Indalo Imininingwane sehlulekile.</string>
+    <string name="error_ContactInsertFailed">Xhumana Faka sehlulekile.</string>
+    <string name="error_ContactNameMissing">Le contact ishoda igama, sicela hlela.</string>
+    <string name="error_ContactNameMissing2">Le contact ishoda igama, sicela reselect.</string>
+    <string name="error_ContactUpdateFailed">Xhumana update sehlulekile.</string>
+    <string name="error_CorrectYourInternetConnection">Internet ayitholakali, hlola izilungiselelo zakho.</string>
+    <string name="error_couldNotExtractPrivateKey">Wahluleka ukukhipha key kwangasese.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange siphelelwe yisikhathi sidluliwe. Qala i- exchange futhi.</string>
+    <string name="error_FeatureIsNotSupport">%1$s akuxhasiwe %2$s ngalesi sikhathi.</string>
+    <string name="error_FileSave">Ayikwazi ukulondoloza %s.</string>
+    <string name="error_FileStorageUnavailable">Isitoreji ifayela akutholakali.</string>
+    <string name="error_HttpCode">Iseva HTTP Iphutha: %d</string>
+    <string name="error_InvalidCommitVerify">Idatha engalungile okutholakala exchange. Qala i- exchange futhi.</string>
+    <string name="error_InvalidCommonUserId">Sicela ufake inamba oqondile.</string>
+    <string name="error_InvalidContactName">A contact Igama esemthethweni okudingekayo.</string>
+    <string name="error_InvalidIncomingMessage">Bad ozayo Umlayezo yohlelo.</string>
+    <string name="error_InvalidMsg">Umlayezo Bad yohlelo.</string>
+    <string name="error_InvalidRecipient">Umamukeli engavumelekile.</string>
+    <string name="error_LocalGroupCommitDiffer">Niye abika umehluko nemishwana. Qala i- exchange futhi.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">I untanga format key akuvumelekile.</string>
+    <string name="error_MessageSignatureVerificationFails">Ukuqinisekisa isignesha sehlulekile.</string>
+    <string name="error_minPassphraseRequire">Passphrases adinga abalingiswa okungenani %d.</string>
+    <string name="error_MinUsersRequired">Linanincane amalungu %d kudingeka ukushintshanisa kwedatha.</string>
+    <string name="error_MissingNdk">SafeSlinger akazange ukubona NDK ukwesekwa kule divayisi, okuyinto okulindeleke.</string>
+    <string name="error_MoreDataThanUsers">Idatha ezingalindelekile okutholakala exchange. Qala i- exchange futhi.</string>
+    <string name="error_MultipleSendNotSupported">Ozama ukuthumela izinto eziningi. Okwamanje, SafeSlinger isekela kuphela ukuthumela intwana eyodwa ngesikhathi.</string>
+    <string name="error_NoEmailAccount">Akhawunti ye-imeyli ayiwona isethaphu!</string>
+    <string name="error_noPassPhrase">Ayikho igama lokungena wangena.</string>
+    <string name="error_NoWordListSelected">Kumele ukhethe enye yezinto nemishwana ngaphambi kokuqhubeka.</string>
+    <string name="error_OtherGroupCommitDiffer">Othile kubike umehluko nemishwana. Qala i- exchange futhi.</string>
+    <string name="error_OutOfMemoryError">Memory iphansi kakhulu ukuqedela lo msebenzi.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases awafani.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Udlule quota umyalezo salokho umamukeli. Sicela uzame kamuva.</string>
+    <string name="error_PushMsgInvalidRegistration">Leyo umemukeli has a push registration abalahlekile noma embi. Kufanele bayeke ukuthumela imilayezo kule divayisi.</string>
+    <string name="error_PushMsgMessageNotFound">Umlayezo uphelelwe isikhathi.</string>
+    <string name="error_PushMsgMessageTooBig">Umlayezo likhulu kakhulu. Nciphisa usayizi kwesigijimi.</string>
+    <string name="error_PushMsgNotRegistered">Push yokubhalisa Lelo yomemukeli ayisavumelekile. Kungenzeka umamukeli ukukhishwa SafeSlinger noma ivaliwe izaziso. Kufanele bayeke ukuthumela imilayezo kule divayisi.</string>
+    <string name="error_PushMsgNotSucceed">Kuvele iphutha yokuxhumana service push isaziso.</string>
+    <string name="error_PushMsgQuotaExceeded">Udlule quota umlayezo kule divayisi. Sicela uzame kamuva.</string>
+    <string name="error_PushMsgServiceFail">Service Isaziso akutholakali sikhathi. Sicela uzame ukuthumela umyalezo kamuva.</string>
+    <string name="error_RecoderError">Awukwazi ukulungiselela le mibhalo audio.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Ukuqala, \' okokulengisa Keys \' nomunye Ifoni ngasikhathi sinye.</string>
+    <string name="error_selectDataToSend">Udinga okunamathiselwe noma umyalezo wombhalo ukuthumela.</string>
+    <string name="error_ServerAppMessage">Unolwazi wombiko: \' %s \'</string>
+    <string name="error_ServerAppMessageCStr">Unolwazi wombiko: \' %s \'</string>
+    <string name="error_ServerNotResponding">Ayikho impendulo kusuka kwiseva.</string>
+    <string name="error_ShareFileDelError">Iyehluleka ukususa ifayela ehlanganyelwe.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Ukuphela kwesikhathi elinde amanye amalungu group ukwengeza idatha.</string>
+    <string name="error_UnableFindPubKey">Bahlulwa key umphakathi ukuba Ikhi yangasese umhlinzeki mfihlo.</string>
+    <string name="error_UnableToSaveMessageInDB">Ayikwazi ukulondoloza kuze database umlayezo.</string>
+    <string name="error_UnableToSaveRecipientInDB">Ayikwazi ukulondoloza kuze database osinikwayo.</string>
+    <string name="error_UnableToUpdateMessageInDB">Ayikwazi ukubuyekeza database umlayezo.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Ayikwazi ukubuyekeza database kubani.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger iphutha, sicela uqale kabusha.</string>
+    <string name="error_VcardParseFailure">Idatha yothintana kwase ihlelwe ngokungesikho.</string>
+    <string name="error_WebCancelledByUser">Umsebenzisi lukhanseliwe isicelo iseva.</string>
+
+    <string name="help_find">Sebenzisa lesi sikrini ukuze usethe igama lakho, yocingo, kanye imeyili ukushintsha nabanye. Thepha inkinobho \' Kwenziw \' uma usuqedile.</string>
+    <string name="help_home">Ukushintshanisa ungubani idatha, ukuqinisekisa yonke abasebenzisi kukhona oseduze efonini. Inkinobho \' Qala Exchange \' kuyokwenza ukushintshanisa kuphela idatha yothintana kuhloliwe.</string>
+    <string name="help_identity_menu">\n\nUngase ushintshe idatha emayelana ubuwena kulolu esibukweni siqu evunyelwe kwi inkinobho negama lakho. Lokhu kuzokwenza babonisa yemenyu ukuvumela ukuba \' Hlela \' contact yakho, \' Yakha New \' contact, noma \' Sebenzisa Enye \' contact.</string>
+    <string name="help_Messages">Le screen ebonisa yonke imilayezo esidlule, nezinamathiselo ukuthi zisatholakala for thwebula.</string>
+    <string name="help_passphrase">Sebenzisa lesi sikrini ukuze ungene ku- isicelo igama lokungena sakho.</string>
+    <string name="help_PickRecip">Oxhumene nabo nge SafeSlinger okhiye ayaboniswa lapha, khetha eyodwa ukuthumela umlayezo wakho ku-.</string>
+    <string name="help_save">Lapho eqeda, protocol kuyokwembula uhlu idatha omazisi umklomelo. Khetha oxhumana nabo ofisa ugcine bese ucindezela \' Import \'.</string>
+    <string name="help_SecureIntroduction">Le screen ikuvumela ukuba ukhethe abantu ababili niye slung okhiye ne ngaphambi ukuze ngokuphepha athumele okhiye zabo komunye nomunye. Simply ucindezele \' Yetfula \' uma sikulungele.</string>
+    <string name="help_Send">Le screen ikuvumela ukuba ukhethe ezinye idatha kanye umemukeli ukuthumela. Simply ucindezele \' Thumela \' uma sikulungele.</string>
+    <string name="help_size">Khetha inamba zabantu zizama ukushintshanisa kwedatha ndawonye bese ucindezela \' OK \'.</string>
+    <string name="help_userid">Le nombolo kulesi sikrini kusetshenziswa ukwakha iqembu eliyingqayizivele abasebenzisi. Bukeza izinombolo kwi bonke abasebenzisi \' izikrini ke bonke abasebenzisi kumele faka inamba ephansi ofanayo bese ucindezela \' OK \'.</string>
+    <string name="help_verify">Manje, kufanele ifanelane enye yalezi imishwana 3 - izwi bonke abasebenzisi. Wonke umsebenzisi kufanele ukhethe ibinzana ezivamile efanayo, bese ucindezela \' Okulandelayo \'.</string>
+
+    <string name="iOS_contactError">Imvume Othintana nabo adingekayo. Sicela uye ku -iOS Izilungiselelo ukuvumela Oxhumana izimvume.</string>
+    <string name="iOS_errorpushtoken">Ukubhalisa push entulekayo.</string>
+    <string name="iOS_notificationError1">Izaziso imvume edingekayo. Sicela uye ku -iOS Izilungiselelo ukuvumela Izaziso izimvume.</string>
+    <string name="iOS_notificationError2">%s imvume edingekayo. Sicela uye ku -iOS Izilungiselelo ukuvumela Izaziso izimvume.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger is hhayi eliphezulu iOS 5.x amadivaysi. SafeSlinger idinga iOS 6 noma ngaphezulu.</string>
+
+    <string name="label_ago">%s edlule</string>
+    <string name="label_backupCompleteDate">Backup Last eqediwe</string>
+    <string name="label_backupRequestDate">Last Isicelo Backup</string>
+    <string name="label_backupURL">URL Backup</string>
+    <string name="label_ClickForNMsgs">Thinta ukubukeza imiyalezo yakho %d</string>
+    <string name="label_ComposeHint">Uqambe Umlayezo</string>
+    <string name="label_ContactEmail">Imeyili yakho</string>
+    <string name="label_ContactName">Igama Lakho</string>
+    <string name="label_ContactPhone">Hambayo Your</string>
+    <string name="label_days">days %d</string>
+    <string name="label_Device">Idivayisi:</string>
+    <string name="label_DeviceInSendOnlyMode">Imodi Thumela kuphela</string>
+    <string name="label_DisabledExchSourceKeyChange">Key wakho washintsha: okokulengisa Keys futhi.</string>
+    <string name="label_Draft">UHLAKA</string>
+    <string name="label_EnabledKeyFormatDeprecated">Format Key yehlile: okokulengisa Keys futhi.</string>
+    <string name="label_exchanged">benana</string>
+    <string name="label_expired">aphelelwe yisikhathi</string>
+    <string name="label_expires">yisikhathi %s</string>
+    <string name="label_expiresIn">yisikhathi ngo</string>
+    <string name="label_FileNameHint">Igama ifayela</string>
+    <string name="label_FindInstruct">Sicela ufake ulwazi lwakho lomuntu siqu. Le idatha kuyobe ngokuphepha kwabiwe ngabanye nobani okhetha nabantu.</string>
+    <string name="label_FirstName">Igama Lokuqala</string>
+    <string name="label_Home">Hlola izinto ufisa ukwabelana bese uthepha \' Qala Exchange \' lapho abanye bakulungele ukushintshanisa.</string>
+    <string name="label_hometag">Home</string>
+    <string name="label_hours">amahora %d</string>
+    <string name="label_iCloudEnable">SafeSlinger ICLOUD inikwe amandla. Thepha inkinobho \' Kwenziw \' uma usuqedile.</string>
+    <string name="label_InstNoMessages">Ayikho imiyalezo. Ungase athumele umyalezo ovela inkinobho \' Bhala Umlayezo \' on imenyu Ekhaya.</string>
+    <string name="label_InstNoMessagesAndroid">Ayikho imiyalezo. Ungase athumele umyalezo ovela \' Dala \' ithebhu.</string>
+    <string name="label_InstNoRecipients">Ayikho abamukeli. Thola olunye umsebenzisi SafeSlinger eseduze uthinte ithebhu \' okokulengisa Keys \' ukwabelana amakhi.</string>
+    <string name="label_InstNoSharedFile">Ifayela No okwabelwana. Xhuma idivayisi yakho ne iTunes kanye amafayela uhudule kuya ifolda ehlanganyelwe.</string>
+    <string name="label_InstRecipients">Khetha umamukeli ukuthumela umyalezo:</string>
+    <string name="label_InstSendInvite">Khetha abamukeli ukwethula ngokuphepha:</string>
+    <string name="label_InstSharedFile">Khetha ifayela ozolinamathisela:</string>
+    <string name="label_introduced">kwethulwa</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Igama Last</string>
+    <string name="label_Me">Me</string>
+    <string name="label_messageIntroduceNameToYou">Ngithanda ukwethula %s kuwe.</string>
+    <string name="label_MeToSender">Me ( kuya %s ):</string>
+    <string name="label_minutes">imizuzu %d</string>
+    <string name="label_mobiletag">Ehambayo</string>
+    <string name="label_MostRecentOnly">Iningi yamuva kuphela</string>
+    <string name="label_MsgSendUpdate">My ulwazi olusha SafeSlinger izifakazo Banamathele.</string>
+    <string name="label_None">None</string>
+    <string name="label_NumericModeHint">Non - English</string>
+    <string name="label_numsharedfiles">%d Amafayela ukuze Share:</string>
+    <string name="label_OldThreads">Old izindikimba</string>
+    <string name="label_othertag">Umphumela</string>
+    <string name="label_PassHintBackoff">Zama futhi</string>
+    <string name="label_PassHintChange">Igama lokungena Kubuyekeziwe</string>
+    <string name="label_PassHintCreate">Yakha igama lokungena</string>
+    <string name="label_PassHintEnter">Igama lokungena</string>
+    <string name="label_PassHintRepeat">Phinda igama lokungena</string>
+    <string name="label_passPhraseCacheTtl">Yehhovisi igama lokungena</string>
+    <string name="label_PassPhraseIsCached">Isibukezo igama lokungena</string>
+    <string name="label_phoneOnly">Ifoni kuphela</string>
+    <string name="label_Photo">Isithombe</string>
+    <string name="label_PromptInstruct">Le nombolo isetshenziswa ukudala iqembu eliyingqayizivele abasebenzisi. Qhathanisa, bese ufaka inombolo ephansi phakathi bonke abasebenzisi.</string>
+    <string name="label_PublicKeyID">ID Key</string>
+    <string name="label_PushTokenID">Push ID Ukubhalisa</string>
+    <string name="label_ReceivedNItems">wathola ayithemu %d</string>
+    <string name="label_RemindBackupDelay">Isikhumbuzi Backup</string>
+    <string name="label_ReportedInactive">Kubika %s abenzi lutho.</string>
+    <string name="label_restoreCompleteDate">Last Buyisela eqediwe</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger isipele imisiwe</string>
+    <string name="label_safeslingered">( SafeSlinger Direct Exchange )</string>
+    <string name="label_SaveAccount">Yonga akhawunti</string>
+    <string name="label_SaveInstruct">Exchange Qedela! Khetha ilungu idatha okusindisa kuze ibhuku lakho nekheli:</string>
+    <string name="label_seconds">%d imizuzwana</string>
+    <string name="label_selectLabel">Khetha ilebula</string>
+    <string name="label_SelectRecip">Khetha Ukuthola</string>
+    <string name="label_sendErrorData">Thumela Iphutha Idatha</string>
+    <string name="label_SendFrom">Kusuka:</string>
+    <string name="label_SendTo">To:</string>
+    <string name="label_ShowHintAtLaunch">Bonisa lokhu Icebo ngokuzayo.</string>
+    <string name="label_step_1">Isinyathelo 1</string>
+    <string name="label_step_2">Isinyathelo 2</string>
+    <string name="label_step_3">Isinyathelo 3</string>
+    <string name="label_step_4">Isinyathelo 4</string>
+    <string name="label_step_5">Isinyathelo 5</string>
+    <string name="label_TapToDecryptFile">Thinta ukususa ukubhala ifayela</string>
+    <string name="label_TapToDecryptMessage">Thepha ukuqaqa</string>
+    <string name="label_TapToDownloadFile">Thinta ukulanda ifayela</string>
+    <string name="label_TapToDownloadMessage">Thinta ukulanda umyalezo</string>
+    <string name="label_TapToOpenFile">Thinta ukuvula ifayela</string>
+    <string name="label_TapToResumeDraft">Thinta ukuze baqale umlayezo uhlaka</string>
+    <string name="label_TapToSendCredentialUpdate">Thepha bese uyabamba ukuthumela Update sokuqinisekisa.</string>
+    <string name="label_targetAccountLabel">Akhawunti oxhumana nabo</string>
+    <string name="label_TouchToConfigureBackupSettings">Ungase optionally vumela SafeSlinger ICLOUD isipele in iOS Settings. Thepha inkinobho \' Kwenziw \' uma usuqedile.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Thinta ukumisa izilungiselelo alondoloziwe.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Thinta ukulungisa isilondolozi izilungiselelo sokuvala.</string>
+    <string name="label_undefinedTypeLabel">Unknown</string>
+    <string name="label_UnknownSender">Othumele ibethelwe</string>
+    <string name="label_UserIdHint">Ephansi</string>
+    <string name="label_UserName">Igama lomsebenzisi</string>
+    <string name="label_VerifyInstruct">Zonke amafoni kufanele ifanelane omunye the imishwana 3- zwi. Qhathanisa, bese ukhethe ibinzana ofanayo.</string>
+    <string name="label_worktag">Emsebenzini</string>
+
+    <string name="menu_About">Mayelana</string>
+    <string name="menu_Change">Shintsha</string>
+    <string name="menu_ChangePassphrase">Shintsha igama lokungena</string>
+    <string name="menu_CreateNew">Yakha New</string>
+    <string name="menu_delete">Susa</string>
+    <string name="menu_deleteThread">Susa Thread \' %s \'</string>
+    <string name="menu_Details">Buka Imininingwane</string>
+    <string name="menu_DownloadDirectory">Download Directory</string>
+    <string name="menu_Edit">Hlela</string>
+    <string name="menu_FileManager">Imenenja yefayela</string>
+    <string name="menu_Help">Siza</string>
+    <string name="menu_Introduction">Isingeniso</string>
+    <string name="menu_License">License</string>
+    <string name="menu_Logout">Phuma</string>
+    <string name="menu_messageCopyText">Copy Text</string>
+    <string name="menu_messageForward">Phambili</string>
+    <string name="menu_Remove">Susa</string>
+    <string name="menu_SelectShareApp">Thumela Isicelo</string>
+    <string name="menu_sendFeedback">Thumela Impendulo</string>
+    <string name="menu_SendUpdate">Thumela Buyekeza</string>
+    <string name="menu_Settings">Izilungiselelo</string>
+    <string name="menu_ShowTutorial">Bonisa isifundo</string>
+    <string name="menu_TagComposeMessage">Uqambe</string>
+    <string name="menu_TagExchange">Okokulengisa Keys</string>
+    <string name="menu_TagListMessages">Imilayezo</string>
+    <string name="menu_UseAnother">Sebenzisa Enye</string>
+
+    <string name="prog_CollectingOthersCommitVerify">elinde ukuqinisekisa kuzo zonke amalungu…</string>
+    <string name="prog_CollectingOthersItems">elinde sonke abasebenzisi ukujoyina…</string>
+    <string name="prog_ConstructingGroupKey">ukwakhiwa key iqembu…</string>
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">ukubethela…</string>
+    <string name="prog_FileSent">Umlayezo wathumela, zilindele impendulo…</string>
+    <string name="prog_findingKey">ekutholeni key…</string>
+    <string name="prog_GeneratingKey">odala key, lokhu kungathatha isikhashana…</string>
+    <string name="prog_generatingSignature">odala isignesha…</string>
+    <string name="prog_loadingContent">ukulayisha wokuqukethwe…</string>
+    <string name="prog_ReceivingFile">kokuthola ifayela ezifihliwe…</string>
+    <string name="prog_RequestingFile">abacela ifayela ezifihliwe…</string>
+    <string name="prog_RequestingMessage">abacela umlayezo ezifihliwe…</string>
+    <string name="prog_RequestingPushReg">ecela ukubhalisa push…</string>
+    <string name="prog_RequestingUserId">becela ubulungu…</string>
+    <string name="prog_SavingContactsToAddressBook">ibhuku lamakheli Iyabuyekeza…</string>
+    <string name="prog_SavingContactsToKeyDatabase">nokubuyekeza database key…</string>
+    <string name="prog_SearchingForBackup">sifuna isipele…</string>
+    <string name="prog_SendingFile">ukuthumela %s ezifihliwe…</string>
+    <string name="prog_verifyingIntegrity">ekuqinisekiseni ubuqotho…</string>
+    <string name="prog_verifyingSignature">ekuqinisekiseni isignesha…</string>
+
+    <string name="section_advanced">Okuthuthukisiwe</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">General</string>
+
+    <string name="state_BackupRestored">Backup elibuyiselwe.</string>
+    <string name="state_FileDeleted">Esusiwe ifayela %s.</string>
+    <string name="state_FileSent">Umlayezo kuthunyelwe.</string>
+    <string name="state_MessageSavedAsDraft">Umlayezo usindiswe njengoba uhlaka.</string>
+    <string name="state_MessagesDeleted">Imiyalezo %d ukusulwa.</string>
+    <string name="state_PassphraseUpdated">Igama lokungena olusha.</string>
+    <string name="state_RecipientsDeleted">%d abamukeli kuyasuswa.</string>
+    <string name="state_SomeContactsImported">%s othintana amazwe.</string>
+    <string name="state_TextCopiedToClipboard">Umbhalo ukopishwe ebhodini lokunamathisela.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger yenzelwe ukwabelana kalula omazisi idatha, ngesiqu noma ocingweni, ugunyazwe, ezizimele, futhi njengoba yayinjalo. Ngalinye umuntu usiza kwakha ekupheleni -to - ekupheleni wesiteshi ephephile ukuthumela imilayezo.\n\nIzici:\n- ukushintshanisa kalula Ukwaziswa ukuthintana nabanye\n- okokulengisa ngokuphepha imibhalo, izithombe, noma yini!\n- Lobhalomfihlo Strong evikela imininingwane yakho\n\nimeyili: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Izilimi kuhlinzekwe ngu:</string>
+    <string name="text_Requirements">Okudingekayo:\n1. Kumele ukufakwa okungenani Amadivayisi 2.\n2. Uxhumano Internet kufanele kube abakhuthele.</string>
+    <string name="text_ShortPromotion">Imibhalo ngokuphepha okokulengisa, izithombe, noma yini!</string>
+
+    <string name="title_About">Mayelana</string>
+    <string name="title_camera">Ikhamera</string>
+    <string name="title_ChooseDirectory">Khetha Directory</string>
+    <string name="title_ChooseFileLoad">Khetha uthando lwakho</string>
+    <string name="title_comments">Amazwana / Imibuzo</string>
+    <string name="title_Error">Iphutha</string>
+    <string name="title_ExchangeWalkthrough">Okokulengisa Keys Umsizi</string>
+    <string name="title_FileOptions">Izinketho okunamathiselwe</string>
+    <string name="title_find">Ukumisa</string>
+    <string name="title_home">Qala Exchange</string>
+    <string name="title_HomePanel">Home</string>
+    <string name="title_MessageDetail">Umlayezo</string>
+    <string name="title_Messages">Imilayezo</string>
+    <string name="title_MyIdentity">Identity My</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Isigijimi Kuyatholakala</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Imilayezo atholakalayo</string>
+    <string name="title_passphrase">Igama lokungena</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Abamukeli</string>
+    <string name="title_Question">Umbuzo</string>
+    <string name="title_RecipientDetail">Umamukeli Imininingwane</string>
+    <string name="title_save">End Exchange</string>
+    <string name="title_SaveFileAs">Yonga Ifayela Njengoba</string>
+    <string name="title_SecureIntroduction">Isingeniso Secure</string>
+    <string name="title_SecureIntroductionInvite">Lilondekile Isingeniso Isimemo!</string>
+    <string name="title_SelectSource">Ukuthumela Izinketho:</string>
+    <string name="title_SendFile">Thumela</string>
+    <string name="title_sharingfolder">Ukwabelana Ifolda</string>
+    <string name="title_size">Bangaki abasebenzisi kule exchange?</string>
+    <string name="title_soundrecoder">Rekhoda umsindo</string>
+    <string name="title_TextInviteMsg">SafeSlinger Isimemo</string>
+    <string name="title_Threads">Izindikimba</string>
+    <string name="title_userid">Yokwenza iqembu</string>
+    <string name="title_verify">Qinisekisa</string>
+    <string name="title_Warn">Isixwayiso</string>
+
+</resources>

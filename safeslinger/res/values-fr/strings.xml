@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Envoyer lien d\'invitation avec…</string>
+    <string name="action_ViewFile">Voir %s avec…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Nicolas Christin</string>
+
+    <string name="ask_BackupDisabledRemindLater">Sauvegarde est désactivée. Voulez-vous ajuster les paramètres de sauvegarde et de garder ce rappel?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s est un appareil plus récent ou sur la touche, êtes-vous sûr que vous voulez utiliser cette plus ancienne?</string>
+    <string name="ask_FileExistsOverwrite">Le fichier %s existe déjà. Écraser?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Sans un compte Google, vous ne serez en mesure d\'envoyer, de recevoir des messages. Voulez-vous ajouter un compte Google?</string>
+    <string name="ask_QuitConfirmation">Quitter? Êtes-vous sûr?</string>
+    <string name="ask_SendErrorData">Nous souhaiterions votre assistance afin d\'améliorer SafeSlinger. Acceptez-vous l\'envoi automatique des erreurs?</string>
+
+    <string name="btn_Accept">Accepter</string>
+    <string name="btn_BeginExchangeProximity">Commencer échange</string>
+    <string name="btn_Cancel">Annuler</string>
+    <string name="btn_Close">Fermer</string>
+    <string name="btn_Continue">Continuer</string>
+    <string name="btn_discard">Jeter</string>
+    <string name="btn_Done">Terminé</string>
+    <string name="btn_Exit">Sortir</string>
+    <string name="btn_Import">Importer</string>
+    <string name="btn_Introduce">Présenter</string>
+    <string name="btn_Match">Suivant</string>
+    <string name="btn_No">Non</string>
+    <string name="btn_NoMatch">Non trouvé</string>
+    <string name="btn_NotRemind">Oublier</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Refuser</string>
+    <string name="btn_Remind">Rappeler</string>
+    <string name="btn_Save">Enregistrer</string>
+    <string name="btn_SelectFile">Sélectionner Fichier</string>
+    <string name="btn_SendFile">Envoyer</string>
+    <string name="btn_Yes">Oui</string>
+
+    <string name="choice_10mins">10 minutes</string>
+    <string name="choice_1hour">1 heure</string>
+    <string name="choice_1min">1 minute</string>
+    <string name="choice_20mins">20 minutes</string>
+    <string name="choice_2hours">2 heures</string>
+    <string name="choice_3mins">3 minutes</string>
+    <string name="choice_40mins">40 minutes</string>
+    <string name="choice_4hours">4 heures</string>
+    <string name="choice_5mins">5 minutes</string>
+    <string name="choice_8hours">8 heures</string>
+    <string name="choice_auto_storage">Stockage par défaut</string>
+    <string name="choice_external_storage">Stockage externe</string>
+    <string name="choice_internal_storage">Stockage interne</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_NumUsers">%d utilisateurs</string>
+    <string name="choice_SaveDirectory">Sauvegarder la</string>
+    <string name="choice_SaveFile">Enregistrer le fichier</string>
+    <string name="choice_Up">Jusqu\'à</string>
+
+    <string name="error_AllMembersMustUpgrade">Certains membres utilisent une version ancienne, tous les membres doivent utiliser au minimum %s.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Tous les membres doivent mettre le logiciel à niveau, certains utilisent des anciens formats de clés.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tous les membres doivent mettre à niveau, certains utilisent les formats d\'enregistrement des poussoirs âgées.</string>
+    <string name="error_AudioPlayerDecodeError">Erreur de décodage-lecteur audio.</string>
+    <string name="error_AudioPlayerError">Impossible de jouer l\'enregistrement.</string>
+    <string name="error_AudioRecorderEncodeError">Erreur de codage-enregistreur audio.</string>
+    <string name="error_AudioRecorderPermissionError">Autorisation de microphone requis. S\'il vous plaît allez dans Paramètres iOS pour activer les autorisations de microphones.</string>
+    <string name="error_BackupNotFound">Pas de sauvegarde à restaurer.</string>
+    <string name="error_BackupNotSupportedDevice">Cet appareil ne permet pas la restauration de sauvegarde.</string>
+    <string name="error_BadCopyProtectUpgrade">En raison d\'un bogue dans Android 4.1, vous aurez désinstaller et réinstaller SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Un compte Google est nécessaire. Ouvrez le gestionnaire de compte, et ajoutez un compte Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Enregistrement non authentifié, s\'il vous plaît réessayer plus tard manuellement.</string>
+    <string name="error_C2DMRegInvalidSender">L\'inscription n\'est pas disponible pour cette version, veuillez consulter la version mise à jour.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">L\'enregistrement de cet appareil avec Google n\'est pas correct. Cet appareil ne prend pas en charge la messagerie push.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Le service d\'enregistrement push n\'est pas disponible, nouvel essai dans %d secondes.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Trop d\'applications sont enregistrées sur le service Push. Désinstallez d\'autres applications et réessayez.</string>
+    <string name="error_CannotSendEmptyFile">Impossible d\'envoyer un fichier vide.</string>
+    <string name="error_CannotSendFilesOver">Impossible d\'envoyer des fichiers de plus de %d octets.</string>
+    <string name="error_CannotSendNullFile">Impossible d\'envoyer un fichier vide.</string>
+    <string name="error_contactCreationFailure">La création de contact a échoué.</string>
+    <string name="error_ContactInsertFailed">L\'insertion de contact a échoué.</string>
+    <string name="error_ContactNameMissing">Nom absent dans ce contact, merci de le modifier.</string>
+    <string name="error_ContactNameMissing2">Nom absent dans ce contact, sélectionnez à nouveau.</string>
+    <string name="error_ContactUpdateFailed">La mise à jour du contact a échoué.</string>
+    <string name="error_CorrectYourInternetConnection">Internet n\'est pas disponible, vérifiez vos paramètres.</string>
+    <string name="error_couldNotExtractPrivateKey">Impossible d\'extraire la clé privée.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Bourse délai dépassé. Recommencez l\'échange.</string>
+    <string name="error_FeatureIsNotSupport">%1$s n\'est pas pris en charge sur %2$s à ce moment.</string>
+    <string name="error_FileSave">Impossible d\'enregistrer %s.</string>
+    <string name="error_FileStorageUnavailable">Stockage de fichiers n\'est pas disponible.</string>
+    <string name="error_HttpCode">Erreur serveur HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">Des données incorrectes trouvés en échange. Recommencez l\'échange.</string>
+    <string name="error_InvalidCommonUserId">Entrez un nombre entier positif.</string>
+    <string name="error_InvalidContactName">Un nom de contact valide est requis.</string>
+    <string name="error_InvalidIncomingMessage">Format de message reçu incorrect.</string>
+    <string name="error_InvalidMsg">Format de message incorrect.</string>
+    <string name="error_InvalidRecipient">Destinataire invalide.</string>
+    <string name="error_LocalGroupCommitDiffer">Vous avez fait état d\'une différence de phrases. Recommencez l\'échange.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Format invalide pour la clé du pair.</string>
+    <string name="error_MessageSignatureVerificationFails">Échec de vérification de signature.</string>
+    <string name="error_minPassphraseRequire">Passphrases besoin d\'au moins %d caractères.</string>
+    <string name="error_MinUsersRequired">Un minimum de %d membres est nécessaire pour échanger des données.</string>
+    <string name="error_MissingNdk">SafeSlinger n\'a pas détecté NDK appui sur ce dispositif, ce qui est nécessaire.</string>
+    <string name="error_MoreDataThanUsers">Données inattendues trouvés en échange. Recommencez l\'échange.</string>
+    <string name="error_MultipleSendNotSupported">Vous essayez d\'envoyer plusieurs éléments. SafeSlinger ne supporte pour l\'instant que l\'envoi d\'un élément à la fois.</string>
+    <string name="error_NoEmailAccount">Compte de messagerie n\'est pas configuré!</string>
+    <string name="error_noPassPhrase">Aucune phrase secrète entrée.</string>
+    <string name="error_NoWordListSelected">Vous devez sélectionner l\'une des phrases avant de poursuivre.</string>
+    <string name="error_OtherGroupCommitDiffer">Quelqu\'un a signalé une différence dans les phrases. Recommencez l\'échange.</string>
+    <string name="error_OutOfMemoryError">La mémoire est trop faible pour effectuer cette opération.</string>
+    <string name="error_passPhrasesDoNotMatch">Les phrases secrètes ne correspondent pas.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Vous avez dépassé le quota de messages pour ce destinataire. Réessayez ultérieurement.</string>
+    <string name="error_PushMsgInvalidRegistration">C\'est destinataire dispose d\'un enregistrement de poussée manquante ou défectueuse. Vous devriez arrêter d\'envoyer des messages à ce dispositif.</string>
+    <string name="error_PushMsgMessageNotFound">Le message d\'expiration.</string>
+    <string name="error_PushMsgMessageTooBig">Le message est trop volumineux. Réduisez la taille du message.</string>
+    <string name="error_PushMsgNotRegistered">L\'enregistrement de poussée de ce destinataire n\'est plus valide. Le destinataire peut avoir désinstallé SafeSlinger ou désactivé les notifications. Vous devriez arrêter d\'envoyer des messages à ce dispositif.</string>
+    <string name="error_PushMsgNotSucceed">Il ya eu une erreur de communication avec le service de notification push.</string>
+    <string name="error_PushMsgQuotaExceeded">Vous avez dépassé le quota de message pour cet appareil. Réessayez ultérieurement.</string>
+    <string name="error_PushMsgServiceFail">Service de notification n\'est pas disponible pour le moment. S\'il vous plaît essayez d\'envoyer le message plus tard.</string>
+    <string name="error_RecoderError">Impossible de préparer l\'enregistreur audio.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Pour commencer, \'Touches de Sling\' un autre téléphone en même temps.</string>
+    <string name="error_selectDataToSend">Vous avez besoin d\'un fichier ou d\'un texto à envoyer.</string>
+    <string name="error_ServerAppMessage">Message serveur: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Message serveur: \'%s\'</string>
+    <string name="error_ServerNotResponding">Le serveur n\'a pas répondu.</string>
+    <string name="error_ShareFileDelError">Impossible de supprimer le fichier partagé.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Le délai d\'attente donné aux membres du groupe pour ajouter des données a expiré.</string>
+    <string name="error_UnableFindPubKey">Impossible de faire correspondre la clé publique avec la clé privée dans le fournisseur crypto.</string>
+    <string name="error_UnableToSaveMessageInDB">Impossible d\'enregistrer la base de données du message.</string>
+    <string name="error_UnableToSaveRecipientInDB">Impossible d\'enregistrer la base de données destinataire.</string>
+    <string name="error_UnableToUpdateMessageInDB">Impossible de mettre à jour la base de données du message.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Impossible de mettre à jour la base de données destinataire.</string>
+    <string name="error_UncaughtExceptionOccured">Erreur SafeSlinger, redémarrez.</string>
+    <string name="error_VcardParseFailure">Les données de contact ont été formatés correctement.</string>
+    <string name="error_WebCancelledByUser">L\'utilisateur a annulé la demande du serveur.</string>
+
+    <string name="help_find">Utilisez cet écran pour configurer le nom, téléphone, et e-mail que vous souhaitez échanger. Appuyez sur le bouton \'Terminé\' lorsque vous avez terminé.</string>
+    <string name="help_home">Pour échanger des identités, assurez-vous que tous les utilisateurs se trouvent à proximité de leur téléphone. Le bouton \'Commencer échange\' échangera uniquement les contacts qui ont été cochés.</string>
+    <string name="help_identity_menu">\n\nVous Puissiez utile de modifier les données personnelles concernant votre identité sur cet écran en appuyant sur ​​le bouton avec votre nom. Cela permet d\'afficher un menu vous permettant de \'Edit\' votre contact, \'Créer un nouveau \'contact ou\' utiliser un autre \'contact.</string>
+    <string name="help_Messages">Cet écran affiche tous les anciens messages et les fichiers qui sont encore disponibles pour le téléchargement.</string>
+    <string name="help_passphrase">Utilisez cet écran pour vous connecter à l\'application avec votre mot de passe.</string>
+    <string name="help_PickRecip">Les contacts avec des clés SafeSlinger sont affichés ici, choisissez celui/celle à qui envoyer votre message.</string>
+    <string name="help_save">Lorsque vous avez terminé, le protocole va révéler une liste d\'identités échangées. Sélectionnez les contacts que vous souhaitez enregistrer et appuyez sur \'Importer\'.</string>
+    <string name="help_SecureIntroduction">Cet écran vous permet de sélectionner deux personnes avec qui vous avez échangé des clés auparavant pour qu\'elles s\'échangent leurs clés de manière sécurisée. Appuyez sur \'Présenter\' lorsque vous êtes prêt.</string>
+    <string name="help_Send">Cet écran vous permet de sélectionner des données et un destinataire. Appuyez sur \'Envoyer\' lorsque vous êtes prêt.</string>
+    <string name="help_size">Sélectionnez le nombre de personnes qui tentent d\'échanger des données ensemble et appuyez sur \'OK\'.</string>
+    <string name="help_userid">Le nombre sur cet écran est utilisé pour créer un groupe unique d\'utilisateurs. Passez en revue les chiffres présents sur les écrans de tous les utilisateurs. Tous les utilisateurs doivent saisir le même chiffre le plus bas et appuyer sur \'OK\'.</string>
+    <string name="help_verify">Maintenant, vous devez faire correspondre une de ces phrases de trois mots avec tous les utilisateurs. Chaque utilisateur doit sélectionner la même phrase commune, et appuyer sur \'Suivant\'.</string>
+
+    <string name="iOS_contactError">Contacts autorisation requise. S\'il vous plaît allez dans Paramètres iOS pour permettre les contacts autorisations.</string>
+    <string name="iOS_errorpushtoken">Enregistrement Push est manquant.</string>
+    <string name="iOS_notificationError1">Autorisation de notifications requises. S\'il vous plaît allez dans Paramètres iOS pour activer les autorisations de Notifications.</string>
+    <string name="iOS_notificationError2">Permission de %s requis. S\'il vous plaît allez dans Paramètres iOS pour activer les autorisations de Notifications.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger n\'est pas optimisé pour les appareils iOS 5.x. SafeSlinger nécessite iOS 6 ou plus.</string>
+
+    <string name="label_ago">Il y a %s</string>
+    <string name="label_backupCompleteDate">Dernière sauvegarde terminée</string>
+    <string name="label_backupRequestDate">Demande de la dernière sauvegarde</string>
+    <string name="label_backupURL">URL de sauvegarde</string>
+    <string name="label_ClickForNMsgs">Touchez pour revoir vos %d messages</string>
+    <string name="label_ComposeHint">Rédiger un message</string>
+    <string name="label_ContactEmail">Votre e-mail</string>
+    <string name="label_ContactName">Votre Nom</string>
+    <string name="label_ContactPhone">Votre téléphone</string>
+    <string name="label_days">%d jours</string>
+    <string name="label_Device">Appareil:</string>
+    <string name="label_DeviceInSendOnlyMode">Mode d\'envoi seulement</string>
+    <string name="label_DisabledExchSourceKeyChange">Votre clé a changé: Échangez les clés à nouveau.</string>
+    <string name="label_Draft">BROUILLON</string>
+    <string name="label_EnabledKeyFormatDeprecated">Format de clé obsolète: Échangez les clés à nouveau.</string>
+    <string name="label_exchanged">échangé(es)</string>
+    <string name="label_expired">expiré(es)</string>
+    <string name="label_expires">expire %s</string>
+    <string name="label_expiresIn">expire en</string>
+    <string name="label_FileNameHint">Nom du fichier</string>
+    <string name="label_FindInstruct">S\'il vous plaît entrer vos informations personnelles. Ces données ne seront partagées en toute sécurité avec les personnes qui vous choisissez de partager avec.</string>
+    <string name="label_FirstName">Prénom</string>
+    <string name="label_Home">Cochez les éléments que vous souhaitez partager et appuyez sur \'Commencer l\'échange\' quand les autres sont prêts à échanger.</string>
+    <string name="label_hometag">Domicile</string>
+    <string name="label_hours">%d heures</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud est activé. Appuyez sur le bouton «Terminé» lorsque vous avez terminé.</string>
+    <string name="label_InstNoMessages">Pas de messages. Vous pouvez envoyer un message à partir du bouton \'Rédiger un message\' dans le menu d\'accueil.</string>
+    <string name="label_InstNoMessagesAndroid">Pas de messages. Vous pouvez envoyer un message à partir de l\'onglet \'Composer\'.</string>
+    <string name="label_InstNoRecipients">Aucun destinataire. Trouver un autre utilisateur SafeSlinger à proximité et pressez l\'onglet \'Échanger clés\' pour partager les clés.</string>
+    <string name="label_InstNoSharedFile">Aucun fichier partagé. Connectez votre appareil avec iTunes et faites glisser les fichiers dans le dossier partagé.</string>
+    <string name="label_InstRecipients">Choisissez un destinataire à qui envoyer un message:</string>
+    <string name="label_InstSendInvite">Choisissez les destinataires à présenter l\'un à l\'autre en toute sécurité:</string>
+    <string name="label_InstSharedFile">Choisissez un fichier à joindre:</string>
+    <string name="label_introduced">présenté</string>
+    <string name="label_Key">Clé:</string>
+    <string name="label_LastName">Nom de famille</string>
+    <string name="label_Me">Moi</string>
+    <string name="label_messageIntroduceNameToYou">Je souhaite vous présenter %s.</string>
+    <string name="label_MeToSender">Moi (à %s):</string>
+    <string name="label_minutes">%d minutes</string>
+    <string name="label_mobiletag">Mobile</string>
+    <string name="label_MostRecentOnly">La plus récente seulement</string>
+    <string name="label_MsgSendUpdate">Mes qualifications de SafeSlinger mises à jour sont attachés.</string>
+    <string name="label_None">Aucun</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_numsharedfiles">%d Fichiers à partager:</string>
+    <string name="label_OldThreads">Vieux fils</string>
+    <string name="label_othertag">Autre</string>
+    <string name="label_PassHintBackoff">Réssayer</string>
+    <string name="label_PassHintChange">Mise à jour phrase secrète</string>
+    <string name="label_PassHintCreate">Créer phrase secrète</string>
+    <string name="label_PassHintEnter">Phrase secrète</string>
+    <string name="label_PassHintRepeat">Répétez phrase secrète</string>
+    <string name="label_passPhraseCacheTtl">Cache phrase secrète</string>
+    <string name="label_PassPhraseIsCached">Phrase de passe mis en cache</string>
+    <string name="label_phoneOnly">téléphone uniquement</string>
+    <string name="label_Photo">Photo</string>
+    <string name="label_PromptInstruct">Ce chiffre est utilisé pour créer un groupe unique d\'utilisateurs. Comparez, puis entrez le chiffre le plus bas parmi tous les utilisateurs.</string>
+    <string name="label_PublicKeyID">ID de clé</string>
+    <string name="label_PushTokenID">Poussez enregistrement ID</string>
+    <string name="label_ReceivedNItems">a reçu %d articles</string>
+    <string name="label_RemindBackupDelay">Rappel de sauvegarde</string>
+    <string name="label_ReportedInactive">Rapporté inactive %s.</string>
+    <string name="label_restoreCompleteDate">Dernière restauration terminé</string>
+    <string name="label_SafeSlingerBackupDelayed">Sauvegarde SafeSlinger retardée</string>
+    <string name="label_safeslingered">(SafeSlinger échange direct)</string>
+    <string name="label_SaveAccount">Enregistrer le compte</string>
+    <string name="label_SaveInstruct">Échange complet! Sélectionnez les données à enregistrer dans votre carnet d\'adresses:</string>
+    <string name="label_seconds">%d secondes</string>
+    <string name="label_selectLabel">Sélectionnez l\'étiquette</string>
+    <string name="label_SelectRecip">Sélectionnez le destinataire</string>
+    <string name="label_sendErrorData">Envoyer les données d\'erreur</string>
+    <string name="label_SendFrom">De:</string>
+    <string name="label_SendTo">Pour:</string>
+    <string name="label_ShowHintAtLaunch">Voir cette astuce la prochaine fois.</string>
+    <string name="label_step_1">Étape 1</string>
+    <string name="label_step_2">Étape 2</string>
+    <string name="label_step_3">Étape 3</string>
+    <string name="label_step_4">Étape 4</string>
+    <string name="label_step_5">Étape 5</string>
+    <string name="label_TapToDecryptFile">Appuyez pour décrypter le fichier</string>
+    <string name="label_TapToDecryptMessage">Appuyez pour décrypter</string>
+    <string name="label_TapToDownloadFile">Appuyez pour télécharger le fichier</string>
+    <string name="label_TapToDownloadMessage">Appuyez pour télécharger le message</string>
+    <string name="label_TapToOpenFile">Appuyez pour ouvrir le fichier</string>
+    <string name="label_TapToResumeDraft">Appuyez pour reprendre le brouillon de message</string>
+    <string name="label_TapToSendCredentialUpdate">Tapez et maintenez pour envoyer des mise à jour d\'informations d\'identification.</string>
+    <string name="label_targetAccountLabel">Comptes des contacts</string>
+    <string name="label_TouchToConfigureBackupSettings">Vous pouvez éventuellement activer SafeSlinger iCloud sauvegarde dans Réglages iOS. Appuyez sur le bouton «Terminé» lorsque vous avez terminé.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Appuyez pour configurer les paramètres de sauvegarde.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Touchez pour configurer les paramètres de délai de cache.</string>
+    <string name="label_undefinedTypeLabel">Inconnue</string>
+    <string name="label_UnknownSender">Expéditeur crypté</string>
+    <string name="label_UserIdHint">Le plus bas</string>
+    <string name="label_UserName">Nom d\'utilisateur</string>
+    <string name="label_VerifyInstruct">Tous les téléphones doivent correspondre à l\'une des phrases de 3 mots. Comparez, puis choisissez la phrase correspondante.</string>
+    <string name="label_worktag">Travail</string>
+
+    <string name="menu_About">À propos</string>
+    <string name="menu_Change">Changer</string>
+    <string name="menu_ChangePassphrase">Changer phrase secrète</string>
+    <string name="menu_CreateNew">Créer nouveau</string>
+    <string name="menu_delete">Supprimer</string>
+    <string name="menu_deleteThread">Supprimer discussion \'%s\'</string>
+    <string name="menu_Details">Voir détails</string>
+    <string name="menu_DownloadDirectory">Télécharger la</string>
+    <string name="menu_Edit">Éditer</string>
+    <string name="menu_FileManager">Gestionnaire de fichiers</string>
+    <string name="menu_Help">Aide</string>
+    <string name="menu_Introduction">Présentation</string>
+    <string name="menu_License">Licence</string>
+    <string name="menu_Logout">Déconnexion</string>
+    <string name="menu_messageCopyText">Copier le texte</string>
+    <string name="menu_messageForward">Vers l\'avant</string>
+    <string name="menu_Remove">Enlever</string>
+    <string name="menu_SelectShareApp">Envoyez la demande</string>
+    <string name="menu_sendFeedback">Envoyer un commentaire</string>
+    <string name="menu_SendUpdate">Envoyer à jour</string>
+    <string name="menu_Settings">Paramètres</string>
+    <string name="menu_ShowTutorial">Voir tutorial</string>
+    <string name="menu_TagComposeMessage">Composer</string>
+    <string name="menu_TagExchange">Échanger clés</string>
+    <string name="menu_TagListMessages">Messages</string>
+    <string name="menu_UseAnother">Utiliser un autre</string>
+
+    <string name="prog_CollectingOthersCommitVerify">en attente de vérification de tous les membres…</string>
+    <string name="prog_CollectingOthersItems">en attente de l\'arrivée de tous les utilisateurs…</string>
+    <string name="prog_ConstructingGroupKey">construction de la clé de groupe…</string>
+    <string name="prog_decrypting">décryptage…</string>
+    <string name="prog_encrypting">cryptage…</string>
+    <string name="prog_FileSent">message envoyé, en attente de la réponse…</string>
+    <string name="prog_findingKey">trouver la clé…</string>
+    <string name="prog_GeneratingKey">généraotion de la clé, cela peut prendre un certain temps…</string>
+    <string name="prog_generatingSignature">génération la signature…</string>
+    <string name="prog_loadingContent">chargement de contenu…</string>
+    <string name="prog_ReceivingFile">réception du fichier crypté…</string>
+    <string name="prog_RequestingFile">demande de fichier crypté…</string>
+    <string name="prog_RequestingMessage">demande de message crypté…</string>
+    <string name="prog_RequestingPushReg">demande d\'enregistrement poussoir…</string>
+    <string name="prog_RequestingUserId">demande d\'adhésion…</string>
+    <string name="prog_SavingContactsToAddressBook">mise à jour du carnet d\'adresses…</string>
+    <string name="prog_SavingContactsToKeyDatabase">mise à jour de la base de données des clés…</string>
+    <string name="prog_SearchingForBackup">recherche de la sauvegarde…</string>
+    <string name="prog_SendingFile">envoi crypté de %s…</string>
+    <string name="prog_verifyingIntegrity">vérification de l\'intégrité…</string>
+    <string name="prog_verifyingSignature">vérification de la signature…</string>
+
+    <string name="section_advanced">Avancé</string>
+    <string name="section_backup">Sauvegarde</string>
+    <string name="section_general">Général</string>
+
+    <string name="state_BackupRestored">Sauvegarde restaurée.</string>
+    <string name="state_FileDeleted">Fichier %s supprimé.</string>
+    <string name="state_FileSent">Message envoyé.</string>
+    <string name="state_MessageSavedAsDraft">Message enregistré comme brouillon.</string>
+    <string name="state_MessagesDeleted">%d messages supprimés.</string>
+    <string name="state_PassphraseUpdated">Phrase secrète mise à jour.</string>
+    <string name="state_RecipientsDeleted">%d destinataires supprimés.</string>
+    <string name="state_SomeContactsImported">%s contacts importés.</string>
+    <string name="state_TextCopiedToClipboard">Texte copié dans le presse-papiers.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger est conçu pour partager facilement des données authentifiées, privées et intactes, en personne ou par téléphone. Chaque personne que vous partagez avec crée un canal de bout en bout sécurisée pour envoyer des messages.\n\nCaractéristiques:\n- Échange facile de coordonnées\n- Échange sûr de textes, photos, ou autres!\n- Forte cryptographie pour protèger vos informations\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_LanguagesProvidedBy">Traductions fournies par:</string>
+    <string name="text_Requirements">Exigences:\n1. Doit être installé sur un minimum de 2 appareils.\n2. Une connexion Internet doit être active.</string>
+    <string name="text_ShortPromotion">Échange sûr de textes, photos, ou autres!</string>
+
+    <string name="title_About">À propos</string>
+    <string name="title_camera">Appareil photo</string>
+    <string name="title_ChooseDirectory">Choisir un répertoire</string>
+    <string name="title_ChooseFileLoad">Choisissez votre fichier</string>
+    <string name="title_comments">Commentaires/Questions</string>
+    <string name="title_Error">Erreur</string>
+    <string name="title_ExchangeWalkthrough">Assistant d\'échange de clés</string>
+    <string name="title_FileOptions">Options de fichier</string>
+    <string name="title_find">Installation</string>
+    <string name="title_home">Commencez échange</string>
+    <string name="title_HomePanel">Accueil</string>
+    <string name="title_MessageDetail">Message</string>
+    <string name="title_Messages">Messages</string>
+    <string name="title_MyIdentity">Mon identité</string>
+    <string name="title_NotifyFileAvailable">Message SafeSlinger disponible</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger messages disponibles</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Album photo</string>
+    <string name="title_photolibary">Bibliothèque photo</string>
+    <string name="title_PickRecipient">Destinataires</string>
+    <string name="title_Question">Question</string>
+    <string name="title_RecipientDetail">Détail destinataire</string>
+    <string name="title_save">Finir l\'échange</string>
+    <string name="title_SaveFileAs">Enregistrer le fichier sous</string>
+    <string name="title_SecureIntroduction">Présentation sécurisée</string>
+    <string name="title_SecureIntroductionInvite">Invitation à une présentation sécurisée!</string>
+    <string name="title_SelectSource">Options d\'envoi:</string>
+    <string name="title_SendFile">Envoyer</string>
+    <string name="title_sharingfolder">Dossier de partage</string>
+    <string name="title_size">Combien d\'utilisateurs dans l\'échange?</string>
+    <string name="title_soundrecoder">Enregistreur audio</string>
+    <string name="title_TextInviteMsg">Invitation SafeSlinger</string>
+    <string name="title_Threads">Discussions</string>
+    <string name="title_userid">Regroupement</string>
+    <string name="title_verify">Vérifier</string>
+    <string name="title_Warn">Avertissement</string>
+
+</resources>
