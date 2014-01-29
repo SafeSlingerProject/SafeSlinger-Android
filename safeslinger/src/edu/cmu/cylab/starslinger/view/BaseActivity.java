@@ -909,8 +909,7 @@ public class BaseActivity extends SherlockFragmentActivity {
         if (!CryptTools.existsSecretKey(getApplicationContext())) {
             // key not found, try migrating older version
             if (!CryptToolsLegacy.updateKeyFormatOld(getApplicationContext(), pass)) {
-                // unable to migrate old key
-                showNote(R.string.error_couldNotExtractPrivateKey);
+                // unable to migrate old key, just continue...
             }
         }
 
@@ -919,6 +918,9 @@ public class BaseActivity extends SherlockFragmentActivity {
             mine = CryptTools.getSecretKey(getApplicationContext(), changePass ? passOld : pass);
         } catch (IOException e) {
             e.printStackTrace(); // key not found
+            // The only valid reason to generate key is when it does not exist,
+            // when it should exist.
+            return false;
         } catch (ClassNotFoundException e) {
             e.printStackTrace(); // unable to deserialize same key format
             showNote(R.string.error_couldNotExtractPrivateKey);

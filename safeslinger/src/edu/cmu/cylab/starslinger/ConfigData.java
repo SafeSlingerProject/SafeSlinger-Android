@@ -223,6 +223,7 @@ public class ConfigData {
         public static final String TEXT_MESSAGE1 = "TextMessage1";
         public static final String TEXT_MESSAGE2 = "TextMessage2";
         public static final String THUMBNAIL = "Thumbnail";
+        public static final String VERIFY_PASS_PHRASE = "VerifyPassPhrase";
     }
 
     public static final String LOG_TAG = "AppLog";

@@ -25,6 +25,9 @@
 
 <resources>
 
+    <!-- screen label (match English casing); used in the Passphrase screen text box as a hint to confirm the current passphrase. -->
+    <string name="label_PassHintCurrent">Current Passphrase</string>
+
     <!-- button (title case); the I Agree button is paired with the Reject button to indicate user acceptance of a condition such as a license. NOTE: The license agreement itself is not localized. -->
     <string name="btn_Agree" translatable="false">I Agree</string>
     <!-- button (title case); the Refuse button is paired with the Accept button to indicate user refusal of a condition such as a license. NOTE: The license agreement itself is not localized. -->

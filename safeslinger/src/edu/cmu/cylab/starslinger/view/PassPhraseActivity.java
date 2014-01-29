@@ -61,6 +61,7 @@ public class PassPhraseActivity extends BaseActivity {
     private EditText mEditTextPassDone;
     private boolean mChangePassPhrase = false;
     private boolean mCreatePassPhrase = false;
+    private boolean mVerifyPassPhrase = false;
     private int mUserNumber = 0;
     private Handler mHandler;
     private final static int mMsPollInterval = 1000;
@@ -92,6 +93,7 @@ public class PassPhraseActivity extends BaseActivity {
         if (extras != null) {
             mCreatePassPhrase = extras.getBoolean(extra.CREATE_PASS_PHRASE);
             mChangePassPhrase = extras.getBoolean(extra.CHANGE_PASS_PHRASE);
+            mVerifyPassPhrase = extras.getBoolean(extra.VERIFY_PASS_PHRASE);
         }
 
         mTextViewVersion.setText(ConfigData.getVersionName(getApplicationContext()));
@@ -117,8 +119,11 @@ public class PassPhraseActivity extends BaseActivity {
             mEditTextPassDone.setHint(R.string.label_PassHintRepeat);
         } else {
             mEditTextPassNext.setVisibility(View.GONE);
-            mEditTextPassDone.setHint(R.string.label_PassHintEnter);
-
+            if (mVerifyPassPhrase) {
+                mEditTextPassDone.setHint(R.string.label_PassHintCurrent);
+            } else {
+                mEditTextPassDone.setHint(R.string.label_PassHintEnter);
+            }
             mHandler = new Handler();
             mHandler.removeCallbacks(checkBackoffRelease);
             mHandler.post(checkBackoffRelease);
@@ -247,6 +252,8 @@ public class PassPhraseActivity extends BaseActivity {
                 } else if (mChangePassPhrase) {
                     mEditTextPassNext.setVisibility(View.VISIBLE);
                     mEditTextPassDone.setHint(R.string.label_PassHintRepeat);
+                } else if (mVerifyPassPhrase) {
+                    mEditTextPassDone.setHint(R.string.label_PassHintCurrent);
                 } else {
                     mEditTextPassDone.setHint(R.string.label_PassHintEnter);
                 }

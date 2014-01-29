@@ -3204,6 +3204,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
         intent.putExtra(extra.CREATE_PASS_PHRASE, create);
         intent.putExtra(extra.CHANGE_PASS_PHRASE, change);
+        intent.putExtra(extra.VERIFY_PASS_PHRASE, false);
         int view = change ? VIEW_PASSPHRASE_CHANGE_ID : VIEW_PASSPHRASE_ID;
         startActivityForResult(intent, view);
         SafeSlinger.setPassphraseOpen(true);
@@ -3213,6 +3214,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
         intent.putExtra(extra.CREATE_PASS_PHRASE, false);
         intent.putExtra(extra.CHANGE_PASS_PHRASE, false);
+        intent.putExtra(extra.VERIFY_PASS_PHRASE, true);
         startActivityForResult(intent, VIEW_PASSPHRASE_VERIFY_ID);
         SafeSlinger.setPassphraseOpen(true);
     }

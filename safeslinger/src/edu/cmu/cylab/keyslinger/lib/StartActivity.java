@@ -182,10 +182,16 @@ public class StartActivity extends ContactActivity {
             // create a contact
             mContact = new ContactStruct();
             ContactStruct pref = new ContactStruct();
-            pref.name = new Name(mPreferredName);
-            pref.addPhone(mPreferredPhoneType, mPreferredPhone, null, true);
-            pref.addContactmethod(Contacts.KIND_EMAIL, mPreferredEmailType, mPreferredEmail, null,
-                    true);
+            if (!TextUtils.isEmpty(mPreferredName)) {
+                pref.name = new Name(mPreferredName);
+            }
+            if (!TextUtils.isEmpty(mPreferredPhone)) {
+                pref.addPhone(mPreferredPhoneType, mPreferredPhone, null, true);
+            }
+            if (!TextUtils.isEmpty(mPreferredEmail)) {
+                pref.addContactmethod(Contacts.KIND_EMAIL, mPreferredEmailType, mPreferredEmail,
+                        null, true);
+            }
             mContact = loadContactDataNoDuplicates(this, mContactLookupKey, pref, false);
 
             // add custom IMPP values directly from third-party...
