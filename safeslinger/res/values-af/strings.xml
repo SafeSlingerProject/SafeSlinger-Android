@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger is ontwerp om maklik te deel identiteit data, in persoon of oor die telefoon, bekragtig, private en ongeskonde. Elke persoon wat jy deel met skep van \'n veilige end-tot-end-kanaal boodskappe te stuur.\n\nKenmerke:\n- Maklik ruil kontak inligting met ander\n- veilig slinger tekste, foto\'s, niks!\n- Sterk kriptografie beskerm jou inligting\n\ne-pos: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Tale verskaf deur:</string>
     <string name="text_Requirements">Vereistes:\n1. Moet geïnstalleer word op \'n minimum van 2 toestelle.\n2. \'N internet konneksie moet aktief te wees.</string>
-    <string name="text_ShortPromotion">Veilig slinger kontakte, tekste, foto\'s, niks!</string>
 
     <string name="title_About">Oor</string>
     <string name="title_camera">Kamera</string>

@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger està dissenyat per compartir fàcilment les dades d\'identitat, en persona o per telèfon, autenticat, privat, i intacte. Cada persona amb la qual comparteixes amb crea un canal segur d\'extrem a extrem per enviar missatges.\n\nCaracterístiques:\n- Fàcil intercanvi d\'informació de contacte amb altres\n- profunda textos, fotos, qualsevol cosa amb seguretat!\n- Criptografia sòlida protegeix la vostra informació\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Idiomes proporcionades per:</string>
     <string name="text_Requirements">Requisits:\n1. Ha d\'instal · lar en un mínim de 2 dispositius.\n2. Una connexió a Internet ha d\'estar activa.</string>
-    <string name="text_ShortPromotion">Contactes de forma segura profunda, textos, fotos, qualsevol cosa!</string>
 
     <string name="title_About">Sobre</string>
     <string name="title_camera">Cambra</string>

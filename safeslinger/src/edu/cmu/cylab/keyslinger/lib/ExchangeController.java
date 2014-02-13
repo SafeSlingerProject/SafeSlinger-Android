@@ -106,6 +106,32 @@ public class ExchangeController {
         return false;
     }
 
+    private static int fibonacci(int n) {
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
+
+    public void doSleepBackoff(int attempt, long intervalStart, long totalStart)
+            throws InterruptedException {
+        // backoff poll the server using Fibonacci sequence
+        long now = System.currentTimeMillis();
+        long diffInterval = now - intervalStart;
+        long diffTotal = now - totalStart;
+        long msBackoff = fibonacci(attempt) * 1000;
+        if ((diffTotal + msBackoff) > KsConfig.MSSVR_TIMEOUT) {
+            // don't sleep past the max timeout
+            msBackoff = KsConfig.MSSVR_TIMEOUT - diffTotal;
+        }
+        if (diffInterval < msBackoff) {
+            Thread.sleep(msBackoff - diffInterval);
+        }
+    }
+
     public boolean doInitialize() {
         mErrMsg = null;
         mError = false;
@@ -213,9 +239,10 @@ public class ExchangeController {
             int commitRet = 0;
             boolean postCommit = true;
             long getCommitWait = System.currentTimeMillis();
-            int backoffPoll = KsConfig.MSSVR_POLL;
+            int attempt = 0;
             while (commitRet == 0) {
                 long intervalStart = System.currentTimeMillis();
+                attempt++;
 
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
@@ -247,16 +274,13 @@ public class ExchangeController {
                     commitRet = 1;
                 }
 
-                if (commitRet == 0) {
-                    long diff = System.currentTimeMillis() - intervalStart;
-                    backoffPoll = backoffPoll + 1; // linear wait
-                    if (diff < backoffPoll)
-                        Thread.sleep(backoffPoll - diff);
-                }
-
                 // make sure we aren't waiting forever
                 if ((System.currentTimeMillis() - getCommitWait) > KsConfig.MSSVR_TIMEOUT) {
                     return handleError(R.string.error_TimeoutWaitingForAllMembers);
+                }
+
+                if (commitRet == 0) {
+                    doSleepBackoff(attempt, intervalStart, getCommitWait);
                 }
             }
 
@@ -296,9 +320,10 @@ public class ExchangeController {
             int dataRet = 0;
             boolean postData = true;
             long getDataWait = System.currentTimeMillis();
-            int backoffPoll = KsConfig.MSSVR_POLL;
+            int attempt = 0;
             while (dataRet == 0) {
                 long intervalStart = System.currentTimeMillis();
+                attempt++;
 
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
@@ -330,16 +355,14 @@ public class ExchangeController {
                 } else if (mNumUsersData == mNumUsers) {
                     dataRet = 1;
                 }
-                if (dataRet == 0) {
-                    long diff = System.currentTimeMillis() - intervalStart;
-                    backoffPoll = backoffPoll + 1; // linear wait
-                    if (diff < backoffPoll)
-                        Thread.sleep(backoffPoll - diff);
-                }
 
                 // make sure we aren't waiting forever
                 if ((System.currentTimeMillis() - getDataWait) > KsConfig.MSSVR_TIMEOUT) {
                     return handleError(R.string.error_TimeoutWaitingForAllMembers);
+                }
+
+                if (dataRet == 0) {
+                    doSleepBackoff(attempt, intervalStart, getDataWait);
                 }
             }
 
@@ -440,9 +463,10 @@ public class ExchangeController {
 
             int dataRet = 0;
             long getSigsWait = System.currentTimeMillis();
-            int backoffPoll = KsConfig.MSSVR_POLL;
+            int attempt = 0;
             while (dataRet == 0) {
                 long intervalStart = System.currentTimeMillis();
+                attempt++;
 
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
@@ -456,16 +480,13 @@ public class ExchangeController {
                     dataRet = 1;
                 }
 
-                if (dataRet == 0) {
-                    long diff = System.currentTimeMillis() - intervalStart;
-                    backoffPoll = backoffPoll + 1; // linear wait
-                    if (diff < backoffPoll)
-                        Thread.sleep(backoffPoll - diff);
-                }
-
                 // make sure we aren't waiting forever
                 if ((System.currentTimeMillis() - getSigsWait) > KsConfig.MSSVR_TIMEOUT) {
                     return handleError(R.string.error_TimeoutWaitingForAllMembers);
+                }
+
+                if (dataRet == 0) {
+                    doSleepBackoff(attempt, intervalStart, getSigsWait);
                 }
             }
 
@@ -495,9 +516,10 @@ public class ExchangeController {
             int dataRet = 0;
             boolean postSig = true;
             long getSigsWait = System.currentTimeMillis();
-            int backoffPoll = KsConfig.MSSVR_POLL;
+            int attempt = 0;
             while (dataRet == 0) {
                 long intervalStart = System.currentTimeMillis();
+                attempt++;
 
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
@@ -525,16 +547,14 @@ public class ExchangeController {
                 } else if (mNumUsersSigs == mNumUsers) {
                     dataRet = 1;
                 }
-                if (dataRet == 0) {
-                    long diff = System.currentTimeMillis() - intervalStart;
-                    backoffPoll = backoffPoll + 1; // linear wait
-                    if (diff < backoffPoll)
-                        Thread.sleep(backoffPoll - diff);
-                }
 
                 // make sure we aren't waiting forever
                 if ((System.currentTimeMillis() - getSigsWait) > KsConfig.MSSVR_TIMEOUT) {
                     return handleError(R.string.error_TimeoutWaitingForAllMembers);
+                }
+
+                if (dataRet == 0) {
+                    doSleepBackoff(attempt, intervalStart, getSigsWait);
                 }
             }
 
@@ -577,9 +597,10 @@ public class ExchangeController {
             int curNodePos = 2;
             byte mynode[] = null;
             long getKeyNodesWait = System.currentTimeMillis();
-            int backoffPoll = KsConfig.MSSVR_POLL;
+            int attempt = 0;
             while (curNodePos < mNumUsers) {
                 long intervalStart = System.currentTimeMillis();
+                attempt++;
 
                 // can calculate node? then calc node.
                 if (pos < 2 || mynode != null) {
@@ -624,18 +645,15 @@ public class ExchangeController {
                     curNodePos++;
                 }
 
-                // "get" should poll with exponential backoff, "put" should post
-                // immediately, not wait...
-                if (pos >= 2 || mynode == null) {
-                    long diff = System.currentTimeMillis() - intervalStart;
-                    backoffPoll = backoffPoll + 1; // linear wait
-                    if (diff < backoffPoll)
-                        Thread.sleep(backoffPoll - diff);
-                }
-
                 // make sure we aren't waiting forever
                 if ((System.currentTimeMillis() - getKeyNodesWait) > KsConfig.MSSVR_TIMEOUT) {
                     return handleError(R.string.error_TimeoutWaitingForAllMembers);
+                }
+
+                // "get" should poll with exponential backoff, "put" should post
+                // immediately, not wait...
+                if (pos >= 2 || mynode == null) {
+                    doSleepBackoff(attempt, intervalStart, getKeyNodesWait);
                 }
             }
 
@@ -676,10 +694,11 @@ public class ExchangeController {
 
             int dataRet = 0;
             boolean postNonce = true;
-            long getSigsWait = System.currentTimeMillis();
-            int backoffPoll = KsConfig.MSSVR_POLL;
+            long getMatchNoncesWait = System.currentTimeMillis();
+            int attempt = 0;
             while (dataRet == 0) {
                 long intervalStart = System.currentTimeMillis();
+                attempt++;
 
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
@@ -707,16 +726,14 @@ public class ExchangeController {
                 } else if (mNumUsersMatchNonces == mNumUsers) {
                     dataRet = 1;
                 }
-                if (dataRet == 0) {
-                    long diff = System.currentTimeMillis() - intervalStart;
-                    backoffPoll = backoffPoll + 1; // linear wait
-                    if (diff < backoffPoll)
-                        Thread.sleep(backoffPoll - diff);
-                }
 
                 // make sure we aren't waiting forever
-                if ((System.currentTimeMillis() - getSigsWait) > KsConfig.MSSVR_TIMEOUT) {
+                if ((System.currentTimeMillis() - getMatchNoncesWait) > KsConfig.MSSVR_TIMEOUT) {
                     return handleError(R.string.error_TimeoutWaitingForAllMembers);
+                }
+
+                if (dataRet == 0) {
+                    doSleepBackoff(attempt, intervalStart, getMatchNoncesWait);
                 }
             }
 

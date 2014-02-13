@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger den identitate datuak erraz partekatzeko diseinatuta dago, pertsona edo telefonoz, autentifikatutako, pribatuak, eta oso-osorik. Partekatu egiten duzun pertsona bakoitzaren amaiera-to-end-kanal seguru baten mezuak bidaltzeko sortzen.\n\nEzaugarriak:\n- Erraz harremanetarako informazioa trukatzeko besteek\n- Segurtasunez testuak, argazkiak, ezer sling batera! %2$s\nweb:: %3$s\n- Strong kriptografia zure informazio\n\nemail babesten</string>
     <string name="text_LanguagesProvidedBy">Emandako hizkuntzak:</string>
     <string name="text_Requirements">Baldintzak:\n1. Behar 2 gailuak gutxienez instalatuta egon.\n2. Internet konexio bat aktibo egon behar du.</string>
-    <string name="text_ShortPromotion">Segurtasunez sling kontaktuak, testuak, argazkiak, ezer!</string>
 
     <string name="title_About">Buruz</string>
     <string name="title_camera">Kamara</string>

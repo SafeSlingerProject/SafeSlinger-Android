@@ -225,6 +225,7 @@
     <string name="label_PassHintBackoff">Réssayer</string>
     <string name="label_PassHintChange">Mise à jour phrase secrète</string>
     <string name="label_PassHintCreate">Créer phrase secrète</string>
+    <string name="label_PassHintCurrent">Phrase de passe actuel</string>
     <string name="label_PassHintEnter">Phrase secrète</string>
     <string name="label_PassHintRepeat">Répétez phrase secrète</string>
     <string name="label_passPhraseCacheTtl">Cache phrase secrète</string>
@@ -336,9 +337,16 @@
     <string name="state_TextCopiedToClipboard">Texte copié dans le presse-papiers.</string>
 
     <string name="text_About">%1$s\n\nSafeSlinger est conçu pour partager facilement des données authentifiées, privées et intactes, en personne ou par téléphone. Chaque personne que vous partagez avec crée un canal de bout en bout sécurisée pour envoyer des messages.\n\nCaractéristiques:\n- Échange facile de coordonnées\n- Échange sûr de textes, photos, ou autres!\n- Forte cryptographie pour protèger vos informations\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Échange</string>
+    <string name="text_KeywordIdentity">Identité</string>
+    <string name="text_KeywordKey">Clé</string>
+    <string name="text_KeywordMessaging">Messagerie</string>
+    <string name="text_KeywordPrivacy">Intimité</string>
+    <string name="text_KeywordSecurity">Sécurité</string>
     <string name="text_LanguagesProvidedBy">Traductions fournies par:</string>
+    <string name="text_RelatedSearchTerms">Termes reliés:</string>
     <string name="text_Requirements">Exigences:\n1. Doit être installé sur un minimum de 2 appareils.\n2. Une connexion Internet doit être active.</string>
-    <string name="text_ShortPromotion">Échange sûr de textes, photos, ou autres!</string>
+    <string name="text_WhatsNew">- Correctifs de stabilité.</string>
 
     <string name="title_About">À propos</string>
     <string name="title_camera">Appareil photo</string>

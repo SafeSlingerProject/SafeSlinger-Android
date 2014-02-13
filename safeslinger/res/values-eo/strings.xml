@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger estas desegnita por facile kunhavigi identeco datumoj, en persono aŭ super la telefono, aŭtentikigita, privata, kaj la disfalinta. Ĉiu persono vin konigi kun kreas sekura finon al ekstrema kanalo por sendi mesaĝojn.\n\nElstaraĵoj:\n- Facile interŝanĝi kontakto informon kun aliaj\n- sekure jxeti tekstojn, fotojn, nenion!\n- Strong ĉifriko protektas viajn informojn\n\nretadreso: %2$s\nretejon: %3$s</string>
     <string name="text_LanguagesProvidedBy">Lingvoj provizita per:</string>
     <string name="text_Requirements">Postuloj:\n1. Devas esti instalita sur minimumo de 2 aparatoj.\n2. Interreta konekto devas esti aktiva.</string>
-    <string name="text_ShortPromotion">Sekure jxeti kontaktoj, tekstoj, fotoj, nenion!</string>
 
     <string name="title_About">Pri</string>
     <string name="title_camera">Fotilo</string>

@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger ni iliyoundwa na kushiriki kwa urahisi data utambulisho, katika mtu au juu ya simu, kuthibitishwa, binafsi, na intact. Kila mtu kushiriki na inajenga salama hadi mwisho-mwisho channel kutuma ujumbe.\n\nSifa:\n- Urahisi kubadilishana mawasiliano ya habari na wengine\n- Salama kombeo maandiko, photos, kitu chochote!\n- Nguvu cryptography kulinda taarifa yako\n\nemail: %2$s\nmtandao: %3$s</string>
     <string name="text_LanguagesProvidedBy">Lugha zinazotolewa na:</string>
     <string name="text_Requirements">Mahitaji:\n1. Lazima kuwa imewekwa kwenye kiwango cha chini ya 2 vifaa.\n2. Uhusiano Internet lazima kuwa hai.</string>
-    <string name="text_ShortPromotion">Mawasiliano Salama kombeo, maandiko, photos, kitu chochote!</string>
 
     <string name="title_About">Kuhusu</string>
     <string name="title_camera">Camera</string>

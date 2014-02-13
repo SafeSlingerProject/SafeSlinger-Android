@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger przeznaczony jest do łatwego udostępniania danych identyfikacyjnych, osobiście lub przez telefon, uwierzytelnione, prywatne, i nienaruszone. Każda osoba, do dzielenia się z tworzy bezpieczny kanał end-to-end w celu wysłania wiadomości.\n\nCechy:\n- Łatwo wymienić informacje kontaktowe z innymi\n- Dokonaj procy teksty, zdjęcia, cokolwiek!\n- Silna kryptografia chroni dane\n\nmail: %2$s\ninternetowej: %3$s</string>
     <string name="text_LanguagesProvidedBy">Języki świadczone przez:</string>
     <string name="text_Requirements">Wymagania:\n1. Musi być zainstalowany na minimum 2 urządzeń.\n2. Internet musi być aktywny.</string>
-    <string name="text_ShortPromotion">Kontakt bezpiecznie Sling, teksty, zdjęcia, cokolwiek!</string>
 
     <string name="title_About">O</string>
     <string name="title_camera">Kamera</string>

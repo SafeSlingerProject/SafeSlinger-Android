@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger được thiết kế để dễ dàng chia sẻ dữ liệu nhận dạng, trực tiếp hoặc qua điện thoại, chứng thực, tư nhân, và nguyên vẹn. Mỗi người bạn chia sẻ với tạo ra một kênh end-to-end an toàn để gửi tin nhắn.\n\ntính năng:\n- Dễ dàng trao đổi thông tin liên lạc với những người khác\n- an toàn sling văn bản, hình ảnh, bất cứ điều gì!\n- mật mã mạnh mẽ bảo vệ thông tin của bạn\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Ngôn ngữ được cung cấp bởi:</string>
     <string name="text_Requirements">Yêu cầu:\n1. Phải được cài đặt trên tối thiểu là 2 thiết bị.\n2. Kết nối Internet phải được hoạt động.</string>
-    <string name="text_ShortPromotion">Địa chỉ liên lạc an toàn sling, văn bản, hình ảnh, bất cứ điều gì!</string>
 
     <string name="title_About">Về</string>
     <string name="title_camera">Máy ảnh</string>

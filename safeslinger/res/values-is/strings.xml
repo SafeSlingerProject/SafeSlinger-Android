@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger er hannað til auðveldlega deila sjálfsmynd gögn, í eigin persónu eða í gegnum síma, staðfest, einka, og ósnortinn. Hver einstaklingur sem þú deilir með skapar öruggt endir-til-endir rás til að senda skilaboð.\n\nFeatures:\n- Auðveldlega skiptast snerting upplýsingar með öðrum\n- Öruggur Sling textar, myndir, neitt!\n- Sterk dulmál ver þínar\n\nemail: %2$s\nvefur: %3$s</string>
     <string name="text_LanguagesProvidedBy">Tungumál veittar af:</string>
     <string name="text_Requirements">Kröfur:\n1. Verður að vera uppsett á amk 2 tæki.\n2. An Internet tenging þarf að vera virkt.</string>
-    <string name="text_ShortPromotion">Tryggilega Sling tengiliði, texta, myndir, nokkuð!</string>
 
     <string name="title_About">Um</string>
     <string name="title_camera">Myndavél</string>

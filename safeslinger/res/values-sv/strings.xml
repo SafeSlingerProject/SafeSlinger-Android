@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger är utformad för att enkelt dela identitetsdata, personligen eller via telefon, autentiserad, privat, och intakt. Varje person som du delar med skapar en säker end-to-end-kanal för att skicka meddelanden.\n\nFunktioner:\n- Lätt att utbyta kontaktinformation med andra\n- säkert sling texter, bilder, vad som helst!\n- Stark kryptering skyddar din information\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Språk som tillhandahålls av:</string>
     <string name="text_Requirements">Krav:\n1. Måste installeras på minst 2 enheter.\n2. En Internet-anslutning måste vara aktiv.</string>
-    <string name="text_ShortPromotion">Säkert slungar kontakter, texter, bilder, vad som helst!</string>
 
     <string name="title_About">Om</string>
     <string name="title_camera">Kamera</string>

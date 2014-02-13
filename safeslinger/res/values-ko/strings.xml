@@ -225,6 +225,7 @@
     <string name="label_PassHintBackoff">재시도</string>
     <string name="label_PassHintChange">암호 업데이트</string>
     <string name="label_PassHintCreate">암호 생성</string>
+    <string name="label_PassHintCurrent">현재 암호 구</string>
     <string name="label_PassHintEnter">암호</string>
     <string name="label_PassHintRepeat">암호 반복</string>
     <string name="label_passPhraseCacheTtl">구문 캐시 전달</string>
@@ -336,9 +337,16 @@
     <string name="state_TextCopiedToClipboard">텍스트 클립 보드로 복사됩니다.</string>
 
     <string name="text_About">%1$s\n\nSafeSlinger는 개인 간의 만남이나 전화를 통해 신뢰할 수 있는 신원정보를 쉽고 안전하게, 온전히 공유할 수 있도록 설계된 프로그램입니다. 당신과 함께 공유하는 각 사람은 메시지를 보낼 수있는 안전한 엔드-투-엔드 채널을 만듭니다.\n\n특징:\n- 다른 사람들과 연락처 정보를 쉽게 교환할 수 있습니다.\n- 텍스트나 사진을 포함한 어떤 파일이든 안전하게 전송하세요!\n- 강력한 암호를 통해 귀하의 정보를 보호합니다.\n\n이메일: %2$s\n웹사이트: %3$s</string>
+    <string name="text_KeywordExchange">교환</string>
+    <string name="text_KeywordIdentity">정체</string>
+    <string name="text_KeywordKey">키</string>
+    <string name="text_KeywordMessaging">메시징</string>
+    <string name="text_KeywordPrivacy">개인 정보 보호 정책</string>
+    <string name="text_KeywordSecurity">보안</string>
     <string name="text_LanguagesProvidedBy">언어 제공:</string>
+    <string name="text_RelatedSearchTerms">관련 검색어 :</string>
     <string name="text_Requirements">요구 사항:\n1. 2 장치의 최소에 설치되어 있어야합니다.\n2.인터넷 연결이 활성화되어 있어야합니다.</string>
-    <string name="text_ShortPromotion">텍스트나 사진을 포함한 어떤 파일이든 안전하게 전송하세요!</string>
+    <string name="text_WhatsNew">- 안정성 수정.</string>
 
     <string name="title_About">정보</string>
     <string name="title_camera">카메라</string>

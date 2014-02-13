@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger dirancang untuk dengan mudah berbagi data identitas, secara langsung atau melalui telepon, dikonfirmasi, swasta, dan utuh. Setiap orang yang Anda berbagi dengan menciptakan saluran aman end-to-end untuk mengirim pesan.\n\nFitur:\n- Mudah bertukar informasi kontak dengan orang lain\n- Aman sling teks, foto, apa saja!\n- kriptografi yang kuat melindungi informasi Anda\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Bahasa yang disediakan oleh:</string>
     <string name="text_Requirements">Persyaratan:\n1. Harus diinstal pada minimal 2 perangkat.\n2. Koneksi Internet harus aktif.</string>
-    <string name="text_ShortPromotion">Kontak Aman sling, teks, foto, apa saja!</string>
 
     <string name="title_About">Tentang</string>
     <string name="title_camera">Kamera</string>

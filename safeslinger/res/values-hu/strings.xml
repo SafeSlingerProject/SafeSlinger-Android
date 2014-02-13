@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger úgy tervezték, hogy könnyen megoszthatja az azonosítási adatokat, személyesen vagy telefonon keresztül, hitelesített, saját, és ép. Minden személy megosztani létrehoz egy biztonságos end-to-end csatorna üzeneteket küldeni.\n\nJellemzők:\n- Könnyen információcseréhez másokkal\n- Biztonságosan parittyával szövegek, fotók, semmit!\n- erős titkosítás védi az adatokat\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Nyelvek által:</string>
     <string name="text_Requirements">Elvárások:\n1.. Kell telepíteni minimum 2 eszközök.\n2.. Az Internet-kapcsolat aktívnak kell lennie.</string>
-    <string name="text_ShortPromotion">Biztonságosan parittyával névjegyek, szövegek, fotók, semmit!</string>
 
     <string name="title_About">Körülbelül</string>
     <string name="title_camera">Kamera</string>

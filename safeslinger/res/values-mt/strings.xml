@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger hija mfassla biex faċilment sehem data identità, personalment jew permezz tat-telefon, awtentikat, privati ​​, u intatt. Kull persuna int taqsam ma toħloq kanal sigur end-to-end biex jibagħtu messaġġi.\n\nKaratteristiċi:\n- Faċilment jiskambjaw informazzjoni ta \'kuntatt ma\' oħrajn\n- Sikur braga testi, ritratti, xejn!\n- kriptografija Strong tipproteġi l-informazzjoni tiegħek\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Lingwi pprovduti minn:</string>
     <string name="text_Requirements">Rekwiżiti:\n1. Għandu jiġi installat fuq minimu ta \' 2 apparati.\n2. Konnessjoni Internet għandhom ikunu attivi.</string>
-    <string name="text_ShortPromotion">Kuntatti sikur Braga, testi, ritratti, xejn!</string>
 
     <string name="title_About">Dwar</string>
     <string name="title_camera">Camera</string>

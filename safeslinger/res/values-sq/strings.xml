@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger është projektuar të lehtë të ndajnë të dhëna të identitetit, personalisht ose me telefon, vërtetuar, private, dhe të paprekur. Çdo person i ndani me të krijon një kanal të sigurtë fund-te-fund për të dërguar mesazhe.\n\nFeatures:\n- Easily shkëmbejnë informacionin e kontaktit me të tjerët\n- kėtu hobe tekste, fotografi, asgjë!\n- cryptography fortë mbron të dhënat tuaja\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Gjuhë të ofruara nga:</string>
     <string name="text_Requirements">Kërkesat:\n1. Duhet të jetë i instaluar në një minimum prej 2 pajisjeve.\n2. Një lidhje në Internet duhet të jetë aktive.</string>
-    <string name="text_ShortPromotion">Kontakte të sigurt hobe, tekste, foto, çdo gjë!</string>
 
     <string name="title_About">Për</string>
     <string name="title_camera">Aparat fotografik</string>

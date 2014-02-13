@@ -225,6 +225,7 @@
     <string name="label_PassHintBackoff">Повторить</string>
     <string name="label_PassHintChange">Секретная фраза обновлена</string>
     <string name="label_PassHintCreate">Создать секретную фразу</string>
+    <string name="label_PassHintCurrent">Текущий Ключевая фраза</string>
     <string name="label_PassHintEnter">Секретная фраза</string>
     <string name="label_PassHintRepeat">Повторите секретную фразу</string>
     <string name="label_passPhraseCacheTtl">Кэш секретной фразы</string>
@@ -336,9 +337,16 @@
     <string name="state_TextCopiedToClipboard">Текст скопирован в буфер обмена.</string>
 
     <string name="text_About">%1$s\n\nSafeSlinger предназначен для легкого обмена идентификационными данными, лично или по телефону, оставляя их приваными и неповрежденными. Каждый человек, которому вы поделиться с создает защищенный канал конца в конец, чтобы отправлять сообщения.\n\nОсобенности\n– Легкий обмен контактной информацией с другими\n- Надежно слинг тексты, фото, ничего!\n- Надежное шифрование защищает вашу информацию\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Обмен</string>
+    <string name="text_KeywordIdentity">Идентичность</string>
+    <string name="text_KeywordKey">Ключ</string>
+    <string name="text_KeywordMessaging">Сообщениями</string>
+    <string name="text_KeywordPrivacy">Конфиденциальность</string>
+    <string name="text_KeywordSecurity">Безопасность</string>
     <string name="text_LanguagesProvidedBy">Переводы предоставлены:</string>
+    <string name="text_RelatedSearchTerms">Связанные термины:</string>
     <string name="text_Requirements">Требования:\n1. Должен быть установлен на минимум 2 устройства.\n2. Интернет-соединение должно быть активным.</string>
-    <string name="text_ShortPromotion">Надежно слинг тексты, фото, ничего!</string>
+    <string name="text_WhatsNew">- Стабильность исправления.</string>
 
     <string name="title_About">О</string>
     <string name="title_camera">Камера</string>

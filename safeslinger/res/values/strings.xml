@@ -106,12 +106,6 @@
     <string name="label_Device">Device:</string>
     <!-- warning message (sentence case, period); message for dialog popups when a user still uses an old iOS device. iOS-only. -->
     <string name="iOS_oldOSWarn">SafeSlinger is not optimized for iOS 5.x devices. SafeSlinger requires iOS 6 or higher.</string>
-    <!-- application description (sentence case); used in the about box and app store listing to enumerate requirements. -->
-    <string name="text_Requirements">Requirements:\n1. Must be installed on a minimum of 2 devices.\n2. An Internet connection must be active.</string>
-    <!-- application description (sentence case); used in the app store listing to list related search terms to help users looking for secure key exchange and messaging. -->
-    <string name="text_RelatedSearchTerms" translatable="false">Related Terms: Safe, Slinger, Key, Exchange, Ad hoc, Messaging, Security, Identity, Privacy, WhatsApp, KakaoTalk, TextSecure, Threema, iMessage.</string>
-    <!-- application description (sentence case); used in the app store listing to for short promotional text. -->
-    <string name="text_ShortPromotion">Securely sling texts, photos, anything!</string>
     <!-- error message (sentence case, period); used to warn that a user did not have an email account when he/she tries to send out comments to administrator account. iOS-only. -->
     <string name="error_NoEmailAccount">Email account is not setup!</string>
     <!-- title (title case); used to denote the dialog for user to pickup sender source options. -->
@@ -289,7 +283,7 @@
     <!-- error message (sentence case, period); used to warn when the device hardware does not support restoration from backup. -->
     <string name="error_BackupNotSupportedDevice">Device does not support backup restore.</string>
     <!-- error message (sentence case, period); used to warn when unable to load native libraries due to a Google Play copy-protection bug, which can corrupt installations for users upgrading to Android 4.1. Android-only. -->
-    <string name="error_BadCopyProtectUpgrade">Due to a bug in Android 4.1, you will have uninstall and reinstall SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">Due to a bug in Android 4.1, you will have to uninstall and reinstall SafeSlinger.</string>
     <!-- error message (sentence case, period); used to warn when use attempts to attach an empty file to the message. -->
     <string name="error_CannotSendEmptyFile">Cannot send an empty attachment.</string>
     <!-- error message (sentence case, period); used to warn when the message and attachment (if any) exceed the current quota limits for the App Engine service we use. %d the maximum limit in bytes of the entire message plus attachments that the App Engine service will allow us to upload. -->
@@ -687,6 +681,40 @@
     <string name="text_About">%1$s\n\nSafeSlinger is designed to easily share identity data, in person or over the phone, authenticated, private, and intact. Each person you share with creates a secure end-to-end channel to send messages.\n\nFeatures:\n- Easily exchange contact information with others\n- Securely sling texts, photos, anything!\n- Strong cryptography protects your information\n\nemail: %2$s\nweb: %3$s</string>
     <!-- application description (sentence case); used at the end of the about dialog to list the translators of SafeSlinger. -->
     <string name="text_LanguagesProvidedBy">Languages provided by:</string>
+    <!-- application description (sentence case); used in the about box and app store listing to enumerate requirements. -->
+    <string name="text_Requirements">Requirements:\n1. Must be installed on a minimum of 2 devices.\n2. An Internet connection must be active.</string>
+    <!-- application description (sentence case); used in the app store listing to list related search terms to help users looking for secure key exchange and messaging. -->
+    <string name="text_RelatedSearchTerms">Related Terms:</string>
+    <!-- application description (sentence case); used to list what changes have been made to updated versions. -->
+    <string name="text_WhatsNew">- Stability fixes.</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordSafe" translatable="false">Safe</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordSlinger" translatable="false">Slinger</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordKey">Key</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordExchange">Exchange</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordAdHoc" translatable="false">ad hoc</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordMessaging">Messaging</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordSecurity">Security</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordIdentity">Identity</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordWhatsApp" translatable="false">WhatsApp</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordKakaoTalk" translatable="false">KakaoTalk</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordTextSecure" translatable="false">TextSecure</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordThreema" translatable="false">Threema</string>
+    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
+    <string name="text_KeywordIMessage" translatable="false">iMessage</string>
 
     <!-- title (title case); used as the -->
     <string name="title_About">About</string>

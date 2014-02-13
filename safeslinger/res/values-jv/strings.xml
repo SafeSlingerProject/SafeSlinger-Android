@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger dibangun kanggo gampang nuduhake ciri data, ing wong utawa liwat telpon, authenticated, swasta, lan utuh. Saben wong sing bareng karo nggawe sing aman mburi-kanggo-mburi saluran kanggo ngirim pesen.\n\nFitur:\n- Gampang ijolan informasi kontak karo wong\n- aman Sling teks, foto, tindakan!\n- Kuwat Cryptography nglindhungi informasi\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Basa sing diwenehake dening:</string>
     <string name="text_Requirements">Requirements:\n1. Kudu diinstal ing minimal 2 piranti.\n2. Sambungan Internet kudu aktif.</string>
-    <string name="text_ShortPromotion">Aman Sling kontak, teks, foto, tindakan!</string>
 
     <string name="title_About">Babagan</string>
     <string name="title_camera">Kamera</string>

@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger waxaa loogu talagalay inay si fudud u wadaagaan xogta aqoonsiga, in qof ama telefoon, lagana sugaa, kuwa gaarka ah, iyo dhawrsan. Qof kasta oo aad la wadaagto abuuraa qaab ammaan ah dhamaadka -ka- dhamaadka soo dirin fariimo.\n\nFeatures:\n- Si fudud, warbixin xiriirka dadka kale\n- sugan loo dhaadhacay wadhafka tuuristiisa qoraallada, photos, wax!\n- cryptography Strong difaacaa macluumaadkaaga\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Luqadaha bixisay by:</string>
     <string name="text_Requirements">Shuruudaha:\n1. Waa in lagu dhejiyaa on ugu yaraan 2 qalabka.\n2. Internet waa in ay ahaadaan kuwo firfircoon.</string>
-    <string name="text_ShortPromotion">Qoraallada sugan loo dhaadhacay wadhafka, photos, wax!</string>
 
     <string name="title_About">About</string>
     <string name="title_camera">Camera</string>

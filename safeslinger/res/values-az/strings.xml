@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger özəl, təsdiq, şəxsən və ya telefon, asanlıqla şəxsiyyət məlumatları bölüşmək üçün nəzərdə tutulmuşdur və bütöv olunur. Ilə bölüşmək hər bir şəxs mesaj göndərmək üçün təhlükəsiz son-to-end kanal yaradır.\n\nXüsusiyyətlər:\n- Asanlıqla başqaları Təhlükəsiz mətnlər, şəkillər, bir şey sapand\n- ilə əlaqə informasiya mübadiləsi! %2$s\nweb: %3$s\n- Güclü Kriptoqrafiya məlumat\n\nemail qoruyur</string>
     <string name="text_LanguagesProvidedBy">Tərəfindən təmin Dillər:</string>
     <string name="text_Requirements">Tələblər:\n1. 2 cihazlar minimum yüklü olmalıdır.\n2. İnternet bağlantısı aktiv olmalıdır.</string>
-    <string name="text_ShortPromotion">Təhlükəsiz sapand kontaktlar, mətnlər, şəkillər, bir şey!</string>
 
     <string name="title_About">Haqqında</string>
     <string name="title_camera">Kamera</string>

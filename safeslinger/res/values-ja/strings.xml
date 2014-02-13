@@ -225,6 +225,7 @@
     <string name="label_PassHintBackoff">リトライ</string>
     <string name="label_PassHintChange">パスフレーズの更新</string>
     <string name="label_PassHintCreate">パスフレーズを作成</string>
+    <string name="label_PassHintCurrent">現在のパスフレーズ</string>
     <string name="label_PassHintEnter">パスフレーズ</string>
     <string name="label_PassHintRepeat">パスフレーズの繰り返し</string>
     <string name="label_passPhraseCacheTtl">フレーズのキャッシュを渡す</string>
@@ -336,9 +337,16 @@
     <string name="state_TextCopiedToClipboard">テキストをクリップボードにコピー。</string>
 
     <string name="text_About">%1$s\n\nSafeSlingerは、直接もしくは電話によって簡単にIDを共有できるソフトウェアです。あなたと共有する一人一人は、メッセージを送るために、安全なエンドツーエンドのチャネルを作成します。\n\n特徴：\n-連絡先を簡単に交換できる\n-テキスト、写真などの安全な共有\n-強力な暗号による情報の保護\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">交換</string>
+    <string name="text_KeywordIdentity">アイデンティティ</string>
+    <string name="text_KeywordKey">キー</string>
+    <string name="text_KeywordMessaging">メッセージング</string>
+    <string name="text_KeywordPrivacy">プライバシー</string>
+    <string name="text_KeywordSecurity">セキュリティー</string>
     <string name="text_LanguagesProvidedBy">利用可能な言語:</string>
+    <string name="text_RelatedSearchTerms">関連用語：</string>
     <string name="text_Requirements">要件：\n1。 2デバイスの最小にインストールする必要があります。\n2。インターネット接続がアクティブである必要があります。</string>
-    <string name="text_ShortPromotion">テキスト、写真などの安全な共有！</string>
+    <string name="text_WhatsNew">- 安定性の修正。</string>
 
     <string name="title_About">このソフトウエアについて</string>
     <string name="title_camera">カメラ</string>

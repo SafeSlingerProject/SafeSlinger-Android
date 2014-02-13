@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger bụ iji mfe ịkọrọ njirimara data, na mmadụ ma ọ bụ ihe karịrị ekwentị, authenticated, na nzuzo, na -emebibeghị. Onye ọ bụla ị na -eso emepụta nchebe ọgwụgwụ na- ọgwụgwụ ọwa ka izipu ozi.\n\nFeatures:\n- mfe ịgbanwe ozi kọntaktị ndị ọzọ\n- nweghịkwa obi slingi odide, foto, na ihe ọ bụla!\n- Sie Ike cryptography na-echebe gị ozi\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Asụsụ nye site na:</string>
     <string name="text_Requirements">Chọrọ:\n1. A ga- arụnyere na nke kacha nta 2 ngwaọrụ.\n2. Njikọ Ịntanetị ga- arụsi ọrụ ike.</string>
-    <string name="text_ShortPromotion">Nweghịkwa obi slingi odide, foto, na ihe ọ bụla!</string>
 
     <string name="title_About">Banyere</string>
     <string name="title_camera">Igwefoto</string>

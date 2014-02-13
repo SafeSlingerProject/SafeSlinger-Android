@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger נועד לשתף נתוני זהויות בקלות, באופן אישי או בטלפון, מאומת, פרטי,וללא שינוי. כל אדם שאתה חולק עם יוצרערוץ מקצה לקצה מאובטח למשלוח הודעות.\n\nמאפיינים:\n- בקלות להחליף פרטי קשר עם אחרים\n- מאובטח קלע טקסטים, תמונות, כל דבר! הצפנה חזקה\n- מגנה על המידע שלך\n\nדוא\'ל: %2$s\nאינטרנט: %3$s</string>
     <string name="text_LanguagesProvidedBy">שפות הניתנות על ידי:</string>
     <string name="text_Requirements">דרישות:\n1. חייב להיות מותקןבמינימום של 2 מכשירים.\n2. חיבור לאינטרנט חייב להיות פעיל.</string>
-    <string name="text_ShortPromotion">אנשי קשר בצורה מאובטחת קלע, טקסטים, תמונות, כל דבר!</string>
 
     <string name="title_About">על</string>
     <string name="title_camera">מצלמה</string>

@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger wedi ei gynllunio i rannu data hunaniaeth yn hawdd, yn bersonol neu dros y ffôn, a ddilyswyd, preifat, ac yn gyfan. Mae pob person yr ydych yn rhannu gyda creu sianel ddiogel pen-i-ben i anfon negeseuon.\n\nNodweddion:\n- cyfnewid gwybodaeth gyswllt Hawdd ag eraill\n- Ddiogel sling testunau, lluniau, unrhyw beth!\n- cryptograffeg cryf yn diogelu eich gwybodaeth\n\ne-bost: %2$s\ngwefan: %3$s</string>
     <string name="text_LanguagesProvidedBy">Ieithoedd ddarperir gan:</string>
     <string name="text_Requirements">Gofynion:\n1. Rhaid gosod ar o leiaf 2 ddyfeisiau.\n2. Rhaid i cysylltiad Rhyngrwyd fod yn egnïol.</string>
-    <string name="text_ShortPromotion">Cysylltiadau Ddiogel sling, testunau, lluniau, unrhyw beth!</string>
 
     <string name="title_About">Amdanom ni</string>
     <string name="title_camera">Camera</string>

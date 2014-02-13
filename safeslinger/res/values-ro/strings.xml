@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger este conceput pentru a partaja cu ușurință date de identitate, în persoană sau la telefon, autentificat, privat, și intact. Fiecare persoană vă împărtășesc cu creeaza un canal securizat end-to-end pentru a trimite mesaje.\n\nCaracteristici:\n- schimb cu ușurință informații de contact cu alte persoane\n- sling Sigur texte, fotografii, nimic!\n- criptografie puternică protejează informațiile dvs.\n\nde e-mail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Limbi furnizate de:</string>
     <string name="text_Requirements">Cerințe:\n1. Trebuie să fie instalat pe un minim de 2 dispozitive.\n2. O conexiune la Internet trebuie să fie activ.</string>
-    <string name="text_ShortPromotion">Contacte în siguranță lanț, texte, fotografii, nimic!</string>
 
     <string name="title_About">Despre</string>
     <string name="title_camera">Aparat foto</string>

@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger on suunniteltu helposti jakaa identiteetin tietoja, henkilökohtaisesti tai puhelimitse, todennettu, yksityisen ja ehjä. Jokainen henkilö jaat luoturvallisen end-to-end-kanava lähettää viestejä.\n\nOminaisuudet:\n- helposti vaihtaa yhteystietoja muiden kanssa\n- Turvallisesti rintareppu tekstejä, kuvia, mitään!\n- vahvan salauksen suojaa tietoja\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Kielet tarjoaa:</string>
     <string name="text_Requirements">Vaatimukset:\n1. On asennettavavähintään 2 laitetta.\n2. Internet-yhteyden on oltava käytössä.</string>
-    <string name="text_ShortPromotion">Turvallisesti rintareppu yhteystiedot, tekstejä, kuvia, mitään!</string>
 
     <string name="title_About">Noin</string>
     <string name="title_camera">Kamera</string>

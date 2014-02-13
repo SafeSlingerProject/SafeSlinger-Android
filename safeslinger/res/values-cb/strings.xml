@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger ang gihimo aron sa sayon ​​nga pagpakigbahin sa pag-ila data, sa tawo o sa ibabaw sa telepono, authenticated, pribado nga, ug hilabti, wala mabalhin. Ang matag tawo nga imong ipakigbahin sa nagmugna sa usa ka luwas nga katapusan-sa-katapusan channel sa pagpadala mensahe.\n\nFeatures:\n- Masayon ​​makigbinayloay impormasyon sa pagkontak sa uban\n- sa kasigurohan saplongon teksto, litrato, sa bisan unsa!\n- Lig-on cryptography manalipod sa inyong mga impormasyon\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Pinulongan nga gihatag sa:</string>
     <string name="text_Requirements">Kinahanglanon:\n1. Kinahanglan nga-instalar sa usa ka minimum sa 2 mga lalang nga.\n2. Usa ka Internet koneksyon kinahanglan nga aktibo.</string>
-    <string name="text_ShortPromotion">Sa kasigurohan saplongon mga kontak, mga teksto, litrato, sa bisan unsa!</string>
 
     <string name="title_About">About</string>
     <string name="title_camera">Camera</string>

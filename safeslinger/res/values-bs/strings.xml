@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger je dizajniran da lako dijeliti podatke identitet, osobno ili preko telefona, autentičnost, privatne, i netaknuta. Svaka osoba koju dijele s stvara siguran kanal end-to-end za slanje poruka.\n\nKarakteristike:\n- Lako razmjenjuju podatke o kontaktu sa drugima\n- sigurno baca tekstovi, fotografije, sve!\n- Snažna kriptografija štiti vaše podatke\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Jezici koje:</string>
     <string name="text_Requirements">Zahtjevi:\n1. Mora biti instaliran na minimalno 2 uređaja.\n2. Internet veza mora biti aktivna.</string>
-    <string name="text_ShortPromotion">Sigurno baca kontakte, tekstovi, fotografije, sve!</string>
 
     <string name="title_About">Oko</string>
     <string name="title_camera">Kamera</string>

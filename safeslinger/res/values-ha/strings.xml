@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger an tsara su iya raba bayanai ainihi, in mutum ko a kan tarho, ya tabbata daga, masu zaman kansu, da kuma m. Kowane mutum ka raba tare da halitta da kafaffen karshen -da- karshen tashar don aika sa_onni.\n\nFeatures:\n- saukake musanya bayanin lamba tare da wasu\n- tam majayijawa texts, photos, wani abu!\n- _arfi cryptography kare abokan bayani\n\nemail: %2$s\nyanar gizo: %3$s</string>
     <string name="text_LanguagesProvidedBy">Languages __bayar by:</string>
     <string name="text_Requirements">Bukatun:\n1. Dole ne a shigar a kan m of 2 na\'urorin.\n2. An jona dole ne aiki.</string>
-    <string name="text_ShortPromotion">Tam majayijawa texts, photos, wani abu!</string>
 
     <string name="title_About">Game da</string>
     <string name="title_camera">Kamara</string>

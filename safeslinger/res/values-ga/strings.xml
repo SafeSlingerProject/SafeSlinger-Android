@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger tá sé deartha chun a roinnt go héasca sonraí aitheantais, go pearsanta nó ar an nguthán, fíordheimhnithe, príobháideach, agus slán. Gach duine a bhfuil tú a roinnt le gcruthaíonn cainéal slán-deireadh le deireadh chun teachtaireachtaí a sheoladh.\n\nGnéithe:\n- héasca eolas teagmhála a mhalartú le daoine eile\n- daingean sling téacsanna, grianghraif, rud ar bith! Cosnaíonn\n- cripteagrafaíochta láidir do chuid faisnéise\n\nr-phost: %2$s\ngréasáin: %3$s</string>
     <string name="text_LanguagesProvidedBy">Teangacha ar fáil ag:</string>
     <string name="text_Requirements">Riachtanais:\n1. Ní mór a bheith suiteáilte ar a laghad 2 feistí.\n2. Ní mór nasc Idirlín a bheith gníomhach.</string>
-    <string name="text_ShortPromotion">Teagmhálacha daingean sling, téacsanna, grianghraif, rud ar bith!</string>
 
     <string name="title_About">Maidir</string>
     <string name="title_camera">Ceamara</string>

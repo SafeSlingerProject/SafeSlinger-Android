@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger er designet til nemt at dele identitetsdata, personligt eller over telefonen, autentificeret, private og intakt. Hver person, du deler med opretter en sikker ende-til-ende kanal til at sende beskeder.\n\nFeatures:\n- Let udveksle kontaktoplysninger med andre\n- Sikker slynge tekster, fotos, noget!\n- Stærk kryptering beskytter dine oplysninger\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Sprog, som:</string>
     <string name="text_Requirements">Krav:\n1. Skal monteres på et minimum af 2 enheder.\n2. En internetforbindelse skal være aktiv.</string>
-    <string name="text_ShortPromotion">Sikker slynge kontakter, tekster, fotos, noget!</string>
 
     <string name="title_About">Om</string>
     <string name="title_camera">Kamera</string>

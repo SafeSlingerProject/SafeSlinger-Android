@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger direka dengan mudah berkongsi maklumat identiti, sendiri atau melalui telefon, yang disahkan, swasta, dan tidak terjejas. Setiap orang yang anda berkongsi dengan mencipta saluran yang selamat hujung-ke-akhir untuk menghantar mesej.\n\nCiri-ciri: -\nMudah bertukar-tukar maklumat hubungan dengan orang lain\n- Selamat sling teks, gambar, apa-apa!\n- kriptografi Kuat melindungi maklumat anda\n\ne-mel: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Bahasa yang disediakan oleh:</string>
     <string name="text_Requirements">Syarat-syarat:\n1. Mesti dipasang pada sekurang-kurangnya 2 peranti.\n2. Sambungan Internet mesti aktif.</string>
-    <string name="text_ShortPromotion">Selamat sling kenalan, teks, gambar, apa-apa!</string>
 
     <string name="title_About">Mengenai</string>
     <string name="title_camera">Kamera</string>

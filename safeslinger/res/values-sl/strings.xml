@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger je zasnovan za enostavno izmenjavo osebnih podatkov, osebno ali po telefonu, potrjeni, zasebni, in nepoškodovani. Vsaka oseba, ki jo deliti z ustvarja varnega kanala end-to-end za pošiljanje sporočil.\n\nZnačilnosti:\n- Preprosto si izmenjujejo kontaktne podatke z drugimi\n- Varno sling besedila, fotografije, karkoli!\n- močna kriptografija ščiti vaše podatke\n\ne-naslov: %2$s\nspletni naslov: %3$s</string>
     <string name="text_LanguagesProvidedBy">Jeziki, ki jih:</string>
     <string name="text_Requirements">Zahteve:\n1. Morajo biti nameščene na najmanj 2 naprav.\n2. Internetna povezava mora biti aktivna.</string>
-    <string name="text_ShortPromotion">Varno Sling stiki, teksti, fotografije, karkoli!</string>
 
     <string name="title_About">O</string>
     <string name="title_camera">Kamera</string>

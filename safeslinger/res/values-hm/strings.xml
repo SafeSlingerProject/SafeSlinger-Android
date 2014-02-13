@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger yog tsim los yooj yim qhia yog leejtwg cov ntaub ntawv, nyob rau hauv tus neeg los yog hauv xov tooj, authenticated, ntiav, thiab si tauv. Txhua tus neeg uas koj qhia nrog tsim ib tug ruaj ntseg kawg-rau-kawg channel xa lus.\n\nnta:\n- yooj yim sib pauv kev sib cuag cov ntaub ntawv nrog lwm tus\n- Securely rab ka xus phau ntawv, cov duab, txhua yam!\n- Muaj zog cryptography tiv thaiv koj cov ntaub ntawv\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Lus muab los ntawm:</string>
     <string name="text_Requirements">Yuav tsum tau muaj:\n1. Yuav tsum tau ntsia ib yam tsawg kawg nkaus ntawm 2 pab kiag li.\n2. Ib Internet kev twb kev txuas yuav tsum nquag.</string>
-    <string name="text_ShortPromotion">Securely rab ka xus tiv tauj, phau ntawv, cov duab, txhua yam!</string>
 
     <string name="title_About">Txog</string>
     <string name="title_camera">Lub koob yees duab</string>

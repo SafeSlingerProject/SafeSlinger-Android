@@ -124,30 +124,70 @@ public class MessageData {
         return mFileHash;
     }
 
+    public String getPerson() {
+        return mPerson;
+    }
+
     // setters...
 
-    public void setRowId(long rowId) {
-        mRowId = rowId;
+    public void setFileType(String value) {
+        mFileType = value;
     }
 
-    public void setFileType(String fileType) {
-        mFileType = fileType;
+    public void setFileName(String value) {
+        mFileName = value;
     }
 
-    public void setFileName(String fileName) {
-        mFileName = fileName;
+    public void setFileSize(int value) {
+        mFileSize = value;
     }
 
-    public void setFileDir(String fileDir) {
-        mFileDir = fileDir;
+    public void setMsgHash(String value) {
+        mMsgHash = value;
     }
 
-    public void setMsgHash(String msgHash) {
-        mMsgHash = msgHash;
+    public void setText(String value) {
+        mText = value;
     }
 
-    public void setText(String text) {
-        mText = text;
+    public void setInbox(boolean value) {
+        mInbox = value;
+    }
+
+    public void setDateRecv(long value) {
+        mDateRecv = value;
+    }
+
+    public void setRowId(long value) {
+        mRowId = value;
+    }
+
+    public void setSeen(boolean value) {
+        mSeen = value;
+    }
+
+    public void setRead(boolean value) {
+        mRead = value;
+    }
+
+    public void setDateSent(long value) {
+        mDateSent = value;
+    }
+
+    public void setStatus(int value) {
+        mStatus = value;
+    }
+
+    public void setEncBody(byte[] value) {
+        mEncBody = value;
+    }
+
+    public void setKeyId(String value) {
+        mKeyId = value;
+    }
+
+    public void setFileDir(String value) {
+        mFileDir = value;
     }
 
     public void setFileData(byte[] fileData) {
@@ -155,21 +195,15 @@ public class MessageData {
         mFileSize = fileData == null ? 0 : fileData.length;
     }
 
-    public void setKeyId(String keyid) {
-        mKeyId = keyid;
+    public void setFileHash(byte[] value) {
+        mFileHash = value;
     }
 
-    public void setFileHash(byte[] fileHash) {
-        mFileHash = fileHash;
+    public void setPerson(String value) {
+        mPerson = value;
     }
 
-    public void setPerson(String person) {
-        mPerson = person;
-    }
-
-    public String getPerson() {
-        return mPerson;
-    }
+    // Others...
 
     public void removeFile() {
         mRawFile = new byte[0];
@@ -182,10 +216,6 @@ public class MessageData {
 
     public void removeText() {
         mText = null;
-    }
-
-    public void setFileSize(int fileSize) {
-        mFileSize = fileSize;
     }
 
 }

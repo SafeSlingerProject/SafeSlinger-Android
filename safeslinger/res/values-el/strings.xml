@@ -225,6 +225,7 @@
     <string name="label_PassHintBackoff">Επανάληψη</string>
     <string name="label_PassHintChange">Ανανέωση Passphrase</string>
     <string name="label_PassHintCreate">Δημιουργία Passphrase</string>
+    <string name="label_PassHintCurrent">Τρέχουσα Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Επαναλάβετε Passphrase</string>
     <string name="label_passPhraseCacheTtl">Εισάγετε Cache φράση</string>
@@ -336,9 +337,16 @@
     <string name="state_TextCopiedToClipboard">Κείμενο αντιγραφεί στο πρόχειρο.</string>
 
     <string name="text_About">%1$s\n\nΤο SafeSlinger έχει σχεδιαστεί για να ανταλλάσονται εύκολα στοιχεία ταυτότητας, είτε αυτοπροσώπως είτε μέσω τηλεφώνου, επικυρωμένα, μυστικά, και άθικτα. Κάθε άτομο που μοιράζεστε με το δημιουργεί μια ασφαλή end-to-end κανάλι για να στείλετε μηνύματα.\n\nΧαρακτηριστικά:\n- Εύκολη ανταλλαγή πληροφοριών επικοινωνίας με άλλους\n- Ασφαλής ανταλλαγή κείμεένων, φωτογραφίών, ο,τιδήποτε!\n- Ισχυρή κρυπτογράφηση προστατεύει τις πληροφορίες σας\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Ανταλλαγή</string>
+    <string name="text_KeywordIdentity">Ταυτότητα</string>
+    <string name="text_KeywordKey">Πλήκτρο</string>
+    <string name="text_KeywordMessaging">Μηνύματα</string>
+    <string name="text_KeywordPrivacy">Μυστικότητα</string>
+    <string name="text_KeywordSecurity">Ασφάλεια</string>
     <string name="text_LanguagesProvidedBy">Οι γλώσσες παρέχονται από:</string>
+    <string name="text_RelatedSearchTerms">Σχετικά Όροι:</string>
     <string name="text_Requirements">Απαιτήσεις:\n1. Πρέπει να είναι εγκατεστημένο σε ένα ελάχιστο των 2 συσκευών.\n2. Μια σύνδεση με το Διαδίκτυο πρέπει να είναι ενεργή.</string>
-    <string name="text_ShortPromotion">Ασφαλής ανταλλαγή κείμεένων, φωτογραφίών, ο,τιδήποτε!</string>
+    <string name="text_WhatsNew">- Διορθώσεις σταθερότητας.</string>
 
     <string name="title_About">Πληροφορίες</string>
     <string name="title_camera">Φωτογραφική μηχανή</string>

@@ -56,40 +56,36 @@ public class KsConfig {
     public static final int AES_IV_LEN = 128 / 8;
     public static final int HALFKEY_LEN = 512 / 8;
     public static final int HASH_LEN = 256 / 8;
-    public static final int MSSVR_TIMEOUT_AUTO = 1000 * 15; // 15s
-    public static final int MSSVR_TIMEOUT = 1000 * 60 * 2; // 2m
-    public static final int MSSVR_POLL = 1000; // exp. 2s->4s->8s...
+    public static final long MSSVR_TIMEOUT = 1000 * 60 * 2; // 2m
     public static final long MSSVR_EXCH_PROT_MAX = 1000 * 60 * 10;// 10m
 
     public static final String LOG_TAG = "AppLog";
 
     // internal interprocess communication...
     public static final class extra {
-        public static final String CONTACT_LOOKUP_KEY = "ContactLookupKey";
         public static final String CONTACT_KEYNAME_PREFIX = "Key";
+        public static final String CONTACT_LOOKUP_KEY = "ContactLookupKey";
         public static final String CONTACT_VALUE_PREFIX = "Value";
-        public static final String MEMBER_DATA = "MemberData";
-        public static final String GROUP_SIZE = "GroupSize";
-        public static final String GROUP_ID = "GroupId";
-        public static final String SERVER_SIZE = "ServerSize";
-        public static final String FLAG_HASH = "FlagHash";
         public static final String DECOY1_HASH = "DecoyHash1";
         public static final String DECOY2_HASH = "DecoyHash2";
-        public static final String MESSAGE = "Message";
-        public static final String USER_ID = "UserId";
-        public static final String USER_DATA = "UserData";
-        public static final String NAME = "Name";
-        public static final String PHONE = "Phone";
         public static final String EMAIL = "Email";
-        public static final String PHONE_TYPE = "PhoneType";
         public static final String EMAIL_TYPE = "EmailType";
         public static final String EXCHANGED_TOTAL = "ExchangedTotal";
-        public static final String SELECTED_TOTAL = "SelectedTotal";
-        public static final String RESID_TITLE = "ResIdTitle";
-        public static final String RESID_MSG = "ResIdMsg";
-        public static final String REQUEST_CODE = "RequestCode";
-        public static final String RANDOM_POS = "RandomPosition";
+        public static final String FLAG_HASH = "FlagHash";
+        public static final String GROUP_ID = "GroupId";
+        public static final String MEMBER_DATA = "MemberData";
+        public static final String MESSAGE = "Message";
+        public static final String NAME = "Name";
+        public static final String PHONE = "Phone";
+        public static final String PHONE_TYPE = "PhoneType";
         public static final String PHOTO = "Photo";
+        public static final String RANDOM_POS = "RandomPosition";
+        public static final String REQUEST_CODE = "RequestCode";
+        public static final String RESID_MSG = "ResIdMsg";
+        public static final String RESID_TITLE = "ResIdTitle";
+        public static final String SELECTED_TOTAL = "SelectedTotal";
+        public static final String USER_DATA = "UserData";
+        public static final String USER_ID = "UserId";
     }
 
     public static String getVersionName(Context ctx) {

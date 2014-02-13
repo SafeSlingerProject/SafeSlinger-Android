@@ -225,6 +225,7 @@
     <string name="label_PassHintBackoff">Intentar de nuevo</string>
     <string name="label_PassHintChange">Frase de Contraseña Actualizada</string>
     <string name="label_PassHintCreate">Crear Frase de Contraseña</string>
+    <string name="label_PassHintCurrent">Frase de Contraseña Actual</string>
     <string name="label_PassHintEnter">Frase de Contraseña</string>
     <string name="label_PassHintRepeat">Repetir Frase de contraseña</string>
     <string name="label_passPhraseCacheTtl">Caché de Frase de Contraseña</string>
@@ -336,9 +337,16 @@
     <string name="state_TextCopiedToClipboard">Texto copiado al portapapeles</string>
 
     <string name="text_About">%1$s\n\nSafeSlinger está diseñado para compartir fácilmente los datos de identidad, en persona o por teléfono, autenticado, privado, e intacto. Cada persona con la que usted comparte crea un canal seguro de extremo a extremo para enviar mensajes.\n\nCaracterísticas:\n- Fácil intercambio de la información de contacto con otros\n- Los textos de forma segura honda, fotos, cualquier cosa!\n- La criptografía fuerte protege su información\n\ncorreo electrónico: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Intercambio</string>
+    <string name="text_KeywordIdentity">Identidad</string>
+    <string name="text_KeywordKey">Clave</string>
+    <string name="text_KeywordMessaging">Mensajería</string>
+    <string name="text_KeywordPrivacy">Intimidad</string>
+    <string name="text_KeywordSecurity">Seguridad</string>
     <string name="text_LanguagesProvidedBy">Idiomas proporcionados por:</string>
+    <string name="text_RelatedSearchTerms">Términos relacionados:</string>
     <string name="text_Requirements">Requisitos:\n1. Debe instalarse en un mínimo de 2 dispositivos.\n2. Una conexión a Internet debe estar activa.</string>
-    <string name="text_ShortPromotion">¡Seguramente textos cabestrillos, fotos, cualquier cosa!</string>
+    <string name="text_WhatsNew">- Correcciones de estabilidad.</string>
 
     <string name="title_About">Acerca de</string>
     <string name="title_camera">Cámara</string>

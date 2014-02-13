@@ -225,6 +225,7 @@
     <string name="label_PassHintBackoff">重試</string>
     <string name="label_PassHintChange">密碼更新</string>
     <string name="label_PassHintCreate">建立存取密碼</string>
+    <string name="label_PassHintCurrent">目前的通關密語</string>
     <string name="label_PassHintEnter">密碼</string>
     <string name="label_PassHintRepeat">再輸入一次密碼</string>
     <string name="label_passPhraseCacheTtl">密碼快取時間</string>
@@ -336,9 +337,16 @@
     <string name="state_TextCopiedToClipboard">文本複製到剪貼板。</string>
 
     <string name="text_About">%1$s\n\nSafeSlinger是用來交換使用者資料，透過使用手機接觸的方式，SafeSlinger可以確保交換資訊有經過認證並保護其私密性。每個人與你分享創造一個安全的終端到終端的信道來發送郵件。\n\n特點:\n- 快速方便地與其他人交換聯絡資訊\n- 安全地投遞(sling)文字相片甚至任何形式的資料！\n- 穩健密碼系統保護你的個人資訊\n\n電子郵件: %2$s\n網頁: %3$s</string>
+    <string name="text_KeywordExchange">交換</string>
+    <string name="text_KeywordIdentity">特性</string>
+    <string name="text_KeywordKey">關鍵</string>
+    <string name="text_KeywordMessaging">消息</string>
+    <string name="text_KeywordPrivacy">隱私</string>
+    <string name="text_KeywordSecurity">安全</string>
     <string name="text_LanguagesProvidedBy">翻譯：</string>
+    <string name="text_RelatedSearchTerms">相關術語：</string>
     <string name="text_Requirements">要求：\n1。必須安裝在至少2設備。\n2。 Internet連接必須處於活動狀態。</string>
-    <string name="text_ShortPromotion">安全地投遞(sling)文字相片甚至任何形式的資料！</string>
+    <string name="text_WhatsNew">- 穩定性修正。</string>
 
     <string name="title_About">關於</string>
     <string name="title_camera">相機</string>

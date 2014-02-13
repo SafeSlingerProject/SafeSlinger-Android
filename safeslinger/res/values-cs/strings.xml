@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger je navržen tak, aby snadno sdílet data identity, osobně nebo po telefonu, ověřený, soukromí a neporušený. Každá osoba sdílíte s vytváří zabezpečený kanál end-to-end pro odesílání zpráv.\n\nVlastnosti:\n- Snadná výměna informací o kontaktech s ostatními\n- Bezpečně praku texty, fotografie, cokoliv!\n- Silné šifrování chrání vaše informace\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Jazyky poskytované:</string>
     <string name="text_Requirements">Požadavky:\n1. Musí být nainstalován na minimálně 2 zařízení.\n2. Připojeník Internetu musí být aktivní.</string>
-    <string name="text_ShortPromotion">Bezpečně Sling kontakty, texty, fotky, cokoliv!</string>
 
     <string name="title_About">O</string>
     <string name="title_camera">Kamera</string>

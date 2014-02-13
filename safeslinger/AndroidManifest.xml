@@ -25,8 +25,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.cmu.cylab.starslinger"
-    android:versionCode="0x01060A00"
-    android:versionName="1.6.10" >
+    android:versionCode="0x01060A01"
+    android:versionName="1.6.10.1" >
 
     <!-- API 9 is the minimum required for password-based encryption PBKDF2WithHmacSHA1. -->
     <!-- API 8 is the minimum required to receive push messages. -->

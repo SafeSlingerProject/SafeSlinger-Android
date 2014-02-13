@@ -225,6 +225,7 @@
     <string name="label_PassHintBackoff">Opnieuw proberen</string>
     <string name="label_PassHintChange">Aangepast Passphrase</string>
     <string name="label_PassHintCreate">Maak Passphrase</string>
+    <string name="label_PassHintCurrent">Huidige Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Herhaal Passphrase</string>
     <string name="label_passPhraseCacheTtl">Wachtwoordgroep Cache</string>
@@ -336,9 +337,16 @@
     <string name="state_TextCopiedToClipboard">Tekst gekopieerd naar het klembord.</string>
 
     <string name="text_About">%1$s\n\nSafeSlinger is ontworpen om gemakkelijk te delen identiteitsgegevens, in persoon of via de telefoon, geverifieerd, prive en intact. Elke persoon die je deelt met zorgt voor een veilige end-to-end-kanaal om berichten te versturen.\n\nEigenschappen:\n- Eenvoudig wisselen contactgegevens met anderen\n- Veilig sling teksten, foto\'s, om het even wat!\n- Sterke cryptografie beschermt uw gegevens\n\ne-mail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Uitwisseling</string>
+    <string name="text_KeywordIdentity">Identiteit</string>
+    <string name="text_KeywordKey">Sleutel</string>
+    <string name="text_KeywordMessaging">Messaging</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Veiligheid</string>
     <string name="text_LanguagesProvidedBy">Talen geleverd door:</string>
+    <string name="text_RelatedSearchTerms">Gerelateerde termen:</string>
     <string name="text_Requirements">Vereisten:\n1. Moet op minimaal 2 inrichtingen worden geïnstalleerd.\n2. Een internetverbinding moet actief zijn.</string>
-    <string name="text_ShortPromotion">Veilig sling teksten, foto\'s, om het even wat!</string>
+    <string name="text_WhatsNew">- Stabiliteit fixes.</string>
 
     <string name="title_About">Over</string>
     <string name="title_camera">Camera</string>

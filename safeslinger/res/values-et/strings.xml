@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger eesmärk on lihtsalt jagada identiteedi andmed, isiklikult või telefoni teel, kinnitatud, era-ja puutumatu. Iga inimene jagate loob turvalise end-to-end kanal sõnumite saatmiseks.\n\nOmadused:\n- kergesti vahetada kontaktandmeid teistega\n- Tellige pilduma tekstid, fotod, midagi!\n- Tugev krüptograafia kaitseb teie andmed\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Keeled, mida pakuvad:</string>
     <string name="text_Requirements">Nõuded:\n1. Tuleb paigaldada vähemalt 2 seadmeid.\n2. Internetiühendus peab olema aktiivne.</string>
-    <string name="text_ShortPromotion">Turvaliseks pilduma kontaktid, teksti, fotosid, midagi!</string>
 
     <string name="title_About">Kohta</string>
     <string name="title_camera">Kaamera</string>

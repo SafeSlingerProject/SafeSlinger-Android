@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger ti a ṣe lati pin awọn iṣọrọ idanimo data, ni eniyan tabi lori foonu, authenticated, ni ikọkọ, ati mule. Kọọkan eniyan ti o pin pẹlu awọn ṣẹda kan to ni aabo opin -si- opin ikanni lati fi ifiranṣẹ ranṣẹ.\n\nawọn ẹya ara ẹrọ:\n- awọn iṣọrọ paṣipaarọ alaye olubasọrọ pẹlu awọn omiiran\n- labeabo sling awọn ọrọ, awọn fọto, ohunkohun!\n- Strong cryptography ndaabobo rẹ alaye\n\nimeeli: %2$s\nwẹẹbu: %3$s</string>
     <string name="text_LanguagesProvidedBy">Awọn ede ti a pese nipa:</string>
     <string name="text_Requirements">Awọn ibeere:\n1. Gbọdọ wa ni fi sori ẹrọ lori kan ti o kere 2 ẹrọ.\n2. Ẹya ayelujara ti isopọ gbodo je lọwọ.</string>
-    <string name="text_ShortPromotion">Labeabo sling awọn ọrọ, awọn fọto, ohunkohun!</string>
 
     <string name="title_About">Nipa</string>
     <string name="title_camera">Kamẹra</string>

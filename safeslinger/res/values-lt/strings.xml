@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger skirtas lengvai dalintis tapatybės duomenis, asmeniškai arba telefonu, autentiškumą, privatus, ir sveika. Kiekvienas asmuo, pasidalinti su sukuriamas saugus \'end-to-end kanalą siųsti pranešimus.\n\nĮranga:\n- Lengvai keistis kontaktinę informaciją su kitais\n- Saugiai diržas tekstų, nuotraukų, nieko!\n- Stiprus kriptografija apsaugo jūsų informacija\n\npaštas: %2$s\nsvetainė: %3$s</string>
     <string name="text_LanguagesProvidedBy">Teikiamos kalbos:</string>
     <string name="text_Requirements">Reikalavimai:\n1. Turi būti sumontuoti ant 2 prietaisus minimumo.\n2. Interneto ryšys turi būti aktyvus.</string>
-    <string name="text_ShortPromotion">Saugiai diržas kontaktai, tekstai, nuotraukos, nieko!</string>
 
     <string name="title_About">Apie</string>
     <string name="title_camera">Fotoaparatas</string>

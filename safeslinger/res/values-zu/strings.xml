@@ -338,7 +338,6 @@
     <string name="text_About">%1$s\n\nSafeSlinger yenzelwe ukwabelana kalula omazisi idatha, ngesiqu noma ocingweni, ugunyazwe, ezizimele, futhi njengoba yayinjalo. Ngalinye umuntu usiza kwakha ekupheleni -to - ekupheleni wesiteshi ephephile ukuthumela imilayezo.\n\nIzici:\n- ukushintshanisa kalula Ukwaziswa ukuthintana nabanye\n- okokulengisa ngokuphepha imibhalo, izithombe, noma yini!\n- Lobhalomfihlo Strong evikela imininingwane yakho\n\nimeyili: %2$s\nweb: %3$s</string>
     <string name="text_LanguagesProvidedBy">Izilimi kuhlinzekwe ngu:</string>
     <string name="text_Requirements">Okudingekayo:\n1. Kumele ukufakwa okungenani Amadivayisi 2.\n2. Uxhumano Internet kufanele kube abakhuthele.</string>
-    <string name="text_ShortPromotion">Imibhalo ngokuphepha okokulengisa, izithombe, noma yini!</string>
 
     <string name="title_About">Mayelana</string>
     <string name="title_camera">Ikhamera</string>

@@ -29,32 +29,7 @@ import android.database.Cursor;
 import edu.cmu.cylab.starslinger.ConfigData;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 
-public class RecipientRow {
-
-    private long mRowId = -1;
-    private String mMyKeyId;
-    private long mExchDate;
-    private String mContactLu;
-    private String mRawId;
-    private String mName;
-    private byte[] mPhoto;
-    private String mKeyId;
-    private long mKeyDate;
-    private String mKeyUserId;
-    private String mPushToken;
-    private int mNotify;
-    private byte[] mPubKey;
-    private int mSource;
-    private int mAppVer;
-    private long mHistDate;
-    private boolean mActive;
-    private String mIntroKeyId;
-    private long mNotRegDate;
-    private int mMyNotify;
-    private String mMyPushToken;
-
-    @Deprecated
-    private String mContactId;
+public class RecipientRow extends RecipientData {
 
     public RecipientRow(Cursor c) {
         if (c == null)
@@ -98,17 +73,6 @@ public class RecipientRow {
         return new RecipientRow(keyid);
     }
 
-    /***
-     * Test purposes only
-     */
-    public RecipientRow(String name, byte[] photo, String keyId, long keyDate, int notify) {
-        mName = name;
-        mPhoto = photo;
-        mKeyId = keyId;
-        mKeyDate = keyDate;
-        mNotify = notify;
-    }
-
     public boolean hasMyKeyChanged(Context ctx) {
         String myKeyId = ConfigData.loadPrefKeyIdString(ctx);
         return (myKeyId == null ? false : !(myKeyId.compareTo(mMyKeyId) == 0));
@@ -142,95 +106,6 @@ public class RecipientRow {
     public boolean isSendable(Context ctx) {
         return (mActive && isRegistered() && isPushable() && !isDeprecated()
                 && isFromTrustedSource() && !hasMyKeyChanged(ctx));
-    }
-
-    public long getRowId() {
-        return mRowId;
-    }
-
-    public String getMykeyid() {
-        return mMyKeyId;
-    }
-
-    public long getExchdate() {
-        return mExchDate;
-    }
-
-    @Deprecated
-    public String getContactid() {
-        return mContactId;
-    }
-
-    public String getContactlu() {
-        return mContactLu;
-    }
-
-    public String getRawid() {
-        return mRawId;
-    }
-
-    public String getName() {
-        return mName;
-    }
-
-    public byte[] getPhoto() {
-        return mPhoto;
-    }
-
-    public String getKeyid() {
-        return mKeyId;
-    }
-
-    public long getKeydate() {
-        return mKeyDate;
-    }
-
-    public String getKeyuserid() {
-        return mKeyUserId;
-    }
-
-    public String getPushtoken() {
-        return mPushToken;
-    }
-
-    public int getNotify() {
-        return mNotify;
-    }
-
-    public byte[] getPubkey() {
-        return mPubKey;
-    }
-
-    public int getSource() {
-        return mSource;
-    }
-
-    public int getAppver() {
-        return mAppVer;
-    }
-
-    public long getHistdate() {
-        return mHistDate;
-    }
-
-    public boolean isActive() {
-        return mActive;
-    }
-
-    public String getIntroKeyid() {
-        return mIntroKeyId;
-    }
-
-    public long getNotRegDate() {
-        return mNotRegDate;
-    }
-
-    public String getMyPushtoken() {
-        return mMyPushToken;
-    }
-
-    public int getMyNotify() {
-        return mMyNotify;
     }
 
 }
