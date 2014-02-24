@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontaktiniai duomenys buvo suformatuotas neteisingai.</string>
     <string name="error_WebCancelledByUser">Vartotojas atšauktas serverio prašymą.</string>
 
-    <string name="help_find">Naudokite šį ekraną nustatyti savo vardą, pavardę, telefoną, elektroninio pašto keistis su kitais. Bakstelėkite \' Done \' mygtuką, kai baigsite.</string>
     <string name="help_home">Keistis tapatybės duomenis, užtikrinti, kad visi vartotojai yra netoliese arba telefonu. \'Pradėti keistis\' mygtuką keisis tik pažymėtus kontaktinius duomenis.</string>
     <string name="help_identity_menu">\n\nJūs taip pat gali pakeisti asmens duomenis apie savo tapatybę šiame ekrane paliesdami mygtuką su jūsų vardu. Tai bus rodomas meniu leidžia jums \' Redaguoti \' adresatą \' Sukurti naują\' ryšį arba \' naudoti kitą \' kontaktą.</string>
     <string name="help_Messages">Šis ekranas rodo visus ankstesnius pranešimus ir priedus, kurie yra vis dar prieinami atsisiųsti.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">baigiasi %s</string>
     <string name="label_expiresIn">baigiasi</string>
     <string name="label_FileNameHint">Failo vardas</string>
-    <string name="label_FindInstruct">Prašome įvesti savo asmeninę informaciją. Šie duomenys bus saugiai dalijamasi tik su asmenimis, kuriems norite pasidalinti ja su.</string>
     <string name="label_FirstName">Vardas</string>
     <string name="label_Home">Patikrinkite elementus norite dalintis ir bakstelėkite \' Pradžia \' Exchange \', kai kiti yra pasiruošę keistis.</string>
     <string name="label_hometag">Namai</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Bandyti dar kartą</string>
     <string name="label_PassHintChange">Atnaujinta Slaptafrazė</string>
     <string name="label_PassHintCreate">Sukurti slaptafrazę</string>
+    <string name="label_PassHintCurrent">Dabartinis Slaptafrazė</string>
     <string name="label_PassHintEnter">Slaptažodis</string>
     <string name="label_PassHintRepeat">Pakartokite slapta frazė</string>
     <string name="label_passPhraseCacheTtl">Slaptažodis talpyklos</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontaktai importuojami.</string>
     <string name="state_TextCopiedToClipboard">Tekstas nukopijuotas į iškarpinę.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger skirtas lengvai dalintis tapatybės duomenis, asmeniškai arba telefonu, autentiškumą, privatus, ir sveika. Kiekvienas asmuo, pasidalinti su sukuriamas saugus \'end-to-end kanalą siųsti pranešimus.\n\nĮranga:\n- Lengvai keistis kontaktinę informaciją su kitais\n- Saugiai diržas tekstų, nuotraukų, nieko!\n- Stiprus kriptografija apsaugo jūsų informacija\n\npaštas: %2$s\nsvetainė: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger skirtas lengvai dalintis tapatybės duomenis, asmeniškai arba telefonu, autentiškumą, privatus, ir sveika. Kiekvienas asmuo, pasidalinti su sukuriamas saugus end-to-end kanalą siųsti pranešimus.\n\nSavybės:\n- Lengvai keistis kontaktinę informaciją su kitais\n- Saugiai diržas tekstai, nuotraukos, nieko!\n- Stiprus kriptografija saugo informaciją\n\npaštas: %2$s\nsvetainė: %3$s</string>
+    <string name="text_KeywordExchange">Mainai</string>
+    <string name="text_KeywordIdentity">Tapatybė</string>
+    <string name="text_KeywordKey">Raktas</string>
+    <string name="text_KeywordMessaging">Pranešimai</string>
+    <string name="text_KeywordPrivacy">Slaptumas</string>
+    <string name="text_KeywordSecurity">Saugumas</string>
     <string name="text_LanguagesProvidedBy">Teikiamos kalbos:</string>
+    <string name="text_RelatedSearchTerms">Susiję sąlygos:</string>
     <string name="text_Requirements">Reikalavimai:\n1. Turi būti sumontuoti ant 2 prietaisus minimumo.\n2. Interneto ryšys turi būti aktyvus.</string>
+    <string name="text_WhatsNew">- Stabilumas pataisymai.</string>
 
     <string name="title_About">Apie</string>
     <string name="title_camera">Fotoaparatas</string>

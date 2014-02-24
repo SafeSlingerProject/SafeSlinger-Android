@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Data cyswllt ei fformatio anghywir.</string>
     <string name="error_WebCancelledByUser">Ganslo Defnyddiwr cais gweinydd.</string>
 
-    <string name="help_find">Defnyddiwch y sgrin hon i osod eich enw, ffôn, ac e-bost i gyfnewid gydag eraill. Tap y botwm \' Done \' ar ôl gorffen.</string>
     <string name="help_home">I gyfnewid data hunaniaeth, sicrhau bod yr holl ddefnyddwyr yn gerllaw neu ar y ffôn. Bydd y botwm \' Dechrau Exchange \' cyfnewid dim ond y data cyswllt gwirio.</string>
     <string name="help_identity_menu">\n\nGallwch hefyd newid data personol am eich hunaniaeth ar y sgrin hon drwy fanteisio ar y botwm gyda\'ch enw. Bydd hyn yn dangos bwydlen sy\'n eich galluogi i \'Edit\' eich cyswllt, \' Creu Newydd \' cyswllt, neu \' Defnyddiwch Arall\' cyswllt.</string>
     <string name="help_Messages">Mae\'r sgrin hon yn dangos pob neges yn y gorffennol, ac atodiadau sydd yn dal ar gael i\'w llwytho i lawr.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">yn dod i ben %s</string>
     <string name="label_expiresIn">dod i ben yn</string>
     <string name="label_FileNameHint">Enw Ffeil</string>
-    <string name="label_FindInstruct">Rhowch eich gwybodaeth bersonol. Bydd y data hwn yn cael ei rhannu yn ddiogel gydag unigolion yr ydych yn dewis ei rannu gyda.</string>
     <string name="label_FirstName">Enw Cyntaf</string>
     <string name="label_Home">Gwiriwch eitemau ydych yn dymuno i rannu a tap \' Dechrau Cyfnewid \' pan fo eraill yn barod i gyfnewid.</string>
     <string name="label_hometag">Cartref</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Ceisio eto</string>
     <string name="label_PassHintChange">Diweddarwyd cyfrin-ymadrodd</string>
     <string name="label_PassHintCreate">Creu cyfrin-ymadrodd</string>
+    <string name="label_PassHintCurrent">Cyfrin-ymadrodd cyfredol</string>
     <string name="label_PassHintEnter">Chyfrinair</string>
     <string name="label_PassHintRepeat">Cyfrin-ymadrodd ailadrodd</string>
     <string name="label_passPhraseCacheTtl">Cache cyfrinair</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Cysylltiadau %s fewnforio.</string>
     <string name="state_TextCopiedToClipboard">Testun gopïo i\'r clipfwrdd.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger wedi ei gynllunio i rannu data hunaniaeth yn hawdd, yn bersonol neu dros y ffôn, a ddilyswyd, preifat, ac yn gyfan. Mae pob person yr ydych yn rhannu gyda creu sianel ddiogel pen-i-ben i anfon negeseuon.\n\nNodweddion:\n- cyfnewid gwybodaeth gyswllt Hawdd ag eraill\n- Ddiogel sling testunau, lluniau, unrhyw beth!\n- cryptograffeg cryf yn diogelu eich gwybodaeth\n\ne-bost: %2$s\ngwefan: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger wedi\'i chynllunio i rannu data hunaniaeth yn hawdd, yn bersonol neu dros y ffôn, a ddilyswyd, preifat, ac yn gyfan. Mae pob person yr ydych yn rhannu gyda creu sianel ddiogel pen-i-ben i anfon negeseuon.\n\nNodweddion:\n- Hawdd cyfnewid cysylltu gwybodaeth ag eraill\n- Testunau Ddiogel sling, lluniau, unrhyw beth!\n- Cryptograffeg cryf diogelu eich gwybodaeth\n\ne-bost: %2$s\ny we: %3$s</string>
+    <string name="text_KeywordExchange">Cyfnewid</string>
+    <string name="text_KeywordIdentity">Hunaniaeth</string>
+    <string name="text_KeywordKey">Allweddol</string>
+    <string name="text_KeywordMessaging">Negeseuon</string>
+    <string name="text_KeywordPrivacy">Preifatrwydd</string>
+    <string name="text_KeywordSecurity">Diogelwch</string>
     <string name="text_LanguagesProvidedBy">Ieithoedd ddarperir gan:</string>
+    <string name="text_RelatedSearchTerms">Termau cysylltiedig:</string>
     <string name="text_Requirements">Gofynion:\n1. Rhaid gosod ar o leiaf 2 ddyfeisiau.\n2. Rhaid i cysylltiad Rhyngrwyd fod yn egnïol.</string>
+    <string name="text_WhatsNew">- Chyfyngderau Sefydlogrwydd.</string>
 
     <string name="title_About">Amdanom ni</string>
     <string name="title_camera">Camera</string>

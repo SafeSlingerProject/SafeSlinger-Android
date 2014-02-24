@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Done Kontakte te fòma mal.</string>
     <string name="error_WebCancelledByUser">Itilizatè anile sèvè mande sa.</string>
 
-    <string name="help_find">Sèvi ak ekran sa a yo mete non ou, telefòn, ak imel fè echanj ak lòt moun. Tape \' Fè \' bouton an lè fini.</string>
     <string name="help_home">Fè echanj done idantite, asire tout itilizatè yo ki tou pre oswa nan telefòn lan. Bouton \' Echanj nan Kòmanse \' ap echanje sèlman done yo tcheke kontak.</string>
     <string name="help_identity_menu">\n\nOu kapab tou chanje done pèsonèl sou idantite ou sou ekran sa a pa frapan sou bouton an ak non w. Sa a ap montre yon meni ki pèmèt ou \' Edit \' kontak ou a, \'Kreye New \' kontak, \'oswa\' sèvi ak yon lòt \' kontak.</string>
     <string name="help_Messages">Ekran sa a montre tout mesaj sot pase yo, ak dokiman ki toujou disponib pou download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">ekspire %s</string>
     <string name="label_expiresIn">pral ekspire nan</string>
     <string name="label_FileNameHint">File name</string>
-    <string name="label_FindInstruct">Tanpri antre enfòmasyon pèsonèl ou. Done sa a ap fèt sèlman byen nou pataje avèk moun ki moun ou chwazi yo pataje li ak.</string>
     <string name="label_FirstName">Prenon</string>
     <string name="label_Home">Tcheke atik ou ta renmen pataje epi tape \' Kòmanse Echanj \' lè lòt moun yo pare fè echanj.</string>
     <string name="label_hometag">Kay</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Rekoumanse</string>
     <string name="label_PassHintChange">Mete ajou pasfraz</string>
     <string name="label_PassHintCreate">Kreye pasfraz</string>
+    <string name="label_PassHintCurrent">Kouran pasfraz</string>
     <string name="label_PassHintEnter">Pasfraz</string>
     <string name="label_PassHintRepeat">Repete pasfraz</string>
     <string name="label_passPhraseCacheTtl">Pasfraz Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Kontak %s enpòte.</string>
     <string name="state_TextCopiedToClipboard">Tèks kopye nan papye.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger se fèt yo fasil pataje done idantite, nan moun oswa nan telefòn lan, otantifye, prive ak entak. Chak moun ou pataje ak kreye yon fen-a-fen chanèl ki an sekirite yo voye mesaj.\n\nFeatures:\n- Fasil echanj enfòmasyon kontak ak lòt moun\n- solidman fistibal tèks, foto, anyen!\n- Bonjan chifreman pwoteje enfòmasyon ou\n\nimel: %2$s\nentènèt: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger se fèt yo fasil pataje done idantite, nan moun oswa nan telefòn lan, otantifye, prive ak entak. Chak moun ou pataje ak kreye yon fen-a-fen chanèl ki an sekirite yo voye mesaj.\n\nFeatures:\n- Fasil echanj enfòmasyon kontak ak lòt moun\n- Solidman fistibal tèks, foto, anyen!\n- Bonjan chifreman pwoteje enfòmasyon ou\n\nemail: %2$s\nsit entènèt: %3$s</string>
+    <string name="text_KeywordExchange">Echanj</string>
+    <string name="text_KeywordIdentity">Idantite</string>
+    <string name="text_KeywordKey">Kle</string>
+    <string name="text_KeywordMessaging">Messaging</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Sekirite</string>
     <string name="text_LanguagesProvidedBy">Lang ki ofri pa:</string>
+    <string name="text_RelatedSearchTerms">Ki gen rapò Regleman:</string>
     <string name="text_Requirements">Kondisyon:\n1. Yo dwe enstale sou yon minimòm de 2 ki bay sipò.\n2. Yon koneksyon entènèt yo dwe aktif.</string>
+    <string name="text_WhatsNew">- Estabilite fikse.</string>
 
     <string name="title_About">Sou</string>
     <string name="title_camera">Pou Kamera</string>

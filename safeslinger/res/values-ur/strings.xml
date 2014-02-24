@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">رابطے کی معلومات غلط طریقے سے فارمیٹ کیا گیا تھا.</string>
     <string name="error_WebCancelledByUser">یوزر کے سرور کی درخواست منسوخ.</string>
 
-    <string name="help_find">دوسروں کے ساتھ تبادلہ کرنے کے لئے آپ کا نام ، فون ، اور ای میل کے قائم کرنے کے لئے اس کی سکرین کا استعمال کریں. ختم جب \' کیا \' کے بٹن ٹیپ.</string>
     <string name="help_home">شناخت کے اعداد و شمار کا تبادلہ کرنا ، تمام صارفین کے قریبی یا فون پر ہیں کو یقینی بنانے. \' شروع ایکسچینج \' کے بٹن پر صرف کی جانچ پڑتال کی رابطے کی معلومات کا تبادلہ کریں گے.</string>
     <string name="help_identity_menu">\n\nآپ اپنے نام کے ساتھ بٹن پر ٹیپ کی طرف سے اس کی سکرین پر آپ کی شناخت کے بارے میں ذاتی ڈیٹا تبدیل کر سکتے ہیں. اس سے آپ کو \'ترمیم کریں\' آپ سے رابطہ کریں ، رابطہ کریں \'نئی تشکیل دیں\' ، یا رابطے \' ایک اور استعمال \' کرنے کی اجازت دی ایک مینو ظاہر کرے گا.</string>
     <string name="help_Messages">یہ سکرین کے تمام گزشتہ پیغامات ، اور اب بھی ڈاؤن لوڈ کے لئے دستیاب ہیں اٹیچمنٹ دکھاتا ہے.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s ختم ہو جاتی ھے</string>
     <string name="label_expiresIn">میں ختم ہو جاتی ھے</string>
     <string name="label_FileNameHint">فائل کا نام</string>
-    <string name="label_FindInstruct">آپ کی ذاتی معلومات درج کریں. یہ اعداد و شمار صرف محفوظ طریقے سے آپ کے ساتھ اشتراک کرنے کے لئے انتخاب کرتے ہیں جن کے افراد کے ساتھ شریک کیا جائے گا.</string>
     <string name="label_FirstName">پہلا نام</string>
     <string name="label_Home">آپ اشتراک اور ایکسچینج شروع \' نل چاہتے اشیاء کی جانچ پڑتال دوسروں کا تبادلہ کرنے کے لئے تیار ہیں.</string>
     <string name="label_hometag">ہوم</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">دوبارہ کوشش کریں</string>
     <string name="label_PassHintChange">اپ ڈیٹ پاس فریز</string>
     <string name="label_PassHintCreate">پاس فریز بنائیں</string>
+    <string name="label_PassHintCurrent">موجودہ پاس فریز</string>
     <string name="label_PassHintEnter">پاس فریز</string>
     <string name="label_PassHintRepeat">دہرائیں پاس فریز</string>
     <string name="label_passPhraseCacheTtl">پاس فریز کیشے</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s رابطے درآمد.</string>
     <string name="state_TextCopiedToClipboard">متن کلپ بورڈ پر کاپی.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger نجی ، توثیق ، ذاتی طور پر یا فون پر ، آسانی سے شناخت کے ڈیٹا کا اشتراک کرنے کے لئے ڈیزائن ، اور برقرار ہے. آپ کے ساتھ اشتراک ہر شخص پیغامات بھیجنے کے لئے ایک محفوظ آخر میں کے آخر میں چینل کی تخلیق کرتا ہے.\n\nخصوصیات:\n- آسانی سے دوسروں محفوظ نصوص ، تصاویر ، کچھ گوفن\n- کے ساتھ رابطے کی معلومات کا تبادلہ! %2$s\nویب: %3$s\n- مضبوط خفیہ نگاری آپ کی معلومات\n\nای میل کی حفاظت کرتا ہے</string>
+    <string name="text_About">%1$s\n\nSafeSlinger، ذاتی طور پر یا فون پر، آسانی سے شناخت کے ڈیٹا کا اشتراک کرنے کے لئے ڈیزائن توثیق، نجی، اور برقرار ہے. آپ کے ساتھ اشتراک ہر شخص پیغامات بھیجنے کے لئے ایک محفوظ آخر میں کے آخر میں چینل کی تخلیق کرتا ہے.\n\nخصوصیات:\n- آسانی سے دوسروں کے ساتھ رابطہ کی معلومات کا تبادلہ\n- محفوظ طریقے سے گوفن نصوص، تصاویر، کچھ بھی!\n- مضبوط خفیہ نگاری آپ کی معلومات کی حفاظت کرتا ہے\n\nای میل: %2$s\nویب سائٹ: %3$s</string>
+    <string name="text_KeywordExchange">ایکسچینج</string>
+    <string name="text_KeywordIdentity">شناخت</string>
+    <string name="text_KeywordKey">کلیدی</string>
+    <string name="text_KeywordMessaging">پیغام رسانی</string>
+    <string name="text_KeywordPrivacy">نجی معلومات کی حفاظتی</string>
+    <string name="text_KeywordSecurity">سیکورٹی</string>
     <string name="text_LanguagesProvidedBy">کی طرف سے فراہم زبانیں:</string>
+    <string name="text_RelatedSearchTerms">متعلقہ اصطلاحات:</string>
     <string name="text_Requirements">کے تقاضے:\n1. 2 آلات کی ایک کم از کم پر انسٹال ہونا ضروری ہے.\n2. ایک انٹرنیٹ کنکشن فعال ہونا ضروری ہے.</string>
+    <string name="text_WhatsNew">- استحکام اصلاحات.</string>
 
     <string name="title_About">کے بارے میں</string>
     <string name="title_camera">کیمرے</string>

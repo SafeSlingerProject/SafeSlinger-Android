@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kọntaktị data e formatted ọhụma.</string>
     <string name="error_WebCancelledByUser">Onye ọrụ na onye kagbuo ihe nkesa na- arịọ arịrịọ.</string>
 
-    <string name="help_find">Jiri ihe a na ihuenyo ka aha gị, ekwentị, na ozi ịgbanwe ndị ọzọ. Mgbata na \' Emela \' button mgbe okokụre.</string>
     <string name="help_home">Ịgbanwe njirimara data, hụ na ihe niile ọrụ ndị dị nso ma ọ bụ na ekwentị. Na \' Malite Exchange \' button ga ịgbanwe naanị enyocha kọntaktị data.</string>
     <string name="help_identity_menu">\n\nỊ nwekwara ike ịgbanwe data onwe gị njirimara a ihuenyo site + Ọ na bọtịnụ gị aha ya. Nke a ga- egosipụta a menu ikwe ka ị \' Dezie \' kọntaktị gị, \' Mepụta New \' kọntaktị, ma ọ bụ, \' Jiri ọzọ \' kọntaktị.</string>
     <string name="help_Messages">Nke a na -egosipụta na ihuenyo niile n\'oge gara aga ozi, na Mgbakwụnye ndị ka na- maka nbudata.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">expires %s</string>
     <string name="label_expiresIn">expires ke</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Biko tinye ozi nkeonwe gị. Nke a na data ga- ga- nweghịkwa obi na-akọrọ ndị mmadụ na ị na -ahọrọ ịkọrọ ya.</string>
     <string name="label_FirstName">Akpa Aha</string>
     <string name="label_Home">Lelee anaghị ị chọrọ ikere òkè na enweta \' Malite Exchange \' mgbe ndị ọzọ ndị dị njikere ịgbanwe.</string>
     <string name="label_hometag">Home</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Nwagharia</string>
     <string name="label_PassHintChange">Emelitere Passphrase</string>
     <string name="label_PassHintCreate">Ike Passphrase</string>
+    <string name="label_PassHintCurrent">Ugbu a Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Megharịa Passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase dị n\'ime oghere</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kọntaktị ihe dị.</string>
     <string name="state_TextCopiedToClipboard">Ederede Baịbụl na clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger bụ iji mfe ịkọrọ njirimara data, na mmadụ ma ọ bụ ihe karịrị ekwentị, authenticated, na nzuzo, na -emebibeghị. Onye ọ bụla ị na -eso emepụta nchebe ọgwụgwụ na- ọgwụgwụ ọwa ka izipu ozi.\n\nFeatures:\n- mfe ịgbanwe ozi kọntaktị ndị ọzọ\n- nweghịkwa obi slingi odide, foto, na ihe ọ bụla!\n- Sie Ike cryptography na-echebe gị ozi\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger bụ iji mfe ịkọrọ njirimara data, na mmadụ ma ọ bụ ihe karịrị ekwentị, authenticated, na nzuzo, na-emebibeghị. Onye ọ bụla ị na-eso emepụta nchebe ọgwụgwụ na-ọgwụgwụ ọwa ka izipu ozi.\n\nAtụmatụ:\n- Mfe ịgbanwe ozi ịkpọtụrụ ndị ọzọ\n- Nweghịkwa obi slingi odide, foto, na ihe ọ bụla!\n- Sie Ike cryptography na-echebe gị ozi\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Izi ozi</string>
+    <string name="text_KeywordPrivacy">Nzuzo</string>
+    <string name="text_KeywordSecurity">Nchebe</string>
     <string name="text_LanguagesProvidedBy">Asụsụ nye site na:</string>
-    <string name="text_Requirements">Chọrọ:\n1. A ga- arụnyere na nke kacha nta 2 ngwaọrụ.\n2. Njikọ Ịntanetị ga- arụsi ọrụ ike.</string>
+    <string name="text_RelatedSearchTerms">Metụtara Okwu:</string>
+    <string name="text_Requirements">Chọrọ:\n1. A ga-arụnyere na nke kacha nta 2 ngwaọrụ.\n2. Njikọ Ịntanetị ga-arụsi ọrụ ike.</string>
+    <string name="text_WhatsNew">- Kwụsie ike fixes.</string>
 
     <string name="title_About">Banyere</string>
     <string name="title_camera">Igwefoto</string>

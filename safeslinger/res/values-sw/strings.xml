@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kuwasiliana data ilikuwa mpangilio kimakosa.</string>
     <string name="error_WebCancelledByUser">Mtumiaji kufutwa ombi server.</string>
 
-    <string name="help_find">Kutumia screen hii kuweka jina lako, simu, na email ya kubadilishana na wengine. Bomba \' Done \' button wakati kumaliza.</string>
     <string name="help_home">Kubadilishana data utambulisho, kuhakikisha watumiaji wote ni jirani au kwa simu. Button \' Kuanza Exchange \' itakuwa kubadilishana tu kuchunguzwa data mawasiliano.</string>
     <string name="help_identity_menu">\n\nUnaweza pia kubadilisha data binafsi kuhusu utambulisho wako wa juu ya screen hii na kugonga kifungo kwa jina lako. Hii kuonyesha orodha ya kuruhusu wewe \'Edit\' kuwasiliana yako, Kujenga New \' mawasiliano, au \' Matumizi nyingine \' kuwasiliana.</string>
     <string name="help_Messages">Screen hii inaonyesha ujumbe wote siku za nyuma, na attachments kwamba bado ni inapatikana kwa shusha.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">muda wake %s</string>
     <string name="label_expiresIn">muda wake katika</string>
     <string name="label_FileNameHint">Jina faili</string>
-    <string name="label_FindInstruct">Tafadhali kuingia habari yako binafsi. Data hii tu kuwa salama pamoja na watu binafsi ambao kuchagua kushiriki kwa.</string>
     <string name="label_FirstName">Jina la kwanza</string>
     <string name="label_Home">Kuangalia vitu unataka kushiriki na bomba \' Kuanza Exchange \' wakati wengine ni tayari kubadilishana.</string>
     <string name="label_hometag">Nyumbani</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Retry</string>
     <string name="label_PassHintChange">Updated passphrase</string>
     <string name="label_PassHintCreate">Kujenga passphrase</string>
+    <string name="label_PassHintCurrent">Sasa passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Kurudia passphrase</string>
     <string name="label_passPhraseCacheTtl">Cache passphrase</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Mawasiliano %s nje.</string>
     <string name="state_TextCopiedToClipboard">Nakala kunakiliwa kwa clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ni iliyoundwa na kushiriki kwa urahisi data utambulisho, katika mtu au juu ya simu, kuthibitishwa, binafsi, na intact. Kila mtu kushiriki na inajenga salama hadi mwisho-mwisho channel kutuma ujumbe.\n\nSifa:\n- Urahisi kubadilishana mawasiliano ya habari na wengine\n- Salama kombeo maandiko, photos, kitu chochote!\n- Nguvu cryptography kulinda taarifa yako\n\nemail: %2$s\nmtandao: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ni iliyoundwa na kushiriki kwa urahisi data utambulisho, katika mtu au juu ya simu, kuthibitishwa, binafsi, na intact. Kila mtu kushiriki na inajenga salama hadi mwisho-mwisho channel kutuma ujumbe.\n\nFeatures:\n- Easily kubadilishana mawasiliano ya habari na wengine\n- Salama kombeo maandiko, photos, kitu chochote!\n- Strong cryptography kulinda habari yako\n\nemail: %2$s\nmtandao: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Utambulisho</string>
+    <string name="text_KeywordKey">Muhimu</string>
+    <string name="text_KeywordMessaging">Ujumbe</string>
+    <string name="text_KeywordPrivacy">Faragha</string>
+    <string name="text_KeywordSecurity">Usalama</string>
     <string name="text_LanguagesProvidedBy">Lugha zinazotolewa na:</string>
+    <string name="text_RelatedSearchTerms">Kuhusiana Terms:</string>
     <string name="text_Requirements">Mahitaji:\n1. Lazima kuwa imewekwa kwenye kiwango cha chini ya 2 vifaa.\n2. Uhusiano Internet lazima kuwa hai.</string>
+    <string name="text_WhatsNew">- Utulivu fixes.</string>
 
     <string name="title_About">Kuhusu</string>
     <string name="title_camera">Camera</string>

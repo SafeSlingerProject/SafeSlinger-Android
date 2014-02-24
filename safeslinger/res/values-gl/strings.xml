@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Datos de contacto foi formatado incorrectamente.</string>
     <string name="error_WebCancelledByUser">Usuario cancelado petición do servidor.</string>
 
-    <string name="help_find">Use esta pantalla para configurar o seu nome, teléfono e correo electrónico para intercambiar cos outros. Preme o botón \' Done \' cando rematar.</string>
     <string name="help_home">Para cambiar datos de identidade, garantir que todos os usuarios están nas proximidades ou no teléfono. O botón \' Comezar de cambio \' van intercambiar só os datos de contacto verificados.</string>
     <string name="help_identity_menu">\n\nTamén pode cambiar os datos persoais sobre a súa identidade na pantalla, tocando o botón co seu nome. Isto amosará un menú que lle permite \'Editar \' o seu contacto, \'Crear Novo contacto ou\' Usar Outro \' contacto.</string>
     <string name="help_Messages">Esta pantalla amosa tódalas mensaxes pasadas e anexos que aínda están dispoñibles para descargar.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">remata %s</string>
     <string name="label_expiresIn">remata o</string>
     <string name="label_FileNameHint">Nome do ficheiro</string>
-    <string name="label_FindInstruct">Por favor, escriba a súa información persoal. Estes datos só serán seguramente compartida coas persoas a quen escoller para compartir con el.</string>
     <string name="label_FirstName">Nome</string>
     <string name="label_Home">Comprobe elementos que quere compartir e toque \' Comezar de cambio \', cando outros están dispostos a cambiar.</string>
     <string name="label_hometag">Casa</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Tentar de novo</string>
     <string name="label_PassHintChange">Passphrase Actualizado</string>
     <string name="label_PassHintCreate">Crear Passphrase</string>
+    <string name="label_PassHintCurrent">Passphrase actual</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Repita Passphrase</string>
     <string name="label_passPhraseCacheTtl">Caché Passphrase</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Contactos %s importado.</string>
     <string name="state_TextCopiedToClipboard">Texto copiado para portapapeis.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger está deseñado para compartir facilmente datos de identidade, en persoa ou por teléfono, dentro do sistema, privado, e intacto. Cada persoa que comparte con crea unha canle segura end-to-end para enviar mensaxes.\n\nCaracterísticas:\n- intercambiar facilmente a información de contacto con outras persoas\n- seguridade funda textos, fotos, calquera cousa!\n- cifrado forte protexe a súa información\n\ncorreo electrónico: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger está deseñado para compartir facilmente datos de identidade, en persoa ou por teléfono, dentro do sistema, privado, e intacto. Cada persoa que comparte con crea unha canle segura end-to-end para enviar mensaxes.\n\nCaracterísticas:\n- Cambiar facilmente a información de contacto con outras persoas\n- Textos seguridade funda, fotos, calquera cousa!\n- Forte cifrado protexe a súa información\n\ne-mail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Intercambio</string>
+    <string name="text_KeywordIdentity">Identidade</string>
+    <string name="text_KeywordKey">Clave</string>
+    <string name="text_KeywordMessaging">Mensaxes</string>
+    <string name="text_KeywordPrivacy">Privacidade</string>
+    <string name="text_KeywordSecurity">Seguridade</string>
     <string name="text_LanguagesProvidedBy">Idiomas proporcionados por:</string>
+    <string name="text_RelatedSearchTerms">Termos relacionados:</string>
     <string name="text_Requirements">Requisitos:\n1. Debe ser instalado en un mínimo de 2 dispositivos.\n2. Unha conexión a Internet debe estar activa.</string>
+    <string name="text_WhatsNew">- Correccións de estabilidade.</string>
 
     <string name="title_About">Sobre</string>
     <string name="title_camera">Cámara</string>

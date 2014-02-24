@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">اطلاعات تماس با اشتباه فرمت شده است.</string>
     <string name="error_WebCancelledByUser">کاربر لغو درخواست سرور.</string>
 
-    <string name="help_find">با استفاده از این صفحه نمایش برای تنظیم نام، تلفن، ایمیل و به تبادل با دیگران است. شیر \' انجام \' را فشار دهید که به پایان رسید.</string>
     <string name="help_home">برای تبادل اطلاعات هویت، اطمینان از تمام کاربران در نزدیکی و یا بر روی تلفن. دکمه \' شروع بورس خواهد تنها اطلاعات تماس چک مبادله.</string>
     <string name="help_identity_menu">\n\nشما همچنین ممکن است داده های شخصی در مورد هویت خود را در این صفحه نمایش با ضربه زدن بر روی دکمه با نام خود را تغییر دهید. این منو به شما این امکان \'ویرایش\' تماس با شما، \' ایجاد جدید \' تماس، و یا \'استفاده از یکی دیگر از تماس صفحه نمایش.</string>
     <string name="help_Messages">این صفحه نمایش تمام پیام های گذشته، و فایل پیوست در که هنوز هم برای دانلود در دسترس است.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">منقضی %s</string>
     <string name="label_expiresIn">منقضی می شود در</string>
     <string name="label_FileNameHint">نام پرونده</string>
-    <string name="label_FindInstruct">لطفا اطلاعات شخصی خود را وارد کنید. این داده ها تنها خواهد شد و ایمن با افراد که شما انتخاب می کنید به اشتراک گذاری آن با به اشتراک گذاشته.</string>
     <string name="label_FirstName">نام</string>
     <string name="label_Home">چک کردن آیتم های شما می خواهید برای به اشتراک گذاشتن و شیر \' شروع اوراق بهادار \' هنگامی که دیگران آماده به تبادل می باشد.</string>
     <string name="label_hometag">خانه</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">دوباره امتحان کنید</string>
     <string name="label_PassHintChange">به روز شده در کلمه عبور</string>
     <string name="label_PassHintCreate">ایجاد کلمه عبور</string>
+    <string name="label_PassHintCurrent">کلمه عبور فعلی</string>
     <string name="label_PassHintEnter">کلمه عبور</string>
     <string name="label_PassHintRepeat">کلمه عبور را تکرار کنید</string>
     <string name="label_passPhraseCacheTtl">کش عبارت عبور</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">اطلاعات تماس %s وارد شده است.</string>
     <string name="state_TextCopiedToClipboard">متن کپی شده به کلیپ بورد.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger طراحی شده است تا به راحتی اطلاعات هویت به اشتراک گذاری ، حضوری و یا از طریق تلفن، تصدیق ، خصوصی ، و دست نخورده. هر شخصی که شما با به اشتراک گذاشتن یک کانال امن پایان به پایان برای ارسال پیام ایجاد می کند.\n\nویژگی ها:\n- به راحتی اطلاعات تماس تبادل با دیگران\n- ایمن فلاخن متن ها، عکس ها، هر چیزی! %2$s\nوب:: %3$s\n- رمزنگاری قوی اطلاعات خود را\n\nایمیل به محافظت</string>
+    <string name="text_About">%1$s\n\nSafeSlinger طراحی شده است تا به راحتی اطلاعات هویت به اشتراک گذاری، حضوری و یا از طریق تلفن، تصدیق، خصوصی، و دست نخورده. هر شخصی که شما با به اشتراک گذاشتن یک کانال امن پایان به پایان برای ارسال پیام ایجاد می کند.\n\nویژگی ها:\n- به راحتی اطلاعات تماس با دیگران تبادل\n- متون ایمن فلاخن، عکس ها، هر چیزی!\n- رمزنگاری قوی اطلاعات خود را محافظت می کند\n\nایمیل: %2$s\nوب: %3$s</string>
+    <string name="text_KeywordExchange">مبادله</string>
+    <string name="text_KeywordIdentity">هویت</string>
+    <string name="text_KeywordKey">کلید</string>
+    <string name="text_KeywordMessaging">پیام</string>
+    <string name="text_KeywordPrivacy">خلوت</string>
+    <string name="text_KeywordSecurity">امنیت</string>
     <string name="text_LanguagesProvidedBy">زبان های ارائه شده توسط:</string>
-    <string name="text_Requirements">مورد نیاز:\n1. باید در حداقل 2 دستگاه نصب شده است.\n2. اتصال به اینترنت باید فعال باشد.</string>
+    <string name="text_RelatedSearchTerms">قوانین و مقررات مرتبط:</string>
+    <string name="text_Requirements">مورد نیاز:\n1. باید در حداقل 2 دستگاه نصب شده است.\n2.اتصال به اینترنت باید فعال باشد.</string>
+    <string name="text_WhatsNew">- رفع ثبات.</string>
 
     <string name="title_About">در حدود</string>
     <string name="title_camera">دوربین</string>

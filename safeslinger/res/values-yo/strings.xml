@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Olubasọrọ data ti a pa ti ko tọ sii.</string>
     <string name="error_WebCancelledByUser">Olumulo pawonre olupin ba beere fun.</string>
 
-    <string name="help_find">Lo yi iboju lati ṣeto orukọ rẹ, foonu, ati imeeli lati ṣe paṣipaarọ pẹlu awọn omiiran. Tẹ \' ṣee \' bọtini nigba ti pari.</string>
     <string name="help_home">Lati pa awọn idanimo data, rii daju gbogbo awọn olumulo ni o wa nitosi tabi lori foonu. Ni \' Bẹrẹ Exchange \' bọtini yoo pa awọn nikan ni ẹnikeji olubasọrọ data.</string>
     <string name="help_identity_menu">\n\nO tun le yi data ara ẹni nipa rẹ idanimo loju iboju yi nipa fifọwọ lori bọtini pẹlu orukọ rẹ. Eleyi yoo han si akojọ ašayan kan gbigba o si \' Ṣatunkọ \' rẹ olubasọrọ, \' Ṣẹda titun \' olubasọrọ, tabi \' Lo miran \' olubasọrọ kan.</string>
     <string name="help_Messages">Iboju yi han gbogbo awọn ti o ti kọja awọn ifiranṣẹ, ati awọn asomọ ti o ba wa ni ṣi wa fun gbigba.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">dopin %s</string>
     <string name="label_expiresIn">dopin ni</string>
     <string name="label_FileNameHint">Faili Orukọ</string>
-    <string name="label_FindInstruct">Jọwọ tẹ alaye ti ara ẹni rẹ. Eleyi yoo data nikan ni ao labeabo pín pẹlu awọn olukuluku eni ti o yan lati pin o pẹlu.</string>
     <string name="label_FirstName">Akọkọ Orukọ</string>
     <string name="label_Home">Ṣayẹwo awọn ohun ti o fẹ lati pin ki o si tẹ \' Bẹrẹ Exchange \' nigba ti awọn miran ni o wa setan lati ṣe paṣipaarọ.</string>
     <string name="label_hometag">Ile</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Gbiyanju</string>
     <string name="label_PassHintChange">Imudojuiwọn kukuru</string>
     <string name="label_PassHintCreate">Ṣẹda kukuru</string>
+    <string name="label_PassHintCurrent">Kukuru lọwọlọwọ</string>
     <string name="label_PassHintEnter">Kukuru</string>
     <string name="label_PassHintRepeat">O tun awọn kukuru</string>
     <string name="label_passPhraseCacheTtl">Kukuru kaṣe</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s awọn olubasọrọ wole.</string>
     <string name="state_TextCopiedToClipboard">Text dakọ si sileti.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ti a ṣe lati pin awọn iṣọrọ idanimo data, ni eniyan tabi lori foonu, authenticated, ni ikọkọ, ati mule. Kọọkan eniyan ti o pin pẹlu awọn ṣẹda kan to ni aabo opin -si- opin ikanni lati fi ifiranṣẹ ranṣẹ.\n\nawọn ẹya ara ẹrọ:\n- awọn iṣọrọ paṣipaarọ alaye olubasọrọ pẹlu awọn omiiran\n- labeabo sling awọn ọrọ, awọn fọto, ohunkohun!\n- Strong cryptography ndaabobo rẹ alaye\n\nimeeli: %2$s\nwẹẹbu: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ti a ṣe lati pin awọn iṣọrọ idanimo data, ni eniyan tabi lori foonu, authenticated, ni ikọkọ, ati mule. Kọọkan eniyan ti o pin pẹlu awọn ṣẹda kan to ni aabo opin-si-opin ikanni lati fi ifiranṣẹ ranṣẹ.\n\nAwọn ẹya ara ẹrọ:\n- Awọn iṣọrọ pa awọn alaye kan si pẹlu awọn omiiran\n- Labeabo sling awọn ọrọ, awọn fọto, ohunkohun!\n- Strong cryptography ndaabobo rẹ alaye\n\nimeeli: %2$s\nwẹẹbu: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Fifiranṣẹ</string>
+    <string name="text_KeywordPrivacy">Ìpamọ</string>
+    <string name="text_KeywordSecurity">Aabo</string>
     <string name="text_LanguagesProvidedBy">Awọn ede ti a pese nipa:</string>
-    <string name="text_Requirements">Awọn ibeere:\n1. Gbọdọ wa ni fi sori ẹrọ lori kan ti o kere 2 ẹrọ.\n2. Ẹya ayelujara ti isopọ gbodo je lọwọ.</string>
+    <string name="text_RelatedSearchTerms">Jẹmọ Ofin:</string>
+    <string name="text_Requirements">Awọn Ibeere:\n1. Gbọdọ wa ni fi sori ẹrọ lori kan ti o kere 2 ẹrọ.\n2. Ẹya ayelujara ti isopọ gbodo je lọwọ.</string>
+    <string name="text_WhatsNew">- Iduroṣinṣin atunse.</string>
 
     <string name="title_About">Nipa</string>
     <string name="title_camera">Kamẹra</string>

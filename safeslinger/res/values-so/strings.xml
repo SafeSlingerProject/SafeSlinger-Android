@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Xogta Contact ahaa Fedaral si qaldan.</string>
     <string name="error_WebCancelledByUser">User kansal server codsi.</string>
 
-    <string name="help_find">Isticmaal screen this to dhigay magacaaga, telefoon, email iyo aad kalka kuwa kale. Qasabadda \' qabtay \' button markaad dhamaysid.</string>
     <string name="help_home">Si aad isu dhaafsadaan xogta aqoonsiga, si loo hubiyo dhamaan isticmaalayaasha u dhow ama telefoonka ku yihiin. \' Ka bilow Exchange \' The badhanka beddelan doonaa oo keliya xogta xiriir la hubiyaa.</string>
     <string name="help_identity_menu">\n\nWaxa kale oo aad beddeli kartaa macluumaadka shakhsiyeed oo ku saabsan aqoonsiga on screen this haray adigoo on badhanka leh magacaaga. Tani waxay muujiyaan doonaa menu a kuu oggolaadaan in aad \' Edit \' xidhiidhka aad, \' Create New \' xiriir, ama \' Isticmaal kale oo \' xiriir.</string>
     <string name="help_Messages">Shaashada Tan waxay ku tusaysaa oo dhan farriimaha la soo dhaafay, iyo lifaaqyada in weli waxaa laga heli karaa for download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">dhicin %s</string>
     <string name="label_expiresIn">ku egyahay</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Fadlan qor macluumaadkaaga shakhsiyeed. Xogtan oo kaliya in lagu ammaan ah lala wadaagi doonaa shaqsiyaadka kii aad doorato inaad la wadaagto.</string>
     <string name="label_FirstName">Magaca Hore</string>
     <string name="label_Home">Hubi alaabta aad rabto in aad la wadaagto hormariyo \' Ka bilow Exchange \' dadka kale marka ay diyaar u yihiin in ay isu dhaafsadaan.</string>
     <string name="label_hometag">Home</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Retry</string>
     <string name="label_PassHintChange">Passphrase Updated</string>
     <string name="label_PassHintCreate">Create an Passphrase</string>
+    <string name="label_PassHintCurrent">Passphrase Current</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Passphrase Repeat</string>
     <string name="label_passPhraseCacheTtl">Cache Passphrase</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Contacts %s laga keeno.</string>
     <string name="state_TextCopiedToClipboard">Texte soo guuriyeen in ay choriomeningitis.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger waxaa loogu talagalay inay si fudud u wadaagaan xogta aqoonsiga, in qof ama telefoon, lagana sugaa, kuwa gaarka ah, iyo dhawrsan. Qof kasta oo aad la wadaagto abuuraa qaab ammaan ah dhamaadka -ka- dhamaadka soo dirin fariimo.\n\nFeatures:\n- Si fudud, warbixin xiriirka dadka kale\n- sugan loo dhaadhacay wadhafka tuuristiisa qoraallada, photos, wax!\n- cryptography Strong difaacaa macluumaadkaaga\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger waxaa loogu talagalay inay si fudud u wadaagaan xogta aqoonsiga, in qof ama telefoon, lagana sugaa, kuwa gaarka ah, iyo dhawrsan. Qof kasta oo aad la wadaagto abuuraa qaab ammaan ah dhamaadka-ka-dhamaadka soo dirin fariimo.\n\nFeatures:\n- Si fudud, warbixin la xiriir lala yeesho dadka kale\n- Qoraallada sugan loo dhaadhacay wadhafka, photos, wax!\n- Cryptography Strong difaacaa macluumaadkaaga\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Aqoonsiga</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Fariin</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Security</string>
     <string name="text_LanguagesProvidedBy">Luqadaha bixisay by:</string>
+    <string name="text_RelatedSearchTerms">Related Terms:</string>
     <string name="text_Requirements">Shuruudaha:\n1. Waa in lagu dhejiyaa on ugu yaraan 2 qalabka.\n2. Internet waa in ay ahaadaan kuwo firfircoon.</string>
+    <string name="text_WhatsNew">- Ciidamada Kumandoska Xasiloonida.</string>
 
     <string name="title_About">About</string>
     <string name="title_camera">Camera</string>

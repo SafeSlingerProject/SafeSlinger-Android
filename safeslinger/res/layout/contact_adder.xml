@@ -48,6 +48,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/size_5dp"
+                    android:layout_marginRight="@dimen/size_50dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/label_FindInstruct"
                     android:textSize="@dimen/text_size_medium" />
@@ -58,6 +60,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="@string/label_ContactName"
                     android:textSize="@dimen/text_size_small" />
             </TableRow>
@@ -69,85 +72,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
+                    android:imeOptions="actionDone"
                     android:inputType="textCapWords|textPersonName"
                     android:privateImeOptions="nm"
                     android:textSize="@dimen/text_size_medium" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_ContactPhone"
-                    android:textSize="@dimen/text_size_small" />
-            </TableRow>
-
-            <TableRow>
-
-                <EditText
-                    android:id="@+id/contactPhoneEditText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:imeOptions="actionNext"
-                    android:inputType="phone"
-                    android:privateImeOptions="nm"
-                    android:textSize="@dimen/text_size_medium" />
-
-                <Spinner
-                    android:id="@+id/contactPhoneTypeSpinner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/text_size_small" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_ContactEmail"
-                    android:textSize="@dimen/text_size_small" />
-            </TableRow>
-
-            <TableRow>
-
-                <EditText
-                    android:id="@+id/contactEmailEditText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:imeOptions="actionDone"
-                    android:inputType="textEmailAddress"
-                    android:privateImeOptions="nm"
-                    android:textSize="@dimen/text_size_medium" />
-
-                <Spinner
-                    android:id="@+id/contactEmailTypeSpinner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/text_size_small" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_targetAccountLabel"
-                    android:textSize="@dimen/text_size_small" />
-            </TableRow>
-
-            <TableRow>
-
-                <Spinner
-                    android:id="@+id/accountSpinner"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="@dimen/text_size_small" />
             </TableRow>
         </TableLayout>
     </ScrollView>

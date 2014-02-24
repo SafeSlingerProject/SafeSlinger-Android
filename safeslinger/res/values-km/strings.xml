@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">ទិន្នន័យ ទំនាក់ទំនងដែល ត្រូវបាន ធ្វើទ្រង់ទ្រាយ មិនត្រឹមត្រូវ។</string>
     <string name="error_WebCancelledByUser">អ្នកប្រើ បានបោះបង់ សំណើ ម៉ាស៊ីនបម្រើ។</string>
 
-    <string name="help_find">ប្រើ អេក្រង់ នេះដើម្បីកំណត់ ឈ្មោះ របស់អ្នក, ទូរស័ព្ទ, អ៊ីម៉ែល និងការ ផ្លាស់ប្តូរ ជាមួយអ្នកផ្សេង ។ ប៉ះ ប៊ូតុង \' ធ្វើ \' ពេលបញ្ចប់។</string>
     <string name="help_home">ដើម្បីផ្លាស់ប្តូរ ទិន្នន័យ អត្តសញ្ញាណ ធានាបាននូវ អ្នកប្រើប្រាស់ ទាំងអស់ គឺមាន នៅក្បែរ ឬនៅលើ ទូរស័ព្ទ។ ប៊ូតុង \' ចាប់ផ្តើម ផ្លាស់ប្តូរ \' នឹង ផ្លាស់ប្តូរ តែទិន្នន័យដែល ទំនាក់ទំនង បានធីក ។</string>
     <string name="help_identity_menu">\n\nអ្នកក៏អាច ផ្លាស់ប្តូរ ទិន្នន័យផ្ទាល់ខ្លួន អំពី អត្តសញ្ញាណ របស់អ្នកនៅលើ អេក្រង់នេះ ដោយគ្រាន់តែប៉ះ លើប៊ូតុង ដែលមានឈ្មោះ របស់អ្នក។ ការ នេះនឹងបង្ហាញ ម៉ឺនុយ ដែលអនុញ្ញាតឱ្យអ្នក ទៅ \' កែសម្រួល \' ទំនាក់ទំនងរបស់អ្នក \' បង្កើតថ្មី \' ការទំនាក់ទំនង ឬ \' ប្រើ មួយផ្សេងទៀត \' ទំនាក់ទំនង មួយ។</string>
     <string name="help_Messages">អេក្រង់នេះ បង្ហាញ សារដែល កន្លងមក ទាំងអស់ហើយ ឯកសារភ្ជាប់ ដែល នៅតែ មានសម្រាប់ទាញយក ។</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">ផុតកំណត់ %s</string>
     <string name="label_expiresIn">ផុតកំណត់ក្នុង</string>
     <string name="label_FileNameHint">ឈ្មោះ ឯកសារ</string>
-    <string name="label_FindInstruct">សូមបញ្ចូល ពត៌មាន ផ្ទាល់ខ្លួនរបស់អ្នក។ ទិន្នន័យ នេះនឹងត្រូវបាន ចែករំលែក សុវត្ថិភាព តែជាមួយ បុគ្គល ដែល អ្នកបានជ្រើស ដើម្បីចែករំលែក វាជាមួយ ។</string>
     <string name="label_FirstName">ឈ្មោះ ដំបូង</string>
     <string name="label_Home">ពិនិត្យមើល ធាតុ ដែលអ្នកចង់ ចែករំលែកនិង ទាញយក \' ចាប់ផ្តើម ផ្លាស់ប្តូរ \' នៅពេលដែល អ្នកដទៃទៀត គឺ ត្រៀមខ្លួនជាស្រេច ក្នុងការ ផ្លាស់ប្តូរ ។</string>
     <string name="label_hometag">ទំព័រដើម</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">ព្យាយាមម្ដងទៀត</string>
     <string name="label_PassHintChange">ឃ្លាសម្ងាត់ បានធ្វើឱ្យទាន់សម័យ</string>
     <string name="label_PassHintCreate">បង្កើត ឃ្លាសម្ងាត់</string>
+    <string name="label_PassHintCurrent">ឃ្លាសម្ងាត់បច្ចុប្បន្ន</string>
     <string name="label_PassHintEnter">ឃ្លាសម្ងាត់</string>
     <string name="label_PassHintRepeat">ឃ្លាសម្ងាត់ ម្តងទៀត</string>
     <string name="label_passPhraseCacheTtl">ឃ្លាំងសម្ងាត់ ឃ្លាសម្ងាត់</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">ទំនាក់ទំនង %s នាំចូល។</string>
     <string name="state_TextCopiedToClipboard">អត្ថបទដែល បានចម្លង ទៅក្ដារតម្បៀតខ្ទាស់ ។</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ត្រូវបានរចនាឡើង ដើម្បីចែករំលែក ទិន្នន័យ អត្តសញ្ញាណ យ៉ាងងាយស្រួល នៅក្នុង មនុស្សម្នាក់ ឬ តាមទូរស័ព្ទ, បានផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវ ឯកជននិង នៅដដែល ។ មនុស្សម្នាក់មាន អ្នកចែករំលែក ជាមួយនឹងការ បង្កើតជា ឆានែល បញ្ចប់ ទៅ នៅចុង មានសុវត្ថិភាព ក្នុងការផ្ញើ សារ។ លក្ខណៈ ពិសេស\n\n:\n- ងាយស្រួលក្នុងការ ផ្លាស់ប្តូរព័ត៌មាន ទំនាក់ទំនង ជាមួយអ្នកដទៃ\n- មូលបត្រ Sling អត្ថបទរូបភាព អ្វីនោះទេ!\n- ការគ្រីប ខ្លាំង ការពារ ព័ត៌មានរបស់អ្នក\n\nអ៊ីម៉ែល: %2$s\nបណ្តាញ: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ត្រូវបានរចនាឡើងដើម្បីចែករំលែកទិន្នន័យអត្តសញ្ញាណយ៉ាងងាយស្រួលនៅក្នុងមនុស្សម្នាក់ឬតាមទូរស័ព្ទ, បានផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវឯកជននិងនៅដដែល។ មនុស្សម្នាក់មានអ្នកចែករំលែកជាមួយនឹងការបង្កើតជាឆានែលបញ្ចប់ទៅនៅចុងមានសុវត្ថិភាពក្នុងការផ្ញើសារ។\n\nលក្ខណៈពិសេស:\n- ងាយស្រួលក្នុងការផ្លាស់ប្តូរព័ត៌មានទាក់ទងជាមួយអ្នកផ្សេង\n- អត្ថបទមូលបត្រ Sling រូបភាពអ្វីទាំងអស់!\n- ការគ្រីបរឹងមាំការពារព័ត៌មានរបស់អ្នក\n\nអ៊ីម៉ែល: %2$s\nគេហទំព័រ: %3$s</string>
+    <string name="text_KeywordExchange">ការផ្លាស់ប្តូរ</string>
+    <string name="text_KeywordIdentity">អត្តសញ្ញាណ</string>
+    <string name="text_KeywordKey">គន្លឹះ</string>
+    <string name="text_KeywordMessaging">ការផ្ញើសារ</string>
+    <string name="text_KeywordPrivacy">ភាពជាឯកជន</string>
+    <string name="text_KeywordSecurity">សន្តិសុខ</string>
     <string name="text_LanguagesProvidedBy">ភាសា ដែលបានផ្ដល់ ដោយ:</string>
-    <string name="text_Requirements">តម្រូវការ:\n1 ។ ត្រូវតែបានដំឡើង នៅលើ អប្បបរមានៃ ឧបករណ៍ 2 ។\n2 ។ ការតភ្ជាប់ អ៊ីធឺណិត មួយដែល ត្រូវតែសកម្ម។</string>
+    <string name="text_RelatedSearchTerms">លក្ខខណ្ឌទាក់ទងនឹង:</string>
+    <string name="text_Requirements">តម្រូវការ:\n1 ។ ត្រូវតែបានដំឡើងនៅលើអប្បបរមានៃឧបករណ៍ 2 ។\n2 ។ ការតភ្ជាប់អ៊ីធឺណិតមួយដែលត្រូវតែសកម្ម។</string>
+    <string name="text_WhatsNew">- ជួសជុលស្ថេរភាព។</string>
 
     <string name="title_About">អំពី</string>
     <string name="title_camera">ម៉ាស៊ីនថត</string>

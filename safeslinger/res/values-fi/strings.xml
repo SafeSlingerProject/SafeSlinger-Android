@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Yhteystietoja on alustettu väärin.</string>
     <string name="error_WebCancelledByUser">Käyttäjä perui palvelimen pyynnöstä.</string>
 
-    <string name="help_find">Tämän näytön avulla asettaa nimesi, puhelinnumerosi ja sähköpostiosoitteesi vaihtaa muiden kanssa. Kosketa\'Valmis\'-painiketta kun olet valmis.</string>
     <string name="help_home">Vaihtaa tunnistetietoja, jotta kaikki käyttäjät ovat lähellä tai puhelimessa. \' Aloita Exchange \'-painiketta vaihtavat vaintarkistanut yhteystietoja.</string>
     <string name="help_identity_menu">\n\nVoit myös vaihtaa henkilötietoja henkilöllisyytesi napauttamalla painiketta nimesi. Tämä näyttää valikon, jonka avulla voit \'Muokkaa\' yhteystietosi, \' Luo uusi \' yhteystietoja, tai \'käyttö Toinen yhteystiedot.</string>
     <string name="help_Messages">Tämä näyttö näyttää kaikki menneisyyden viestit ja liitetiedostot, jotka ovat vielä ladattavissa.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">päättyy %s</string>
     <string name="label_expiresIn">päättyy vuonna</string>
     <string name="label_FileNameHint">Tiedoston nimi</string>
-    <string name="label_FindInstruct">Kirjoita henkilökohtaisia ​​tietoja. Tämä tietoja saa turvallisesti jakaa yksilöiden kenen kanssa olet jakaa sen.</string>
     <string name="label_FirstName">Etunimi</string>
     <string name="label_Home">Tarkista kohteet, jotka haluat jakaa ja napauta \' Aloita Exchange \', kun toiset ovat valmiita vaihtamaan.</string>
     <string name="label_hometag">Koti</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Yritä uudelleen</string>
     <string name="label_PassHintChange">Päivitetty Tunnuslause</string>
     <string name="label_PassHintCreate">Luo Tunnuslause</string>
+    <string name="label_PassHintCurrent">Nykyinen Tunnuslause</string>
     <string name="label_PassHintEnter">Tunnuslause</string>
     <string name="label_PassHintRepeat">Toista Tunnuslause</string>
     <string name="label_passPhraseCacheTtl">Tunnuslause Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s tuotujen yhteystietojen.</string>
     <string name="state_TextCopiedToClipboard">Teksti kopioitu leikepöydälle.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger on suunniteltu helposti jakaa identiteetin tietoja, henkilökohtaisesti tai puhelimitse, todennettu, yksityisen ja ehjä. Jokainen henkilö jaat luoturvallisen end-to-end-kanava lähettää viestejä.\n\nOminaisuudet:\n- helposti vaihtaa yhteystietoja muiden kanssa\n- Turvallisesti rintareppu tekstejä, kuvia, mitään!\n- vahvan salauksen suojaa tietoja\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger on suunniteltu helposti jakaa identiteetin tietoja, henkilökohtaisesti tai puhelimitse, todennettu, yksityisen ja ehjä. Jokainen henkilö jaat luo turvallisen end-to-end-kanava lähettää viestejä.\n\nOminaisuudet:\n- Helposti vaihtaa yhteystietoja muiden kanssa\n- Turvallisesti rintareppu tekstejä, kuvia, mitään!\n- Vahvan salauksen suojaa tietoja\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Vaihto</string>
+    <string name="text_KeywordIdentity">Identiteetti</string>
+    <string name="text_KeywordKey">Avain</string>
+    <string name="text_KeywordMessaging">Viestit</string>
+    <string name="text_KeywordPrivacy">Yksityisyys</string>
+    <string name="text_KeywordSecurity">Turvallisuus</string>
     <string name="text_LanguagesProvidedBy">Kielet tarjoaa:</string>
-    <string name="text_Requirements">Vaatimukset:\n1. On asennettavavähintään 2 laitetta.\n2. Internet-yhteyden on oltava käytössä.</string>
+    <string name="text_RelatedSearchTerms">Asiaan liittyviä termejä:</string>
+    <string name="text_Requirements">Vaatimukset:\n1. On asennettava vähintään 2 laitetta.\n2. Internet-yhteyden on oltava käytössä.</string>
+    <string name="text_WhatsNew">- Vakaus korjauksia.</string>
 
     <string name="title_About">Noin</string>
     <string name="title_camera">Kamera</string>

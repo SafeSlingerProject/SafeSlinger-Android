@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontaktní údaje formátování nesprávně.</string>
     <string name="error_WebCancelledByUser">Uživatel zrušil požadavek serveru.</string>
 
-    <string name="help_find">Na této obrazovce můžete nastavit své jméno, telefon, e-mail a vyměňovat si s ostatními. Po dokončení klepněte na tlačítko \' Hotovo \'.</string>
     <string name="help_home">Pro výměnu dat identity, zajištění všichni uživatelé jsou v blízkosti nebo na telefonu. Tlačítko \' začnou burzy budou vyměňovat pouze zaškrtnuté kontaktní údaje.</string>
     <string name="help_identity_menu">\n\nMůžete také změnit osobní údaje týkající se vaší identity na této obrazovce klepnutím na tlačítko s vaším jménem. Tím se zobrazí nabídka umožňující \' Upravit \' svůj kontakt, \' Vytvořit nový \' kontakt, nebo \' Použít \' Další kontakt.</string>
     <string name="help_Messages">Tato obrazovka zobrazuje všechny minulé zprávy a přílohy, které jsou stále k dispozici ke stažení.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">vyprší %s</string>
     <string name="label_expiresIn">vyprší v</string>
     <string name="label_FileNameHint">Jméno souboru</string>
-    <string name="label_FindInstruct">Prosím, zadejte své osobní údaje. Tato data budou pouze bezpečně sdíleny s jednotlivci, kterého se budete chtít sdílet.</string>
     <string name="label_FirstName">Jméno</string>
     <string name="label_Home">Zkontrolujte položky, které chcete sdílet, a klepněte na tlačítko \' Begin Exchange \', když ostatní jsou připraveny k výměně.</string>
     <string name="label_hometag">Domácí</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Zkusit znovu</string>
     <string name="label_PassHintChange">Aktualizováno Přístupové heslo</string>
     <string name="label_PassHintCreate">Vytvořte přístupové heslo</string>
+    <string name="label_PassHintCurrent">Aktuální Přístupové heslo</string>
     <string name="label_PassHintEnter">Přístupové heslo</string>
     <string name="label_PassHintRepeat">Opakujte Přístupové heslo</string>
     <string name="label_passPhraseCacheTtl">Přístupové heslo Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontakty importovat.</string>
     <string name="state_TextCopiedToClipboard">Text zkopírován do schránky.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger je navržen tak, aby snadno sdílet data identity, osobně nebo po telefonu, ověřený, soukromí a neporušený. Každá osoba sdílíte s vytváří zabezpečený kanál end-to-end pro odesílání zpráv.\n\nVlastnosti:\n- Snadná výměna informací o kontaktech s ostatními\n- Bezpečně praku texty, fotografie, cokoliv!\n- Silné šifrování chrání vaše informace\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger je navržen tak, aby snadno sdílet data identity, osobně nebo po telefonu, ověřený, soukromí a neporušený. Každá osoba sdílíte s vytváří zabezpečený kanál end-to-end pro odesílání zpráv.\n\nVlastnosti:\n- Snadná výměna kontaktní informace s ostatními\n- Bezpečně Sling texty, fotky, cokoliv!\n- Silné šifrování chrání vaše informace\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Výměna</string>
+    <string name="text_KeywordIdentity">Identita</string>
+    <string name="text_KeywordKey">Klíč</string>
+    <string name="text_KeywordMessaging">Zprávy</string>
+    <string name="text_KeywordPrivacy">Soukromí</string>
+    <string name="text_KeywordSecurity">Zabezpečení</string>
     <string name="text_LanguagesProvidedBy">Jazyky poskytované:</string>
-    <string name="text_Requirements">Požadavky:\n1. Musí být nainstalován na minimálně 2 zařízení.\n2. Připojeník Internetu musí být aktivní.</string>
+    <string name="text_RelatedSearchTerms">Příbuzné termíny:</string>
+    <string name="text_Requirements">Požadavky:\n1. Musí být nainstalován na minimálně 2 zařízení.\n2. Připojení k Internetu musí být aktivní.</string>
+    <string name="text_WhatsNew">- Opravy stability.</string>
 
     <string name="title_About">O</string>
     <string name="title_camera">Kamera</string>

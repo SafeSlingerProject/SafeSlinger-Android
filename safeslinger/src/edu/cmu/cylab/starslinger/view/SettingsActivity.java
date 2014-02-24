@@ -66,8 +66,6 @@ public class SettingsActivity extends SherlockPreferenceActivity {
     private ListPreference mAccountNameType = null;
     private ListPreference mFileManagerDirectory = null;
     private EditTextPreference mContactName = null;
-    private EditTextPreference mContactPhone = null;
-    private EditTextPreference mContactEmail = null;
     private Preference mContactPubKeyId = null;
     private Preference mContactPushToken = null;
     private Preference mBackupRequestDate = null;
@@ -109,8 +107,6 @@ public class SettingsActivity extends SherlockPreferenceActivity {
         setupBackupCompleteDate();
         setupRestoreCompleteDate();
         setupContactName();
-        setupContactPhone();
-        setupContactEmail();
         setupContactSyncAccount();
     }
 
@@ -380,38 +376,6 @@ public class SettingsActivity extends SherlockPreferenceActivity {
                 mContactName.setText((String) newValue);
                 mContactName.setSummary((String) newValue);
                 ConfigData.savePrefContactName(getApplicationContext(), (String) newValue);
-                return false;
-            }
-        });
-    }
-
-    protected void setupContactPhone() {
-        mContactPhone = (EditTextPreference) findPreference(ConfigData.pref.CONTACT_PHONE);
-        mContactPhone.setText(ConfigData.loadPrefContactPhone(getApplicationContext()));
-        mContactPhone.setSummary(ConfigData.loadPrefContactPhone(getApplicationContext()));
-        mContactPhone.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                mContactPhone.setText((String) newValue);
-                mContactPhone.setSummary((String) newValue);
-                ConfigData.savePrefContactPhone(getApplicationContext(), (String) newValue);
-                return false;
-            }
-        });
-    }
-
-    protected void setupContactEmail() {
-        mContactEmail = (EditTextPreference) findPreference(ConfigData.pref.CONTACT_EMAIL);
-        mContactEmail.setText(ConfigData.loadPrefContactEmail(getApplicationContext()));
-        mContactEmail.setSummary(ConfigData.loadPrefContactEmail(getApplicationContext()));
-        mContactEmail.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                mContactEmail.setText((String) newValue);
-                mContactEmail.setSummary((String) newValue);
-                ConfigData.savePrefContactEmail(getApplicationContext(), (String) newValue);
                 return false;
             }
         });

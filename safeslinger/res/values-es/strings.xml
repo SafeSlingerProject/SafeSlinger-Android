@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Los datos de contacto fueron formateados incorrectamente.</string>
     <string name="error_WebCancelledByUser">El usuario canceló la solicitud del servidor.</string>
 
-    <string name="help_find">Utilice esta pantalla para configurar su nombre, teléfono y correo electrónico para intercambiar con otros. Pulse el botón \'Hecho\' cuando haya terminado.</string>
     <string name="help_home">Para el intercambio de datos de identidad, asegúrese de que todos los usuarios estén cerca o en el teléfono. El botón \'Comenzar Cambio\' canjeará únicamente los datos de contacto chequeados.</string>
     <string name="help_identity_menu">\n\nTambién puede cambiar los datos personales sobre su identidad en esta pantalla pulsando sobre el botón con su nombre. Esto mostrará un menú que le permite \'Editar\' su contacto \'Crear nuevo\' contacto, o \'Utilizar Otro \'contacto.</string>
     <string name="help_Messages">Esta pantalla muestra todos los mensajes anteriores y los anexos que aún están disponibles para su descarga.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">expira %s</string>
     <string name="label_expiresIn">expira en</string>
     <string name="label_FileNameHint">Nombre del Archivo</string>
-    <string name="label_FindInstruct">Por favor, introduzca su información personal. Estos datos sólo serán compartidos con personas a las que usted elija para compartirlos.</string>
     <string name="label_FirstName">Primer Nombre</string>
     <string name="label_Home">Compruebe los elementos que desea compartir y toque \'Comenzar Intercambio\' cuando los demás estén dispuestos a intercambiar.</string>
     <string name="label_hometag">Inicio</string>

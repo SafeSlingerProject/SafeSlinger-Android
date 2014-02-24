@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontaktné údaje formátovanie nesprávne.</string>
     <string name="error_WebCancelledByUser">Užívateľ zrušil požiadavku servera.</string>
 
-    <string name="help_find">Na tejto obrazovke môžete nastaviť svoje meno, telefón, e-mail a vymieňať si s ostatnými. Po dokončení kliknite na tlačidlo \' Hotovo \'.</string>
     <string name="help_home">Pre výmenu dát identity, zabezpečenie všetci užívatelia sú v blízkosti alebo na telefóne. Tlačidlo \' začnú burzy budú vymieňať iba zaškrtnuté kontaktné údaje.</string>
     <string name="help_identity_menu">\n\nMôžete tiež zmeniť osobné údaje týkajúce sa vašej identity na tejto obrazovke kliknutím na tlačidlo s vaším menom. Tým sa zobrazí ponuka umožňujúca \' Upraviť \' svoj ​​kontakt, \' Vytvoriť nový \' kontakt, alebo \' Použiť \' Ďalší kontakt.</string>
     <string name="help_Messages">Táto obrazovka zobrazuje všetky minulé správy a prílohy, ktoré sú stále k dispozícii na stiahnutie.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">vyprší %s</string>
     <string name="label_expiresIn">vyprší v</string>
     <string name="label_FileNameHint">Meno súboru</string>
-    <string name="label_FindInstruct">Prosím, zadajte svoje osobné údaje. Tieto dáta budú iba bezpečne zdieľané s jednotlivcami, ktorého sa budete chcieť zdieľať.</string>
     <string name="label_FirstName">Meno</string>
     <string name="label_Home">Skontrolujte položky, ktoré chcete zdieľať, a kliknite na tlačidlo \' Begin Exchange \', keď ostatné sú pripravené k výmene.</string>
     <string name="label_hometag">Domáce</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Skúsiť znova</string>
     <string name="label_PassHintChange">Aktualizované Prístupové heslo</string>
     <string name="label_PassHintCreate">Vytvorte prístupové heslo</string>
+    <string name="label_PassHintCurrent">Aktuálne Prístupové heslo</string>
     <string name="label_PassHintEnter">Prístupové heslo</string>
     <string name="label_PassHintRepeat">Opakujte Prístupové heslo</string>
     <string name="label_passPhraseCacheTtl">Prístupové heslo Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontakty importovať.</string>
     <string name="state_TextCopiedToClipboard">Text skopírovaný do schránky.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger je navrhnutý tak, aby ľahko zdieľať dáta identity, osobne alebo po telefóne, overený, súkromie a neporušený. Každá osoba zdieľate s vytvára zabezpečený kanál end-to-end pre odosielanie správ.\n\nVlastnosti:\n- Jednoduchá výmena informácií o kontaktoch s ostatnými\n- Bezpečne praku texty, fotografie, čokoľvek!\n- Silné šifrovanie chráni vaše informácie\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger je navrhnutý tak, aby ľahko zdieľať dáta identity, osobne alebo po telefóne, overený, súkromie a neporušený. Každá osoba zdieľate s vytvára zabezpečený kanál end-to-end pre odosielanie správ.\n\nVlastnosti:\n- Jednoduchá výmena kontaktné informácie s ostatnými\n- Bezpečne Sling texty, fotky, čokoľvek!\n- Silné šifrovanie chráni vaše informácie\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Výmena</string>
+    <string name="text_KeywordIdentity">Identita</string>
+    <string name="text_KeywordKey">Kľúč</string>
+    <string name="text_KeywordMessaging">Správy</string>
+    <string name="text_KeywordPrivacy">Súkromie</string>
+    <string name="text_KeywordSecurity">Zabezpečenie</string>
     <string name="text_LanguagesProvidedBy">Jazyky poskytované:</string>
+    <string name="text_RelatedSearchTerms">Príbuzné termíny:</string>
     <string name="text_Requirements">Požiadavky:\n1. Musí byť nainštalovaný na minimálne 2 zariadenia.\n2. Pripojenie k Internetu musí byť aktívny.</string>
+    <string name="text_WhatsNew">- Opravy stability.</string>
 
     <string name="title_About">O</string>
     <string name="title_camera">Kamera</string>

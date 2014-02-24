@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">సంప్రదించండి డేటా తప్పుగా ఫార్మాట్ చేశారు.</string>
     <string name="error_WebCancelledByUser">వాడుకరి సర్వర్ అభ్యర్థనను రద్దు.</string>
 
-    <string name="help_find">ఇతరులతో మార్పిడి మీ పేరు, ఫోన్, మరియు ఇమెయిల్ సెట్ తెరమీద ఉపయోగించండి. పూర్తవగానే \' డన్ \' బటన్ నొక్కండి.</string>
     <string name="help_home">గుర్తింపు డేటా మార్పిడి, యూజర్లు సమీపంలోని లేదా ఫోన్ ఉండేలా. \' ప్రారంభం SWF ఎక్సే్ఛంజీ బటన్ తనిఖీ పరిచయం డేటా మార్పిడి చేస్తుంది.</string>
     <string name="help_identity_menu">\n\nమీరు కూడా మీ పేరుతో బటన్ నొక్కడం ద్వారా తెరమీద మీ ఐడెంటిటీ వ్యక్తిగత డేటా మార్చవచ్చు. మీరు \' మార్చు \' మీ పరిచయం, పరిచయం \' న్యూ సృష్టించు \', లేదా పరిచయం \' మరో ఉపయోగించండి \' అనుమతిస్తుంది ఒక మెను ప్రదర్శిస్తుంది.</string>
     <string name="help_Messages">ఈ తెర అన్ని గత సందేశాలను, మరియు ఇప్పటికీ డౌన్లోడ్ కోసం అందుబాటులో జోడింపులను ప్రదర్శిస్తుంది.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s గడువు</string>
     <string name="label_expiresIn">లో ముగుస్తుంది</string>
     <string name="label_FileNameHint">దస్త్రం పేరు</string>
-    <string name="label_FindInstruct">మీ వ్యక్తిగత సమాచారాన్ని ఇవ్వండి. ఈ డేటాను మాత్రమే సురక్షితంగా మీరు తో భాగస్వామ్యం ఎంచుకోండి వీరిలో వ్యక్తులు భాగస్వామ్యం చేయబడుతుంది.</string>
     <string name="label_FirstName">మొదటి పేరు</string>
     <string name="label_Home">మీరు భాగస్వామ్యం \' ఎక్స్చేంజ్ ప్రారంభం SWF \' కార్చు అనుకుంటున్నారా అంశాలను తనిఖీ ఇతరులు మార్పిడి సిద్ధంగా ఉన్నప్పుడు.</string>
     <string name="label_hometag">హోం</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">మళ్ళీ ప్రయత్నించండి</string>
     <string name="label_PassHintChange">Updated సంకేతపదమును</string>
     <string name="label_PassHintCreate">పాస్ఫ్రేజ్ సృష్టించు</string>
+    <string name="label_PassHintCurrent">ప్రస్తుత సంకేతపదాన్ని</string>
     <string name="label_PassHintEnter">పాస్ఫ్రేజ్</string>
     <string name="label_PassHintRepeat">రిపీట్ సంకేతపదమును</string>
     <string name="label_passPhraseCacheTtl">పాస్ఫ్రేజ్ Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s పరిచయాలను దిగుమతి.</string>
     <string name="state_TextCopiedToClipboard">టెక్స్ట్ కాపీ చేయబడి.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ప్రైవేట్, అధికారం, వ్యక్తి లేదా ఫోన్, సులభంగా గుర్తింపు డేటా భాగస్వామ్యం రూపొందించబడింది, మరియు చెక్కుచెదరకుండా ఉంది. మీరు భాగస్వామ్యం ప్రతి వ్యక్తికి సందేశాలను పంపడానికి సురక్షిత ఎండ్ టు ఎండ్ ఛానల్ సృష్టిస్తుంది.\n\nఫీచర్స్:\n- సులభంగా ఇతరులు సురక్షితంగా పాఠాలు, ఫోటోలు, ఏదైనా స్లింగ్\n- సంబంధం సమాచారాన్ని మార్పిడి! %2$s\nవెబ్: %3$s\n- బలమైన గూఢ మీ సమాచారాన్ని\n\nఇమెయిల్ రక్షిస్తుంది</string>
+    <string name="text_About">%1$s\n\nSafeSlinger, వ్యక్తి లేదా ఫోన్, సులభంగా గుర్తింపు డేటా భాగస్వామ్యం రూపొందించబడింది అధికారం, ప్రైవేట్, మరియు చెక్కుచెదరకుండా ఉంది. మీరు భాగస్వామ్యం ప్రతి వ్యక్తికి సందేశాలను పంపడానికి సురక్షిత ఎండ్ టు ఎండ్ ఛానల్ సృష్టిస్తుంది.\n\nఫీచర్స్\n- సులభంగా ఇతరులతో సమాచారాన్ని సంప్రదించండి మార్పిడి\n- సురక్షితంగా స్లింగ్ పాఠాలు, ఫోటోలు, ఏదైనా!\n- బలమైన గూఢ మీ సమాచారాన్ని రక్షించే\n\nఇమెయిల్: %2$s\nవెబ్: %3$s</string>
+    <string name="text_KeywordExchange">మార్పిడి</string>
+    <string name="text_KeywordIdentity">గుర్తింపు</string>
+    <string name="text_KeywordKey">కీ</string>
+    <string name="text_KeywordMessaging">మెసేజింగ్</string>
+    <string name="text_KeywordPrivacy">గోప్యతా</string>
+    <string name="text_KeywordSecurity">భద్రత</string>
     <string name="text_LanguagesProvidedBy">అందించిన భాషలు:</string>
+    <string name="text_RelatedSearchTerms">సంబంధిత నిబంధనలు:</string>
     <string name="text_Requirements">అవసరాలు:\n1. 2 పరికరాల కనీసం ఇన్స్టాల్ చేయాలి.\n2. ఒక ఇంటర్నెట్ కనెక్షన్ యాక్టివ్గా ఉండాలి.</string>
+    <string name="text_WhatsNew">- స్టెబిలిటీ పరిష్కారాలను.</string>
 
     <string name="title_About">గురించి</string>
     <string name="title_camera">కెమెరా</string>

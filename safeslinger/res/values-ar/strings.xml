@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">تم تنسيقها جهة الاتصال بشكل غير صحيح.</string>
     <string name="error_WebCancelledByUser">إلغاء طلب المعلن الخادم.</string>
 
-    <string name="help_find">استخدام هذه الشاشة لتحديد اسمك ، والهاتف ، والبريد الإلكتروني لتبادل مع الآخرين. اضغط على زر \'تم\' عند الانتهاء.</string>
     <string name="help_home">لتبادل البيانات الهوية ، وضمان جميع المستخدمين في مكان قريب أو على الهاتف. سوف زر \' بيغن الصرافة تبادل البيانات فقط الاتصال فحصها.</string>
     <string name="help_identity_menu"> غير متوافر غير متوافر يمكنك أيضا تغيير البيانات الشخصية حول الهوية الخاصة بك على هذه الشاشة من خلال النقر على زر مع اسمك. وهذا عرض قائمة مما يتيح لك \'تحرير \' الاتصال الخاصة بك، \'إنشاء جديد \' الاتصال، أو \' استخدام آخر \' للإتصال به.</string>
     <string name="help_Messages">يعرض هذه الشاشة كل الرسائل الماضية، و المرفقات التي لا تزال متاحة للتنزيل.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">تنتهي %s</string>
     <string name="label_expiresIn">تنتهي في</string>
     <string name="label_FileNameHint">اسم الملف</string>
-    <string name="label_FindInstruct">الرجاء إدخال المعلومات الشخصية الخاصة بك. لن يتم تقاسم هذه البيانات بشكل آمن مع الأفراد الذين اخترت مشاركتها مع.</string>
     <string name="label_FirstName">الاسم الأول</string>
     <string name="label_Home">تحقق العناصر التي ترغب في المشاركة والاستفادة من \' بيغن الصرافة عند الآخرين مستعدون لتبادل.</string>
     <string name="label_hometag">منزل</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">أعد المحاولة</string>
     <string name="label_PassHintChange">تحديث عبارة المرور</string>
     <string name="label_PassHintCreate">إنشاء عبارة المرور</string>
+    <string name="label_PassHintCurrent">عبارة المرور الحالية</string>
     <string name="label_PassHintEnter">عبارة المرور</string>
     <string name="label_PassHintRepeat">تكرار عبارة المرور</string>
     <string name="label_passPhraseCacheTtl">الكاش عبارة المرور</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">الاتصالات %s المستوردة.</string>
     <string name="state_TextCopiedToClipboard">النص المنسوخ إلى الحافظة.</string>
 
-    <string name="text_About">تم تصميم %1$s غير متوافر غير متوافر SafeSlinger لتبادل البيانات بسهولة الهوية، في شخص أو عبر الهاتف، مصادقة ، والخاصة، و سليمة. كل شخص كنت تشارك مع يخلق نهاية إلى نهاية قناة آمنة لإرسال الرسائل. غير متوافر غير متوافر الميزات: - غير متوافر تبادل المعلومات بسهولة الاتصال مع الآخرين غير متوافر - حبال غرفتك النصوص والصور و أي شيء! غير متوافر - التشفير قوي يحمي معلوماتك غير متوافر غير متوافر البريد الإلكتروني: %2$s غير متوافر على شبكة الإنترنت: %3$s</string>
+    <string name="text_About">%1$s\n\nتم تصميم SafeSlinger لتبادل البيانات بسهولة الهوية، في شخص أو عبر الهاتف، مصادقة، والخاصة، وسليمة. كل شخص كنت تشارك مع يخلق نهاية إلى نهاية قناة آمنة لإرسال الرسائل.\n\nالميزات:\n- تبادل المعلومات بسهولة الاتصال مع الآخرين\n- النصوص حبال آمن والصور وأي شيء!\n- تشفير قوي يحمي معلوماتك\n\nالبريد الإلكتروني: %2$s\nعلى شبكة الإنترنت: %3$s</string>
+    <string name="text_KeywordExchange">تبادل</string>
+    <string name="text_KeywordIdentity">هوية</string>
+    <string name="text_KeywordKey">مفتاح</string>
+    <string name="text_KeywordMessaging">الرسائل</string>
+    <string name="text_KeywordPrivacy">خصوصية</string>
+    <string name="text_KeywordSecurity">أمن</string>
     <string name="text_LanguagesProvidedBy">اللغات التي تقدمها:</string>
-    <string name="text_Requirements">المتطلبات: غير متوافر 1. يجب أن تكون مثبتة على الحد الأدنى من الأجهزة 2. غير متوافر 2. يجب أن يكون اتصال إنترنت نشط.</string>
+    <string name="text_RelatedSearchTerms">شروط ذات الصلة:</string>
+    <string name="text_Requirements">المتطلبات:\n1. يجب أن تكون مثبتة على الحد الأدنى من الأجهزة 2.\n2. يجب أن يكون اتصال إنترنت نشط.</string>
+    <string name="text_WhatsNew">- إصلاحات الاستقرار.</string>
 
     <string name="title_About">حول</string>
     <string name="title_camera">كاميرا</string>

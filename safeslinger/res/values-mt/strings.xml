@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Informazzjoni ta \'kuntatt kien formattjati b\'mod żbaljat.</string>
     <string name="error_WebCancelledByUser">User kkanċellati talba server.</string>
 
-    <string name="help_find">Uża dan l-iskrin li jiġu stabbiliti l-isem tiegħek, telefon, u email biex jiskambjaw ma \'oħrajn. Tektek il-\' Magħmul \' buttuna meta lest.</string>
     <string name="help_home">Li jiskambja data identità, tiżgura l-utenti kollha huma fil-qrib jew fuq it-telefon. Buttuna \' Tibda Exchange \' se jiskambjaw biss id-dejta ta\' kuntatt ċċekkjati.</string>
     <string name="help_identity_menu">\n\nInti tista \'wkoll jibdlu data personali dwar l-identità tiegħek fuq dan l-iskrin billi ttektek fuq il-buttuna bl-isem tiegħek. Dan se display menu li jippermettilek li \' Edit \' kuntatt tiegħek, \' Oħloq New \' kuntatt, jew \'Użu ieħor \' kuntatt.</string>
     <string name="help_Messages">Dan screen displays messaġġi kollha tal-passat, u l-annessi li għadhom disponibbli għal download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">jiskadi %s</string>
     <string name="label_expiresIn">jiskadi fl-</string>
     <string name="label_FileNameHint">Isem tal-fajl</string>
-    <string name="label_FindInstruct">Jekk jogħġbok ikteb l-informazzjoni personali tiegħek. Din l-informazzjoni sikur kondiviża biss ma \'individwi li magħhom inti tagħżel li tinqasam ma.</string>
     <string name="label_FirstName">Isem</string>
     <string name="label_Home">Iċċekkja oġġetti li tixtieq taqsam u vit \' Tibda Exchange \' meta oħrajn huma lesti li jiskambjaw.</string>
     <string name="label_hometag">Home</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Retry</string>
     <string name="label_PassHintChange">Passphrase updated</string>
     <string name="label_PassHintCreate">Oħloq passphrase</string>
+    <string name="label_PassHintCurrent">Passphrase attwali</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Passphrase Irrepeti</string>
     <string name="label_passPhraseCacheTtl">Cache passphrase</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Kuntatti %s importati.</string>
     <string name="state_TextCopiedToClipboard">Test ikkuppjata lill clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger hija mfassla biex faċilment sehem data identità, personalment jew permezz tat-telefon, awtentikat, privati ​​, u intatt. Kull persuna int taqsam ma toħloq kanal sigur end-to-end biex jibagħtu messaġġi.\n\nKaratteristiċi:\n- Faċilment jiskambjaw informazzjoni ta \'kuntatt ma\' oħrajn\n- Sikur braga testi, ritratti, xejn!\n- kriptografija Strong tipproteġi l-informazzjoni tiegħek\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger hija mfassla biex faċilment sehem data identità, personalment jew permezz tat-telefon, awtentikat, privati​​, u intatt. Kull persuna int taqsam ma toħloq kanal sigur end-to-end biex jibagħtu messaġġi.\n\nKaratteristiċi:\n- Faċilment jiskambjaw informazzjoni ta \'kuntatt ma\' oħrajn\n- Testi Sikur braga b\'ħafna truf, ritratti, xejn!\n- Kriptografija Strong tipproteġi l-informazzjoni tiegħek\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Skambju</string>
+    <string name="text_KeywordIdentity">Identità</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Messaging</string>
+    <string name="text_KeywordPrivacy">Privatezza</string>
+    <string name="text_KeywordSecurity">Sigurtà</string>
     <string name="text_LanguagesProvidedBy">Lingwi pprovduti minn:</string>
-    <string name="text_Requirements">Rekwiżiti:\n1. Għandu jiġi installat fuq minimu ta \' 2 apparati.\n2. Konnessjoni Internet għandhom ikunu attivi.</string>
+    <string name="text_RelatedSearchTerms">Termini relatati:</string>
+    <string name="text_Requirements">Rekwiżiti:\n1. Għandu jiġi installat fuq minimu ta \'2 apparati.\n2. Konnessjoni Internet għandhom ikunu attivi.</string>
+    <string name="text_WhatsNew">- Jiffissa l-istabbiltà.</string>
 
     <string name="title_About">Dwar</string>
     <string name="title_camera">Camera</string>

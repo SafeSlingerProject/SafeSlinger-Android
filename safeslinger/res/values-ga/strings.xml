@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Cuireadh formáidithe sonraí Teagmháil mícheart.</string>
     <string name="error_WebCancelledByUser">Úsáideoir ceal iarraidh freastalaí.</string>
 
-    <string name="help_find">Bain úsáid as an scáileán a leagan amach do ainm, fón, agus r-phost a mhalartú le daoine eile. Beartaíonn an cnaipe \' Arna dhéanamh \' nuair críochnaithe.</string>
     <string name="help_home">Chun sonraí aitheantais a mhalartú, a chinntiú go bhfuil gach úsáideoir in aice láimhe nó ar an teileafón. Beidh an cnaipe an \' Tosaigh Malartú \' a mhalartú ach amháin na sonraí teagmhála a sheiceáil.</string>
     <string name="help_identity_menu">\n\nIs féidir leat sonraí pearsanta faoi do chéannacht ar an scáileán a athrú freisin ag cnagadh ar an gcnaipe le do ainm. Beidh sé seo a thaispeáint roghchlár a ligeann duit \'Cuir in eagar \' do teagmháil a dhéanamh, \' Cruthaigh Nua \' teagmhála, nó \' Bain úsáid eile \' teagmhála.</string>
     <string name="help_Messages">Taispeánann an scáileán gach teachtaireacht atá caite, agus ceangaltáin atá fós ar fáil le híoslódáil.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">éag %s</string>
     <string name="label_expiresIn">éag i</string>
     <string name="label_FileNameHint">Comhad Ainm</string>
-    <string name="label_FindInstruct">Cuir isteach do chuid faisnéise pearsanta. Beidh na sonraí seo a roinnt go daingean ach amháin le daoine aonair a bhfuil a roghnaíonn tú a roinnt le.</string>
     <string name="label_FirstName">Céad Ainm</string>
     <string name="label_Home">Nithe ​​is mian leat a roinnt agus sconna \' Tosaigh Malartú \' Seiceáil nuair a bhíonn daoine eile réidh a mhalartú.</string>
     <string name="label_hometag">Baile</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Atriail</string>
     <string name="label_PassHintChange">Nuashonraithe Frása Faire</string>
     <string name="label_PassHintCreate">Cruthaigh Frása Faire</string>
+    <string name="label_PassHintCurrent">Frása Faire Reatha</string>
     <string name="label_PassHintEnter">Frása Faire</string>
     <string name="label_PassHintRepeat">Frása Faire Déan</string>
     <string name="label_passPhraseCacheTtl">Taisce Frása Faire</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Teagmhálacha %s allmhairithe.</string>
     <string name="state_TextCopiedToClipboard">Téacs cóip a chur chuig gearrthaisce.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger tá sé deartha chun a roinnt go héasca sonraí aitheantais, go pearsanta nó ar an nguthán, fíordheimhnithe, príobháideach, agus slán. Gach duine a bhfuil tú a roinnt le gcruthaíonn cainéal slán-deireadh le deireadh chun teachtaireachtaí a sheoladh.\n\nGnéithe:\n- héasca eolas teagmhála a mhalartú le daoine eile\n- daingean sling téacsanna, grianghraif, rud ar bith! Cosnaíonn\n- cripteagrafaíochta láidir do chuid faisnéise\n\nr-phost: %2$s\ngréasáin: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger tá sé deartha chun a roinnt go héasca sonraí aitheantais, go pearsanta nó ar an nguthán, fíordheimhnithe, príobháideach, agus slán. Gach duine a bhfuil tú a roinnt le gcruthaíonn cainéal slán-deireadh le deireadh chun teachtaireachtaí a sheoladh.\n\nGnéithe:\n- A mhalartú go héasca faisnéis teagmhála le daoine eile\n- Téacsanna daingean sling, grianghraif, rud ar bith!\n- Cosnaíonn cripteagrafaíochta láidir do chuid faisnéise\n\nr-phost: %2$s\ngréasáin: %3$s</string>
+    <string name="text_KeywordExchange">Malartú</string>
+    <string name="text_KeywordIdentity">Céannacht</string>
+    <string name="text_KeywordKey">Eochair</string>
+    <string name="text_KeywordMessaging">Teachtaireachtaí</string>
+    <string name="text_KeywordPrivacy">Príobháideacht</string>
+    <string name="text_KeywordSecurity">Slándáil</string>
     <string name="text_LanguagesProvidedBy">Teangacha ar fáil ag:</string>
+    <string name="text_RelatedSearchTerms">Téarmaí ghaolmhara:</string>
     <string name="text_Requirements">Riachtanais:\n1. Ní mór a bheith suiteáilte ar a laghad 2 feistí.\n2. Ní mór nasc Idirlín a bheith gníomhach.</string>
+    <string name="text_WhatsNew">- Ceartúcháin Cobhsaíochta.</string>
 
     <string name="title_About">Maidir</string>
     <string name="title_camera">Ceamara</string>

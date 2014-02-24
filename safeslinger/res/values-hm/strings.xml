@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Sib cuag cov ntaub ntawv twb formatted incorrectly.</string>
     <string name="error_WebCancelledByUser">Tus neeg siv yuav tso tseg rau zaub mov thov.</string>
 
-    <string name="help_find">Siv no screen mus teem koj lub npe, xov tooj, thiab email mus sib pauv nrog lwm tus. Khob qhov \' Tas \' khawm thaum tiav lawm.</string>
     <string name="help_home">Mus pauv tus kheej cov ntaub ntawv, kom tag nrho cov neeg siv yog cov nyob ze los yog hauv xov tooj. Qhov \' Pib Txauv \' khawm yuav sib pauv xwb lub soj ntsuam cov ntaub ntawv sib tiv tauj.</string>
     <string name="help_identity_menu">\n\nTej zaum koj kuj yuav hloov koj tus kheej cov ntaub ntawv txog koj tus kheej nyob rau hauv kev tshuaj ntsuam no los tapping rau lub khawm nrog koj lub npe. Qhov no yuav tso saib ib lub hom phiaj rau cov zaub mov koj mus \' Kho kom raug neeg \' koj cov lus hu, \' Tsim Tshiab \' kev sib cuag, los yog \' Siv Lwm \' kev sib cuag.</string>
     <string name="help_Messages">Qhov no qhia tag nrho cov kev tshuaj ntsuam yav dhau los lus, thiab txuas hais tias yog tseem muaj nyob rau download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">expires %s</string>
     <string name="label_expiresIn">expires nyob rau hauv</string>
     <string name="label_FileNameHint">Cov ntaub ntawv lub npe</string>
-    <string name="label_FindInstruct">Thov nkag mus rau koj tus kheej cov lus qhia. Qhov ntaub ntawv no yuav tsuas yuav securely muab qhia nrog cov tib neeg uas koj xaiv los mus qhia nws nrog.</string>
     <string name="label_FirstName">Npe</string>
     <string name="label_Home">Mus saib tej yam khoom uas koj xav qhia thiab khob \' Pib Txauv \' thaum lwm tus neeg npaj txhij mus pauv.</string>
     <string name="label_hometag">Home</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Retry</string>
     <string name="label_PassHintChange">Tshiab Passphrase</string>
     <string name="label_PassHintCreate">Tsim Passphrase</string>
+    <string name="label_PassHintCurrent">Tam sim no Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Repeat Passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s tiv tauj txawv.</string>
     <string name="state_TextCopiedToClipboard">Lus copied rau daim ntawv tiag.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger yog tsim los yooj yim qhia yog leejtwg cov ntaub ntawv, nyob rau hauv tus neeg los yog hauv xov tooj, authenticated, ntiav, thiab si tauv. Txhua tus neeg uas koj qhia nrog tsim ib tug ruaj ntseg kawg-rau-kawg channel xa lus.\n\nnta:\n- yooj yim sib pauv kev sib cuag cov ntaub ntawv nrog lwm tus\n- Securely rab ka xus phau ntawv, cov duab, txhua yam!\n- Muaj zog cryptography tiv thaiv koj cov ntaub ntawv\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger yog tsim los yooj yim qhia yog leejtwg cov ntaub ntawv, nyob rau hauv tus neeg los yog hauv xov tooj, authenticated, ntiav, thiab si tauv. Txhua tus neeg uas koj qhia nrog tsim ib tug ruaj ntseg kawg-rau-kawg channel xa lus.\n\nNta:\n- Yooj yim sib pauv hu rau cov ntaub ntawv nrog lwm tus\n- Securely rab ka xus phau ntawv, cov duab, txhua yam!\n- Muaj zog cryptography tiv thaiv koj cov ntaub ntawv\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Txauv</string>
+    <string name="text_KeywordIdentity">Yog leejtwg</string>
+    <string name="text_KeywordKey">Ntsiab</string>
+    <string name="text_KeywordMessaging">Messaging</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Security</string>
     <string name="text_LanguagesProvidedBy">Lus muab los ntawm:</string>
-    <string name="text_Requirements">Yuav tsum tau muaj:\n1. Yuav tsum tau ntsia ib yam tsawg kawg nkaus ntawm 2 pab kiag li.\n2. Ib Internet kev twb kev txuas yuav tsum nquag.</string>
+    <string name="text_RelatedSearchTerms">Related Cov ntsiab lus:</string>
+    <string name="text_Requirements">Yuav Tsum tau Muaj:\n1. Yuav tsum tau ntsia ib yam tsawg kawg nkaus ntawm 2 pab kiag li.\n2. Ib Internet kev twb kev txuas yuav tsum nquag.</string>
+    <string name="text_WhatsNew">- Ruaj ntseg kho.</string>
 
     <string name="title_About">Txog</string>
     <string name="title_camera">Lub koob yees duab</string>

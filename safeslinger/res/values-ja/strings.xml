@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">連絡先データが誤ってフォーマットした。</string>
     <string name="error_WebCancelledByUser">ユーザはサーバ要求をキャンセルしました。</string>
 
-    <string name="help_find">名前・電話番号・電子メールを設定するには、この画面を使用します。完了したら \'Done\'ボタンをタップしてください。</string>
     <string name="help_home">IDデータを交換するために、すべてのユーザーが近くいるか携帯電話をもっていなければなりません。 \'交換開始\'ボタンを押すとチェックされている連絡先データだけ交換します。</string>
     <string name="help_identity_menu">\n\nは便利自分の名前の付いたボタンをタップしてこの画面であなたの身元に関する個人データを変更することがあります。これは、メニューができ、あなたのタッチを\'編集\'に\'新規作成\'接触を表示したり、連絡先のもう一つを使用して\'ます。</string>
     <string name="help_Messages">この画面では、過去のすべてのメッセージと、まだダウンロード可能なファイルが表示されます。</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%sの期限が切れる</string>
     <string name="label_expiresIn">に失効</string>
     <string name="label_FileNameHint">ファイル名</string>
-    <string name="label_FindInstruct">あなたの個人情報を入力してください。このデータは、確実にあなたがそれを共有することを選択した個体と共有される。</string>
     <string name="label_FirstName">名前</string>
     <string name="label_Home">交換したいアイテムをチェックして、他のユーザが交換準備ができたら \'交換開始\'タップしてください。</string>
     <string name="label_hometag">ホーム</string>

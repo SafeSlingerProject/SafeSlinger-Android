@@ -35,8 +35,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Environment;
-import android.provider.ContactsContract.CommonDataKinds.Email;
-import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.text.TextUtils;
 import android.util.Base64;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
@@ -112,8 +110,6 @@ public class ConfigData {
     private static final boolean DEFAULT_REMINDBACKUPDELAY = true;
     private static final boolean DEFAULT_SHOW_RECENT_RECIPONLY = true;
     private static final boolean DEFAULT_SHOW_RECENT_RECIPONLY_EDITED = false;
-    private static final int DEFAULT_CONTACT_PHONE_TYPE = Phone.TYPE_MOBILE;
-    private static final int DEFAULT_CONTACT_EMAIL_TYPE = Email.TYPE_HOME;
     private static final boolean DEFAULT_FIRST_EXCH_COMPLETE = false;
     private static final boolean DEFAULT_SHOW_REMINDSLINGKEYS = true;
 
@@ -129,7 +125,15 @@ public class ConfigData {
      */
     public static final class pref {
         @Deprecated
+        public static final String CONTACT_EMAIL = "ContactEmail";
+        @Deprecated
+        public static final String CONTACT_EMAIL_TYPE = "ContactEmailType";
+        @Deprecated
         public static final String CONTACT_ID = "ContactID";
+        @Deprecated
+        public static final String CONTACT_PHONE = "ContactPhone";
+        @Deprecated
+        public static final String CONTACT_PHONE_TYPE = "ContactPhoneType";
 
         public static final String ACCOUNT_NAME = "AccountName";
         public static final String ACCOUNT_TYPE = "AccountType";
@@ -137,12 +141,8 @@ public class ConfigData {
         public static final String BACKUP_REQUEST_DATE = "backupRequestDate";
         public static final String CHANGE_PASSPHRASE = "changePassphrase";
         public static final String CONTACT_DB_LAST_SCAN = "contactDBLastScan";
-        public static final String CONTACT_EMAIL = "ContactEmail";
-        public static final String CONTACT_EMAIL_TYPE = "ContactEmailType";
         public static final String CONTACT_LOOKUP_KEY = "ContactLookupKey";
         public static final String CONTACT_NAME = "ContactName";
-        public static final String CONTACT_PHONE = "ContactPhone";
-        public static final String CONTACT_PHONE_TYPE = "ContactPhoneType";
         public static final String CURR_MSG_DB_VER = "CurrentMessageDBVer";
         public static final String CURR_RECIP_DB_VER = "CurrentRecipientDBVer";
         public static final String CURRENT_USER = "CurrentUser";
@@ -185,8 +185,6 @@ public class ConfigData {
         public static final String CREATE_PASS_PHRASE = "CreatePassPhrase";
         public static final String CREATED = "Created";
         public static final String DIRS = "DirectoryStack";
-        public static final String EMAIL = "Email";
-        public static final String EMAIL_TYPE = "EmailType";
         public static final String ERROR = "Error";
         public static final String EXCH_NAME = "ExchName";
         public static final String EXCHANGED_TOTAL = "ExchangedTotal";
@@ -200,8 +198,6 @@ public class ConfigData {
         public static final String NAME = "Name";
         public static final String PASS_PHRASE = "PassPhrase";
         public static final String PCT = "pct";
-        public static final String PHONE = "Phone";
-        public static final String PHONE_TYPE = "PhoneType";
         public static final String PHOTO = "Photo";
         public static final String POSITION = "Position";
         public static final String PUSH_FILE_NAME = "PushFileName";
@@ -283,6 +279,13 @@ public class ConfigData {
 
     // persist to backup account...
 
+    public static void removePrefDeprecated(Context ctx) {
+        removePref(ctx, pref.CONTACT_EMAIL, true);
+        removePref(ctx, pref.CONTACT_EMAIL_TYPE, true);
+        removePref(ctx, pref.CONTACT_PHONE, true);
+        removePref(ctx, pref.CONTACT_PHONE_TYPE, true);
+    }
+
     public static boolean loadPrefContactField(Context ctx, String field) {
         return loadPrefBoolean(ctx, getUserKeyName(ctx, field), true, true);
     }
@@ -318,40 +321,6 @@ public class ConfigData {
 
     public static void savePrefContactName(Context ctx, String ContactName) {
         savePrefString(ctx, getUserKeyName(ctx, pref.CONTACT_NAME), ContactName, true);
-    }
-
-    public static String loadPrefContactPhone(Context ctx) {
-        return loadPrefString(ctx, getUserKeyName(ctx, pref.CONTACT_PHONE), null, true);
-    }
-
-    public static void savePrefContactPhone(Context ctx, String ContactPhone) {
-        savePrefString(ctx, getUserKeyName(ctx, pref.CONTACT_PHONE), ContactPhone, true);
-    }
-
-    public static String loadPrefContactEmail(Context ctx) {
-        return loadPrefString(ctx, getUserKeyName(ctx, pref.CONTACT_EMAIL), null, true);
-    }
-
-    public static void savePrefContactEmailType(Context ctx, int ContactEmailType) {
-        savePrefInt(ctx, getUserKeyName(ctx, pref.CONTACT_EMAIL_TYPE), ContactEmailType, true);
-    }
-
-    public static int loadPrefContactPhoneType(Context ctx) {
-        return loadPrefInt(ctx, getUserKeyName(ctx, pref.CONTACT_PHONE_TYPE),
-                DEFAULT_CONTACT_PHONE_TYPE, true);
-    }
-
-    public static void savePrefContactPhoneType(Context ctx, int ContactPhoneType) {
-        savePrefInt(ctx, getUserKeyName(ctx, pref.CONTACT_PHONE_TYPE), ContactPhoneType, true);
-    }
-
-    public static int loadPrefContactEmailType(Context ctx) {
-        return loadPrefInt(ctx, getUserKeyName(ctx, pref.CONTACT_EMAIL_TYPE),
-                DEFAULT_CONTACT_EMAIL_TYPE, true);
-    }
-
-    public static void savePrefContactEmail(Context ctx, String ContactEmail) {
-        savePrefString(ctx, getUserKeyName(ctx, pref.CONTACT_EMAIL), ContactEmail, true);
     }
 
     public static String loadPrefAccountName(Context ctx) {
@@ -696,6 +665,20 @@ public class ConfigData {
         // request backup when recoverable setting has changed
         if (recover && loadPrefInt != value) {
             queueBackup(ctx);
+        }
+    }
+
+    private static void removePref(Context ctx, String key, boolean recover) {
+        SharedPreferences settings = ctx.getSharedPreferences(getPrefsFileName(recover),
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings.edit();
+        if (settings.contains(key)) {
+            editor.remove(key);
+            editor.commit();
+            // request backup when recoverable setting has changed
+            if (recover) {
+                queueBackup(ctx);
+            }
         }
     }
 

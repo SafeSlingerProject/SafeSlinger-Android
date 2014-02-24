@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Podaci za kontakt je pogrešno formatiran.</string>
     <string name="error_WebCancelledByUser">Korisnik otkazao zahtjeva serveru.</string>
 
-    <string name="help_find">Koristite ovaj ekran postaviti svoje ime, telefon, i email razmjene sa drugima. Dodirnite \' Done \' tipku kada završite.</string>
     <string name="help_home">Za razmjenu podataka identiteta, osigurati svim korisnicima su u blizini ili na telefon. Dugme \' Begin Exchange \' će razmjenjivati ​​samo provjeriti kontakt podatke.</string>
     <string name="help_identity_menu">\n\nTakođer možete promijeniti osobne podatke o svom identitetu na ovom zaslonu dodirom na gumb sa svojim imenom. Tako će se prikazati izbornik omogućava vam da \' Edit \' kontakt, \'Napravi novu \' kontakt, ili \' koristite drugi \' kontakt.</string>
     <string name="help_Messages">Ovaj ekran prikazuje sve prošlosti poruke, i priloge koji su još uvijek dostupna za download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">ističe %s</string>
     <string name="label_expiresIn">ističe u</string>
     <string name="label_FileNameHint">Ime datoteke</string>
-    <string name="label_FindInstruct">Unesite svoje osobne podatke. Ovi podaci će biti sigurno dijeli samo s pojedincima kojima se odlučite podijeliti sa.</string>
     <string name="label_FirstName">Ime</string>
     <string name="label_Home">Provjerite stavke koje želite podijeliti i dodirnite \' Početi Exchange \' kada drugi su spremni za razmjenu.</string>
     <string name="label_hometag">Kući</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Ponovo suditi</string>
     <string name="label_PassHintChange">Ažurirano Passphrase</string>
     <string name="label_PassHintCreate">Napravi Passphrase</string>
+    <string name="label_PassHintCurrent">Trenutni Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Ponovite Passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontakti uvoze.</string>
     <string name="state_TextCopiedToClipboard">Tekst kopiran u clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger je dizajniran da lako dijeliti podatke identitet, osobno ili preko telefona, autentičnost, privatne, i netaknuta. Svaka osoba koju dijele s stvara siguran kanal end-to-end za slanje poruka.\n\nKarakteristike:\n- Lako razmjenjuju podatke o kontaktu sa drugima\n- sigurno baca tekstovi, fotografije, sve!\n- Snažna kriptografija štiti vaše podatke\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger je dizajniran tako da se lako dijeliti podatke identitet, osobno ili preko telefona, autentičnost, privatne, i netaknuta. Svaka osoba koju dijele s stvara siguran kanal end-to-end za slanje poruka.\n\nKarakteristike:\n- Lako zamjena PODACI sa drugima\n- Sigurno baca tekstovi, fotografije, sve!\n- Jako kriptografije štiti vaše podatke\n\ne-mail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Razmjena</string>
+    <string name="text_KeywordIdentity">Identitet</string>
+    <string name="text_KeywordKey">Ključni</string>
+    <string name="text_KeywordMessaging">Poruke</string>
+    <string name="text_KeywordPrivacy">Privatnost</string>
+    <string name="text_KeywordSecurity">Bezbjednost</string>
     <string name="text_LanguagesProvidedBy">Jezici koje:</string>
+    <string name="text_RelatedSearchTerms">Related Uvjeti:</string>
     <string name="text_Requirements">Zahtjevi:\n1. Mora biti instaliran na minimalno 2 uređaja.\n2. Internet veza mora biti aktivna.</string>
+    <string name="text_WhatsNew">- Stabilnost popravci.</string>
 
     <string name="title_About">Oko</string>
     <string name="title_camera">Kamera</string>

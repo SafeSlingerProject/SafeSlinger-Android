@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Les données de contact ont été formatés correctement.</string>
     <string name="error_WebCancelledByUser">L\'utilisateur a annulé la demande du serveur.</string>
 
-    <string name="help_find">Utilisez cet écran pour configurer le nom, téléphone, et e-mail que vous souhaitez échanger. Appuyez sur le bouton \'Terminé\' lorsque vous avez terminé.</string>
     <string name="help_home">Pour échanger des identités, assurez-vous que tous les utilisateurs se trouvent à proximité de leur téléphone. Le bouton \'Commencer échange\' échangera uniquement les contacts qui ont été cochés.</string>
     <string name="help_identity_menu">\n\nVous Puissiez utile de modifier les données personnelles concernant votre identité sur cet écran en appuyant sur ​​le bouton avec votre nom. Cela permet d\'afficher un menu vous permettant de \'Edit\' votre contact, \'Créer un nouveau \'contact ou\' utiliser un autre \'contact.</string>
     <string name="help_Messages">Cet écran affiche tous les anciens messages et les fichiers qui sont encore disponibles pour le téléchargement.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">expire %s</string>
     <string name="label_expiresIn">expire en</string>
     <string name="label_FileNameHint">Nom du fichier</string>
-    <string name="label_FindInstruct">S\'il vous plaît entrer vos informations personnelles. Ces données ne seront partagées en toute sécurité avec les personnes qui vous choisissez de partager avec.</string>
     <string name="label_FirstName">Prénom</string>
     <string name="label_Home">Cochez les éléments que vous souhaitez partager et appuyez sur \'Commencer l\'échange\' quand les autres sont prêts à échanger.</string>
     <string name="label_hometag">Domicile</string>

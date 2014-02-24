@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontaktni podatki, je bilo oblikovano napačno.</string>
     <string name="error_WebCancelledByUser">Uporabnik prekliče zahtevo strežnika.</string>
 
-    <string name="help_find">Uporabo tega zaslona, da nastavite vaše ime, telefon in e-izmenjava z drugimi. Dotaknite gumb \' Done \', ko končate.</string>
     <string name="help_home">Izmenjujejo osebne podatke, naj vsi uporabniki so v neposredni bližini ali po telefonu. Gumb \' Begin izmenjava\' bodo izmenjali samo preverjene kontaktnih podatkov.</string>
     <string name="help_identity_menu">\n\nlahko spremenite osebne podatke tudi o vaši identiteti na tem zaslonu z dotikom na gumb s svojim imenom. To bo prikazalo meni vam omogoča, da \' Edit \' svojo vizitko, \'Ustvari novo \' osebo ali \' uporabiti drugo \' stik.</string>
     <string name="help_Messages">Ta zaslon prikazuje vse pretekle sporočila in priloge, ki so še vedno na voljo za prenos.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">poteče %s</string>
     <string name="label_expiresIn">izteče leta</string>
     <string name="label_FileNameHint">Ime datoteke</string>
-    <string name="label_FindInstruct">Prosimo, vnesite svoje osebne podatke. Ti podatki se bodo zaupno delili le s posamezniki, ki jih izberete, da ga delite s.</string>
     <string name="label_FirstName">Ime</string>
     <string name="label_Home">Preverite elemente, si želijo, da delijo in izberite \' Začni Exchange \', ko so drugi pripravljeni za izmenjavo.</string>
     <string name="label_hometag">Domov</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Retry</string>
     <string name="label_PassHintChange">Posodobljeno Passphrase</string>
     <string name="label_PassHintCreate">Ustvari Passphrase</string>
+    <string name="label_PassHintCurrent">Trenutni Passphrase</string>
     <string name="label_PassHintEnter">Geselska</string>
     <string name="label_PassHintRepeat">Ponovite Passphrase</string>
     <string name="label_passPhraseCacheTtl">Geselska Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s stiki uvoženi.</string>
     <string name="state_TextCopiedToClipboard">Besedilo, ki kopira v odložišče.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger je zasnovan za enostavno izmenjavo osebnih podatkov, osebno ali po telefonu, potrjeni, zasebni, in nepoškodovani. Vsaka oseba, ki jo deliti z ustvarja varnega kanala end-to-end za pošiljanje sporočil.\n\nZnačilnosti:\n- Preprosto si izmenjujejo kontaktne podatke z drugimi\n- Varno sling besedila, fotografije, karkoli!\n- močna kriptografija ščiti vaše podatke\n\ne-naslov: %2$s\nspletni naslov: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger je zasnovan za enostavno izmenjavo osebnih podatkov, osebno ali po telefonu, potrjeni, zasebni, in nepoškodovani. Vsaka oseba, ki jo deliti z ustvarja varnega kanala end-to-end za pošiljanje sporočil.\n\nZnačilnosti:\n- Preprosto si izmenjujejo podatke za stik z drugimi\n- Varno Sling teksti, fotografije, karkoli!\n- Močna kriptografija ščiti vaše podatke\n\ne-pošta: %2$s\nspletni naslov: %3$s</string>
+    <string name="text_KeywordExchange">Izmenjava</string>
+    <string name="text_KeywordIdentity">Identiteta</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Sporočila</string>
+    <string name="text_KeywordPrivacy">Pravilnik o zasebnosti</string>
+    <string name="text_KeywordSecurity">Varnost</string>
     <string name="text_LanguagesProvidedBy">Jeziki, ki jih:</string>
+    <string name="text_RelatedSearchTerms">Podobni pogoji:</string>
     <string name="text_Requirements">Zahteve:\n1. Morajo biti nameščene na najmanj 2 naprav.\n2. Internetna povezava mora biti aktivna.</string>
+    <string name="text_WhatsNew">- Določa stabilnost.</string>
 
     <string name="title_About">O</string>
     <string name="title_camera">Kamera</string>

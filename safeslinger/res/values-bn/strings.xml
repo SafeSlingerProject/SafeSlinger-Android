@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">যোগাযোগ তথ্য ভুল ফরম্যাট করা হয়.</string>
     <string name="error_WebCancelledByUser">ব্যবহারকারী সার্ভারটি অনুরোধটি বাতিল.</string>
 
-    <string name="help_find">অন্যদের সাথে বিনিময় করতে আপনার নাম, ফোন, এবং ইমেল সেট এই পর্দা ব্যবহার করুন. শেষ হলে \' সম্পন্ন \' বাটন ট্যাপ.</string>
     <string name="help_home">পরিচয় তথ্য বিনিময় করার জন্য, সব ব্যবহারকারীদের কাছাকাছি বা ফোনে নিশ্চিত. \' শুরু এক্সচেঞ্জ \' বাটন শুধুমাত্র পরীক্ষিত যোগাযোগের তথ্য বিনিময় করবে.</string>
     <string name="help_identity_menu">\n\nএছাড়াও আপনি আপনার নামের সঙ্গে বোতাম লঘুপাত দ্বারা এই পর্দায় আপনার পরিচয় সম্পর্কে ব্যক্তিগত তথ্য পরিবর্তন হতে পারে. এই যে আপনি \' সম্পাদনা করুন \' আপনার পরিচিতি, যোগাযোগের \'গেম তৈরি করুন \', বা পরিচিতি \' আরেকটি ব্যবহার করুন \', যার ফলে একটি মেনু প্রদর্শন করা হবে.</string>
     <string name="help_Messages">এই পর্দায় সব অতীতের বার্তা, এবং এখনও ডাউনলোডের জন্য উপলব্ধ যে সংযুক্তি প্রদর্শন করা হয়.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s মেয়াদ শেষ</string>
     <string name="label_expiresIn">এ মেয়াদ শেষ</string>
     <string name="label_FileNameHint">ফাইলের নাম</string>
-    <string name="label_FindInstruct">আপনার ব্যক্তিগত তথ্য লিখুন. এই তথ্য শুধুমাত্র নিরাপদভাবে আপনার সাথে শেয়ার করতে পছন্দ করে নিন যাকে ব্যক্তিদের সাথে ভাগ করা হবে.</string>
     <string name="label_FirstName">নাম</string>
     <string name="label_Home">আপনি ভাগ এবং \' বিনিময় শুরু করুন \' টোকা করতে ইচ্ছুক আইটেম চেক করুন অন্যদের বিনিময় করতে প্রস্তুত হলে.</string>
     <string name="label_hometag">বাড়ি</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">পুনরায় চেষ্টা করা</string>
     <string name="label_PassHintChange">আপডেট পাসফ্রেজ</string>
     <string name="label_PassHintCreate">পাসফ্রেজ তৈরি করুন</string>
+    <string name="label_PassHintCurrent">বর্তমান পাসফ্রেজ</string>
     <string name="label_PassHintEnter">পাসফ্রেজ</string>
     <string name="label_PassHintRepeat">পুনরাবৃত্তি পাসফ্রেজ</string>
     <string name="label_passPhraseCacheTtl">পাসফ্রেজ ক্যাশে</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s পরিচিতি আমদানি করা.</string>
     <string name="state_TextCopiedToClipboard">টেক্সট ক্লিপবোর্ডে কপি করা.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ব্যক্তিগত, অনুমোদন যাচাই, ব্যক্তি বা ফোনের মাধ্যমে, সহজে পরিচয় তথ্য শেয়ার করার জন্য ডিজাইন করা, এবং অক্ষত হয়. আপনার সাথে ভাগ করে প্রতিটি ব্যক্তি বার্তা পাঠানোর জন্য একটি নিরাপদ শেষ যাও শেষ চ্যানেল তৈরি করে.\n\nবৈশিষ্ট্য:\n- সহজেই অন্যদের নিরাপদে গ্রন্থে, ছবি, কিছু গুলতি\n- সাথে যোগাযোগ সংক্রান্ত তথ্য বিনিময়! %2$s\nওয়েব:: %3$s\n- স্ট্রং ক্রিপ্টোগ্রাফি আপনার তথ্য\n\nইমেইল রক্ষা করে</string>
+    <string name="text_About">%1$s\n\nSafeSlinger, ব্যক্তি বা ফোনের মাধ্যমে, সহজে পরিচয় তথ্য শেয়ার করার জন্য ডিজাইন অনুমোদন যাচাই করা, ব্যক্তিগত, এবং অক্ষত হয়. আপনার সাথে ভাগ করে প্রতিটি ব্যক্তি বার্তা পাঠানোর জন্য একটি নিরাপদ শেষ যাও শেষ চ্যানেল তৈরি করে.\n\nবৈশিষ্ট্য:\n- সহজেই অন্যদের সঙ্গে যোগাযোগের তথ্য বিনিময়\n- নিরাপদভাবে গুলতি গ্রন্থে, ছবি, কিছু!\n- স্ট্রং ক্রিপ্টোগ্রাফি আপনার তথ্য রক্ষা করে\n\nইমেইল: %2$s\nওয়েব: %3$s</string>
+    <string name="text_KeywordExchange">বিনিময়</string>
+    <string name="text_KeywordIdentity">পরিচয়</string>
+    <string name="text_KeywordKey">চাবি</string>
+    <string name="text_KeywordMessaging">মেসেজিং</string>
+    <string name="text_KeywordPrivacy">গোপনীয়তা</string>
+    <string name="text_KeywordSecurity">নিরাপত্তা</string>
     <string name="text_LanguagesProvidedBy">দ্বারা উপলব্ধ ভাষা:</string>
-    <string name="text_Requirements">প্রয়োজনীয়তা:\n1. 2 ডিভাইসের একটি সর্বনিম্ন ইনস্টল থাকা আবশ্যক.\n2. কোনো ধরনের ইন্টারনেট সংযোগ সক্রিয় হতে হবে.</string>
+    <string name="text_RelatedSearchTerms">সম্পর্কিত শর্তাবলী:</string>
+    <string name="text_Requirements">আবশ্যক:\n1. 2 ডিভাইসের একটি সর্বনিম্ন ইনস্টল থাকা আবশ্যক.\n2. কোনো ধরনের ইন্টারনেট সংযোগ সক্রিয় হতে হবে.</string>
+    <string name="text_WhatsNew">- স্টেবিলিটি সংশোধন করা হয়েছে.</string>
 
     <string name="title_About">সম্পর্কে</string>
     <string name="title_camera">ক্যামেরা</string>

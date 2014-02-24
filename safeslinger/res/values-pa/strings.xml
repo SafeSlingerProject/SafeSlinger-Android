@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">ਸੰਪਰਕ ਡਾਟਾ ਗਲਤ ਫਾਰਮੈਟ ਕੀਤੇ ਗਿਆ ਸੀ.</string>
     <string name="error_WebCancelledByUser">ਉਪਭੋਗੀ ਨੂੰ ਸਰਵਰ ਮੰਗ ਨੂੰ ਰੱਦ ਕਰ ਦਿੱਤਾ.</string>
 
-    <string name="help_find">ਹੋਰ ਨਾਲ ਬਦਲੀ ਕਰਨ ਲਈ, ਤੁਹਾਡਾ ਆਪਣਾ ਨਾਮ, ਫੋਨ, ਅਤੇ ਈਮੇਲ ਨੂੰ ਸੈੱਟ ਕਰਨ ਲਈ ਇਹ ਸਕਰੀਨ ਵਰਤੋ. ਨਿਬੇੜ ਕੇ \' ਸੰਪੰਨ \' ਬਟਨ ਟੈਪ ਕਰੋ.</string>
     <string name="help_home">ਪਛਾਣ ਦੀ ਡਾਟਾ ਬਦਲੀ ਕਰਨ ਲਈ, ਸਭ ਉਪਭੋਗੀ ਨੇੜਲੇ ਜ ਫੋਨ \'ਤੇ ਹਨ, ਇਹ ਯਕੀਨੀ ਬਣਾਉਣ. \' ਸ਼ੁਰੂ ਐਕਸਚੇਜ਼ \' ਬਟਨ ਸਿਰਫ਼ ਕੀਤੀ ਗਈ ਦੇ ਸੰਪਰਕ ਡਾਟਾ ਦਾ ਲੈਣ ਜਾਵੇਗਾ.</string>
     <string name="help_identity_menu">\n\nਤੁਹਾਨੂੰ ਇਹ ਵੀ ਤੁਹਾਡਾ ਨਾਮ ਨਾਲ ਬਟਨ ਨੂੰ ਦਬਾ ਕੇ ਇਸ ਸਕਰੀਨ \'ਤੇ ਤੁਹਾਡੀ ਪਛਾਣ ਬਾਰੇ ਨਿੱਜੀ ਡਾਟਾ ਤਬਦੀਲ ਕਰ ਸਕਦੇ ਹੋ. ਇਸ ਨਾਲ ਤੁਹਾਨੂੰ \' ਸੋਧ \' ਨੂੰ ਆਪਣੇ ਸੰਪਰਕ ਨੂੰ, ਨਾਲ ਸੰਪਰਕ ਕਰੋ \' ਨਿਊ ਬਣਾਓ \', ਜ ਦੇ ਸੰਪਰਕ \' ਇੱਕ ਹੋਰ ਵਰਤੋ \' ਨੂੰ, ਜਿਸ ਨਾਲ ਇੱਕ ਮੇਨੂ ਵੇਖਾਏਗਾ.</string>
     <string name="help_Messages">ਇਹ ਸਕਰੀਨ ਸਭ ਬੀਤੇ ਸੁਨੇਹੇ, ਅਤੇ ਹਾਲੇ ਵੀ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ ਉਪਲੱਬਧ ਹਨ, ਜੋ ਕਿ ਨੱਥੀ ਵਿਖਾਉਦਾ ਹੈ.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s ਦੀ ਮਿਆਦ</string>
     <string name="label_expiresIn">ਵਿੱਚ ਮਿਆਦ ​​ਖਤਮ</string>
     <string name="label_FileNameHint">ਫਾਇਲ ਦਾ ਨਾਮ</string>
-    <string name="label_FindInstruct">ਆਪਣੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਦਿਓ ਜੀ. ਇਹ ਡਾਟਾ ਸਿਰਫ ਸੁਰੱਖਿਅਤ ਤੁਹਾਡੇ ਨਾਲ ਇਸ ਨੂੰ ਸ਼ੇਅਰ ਕਰਨ ਦੀ ਚੋਣ ਹੈ ਜਿਸਨੂੰ ਵਿਅਕਤੀ ਨਾਲ ਸ਼ੇਅਰ ਕੀਤਾ ਜਾਵੇਗਾ.</string>
     <string name="label_FirstName">ਪਿਹਲਾ ਨਾਮ</string>
     <string name="label_Home">ਤੁਹਾਨੂੰ ਸ਼ੇਅਰ ਅਤੇ ​​\' ਐਕਸਚੇਜ਼ ਸ਼ੁਰੂ \' ਟੈਪ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਆਈਟਮ ਚੈੱਕ ਕਰੋ ਹੋਰ ਹੋਰ ਦਾ ਲੈਣ ਲਈ ਤਿਆਰ ਹਨ, ਜਦ.</string>
     <string name="label_hometag">ਘਰ</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">ਮੁੜ ਟਰਾਈ</string>
     <string name="label_PassHintChange">ਅੱਪਡੇਟ ਕੀਤੇ ਪ੍ਹੈਰਾ</string>
     <string name="label_PassHintCreate">ਪ੍ਹੈਰਾ ਬਣਾਓ</string>
+    <string name="label_PassHintCurrent">ਮੌਜੂਦਾ ਪ੍ਹੈਰਾ</string>
     <string name="label_PassHintEnter">ਪ੍ਹੈਰਾ</string>
     <string name="label_PassHintRepeat">ਦੁਹਰਾਓ ਪ੍ਹੈਰਾ</string>
     <string name="label_passPhraseCacheTtl">ਪ੍ਹੈਰਾ ਕੈਸ਼</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s ਸੰਪਰਕ ਆਯਾਤ.</string>
     <string name="state_TextCopiedToClipboard">ਪਾਠ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਰਨ ਲਈ ਨਕਲ ਕੀਤਾ.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ਪ੍ਰਾਈਵੇਟ, ਪਰਮਾਣਿਤ, ਵਿਅਕਤੀ ਵਿੱਚ ਜ ਫੋਨ ਉੱਤੇ, ਅਸਾਨੀ ਨਾਲ ਪਛਾਣ ਦੀ ਡਾਟਾ ਸ਼ੇਅਰ ਕਰਨ ਲਈ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ, ਅਤੇ ਬਰਕਰਾਰ ਰਿਹਾ ਹੈ. ਤੁਹਾਡੇ ਨਾਲ ਸ਼ੇਅਰ ਹਰ ਵਿਅਕਤੀ ਨੂੰ ਸੁਨੇਹੇ ਭੇਜਣ ਲਈ ਇੱਕ ਸੁਰੱਖਿਅਤ ਅੰਤ ਵਿੱਚ - ਕਰਨ ਲਈ - ਅੰਤ ਵਿੱਚ ਚੈਨਲ ਨੂੰ ਬਣਾਉਦਾ ਹੈ.\n\nਫੀਚਰ:\n- ਸੌਖੀ ਹੋਰ ਹੋਰ\nਨਾਲ ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਦਾ ਲੈਣ - ਸੁਰੱਖਿਅਤ ਹਵਾਲੇ, ਫੋਟੋ, ਕੁਝ ਵੀ ਗੋਪੀਆ! %2$s\nਵੈਬ:: %3$s -\nਮਜਬੂਤ ਕਰਿਪਟੋਗਰਾਫੀ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਨੂੰ\n\nਈ ਦੀ ਰੱਖਿਆ ਕਰਦਾ ਹੈ</string>
+    <string name="text_About">%1$s\n\nSafeSlinger, ਵਿਅਕਤੀ ਨੂੰ ਵਿੱਚ ਜ ਫੋਨ ਉੱਤੇ, ਅਸਾਨੀ ਨਾਲ ਪਛਾਣ ਦੀ ਡਾਟਾ ਸ਼ੇਅਰ ਕਰਨ ਲਈ ਤਿਆਰ ਕੀਤਾ ਪਰਮਾਣਿਤ, ਪ੍ਰਾਈਵੇਟ, ਅਤੇ ਬਰਕਰਾਰ ਰਿਹਾ ਹੈ. ਤੁਹਾਡੇ ਨਾਲ ਸ਼ੇਅਰ ਹਰ ਵਿਅਕਤੀ ਨੂੰ ਸੁਨੇਹੇ ਭੇਜਣ ਲਈ ਇੱਕ ਸੁਰੱਖਿਅਤ ਅੰਤ ਵਿੱਚ-ਕਰਨ ਲਈ-ਅੰਤ ਵਿੱਚ ਚੈਨਲ ਨੂੰ ਬਣਾਉਦਾ ਹੈ.\n\nਫੀਚਰ:\n- ਸੌਖੀ ਹੋਰ ਨਾਲ ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਦਾ ਲੈਣ\n- ਸੁਰੱਖਿਅਤ ਗੋਪੀਆ ਹਵਾਲੇ, ਫੋਟੋ, ਕੁਝ ਵੀ!\n- ਮਜਬੂਤ ਕਰਿਪਟੋਗਰਾਫੀ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਨੂੰ ਰੱਖਿਆ ਕਰਦਾ ਹੈ\n\nਈਮੇਲ: %2$s\nਵੈੱਬ: %3$s</string>
+    <string name="text_KeywordExchange">ਐਕਸਚੇਜ਼</string>
+    <string name="text_KeywordIdentity">ਪਛਾਣ</string>
+    <string name="text_KeywordKey">ਕੁੰਜੀ</string>
+    <string name="text_KeywordMessaging">ਸੁਨੇਹਾ</string>
+    <string name="text_KeywordPrivacy">ਪਰਦੇਦਾਰੀ</string>
+    <string name="text_KeywordSecurity">ਸੁਰੱਖਿਆ</string>
     <string name="text_LanguagesProvidedBy">ਦੁਆਰਾ ਮੁਹੱਈਆ ਕੀਤੀ ਭਾਸ਼ਾ:</string>
+    <string name="text_RelatedSearchTerms">ਸੰਬੰਧਿਤ ਸ਼ਰਤਾ:</string>
     <string name="text_Requirements">ਲੋੜ:\n1. 2 ਜੰਤਰ ਦਾ ਘੱਟੋ ਘੱਟ ਤੇ ਇੰਸਟਾਲ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ.\n2. ਇੱਕ ਇੰਟਰਨੈੱਟ ਕੁਨੈਕਸ਼ਨ ਨੂੰ ਸਰਗਰਮ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ.</string>
+    <string name="text_WhatsNew">- ਸਥਿਰਤਾ ਫਿਕਸ.</string>
 
     <string name="title_About">ਬਾਰੇ</string>
     <string name="title_camera">ਕੈਮਰਾ</string>

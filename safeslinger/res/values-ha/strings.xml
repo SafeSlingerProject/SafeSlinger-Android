@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Contact bayanai da aka tsara ba daidai ba.</string>
     <string name="error_WebCancelledByUser">User soke uwar garken request.</string>
 
-    <string name="help_find">Yi amfani da wannan allo domin saita sunanka, waya, da kuma imel zuwa musanya da wasu. Tap da \' Anyi \' button lokacin da ya gama.</string>
     <string name="help_home">Don musanya ainihi bayanai, tabbatar da duk masu amfani ne a nan kusa ko a waya. A \' Begin Exchange \' button zai musanya kawai bari lamba bayanai.</string>
     <string name="help_identity_menu">\n\nnan _ila ka canza bayanan sirri game da ainihi a kan wannan allon da tapping a kan button da sunanka. Wannan zai nuna menu bar ka ka \' Edit \' ka lamba, \' Create New \' lambar sadarwa, ko \' yi amfani da wata \' lambar sadarwa.</string>
     <string name="help_Messages">Wannan allon nuna duk sa_onnin da suka gabata, da ha_e-ha_e da cewa har yanzu don saukewa.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">ya _are %s</string>
     <string name="label_expiresIn">ya _are a</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Don Allah a shigar da bayanan sirri. Wannan bayanai ne kawai za a tam rabawa da mutane da wanda ka za_i raba shi tare da.</string>
     <string name="label_FirstName">First Name</string>
     <string name="label_Home">Duba abubuwan da kuke so a raba da famfo \' Begin Exchange \' a lokacin da wasu suna shirye su musanya.</string>
     <string name="label_hometag">Home</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">A sake gwadawa</string>
     <string name="label_PassHintChange">Updated Passphrase</string>
     <string name="label_PassHintCreate">Create Passphrase</string>
+    <string name="label_PassHintCurrent">Current Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Maimaita Passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s lambobin sadarwa shigo da.</string>
     <string name="state_TextCopiedToClipboard">Text kofe zuwa allo mai rike takarda.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger an tsara su iya raba bayanai ainihi, in mutum ko a kan tarho, ya tabbata daga, masu zaman kansu, da kuma m. Kowane mutum ka raba tare da halitta da kafaffen karshen -da- karshen tashar don aika sa_onni.\n\nFeatures:\n- saukake musanya bayanin lamba tare da wasu\n- tam majayijawa texts, photos, wani abu!\n- _arfi cryptography kare abokan bayani\n\nemail: %2$s\nyanar gizo: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger an tsara su iya raba bayanai ainihi, in mutum ko a kan tarho, ya tabbata daga, masu zaman kansu, da kuma m. Kowane mutum ka raba tare da halitta da kafaffen karshen-da-karshen tashar don aika saƙonni.\n\nFeatures:\n- Saukake musanya bayanin tuntuɓa tare da sauran\n- Tam majayijawa texts, photos, wani abu!\n- Mai ƙarfi cryptography kare abokan bayanai\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Saƙo</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Tsaro</string>
     <string name="text_LanguagesProvidedBy">Languages __bayar by:</string>
+    <string name="text_RelatedSearchTerms">Related Terms:</string>
     <string name="text_Requirements">Bukatun:\n1. Dole ne a shigar a kan m of 2 na\'urorin.\n2. An jona dole ne aiki.</string>
+    <string name="text_WhatsNew">- Stability gyaran gaba daya.</string>
 
     <string name="title_About">Game da</string>
     <string name="title_camera">Kamara</string>

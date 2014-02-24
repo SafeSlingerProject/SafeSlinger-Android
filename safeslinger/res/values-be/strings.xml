@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Кантактныя дадзеныя адфарматыраваная няправільна.</string>
     <string name="error_WebCancelledByUser">Карыстальнік адмяніў запыт сервера.</string>
 
-    <string name="help_find">Выкарыстоўвайце гэты экран, каб усталяваць ваша імя, тэлефон, і адрас электроннай пошты для абмену з іншымі. Націсніце кнопку \' Гатова\', калі скончыце.</string>
     <string name="help_home">Для абмену дадзенымі пасведчанняў, гарантаваць, што ўсе карыстальнікі знаходзяцца непадалёк або па тэлефоне. Кнопка \'пачаць Exchange? Абмянялі толькі правераныя кантактныя дадзеныя.</string>
     <string name="help_identity_menu">\n\nВы таксама можаце змяніць асабістыя дадзеныя аб вашай асобы на гэтым экране, націснуўшы на кнопку з вашым імем. Гэта адлюструе меню, якое дазваляе \' Edit \' ваш кантакт, \'Стварыць новы \' кантакт, або « Выкарыстоўвайце іншы \' кантакт.</string>
     <string name="help_Messages">На гэтым экране адлюстроўваецца ўсе мінулыя паведамленні і ўкладанні, якія ўсё яшчэ даступныя для запампоўкі.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">мінае %s</string>
     <string name="label_expiresIn">заканчваецца ў</string>
     <string name="label_FileNameHint">Назва файла</string>
-    <string name="label_FindInstruct">Калі ласка, увядзіце вашу асабістую інфармацыю. Гэтыя дадзеныя будуць надзейна падзяляе толькі з асоб, якіх вы вырашыце падзяліцца ім з.</string>
     <string name="label_FirstName">Імя</string>
     <string name="label_Home">Праверыць тавары, якія вы хочаце падзяліцца, і націсніце \'Пачаць Абмен \', калі іншыя гатовыя абмяняць.</string>
     <string name="label_hometag">Дадому</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Паўтарыць</string>
     <string name="label_PassHintChange">Абноўлена Ключавая фраза</string>
     <string name="label_PassHintCreate">Стварэнне парольную фразу</string>
+    <string name="label_PassHintCurrent">Бягучы Ключавая фраза</string>
     <string name="label_PassHintEnter">Ключавая фраза</string>
     <string name="label_PassHintRepeat">Паўтарыце Ключавая фраза</string>
     <string name="label_passPhraseCacheTtl">Ключавая фраза Кэш</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s кантакты імпартуюцца.</string>
     <string name="state_TextCopiedToClipboard">Тэкст скапіяваны ў буфер абмену.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger прызначаны для лёгка сумеснае выкарыстанне ідэнтыфікацыйных дадзеных, асабіста або па тэлефоне, праверка сапраўднасці, прыватныя і некранутымі. Кожны чалавек, якому вы падзяліцца з стварае абаронены канал канца ў канец, каб адпраўляць паведамленні.\n\nАсаблівасці:\n- Лёгка абменьвацца кантактнай інфармацыяй з іншымі\n- Надзейна сьлінг тэксты, фота, нічога!\n- Моцная крыптаграфія абараняе вашу інфармацыю\n\nэлектронная пошта: %2$s\nвэб: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger прызначаны для лёгка сумеснае выкарыстанне ідэнтыфікацыйных дадзеных, асабіста або па тэлефоне, праверка сапраўднасці, прыватныя і некранутымі. Кожны чалавек, якому вы падзяліцца з стварае абаронены канал канца ў канец, каб адпраўляць паведамленні.\n\nАсаблівасці:\n- Лёгка абменьвацца кантактнай інфармацыяй з іншымі\n- Надзейна сьлінг тэксты, фота, нічога!\n- Устойлівыя крыптаграфічныя алгарытмы, абараняе вашу інфармацыю\n\nадрас электроннай пошты: %2$s\nвэб: %3$s</string>
+    <string name="text_KeywordExchange">Абмен</string>
+    <string name="text_KeywordIdentity">Ідэнтычнасць</string>
+    <string name="text_KeywordKey">Ключ</string>
+    <string name="text_KeywordMessaging">Абмен паведамленнямі</string>
+    <string name="text_KeywordPrivacy">Канфідэнцыяльнасць</string>
+    <string name="text_KeywordSecurity">Бяспеку</string>
     <string name="text_LanguagesProvidedBy">Мовы, прадастаўленыя:</string>
+    <string name="text_RelatedSearchTerms">Змяненні, тэрміны:</string>
     <string name="text_Requirements">Патрабаванні:\n1. Павінен быць усталяваны на мінімум 2 прылады.\n2. Інтэрнэт-злучэнне павінна быць актыўным.</string>
+    <string name="text_WhatsNew">- Стабільнасць выпраўлення.</string>
 
     <string name="title_About">Аб</string>
     <string name="title_camera">Камера</string>

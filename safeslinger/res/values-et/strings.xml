@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontakt andmed vormindatud valesti.</string>
     <string name="error_WebCancelledByUser">Kasutaja tühistatud server taotluse.</string>
 
-    <string name="help_find">Kasutage seda ekraani, et määrata oma nimi, telefoninumber ja e-posti, et vahetada teistega. Puuduta\' Valmis \' nuppu, kui olete lõpetanud.</string>
     <string name="help_home">Vahetada identiteedi andmed, et kõik kasutajad on lähedal või telefoni teel. \' Alustada Exchange \'nuppu vahetavad ainultkontrollitud kontaktandmed.</string>
     <string name="help_identity_menu">\n\nVõite muuta isikuandmeid oma identiteeti selle ekraani puudutades nuppu oma nimi. See avab menüü, mis võimaldab teil \' Edit \' oma kontakt, \' Loo uus \' kontakt või \' kasutada muud kontaktid.</string>
     <string name="help_Messages">See ekraan kuvab kõik viimase sõnumeid ja manuseid, mis on veel saadaval allalaadimiseks.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">aegub %s</string>
     <string name="label_expiresIn">aegub</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Palun sisesta oma isikuandmeid. Neid andmeid ainult turvaliselt jagada üksikisikute kellele soovite jagada seda.</string>
     <string name="label_FirstName">Eesnimi</string>
     <string name="label_Home">Kontrolli üksused, mida soovite jagada ning puudutage \' Alustada vahetus \' kui teised on valmis vahetama.</string>
     <string name="label_hometag">Kodu</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Uuesti</string>
     <string name="label_PassHintChange">Uuendatud Passphrase</string>
     <string name="label_PassHintCreate">Loo Passphrase</string>
+    <string name="label_PassHintCurrent">Praegune Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Korda Passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontakte importida.</string>
     <string name="state_TextCopiedToClipboard">Tekst kopeeritakse lõikelauale.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger eesmärk on lihtsalt jagada identiteedi andmed, isiklikult või telefoni teel, kinnitatud, era-ja puutumatu. Iga inimene jagate loob turvalise end-to-end kanal sõnumite saatmiseks.\n\nOmadused:\n- kergesti vahetada kontaktandmeid teistega\n- Tellige pilduma tekstid, fotod, midagi!\n- Tugev krüptograafia kaitseb teie andmed\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger eesmärk on lihtsalt jagada identiteedi andmed, isiklikult või telefoni teel, kinnitatud, era-ja puutumatu. Iga inimene jagate loob turvalise end-to-end kanal sõnumite saatmiseks.\n\nOmadused:\n- Lihtne vahetada kontaktandmeid teistega\n- Tellige pilduma tekstid, fotod, midagi!\n- Tugev krüptograafia kaitseb teie andmed\n\ne-post: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Vahetus</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">Võti</string>
+    <string name="text_KeywordMessaging">Sõnumid</string>
+    <string name="text_KeywordPrivacy">Privaatsus</string>
+    <string name="text_KeywordSecurity">Turvalisus</string>
     <string name="text_LanguagesProvidedBy">Keeled, mida pakuvad:</string>
+    <string name="text_RelatedSearchTerms">Seotud mõisted:</string>
     <string name="text_Requirements">Nõuded:\n1. Tuleb paigaldada vähemalt 2 seadmeid.\n2. Internetiühendus peab olema aktiivne.</string>
+    <string name="text_WhatsNew">- Stabiilsus parandusi.</string>
 
     <string name="title_About">Kohta</string>
     <string name="title_camera">Kaamera</string>

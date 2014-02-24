@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Contact data nga nakahan-ay sayop.</string>
     <string name="error_WebCancelledByUser">User gikanselar server hangyo.</string>
 
-    <string name="help_find">Gamita kini nga screen nga sa imong ngalan, telepono, ug email sa pagbaylo sa uban sa uban. Pindota ang \' Done \' button sa diha nga nahuman.</string>
     <string name="help_home">Sa pagbaylo sa pag-ila data, masiguro sa tanan nga mga tiggamit mao ang mga duol nga o sa telepono. Ang \' Sugdi Exchange, button makigbinayloay lang sa mga gitan-aw contact data.</string>
     <string name="help_identity_menu">\n\nMahimo usab-usab sa personal nga data mahitungod sa imong pagkatawo niini nga screen sa tapping sa button uban sa imong ngalan. Kini mopakita sa usa ka menu sa pagtugot kaninyo sa sa \' Edit, sa imong contact,\' Create New \' contact, o\' Gamita Laing, contact.</string>
     <string name="help_Messages">Kini nga screen pagpakita sa tanan nga sa miagi nga mga mensahe, ug mga sumpay, mga dugtong nga mga pa magamit alang sa download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">matapos %s</string>
     <string name="label_expiresIn">matapos sa</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Palihug mosulod sa imong personal nga impormasyon. Kini data lamang nga sa kasigurohan mipakigbahin uban sa tagsa-tagsa nga imong pilion sa pagpakigbahin niini sa uban.</string>
     <string name="label_FirstName">First Name</string>
     <string name="label_Home">Check mga butang nga imong gusto sa pagpakigbahin ug Sun.Star \' Sugdi Exchange \' sa dihang ang uban mao ang mga andam sa pagbaylo sa.</string>
     <string name="label_hometag">Home</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Retry</string>
     <string name="label_PassHintChange">Updated Passphrase</string>
     <string name="label_PassHintCreate">Create Passphrase</string>
+    <string name="label_PassHintCurrent">Current Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Repeat Passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s mga kontak imported.</string>
     <string name="state_TextCopiedToClipboard">Text gikopya sa Clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ang gihimo aron sa sayon ​​nga pagpakigbahin sa pag-ila data, sa tawo o sa ibabaw sa telepono, authenticated, pribado nga, ug hilabti, wala mabalhin. Ang matag tawo nga imong ipakigbahin sa nagmugna sa usa ka luwas nga katapusan-sa-katapusan channel sa pagpadala mensahe.\n\nFeatures:\n- Masayon ​​makigbinayloay impormasyon sa pagkontak sa uban\n- sa kasigurohan saplongon teksto, litrato, sa bisan unsa!\n- Lig-on cryptography manalipod sa inyong mga impormasyon\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ang gihimo aron sa sayon ​​nga pagpakigbahin sa pag-ila data, sa tawo o sa ibabaw sa telepono, authenticated, pribado nga, ug hilabti, wala mabalhin. Ang matag tawo nga imong ipakigbahin sa nagmugna sa usa ka luwas nga katapusan-sa-katapusan channel sa pagpadala mensahe.\n\nFeatures:\n- Dali makigbinayloay impormasyon sa pagkontak sa uban\n- Sa kasigurohan saplongon teksto, litrato, sa bisan unsa!\n- Lig-on cryptography manalipod sa inyong mga impormasyon\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Ang identity</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Messaging</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Security</string>
     <string name="text_LanguagesProvidedBy">Pinulongan nga gihatag sa:</string>
+    <string name="text_RelatedSearchTerms">May Kalabutan nga mga Terms:</string>
     <string name="text_Requirements">Kinahanglanon:\n1. Kinahanglan nga-instalar sa usa ka minimum sa 2 mga lalang nga.\n2. Usa ka Internet koneksyon kinahanglan nga aktibo.</string>
+    <string name="text_WhatsNew">- Kalig-on ayo.</string>
 
     <string name="title_About">About</string>
     <string name="title_camera">Camera</string>

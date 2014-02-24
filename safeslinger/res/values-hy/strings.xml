@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Կապ տվյալները չափագրված սխալ.</string>
     <string name="error_WebCancelledByUser">User չեղյալ սերվերի խնդրանքով.</string>
 
-    <string name="help_find">Օգտագործեք այս էկրանի ստեղծել ձեր անունը, հեռախոսի, եւ նամակ են փոխանակել ուրիշների հետ միասին. Ծորակ է « Կատարված » կոճակը, երբ ավարտեցի.</string>
     <string name="help_home">Փոխանակման նույնականացման տվյալները, ապահովել բոլոր օգտագործողների մոտ են կամ հեռախոսով. The \' BEGIN Exchange \' կոճակը կփոխանակեն միայն նշված կոնտակտային տվյալները.</string>
     <string name="help_identity_menu">\n\nԴուք կարող եք նաեւ փոխել անձնական տվյալները ձեր ինքնությունը: Այս էկրանի կտկտոցը կոճակը ձեր անունով. Սա ցույց է մենյու տալիս to \' Խմբագրել \' Ձեր կապը, ստեղծել նոր շփման, կամ \' օգտագործել մեկ այլ \' կոնտակտ.</string>
     <string name="help_Messages">Այս էկրանի ցուցադրում է անցյալի բոլոր հաղորդագրությունները, եւ հավելվածները, որոնք դեռեւս հասանելի է ներբեռնման համար.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">սպառվում %s</string>
     <string name="label_expiresIn">ժամկետը լրանում է</string>
     <string name="label_FileNameHint">Պատկեր Անունը</string>
-    <string name="label_FindInstruct">Խնդրում ենք մուտքագրել Ձեր անձնական տեղեկությունները. Այս տվյալները միայն ապահով կիսել մարդկանց, ում դուք ընտրում է կիսել այն.</string>
     <string name="label_FirstName">Անուն</string>
     <string name="label_Home">Ստուգեք տարրեր ցանկանում եք կիսվել, եւ թակել « Սկիզբ Exchange, երբ մյուսները պատրաստ են փոխանակել.</string>
     <string name="label_hometag">Տուն</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Կրկնել</string>
     <string name="label_PassHintChange">Թարմացվել է passphrase</string>
     <string name="label_PassHintCreate">Ստեղծել passphrase</string>
+    <string name="label_PassHintCurrent">Միջին passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Կրկնել passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s Կապ ներմուծվել.</string>
     <string name="state_TextCopiedToClipboard">Text պատճենահանվել է clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger նախագծված է հեշտությամբ կիսել նույնականացման տվյալները, անձամբ կամ ավելի հեռախոսով, իսկությունը, մասնավոր եւ անձեռնմխելի. Յուրաքանչյուր անձ եք կիսվել ստեղծում է անվտանգ վերջ-to-end ալիքը ուղարկել հաղորդագրություն.\n\nՆկարագրություն:\n- Հեշտությամբ փոխանակել կոնտակտային ուրիշների հետ\n- Ապահով պարսատիկ տեքստեր, լուսանկարներ, բան.\n- Ուժեղ ծածկագիտություն պաշտպանում է Ձեր տվյալները\n\nEmail: %2$s\nWeb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger նախագծված է հեշտությամբ կիսել նույնականացման տվյալները, անձամբ կամ ավելի հեռախոսով, իսկությունը, մասնավոր եւ անձեռնմխելի. Յուրաքանչյուր անձ եք կիսվել ստեղծում է անվտանգ վերջ-to-end ալիքը ուղարկել հաղորդագրություն.\n\nՆկարագրություն:\n- Հեշտությամբ փոխանակել կոնտակտային տվյալները ուրիշների հետ\n- Ապահով Պարսատիկ տեքստեր, լուսանկարներ, բան.\n- Ուժեղ Գաղտնագրությունը պաշտպանում ձեր\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Փոխանակել</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">Հիմնական</string>
+    <string name="text_KeywordMessaging">Հաղորդագրություններ</string>
+    <string name="text_KeywordPrivacy">Մենություն</string>
+    <string name="text_KeywordSecurity">Անվտանգություն</string>
     <string name="text_LanguagesProvidedBy">Լեզուներ կողմից:</string>
-    <string name="text_Requirements">Պահանջներ:\n1. Պետք է տեղադրված է առնվազն 2 սարքերի.\n2. An ինտերնետ կապ պետք է լինի ակտիվ.</string>
+    <string name="text_RelatedSearchTerms">Առնչվող Պայմանաբառ:</string>
+    <string name="text_Requirements">Պահանջները:\n1. Պետք է տեղադրված է առնվազն 2 սարքերի.\n2. An ինտերնետ կապ պետք է լինի ակտիվ.</string>
+    <string name="text_WhatsNew">- Կայունության ամրագրում.</string>
 
     <string name="title_About">Մոտ</string>
     <string name="title_camera">Ֆոտոխցիկ</string>

@@ -91,6 +91,7 @@ public class SafeSlinger extends Application {
         checkForPendingMessages();
 
         // manage preferences...
+        ConfigData.removePrefDeprecated(this);
         ConfigData.savePrefPusgRegBackoff(this, ConfigData.DEFAULT_PUSHREG_BACKOFF);
     }
 

@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Contact Data е форматиран неправилно.</string>
     <string name="error_WebCancelledByUser">Потребителят отменен искане сървър.</string>
 
-    <string name="help_find">Използвайте този екран за да настроите вашето име, телефон и имейл, за да обменят с други страни. Натиснете бутона \' Готово \', когато приключите.</string>
     <string name="help_home">За обмен на данни за самоличност, гарантира, че всички потребители са наблизо или по телефона. Бутонът \' Започнете борса \' ще обменят само проверени данни за контакт.</string>
     <string name="help_identity_menu">\n\nВие може също така да промените личните данни във връзка с идентичността си на този екран чрез потупване върху бутона с името си. Това ще покаже меню, което ви позволява да \' Edit \' ви контакт, \' Създаване на нов контактен, или\' употреба Друг \' контакт.</string>
     <string name="help_Messages">Този екран показва всички последните съобщения и прикачени файлове, които са все още на разположение за изтегляне.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">изтича %s</string>
     <string name="label_expiresIn">изтича през</string>
     <string name="label_FileNameHint">Име на файла</string>
-    <string name="label_FindInstruct">Моля въведете вашите лични данни. Тези данни ще бъдат сигурно споделя само с лица, които сте избрали да го споделиш.</string>
     <string name="label_FirstName">Име</string>
     <string name="label_Home">Проверете елементите, които желаят да споделят и натиснете \' Започнете Exchange \', когато другите са готови да разменят.</string>
     <string name="label_hometag">Вкъщи</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Повторен опит</string>
     <string name="label_PassHintChange">Актуализирано Passphrase</string>
     <string name="label_PassHintCreate">Създаване Passphrase</string>
+    <string name="label_PassHintCurrent">Current Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Повторете Passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s контакти внесени.</string>
     <string name="state_TextCopiedToClipboard">Текст копиран в клипборда.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger е проектиран за лесно споделяне на данни за самоличност, лично или по телефона, заверено, частни и непокътнат. Всеки човек, който споделя с създава сигурен канал от край до край, за да изпращате съобщения.\n\nУдобства:\n- лесно да обменят информация за контакти с други\n- Сигурно прашка текстове, снимки, нищо!\n- Силна криптографията защитава вашата информация,\n\nимейл: %2$s\nуеб: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger е проектиран за лесно споделяне на данни за самоличност, лично или по телефона, заверено, частни и непокътнат. Всеки човек, който споделя с създава сигурен канал от край до край, за да изпращате съобщения.\n\nУдобства:\n- Лесно да обменят информация за контакти с други хора\n- Сигурно прашка текстове, снимки, нищо!\n- Силна криптографията защитава вашата информация,\n\nимейл: %2$s\nмрежата: %3$s</string>
+    <string name="text_KeywordExchange">Обмен</string>
+    <string name="text_KeywordIdentity">Идентичност</string>
+    <string name="text_KeywordKey">Ключ</string>
+    <string name="text_KeywordMessaging">Съобщения</string>
+    <string name="text_KeywordPrivacy">Уединение</string>
+    <string name="text_KeywordSecurity">Сигурност</string>
     <string name="text_LanguagesProvidedBy">Езици, предоставяни от:</string>
+    <string name="text_RelatedSearchTerms">Термини, свързани с:</string>
     <string name="text_Requirements">Изисквания:\n1. Трябва да бъде монтирано на най-малко две устройства.\n2. Интернет връзка трябва да бъде активна.</string>
+    <string name="text_WhatsNew">- Поправки стабилност.</string>
 
     <string name="title_About">За</string>
     <string name="title_camera">Камера</string>

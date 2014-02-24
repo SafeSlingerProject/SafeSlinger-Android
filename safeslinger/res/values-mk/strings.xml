@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Контакт податоци е форматирана погрешно.</string>
     <string name="error_WebCancelledByUser">Корисникот откажани серверот барање.</string>
 
-    <string name="help_find">Го користите овој екран да го поставите вашето име, телефон, и-мејл за размена со другите. Допрете го копчето \' Готово \' кога заврши.</string>
     <string name="help_home">Да се ​​разменуваат идентитет податоци, се обезбеди сите корисници се во близина или на телефон. Копчето \' Започни Размена \' ќе разменат само на проверени податоци за контакт.</string>
     <string name="help_identity_menu">\n\nМожете исто така може да се промени на личните податоци за вашиот идентитет на овој екран со прислушување на копчето со вашето име. Ова ќе прикаже менито што ќе ви овозможи да се \'Уреди\' Вашиот контакт, \'Креирај нова \' контакт, или \' користите друг \' контакт.</string>
     <string name="help_Messages">Овој екран прикажува сите минати пораки, и додатоци кои се уште се достапни за преземање.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">истекува %s</string>
     <string name="label_expiresIn">истекува во</string>
     <string name="label_FileNameHint">Име на датотеката</string>
-    <string name="label_FindInstruct">Ве молиме внесете вашите лични информации. Овие податоци ќе бидат безбедно дели со поединци кои ќе изберат да го споделат со.</string>
     <string name="label_FirstName">Име</string>
     <string name="label_Home">Проверете ставки сакате да ги споделат и да го допрете \' Започнете Размена \', кога други се подготвени да ги разменат.</string>
     <string name="label_hometag">Дома</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Обидете повторно</string>
     <string name="label_PassHintChange">Нема Лозинка</string>
     <string name="label_PassHintCreate">Креирај Лозинка</string>
+    <string name="label_PassHintCurrent">Тековната Лозинка</string>
     <string name="label_PassHintEnter">Лозинка</string>
     <string name="label_PassHintRepeat">Повторете Лозинка</string>
     <string name="label_passPhraseCacheTtl">Лозинка Кеш</string>
@@ -336,8 +335,16 @@
     <string name="state_TextCopiedToClipboard">Текст копирани на таблата со исечоци.</string>
 
     <string name="text_About">%1$s\n\nSafeSlinger е дизајниран за лесно споделување на идентитет податоци, во лице или по телефон, проверено, приватниот и непроменети. Секој човек ќе ги споделите со создава безбедна крај-до-крај канал за да праќате пораки.\n\nКарактеристики:\n- Лесно размена контакт информации со другите\n- Безбедно прашка текстови, фотографии, ништо!\n- Силен криптографијата штити вашите информации\n\ne-mail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Размена</string>
+    <string name="text_KeywordIdentity">Идентитет</string>
+    <string name="text_KeywordKey">Клучни</string>
+    <string name="text_KeywordMessaging">Пораки</string>
+    <string name="text_KeywordPrivacy">Приватноста</string>
+    <string name="text_KeywordSecurity">Безбедност</string>
     <string name="text_LanguagesProvidedBy">Јазици обезбедена од:</string>
-    <string name="text_Requirements">Потребно:\n1. Мора да биде инсталиран на минимум 2 уреди.\n2. Интернет конекција мора да бидат активни.</string>
+    <string name="text_RelatedSearchTerms">Поврзани Услови:</string>
+    <string name="text_Requirements">Барања:\n1. Мора да биде инсталиран на минимум 2 уреди.\n2. Интернет конекција мора да бидат активни.</string>
+    <string name="text_WhatsNew">- Стабилност поправки.</string>
 
     <string name="title_About">За</string>
     <string name="title_camera">Камера</string>

@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Raraunga Whakapā whakahōputu i hē.</string>
     <string name="error_WebCancelledByUser">Whakakorea Kaiwhakamahi tono tūmau.</string>
 
-    <string name="help_find">Whakamahia tēnei mata ki te whakatakotoria tou ingoa, waea, me te īmēra ki te whakawhiti ki ētahi atu. Paoa i te pātene \' Fai \', ka mutu.</string>
     <string name="help_home">Ki te whakawhiti raraunga tuakiri, te whakarite kei tata ranei i runga i te waea kaiwhakamahi katoa. Ka whakawhiti pātene te \' Kamata Exchange \' te raraunga whakapā takina anake.</string>
     <string name="help_identity_menu">\n\nkia hoki e koe te huri i ngā raraunga whaiaro e pā ana ki o koutou i runga i tenei tuakiri mata i te ingoa i runga i te pātene ki tou ingoa. Tenei ka whakaatu te tahua tuku koe ki te \' Whakatika \' to koutou whakapā, \' Waihanga New \' whakapā, \' Whakamahia tētahi atu \' whakapā ranei.</string>
     <string name="help_Messages">Ka whakaatu tēnei mata i ngā karere o mua katoa, me ngā tāpiritanga e wātea ana mō te download he tonu.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">Ka pau %s</string>
     <string name="label_expiresIn">Ka pau i roto i te</string>
     <string name="label_FileNameHint">Ingoa kōnae</string>
-    <string name="label_FindInstruct">Tomo koa koutou pārongo whaiaro. Anake tenei raraunga ka e hu noa ngā tāngata takitahi ki te e whiriwhiri koe ki te faaite i te reira ki te.</string>
     <string name="label_FirstName">Ingoa Tuatahi</string>
     <string name="label_Home">Tirohia ngā tūemi e hiahia ana koe ki te tiritiri me te pato \' Tīmata Exchange \' ka noho rite ki te whakawhiti i ētahi atu.</string>
     <string name="label_hometag">Kāinga</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Ngana anō</string>
     <string name="label_PassHintChange">Kīangahipa whakahoutia</string>
     <string name="label_PassHintCreate">Waihanga Kīangahipa</string>
+    <string name="label_PassHintCurrent">Kīangahipa o nāianei</string>
     <string name="label_PassHintEnter">Kīangahipa</string>
     <string name="label_PassHintRepeat">Tukurua Kīangahipa</string>
     <string name="label_passPhraseCacheTtl">Keteroki kīangahipa</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">I ngā hoapā %s kawemai.</string>
     <string name="state_TextCopiedToClipboard">Te tārua kuputuhi ki te papatopenga.</string>
 
-    <string name="text_About">Hangaia %1$s\n\nSafeSlinger ki te tiri raraunga tuakiri, te tangata i roto i runga i te waea ranei, whakamotuhēhē, tümataiti, me te whakaū tonu. Ia tangata faaite koe ki te hanga i tētahi hongere haumaru mutunga - ki - mutu ki te unga karere.\n\nNgā Whakaaturanga:\n- ngāwari te whakawhiti pārongo whakapā ki ētahi atu\n- humarie piua tuhinga, whakaahua, tetahi mea!\n- kaha tuhiwhakamuna tiaki koutou mōhiohio\n\nīmēra: %2$s\ntukutuku: %3$s</string>
+    <string name="text_About">%1$s\n\nHangaia SafeSlinger ki te tiri raraunga tuakiri, te tangata i roto i runga i te waea ranei, whakamotuhēhē, tümataiti, me te whakaū tonu. Ia tangata faaite koe ki te hanga i tētahi hongere haumaru mutunga-ki-mutu ki te unga karere.\n\nNgā Āhuatanga:\n- Ngāwari te whakawhiti whakapā atu mōhiohio ki ētahi atu\n- Tuhinga humarie te piupiu, whakaahua, tetahi mea!\n- Kaha tuhiwhakamuna tiaki koutou mōhiohio\n\nīmēra: %2$s\ntukutuku: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Tuakiri</string>
+    <string name="text_KeywordKey">Matua</string>
+    <string name="text_KeywordMessaging">Karere</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Haumarutanga</string>
     <string name="text_LanguagesProvidedBy">Reo e whakaratohia ana e:</string>
+    <string name="text_RelatedSearchTerms">Ngā ture e pā ana:</string>
     <string name="text_Requirements">Whakaritenga:\n1. Me tāuta i runga i te iti o te 2 ngā pūrere.\n2. Me kaha te hononga Ipurangi.</string>
+    <string name="text_WhatsNew">- Pūmau whakatika.</string>
 
     <string name="title_About">Mō</string>
     <string name="title_camera">Camera</string>

@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Idatha yothintana kwase ihlelwe ngokungesikho.</string>
     <string name="error_WebCancelledByUser">Umsebenzisi lukhanseliwe isicelo iseva.</string>
 
-    <string name="help_find">Sebenzisa lesi sikrini ukuze usethe igama lakho, yocingo, kanye imeyili ukushintsha nabanye. Thepha inkinobho \' Kwenziw \' uma usuqedile.</string>
     <string name="help_home">Ukushintshanisa ungubani idatha, ukuqinisekisa yonke abasebenzisi kukhona oseduze efonini. Inkinobho \' Qala Exchange \' kuyokwenza ukushintshanisa kuphela idatha yothintana kuhloliwe.</string>
     <string name="help_identity_menu">\n\nUngase ushintshe idatha emayelana ubuwena kulolu esibukweni siqu evunyelwe kwi inkinobho negama lakho. Lokhu kuzokwenza babonisa yemenyu ukuvumela ukuba \' Hlela \' contact yakho, \' Yakha New \' contact, noma \' Sebenzisa Enye \' contact.</string>
     <string name="help_Messages">Le screen ebonisa yonke imilayezo esidlule, nezinamathiselo ukuthi zisatholakala for thwebula.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">yisikhathi %s</string>
     <string name="label_expiresIn">yisikhathi ngo</string>
     <string name="label_FileNameHint">Igama ifayela</string>
-    <string name="label_FindInstruct">Sicela ufake ulwazi lwakho lomuntu siqu. Le idatha kuyobe ngokuphepha kwabiwe ngabanye nobani okhetha nabantu.</string>
     <string name="label_FirstName">Igama Lokuqala</string>
     <string name="label_Home">Hlola izinto ufisa ukwabelana bese uthepha \' Qala Exchange \' lapho abanye bakulungele ukushintshanisa.</string>
     <string name="label_hometag">Home</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Zama futhi</string>
     <string name="label_PassHintChange">Igama lokungena Kubuyekeziwe</string>
     <string name="label_PassHintCreate">Yakha igama lokungena</string>
+    <string name="label_PassHintCurrent">Igama lokungena yamanje</string>
     <string name="label_PassHintEnter">Igama lokungena</string>
     <string name="label_PassHintRepeat">Phinda igama lokungena</string>
     <string name="label_passPhraseCacheTtl">Yehhovisi igama lokungena</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s othintana amazwe.</string>
     <string name="state_TextCopiedToClipboard">Umbhalo ukopishwe ebhodini lokunamathisela.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger yenzelwe ukwabelana kalula omazisi idatha, ngesiqu noma ocingweni, ugunyazwe, ezizimele, futhi njengoba yayinjalo. Ngalinye umuntu usiza kwakha ekupheleni -to - ekupheleni wesiteshi ephephile ukuthumela imilayezo.\n\nIzici:\n- ukushintshanisa kalula Ukwaziswa ukuthintana nabanye\n- okokulengisa ngokuphepha imibhalo, izithombe, noma yini!\n- Lobhalomfihlo Strong evikela imininingwane yakho\n\nimeyili: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger yakhelwe ukwabelana kalula omazisi idatha, ngesiqu noma ocingweni, ugunyazwe, ezizimele, futhi njengoba yayinjalo. Ngalinye umuntu usiza kwakha ekupheleni-to-ekupheleni wesiteshi ephephile ukuthumela imilayezo.\n\nIzici:\n- Ukushintshanisa kalula ulwazi lokuxhumana nabanye\n- Imibhalo ngokuphepha okokulengisa, izithombe, noma yini!\n- Lobhalomfihlo Strong evikela imininingwane yakho\n\nimeyili: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Imiyalezo</string>
+    <string name="text_KeywordPrivacy">Ubumfihlo</string>
+    <string name="text_KeywordSecurity">Ukuphepha</string>
     <string name="text_LanguagesProvidedBy">Izilimi kuhlinzekwe ngu:</string>
-    <string name="text_Requirements">Okudingekayo:\n1. Kumele ukufakwa okungenani Amadivayisi 2.\n2. Uxhumano Internet kufanele kube abakhuthele.</string>
+    <string name="text_RelatedSearchTerms">Amagama Related:</string>
+    <string name="text_Requirements">Izidingo:\n1. Kumele ukufakwa okungenani Amadivayisi 2.\n2. Uxhumano Internet kufanele kube abakhuthele.</string>
+    <string name="text_WhatsNew">- Ukusimama fixes.</string>
 
     <string name="title_About">Mayelana</string>
     <string name="title_camera">Ikhamera</string>

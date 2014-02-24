@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">ข้อมูล การติดต่อ ได้รับการ จัดรูปแบบ ไม่ถูกต้อง</string>
     <string name="error_WebCancelledByUser">ผู้ใช้ ยกเลิก คำขอ เซิร์ฟเวอร์</string>
 
-    <string name="help_find">ใช้หน้าจอ นี้เพื่อตั้ง ชื่อ ของโทรศัพท์ และอีเมล์ เพื่อแลกเปลี่ยน กับผู้อื่น แตะ ที่ปุ่ม \' เสร็จ \' เมื่อเสร็จแล้ว</string>
     <string name="help_home">เพื่อแลกเปลี่ยนข้อมูล ตัวตน มั่นใจว่าผู้ใช้ ทั้งหมดที่อยู่ บริเวณใกล้เคียงหรือ ทางโทรศัพท์ ปุ่ม \' เริ่มต้น ตลาดหลักทรัพย์ จะแลกเปลี่ยน เฉพาะข้อมูล การตรวจสอบ รายชื่อผู้ติดต่อ</string>
     <string name="help_identity_menu">\n\nนอกจากนี้คุณยัง อาจมีการเปลี่ยนแปลง ข้อมูล ส่วนบุคคลเกี่ยวกับ ตัวตนของคุณ บนหน้าจอนี้ โดยแตะที่ ปุ่มที่มี ชื่อของคุณ นี้จะ แสดงเมนู ช่วยให้คุณสามารถ \'แก้ไข\' ที่ติดต่อของคุณ \'สร้าง ใหม่\' ติดต่อ หรือ ใช้ อีก \' ติดต่อ</string>
     <string name="help_Messages">หน้าจอนี้จะ แสดงข้อความ ที่ผ่านมาทั้งหมด และสิ่งที่แนบ ที่ ยังคงมีอยู่ สำหรับการดาวน์โหลด</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">หมดอายุ %s</string>
     <string name="label_expiresIn">จะหมดอายุใน</string>
     <string name="label_FileNameHint">ชื่อ ไฟล์</string>
-    <string name="label_FindInstruct">กรุณากรอก ข้อมูลส่วนตัวของคุณ ข้อมูลนี้ จะถูก ใช้ร่วมกัน อย่างปลอดภัย กับบุคคล ที่คุณ เลือกที่จะ ใช้ร่วมกับ</string>
     <string name="label_FirstName">ชื่อ แรก</string>
     <string name="label_Home">ตรวจสอบ รายการที่คุณ ต้องการแบ่งปัน และแตะ \' เริ่มต้นการ แลกเปลี่ยน \' เมื่อ คนอื่น ๆ ก็พร้อมที่จะ แลกเปลี่ยน</string>
     <string name="label_hometag">บ้าน</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">ลองใหม่อีกครั้ง</string>
     <string name="label_PassHintChange">ข้อความรหัสผ่าน การปรับปรุง</string>
     <string name="label_PassHintCreate">สร้าง วลีรหัสผ่าน</string>
+    <string name="label_PassHintCurrent">ข้อความรหัสผ่านปัจจุบัน</string>
     <string name="label_PassHintEnter">รหัสผ่าน</string>
     <string name="label_PassHintRepeat">Passphrase ซ้ำ</string>
     <string name="label_passPhraseCacheTtl">แคช รหัสผ่าน</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">ติดต่อ %s นำเข้า</string>
     <string name="state_TextCopiedToClipboard">ข้อความที่คัดลอก ไปยังคลิปบอร์ด</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ถูกออกแบบมาเพื่อ ใช้ข้อมูลร่วมกัน ได้อย่างง่ายดาย ตัวตน ด้วยตนเองหรือ ผ่านทางโทรศัพท์ ที่ รับรองความถูกต้อง ของภาคเอกชน และครบถ้วน คนที่คุณ แบ่งปัน ด้วยกัน สร้างช่อง end-to-end ที่ มีความปลอดภัย ในการส่งข้อความ\n\nคุณสมบัติ:\n-สามารถ แลกเปลี่ยนข้อมูล การติดต่อกับ คนอื่น ๆ\n- ปลอดภัย สลิง ข้อความ รูปถ่าย อะไร\n- การเข้ารหัส ที่แข็งแกร่งใน การปกป้อง ข้อมูลของคุณ\n\nอีเมล์: %2$s\nเว็บ: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ถูกออกแบบมาเพื่อใช้ข้อมูลร่วมกันได้อย่างง่ายดายตัวตนด้วยตนเองหรือผ่านทางโทรศัพท์ที่รับรองความถูกต้องของภาคเอกชนและครบถ้วน คนที่คุณแบ่งปันด้วยกันสร้างช่อง end-to-end ที่มีความปลอดภัยในการส่งข้อความ\n\nคุณสมบัติ:\n- ง่ายแลกเปลี่ยนข้อมูลการติดต่อกับผู้อื่น\n- ข้อความที่ปลอดภัยสลิงภาพถ่ายอะไร\n- การเข้ารหัสที่แข็งแกร่งในการปกป้องข้อมูลของคุณ\n\nอีเมล์: %2$s\nเว็บ: %3$s</string>
+    <string name="text_KeywordExchange">แลกเปลี่ยน</string>
+    <string name="text_KeywordIdentity">เอกลักษณ์</string>
+    <string name="text_KeywordKey">สำคัญ</string>
+    <string name="text_KeywordMessaging">การส่งข้อความ</string>
+    <string name="text_KeywordPrivacy">ความเป็นส่วนตัว</string>
+    <string name="text_KeywordSecurity">ความปลอดภัย</string>
     <string name="text_LanguagesProvidedBy">ภาษา ที่ให้บริการโดย:</string>
-    <string name="text_Requirements">ต้องการ:\n1 ต้องติดตั้งบน อย่างน้อย 2 อุปกรณ์\n2 การเชื่อมต่ออินเทอร์เน็ตจะต้องใช้งาน</string>
+    <string name="text_RelatedSearchTerms">ข้อตกลงและเงื่อนไขที่เกี่ยวข้อง</string>
+    <string name="text_Requirements">ต้องการ:\n1 ต้องติดตั้งบนอย่างน้อย 2 อุปกรณ์\n2 การเชื่อมต่ออินเทอร์เน็ตจะต้องใช้งาน</string>
+    <string name="text_WhatsNew">- แก้ไขเสถียรภาพ</string>
 
     <string name="title_About">เกี่ยวกับ</string>
     <string name="title_camera">กล้อง</string>

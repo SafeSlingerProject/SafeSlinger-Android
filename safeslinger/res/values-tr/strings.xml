@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">İletişim bilgileri hatalı biçimlendirilmiş.</string>
     <string name="error_WebCancelledByUser">Kullanıcı sunucu isteği iptal edildi.</string>
 
-    <string name="help_find">Başkaları ile alışverişi için adınızı, telefon ve e-posta ayarlamak için bu ekranı kullanın. Bittiğinde\'Bitti \' düğmesine dokunun.</string>
     <string name="help_home">Kimlik veri alışverişi için tüm kullanıcıların yakın yatelefonda sağlamak. \'Başlamak Borsası\' düğmesi yalnızcaişaretli temas veri alışverişi olacaktır.</string>
     <string name="help_identity_menu">\n\nAyrıca adı iledüğmeye dokunarak ekranda kimliğinizle ilgili kişisel veriler değişebilir. Bu \' Düzenle \' kişiyi, kişiyi \'Yeni Oluştur\', ya da kişiyi \'Başka kullan\' sağlayan bir menü görüntüler.</string>
     <string name="help_Messages">Bu ekran tüm geçmiş iletileri ve hala yüklenebilir ekleri görüntüler.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s sona eriyor</string>
     <string name="label_expiresIn">sona eriyor</string>
     <string name="label_FileNameHint">Dosya Adı</string>
-    <string name="label_FindInstruct">Kişisel bilgilerinizi giriniz. Bu veriler sadece güvenli sizinle paylaşmak için tercih bireyler ile paylaşılacaktır.</string>
     <string name="label_FirstName">Ad</string>
     <string name="label_Home">Paylaşmak ve \' Değiş Başlayacak \' dokunun istediğiniz öğeleri işaretleyin diğerleri değişimi için hazır olduğunuzda.</string>
     <string name="label_hometag">Ev</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Yeniden Dene</string>
     <string name="label_PassHintChange">Güncelleme Parolası</string>
     <string name="label_PassHintCreate">Şifresini oluşturma</string>
+    <string name="label_PassHintCurrent">Güncel Parolası</string>
     <string name="label_PassHintEnter">Parolası</string>
     <string name="label_PassHintRepeat">Tekrar Parolası</string>
     <string name="label_passPhraseCacheTtl">Parolası Önbellek</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kişileri ithal.</string>
     <string name="state_TextCopiedToClipboard">Metin panoya kopyalandı.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger özel, doğrulanmış, şahsen veyatelefon üzerinden kolayca kimlik veri paylaşmak için tasarlanmıştır ve sağlam durumda. Eğer paylaştığınız her kişi mesaj göndermek için güvenli bir uçtan uca bir kanal oluşturur.\n\nÖzellikler:\n- başkalarıyla kolayca güvenli metinler, fotoğraflar, bir şey atmak\n- ile iletişim bilgi alışverişinde! %2$s\nweb: %3$s\n- Güçlü kriptografi bilgileriniz\n\ne-posta korur</string>
+    <string name="text_About">%1$s\n\nSafeSlinger, şahsen veya telefon üzerinden kolayca kimlik verileri paylaşmak için tasarlanmıştır doğrulanmış, özel ve bozulmamış olduğunu. Eğer paylaştığınız her kişi mesaj göndermek için güvenli bir uçtan uca bir kanal oluşturur.\n\nÖzellikler:\n- Kolay başkaları ile iletişim bilgileri alışverişi\n- Güvenli sapan metinler, fotoğraflar, her şey!\n- Güçlü şifreleme bilgilerinizi korur\n\ne-posta: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Borsa</string>
+    <string name="text_KeywordIdentity">Kimlik</string>
+    <string name="text_KeywordKey">Anahtar</string>
+    <string name="text_KeywordMessaging">Mesajlaşma</string>
+    <string name="text_KeywordPrivacy">Gizlilik</string>
+    <string name="text_KeywordSecurity">Güvenlik</string>
     <string name="text_LanguagesProvidedBy">Tarafından sağlanan Diller:</string>
-    <string name="text_Requirements">Gereksinimler:\n1. 2 cihazların minimum yüklü olmalıdır.\n2. Bir Internet bağlantısı aktif olmalıdır.</string>
+    <string name="text_RelatedSearchTerms">İlgili Şartlar:</string>
+    <string name="text_Requirements">Koşullar:\n1. 2 cihazların minimum yüklü olmalıdır.\n2. Bir Internet bağlantısı aktif olmalıdır.</string>
+    <string name="text_WhatsNew">- İstikrar giderir.</string>
 
     <string name="title_About">Hakkında</string>
     <string name="title_camera">Kamera</string>

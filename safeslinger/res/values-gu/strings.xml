@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">સંપર્ક માહિતી ખોટી રીતે ફોર્મેટ કરવામાં આવી હતી.</string>
     <string name="error_WebCancelledByUser">વપરાશકર્તા સર્વર વિનંતી રદ.</string>
 
-    <string name="help_find">અન્ય લોકો સાથે અદલા તમારું નામ, ફોન, અને ઇમેઇલ સુયોજિત કરવા માટે આ સ્ક્રીનને વાપરો. જ્યારે સમાપ્ત થાય ત્યારે \' થઈ ગયું \' બટન ટેપ કરો.</string>
     <string name="help_home">ઓળખ માહિતી વિનિમય માટે, બધા વપરાશકર્તાઓ નજીકના અથવા ફોન પર હોય છે તેની ખાતરી કરો. આ \' શરૂ એક્સચેન્જ \' બટન માત્ર ચકાસાયેલ સંપર્ક માહિતી લે કરશે.</string>
     <string name="help_identity_menu">\n\nતમે પણ તમારા નામ સાથે બટન પર ટેપ દ્વારા આ સ્ક્રીન પર તમારી ઓળખ વિશે વ્યક્તિગત માહિતી બદલી શકો છો. આ તમને \' ફેરફાર કરો \' તમારી સંપર્ક, સંપર્ક \' ન્યૂ બનાવો\', અથવા સંપર્ક \' અન્ય ઉપયોગ \' માટે પરવાનગી આપે છે મેનુ દર્શાવશે.</string>
     <string name="help_Messages">આ સ્ક્રીન બધા છેલ્લા સંદેશાઓ, અને હજુ પણ ડાઉનલોડ માટે ઉપલબ્ધ છે કે જોડાણો દર્શાવે છે.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s સમાપ્ત થાય છે</string>
     <string name="label_expiresIn">માં સમાપ્ત થાય છે</string>
     <string name="label_FileNameHint">ફાઇલ નામ</string>
-    <string name="label_FindInstruct">તમારી વ્યક્તિગત માહિતી દાખલ કરો. આ ડેટા માત્ર સુરક્ષિત તેને તમારી સાથે શેર કરવા માટે પસંદ જેની વ્યક્તિઓ સાથે શેર કરવામાં આવશે.</string>
     <string name="label_FirstName">પ્રથમ નામ</string>
     <string name="label_Home">તમે શેર અને \' એક્સચેન્જ શરૂ \' ટેપ કરવા માંગો છો વસ્તુઓ તપાસો અન્ય બદલી કરવા માટે તૈયાર હોય છે.</string>
     <string name="label_hometag">ઘર</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">ફરી પ્રયાસ કરો</string>
     <string name="label_PassHintChange">અપડેટ પાસફ્રેઝ</string>
     <string name="label_PassHintCreate">પાસફ્રેઝ બનાવો</string>
+    <string name="label_PassHintCurrent">વર્તમાન પાસફ્રેઝ</string>
     <string name="label_PassHintEnter">પાસફ્રેઝ</string>
     <string name="label_PassHintRepeat">પુનરાવર્તન પાસફ્રેઝ</string>
     <string name="label_passPhraseCacheTtl">પાસફ્રેઝ કેશ</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s સંપર્કો આયાત કરી છે.</string>
     <string name="state_TextCopiedToClipboard">લખાણ ક્લિપબોર્ડ પર નકલ.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ખાનગી, પ્રમાણિત, વ્યક્તિ અથવા ફોન પર, સરળતાથી ઓળખ માહિતી શેર કરે છે, અને અકબંધ છે. તમારી સાથે શેર દરેક વ્યક્તિ સંદેશાઓ મોકલવા માટે એક સુરક્ષિત અંત માટે અંતે ચેનલ બનાવે છે.\n\nસુવિધાઓ\n- સરળતાથી અન્ય સુરક્ષિત ગ્રંથો, ફોટા, કંઈપણ sling\n- સાથે સંપર્ક માહિતી બદલી! %2$s\nવેબ:: %3$s\n- મજબૂત ક્રિપ્ટોગ્રાફી તમારી માહિતી\n\nઇમેઇલ સામે રક્ષણ આપે છે</string>
+    <string name="text_About">%1$s\n\nSafeSlinger, વ્યક્તિ અથવા ફોન પર, સરળતાથી ઓળખ માહિતી શેર કરવા માટે રચાયેલ સત્તાધિકારીત, ખાનગી અને અખંડ છે. તમારી સાથે શેર દરેક વ્યક્તિ સંદેશાઓ મોકલવા માટે એક સુરક્ષિત અંત માટે અંતે ચેનલ બનાવે છે.\n\nલક્ષણો:\n- સરળતાથી અન્ય લોકો સાથે સંપર્ક માહિતી વિનિમય\n- સુરક્ષિત sling ગ્રંથો, ફોટા, ખાવા!\n- મજબૂત ક્રિપ્ટોગ્રાફી તમારી માહિતી રક્ષણ આપે છે\n\nઇમેઇલ: %2$s\nવેબ: %3$s</string>
+    <string name="text_KeywordExchange">વિનિમય</string>
+    <string name="text_KeywordIdentity">ઓળખ</string>
+    <string name="text_KeywordKey">કી</string>
+    <string name="text_KeywordMessaging">મેસેજિંગ</string>
+    <string name="text_KeywordPrivacy">ગોપનીયતા</string>
+    <string name="text_KeywordSecurity">સુરક્ષા</string>
     <string name="text_LanguagesProvidedBy">દ્વારા પૂરી પાડવામાં આવેલ ભાષા:</string>
+    <string name="text_RelatedSearchTerms">સંબંધિત શરતો:</string>
     <string name="text_Requirements">જરૂરીયાતો:\n1. 2 ઉપકરણો ઓછામાં ઓછા પર સ્થાપિત હોવું જ જોઈએ.\n2. ઈન્ટરનેટ જોડાણ સક્રિય હોવા જ જોઈએ.</string>
+    <string name="text_WhatsNew">- સ્થિરતા સુધારાઓ.</string>
 
     <string name="title_About">લગભગ</string>
     <string name="title_camera">કેમેરા</string>

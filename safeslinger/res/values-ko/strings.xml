@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">연락처 데이터 의 형식이 잘못 되었습니다.</string>
     <string name="error_WebCancelledByUser">사용자가 서버 요청을 취소했습니다.</string>
 
-    <string name="help_find">이 화면에서는 다른 사람들과 교환하는 이름, 전화, 이메일을 설정할 수 있습니다. 완료되면 \'완료\'버튼을 누르십시오.</string>
     <string name="help_home">신원정보를 교환하고자 하는 모든 사용자가 서로의 근처에 있어야 합니다. 교환하고자 하는 연락처 정보를 골라 선택한 후 \'교류 시작\' 버튼을 눌러주십시오.</string>
     <string name="help_identity_menu">\n\n당신은 유용한 이름을 가진 버튼을 눌러이 화면에서 사용자의 신원에 대한 개인 데이터를 변경할 수 있습니다. 이 메뉴 있도록 당신의 손길을 \'수정\'을, 접촉 \'새로 만들기\'를, 또는 \'을 사용하는 또 다른의 연락처를 표시합니다.</string>
     <string name="help_Messages">이 화면에는 과거에 교환했던 다운로드 가능한 메시지와 파일들을 표시합니다.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s 에게 만료</string>
     <string name="label_expiresIn">만료</string>
     <string name="label_FileNameHint">파일 이름</string>
-    <string name="label_FindInstruct">귀하의 개인 정보를 입력하십시오. 이 데이터는 안전하게 당신과 함께 그것을 공유하도록 선택할 사람과 공유 할 수 있습니다.</string>
     <string name="label_FirstName">이름</string>
     <string name="label_Home">공유하고자하는 항목을 확인한 후 다른 사람들이 교환 준비가 되었을 때 \'교환 시작\'탭을 눌러주십시오.</string>
     <string name="label_hometag">홈</string>

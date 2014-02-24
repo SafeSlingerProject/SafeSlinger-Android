@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Të dhënat e kontaktit u formatuar gabimisht.</string>
     <string name="error_WebCancelledByUser">User anuluar kërkesën server.</string>
 
-    <string name="help_find">Përdoreni këtë ekran për të vendosur emrin tuaj, telefon, dhe email për të shkëmbyer me të tjerët. Tap butonin \' Done \' kur mbaruar.</string>
     <string name="help_home">Të shkëmbejnë të dhëna të identitetit, të sigurojë të gjithë përdoruesit janë të afërt ose në telefon. Butonin \' fillojnë Shkëmbim \' do të shkëmbejnë vetëm të dhëna të kontrolluar kontaktit.</string>
     <string name="help_identity_menu">\n\nJu gjithashtu mund të ndryshojë të dhënat personale për identitetin tuaj në këtë ekran nga përgjimi mbi butonin me emrin tuaj. Kjo do të shfaq një menu që ju lejon të \' Edit \' kontakt tuaj, \'Krijo të re\' kontakt, ose \' Përdor Një tjetër \' kontakt.</string>
     <string name="help_Messages">Ky ekran tregon të gjitha mesazhet e kaluara dhe të bashkëngjitni skedarë që janë ende në dispozicion për shkarkim.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">skadon %s</string>
     <string name="label_expiresIn">skadon në</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Ju lutemi shkruani të dhënat tuaja personale. Këto të dhëna do të ndahen vetëm të sigurt me individë të cilët ju zgjidhni për të ndarë atë me të.</string>
     <string name="label_FirstName">Emër</string>
     <string name="label_Home">Kontrolloni sendet që ju dëshironi për të ndarë dhe trokitje e lehtë \' Filloni Exchange \' kur të tjerët janë të gatshëm për të shkëmbyer.</string>
     <string name="label_hometag">Shtëpi</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Rigjykoj</string>
     <string name="label_PassHintChange">Fjalëkalim përditësua</string>
     <string name="label_PassHintCreate">Krijo fjalëkalim</string>
+    <string name="label_PassHintCurrent">Fjalëkalim tanishme</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Përsëriteni fjalëkalim</string>
     <string name="label_passPhraseCacheTtl">Cache passphrase</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Kontaktet %s importuar.</string>
     <string name="state_TextCopiedToClipboard">Tekst kopjuar në Clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger është projektuar të lehtë të ndajnë të dhëna të identitetit, personalisht ose me telefon, vërtetuar, private, dhe të paprekur. Çdo person i ndani me të krijon një kanal të sigurtë fund-te-fund për të dërguar mesazhe.\n\nFeatures:\n- Easily shkëmbejnë informacionin e kontaktit me të tjerët\n- kėtu hobe tekste, fotografi, asgjë!\n- cryptography fortë mbron të dhënat tuaja\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger është projektuar të lehtë të ndajnë të dhëna të identitetit, personalisht ose me telefon, vërtetuar, private, dhe të paprekur. Çdo person i ndani me të krijon një kanal të sigurtë fund-te-fund për të dërguar mesazhe.\n\nFeatures:\n- Easily shkëmbejnë informacion kontaktoni me të tjerët\n- Tekste Sigurt hobe, photos, çdo gjë!\n- Kriptografia fortë mbron të dhënat tuaja\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Shkëmbim</string>
+    <string name="text_KeywordIdentity">Identitet</string>
+    <string name="text_KeywordKey">Kyç</string>
+    <string name="text_KeywordMessaging">Mesazhimi</string>
+    <string name="text_KeywordPrivacy">Intimitet</string>
+    <string name="text_KeywordSecurity">Siguri</string>
     <string name="text_LanguagesProvidedBy">Gjuhë të ofruara nga:</string>
+    <string name="text_RelatedSearchTerms">Related Terms:</string>
     <string name="text_Requirements">Kërkesat:\n1. Duhet të jetë i instaluar në një minimum prej 2 pajisjeve.\n2. Një lidhje në Internet duhet të jetë aktive.</string>
+    <string name="text_WhatsNew">- Fixes Stabilitetit.</string>
 
     <string name="title_About">Për</string>
     <string name="title_camera">Aparat fotografik</string>

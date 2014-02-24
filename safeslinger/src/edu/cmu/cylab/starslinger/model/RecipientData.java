@@ -24,7 +24,6 @@
 
 package edu.cmu.cylab.starslinger.model;
 
-
 public class RecipientData {
 
     protected long mRowId = -1;

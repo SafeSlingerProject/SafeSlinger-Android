@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontakt Daten wurden falsch formatiert.</string>
     <string name="error_WebCancelledByUser">Benutzer brach Serveranfrage ab.</string>
 
-    <string name="help_find">Verwenden Sie dieses Fenster, um Ihren Namen, Telefonnummer und E-Mail festlegen, um sie mit anderen auszutauschen. Tippen Sie auf die Schaltfläche \'Fertig\', wenn Sie fertig sind.</string>
     <string name="help_home">Um Identitätsdaten auszutauschen, vergewissern Sie sich zuerst, dass alle Benutzer mit ihrem Handy bereit sind. Durch die Schaltfläche \'Austauschen\' werden nur die ausgewählten Kontaktdaten ausgetauscht.</string>
     <string name="help_identity_menu">\n\nSie können auch Ihre personenbezogenen Identitätsdaten auf dieser Seite ändern, indem Sie auf die Schaltfläche mit Ihrem Namen tippen. es wird ein Menü angezeigt, auf dem Sie Ihren Kontakt \'editieren\', einen \'neuen Kontakt\' anlegen oder einen \'anderen verwenden\' können.</string>
     <string name="help_Messages">Dieses Fenster zeigt alle bisherigen Nachrichten und Dateien, die noch zum Download zur Verfügung sind.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">Läuft %s ab</string>
     <string name="label_expiresIn">läuft ab in</string>
     <string name="label_FileNameHint">Dateiname</string>
-    <string name="label_FindInstruct">Bitte geben Sie Ihre persönlichen Daten ein. Diese Daten werden nur denjenigen Personen sicher mitgeteilt, die Sie ausgewählt haben.</string>
     <string name="label_FirstName">Vorname</string>
     <string name="label_Home">Wählen Sie die Informationen aus, die Sie mit anderen austauschen möchten, und tippen Sie \'Austauschen\', wenn alle Teilnehmer bereit sind.</string>
     <string name="label_hometag">Zuhause</string>

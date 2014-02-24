@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontaktinformācija tika formatēts pareizi.</string>
     <string name="error_WebCancelledByUser">Lietotājs atcēla servera pieprasījumu.</string>
 
-    <string name="help_find">Izmantojiet šo ekrānu, lai uzstādītu savu vārdu, telefonu un e-pastu, lai apmainītos ar citiem. Pieskarieties \' Done \' pogu, kad pabeigta.</string>
     <string name="help_home">Lai apmainītos ar identitātes datiem, nodrošinātu, ka visi lietotāji ir tuvumā, vai pa tālruni. Ka \' sāk biržas \' pogu apmainīsies tikai pārbaudīt kontaktu datus.</string>
     <string name="help_identity_menu">\n\nJūs varat mainīt arī personiskos datus par savu identitāti šajā ekrānā, pieskaroties uz pogas ar savu vārdu. Tas parādīs izvēlni, kas ļauj jums \' Edit \' savu kontaktinformāciju, \' Izveidot jaunu \' kontaktu, vai \' izmantot citu \' kontaktu.</string>
     <string name="help_Messages">Šis ekrāns parāda visas iepriekšējās ziņas un pielikumus, kas joprojām ir pieejams lejupielādei.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">beidzas %s</string>
     <string name="label_expiresIn">beidzas</string>
     <string name="label_FileNameHint">Faila nosaukums</string>
-    <string name="label_FindInstruct">Ievadiet savu personisko informāciju. Šie dati tiks droši zināma tikai ar cilvēkiem, kuriem jūs izvēlēties, lai dalīties ar jums.</string>
     <string name="label_FirstName">Vārds</string>
     <string name="label_Home">Pārbaudiet Vienumi, ko vēlaties dalīties un pieskarieties \' Sākt Exchange \', kad citi ir gatavi apmainīt.</string>
     <string name="label_hometag">Mājas</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Otrreiz izskatīt</string>
     <string name="label_PassHintChange">Atjaunināts parole</string>
     <string name="label_PassHintCreate">Izveidot ieejas frāzi</string>
+    <string name="label_PassHintCurrent">Pašreizējā parole</string>
     <string name="label_PassHintEnter">Parole</string>
     <string name="label_PassHintRepeat">Atkārtot parole</string>
     <string name="label_passPhraseCacheTtl">Parole Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontakti importēts.</string>
     <string name="state_TextCopiedToClipboard">Teksts iekopēts starpliktuvē.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ir paredzēts, lai viegli dalīties identitātes datus, personīgi vai pa tālruni, autentiskums, privātā un neskarts. Katra persona jums dalīties ar rada drošu end-to-end kanālu, lai nosūtītu ziņojumus.\n\nFeatures:\n- kontaktinformāciju viegli apmainīties ar citiem\n- Jau linga teksti, fotogrāfijas, neko!\n- Spēcīga kriptogrāfija aizsargā jūsu informāciju\n\ne-pasts: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ir paredzēts, lai viegli dalīties identitātes datus, personīgi vai pa tālruni, autentiskums, privātā un neskarts. Katra persona jums dalīties ar rada drošu end-to-end kanālu, lai nosūtītu ziņojumus.\n\nFunkcijas:\n- Viegli apmainīties ar kontaktinformāciju ar citiem\n- Droši Sling tekstus, fotogrāfijas, neko!\n- Strong kriptogrāfija aizsargā jūsu informāciju\n\ne-pasts: %2$s\nmājas lapa: %3$s</string>
+    <string name="text_KeywordExchange">Maiņa</string>
+    <string name="text_KeywordIdentity">Identitāte</string>
+    <string name="text_KeywordKey">Taustiņš</string>
+    <string name="text_KeywordMessaging">Messaging</string>
+    <string name="text_KeywordPrivacy">Privātums</string>
+    <string name="text_KeywordSecurity">Drošība</string>
     <string name="text_LanguagesProvidedBy">Valodas, ko sniedz:</string>
+    <string name="text_RelatedSearchTerms">Saistītie noteikumi:</string>
     <string name="text_Requirements">Prasības:\n1. Jāuzstāda uz vismaz 2 ierīcēm.\n2. Interneta pieslēgums ir aktīvs.</string>
+    <string name="text_WhatsNew">- Stabilitātes labojumi.</string>
 
     <string name="title_About">Par</string>
     <string name="title_camera">Kamera</string>

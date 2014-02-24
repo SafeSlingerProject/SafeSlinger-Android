@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Data kontak diformat salah.</string>
     <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan server.</string>
 
-    <string name="help_find">Gunakan layar ini untuk mengatur nama, telepon, dan email untuk bertukar dengan orang lain. Tekan \' Selesai \' tombol ketika selesai.</string>
     <string name="help_home">Untuk bertukar data identitas, memastikan semua pengguna berada di dekatnya atau di telepon. Tombol \' Mulai Efek \' akan bertukar hanya data kontak diperiksa.</string>
     <string name="help_identity_menu">\n\nAnda juga dapat mengubah data pribadi tentang identitas Anda pada layar ini dengan menekan tombol dengan nama Anda. Ini akan menampilkan menu yang memungkinkan Anda untuk \'Edit \' kontak Anda, \' Create New \' kontak, atau \' Gunakan lagi \' kontak.</string>
     <string name="help_Messages">Layar ini menampilkan semua pesan masa lalu, dan lampiran yang masih tersedia untuk di-download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">berakhir %s</string>
     <string name="label_expiresIn">berakhir pada</string>
     <string name="label_FileNameHint">Nama file</string>
-    <string name="label_FindInstruct">Masukkan informasi pribadi Anda. Data ini hanya akan aman berbagi dengan orang-orang yang Anda memilih untuk berbagi dengan.</string>
     <string name="label_FirstName">Nama Depan</string>
     <string name="label_Home">Memeriksa barang-barang yang Anda ingin berbagi dan tekan \' Mulai Efek \' ketika orang lain siap untuk bertukar.</string>
     <string name="label_hometag">Rumah</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Mencoba kembali</string>
     <string name="label_PassHintChange">Diperbarui Passphrase</string>
     <string name="label_PassHintCreate">Buat Passphrase</string>
+    <string name="label_PassHintCurrent">Passphrase saat ini</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Ulangi Passphrase</string>
     <string name="label_passPhraseCacheTtl">Frasa Sandi Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Kontak %s impor.</string>
     <string name="state_TextCopiedToClipboard">Teks disalin ke clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger dirancang untuk dengan mudah berbagi data identitas, secara langsung atau melalui telepon, dikonfirmasi, swasta, dan utuh. Setiap orang yang Anda berbagi dengan menciptakan saluran aman end-to-end untuk mengirim pesan.\n\nFitur:\n- Mudah bertukar informasi kontak dengan orang lain\n- Aman sling teks, foto, apa saja!\n- kriptografi yang kuat melindungi informasi Anda\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger dirancang untuk dengan mudah berbagi data identitas, secara langsung atau melalui telepon, dikonfirmasi, swasta, dan utuh. Setiap orang yang Anda berbagi dengan menciptakan saluran aman end-to-end untuk mengirim pesan.\n\nFitur:\n- Mudah bertukar informasi kontak dengan orang lain\n- Teks Aman sling, foto, apa saja!\n- Kriptografi yang kuat melindungi informasi Anda\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Pertukaran</string>
+    <string name="text_KeywordIdentity">Identitas</string>
+    <string name="text_KeywordKey">Kunci</string>
+    <string name="text_KeywordMessaging">Pesan</string>
+    <string name="text_KeywordPrivacy">Pribadi</string>
+    <string name="text_KeywordSecurity">Keamanan</string>
     <string name="text_LanguagesProvidedBy">Bahasa yang disediakan oleh:</string>
+    <string name="text_RelatedSearchTerms">Ketentuan terkait:</string>
     <string name="text_Requirements">Persyaratan:\n1. Harus diinstal pada minimal 2 perangkat.\n2. Koneksi Internet harus aktif.</string>
+    <string name="text_WhatsNew">- Stabilitas perbaikan.</string>
 
     <string name="title_About">Tentang</string>
     <string name="title_camera">Kamera</string>

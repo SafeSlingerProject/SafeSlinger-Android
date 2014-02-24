@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Tengiliðagögn var sniðinn rangt.</string>
     <string name="error_WebCancelledByUser">Notandi hætti beiðni miðlara.</string>
 
-    <string name="help_find">Notaðu þennan skjá til að setja nafn þitt, síma og tölvupóst til að skiptast á við aðra. Tappa á hnappinn \' gert\' þegar því er lokið.</string>
     <string name="help_home">Að skiptast á persónuskilríki gögn skal gæta allir notendur eru nálægt eða í símanum. Hnappinn \' BEGIN skipti \' munu skiptast users.cpp tengiliðagögn.</string>
     <string name="help_identity_menu">\n\nÞú getur líka breyst persónuleg gögn um persónuupplýsingar þínar á þessum skjá með því að slá á hnappinn með nafni þínu. Þetta birtir valmynd sem gerir þér kleift að \' Breyta\' þinn snerting, \' Búa til nýjan \' tengilið eða \' Nota annar\' tengilið.</string>
     <string name="help_Messages">Þessi skjár sýnir öll fyrri skilaboð og viðhengi sem eru enn í boði fyrir niðurhal.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">rennur %s</string>
     <string name="label_expiresIn">rennur út í</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Vinsamlegast sláðu inn persónulegar upplýsingar þínar. Þessi gögn munu aðeins vera tryggilega hluti við einstaklinga sem þú velur að deila henni með.</string>
     <string name="label_FirstName">Fornafn</string>
     <string name="label_Home">Athuga hluti sem þú vilt deila og tappa \'Byrja á húsum \' þegar aðrir eru tilbúnir til að skiptast á.</string>
     <string name="label_hometag">Forsíða</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Reyna</string>
     <string name="label_PassHintChange">Uppfært lykilorð</string>
     <string name="label_PassHintCreate">Búa lykilorð</string>
+    <string name="label_PassHintCurrent">Núverandi lykilorð</string>
     <string name="label_PassHintEnter">Lykilorð</string>
     <string name="label_PassHintRepeat">Endurtaka lykilorð</string>
     <string name="label_passPhraseCacheTtl">Lykilorð Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s tengiliðir fluttir inn.</string>
     <string name="state_TextCopiedToClipboard">Texti afritaður í klemmuspjald.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger er hannað til auðveldlega deila sjálfsmynd gögn, í eigin persónu eða í gegnum síma, staðfest, einka, og ósnortinn. Hver einstaklingur sem þú deilir með skapar öruggt endir-til-endir rás til að senda skilaboð.\n\nFeatures:\n- Auðveldlega skiptast snerting upplýsingar með öðrum\n- Öruggur Sling textar, myndir, neitt!\n- Sterk dulmál ver þínar\n\nemail: %2$s\nvefur: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger er hannað til auðveldlega deila sjálfsmynd gögn, í eigin persónu eða í gegnum síma, staðfest, einka, og ósnortinn. Hver einstaklingur sem þú deilir með skapar öruggt endir-til-endir rás til að senda skilaboð.\n\nFeatures:\n- Skiptast auðveldlega samband upplýsingum með öðrum\n- Öruggur Sling textar, myndir, nokkuð!\n- Strong dulmál ver þínar\n\nemail: %2$s\nVefur: %3$s</string>
+    <string name="text_KeywordExchange">Skipti</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Skilaboð</string>
+    <string name="text_KeywordPrivacy">Næði</string>
+    <string name="text_KeywordSecurity">Öryggi</string>
     <string name="text_LanguagesProvidedBy">Tungumál veittar af:</string>
-    <string name="text_Requirements">Kröfur:\n1. Verður að vera uppsett á amk 2 tæki.\n2. An Internet tenging þarf að vera virkt.</string>
+    <string name="text_RelatedSearchTerms">Skyld hugtök:</string>
+    <string name="text_Requirements">Kröfur:\n1. Verður að vera uppsett á amk 2 tæki.\n2.. An Internet tenging þarf að vera virkt.</string>
+    <string name="text_WhatsNew">- Stöðugleiki fastur.</string>
 
     <string name="title_About">Um</string>
     <string name="title_camera">Myndavél</string>

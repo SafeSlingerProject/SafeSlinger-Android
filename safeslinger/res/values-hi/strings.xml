@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">संपर्क डेटा को गलत ढंग से स्वरूपित किया गया था.</string>
     <string name="error_WebCancelledByUser">उपयोगकर्ता सर्वर अनुरोध को रद्द कर दिया.</string>
 
-    <string name="help_find">दूसरों के साथ आदान प्रदान करने के लिए अपना नाम, फोन, और ईमेल स्थापित करने के लिए इस स्क्रीन का प्रयोग करें. जब समाप्त \'पूर्ण\' बटन नल.</string>
     <string name="help_home">पहचान डेटा का आदान प्रदान करने, सभी उपयोगकर्ताओं के पास या फोन पर कर रहे हैं सुनिश्चित करते हैं. \' शुरू एक्सचेंज का बटन ही जाँच संपर्क डेटा का आदान प्रदान करेंगे.</string>
     <string name="help_identity_menu">\n\nआप भी अपने नाम के साथ बटन पर टैप करके इस स्क्रीन पर अपनी पहचान के बारे में व्यक्तिगत डेटा बदल सकते हैं. यह आपको \'संपादन\' आपके संपर्क, संपर्क \'नया बनाएँ\', या संपर्क \' एक और प्रयोग \' करने की अनुमति एक मेनू प्रदर्शित करेगा.</string>
     <string name="help_Messages">यह स्क्रीन सब अतीत संदेश, और अभी भी डाउनलोड के लिए उपलब्ध हैं कि अनुलग्नकों को प्रदर्शित करता है.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s की समय सीमा समाप्त</string>
     <string name="label_expiresIn">में समाप्त हो रहा है</string>
     <string name="label_FileNameHint">फ़ाइल नाम</string>
-    <string name="label_FindInstruct">आपकी व्यक्तिगत जानकारी दर्ज करें. यह डेटा केवल सुरक्षित रूप से आप के साथ साझा करने के लिए चुन किसे व्यक्तियों के साथ साझा किया जाएगा.</string>
     <string name="label_FirstName">प्रथम नाम</string>
     <string name="label_Home">आप का हिस्सा है और \'एक्सचेंज शुरू \' नल की इच्छा वस्तुओं की जांच दूसरों के आदान प्रदान के लिए तैयार हैं.</string>
     <string name="label_hometag">घर</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">पुन: प्रयास</string>
     <string name="label_PassHintChange">नवीनीकृत पासफ़्रेज़</string>
     <string name="label_PassHintCreate">कूटशब्द बनाएँ</string>
+    <string name="label_PassHintCurrent">वर्तमान कूटशब्द</string>
     <string name="label_PassHintEnter">पासफ्रेज</string>
     <string name="label_PassHintRepeat">दोहराएँ पासफ़्रेज़</string>
     <string name="label_passPhraseCacheTtl">पासफ्रेज कैश</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s संपर्क आयात.</string>
     <string name="state_TextCopiedToClipboard">पाठ क्लिपबोर्ड करने के लिए नकल की.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger निजी, प्रमाणीकृत, व्यक्ति में या फोन पर, आसानी से पहचान डेटा साझा करने के लिए तैयार है, और बरकरार है. आपके साथ साझा प्रत्येक व्यक्ति को संदेश भेजने के लिए एक सुरक्षित अंत करने के लिए अंत चैनल बनाता है.\n\nसुविधाएँ:\n- आसानी से दूसरों को सुरक्षित ग्रंथों, फोटो, कुछ भी गोफन\n- के साथ संपर्क जानकारी का आदान प्रदान! %2$s\nवेब: %3$s\n- मजबूत क्रिप्टोग्राफी आपकी जानकारी\n\nईमेल बचाता है</string>
+    <string name="text_About">%1$s\n\nSafeSlinger, व्यक्ति में या फोन पर, आसानी से पहचान डेटा साझा करने के लिए बनाया गया प्रमाणीकृत, निजी, और बरकरार है. आपके साथ साझा प्रत्येक व्यक्ति को संदेश भेजने के लिए एक सुरक्षित अंत करने के लिए अंत चैनल बनाता है.\n\nविशेषताएं:\n- आसानी से दूसरों के साथ संपर्क जानकारी का आदान प्रदान\n- सुरक्षित गोफन ग्रंथों, फोटो, कुछ भी!\n- मजबूत क्रिप्टोग्राफी अपनी जानकारी की सुरक्षा\n\nईमेल: %2$s\nवेब: %3$s</string>
+    <string name="text_KeywordExchange">विनिमय</string>
+    <string name="text_KeywordIdentity">पहचान</string>
+    <string name="text_KeywordKey">कुंजी</string>
+    <string name="text_KeywordMessaging">संदेश भेजना</string>
+    <string name="text_KeywordPrivacy">एकांत</string>
+    <string name="text_KeywordSecurity">सुरक्षा</string>
     <string name="text_LanguagesProvidedBy">द्वारा प्रदान की भाषाएं:</string>
+    <string name="text_RelatedSearchTerms">संबंधित नियम:</string>
     <string name="text_Requirements">आवश्यकताएँ:\n1. 2 उपकरणों की एक न्यूनतम पर स्थापित किया जाना चाहिए.\n2. एक इंटरनेट कनेक्शन सक्रिय होना चाहिए.</string>
+    <string name="text_WhatsNew">- स्थिरता फिक्सेस.</string>
 
     <string name="title_About">के बारे में</string>
     <string name="title_camera">कैमरा</string>

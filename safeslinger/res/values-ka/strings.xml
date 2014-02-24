@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">საკონტაქტო მონაცემები ფორმატირებული არასწორად.</string>
     <string name="error_WebCancelledByUser">პროფაილი გაუქმდა სერვერზე მოთხოვნით.</string>
 
-    <string name="help_find">გამოიყენეთ ეს ეკრანზე თქვენი სახელი, გვარი, ტელეფონი და ელექტრონული ფოსტის გაცვლა სხვები. ლიბერალიზაცია \' შესრულებულია \' ღილაკს, როდესაც დასრულდა.</string>
     <string name="help_home">გაცვლა პირადობის მონაცემებით, უზრუნველყონ ყველა მომხმარებლის მიმდებარე ან ტელეფონით. \' დასაწყისი Exchange \'ღილაკს გაცვლიან მხოლოდ გადამოწმებული საკონტაქტო მონაცემები.</string>
     <string name="help_identity_menu">\n\nთქვენ შესაძლებელია აგრეთვე შეცვალოს პერსონალური მონაცემების შესახებ თქვენი პიროვნება ამ ეკრანზე მიერ მოსმენების ღილაკს თქვენი სახელი. ეს არის მენიუ, რომელიც საშუალებას გაძლევთ \' Edit \' თქვენი საკონტაქტო, შექმნა ახალი \' კონტაქტის, ან გამოიყენეთ სხვა \' კონტაქტი.</string>
     <string name="help_Messages">ამ ეკრანზე აჩვენებს ყველა წარსულში შეტყობინებები და attachments, რომ ჯერ კიდევ ხელმისაწვდომია.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">იწურება %s</string>
     <string name="label_expiresIn">იწურება</string>
     <string name="label_FileNameHint">ფაილის სახელი</string>
-    <string name="label_FindInstruct">გთხოვთ მიუთითოთ თქვენი პირადი ინფორმაცია. ეს მონაცემები იქნება უსაფრთხოდ გაუზიარეს პირებს რომელთანაც თქვენ გაუზიაროს იგი.</string>
     <string name="label_FirstName">სახელი</string>
     <string name="label_Home">შეამოწმეთ ნივთები გსურთ გაუზიაროს და ლიბერალიზაცია \' დასაწყისი Exchange \' როცა სხვები მზად ვართ, გაცვლა.</string>
     <string name="label_hometag">მთავარი</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">გაიმეორეთ</string>
     <string name="label_PassHintChange">განახლებულია passphrase</string>
     <string name="label_PassHintCreate">შექმნა passphrase</string>
+    <string name="label_PassHintCurrent">აქტუალური passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">გაიმეორეთ passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s კონტაქტები იმპორტირებული.</string>
     <string name="state_TextCopiedToClipboard">ტექსტი დაკოპირებული ბუფერში.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger განკუთვნილია ადვილად გაუზიაროთ პირადობის მონაცემებით, პირის ან სატელეფონო, დამოწმებული, კერძო და უცვლელი. ყოველი პირი თქვენ გაუზიარებთ ქმნის უსაფრთხო ბოლომდე-to-end არხი გააგზავნოთ შეტყობინებები.\n\nმახასიათებლები:\n- ადვილად გაცვლა საკონტაქტო ინფორმაცია სხვებთან\n- უსაფრთხოდ Sling ტექსტები, ფოტოები, არაფერი!\n- ძლიერი კრიპტოგრაფიის იცავს თქვენს ინფორმაციას\n\nელ: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger განკუთვნილია ადვილად გაუზიაროთ პირადობის მონაცემებით, პირის ან სატელეფონო, დამოწმებული, კერძო და უცვლელი. ყოველი პირი თქვენ გაუზიარებთ ქმნის უსაფრთხო ბოლომდე-to-end არხი გააგზავნოთ შეტყობინებები.\n\nმახასიათებლები:\n- ადვილად გაცვლა საკონტაქტო ინფორმაცია სხვებთან\n- უსაფრთხოდ Sling ტექსტები, ფოტოები, არაფერი!\n- ძლიერი კრიპტოგრაფიის იცავს თქვენს ინფორმაციას\n\nელფოსტა: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">გაცვლა</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">ძირითადი</string>
+    <string name="text_KeywordMessaging">მიმოწერა</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">უსაფრთხოება</string>
     <string name="text_LanguagesProvidedBy">ენები გათვალისწინებული:</string>
+    <string name="text_RelatedSearchTerms">დაკავშირებული პირობები:</string>
     <string name="text_Requirements">მოთხოვნები:\n1. უნდა იყოს დამონტაჟებული მინიმუმ 2 მოწყობილობები.\n2. ინტერნეტი უნდა იყოს აქტიური.</string>
+    <string name="text_WhatsNew">- სტაბილურობის აფიქსირებს.</string>
 
     <string name="title_About">მომხმარებლის</string>
     <string name="title_camera">კამერა</string>

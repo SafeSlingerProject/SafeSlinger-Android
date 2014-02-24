@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontak data iki format salah.</string>
     <string name="error_WebCancelledByUser">Anggota dibatalake server request.</string>
 
-    <string name="help_find">Gunakake layar iki kanggo nyetel jeneng, telpon, lan email ijolan karo liyane. Tutul tombol \' Rampung nalika rampung.</string>
     <string name="help_home">Ijolan identitas data, njamin kabeh kedhaftar ana toko utawa ing telpon. Tombol \' Begin Exchange \' bakal ijolan namung data kontak dicenthang.</string>
     <string name="help_identity_menu">\n\nSampeyan uga ngganti data pribadhi babagan ciri ing layar iki kanthi nutul tombol karo jeneng. Iki bakal nampilake menu ngijini sampeyan kanggo \' Sunting \' kontak \' Gawe anyar \' kontak, utawa \' Gunakake Liyane \' kontak.</string>
     <string name="help_Messages">Layar iki nampilake pesen-pesen kabeh kepungkur, lan lampiran sing isih kasedhiya kanggo download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">kadaluwarsa %s</string>
     <string name="label_expiresIn">kadaluwarsa ing</string>
     <string name="label_FileNameHint">Gambar Jeneng</string>
-    <string name="label_FindInstruct">Mangga ngetik informasi pribadhi. Data iki bakal mung bisa aman dituduhake kanthi individu kang milih enggo bareng karo.</string>
     <string name="label_FirstName">Jeneng pisanan</string>
     <string name="label_Home">Mriksa item sing pengin kanggo enggo bareng lan tunyuk \' Begin Exchange nalika wong siyap ijolan.</string>
     <string name="label_hometag">Ngarep</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Coba maneh</string>
     <string name="label_PassHintChange">Dianyari frasa sandhi</string>
     <string name="label_PassHintCreate">Nggawe frasa sandhi</string>
+    <string name="label_PassHintCurrent">Saiki frasa sandhi</string>
     <string name="label_PassHintEnter">Frasa sandhi</string>
     <string name="label_PassHintRepeat">Baleni frasa sandhi</string>
     <string name="label_passPhraseCacheTtl">Frasa sandhi Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontak diimpor.</string>
     <string name="state_TextCopiedToClipboard">Teks disalin menyang clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger dibangun kanggo gampang nuduhake ciri data, ing wong utawa liwat telpon, authenticated, swasta, lan utuh. Saben wong sing bareng karo nggawe sing aman mburi-kanggo-mburi saluran kanggo ngirim pesen.\n\nFitur:\n- Gampang ijolan informasi kontak karo wong\n- aman Sling teks, foto, tindakan!\n- Kuwat Cryptography nglindhungi informasi\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger dibangun kanggo gampang nuduhake ciri data, ing wong utawa liwat telpon, authenticated, swasta, lan utuh. Saben wong sing bareng karo nggawe sing aman mburi-kanggo-mburi saluran kanggo ngirim pesen.\n\nFitur:\n- Gampang ijolan informasi kontak karo liyane\n- Aman Sling teks, foto, tindakan!\n- Ngrembuyung Cryptography nglindhungi informasi\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">Tombol</string>
+    <string name="text_KeywordMessaging">Olahpesen</string>
+    <string name="text_KeywordPrivacy">Kebijakan</string>
+    <string name="text_KeywordSecurity">Keamanan</string>
     <string name="text_LanguagesProvidedBy">Basa sing diwenehake dening:</string>
+    <string name="text_RelatedSearchTerms">Sarat Related:</string>
     <string name="text_Requirements">Requirements:\n1. Kudu diinstal ing minimal 2 piranti.\n2. Sambungan Internet kudu aktif.</string>
+    <string name="text_WhatsNew">- Stabilitas koreksi.</string>
 
     <string name="title_About">Babagan</string>
     <string name="title_camera">Kamera</string>

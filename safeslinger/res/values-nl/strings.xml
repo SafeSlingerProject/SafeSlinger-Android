@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Contact gegevens onjuist geformatteerd.</string>
     <string name="error_WebCancelledByUser">Bewerking geannuleerd door gebruiker.</string>
 
-    <string name="help_find">Gebruik dit scherm om uw naam, telefoonnummer en e-mail uit te wisselen met anderen te stellen. Tik op de knop \'Gereed\' wanneer u klaar bent.</string>
     <string name="help_home">Om de identiteits gegevens te ruilen, moeten alle gebruikers in de buurt of aan de telefoon zijn. De \'Omruilen beginnen\' knop zul alleen maar de geselecteerde contact gegevens omruilen.</string>
     <string name="help_identity_menu">\n\nU kunt ook persoonlijke gegevens over uw identiteit via dit scherm wijzigen door op de knop met uw naam. Hierdoor wordt een menu waarin u \'Bewerken\' uw contactgegevens weer te geven, \'Create New\' contact, of \'Gebruik ander\' contact.</string>
     <string name="help_Messages">Dit scherm toont alle vroegere berichten en bestanden die nog beschikbaar zijn voor download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">verloopt %s</string>
     <string name="label_expiresIn">loopt af in</string>
     <string name="label_FileNameHint">Bestandsnaam</string>
-    <string name="label_FindInstruct">Vul uw persoonlijke gegevens. Deze gegevens zullen alleen veilig worden gedeeld met mensen die je kiest om het te delen met.</string>
     <string name="label_FirstName">Voornaam</string>
     <string name="label_Home">Kies gegevens die U wilt delen en druk op \'Omruilen beginnen\' als anderen klaar staan om te ruilen.</string>
     <string name="label_hometag">Thuis</string>
@@ -336,7 +334,7 @@
     <string name="state_SomeContactsImported">%s contacten geïmporteerd.</string>
     <string name="state_TextCopiedToClipboard">Tekst gekopieerd naar het klembord.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger is ontworpen om gemakkelijk te delen identiteitsgegevens, in persoon of via de telefoon, geverifieerd, prive en intact. Elke persoon die je deelt met zorgt voor een veilige end-to-end-kanaal om berichten te versturen.\n\nEigenschappen:\n- Eenvoudig wisselen contactgegevens met anderen\n- Veilig sling teksten, foto\'s, om het even wat!\n- Sterke cryptografie beschermt uw gegevens\n\ne-mail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger is ontworpen om gemakkelijk identiteitsgegevens te delen, in persoon of via de telefoon, geverifieerd, prive, en intact. Elke persoon die je deelt met zorgt voor een veilige end-to-end-kanaal om berichten te versturen.\n\nKenmerken:\n- Gemakkelijk wisselen contactgegevens met anderen\n- Veilig sling teksten, foto\'s, om het even wat!\n- Sterke cryptografie beschermt uw informatie\n\ne-mail: %2$s\nweb: %3$s</string>
     <string name="text_KeywordExchange">Uitwisseling</string>
     <string name="text_KeywordIdentity">Identiteit</string>
     <string name="text_KeywordKey">Sleutel</string>

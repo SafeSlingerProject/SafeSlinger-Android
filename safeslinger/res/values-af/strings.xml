@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontak data is nie korrek geformateer.</string>
     <string name="error_WebCancelledByUser">Gebruiker gekanselleer bediener versoek.</string>
 
-    <string name="help_find">Gebruik hierdie skerm jou naam, telefoon en e-pos in te stel om te ruil met ander. Tik die knoppie \'Klaar\' wanneer jy klaar is.</string>
     <string name="help_home">Identiteit data te ruil, verseker dat alle gebruikers is naby of op die telefoon. Die \' Begin Exchange \' knoppie sal ruil net die nagegaan kontak data.</string>
     <string name="help_identity_menu">\n\nJy kan ook verander persoonlike data oor jou identiteit op die skerm deur afluister op die knoppie met jou naam. Dit sal \'n spyskaart sodat jy \'Edit\' jou kontak, \' Skep Nuwe\' kontak, of \'Gebruik Nog \' kontak te vertoon.</string>
     <string name="help_Messages">Hierdie skerm vertoon al die afgelope boodskappe en aanhangsels wat nog beskikbaar is vir aflaai.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">verstryk %s</string>
     <string name="label_expiresIn">verval in</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Tik jou persoonlike inligting. Hierdie data sal net veilig word gedeel met individue wie jy kies om dit te deel met.</string>
     <string name="label_FirstName">Eerste Naam</string>
     <string name="label_Home">Check items wat jy wil om te deel en tap \' Begin Exchange wanneer ander is gereed om te ruil.</string>
     <string name="label_hometag">Huis</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Probeer weer</string>
     <string name="label_PassHintChange">Opgedateer Passphrase</string>
     <string name="label_PassHintCreate">Skep Passphrase</string>
+    <string name="label_PassHintCurrent">Huidige Passphrase</string>
     <string name="label_PassHintEnter">Wagwoordfrase</string>
     <string name="label_PassHintRepeat">Herhaal Passphrase</string>
     <string name="label_passPhraseCacheTtl">Wagwoordfrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontakte ingevoer.</string>
     <string name="state_TextCopiedToClipboard">Teks kopieer na die knipbord.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger is ontwerp om maklik te deel identiteit data, in persoon of oor die telefoon, bekragtig, private en ongeskonde. Elke persoon wat jy deel met skep van \'n veilige end-tot-end-kanaal boodskappe te stuur.\n\nKenmerke:\n- Maklik ruil kontak inligting met ander\n- veilig slinger tekste, foto\'s, niks!\n- Sterk kriptografie beskerm jou inligting\n\ne-pos: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger is ontwerp om maklik te deel identiteit data, in persoon of oor die telefoon, bekragtig, private en ongeskonde. Elke persoon wat jy deel met skep van \'n veilige end-tot-end-kanaal boodskappe te stuur.\n\nKenmerke:\n- Maklik ruil Kontak inligting met ander\n- Veilig slinger tekste, foto\'s, niks!\n- Sterk kriptografie beskerm jou inligting\n\ne-pos: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Ruil</string>
+    <string name="text_KeywordIdentity">Identiteit</string>
+    <string name="text_KeywordKey">Sleutel</string>
+    <string name="text_KeywordMessaging">Boodskappe</string>
+    <string name="text_KeywordPrivacy">Privaatheid</string>
+    <string name="text_KeywordSecurity">Sekuriteit</string>
     <string name="text_LanguagesProvidedBy">Tale verskaf deur:</string>
+    <string name="text_RelatedSearchTerms">Verwante terme:</string>
     <string name="text_Requirements">Vereistes:\n1. Moet geïnstalleer word op \'n minimum van 2 toestelle.\n2. \'N internet konneksie moet aktief te wees.</string>
+    <string name="text_WhatsNew">- Stabiliteit fixes.</string>
 
     <string name="title_About">Oor</string>
     <string name="title_camera">Kamera</string>

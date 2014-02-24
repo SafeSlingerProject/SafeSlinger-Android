@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">ຂໍ້ມູນ ຕິດຕໍ່ ໄດ້ ແບບ ບໍ່ຖືກຕ້ອງ.</string>
     <string name="error_WebCancelledByUser">ຜູ້ໃຊ້ ຍົກເລີກ ຄໍາຮ້ອງຂໍ ຂອງເຄື່ອງແມ່ຂ່າຍ.</string>
 
-    <string name="help_find">ການນໍາໃຊ້ ຫນ້າຈໍ ນີ້ ຈະກໍານົດ ຊື່ ຂອງທ່ານ, ໂທລະສັບ, ແລະ ອີເມລ໌ ເພື່ອແລກປ່ຽນ ກັບຄົນອື່ນ. ປາດ ປຸ່ມ \' ເຮັດ \' ໃນເວລາ ສໍາເລັດແລ້ວ.</string>
     <string name="help_home">ເພື່ອ ແລກປ່ຽນ ຂໍ້ມູນ ເອກະລັກ, ຮັບປະກັນການ ຊົມໃຊ້ ທັງຫມົດແມ່ນ ໃກ້ຄຽງຫຼື ຢູ່ໃນໂທລະສັບ ໄດ້. ປຸ່ມ \' ເລີ່ມຕົ້ນ ການແລກປ່ຽນ, ຈະ ແລກປ່ຽນ ພຽງແຕ່ ໄດ້ ຂໍ້ມູນ ການຕິດຕໍ່ ການກວດກາ.</string>
     <string name="help_identity_menu">\n\nນອກນັ້ນທ່ານຍັງ ອາດຈະ ມີການປ່ຽນແປງ ຂໍ້ມູນ ສ່ວນຕົວກ່ຽວກັບ ຕົວຕົນ ຂອງທ່ານກ່ຽວກັບ ຫນ້າຈໍ ນີ້ ໂດຍ ປາດຢາງ ໃສ່ປຸ່ມ ທີ່ມີຊື່ ຂອງທ່ານ. ນີ້ ຈະສະແດງ ເມນູ ໃຫ້ທ່ານ \' ດັດແກ້ \' ຕິດຕໍ່ຂອງທ່ານ, ສ້າງ ໃຫມ່ \' ການຕິດຕໍ່, ຫຼື \' ການນໍາໃຊ້ ອີກປະການຫນຶ່ງ, ການພົວພັນ ເປັນ.</string>
     <string name="help_Messages">ຫນ້າຈໍນີ້ ຈະສະແດງ ຂໍ້ຄວາມ ທີ່ຜ່ານມາ ທັງຫມົດ, ແລະຄັດຕິດ ທີ່ ຍັງມີ ສໍາລັບ ການດາວໂຫຼດ.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">ຫມົດ %s</string>
     <string name="label_expiresIn">ຫມົດ ໃນ</string>
     <string name="label_FileNameHint">ຊື່ ໄຟລ໌</string>
-    <string name="label_FindInstruct">ກະລຸນາໃສ່ ຂໍ້ມູນ ສ່ວນບຸກຄົນ ຂອງທ່ານ. ຂໍ້ມູນ ນີ້ຈະ ມີພຽງແຕ່ຈະ ແບ່ງປັນ ຢ່າງປອດໄພ ກັບ ບຸກຄົນ ຜູ້ທີ່ທ່ານ ເລືອກທີ່ຈະ ແລກປ່ຽນ ມັນ ກັບ.</string>
     <string name="label_FirstName">ຊື່ ຫນ້າທໍາອິດ</string>
     <string name="label_Home">ກວດສອບ ລາຍການລາຍການ ທີ່ທ່ານຕ້ອງການ ທີ່ຈະແບ່ງປັນ ແລະປາດ \' ເລີ່ມຕົ້ນ ການແລກປ່ຽນ, ໃນເວລາທີ່ ຄົນອື່ນມີ ຄວາມພ້ອມທີ່ຈະ ແລກປ່ຽນ.</string>
     <string name="label_hometag">ຫນ້າທໍາອິດ</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Retry</string>
     <string name="label_PassHintChange">Passphrase ສະບັບປັບປຸງ</string>
     <string name="label_PassHintCreate">ສ້າງ Passphrase</string>
+    <string name="label_PassHintCurrent">Passphrase ໃນປະຈຸບັນ</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Passphrase ຊ້ໍ</string>
     <string name="label_passPhraseCacheTtl">ຈໍາ Passphrase</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">ຕິດຕໍ່ພົວພັນ %s ນໍາເຂົ້າ.</string>
     <string name="state_TextCopiedToClipboard">ຂໍ້ຄວາມ ຄັດລອກໄປທີ່ clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ຖືກອອກແບບເພື່ອ ໄດ້ຢ່າງງ່າຍດາຍ ສ່ວນແບ່ງ ຂໍ້ມູນ ເອກະລັກ, ໃນ ການບຸກຄົນຫຼື ຜ່ານທາງໂທລະສັບ, authenticated, ເອກະຊົນ, ແລະ intact. ບຸກຄົນ ແຕ່ລະ ທ່ານ ກ່ຽວກັບ ການສ້າງ ເປັນຊ່ອງທາງ ໃນຕອນທ້າຍ ເພື່ອສຸດທ້າຍ, ຄວາມປອດໄພ ໃນການສົ່ງ ຂໍ້ຄວາມ. ຄຸນນະສົມບັດ\n\n:\n- ການແລກປ່ຽນ ໄດ້ຢ່າງງ່າຍດາຍ ຂໍ້ມູນຂ່າວສານ ການພົວພັນກັບ ຄົນອື່ນ\n- ຄວາມປອດໄພ Sling ບົດເລື່ອງ, ຮູບ ຫຍັງ!\n- cryptography ເຂັ້ມແຂງ ປົກປ້ອງ ຂໍ້ມູນຂອງທ່ານ\n\nອີເມລ: %2$s: ເວັບໄຊຕ໌ %3$s\n</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ຖືກອອກແບບເພື່ອໄດ້ຢ່າງງ່າຍດາຍສ່ວນແບ່ງຂໍ້ມູນເອກະລັກ, ໃນການບຸກຄົນຫຼືຜ່ານທາງໂທລະສັບ, authenticated, ເອກະຊົນ, ແລະ intact. ບຸກຄົນແຕ່ລະທ່ານກ່ຽວກັບການສ້າງເປັນຊ່ອງທາງໃນຕອນທ້າຍເພື່ອສຸດທ້າຍ, ຄວາມປອດໄພໃນການສົ່ງຂໍ້ຄວາມ.\n\nຄຸນນະສົມບັດ:\n- ໄດ້ຢ່າງງ່າຍດາຍແລກປ່ຽນຂໍ້ມູນຂ່າວສານຕິດຕໍ່ກັບຄົນອື່ນ\n- ບົດເລື່ອງຄວາມປອດໄພ Sling, ຮູບພາບ, ມີຫຍັງບໍ່?\n- cryptography ເຂັ້ມແຂງປົກປ້ອງຂໍ້ມູນຂອງທ່ານ\n\nອີເມລ໌: %2$s\nເວັບໄຊຕ໌: %3$s</string>
+    <string name="text_KeywordExchange">ການແລກປ່ຽນ</string>
+    <string name="text_KeywordIdentity">ທີ່</string>
+    <string name="text_KeywordKey">ທີ່ສໍາຄັນ</string>
+    <string name="text_KeywordMessaging">ຂໍ້ຄວາມ</string>
+    <string name="text_KeywordPrivacy">ຄວາມເປັນສ່ວນຕົວ</string>
+    <string name="text_KeywordSecurity">ຄວາມປອດໄພ</string>
     <string name="text_LanguagesProvidedBy">ພາສາ ສະຫນອງໃຫ້ໂດຍ:</string>
-    <string name="text_Requirements">ຕ້ອງການ:\n1. ຕ້ອງໄດ້ຮັບການ ຕິດຕັ້ງຢູ່ໃນ ຕໍາ່ສຸດທີ່ ຂອງ ອຸປະກອນ 2 ເປັນ.\n2. ການເຊື່ອມຕໍ່ ອິນເຕີເນັດ ເປັນ ຕ້ອງ ມີການເຄື່ອນໄຫວ.</string>
+    <string name="text_RelatedSearchTerms">ເງື່ອນໄຂທີ່ກ່ຽວຂ້ອງ:</string>
+    <string name="text_Requirements">ຕ້ອງການ:\n1. ຕ້ອງໄດ້ຮັບການຕິດຕັ້ງຢູ່ໃນຕໍາ່ສຸດທີ່ຂອງອຸປະກອນ 2 ເປັນ.\n2. ການເຊື່ອມຕໍ່ອິນເຕີເນັດເປັນຕ້ອງມີການເຄື່ອນໄຫວ.</string>
+    <string name="text_WhatsNew">- ການແກ້ໄຂສະຖຽນລະພາບ.</string>
 
     <string name="title_About">ກ່ຽວກັບ</string>
     <string name="title_camera">ກ້ອງຖ່າຍຮູບ</string>

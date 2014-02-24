@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Data kenalan telah diformatkan dengan betul.</string>
     <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan pelayan.</string>
 
-    <string name="help_find">Gunakan skrin ini untuk menetapkan nama, telefon, dan e-mel untuk bertukar-tukar dengan orang lain. Ketuk butang \' Selesai\' apabila selesai.</string>
     <string name="help_home">Untuk bertukar-tukar data identiti, memastikan semua pengguna adalah berhampiran atau di telefon. Butang \' Mulakan Exchange \' akan bertukar-tukar hanya data kenalan diperiksa.</string>
     <string name="help_identity_menu">\n\nAnda juga boleh menukar data peribadi tentang identiti anda pada skrin ini dengan mengetuk butang dengan nama anda. Ini akan memaparkan menu membolehkan anda untuk \'Edit\' kenalan anda, \'Cipta Baru kenalan, atau \' Gunakan Satu lagi \' kenalan.</string>
     <string name="help_Messages">Skrin ini memaparkan semua mesej yang lalu, dan lampiran yang masih boleh didapati untuk muat turun.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">tamat %s</string>
     <string name="label_expiresIn">tamat pada</string>
     <string name="label_FileNameHint">Nama Fail</string>
-    <string name="label_FindInstruct">Sila masukkan maklumat peribadi anda. Data ini hanya akan selamat berkongsi dengan individu yang anda memilih untuk berkongsi dengan.</string>
     <string name="label_FirstName">Nama Pertama</string>
     <string name="label_Home">Semak item yang ingin berkongsi dan ketik \' Mulakan Exchange \' ketika orang lain sudah bersedia untuk bertukar-tukar.</string>
     <string name="label_hometag">Laman Utama</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Cuba lagi</string>
     <string name="label_PassHintChange">Frasa laluan Dikemaskini</string>
     <string name="label_PassHintCreate">Membuat Frasa Laluan</string>
+    <string name="label_PassHintCurrent">Frasa laluan semasa</string>
     <string name="label_PassHintEnter">Frasa laluan</string>
     <string name="label_PassHintRepeat">Ulang Frasa Laluan</string>
     <string name="label_passPhraseCacheTtl">Cache frasa laluan</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Kenalan %s diimport.</string>
     <string name="state_TextCopiedToClipboard">Teks disalin ke clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger direka dengan mudah berkongsi maklumat identiti, sendiri atau melalui telefon, yang disahkan, swasta, dan tidak terjejas. Setiap orang yang anda berkongsi dengan mencipta saluran yang selamat hujung-ke-akhir untuk menghantar mesej.\n\nCiri-ciri: -\nMudah bertukar-tukar maklumat hubungan dengan orang lain\n- Selamat sling teks, gambar, apa-apa!\n- kriptografi Kuat melindungi maklumat anda\n\ne-mel: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger direka untuk mudah berkongsi data identiti, sendiri atau melalui telefon, yang disahkan, swasta, dan tidak terjejas. Setiap orang yang anda berkongsi dengan mencipta saluran yang selamat hujung-ke-akhir untuk menghantar mesej.\n\nCiri-Ciri:\n- Mudah bertukar-tukar maklumat kenalan dengan orang lain\n- Selamat sling teks, gambar, apa-apa!\n- Kriptografi Kuat melindungi maklumat anda\n\ne-mel: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Bursa</string>
+    <string name="text_KeywordIdentity">Pengenalan</string>
+    <string name="text_KeywordKey">Utama</string>
+    <string name="text_KeywordMessaging">Pesanan</string>
+    <string name="text_KeywordPrivacy">Privasi</string>
+    <string name="text_KeywordSecurity">Keselamatan</string>
     <string name="text_LanguagesProvidedBy">Bahasa yang disediakan oleh:</string>
-    <string name="text_Requirements">Syarat-syarat:\n1. Mesti dipasang pada sekurang-kurangnya 2 peranti.\n2. Sambungan Internet mesti aktif.</string>
+    <string name="text_RelatedSearchTerms">Terma berkaitan:</string>
+    <string name="text_Requirements">Syarat-Syarat:\n1. Mesti dipasang pada sekurang-kurangnya 2 peranti.\n2. Sambungan Internet mesti aktif.</string>
+    <string name="text_WhatsNew">- Perbaikan Kestabilan.</string>
 
     <string name="title_About">Mengenai</string>
     <string name="title_camera">Kamera</string>

@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Əlaqə data səhv biçimlendirilmiş edilib.</string>
     <string name="error_WebCancelledByUser">İstifadəçi server sorğu ləğv.</string>
 
-    <string name="help_find">Başqaları ilə mübadiləsi adınızı, telefon və e-poçt etmək üçün, bu ekran istifadə edin. Başa zaman \'Bitti\' düyməsini dokunun.</string>
     <string name="help_home">Şəxsiyyət data mübadiləsi, bütün istifadəçilər yaxın və ya telefon təmin edir. The \' başlayın Birjası \' düyməsini yalnız yoxlanılır əlaqə məlumatları mübadiləsi aparacaqlar.</string>
     <string name="help_identity_menu">\n\nSiz həmçinin adı ilə düyməsini tıqqıltı ilə bu ekranda şəxsiyyət haqqında şəxsi məlumatları dəyişə bilər. Bu \'Düzenle\' əlaqə, əlaqə \'Yeni yarat \', və ya əlaqə \' Digər istifadə \' üçün imkan bir menyu göstərilir.</string>
     <string name="help_Messages">Bu ekran bütün keçmiş messages, və hələ də download üçün mövcuddur ki, əlavə göstərilir.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s başa çatır</string>
     <string name="label_expiresIn">ildə başa çatır</string>
     <string name="label_FileNameHint">Fayl adı</string>
-    <string name="label_FindInstruct">Sizin şəxsi məlumat daxil edin. Bu məlumatlar yalnız təhlükəsiz ilə bölüşmək üçün seçə kimə şəxslər ilə bölüşdü olunacaq.</string>
     <string name="label_FirstName">Ad</string>
     <string name="label_Home">Bölüşmək və mübadiləsi başlayın \' kran istədiyiniz maddələr yoxlamaq başqaları mübadiləsi üçün hazır olduqda.</string>
     <string name="label_hometag">Ev</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Yeniden Dene</string>
     <string name="label_PassHintChange">Yenilənib Passphrase</string>
     <string name="label_PassHintCreate">Passphrase yarat</string>
+    <string name="label_PassHintCurrent">Cari Passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Repeat Passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s əlaqə idxal.</string>
     <string name="state_TextCopiedToClipboard">Mətn panoya kopyalanır.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger özəl, təsdiq, şəxsən və ya telefon, asanlıqla şəxsiyyət məlumatları bölüşmək üçün nəzərdə tutulmuşdur və bütöv olunur. Ilə bölüşmək hər bir şəxs mesaj göndərmək üçün təhlükəsiz son-to-end kanal yaradır.\n\nXüsusiyyətlər:\n- Asanlıqla başqaları Təhlükəsiz mətnlər, şəkillər, bir şey sapand\n- ilə əlaqə informasiya mübadiləsi! %2$s\nweb: %3$s\n- Güclü Kriptoqrafiya məlumat\n\nemail qoruyur</string>
+    <string name="text_About">%1$s\n\nSafeSlinger, şəxsən və ya telefon, asanlıqla şəxsiyyət məlumatları bölüşmək üçün nəzərdə təsdiq, özəl və bütöv olunur. Ilə bölüşmək hər bir şəxs mesaj göndərmək üçün təhlükəsiz son-to-end kanal yaradır.\n\nFeatures:\n- Asanlıqla başqaları ilə əlaqə məlumatı mübadiləsi\n- Təhlükəsiz sapand mətnlər, şəkillər, bir şey!\n- Güclü Kriptoqrafiya məlumat qoruyur\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Mübadilə</string>
+    <string name="text_KeywordIdentity">Identiklik</string>
+    <string name="text_KeywordKey">Açar</string>
+    <string name="text_KeywordMessaging">Messaging</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Təhlükəsizlik</string>
     <string name="text_LanguagesProvidedBy">Tərəfindən təmin Dillər:</string>
+    <string name="text_RelatedSearchTerms">Related şərtləri:</string>
     <string name="text_Requirements">Tələblər:\n1. 2 cihazlar minimum yüklü olmalıdır.\n2. İnternet bağlantısı aktiv olmalıdır.</string>
+    <string name="text_WhatsNew">- Sabitlik giderir.</string>
 
     <string name="title_About">Haqqında</string>
     <string name="title_camera">Kamera</string>

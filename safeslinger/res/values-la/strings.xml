@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Est Lorem ipsum dolor cursu recte.</string>
     <string name="error_WebCancelledByUser">Aliquam ornare tempus remittuntur tibi petitionem.</string>
 
-    <string name="help_find">Ad nomen sanctum tuum istud, phone, email commutare cum aliis. ICTUS \' Actum \' ipsum effectum.</string>
     <string name="help_home">Permutare identitatem notitia accumsan omnia prope vel phone users. In interdum incipias, et ipsum non est sedatus contactus notitia commutationem.</string>
     <string name="help_identity_menu"> Item alio notitia ad identitatem\n\nUt in elit ipsum, cum percussoque in nomine tuo. Hoc a te, a menu ut sino vos, Edit, contact vestri: New Lorem, ad contactum, aut alia utendum, ante.</string>
     <string name="help_Messages">Haec verba proferat, sunt omnia, et quae sunt affectiones quae tractari possunt.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">exspirat %s</string>
     <string name="label_expiresIn">transit in</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Lorem ipsum dolor tuam. Hoc modo secure data communis participationem individua eliges.</string>
     <string name="label_FirstName">Lorem ipsum</string>
     <string name="label_Home">Duis ac aliquam partem vis ICTUS inciperet commutata parata aliis permutare.</string>
     <string name="label_hometag">Lorem ipsum</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Retry</string>
     <string name="label_PassHintChange">Updated passphrase</string>
     <string name="label_PassHintCreate">Aliquam passphrase</string>
+    <string name="label_PassHintCurrent">Current passphrase</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Repeat passphrase</string>
     <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s consuetudine alienum seminabis.</string>
     <string name="state_TextCopiedToClipboard">To clipboard osténde.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger est ad idem notitia facile participes, per se vel per phone, eius authenticitate, privati ​​, et in integrum. Unusquisque homo securus a fine usque ad finem, vos quoque per creationem, ut viam mittere.\n\nnulla:\nfacile mutare erat volutpat - -\nsecura longe cum aliis locis, imagines, nihil! - Lorem ipsum fortis\ncryptography servat\n\nemail: %2$s\ntexuerunt %3$s</string>
+    <string name="text_About">%1$s\n\nIdem facile est ad participandam SafeSlinger Mauris interdum in vel, compertum, moralis, et integer. Unusquisque homo securus a fine usque ad finem, vos quoque per creationem, ut viam mittere.\n\nFeatures:\n- Facile erat volutpat commutare cum aliis,\n- Textus secura longe, imagines, nihil!\n- Cryptography forte protegat te ipsum\n\nemail: %2$s\nlatin: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Aliquam</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Nuntius</string>
+    <string name="text_KeywordPrivacy">Lorem ipsum</string>
+    <string name="text_KeywordSecurity">Lorem ipsum</string>
     <string name="text_LanguagesProvidedBy">Provisum est a lingua:</string>
-    <string name="text_Requirements">Aliquam: I\n. Necesse est velit quae ad tres saltem II modis.\nII. Agentibus tortor.</string>
+    <string name="text_RelatedSearchTerms">Aliquam rhoncus,</string>
+    <string name="text_Requirements">Requisita:\nI. Necesse est velit quae ad tres saltem II modis.\nII. Agentibus tortor.</string>
+    <string name="text_WhatsNew">- Ilia stabilitate.</string>
 
     <string name="title_About">About</string>
     <string name="title_camera">Camera</string>

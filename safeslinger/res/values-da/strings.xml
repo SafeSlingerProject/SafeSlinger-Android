@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontaktdata blev formateret forkert.</string>
     <string name="error_WebCancelledByUser">Bruger aflyst server anmodning.</string>
 
-    <string name="help_find">Brug dette skærmbillede til at indstille dit navn, telefonnummer og e-mail til at udveksle med andre. Tryk på knappen \' Udført\' når du er færdig.</string>
     <string name="help_home">At udveksle identitetsdata, sikre, at alle brugere er i nærheden eller på telefonen. Den \' Begynd Exchange \'knappen vil udveksle kun de kontrollerede kontaktoplysninger.</string>
     <string name="help_identity_menu">\n\nDu kan også ændre personlige oplysninger om din identitet på denne skærm ved at trykke på knappen med dit navn. Dette vil vise en menu tillader dig at \'Rediger\' din kontaktperson, \'Opret ny \' kontakt, eller \'Brug en anden \' kontakt.</string>
     <string name="help_Messages">Denne skærm viser alle tidligere beskeder og vedhæftede filer, der stadig er til rådighed for download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">udløber %s</string>
     <string name="label_expiresIn">udløber i</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Indtast venligst dine personlige oplysninger. Disse data vil kun blive sikkert deles med personer, som du vælger at dele det med.</string>
     <string name="label_FirstName">Fornavn</string>
     <string name="label_Home">Tjek elementer, du vil dele, og tryk på \' Begin Exchange \', når andre er klar til at udveksle.</string>
     <string name="label_hometag">Hjem</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Prøv igen</string>
     <string name="label_PassHintChange">Opdateret Passphrase</string>
     <string name="label_PassHintCreate">Opret Passphrase</string>
+    <string name="label_PassHintCurrent">Nuværende adgangskode</string>
     <string name="label_PassHintEnter">Løsen</string>
     <string name="label_PassHintRepeat">Gentag adgangskode</string>
     <string name="label_passPhraseCacheTtl">Adgangssætning Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontakter importeres.</string>
     <string name="state_TextCopiedToClipboard">Tekst kopieret til klippebordet.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger er designet til nemt at dele identitetsdata, personligt eller over telefonen, autentificeret, private og intakt. Hver person, du deler med opretter en sikker ende-til-ende kanal til at sende beskeder.\n\nFeatures:\n- Let udveksle kontaktoplysninger med andre\n- Sikker slynge tekster, fotos, noget!\n- Stærk kryptering beskytter dine oplysninger\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger er designet til nemt at dele identitetsdata, personligt eller over telefonen, autentificeret, private og intakt. Hver person, du deler med opretter en sikker ende-til-ende kanal til at sende beskeder.\n\nFeatures:\n- Nemt at udveksle kontaktoplysninger med andre\n- Sikker slynge tekster, fotos, noget!\n- Stærk kryptering beskytter dine oplysninger\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Identitet</string>
+    <string name="text_KeywordKey">Nøgle</string>
+    <string name="text_KeywordMessaging">Beskeder</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Sikkerhed</string>
     <string name="text_LanguagesProvidedBy">Sprog, som:</string>
+    <string name="text_RelatedSearchTerms">Relaterede Vilkår:</string>
     <string name="text_Requirements">Krav:\n1. Skal monteres på et minimum af 2 enheder.\n2. En internetforbindelse skal være aktiv.</string>
+    <string name="text_WhatsNew">- Stabilitet rettelser.</string>
 
     <string name="title_About">Om</string>
     <string name="title_camera">Kamera</string>

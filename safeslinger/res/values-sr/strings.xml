@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Контакт подаци су неправилно форматирана.</string>
     <string name="error_WebCancelledByUser">Корисник је отказао захтев сервера.</string>
 
-    <string name="help_find">Користите овај екран да бисте подесили своје име, телефон и е-маил за размену са другима. Додирните дугме \' Доне \' када завршите.</string>
     <string name="help_home">За размену личних података, обезбедити сви корисници су у близини или на телефон. Дугме \' Бегин Берзе\' ће размењивати само проверене контакт податке.</string>
     <string name="help_identity_menu">\n\nТакође можете променити личне податке о свом идентитету на овом екрану додиром на дугме са вашим именом. Ово ће приказати мени који вам омогућава да \' Измени \' свој контакт, \' Цреате нев\' контакт, или \' Користи још један\' контакт.</string>
     <string name="help_Messages">Овај екран приказује све досадашње поруке и прилоге који су још увек доступни за преузимање.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">истиче %s</string>
     <string name="label_expiresIn">истиче у</string>
     <string name="label_FileNameHint">Филе Наме</string>
-    <string name="label_FindInstruct">Молимо Вас да унесете своје личне податке. Ови подаци ће бити безбедно деле само са појединцима којима сте изабрали да га поделим са.</string>
     <string name="label_FirstName">Име</string>
     <string name="label_Home">Проверите ставке које желите да делите и додирните \' Бегин Екцханге \' када су други спремни да размене.</string>
     <string name="label_hometag">Дом</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Поново судити</string>
     <string name="label_PassHintChange">Ажурирано фразу</string>
     <string name="label_PassHintCreate">Направи Пасспхрасе</string>
+    <string name="label_PassHintCurrent">Тренутна фразу</string>
     <string name="label_PassHintEnter">Фразу</string>
     <string name="label_PassHintRepeat">Поновите фразу</string>
     <string name="label_passPhraseCacheTtl">Фразу кеш</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s контакти увезени.</string>
     <string name="state_TextCopiedToClipboard">Текст копиран у клипборд.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger је дизајниран да се лако деле личне податке, лично или преко телефона, аутентичан, приватно, и нетакнут. Свака особа коју делите са ствара сигуран канал енд-то-енд за слање поруке.\n\nКарактеристике: - Лако\nразмењују информације о контакту са другима\n- Безбедно ремен текстови, фотографије, било шта!\n- Јака Криптографија штити ваше информације\n\nмаил: %2$s\nВеб: %3$s</string>
+    <string name="text_About">%1$s\n\nСафеСлингер је дизајниран да се лако деле личне податке, лично или преко телефона, аутентичан, приватно, и нетакнут. Свака особа коју делите са ствара сигуран канал енд-то-енд за слање поруке.\n\nКарактеристике:\n- Лако размењују информације о контакту са другима\n- Безбедно слинг текстови, фотографије, било шта!\n- Јака криптографија штити ваше информације\n\nе-маил: %2$s\nвеб: %3$s</string>
+    <string name="text_KeywordExchange">Размена</string>
+    <string name="text_KeywordIdentity">Идентитет</string>
+    <string name="text_KeywordKey">Кључ</string>
+    <string name="text_KeywordMessaging">Поруке</string>
+    <string name="text_KeywordPrivacy">Приватност</string>
+    <string name="text_KeywordSecurity">Безбедност</string>
     <string name="text_LanguagesProvidedBy">Језици које пружа:</string>
-    <string name="text_Requirements">Захтеви:\n1. Мора бити инсталиран на минимум 2 уређаја.\n2.. Интернет конекција мора бити активна.</string>
+    <string name="text_RelatedSearchTerms">Релатед Термс:</string>
+    <string name="text_Requirements">Захтеви:\n1. Мора бити инсталиран на минимум 2 уређаја.\n2. Интернет конекција мора бити активна.</string>
+    <string name="text_WhatsNew">- Исправке стабилност.</string>
 
     <string name="title_About">Око</string>
     <string name="title_camera">Камера</string>

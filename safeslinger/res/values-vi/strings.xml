@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Dữ liệu liên lạc đã được định dạng chính xác.</string>
     <string name="error_WebCancelledByUser">Người sử dụng bị hủy bỏ yêu cầu máy chủ.</string>
 
-    <string name="help_find">Sử dụng màn hình này để thiết lập tên của bạn, điện thoại và email để trao đổi với người khác. Bấm vào nút \' Done \' khi hoàn tất.</string>
     <string name="help_home">Trao đổi dữ liệu nhận dạng, đảm bảo tất cả người dùng đang ở gần hoặc trên điện thoại. Nút \' Bắt đầu giao dịch \' sẽ trao đổi chỉ có dữ liệu liên lạc kiểm tra.</string>
     <string name="help_identity_menu">\n\nBạn cũng có thể thay đổi dữ liệu cá nhân về danh tính của bạn trên màn hình này bằng cách khai thác vào nút có tên của bạn. Điều này sẽ hiển thị một menu cho phép bạn \'Chỉnh sửa\' liên lạc của bạn, \'Tạo mới \' liên lạc, hoặc \' Sử dụng Một \' liên lạc.</string>
     <string name="help_Messages">Màn hình này hiển thị tất cả các thông điệp qua, và file đính kèm vẫn có sẵn để tải về.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">hết hạn %s</string>
     <string name="label_expiresIn">hết hạn trong</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Vui lòng nhập thông tin cá nhân của bạn. Dữ liệu này sẽ chỉ được chia sẻ một cách an toàn với những người mà bạn chọn để chia sẻ nó với.</string>
     <string name="label_FirstName">Tên đầu tiên</string>
     <string name="label_Home">Kiểm tra các mục mà bạn muốn chia sẻ và khai thác \'Bắt đầu giao dịch \' khi những người khác đã sẵn sàng để trao đổi.</string>
     <string name="label_hometag">Quê hương</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Thử lại</string>
     <string name="label_PassHintChange">Cụm mật khẩu được cập nhật</string>
     <string name="label_PassHintCreate">Tạo ra cụm mật khẩu</string>
+    <string name="label_PassHintCurrent">Cụm mật khẩu hiện tại</string>
     <string name="label_PassHintEnter">Cụm từ mật khẩu</string>
     <string name="label_PassHintRepeat">Lặp lại cụm mật khẩu</string>
     <string name="label_passPhraseCacheTtl">Cache mật khẩu</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Địa chỉ liên lạc %s nhập khẩu.</string>
     <string name="state_TextCopiedToClipboard">Sao chép văn bản vào clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger được thiết kế để dễ dàng chia sẻ dữ liệu nhận dạng, trực tiếp hoặc qua điện thoại, chứng thực, tư nhân, và nguyên vẹn. Mỗi người bạn chia sẻ với tạo ra một kênh end-to-end an toàn để gửi tin nhắn.\n\ntính năng:\n- Dễ dàng trao đổi thông tin liên lạc với những người khác\n- an toàn sling văn bản, hình ảnh, bất cứ điều gì!\n- mật mã mạnh mẽ bảo vệ thông tin của bạn\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger được thiết kế để dễ dàng chia sẻ dữ liệu nhận dạng, trực tiếp hoặc qua điện thoại, chứng thực, tư nhân, và nguyên vẹn. Mỗi người bạn chia sẻ với tạo ra một kênh end-to-end an toàn để gửi tin nhắn.\n\nCác Tính Năng:\n- Dễ dàng trao đổi thông tin liên lạc với những người khác\n- Văn bản an toàn sling, hình ảnh, bất cứ điều gì!\n- Mật mã mạnh mẽ bảo vệ thông tin của bạn\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Ngoại tệ</string>
+    <string name="text_KeywordIdentity">Bản sắc</string>
+    <string name="text_KeywordKey">Chính</string>
+    <string name="text_KeywordMessaging">Tin nhắn</string>
+    <string name="text_KeywordPrivacy">Riêng tư</string>
+    <string name="text_KeywordSecurity">An ninh</string>
     <string name="text_LanguagesProvidedBy">Ngôn ngữ được cung cấp bởi:</string>
+    <string name="text_RelatedSearchTerms">Điều khoản liên quan:</string>
     <string name="text_Requirements">Yêu cầu:\n1. Phải được cài đặt trên tối thiểu là 2 thiết bị.\n2. Kết nối Internet phải được hoạt động.</string>
+    <string name="text_WhatsNew">- Bản sửa lỗi ổn định.</string>
 
     <string name="title_About">Về</string>
     <string name="title_camera">Máy ảnh</string>

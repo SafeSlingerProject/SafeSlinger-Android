@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">ಸಂಪರ್ಕಿಸಿ ಡೇಟಾ ತಪ್ಪಾಗಿ ಸ್ವರೂಪಗೊಳಿಸಲಾಗಿದೆ ಮಾಡಲಾಯಿತು.</string>
     <string name="error_WebCancelledByUser">ಬಳಕೆದಾರ ಸರ್ವರ್ ಮನವಿಯನ್ನು ತಳ್ಳಿಹಾಕಿದರು.</string>
 
-    <string name="help_find">ಇತರರೊಂದಿಗೆ ವಿನಿಮಯ ನಿಮ್ಮ ಹೆಸರು, ಫೋನ್, ಮತ್ತು ಇಮೇಲ್ ಸೆಟ್ ಇದನ್ನು ಬಳಸಿ. ಮುಗಿದಮೇಲೆ \' ಡನ್ \' ಬಟನ್ ಟ್ಯಾಪ್.</string>
     <string name="help_home">ಗುರುತನ್ನು ದಶಮಾಂಶ ವಿನಿಮಯ, ಎಲ್ಲಾ ಬಳಕೆದಾರರು ಹತ್ತಿರದ ಅಥವಾ ಫೋನ್ನಲ್ಲಿ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು. \' ಆರಂಭಿಸಲು ಎಕ್ಸ್ಚೇಂಜ್ \' ಗುಂಡಿಯನ್ನು ಮಾತ್ರ ಪರಿಶೀಲಿಸಿದ ಸಂಪರ್ಕ ದಶಮಾಂಶ ವಿನಿಮಯ.</string>
     <string name="help_identity_menu">\n\nನಿಮ್ಮ ಹೆಸರಿನ ಗುಂಡಿಯನ್ನು ಟ್ಯಾಪಿಂಗ್ ಮೂಲಕ ಈ ತೆರೆಯಲ್ಲಿ ನಿಮ್ಮ ಗುರುತನ್ನು ಬಗ್ಗೆ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಬದಲಾಯಿಸಬಹುದು. ನೀವು \'ಸಂಪಾದಿಸು\' ನಿಮ್ಮ ಸಂಪರ್ಕ, ಸಂಪರ್ಕ \' ಹೊಸ ರಚಿಸಿ \', ಅಥವಾ ಸಂಪರ್ಕ \' ಮತ್ತೊಂದು ಬಳಸಿ \' ಅವಕಾಶ ಮೆನುವನ್ನು ತೋರಿಸುತ್ತದೆ.</string>
     <string name="help_Messages">ಈ ಪರದೆಯ ಎಲ್ಲಾ ಕಳೆದ ಸಂದೇಶಗಳನ್ನು, ಮತ್ತು ಇನ್ನೂ ಡೌನ್ಲೋಡ್ ಲಭ್ಯವಿರುವ ಲಗತ್ತುಗಳನ್ನು ತೋರಿಸುತ್ತದೆ.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s ಅವಧಿಯು</string>
     <string name="label_expiresIn">ರಲ್ಲಿ ಮುಕ್ತಾಯಗೊಳ್ಳುತ್ತದೆ</string>
     <string name="label_FileNameHint">ಫೈಲ್ ಹೆಸರು</string>
-    <string name="label_FindInstruct">ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನಮೂದಿಸಿ. ಈ ಡೇಟಾವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ನೀವು ಇದನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ಆಯ್ಕೆ ಇವರಲ್ಲಿ ವ್ಯಕ್ತಿಗಳು ಹಂಚಲಾಗುತ್ತದೆ.</string>
     <string name="label_FirstName">ಮೊದಲ ಹೆಸರು</string>
     <string name="label_Home">ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಮತ್ತು \' ಎಕ್ಸ್ಚೇಂಜ್ ಆರಂಭಿಸಲು \' ಕದ್ದಾಲಿಸಲು ಬಯಸುವ ಐಟಂಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಇತರರು ವಿನಿಮಯ ತಯಾರಾದ.</string>
     <string name="label_hometag">ಮುಖಪುಟ</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">ಮರುಪ್ರಯತ್ನಿಸಿ</string>
     <string name="label_PassHintChange">ನವೀಕರಿಸಲಾಗಿದೆ ಪಾಸ್ಫ್ರೇಸ್</string>
     <string name="label_PassHintCreate">ಪಾಸ್ಫ್ರೇಸ್ ರಚಿಸಿ</string>
+    <string name="label_PassHintCurrent">ಪ್ರಸ್ತುತ ಪಾಸ್ಫ್ರೇಸ್</string>
     <string name="label_PassHintEnter">ಪಾಸ್ಫ್ರೇಸ್</string>
     <string name="label_PassHintRepeat">ಪುನರಾವರ್ತನೆ ಪಾಸ್ಫ್ರೇಸ್</string>
     <string name="label_passPhraseCacheTtl">ಪಾಸ್ಫ್ರೇಸ್ ಸಂಗ್ರಹ</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s ಸಂಪರ್ಕಗಳನ್ನು.</string>
     <string name="state_TextCopiedToClipboard">ಪಠ್ಯ ಕ್ಲಿಪ್ಬೋರ್ಡ್ಗೆ ನಕಲು.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ಖಾಸಗಿ, ದೃಢೀಕರಿಸಬಹುದು ಖುದ್ದಾಗಿ ಅಥವಾ ದೂರವಾಣಿ, ಸುಲಭವಾಗಿ ಗುರುತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ವಿನ್ಯಾಸ, ಮತ್ತು ಹಾಗೇ ಇದೆ. ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಪ್ರತಿ ವ್ಯಕ್ತಿಯ ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸಲು ಸುರಕ್ಷಿತ ಕೊನೆಯಲ್ಲಿ ಕೊನೆಗೆ ಚಾನಲ್ ಸೃಷ್ಟಿಸುತ್ತದೆ.\n\nವೈಶಿಷ್ಟ್ಯಗಳು:\n- ಸುಲಭವಾಗಿ ಇತರರ ಸುರಕ್ಷಿತವಾಗಿ ಗ್ರಂಥಗಳು, ಫೋಟೋಗಳನ್ನು, ಏನು ಜೋಲಿ\n- ಸಂಪರ್ಕಕ್ಕೆ ಮಾಹಿತಿಯನ್ನು ವಿನಿಮಯ! %2$s\nವೆಬ್:: %3$s\n- ಬಲವಾದ ಗೂಢಲಿಪಿ ನಿಮ್ಮ ಮಾಹಿತಿ\n\nಇಮೇಲ್ ರಕ್ಷಿಸುತ್ತದೆ</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ಖುದ್ದಾಗಿ ಅಥವಾ ದೂರವಾಣಿ, ಸುಲಭವಾಗಿ ಗುರುತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ವಿನ್ಯಾಸ ದೃಢೀಕರಿಸಬಹುದು, ಖಾಸಗಿ, ಮತ್ತು ಹಾಗೇ ಇದೆ. ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಪ್ರತಿ ವ್ಯಕ್ತಿಯ ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸಲು ಸುರಕ್ಷಿತ ಕೊನೆಯಲ್ಲಿ ಕೊನೆಗೆ ಚಾನಲ್ ಸೃಷ್ಟಿಸುತ್ತದೆ.\n\nವೈಶಿಷ್ಟ್ಯಗಳು:\n- ಸುಲಭವಾಗಿ ಇತರರೊಂದಿಗೆ ಮಾಹಿತಿಯನ್ನು ಸಂಪರ್ಕಿಸಿ ವಿನಿಮಯ\n- ಸುರಕ್ಷಿತವಾಗಿ ಜೋಲಿ ಗ್ರಂಥಗಳು, ಫೋಟೋಗಳನ್ನು, ಏನು!\n- ಬಲವಾದ ಗೂಢಲಿಪಿ ನಿಮ್ಮ ಮಾಹಿತಿ ರಕ್ಷಿಸುತ್ತದೆ\n\nಇಮೇಲ್: %2$s\nವೆಬ್: %3$s</string>
+    <string name="text_KeywordExchange">ವಿನಿಮಯ</string>
+    <string name="text_KeywordIdentity">ಗುರುತು</string>
+    <string name="text_KeywordKey">ಕೀಲಿಕೈ</string>
+    <string name="text_KeywordMessaging">ಸಂದೇಶ</string>
+    <string name="text_KeywordPrivacy">ಖಾಸಗಿತನ</string>
+    <string name="text_KeywordSecurity">ಭದ್ರತೆ</string>
     <string name="text_LanguagesProvidedBy">ಒದಗಿಸಿದ ಭಾಷೆಗಳು:</string>
+    <string name="text_RelatedSearchTerms">ಸಂಬಂಧಿತ ನಿಯಮಗಳು:</string>
     <string name="text_Requirements">ಬೇಡಿಕೆಗಳು:\n1. 2 ಸಾಧನಗಳ ಕನಿಷ್ಠ ಇನ್ಸ್ಟಾಲ್ ಮಾಡಬೇಕು.\n2. ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಸಕ್ರಿಯ ಇರಬೇಕು.</string>
+    <string name="text_WhatsNew">- ಸ್ಟೆಬಿಲಿಟಿ ಪರಿಹಾರಗಳನ್ನು.</string>
 
     <string name="title_About">ಕುರಿತು</string>
     <string name="title_camera">ಕ್ಯಾಮೆರಾ</string>

@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">聯繫數據格式不正確。</string>
     <string name="error_WebCancelledByUser">使用者取消伺服器請求。</string>
 
-    <string name="help_find">該畫面可以設定你準備與其他人交換的聯絡資訊(姓名，電話與電子郵件). 編輯後按\'完成\'按鈕。</string>
     <string name="help_home">為了交換聯絡資訊，請確保所有成員都在附近，並按下\'開始交換\'按鈕，將開始與群體成員開始進行資料交換。</string>
     <string name="help_identity_menu">\n\n您可以更改個人資料透過點擊屏幕上顯示你名字的按鈕。它將顯示一個菜單，允許你\'編輯\'你的資料，或\'建立一個新的聯絡人\'，或\'使用另一個聯絡人\'。</string>
     <string name="help_Messages">該畫面顯示所有以前的訊息，以及可能被下載的檔案。</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">過期%s</string>
     <string name="label_expiresIn">在到期</string>
     <string name="label_FileNameHint">檔案名稱</string>
-    <string name="label_FindInstruct">請輸入您的個人資訊。這些數據僅將被安全地與你選擇交換的用戶進行共享。</string>
     <string name="label_FirstName">名字</string>
     <string name="label_Home">勾選你想分享的項目，當其他成員都準備好，點擊\'開始交換\'。</string>
     <string name="label_hometag">家用</string>

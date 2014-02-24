@@ -591,16 +591,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             intent.putExtras(writeSingleExportExchangeArgs(new ContactImpp(contactLookupKey, impps)));
 
             String name = ConfigData.loadPrefContactName(getApplicationContext());
-            String phone = ConfigData.loadPrefContactPhone(getApplicationContext());
-            String email = ConfigData.loadPrefContactEmail(getApplicationContext());
-            int phoneType = ConfigData.loadPrefContactPhoneType(getApplicationContext());
-            int emailType = ConfigData.loadPrefContactEmailType(getApplicationContext());
 
             intent.putExtra(extra.NAME, name);
-            intent.putExtra(extra.PHONE, phone);
-            intent.putExtra(extra.EMAIL, email);
-            intent.putExtra(extra.PHONE_TYPE, phoneType);
-            intent.putExtra(extra.EMAIL_TYPE, emailType);
 
             sExchangeOpen = true;
             startActivityForResult(intent, VIEW_MAINTAB_ID);
@@ -1443,9 +1435,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 break;
             case ComposeFragment.RESULT_CONTACTADD:
                 // user wants to create new contact
-                showAddContact(ConfigData.loadPrefContactName(getApplicationContext()),
-                        getContactPhones(contactLookupKey, null),
-                        getContactEmails(contactLookupKey));
+                showAddContact(ConfigData.loadPrefContactName(getApplicationContext()));
                 break;
             case ComposeFragment.RESULT_CONTACTEDIT:
                 // user wants to edit contact
@@ -1929,11 +1919,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     case ContactActivity.RESULT_KEYSLINGERCONTACTADD:
                         // user wants to create new contact
                         sExchangeOpen = false;
-                        String contactLookupKey = ConfigData
-                                .loadPrefContactLookupKey(getApplicationContext());
-                        showAddContact(ConfigData.loadPrefContactName(getApplicationContext()),
-                                getContactPhones(contactLookupKey, null),
-                                getContactEmails(contactLookupKey));
+                        showAddContact(ConfigData.loadPrefContactName(getApplicationContext()));
                         break;
                     case ContactActivity.RESULT_KEYSLINGERCONTACTEDIT:
                         // user wants to edit contact
@@ -1964,20 +1950,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     case FindContactActivity.RESULT_CONTACTADD:
                         // user wants to create new contact
                         String name = ConfigData.loadPrefContactName(this);
-
-                        ArrayList<String> phones = new ArrayList<String>();
-                        String phone = ConfigData.loadPrefContactPhone(this);
-                        if (!TextUtils.isEmpty(phone)) {
-                            phones.add(phone);
-                        }
-
-                        ArrayList<String> emails = new ArrayList<String>();
-                        String email = ConfigData.loadPrefContactEmail(this);
-                        if (!TextUtils.isEmpty(email)) {
-                            emails.add(email);
-                        }
-
-                        showAddContact(name, phones, emails);
+                        showAddContact(name);
                         break;
                     case RESULT_CANCELED:
                         showExit(RESULT_CANCELED);
@@ -3003,23 +2976,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         }
     }
 
-    private void showAddContact(String name, ArrayList<String> phones, ArrayList<String> emails) {
+    private void showAddContact(String name) {
 
         Intent intent = new Intent(Intent.ACTION_INSERT);
         intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
 
         if (!TextUtils.isEmpty(name))
             intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
-        if (phones != null && !phones.isEmpty()) {
-            for (String phone : phones) {
-                intent.putExtra(ContactsContract.Intents.Insert.PHONE, phone);
-            }
-        }
-        if (emails != null && !emails.isEmpty()) {
-            for (String email : emails) {
-                intent.putExtra(ContactsContract.Intents.Insert.EMAIL, email);
-            }
-        }
         try {
             startActivityForResult(intent, RESULT_PICK_CONTACT_SENDER);
         } catch (ActivityNotFoundException e) {
@@ -3149,17 +3112,9 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
     private void showFindContact() {
         String name = ConfigData.loadPrefContactName(getApplicationContext());
-        String phone = ConfigData.loadPrefContactPhone(getApplicationContext());
-        String email = ConfigData.loadPrefContactEmail(getApplicationContext());
-        int phoneType = ConfigData.loadPrefContactPhoneType(getApplicationContext());
-        int emailType = ConfigData.loadPrefContactEmailType(getApplicationContext());
 
         Intent intent = new Intent(HomeActivity.this, FindContactActivity.class);
         intent.putExtra(extra.NAME, name);
-        intent.putExtra(extra.PHONE, phone);
-        intent.putExtra(extra.EMAIL, email);
-        intent.putExtra(extra.PHONE_TYPE, phoneType);
-        intent.putExtra(extra.EMAIL_TYPE, emailType);
         startActivityForResult(intent, VIEW_FINDCONTACT_ID);
     }
 

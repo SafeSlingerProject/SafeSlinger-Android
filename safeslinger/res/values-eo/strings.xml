@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Kontakto datumoj estis formatita malĝuste.</string>
     <string name="error_WebCancelledByUser">Uzanto nuligita servilo peton.</string>
 
-    <string name="help_find">Uzu tiun ekranon por agordi vian nomon, telefonon, kaj retpoŝton por interŝanĝi kun aliaj. Frapeti la \' Farita \' butono kiam finis.</string>
     <string name="help_home">Interŝanĝi identecon datumoj, certigi al ĉiuj uzantoj estas proksimaj aŭ telefone. La \' Begin Exchange \' butono interŝanĝi nur la kontrolita kontakto datumojn.</string>
     <string name="help_identity_menu">\n\nVi povas ankaŭ ŝanĝi personajn datumojn pri via identeco sur ĉi ekrano per frapeton sur la butono kun via nomo. Tio montros menuo kiu permesas vin al \' Redakti \' via kontakto, \' Kreu novan \' kontakto, aŭ \' uzi alian \' kontakton.</string>
     <string name="help_Messages">Ĉi ekrano montras ĉiujn pasinteco mesaĝoj, kaj ligiteco, kiuj estas ankoraŭ disponebla por elŝuti.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">eksvalidiĝi %s</string>
     <string name="label_expiresIn">elspiras en</string>
     <string name="label_FileNameHint">Dosiero Nomo</string>
-    <string name="label_FindInstruct">Bonvolu entajpi vian personan informon. Ĉi tiuj datumoj estos nur tiam sekure dividis kun individuoj, kiujn vi elektis por dividi ĝin kun.</string>
     <string name="label_FirstName">Persona nomo</string>
     <string name="label_Home">Kontrolu erojn vi deziras kunhavigi kaj frapeti \' Begin Exchange \' kiam aliaj pretas interŝanĝi.</string>
     <string name="label_hometag">Hejmo</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Reprovi</string>
     <string name="label_PassHintChange">Ĝisdatigita pasfrazon</string>
     <string name="label_PassHintCreate">Krei pasfrazon</string>
+    <string name="label_PassHintCurrent">Nuna pasfrazon</string>
     <string name="label_PassHintEnter">Pasfrazon</string>
     <string name="label_PassHintRepeat">Ripetu pasfrazon</string>
     <string name="label_passPhraseCacheTtl">Pasfrazon Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s kontaktoj importitaj.</string>
     <string name="state_TextCopiedToClipboard">Teksto kopiitaj al tondujo.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger estas desegnita por facile kunhavigi identeco datumoj, en persono aŭ super la telefono, aŭtentikigita, privata, kaj la disfalinta. Ĉiu persono vin konigi kun kreas sekura finon al ekstrema kanalo por sendi mesaĝojn.\n\nElstaraĵoj:\n- Facile interŝanĝi kontakto informon kun aliaj\n- sekure jxeti tekstojn, fotojn, nenion!\n- Strong ĉifriko protektas viajn informojn\n\nretadreso: %2$s\nretejon: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger estas desegnita por facile kunhavigi identeco datumoj, en persono aŭ super la telefono, aŭtentikigita, privata, kaj la disfalinta. Ĉiu persono vin konigi kun kreas sekura finon al ekstrema kanalo por sendi mesaĝojn.\n\nElstaraĵoj:\n- Facile interŝanĝi kontaktu informon kun aliaj\n- Sekure jxeti tekstojn, fotojn, nenion!\n- Fortaj ĉifriko protektas viajn informojn\n\nretpoŝto: %2$s\nretejo: %3$s</string>
+    <string name="text_KeywordExchange">Interŝanĝo</string>
+    <string name="text_KeywordIdentity">Identeco</string>
+    <string name="text_KeywordKey">Ŝlosilo</string>
+    <string name="text_KeywordMessaging">Mesaĝado</string>
+    <string name="text_KeywordPrivacy">Regularo</string>
+    <string name="text_KeywordSecurity">Sekureco</string>
     <string name="text_LanguagesProvidedBy">Lingvoj provizita per:</string>
+    <string name="text_RelatedSearchTerms">Related Terms:</string>
     <string name="text_Requirements">Postuloj:\n1. Devas esti instalita sur minimumo de 2 aparatoj.\n2. Interreta konekto devas esti aktiva.</string>
+    <string name="text_WhatsNew">- Stabileco de eraroj.</string>
 
     <string name="title_About">Pri</string>
     <string name="title_camera">Fotilo</string>

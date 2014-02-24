@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Dati di contatto è stata formattata correttamente.</string>
     <string name="error_WebCancelledByUser">Utente cancellato richiesta del server.</string>
 
-    <string name="help_find">Utilizzare questa schermata per impostare il vostro nome, telefono, e-mail a scambiare con gli altri. Toccare il pulsante \' Done \' una volta terminato.</string>
     <string name="help_home">Per lo scambio di dati di identità, accertarsi che tutti gli utenti si trovano nelle vicinanze o al telefono. Il pulsante \' Begin scambio \' si scambieranno solo i dati di contatto controllati.</string>
     <string name="help_identity_menu">\n\nÈ inoltre possibile modificare i dati personali sulla tua identità in questa schermata toccando il pulsante con il tuo nome. Verrà visualizzato un menu che permette di \' Edit\' il vostro contatto, \' Crea nuovo \' contatto, o \' utilizzare un altro \' contatto.</string>
     <string name="help_Messages">Questa schermata visualizza tutti i messaggi passati, e gli allegati che sono ancora disponibili per il download.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">scade %s</string>
     <string name="label_expiresIn">scade nel</string>
     <string name="label_FileNameHint">Nome file</string>
-    <string name="label_FindInstruct">Inserisci i tuoi dati personali. Questi dati saranno condivise solo in modo sicuro con individui che si sceglie di condividere con.</string>
     <string name="label_FirstName">Nome</string>
     <string name="label_Home">Controllare oggetti che si desidera condividere e toccare \' Begin cambio \' quando gli altri sono pronti a scambiare.</string>
     <string name="label_hometag">Casa</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Riprova</string>
     <string name="label_PassHintChange">Passphrase aggiornato</string>
     <string name="label_PassHintCreate">Crea Passphrase</string>
+    <string name="label_PassHintCurrent">Passphrase corrente</string>
     <string name="label_PassHintEnter">Passphrase</string>
     <string name="label_PassHintRepeat">Ripetere Passphrase</string>
     <string name="label_passPhraseCacheTtl">Cache passphrase</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Contatti %s importati.</string>
     <string name="state_TextCopiedToClipboard">Testo copiato negli appunti.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger è stato progettato per condividere facilmente i dati di identità, di persona o per telefono, autenticato, privato e intatto. Ogni persona si condivide con crea un canale sicuro end-to-end per inviare messaggi.\n\nCaratteristiche:\n- scambiare facilmente informazioni di contatto con gli altri\n- saldamente fionda testi, foto, niente!\n- Crittografia avanzata protegge le informazioni\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger è stato progettato per condividere facilmente i dati di identità, di persona o per telefono, autenticato, privato e intatto. Ogni persona si condivide con crea un canale sicuro end-to-end per inviare messaggi.\n\nCaratteristiche:\n- Facilmente scambiare informazioni di contatto con gli altri\n- Testi saldamente fionda, foto, niente!\n- Crittografia avanzata protegge le informazioni\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Scambio</string>
+    <string name="text_KeywordIdentity">Identità</string>
+    <string name="text_KeywordKey">Chiave</string>
+    <string name="text_KeywordMessaging">Messaging</string>
+    <string name="text_KeywordPrivacy">Vita privata</string>
+    <string name="text_KeywordSecurity">Sicurezza</string>
     <string name="text_LanguagesProvidedBy">Lingue forniti da:</string>
+    <string name="text_RelatedSearchTerms">Termini correlati:</string>
     <string name="text_Requirements">Requisiti:\n1. Deve essere installato su un minimo di 2 dispositivi.\n2. Una connessione a Internet deve essere attiva.</string>
+    <string name="text_WhatsNew">- Correzioni di stabilità.</string>
 
     <string name="title_About">Circa</string>
     <string name="title_camera">Telecamera</string>

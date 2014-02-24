@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">தொடர்பு தரவு தவறாக வடிவமைக்கப்பட்டுள்ளது.</string>
     <string name="error_WebCancelledByUser">பயனர் சர்வர் இரத்து செய்தது.</string>
 
-    <string name="help_find">மற்றவர்களுடன் பரிமாறி உங்கள் பெயர், தொலைபேசி, மற்றும் மின்னஞ்சல் அமைக்க இந்த திரையை பயன்படுத்தவும். முடித்த போது \' முடிந்தது \' பொத்தானை தட்டவும்.</string>
     <string name="help_home">அடையாள பரிமாற்றம் தரவு, அனைத்து பயனர்கள் அருகிலுள்ள அல்லது தொலைபேசியில் உறுதி. \' தொடங்கியிருக்கவேண்டும் செலாவணி \' பொத்தானை மட்டுமே சரிபார்க்கப்பட தொடர்பு தரவு மாற்றித்தரும்.</string>
     <string name="help_identity_menu">\n\nஉங்கள் பெயர் பொத்தானை தட்டுவதன் மூலம் இந்த திரையில் உங்கள் அடையாளம் பற்றி தனிப்பட்ட தரவு மாற்றலாம். இந்த \'Edit\' தொடர்பு, தொடர்பு \' நியூ உருவாக்கவும் \', அல்லது தொடர்பு \' மற்றொரு பயன்பாடு \' அனுமதிக்கும் ஒரு மெனு காண்பிக்கும்.</string>
     <string name="help_Messages">இந்த திரையில் அனைத்து கடந்த செய்திகள், மற்றும் இன்னும் பதிவிறக்க கிடைக்க உள்ளன என்று இணைப்புகளை காட்டுகிறது.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">%s காலாவதியாகிறது</string>
     <string name="label_expiresIn">ல் காலாவதியாகிறது</string>
     <string name="label_FileNameHint">கோப்பு பெயர்</string>
-    <string name="label_FindInstruct">உங்கள் தனிப்பட்ட தகவல்களை உள்ளிடவும். இந்த தரவு பாதுகாப்பாக நீங்கள் பகிர்ந்து கொள்ள தேர்வு யாரை தனிநபர்கள் பகிர்ந்து கொள்ளப்படும்.</string>
     <string name="label_FirstName">முதல் பெயர்</string>
     <string name="label_Home">நீங்கள் பகிர்ந்து மற்றும் \'எக்ஸ்சேஞ்ச் தொடங்கியிருக்கவேண்டும் \' தட்டி விரும்பும் பொருட்களை சரிபார்க்கவும் மற்றவர்கள் பரிமாறி தயாராக இருக்கும் போது.</string>
     <string name="label_hometag">முகப்பு</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">மீண்டும் முயற்சி செய்க</string>
     <string name="label_PassHintChange">இற்றை கடவுச்சொல்லை</string>
     <string name="label_PassHintCreate">கடவுச்சொல்லை உருவாக்கவும்</string>
+    <string name="label_PassHintCurrent">தற்போதைய கடவுச்சொல்லை</string>
     <string name="label_PassHintEnter">கடவுச்சொல்லை</string>
     <string name="label_PassHintRepeat">மீண்டும் மீண்டும் கடவுச்சொல்லை</string>
     <string name="label_passPhraseCacheTtl">கடவுச்சொல்லை Cache</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">%s தொடர்புகளை இறக்குமதி.</string>
     <string name="state_TextCopiedToClipboard">உரை இடைநிலைப்பலகையில் நகலெடுக்கப்படும்.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger தனியார், அங்கீகரிக்கப்பட்ட நபர் அல்லது தொலைபேசி, எளிதாக அடையாளம் தரவு பகிர்ந்து வடிவமைக்கப்பட்டுள்ளது, அப்படியே உள்ளது. நீங்கள் பகிர்ந்து ஒவ்வொரு நபர் செய்திகளை அனுப்ப ஒரு பாதுகாப்பான இறுதி வரை இறுதி சேனல் உருவாக்குகிறது.\n\nஅம்சங்கள்:\n- எளிதாக மற்றவர்கள் பாதுகாப்பாக நூல்கள், புகைப்படங்கள், எதையும் உணர்த்துவது\n- தொடர்பு தகவல்களை பரிமாறி! %2$s\nவலை: %3$s\n- வலுவான குறியாக்கவியல் உங்கள் தகவல்\n\nமின்னஞ்சல் பாதுகாக்கிறது</string>
+    <string name="text_About">%1$s\n\nSafeSlinger, நபர் அல்லது தொலைபேசி, எளிதாக அடையாளம் தரவு பகிர்ந்து வடிவமைக்கப்பட்டுள்ளது அங்கீகரிக்கப்பட்ட தனியார், அப்படியே உள்ளது. நீங்கள் பகிர்ந்து ஒவ்வொரு நபர் செய்திகளை அனுப்ப ஒரு பாதுகாப்பான இறுதி வரை இறுதி சேனல் உருவாக்குகிறது.\n\nஅம்சங்கள்:\n- எளிதாக மற்றவர்களுடன் தொடர்பு தகவல்களை பரிமாறி\n- பாதுகாப்பாக உணர்த்துவது நூல்கள், புகைப்படங்கள், எதையும்!\n- வலுவான குறியாக்கவியல் உங்கள் தகவல் பாதுகாக்கிறது\n\nமின்னஞ்சல்: %2$s\nவலை: %3$s</string>
+    <string name="text_KeywordExchange">சந்தை</string>
+    <string name="text_KeywordIdentity">அடையாளம்</string>
+    <string name="text_KeywordKey">சாவி</string>
+    <string name="text_KeywordMessaging">செய்தி</string>
+    <string name="text_KeywordPrivacy">தனிமை</string>
+    <string name="text_KeywordSecurity">பாதுகாப்பு</string>
     <string name="text_LanguagesProvidedBy">வழங்கப்பட்ட மொழிகள்:</string>
+    <string name="text_RelatedSearchTerms">தொடர்பான விதிமுறைகள்:</string>
     <string name="text_Requirements">தேவைகள்:\n1. 2 சாதனங்களை ஒரு குறைந்தபட்ச நிறுவ வேண்டும்.\n2. இணைய இணைப்பு செயலில் இருக்க வேண்டும்.</string>
+    <string name="text_WhatsNew">- உறுதிப்பாட்டு திருத்தங்கள்.</string>
 
     <string name="title_About">பற்றி</string>
     <string name="title_camera">கேமரா</string>

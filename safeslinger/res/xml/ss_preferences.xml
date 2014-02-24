@@ -34,6 +34,14 @@
             android:key="showLicense"
             android:title="@string/menu_License" >
         </Preference>
+
+        <EditTextPreference
+            android:inputType="textCapWords|textPersonName"
+            android:key="ContactName"
+            android:persistent="false"
+            android:privateImeOptions="nm"
+            android:title="@string/label_ContactName" />
+
         <Preference
             android:key="changePassphrase"
             android:title="@string/menu_ChangePassphrase" >
@@ -89,25 +97,6 @@
             android:key="KeyIdString"
             android:persistent="false"
             android:title="@string/label_PublicKeyID" />
-
-        <EditTextPreference
-            android:inputType="textCapWords|textPersonName"
-            android:key="ContactName"
-            android:persistent="false"
-            android:privateImeOptions="nm"
-            android:title="@string/label_ContactName" />
-        <EditTextPreference
-            android:inputType="phone"
-            android:key="ContactPhone"
-            android:persistent="false"
-            android:privateImeOptions="nm"
-            android:title="@string/label_ContactPhone" />
-        <EditTextPreference
-            android:inputType="textEmailAddress"
-            android:key="ContactEmail"
-            android:persistent="false"
-            android:privateImeOptions="nm"
-            android:title="@string/label_ContactEmail" />
 
         <ListPreference
             android:dialogTitle="@string/label_targetAccountLabel"

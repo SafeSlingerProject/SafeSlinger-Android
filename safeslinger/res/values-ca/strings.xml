@@ -155,7 +155,6 @@
     <string name="error_VcardParseFailure">Dades de contacte va ser un format incorrecte.</string>
     <string name="error_WebCancelledByUser">L\'usuari cancel · lar la sol · licitud del servidor.</string>
 
-    <string name="help_find">Utilitzeu aquesta pantalla per configurar el seu nom, telèfon i correu electrònic per intercanviar amb altres. Premeu el botó \'Fet \' quan hagi acabat.</string>
     <string name="help_home">Per a l\'intercanvi de dades d\'identitat, assegureu-vos que tots els usuaris estan a prop o per telèfon. El botó \'Començar Canvi \' canviarà únicament les dades de contacte controlades.</string>
     <string name="help_identity_menu">\n\nTambé pot canviar les dades personals sobre la seva identitat en aquesta pantalla prement sobre el botó amb el seu nom. Això mostrarà un menú que us permet \' Edita\' contacte \'Crea nou\' contacte, o «Utilització Un altre \' contacte.</string>
     <string name="help_Messages">Aquesta pantalla mostra tots els missatges anteriors i annexos que encara estan disponibles per a baixar.</string>
@@ -194,7 +193,6 @@
     <string name="label_expires">expira %s</string>
     <string name="label_expiresIn">expira el</string>
     <string name="label_FileNameHint">Nom del fitxer</string>
-    <string name="label_FindInstruct">Si us plau, introdueixi la seva informació personal. Aquestes dades només amb seguretat es proporcionarà persones a que triï per compartir-lo.</string>
     <string name="label_FirstName">Nom</string>
     <string name="label_Home">Seleccioneu els elements que desitja compartir i toc \' Begin Canvi \' quan els altres estan disposats a intercanviar.</string>
     <string name="label_hometag">Casa</string>
@@ -225,6 +223,7 @@
     <string name="label_PassHintBackoff">Torneu a provar</string>
     <string name="label_PassHintChange">Actualitzat Frase</string>
     <string name="label_PassHintCreate">Crear Frase</string>
+    <string name="label_PassHintCurrent">Contrasenya actual</string>
     <string name="label_PassHintEnter">Contrasenya</string>
     <string name="label_PassHintRepeat">Repetir frase de pas</string>
     <string name="label_passPhraseCacheTtl">Memòria cau de claus</string>
@@ -335,9 +334,17 @@
     <string name="state_SomeContactsImported">Contactes %s importats.</string>
     <string name="state_TextCopiedToClipboard">Text copiat al porta-retalls.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger està dissenyat per compartir fàcilment les dades d\'identitat, en persona o per telèfon, autenticat, privat, i intacte. Cada persona amb la qual comparteixes amb crea un canal segur d\'extrem a extrem per enviar missatges.\n\nCaracterístiques:\n- Fàcil intercanvi d\'informació de contacte amb altres\n- profunda textos, fotos, qualsevol cosa amb seguretat!\n- Criptografia sòlida protegeix la vostra informació\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger està dissenyat per compartir fàcilment les dades d\'identitat, en persona o per telèfon, autenticat, privada, i intacte. Cada persona amb la qual comparteixes amb crea un canal segur d\'extrem a extrem per enviar missatges.\n\nCaracterístiques:\n- Fàcil intercanvi de la informació de contacte amb altres\n- Els textos de forma segura profunda, fotos, qualsevol cosa!\n- La criptografia forta protegeix la vostra informació\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Intercanvi</string>
+    <string name="text_KeywordIdentity">Identitat</string>
+    <string name="text_KeywordKey">Clau</string>
+    <string name="text_KeywordMessaging">Missatgeria</string>
+    <string name="text_KeywordPrivacy">Intimitat</string>
+    <string name="text_KeywordSecurity">Seguretat</string>
     <string name="text_LanguagesProvidedBy">Idiomes proporcionades per:</string>
+    <string name="text_RelatedSearchTerms">Termes relacionats:</string>
     <string name="text_Requirements">Requisits:\n1. Ha d\'instal · lar en un mínim de 2 dispositius.\n2. Una connexió a Internet ha d\'estar activa.</string>
+    <string name="text_WhatsNew">- Correccions d\'estabilitat.</string>
 
     <string name="title_About">Sobre</string>
     <string name="title_camera">Cambra</string>
