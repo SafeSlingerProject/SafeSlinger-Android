@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Done Kontakte te fòma mal.</string>
     <string name="error_WebCancelledByUser">Itilizatè anile sèvè mande sa.</string>
 
+    <string name="help_find">Sèvi ak ekran sa a yo mete non ou nan echanj ak lòt moun. Tape \'Fè\' bouton an lè fini.</string>
     <string name="help_home">Fè echanj done idantite, asire tout itilizatè yo ki tou pre oswa nan telefòn lan. Bouton \' Echanj nan Kòmanse \' ap echanje sèlman done yo tcheke kontak.</string>
     <string name="help_identity_menu">\n\nOu kapab tou chanje done pèsonèl sou idantite ou sou ekran sa a pa frapan sou bouton an ak non w. Sa a ap montre yon meni ki pèmèt ou \' Edit \' kontak ou a, \'Kreye New \' kontak, \'oswa\' sèvi ak yon lòt \' kontak.</string>
     <string name="help_Messages">Ekran sa a montre tout mesaj sot pase yo, ak dokiman ki toujou disponib pou download.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">ekspire %s</string>
     <string name="label_expiresIn">pral ekspire nan</string>
     <string name="label_FileNameHint">File name</string>
+    <string name="label_FindInstruct">Ekri non an ou vle lòt moun yo wè lè kominike byen:</string>
     <string name="label_FirstName">Prenon</string>
-    <string name="label_Home">Tcheke atik ou ta renmen pataje epi tape \' Kòmanse Echanj \' lè lòt moun yo pare fè echanj.</string>
+    <string name="label_Home">Tape non ou yo ajoute oswa retire done kontak, tcheke atik ou ta vle pataje, ak yon wobinè \'Kòmanse Echanj\' lè lòt moun yo pare yo echanj:</string>
     <string name="label_hometag">Kay</string>
     <string name="label_hours">%d èdtan</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud se pèmèt. Tape \' Fè \' bouton an lè fini.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup reta</string>
     <string name="label_safeslingered">(SafeSlinger Echanj dirèk)</string>
     <string name="label_SaveAccount">Save Kont</string>
-    <string name="label_SaveInstruct">Echanj Ranpli! Chwazi done manm pou konsève pou nan liv adrès ou:</string>
+    <string name="label_SaveInstruct">Tcheke kontak ou vle mete nan liv adrès ou, Lè sa a, tape \'Import\' pou konsève pou kontak an sekirite:</string>
     <string name="label_seconds">%d segonn</string>
     <string name="label_selectLabel">Chwazi mete etikèt sou</string>
     <string name="label_SelectRecip">Chwazi Moun Kap Resevwa Asistans</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Fistibal Repons</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Sèvi ak yon lòt</string>
+    <string name="menu_UseContactPerson">Itilize | Kontakte \'%s\'</string>
+    <string name="menu_UseNoContact">Sèvi ak non sèlman</string>
+    <string name="menu_UseProfilePerson">Sèvi ak Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">ap tann pou verifikasyon ki soti nan tout manm…</string>
     <string name="prog_CollectingOthersItems">ap tann pou tout itilizatè yo rantre nan…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Lang ki ofri pa:</string>
     <string name="text_RelatedSearchTerms">Ki gen rapò Regleman:</string>
     <string name="text_Requirements">Kondisyon:\n1. Yo dwe enstale sou yon minimòm de 2 ki bay sipò.\n2. Yon koneksyon entènèt yo dwe aktif.</string>
+    <string name="text_SourceCodeRepo">sous louvri: %s</string>
     <string name="text_WhatsNew">- Estabilite fikse.</string>
 
     <string name="title_About">Sou</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Kay</string>
     <string name="title_MessageDetail">Mesaj</string>
     <string name="title_Messages">Messages</string>
-    <string name="title_MyIdentity">Idantite mwen</string>
+    <string name="title_MyIdentity">Kontakte Montre granmoun</string>
     <string name="title_NotifyFileAvailable">Mesaj SafeSlinger ki disponib</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages ki disponib</string>
     <string name="title_passphrase">Pasfraz</string>

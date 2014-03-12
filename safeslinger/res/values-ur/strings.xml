@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">رابطے کی معلومات غلط طریقے سے فارمیٹ کیا گیا تھا.</string>
     <string name="error_WebCancelledByUser">یوزر کے سرور کی درخواست منسوخ.</string>
 
+    <string name="help_find">دوسروں کے ساتھ تبادلہ کرنے کے لئے آپ کے نام قائم کرنے کے لئے اس کی سکرین کا استعمال کریں. ختم جب \'کیا\' کے بٹن ٹیپ.</string>
     <string name="help_home">شناخت کے اعداد و شمار کا تبادلہ کرنا ، تمام صارفین کے قریبی یا فون پر ہیں کو یقینی بنانے. \' شروع ایکسچینج \' کے بٹن پر صرف کی جانچ پڑتال کی رابطے کی معلومات کا تبادلہ کریں گے.</string>
     <string name="help_identity_menu">\n\nآپ اپنے نام کے ساتھ بٹن پر ٹیپ کی طرف سے اس کی سکرین پر آپ کی شناخت کے بارے میں ذاتی ڈیٹا تبدیل کر سکتے ہیں. اس سے آپ کو \'ترمیم کریں\' آپ سے رابطہ کریں ، رابطہ کریں \'نئی تشکیل دیں\' ، یا رابطے \' ایک اور استعمال \' کرنے کی اجازت دی ایک مینو ظاہر کرے گا.</string>
     <string name="help_Messages">یہ سکرین کے تمام گزشتہ پیغامات ، اور اب بھی ڈاؤن لوڈ کے لئے دستیاب ہیں اٹیچمنٹ دکھاتا ہے.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s ختم ہو جاتی ھے</string>
     <string name="label_expiresIn">میں ختم ہو جاتی ھے</string>
     <string name="label_FileNameHint">فائل کا نام</string>
+    <string name="label_FindInstruct">نام درج کریں آپ کو محفوظ طریقے سے بات چیت جب دیکھنے کے لئے دوسروں کی خواہش:</string>
     <string name="label_FirstName">پہلا نام</string>
-    <string name="label_Home">آپ اشتراک اور ایکسچینج شروع \' نل چاہتے اشیاء کی جانچ پڑتال دوسروں کا تبادلہ کرنے کے لئے تیار ہیں.</string>
+    <string name="label_Home">شامل کرنے یا ہٹانے کے رابطے کی معلومات، آپ اشتراک کرنا چاہتے ہیں اشیاء کی جانچ پڑتال، اور نل آپ کے نام کے نل کے تبادلے شروع دوسروں کے تبادلے کے لئے تیار ہیں جب:</string>
     <string name="label_hometag">ہوم</string>
     <string name="label_hours">%d گھنٹے</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud کے چالو حالت میں ہے. ختم جب \' کیا \' کے بٹن ٹیپ.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">تاخیر SafeSlinger بیک اپ</string>
     <string name="label_safeslingered">(SafeSlinger براہ راست تبادلہ)</string>
     <string name="label_SaveAccount">اکاؤنٹ کو محفوظ کریں</string>
-    <string name="label_SaveInstruct">ایکسچینج مکمل کریں! آپ کی ایڈریس بک کو بچانے کے لئے اراکین کے اعداد و شمار کو منتخب کریں:</string>
+    <string name="label_SaveInstruct">محفوظ رابطوں کو بچانے کے لئے \'درآمد\' نل تو، آپ کو آپ کی ایڈریس بک میں اپ ڈیٹ کرنا چاہتے رابطے کی جانچ پڑتال کریں:</string>
     <string name="label_seconds">%d چلیں</string>
     <string name="label_selectLabel">منتخب لیبل</string>
     <string name="label_SelectRecip">منتخب وصول کنندہ</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">پھینکیں چابیاں</string>
     <string name="menu_TagListMessages">پیغامات</string>
     <string name="menu_UseAnother">ایک اور استعمال</string>
+    <string name="menu_UseContactPerson">رابطہ کریں \'%s\' کا استعمال کریں</string>
+    <string name="menu_UseNoContact">استعمال نام صرف</string>
+    <string name="menu_UseProfilePerson">کوائف \'%s\' کا استعمال کریں</string>
 
     <string name="prog_CollectingOthersCommitVerify">تمام ارکان کی طرف سے توثیق کے لئے انتظار کر رہے ہیں…</string>
     <string name="prog_CollectingOthersItems">تمام صارفین کے ساتھ شامل کرنے کے لئے انتظار کر رہے…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">کی طرف سے فراہم زبانیں:</string>
     <string name="text_RelatedSearchTerms">متعلقہ اصطلاحات:</string>
     <string name="text_Requirements">کے تقاضے:\n1. 2 آلات کی ایک کم از کم پر انسٹال ہونا ضروری ہے.\n2. ایک انٹرنیٹ کنکشن فعال ہونا ضروری ہے.</string>
+    <string name="text_SourceCodeRepo">کھلا ماخذ: %s</string>
     <string name="text_WhatsNew">- استحکام اصلاحات.</string>
 
     <string name="title_About">کے بارے میں</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">ہوم</string>
     <string name="title_MessageDetail">پیغام</string>
     <string name="title_Messages">پیغامات</string>
-    <string name="title_MyIdentity">میری شناخت</string>
+    <string name="title_MyIdentity">ذاتی رابطہ</string>
     <string name="title_NotifyFileAvailable">دستیاب SafeSlinger پیغام</string>
     <string name="title_NotifyMulFileAvailable">دستیاب %d SafeSlinger پیغامات</string>
     <string name="title_passphrase">پاس فریز</string>

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Est Lorem ipsum dolor cursu recte.</string>
     <string name="error_WebCancelledByUser">Aliquam ornare tempus remittuntur tibi petitionem.</string>
 
+    <string name="help_find">Praesent id velit, ut te ad commutare cum aliis. ICTUS \'Actum\' ipsum effectum.</string>
     <string name="help_home">Permutare identitatem notitia accumsan omnia prope vel phone users. In interdum incipias, et ipsum non est sedatus contactus notitia commutationem.</string>
     <string name="help_identity_menu"> Item alio notitia ad identitatem\n\nUt in elit ipsum, cum percussoque in nomine tuo. Hoc a te, a menu ut sino vos, Edit, contact vestri: New Lorem, ad contactum, aut alia utendum, ante.</string>
     <string name="help_Messages">Haec verba proferat, sunt omnia, et quae sunt affectiones quae tractari possunt.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">exspirat %s</string>
     <string name="label_expiresIn">transit in</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Da nomen tibi cum aliis communicare, ut secure:</string>
     <string name="label_FirstName">Lorem ipsum</string>
-    <string name="label_Home">Duis ac aliquam partem vis ICTUS inciperet commutata parata aliis permutare.</string>
+    <string name="label_Home">ICTUS nomen contactus notitia, addere, nec auferre, quis items vis ad participes, et ICTUS \'mutationis incipit, cum alii ad commutationes faciendas,</string>
     <string name="label_hometag">Lorem ipsum</string>
     <string name="label_hours">%d horas</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud possit. ICTUS \' Actum \' ipsum effectum.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger tergum moram</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Nisi augue</string>
-    <string name="label_SaveInstruct">Imple Exchange; Lorem ipsum dolor ut, nisi tuam partem libri:</string>
+    <string name="label_SaveInstruct">Reprehendo tactus in te volo ut update vestri oratio libro et ICTUS, Import: ut evadant, nisi secura;</string>
     <string name="label_seconds">%d secundis</string>
     <string name="label_selectLabel">Donec lobortis</string>
     <string name="label_SelectRecip">Select Recipient</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Non quis fuerim? fundæ</string>
     <string name="menu_TagListMessages">Nuntius</string>
     <string name="menu_UseAnother">Aliquam Alia</string>
+    <string name="menu_UseContactPerson">Aliquam erat volutpat \'%s,</string>
+    <string name="menu_UseNoContact">Nomen tantum usu</string>
+    <string name="menu_UseProfilePerson">Praesent aliquam, %s,</string>
 
     <string name="prog_CollectingOthersCommitVerify">Lorem membra exspectare a…</string>
     <string name="prog_CollectingOthersItems">expectans users ad…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Provisum est a lingua:</string>
     <string name="text_RelatedSearchTerms">Aliquam rhoncus,</string>
     <string name="text_Requirements">Requisita:\nI. Necesse est velit quae ad tres saltem II modis.\nII. Agentibus tortor.</string>
+    <string name="text_SourceCodeRepo">patenti: %s</string>
     <string name="text_WhatsNew">- Ilia stabilitate.</string>
 
     <string name="title_About">About</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Lorem ipsum</string>
     <string name="title_MessageDetail">Nuntius</string>
     <string name="title_Messages">Nuntius</string>
-    <string name="title_MyIdentity">Identity</string>
+    <string name="title_MyIdentity">Aliquam erat volutpat</string>
     <string name="title_NotifyFileAvailable">Nuntius Nullam SafeSlinger</string>
     <string name="title_NotifyMulFileAvailable">%d nuntiorum SafeSlinger</string>
     <string name="title_passphrase">Passphrase</string>

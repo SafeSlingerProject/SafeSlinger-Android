@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kọntaktị data e formatted ọhụma.</string>
     <string name="error_WebCancelledByUser">Onye ọrụ na onye kagbuo ihe nkesa na- arịọ arịrịọ.</string>
 
+    <string name="help_find">Jiri ihe a na ihuenyo ka aha gị ịgbanwe ndị ọzọ. Mgbata na \'Emela\' button mgbe okokụre.</string>
     <string name="help_home">Ịgbanwe njirimara data, hụ na ihe niile ọrụ ndị dị nso ma ọ bụ na ekwentị. Na \' Malite Exchange \' button ga ịgbanwe naanị enyocha kọntaktị data.</string>
     <string name="help_identity_menu">\n\nỊ nwekwara ike ịgbanwe data onwe gị njirimara a ihuenyo site + Ọ na bọtịnụ gị aha ya. Nke a ga- egosipụta a menu ikwe ka ị \' Dezie \' kọntaktị gị, \' Mepụta New \' kọntaktị, ma ọ bụ, \' Jiri ọzọ \' kọntaktị.</string>
     <string name="help_Messages">Nke a na -egosipụta na ihuenyo niile n\'oge gara aga ozi, na Mgbakwụnye ndị ka na- maka nbudata.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">expires %s</string>
     <string name="label_expiresIn">expires ke</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Tinye aha ị chọrọ ka ndị ọzọ hụ mgbe-agwa ya okwu n\'enweghị:</string>
     <string name="label_FirstName">Akpa Aha</string>
-    <string name="label_Home">Lelee anaghị ị chọrọ ikere òkè na enweta \' Malite Exchange \' mgbe ndị ọzọ ndị dị njikere ịgbanwe.</string>
+    <string name="label_Home">Mgbata aha gị tinye kọntaktị ma ọ bụ wepu data, lelee anaghị ị chọrọ ikere òkè, na enweta \'Malite Exchange\' mgbe ndị ọzọ njikere igbanwe:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d awa</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud bụ na agbanyere ya. Mgbata na \' Emela \' button mgbe okokụre.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger ndabere -egbu oge</string>
     <string name="label_safeslingered">( SafeSlinger Direct Exchange )</string>
     <string name="label_SaveAccount">Chekwa na Akaụntụ</string>
-    <string name="label_SaveInstruct">Exchange Wet! Họrọ otu data ịzọpụta gị okwu akwụkwọ:</string>
+    <string name="label_SaveInstruct">Lelee kọntaktị ị chọrọ imelite gị okwu akwụkwọ ahụ, mgbe ahụ enweta \'Bubata\' ịzọpụta nchebe kọntaktị:</string>
     <string name="label_seconds">%d Sekọnd</string>
     <string name="label_selectLabel">Họrọ labeelu</string>
     <string name="label_SelectRecip">Họrọ Gosiri</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Slingi now</string>
     <string name="menu_TagListMessages">Ozi</string>
     <string name="menu_UseAnother">Jiri ọzọ</string>
+    <string name="menu_UseContactPerson">Jiri Mkpọtụrụ \'%s\'</string>
+    <string name="menu_UseNoContact">Jiri Aha Nani</string>
+    <string name="menu_UseProfilePerson">Jiri Profaịlụ \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">na-eche maka nkwenye niile so…</string>
     <string name="prog_CollectingOthersItems">na-eche maka ihe niile ọrụ isonyere…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Asụsụ nye site na:</string>
     <string name="text_RelatedSearchTerms">Metụtara Okwu:</string>
     <string name="text_Requirements">Chọrọ:\n1. A ga-arụnyere na nke kacha nta 2 ngwaọrụ.\n2. Njikọ Ịntanetị ga-arụsi ọrụ ike.</string>
+    <string name="text_SourceCodeRepo">oghe si: %s</string>
     <string name="text_WhatsNew">- Kwụsie ike fixes.</string>
 
     <string name="title_About">Banyere</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Ozi</string>
     <string name="title_Messages">Ozi</string>
-    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_MyIdentity">Personal kọntaktị</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Ozi E Nwere</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Ozi E Nwere</string>
     <string name="title_passphrase">Passphrase</string>

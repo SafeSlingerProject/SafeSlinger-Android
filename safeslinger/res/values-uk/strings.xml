@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Контактні дані відформатована неправильно.</string>
     <string name="error_WebCancelledByUser">Користувач скасував запит сервера.</string>
 
+    <string name="help_find">Використовуйте цей екран, щоб встановити своє ім\'я для обміну з іншими. Натисніть кнопку \'Готово\', коли закінчите.</string>
     <string name="help_home">Для обміну даними посвідчень, гарантувати, що всі користувачі знаходяться неподалік або по телефону. Кнопка \' почати Exchange? Обміняють тільки перевірені контактні дані.</string>
     <string name="help_identity_menu">\n\nВи також можете змінити особисті дані про вашої особистості на цьому екрані, натиснувши на кнопку з вашим ім\'ям. Це відобразить меню, що дозволяє \'Edit\' ваш контакт, \' Створити новий \' контакт, або «Використовуйте другий \' контакт.</string>
     <string name="help_Messages">На цьому екрані відображається всі минулі повідомлення та вкладення, які все ще доступні для скачування.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">закінчується %s</string>
     <string name="label_expiresIn">минає в</string>
     <string name="label_FileNameHint">Назва файлу</string>
+    <string name="label_FindInstruct">Введіть ім\'я ви хочете, щоб інші бачили при спілкуванні надійно:</string>
     <string name="label_FirstName">Ім\'я</string>
-    <string name="label_Home">Перевірити товари, які ви хочете поділитися, і натисніть \' Почати Обмін \', коли інші готові обміняти.</string>
+    <string name="label_Home">Натисніть на своє ім\'я, щоб додати або видалити контактні дані, перевірити елементи, які ви хотіли б поділитися, і натисніть \'Почати Обмін\', коли інші готові обміну:</string>
     <string name="label_hometag">Додому</string>
     <string name="label_hours">%d годин</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud включена. Натисніть кнопку \' Готово \', коли закінчите.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger резервного копіювання з затримкою</string>
     <string name="label_safeslingered">(SafeSlinger Прямий обмін)</string>
     <string name="label_SaveAccount">Зберегти запис</string>
-    <string name="label_SaveInstruct">Обмін Complete! Виберіть дані-члени зберегти в адресній книзі:</string>
+    <string name="label_SaveInstruct">Перевірте контакти, які необхідно оновити у вашій адресній книзі, потім натисніть \'Імпорт\', щоб зберегти надійні контакти:</string>
     <string name="label_seconds">%d секунд</string>
     <string name="label_selectLabel">Виберіть етикетки</string>
     <string name="label_SelectRecip">Виберіть Одержувач</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Слінг Ключі</string>
     <string name="menu_TagListMessages">Повідомлення</string>
     <string name="menu_UseAnother">Використовуйте Інший</string>
+    <string name="menu_UseContactPerson">Використовуйте контакт \'%s\'</string>
+    <string name="menu_UseNoContact">Використовувати ім\'я тільки</string>
+    <string name="menu_UseProfilePerson">Використовуйте Профіль \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">чекає перевірки від усіх членів…</string>
     <string name="prog_CollectingOthersItems">чекає всі користувачі приєднатися…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Мови, надані:</string>
     <string name="text_RelatedSearchTerms">Пов\'язані терміни:</string>
     <string name="text_Requirements">Вимоги:\n1. Повинен бути встановлений на мінімум 2 пристрої.\n2. Інтернет-з\'єднання має бути активним.</string>
+    <string name="text_SourceCodeRepo">з відкритим вихідним кодом: %s</string>
     <string name="text_WhatsNew">- Стабільність виправлення.</string>
 
     <string name="title_About">Про</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Додому</string>
     <string name="title_MessageDetail">Повідомлення</string>
     <string name="title_Messages">Повідомлення</string>
-    <string name="title_MyIdentity">Мій стиль</string>
+    <string name="title_MyIdentity">Особистий контакт</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Повідомлення Доступний</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Повідомлення Доступні</string>
     <string name="title_passphrase">Ключова фраза</string>

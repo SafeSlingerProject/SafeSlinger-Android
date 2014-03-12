@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Контакт податоци е форматирана погрешно.</string>
     <string name="error_WebCancelledByUser">Корисникот откажани серверот барање.</string>
 
+    <string name="help_find">Го користите овој екран да го поставите вашето име за размена со другите. Допрете го копчето \'Готово\' кога заврши.</string>
     <string name="help_home">Да се ​​разменуваат идентитет податоци, се обезбеди сите корисници се во близина или на телефон. Копчето \' Започни Размена \' ќе разменат само на проверени податоци за контакт.</string>
     <string name="help_identity_menu">\n\nМожете исто така може да се промени на личните податоци за вашиот идентитет на овој екран со прислушување на копчето со вашето име. Ова ќе прикаже менито што ќе ви овозможи да се \'Уреди\' Вашиот контакт, \'Креирај нова \' контакт, или \' користите друг \' контакт.</string>
     <string name="help_Messages">Овој екран прикажува сите минати пораки, и додатоци кои се уште се достапни за преземање.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">истекува %s</string>
     <string name="label_expiresIn">истекува во</string>
     <string name="label_FileNameHint">Име на датотеката</string>
+    <string name="label_FindInstruct">Внесете го името што сакате другите да го видат при комуникација безбедно:</string>
     <string name="label_FirstName">Име</string>
-    <string name="label_Home">Проверете ставки сакате да ги споделат и да го допрете \' Започнете Размена \', кога други се подготвени да ги разменат.</string>
+    <string name="label_Home">Допрете го вашето име да додадете или отстраните контакт податоци, проверете ставки сакате да ги споделите, и допрете \'Започнете Размена\', кога други се подготвени за размена на:</string>
     <string name="label_hometag">Дома</string>
     <string name="label_hours">%d часа</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud е овозможено. Допрете го копчето \' Готово \' кога заврши.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger резерви одложен</string>
     <string name="label_safeslingered">(SafeSlinger директна размена)</string>
     <string name="label_SaveAccount">Зачувај сметка</string>
-    <string name="label_SaveInstruct">Размена заврши! Изберете членка податоци да се спаси на вашиот адресар:</string>
+    <string name="label_SaveInstruct">Проверете ги контактите што сакате да се ажурира во вашиот адресар, а потоа допрете \'Увоз\' да се спаси сигурен контакти:</string>
     <string name="label_seconds">%d секунди</string>
     <string name="label_selectLabel">Изберете етикета</string>
     <string name="label_SelectRecip">Изберете примач</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Прашка клучеви</string>
     <string name="menu_TagListMessages">Пораки</string>
     <string name="menu_UseAnother">Користите друг</string>
+    <string name="menu_UseContactPerson">Употреба Контактирајте \'%s\'</string>
+    <string name="menu_UseNoContact">Употреба Име Само</string>
+    <string name="menu_UseProfilePerson">Користете Профил \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">чекање за верификација од сите членови…</string>
     <string name="prog_CollectingOthersItems">чека за сите корисници да се приклучат…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Јазици обезбедена од:</string>
     <string name="text_RelatedSearchTerms">Поврзани Услови:</string>
     <string name="text_Requirements">Барања:\n1. Мора да биде инсталиран на минимум 2 уреди.\n2. Интернет конекција мора да бидат активни.</string>
+    <string name="text_SourceCodeRepo">Open Source: %s</string>
     <string name="text_WhatsNew">- Стабилност поправки.</string>
 
     <string name="title_About">За</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Дома</string>
     <string name="title_MessageDetail">Порака</string>
     <string name="title_Messages">Пораки</string>
-    <string name="title_MyIdentity">Мојот идентитет</string>
+    <string name="title_MyIdentity">Лична Контакт</string>
     <string name="title_NotifyFileAvailable">SafeSlinger порака Достапно</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger пораки достапни</string>
     <string name="title_passphrase">Лозинка</string>

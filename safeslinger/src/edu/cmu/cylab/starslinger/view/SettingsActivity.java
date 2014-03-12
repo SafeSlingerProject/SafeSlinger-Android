@@ -48,11 +48,11 @@ import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockPreferenceActivity;
 
-import edu.cmu.cylab.keyslinger.lib.AccountData;
 import edu.cmu.cylab.starslinger.ConfigData;
 import edu.cmu.cylab.starslinger.ConfigData.extra;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlinger;
+import edu.cmu.cylab.starslinger.model.AccountData;
 import edu.cmu.cylab.starslinger.model.IntegerListPreference;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 import edu.cmu.cylab.starslinger.util.StorageOptions;

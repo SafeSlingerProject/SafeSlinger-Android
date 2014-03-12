@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Контакт подаци су неправилно форматирана.</string>
     <string name="error_WebCancelledByUser">Корисник је отказао захтев сервера.</string>
 
+    <string name="help_find">Користите овај екран да подесите своје име за размену са другима. Додирните дугме \'Доне\' када завршите.</string>
     <string name="help_home">За размену личних података, обезбедити сви корисници су у близини или на телефон. Дугме \' Бегин Берзе\' ће размењивати само проверене контакт податке.</string>
     <string name="help_identity_menu">\n\nТакође можете променити личне податке о свом идентитету на овом екрану додиром на дугме са вашим именом. Ово ће приказати мени који вам омогућава да \' Измени \' свој контакт, \' Цреате нев\' контакт, или \' Користи још један\' контакт.</string>
     <string name="help_Messages">Овај екран приказује све досадашње поруке и прилоге који су још увек доступни за преузимање.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">истиче %s</string>
     <string name="label_expiresIn">истиче у</string>
     <string name="label_FileNameHint">Филе Наме</string>
+    <string name="label_FindInstruct">Унесите име желите другима да виде када комуницирате безбедно:</string>
     <string name="label_FirstName">Име</string>
-    <string name="label_Home">Проверите ставке које желите да делите и додирните \' Бегин Екцханге \' када су други спремни да размене.</string>
+    <string name="label_Home">Додирните име да бисте додали или уклонили контакт податке, проверите ставке које желите да делите, а затим додирните \'Бегин Екцханге \'када су други спремни да размене:</string>
     <string name="label_hometag">Дом</string>
     <string name="label_hours">%d сати</string>
     <string name="label_iCloudEnable">СафеСлингер иЦлоуд је омогућен. Додирните дугме \' Доне \' када завршите.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger бекап одложено</string>
     <string name="label_safeslingered">(SafeSlinger директну размену)</string>
     <string name="label_SaveAccount">Сачувајте рачун</string>
-    <string name="label_SaveInstruct">Екцханге Цомплете! Изаберите податке чланице да сачувате у свој адресар:</string>
+    <string name="label_SaveInstruct">Проверите контакте које желите да ажурирате у свој адресар, а затим додирните \'Увези\' да спасе сигурне контакте:</string>
     <string name="label_seconds">%d секунди</string>
     <string name="label_selectLabel">Избор ознака</string>
     <string name="label_SelectRecip">Изаберите примаоца</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Слинг Тастери</string>
     <string name="menu_TagListMessages">Поруке</string>
     <string name="menu_UseAnother">Користите Други</string>
+    <string name="menu_UseContactPerson">Користите контакт \'%s\'</string>
+    <string name="menu_UseNoContact">Користите само име</string>
+    <string name="menu_UseProfilePerson">Користите профил \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">чека верификацију од свих чланова…</string>
     <string name="prog_CollectingOthersItems">чека свим корисницима да се придруже…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Језици које пружа:</string>
     <string name="text_RelatedSearchTerms">Релатед Термс:</string>
     <string name="text_Requirements">Захтеви:\n1. Мора бити инсталиран на минимум 2 уређаја.\n2. Интернет конекција мора бити активна.</string>
+    <string name="text_SourceCodeRepo">Опен Соурце: %s</string>
     <string name="text_WhatsNew">- Исправке стабилност.</string>
 
     <string name="title_About">Око</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Дом</string>
     <string name="title_MessageDetail">Порука</string>
     <string name="title_Messages">Поруке</string>
-    <string name="title_MyIdentity">Мој идентитет</string>
+    <string name="title_MyIdentity">Лични контакт</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Порука Доступно</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Поруке Доступне</string>
     <string name="title_passphrase">Фразу</string>

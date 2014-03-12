@@ -22,24 +22,34 @@
  * THE SOFTWARE.
  */
 
-package edu.cmu.cylab.keyslinger.lib;
+package edu.cmu.cylab.starslinger.model;
 
-public class SaveContact {
+public class RawContactData {
+    private String mName = null;
+    private String mType = null;
+    private String mRawContactId = null;
 
-    private String mName;
-    private byte[] mAvatar;
-
-    public SaveContact(String name, byte[] avatar) {
+    public RawContactData(String name, String accountType, String rawContactId) {
         mName = name;
-        mAvatar = avatar;
+        mType = accountType;
+        mRawContactId = rawContactId;
     }
 
     public String getName() {
         return mName;
     }
 
-    public byte[] getAvatar() {
-        return mAvatar;
+    public String getType() {
+        return mType;
+    }
+
+    public String getRawContactId() {
+        return mRawContactId;
+    }
+
+    @Override
+    public String toString() {
+        return mName;
     }
 
 }

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kontak data iki format salah.</string>
     <string name="error_WebCancelledByUser">Anggota dibatalake server request.</string>
 
+    <string name="help_find">Gunakake layar iki kanggo nyetel jeneng ijolan karo liyane. Tutul tombol \'Rampung nalika rampung.</string>
     <string name="help_home">Ijolan identitas data, njamin kabeh kedhaftar ana toko utawa ing telpon. Tombol \' Begin Exchange \' bakal ijolan namung data kontak dicenthang.</string>
     <string name="help_identity_menu">\n\nSampeyan uga ngganti data pribadhi babagan ciri ing layar iki kanthi nutul tombol karo jeneng. Iki bakal nampilake menu ngijini sampeyan kanggo \' Sunting \' kontak \' Gawe anyar \' kontak, utawa \' Gunakake Liyane \' kontak.</string>
     <string name="help_Messages">Layar iki nampilake pesen-pesen kabeh kepungkur, lan lampiran sing isih kasedhiya kanggo download.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">kadaluwarsa %s</string>
     <string name="label_expiresIn">kadaluwarsa ing</string>
     <string name="label_FileNameHint">Gambar Jeneng</string>
+    <string name="label_FindInstruct">Ketik jeneng sing pengin liyane kanggo ndeleng nalika sesambungan aman:</string>
     <string name="label_FirstName">Jeneng pisanan</string>
-    <string name="label_Home">Mriksa item sing pengin kanggo enggo bareng lan tunyuk \' Begin Exchange nalika wong siyap ijolan.</string>
+    <string name="label_Home">Tunyuk jeneng kanggo nambah utawa mbusak data kontak, priksa item sing pengin enggo bareng, banjur tutul \'Begin Exchange nalika wong sing siap ngganti:</string>
     <string name="label_hometag">Ngarep</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud wis aktif. Tutul tombol \' Rampung nalika rampung.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger serep telat</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Nyimpen akun</string>
-    <string name="label_SaveInstruct">Exchange Complete! Pilih data anggota kanggo nyimpen buku alamat:</string>
+    <string name="label_SaveInstruct">Mriksa kontak sing pengin digunakake kanggo nganyari ing buku alamat, banjur tutul \'Impor\' kanggo nyimpen aman kontak:</string>
     <string name="label_seconds">%d detik</string>
     <string name="label_selectLabel">Pilih label</string>
     <string name="label_SelectRecip">Pilih panrima</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Tali Keys</string>
     <string name="menu_TagListMessages">Pesen</string>
     <string name="menu_UseAnother">Gunakake Liyane</string>
+    <string name="menu_UseContactPerson">Gunakake Kontak \'%s\'</string>
+    <string name="menu_UseNoContact">Nggunakake Jeneng Mung</string>
+    <string name="menu_UseProfilePerson">Gunakake Profil \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">nunggu verifikasi saka kabeh anggota…</string>
     <string name="prog_CollectingOthersItems">nunggu kabeh kedhaftar kanggo nggabungake…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Basa sing diwenehake dening:</string>
     <string name="text_RelatedSearchTerms">Sarat Related:</string>
     <string name="text_Requirements">Requirements:\n1. Kudu diinstal ing minimal 2 piranti.\n2. Sambungan Internet kudu aktif.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Stabilitas koreksi.</string>
 
     <string name="title_About">Babagan</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Ngarep</string>
     <string name="title_MessageDetail">Pesen</string>
     <string name="title_Messages">Pesen</string>
-    <string name="title_MyIdentity">Pendhaftaran Identity</string>
+    <string name="title_MyIdentity">Kontak pribadi</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Pesen Cepak</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Pesen Cepak</string>
     <string name="title_passphrase">Frasa sandhi</string>

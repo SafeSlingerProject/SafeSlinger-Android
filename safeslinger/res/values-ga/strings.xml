@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Cuireadh formáidithe sonraí Teagmháil mícheart.</string>
     <string name="error_WebCancelledByUser">Úsáideoir ceal iarraidh freastalaí.</string>
 
+    <string name="help_find">Bain úsáid as an scáileán a leagan d\'ainm a mhalartú le daoine eile. Beartaíonn an cnaipe \'Arna dhéanamh\' nuair críochnaithe.</string>
     <string name="help_home">Chun sonraí aitheantais a mhalartú, a chinntiú go bhfuil gach úsáideoir in aice láimhe nó ar an teileafón. Beidh an cnaipe an \' Tosaigh Malartú \' a mhalartú ach amháin na sonraí teagmhála a sheiceáil.</string>
     <string name="help_identity_menu">\n\nIs féidir leat sonraí pearsanta faoi do chéannacht ar an scáileán a athrú freisin ag cnagadh ar an gcnaipe le do ainm. Beidh sé seo a thaispeáint roghchlár a ligeann duit \'Cuir in eagar \' do teagmháil a dhéanamh, \' Cruthaigh Nua \' teagmhála, nó \' Bain úsáid eile \' teagmhála.</string>
     <string name="help_Messages">Taispeánann an scáileán gach teachtaireacht atá caite, agus ceangaltáin atá fós ar fáil le híoslódáil.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">éag %s</string>
     <string name="label_expiresIn">éag i</string>
     <string name="label_FileNameHint">Comhad Ainm</string>
+    <string name="label_FindInstruct">Cuir isteach an t-ainm mian leat daoine eile a fheiceáil nuair a cumarsáid a dhéanamh go daingean:</string>
     <string name="label_FirstName">Céad Ainm</string>
-    <string name="label_Home">Nithe ​​is mian leat a roinnt agus sconna \' Tosaigh Malartú \' Seiceáil nuair a bhíonn daoine eile réidh a mhalartú.</string>
+    <string name="label_Home">Beartaíonn d\'ainm a chur leis nó a bhaint sonraí teagmhála, nithe is mian leat a roinnt a sheiceáil, agus sconna \'Tosaigh Malartú\' nuair a bhíonn daoine eile réidh chun malartú:</string>
     <string name="label_hometag">Baile</string>
     <string name="label_hours">%d uair an chloig</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud atá cumasaithe. Beartaíonn an cnaipe \' Arna dhéanamh \' nuair críochnaithe.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger cúltaca moill</string>
     <string name="label_safeslingered">(SafeSlinger Malartú Díreach)</string>
     <string name="label_SaveAccount">Sábháil Cuntas</string>
-    <string name="label_SaveInstruct">Malartú Comhlánaigh! Roghnaigh shonraí ball a shábháil ar do leabhar seoltaí:</string>
+    <string name="label_SaveInstruct">Teagmhálacha is mian leat a thabhairt cothrom le dáta i do leabhar seoltaí Seiceáil, ansin Beartaíonn \'Iompórtáil\' a shábháil teagmhálacha slán:</string>
     <string name="label_seconds">%d soicind</string>
     <string name="label_selectLabel">Roghnaigh lipéad</string>
     <string name="label_SelectRecip">Roghnaigh Faighteoir</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Eochracha Sling</string>
     <string name="menu_TagListMessages">Teachtaireachtaí</string>
     <string name="menu_UseAnother">Bain úsáid as eile</string>
+    <string name="menu_UseContactPerson">Úsáid Teagmháil \'%s\'</string>
+    <string name="menu_UseNoContact">Úsáid Ainm Amháin</string>
+    <string name="menu_UseProfilePerson">Bain úsáid as Próifíl \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">ag fanacht le fíorú ó gach ball…</string>
     <string name="prog_CollectingOthersItems">fanacht do gach úsáideoir a bheith páirteach…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Teangacha ar fáil ag:</string>
     <string name="text_RelatedSearchTerms">Téarmaí ghaolmhara:</string>
     <string name="text_Requirements">Riachtanais:\n1. Ní mór a bheith suiteáilte ar a laghad 2 feistí.\n2. Ní mór nasc Idirlín a bheith gníomhach.</string>
+    <string name="text_SourceCodeRepo">foinse oscailte: %s</string>
     <string name="text_WhatsNew">- Ceartúcháin Cobhsaíochta.</string>
 
     <string name="title_About">Maidir</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Baile</string>
     <string name="title_MessageDetail">Teachtaireacht</string>
     <string name="title_Messages">Teachtaireachtaí</string>
-    <string name="title_MyIdentity">Mo Aitheantas</string>
+    <string name="title_MyIdentity">Teagmháil Phearsanta</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Teachtaireacht Fáil</string>
     <string name="title_NotifyMulFileAvailable">%d Teachtaireachtaí SafeSlinger Fáil</string>
     <string name="title_passphrase">Frása Faire</string>

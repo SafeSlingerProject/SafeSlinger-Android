@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">సంప్రదించండి డేటా తప్పుగా ఫార్మాట్ చేశారు.</string>
     <string name="error_WebCancelledByUser">వాడుకరి సర్వర్ అభ్యర్థనను రద్దు.</string>
 
+    <string name="help_find">ఇతరులతో మార్పిడి మీ పేరు సెట్ తెరమీద ఉపయోగించండి. పూర్తవగానే \'డన్\' బటన్ నొక్కండి.</string>
     <string name="help_home">గుర్తింపు డేటా మార్పిడి, యూజర్లు సమీపంలోని లేదా ఫోన్ ఉండేలా. \' ప్రారంభం SWF ఎక్సే్ఛంజీ బటన్ తనిఖీ పరిచయం డేటా మార్పిడి చేస్తుంది.</string>
     <string name="help_identity_menu">\n\nమీరు కూడా మీ పేరుతో బటన్ నొక్కడం ద్వారా తెరమీద మీ ఐడెంటిటీ వ్యక్తిగత డేటా మార్చవచ్చు. మీరు \' మార్చు \' మీ పరిచయం, పరిచయం \' న్యూ సృష్టించు \', లేదా పరిచయం \' మరో ఉపయోగించండి \' అనుమతిస్తుంది ఒక మెను ప్రదర్శిస్తుంది.</string>
     <string name="help_Messages">ఈ తెర అన్ని గత సందేశాలను, మరియు ఇప్పటికీ డౌన్లోడ్ కోసం అందుబాటులో జోడింపులను ప్రదర్శిస్తుంది.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s గడువు</string>
     <string name="label_expiresIn">లో ముగుస్తుంది</string>
     <string name="label_FileNameHint">దస్త్రం పేరు</string>
+    <string name="label_FindInstruct">పేరు నమోదు మీరు సురక్షితంగా తెలుసుకొనేందుకు చూడటానికి ఇతరులు అనుకుంటున్నారా:</string>
     <string name="label_FirstName">మొదటి పేరు</string>
-    <string name="label_Home">మీరు భాగస్వామ్యం \' ఎక్స్చేంజ్ ప్రారంభం SWF \' కార్చు అనుకుంటున్నారా అంశాలను తనిఖీ ఇతరులు మార్పిడి సిద్ధంగా ఉన్నప్పుడు.</string>
+    <string name="label_Home">జోడించడానికి లేదా తొలగించడానికి పరిచయం డేటా, మీరు భాగస్వామ్యం అనుకుంటున్నారా అంశాలను తనిఖీ, మరియు నొక్కండి మీ పేరు పంపు \'ఎక్స్చేంజ్ ప్రారంభం SWF\' ఇతరులు మార్పిడి సిద్ధంగా ఉన్నప్పుడు:</string>
     <string name="label_hometag">హోం</string>
     <string name="label_hours">%d గంటల</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ప్రారంభించబడింది. పూర్తవగానే \' డన్ \' బటన్ నొక్కండి.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">ఆలస్యం SafeSlinger బ్యాకప్</string>
     <string name="label_safeslingered">(SafeSlinger డైరెక్ట్ ఎక్స్చేంజ్)</string>
     <string name="label_SaveAccount">ఖాతా సేవ్</string>
-    <string name="label_SaveInstruct">మార్పిడి పూర్తి! మీ చిరునామా పుస్తకం సేవ్ సభ్యుల డేటా ఎంచుకోండి:</string>
+    <string name="label_SaveInstruct">సురక్షిత పరిచయాలను సేవ్ \'దిగుమతి\' నొక్కండి, మీరు మీ చిరునామా పుస్తకం లో నవీకరించాలనుకున్న పరిచయాలను తనిఖీ:</string>
     <string name="label_seconds">%d సెకన్లు</string>
     <string name="label_selectLabel">ఎంచుకోండి లేబుల్</string>
     <string name="label_SelectRecip">స్వీకర్త ఎంచుకోండి</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">స్లింగ్ కీస్</string>
     <string name="menu_TagListMessages">సందేశాలు</string>
     <string name="menu_UseAnother">మరో ఉపయోగించండి</string>
+    <string name="menu_UseContactPerson">సంప్రదించండి \'%s\' ఉపయోగించండి</string>
+    <string name="menu_UseNoContact">వాడుక పేరు మాత్రమే</string>
+    <string name="menu_UseProfilePerson">ప్రొఫైల్ \'%s\' ఉపయోగించండి</string>
 
     <string name="prog_CollectingOthersCommitVerify">అన్ని సభ్యులు నుండి ధ్రువీకరణ కోసం వేచి…</string>
     <string name="prog_CollectingOthersItems">యూజర్లు చేరడానికి కోసం వేచి…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">అందించిన భాషలు:</string>
     <string name="text_RelatedSearchTerms">సంబంధిత నిబంధనలు:</string>
     <string name="text_Requirements">అవసరాలు:\n1. 2 పరికరాల కనీసం ఇన్స్టాల్ చేయాలి.\n2. ఒక ఇంటర్నెట్ కనెక్షన్ యాక్టివ్గా ఉండాలి.</string>
+    <string name="text_SourceCodeRepo">ఓపెన్ సోర్స్: %s</string>
     <string name="text_WhatsNew">- స్టెబిలిటీ పరిష్కారాలను.</string>
 
     <string name="title_About">గురించి</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">హోం</string>
     <string name="title_MessageDetail">మెసేజ్</string>
     <string name="title_Messages">సందేశాలు</string>
-    <string name="title_MyIdentity">నా గుర్తింపు</string>
+    <string name="title_MyIdentity">వ్యక్తిగత సంప్రదించండి</string>
     <string name="title_NotifyFileAvailable">అందుబాటులో SafeSlinger మెసేజ్</string>
     <string name="title_NotifyMulFileAvailable">అందుబాటులో %d SafeSlinger సందేశాలు</string>
     <string name="title_passphrase">పాస్ఫ్రేజ్</string>

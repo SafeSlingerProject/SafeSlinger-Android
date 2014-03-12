@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kapcsolat adatok formázása helytelen.</string>
     <string name="error_WebCancelledByUser">Felhasználó törölt szerver kérést.</string>
 
+    <string name="help_find">Ezen a képernyőn állítsa be a nevet cserélni másokkal. Érintse meg a \'Kész\' gombra, amikor befejezte.</string>
     <string name="help_home">A csere azonosító adatok, hogy minden felhasználó a közelben, vagy a telefon. A \' Begin csere\' gomb csere csak az ellenőrzött elérhetőségeit.</string>
     <string name="help_identity_menu">\n\nÖn is megváltoztathatja személyes adatait az Ön személyazonosságát a képernyőn megérinti a gombot a neved. Ekkor megjelenik egy menü, amely lehetővé teszi, hogy \'Szerkesztés\' a kapcsolat, \' Új \' kapcsolatot, vagy \' használata másik\' kapcsolatot.</string>
     <string name="help_Messages">Ez a képernyő összes eddigi üzeneteket és csatolmányokat, hogy továbbra is letölthető.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">lejár %s</string>
     <string name="label_expiresIn">lejár</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Írja be a kívánt nevet mások is lássák kommunikáció során biztonságosan:</string>
     <string name="label_FirstName">Keresztnév</string>
-    <string name="label_Home">Gyűjtsön termékeket szeretné megosztani, és érintse meg a \' Begin csere\', ha mások készek cserélni.</string>
+    <string name="label_Home">Érintse meg a neved, hogy hozzáadni vagy eltávolítani elérhetőségi adatok, ellenőrizze elemeket szeretné megosztani, és érintse meg a \'Begin csere\', amikor mások készek csere:</string>
     <string name="label_hometag">Otthon</string>
     <string name="label_hours">%d óra</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud engedélyezve van. Érintse meg a\' Kész\' gombra, amikor befejezte.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger mentés késleltetett</string>
     <string name="label_safeslingered">(SafeSlinger Közvetlen csere)</string>
     <string name="label_SaveAccount">Mentés Fiók</string>
-    <string name="label_SaveInstruct">Az Exchange Töltse ki! Válassza tag adatokat menteni a címjegyzék:</string>
+    <string name="label_SaveInstruct">Ellenőrizze kapcsolatokat szeretné frissíteni a címjegyzékben, majd érintse meg az \'Import\' menteni biztonságos kapcsolatot:</string>
     <string name="label_seconds">%d másodperc</string>
     <string name="label_selectLabel">Válassza ki a címke</string>
     <string name="label_SelectRecip">Válassza ki a Címzett</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Üzenetek</string>
     <string name="menu_UseAnother">Használjon más</string>
+    <string name="menu_UseContactPerson">Használat szabályai Kapcsolat \'%s\'</string>
+    <string name="menu_UseNoContact">Use Name Only</string>
+    <string name="menu_UseProfilePerson">Használja a Profil \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">vár ellenőrzés minden tagja…</string>
     <string name="prog_CollectingOthersItems">várja minden felhasználó csatlakozhat…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Nyelvek által:</string>
     <string name="text_RelatedSearchTerms">Kapcsolódó kifejezések:</string>
     <string name="text_Requirements">Szükséglet:\n1. Kell telepíteni minimum 2 eszközök.\n2. Az Internet-kapcsolat aktívnak kell lennie.</string>
+    <string name="text_SourceCodeRepo">Open Source: %s</string>
     <string name="text_WhatsNew">- Stabilitás javítás.</string>
 
     <string name="title_About">Körülbelül</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Otthon</string>
     <string name="title_MessageDetail">Üzenet</string>
     <string name="title_Messages">Üzenetek</string>
-    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_MyIdentity">Személyes kapcsolat</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Elérhető</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger üzenetek Elérhető</string>
     <string name="title_passphrase">Jelmondat</string>

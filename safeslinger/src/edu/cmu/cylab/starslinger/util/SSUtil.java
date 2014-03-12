@@ -33,6 +33,7 @@ import java.nio.charset.CharsetEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 import a_vcard.android.syncml.pim.vcard.ContactStruct;
 import a_vcard.android.syncml.pim.vcard.Name;
@@ -49,7 +50,6 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.webkit.MimeTypeMap;
-import edu.cmu.cylab.keyslinger.lib.KsConfig;
 import edu.cmu.cylab.starslinger.ConfigData;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlinger;
@@ -255,13 +255,12 @@ public class SSUtil {
         contact.name = new Name(recip.getName());
         contact.photoBytes = recip.getPhoto();
         contact.addContactmethod(android.provider.Contacts.KIND_IM,
-                android.provider.Contacts.ContactMethodsColumns.TYPE_HOME,
-                new String(KsConfig.finalEncode(SlingerIdentity.sidKey2DBKey(slinger).getBytes())),
+                android.provider.Contacts.ContactMethodsColumns.TYPE_HOME, new String(
+                        finalEncode(SlingerIdentity.sidKey2DBKey(slinger).getBytes())),
                 ConfigData.APP_KEY_PUBKEY, false);
-        contact.addContactmethod(
-                android.provider.Contacts.KIND_IM,
-                android.provider.Contacts.ContactMethodsColumns.TYPE_HOME,
-                new String(KsConfig.finalEncode(SlingerIdentity.sidPush2DBPush(slinger).getBytes())),
+        contact.addContactmethod(android.provider.Contacts.KIND_IM,
+                android.provider.Contacts.ContactMethodsColumns.TYPE_HOME, new String(
+                        finalEncode(SlingerIdentity.sidPush2DBPush(slinger).getBytes())),
                 ConfigData.APP_KEY_PUSHTOKEN, false);
 
         VCardComposer composer = new VCardComposer();
@@ -373,6 +372,47 @@ public class SSUtil {
                 return ctx.getString(R.string.label_iOS);
             default:
                 return ctx.getString(R.string.label_undefinedTypeLabel);
+        }
+    }
+
+    /***
+     * Ensure arbitrary data is only Base 64 encoded once.
+     */
+    public static byte[] finalEncode(byte[] src) {
+        byte[] dest = null;
+        if (isArrayByteBase64(src)) {
+            dest = src;
+        } else {
+            dest = Base64.encode(src, Base64.NO_WRAP);
+        }
+        return dest;
+    }
+
+    /***
+     * Ensure arbitrary data can only be Base 64 decoded once.
+     */
+    public static byte[] finalDecode(byte[] src) {
+        byte[] dest = null;
+        try {
+            dest = Base64.decode(src, Base64.NO_WRAP);
+        } catch (IllegalArgumentException e) {
+            return src;
+        }
+
+        if (!isArrayByteBase64(dest)) {
+            dest = src;
+        }
+        return dest;
+    }
+
+    private static boolean isArrayByteBase64(byte[] src) {
+        try {
+            String s = new String(src, "UTF-8");
+            final String base64Regex = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$";
+            return Pattern.matches(base64Regex, s);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

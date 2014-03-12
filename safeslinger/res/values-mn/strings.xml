@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Холбоо барих мэдээлэл буруу форматлагдсан байна.</string>
     <string name="error_WebCancelledByUser">Хэрэглэгчийн сервер хүсэлтээ цуцалсан.</string>
 
+    <string name="help_find">Бусадтай солилцох дүн таны хайсан нэрийг тогтоохын тулд энэ дэлгэцийн ашигла. Дуусахдаа \'Үүнийг\' товчлуур дээр дар.</string>
     <string name="help_home">Биеийн өгөгдөл солилцох тулд бүх хэрэглэгчид ойр, эсвэл утсаар эсэхийг шалгаарай. \' Эхлэх Биржийн \' товчийг л шалгаж холбоо барих мэдээлэл солилцох болно.</string>
     <string name="help_identity_menu">\n\nТа мөн нэрээр товчийг илрүүлэх замаар дэлгэцэн дээр таны биеийн тухай хувийн мэдээллийг өөрчилж болно. Энэ нь та \'Засах \' дүн таны хайсан холбоо, харилцаа холбоо \'шинэ үүсгэх \', эсвэл холбоо \' Өөр нэг ашигла \' боломж олгох цэсийг үзүүлэх болно.</string>
     <string name="help_Messages">Энэхүү дэлгэц бүхий л өнгөрсөн зурвас, одоо ч гэсэн татаж авах боломжтой байгаа хавсралтуудыг харуулна.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s хугацаа дуусахаас</string>
     <string name="label_expiresIn">онд дуусна</string>
     <string name="label_FileNameHint">Файлын нэр</string>
+    <string name="label_FindInstruct">Та нэрээ оруулна уу Та найдвартай дамжуулах үед харж бусдыг хүсвэл:</string>
     <string name="label_FirstName">Нэр</string>
-    <string name="label_Home">Хэрэв та хуваалцаж, \' Exchange эхлэх \' чагнахыг хүсэж эд зүйлсийг шалгана бусад солилцоход бэлэн байна гэсэн уг.</string>
+    <string name="label_Home">Нэмэх эсвэл устгах холбоо барих мэдээллийг та хуваалцахыг хүссэн эд зүйлсийг шалгаж холбох таны нэр дээр дар \'Exchange эхлэх\' Бусад хүмүүс солилцоход бэлэн байгаа үед:</string>
     <string name="label_hometag">Нүүр хуудас</string>
     <string name="label_hours">%d цаг</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud идэвхжүүлсэн байна. Дуусахдаа \' Үүнийг \' товчлуур дээр дар.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">Хойшлогдож SafeSlinger нөөц</string>
     <string name="label_safeslingered">( SafeSlinger Шууд бирж)</string>
     <string name="label_SaveAccount">Данс ивээх</string>
-    <string name="label_SaveInstruct">Валютын бөглөнө! Таны хаяг номноос хэмнэх гишүүн өгөгдлийг сонгоно уу:</string>
+    <string name="label_SaveInstruct">Найдвартай харилцаа холбоо аврахын тулд \'импортын\' холбох, дараа нь та нар номонд хаяг шинэчлэхийг хүсвэл харилцах шалгана:</string>
     <string name="label_seconds">%d секунд</string>
     <string name="label_selectLabel">Сонгох шошго</string>
     <string name="label_SelectRecip">Сонгох Хүлээн авагч</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling түлхүүрүүд</string>
     <string name="menu_TagListMessages">Мессеж</string>
     <string name="menu_UseAnother">Өөр нэг ашиглах</string>
+    <string name="menu_UseContactPerson">Харилцах \'%s \'ашиглах</string>
+    <string name="menu_UseNoContact">Ашиглах Нэр Зөвхөн</string>
+    <string name="menu_UseProfilePerson">Хувийн \'%s \'ашиглах</string>
 
     <string name="prog_CollectingOthersCommitVerify">бүх гишүүдийн нотолгоо хүлээж…</string>
     <string name="prog_CollectingOthersItems">бүх хэрэглэгчид нэгдэж хүлээж…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Өгсөн Хэл:</string>
     <string name="text_RelatedSearchTerms">Холбогдох нөхцөл:</string>
     <string name="text_Requirements">Тавигдах Шаардлага:\n1. 2 төхөөрөмжүүдийн хамгийн багадаа суусан байх ёстой.\n2. Интернет холболт идэвхтэй байх ёстой.</string>
+    <string name="text_SourceCodeRepo">нээлттэй эх сурвалж: %s</string>
     <string name="text_WhatsNew">- Тогтвортой байдлын засварууд.</string>
 
     <string name="title_About">Тухай</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Нүүр хуудас</string>
     <string name="title_MessageDetail">Зурвас илгээх</string>
     <string name="title_Messages">Мессеж</string>
-    <string name="title_MyIdentity">Миний Identity</string>
+    <string name="title_MyIdentity">Хувийн Холбоо барих</string>
     <string name="title_NotifyFileAvailable">Боломжит SafeSlinger зурвас</string>
     <string name="title_NotifyMulFileAvailable">Боломжит %d SafeSlinger Мессеж</string>
     <string name="title_passphrase">Нэвтрэх үгнүүдийг дахин дахин</string>

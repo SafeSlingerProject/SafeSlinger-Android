@@ -22,14 +22,24 @@
  * THE SOFTWARE.
  */
 
-package edu.cmu.cylab.keyslinger.lib;
+package edu.cmu.cylab.starslinger.model;
 
-import java.util.Comparator;
+public class SaveContact {
 
-public class StringComparator implements Comparator<String> {
+    private String mName;
+    private byte[] mAvatar;
 
-    @Override
-    public int compare(String m1, String m2) {
-        return m1.compareToIgnoreCase(m2);
+    public SaveContact(String name, byte[] avatar) {
+        mName = name;
+        mAvatar = avatar;
     }
+
+    public String getName() {
+        return mName;
+    }
+
+    public byte[] getAvatar() {
+        return mAvatar;
+    }
+
 }

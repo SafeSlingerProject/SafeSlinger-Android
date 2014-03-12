@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Contact data nga nakahan-ay sayop.</string>
     <string name="error_WebCancelledByUser">User gikanselar server hangyo.</string>
 
+    <string name="help_find">Gamita kini nga screen nga sa imong ngalan sa pagbaylo sa uban sa uban. Pindota ang \'Done \'button sa diha nga nahuman.</string>
     <string name="help_home">Sa pagbaylo sa pag-ila data, masiguro sa tanan nga mga tiggamit mao ang mga duol nga o sa telepono. Ang \' Sugdi Exchange, button makigbinayloay lang sa mga gitan-aw contact data.</string>
     <string name="help_identity_menu">\n\nMahimo usab-usab sa personal nga data mahitungod sa imong pagkatawo niini nga screen sa tapping sa button uban sa imong ngalan. Kini mopakita sa usa ka menu sa pagtugot kaninyo sa sa \' Edit, sa imong contact,\' Create New \' contact, o\' Gamita Laing, contact.</string>
     <string name="help_Messages">Kini nga screen pagpakita sa tanan nga sa miagi nga mga mensahe, ug mga sumpay, mga dugtong nga mga pa magamit alang sa download.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">matapos %s</string>
     <string name="label_expiresIn">matapos sa</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Pagsulod sa ngalan nga imong gusto sa uban sa pagtan-aw sa diha nga ang pagpakigsulti sa kasigurohan:</string>
     <string name="label_FirstName">First Name</string>
-    <string name="label_Home">Check mga butang nga imong gusto sa pagpakigbahin ug Sun.Star \' Sugdi Exchange \' sa dihang ang uban mao ang mga andam sa pagbaylo sa.</string>
+    <string name="label_Home">Sun.Star imong ngalan aron sa pagdugang o pagtangtang sa contact data, check mga butang nga imong gusto sa pagpakigbahin, ug sa Sun.Star \'Sugdi Exchange\' sa dihang ang uban mao ang mga andam sa baylo:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d ka oras</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ang nakahimo. Pindota ang \' Done \' button sa diha nga nahuman.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger tabang nadugay</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Luwasa Account</string>
-    <string name="label_SaveInstruct">Exchange Kompletoha! Pagpili miyembro sa data sa pagluwas sa imong address book:</string>
+    <string name="label_SaveInstruct">Check mga kontak nga imong gusto sa update diha sa imong address basahon, nan Sun.Star \'Import\' sa pagluwas sa luwas nga mga kontak:</string>
     <string name="label_seconds">%d seconds</string>
     <string name="label_selectLabel">Select label</string>
     <string name="label_SelectRecip">Select Resibo</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Saplong yawe</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Gamita Laing</string>
+    <string name="menu_UseContactPerson">Gamita ang Contact, %s,</string>
+    <string name="menu_UseNoContact">Paggamit Ngalan lamang</string>
+    <string name="menu_UseProfilePerson">Gamita Profile, %s,</string>
 
     <string name="prog_CollectingOthersCommitVerify">naghulat alang sa verification gikan sa tanang mga miyembro…</string>
     <string name="prog_CollectingOthersItems">naghulat alang sa tanang tiggamit sa pag-apil…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Pinulongan nga gihatag sa:</string>
     <string name="text_RelatedSearchTerms">May Kalabutan nga mga Terms:</string>
     <string name="text_Requirements">Kinahanglanon:\n1. Kinahanglan nga-instalar sa usa ka minimum sa 2 mga lalang nga.\n2. Usa ka Internet koneksyon kinahanglan nga aktibo.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Kalig-on ayo.</string>
 
     <string name="title_About">About</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Mensahe</string>
     <string name="title_Messages">Messages</string>
-    <string name="title_MyIdentity">Ang akong identity</string>
+    <string name="title_MyIdentity">Personal Contact</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Available</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages Anaa</string>
     <string name="title_passphrase">Passphrase</string>

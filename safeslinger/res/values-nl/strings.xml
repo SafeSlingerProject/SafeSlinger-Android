@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Contact gegevens onjuist geformatteerd.</string>
     <string name="error_WebCancelledByUser">Bewerking geannuleerd door gebruiker.</string>
 
+    <string name="help_find">Gebruik dit scherm om uw naam in te stellen uit te wisselen met anderen. Tik op de knop \'Gereed\' als u klaar bent.</string>
     <string name="help_home">Om de identiteits gegevens te ruilen, moeten alle gebruikers in de buurt of aan de telefoon zijn. De \'Omruilen beginnen\' knop zul alleen maar de geselecteerde contact gegevens omruilen.</string>
     <string name="help_identity_menu">\n\nU kunt ook persoonlijke gegevens over uw identiteit via dit scherm wijzigen door op de knop met uw naam. Hierdoor wordt een menu waarin u \'Bewerken\' uw contactgegevens weer te geven, \'Create New\' contact, of \'Gebruik ander\' contact.</string>
     <string name="help_Messages">Dit scherm toont alle vroegere berichten en bestanden die nog beschikbaar zijn voor download.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">verloopt %s</string>
     <string name="label_expiresIn">loopt af in</string>
     <string name="label_FileNameHint">Bestandsnaam</string>
+    <string name="label_FindInstruct">Voer de naam in die u anderen wilt zien wanneer beveiligde communicatie:</string>
     <string name="label_FirstName">Voornaam</string>
-    <string name="label_Home">Kies gegevens die U wilt delen en druk op \'Omruilen beginnen\' als anderen klaar staan om te ruilen.</string>
+    <string name="label_Home">Tik op uw naam om contactgegevens toe te voegen of te verwijderen, controleren items die u wilt delen en tik \'Begin Exchange\' wanneer anderen zijn klaar om te wisselen:</string>
     <string name="label_hometag">Thuis</string>
     <string name="label_hours">%d uur</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud is ingeschakeld. Tik op de knop \'Gereed\' als u klaar bent.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup uitgesteld</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Account opslaan</string>
-    <string name="label_SaveInstruct">Omruilen compleet! Kies lid gegevens om op te slaan in Uw adresboek:</string>
+    <string name="label_SaveInstruct">Controleer de contacten die u wilt bijwerken in uw adresboek, tik \'Import\' om veilige contactpersonen op te slaan:</string>
     <string name="label_seconds">%d seconden</string>
     <string name="label_selectLabel">Selecteer label</string>
     <string name="label_SelectRecip">Selecteer Ontvanger</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Berichten</string>
     <string name="menu_UseAnother">Gebruik een andere</string>
+    <string name="menu_UseContactPerson">Gebruik Contact \'%s\'</string>
+    <string name="menu_UseNoContact">Gebruik slechts Naam</string>
+    <string name="menu_UseProfilePerson">Gebruik Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">Wachten op verificatie van de alle leden…</string>
     <string name="prog_CollectingOthersItems">Wachten op alle leden zich aan te sluiten…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Talen geleverd door:</string>
     <string name="text_RelatedSearchTerms">Gerelateerde termen:</string>
     <string name="text_Requirements">Vereisten:\n1. Moet op minimaal 2 inrichtingen worden geïnstalleerd.\n2. Een internetverbinding moet actief zijn.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Stabiliteit fixes.</string>
 
     <string name="title_About">Over</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Thuis</string>
     <string name="title_MessageDetail">Bericht</string>
     <string name="title_Messages">Berichten</string>
-    <string name="title_MyIdentity">Mijn identiteit</string>
+    <string name="title_MyIdentity">Persoonlijk Contact</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Bericht Beschikbaar</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger berichten beschikbaar</string>
     <string name="title_passphrase">Passphrase</string>

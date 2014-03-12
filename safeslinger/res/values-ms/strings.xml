@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Data kenalan telah diformatkan dengan betul.</string>
     <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan pelayan.</string>
 
+    <string name="help_find">Gunakan skrin ini untuk menetapkan nama anda untuk bertukar-tukar dengan orang lain. Ketuk butang \'Selesai\' apabila selesai.</string>
     <string name="help_home">Untuk bertukar-tukar data identiti, memastikan semua pengguna adalah berhampiran atau di telefon. Butang \' Mulakan Exchange \' akan bertukar-tukar hanya data kenalan diperiksa.</string>
     <string name="help_identity_menu">\n\nAnda juga boleh menukar data peribadi tentang identiti anda pada skrin ini dengan mengetuk butang dengan nama anda. Ini akan memaparkan menu membolehkan anda untuk \'Edit\' kenalan anda, \'Cipta Baru kenalan, atau \' Gunakan Satu lagi \' kenalan.</string>
     <string name="help_Messages">Skrin ini memaparkan semua mesej yang lalu, dan lampiran yang masih boleh didapati untuk muat turun.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">tamat %s</string>
     <string name="label_expiresIn">tamat pada</string>
     <string name="label_FileNameHint">Nama Fail</string>
+    <string name="label_FindInstruct">Masukkan nama yang anda ingin orang lain untuk melihat apabila berkomunikasi dengan selamat:</string>
     <string name="label_FirstName">Nama Pertama</string>
-    <string name="label_Home">Semak item yang ingin berkongsi dan ketik \' Mulakan Exchange \' ketika orang lain sudah bersedia untuk bertukar-tukar.</string>
+    <string name="label_Home">Ketik nama anda untuk menambah atau mengeluarkan data kenalan, lihat item yang ingin berkongsi, dan ketik \'Mulakan Exchange\' ketika orang lain sudah bersedia untuk pertukaran:</string>
     <string name="label_hometag">Laman Utama</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud dibolehkan. Ketuk butang \' Selesai\' apabila selesai.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger sandaran ditangguhkan</string>
     <string name="label_safeslingered">(SafeSlinger Exchange langsung)</string>
     <string name="label_SaveAccount">Jimat Akaun</string>
-    <string name="label_SaveInstruct">Bursa Lengkapkan! Pilih data anggota untuk simpan ke buku alamat anda:</string>
+    <string name="label_SaveInstruct">Semak kenalan yang anda hendak mengemas kini dalam buku alamat anda, kemudian ketik \'Import\' untuk menyimpan kenalan yang selamat:</string>
     <string name="label_seconds">%d saat</string>
     <string name="label_selectLabel">Pilih label</string>
     <string name="label_SelectRecip">Pilih penerima</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Kekunci</string>
     <string name="menu_TagListMessages">Mesej</string>
     <string name="menu_UseAnother">Gunakan Satu lagi</string>
+    <string name="menu_UseContactPerson">Gunakan Hubungi \'%s\'</string>
+    <string name="menu_UseNoContact">Penggunaan Nama Hanya</string>
+    <string name="menu_UseProfilePerson">Gunakan Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">menunggu pengesahan daripada semua ahli…</string>
     <string name="prog_CollectingOthersItems">menunggu untuk semua pengguna untuk menyertai…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Bahasa yang disediakan oleh:</string>
     <string name="text_RelatedSearchTerms">Terma berkaitan:</string>
     <string name="text_Requirements">Syarat-Syarat:\n1. Mesti dipasang pada sekurang-kurangnya 2 peranti.\n2. Sambungan Internet mesti aktif.</string>
+    <string name="text_SourceCodeRepo">sumber terbuka: %s</string>
     <string name="text_WhatsNew">- Perbaikan Kestabilan.</string>
 
     <string name="title_About">Mengenai</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Laman Utama</string>
     <string name="title_MessageDetail">Mesej</string>
     <string name="title_Messages">Mesej</string>
-    <string name="title_MyIdentity">Pengenalan saya</string>
+    <string name="title_MyIdentity">Hubungi peribadi</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Mesej Available</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Mesej Available</string>
     <string name="title_passphrase">Frasa laluan</string>

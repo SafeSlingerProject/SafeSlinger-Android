@@ -284,7 +284,7 @@
     <string name="error_WebCancelledByUser">User canceled server request.</string>
 
     <!-- help message (sentence case, period); used via Help button on the Setup screen to describe in more detail what the Setup screen does. -->
-    <string name="help_find" translatable="false">Use this screen to set your name to exchange with others. Tap the \'Done\' button when finished.</string>
+    <string name="help_find">Use this screen to set your name to exchange with others. Tap the \'Done\' button when finished.</string>
     <!-- help message (sentence case, period); used via Help button on the Begin Exchange screen and also the key exchange walkthrough tutorial to describe in more detail what the Begin Exchange screen does. -->
     <string name="help_home">To exchange identity data, ensure all users are nearby or on the phone. The \'Begin Exchange\' button will exchange only the checked contact data.</string>
     <!-- help message (sentence case, period); Additional help text, which is appended to the Help button text on the Compose and Begin Exchange screens. -->
@@ -372,7 +372,7 @@
     <!-- screen label (match English casing); used to indicate file size on the Messages list and Compose Message screens. %.1f = the number of gigabytes in tenths. -->
     <string name="label_gb" translatable="false">%.1f GB</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Begin Exchange screen. -->
-    <string name="label_Home">Check items you wish to share and tap \'Begin Exchange\' when others are ready to exchange.</string>
+    <string name="label_Home">Tap your name to add or remove contact data, check items you wish to share, and tap \'Begin Exchange\' when others are ready to exchange:</string>
     <!-- screen label (match English casing); used to denote a 'home' type of email or phone on the Setup screen. iOS-only. -->
     <string name="label_hometag">Home</string>
     <!-- screen label (match English casing); used as a relative time label to the current time on the message list. %.0f = the number of whole hours. -->
@@ -411,6 +411,12 @@
     <string name="label_Me">Me</string>
     <!-- screen label (match English casing); used as the text message when sending secure introduction invitations. %s = the name of a person. -->
     <string name="label_messageIntroduceNameToYou">I would like to introduce %s to you.</string>
+    <!-- screen label (match English casing); used as message text to show a user how to install SafeSlinger. %s = the main installation url for mobile devices -->
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <!-- screen label (match English casing); used as message text to show a user how to begin secure messaging. -->
+    <string name="label_messageInviteSetupInst">To setup a secure messaging connection, we can meet or phone each other at the same time just once, then Sling Keys to verify the connection.</string>
+    <!-- screen label (match English casing); used as message text to invite a contact to begin secure messaging. -->
+    <string name="label_messageInviteStartMsg">I\'d like to start secure messaging with you using the SafeSlinger iPhone or Android app.</string>
     <!-- screen label (match English casing); used as a header for sent messages in the messages list screen. %s = the name of a person. -->
     <string name="label_MeToSender">Me (to %s):</string>
     <!-- screen label (match English casing); used as a relative time label to the current time on the message list. %.0f = the number of whole minutes. -->
@@ -472,7 +478,7 @@
     <!-- screen label (match English casing); used above the editable field on the Setup and End Exchange screen to showing the address book account to use when saving or updating contacts. -->
     <string name="label_SaveAccount">Save Account</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the End Exchange screen. -->
-    <string name="label_SaveInstruct">Exchange Complete! Select member data to save to your address book:</string>
+    <string name="label_SaveInstruct">Check contacts you want to update in your address book, then tap \'Import\' to save secure contacts:</string>
     <!-- screen label (match English casing); used as a relative time label to the current time on the message list. %.0f = the number of whole seconds. -->
     <string name="label_seconds">%d seconds</string>
     <!-- screen label (match English casing); used on the drop-down menu title on the Setup screen when choosing an email of phone type label. Android 2.2 and 2.3. -->
@@ -538,7 +544,7 @@
     <string name="menu_Change">Change</string>
     <!-- menu option (title case); used to confirm the current passphrase and create and new one via the Settings screen. -->
     <string name="menu_ChangePassphrase">Change Passphrase</string>
-    <!-- menu option (title case); used to show a new empty contact in the address book for editing as the users' current identity via the My Identity dialog. -->
+    <!-- menu option (title case); used to show a new empty contact in the address book for editing as the users' current identity via the Personal Contact dialog. -->
     <string name="menu_CreateNew">Create New</string>
     <!-- menu option (title case); used to delete the current item from the list context menu. -->
     <string name="menu_delete">Delete</string>
@@ -548,8 +554,12 @@
     <string name="menu_Details">View Detail</string>
     <!-- choice (sentence case); used when the user chooses to change the directory of the attachment before saving. -->
     <string name="menu_DownloadDirectory">Download Directory</string>
-    <!-- menu option (title case); used to show the users' current contact in the address book for editing via the My Identity dialog. -->
+    <!-- menu option (title case); used to provide a generic edit menu option. -->
     <string name="menu_Edit">Edit</string>
+    <!-- menu option (title case); used to show the users' current contact in the address book for editing via the Personal Contact dialog. -->
+    <string name="menu_EditContact">Edit Contact</string>
+    <!-- menu option (title case); used to show the Settings dialog to change the preferred name. -->
+    <string name="menu_EditName">Edit Name</string>
     <!-- menu option (title case); used to show a custom file system navigation menu via the Choose Your File dialog. Android-only. -->
     <string name="menu_FileManager">File Manager</string>
     <!-- menu option (title case); used to show a help dialog for the current screen. -->
@@ -586,12 +596,12 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <!-- menu option (title case); used as the title of the message list tab for the home tab view. -->
     <string name="menu_TagListMessages">Messages</string>
-    <!-- menu option (title case); used to redo the Setup process again to find another contact to use as the users' main identity via the My Identity dialog. -->
+    <!-- menu option (title case); used to redo the Setup process again to find another contact to use as the users' main identity via the Personal Contact dialog. -->
     <string name="menu_UseAnother">Use Another</string>
     <!-- menu option (title case); used to select the found contact as the users' main identity via the Personal Contact dialog. -->
     <string name="menu_UseContactPerson">Use Contact \'%s\'</string>
     <!-- menu option (title case); used to select no contact as the users' main identity via the Personal Contact dialog. -->
-    <string name="menu_UseNoContact">No Contact</string>
+    <string name="menu_UseNoContact">Use Name Only</string>
     <!-- menu option (title case); used to select the main profile contact as the users' main identity via the Personal Contact dialog. -->
     <string name="menu_UseProfilePerson">Use Profile \'%s\'</string>
 
@@ -700,6 +710,8 @@
     <string name="text_RelatedSearchTerms">Related Terms:</string>
     <!-- application description (sentence case); used in the about box and app store listing to enumerate requirements. -->
     <string name="text_Requirements">Requirements:\n1. Must be installed on a minimum of 2 devices.\n2. An Internet connection must be active.</string>
+    <!-- application description (sentence case); used in the app store listing to show the location of the open source code repository. -->
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <!-- application description (sentence case); used to list what changes have been made to updated versions. -->
     <string name="text_WhatsNew">- Stability fixes.</string>
 
@@ -732,7 +744,7 @@
     <!-- title (title case); used at the top of the message list screen. -->
     <string name="title_Messages">Messages</string>
     <!-- title (title case); used at the top of a menu when choosing to alter the users' contact: Edit, Create New, or Use Another. -->
-    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_MyIdentity">Personal Contact</string>
     <!-- title (title case); used as the title of an incoming message in the notification window. -->
     <string name="title_NotifyFileAvailable">SafeSlinger Message Available</string>
     <!-- title (title case); used as the title of multiple incoming messages in the notification window. iOS-only. -->

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Կապ տվյալները չափագրված սխալ.</string>
     <string name="error_WebCancelledByUser">User չեղյալ սերվերի խնդրանքով.</string>
 
+    <string name="help_find">Օգտագործեք այս էկրանի ստեղծել Ձեր անունը փոխանակել ուրիշների հետ միասին. Ծորակ է «Կատարված» կոճակը, երբ ավարտեցի.</string>
     <string name="help_home">Փոխանակման նույնականացման տվյալները, ապահովել բոլոր օգտագործողների մոտ են կամ հեռախոսով. The \' BEGIN Exchange \' կոճակը կփոխանակեն միայն նշված կոնտակտային տվյալները.</string>
     <string name="help_identity_menu">\n\nԴուք կարող եք նաեւ փոխել անձնական տվյալները ձեր ինքնությունը: Այս էկրանի կտկտոցը կոճակը ձեր անունով. Սա ցույց է մենյու տալիս to \' Խմբագրել \' Ձեր կապը, ստեղծել նոր շփման, կամ \' օգտագործել մեկ այլ \' կոնտակտ.</string>
     <string name="help_Messages">Այս էկրանի ցուցադրում է անցյալի բոլոր հաղորդագրությունները, եւ հավելվածները, որոնք դեռեւս հասանելի է ներբեռնման համար.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">սպառվում %s</string>
     <string name="label_expiresIn">ժամկետը լրանում է</string>
     <string name="label_FileNameHint">Պատկեր Անունը</string>
+    <string name="label_FindInstruct">Մուտքագրեք անունը ցանկանում ուրիշներին տեսնել, երբ շփվելու ապահով:</string>
     <string name="label_FirstName">Անուն</string>
-    <string name="label_Home">Ստուգեք տարրեր ցանկանում եք կիսվել, եւ թակել « Սկիզբ Exchange, երբ մյուսները պատրաստ են փոխանակել.</string>
+    <string name="label_Home">Թակել ձեր անունը ավելացնել կամ հեռացնել կոնտակտային տվյալները, ստուգելու տարրեր ցանկանում եք կիսվել, եւ թակել «Սկիզբ Exchange, երբ մյուսները պատրաստ են բորսայում:</string>
     <string name="label_hometag">Տուն</string>
     <string name="label_hours">%d ժամ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud միացված. Ծորակ է « Կատարված » կոճակը, երբ ավարտեցի.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger կրկնօրինակում հետաձգվել</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Պահել հաշիվ</string>
-    <string name="label_SaveInstruct">Exchange ամբողջական. Ընտրել անդամ տվյալները փրկել ձեր Հասցեների գրքույկ Զրույց:</string>
+    <string name="label_SaveInstruct">Ստուգեք կոնտակտները ցանկանում եք թարմացնել Ձեր հասցեն գիրքը, ապա թակել «ներմուծում» պահպանել անվտանգ Կոնտակտներ:</string>
     <string name="label_seconds">%d վայրկյան</string>
     <string name="label_selectLabel">Ընտրել պիտակը</string>
     <string name="label_SelectRecip">Ընտրել Ստացող</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Պարսատիկ Keys</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Օգտագործել այլ</string>
+    <string name="menu_UseContactPerson">Կապ \'%s\'</string>
+    <string name="menu_UseNoContact">Օգտագործեք միայն անունով</string>
+    <string name="menu_UseProfilePerson">Օգտագործեք Անձնագիր \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">սպասում ստուգման բոլոր անդամները…</string>
     <string name="prog_CollectingOthersItems">սպասում բոլոր օգտվողները միանալ…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Լեզուներ կողմից:</string>
     <string name="text_RelatedSearchTerms">Առնչվող Պայմանաբառ:</string>
     <string name="text_Requirements">Պահանջները:\n1. Պետք է տեղադրված է առնվազն 2 սարքերի.\n2. An ինտերնետ կապ պետք է լինի ակտիվ.</string>
+    <string name="text_SourceCodeRepo">բաց կոդով: %s</string>
     <string name="text_WhatsNew">- Կայունության ամրագրում.</string>
 
     <string name="title_About">Մոտ</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Տուն</string>
     <string name="title_MessageDetail">Հաղորդագրություն</string>
     <string name="title_Messages">Messages</string>
-    <string name="title_MyIdentity">Իմ Identity</string>
+    <string name="title_MyIdentity">Personal Կապ</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Դուք փնտրել էք-</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages նյութեր</string>
     <string name="title_passphrase">Passphrase</string>

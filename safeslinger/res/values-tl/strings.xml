@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Makipag-ugnay sa data ay hindi tama ang pagka-format.</string>
     <string name="error_WebCancelledByUser">Kinansela ang User kahilingan sa server.</string>
 
+    <string name="help_find">Gamitin ang screen na ito upang itakda ang iyong pangalan upang magpalitan sa iba. I-tap ang pindutan na \'Tapos na\' kapag tapos na.</string>
     <string name="help_home">Upang makipagpalitan ng data pagkakakilanlan, siguraduhin ang lahat ng mga gumagamit ay nasa malapit o sa telepono. Ang pindutan ng \' Simulan Exchange \' ay makipagpalitan lamang ang naka-check ang data ng contact.</string>
     <string name="help_identity_menu">\n\nMaaari mo ring baguhin ang personal na data tungkol sa iyong pagkakakilanlan sa screen na ito sa pamamagitan ng pagtapik sa pindutan gamit ang iyong pangalan. Magpapakita ito ng menu na nagbibigay-daan sa iyo upang \'I-edit \' ng iyong contact, \'Lumikha ng Bagong \' contact, o \' Gamitin ang isa pang \' contact.</string>
     <string name="help_Messages">Ipinapakita ng screen na ito ng lahat ng nakalipas mga mensahe, at mga kalakip na magagamit para sa pag-download pa rin.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">mag-expire ang %s</string>
     <string name="label_expiresIn">mamamatay sa</string>
     <string name="label_FileNameHint">Pangalan ng File</string>
+    <string name="label_FindInstruct">Ipasok ang pangalan na nais mong makita ng iba ang kapag pakikipag-secure:</string>
     <string name="label_FirstName">Pangalan</string>
-    <string name="label_Home">Suriin ang mga item na nais mong ibahagi at i-tap ang \' Simulan Exchange \' kapag ang iba ay handa na upang magpalitan.</string>
+    <string name="label_Home">Tapikin ang iyong pangalan upang magdagdag o mag-alis ng data ng contact, i-check ang mga item na nais mong ibahagi, at i-tap ang \'Simulan Exchange\' kapag ang iba ay handa nang i exchange:</string>
     <string name="label_hometag">Tahanan</string>
     <string name="label_hours">%d oras</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ay pinagana. I-tap ang pindutan na \' Tapos na\' kapag tapos na.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup maantala</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">I-save ang Account</string>
-    <string name="label_SaveInstruct">Kumpletuhin Exchange! Piliin ang data kasapi upang i-save sa iyong address book:</string>
+    <string name="label_SaveInstruct">Suriin ang mga contact na nais mong i-update sa iyong address book, pagkatapos ay i-tap ang \'I-import\' upang i-save ang mga secure na mga contact:</string>
     <string name="label_seconds">%d segundo</string>
     <string name="label_selectLabel">Pumili ng label</string>
     <string name="label_SelectRecip">Pumili ng Tatanggap</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Tirador Keys</string>
     <string name="menu_TagListMessages">Mensahe</string>
     <string name="menu_UseAnother">Gamitin ang isa pang</string>
+    <string name="menu_UseContactPerson">Gamitin ang Contact \'%s\'</string>
+    <string name="menu_UseNoContact">Paggamit Pangalan Lamang</string>
+    <string name="menu_UseProfilePerson">Gamitin ang Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">naghihintay ng pag-verify mula sa lahat ng mga kasapi…</string>
     <string name="prog_CollectingOthersItems">naghihintay para sa lahat ng mga gumagamit na sumali sa…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Mga wika na ibinigay ng:</string>
     <string name="text_RelatedSearchTerms">Mga kaugnay na Tuntunin:</string>
     <string name="text_Requirements">Mga Kinakailangan:\n1. Dapat mai-install sa isang minimum ng 2 mga aparato.\n2. Dapat maging aktibo ang isang koneksyon sa Internet.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Katatagan mga pag-aayos.</string>
 
     <string name="title_About">Tungkol sa</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Tahanan</string>
     <string name="title_MessageDetail">Mensahe</string>
     <string name="title_Messages">Mensahe</string>
-    <string name="title_MyIdentity">Aking Pagkakakilanlan</string>
+    <string name="title_MyIdentity">Personal Makipag-ugnay sa</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Mensahe Magagamit na</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Mensahe Magagamit na</string>
     <string name="title_passphrase">Passphrase</string>

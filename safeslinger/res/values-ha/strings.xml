@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Contact bayanai da aka tsara ba daidai ba.</string>
     <string name="error_WebCancelledByUser">User soke uwar garken request.</string>
 
+    <string name="help_find">Yi amfani da wannan allo domin saita Sunan ka yi musayar wasu. Tap da \'Anyi\' button lokacin da ya gama.</string>
     <string name="help_home">Don musanya ainihi bayanai, tabbatar da duk masu amfani ne a nan kusa ko a waya. A \' Begin Exchange \' button zai musanya kawai bari lamba bayanai.</string>
     <string name="help_identity_menu">\n\nnan _ila ka canza bayanan sirri game da ainihi a kan wannan allon da tapping a kan button da sunanka. Wannan zai nuna menu bar ka ka \' Edit \' ka lamba, \' Create New \' lambar sadarwa, ko \' yi amfani da wata \' lambar sadarwa.</string>
     <string name="help_Messages">Wannan allon nuna duk sa_onnin da suka gabata, da ha_e-ha_e da cewa har yanzu don saukewa.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">ya _are %s</string>
     <string name="label_expiresIn">ya _are a</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Shigar da sunan da kuke so wasu su gani, a lõkacin sadarwa tam:</string>
     <string name="label_FirstName">First Name</string>
-    <string name="label_Home">Duba abubuwan da kuke so a raba da famfo \' Begin Exchange \' a lokacin da wasu suna shirye su musanya.</string>
+    <string name="label_Home">Tap sunanka don ƙara ko cire lambar sadarwa bayanai, duba abubuwan da kuke so a raba, da kuma Tap \'Begin Exchange\' a lokacin da wasu suna shirye su canza:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d hours</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud an kunna. Tap da \' Anyi \' button lokacin da ya gama.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger madadin jinkiri</string>
     <string name="label_safeslingered">( SafeSlinger Direct Exchange )</string>
     <string name="label_SaveAccount">Ajiye Account</string>
-    <string name="label_SaveInstruct">Exchange Complete! A zabi mamba bayanai domin ya ceci to your address book:</string>
+    <string name="label_SaveInstruct">Duba lambobi da kake son sabunta a cikin littafin adireshi, to, Tap \'Shigo da\' ya cece amintattu lambobi:</string>
     <string name="label_seconds">%d seconds</string>
     <string name="label_selectLabel">Za_i lambar</string>
     <string name="label_SelectRecip">Zabi Mai Karba</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Majayijawa Kunamu</string>
     <string name="menu_TagListMessages">Sa_onni</string>
     <string name="menu_UseAnother">Yi amfani da Another</string>
+    <string name="menu_UseContactPerson">Yi amfani Contact \'%s\'</string>
+    <string name="menu_UseNoContact">Yi amfani da sunan kawai</string>
+    <string name="menu_UseProfilePerson">Yi amfani da Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">jiran tabbaci daga dukan membobin…</string>
     <string name="prog_CollectingOthersItems">jiran duk masu amfani don shiga…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Languages __bayar by:</string>
     <string name="text_RelatedSearchTerms">Related Terms:</string>
     <string name="text_Requirements">Bukatun:\n1. Dole ne a shigar a kan m of 2 na\'urorin.\n2. An jona dole ne aiki.</string>
+    <string name="text_SourceCodeRepo">bude source: %s</string>
     <string name="text_WhatsNew">- Stability gyaran gaba daya.</string>
 
     <string name="title_About">Game da</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Message</string>
     <string name="title_Messages">Sa_onni</string>
-    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_MyIdentity">Personal Contact</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Rasu</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Sa_onni Ya Rasu</string>
     <string name="title_passphrase">Passphrase</string>

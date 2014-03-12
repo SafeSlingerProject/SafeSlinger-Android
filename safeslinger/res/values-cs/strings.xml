@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kontaktní údaje formátování nesprávně.</string>
     <string name="error_WebCancelledByUser">Uživatel zrušil požadavek serveru.</string>
 
+    <string name="help_find">Na této obrazovce můžete nastavit své jméno vyměňovat s ostatními. Po dokončení klepněte na tlačítko \'Hotovo\'.</string>
     <string name="help_home">Pro výměnu dat identity, zajištění všichni uživatelé jsou v blízkosti nebo na telefonu. Tlačítko \' začnou burzy budou vyměňovat pouze zaškrtnuté kontaktní údaje.</string>
     <string name="help_identity_menu">\n\nMůžete také změnit osobní údaje týkající se vaší identity na této obrazovce klepnutím na tlačítko s vaším jménem. Tím se zobrazí nabídka umožňující \' Upravit \' svůj kontakt, \' Vytvořit nový \' kontakt, nebo \' Použít \' Další kontakt.</string>
     <string name="help_Messages">Tato obrazovka zobrazuje všechny minulé zprávy a přílohy, které jsou stále k dispozici ke stažení.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">vyprší %s</string>
     <string name="label_expiresIn">vyprší v</string>
     <string name="label_FileNameHint">Jméno souboru</string>
+    <string name="label_FindInstruct">Zadejte jméno, které chtějí ostatní vidět při komunikaci bezpečně:</string>
     <string name="label_FirstName">Jméno</string>
-    <string name="label_Home">Zkontrolujte položky, které chcete sdílet, a klepněte na tlačítko \' Begin Exchange \', když ostatní jsou připraveny k výměně.</string>
+    <string name="label_Home">Klepněte na své jméno přidat nebo odebrat kontaktní údaje, zkontrolujte položky, které chcete sdílet, a klepněte na tlačítko \'Begin Exchange\', když ostatní jsou připraveny k výměně:</string>
     <string name="label_hometag">Domácí</string>
     <string name="label_hours">%d hodin</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud je povoleno. Po dokončení klepněte na tlačítko \' Hotovo\'.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger zálohy odloženo</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Uložte účet</string>
-    <string name="label_SaveInstruct">Výměna Complete! Vyberte členské data uložit do adresáře:</string>
+    <string name="label_SaveInstruct">Zkontrolujte, zda kontakty, které chcete aktualizovat ve vašem adresáři, klepněte na položku \'Importovat\' pro uložení bezpečné kontaktů:</string>
     <string name="label_seconds">%d sekund</string>
     <string name="label_selectLabel">Vybrat štítek</string>
     <string name="label_SelectRecip">Zvolte příjemce</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Zprávy</string>
     <string name="menu_UseAnother">Použijte Další</string>
+    <string name="menu_UseContactPerson">Jak nakupovat Kontaktujte \'%s \'</string>
+    <string name="menu_UseNoContact">Používejte jen podle jména</string>
+    <string name="menu_UseProfilePerson">Použijte Profil \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">čeká na ověření všech členů…</string>
     <string name="prog_CollectingOthersItems">čeká na všechny uživatele se připojit…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Jazyky poskytované:</string>
     <string name="text_RelatedSearchTerms">Příbuzné termíny:</string>
     <string name="text_Requirements">Požadavky:\n1. Musí být nainstalován na minimálně 2 zařízení.\n2. Připojení k Internetu musí být aktivní.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Opravy stability.</string>
 
     <string name="title_About">O</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Domácí</string>
     <string name="title_MessageDetail">Zpráva</string>
     <string name="title_Messages">Zprávy</string>
-    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_MyIdentity">Osobní kontakt</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Zpráva dispozici</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Zprávy dispozici</string>
     <string name="title_passphrase">Přístupové heslo</string>

@@ -1,5 +1,5 @@
 
-package edu.cmu.cylab.keyslinger.lib;
+package edu.cmu.cylab.starslinger.model;
 
 /*
  * The MIT License (MIT)
@@ -63,8 +63,10 @@ import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.RawContacts;
 import android.text.TextUtils;
 import android.widget.Toast;
+import edu.cmu.cylab.keyslinger.lib.KsConfig;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class ContactAccessorApi5 extends ContactAccessor {
 
@@ -532,7 +534,7 @@ public class ContactAccessorApi5 extends ContactAccessor {
         String label = isCustom ? null : "";
         String custom = isCustom ? im.label : null;
         // base-64 decode custom IM so since vCard is ASCII
-        String data = isCustom ? new String(KsConfig.finalDecode(im.data.getBytes())) : im.data;
+        String data = isCustom ? new String(SSUtil.finalDecode(im.data.getBytes())) : im.data;
 
         ContentValues val = new ContentValues();
         val.put(Data.MIMETYPE, Im.CONTENT_ITEM_TYPE);

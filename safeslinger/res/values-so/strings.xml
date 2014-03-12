@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Xogta Contact ahaa Fedaral si qaldan.</string>
     <string name="error_WebCancelledByUser">User kansal server codsi.</string>
 
+    <string name="help_find">Isticmaal screen this to dhigay magacaaga si ay isu dhaafsadaan dadka kale. Qasabadda \'qabtay\' button markaad dhamaysid.</string>
     <string name="help_home">Si aad isu dhaafsadaan xogta aqoonsiga, si loo hubiyo dhamaan isticmaalayaasha u dhow ama telefoonka ku yihiin. \' Ka bilow Exchange \' The badhanka beddelan doonaa oo keliya xogta xiriir la hubiyaa.</string>
     <string name="help_identity_menu">\n\nWaxa kale oo aad beddeli kartaa macluumaadka shakhsiyeed oo ku saabsan aqoonsiga on screen this haray adigoo on badhanka leh magacaaga. Tani waxay muujiyaan doonaa menu a kuu oggolaadaan in aad \' Edit \' xidhiidhka aad, \' Create New \' xiriir, ama \' Isticmaal kale oo \' xiriir.</string>
     <string name="help_Messages">Shaashada Tan waxay ku tusaysaa oo dhan farriimaha la soo dhaafay, iyo lifaaqyada in weli waxaa laga heli karaa for download.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">dhicin %s</string>
     <string name="label_expiresIn">ku egyahay</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Geli magaca aad rabto inaad dadka kale si aad u aragto marka la xidhiidhka dadka si ammaan ah:</string>
     <string name="label_FirstName">Magaca Hore</string>
-    <string name="label_Home">Hubi alaabta aad rabto in aad la wadaagto hormariyo \' Ka bilow Exchange \' dadka kale marka ay diyaar u yihiin in ay isu dhaafsadaan.</string>
+    <string name="label_Home">Qasabada magacaaga ama ku darto ciribtiro xiriir, hubi alaabta aad rabto in aad la wadaagto, loo hormariyo \'Ka bilow Exchange\' dadka kale marka ay diyaar u yihiin is dhaafsiga:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d saacadood</string>
     <string name="label_iCloudEnable">SafeSlinger oodaa laguusoo. Qasabadda \' qabtay \' button markaad dhamaysid.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger raad raac dib u</string>
     <string name="label_safeslingered">( SafeSlinger Direct Exchange )</string>
     <string name="label_SaveAccount">Save the Account</string>
-    <string name="label_SaveInstruct">Exchange Buuxi! Dooro xogta xubin ka ah si loo badbaadiyo si aad buugga cinwaankiisu yahay:</string>
+    <string name="label_SaveInstruct">Hubi xiriirada aad doonayso inaad cusboonaysiiso in aad buug cinwaanka, ka dibna tubbada ah \'Soodejineed\' si ay u badbaadiyaan xiriirka la aamin ah:</string>
     <string name="label_seconds">%d seconds</string>
     <string name="label_selectLabel">Select calaamad</string>
     <string name="label_SelectRecip">Select Qaate</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Shakaalka Furayaasha</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Isticmaal kale oo</string>
+    <string name="menu_UseContactPerson">Isticmaal Contact \'%s\'</string>
+    <string name="menu_UseNoContact">Isticmaalka Magaca oo kaliya</string>
+    <string name="menu_UseProfilePerson">Isticmaal Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">sugeyso xaqiijinta dhammaan xubnaha…</string>
     <string name="prog_CollectingOthersItems">sugaya oo dhan isticmaala si ay ugu biiraan…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Luqadaha bixisay by:</string>
     <string name="text_RelatedSearchTerms">Related Terms:</string>
     <string name="text_Requirements">Shuruudaha:\n1. Waa in lagu dhejiyaa on ugu yaraan 2 qalabka.\n2. Internet waa in ay ahaadaan kuwo firfircoon.</string>
+    <string name="text_SourceCodeRepo">source u furan: %s</string>
     <string name="text_WhatsNew">- Ciidamada Kumandoska Xasiloonida.</string>
 
     <string name="title_About">About</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Message</string>
     <string name="title_Messages">Messages</string>
-    <string name="title_MyIdentity">My Aqoonsiga</string>
+    <string name="title_MyIdentity">Contact Personal</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Available</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages Available</string>
     <string name="title_passphrase">Passphrase</string>

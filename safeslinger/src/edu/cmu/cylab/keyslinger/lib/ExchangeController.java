@@ -198,7 +198,7 @@ public class ExchangeController {
 
     public boolean doRequestUserId() {
         if (mCommitB == null || mCommitB.length == 0) {
-            handleError(R.string.error_UncaughtExceptionOccured);
+            return handleError(R.string.error_UncaughtExceptionOccured);
         }
         int id = 0;
         ByteBuffer res = null;
@@ -219,7 +219,7 @@ public class ExchangeController {
 
     private boolean syncCommitments() {
         if (mCommitB == null || mCommitB.length == 0) {
-            handleError(R.string.error_UncaughtExceptionOccured);
+            return handleError(R.string.error_UncaughtExceptionOccured);
         }
         int[] usridList = null;
         byte[] commitList = null;

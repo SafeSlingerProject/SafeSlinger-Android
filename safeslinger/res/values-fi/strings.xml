@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Yhteystietoja on alustettu väärin.</string>
     <string name="error_WebCancelledByUser">Käyttäjä perui palvelimen pyynnöstä.</string>
 
+    <string name="help_find">Tämän näytön avulla asettaa nimesi vaihtaa muiden kanssa. Kosketa \'Valmis\'-painiketta kun olet valmis.</string>
     <string name="help_home">Vaihtaa tunnistetietoja, jotta kaikki käyttäjät ovat lähellä tai puhelimessa. \' Aloita Exchange \'-painiketta vaihtavat vaintarkistanut yhteystietoja.</string>
     <string name="help_identity_menu">\n\nVoit myös vaihtaa henkilötietoja henkilöllisyytesi napauttamalla painiketta nimesi. Tämä näyttää valikon, jonka avulla voit \'Muokkaa\' yhteystietosi, \' Luo uusi \' yhteystietoja, tai \'käyttö Toinen yhteystiedot.</string>
     <string name="help_Messages">Tämä näyttö näyttää kaikki menneisyyden viestit ja liitetiedostot, jotka ovat vielä ladattavissa.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">päättyy %s</string>
     <string name="label_expiresIn">päättyy vuonna</string>
     <string name="label_FileNameHint">Tiedoston nimi</string>
+    <string name="label_FindInstruct">Anna nimi, jonka haluat muiden näkevän kommunikoida turvallisesti:</string>
     <string name="label_FirstName">Etunimi</string>
-    <string name="label_Home">Tarkista kohteet, jotka haluat jakaa ja napauta \' Aloita Exchange \', kun toiset ovat valmiita vaihtamaan.</string>
+    <string name="label_Home">Voit napauttaa nimeäsi lisätä tai poistaa yhteystietoja, tarkista kohteet, jotka haluat jakaa, ja napauta \'Aloita Exchange\', kun toiset ovat valmiita exchange:</string>
     <string name="label_hometag">Koti</string>
     <string name="label_hours">%d tuntia</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud on käytössä. Kosketa \'Valmis\'-painiketta kun olet valmis.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup viivästyy</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Tallenna tili</string>
-    <string name="label_SaveInstruct">Vaihto Complete! Valitse jäsen tietosi pelasti osoitekirjaasi:</string>
+    <string name="label_SaveInstruct">Tarkista nimet haluat päivittää osoitekirjassa, kosketa sitten \'Tuo\' tallentaaksesi turvallinen yhteystiedot:</string>
     <string name="label_seconds">%d sekuntia</string>
     <string name="label_selectLabel">Valitse etiketti</string>
     <string name="label_SelectRecip">Valitse Vastaanottaja</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Viestit</string>
     <string name="menu_UseAnother">Käytä toista</string>
+    <string name="menu_UseContactPerson">Käytä Pitää yhteyttä \'%s\'</string>
+    <string name="menu_UseNoContact">Käytä nimi vain</string>
+    <string name="menu_UseProfilePerson">Käytä Profiili \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">odottaa tarkastusta kaikilta jäseniltä…</string>
     <string name="prog_CollectingOthersItems">odottaa kaikkien käyttäjien liittyä…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Kielet tarjoaa:</string>
     <string name="text_RelatedSearchTerms">Asiaan liittyviä termejä:</string>
     <string name="text_Requirements">Vaatimukset:\n1. On asennettava vähintään 2 laitetta.\n2. Internet-yhteyden on oltava käytössä.</string>
+    <string name="text_SourceCodeRepo">avoimen lähdekoodin: %s</string>
     <string name="text_WhatsNew">- Vakaus korjauksia.</string>
 
     <string name="title_About">Noin</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Koti</string>
     <string name="title_MessageDetail">Viesti</string>
     <string name="title_Messages">Viestit</string>
-    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_MyIdentity">Henkilökohtainen kontakti</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Viesti Saatavilla</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger viestit saataville</string>
     <string name="title_passphrase">Tunnuslause</string>

@@ -111,19 +111,32 @@ public class C2DMReceiver extends C2DMBaseReceiver {
             recvIntent.putExtra(extra.MESSAGE_ROW_ID, rowId);
             sendBroadcast(recvIntent);
 
-            // download initial message
+            // download initial message, from push, or else from web...
             if (mWeb == null) {
                 mWeb = new WebEngine(this);
             }
             byte[] resp = null;
-            try {
-                resp = mWeb.getMessage(msgHashBytes);
-            } catch (ExchangeException e) {
-                showNote(e.getLocalizedMessage());
-                return;
-            } catch (MessageNotFoundException e) {
-                showNote(e.getLocalizedMessage());
-                return;
+            String msgEnc = extras.getString("msgenc");
+            if (!TextUtils.isEmpty(msgEnc)) {
+                // try automatic parse of cipher
+                try {
+                    resp = Base64.decode(msgEnc.getBytes(), Base64.NO_WRAP);
+                } catch (IllegalArgumentException e) {
+                    e.printStackTrace();
+                    // try downloading...
+                }
+            }
+            if (resp == null) {
+                // try manual download of cipher
+                try {
+                    resp = mWeb.getMessage(msgHashBytes);
+                } catch (ExchangeException e) {
+                    showNote(e.getLocalizedMessage());
+                    return;
+                } catch (MessageNotFoundException e) {
+                    showNote(e.getLocalizedMessage());
+                    return;
+                }
             }
             if (resp == null || resp.length == 0) {
                 showNote(R.string.error_InvalidIncomingMessage);

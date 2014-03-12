@@ -26,10 +26,10 @@ package edu.cmu.cylab.starslinger.view;
 
 import java.util.List;
 
-import a_vcard.android.text.TextUtils;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;

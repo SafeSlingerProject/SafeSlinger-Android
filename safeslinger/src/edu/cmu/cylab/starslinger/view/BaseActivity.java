@@ -34,9 +34,17 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import a_vcard.android.syncml.pim.VDataBuilder;
+import a_vcard.android.syncml.pim.VNode;
+import a_vcard.android.syncml.pim.vcard.ContactStruct;
+import a_vcard.android.syncml.pim.vcard.Name;
+import a_vcard.android.syncml.pim.vcard.VCardException;
+import a_vcard.android.syncml.pim.vcard.VCardParser;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
@@ -49,6 +57,7 @@ import android.database.DatabaseUtils;
 import android.database.SQLException;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.BaseColumns;
@@ -77,7 +86,6 @@ import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
-import edu.cmu.cylab.keyslinger.lib.KsConfig;
 import edu.cmu.cylab.starslinger.ConfigData;
 import edu.cmu.cylab.starslinger.ConfigData.extra;
 import edu.cmu.cylab.starslinger.Eula;
@@ -90,17 +98,20 @@ import edu.cmu.cylab.starslinger.crypto.CryptToolsLegacy;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgPeerKeyFormatException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
-import edu.cmu.cylab.starslinger.model.AccountData;
+import edu.cmu.cylab.starslinger.model.ContactAccessor;
 import edu.cmu.cylab.starslinger.model.ContactImpp;
 import edu.cmu.cylab.starslinger.model.CryptoMsgPrivateData;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageRow;
 import edu.cmu.cylab.starslinger.model.PushTokenKeyDateComparator;
+import edu.cmu.cylab.starslinger.model.RawContactData;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.SlingerContact;
 import edu.cmu.cylab.starslinger.model.SlingerIdentity;
 import edu.cmu.cylab.starslinger.model.ThreadData;
+import edu.cmu.cylab.starslinger.model.UseContactItem;
+import edu.cmu.cylab.starslinger.model.UseContactItem.UCType;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class BaseActivity extends SherlockFragmentActivity {
@@ -126,14 +137,14 @@ public class BaseActivity extends SherlockFragmentActivity {
     /**
      * For start activity KeySlinger with the necessary parameters.
      */
-    protected Bundle writeSingleExportExchangeArgs(ContactImpp out) {
+    protected static Bundle writeSingleExportExchangeArgs(ContactImpp out) {
 
         Bundle args = new Bundle();
         args.putString(ConfigData.extra.CONTACT_LOOKUP_KEY, out.lookup);
 
         for (int i = 0; i < out.impps.size(); i++) {
-            args.putString(KsConfig.extra.CONTACT_KEYNAME_PREFIX + i, out.impps.get(i).k);
-            args.putByteArray(KsConfig.extra.CONTACT_VALUE_PREFIX + i, out.impps.get(i).v);
+            args.putString(extra.CONTACT_KEYNAME_PREFIX + i, out.impps.get(i).k);
+            args.putByteArray(extra.CONTACT_VALUE_PREFIX + i, out.impps.get(i).v);
         }
 
         return args;
@@ -457,6 +468,60 @@ public class BaseActivity extends SherlockFragmentActivity {
         return contactLookupKey;
     }
 
+    protected ArrayList<UseContactItem> getUseContactItemsByName(String name) {
+        ArrayList<UseContactItem> contacts = new ArrayList<UseContactItem>();
+        if (TextUtils.isEmpty(name)) {
+            return contacts;
+        }
+
+        // find aggregated contact
+        String[] whereParameters = new String[] {
+                StructuredName.DISPLAY_NAME, StructuredName.LOOKUP_KEY
+        };
+        String where = StructuredName.DISPLAY_NAME + " = "
+                + DatabaseUtils.sqlEscapeString("" + name);
+        Cursor c = getContentResolver().query(Data.CONTENT_URI, whereParameters, where, null, null);
+        if (c != null) {
+            while (c.moveToNext()) {
+                String tempLookup = c.getString(c.getColumnIndexOrThrow(StructuredName.LOOKUP_KEY));
+                String tempName = c.getString(c.getColumnIndexOrThrow(StructuredName.DISPLAY_NAME));
+                byte[] tempPhoto = getContactPhoto(tempLookup);
+                if (!TextUtils.isEmpty(tempLookup)) {
+                    contacts.add(new UseContactItem(tempName, tempPhoto, tempLookup, UCType.CONTACT));
+                }
+            }
+            c.close();
+        }
+
+        return contacts;
+    }
+
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+    protected UseContactItem getContactProfile() {
+        UseContactItem profile = null;
+
+        if (Build.VERSION.SDK_INT >= VERSION_CODES.ICE_CREAM_SANDWICH) {
+            Cursor c = getContentResolver().query(ContactsContract.Profile.CONTENT_URI, null, null,
+                    null, null);
+            if (c != null) {
+                if (c.moveToFirst()) {
+                    String tempLookup = c.getString(c
+                            .getColumnIndexOrThrow(ContactsContract.Profile.LOOKUP_KEY));
+                    String tempName = c.getString(c
+                            .getColumnIndexOrThrow(ContactsContract.Profile.DISPLAY_NAME));
+                    byte[] tempPhoto = getContactPhoto(tempLookup);
+                    if (!TextUtils.isEmpty(tempLookup)) {
+                        profile = new UseContactItem(tempName, tempPhoto, tempLookup,
+                                UCType.PROFILE);
+                    }
+                }
+                c.close();
+            }
+        }
+
+        return profile;
+    }
+
     protected String getContactLookupKeyByPhone(String phone) {
         String contactLookupKey = null;
         if (TextUtils.isEmpty(phone)) {
@@ -544,8 +609,8 @@ public class BaseActivity extends SherlockFragmentActivity {
         return contactLookupKey;
     }
 
-    protected ArrayList<AccountData> getRawContactIds(String contactId) {
-        ArrayList<AccountData> accts = new ArrayList<AccountData>();
+    protected ArrayList<RawContactData> getRawContactIds(String contactId) {
+        ArrayList<RawContactData> accts = new ArrayList<RawContactData>();
         if (TextUtils.isEmpty(contactId)) {
             return accts;
         }
@@ -567,7 +632,7 @@ public class BaseActivity extends SherlockFragmentActivity {
                 rawContactId = c.getString(c.getColumnIndexOrThrow(BaseColumns._ID));
                 accountName = c.getString(c.getColumnIndexOrThrow(RawContacts.ACCOUNT_NAME));
                 accountType = c.getString(c.getColumnIndexOrThrow(RawContacts.ACCOUNT_TYPE));
-                accts.add(new AccountData(accountName, accountType, rawContactId));
+                accts.add(new RawContactData(accountName, accountType, rawContactId));
             }
             c.close();
         }
@@ -1090,13 +1155,6 @@ public class BaseActivity extends SherlockFragmentActivity {
         String name = null;
         String push = null;
         String key = null;
-        int selected = 0;
-
-        if (recipSource == RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION) {
-            selected = 1;
-        } else {
-            selected = args.getInt(extra.SELECTED_TOTAL);
-        }
 
         StringBuilder errors = new StringBuilder();
         do {
@@ -1127,7 +1185,7 @@ public class BaseActivity extends SherlockFragmentActivity {
                 String contactId = getContactIdByName(name);
                 String rawContactId = null;
                 if (contactId != null) {
-                    ArrayList<AccountData> v = getRawContactIds(contactId);
+                    ArrayList<RawContactData> v = getRawContactIds(contactId);
                     if (v != null && v.size() > 0)
                         rawContactId = v.get(0).getRawContactId();
                 }
@@ -1145,11 +1203,6 @@ public class BaseActivity extends SherlockFragmentActivity {
 
         if (!TextUtils.isEmpty(errors)) {
             throw new GeneralException(errors.toString().trim());
-        }
-
-        // add redundant check for correct number of contacts imported...
-        if (cExch.size() != selected) {
-            return 0;
         }
 
         ArrayList<String> importedKeys = new ArrayList<String>();
@@ -1282,7 +1335,19 @@ public class BaseActivity extends SherlockFragmentActivity {
 
     public static String formatMessageDetails(Activity act, MessageRow m) {
         StringBuilder s = new StringBuilder();
-        s.append(dat(act, R.string.title_MessageDetail, m.getProbableDate()));
+
+        // show sent and received dates when arrival time over clock skew for
+        // decrypted messages, likely network lag.
+        if (m.getDateRecv() > 0 && m.getDateSent() > 0
+                && (m.getDateRecv() - m.getDateSent()) > ConfigData.CLOCK_SKEW_MS) {
+            s.append(dat(act, R.string.title_MessageDetail, m.getDateRecv()));
+            s.append(dat(act, R.string.state_FileSent, m.getDateSent()));
+        } else if (m.getDateSent() > 0) {
+            s.append(dat(act, R.string.state_FileSent, m.getDateSent()));
+        } else {
+            s.append(dat(act, R.string.title_MessageDetail, m.getDateRecv()));
+        }
+
         s.append(str(act, R.string.label_UserName, m.getPerson()));
         s.append(str(act, R.string.title_MessageDetail, m.getText()));
         String file = m.getFileSize() > 0 ? m.getFileName() + " "
@@ -1508,7 +1573,6 @@ public class BaseActivity extends SherlockFragmentActivity {
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 ConfigData.savePrefShowWalkthrough(act, checkBoxWalkthrough.isChecked());
-                act.showExchange();
                 dialog.dismiss();
             }
         });
@@ -1516,7 +1580,6 @@ public class BaseActivity extends SherlockFragmentActivity {
 
             @Override
             public void onCancel(DialogInterface dialog) {
-                act.showExchange();
                 dialog.dismiss();
             }
         });
@@ -1643,6 +1706,162 @@ public class BaseActivity extends SherlockFragmentActivity {
     public String getUnsupportedFeatureString(String feature) {
         return String.format(getString(R.string.error_FeatureIsNotSupport), feature, Build.BRAND
                 + " " + Build.MODEL);
+    }
+
+    public List<ContactStruct> parseVCards(byte[][] data) {
+
+        // parse all data for vCard format, and pull names list, skipping owner
+        List<ContactStruct> parsedContacts = new ArrayList<ContactStruct>();
+
+        if (data != null && data.length > 0)
+            for (int i = 0; i < data.length; i++) {
+                VCardParser parser = new VCardParser();
+                VDataBuilder builder = new VDataBuilder();
+                String vcardString = new String(data[i]);
+
+                // parse the string
+                boolean parsed = false;
+                try {
+                    MyLog.d(TAG, vcardString);
+                    parsed = parser.parse(vcardString, "UTF-8", builder);
+                } catch (VCardException e) {
+                    ContactStruct mem = new ContactStruct();
+                    mem.name = new Name("Error: " + e.getLocalizedMessage());
+                    parsedContacts.add(mem);
+                    continue;
+                } catch (IOException e) {
+                    ContactStruct mem = new ContactStruct();
+                    mem.name = new Name("Error: " + e.getLocalizedMessage());
+                    parsedContacts.add(mem);
+                    continue;
+                }
+                if (!parsed) {
+                    ContactStruct mem = new ContactStruct();
+                    mem.name = new Name("Error: " + getString(R.string.error_ContactInsertFailed));
+                    parsedContacts.add(mem);
+                    continue;
+                }
+
+                // get all parsed contacts
+                List<VNode> pimContacts = builder.vNodeList;
+
+                // do something for all the contacts
+                for (VNode contact : pimContacts) {
+
+                    ContactStruct mem = ContactStruct.constructContactFromVNode(contact,
+                            Name.NAME_ORDER_TYPE_ENGLISH);
+                    if (mem != null)
+                        parsedContacts.add(mem);
+                    continue;
+                }
+            }
+
+        return parsedContacts;
+    }
+
+    protected static ContactStruct loadContactDataNoDuplicates(Context ctx,
+            String contactLookupKey, ContactStruct in, boolean removeMatches) {
+        // order: name, photo, phone, im, email, url, postal, title, org
+        final ContactAccessor accessor = ContactAccessor.getInstance();
+
+        // create a parallel here for storing the data, use the table rows
+        ContentResolver resolver = ctx.getContentResolver();
+        ContactStruct contact = (in != null) ? in : new ContactStruct();
+
+        // get name, retain passed in name
+        if (contact.name == null || TextUtils.isEmpty(contact.name.toString())) {
+            Uri uriName = accessor.getUriName(resolver, contactLookupKey);
+            if (uriName != null) {
+                Cursor names = ctx.getContentResolver().query(uriName, accessor.getProjName(),
+                        accessor.getQueryName(), null, null);
+                if (names != null) {
+                    while (names.moveToNext()) {
+                        accessor.addName(contact, names);
+                    }
+                    names.close();
+                }
+            }
+        }
+
+        // get photo
+        Uri uriPhoto = accessor.getUriPhoto(resolver, contactLookupKey);
+        if (uriPhoto != null) {
+            Cursor photos = ctx.getContentResolver().query(uriPhoto, accessor.getProjPhoto(),
+                    accessor.getQueryPhoto(), null, null);
+            if (photos != null) {
+                while (photos.moveToNext()) {
+                    accessor.addPhoto(contact, photos);
+                }
+                photos.close();
+            }
+        }
+
+        // get phone
+        Uri uriPhone = accessor.getUriPhone(resolver, contactLookupKey);
+        if (uriPhone != null) {
+            Cursor phones = ctx.getContentResolver().query(uriPhone, accessor.getProjPhone(),
+                    accessor.getQueryPhone(), null, null);
+            if (phones != null) {
+                while (phones.moveToNext()) {
+                    accessor.addPhone(ctx, contact, phones, removeMatches);
+                }
+                phones.close();
+            }
+        }
+
+        // get IM
+        Uri uriIm = accessor.getUriIM(resolver, contactLookupKey);
+        if (uriIm != null) {
+            Cursor ims = ctx.getContentResolver().query(uriIm, accessor.getProjIM(),
+                    accessor.getQueryIM(), null, null);
+            if (ims != null) {
+                while (ims.moveToNext()) {
+                    accessor.addIM(contact, ims, ctx, removeMatches);
+                }
+                ims.close();
+            }
+        }
+
+        // get email
+        Uri uriEmail = accessor.getUriEmail(resolver, contactLookupKey);
+        if (uriEmail != null) {
+            Cursor emails = ctx.getContentResolver().query(uriEmail, accessor.getProjEmail(),
+                    accessor.getQueryEmail(), null, null);
+            if (emails != null) {
+                while (emails.moveToNext()) {
+                    accessor.addEmail(contact, emails, removeMatches);
+                }
+                emails.close();
+            }
+        }
+
+        // get Url
+        Uri uriUrl = accessor.getUriUrl(resolver, contactLookupKey);
+        if (uriUrl != null) {
+            Cursor urls = ctx.getContentResolver().query(uriUrl, accessor.getProjUrl(),
+                    accessor.getQueryUrl(), null, null);
+            if (urls != null) {
+                while (urls.moveToNext()) {
+                    accessor.addUrl(contact, urls, ctx, removeMatches);
+                }
+                urls.close();
+            }
+        }
+
+        // get postal
+        Uri uriPostal = accessor.getUriPostal(resolver, contactLookupKey);
+        if (uriPostal != null) {
+            Cursor postals = ctx.getContentResolver().query(uriPostal, accessor.getProjPostal(),
+                    accessor.getQueryPostal(), null, null);
+            if (postals != null) {
+                while (postals.moveToNext()) {
+                    accessor.addPostal(contact, postals, removeMatches);
+                }
+                postals.close();
+            }
+        }
+
+        return contact;
     }
 
 }

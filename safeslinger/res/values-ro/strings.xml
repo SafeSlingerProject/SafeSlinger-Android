@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Datele de contact a fost formatat incorect.</string>
     <string name="error_WebCancelledByUser">Utilizatorul a anulat cererea de server.</string>
 
+    <string name="help_find">Utilizați acest ecran pentru a seta numele dvs. de a face schimb cu alte persoane. Apăsați butonul \'Done\' când ați terminat.</string>
     <string name="help_home">Pentru a face schimb de date de identitate, asigura toți utilizatorii sunt în apropiere sau la telefon. Butonul \' Începeți Exchange \' vor schimba doar datele de contact verificate.</string>
     <string name="help_identity_menu">\n\nPuteți schimba, de asemenea, date cu caracter personal cu privire la identitatea pe acest ecran apăsând pe butonul cu numele tău. Aceasta va afișa un meniu care vă permite să \' Edit \' contact, \' Creare \' de contact, sau \' folosiți un alt \' de contact.</string>
     <string name="help_Messages">Acest ecran afișează toate mesajele trecute, și accesorii, care sunt încă disponibile pentru descărcare.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">expiră %s</string>
     <string name="label_expiresIn">expiră în</string>
     <string name="label_FileNameHint">Nume fișier</string>
+    <string name="label_FindInstruct">Introduceți numele pe care doriți ca alții să vadă atunci când comunică în siguranță:</string>
     <string name="label_FirstName">Nume</string>
-    <string name="label_Home">Verificați elementele pe care doriți să împărtășiți și atingeți \' Inceput de schimb valutar \', atunci când alții sunt gata să facă schimb.</string>
+    <string name="label_Home">Apăsați pe numele dvs. pentru a adăuga sau elimina datele de contact, verificați elementele pe care doriți să le partajați și atingeți \'Inceput de schimb\', atunci când alții sunt gata de schimb:</string>
     <string name="label_hometag">Acasă</string>
     <string name="label_hours">%d oră</string>
     <string name="label_iCloudEnable">SafeSlinger icloud este activat. Apăsați butonul \' Done \' când ați terminat.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger rezervă întârziat</string>
     <string name="label_safeslingered">(SafeSlinger directă Exchange)</string>
     <string name="label_SaveAccount">Salvați cont</string>
-    <string name="label_SaveInstruct">Completați schimb! Selectați datelor membre pentru a salva în agenda dvs.:</string>
+    <string name="label_SaveInstruct">Verificați contactele pe care doriți să actualizați în agendă, apoi atingeți \'Import\' pentru a salva contacte sigure:</string>
     <string name="label_seconds">%d secunde</string>
     <string name="label_selectLabel">Selectați eticheta</string>
     <string name="label_SelectRecip">Selectați destinatar</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Mesaje</string>
     <string name="menu_UseAnother">Utilizați un alt</string>
+    <string name="menu_UseContactPerson">Folosiți Contact \'%s\'</string>
+    <string name="menu_UseNoContact">Utilizare doar cu numele</string>
+    <string name="menu_UseProfilePerson">Utilizați Profil \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">de așteptare pentru verificare de la toți membrii…</string>
     <string name="prog_CollectingOthersItems">de așteptare pentru toți utilizatorii să se alăture…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Limbi furnizate de:</string>
     <string name="text_RelatedSearchTerms">Termeni legate de:</string>
     <string name="text_Requirements">Cerințe:\n1. Trebuie să fie instalat pe un minim de 2 dispozitive.\n2. O conexiune la Internet trebuie să fie activ.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Remedieri stabilitate.</string>
 
     <string name="title_About">Despre</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Acasă</string>
     <string name="title_MessageDetail">Mesaj</string>
     <string name="title_Messages">Mesaje</string>
-    <string name="title_MyIdentity">Identitatea mea</string>
+    <string name="title_MyIdentity">Personal Contact</string>
     <string name="title_NotifyFileAvailable">Mesaj SafeSlinger Disponibil</string>
     <string name="title_NotifyMulFileAvailable">%d de SafeSlinger Mesajele disponibile</string>
     <string name="title_passphrase">Frază de acces</string>

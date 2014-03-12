@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">צור קשר היה מעוצב בצורה לא נכונה.</string>
     <string name="error_WebCancelledByUser">משתמש ביטל את בקשת שרת.</string>
 
+    <string name="help_find">השתמש במסך זה כדי להגדיר את שמך להחליף עם אחרים. לחץ על לחצן \'סיום\' בסיום.</string>
     <string name="help_home">כדי להחליף נתונים זהות, להבטיח שכל המשתמשים נמצאים בקרבת מקום, או בטלפון. הכפתור\' התחל Exchange \' יחליף רק את נתוני אנשי קשר המסומנים.</string>
     <string name="help_identity_menu">\n\nאתה יכול גם לשנות את הנתונים אישיים על הזהות שלך במסך זה על ידי הקשה על הכפתור עם השם שלך. זה יציגתפריט שמאפשר לך \'ערוך\' אנשי הקשר שלך, \' צור חדש \' איש קשר או \' שימוש נוסף \' ליצירת קשר.</string>
     <string name="help_Messages">מסך זה מציג את כל ההודעות האחרונות, ובקבצים מצורפים שעדיין זמינים להורדה.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">פג %s</string>
     <string name="label_expiresIn">יפוג ב</string>
     <string name="label_FileNameHint">שם קובץ</string>
+    <string name="label_FindInstruct">הזן את השם שאתה רוצה שאחרים תוכל לראות כאשר מתקשרים בצורה מאובטחת:</string>
     <string name="label_FirstName">שם פרטים</string>
-    <string name="label_Home">בדוק פריטים שברצונך לשתף והקש \' בגין שערי \' כאשר אחרים מוכנים להחליף.</string>
+    <string name="label_Home">הקש את השם שלך כדי להוסיף או להסיר צורו קשר, לבדוק פריטים שברצונך לשתף ולהקיש \'בגין שערי\' כאשר אחרים מוכנים מטבע:</string>
     <string name="label_hometag">דף בית</string>
     <string name="label_hours">%d שעות</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud מופעל. לחץ על לחצן \'סיום\' בסיום.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">גיבוי SafeSlinger מתעכב</string>
     <string name="label_safeslingered">(SafeSlinger ישיר לניירות ערך)</string>
     <string name="label_SaveAccount">להציל את החשבון</string>
-    <string name="label_SaveInstruct">שערי שלמה! נתונים נבחרים מחבר כדי לחסוךלפנקס הכתובות שלך:</string>
+    <string name="label_SaveInstruct">בדוק אנשי קשר שברצונך לעדכן בפנקס הכתובות שלך, לאחר מכן הקש על \'היבוא\' כדי לשמור אנשי קשר מאובטחים:</string>
     <string name="label_seconds">%d שניות</string>
     <string name="label_selectLabel">בחר תווית</string>
     <string name="label_SelectRecip">נמען בחר</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">קלע מפתחות</string>
     <string name="menu_TagListMessages">הודעות</string>
     <string name="menu_UseAnother">שימוש נוסף</string>
+    <string name="menu_UseContactPerson">השתמש ב \'%s\' לתקשר עם</string>
+    <string name="menu_UseNoContact">השתמש שם רק</string>
+    <string name="menu_UseProfilePerson">השתמש ב \'%s\' הפרופיל</string>
 
     <string name="prog_CollectingOthersCommitVerify">ממתין לאימות מכל החברים…</string>
     <string name="prog_CollectingOthersItems">מחכה לכל המשתמשים להצטרף…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">שפות הניתנות על ידי:</string>
     <string name="text_RelatedSearchTerms">תנאים נלווים:</string>
     <string name="text_Requirements">דרישות:\n1. חייב להיות מותקן במינימום של 2 מכשירים.\n2.חיבור לאינטרנט חייב להיות פעיל.</string>
+    <string name="text_SourceCodeRepo">קוד פתוח: %s</string>
     <string name="text_WhatsNew">- תיקוני יציבות.</string>
 
     <string name="title_About">על</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">דף בית</string>
     <string name="title_MessageDetail">הודעה</string>
     <string name="title_Messages">הודעות</string>
-    <string name="title_MyIdentity">הזהות שלי</string>
+    <string name="title_MyIdentity">קשר אישי</string>
     <string name="title_NotifyFileAvailable">מסר SafeSlinger זמין</string>
     <string name="title_NotifyMulFileAvailable">%d הודעות SafeSlinger זמינות</string>
     <string name="title_passphrase">ביטוי סיסמה</string>

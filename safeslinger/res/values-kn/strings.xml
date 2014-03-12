@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">ಸಂಪರ್ಕಿಸಿ ಡೇಟಾ ತಪ್ಪಾಗಿ ಸ್ವರೂಪಗೊಳಿಸಲಾಗಿದೆ ಮಾಡಲಾಯಿತು.</string>
     <string name="error_WebCancelledByUser">ಬಳಕೆದಾರ ಸರ್ವರ್ ಮನವಿಯನ್ನು ತಳ್ಳಿಹಾಕಿದರು.</string>
 
+    <string name="help_find">ಇತರರೊಂದಿಗೆ ವಿನಿಮಯ ನಿಮ್ಮ ಹೆಸರು ಸೆಟ್ ಇದನ್ನು ಬಳಸಿ. ಮುಗಿದಮೇಲೆ \'ಡನ್\' ಬಟನ್ ಟ್ಯಾಪ್.</string>
     <string name="help_home">ಗುರುತನ್ನು ದಶಮಾಂಶ ವಿನಿಮಯ, ಎಲ್ಲಾ ಬಳಕೆದಾರರು ಹತ್ತಿರದ ಅಥವಾ ಫೋನ್ನಲ್ಲಿ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು. \' ಆರಂಭಿಸಲು ಎಕ್ಸ್ಚೇಂಜ್ \' ಗುಂಡಿಯನ್ನು ಮಾತ್ರ ಪರಿಶೀಲಿಸಿದ ಸಂಪರ್ಕ ದಶಮಾಂಶ ವಿನಿಮಯ.</string>
     <string name="help_identity_menu">\n\nನಿಮ್ಮ ಹೆಸರಿನ ಗುಂಡಿಯನ್ನು ಟ್ಯಾಪಿಂಗ್ ಮೂಲಕ ಈ ತೆರೆಯಲ್ಲಿ ನಿಮ್ಮ ಗುರುತನ್ನು ಬಗ್ಗೆ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಬದಲಾಯಿಸಬಹುದು. ನೀವು \'ಸಂಪಾದಿಸು\' ನಿಮ್ಮ ಸಂಪರ್ಕ, ಸಂಪರ್ಕ \' ಹೊಸ ರಚಿಸಿ \', ಅಥವಾ ಸಂಪರ್ಕ \' ಮತ್ತೊಂದು ಬಳಸಿ \' ಅವಕಾಶ ಮೆನುವನ್ನು ತೋರಿಸುತ್ತದೆ.</string>
     <string name="help_Messages">ಈ ಪರದೆಯ ಎಲ್ಲಾ ಕಳೆದ ಸಂದೇಶಗಳನ್ನು, ಮತ್ತು ಇನ್ನೂ ಡೌನ್ಲೋಡ್ ಲಭ್ಯವಿರುವ ಲಗತ್ತುಗಳನ್ನು ತೋರಿಸುತ್ತದೆ.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s ಅವಧಿಯು</string>
     <string name="label_expiresIn">ರಲ್ಲಿ ಮುಕ್ತಾಯಗೊಳ್ಳುತ್ತದೆ</string>
     <string name="label_FileNameHint">ಫೈಲ್ ಹೆಸರು</string>
+    <string name="label_FindInstruct">ಹೆಸರನ್ನು ನಮೂದಿಸಿ ನೀವು ಸುರಕ್ಷಿತವಾಗಿ ಸಂವಹನ ಇತರರಿಗಾಗಿ ಬಯಸುವ:</string>
     <string name="label_FirstName">ಮೊದಲ ಹೆಸರು</string>
-    <string name="label_Home">ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಮತ್ತು \' ಎಕ್ಸ್ಚೇಂಜ್ ಆರಂಭಿಸಲು \' ಕದ್ದಾಲಿಸಲು ಬಯಸುವ ಐಟಂಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಇತರರು ವಿನಿಮಯ ತಯಾರಾದ.</string>
+    <string name="label_Home">ಸೇರಿಸಲು ಅಥವ ತೆಗೆದು ಸಂಪರ್ಕ ದಶಮಾಂಶ, ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಬಯಸುವ ಐಟಂಗಳನ್ನು ಪರಿಶೀಲಿಸಲು, ಮತ್ತು ಸ್ಪರ್ಶಿಸಿ ನಿಮ್ಮ ಹೆಸರು ಟ್ಯಾಪ್ \'ಎಕ್ಸ್ಚೇಂಜ್ ಆರಂಭಿಸಲು\' ಇತರರು ವಿನಿಮಯ ತಯಾರಾದ:</string>
     <string name="label_hometag">ಮುಖಪುಟ</string>
     <string name="label_hours">%d ಗಂಟೆಗಳ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಮುಗಿದಮೇಲೆ \' ಡನ್ \' ಬಟನ್ ಟ್ಯಾಪ್.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">ತಡವಾಗಿ SafeSlinger ಬ್ಯಾಕ್ಅಪ್</string>
     <string name="label_safeslingered">(SafeSlinger ನೇರ ವಿನಿಮಯ)</string>
     <string name="label_SaveAccount">ಖಾತೆ ಉಳಿಸಿ</string>
-    <string name="label_SaveInstruct">ವಿನಿಮಯ ಪೂರ್ಣಗೊಳಿಸಲು! ನಿಮ್ಮ ವಿಳಾಸ ಪುಸ್ತಕದ ಉಳಿಸಲು ಸದಸ್ಯ ದಶಮಾಂಶ ಆಯ್ಕೆ:</string>
+    <string name="label_SaveInstruct">ಸುರಕ್ಷಿತ ಸಂಪರ್ಕಗಳು ಉಳಿಸಲು \'ಆಮದು\' ಟ್ಯಾಪ್ ನಂತರ, ನೀವು ನಿಮ್ಮ ವಿಳಾಸ ಪುಸ್ತಕದಲ್ಲಿ ನವೀಕರಿಸಲು ಬಯಸುತ್ತೀರಾ ಸಂಪರ್ಕಗಳು ಪರಿಶೀಲಿಸಿ:</string>
     <string name="label_seconds">%d ಸೆಕೆಂಡುಗಳ</string>
     <string name="label_selectLabel">ಆಯ್ಕೆ ಲೇಬಲ್</string>
     <string name="label_SelectRecip">ಸ್ವೀಕರಿಸುವವರ ಆಯ್ಕೆ</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">ಜೋಲಿ ಕೀಸ್</string>
     <string name="menu_TagListMessages">ಸಂದೇಶಗಳು</string>
     <string name="menu_UseAnother">ಮತ್ತೊಂದು ಬಳಸಿ</string>
+    <string name="menu_UseContactPerson">ಸಂಪರ್ಕಿಸಿ \'%s\' ಬಳಸಿ</string>
+    <string name="menu_UseNoContact">ಬಳಸಿ ಹೆಸರು ಮಾತ್ರ</string>
+    <string name="menu_UseProfilePerson">ಪ್ರೊಫೈಲ್ \'%s\' ಬಳಸಿ</string>
 
     <string name="prog_CollectingOthersCommitVerify">ಎಲ್ಲಾ ಸದಸ್ಯರು ಪರಿಶೀಲನೆ ಕಾಯುತ್ತಿದೆ…</string>
     <string name="prog_CollectingOthersItems">ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಸೇರಲು ಕಾಯುತ್ತಿದೆ…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">ಒದಗಿಸಿದ ಭಾಷೆಗಳು:</string>
     <string name="text_RelatedSearchTerms">ಸಂಬಂಧಿತ ನಿಯಮಗಳು:</string>
     <string name="text_Requirements">ಬೇಡಿಕೆಗಳು:\n1. 2 ಸಾಧನಗಳ ಕನಿಷ್ಠ ಇನ್ಸ್ಟಾಲ್ ಮಾಡಬೇಕು.\n2. ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಸಕ್ರಿಯ ಇರಬೇಕು.</string>
+    <string name="text_SourceCodeRepo">ತೆರೆದ ಮೂಲ: %s</string>
     <string name="text_WhatsNew">- ಸ್ಟೆಬಿಲಿಟಿ ಪರಿಹಾರಗಳನ್ನು.</string>
 
     <string name="title_About">ಕುರಿತು</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">ಮುಖಪುಟ</string>
     <string name="title_MessageDetail">ಸಂದೇಶ</string>
     <string name="title_Messages">ಸಂದೇಶಗಳು</string>
-    <string name="title_MyIdentity">ನನ್ನ ಐಡೆಂಟಿಟಿ</string>
+    <string name="title_MyIdentity">ವೈಯಕ್ತಿಕ ಸಂಪರ್ಕಿಸಿ</string>
     <string name="title_NotifyFileAvailable">ಲಭ್ಯವಿರುವ SafeSlinger ಸಂದೇಶ</string>
     <string name="title_NotifyMulFileAvailable">ಲಭ್ಯವಿರುವ %d SafeSlinger ಸಂದೇಶಗಳು</string>
     <string name="title_passphrase">ಪಾಸ್ಫ್ರೇಸ್</string>

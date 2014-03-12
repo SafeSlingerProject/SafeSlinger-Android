@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kontakto datumoj estis formatita malĝuste.</string>
     <string name="error_WebCancelledByUser">Uzanto nuligita servilo peton.</string>
 
+    <string name="help_find">Uzu tiun ekranon por agordi vian nomon por interŝanĝi kun aliaj. Frapeti la \'Farita\' butono kiam finis.</string>
     <string name="help_home">Interŝanĝi identecon datumoj, certigi al ĉiuj uzantoj estas proksimaj aŭ telefone. La \' Begin Exchange \' butono interŝanĝi nur la kontrolita kontakto datumojn.</string>
     <string name="help_identity_menu">\n\nVi povas ankaŭ ŝanĝi personajn datumojn pri via identeco sur ĉi ekrano per frapeton sur la butono kun via nomo. Tio montros menuo kiu permesas vin al \' Redakti \' via kontakto, \' Kreu novan \' kontakto, aŭ \' uzi alian \' kontakton.</string>
     <string name="help_Messages">Ĉi ekrano montras ĉiujn pasinteco mesaĝoj, kaj ligiteco, kiuj estas ankoraŭ disponebla por elŝuti.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">eksvalidiĝi %s</string>
     <string name="label_expiresIn">elspiras en</string>
     <string name="label_FileNameHint">Dosiero Nomo</string>
+    <string name="label_FindInstruct">Entajpu la nomon vi deziras ke aliaj vidas kiam komuniki kun firmaj:</string>
     <string name="label_FirstName">Persona nomo</string>
-    <string name="label_Home">Kontrolu erojn vi deziras kunhavigi kaj frapeti \' Begin Exchange \' kiam aliaj pretas interŝanĝi.</string>
+    <string name="label_Home">Frapeti vian nomon por aldoni aŭ forigi kontakto datumoj, kontrolu erojn vi deziras kunhavigi kaj frapeti \'Begin Exchange\' kiam aliaj estas preta interŝanĝo:</string>
     <string name="label_hometag">Hejmo</string>
     <string name="label_hours">%d horoj</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud estas ebligita. Frapeti la \' Farita \' butono kiam finis.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger sekurkopioj prokrastita</string>
     <string name="label_safeslingered">(SafeSlinger Rekta Exchange)</string>
     <string name="label_SaveAccount">Konservu konto</string>
-    <string name="label_SaveInstruct">Interŝanĝo Kompletigu! Elektu membro datumoj por savi vian adreson libro:</string>
+    <string name="label_SaveInstruct">Kontrolu kontaktoj vi volas ĝisdatigi en via adreslibro, tiam frapeti \'Importi\' savi sekura kontaktoj:</string>
     <string name="label_seconds">%d sekundoj</string>
     <string name="label_selectLabel">Selektu etikedon</string>
     <string name="label_SelectRecip">Elektu Ricevanto</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Profunda Keys</string>
     <string name="menu_TagListMessages">Mesaĝoj</string>
     <string name="menu_UseAnother">Uzu Alia</string>
+    <string name="menu_UseContactPerson">Uzu Kontakto \'%s\'</string>
+    <string name="menu_UseNoContact">Uzo Nomo Nur</string>
+    <string name="menu_UseProfilePerson">Uzu Profilo \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">atendante konfirmo de ĉiuj membroj…</string>
     <string name="prog_CollectingOthersItems">atendante por ĉiuj uzantoj aliĝi…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Lingvoj provizita per:</string>
     <string name="text_RelatedSearchTerms">Related Terms:</string>
     <string name="text_Requirements">Postuloj:\n1. Devas esti instalita sur minimumo de 2 aparatoj.\n2. Interreta konekto devas esti aktiva.</string>
+    <string name="text_SourceCodeRepo">malfermita fonto: %s</string>
     <string name="text_WhatsNew">- Stabileco de eraroj.</string>
 
     <string name="title_About">Pri</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Hejmo</string>
     <string name="title_MessageDetail">Mesaĝo</string>
     <string name="title_Messages">Mesaĝoj</string>
-    <string name="title_MyIdentity">Mia Identeco</string>
+    <string name="title_MyIdentity">Personaj Kontakto</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Mesaĝo Havebla</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Mesaĝoj Havebla</string>
     <string name="title_passphrase">Pasfrazon</string>

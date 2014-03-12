@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Raraunga Whakapā whakahōputu i hē.</string>
     <string name="error_WebCancelledByUser">Whakakorea Kaiwhakamahi tono tūmau.</string>
 
+    <string name="help_find">Whakamahia tēnei mata ki te whakatakotoria tou ingoa ki te whakawhiti ki ētahi atu. Paoa i te pātene \'Fai\', ka mutu.</string>
     <string name="help_home">Ki te whakawhiti raraunga tuakiri, te whakarite kei tata ranei i runga i te waea kaiwhakamahi katoa. Ka whakawhiti pātene te \' Kamata Exchange \' te raraunga whakapā takina anake.</string>
     <string name="help_identity_menu">\n\nkia hoki e koe te huri i ngā raraunga whaiaro e pā ana ki o koutou i runga i tenei tuakiri mata i te ingoa i runga i te pātene ki tou ingoa. Tenei ka whakaatu te tahua tuku koe ki te \' Whakatika \' to koutou whakapā, \' Waihanga New \' whakapā, \' Whakamahia tētahi atu \' whakapā ranei.</string>
     <string name="help_Messages">Ka whakaatu tēnei mata i ngā karere o mua katoa, me ngā tāpiritanga e wātea ana mō te download he tonu.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">Ka pau %s</string>
     <string name="label_expiresIn">Ka pau i roto i te</string>
     <string name="label_FileNameHint">Ingoa kōnae</string>
+    <string name="label_FindInstruct">Tomo i te ingoa e hiahia ana koe ki te kite i ētahi atu i te kōrero he wehi:</string>
     <string name="label_FirstName">Ingoa Tuatahi</string>
-    <string name="label_Home">Tirohia ngā tūemi e hiahia ana koe ki te tiritiri me te pato \' Tīmata Exchange \' ka noho rite ki te whakawhiti i ētahi atu.</string>
+    <string name="label_Home">Paoa tou ingoa ki te tāpiri ranei tango raraunga whakapā, tirohia tūemi e hiahia ana koe ki te tiritiri, me te pato \'Tīmata Exchange\' ka e rite ki te whakawhiti etahi atu:</string>
     <string name="label_hometag">Kāinga</string>
     <string name="label_hours">%d haora</string>
     <string name="label_iCloudEnable">Ngā makaurangi SafeSlinger iCloud te. Paoa i te pātene \' Fai \', ka mutu.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger pūrua roa</string>
     <string name="label_safeslingered">( SafeSlinger Direct Exchange )</string>
     <string name="label_SaveAccount">Whakaorangia Pūkete</string>
-    <string name="label_SaveInstruct">Whakaotia Exchange! Tīpakohia raraunga mema ki te whakaora ki to koutou pukapuka wāhitau:</string>
+    <string name="label_SaveInstruct">Tirohia ngā hoapā e hiahia ana koe ki te whakahou i roto i to koutou pukapuka wāhitau, ka pato \'Kawemai\' ki te whakaora i ngā hoapā haumaru:</string>
     <string name="label_seconds">%d hēkona</string>
     <string name="label_selectLabel">Tīpakohia te tapanga</string>
     <string name="label_SelectRecip">Tīpako i te Kaiwhiwhi</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Kotaha Kī</string>
     <string name="menu_TagListMessages">Karere</string>
     <string name="menu_UseAnother">Whakamahia tētahi atu</string>
+    <string name="menu_UseContactPerson">Whakamahia Whakapā \'%s\'</string>
+    <string name="menu_UseNoContact">Whakamahia te Ingoa anake</string>
+    <string name="menu_UseProfilePerson">Whakamahia Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">tatari hei manatoko i te mau melo i te katoa…</string>
     <string name="prog_CollectingOthersItems">e tatari ana ki te kaiwhakamahi katoa te whakauru mai…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Reo e whakaratohia ana e:</string>
     <string name="text_RelatedSearchTerms">Ngā ture e pā ana:</string>
     <string name="text_Requirements">Whakaritenga:\n1. Me tāuta i runga i te iti o te 2 ngā pūrere.\n2. Me kaha te hononga Ipurangi.</string>
+    <string name="text_SourceCodeRepo">tuwhera pūtake: %s</string>
     <string name="text_WhatsNew">- Pūmau whakatika.</string>
 
     <string name="title_About">Mō</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Kāinga</string>
     <string name="title_MessageDetail">Message</string>
     <string name="title_Messages">Karere</string>
-    <string name="title_MyIdentity">Toku tuakiri</string>
+    <string name="title_MyIdentity">Whakapā whaiaro</string>
     <string name="title_NotifyFileAvailable">Karere SafeSlinger wātea</string>
     <string name="title_NotifyMulFileAvailable">%d Messages SafeSlinger wātea</string>
     <string name="title_passphrase">Kīangahipa</string>

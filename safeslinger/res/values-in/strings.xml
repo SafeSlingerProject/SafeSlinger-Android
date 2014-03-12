@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Data kontak diformat salah.</string>
     <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan server.</string>
 
+    <string name="help_find">Gunakan layar ini untuk mengatur nama Anda untuk bertukar dengan orang lain. Tekan \'Selesai\' tombol ketika selesai.</string>
     <string name="help_home">Untuk bertukar data identitas, memastikan semua pengguna berada di dekatnya atau di telepon. Tombol \' Mulai Efek \' akan bertukar hanya data kontak diperiksa.</string>
     <string name="help_identity_menu">\n\nAnda juga dapat mengubah data pribadi tentang identitas Anda pada layar ini dengan menekan tombol dengan nama Anda. Ini akan menampilkan menu yang memungkinkan Anda untuk \'Edit \' kontak Anda, \' Create New \' kontak, atau \' Gunakan lagi \' kontak.</string>
     <string name="help_Messages">Layar ini menampilkan semua pesan masa lalu, dan lampiran yang masih tersedia untuk di-download.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">berakhir %s</string>
     <string name="label_expiresIn">berakhir pada</string>
     <string name="label_FileNameHint">Nama file</string>
+    <string name="label_FindInstruct">Masukkan nama yang ingin orang lain untuk melihat ketika berkomunikasi dengan aman:</string>
     <string name="label_FirstName">Nama Depan</string>
-    <string name="label_Home">Memeriksa barang-barang yang Anda ingin berbagi dan tekan \' Mulai Efek \' ketika orang lain siap untuk bertukar.</string>
+    <string name="label_Home">Ketuk nama Anda untuk menambah atau menghapus data kontak, periksa item yang ingin berbagi, dan tekan \'Mulai Efek\' ketika orang lain siap untuk pertukaran:</string>
     <string name="label_hometag">Rumah</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud diaktifkan. Tekan \' Selesai \' tombol ketika selesai.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup tertunda</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Simpan Akun</string>
-    <string name="label_SaveInstruct">Bursa Lengkap! Pilih Data anggota untuk menyimpan ke buku alamat Anda:</string>
+    <string name="label_SaveInstruct">Periksa kontak Anda ingin memperbarui dalam buku alamat Anda, lalu ketuk \'Impor\' untuk menyimpan kontak yang aman:</string>
     <string name="label_seconds">%d detik</string>
     <string name="label_selectLabel">Pilih label</string>
     <string name="label_SelectRecip">Pilih Penerima</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Pesan</string>
     <string name="menu_UseAnother">Gunakan lain</string>
+    <string name="menu_UseContactPerson">Gunakan Contact \'%s\'</string>
+    <string name="menu_UseNoContact">Gunakan Nama Hanya</string>
+    <string name="menu_UseProfilePerson">Gunakan Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">menunggu verifikasi dari semua anggota…</string>
     <string name="prog_CollectingOthersItems">menunggu untuk semua pengguna untuk bergabung…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Bahasa yang disediakan oleh:</string>
     <string name="text_RelatedSearchTerms">Ketentuan terkait:</string>
     <string name="text_Requirements">Persyaratan:\n1. Harus diinstal pada minimal 2 perangkat.\n2. Koneksi Internet harus aktif.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Stabilitas perbaikan.</string>
 
     <string name="title_About">Tentang</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Rumah</string>
     <string name="title_MessageDetail">Pesan</string>
     <string name="title_Messages">Pesan</string>
-    <string name="title_MyIdentity">Identitas saya</string>
+    <string name="title_MyIdentity">Kontak pribadi</string>
     <string name="title_NotifyFileAvailable">Pesan SafeSlinger Tersedia</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Pesan Tersedia</string>
     <string name="title_passphrase">Passphrase</string>

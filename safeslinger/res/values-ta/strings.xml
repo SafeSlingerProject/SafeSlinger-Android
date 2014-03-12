@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">தொடர்பு தரவு தவறாக வடிவமைக்கப்பட்டுள்ளது.</string>
     <string name="error_WebCancelledByUser">பயனர் சர்வர் இரத்து செய்தது.</string>
 
+    <string name="help_find">மற்றவர்களுடன் பரிமாறி உங்கள் பெயர் அமைக்க இந்த திரையை பயன்படுத்தவும். முடித்த போது \'முடிந்தது\' பொத்தானை தட்டவும்.</string>
     <string name="help_home">அடையாள பரிமாற்றம் தரவு, அனைத்து பயனர்கள் அருகிலுள்ள அல்லது தொலைபேசியில் உறுதி. \' தொடங்கியிருக்கவேண்டும் செலாவணி \' பொத்தானை மட்டுமே சரிபார்க்கப்பட தொடர்பு தரவு மாற்றித்தரும்.</string>
     <string name="help_identity_menu">\n\nஉங்கள் பெயர் பொத்தானை தட்டுவதன் மூலம் இந்த திரையில் உங்கள் அடையாளம் பற்றி தனிப்பட்ட தரவு மாற்றலாம். இந்த \'Edit\' தொடர்பு, தொடர்பு \' நியூ உருவாக்கவும் \', அல்லது தொடர்பு \' மற்றொரு பயன்பாடு \' அனுமதிக்கும் ஒரு மெனு காண்பிக்கும்.</string>
     <string name="help_Messages">இந்த திரையில் அனைத்து கடந்த செய்திகள், மற்றும் இன்னும் பதிவிறக்க கிடைக்க உள்ளன என்று இணைப்புகளை காட்டுகிறது.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s காலாவதியாகிறது</string>
     <string name="label_expiresIn">ல் காலாவதியாகிறது</string>
     <string name="label_FileNameHint">கோப்பு பெயர்</string>
+    <string name="label_FindInstruct">பெயர் சேர்க்கவும் நீங்கள் பாதுகாப்பாக தொடர்பு போது பார்க்க மற்றவர்கள் விரும்புகிறேன்:</string>
     <string name="label_FirstName">முதல் பெயர்</string>
-    <string name="label_Home">நீங்கள் பகிர்ந்து மற்றும் \'எக்ஸ்சேஞ்ச் தொடங்கியிருக்கவேண்டும் \' தட்டி விரும்பும் பொருட்களை சரிபார்க்கவும் மற்றவர்கள் பரிமாறி தயாராக இருக்கும் போது.</string>
+    <string name="label_Home">சேர்க்க அல்லது நீக்க தொடர்பு தரவு, நீங்கள் பகிர்ந்து கொள்ள விரும்பும் பொருட்களை சரிபார்த்து, மற்றும் குழாய் உங்கள் பெயரை தட்டுக \'எக்ஸ்சேஞ்ச் தொடங்கியிருக்கவேண்டும்\' மற்றவர்கள் பரிமாற்றம் தயாராக இருக்கும் போது:</string>
     <string name="label_hometag">முகப்பு</string>
     <string name="label_hours">%d மணி நேரம்</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud செயல்படுத்தப்படும். முடித்த போது \' முடிந்தது \' பொத்தானை தட்டவும்.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">தாமதமாக SafeSlinger காப்பு</string>
     <string name="label_safeslingered">(SafeSlinger நேரடி எக்ஸ்சேஞ்ச்)</string>
     <string name="label_SaveAccount">கணக்கு சேமிக்கவும்</string>
-    <string name="label_SaveInstruct">சந்தை நிறைவு! உங்கள் முகவரி புத்தகத்தில் காப்பாற்ற உறுப்பினர் தரவு தேர்ந்தெடுக்கவும்:</string>
+    <string name="label_SaveInstruct">பாதுகாப்பான தொடர்புகள் காப்பாற்ற \'இறக்குமதி\' தட்டி, நீங்கள் உங்கள் முகவரி புத்தகத்தில் உள்ள மேம்படுத்த வேண்டும் தொடர்புகள் பாருங்கள்:</string>
     <string name="label_seconds">%d வினாடிகள்</string>
     <string name="label_selectLabel">தேர்ந்தெடு</string>
     <string name="label_SelectRecip">தேர்வு பெற்றவர்</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">ஸ்லிங் விசைகள்</string>
     <string name="menu_TagListMessages">செய்திகள்</string>
     <string name="menu_UseAnother">மற்றொரு பயன்பாடு</string>
+    <string name="menu_UseContactPerson">தொடர்பு \'%s\' பயன்படுத்தவும்</string>
+    <string name="menu_UseNoContact">பயன்பாட்டு பெயர் மட்டும்</string>
+    <string name="menu_UseProfilePerson">காண்க \'%s\' பயன்படுத்தவும்</string>
 
     <string name="prog_CollectingOthersCommitVerify">அனைத்து உறுப்பினர்கள் சரிபார்ப்பு காத்திருக்கிறது…</string>
     <string name="prog_CollectingOthersItems">அனைத்து பயனர்கள் சேர காத்திருக்கும்…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">வழங்கப்பட்ட மொழிகள்:</string>
     <string name="text_RelatedSearchTerms">தொடர்பான விதிமுறைகள்:</string>
     <string name="text_Requirements">தேவைகள்:\n1. 2 சாதனங்களை ஒரு குறைந்தபட்ச நிறுவ வேண்டும்.\n2. இணைய இணைப்பு செயலில் இருக்க வேண்டும்.</string>
+    <string name="text_SourceCodeRepo">திறந்த மூல: %s</string>
     <string name="text_WhatsNew">- உறுதிப்பாட்டு திருத்தங்கள்.</string>
 
     <string name="title_About">பற்றி</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">முகப்பு</string>
     <string name="title_MessageDetail">செய்தி</string>
     <string name="title_Messages">செய்திகள்</string>
-    <string name="title_MyIdentity">என் அடையாளத்தை</string>
+    <string name="title_MyIdentity">தனிப்பட்ட தொடர்பு</string>
     <string name="title_NotifyFileAvailable">கிடைக்கும் SafeSlinger செய்தி</string>
     <string name="title_NotifyMulFileAvailable">கிடைக்கும் %d SafeSlinger செய்திகள்</string>
     <string name="title_passphrase">கடவுச்சொல்லை</string>

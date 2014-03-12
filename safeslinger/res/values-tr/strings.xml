@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">İletişim bilgileri hatalı biçimlendirilmiş.</string>
     <string name="error_WebCancelledByUser">Kullanıcı sunucu isteği iptal edildi.</string>
 
+    <string name="help_find">Başkaları ile alışverişi için adını ayarlamak için bu ekranı kullanın. Bittiğinde \'Bitti\' düğmesine dokunun.</string>
     <string name="help_home">Kimlik veri alışverişi için tüm kullanıcıların yakın yatelefonda sağlamak. \'Başlamak Borsası\' düğmesi yalnızcaişaretli temas veri alışverişi olacaktır.</string>
     <string name="help_identity_menu">\n\nAyrıca adı iledüğmeye dokunarak ekranda kimliğinizle ilgili kişisel veriler değişebilir. Bu \' Düzenle \' kişiyi, kişiyi \'Yeni Oluştur\', ya da kişiyi \'Başka kullan\' sağlayan bir menü görüntüler.</string>
     <string name="help_Messages">Bu ekran tüm geçmiş iletileri ve hala yüklenebilir ekleri görüntüler.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s sona eriyor</string>
     <string name="label_expiresIn">sona eriyor</string>
     <string name="label_FileNameHint">Dosya Adı</string>
+    <string name="label_FindInstruct">Adını girin güvenli iletişim kurarken görmek için başkalarını diliyorum:</string>
     <string name="label_FirstName">Ad</string>
-    <string name="label_Home">Paylaşmak ve \' Değiş Başlayacak \' dokunun istediğiniz öğeleri işaretleyin diğerleri değişimi için hazır olduğunuzda.</string>
+    <string name="label_Home">Eklemek veya kaldırmak veri iletişim, paylaşmak istediğiniz öğeleri kontrol ve dokunun adınızı dokunun \'Değiş başlayın\' başkalarının alışverişine hazır olduğunuzda:</string>
     <string name="label_hometag">Ev</string>
     <string name="label_hours">%d saat</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud etkindir. Bittiğinde\'Bitti \' düğmesine dokunun.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">Gecikmeli SafeSlinger yedekleme</string>
     <string name="label_safeslingered">(SafeSlinger Doğrudan Exchange)</string>
     <string name="label_SaveAccount">Hesap kaydet</string>
-    <string name="label_SaveInstruct">Değişimi tamamlayın! Adres defterinize kaydetmek için üye verileri seçin:</string>
+    <string name="label_SaveInstruct">Güvenli kişileri kaydetmek için \'Al\' düğmesine dokunun, sonra da adres defterinde güncellemek istediğiniz kişileri kontrol edin:</string>
     <string name="label_seconds">%d saniye</string>
     <string name="label_selectLabel">Seç etiket</string>
     <string name="label_SelectRecip">Seç Alıcı</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Mesajlar</string>
     <string name="menu_UseAnother">Başka kullanın</string>
+    <string name="menu_UseContactPerson">İletişim \'%s\' kullanın</string>
+    <string name="menu_UseNoContact">Kullanım Sadece İsim</string>
+    <string name="menu_UseProfilePerson">Profil \'%s\' kullanın</string>
 
     <string name="prog_CollectingOthersCommitVerify">tüm üyelerin doğrulama için bekliyor…</string>
     <string name="prog_CollectingOthersItems">Tüm kullanıcıların katılmak için bekliyor…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Tarafından sağlanan Diller:</string>
     <string name="text_RelatedSearchTerms">İlgili Şartlar:</string>
     <string name="text_Requirements">Koşullar:\n1. 2 cihazların minimum yüklü olmalıdır.\n2. Bir Internet bağlantısı aktif olmalıdır.</string>
+    <string name="text_SourceCodeRepo">açık kaynak: %s</string>
     <string name="text_WhatsNew">- İstikrar giderir.</string>
 
     <string name="title_About">Hakkında</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Ev</string>
     <string name="title_MessageDetail">Mesaj</string>
     <string name="title_Messages">Mesajlar</string>
-    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_MyIdentity">Kişisel İletişim</string>
     <string name="title_NotifyFileAvailable">Mevcut SafeSlinger Mesaj</string>
     <string name="title_NotifyMulFileAvailable">Mevcut %d SafeSlinger Mesajlar</string>
     <string name="title_passphrase">Parolası</string>

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">تم تنسيقها جهة الاتصال بشكل غير صحيح.</string>
     <string name="error_WebCancelledByUser">إلغاء طلب المعلن الخادم.</string>
 
+    <string name="help_find">استخدام هذه الشاشة لتحديد اسم لتبادل مع الآخرين. اضغط على زر \'تم\' عند الانتهاء.</string>
     <string name="help_home">لتبادل البيانات الهوية ، وضمان جميع المستخدمين في مكان قريب أو على الهاتف. سوف زر \' بيغن الصرافة تبادل البيانات فقط الاتصال فحصها.</string>
     <string name="help_identity_menu"> غير متوافر غير متوافر يمكنك أيضا تغيير البيانات الشخصية حول الهوية الخاصة بك على هذه الشاشة من خلال النقر على زر مع اسمك. وهذا عرض قائمة مما يتيح لك \'تحرير \' الاتصال الخاصة بك، \'إنشاء جديد \' الاتصال، أو \' استخدام آخر \' للإتصال به.</string>
     <string name="help_Messages">يعرض هذه الشاشة كل الرسائل الماضية، و المرفقات التي لا تزال متاحة للتنزيل.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">تنتهي %s</string>
     <string name="label_expiresIn">تنتهي في</string>
     <string name="label_FileNameHint">اسم الملف</string>
+    <string name="label_FindInstruct">أدخل الاسم الذي ترغب أن ترى الآخرين عند الاتصال بشكل آمن:</string>
     <string name="label_FirstName">الاسم الأول</string>
-    <string name="label_Home">تحقق العناصر التي ترغب في المشاركة والاستفادة من \' بيغن الصرافة عند الآخرين مستعدون لتبادل.</string>
+    <string name="label_Home">الاستفادة اسمك لإضافة أو إزالة بيانات الاتصال، والتحقق من العناصر التي ترغب في مشاركتها، ثم انقر فوق \'بدء صرف\' عند البعض الآخر على استعداد لتبادل:</string>
     <string name="label_hometag">منزل</string>
     <string name="label_hours">%d ساعة</string>
     <string name="label_iCloudEnable">يتم تمكين SafeSlinger iCloud. اضغط على زر\' تم\' عند الانتهاء.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger احتياطية تأخير</string>
     <string name="label_safeslingered">(SafeSlinger تبادل مباشر)</string>
     <string name="label_SaveAccount">حفظ الحساب</string>
-    <string name="label_SaveInstruct">تبادل أكمل! تحديد بيانات الأعضاء لإنقاذ ل دفتر العناوين الخاص بك:</string>
+    <string name="label_SaveInstruct">تحقق جهات الاتصال التي تريد تحديثها في دفتر العناوين الخاص بك، ثم اضغط على \'استيراد\' لحفظ الأسماء أمنا:</string>
     <string name="label_seconds">%d ثانية</string>
     <string name="label_selectLabel">حدد التسمية</string>
     <string name="label_SelectRecip">حدد مستلم</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">حبال مفاتيح</string>
     <string name="menu_TagListMessages">رسائل</string>
     <string name="menu_UseAnother">استخدام آخر</string>
+    <string name="menu_UseContactPerson">استخدام الاتصال \'%s\'</string>
+    <string name="menu_UseNoContact">استخدام اسم فقط</string>
+    <string name="menu_UseProfilePerson">استخدام الملف \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">في انتظار التحقق من جميع أعضاء…</string>
     <string name="prog_CollectingOthersItems">في انتظار لجميع المستخدمين للانضمام…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">اللغات التي تقدمها:</string>
     <string name="text_RelatedSearchTerms">شروط ذات الصلة:</string>
     <string name="text_Requirements">المتطلبات:\n1. يجب أن تكون مثبتة على الحد الأدنى من الأجهزة 2.\n2. يجب أن يكون اتصال إنترنت نشط.</string>
+    <string name="text_SourceCodeRepo">المصدر المفتوح: %s</string>
     <string name="text_WhatsNew">- إصلاحات الاستقرار.</string>
 
     <string name="title_About">حول</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">منزل</string>
     <string name="title_MessageDetail">رسالة</string>
     <string name="title_Messages">رسائل</string>
-    <string name="title_MyIdentity">هويتي</string>
+    <string name="title_MyIdentity">الاتصال الشخصية</string>
     <string name="title_NotifyFileAvailable">رسالة SafeSlinger متاح</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger الرسائل المتوفرة</string>
     <string name="title_passphrase">عبارة المرور</string>

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Dữ liệu liên lạc đã được định dạng chính xác.</string>
     <string name="error_WebCancelledByUser">Người sử dụng bị hủy bỏ yêu cầu máy chủ.</string>
 
+    <string name="help_find">Sử dụng màn hình này để thiết lập tên của bạn để trao đổi với người khác. Bấm vào nút \'Done\' khi hoàn tất.</string>
     <string name="help_home">Trao đổi dữ liệu nhận dạng, đảm bảo tất cả người dùng đang ở gần hoặc trên điện thoại. Nút \' Bắt đầu giao dịch \' sẽ trao đổi chỉ có dữ liệu liên lạc kiểm tra.</string>
     <string name="help_identity_menu">\n\nBạn cũng có thể thay đổi dữ liệu cá nhân về danh tính của bạn trên màn hình này bằng cách khai thác vào nút có tên của bạn. Điều này sẽ hiển thị một menu cho phép bạn \'Chỉnh sửa\' liên lạc của bạn, \'Tạo mới \' liên lạc, hoặc \' Sử dụng Một \' liên lạc.</string>
     <string name="help_Messages">Màn hình này hiển thị tất cả các thông điệp qua, và file đính kèm vẫn có sẵn để tải về.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">hết hạn %s</string>
     <string name="label_expiresIn">hết hạn trong</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Nhập tên bạn muốn người khác nhìn thấy khi giao tiếp an toàn:</string>
     <string name="label_FirstName">Tên đầu tiên</string>
-    <string name="label_Home">Kiểm tra các mục mà bạn muốn chia sẻ và khai thác \'Bắt đầu giao dịch \' khi những người khác đã sẵn sàng để trao đổi.</string>
+    <string name="label_Home">Khai thác tên của bạn để thêm hoặc loại bỏ các dữ liệu liên lạc, kiểm tra các mặt hàng bạn muốn chia sẻ, và bấm \'Bắt đầu giao dịch \'khi những người khác đã sẵn sàng để trao đổi:</string>
     <string name="label_hometag">Quê hương</string>
     <string name="label_hours">%d giờ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud được kích hoạt. Bấm vào nút \' Done \' khi hoàn tất.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger sao lưu bị trì hoãn</string>
     <string name="label_safeslingered">(SafeSlinger Trao đổi trực tiếp)</string>
     <string name="label_SaveAccount">Tài khoản tiết kiệm</string>
-    <string name="label_SaveInstruct">Ngoại tệ Hoàn thành! Chọn dữ liệu thành viên để lưu vào sổ địa chỉ của bạn:</string>
+    <string name="label_SaveInstruct">Kiểm tra địa chỉ liên lạc bạn muốn cập nhật trong sổ địa chỉ của bạn, sau đó bấm \'nhập khẩu\' để lưu địa chỉ liên lạc an toàn:</string>
     <string name="label_seconds">%d giây</string>
     <string name="label_selectLabel">Chọn nhãn</string>
     <string name="label_SelectRecip">Chọn người nhận</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling phím</string>
     <string name="menu_TagListMessages">Tin nhắn</string>
     <string name="menu_UseAnother">Sử dụng khác</string>
+    <string name="menu_UseContactPerson">Sử dụng Liên hệ với \'%s\'</string>
+    <string name="menu_UseNoContact">Tên sử dụng Chỉ</string>
+    <string name="menu_UseProfilePerson">Sử dụng Hồ sơ của %s \'</string>
 
     <string name="prog_CollectingOthersCommitVerify">chờ đợi để xác minh từ tất cả các thành viên…</string>
     <string name="prog_CollectingOthersItems">chờ đợi cho tất cả người dùng tham gia…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Ngôn ngữ được cung cấp bởi:</string>
     <string name="text_RelatedSearchTerms">Điều khoản liên quan:</string>
     <string name="text_Requirements">Yêu cầu:\n1. Phải được cài đặt trên tối thiểu là 2 thiết bị.\n2. Kết nối Internet phải được hoạt động.</string>
+    <string name="text_SourceCodeRepo">mã nguồn mở: %s</string>
     <string name="text_WhatsNew">- Bản sửa lỗi ổn định.</string>
 
     <string name="title_About">Về</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Quê hương</string>
     <string name="title_MessageDetail">Tin nhắn</string>
     <string name="title_Messages">Tin nhắn</string>
-    <string name="title_MyIdentity">My Identity</string>
+    <string name="title_MyIdentity">Liên hệ với cá nhân</string>
     <string name="title_NotifyFileAvailable">SafeSlinger tin nhắn có sẵn</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Tin nhắn có sẵn</string>
     <string name="title_passphrase">Cụm từ mật khẩu</string>

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Los datos de contacto fueron formateados incorrectamente.</string>
     <string name="error_WebCancelledByUser">El usuario canceló la solicitud del servidor.</string>
 
+    <string name="help_find">Utilice esta pantalla para configurar su nombre de intercambiar con los demás. Pulse el botón \'Hecho\' cuando haya terminado.</string>
     <string name="help_home">Para el intercambio de datos de identidad, asegúrese de que todos los usuarios estén cerca o en el teléfono. El botón \'Comenzar Cambio\' canjeará únicamente los datos de contacto chequeados.</string>
     <string name="help_identity_menu">\n\nTambién puede cambiar los datos personales sobre su identidad en esta pantalla pulsando sobre el botón con su nombre. Esto mostrará un menú que le permite \'Editar\' su contacto \'Crear nuevo\' contacto, o \'Utilizar Otro \'contacto.</string>
     <string name="help_Messages">Esta pantalla muestra todos los mensajes anteriores y los anexos que aún están disponibles para su descarga.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">expira %s</string>
     <string name="label_expiresIn">expira en</string>
     <string name="label_FileNameHint">Nombre del Archivo</string>
+    <string name="label_FindInstruct">Introduzca el nombre que desea que otros vean cuando se comunica de forma segura:</string>
     <string name="label_FirstName">Primer Nombre</string>
-    <string name="label_Home">Compruebe los elementos que desea compartir y toque \'Comenzar Intercambio\' cuando los demás estén dispuestos a intercambiar.</string>
+    <string name="label_Home">Pulse en el nombre para agregar o quitar datos de contacto, comprobar los elementos que desea compartir y toque \'Begin Cambio\' cuando los demás están listos para el intercambio:</string>
     <string name="label_hometag">Inicio</string>
     <string name="label_hours">%d horas</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud está habilitado. Pulse el botón \'Hecho\' cuando haya terminado.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">Copia de Seguridad de SafeSlinger retrazada</string>
     <string name="label_safeslingered">(Intercambio Directo de SafeSlinger)</string>
     <string name="label_SaveAccount">Cuenta de Ahorros</string>
-    <string name="label_SaveInstruct">¡Intercambio Completo! Seleccione los datos de los miembros para guardar en su libreta de direcciones:</string>
+    <string name="label_SaveInstruct">Verificar los contactos que desea actualizar en su libreta de direcciones, a continuación, toque \'Importar\' para guardar contactos seguros:</string>
     <string name="label_seconds">%d segundos</string>
     <string name="label_selectLabel">Seleccione una etiqueta</string>
     <string name="label_SelectRecip">Seleccione un Destinatario</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Claves en Cabestrillo</string>
     <string name="menu_TagListMessages">Mensajes</string>
     <string name="menu_UseAnother">Utilice Otro</string>
+    <string name="menu_UseContactPerson">Utilice Contacto \'%s\'</string>
+    <string name="menu_UseNoContact">Uso sólo de nombre</string>
+    <string name="menu_UseProfilePerson">Utilice Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">esperando la verificación de todos los miembros…</string>
     <string name="prog_CollectingOthersItems">esperando a que todos los usuarios se unan…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Idiomas proporcionados por:</string>
     <string name="text_RelatedSearchTerms">Términos relacionados:</string>
     <string name="text_Requirements">Requisitos:\n1. Debe instalarse en un mínimo de 2 dispositivos.\n2. Una conexión a Internet debe estar activa.</string>
+    <string name="text_SourceCodeRepo">de código abierto: %s</string>
     <string name="text_WhatsNew">- Correcciones de estabilidad.</string>
 
     <string name="title_About">Acerca de</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Inicio</string>
     <string name="title_MessageDetail">Mensaje</string>
     <string name="title_Messages">Mensajes</string>
-    <string name="title_MyIdentity">Mi Identidad</string>
+    <string name="title_MyIdentity">Contacto Personal</string>
     <string name="title_NotifyFileAvailable">Mensaje SafeSlinger Disponible</string>
     <string name="title_NotifyMulFileAvailable">%d Mensajes SafeSlinger Disponibles</string>
     <string name="title_passphrase">Frase de contraseña</string>

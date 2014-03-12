@@ -103,7 +103,6 @@ public class MessagesFragment extends SherlockFragment {
     private MessagesAdapter mAdapterMsg;
     private ThreadsAdapter mAdapterThread;
     private NotificationManager mNm;
-    private byte[] mMyPhoto;
     private OnMessagesResultListener mResult;
     private static RecipientRow mRecip;
     private static int mListMsgVisiblePos;
@@ -122,15 +121,13 @@ public class MessagesFragment extends SherlockFragment {
 
         String ns = Context.NOTIFICATION_SERVICE;
         mNm = (NotificationManager) this.getActivity().getSystemService(ns);
-
-        String contactLookupKey = ConfigData.loadPrefContactLookupKey(this.getActivity()
-                .getApplicationContext());
-        mMyPhoto = ((BaseActivity) this.getActivity()).getContactPhoto(contactLookupKey);
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+
+        doSave(mEditTextMessage.getText().toString(), mRecip != null);
 
         // save
         if (mDraft != null && mDraft.getRowId() != -1) {
@@ -234,6 +231,7 @@ public class MessagesFragment extends SherlockFragment {
                         Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(mEditTextMessage.getWindowToken(), 0);
 
+                // requested send from send button...
                 if (!TextUtils.isEmpty(mEditTextMessage.getText())) {
                     doSend(mEditTextMessage.getText().toString(), mRecip != null);
                 }
@@ -245,6 +243,7 @@ public class MessagesFragment extends SherlockFragment {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEND) {
+                    // requested send from keyboard...
                     if (!TextUtils.isEmpty(mEditTextMessage.getText())) {
                         doSend(mEditTextMessage.getText().toString(), mRecip != null);
                     }
@@ -262,22 +261,19 @@ public class MessagesFragment extends SherlockFragment {
     private void doSave(String text, boolean save) {
         Intent intent = new Intent();
         if (save) {
-            if (mRecip != null) {
-                // recipient required to save anything
-                intent.putExtra(extra.TEXT_MESSAGE, text);
-                if (mDraft != null) {
-                    intent.putExtra(extra.MESSAGE_ROW_ID, mDraft.getRowId());
-                }
-                if (mRecip != null) {
-                    intent.putExtra(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
-                }
-                // always keep local version, unless we need to delete
-                if (mDraft != null && TextUtils.isEmpty(text)) {
-                    mDraft = null;
-                    mEditTextMessage.setText("");
-                }
-                sendResultToHost(RESULT_SAVE, intent.getExtras());
+            intent.putExtra(extra.TEXT_MESSAGE, text);
+            if (mDraft != null) {
+                intent.putExtra(extra.MESSAGE_ROW_ID, mDraft.getRowId());
             }
+            if (mRecip != null) {
+                intent.putExtra(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
+            }
+            // always keep local version, unless we need to delete
+            if (mDraft != null && TextUtils.isEmpty(text)) {
+                mDraft = null;
+                mEditTextMessage.setTextKeepState("");
+            }
+            sendResultToHost(RESULT_SAVE, intent.getExtras());
         }
     }
 
@@ -294,7 +290,7 @@ public class MessagesFragment extends SherlockFragment {
             }
             // remove local version after sending
             mDraft = null;
-            mEditTextMessage.setText("");
+            mEditTextMessage.setTextKeepState("");
             sendResultToHost(RESULT_SEND, intent.getExtras());
         }
     }
@@ -422,19 +418,27 @@ public class MessagesFragment extends SherlockFragment {
             return;
         }
 
+        String contactLookupKey = ConfigData.loadPrefContactLookupKey(this.getActivity()
+                .getApplicationContext());
+        byte[] myPhoto = ((BaseActivity) this.getActivity()).getContactPhoto(contactLookupKey);
+
         MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this.getActivity()
                 .getApplicationContext());
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity()
                 .getApplicationContext());
 
         if (isResumed() && mRecip != null) {
-            // when shown, all are now seen, remove notify
+            // when shown, current thread all are now seen
             dbMessage.updateAllMessagesAsSeenByThread(mRecip.getKeyid());
-            mNm.cancel(HomeActivity.NOTIFY_NEW_MSG_ID);
+
+            // remove notify when every unseen thread has been seen
+            if (dbMessage.fetchUnseenMessageCount() == 0) {
+                mNm.cancel(HomeActivity.NOTIFY_NEW_MSG_ID);
+            }
         }
 
         mTvInstruct.setVisibility(View.GONE);
-        mComposeWidget.setVisibility(View.GONE);
+        boolean showCompose = false;
 
         // draw threads list/title bar
         mThreadList.clear();
@@ -498,11 +502,11 @@ public class MessagesFragment extends SherlockFragment {
                     if (mRecip != null) {
                         if (recipientRow != null && recipientRow.isSendable(getActivity())
                                 && !newerExists) {
-                            mComposeWidget.setVisibility(View.VISIBLE);
+                            showCompose = true;
                         }
                         break;
                     } else {
-                        mComposeWidget.setVisibility(View.GONE);
+                        showCompose = false;
                     }
                 }
                 ct.close();
@@ -510,22 +514,29 @@ public class MessagesFragment extends SherlockFragment {
         }
         Collections.sort(mThreadList, new ThreadDateDecendingComparator());
 
+        if (showCompose) {
+            mComposeWidget.setVisibility(View.VISIBLE);
+        } else {
+            mComposeWidget.setVisibility(View.GONE);
+        }
+
         // draw messages list/compose draft
         mMessageList.clear();
         if (mRecip != null) {
             Cursor cm = dbMessage.fetchAllMessagesByThread(mRecip.getKeyid());
             if (cm != null) {
-                mDraft = null; // init
                 while (cm.moveToNext()) {
+                    RecipientRow recipientRow = null;
                     MessageRow messageRow = new MessageRow(cm);
+                    Cursor cr = dbRecipient.fetchRecipientByKeyId(messageRow.getKeyId());
+                    if (cr != null) {
+                        recipientRow = new RecipientRow(cr);
+                        cr.close();
+                    }
                     if (!messageRow.isInbox()) {
-                        messageRow.setPhoto(mMyPhoto);
+                        messageRow.setPhoto(myPhoto);
                     } else {
-
-                        Cursor cr = dbRecipient.fetchRecipientByKeyId(messageRow.getKeyId());
-                        if (cr != null) {
-                            RecipientRow recipientRow = new RecipientRow(cr);
-                            cr.close();
+                        if (recipientRow != null) {
                             messageRow.setPhoto(recipientRow.getPhoto());
                         }
                     }
@@ -536,8 +547,11 @@ public class MessagesFragment extends SherlockFragment {
                             && mRecip.isSendable(getActivity())) {
                         // if recent draft, remove from list put in edit box
                         mDraft = messageRow;
-                        mEditTextMessage.setText(mDraft.getText());
+                        mEditTextMessage.setTextKeepState(mDraft.getText());
                         mEditTextMessage.forceLayout();
+                    } else if (mDraft != null && mDraft.getRowId() == messageRow.getRowId()) {
+                        // draft has already been updated
+                        continue;
                     } else {
                         // show message normally
                         mMessageList.add(messageRow);
@@ -550,7 +564,7 @@ public class MessagesFragment extends SherlockFragment {
             // clear draft in thread view
             doSave(mEditTextMessage.getText().toString(), true);
             mDraft = null;
-            mEditTextMessage.setText("");
+            mEditTextMessage.setTextKeepState("");
         }
 
         // set position to top when incoming message in foreground...
@@ -641,16 +655,6 @@ public class MessagesFragment extends SherlockFragment {
         }
     }
 
-    protected void showHelp(String title, String msg) {
-        Bundle args = new Bundle();
-        args.putString(extra.RESID_TITLE, title);
-        args.putString(extra.RESID_MSG, msg);
-        DialogFragment newFragment = MessagesAlertDialogFragment.newInstance(
-                BaseActivity.DIALOG_HELP, args);
-        newFragment.show(getFragmentManager(), "dialog");
-
-    }
-
     private void doDecryptMessage(String pass, MessageRow msg) {
         try {
             StringBuilder keyidout = new StringBuilder();
@@ -711,6 +715,7 @@ public class MessagesFragment extends SherlockFragment {
         super.onPause();
         // The activity has become not visible (it is now "paused").
 
+        // save draft when view is lost
         doSave(mEditTextMessage.getText().toString(), mRecip != null);
     }
 
@@ -773,6 +778,15 @@ public class MessagesFragment extends SherlockFragment {
                 showHelp(getString(R.string.app_name), msg);
             }
         }
+    }
+
+    protected void showHelp(String title, String msg) {
+        Bundle args = new Bundle();
+        args.putString(extra.RESID_TITLE, title);
+        args.putString(extra.RESID_MSG, msg);
+        DialogFragment newFragment = MessagesAlertDialogFragment.newInstance(
+                BaseActivity.DIALOG_HELP, args);
+        newFragment.show(getFragmentManager(), "dialog");
     }
 
     public static class MessagesAlertDialogFragment extends DialogFragment {

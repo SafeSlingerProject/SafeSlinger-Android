@@ -24,19 +24,44 @@
 
 package edu.cmu.cylab.starslinger.model;
 
-/**
- * A container class used to represent all known information about an account.
- */
-public class AccountData {
+import android.accounts.AuthenticatorDescription;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
+import edu.cmu.cylab.starslinger.R;
 
+public class AccountData {
     private String mName = null;
     private String mType = null;
-    private String mRawContactId = null;
+    private CharSequence mTypeLabel = null;
+    private Drawable mIcon = null;
 
-    public AccountData(String name, String accountType, String rawContactId) {
+    public AccountData(Context ctx, String name, AuthenticatorDescription description) {
         mName = name;
-        mType = accountType;
-        mRawContactId = rawContactId;
+        if (description != null) {
+            mType = description.type;
+
+            // The type string is stored in a resource, so we need to
+            // convert it into something
+            // human readable.
+            String packageName = description.packageName;
+            PackageManager pm = ctx.getPackageManager();
+
+            if (description.labelId != 0) {
+                mTypeLabel = pm.getText(packageName, description.labelId, null);
+                if (mTypeLabel == null) {
+                    mTypeLabel = ctx.getString(R.string.label_undefinedTypeLabel);
+                }
+            } else {
+                mTypeLabel = "";
+            }
+
+            if (description.iconId != 0) {
+                mIcon = pm.getDrawable(packageName, description.iconId, null);
+            } else {
+                mIcon = ctx.getResources().getDrawable(android.R.drawable.sym_def_app_icon);
+            }
+        }
     }
 
     public String getName() {
@@ -47,12 +72,17 @@ public class AccountData {
         return mType;
     }
 
-    public String getRawContactId() {
-        return mRawContactId;
+    public CharSequence getTypeLabel() {
+        return mTypeLabel;
+    }
+
+    public Drawable getIcon() {
+        return mIcon;
     }
 
     @Override
     public String toString() {
         return mName;
     }
+
 }

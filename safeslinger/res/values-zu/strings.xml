@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Idatha yothintana kwase ihlelwe ngokungesikho.</string>
     <string name="error_WebCancelledByUser">Umsebenzisi lukhanseliwe isicelo iseva.</string>
 
+    <string name="help_find">Sebenzisa lesi sikrini ukuze usethe igama lakho ukushintshanisa nabanye. Thepha inkinobho \'Kwenziw\' uma usuqedile.</string>
     <string name="help_home">Ukushintshanisa ungubani idatha, ukuqinisekisa yonke abasebenzisi kukhona oseduze efonini. Inkinobho \' Qala Exchange \' kuyokwenza ukushintshanisa kuphela idatha yothintana kuhloliwe.</string>
     <string name="help_identity_menu">\n\nUngase ushintshe idatha emayelana ubuwena kulolu esibukweni siqu evunyelwe kwi inkinobho negama lakho. Lokhu kuzokwenza babonisa yemenyu ukuvumela ukuba \' Hlela \' contact yakho, \' Yakha New \' contact, noma \' Sebenzisa Enye \' contact.</string>
     <string name="help_Messages">Le screen ebonisa yonke imilayezo esidlule, nezinamathiselo ukuthi zisatholakala for thwebula.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">yisikhathi %s</string>
     <string name="label_expiresIn">yisikhathi ngo</string>
     <string name="label_FileNameHint">Igama ifayela</string>
+    <string name="label_FindInstruct">Faka igama ofisa abanye ukubona lapho ukuxhumana ngokuphepha:</string>
     <string name="label_FirstName">Igama Lokuqala</string>
-    <string name="label_Home">Hlola izinto ufisa ukwabelana bese uthepha \' Qala Exchange \' lapho abanye bakulungele ukushintshanisa.</string>
+    <string name="label_Home">Thepha igama lakho ukuze wengeze noma ususe idatha yothintana, hlola izinto ufisa ukwabelana, bese uthepha \'Qala Exchange\' lapho nabanye bakulungele exchange:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">amahora %d</string>
     <string name="label_iCloudEnable">SafeSlinger ICLOUD inikwe amandla. Thepha inkinobho \' Kwenziw \' uma usuqedile.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger isipele imisiwe</string>
     <string name="label_safeslingered">( SafeSlinger Direct Exchange )</string>
     <string name="label_SaveAccount">Yonga akhawunti</string>
-    <string name="label_SaveInstruct">Exchange Qedela! Khetha ilungu idatha okusindisa kuze ibhuku lakho nekheli:</string>
+    <string name="label_SaveInstruct">Hlola oxhumana nabo ofuna ukuvuselela encwadini yakho yekheli ke uthepha \'Import\' ukusindisa othintana ephephile:</string>
     <string name="label_seconds">%d imizuzwana</string>
     <string name="label_selectLabel">Khetha ilebula</string>
     <string name="label_SelectRecip">Khetha Ukuthola</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Okokulengisa Keys</string>
     <string name="menu_TagListMessages">Imilayezo</string>
     <string name="menu_UseAnother">Sebenzisa Enye</string>
+    <string name="menu_UseContactPerson">Sebenzisa \'%s\' Contact</string>
+    <string name="menu_UseNoContact">Sebenzisa Igama kuphela</string>
+    <string name="menu_UseProfilePerson">Sebenzisa iphrofayela \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">elinde ukuqinisekisa kuzo zonke amalungu…</string>
     <string name="prog_CollectingOthersItems">elinde sonke abasebenzisi ukujoyina…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Izilimi kuhlinzekwe ngu:</string>
     <string name="text_RelatedSearchTerms">Amagama Related:</string>
     <string name="text_Requirements">Izidingo:\n1. Kumele ukufakwa okungenani Amadivayisi 2.\n2. Uxhumano Internet kufanele kube abakhuthele.</string>
+    <string name="text_SourceCodeRepo">umthombo ovulekile: %s</string>
     <string name="text_WhatsNew">- Ukusimama fixes.</string>
 
     <string name="title_About">Mayelana</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Umlayezo</string>
     <string name="title_Messages">Imilayezo</string>
-    <string name="title_MyIdentity">Identity My</string>
+    <string name="title_MyIdentity">Imininingwane Personal</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Isigijimi Kuyatholakala</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Imilayezo atholakalayo</string>
     <string name="title_passphrase">Igama lokungena</string>

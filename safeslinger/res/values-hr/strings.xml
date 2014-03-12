@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kontakt podaci su pogrešno formatirana.</string>
     <string name="error_WebCancelledByUser">Korisnik je otkazao zahtjev poslužitelja.</string>
 
+    <string name="help_find">Koristite ovaj ekran postaviti svoje ime razmijeniti s drugima. Dodirnite \'Done\' gumb kad ste gotovi.</string>
     <string name="help_home">Razmjenjivati ​​podatke o identitetu, osigurali svi korisnici su u blizini ili na telefon. Gumb \'Počnite razmjenu\' će razmjenjivati ​​samo podatke provjeriti kontakt.</string>
     <string name="help_identity_menu">\n\nVi svibanj također promijeniti osobne podatke o svom identitetu na ovom zaslonu pritiskom na gumb sa svojim imenom. Tako će se prikazati izbornik omogućuje vam da \' Uredi \' tvoj dodir, \' Stvaranje novog\' kontakt, ili \' Koristite Još jedan\' dodir.</string>
     <string name="help_Messages">Ovaj ekran prikazuje sve prošlost poruke i privitke koje su još uvijek dostupna za preuzimanje.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">istječe %s</string>
     <string name="label_expiresIn">istječe</string>
     <string name="label_FileNameHint">Naziv datoteke</string>
+    <string name="label_FindInstruct">Unesite ime želite da drugi vide kad komuniciraju sigurno:</string>
     <string name="label_FirstName">Ime</string>
-    <string name="label_Home">Provjerite stavke koje želite podijeliti i dodirnite \'Počnite Exchange \', kada su drugi spremni na razmjenu.</string>
+    <string name="label_Home">Dodirnite naziv za dodavanje ili uklanjanje kontaktne podatke, provjerite stavke koje želite podijeliti i pritisnite \'Počnite Exchange \', kada su drugi spremni za razmjenu:</string>
     <string name="label_hometag">Dom</string>
     <string name="label_hours">%d sati</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud omogućena. Dodirnite \' Done \' gumb kad ste gotovi.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup odgođen</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Spremanje račun</string>
-    <string name="label_SaveInstruct">Razmjena Ispunite! Odaberite podatke Člana spremiti u svoj adresar:</string>
+    <string name="label_SaveInstruct">Provjerite kontakte koje želite ažurirati u imeniku, a zatim \'Uvoz\' spasiti sigurne kontakte:</string>
     <string name="label_seconds">%d sekundi</string>
     <string name="label_selectLabel">Odaberite oznaka</string>
     <string name="label_SelectRecip">Odaberite Primatelj</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Nošene Keys</string>
     <string name="menu_TagListMessages">Poruke</string>
     <string name="menu_UseAnother">Koristite Drugi</string>
+    <string name="menu_UseContactPerson">Kontaktirajte \'%s\'</string>
+    <string name="menu_UseNoContact">Koristite Name Only</string>
+    <string name="menu_UseProfilePerson">Koristite profil \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">čeka verifikaciju od svih članova…</string>
     <string name="prog_CollectingOthersItems">čeka svim korisnicima da se pridruže…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Jezici koje pruža:</string>
     <string name="text_RelatedSearchTerms">Povezano Uvjeti:</string>
     <string name="text_Requirements">Zahtjevi:\n1. Mora biti instaliran na minimalno 2 uređaja.\n2. Internet priključak mora biti aktivan.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Popravci stabilnost.</string>
 
     <string name="title_About">Oko</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Dom</string>
     <string name="title_MessageDetail">Poruka</string>
     <string name="title_Messages">Poruke</string>
-    <string name="title_MyIdentity">Moj identitet</string>
+    <string name="title_MyIdentity">Osobni kontakt</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Poruka Dostupan</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Poruke Slobodne</string>
     <string name="title_passphrase">Lozinka</string>

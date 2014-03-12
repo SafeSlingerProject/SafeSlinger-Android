@@ -75,16 +75,13 @@ import edu.cmu.cylab.starslinger.util.SSUtil;
 public class ComposeFragment extends SherlockFragment {
     private static final String TAG = ConfigData.LOG_TAG;
     public static final int RESULT_FILESEL = 20;
-    public static final int RESULT_CONTACTSEL = 21;
     public static final int RESULT_RECIPSEL = 22;
     public static final int RESULT_SEND = 24;
     public static final int RESULT_FILEREMOVE = 29;
-    public static final int RESULT_CONTACTADD = 30;
-    public static final int RESULT_CONTACTEDIT = 31;
     public static final int RESULT_RESTART = 32;
     public static final int RESULT_SAVE = 33;
+    public static final int RESULT_USEROPTIONS = 200;
 
-    private String mSenderContactLookupKey = null;
     private String mFilePath = null;
     private int mFileSize = 0;
     private String mText = null;
@@ -159,7 +156,7 @@ public class ComposeFragment extends SherlockFragment {
 
             @Override
             public void onClick(View v) {
-                showChangeSenderOptions();
+                doChangeUser();
             }
         };
         mButtonSender.setOnClickListener(clickSender);
@@ -200,8 +197,8 @@ public class ComposeFragment extends SherlockFragment {
 
     public void updateValues(Bundle extras) {
 
+        String contactLookupKey = ConfigData.loadPrefContactLookupKey(getActivity());
         if (extras != null) {
-            mSenderContactLookupKey = extras.getString(extra.CONTACT_LOOKUP_KEY);
             mFilePath = extras.getString(extra.FILE_PATH);
             mFileSize = extras.getInt(extra.PUSH_FILE_SIZE);
             mText = extras.getString(extra.TEXT_MESSAGE);
@@ -229,10 +226,9 @@ public class ComposeFragment extends SherlockFragment {
 
         // sender
         mImageViewSenderPhoto.setBackgroundResource(0);
-        if (!TextUtils.isEmpty(mSenderContactLookupKey)) {
-            String name = ConfigData.loadPrefContactName(getActivity().getApplicationContext());
-            byte[] photo = ((BaseActivity) this.getActivity())
-                    .getContactPhoto(mSenderContactLookupKey);
+        String name = ConfigData.loadPrefContactName(getActivity().getApplicationContext());
+        if (!TextUtils.isEmpty(name)) {
+            byte[] photo = ((BaseActivity) this.getActivity()).getContactPhoto(contactLookupKey);
             drawUserData(R.string.label_SendFrom, name, photo, mTextViewSenderName,
                     mTextViewSenderKey, mImageViewSenderPhoto, myKeyId, myKeyDate);
         } else {
@@ -270,10 +266,10 @@ public class ComposeFragment extends SherlockFragment {
 
         // message
         if (!TextUtils.isEmpty(mText)) {
-            mEditTextMessage.setText(mText);
+            mEditTextMessage.setTextKeepState(mText);
             mEditTextMessage.forceLayout();
         } else {
-            mEditTextMessage.setText("");
+            mEditTextMessage.setTextKeepState("");
         }
     }
 
@@ -312,58 +308,7 @@ public class ComposeFragment extends SherlockFragment {
 
     private static void doChangeUser() {
         Intent intent = new Intent();
-        sendResultToHost(RESULT_CONTACTSEL, intent.getExtras());
-    }
-
-    private static void doNewUser() {
-        Intent intent = new Intent();
-        sendResultToHost(RESULT_CONTACTADD, intent.getExtras());
-    }
-
-    private static void doEditUser() {
-        Intent intent = new Intent();
-        sendResultToHost(RESULT_CONTACTEDIT, intent.getExtras());
-    }
-
-    private void showChangeSenderOptions() {
-        DialogFragment newFragment = ComposeAlertDialogFragment
-                .newInstance(BaseActivity.DIALOG_USEROPTIONS);
-        newFragment.show(getFragmentManager(), "dialog");
-    }
-
-    public static AlertDialog.Builder xshowChangeSenderOptions(final Activity act) {
-        final CharSequence[] items = new CharSequence[] {
-                act.getText(R.string.menu_Edit), act.getText(R.string.menu_CreateNew),
-                act.getText(R.string.menu_UseAnother)
-        };
-        AlertDialog.Builder ad = new AlertDialog.Builder(act);
-        ad.setTitle(R.string.title_MyIdentity);
-        ad.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-                dialog.dismiss();
-                switch (item) {
-                    case 0: // edit
-                        doEditUser();
-                        break;
-                    case 1: // new
-                        doNewUser();
-                        break;
-                    case 2: // change
-                        doChangeUser();
-                        break;
-                }
-            }
-        });
-        ad.setOnCancelListener(new DialogInterface.OnCancelListener() {
-
-            @Override
-            public void onCancel(DialogInterface dialog) {
-                dialog.dismiss();
-            }
-        });
-        return ad;
+        sendResultToHost(RESULT_USEROPTIONS, intent.getExtras());
     }
 
     private void showChangeFileOptions() {
@@ -461,12 +406,14 @@ public class ComposeFragment extends SherlockFragment {
         }
 
         // draw name
-        if (textViewUserName != null)
+        if (textViewUserName != null) {
             textViewUserName.setText(getString(dirId) + " " + name);
+        }
 
         // draw keys
-        if (textViewKey != null)
+        if (textViewKey != null) {
             textViewKey.setText(detailStr);
+        }
 
         // draw photo
         if (photo != null) {
@@ -487,6 +434,7 @@ public class ComposeFragment extends SherlockFragment {
         super.onPause();
         // The activity has become not visible (it is now "paused").
 
+        // save draft when view is lost
         doSave(mEditTextMessage.getText().toString());
     }
 
@@ -539,8 +487,8 @@ public class ComposeFragment extends SherlockFragment {
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             int id = getArguments().getInt(extra.RESULT_CODE);
             switch (id) {
-                case BaseActivity.DIALOG_USEROPTIONS:
-                    return ComposeFragment.xshowChangeSenderOptions(getActivity()).create();
+                case BaseActivity.DIALOG_HELP:
+                    return BaseActivity.xshowHelp(getActivity(), getArguments()).create();
                 case BaseActivity.DIALOG_FILEOPTIONS:
                     return ComposeFragment.xshowChangeFileOptions(getActivity()).create();
             }
@@ -564,9 +512,26 @@ public class ComposeFragment extends SherlockFragment {
     protected void showNote(String msg) {
         MyLog.i(TAG, msg);
         if (msg != null) {
-            Toast toast = Toast.makeText(this.getActivity(), msg, Toast.LENGTH_LONG);
-            toast.show();
+            int readDuration = msg.length() * ConfigData.MS_READ_PER_CHAR;
+            if (readDuration <= ConfigData.SHORT_DELAY) {
+                Toast toast = Toast.makeText(this.getActivity(), msg, Toast.LENGTH_SHORT);
+                toast.show();
+            } else if (readDuration <= ConfigData.LONG_DELAY) {
+                Toast toast = Toast.makeText(this.getActivity(), msg, Toast.LENGTH_LONG);
+                toast.show();
+            } else {
+                showHelp(getString(R.string.app_name), msg);
+            }
         }
+    }
+
+    protected void showHelp(String title, String msg) {
+        Bundle args = new Bundle();
+        args.putString(extra.RESID_TITLE, title);
+        args.putString(extra.RESID_MSG, msg);
+        DialogFragment newFragment = ComposeAlertDialogFragment.newInstance(
+                BaseActivity.DIALOG_HELP, args);
+        newFragment.show(getFragmentManager(), "dialog");
     }
 
 }

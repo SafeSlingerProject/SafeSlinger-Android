@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Dane kontaktowe została sformatowana nieprawidłowo.</string>
     <string name="error_WebCancelledByUser">Użytkownik anulował żądanie serwera.</string>
 
+    <string name="help_find">Użyj tego ekranu, aby ustawić swoje nazwisko do wymiany z innymi. Dotknij przycisku \'Gotowe\' kiedy skończysz.</string>
     <string name="help_home">Do wymiany danych identyfikacyjnych, zapewnić wszystkich użytkowników są w pobliżu lub na telefon. Przycisk \' Rozpocząć wymiana \' będą wymieniać tylko sprawdzone dane kontaktowe.</string>
     <string name="help_identity_menu">\n\nMożesz także zmienić dane osobowe na temat swojej tożsamości na tym ekranie, naciskając przycisk z nazwą. Spowoduje to wyświetlenie menu pozwalającego na \'Edytuj\' Twój kontakt, \' Utwórz nowe \' kontakt, lub \' Użyj innego \' kontakt.</string>
     <string name="help_Messages">Ten ekran wyświetla wszystkie stare wiadomości i załączników, które są wciąż dostępne do pobrania.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">wygasa %s</string>
     <string name="label_expiresIn">wygasa w</string>
     <string name="label_FileNameHint">Nazwa pliku</string>
+    <string name="label_FindInstruct">Wprowadź nazwę chcesz innym zobaczyć podczas komunikowania bezpiecznie:</string>
     <string name="label_FirstName">Imię</string>
-    <string name="label_Home">Sprawdź elementy, które chcesz udostępnić i stuknij w \' Rozpocznij Exchange \', gdy inni są gotowi do wymiany.</string>
+    <string name="label_Home">Stuknij swoje imię, aby dodać lub usunąć dane kontaktowe, sprawdź elementy, które chcesz udostępnić, a następnie wybierz \'Rozpocznij Exchange\', gdy inni są gotowi do wymiany:</string>
     <string name="label_hometag">Dom</string>
     <string name="label_hours">%d godzin</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud jest włączony. Dotknij przycisku\' Gotowe\' kiedy skończysz.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">Backup SafeSlinger opóźnione</string>
     <string name="label_safeslingered">(SafeSlinger bezpośredniej wymiany)</string>
     <string name="label_SaveAccount">Zapisz konto</string>
-    <string name="label_SaveInstruct">Wymiana Complete! Wybierz dane członków, aby zapisać do swojej książki adresowej:</string>
+    <string name="label_SaveInstruct">Sprawdź kontakty, które chcesz zaktualizować w książce adresowej, a następnie wybierz \'Importuj\', aby zapisać bezpiecznych kontaktów:</string>
     <string name="label_seconds">%d sekund</string>
     <string name="label_selectLabel">Wybierz etykiety</string>
     <string name="label_SelectRecip">Wybierz odbiorcę</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Wiadomości</string>
     <string name="menu_UseAnother">Użyć innego</string>
+    <string name="menu_UseContactPerson">Użyj \'Contact\' %s</string>
+    <string name="menu_UseNoContact">Tylko użycie Nazwa</string>
+    <string name="menu_UseProfilePerson">Użyj profil \'%s \'</string>
 
     <string name="prog_CollectingOthersCommitVerify">czeka na weryfikację wszystkich członków…</string>
     <string name="prog_CollectingOthersItems">czeka na wszystkich użytkowników do przyłączenia…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Języki świadczone przez:</string>
     <string name="text_RelatedSearchTerms">Związane:</string>
     <string name="text_Requirements">Wymagania:\n1. Musi być zainstalowany na minimum 2 urządzeń.\n2. Internet musi być aktywny.</string>
+    <string name="text_SourceCodeRepo">Open Source: %s</string>
     <string name="text_WhatsNew">- Poprawki stabilności.</string>
 
     <string name="title_About">O</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Dom</string>
     <string name="title_MessageDetail">Wiadomość</string>
     <string name="title_Messages">Wiadomości</string>
-    <string name="title_MyIdentity">Moja tożsamość</string>
+    <string name="title_MyIdentity">Kontakt osobisty</string>
     <string name="title_NotifyFileAvailable">Wiadomość SafeSlinger Dostępny</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Wiadomości Dostępne</string>
     <string name="title_passphrase">Hasło</string>

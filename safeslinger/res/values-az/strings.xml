@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Əlaqə data səhv biçimlendirilmiş edilib.</string>
     <string name="error_WebCancelledByUser">İstifadəçi server sorğu ləğv.</string>
 
+    <string name="help_find">Başqaları ilə mübadiləsi üçün adını təyin etmək üçün bu ekran istifadə edin. Başa zaman \'Bitti\' düyməsini dokunun.</string>
     <string name="help_home">Şəxsiyyət data mübadiləsi, bütün istifadəçilər yaxın və ya telefon təmin edir. The \' başlayın Birjası \' düyməsini yalnız yoxlanılır əlaqə məlumatları mübadiləsi aparacaqlar.</string>
     <string name="help_identity_menu">\n\nSiz həmçinin adı ilə düyməsini tıqqıltı ilə bu ekranda şəxsiyyət haqqında şəxsi məlumatları dəyişə bilər. Bu \'Düzenle\' əlaqə, əlaqə \'Yeni yarat \', və ya əlaqə \' Digər istifadə \' üçün imkan bir menyu göstərilir.</string>
     <string name="help_Messages">Bu ekran bütün keçmiş messages, və hələ də download üçün mövcuddur ki, əlavə göstərilir.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s başa çatır</string>
     <string name="label_expiresIn">ildə başa çatır</string>
     <string name="label_FileNameHint">Fayl adı</string>
+    <string name="label_FindInstruct">Adını daxil edin təhlükəsiz ünsiyyət zaman görmək üçün başqaları arzu:</string>
     <string name="label_FirstName">Ad</string>
-    <string name="label_Home">Bölüşmək və mübadiləsi başlayın \' kran istədiyiniz maddələr yoxlamaq başqaları mübadiləsi üçün hazır olduqda.</string>
+    <string name="label_Home">Əlavə və ya aradan qaldırılması əlaqə məlumatları, siz bölüşmək istədiyiniz maddələr yoxlamaq və kran üçün adı dokunun \'mübadiləsi başlayın digərlərinin mübadiləsi üçün hazır olduqda:</string>
     <string name="label_hometag">Ev</string>
     <string name="label_hours">%d saat</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud effektiv. Başa zaman \'Bitti\' düyməsini dokunun.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">Təxirə SafeSlinger backup</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Hesabi saxla</string>
-    <string name="label_SaveInstruct">Exchange doldurun! Sizin ünvanı kitab saxlamaq üçün üzv data seçin:</string>
+    <string name="label_SaveInstruct">Təhlükəsiz saxlamaq üçün \'İdxal\' kran sonra, Siz ünvanı kitab güncellemek istəyirsinizsə əlaqə edin:</string>
     <string name="label_seconds">%d saniyə</string>
     <string name="label_selectLabel">Select etiket</string>
     <string name="label_SelectRecip">Select Alan</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">İsmarıclar</string>
     <string name="menu_UseAnother">Digər istifadə</string>
+    <string name="menu_UseContactPerson">Əlaqə \'%s\' istifadə edin</string>
+    <string name="menu_UseNoContact">İstifadə Adı Yalnız</string>
+    <string name="menu_UseProfilePerson">Profile \'%s\' istifadə edin</string>
 
     <string name="prog_CollectingOthersCommitVerify">bütün üzvlərinin yoxlama gözləyir…</string>
     <string name="prog_CollectingOthersItems">bütün istifadəçilər qoşulmaq üçün gözləyir…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Tərəfindən təmin Dillər:</string>
     <string name="text_RelatedSearchTerms">Related şərtləri:</string>
     <string name="text_Requirements">Tələblər:\n1. 2 cihazlar minimum yüklü olmalıdır.\n2. İnternet bağlantısı aktiv olmalıdır.</string>
+    <string name="text_SourceCodeRepo">açıq mənbə: %s</string>
     <string name="text_WhatsNew">- Sabitlik giderir.</string>
 
     <string name="title_About">Haqqında</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Ev</string>
     <string name="title_MessageDetail">Məlumat</string>
     <string name="title_Messages">İsmarıclar</string>
-    <string name="title_MyIdentity">Mənim Identity</string>
+    <string name="title_MyIdentity">Şəxsi ünsiyyət</string>
     <string name="title_NotifyFileAvailable">Available SafeSlinger Mesaj</string>
     <string name="title_NotifyMulFileAvailable">Available %d SafeSlinger Mesajlarım</string>
     <string name="title_passphrase">Passphrase</string>

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">સંપર્ક માહિતી ખોટી રીતે ફોર્મેટ કરવામાં આવી હતી.</string>
     <string name="error_WebCancelledByUser">વપરાશકર્તા સર્વર વિનંતી રદ.</string>
 
+    <string name="help_find">અન્ય લોકો સાથે અદલા તમારું નામ સુયોજિત કરવા માટે આ સ્ક્રીનને વાપરો. જ્યારે સમાપ્ત થાય ત્યારે \'થઈ ગયું\' બટન ટેપ કરો.</string>
     <string name="help_home">ઓળખ માહિતી વિનિમય માટે, બધા વપરાશકર્તાઓ નજીકના અથવા ફોન પર હોય છે તેની ખાતરી કરો. આ \' શરૂ એક્સચેન્જ \' બટન માત્ર ચકાસાયેલ સંપર્ક માહિતી લે કરશે.</string>
     <string name="help_identity_menu">\n\nતમે પણ તમારા નામ સાથે બટન પર ટેપ દ્વારા આ સ્ક્રીન પર તમારી ઓળખ વિશે વ્યક્તિગત માહિતી બદલી શકો છો. આ તમને \' ફેરફાર કરો \' તમારી સંપર્ક, સંપર્ક \' ન્યૂ બનાવો\', અથવા સંપર્ક \' અન્ય ઉપયોગ \' માટે પરવાનગી આપે છે મેનુ દર્શાવશે.</string>
     <string name="help_Messages">આ સ્ક્રીન બધા છેલ્લા સંદેશાઓ, અને હજુ પણ ડાઉનલોડ માટે ઉપલબ્ધ છે કે જોડાણો દર્શાવે છે.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s સમાપ્ત થાય છે</string>
     <string name="label_expiresIn">માં સમાપ્ત થાય છે</string>
     <string name="label_FileNameHint">ફાઇલ નામ</string>
+    <string name="label_FindInstruct">નામ દાખલ કરો જો તમે સુરક્ષિત રીતે વાતચીત જોવા માટે જ્યારે અન્ય ઇચ્છો છો:</string>
     <string name="label_FirstName">પ્રથમ નામ</string>
-    <string name="label_Home">તમે શેર અને \' એક્સચેન્જ શરૂ \' ટેપ કરવા માંગો છો વસ્તુઓ તપાસો અન્ય બદલી કરવા માટે તૈયાર હોય છે.</string>
+    <string name="label_Home">ઉમેરવા અથવા દૂર કરવા માટે સંપર્ક માહિતી, તમે શેર કરવા માંગો છો વસ્તુઓ તપાસો, અને ટેપ કરવા માટે તમારું નામ ટેપ કરો \'એક્સચેન્જ શરૂ\' અન્ય એક્સચેન્જ માટે તૈયાર છે ત્યારે:</string>
     <string name="label_hometag">ઘર</string>
     <string name="label_hours">%d કલાક</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud સક્રિય થયેલ છે. જ્યારે સમાપ્ત થાય ત્યારે \' થઈ ગયું \' બટન ટેપ કરો.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">વિલંબ SafeSlinger બેકઅપ</string>
     <string name="label_safeslingered">(SafeSlinger ડાઇરેક્ટ એક્સચેન્જ)</string>
     <string name="label_SaveAccount">એકાઉન્ટ સાચવો</string>
-    <string name="label_SaveInstruct">એક્સચેન્જ પૂર્ણ કરો! તમારી સરનામા પુસ્તિકામાં સેવ સભ્ય માહિતી કરો:</string>
+    <string name="label_SaveInstruct">સુરક્ષિત કરારો સેવ \'આયાત\' ટેપ પછી, તમે તમારી સરનામાં પુસ્તિકામાં અપડેટ કરવા માંગો છો સંપર્કો ચકાસો:</string>
     <string name="label_seconds">%d સેકન્ડ</string>
     <string name="label_selectLabel">પસંદ કરો લેબલ</string>
     <string name="label_SelectRecip">પસંદ કરો પ્રાપ્તકર્તા</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling કી</string>
     <string name="menu_TagListMessages">સંદેશાઓ</string>
     <string name="menu_UseAnother">અન્ય ઉપયોગ</string>
+    <string name="menu_UseContactPerson">સંપર્ક \'%s\' નો ઉપયોગ કરો</string>
+    <string name="menu_UseNoContact">ઉપયોગ નામ માત્ર</string>
+    <string name="menu_UseProfilePerson">પ્રોફાઇલ \'%s\' નો ઉપયોગ કરો</string>
 
     <string name="prog_CollectingOthersCommitVerify">બધા સભ્યો તરફથી ચકાસણી માટે રાહ જુએ છે…</string>
     <string name="prog_CollectingOthersItems">બધા વપરાશકર્તાઓ જોડાવા માટે રાહ જુએ છે…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">દ્વારા પૂરી પાડવામાં આવેલ ભાષા:</string>
     <string name="text_RelatedSearchTerms">સંબંધિત શરતો:</string>
     <string name="text_Requirements">જરૂરીયાતો:\n1. 2 ઉપકરણો ઓછામાં ઓછા પર સ્થાપિત હોવું જ જોઈએ.\n2. ઈન્ટરનેટ જોડાણ સક્રિય હોવા જ જોઈએ.</string>
+    <string name="text_SourceCodeRepo">ઓપન સોર્સ: %s</string>
     <string name="text_WhatsNew">- સ્થિરતા સુધારાઓ.</string>
 
     <string name="title_About">લગભગ</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">ઘર</string>
     <string name="title_MessageDetail">સંદેશ</string>
     <string name="title_Messages">સંદેશાઓ</string>
-    <string name="title_MyIdentity">મારી ઓળખ</string>
+    <string name="title_MyIdentity">અંગત સંબંધ</string>
     <string name="title_NotifyFileAvailable">ઉપલબ્ધ SafeSlinger સંદેશ</string>
     <string name="title_NotifyMulFileAvailable">ઉપલબ્ધ %d SafeSlinger સંદેશાઓ</string>
     <string name="title_passphrase">પાસફ્રેઝ</string>

@@ -67,6 +67,8 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -80,27 +82,27 @@ import android.provider.ContactsContract.Contacts;
 import android.provider.MediaStore;
 import android.provider.MediaStore.MediaColumns;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.webkit.MimeTypeMap;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
-import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
-import edu.cmu.cylab.keyslinger.lib.ContactAccessor;
-import edu.cmu.cylab.keyslinger.lib.ContactActivity;
 import edu.cmu.cylab.keyslinger.lib.ControllerActivity;
-import edu.cmu.cylab.keyslinger.lib.KsConfig;
 import edu.cmu.cylab.starslinger.ConfigData;
 import edu.cmu.cylab.starslinger.ConfigData.extra;
 import edu.cmu.cylab.starslinger.Eula;
@@ -116,7 +118,6 @@ import edu.cmu.cylab.starslinger.crypto.CryptoMsgNonExistingKeyException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgPacketSizeException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgPeerKeyFormatException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
-import edu.cmu.cylab.starslinger.model.AccountData;
 import edu.cmu.cylab.starslinger.model.ContactImpp;
 import edu.cmu.cylab.starslinger.model.CryptoMsgPrivateData;
 import edu.cmu.cylab.starslinger.model.ImppValue;
@@ -131,6 +132,8 @@ import edu.cmu.cylab.starslinger.model.RecipientDatabaseHelper;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.SlingerIdentity;
+import edu.cmu.cylab.starslinger.model.UseContactItem;
+import edu.cmu.cylab.starslinger.model.UseContactItem.UCType;
 import edu.cmu.cylab.starslinger.transaction.C2DMBaseReceiver;
 import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
 import edu.cmu.cylab.starslinger.transaction.C2DMessaging;
@@ -152,7 +155,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     private static final int RESULT_PICK_MSGAPP = 13;
     private static final int REQUEST_QRECEIVE_MGS = 14;
     private static final int VIEW_RECIPSEL_ID = 140;
-    private static final int VIEW_MAINTAB_ID = 160;
+    private static final int VIEW_EXCHANGE_ID = 160;
     private static final int VIEW_FILESAVE_ID = 130;
     private static final int VIEW_FILEATTACH_ID = 120;
     private static final int VIEW_FINDCONTACT_ID = 190;
@@ -161,6 +164,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     private static final int VIEW_SENDINVITE_ID = 240;
     private static final int VIEW_PASSPHRASE_VERIFY_ID = 250;
     private static final int VIEW_SETTINGS_ID = 260;
+    private static final int VIEW_SAVE_ID = 280;
     private static final int RECOVERY_PUSHREG = 310;
     private static final int RECOVERY_CREATEKEY = 340;
     private static final int RECOVERY_EXCHANGEIMPORT = 380;
@@ -187,16 +191,16 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     private static String sWebError = null;
     private static String sProgressMsg = null;
     private static String sEditPassPhrase = null;
-    private static boolean sExchangeOpen = false;
     private static boolean sBackupExists = false;
     private static boolean sRestoring = false;
     private static boolean sRestoreRequested = false;
     private static boolean sRestoreReported = false;
-    private static Tabs sTab = Tabs.COMPOSE;
     private static CryptoMsgProvider sKeyData;
     private static boolean sAppOpened = false;
     private static ContactStruct sSecureIntro = null;
     private static Uri sTempCameraFileUri;
+    private ViewPager mViewPager;
+    private TabsAdapter mTabsAdapter;
 
     private enum Tabs {
         COMPOSE, MESSAGE, KEYSLING
@@ -253,17 +257,17 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         public void onReceive(Context context, Intent intent) {
 
             // if message window in view, update messages immediately...
-            sTab = Tabs.MESSAGE;
+            setTab(Tabs.MESSAGE);
 
             // update current message list if in view...
-            final ActionBar bar = getSupportActionBar();
-            Tab tab = bar.getSelectedTab();
-            if (getString(R.string.menu_TagListMessages).compareToIgnoreCase(
-                    tab.getText().toString()) == 0) {
-                FragmentManager fm = getSupportFragmentManager();
-                MessagesFragment mf = (MessagesFragment) fm.findFragmentByTag(Tabs.MESSAGE.name());
-                if (mf != null) {
-                    mf.updateValues(intent.getExtras());
+            final int position = getSupportActionBar().getSelectedNavigationIndex();
+            if (position == Tabs.MESSAGE.ordinal()) {
+                if (mTabsAdapter != null) {
+                    MessagesFragment mf = (MessagesFragment) mTabsAdapter
+                            .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+                    if (mf != null) {
+                        mf.updateValues(intent.getExtras());
+                    }
                 }
             }
         }
@@ -313,7 +317,9 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
         if (ConfigData.Intent.ACTION_MESSAGENOTIFY.equals(action)) {
             // clicked on new message notifications window, show messages
-            sTab = Tabs.MESSAGE;
+            // collapse messages to threads when looking for new messages
+            MessagesFragment.setRecip(null);
+            setTab(Tabs.MESSAGE);
             restart();
 
         } else if (ConfigData.Intent.ACTION_BACKUPNOTIFY.equals(action)) {
@@ -324,13 +330,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
         } else if (ConfigData.Intent.ACTION_SLINGKEYSNOTIFY.equals(action)) {
             // clicked on exchange reminder, show exchange tab
-            sTab = Tabs.KEYSLING;
+            setTab(Tabs.KEYSLING);
             restart();
 
         } else if (Intent.ACTION_SEND.equals(action) || Intent.ACTION_SEND_MULTIPLE.equals(action)) {
             // clicked share externally, load file, show compose
             if (handleSendToAction()) {
-                sTab = Tabs.COMPOSE;
+                setTab(Tabs.COMPOSE);
             }
             restart();
         }
@@ -341,7 +347,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         super.onPostCreate(savedInstanceState);
 
         if (savedInstanceState != null) {
-            sProgressMsg = savedInstanceState.getString(extra.RESID_MSG);
+            setTab(Tabs.values()[savedInstanceState.getInt(extra.RECOVERY_TAB)]);
             if (!TextUtils.isEmpty(sProgressMsg)) {
                 int newValue = savedInstanceState.getInt(extra.PCT);
                 int maxValue = savedInstanceState.getInt(extra.MAX);
@@ -367,14 +373,24 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         if (!SSUtil.isGoogleAccountPresent(getApplicationContext())) {
             bar.setSubtitle(String.format("(%s)", getString(R.string.label_DeviceInSendOnlyMode)));
         }
-        addTabs(savedInstanceState, bar);
+
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+
+        mTabsAdapter = new TabsAdapter(this, bar, mViewPager);
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagComposeMessage),
+                ComposeFragment.class, null);
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagListMessages),
+                MessagesFragment.class, null);
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagExchange), SlingerFragment.class,
+                null);
+
+        if (savedInstanceState != null) {
+            setTab(Tabs.values()[savedInstanceState.getInt(extra.RECOVERY_TAB)]);
+        }
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        restoreView(getComposeArgs());
-
-        // selected tab
-        bar.setSelectedNavigationItem(sTab.ordinal());
+        restoreView();
 
         // prepare for push registration...
         registerReceiver(mPushRegReceiver, new IntentFilter(C2DMReceiver.PUSH_REGISTERED));
@@ -394,147 +410,140 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         }
     }
 
-    protected void addTabs(Bundle extras, final ActionBar bar) {
-        Tab sendTab = bar
-                .newTab()
-                .setText(R.string.menu_TagComposeMessage)
-                .setTabListener(
-                        new TabListener<ComposeFragment>(this, Tabs.COMPOSE.name(),
-                                ComposeFragment.class, extras));
-        Tab msgsTab = bar
-                .newTab()
-                .setText(R.string.menu_TagListMessages)
-                .setTabListener(
-                        new TabListener<MessagesFragment>(this, Tabs.MESSAGE.name(),
-                                MessagesFragment.class));
-        Tab slingTab = bar
-                .newTab()
-                .setText(R.string.menu_TagExchange)
-                .setTabListener(
-                        new TabListener<SlingerFragment>(this, Tabs.KEYSLING.name(),
-                                SlingerFragment.class));
+    public static class TabsAdapter extends FragmentPagerAdapter implements
+            ViewPager.OnPageChangeListener, ActionBar.TabListener {
+        private final SherlockFragmentActivity mAct;
+        private final ActionBar mBar;
+        private final ViewPager mViewPager;
+        private final ArrayList<TabInfo> mTabs = new ArrayList<TabInfo>();
 
-        bar.addTab(sendTab, Tabs.COMPOSE.ordinal());
-        bar.addTab(msgsTab, Tabs.MESSAGE.ordinal());
-        bar.addTab(slingTab, Tabs.KEYSLING.ordinal());
-    }
+        static final class TabInfo {
+            private final Class<?> clss;
+            private final Bundle args;
 
-    public class TabListener<T extends SherlockFragment> implements ActionBar.TabListener {
-        private final SherlockFragmentActivity mActivity;
-        private final String mTag;
-        private final Class<T> mClass;
-        private final Bundle mArgs;
-        private SherlockFragment mFragment;
-
-        public TabListener(SherlockFragmentActivity activity, String tag, Class<T> clz) {
-            this(activity, tag, clz, null);
+            TabInfo(Class<?> _class, Bundle _args) {
+                clss = _class;
+                args = _args;
+            }
         }
 
-        public TabListener(SherlockFragmentActivity activity, String tag, Class<T> clz, Bundle args) {
-            mActivity = activity;
-            mTag = tag;
-            mClass = clz;
-            mArgs = args;
+        public TabsAdapter(SherlockFragmentActivity activity, ActionBar bar, ViewPager pager) {
+            super(activity.getSupportFragmentManager());
+            mAct = activity;
+            mBar = bar;
+            mViewPager = pager;
+            mViewPager.setAdapter(this);
+            mViewPager.setOnPageChangeListener(this);
+        }
 
-            // Check to see if we already have a fragment for this tab, probably
-            // from a previously saved state. If so, deactivate it, because our
-            // initial state is that a tab isn't shown.
-            mFragment = (SherlockFragment) mActivity.getSupportFragmentManager().findFragmentByTag(
-                    mTag);
-            if (mFragment != null && !mFragment.isDetached()) {
-                FragmentTransaction ft = mActivity.getSupportFragmentManager().beginTransaction();
-                ft.detach(mFragment);
-                ft.commit();
-            }
+        public void addTab(ActionBar.Tab tab, Class<? extends Fragment> clss, Bundle args) {
+            TabInfo info = new TabInfo(clss, args);
+            tab.setTag(info);
+            tab.setTabListener(this);
+            mTabs.add(info);
+            mBar.addTab(tab);
+            notifyDataSetChanged();
+        }
+
+        @Override
+        public int getCount() {
+            return mTabs.size();
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            TabInfo info = mTabs.get(position);
+            return Fragment.instantiate(mAct, info.clss.getName(), info.args);
+        }
+
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            mBar.setSelectedNavigationItem(position);
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
         }
 
         @Override
         public void onTabSelected(Tab tab, FragmentTransaction ft) {
-            // preserve selected tab
-            sTab = Tabs.values()[tab.getPosition()];
+            Object tag = tab.getTag();
+            for (int i = 0; i < mTabs.size(); i++) {
+                if (mTabs.get(i) == tag) {
+                    mViewPager.setCurrentItem(i);
 
-            if (mFragment == null) {
-                mFragment = (SherlockFragment) Fragment.instantiate(mActivity, mClass.getName(),
-                        mArgs);
-                ft.add(android.R.id.content, mFragment, mTag);
-            } else {
-                ft.attach(mFragment);
-            }
-
-            FragmentManager fm = getSupportFragmentManager();
-            switch (Tabs.values()[tab.getPosition()]) {
-                case COMPOSE:
-                    ComposeFragment cf = (ComposeFragment) fm
-                            .findFragmentByTag(Tabs.COMPOSE.name());
-                    if (cf != null) {
-                        cf.updateValues(getComposeArgs());
+                    // refresh all that matter
+                    switch (Tabs.values()[tab.getPosition()]) {
+                        case COMPOSE:
+                            ComposeFragment cf = (ComposeFragment) findFragmentByPosition(Tabs.COMPOSE
+                                    .ordinal());
+                            if (cf != null) {
+                                cf.updateValues(getComposeArgs());
+                            }
+                            break;
+                        case MESSAGE:
+                            MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
+                                    .ordinal());
+                            if (mf != null) {
+                                mf.updateValues(getMessagesArgs());
+                            }
+                            break;
+                        case KEYSLING:
+                            SlingerFragment sf = (SlingerFragment) findFragmentByPosition(Tabs.KEYSLING
+                                    .ordinal());
+                            if (sf != null) {
+                                sf.updateValues(getSlingerArgs());
+                            }
+                            break;
                     }
-                    break;
-                case MESSAGE:
-                    MessagesFragment mf = (MessagesFragment) fm.findFragmentByTag(Tabs.MESSAGE
-                            .name());
-                    if (mf != null) {
-                        mf.updateValues(null);
-                    }
-                    break;
-                case KEYSLING:
-                    SlingerFragment sf = (SlingerFragment) fm.findFragmentByTag(Tabs.KEYSLING
-                            .name());
-                    if (sf != null) {
-                        sf.updateValues(null);
-                    }
-
-                    if (ConfigData.loadPrefShowWalkthrough(getApplicationContext())) {
-                        showWalkthrough();
-                    } else {
-                        showExchange();
-                    }
-                    break;
+                }
             }
         }
 
         @Override
         public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-            if (mFragment != null) {
-                ft.detach(mFragment);
-            }
         }
 
         @Override
         public void onTabReselected(Tab tab, FragmentTransaction ft) {
             // refresh all that matter
-            FragmentManager fm = getSupportFragmentManager();
             switch (Tabs.values()[tab.getPosition()]) {
                 case COMPOSE:
-                    ComposeFragment cf = (ComposeFragment) fm
-                            .findFragmentByTag(Tabs.COMPOSE.name());
+                    ComposeFragment cf = (ComposeFragment) findFragmentByPosition(Tabs.COMPOSE
+                            .ordinal());
                     if (cf != null) {
                         cf.updateValues(getComposeArgs());
                     }
                     break;
                 case MESSAGE:
-                    MessagesFragment mf = (MessagesFragment) fm.findFragmentByTag(Tabs.MESSAGE
-                            .name());
+                    MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
+                            .ordinal());
                     if (mf != null) {
-                        mf.updateValues(null);
+                        mf.updateValues(getMessagesArgs());
                     }
                     break;
                 case KEYSLING:
-                    SlingerFragment sf = (SlingerFragment) fm.findFragmentByTag(Tabs.KEYSLING
-                            .name());
+                    SlingerFragment sf = (SlingerFragment) findFragmentByPosition(Tabs.KEYSLING
+                            .ordinal());
                     if (sf != null) {
-                        sf.updateValues(null);
+                        sf.updateValues(getSlingerArgs());
                     }
                     break;
             }
         }
+
+        public Fragment findFragmentByPosition(int position) {
+            return mAct.getSupportFragmentManager().findFragmentByTag(
+                    "android:switcher:" + mViewPager.getId() + ":" + getItemId(position));
+        }
     }
 
-    private Bundle getComposeArgs() {
+    private static Bundle getComposeArgs() {
         Bundle args = new Bundle();
-
-        String contactLookupKey = ConfigData.loadPrefContactLookupKey(getApplicationContext());
-        args.putString(extra.CONTACT_LOOKUP_KEY, contactLookupKey);
         if (sRecip != null) {
             args.putLong(extra.RECIPIENT_ROW_ID, sRecip.getRowId());
         } else {
@@ -544,59 +553,71 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         args.putInt(extra.PUSH_FILE_SIZE, sSendMsg.getFileSize());
         args.putString(extra.TEXT_MESSAGE, sSendMsg.getText());
         if (!TextUtils.isEmpty(sSendMsg.getFileType()) && sSendMsg.getFileType().contains("image")) {
-            args.putByteArray(extra.THUMBNAIL,
-                    SSUtil.makeThumbnail(getApplicationContext(), sSendMsg.getFileData()));
+            args.putByteArray(extra.THUMBNAIL, SSUtil.makeThumbnail(SafeSlinger.getApplication()
+                    .getApplicationContext(), sSendMsg.getFileData()));
         } else {
             args.remove(extra.THUMBNAIL);
         }
         return args;
     }
 
-    protected void restoreView(Bundle args) {
+    private static Bundle getMessagesArgs() {
+        return null;
+    }
+
+    protected void restoreView() {
         // all tabs with data...
-        FragmentManager fm = getSupportFragmentManager();
-        if (fm != null) {
-            ComposeFragment cf = (ComposeFragment) fm.findFragmentByTag(Tabs.COMPOSE.name());
+        if (mTabsAdapter != null) {
+            ComposeFragment cf = (ComposeFragment) mTabsAdapter.findFragmentByPosition(Tabs.COMPOSE
+                    .ordinal());
             if (cf != null) {
-                cf.updateValues(args);
+                cf.updateValues(getComposeArgs());
             }
-            MessagesFragment mf = (MessagesFragment) fm.findFragmentByTag(Tabs.MESSAGE.name());
+            MessagesFragment mf = (MessagesFragment) mTabsAdapter
+                    .findFragmentByPosition(Tabs.MESSAGE.ordinal());
             if (mf != null) {
-                mf.updateValues(null);
+                mf.updateValues(getMessagesArgs());
             }
-            SlingerFragment sf = (SlingerFragment) fm.findFragmentByTag(Tabs.KEYSLING.name());
+            SlingerFragment sf = (SlingerFragment) mTabsAdapter
+                    .findFragmentByPosition(Tabs.KEYSLING.ordinal());
             if (sf != null) {
-                sf.updateValues(null);
+                sf.updateValues(getSlingerArgs());
             }
         }
     }
 
-    public void showExchange() {
-        String contactLookupKey = ConfigData.loadPrefContactLookupKey(getApplicationContext());
+    private static Bundle getSlingerArgs() {
+        Bundle args = new Bundle();
+        String contactLookupKey = ConfigData.loadPrefContactLookupKey(SafeSlinger.getApplication()
+                .getApplicationContext());
 
         // valid key and push token is required
         if (TextUtils.isEmpty(SlingerIdentity.sidPush2DBPush(sSenderKey))) {
-            restart();
+            return args;
         } else if (TextUtils.isEmpty(SlingerIdentity.sidKey2DBKey(sSenderKey))) {
-            restart();
-        } else if (!sExchangeOpen) {
-
-            Intent intent = new Intent(HomeActivity.this, ControllerActivity.class);
-
-            ArrayList<ImppValue> impps = new ArrayList<ImppValue>();
-            impps.add(new ImppValue(ConfigData.APP_KEY_PUSHTOKEN, KsConfig
-                    .finalEncode(SlingerIdentity.sidPush2DBPush(sSenderKey).getBytes())));
-            impps.add(new ImppValue(ConfigData.APP_KEY_PUBKEY, KsConfig.finalEncode(SlingerIdentity
-                    .sidKey2DBKey(sSenderKey).getBytes())));
-            intent.putExtras(writeSingleExportExchangeArgs(new ContactImpp(contactLookupKey, impps)));
-
-            String name = ConfigData.loadPrefContactName(getApplicationContext());
-
-            intent.putExtra(extra.NAME, name);
-
-            sExchangeOpen = true;
-            startActivityForResult(intent, VIEW_MAINTAB_ID);
+            return args;
         }
+
+        ArrayList<ImppValue> impps = new ArrayList<ImppValue>();
+        impps.add(new ImppValue(ConfigData.APP_KEY_PUSHTOKEN, SSUtil.finalEncode(SlingerIdentity
+                .sidPush2DBPush(sSenderKey).getBytes())));
+        impps.add(new ImppValue(ConfigData.APP_KEY_PUBKEY, SSUtil.finalEncode(SlingerIdentity
+                .sidKey2DBKey(sSenderKey).getBytes())));
+        args.putAll(writeSingleExportExchangeArgs(new ContactImpp(contactLookupKey, impps)));
+
+        return args;
+    }
+
+    private void showExchange(byte[] userData) {
+        Intent intent = new Intent(HomeActivity.this, ControllerActivity.class);
+        intent.putExtra(extra.USER_DATA, userData);
+        startActivityForResult(intent, VIEW_EXCHANGE_ID);
+    }
+
+    private void showSave(Bundle args) {
+        Intent intent = new Intent(HomeActivity.this, SaveActivity.class);
+        intent.replaceExtras(args);
+        startActivityForResult(intent, VIEW_SAVE_ID);
     }
 
     public void doUpgradeDatabaseInPlace() throws IllegalArgumentException {
@@ -716,26 +737,16 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         // we passed backup restore, now we can load databases...
         doUpgradeDatabaseInPlace();
 
-        // ensure that a valid contact is selected...
-        String contactLookupKey = ConfigData.loadPrefContactLookupKey(getApplicationContext());
-        if (TextUtils.isEmpty(contactLookupKey)) {
-            // null? try deprecated value...
-            String contactIdDeprecated = ConfigData.loadPrefContactId(getApplicationContext());
-            if (!TextUtils.isEmpty(contactIdDeprecated)) {
-                contactLookupKey = getContactLookupKeyByContactId(contactIdDeprecated);
-            }
+        // contact
+        String contactName = ConfigData.loadPrefContactName(getApplicationContext());
+        if (TextUtils.isEmpty(contactName)) {
+            showFindContact();
+            return false;
         }
-        if (!TextUtils.isEmpty(contactLookupKey)) {
-            // contact
-            String contactName = ConfigData.loadPrefContactName(getApplicationContext());
 
-            // we need a real persons name
-            if (!ConfigData.isNameValid(contactName, getApplicationContext())) {
-                showNote(R.string.error_InvalidContactName);
-                showFindContact();
-                return false;
-            }
-        } else {
+        // we need a real persons name
+        if (!ConfigData.isNameValid(contactName, getApplicationContext())) {
+            showNote(R.string.error_InvalidContactName);
             showFindContact();
             return false;
         }
@@ -815,6 +826,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         } catch (CryptoMsgException e) {
             // key formatted incorrectly
             e.printStackTrace();
+        } finally {
+            if (secret == null) {
+                return false;
+            }
         }
 
         // update key details
@@ -860,16 +875,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
         @Override
         public void run() {
-            restoreView(getComposeArgs());
-
-            // selected tab
-            final ActionBar bar = getSupportActionBar();
-            try {
-                bar.setSelectedNavigationItem(sTab.ordinal());
-            } catch (IllegalStateException e) {
-                // Can not perform this action after onSaveInstanceState...
-                e.printStackTrace();
-            }
+            restoreView();
         }
     };
 
@@ -881,8 +887,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         if (sTempCameraFileUri != null) {
             outState.putString(extra.FILE_PATH, sTempCameraFileUri.getPath());
         }
-        outState.putInt(extra.RECOVERY_TAB, sTab.ordinal());
+        final int position = getSupportActionBar().getSelectedNavigationIndex();
+        outState.putInt(extra.RECOVERY_TAB, position);
         outState.putAll(getComposeArgs());
+        outState.putAll(getSlingerArgs());
 
         if (sProg != null) {
             if (sProg.isShowing()) {
@@ -901,12 +909,14 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
 
         int showAsActionIfRoom = com.actionbarsherlock.view.MenuItem.SHOW_AS_ACTION_IF_ROOM;
-        menu.add(0, MENU_SENDINTRO, 0, R.string.menu_Introduction)
+        menu.add(0, MENU_SENDINTRO, 0, R.string.title_SecureIntroduction)
                 .setIcon(R.drawable.ic_action_secintro).setShowAsAction(showAsActionIfRoom);
 
         // do not crowd default action bar with these items, leave room for
         // tabs...
         menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(android.R.drawable.ic_menu_help);
+        menu.add(0, MENU_SENDINTRO, 0, R.string.title_SecureIntroduction).setIcon(
+                R.drawable.ic_action_secintro);
         menu.add(0, MENU_SENDAPP, 0, R.string.menu_SelectShareApp).setIcon(
                 android.R.drawable.ic_menu_share);
         menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
@@ -921,7 +931,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
     @Override
     public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
-        String contactLookupKey = ConfigData.loadPrefContactLookupKey(getApplicationContext());
         switch (item.getItemId()) {
             case MENU_LOGOUT:
                 // remove cached pass
@@ -937,7 +946,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 showSettings();
                 return true;
             case MENU_SENDINTRO:
-                showSendIntroduction(contactLookupKey);
+                showSendIntroduction();
                 return true;
             case MENU_FEEDBACK:
                 SafeSlinger.getApplication().showFeedbackEmail(HomeActivity.this);
@@ -1030,7 +1039,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         // must have either file or text to send
         if (TextUtils.isEmpty(sendMsg.getText()) && TextUtils.isEmpty(sendMsg.getFileName())) {
             showNote(R.string.error_selectDataToSend);
-            sTab = Tabs.COMPOSE;
+            setTab(Tabs.COMPOSE);
             restart();
             return;
         }
@@ -1114,14 +1123,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         }
 
         // switch to message tab
-        sTab = Tabs.MESSAGE;
-        final ActionBar bar = getSupportActionBar();
-        try {
-            bar.setSelectedNavigationItem(sTab.ordinal());
-        } catch (IllegalStateException e) {
-            // Can not perform this action after onSaveInstanceState...
-            e.printStackTrace();
-        }
+        setTab(Tabs.MESSAGE);
         restart();
 
         // start background task to send
@@ -1133,6 +1135,18 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         sendIntent.putExtra(extra.MESSAGE_ROW_ID, sendMsg.getRowId());
         sendIntent.putExtra(extra.RECIPIENT_ROW_ID, recip.getRowId());
         getApplicationContext().sendBroadcast(sendIntent);
+    }
+
+    private void setTab(Tabs tab) {
+        try {
+            final ActionBar ab = getSupportActionBar();
+            if (ab != null) {
+                ab.setSelectedNavigationItem(tab.ordinal());
+            }
+        } catch (Exception e) {
+            // since this may be called from another thread,
+            // catch, but not critically...
+        }
     }
 
     private void endProgress(final int recover) {
@@ -1347,7 +1361,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     @Override
     public void onComposeResultListener(Bundle data) {
         int resultCode = data.getInt(extra.RESULT_CODE);
-        String contactLookupKey = ConfigData.loadPrefContactLookupKey(getApplicationContext());
         String text = null;
         if (data != null) {
             text = data.getString(extra.TEXT_MESSAGE);
@@ -1429,17 +1442,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             case ComposeFragment.RESULT_RESTART:
                 restart();
                 break;
-            case ComposeFragment.RESULT_CONTACTSEL:
-                // user wants to choose new contact for themselves
-                showPickContact(RESULT_PICK_CONTACT_SENDER);
-                break;
-            case ComposeFragment.RESULT_CONTACTADD:
-                // user wants to create new contact
-                showAddContact(ConfigData.loadPrefContactName(getApplicationContext()));
-                break;
-            case ComposeFragment.RESULT_CONTACTEDIT:
-                // user wants to edit contact
-                showEditContact(RESULT_PICK_CONTACT_SENDER);
+            case ComposeFragment.RESULT_USEROPTIONS:
+                showChangeSenderOptions();
                 break;
             case ComposeFragment.RESULT_FILESEL:
                 // user wants to pick a file to send
@@ -1447,12 +1451,12 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 break;
             case ComposeFragment.RESULT_RECIPSEL:
                 // user wants to pick a recipient
-                showRecipientSelect(contactLookupKey);
+                showRecipientSelect();
                 break;
             case ComposeFragment.RESULT_FILEREMOVE:
                 // user wants to remove file
                 sSendMsg.removeFile();
-                sTab = Tabs.COMPOSE;
+                setTab(Tabs.COMPOSE);
                 restart();
                 break;
         }
@@ -1583,7 +1587,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     long rowId = dbMessage.createDraftMessage(sRecip, sSendMsg);
                     sSendMsg.setRowId(rowId);
                 }
-                sTab = Tabs.COMPOSE;
+                setTab(Tabs.COMPOSE);
                 restart();
                 break;
             case MessagesFragment.RESULT_EDITMESSAGE:
@@ -1606,7 +1610,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                         break;
                     }
                 }
-                sTab = Tabs.COMPOSE;
+                setTab(Tabs.COMPOSE);
                 restart();
                 break;
             case MessagesFragment.RESULT_GETMESSAGE:
@@ -1647,9 +1651,11 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         int resultCode = data.getInt(extra.RESULT_CODE);
 
         switch (resultCode) {
-            case SlingerFragment.RESULT_SHOWCOMPOSE:
-                sTab = Tabs.COMPOSE;
-                restart();
+            case SlingerFragment.RESULT_BEGINEXCHANGE:
+                showExchange(data.getString(extra.USER_DATA).getBytes());
+                break;
+            case SlingerFragment.RESULT_USEROPTIONS:
+                showChangeSenderOptions();
                 break;
         }
     }
@@ -1745,11 +1751,11 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                             CheckRegistrationStateTask task = new CheckRegistrationStateTask();
                             task.execute(sRecip);
 
-                            sTab = Tabs.COMPOSE;
+                            setTab(Tabs.COMPOSE);
                             restart();
                         } else {
                             showNote(R.string.error_InvalidRecipient);
-                            sTab = Tabs.COMPOSE;
+                            setTab(Tabs.COMPOSE);
                             restart();
                             break;
                         }
@@ -1899,39 +1905,35 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 }
                 break;
 
-            case VIEW_MAINTAB_ID:
+            case VIEW_EXCHANGE_ID:
                 switch (resultCode) {
-                    case ContactActivity.RESULT_KEYSLINGERIMPORTED:
+                    case ControllerActivity.RESULT_KEYSLINGERIMPORTED:
+                        showSave(data.getExtras());
+                        break;
+                    case ControllerActivity.RESULT_KEYSLINGERCANCELED:
+                        restart();
+                        break;
+                }
+                break;
+
+            case VIEW_SAVE_ID:
+                switch (resultCode) {
+                    case SaveActivity.RESULT_SAVE:
                         // locally store trusted exchanged items
                         ConfigData.savePrefFirstExchangeComplete(getApplicationContext(), true);
                         runThreadImportFromExchange(data.getExtras(),
                                 RecipientDbAdapter.RECIP_SOURCE_EXCHANGE, null);
                         break;
-                    case ContactActivity.RESULT_KEYSLINGERCANCELED:
-                        sExchangeOpen = false;
-                        restart();
-                        break;
-                    case ContactActivity.RESULT_KEYSLINGERCONTACTSEL:
-                        // user wants to choose new contact for themselves
-                        sExchangeOpen = false;
-                        showPickContact(RESULT_PICK_CONTACT_SENDER);
-                        break;
-                    case ContactActivity.RESULT_KEYSLINGERCONTACTADD:
-                        // user wants to create new contact
-                        sExchangeOpen = false;
-                        showAddContact(ConfigData.loadPrefContactName(getApplicationContext()));
-                        break;
-                    case ContactActivity.RESULT_KEYSLINGERCONTACTEDIT:
-                        // user wants to edit contact
-                        sExchangeOpen = false;
-                        showEditContact(RESULT_PICK_CONTACT_SENDER);
-                        break;
-                    case RESULT_OK:
-                        sExchangeOpen = false;
-                        restart();
+                    case SaveActivity.RESULT_SELNONE:
+                        int exchanged = data.getExtras().getInt(extra.EXCHANGED_TOTAL);
+                        showNote(String.format(getString(R.string.state_SomeContactsImported), "0/"
+                                + exchanged));
                         break;
                     case RESULT_CANCELED:
-                        showExit(RESULT_CANCELED);
+                        showNote(String.format(getString(R.string.state_SomeContactsImported), "0"));
+                        break;
+                    default:
+                        showNote(String.format(getString(R.string.state_SomeContactsImported), "?"));
                         break;
                 }
                 break;
@@ -1939,18 +1941,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             case VIEW_FINDCONTACT_ID:
                 switch (resultCode) {
                     case RESULT_OK:
-                        String newContactLookupKey = data.getStringExtra(extra.CONTACT_LOOKUP_KEY);
-                        if (!TextUtils.isEmpty(newContactLookupKey)) {
-                            ConfigData.savePrefContactLookupKey(getApplicationContext(),
-                                    newContactLookupKey);
-                            sTab = Tabs.COMPOSE;
-                        }
                         restart();
-                        break;
-                    case FindContactActivity.RESULT_CONTACTADD:
-                        // user wants to create new contact
-                        String name = ConfigData.loadPrefContactName(this);
-                        showAddContact(name);
                         break;
                     case RESULT_CANCELED:
                         showExit(RESULT_CANCELED);
@@ -2036,19 +2027,19 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                             break;
                         }
 
-                        sTab = Tabs.COMPOSE;
+                        setTab(Tabs.COMPOSE);
                         restart();
                         break;
                     case RESULT_CANCELED:
                         sSendMsg.removeFile();
-                        sTab = Tabs.COMPOSE;
+                        setTab(Tabs.COMPOSE);
                         restart();
                         break;
                 }
                 break;
 
             case RESULT_PICK_MSGAPP:
-                sTab = Tabs.COMPOSE;
+                setTab(Tabs.COMPOSE);
                 restart();
                 break;
 
@@ -2107,7 +2098,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     private void doSaveDownloadedFile(File file, MessageData recvMsg) {
         if (saveFileAtLocation(file, recvMsg)) {
             // back to messages, to tap for open...
-            sTab = Tabs.MESSAGE;
+            setTab(Tabs.MESSAGE);
             restart();
         } else {
             showNote(String.format(getString(R.string.error_FileSave), recvMsg.getFileName()));
@@ -2253,8 +2244,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 msg.setData(args);
                 importMsgHandler.sendMessage(msg);
 
-                sTab = Tabs.COMPOSE;
-                sExchangeOpen = false;
                 endProgress(RECOVERY_EXCHANGEIMPORT);
             }
         };
@@ -2328,25 +2317,15 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         super.onResume();
         // The activity has become visible (it is now "resumed").
 
-        restoreView(getComposeArgs());
-
-        // selected tab
-        final ActionBar bar = getSupportActionBar();
-        try {
-            bar.setSelectedNavigationItem(sTab.ordinal());
-        } catch (IllegalStateException e) {
-            // Can not perform this action after onSaveInstanceState...
-            e.printStackTrace();
-        }
+        restoreView();
 
         // require pass on wake...
         showPassphraseWhenExpired();
     }
 
     private void showPassphraseWhenExpired() {
-        String contactLookupKey = ConfigData.loadPrefContactLookupKey(getApplicationContext());
-        if (CryptTools.existsSecretKey(getApplicationContext())
-                && !TextUtils.isEmpty(contactLookupKey)) {
+        String contactName = ConfigData.loadPrefContactName(getApplicationContext());
+        if (CryptTools.existsSecretKey(getApplicationContext()) && !TextUtils.isEmpty(contactName)) {
 
             String pass = SafeSlinger.getCachedPassPhrase(ConfigData
                     .loadPrefKeyIdString(getApplicationContext()));
@@ -2363,16 +2342,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         // Another activity is taking focus (this activity is about to be
         // "paused").
 
-        restoreView(getComposeArgs());
-
-        // selected tab
-        final ActionBar bar = getSupportActionBar();
-        try {
-            bar.setSelectedNavigationItem(sTab.ordinal());
-        } catch (IllegalStateException e) {
-            // Can not perform this action after onSaveInstanceState...
-            e.printStackTrace();
-        }
+        restoreView();
     }
 
     @Override
@@ -2415,7 +2385,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             if (!TextUtils.isEmpty(filepath)) {
                 sTempCameraFileUri = Uri.fromFile(new File(filepath));
             }
-            sTab = Tabs.values()[savedInstanceState.getInt(extra.RECOVERY_TAB)];
+
+            setTab(Tabs.values()[savedInstanceState.getInt(extra.RECOVERY_TAB)]);
         }
 
         // several private members may need to be reloaded...
@@ -2433,10 +2404,12 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
     protected void postProgressMsgList(long rowId, String msg) {
         try {
-            FragmentManager fm = getSupportFragmentManager();
-            MessagesFragment mf = (MessagesFragment) fm.findFragmentByTag(Tabs.MESSAGE.name());
-            if (mf != null) {
-                mf.postProgressMsgList(rowId, msg);
+            if (mTabsAdapter != null) {
+                MessagesFragment mf = (MessagesFragment) mTabsAdapter
+                        .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+                if (mf != null) {
+                    mf.postProgressMsgList(rowId, msg);
+                }
             }
         } catch (IllegalStateException e) {
             // Can not perform this action after onSaveInstanceState...
@@ -2547,7 +2520,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         protected void onPostExecute(String error) {
             postProgressMsgList(mRowId, null);
             if (TextUtils.isEmpty(error)) {
-                sTab = Tabs.MESSAGE;
+                setTab(Tabs.MESSAGE);
                 restart();
             } else {
                 showNote(error);
@@ -3038,12 +3011,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         sSendMsg = new MessageData();
         sWebError = null;
         sEditPassPhrase = null;
-        sExchangeOpen = false;
         sBackupExists = false;
         sRestoreRequested = false;
         sRestoreReported = false;
         sRestoring = false;
-        sTab = Tabs.COMPOSE;
         sSecureIntro = null;
     }
 
@@ -3118,9 +3089,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         startActivityForResult(intent, VIEW_FINDCONTACT_ID);
     }
 
-    private void showRecipientSelect(String senderContactLookupKey) {
+    private void showRecipientSelect() {
         Intent intent = new Intent(HomeActivity.this, PickRecipientsActivity.class);
-        intent.putExtra(extra.CONTACT_LOOKUP_KEY, senderContactLookupKey);
         intent.putExtra(extra.ALLOW_EXCH, true);
         intent.putExtra(extra.ALLOW_INTRO, true);
         startActivityForResult(intent, VIEW_RECIPSEL_ID);
@@ -3192,9 +3162,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         return userNumber > 1 ? userNumber : 1;
     }
 
-    private void showSendIntroduction(String senderContactLookupKey) {
+    private void showSendIntroduction() {
         Intent intent = new Intent(HomeActivity.this, IntroductionActivity.class);
-        intent.putExtra(extra.CONTACT_LOOKUP_KEY, senderContactLookupKey);
         startActivityForResult(intent, VIEW_SENDINVITE_ID);
     }
 
@@ -3262,48 +3231,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                             if (item.label.compareTo(ConfigData.APP_KEY_PUBKEY) == 0
                                     || item.label.compareTo(ConfigData.APP_KEY_PUSHTOKEN) == 0) {
                                 args.putByteArray(item.label + selected,
-                                        KsConfig.finalDecode(item.data.getBytes()));
+                                        SSUtil.finalDecode(item.data.getBytes()));
                             }
                         }
                     }
                 }
 
-                // save in address book
-                ContactAccessor accessor = ContactAccessor.getInstance();
-                String contactId = getContactIdByName(sSecureIntro.name.toString());
                 String contactLookupKey = getContactLookupKeyByName(sSecureIntro.name.toString());
-                String rawContactId = null;
-
-                if (contactId != null) {
-                    ArrayList<AccountData> v = getRawContactIds(contactId);
-                    if (v != null && v.size() > 0)
-                        rawContactId = v.get(0).getRawContactId();
-                }
-                String loadPrefAccountType = ConfigData
-                        .loadPrefAccountType(getApplicationContext());
-                String loadPrefAccountName = ConfigData
-                        .loadPrefAccountName(getApplicationContext());
-
-                if (!TextUtils.isEmpty(rawContactId)) {
-
-                    if (!accessor.updateOldContact(sSecureIntro, act, loadPrefAccountType,
-                            loadPrefAccountName, rawContactId)) {
-                        showNote(R.string.error_ContactUpdateFailed);
-                        sSecureIntro = null;
-                        return;
-                    }
-                } else {
-                    rawContactId = accessor.insertNewContact(sSecureIntro, loadPrefAccountType,
-                            loadPrefAccountName, act);
-                    if (!TextUtils.isEmpty(rawContactId)) {
-                        contactLookupKey = getContactLookupKeyByContactId(rawContactId);
-                    } else {
-                        showNote(R.string.error_ContactInsertFailed);
-                        sSecureIntro = null;
-                        return;
-                    }
-                }
-
                 args.putString(extra.CONTACT_LOOKUP_KEY + selected, contactLookupKey);
 
                 sSecureIntro = null; // we're done with it now...
@@ -3318,14 +3252,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
                 if (inviteMsg == null) {
                     showNote(R.string.error_InvalidIncomingMessage);
-                    sSecureIntro = null;
                     return;
                 }
 
                 // import the new contacts
                 runThreadImportFromExchange(args, RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION,
                         inviteMsg.getKeyId());
-                sTab = Tabs.MESSAGE;
+                setTab(Tabs.MESSAGE);
                 restart();
             }
         });
@@ -3339,6 +3272,151 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 restart();
             }
         });
+        return ad;
+    }
+
+    protected void showChangeSenderOptions() {
+        UseContactItem profile = getContactProfile();
+
+        String name = ConfigData.loadPrefContactName(getApplicationContext());
+        ArrayList<UseContactItem> contacts = getUseContactItemsByName(name);
+
+        boolean isContactInUse = !TextUtils.isEmpty(ConfigData
+                .loadPrefContactLookupKey(getApplicationContext()));
+
+        Bundle args = new Bundle();
+        args.putBoolean(extra.CREATED, isContactInUse);
+        if (profile != null) {
+            args.putString(extra.NAME, profile.text);
+            args.putByteArray(extra.PHOTO, profile.icon);
+            args.putString(extra.CONTACT_LOOKUP_KEY, profile.contactLookupKey);
+        }
+        if (contacts != null) {
+            for (int i = 0; i < contacts.size(); i++) {
+                UseContactItem c = contacts.get(i);
+                args.putString(extra.NAME + i, c.text);
+                args.putByteArray(extra.PHOTO + i, c.icon);
+                args.putString(extra.CONTACT_LOOKUP_KEY + i, c.contactLookupKey);
+            }
+        }
+        if (!isFinishing()) {
+            removeDialog(DIALOG_USEROPTIONS);
+            showDialog(DIALOG_USEROPTIONS, args);
+        }
+    }
+
+    protected AlertDialog.Builder xshowChangeSenderOptions(final Activity act, Bundle args) {
+        final ArrayList<UseContactItem> items = new ArrayList<UseContactItem>();
+        boolean isContactInUse = args.getBoolean(extra.CREATED);
+        String pName = args.getString(extra.NAME);
+        byte[] pPhoto = args.getByteArray(extra.PHOTO);
+        String pLookupKey = args.getString(extra.CONTACT_LOOKUP_KEY);
+        if (!TextUtils.isEmpty(pName)) {
+            items.add(new UseContactItem(String.format(
+                    act.getString(R.string.menu_UseProfilePerson), pName), pPhoto, pLookupKey,
+                    UCType.PROFILE));
+        }
+        int i = 0;
+        String cName = args.getString(extra.NAME + i);
+        byte[] cPhoto = args.getByteArray(extra.PHOTO + i);
+        String cLookupKey = args.getString(extra.CONTACT_LOOKUP_KEY + i);
+        while (!TextUtils.isEmpty(cName)) {
+            items.add(new UseContactItem(String.format(
+                    act.getString(R.string.menu_UseContactPerson), cName), cPhoto, cLookupKey,
+                    UCType.CONTACT));
+            i++;
+            cName = args.getString(extra.NAME + i);
+            cPhoto = args.getByteArray(extra.PHOTO + i);
+            cLookupKey = args.getString(extra.CONTACT_LOOKUP_KEY + i);
+        }
+        items.add(new UseContactItem(act.getString(R.string.menu_UseNoContact), UCType.NONE));
+        items.add(new UseContactItem(act.getString(R.string.menu_UseAnother), UCType.ANOTHER));
+        items.add(new UseContactItem(act.getString(R.string.menu_CreateNew), UCType.NEW));
+        items.add(new UseContactItem(act.getString(R.string.menu_EditName), UCType.EDIT_NAME));
+        if (isContactInUse) {
+            items.add(new UseContactItem(act.getString(R.string.menu_EditContact),
+                    UCType.EDIT_CONTACT));
+        }
+
+        AlertDialog.Builder ad = new AlertDialog.Builder(act);
+        ad.setTitle(R.string.title_MyIdentity);
+        ad.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                dialog.dismiss();
+            }
+        });
+        ListAdapter adapter = new ArrayAdapter<UseContactItem>(act,
+                android.R.layout.select_dialog_item, android.R.id.text1, items) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View v = super.getView(position, convertView, parent);
+                TextView tv = (TextView) v.findViewById(android.R.id.text1);
+                UseContactItem item = items.get(position);
+
+                if (item.contact) {
+                    Drawable d;
+                    if (item.icon != null) {
+                        Bitmap bm = BitmapFactory.decodeByteArray(item.icon, 0, item.icon.length,
+                                null);
+                        d = new BitmapDrawable(act.getResources(), bm);
+                    } else {
+                        d = act.getResources().getDrawable(R.drawable.ic_silhouette);
+                    }
+                    // d.setBounds(0, 0, 25, 25);
+                    tv.setCompoundDrawablesWithIntrinsicBounds(null, null, d, null);
+                    tv.setCompoundDrawablePadding((int) act.getResources().getDimension(
+                            R.dimen.size_5dp));
+                } else {
+                    tv.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                }
+
+                return v;
+            }
+        };
+        ad.setAdapter(adapter, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                dialog.dismiss();
+                switch (items.get(item).type) {
+                    case PROFILE:
+                        // user wants to use found profile as a personal contact
+                        ConfigData.savePrefContactLookupKey(getApplicationContext(),
+                                items.get(item).contactLookupKey);
+                        restart();
+                        break;
+                    case CONTACT:
+                        // user wants to use found contact as a personal contact
+                        ConfigData.savePrefContactLookupKey(getApplicationContext(),
+                                items.get(item).contactLookupKey);
+                        restart();
+                        break;
+                    case ANOTHER:
+                        // user wants to choose new contact for themselves
+                        showPickContact(RESULT_PICK_CONTACT_SENDER);
+                        break;
+                    case NONE:
+                        // user wants to remove link to address book
+                        ConfigData.savePrefContactLookupKey(getApplicationContext(), null);
+                        restart();
+                        break;
+                    case NEW:
+                        // user wants to create new contact
+                        showAddContact(ConfigData.loadPrefContactName(getApplicationContext()));
+                        break;
+                    case EDIT_CONTACT:
+                        // user wants to edit contact
+                        showEditContact(RESULT_PICK_CONTACT_SENDER);
+                        break;
+                    case EDIT_NAME:
+                        // user wants to edit name
+                        showSettings();
+                        restart();
+                        break;
+                }
+            }
+        });
+
         return ad;
     }
 
@@ -3475,8 +3553,9 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     @Override
     public void onBackPressed() {
 
-        if (MessagesFragment.getRecip() != null && sTab == Tabs.MESSAGE) {
-            // collape messages to threads when in message view
+        final int position = getSupportActionBar().getSelectedNavigationIndex();
+        if (MessagesFragment.getRecip() != null && position == Tabs.MESSAGE.ordinal()) {
+            // collapse messages to threads when in message view
             MessagesFragment.setRecip(null);
             restart();
         } else {
@@ -3507,6 +3586,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 return xshowReference(HomeActivity.this).create();
             case DIALOG_BACKUPQUERY:
                 return xshowBackupQuery(HomeActivity.this).create();
+            case DIALOG_USEROPTIONS:
+                return xshowChangeSenderOptions(HomeActivity.this, args).create();
         }
         return super.onCreateDialog(id);
     }

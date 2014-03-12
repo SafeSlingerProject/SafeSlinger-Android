@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">संपर्क डेटा को गलत ढंग से स्वरूपित किया गया था.</string>
     <string name="error_WebCancelledByUser">उपयोगकर्ता सर्वर अनुरोध को रद्द कर दिया.</string>
 
+    <string name="help_find">दूसरों के साथ आदान प्रदान करने के लिए अपना नाम स्थापित करने के लिए इस स्क्रीन का प्रयोग करें. जब समाप्त \'पूर्ण\' बटन नल.</string>
     <string name="help_home">पहचान डेटा का आदान प्रदान करने, सभी उपयोगकर्ताओं के पास या फोन पर कर रहे हैं सुनिश्चित करते हैं. \' शुरू एक्सचेंज का बटन ही जाँच संपर्क डेटा का आदान प्रदान करेंगे.</string>
     <string name="help_identity_menu">\n\nआप भी अपने नाम के साथ बटन पर टैप करके इस स्क्रीन पर अपनी पहचान के बारे में व्यक्तिगत डेटा बदल सकते हैं. यह आपको \'संपादन\' आपके संपर्क, संपर्क \'नया बनाएँ\', या संपर्क \' एक और प्रयोग \' करने की अनुमति एक मेनू प्रदर्शित करेगा.</string>
     <string name="help_Messages">यह स्क्रीन सब अतीत संदेश, और अभी भी डाउनलोड के लिए उपलब्ध हैं कि अनुलग्नकों को प्रदर्शित करता है.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s की समय सीमा समाप्त</string>
     <string name="label_expiresIn">में समाप्त हो रहा है</string>
     <string name="label_FileNameHint">फ़ाइल नाम</string>
+    <string name="label_FindInstruct">नाम दर्ज करें आप सुरक्षित रूप से संचार के दौरान देखने के लिए दूसरों की कामना करते हैं:</string>
     <string name="label_FirstName">प्रथम नाम</string>
-    <string name="label_Home">आप का हिस्सा है और \'एक्सचेंज शुरू \' नल की इच्छा वस्तुओं की जांच दूसरों के आदान प्रदान के लिए तैयार हैं.</string>
+    <string name="label_Home">जोड़ने या हटाने से संपर्क डेटा, आप साझा करना चाहते हैं वस्तुओं की जांच, और दोहन करने के लिए अपने नाम ठोकर \'एक्सचेंज शुरू\' दूसरों के आदान प्रदान के लिए तैयार हैं:</string>
     <string name="label_hometag">घर</string>
     <string name="label_hours">%d घंटे</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud सक्षम है. जब समाप्त \'पूर्ण\' बटन नल.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">देरी SafeSlinger बैकअप</string>
     <string name="label_safeslingered">(SafeSlinger सीधी एक्सचेंज)</string>
     <string name="label_SaveAccount">खाता सहेजें</string>
-    <string name="label_SaveInstruct">मुद्रा पूरा! आपके पते की किताब को बचाने के लिए सदस्य डेटा का चयन करें:</string>
+    <string name="label_SaveInstruct">सुरक्षित संपर्कों को बचाने के लिए \'आयात\' नल तो, आप अपनी पता पुस्तिका में अद्यतन करना चाहते संपर्कों की जाँच करें:</string>
     <string name="label_seconds">%d सेकंड</string>
     <string name="label_selectLabel">चयन लेबल</string>
     <string name="label_SelectRecip">चयन प्राप्तकर्ता</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">गोफन कुंजी</string>
     <string name="menu_TagListMessages">संदेश</string>
     <string name="menu_UseAnother">एक और प्रयोग</string>
+    <string name="menu_UseContactPerson">संपर्क \'%s\' का प्रयोग करें</string>
+    <string name="menu_UseNoContact">इस्तेमाल की नाम केवल</string>
+    <string name="menu_UseProfilePerson">प्रोफ़ाइल \'%s\' का प्रयोग करें</string>
 
     <string name="prog_CollectingOthersCommitVerify">सभी सदस्यों से सत्यापन के लिए इंतजार कर…</string>
     <string name="prog_CollectingOthersItems">सभी उपयोगकर्ताओं में शामिल होने के लिए इंतजार कर…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">द्वारा प्रदान की भाषाएं:</string>
     <string name="text_RelatedSearchTerms">संबंधित नियम:</string>
     <string name="text_Requirements">आवश्यकताएँ:\n1. 2 उपकरणों की एक न्यूनतम पर स्थापित किया जाना चाहिए.\n2. एक इंटरनेट कनेक्शन सक्रिय होना चाहिए.</string>
+    <string name="text_SourceCodeRepo">खुला स्रोत: %s</string>
     <string name="text_WhatsNew">- स्थिरता फिक्सेस.</string>
 
     <string name="title_About">के बारे में</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">घर</string>
     <string name="title_MessageDetail">संदेश</string>
     <string name="title_Messages">संदेश</string>
-    <string name="title_MyIdentity">मेरी पहचान</string>
+    <string name="title_MyIdentity">व्यक्तिगत संपर्क</string>
     <string name="title_NotifyFileAvailable">उपलब्ध SafeSlinger संदेश</string>
     <string name="title_NotifyMulFileAvailable">उपलब्ध %d SafeSlinger संदेश</string>
     <string name="title_passphrase">पासफ्रेज</string>

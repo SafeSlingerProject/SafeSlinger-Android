@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Sib cuag cov ntaub ntawv twb formatted incorrectly.</string>
     <string name="error_WebCancelledByUser">Tus neeg siv yuav tso tseg rau zaub mov thov.</string>
 
+    <string name="help_find">Siv no screen mus teem koj lub npe mus pauv nrog lwm tus. Khob qhov \'Tas\' khawm thaum tiav lawm.</string>
     <string name="help_home">Mus pauv tus kheej cov ntaub ntawv, kom tag nrho cov neeg siv yog cov nyob ze los yog hauv xov tooj. Qhov \' Pib Txauv \' khawm yuav sib pauv xwb lub soj ntsuam cov ntaub ntawv sib tiv tauj.</string>
     <string name="help_identity_menu">\n\nTej zaum koj kuj yuav hloov koj tus kheej cov ntaub ntawv txog koj tus kheej nyob rau hauv kev tshuaj ntsuam no los tapping rau lub khawm nrog koj lub npe. Qhov no yuav tso saib ib lub hom phiaj rau cov zaub mov koj mus \' Kho kom raug neeg \' koj cov lus hu, \' Tsim Tshiab \' kev sib cuag, los yog \' Siv Lwm \' kev sib cuag.</string>
     <string name="help_Messages">Qhov no qhia tag nrho cov kev tshuaj ntsuam yav dhau los lus, thiab txuas hais tias yog tseem muaj nyob rau download.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">expires %s</string>
     <string name="label_expiresIn">expires nyob rau hauv</string>
     <string name="label_FileNameHint">Cov ntaub ntawv lub npe</string>
+    <string name="label_FindInstruct">Sau lub npe koj xav lwm tus pom thaum sib txuas lus securely:</string>
     <string name="label_FirstName">Npe</string>
-    <string name="label_Home">Mus saib tej yam khoom uas koj xav qhia thiab khob \' Pib Txauv \' thaum lwm tus neeg npaj txhij mus pauv.</string>
+    <string name="label_Home">Siv koj lub npe mus ntxiv los yog tshem tawm cov ntaub ntawv tiv tauj, kos tej yam khoom uas koj xav qhia, thiab khob \'Pib Txauv\' thaum lwm tus neeg npaj txhij mus pauv:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d teev</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud yog enabled. Khob qhov \' Tas \' khawm thaum tiav lawm.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup ncua</string>
     <string name="label_safeslingered">(SafeSlinger Direct txauv)</string>
     <string name="label_SaveAccount">Txuag Account</string>
-    <string name="label_SaveInstruct">Txauv Ua kom tiav! Xaiv tug tswv cuab cov ntaub ntawv kom txuag tau mus rau koj qhov chaw nyob phau ntawv:</string>
+    <string name="label_SaveInstruct">Kos tiv tauj koj xav hloov nyob rau hauv koj phau ntawv chaw nyob, ces khob \'Import\' kom txuag tau ruaj ntseg tiv tauj:</string>
     <string name="label_seconds">%d seconds</string>
     <string name="label_selectLabel">Xaiv daim ntawv lo</string>
     <string name="label_SelectRecip">Xaiv tau txais kev pabcuam</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Rab ka xus yuam sij</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Siv Lwm</string>
+    <string name="menu_UseContactPerson">Siv cuag \'%s\'</string>
+    <string name="menu_UseNoContact">Siv npe Tsuas</string>
+    <string name="menu_UseProfilePerson">Siv Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">tos pov thawj los ntawm tag nrho cov tswv cuab…</string>
     <string name="prog_CollectingOthersItems">tos rau tag nrho cov neeg siv koom…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Lus muab los ntawm:</string>
     <string name="text_RelatedSearchTerms">Related Cov ntsiab lus:</string>
     <string name="text_Requirements">Yuav Tsum tau Muaj:\n1. Yuav tsum tau ntsia ib yam tsawg kawg nkaus ntawm 2 pab kiag li.\n2. Ib Internet kev twb kev txuas yuav tsum nquag.</string>
+    <string name="text_SourceCodeRepo">qhib tau qhov twg los: %s</string>
     <string name="text_WhatsNew">- Ruaj ntseg kho.</string>
 
     <string name="title_About">Txog</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Message</string>
     <string name="title_Messages">Messages</string>
-    <string name="title_MyIdentity">Kuv Yog leejtwg</string>
+    <string name="title_MyIdentity">Tus kheej cuag</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Qhov</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Re: Qhov</string>
     <string name="title_passphrase">Passphrase</string>

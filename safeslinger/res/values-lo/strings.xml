@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">ຂໍ້ມູນ ຕິດຕໍ່ ໄດ້ ແບບ ບໍ່ຖືກຕ້ອງ.</string>
     <string name="error_WebCancelledByUser">ຜູ້ໃຊ້ ຍົກເລີກ ຄໍາຮ້ອງຂໍ ຂອງເຄື່ອງແມ່ຂ່າຍ.</string>
 
+    <string name="help_find">ການນໍາໃຊ້ຫນ້າຈໍນີ້ຈະກໍານົດຊື່ຂອງທ່ານທີ່ຈະແລກປ່ຽນກັບຄົນອື່ນ. ປາດປຸ່ມ \'ເຮັດ\' ໃນເວລາສໍາເລັດແລ້ວ.</string>
     <string name="help_home">ເພື່ອ ແລກປ່ຽນ ຂໍ້ມູນ ເອກະລັກ, ຮັບປະກັນການ ຊົມໃຊ້ ທັງຫມົດແມ່ນ ໃກ້ຄຽງຫຼື ຢູ່ໃນໂທລະສັບ ໄດ້. ປຸ່ມ \' ເລີ່ມຕົ້ນ ການແລກປ່ຽນ, ຈະ ແລກປ່ຽນ ພຽງແຕ່ ໄດ້ ຂໍ້ມູນ ການຕິດຕໍ່ ການກວດກາ.</string>
     <string name="help_identity_menu">\n\nນອກນັ້ນທ່ານຍັງ ອາດຈະ ມີການປ່ຽນແປງ ຂໍ້ມູນ ສ່ວນຕົວກ່ຽວກັບ ຕົວຕົນ ຂອງທ່ານກ່ຽວກັບ ຫນ້າຈໍ ນີ້ ໂດຍ ປາດຢາງ ໃສ່ປຸ່ມ ທີ່ມີຊື່ ຂອງທ່ານ. ນີ້ ຈະສະແດງ ເມນູ ໃຫ້ທ່ານ \' ດັດແກ້ \' ຕິດຕໍ່ຂອງທ່ານ, ສ້າງ ໃຫມ່ \' ການຕິດຕໍ່, ຫຼື \' ການນໍາໃຊ້ ອີກປະການຫນຶ່ງ, ການພົວພັນ ເປັນ.</string>
     <string name="help_Messages">ຫນ້າຈໍນີ້ ຈະສະແດງ ຂໍ້ຄວາມ ທີ່ຜ່ານມາ ທັງຫມົດ, ແລະຄັດຕິດ ທີ່ ຍັງມີ ສໍາລັບ ການດາວໂຫຼດ.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">ຫມົດ %s</string>
     <string name="label_expiresIn">ຫມົດ ໃນ</string>
     <string name="label_FileNameHint">ຊື່ ໄຟລ໌</string>
+    <string name="label_FindInstruct">ກະລຸນາໃສ່ຊື່ຂອງທ່ານຕ້ອງການໃຫ້ຄົນອື່ນເຫັນໃນເວລາຕິດຕໍ່ສື່ສານຢ່າງປອດໄພ:</string>
     <string name="label_FirstName">ຊື່ ຫນ້າທໍາອິດ</string>
-    <string name="label_Home">ກວດສອບ ລາຍການລາຍການ ທີ່ທ່ານຕ້ອງການ ທີ່ຈະແບ່ງປັນ ແລະປາດ \' ເລີ່ມຕົ້ນ ການແລກປ່ຽນ, ໃນເວລາທີ່ ຄົນອື່ນມີ ຄວາມພ້ອມທີ່ຈະ ແລກປ່ຽນ.</string>
+    <string name="label_Home">ປາດຊື່ຂອງທ່ານທີ່ຈະເພີ່ມຫຼືເອົາຂໍ້ມູນການຕິດຕໍ່, ໃຫ້ກວດເບິ່ງລາຍການລາຍການທີ່ທ່ານຕ້ອງການທີ່ຈະແບ່ງປັນ, ແລະປາດ \'ເລີ່ມຕົ້ນການແລກປ່ຽນ, ໃນເວລາທີ່ຄົນອື່ນມີຄວາມພ້ອມທີ່ຈະແລກປ່ຽນເງິນຕາ:</string>
     <string name="label_hometag">ຫນ້າທໍາອິດ</string>
     <string name="label_hours">%d ຊົ່ວໂມງ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ເທີງ. ປາດ ປຸ່ມ \' ເຮັດ \' ໃນເວລາ ສໍາເລັດແລ້ວ.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">ຮອງ SafeSlinger ຊັກຊ້າ</string>
     <string name="label_safeslingered">(SafeSlinger ໂດຍກົງ ຊັບ)</string>
     <string name="label_SaveAccount">ເງິນຝາກປະຢັດ</string>
-    <string name="label_SaveInstruct">ການແລກປ່ຽນ ສໍາເລັດ! ເລືອກ ຂໍ້ມູນ ສະມາຊິກ ທີ່ຈະ ຊ່ວຍປະຢັດ ການ ປື້ມທີ່ຢູ່ ຂອງທ່ານ:</string>
+    <string name="label_SaveInstruct">ກວດສອບການຕິດຕໍ່ພົວພັນທ່ານຕ້ອງການທີ່ຈະປັບປຸງໃນປື້ມທີ່ຢູ່ຂອງທ່ານ, ຫຼັງຈາກນັ້ນປາດນໍາເຂົ້າຈະຊ່ວຍປະຢັດການພົວພັນທີ່ປອດໄພ:</string>
     <string name="label_seconds">%d ວິນາທີ</string>
     <string name="label_selectLabel">ເລືອກເອົາປ້າຍ</string>
     <string name="label_SelectRecip">ເລືອກ ຮັບ</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">ຫຼັກ Sling</string>
     <string name="menu_TagListMessages">ຂໍ້ຄວາມ</string>
     <string name="menu_UseAnother">ການນໍາໃຊ້ ອີກປະການຫນຶ່ງ</string>
+    <string name="menu_UseContactPerson">ການນໍາໃຊ້ \'%s \'ຕິດຕໍ່ພົວພັນ</string>
+    <string name="menu_UseNoContact">ການນໍາໃຊ້ຊື່ພຽງແຕ່</string>
+    <string name="menu_UseProfilePerson">ການນໍາໃຊ້ຂໍ້ມູນ \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">ລໍຖ້າ ສໍາລັບ ການຢັ້ງຢືນ ຈາກ ສະມາຊິກ ທຸກຄົນ…</string>
     <string name="prog_CollectingOthersItems">ລໍຖ້າ ສໍາລັບຜູ້ໃຊ້ ທັງຫມົດ ເພື່ອເຂົ້າຮ່ວມ…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">ພາສາ ສະຫນອງໃຫ້ໂດຍ:</string>
     <string name="text_RelatedSearchTerms">ເງື່ອນໄຂທີ່ກ່ຽວຂ້ອງ:</string>
     <string name="text_Requirements">ຕ້ອງການ:\n1. ຕ້ອງໄດ້ຮັບການຕິດຕັ້ງຢູ່ໃນຕໍາ່ສຸດທີ່ຂອງອຸປະກອນ 2 ເປັນ.\n2. ການເຊື່ອມຕໍ່ອິນເຕີເນັດເປັນຕ້ອງມີການເຄື່ອນໄຫວ.</string>
+    <string name="text_SourceCodeRepo">ແຫຼ່ງເປີດເຜີຍ: %s</string>
     <string name="text_WhatsNew">- ການແກ້ໄຂສະຖຽນລະພາບ.</string>
 
     <string name="title_About">ກ່ຽວກັບ</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">ຫນ້າທໍາອິດ</string>
     <string name="title_MessageDetail">ຂໍ້ຄວາມ</string>
     <string name="title_Messages">ຂໍ້ຄວາມ</string>
-    <string name="title_MyIdentity">ທີ່ ຂ້າພະເຈົ້າ</string>
+    <string name="title_MyIdentity">ຕິດຕໍ່ພົວພັນສ່ວນບຸກຄົນ</string>
     <string name="title_NotifyFileAvailable">SafeSlinger ຂໍ້ຄວາມ ທີ່ມີຢູ່</string>
     <string name="title_NotifyMulFileAvailable">%d ຂໍ້ SafeSlinger ຫາ</string>
     <string name="title_passphrase">Passphrase</string>

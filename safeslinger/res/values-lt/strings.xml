@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kontaktiniai duomenys buvo suformatuotas neteisingai.</string>
     <string name="error_WebCancelledByUser">Vartotojas atšauktas serverio prašymą.</string>
 
+    <string name="help_find">Naudokite šį ekraną nustatyti savo vardą keistis su kitais. Bakstelėkite \'Done\' mygtuką, kai baigsite.</string>
     <string name="help_home">Keistis tapatybės duomenis, užtikrinti, kad visi vartotojai yra netoliese arba telefonu. \'Pradėti keistis\' mygtuką keisis tik pažymėtus kontaktinius duomenis.</string>
     <string name="help_identity_menu">\n\nJūs taip pat gali pakeisti asmens duomenis apie savo tapatybę šiame ekrane paliesdami mygtuką su jūsų vardu. Tai bus rodomas meniu leidžia jums \' Redaguoti \' adresatą \' Sukurti naują\' ryšį arba \' naudoti kitą \' kontaktą.</string>
     <string name="help_Messages">Šis ekranas rodo visus ankstesnius pranešimus ir priedus, kurie yra vis dar prieinami atsisiųsti.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">baigiasi %s</string>
     <string name="label_expiresIn">baigiasi</string>
     <string name="label_FileNameHint">Failo vardas</string>
+    <string name="label_FindInstruct">Įveskite vardą, kurį norite kitiems matyti, kai bendrauti saugiai:</string>
     <string name="label_FirstName">Vardas</string>
-    <string name="label_Home">Patikrinkite elementus norite dalintis ir bakstelėkite \' Pradžia \' Exchange \', kai kiti yra pasiruošę keistis.</string>
+    <string name="label_Home">Bakstelėkite savo vardą pridėti ar išimti kontaktinius duomenis, patikrinti elementus, kuriuos norite bendrinti, ir bakstelėkite \'Pradžia\' Exchange \', kai kiti yra pasiruošę keistis:</string>
     <string name="label_hometag">Namai</string>
     <string name="label_hours">%d valandos</string>
     <string name="label_iCloudEnable">SafeSlinger icloud yra įjungtas. Bakstelėkite \' Done \' mygtuką, kai baigsite.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger atsarginės atidėtas</string>
     <string name="label_safeslingered">(SafeSlinger Tiesioginis birža)</string>
     <string name="label_SaveAccount">Sutaupykite paskyrą</string>
-    <string name="label_SaveInstruct">Valiutų baigtas! Pasirinkite valstybes duomenis įrašyti į adresų knygą:</string>
+    <string name="label_SaveInstruct">Tikrinti adresatus, kuriuos norite atnaujinti savo adresų knygą, tada palieskite \'Importuoti\', kad išsaugotumėte saugius ryšius:</string>
     <string name="label_seconds">%d sekundžių</string>
     <string name="label_selectLabel">Pasirinkite etiketė</string>
     <string name="label_SelectRecip">Pasirinkite Gavėjas</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling raktai</string>
     <string name="menu_TagListMessages">Pranešimai</string>
     <string name="menu_UseAnother">Naudokite Kitas</string>
+    <string name="menu_UseContactPerson">Naudokite kontaktinę \'%s \'</string>
+    <string name="menu_UseNoContact">Naudokite pavadinimas Tik</string>
+    <string name="menu_UseProfilePerson">Naudokite Profilis \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">laukia patikrinimo iš visų narių…</string>
     <string name="prog_CollectingOthersItems">laukia visi vartotojai prisijungti…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Teikiamos kalbos:</string>
     <string name="text_RelatedSearchTerms">Susiję sąlygos:</string>
     <string name="text_Requirements">Reikalavimai:\n1. Turi būti sumontuoti ant 2 prietaisus minimumo.\n2. Interneto ryšys turi būti aktyvus.</string>
+    <string name="text_SourceCodeRepo">atviro kodo: %s</string>
     <string name="text_WhatsNew">- Stabilumas pataisymai.</string>
 
     <string name="title_About">Apie</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Namai</string>
     <string name="title_MessageDetail">Pranešimas</string>
     <string name="title_Messages">Pranešimai</string>
-    <string name="title_MyIdentity">Mano tapatybė</string>
+    <string name="title_MyIdentity">Asmeninė Kontaktai</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Pranešimas Prieinamas</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Pranešimai bylos</string>
     <string name="title_passphrase">Slaptažodis</string>

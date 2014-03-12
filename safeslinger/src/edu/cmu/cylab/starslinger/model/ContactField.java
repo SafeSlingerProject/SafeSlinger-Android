@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package edu.cmu.cylab.keyslinger.lib;
+package edu.cmu.cylab.starslinger.model;
 
 public class ContactField {
 

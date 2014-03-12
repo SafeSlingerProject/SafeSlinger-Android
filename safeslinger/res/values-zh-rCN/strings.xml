@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">联系数据格式不正确。</string>
     <string name="error_WebCancelledByUser">使用者取消伺服器请求。</string>
 
+    <string name="help_find">使用此屏幕来设置你的名字和别人交流。完成后，点击\'完成\'按钮。</string>
     <string name="help_home">为了交换联络资讯，请确保所有成员都在附近，并按下\'开始交换\'按钮，将开始与群体成员开始进行资料交换。</string>
     <string name="help_identity_menu">\n\n您可以更改个人资料透过点击屏幕上显示你名字的按钮。它将显示一个菜单，允许你\'编辑\'你的资料，或\'建立一个新的联络人\'，或\'使用另一个联络人\'。</string>
     <string name="help_Messages">该画面显示所有以前的讯息，以及可能被下载的档案。</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">过期%s</string>
     <string name="label_expiresIn">在到期</string>
     <string name="label_FileNameHint">档案名称</string>
+    <string name="label_FindInstruct">输入名字你希望别人看到通信安全时：</string>
     <string name="label_FirstName">名字</string>
-    <string name="label_Home">勾选你想分享的项目，当其他成员都准备好，点击\'开始交换\'。</string>
+    <string name="label_Home">点击你的名字，添加或删除联系人数据，请检查你想分享的项目，然后点击\'开始兑换\'当别人都准备好交换：</string>
     <string name="label_hometag">家用</string>
     <string name="label_hours">%d小时</string>
     <string name="label_iCloudEnable">SafeSlinger的iCloud启用。完成后，点击\'完成\'按钮。</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger备份延迟</string>
     <string name="label_safeslingered">（SafeSlinger直接交换）</string>
     <string name="label_SaveAccount">保存帐户</string>
-    <string name="label_SaveInstruct">交换完成！选择成员资料保存到您的通讯簿：</string>
+    <string name="label_SaveInstruct">选中您希望在您的地址簿更新联系人，然后点按\'导入\'保存安全联系人：</string>
     <string name="label_seconds">%d秒</string>
     <string name="label_selectLabel">Select label</string>
     <string name="label_SelectRecip">选择收件人</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">交换金钥</string>
     <string name="menu_TagListMessages">讯息清单</string>
     <string name="menu_UseAnother">使用另一个联络人</string>
+    <string name="menu_UseContactPerson">使用企业联系\'%s\'</string>
+    <string name="menu_UseNoContact">使用仅名称</string>
+    <string name="menu_UseProfilePerson">使用个人资料\'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">等待所有成员被验证…</string>
     <string name="prog_CollectingOthersItems">等待所有成员加入…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">翻译：</string>
     <string name="text_RelatedSearchTerms">相关术语：</string>
     <string name="text_Requirements">要求：\n1。必须安装在至少2设备。\n2。 Internet连接必须处于活动状态。</string>
+    <string name="text_SourceCodeRepo">开源：%s</string>
     <string name="text_WhatsNew">- 稳定性修正。</string>
 
     <string name="title_About">关於</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">首页</string>
     <string name="title_MessageDetail">讯息内容</string>
     <string name="title_Messages">讯息</string>
-    <string name="title_MyIdentity">我的资料</string>
+    <string name="title_MyIdentity">个人联系</string>
     <string name="title_NotifyFileAvailable">SafeSlinger讯息通知</string>
     <string name="title_NotifyMulFileAvailable">%d可用SafeSlinger消息</string>
     <string name="title_passphrase">通关密语</string>

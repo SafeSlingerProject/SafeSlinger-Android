@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Στοιχεία επαφής μορφοποιηθεί σωστά.</string>
     <string name="error_WebCancelledByUser">Ο χρήστης ακύρωσε αίτημα διακομιστή.</string>
 
+    <string name="help_find">Χρησιμοποιήστε αυτήν την οθόνη για να ρυθμίσετε το όνομά σας για να ανταλλάξουν με άλλους. Πατήστε το κουμπί \'Τέλος\' όταν τελειώσετε.</string>
     <string name="help_home">Για την ανταλλαγή δεδομένων ταυτότητας, βεβαιωθείτε ότι όλοι οι χρήστες είναι κοντά ή στο τηλέφωνο. Το πλήκτρο \'Αρχίστε Ανταλλαγή\' θα ανταλλάξει μόνο τα επιλεγμένα στοιχεία επικοινωνίας.</string>
     <string name="help_identity_menu">\n\nμπορείτε να αλλάξετε χρήσιμα δεδομένα προσωπικού χαρακτήρα σχετικά με την ταυτότητά σας σε αυτή την οθόνη πατώντας το κουμπί με το όνομά σας. Αυτό θα εμφανίσει ένα μενού που σας επιτρέπει να \'Επεξεργασία\' σας πινελιά, \'Δημιουργία νέου \'επαφής, ή\' Χρήση άλλο \'επαφής.</string>
     <string name="help_Messages">Αυτή η οθόνη εμφανίζει όλα τα προηγούμενα μηνύματα, και τα αρχεία που είναι ακόμα διαθέσιμα για λήψη.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">λήγει %s</string>
     <string name="label_expiresIn">λήγει σε</string>
     <string name="label_FileNameHint">Όνομα αρχείου</string>
+    <string name="label_FindInstruct">Πληκτρολογήστε το όνομα που θέλετε να βλέπουν οι άλλοι όταν επικοινωνούν με ασφάλεια:</string>
     <string name="label_FirstName">Όνομα</string>
-    <string name="label_Home">Επιλέξτε τα στοιχεία που θέλετε να στείλετε και πατήστε \'Ξεκινήστε Ανταλλαγή\', όταν οι άλλοι είναι έτοιμοι για ανταλλαγή.</string>
+    <string name="label_Home">Πατήστε το όνομά σας για να προσθέσετε ή να αφαιρέσετε στοιχεία επικοινωνίας, ελέγξτε τα στοιχεία που θέλετε να μοιραστείτε, και επιλέξτε «Ξεκινήστε Ανταλλαγής» όταν οι άλλοι είναι έτοιμοι να ανταλλάσσουν:</string>
     <string name="label_hometag">Σπίτι</string>
     <string name="label_hours">%d ώρες</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud είναι ενεργοποιημένη. Πατήστε το κουμπί\' Τέλος\' όταν τελειώσετε.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger αντιγραφή δεδομένων ασφαλείας καθυστέρησε</string>
     <string name="label_safeslingered">(SafeSlinger άμεση ανταλλαγή)</string>
     <string name="label_SaveAccount">Αποθήκευση λογαριασμού</string>
-    <string name="label_SaveInstruct">Ανταλλαγή ολοκληρώθηκε! Επιλέξτε τα δεδομένα του άλλου χρήστη για να αποθηκεύσετε στο βιβλίο διευθύνσεών σας:</string>
+    <string name="label_SaveInstruct">Ελέγξτε τις επαφές που θέλετε να ενημερώσετε το βιβλίο διευθύνσεών σας, στη συνέχεια, πατήστε «Εισαγωγή» για να αποθηκεύσετε ασφαλείς επαφές:</string>
     <string name="label_seconds">%d δευτερόλεπτα</string>
     <string name="label_selectLabel">Επιλέξτε ετικέτα</string>
     <string name="label_SelectRecip">Επιλέξτε παραλήπτη</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Κλειδιά Sling</string>
     <string name="menu_TagListMessages">Μηνύματα</string>
     <string name="menu_UseAnother">Χρησιμοποιήστε άλλο</string>
+    <string name="menu_UseContactPerson">Χρησιμοποιήστε Επικοινωνία \'%s »</string>
+    <string name="menu_UseNoContact">Χρησιμοποιήστε Name Only</string>
+    <string name="menu_UseProfilePerson">Χρησιμοποιήστε Προφίλ »%s»</string>
 
     <string name="prog_CollectingOthersCommitVerify">αναμονή για επιβεβαίωση από όλα τα μέλη…</string>
     <string name="prog_CollectingOthersItems">αναμονή για σύνδεση όλων των χρηστών…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Οι γλώσσες παρέχονται από:</string>
     <string name="text_RelatedSearchTerms">Σχετικά Όροι:</string>
     <string name="text_Requirements">Απαιτήσεις:\n1. Πρέπει να είναι εγκατεστημένο σε ένα ελάχιστο των 2 συσκευών.\n2. Μια σύνδεση με το Διαδίκτυο πρέπει να είναι ενεργή.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Διορθώσεις σταθερότητας.</string>
 
     <string name="title_About">Πληροφορίες</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Σπίτι</string>
     <string name="title_MessageDetail">Μήνυμα</string>
     <string name="title_Messages">Μηνύματα</string>
-    <string name="title_MyIdentity">Η Ταυτότητα μου</string>
+    <string name="title_MyIdentity">Προσωπική Επικοινωνία</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Μήνυμα Διαθέσιμο</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger μηνύματα Διαθέσιμο</string>
     <string name="title_passphrase">Φράση πρόσβασης</string>

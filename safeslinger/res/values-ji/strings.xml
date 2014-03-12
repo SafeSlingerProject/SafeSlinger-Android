@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">קאָנטאַקט דאַטן איז פאָרמאַטטעד ינקערעקטלי.</string>
     <string name="error_WebCancelledByUser">באַניצער קאַנסאַלד סערווירער בעטן.</string>
 
+    <string name="help_find">נוצן דעם עקראַן צו שטעלן אייער נאָמען צו וועקסל מיט אנדערע. צאַפּן די \'דאַן\' קנעפּל ווען פאַרטיק.</string>
     <string name="help_home">צו וועקסל אידענטיטעט דאַטן, ענשור אַלע וסערס זענען נירביי אָדער אויף די טעלעפאָנירן. די \' אָנהייבן עקסטשאַנגע \' קנעפּל וועט וועקסל בלויז די אָפּגעשטעלט קאָנטאַקט דאַטן.</string>
     <string name="help_identity_menu"> נוולן נוולן איר קען אויך טוישן פּערזענלעך דאַטן וועגן אייער אידענטיטעט אויף דעם עקראַן דורך טאַפּינג אויף די קנעפּל מיט דיין נאָמען. דעם וועט אַרויסווייַזן אַ מעניו אַלאַוינג איר צו \' רעדאַגירן \' דיין קאָנטאַקט, \' שאַפֿן ניו \' ​​קאָנטאַקט, אָדער \' ניצן אן אנדער \' קאָנטאַקט.</string>
     <string name="help_Messages">דעם פאַרשטעלן דיספּלייז אַלע פאַרגאַנגענהייַט אַרטיקלען, און אַטאַטשמאַנץ אַז זענען נאָך פאַראַנען פֿאַר אָפּלאָדירן.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">יקספּייערז %s</string>
     <string name="label_expiresIn">יקספּייערז אין</string>
     <string name="label_FileNameHint">טעקע נאָמען</string>
+    <string name="label_FindInstruct">אַרייַן די נאָמען איר ווינטשן אנדערע צו זען ווען קאַמיונאַקייטינג סיקיורלי:</string>
     <string name="label_FirstName">ערשטער נאָמען</string>
-    <string name="label_Home">טשעק זאכן איר ווינטשן צו טיילן און צאַפּן \' אָנהייבן עקסטשאַנגע \' ווען אנדערע זענען גרייט צו בייַט.</string>
+    <string name="label_Home">צאַפּן דיין נאָמען צו לייגן אָדער אַראָפּנעמען קאָנטאַקט דאַטן, טשעק זאכן איר ווינטשן צו טיילן, און צאַפּן \'אָנהייבן עקסטשאַנגע\' ווען אנדערע זענען גרייט צו בייַט:</string>
     <string name="label_hometag">היים</string>
     <string name="label_hours">%d שעה</string>
     <string name="label_iCloudEnable">סאַפעסלינגער יקלאָוד איז ענייבאַלד. צאַפּן די \' דאַן \' קנעפּל ווען פאַרטיק.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger באַקקופּ דילייד</string>
     <string name="label_safeslingered">(SafeSlinger דירעקט עקסטשאַנגע)</string>
     <string name="label_SaveAccount">היט אַקאַונט</string>
-    <string name="label_SaveInstruct">וועקסל גאַנץ! אויסקלייַבן מיטגליד דאַטן צו ראַטעווען צו דיין אַדרעס בוך:</string>
+    <string name="label_SaveInstruct">קוק קאָנטאַקטן איר ווילן צו דערהייַנטיקן אין אייער אַדרעס בוך, דעמאָלט צאַפּן \'ימפּאָרט\' צו ראַטעווען זיכער קאָנטאַקטן:</string>
     <string name="label_seconds">%d סעקונדעס</string>
     <string name="label_selectLabel">אויסקלייַבן פירמע</string>
     <string name="label_SelectRecip">אויסקלייַבן רעסיפּיענט</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">וואַרפלקע קיז</string>
     <string name="menu_TagListMessages">אַרטיקלען</string>
     <string name="menu_UseAnother">נוצן אן אנדער</string>
+    <string name="menu_UseContactPerson">נוצן קאָנטאַקט \'%s\'</string>
+    <string name="menu_UseNoContact">ניצן נאָמען בלויז</string>
+    <string name="menu_UseProfilePerson">נוצן פּראָופייל \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">ווארטן פֿאַר וועראַפאַקיישאַן פון אַלע מיטגלידער…</string>
     <string name="prog_CollectingOthersItems">ווארטן פֿאַר אַלע ניצערס צו פאַרבינדן…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">שפּראַכן צוגעשטעלט דורך:</string>
     <string name="text_RelatedSearchTerms">פֿאַרבונדענע תּנאָים:</string>
     <string name="text_Requirements">באדערפענישן:\n1. מוזן זיין אינסטאַלירן אויף אַ מינימום פון 2 דיווייסאַז.\n2. אַן אינטערנעץ קשר מוזן זיין אַקטיוו.</string>
+    <string name="text_SourceCodeRepo">עפענען מקור: %s</string>
     <string name="text_WhatsNew">- סטאַביליטי פיקסיז.</string>
 
     <string name="title_About">וועגן</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">היים</string>
     <string name="title_MessageDetail">אָנזאָג</string>
     <string name="title_Messages">אַרטיקלען</string>
-    <string name="title_MyIdentity">מיין אידענטיטעט</string>
+    <string name="title_MyIdentity">פּערזענלעך קאָנטאַקט</string>
     <string name="title_NotifyFileAvailable">SafeSlinger מעסעדזש פאַראַנען</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger אַרטיקלען פאַראַנען</string>
     <string name="title_passphrase">פּאַסספראַסע</string>

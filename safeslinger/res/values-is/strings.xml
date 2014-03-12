@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Tengiliðagögn var sniðinn rangt.</string>
     <string name="error_WebCancelledByUser">Notandi hætti beiðni miðlara.</string>
 
+    <string name="help_find">Notaðu þennan skjá til að setja nafn þitt til að skiptast á við aðra. Tappa á hnappinn \'gert\' þegar því er lokið.</string>
     <string name="help_home">Að skiptast á persónuskilríki gögn skal gæta allir notendur eru nálægt eða í símanum. Hnappinn \' BEGIN skipti \' munu skiptast users.cpp tengiliðagögn.</string>
     <string name="help_identity_menu">\n\nÞú getur líka breyst persónuleg gögn um persónuupplýsingar þínar á þessum skjá með því að slá á hnappinn með nafni þínu. Þetta birtir valmynd sem gerir þér kleift að \' Breyta\' þinn snerting, \' Búa til nýjan \' tengilið eða \' Nota annar\' tengilið.</string>
     <string name="help_Messages">Þessi skjár sýnir öll fyrri skilaboð og viðhengi sem eru enn í boði fyrir niðurhal.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">rennur %s</string>
     <string name="label_expiresIn">rennur út í</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Sláðu inn nafnið sem þú vilt að aðrir sjá í samskiptum tryggilega:</string>
     <string name="label_FirstName">Fornafn</string>
-    <string name="label_Home">Athuga hluti sem þú vilt deila og tappa \'Byrja á húsum \' þegar aðrir eru tilbúnir til að skiptast á.</string>
+    <string name="label_Home">Bankaðu á Nafn þitt til að bæta við eða fjarlægja mjúkar gögn, athuga hluti sem þú vilt deila, og tappa \'Byrja á húsum\' þegar aðrir eru tilbúnir til að skiptast á:</string>
     <string name="label_hometag">Forsíða</string>
     <string name="label_hours">%d klst</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud er virkt. Tappa á hnappinn \' gert\' þegar því er lokið.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger öryggisafrit seinkað</string>
     <string name="label_safeslingered">(SafeSlinger Bein Exchange)</string>
     <string name="label_SaveAccount">Vista reikning</string>
-    <string name="label_SaveInstruct">Exchange lokið! Veldu aðildarfélög gögn til að spara við netfangalistann þinn:</string>
+    <string name="label_SaveInstruct">Kanna tengiliði sem þú vilt uppfæra í bók netfangið þitt, bankaðu síðan á \'Flytja inn\' til að vista örugga tengiliði:</string>
     <string name="label_seconds">%d sekúndur</string>
     <string name="label_selectLabel">Velja flokk</string>
     <string name="label_SelectRecip">Velja móttakanda</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Skilaboð</string>
     <string name="menu_UseAnother">Nota annað</string>
+    <string name="menu_UseContactPerson">Hafðu \'%s\'</string>
+    <string name="menu_UseNoContact">Nota nafn Aðeins</string>
+    <string name="menu_UseProfilePerson">Nota upplýsingar \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">bíða eftir staðfestingu frá öllum meðlimum…</string>
     <string name="prog_CollectingOthersItems">bíða eftir alla notendur til að taka þátt…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Tungumál veittar af:</string>
     <string name="text_RelatedSearchTerms">Skyld hugtök:</string>
     <string name="text_Requirements">Kröfur:\n1. Verður að vera uppsett á amk 2 tæki.\n2.. An Internet tenging þarf að vera virkt.</string>
+    <string name="text_SourceCodeRepo">Open Source: %s</string>
     <string name="text_WhatsNew">- Stöðugleiki fastur.</string>
 
     <string name="title_About">Um</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Forsíða</string>
     <string name="title_MessageDetail">Skilaboð</string>
     <string name="title_Messages">Skilaboð</string>
-    <string name="title_MyIdentity">Identity minn</string>
+    <string name="title_MyIdentity">Starfsfólk samband</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Skilaboð Laus</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Skilaboð Laus</string>
     <string name="title_passphrase">Lykilorð</string>

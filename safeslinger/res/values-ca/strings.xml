@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Dades de contacte va ser un format incorrecte.</string>
     <string name="error_WebCancelledByUser">L\'usuari cancel · lar la sol · licitud del servidor.</string>
 
+    <string name="help_find">Utilitzeu aquesta pantalla per configurar el seu nom d\'intercanviar amb els altres. Premeu el botó \'Fet\' quan hagi acabat.</string>
     <string name="help_home">Per a l\'intercanvi de dades d\'identitat, assegureu-vos que tots els usuaris estan a prop o per telèfon. El botó \'Començar Canvi \' canviarà únicament les dades de contacte controlades.</string>
     <string name="help_identity_menu">\n\nTambé pot canviar les dades personals sobre la seva identitat en aquesta pantalla prement sobre el botó amb el seu nom. Això mostrarà un menú que us permet \' Edita\' contacte \'Crea nou\' contacte, o «Utilització Un altre \' contacte.</string>
     <string name="help_Messages">Aquesta pantalla mostra tots els missatges anteriors i annexos que encara estan disponibles per a baixar.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">expira %s</string>
     <string name="label_expiresIn">expira el</string>
     <string name="label_FileNameHint">Nom del fitxer</string>
+    <string name="label_FindInstruct">Introduïu el nom que voleu que altres vegin quan es comunica de forma segura:</string>
     <string name="label_FirstName">Nom</string>
-    <string name="label_Home">Seleccioneu els elements que desitja compartir i toc \' Begin Canvi \' quan els altres estan disposats a intercanviar.</string>
+    <string name="label_Home">Feu clic al nom per afegir o treure dades de contacte, comprovar els elements que desitja compartir i toc \'Begin Canvi\' quan els altres són a punt per a l\'intercanvi:</string>
     <string name="label_hometag">Casa</string>
     <string name="label_hours">%d hores</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud està habilitada. Premeu el botó\' Fet \' quan hagi acabat.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">Backup SafeSlinger retardada</string>
     <string name="label_safeslingered">(SafeSlinger directe Exchange)</string>
     <string name="label_SaveAccount">Estalvia Compte</string>
-    <string name="label_SaveInstruct">Intercanvi Complete! Seleccionar dades dels membres per salvar la llibreta d\'adreces:</string>
+    <string name="label_SaveInstruct">Verificar els contactes que voleu actualitzar a la seva llibreta d\'adreces, a continuació, toc \'Importar\' per guardar contactes assegurances:</string>
     <string name="label_seconds">%d segons</string>
     <string name="label_selectLabel">Seleccioneu una etiqueta</string>
     <string name="label_SelectRecip">Seleccioneu un destinatari</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Missatges</string>
     <string name="menu_UseAnother">Utilitzeu altra</string>
+    <string name="menu_UseContactPerson">Utilitzeu Contacte \'%s\'</string>
+    <string name="menu_UseNoContact">Ús només de nom</string>
+    <string name="menu_UseProfilePerson">Utilitzeu Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">l\'espera de la verificació de tots els membres…</string>
     <string name="prog_CollectingOthersItems">esperant que tots els usuaris s\'uneixin…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Idiomes proporcionades per:</string>
     <string name="text_RelatedSearchTerms">Termes relacionats:</string>
     <string name="text_Requirements">Requisits:\n1. Ha d\'instal · lar en un mínim de 2 dispositius.\n2. Una connexió a Internet ha d\'estar activa.</string>
+    <string name="text_SourceCodeRepo">de codi obert: %s</string>
     <string name="text_WhatsNew">- Correccions d\'estabilitat.</string>
 
     <string name="title_About">Sobre</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Casa</string>
     <string name="title_MessageDetail">Missatge</string>
     <string name="title_Messages">Missatges</string>
-    <string name="title_MyIdentity">La meva Identitat</string>
+    <string name="title_MyIdentity">Contacte Personal</string>
     <string name="title_NotifyFileAvailable">Missatge SafeSlinger Disponible</string>
     <string name="title_NotifyMulFileAvailable">%d Missatges SafeSlinger disponibles</string>
     <string name="title_passphrase">Contrasenya</string>

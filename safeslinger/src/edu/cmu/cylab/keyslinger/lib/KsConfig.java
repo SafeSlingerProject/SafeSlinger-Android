@@ -25,15 +25,10 @@ package edu.cmu.cylab.keyslinger.lib;
  * THE SOFTWARE.
  */
 
-import java.io.UnsupportedEncodingException;
-import java.util.regex.Pattern;
-
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.util.Base64;
 
 /***
  * This static class is meant to hold user preferences and static data and
@@ -63,22 +58,13 @@ public class KsConfig {
 
     // internal interprocess communication...
     public static final class extra {
-        public static final String CONTACT_KEYNAME_PREFIX = "Key";
-        public static final String CONTACT_LOOKUP_KEY = "ContactLookupKey";
-        public static final String CONTACT_VALUE_PREFIX = "Value";
         public static final String DECOY1_HASH = "DecoyHash1";
         public static final String DECOY2_HASH = "DecoyHash2";
-        public static final String EMAIL = "Email";
-        public static final String EMAIL_TYPE = "EmailType";
         public static final String EXCHANGED_TOTAL = "ExchangedTotal";
         public static final String FLAG_HASH = "FlagHash";
         public static final String GROUP_ID = "GroupId";
         public static final String MEMBER_DATA = "MemberData";
         public static final String MESSAGE = "Message";
-        public static final String NAME = "Name";
-        public static final String PHONE = "Phone";
-        public static final String PHONE_TYPE = "PhoneType";
-        public static final String PHOTO = "Photo";
         public static final String RANDOM_POS = "RandomPosition";
         public static final String REQUEST_CODE = "RequestCode";
         public static final String RESID_MSG = "ResIdMsg";
@@ -86,17 +72,6 @@ public class KsConfig {
         public static final String SELECTED_TOTAL = "SelectedTotal";
         public static final String USER_DATA = "UserData";
         public static final String USER_ID = "UserId";
-    }
-
-    public static String getVersionName(Context ctx) {
-        PackageManager pm = ctx.getPackageManager();
-        PackageInfo pi;
-        try {
-            pi = pm.getPackageInfo(ctx.getPackageName(), PackageManager.GET_META_DATA);
-            return pi.versionName;
-        } catch (NameNotFoundException e) {
-            return "0.0";
-        }
     }
 
     public static int getVersionCode(Context ctx) {
@@ -110,55 +85,4 @@ public class KsConfig {
         }
     }
 
-    public static boolean isDebug(Context ctx) {
-        PackageManager pm = ctx.getPackageManager();
-        ApplicationInfo ai;
-        try {
-            ai = pm.getApplicationInfo(ctx.getPackageName(), PackageManager.GET_META_DATA);
-            return ((ai.flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0);
-        } catch (NameNotFoundException e) {
-            return false;
-        }
-    }
-
-    /***
-     * Ensure arbitrary data is only Base 64 encoded once.
-     */
-    public static byte[] finalEncode(byte[] src) {
-        byte[] dest = null;
-        if (isArrayByteBase64(src)) {
-            dest = src;
-        } else {
-            dest = Base64.encode(src, Base64.NO_WRAP);
-        }
-        return dest;
-    }
-
-    /***
-     * Ensure arbitrary data can only be Base 64 decoded once.
-     */
-    public static byte[] finalDecode(byte[] src) {
-        byte[] dest = null;
-        try {
-            dest = Base64.decode(src, Base64.NO_WRAP);
-        } catch (IllegalArgumentException e) {
-            return src;
-        }
-
-        if (!isArrayByteBase64(dest)) {
-            dest = src;
-        }
-        return dest;
-    }
-
-    private static boolean isArrayByteBase64(byte[] src) {
-        try {
-            String s = new String(src, "UTF-8");
-            final String base64Regex = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$";
-            return Pattern.matches(base64Regex, s);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
 }

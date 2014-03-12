@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Informazzjoni ta \'kuntatt kien formattjati b\'mod żbaljat.</string>
     <string name="error_WebCancelledByUser">User kkanċellati talba server.</string>
 
+    <string name="help_find">Uża dan l-iskrin li jiġu stabbiliti l-isem tiegħek għal skambju ma \'oħrajn. Tektek il-\'Magħmul\' buttuna meta lest.</string>
     <string name="help_home">Li jiskambja data identità, tiżgura l-utenti kollha huma fil-qrib jew fuq it-telefon. Buttuna \' Tibda Exchange \' se jiskambjaw biss id-dejta ta\' kuntatt ċċekkjati.</string>
     <string name="help_identity_menu">\n\nInti tista \'wkoll jibdlu data personali dwar l-identità tiegħek fuq dan l-iskrin billi ttektek fuq il-buttuna bl-isem tiegħek. Dan se display menu li jippermettilek li \' Edit \' kuntatt tiegħek, \' Oħloq New \' kuntatt, jew \'Użu ieħor \' kuntatt.</string>
     <string name="help_Messages">Dan screen displays messaġġi kollha tal-passat, u l-annessi li għadhom disponibbli għal download.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">jiskadi %s</string>
     <string name="label_expiresIn">jiskadi fl-</string>
     <string name="label_FileNameHint">Isem tal-fajl</string>
+    <string name="label_FindInstruct">Daħħal l-isem inti tixtieq oħrajn biex tara meta tikkomunika sikur:</string>
     <string name="label_FirstName">Isem</string>
-    <string name="label_Home">Iċċekkja oġġetti li tixtieq taqsam u vit \' Tibda Exchange \' meta oħrajn huma lesti li jiskambjaw.</string>
+    <string name="label_Home">Tektek ismek biex iżżid jew tneħħi informazzjoni ta \'kuntatt, oġġetti li tixtieq li jaqsmu jivverifikaw, u vit \'Tibda Exchange\' meta oħrajn huma lesti li jiskambjaw:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d siegħa</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud hija ppermettiet. Tektek il-\' Magħmul \' buttuna meta lest.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup mdewma</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Ħlief Kont</string>
-    <string name="label_SaveInstruct">Skambju kompluta! Agħżel data membri biex isalva lill-ktieb l-indirizz tiegħek:</string>
+    <string name="label_SaveInstruct">Iċċekkja kuntatti inti tixtieq li taġġorna fil-ktieb l-indirizz tiegħek, imbagħad vit \'Importazzjoni\' li tiffranka kuntatti siguri:</string>
     <string name="label_seconds">%d sekondi</string>
     <string name="label_selectLabel">Tikketta Agħżel</string>
     <string name="label_SelectRecip">Riċevitur Agħżel</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Braga Keys</string>
     <string name="menu_TagListMessages">Messaġġi</string>
     <string name="menu_UseAnother">Użu ieħor</string>
+    <string name="menu_UseContactPerson">Uża Kuntatt \'%s\'</string>
+    <string name="menu_UseNoContact">Użu Isem Biss</string>
+    <string name="menu_UseProfilePerson">Uża Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">stennija għall-verifika mill-membri kollha…</string>
     <string name="prog_CollectingOthersItems">stennija għall-utenti kollha biex jingħaqdu…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Lingwi pprovduti minn:</string>
     <string name="text_RelatedSearchTerms">Termini relatati:</string>
     <string name="text_Requirements">Rekwiżiti:\n1. Għandu jiġi installat fuq minimu ta \'2 apparati.\n2. Konnessjoni Internet għandhom ikunu attivi.</string>
+    <string name="text_SourceCodeRepo">sors miftuħ: %s</string>
     <string name="text_WhatsNew">- Jiffissa l-istabbiltà.</string>
 
     <string name="title_About">Dwar</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Messaġġ</string>
     <string name="title_Messages">Messaġġi</string>
-    <string name="title_MyIdentity">Identità tiegħi</string>
+    <string name="title_MyIdentity">Kuntatt personali</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Messaġġ Disponibbli</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages Disponibbli</string>
     <string name="title_passphrase">Passphrase</string>

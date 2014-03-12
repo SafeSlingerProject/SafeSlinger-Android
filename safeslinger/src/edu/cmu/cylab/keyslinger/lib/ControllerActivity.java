@@ -36,11 +36,11 @@ import javax.crypto.NoSuchPaddingException;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.TextUtils;
 import edu.cmu.cylab.keyslinger.lib.KsConfig.extra;
 import edu.cmu.cylab.starslinger.R;
 
@@ -55,19 +55,20 @@ public class ControllerActivity extends ContactActivity {
     private Intent mCurrIntent = null;
     private int mCurrView = 0;
     private ExchangeController mProt;
-    private String mContactLookupKey = null;
     private byte[][] mExcgMemData;
-    private Bundle mSavedInstanceState;
     private static boolean mLaunched = false;
-    private Bundle mThirdPartyArgs;
     private Handler mHandler;
+    private ProgressDialog mDlgProg;
+    private String mProgressMsg = null;
 
-    private static final int VIEW_START_ID = 1;
+    private static final int VIEW_PROMPT_ID = 76;
     private static final int VIEW_VERIFY_ID = 4;
     private static final int RESULT_ERROR_EXIT = 6;
-    private static final int RESULT_CONFIRM_EXIT = 11;
-    private static final int VIEW_SAVE_ID = 20;
-    private static final int VIEW_PROMPT_ID = 76;
+    private static final int RESULT_CONFIRM_EXIT_PROMPT = 12;
+    private static final int RESULT_CONFIRM_EXIT_VERIFY = 13;
+
+    public static final int RESULT_KEYSLINGERIMPORTED = 300;
+    public static final int RESULT_KEYSLINGERCANCELED = 301;
 
     private static final int MS_POLL_INTERVAL = 500;
 
@@ -116,54 +117,35 @@ public class ControllerActivity extends ContactActivity {
         setTheme(R.style.Theme_SafeSlinger);
         super.onCreate(savedInstanceState);
 
-        mSavedInstanceState = savedInstanceState;
-
-        if (!handleCallerAction())
-            return;
-
-        initOnReload();
-
-        if (!mLaunched) {
-            mLaunched = true;
-        }
-
-    }
-
-    private boolean handleCallerAction() {
-        Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
-
-        if (extras != null) {
-            mContactLookupKey = extras.getString(extra.CONTACT_LOOKUP_KEY);
-            mThirdPartyArgs = extras;
-        }
-        if (TextUtils.isEmpty(mContactLookupKey)) {
-            showError(getString(R.string.error_CannotSendEmptyFile));
-            showExit(RESULT_CANCELED);
-        }
-
-        return true;
-    }
-
-    private void initOnReload() {
         try {
             setContentView(R.layout.splash);
         } catch (OutOfMemoryError e) {
             showError(getString(R.string.error_OutOfMemoryError));
-            showExit(RESULT_CANCELED);
             return;
         }
 
         // method
         mProt = new ExchangeController(this);
 
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if (extras != null) {
+            mProt.setData(extras.getByteArray(extra.USER_DATA));
+        }
+
+        // confirm contact exists
+        if (mProt.getData() == null) {
+            showError(getString(R.string.error_CannotSendEmptyFile));
+            return;
+        }
+
         // initialize exchange
         if (handled(mProt.doInitialize())) {
+            showGroupSizePicker();
+        }
 
-            // confirm contact exists
-            if (!TextUtils.isEmpty(mContactLookupKey)) {
-                showStart(mThirdPartyArgs); // Read saved
-            }
+        if (!mLaunched) {
+            mLaunched = true;
         }
     }
 
@@ -176,28 +158,42 @@ public class ControllerActivity extends ContactActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         switch (requestCode) {
-            case VIEW_START_ID:
-                handleStartActivity(resultCode, data);
-                break;
 
             case VIEW_PROMPT_ID:
                 handlePromptActivity(resultCode, data);
-                break;
-
-            case VIEW_SAVE_ID:
-                handleSaveActivity(resultCode, data);
                 break;
 
             case VIEW_VERIFY_ID:
                 handleVerifyActivity(resultCode);
                 break;
 
-            case RESULT_CONFIRM_EXIT:
-                handleConfirmExitAlert(resultCode);
+            case RESULT_CONFIRM_EXIT_PROMPT:
+                switch (resultCode) {
+                    case RESULT_OK:
+                        showExit(RESULT_CANCELED);
+                        break;
+                    case RESULT_CANCELED:
+                        // return to current activity
+                        startActivityForResult(mCurrIntent, mCurrView);
+                        break;
+                }
+                break;
+
+            case RESULT_CONFIRM_EXIT_VERIFY:
+                switch (resultCode) {
+                    case RESULT_OK:
+                        // confirmed exit from verify, send invalid sig
+                        runThreadSendInvalidSignature();
+                        break;
+                    case RESULT_CANCELED:
+                        // return to current activity
+                        startActivityForResult(mCurrIntent, mCurrView);
+                        break;
+                }
                 break;
 
             case RESULT_ERROR_EXIT:
-                restart();
+                showExit(RESULT_CANCELED);
                 break;
         }
     }
@@ -211,35 +207,12 @@ public class ControllerActivity extends ContactActivity {
                 runThreadSendInvalidSignature();
                 break;
             case RESULT_CANCELED: // Verify button No Match
-                showExitConfirm();
-                break;
-        }
-    }
-
-    private void handleSaveActivity(int resultCode, Intent data) {
-        switch (resultCode) {
-            case SaveActivity.RESULT_SAVE:
-                showExitImportOK(data);
-                break;
-            case SaveActivity.RESULT_SELNONE:
-                int exchanged = data.getExtras().getInt(extra.EXCHANGED_TOTAL);
-                showNote(String.format(getString(R.string.state_SomeContactsImported), "0/"
-                        + exchanged));
-                showExit(RESULT_CANCELED);
-                break;
-            case RESULT_CANCELED:
-                showNote(String.format(getString(R.string.state_SomeContactsImported), "0"));
-                showExit(RESULT_CANCELED);
-                break;
-            default:
-                showNote(String.format(getString(R.string.state_SomeContactsImported), "?"));
-                showExit(RESULT_CANCELED);
+                showExitConfirm(RESULT_CONFIRM_EXIT_VERIFY);
                 break;
         }
     }
 
     private void handlePromptActivity(int resultCode, Intent data) {
-
         switch (resultCode) {
             case RESULT_OK:
                 int result = 0;
@@ -256,34 +229,9 @@ public class ControllerActivity extends ContactActivity {
                 runThreadGetCommitmentsGetData();
                 break;
             case RESULT_CANCELED:
-                restart();
+                showExitConfirm(RESULT_CONFIRM_EXIT_PROMPT);
                 break;
         }
-    }
-
-    private void handleStartActivity(int resultCode, Intent data) {
-        switch (resultCode) {
-            case RESULT_OK:
-                mProt.setData(data.getStringExtra(extra.USER_DATA).getBytes());
-                showGroupSizePicker();
-                break;
-            case RESULT_KEYSLINGERCONTACTSEL:
-                showExit(resultCode);
-                break;
-            case RESULT_KEYSLINGERCONTACTEDIT:
-                showExit(resultCode);
-                break;
-            case RESULT_KEYSLINGERCONTACTADD:
-                showExit(resultCode);
-                break;
-            case RESULT_CANCELED:
-                showExit(resultCode);
-                break;
-        }
-    }
-
-    private void restart() {
-        this.onCreate(mSavedInstanceState); // restart
     }
 
     private void doGroupFormation() {
@@ -296,7 +244,13 @@ public class ControllerActivity extends ContactActivity {
         mExcgMemData = mProt.getGroupData().sortOthersDataNew(mProt.getUserId());
         // decrypt the data with each others match nonce
         try {
-            showSave(mProt.decryptMemData(mExcgMemData, mProt.getUserId()));
+            final byte[][] decryptMemData = mProt.decryptMemData(mExcgMemData, mProt.getUserId());
+
+            Intent data = new Intent();
+            for (int i = 0; i < decryptMemData.length; i++) {
+                data.putExtra(extra.MEMBER_DATA + i, decryptMemData[i]);
+            }
+            showExitImportOK(data);
         } catch (InvalidKeyException e) {
             showError(e.getLocalizedMessage());
         } catch (NoSuchAlgorithmException e) {
@@ -442,55 +396,13 @@ public class ControllerActivity extends ContactActivity {
         mHandler = new Handler();
         mHandler.removeCallbacks(mUpdateReceivedProg);
         mHandler.postDelayed(mUpdateReceivedProg, MS_POLL_INTERVAL);
-
     }
 
     private boolean handled(boolean success) {
-        if (!success)
+        if (!success) {
             showError(mProt.getErrorMsg());
+        }
         return success;
-    }
-
-    private void handleConfirmExitAlert(int buttonId) {
-        switch (buttonId) {
-
-            case RESULT_OK:
-                switch (mCurrView) {
-                    case VIEW_VERIFY_ID:
-                        runThreadSendInvalidSignature();
-                        break;
-                    default:
-                        restart();
-                        break;
-                }
-                break;
-
-            case RESULT_CANCELED:
-                // return to current activity
-                startActivityForResult(mCurrIntent, mCurrView);
-                break;
-        }
-    }
-
-    private void showStart(Bundle args) {
-        mCurrIntent = new Intent(ControllerActivity.this, StartActivity.class);
-        if (args != null) {
-            mCurrIntent.replaceExtras(args);
-        } else {
-            mCurrIntent.putExtra(extra.CONTACT_LOOKUP_KEY, mContactLookupKey);
-        }
-
-        mCurrView = VIEW_START_ID;
-        startActivityForResult(mCurrIntent, mCurrView);
-    }
-
-    private void showSave(byte[][] memData) {
-        mCurrIntent = new Intent(ControllerActivity.this, SaveActivity.class);
-        for (int i = 0; i < memData.length; i++) {
-            mCurrIntent.putExtra(extra.MEMBER_DATA + i, memData[i]);
-        }
-        mCurrView = VIEW_SAVE_ID;
-        startActivityForResult(mCurrIntent, mCurrView);
     }
 
     private void showVerify(byte[] hashVal, byte[] decoyHash1, byte[] decoyHash2, int randomPos) {
@@ -503,8 +415,8 @@ public class ControllerActivity extends ContactActivity {
         startActivityForResult(mCurrIntent, mCurrView);
     }
 
-    private void showExitConfirm() {
-        showQuestion(getString(R.string.ask_QuitConfirmation), RESULT_CONFIRM_EXIT);
+    private void showExitConfirm(int resultCode) {
+        showQuestion(getString(R.string.ask_QuitConfirmation), resultCode);
     }
 
     private void showError(String msg) {
@@ -589,7 +501,7 @@ public class ControllerActivity extends ContactActivity {
             @Override
             public void onCancel(DialogInterface dialog) {
                 dialog.dismiss();
-                restart();
+                showExit(RESULT_CANCELED);
             }
         });
         return ad;
@@ -670,6 +582,34 @@ public class ControllerActivity extends ContactActivity {
             }
         });
         return ad;
+    }
+
+    private void showProgress(String msg, boolean indeterminate) {
+        MyLog.i(TAG, msg);
+        mDlgProg = new ProgressDialog(this);
+        mDlgProg.setProgressStyle(indeterminate ? ProgressDialog.STYLE_SPINNER
+                : ProgressDialog.STYLE_HORIZONTAL);
+        mDlgProg.setMessage(msg);
+        mProgressMsg = msg;
+        mDlgProg.setCancelable(true);
+        mDlgProg.setIndeterminate(indeterminate);
+        mDlgProg.setProgress(0);
+        mDlgProg.show();
+    }
+
+    private void showProgressUpdate(int value, String msg) {
+        if (mDlgProg != null) {
+            mDlgProg.setProgress(value);
+            if (msg != null) {
+                mDlgProg.setMessage(msg);
+            }
+        }
+    }
+
+    private void hideProgress() {
+        if (mDlgProg != null) {
+            mDlgProg.dismiss();
+        }
     }
 
     @Override

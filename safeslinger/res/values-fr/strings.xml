@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Les données de contact ont été formatés correctement.</string>
     <string name="error_WebCancelledByUser">L\'utilisateur a annulé la demande du serveur.</string>
 
+    <string name="help_find">Utilisez cet écran pour configurer votre nom d\'échanger avec les autres. Appuyez sur le bouton «Terminé» lorsque vous avez terminé.</string>
     <string name="help_home">Pour échanger des identités, assurez-vous que tous les utilisateurs se trouvent à proximité de leur téléphone. Le bouton \'Commencer échange\' échangera uniquement les contacts qui ont été cochés.</string>
     <string name="help_identity_menu">\n\nVous Puissiez utile de modifier les données personnelles concernant votre identité sur cet écran en appuyant sur ​​le bouton avec votre nom. Cela permet d\'afficher un menu vous permettant de \'Edit\' votre contact, \'Créer un nouveau \'contact ou\' utiliser un autre \'contact.</string>
     <string name="help_Messages">Cet écran affiche tous les anciens messages et les fichiers qui sont encore disponibles pour le téléchargement.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">expire %s</string>
     <string name="label_expiresIn">expire en</string>
     <string name="label_FileNameHint">Nom du fichier</string>
+    <string name="label_FindInstruct">Entrez le nom que vous souhaitez d\'autres à voir lors de la communication en toute sécurité:</string>
     <string name="label_FirstName">Prénom</string>
-    <string name="label_Home">Cochez les éléments que vous souhaitez partager et appuyez sur \'Commencer l\'échange\' quand les autres sont prêts à échanger.</string>
+    <string name="label_Home">Tapez votre nom d\'ajouter ou de supprimer des données de contact, consultez les articles que vous souhaitez partager, puis appuyez sur «Commencer Exchange\' quand d\'autres sont prêts à l\'échange:</string>
     <string name="label_hometag">Domicile</string>
     <string name="label_hours">%d heures</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud est activé. Appuyez sur le bouton «Terminé» lorsque vous avez terminé.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">Sauvegarde SafeSlinger retardée</string>
     <string name="label_safeslingered">(SafeSlinger échange direct)</string>
     <string name="label_SaveAccount">Enregistrer le compte</string>
-    <string name="label_SaveInstruct">Échange complet! Sélectionnez les données à enregistrer dans votre carnet d\'adresses:</string>
+    <string name="label_SaveInstruct">Vérifier les contacts que vous souhaitez mettre à jour votre carnet d\'adresses, puis appuyez sur \'Importer\' pour enregistrer les contacts sécurisés:</string>
     <string name="label_seconds">%d secondes</string>
     <string name="label_selectLabel">Sélectionnez l\'étiquette</string>
     <string name="label_SelectRecip">Sélectionnez le destinataire</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Échanger clés</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Utiliser un autre</string>
+    <string name="menu_UseContactPerson">Utilisez Contact \'%s\'</string>
+    <string name="menu_UseNoContact">Utilisez uniquement du nom</string>
+    <string name="menu_UseProfilePerson">Utiliser le profil «%s \'</string>
 
     <string name="prog_CollectingOthersCommitVerify">en attente de vérification de tous les membres…</string>
     <string name="prog_CollectingOthersItems">en attente de l\'arrivée de tous les utilisateurs…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Traductions fournies par:</string>
     <string name="text_RelatedSearchTerms">Termes reliés:</string>
     <string name="text_Requirements">Exigences:\n1. Doit être installé sur un minimum de 2 appareils.\n2. Une connexion Internet doit être active.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Correctifs de stabilité.</string>
 
     <string name="title_About">À propos</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Accueil</string>
     <string name="title_MessageDetail">Message</string>
     <string name="title_Messages">Messages</string>
-    <string name="title_MyIdentity">Mon identité</string>
+    <string name="title_MyIdentity">Contact personnel</string>
     <string name="title_NotifyFileAvailable">Message SafeSlinger disponible</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger messages disponibles</string>
     <string name="title_passphrase">Passphrase</string>

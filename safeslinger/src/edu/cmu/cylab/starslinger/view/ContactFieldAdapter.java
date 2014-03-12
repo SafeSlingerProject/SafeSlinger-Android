@@ -22,40 +22,41 @@
  * THE SOFTWARE.
  */
 
-package edu.cmu.cylab.keyslinger.lib;
+package edu.cmu.cylab.starslinger.view;
 
 import java.util.List;
 
-import a_vcard.android.syncml.pim.vcard.ContactStruct;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.TextView;
+import edu.cmu.cylab.starslinger.ConfigData;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.model.ContactField;
 
-public class SaveContactAdapter extends BaseAdapter {
+public class ContactFieldAdapter extends BaseAdapter {
     private Context mContext;
-    private List<ContactStruct> mListSaveContacts;
+    private List<ContactField> mListContactFields;
 
-    public SaveContactAdapter(Context context, List<ContactStruct> mContacts) {
+    public ContactFieldAdapter(Context context, List<ContactField> mContactFields) {
         mContext = context;
-        mListSaveContacts = mContacts;
+        mListContactFields = mContactFields;
     }
 
     @Override
     public int getCount() {
-        return mListSaveContacts.size();
+        return mListContactFields.size();
     }
 
     @Override
     public Object getItem(int pos) {
-        return mListSaveContacts.get(pos);
+        return mListContactFields.get(pos);
     }
 
     @Override
@@ -66,41 +67,65 @@ public class SaveContactAdapter extends BaseAdapter {
     @Override
     public View getView(int pos, View convertView, ViewGroup parent) {
         // get selected entry
-        ContactStruct mem = mListSaveContacts.get(pos);
+        ContactField field = mListContactFields.get(pos);
 
         // always inflate the view, otherwise check box states will get recycled
         // on scrolling...
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        convertView = inflater.inflate(R.layout.savedataitem, null);
+        convertView = inflater.inflate(R.layout.contactfielditem, null);
 
-        drawSaveContact(convertView, mem);
+        drawContactField(convertView, field);
         return convertView;
     }
 
-    private void drawSaveContact(View convertView, ContactStruct mem) {
+    private void drawContactField(View convertView, ContactField field) {
 
-        // draw on screen
         CheckBox cb = (CheckBox) convertView.findViewById(R.id.cb);
+        ImageView img = (ImageView) convertView.findViewById(R.id.img);
         TextView name = (TextView) convertView.findViewById(R.id.name);
-        ImageView avatar = (ImageView) convertView.findViewById(R.id.avatar);
+        TextView value = (TextView) convertView.findViewById(R.id.value);
 
-        cb.setChecked(true);
+        String n = field.getName();
+        String v = field.getValue();
+        int icon = field.getIconResId();
+        boolean forceCheck = field.getForceChecked();
 
-        name.setText(mem.name != null ? mem.name.toString() : mContext
-                .getString(R.string.error_ContactInsertFailed));
+        final String compare = getFieldForCompare(n, v);
 
-        try {
-            if (mem.photoBytes != null) {
-                Bitmap bm = BitmapFactory.decodeByteArray(mem.photoBytes, 0, mem.photoBytes.length,
-                        null);
-                avatar.setImageBitmap(bm);
-            } else {
-                avatar.setImageResource(R.drawable.ic_silhouette);
-            }
-        } catch (OutOfMemoryError e) {
-            avatar.setImageBitmap(null);
+        if (forceCheck) {
+            cb.setChecked(true);
+            cb.setEnabled(false);
+        } else {
+            cb.setChecked(ConfigData.loadPrefContactField(mContext, compare));
+            cb.setEnabled(true);
         }
 
+        // TODO highlight checked lines for clarity
+
+        try {
+            if (icon != 0) {
+                img.setImageResource(icon);
+            } else {
+                img.setBackgroundResource(0);
+            }
+        } catch (OutOfMemoryError e) {
+            img.setImageBitmap(null);
+        }
+
+        name.setText(n);
+        value.setText(v);
+
+        cb.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ConfigData.savePrefContactField(mContext, compare, isChecked);
+            }
+        });
     }
 
+    public static String getFieldForCompare(String n, String v) {
+        final String compare = (n != null ? n.trim() : "") + (v != null ? v.trim() : "");
+        return compare;
+    }
 }

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">ข้อมูล การติดต่อ ได้รับการ จัดรูปแบบ ไม่ถูกต้อง</string>
     <string name="error_WebCancelledByUser">ผู้ใช้ ยกเลิก คำขอ เซิร์ฟเวอร์</string>
 
+    <string name="help_find">ใช้หน้าจอนี้เพื่อตั้งชื่อของคุณไปแลกเปลี่ยนกับคนอื่น ๆ แตะที่ปุ่ม \'เสร็จ\' เมื่อเสร็จแล้ว</string>
     <string name="help_home">เพื่อแลกเปลี่ยนข้อมูล ตัวตน มั่นใจว่าผู้ใช้ ทั้งหมดที่อยู่ บริเวณใกล้เคียงหรือ ทางโทรศัพท์ ปุ่ม \' เริ่มต้น ตลาดหลักทรัพย์ จะแลกเปลี่ยน เฉพาะข้อมูล การตรวจสอบ รายชื่อผู้ติดต่อ</string>
     <string name="help_identity_menu">\n\nนอกจากนี้คุณยัง อาจมีการเปลี่ยนแปลง ข้อมูล ส่วนบุคคลเกี่ยวกับ ตัวตนของคุณ บนหน้าจอนี้ โดยแตะที่ ปุ่มที่มี ชื่อของคุณ นี้จะ แสดงเมนู ช่วยให้คุณสามารถ \'แก้ไข\' ที่ติดต่อของคุณ \'สร้าง ใหม่\' ติดต่อ หรือ ใช้ อีก \' ติดต่อ</string>
     <string name="help_Messages">หน้าจอนี้จะ แสดงข้อความ ที่ผ่านมาทั้งหมด และสิ่งที่แนบ ที่ ยังคงมีอยู่ สำหรับการดาวน์โหลด</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">หมดอายุ %s</string>
     <string name="label_expiresIn">จะหมดอายุใน</string>
     <string name="label_FileNameHint">ชื่อ ไฟล์</string>
+    <string name="label_FindInstruct">ป้อนชื่อที่คุณต้องการให้ผู้อื่นเห็นเมื่อสื่อสารอย่างปลอดภัย:</string>
     <string name="label_FirstName">ชื่อ แรก</string>
-    <string name="label_Home">ตรวจสอบ รายการที่คุณ ต้องการแบ่งปัน และแตะ \' เริ่มต้นการ แลกเปลี่ยน \' เมื่อ คนอื่น ๆ ก็พร้อมที่จะ แลกเปลี่ยน</string>
+    <string name="label_Home">แตะชื่อของคุณเพื่อเพิ่มหรือลบข้อมูลรายชื่อผู้ติดต่อให้ตรวจสอบรายการที่คุณต้องการแบ่งปันและแตะ \'เริ่มต้นการแลกเปลี่ยน\' เมื่อคนอื่น ๆ ก็พร้อมที่จะแลกเปลี่ยน</string>
     <string name="label_hometag">บ้าน</string>
     <string name="label_hours">%d ชั่วโมง</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud จะเปิดใช้งาน แตะ ที่ปุ่ม \' เสร็จ \' เมื่อเสร็จแล้ว</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">สำรอง SafeSlinger ล่าช้า</string>
     <string name="label_safeslingered">(SafeSlinger ตรง Exchange)</string>
     <string name="label_SaveAccount">บันทึก บัญชี</string>
-    <string name="label_SaveInstruct">แลกเปลี่ยน Complete! เลือกข้อมูล ของสมาชิก ที่จะ บันทึกลงใน สมุดที่อยู่ ของคุณ</string>
+    <string name="label_SaveInstruct">ตรวจสอบรายชื่อที่คุณต้องการปรับปรุงในสมุดที่อยู่ของคุณแล้วแตะ \'นำเข้า\' เพื่อบันทึกรายชื่อการรักษาความปลอดภัย</string>
     <string name="label_seconds">%d วินาที</string>
     <string name="label_selectLabel">เลือก ป้าย</string>
     <string name="label_SelectRecip">เลือก ผู้รับ</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">สลิง คีย์</string>
     <string name="menu_TagListMessages">ข้อความ</string>
     <string name="menu_UseAnother">ใช้ อีก</string>
+    <string name="menu_UseContactPerson">ใช้ติดต่อ \'%s\'</string>
+    <string name="menu_UseNoContact">การใช้ชื่อเฉพาะ</string>
+    <string name="menu_UseProfilePerson">สามารถใช้งานโปรไฟล์ \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">รอ การตรวจสอบ จาก สมาชิกทุกคน…</string>
     <string name="prog_CollectingOthersItems">รอให้ ผู้ใช้ทุกคน ที่จะเข้าร่วม…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">ภาษา ที่ให้บริการโดย:</string>
     <string name="text_RelatedSearchTerms">ข้อตกลงและเงื่อนไขที่เกี่ยวข้อง</string>
     <string name="text_Requirements">ต้องการ:\n1 ต้องติดตั้งบนอย่างน้อย 2 อุปกรณ์\n2 การเชื่อมต่ออินเทอร์เน็ตจะต้องใช้งาน</string>
+    <string name="text_SourceCodeRepo">เปิดแหล่งที่มา: %s</string>
     <string name="text_WhatsNew">- แก้ไขเสถียรภาพ</string>
 
     <string name="title_About">เกี่ยวกับ</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">บ้าน</string>
     <string name="title_MessageDetail">ข่าวสาร</string>
     <string name="title_Messages">ข้อความ</string>
-    <string name="title_MyIdentity">ตัวตน ของฉัน</string>
+    <string name="title_MyIdentity">ติดต่อส่วนบุคคล</string>
     <string name="title_NotifyFileAvailable">SafeSlinger ข้อความ ที่มีจำหน่าย</string>
     <string name="title_NotifyMulFileAvailable">%d ข้อความ SafeSlinger ที่มีจำหน่าย</string>
     <string name="title_passphrase">รหัสผ่าน</string>

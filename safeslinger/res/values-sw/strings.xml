@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kuwasiliana data ilikuwa mpangilio kimakosa.</string>
     <string name="error_WebCancelledByUser">Mtumiaji kufutwa ombi server.</string>
 
+    <string name="help_find">Kutumia screen hii kuweka jina lako ili kubadilishana na watu wengine. Bomba \'Done\' button wakati kumaliza.</string>
     <string name="help_home">Kubadilishana data utambulisho, kuhakikisha watumiaji wote ni jirani au kwa simu. Button \' Kuanza Exchange \' itakuwa kubadilishana tu kuchunguzwa data mawasiliano.</string>
     <string name="help_identity_menu">\n\nUnaweza pia kubadilisha data binafsi kuhusu utambulisho wako wa juu ya screen hii na kugonga kifungo kwa jina lako. Hii kuonyesha orodha ya kuruhusu wewe \'Edit\' kuwasiliana yako, Kujenga New \' mawasiliano, au \' Matumizi nyingine \' kuwasiliana.</string>
     <string name="help_Messages">Screen hii inaonyesha ujumbe wote siku za nyuma, na attachments kwamba bado ni inapatikana kwa shusha.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">muda wake %s</string>
     <string name="label_expiresIn">muda wake katika</string>
     <string name="label_FileNameHint">Jina faili</string>
+    <string name="label_FindInstruct">Kuingia jina unataka wengine kuona wakati kuwasiliana kwa usalama:</string>
     <string name="label_FirstName">Jina la kwanza</string>
-    <string name="label_Home">Kuangalia vitu unataka kushiriki na bomba \' Kuanza Exchange \' wakati wengine ni tayari kubadilishana.</string>
+    <string name="label_Home">Bomba jina lako kuongeza au kuondoa data mawasiliano, kuangalia vitu unataka kushiriki, na bomba \'Kuanza Exchange\' wakati wengine ni tayari kubadilishana:</string>
     <string name="label_hometag">Nyumbani</string>
     <string name="label_hours">masaa %d</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ni kuwezeshwa. Bomba \' Done \' button wakati kumaliza.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger Backup kuchelewa</string>
     <string name="label_safeslingered">(SafeSlinger moja kwa moja Exchange)</string>
     <string name="label_SaveAccount">Ila Akaunti</string>
-    <string name="label_SaveInstruct">Exchange kamili! Kuchagua data mwanachama kuokoa anwani yako ya kitabu:</string>
+    <string name="label_SaveInstruct">Angalia mawasiliano unataka update katika anwani yako ya kitabu, kisha bomba \'Import\' kuokoa mawasiliano salama:</string>
     <string name="label_seconds">sekunde %d</string>
     <string name="label_selectLabel">Chagua studio</string>
     <string name="label_SelectRecip">Chagua mpokeaji</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Kombeo Keys</string>
     <string name="menu_TagListMessages">Ujumbe</string>
     <string name="menu_UseAnother">Kutumia nyingine</string>
+    <string name="menu_UseContactPerson">Kutumia ya Mawasiliano \'%s\'</string>
+    <string name="menu_UseNoContact">Matumizi Jina tu</string>
+    <string name="menu_UseProfilePerson">Kutumia Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">kusubiri kwa ajili ya ukaguzi kutoka kwa wanachama wote…</string>
     <string name="prog_CollectingOthersItems">kusubiri kwa watumiaji wote kujiunga na…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Lugha zinazotolewa na:</string>
     <string name="text_RelatedSearchTerms">Kuhusiana Terms:</string>
     <string name="text_Requirements">Mahitaji:\n1. Lazima kuwa imewekwa kwenye kiwango cha chini ya 2 vifaa.\n2. Uhusiano Internet lazima kuwa hai.</string>
+    <string name="text_SourceCodeRepo">wazi chanzo: %s</string>
     <string name="text_WhatsNew">- Utulivu fixes.</string>
 
     <string name="title_About">Kuhusu</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Nyumbani</string>
     <string name="title_MessageDetail">Ujumbe</string>
     <string name="title_Messages">Ujumbe</string>
-    <string name="title_MyIdentity">Utambulisho wangu</string>
+    <string name="title_MyIdentity">Binafsi ya Mawasiliano</string>
     <string name="title_NotifyFileAvailable">Ujumbe SafeSlinger Available</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Ujumbe Available</string>
     <string name="title_passphrase">Passphrase</string>

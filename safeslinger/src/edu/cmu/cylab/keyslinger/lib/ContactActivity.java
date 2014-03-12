@@ -25,31 +25,16 @@ package edu.cmu.cylab.keyslinger.lib;
  * THE SOFTWARE.
  */
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import a_vcard.android.syncml.pim.VDataBuilder;
-import a_vcard.android.syncml.pim.VNode;
-import a_vcard.android.syncml.pim.vcard.ContactStruct;
-import a_vcard.android.syncml.pim.vcard.Name;
-import a_vcard.android.syncml.pim.vcard.VCardException;
-import a_vcard.android.syncml.pim.vcard.VCardParser;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
-import android.provider.ContactsContract.Data;
 import android.text.TextUtils;
 import android.widget.Toast;
 
@@ -62,20 +47,11 @@ import edu.cmu.cylab.starslinger.SafeSlinger;
 
 public class ContactActivity extends SherlockActivity {
 
-    private final ContactAccessor mAccessor = ContactAccessor.getInstance();
     private static final String TAG = KsConfig.LOG_TAG;
-    protected ProgressDialog mDlgProg;
-    protected String mProgressMsg = null;
     public static final int DIALOG_HELP = 1;
     public static final int DIALOG_ERROR = 2;
     public static final int DIALOG_QUESTION = 3;
     public static final int DIALOG_GRP_SIZE = 4;
-    public static final int DIALOG_USEROPTIONS = 5;
-    public static final int RESULT_KEYSLINGERIMPORTED = 300;
-    public static final int RESULT_KEYSLINGERCANCELED = 301;
-    public static final int RESULT_KEYSLINGERCONTACTSEL = 302;
-    public static final int RESULT_KEYSLINGERCONTACTEDIT = 303;
-    public static final int RESULT_KEYSLINGERCONTACTADD = 304;
 
     public Uri getPersonUri(String contactLookupKey) {
         if (!TextUtils.isEmpty(contactLookupKey)) {
@@ -167,201 +143,6 @@ public class ContactActivity extends SherlockActivity {
         }
     }
 
-    public List<ContactStruct> parseVCards(byte[][] data) {
-
-        // parse all data for vCard format, and pull names list, skipping owner
-        List<ContactStruct> parsedContacts = new ArrayList<ContactStruct>();
-
-        if (data != null && data.length > 0)
-            for (int i = 0; i < data.length; i++) {
-                VCardParser parser = new VCardParser();
-                VDataBuilder builder = new VDataBuilder();
-                String vcardString = new String(data[i]);
-
-                // parse the string
-                boolean parsed = false;
-                try {
-                    MyLog.d(TAG, vcardString);
-                    parsed = parser.parse(vcardString, "UTF-8", builder);
-                } catch (VCardException e) {
-                    ContactStruct mem = new ContactStruct();
-                    mem.name = new Name("Error: " + e.getLocalizedMessage());
-                    parsedContacts.add(mem);
-                    continue;
-                } catch (IOException e) {
-                    ContactStruct mem = new ContactStruct();
-                    mem.name = new Name("Error: " + e.getLocalizedMessage());
-                    parsedContacts.add(mem);
-                    continue;
-                }
-                if (!parsed) {
-                    ContactStruct mem = new ContactStruct();
-                    mem.name = new Name("Error: " + getString(R.string.error_ContactInsertFailed));
-                    parsedContacts.add(mem);
-                    continue;
-                }
-
-                // get all parsed contacts
-                List<VNode> pimContacts = builder.vNodeList;
-
-                // do something for all the contacts
-                for (VNode contact : pimContacts) {
-
-                    ContactStruct mem = ContactStruct.constructContactFromVNode(contact,
-                            Name.NAME_ORDER_TYPE_ENGLISH);
-                    if (mem != null)
-                        parsedContacts.add(mem);
-                    continue;
-                }
-            }
-
-        return parsedContacts;
-    }
-
-    protected String getContactLookupKeyByName(String name) {
-        String contactLookupKey = null;
-
-        // find aggregated contact
-        Uri uriLookup = mAccessor.getUriPersonLookupKey();
-        if (uriLookup != null) {
-            Cursor c = getContentResolver().query(uriLookup, mAccessor.getProjPersonLookupKey(),
-                    mAccessor.getQueryPersonLookupKey(name), null, null);
-            if (c != null) {
-                if (c.moveToFirst()) {
-                    contactLookupKey = c.getString(c.getColumnIndexOrThrow(Data.LOOKUP_KEY));
-                }
-                c.close();
-            }
-        }
-        return contactLookupKey;
-    }
-
-    protected String getContactLookupKeyByContactId(String contactId) {
-        if (TextUtils.isEmpty(contactId)) {
-            return null;
-        }
-
-        String where = Data.CONTACT_ID + " = ?";
-        String[] whereParameters = new String[] {
-            contactId
-        };
-
-        Cursor c = getContentResolver().query(Data.CONTENT_URI, null, where, whereParameters, null);
-        if (c != null) {
-            while (c.moveToNext()) {
-                String lookup = c.getString(c.getColumnIndexOrThrow(Data.LOOKUP_KEY));
-                c.close();
-                return lookup;
-            }
-            c.close();
-        }
-        return null;
-    }
-
-    protected ContactStruct loadContactDataNoDuplicates(Context ctx, String contactLookupKey,
-            ContactStruct in, boolean removeMatches) {
-        // order: name, photo, phone, im, email, url, postal, title, org
-
-        // create a parallel here for storing the data, use the table rows
-        ContentResolver resolver = getContentResolver();
-        ContactStruct contact = (in != null) ? in : new ContactStruct();
-
-        // get name, retain passed in name
-        if (contact.name == null || TextUtils.isEmpty(contact.name.toString())) {
-            Uri uriName = mAccessor.getUriName(resolver, contactLookupKey);
-            if (uriName != null) {
-                Cursor names = getContentResolver().query(uriName, mAccessor.getProjName(),
-                        mAccessor.getQueryName(), null, null);
-                if (names != null) {
-                    while (names.moveToNext()) {
-                        mAccessor.addName(contact, names);
-                    }
-                    names.close();
-                }
-            }
-        }
-
-        // get photo
-        Uri uriPhoto = mAccessor.getUriPhoto(resolver, contactLookupKey);
-        if (uriPhoto != null) {
-            Cursor photos = getContentResolver().query(uriPhoto, mAccessor.getProjPhoto(),
-                    mAccessor.getQueryPhoto(), null, null);
-            if (photos != null) {
-                while (photos.moveToNext()) {
-                    mAccessor.addPhoto(contact, photos);
-                }
-                photos.close();
-            }
-        }
-
-        // get phone
-        Uri uriPhone = mAccessor.getUriPhone(resolver, contactLookupKey);
-        if (uriPhone != null) {
-            Cursor phones = getContentResolver().query(uriPhone, mAccessor.getProjPhone(),
-                    mAccessor.getQueryPhone(), null, null);
-            if (phones != null) {
-                while (phones.moveToNext()) {
-                    mAccessor.addPhone(ctx, contact, phones, removeMatches);
-                }
-                phones.close();
-            }
-        }
-
-        // get IM
-        Uri uriIm = mAccessor.getUriIM(resolver, contactLookupKey);
-        if (uriIm != null) {
-            Cursor ims = getContentResolver().query(uriIm, mAccessor.getProjIM(),
-                    mAccessor.getQueryIM(), null, null);
-            if (ims != null) {
-                while (ims.moveToNext()) {
-                    mAccessor.addIM(contact, ims, this, removeMatches);
-                }
-                ims.close();
-            }
-        }
-
-        // get email
-        Uri uriEmail = mAccessor.getUriEmail(resolver, contactLookupKey);
-        if (uriEmail != null) {
-            Cursor emails = getContentResolver().query(uriEmail, mAccessor.getProjEmail(),
-                    mAccessor.getQueryEmail(), null, null);
-            if (emails != null) {
-                while (emails.moveToNext()) {
-                    mAccessor.addEmail(contact, emails, removeMatches);
-                }
-                emails.close();
-            }
-        }
-
-        // get Url
-        Uri uriUrl = mAccessor.getUriUrl(resolver, contactLookupKey);
-        if (uriUrl != null) {
-            Cursor urls = getContentResolver().query(uriUrl, mAccessor.getProjUrl(),
-                    mAccessor.getQueryUrl(), null, null);
-            if (urls != null) {
-                while (urls.moveToNext()) {
-                    mAccessor.addUrl(contact, urls, this, removeMatches);
-                }
-                urls.close();
-            }
-        }
-
-        // get postal
-        Uri uriPostal = mAccessor.getUriPostal(resolver, contactLookupKey);
-        if (uriPostal != null) {
-            Cursor postals = getContentResolver().query(uriPostal, mAccessor.getProjPostal(),
-                    mAccessor.getQueryPostal(), null, null);
-            if (postals != null) {
-                while (postals.moveToNext()) {
-                    mAccessor.addPostal(contact, postals, removeMatches);
-                }
-                postals.close();
-            }
-        }
-
-        return contact;
-    }
-
     protected void setResultForParent(int resultCode) {
         if (getParent() == null) {
             setResult(resultCode);
@@ -375,34 +156,6 @@ public class ContactActivity extends SherlockActivity {
             setResult(resultCode, data);
         } else {
             getParent().setResult(resultCode, data);
-        }
-    }
-
-    protected void showProgress(String msg, boolean indeterminate) {
-        MyLog.i(TAG, msg);
-        mDlgProg = new ProgressDialog(this);
-        mDlgProg.setProgressStyle(indeterminate ? ProgressDialog.STYLE_SPINNER
-                : ProgressDialog.STYLE_HORIZONTAL);
-        mDlgProg.setMessage(msg);
-        mProgressMsg = msg;
-        mDlgProg.setCancelable(true);
-        mDlgProg.setIndeterminate(indeterminate);
-        mDlgProg.setProgress(0);
-        mDlgProg.show();
-    }
-
-    protected void showProgressUpdate(int value, String msg) {
-        if (mDlgProg != null) {
-            mDlgProg.setProgress(value);
-            if (msg != null) {
-                mDlgProg.setMessage(msg);
-            }
-        }
-    }
-
-    protected void hideProgress() {
-        if (mDlgProg != null) {
-            mDlgProg.dismiss();
         }
     }
 

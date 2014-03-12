@@ -37,47 +37,40 @@
         android:layout_margin="@dimen/size_5dp"
         android:layout_weight="2" >
 
-        <TableLayout
+        <LinearLayout
+            android:id="@+id/FrameScroll"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-            <TableRow>
+            <TextView
+                android:id="@+id/AddTextViewInstruct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/label_FindInstruct"
+                android:textSize="@dimen/text_size_medium" />
 
-                <TextView
-                    android:id="@+id/AddTextViewInstruct"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/size_5dp"
-                    android:layout_marginRight="@dimen/size_50dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/label_FindInstruct"
-                    android:textSize="@dimen/text_size_medium" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/label_ContactName"
-                    android:textSize="@dimen/text_size_small" />
-            </TableRow>
-
-            <TableRow>
+            <LinearLayout
+                android:id="@+id/FrameCenter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
 
                 <EditText
                     android:id="@+id/contactNameEditText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:hint="@string/label_ContactName"
                     android:imeOptions="actionDone"
                     android:inputType="textCapWords|textPersonName"
                     android:privateImeOptions="nm"
                     android:textSize="@dimen/text_size_medium" />
-            </TableRow>
-        </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
     <RelativeLayout

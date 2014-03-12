@@ -35,13 +35,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import edu.cmu.cylab.keyslinger.lib.AccountData;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.model.AccountData;
 
-/**
- * Custom adapter used to display account icons and descriptions in the account
- * spinner.
- */
 public class AccountAdapter extends ArrayAdapter<AccountData> {
 
     private Context mContext;

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Datos de contacto foi formatado incorrectamente.</string>
     <string name="error_WebCancelledByUser">Usuario cancelado petición do servidor.</string>
 
+    <string name="help_find">Use esta pantalla para configurar o nome para intercambiar cos outros. Preme o botón \'Done\' cando rematar.</string>
     <string name="help_home">Para cambiar datos de identidade, garantir que todos os usuarios están nas proximidades ou no teléfono. O botón \' Comezar de cambio \' van intercambiar só os datos de contacto verificados.</string>
     <string name="help_identity_menu">\n\nTamén pode cambiar os datos persoais sobre a súa identidade na pantalla, tocando o botón co seu nome. Isto amosará un menú que lle permite \'Editar \' o seu contacto, \'Crear Novo contacto ou\' Usar Outro \' contacto.</string>
     <string name="help_Messages">Esta pantalla amosa tódalas mensaxes pasadas e anexos que aínda están dispoñibles para descargar.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">remata %s</string>
     <string name="label_expiresIn">remata o</string>
     <string name="label_FileNameHint">Nome do ficheiro</string>
+    <string name="label_FindInstruct">Introduza o nome que quere que os outros vexan cando se comunicar de forma segura:</string>
     <string name="label_FirstName">Nome</string>
-    <string name="label_Home">Comprobe elementos que quere compartir e toque \' Comezar de cambio \', cando outros están dispostos a cambiar.</string>
+    <string name="label_Home">Preme no seu nome para engadir ou eliminar datos de contacto, comprobe os elementos que quere compartir, e toque \'Comezar de cambio\', cando outros están dispostos a cambio:</string>
     <string name="label_hometag">Casa</string>
     <string name="label_hours">%d horas</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud está activado. Preme o botón \' Done \' cando rematar.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger de copia de seguridade atrasado</string>
     <string name="label_safeslingered">(SafeSlinger directo Exchange)</string>
     <string name="label_SaveAccount">Salva conta</string>
-    <string name="label_SaveInstruct">Cambio completa! Seleccione os datos de membros para salvar a súa lista de enderezos:</string>
+    <string name="label_SaveInstruct">Comprobe os contactos que quere actualizar no seu libro de enderezos, e despois toque \'Importar\' para gardar contactos seguros:</string>
     <string name="label_seconds">%d segundo</string>
     <string name="label_selectLabel">Seleccione etiqueta</string>
     <string name="label_SelectRecip">Seleccionar Destinatario</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Chaves</string>
     <string name="menu_TagListMessages">Mensaxes</string>
     <string name="menu_UseAnother">Usar Outro</string>
+    <string name="menu_UseContactPerson">Use Contacto \'%s\'</string>
+    <string name="menu_UseNoContact">Use nome só</string>
+    <string name="menu_UseProfilePerson">Usar perfil \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">espera para a comprobación de todos os membros…</string>
     <string name="prog_CollectingOthersItems">á espera de todos os usuarios para unirse…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Idiomas proporcionados por:</string>
     <string name="text_RelatedSearchTerms">Termos relacionados:</string>
     <string name="text_Requirements">Requisitos:\n1. Debe ser instalado en un mínimo de 2 dispositivos.\n2. Unha conexión a Internet debe estar activa.</string>
+    <string name="text_SourceCodeRepo">de código aberto: %s</string>
     <string name="text_WhatsNew">- Correccións de estabilidade.</string>
 
     <string name="title_About">Sobre</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Casa</string>
     <string name="title_MessageDetail">Mensaxe</string>
     <string name="title_Messages">Mensaxes</string>
-    <string name="title_MyIdentity">A miña Identidade</string>
+    <string name="title_MyIdentity">Contacto persoal</string>
     <string name="title_NotifyFileAvailable">SafeSlinger mensaxe dispoñible</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger mensaxes dispoñíbeis</string>
     <string name="title_passphrase">Passphrase</string>

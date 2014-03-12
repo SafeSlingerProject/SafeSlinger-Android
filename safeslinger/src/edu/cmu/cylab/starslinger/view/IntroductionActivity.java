@@ -74,7 +74,6 @@ public class IntroductionActivity extends BaseActivity {
     private Button mButtonSend;
     private Button mButtonRecip1;
     private Button mButtonRecip2;
-    private String mSenderContactLookupKey = null;
     private RecipientRow mRecip1;
     private RecipientRow mRecip2;
 
@@ -235,11 +234,11 @@ public class IntroductionActivity extends BaseActivity {
     }
 
     private void doClickRecipient1() {
-        showRecipientSelect(mSenderContactLookupKey, VIEW_RECIPSEL1);
+        showRecipientSelect(VIEW_RECIPSEL1);
     }
 
     private void doClickRecipient2() {
-        showRecipientSelect(mSenderContactLookupKey, VIEW_RECIPSEL2);
+        showRecipientSelect(VIEW_RECIPSEL2);
     }
 
     private Intent resultIntent() {
@@ -352,9 +351,8 @@ public class IntroductionActivity extends BaseActivity {
         }
     }
 
-    private void showRecipientSelect(String senderContactLookupKey, int requestCode) {
+    private void showRecipientSelect(int requestCode) {
         Intent intent = new Intent(IntroductionActivity.this, PickRecipientsActivity.class);
-        intent.putExtra(extra.CONTACT_LOOKUP_KEY, senderContactLookupKey);
         intent.putExtra(extra.ALLOW_EXCH, true);
         intent.putExtra(extra.ALLOW_INTRO, false);
         startActivityForResult(intent, requestCode);

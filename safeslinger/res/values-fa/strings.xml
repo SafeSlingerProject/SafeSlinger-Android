@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">اطلاعات تماس با اشتباه فرمت شده است.</string>
     <string name="error_WebCancelledByUser">کاربر لغو درخواست سرور.</string>
 
+    <string name="help_find">با استفاده از این صفحه نمایش برای تنظیم نام و نام خانوادگی خود را به تبادل با دیگران است. شیر \'انجام\' را فشار دهید که به پایان رسید.</string>
     <string name="help_home">برای تبادل اطلاعات هویت، اطمینان از تمام کاربران در نزدیکی و یا بر روی تلفن. دکمه \' شروع بورس خواهد تنها اطلاعات تماس چک مبادله.</string>
     <string name="help_identity_menu">\n\nشما همچنین ممکن است داده های شخصی در مورد هویت خود را در این صفحه نمایش با ضربه زدن بر روی دکمه با نام خود را تغییر دهید. این منو به شما این امکان \'ویرایش\' تماس با شما، \' ایجاد جدید \' تماس، و یا \'استفاده از یکی دیگر از تماس صفحه نمایش.</string>
     <string name="help_Messages">این صفحه نمایش تمام پیام های گذشته، و فایل پیوست در که هنوز هم برای دانلود در دسترس است.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">منقضی %s</string>
     <string name="label_expiresIn">منقضی می شود در</string>
     <string name="label_FileNameHint">نام پرونده</string>
+    <string name="label_FindInstruct">نام را وارد کنید که می خواهید دیگران برای دیدن در هنگام برقراری ارتباط ایمن:</string>
     <string name="label_FirstName">نام</string>
-    <string name="label_Home">چک کردن آیتم های شما می خواهید برای به اشتراک گذاشتن و شیر \' شروع اوراق بهادار \' هنگامی که دیگران آماده به تبادل می باشد.</string>
+    <string name="label_Home">برای اضافه کردن و یا حذف اطلاعات تماس، اقلام می خواهید برای به اشتراک گذاشتن بررسی کنید، و شیر نام خود ضربه بزنید \'شروع اوراق بهادار\' هنگامی که دیگران آماده به ارز می باشد:</string>
     <string name="label_hometag">خانه</string>
     <string name="label_hours">%d ساعت</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud را فعال کنید. شیر \' انجام \' را فشار دهید که به پایان رسید.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">نسخه پشتیبان تهیه SafeSlinger به تاخیر افتاد</string>
     <string name="label_safeslingered">(تبادل مستقیم SafeSlinger)</string>
     <string name="label_SaveAccount">صرفه جویی در حساب</string>
-    <string name="label_SaveInstruct">تبادل کامل! اطلاعات عضو انتخاب را برای نجات به کتاب آدرس خود را:</string>
+    <string name="label_SaveInstruct">چک کردن تماس های شما می خواهید برای به روز رسانی در دفترچه آدرس خود، پس از آن شیر \'واردات\' برای ذخیره اطلاعات تماس امن:</string>
     <string name="label_seconds">%d ثانیه</string>
     <string name="label_selectLabel">انتخاب برچسب</string>
     <string name="label_SelectRecip">انتخاب گیرنده</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">کلید رسن</string>
     <string name="menu_TagListMessages">پیام</string>
     <string name="menu_UseAnother">یکی دیگر از استفاده</string>
+    <string name="menu_UseContactPerson">استفاده از تماس %s \'</string>
+    <string name="menu_UseNoContact">نام استفاده از فقط</string>
+    <string name="menu_UseProfilePerson">استفاده از نمایش \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">انتظار برای تایید از همه اعضای…</string>
     <string name="prog_CollectingOthersItems">انتظار برای همه کاربران برای پیوستن به…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">زبان های ارائه شده توسط:</string>
     <string name="text_RelatedSearchTerms">قوانین و مقررات مرتبط:</string>
     <string name="text_Requirements">مورد نیاز:\n1. باید در حداقل 2 دستگاه نصب شده است.\n2.اتصال به اینترنت باید فعال باشد.</string>
+    <string name="text_SourceCodeRepo">منبع باز: %s</string>
     <string name="text_WhatsNew">- رفع ثبات.</string>
 
     <string name="title_About">در حدود</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">خانه</string>
     <string name="title_MessageDetail">پیام</string>
     <string name="title_Messages">پیام</string>
-    <string name="title_MyIdentity">هویت من</string>
+    <string name="title_MyIdentity">شخصی تماس با</string>
     <string name="title_NotifyFileAvailable">پیام SafeSlinger موجود</string>
     <string name="title_NotifyMulFileAvailable">%d پیام های SafeSlinger موجود</string>
     <string name="title_passphrase">کلمه عبور</string>

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kontakt andmed vormindatud valesti.</string>
     <string name="error_WebCancelledByUser">Kasutaja tühistatud server taotluse.</string>
 
+    <string name="help_find">Kasutage seda ekraani, et määrata oma nime vahetada teistega. Puuduta \'Valmis\' nuppu, kui olete lõpetanud.</string>
     <string name="help_home">Vahetada identiteedi andmed, et kõik kasutajad on lähedal või telefoni teel. \' Alustada Exchange \'nuppu vahetavad ainultkontrollitud kontaktandmed.</string>
     <string name="help_identity_menu">\n\nVõite muuta isikuandmeid oma identiteeti selle ekraani puudutades nuppu oma nimi. See avab menüü, mis võimaldab teil \' Edit \' oma kontakt, \' Loo uus \' kontakt või \' kasutada muud kontaktid.</string>
     <string name="help_Messages">See ekraan kuvab kõik viimase sõnumeid ja manuseid, mis on veel saadaval allalaadimiseks.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">aegub %s</string>
     <string name="label_expiresIn">aegub</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Sisestage nimi, mida soovite teistele näha suheldes turvaliselt:</string>
     <string name="label_FirstName">Eesnimi</string>
-    <string name="label_Home">Kontrolli üksused, mida soovite jagada ning puudutage \' Alustada vahetus \' kui teised on valmis vahetama.</string>
+    <string name="label_Home">Puuduta oma nimi lisada või eemaldada kontaktandmed kontrollige üksused, mida soovite jagada, ja koputage \'Alustada vahetus\' kui teised on valmis vahetama:</string>
     <string name="label_hometag">Kodu</string>
     <string name="label_hours">%d tundi</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud on lubatud. Puuduta\' Valmis \' nuppu, kui olete lõpetanud.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup hilineb</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Säästa konto</string>
-    <string name="label_SaveInstruct">Exchange valmis! Valige kasutaja andmeid salvestada oma aadressiraamatusse:</string>
+    <string name="label_SaveInstruct">Kontrolli kontakte, mida soovite värskendada sinu aadressiraamatus, seejärel koputage Impordi \'salvestada turvaline kontaktid:</string>
     <string name="label_seconds">%d sekundit</string>
     <string name="label_selectLabel">Valige silt</string>
     <string name="label_SelectRecip">Vali adressaat</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Sõnumid</string>
     <string name="menu_UseAnother">Kasutage teist</string>
+    <string name="menu_UseContactPerson">Võtke \'%s\'</string>
+    <string name="menu_UseNoContact">Kasutage nime ainult</string>
+    <string name="menu_UseProfilePerson">Kasutage Profile \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">ootab kontrollimine kõigi liikmete…</string>
     <string name="prog_CollectingOthersItems">ootab kõiki kasutajaid liituma…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Keeled, mida pakuvad:</string>
     <string name="text_RelatedSearchTerms">Seotud mõisted:</string>
     <string name="text_Requirements">Nõuded:\n1. Tuleb paigaldada vähemalt 2 seadmeid.\n2. Internetiühendus peab olema aktiivne.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">- Stabiilsus parandusi.</string>
 
     <string name="title_About">Kohta</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Kodu</string>
     <string name="title_MessageDetail">Sõnum</string>
     <string name="title_Messages">Sõnumid</string>
-    <string name="title_MyIdentity">Minu identiteet</string>
+    <string name="title_MyIdentity">Personal Kontakt</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Sõnum Saadaval</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages Saadaval</string>
     <string name="title_passphrase">Passphrase</string>

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">საკონტაქტო მონაცემები ფორმატირებული არასწორად.</string>
     <string name="error_WebCancelledByUser">პროფაილი გაუქმდა სერვერზე მოთხოვნით.</string>
 
+    <string name="help_find">გამოიყენეთ ეს ეკრანზე თქვენი სახელი გაცვლა სხვები. ლიბერალიზაცია \'შესრულებულია\' ღილაკს, როდესაც დასრულდა.</string>
     <string name="help_home">გაცვლა პირადობის მონაცემებით, უზრუნველყონ ყველა მომხმარებლის მიმდებარე ან ტელეფონით. \' დასაწყისი Exchange \'ღილაკს გაცვლიან მხოლოდ გადამოწმებული საკონტაქტო მონაცემები.</string>
     <string name="help_identity_menu">\n\nთქვენ შესაძლებელია აგრეთვე შეცვალოს პერსონალური მონაცემების შესახებ თქვენი პიროვნება ამ ეკრანზე მიერ მოსმენების ღილაკს თქვენი სახელი. ეს არის მენიუ, რომელიც საშუალებას გაძლევთ \' Edit \' თქვენი საკონტაქტო, შექმნა ახალი \' კონტაქტის, ან გამოიყენეთ სხვა \' კონტაქტი.</string>
     <string name="help_Messages">ამ ეკრანზე აჩვენებს ყველა წარსულში შეტყობინებები და attachments, რომ ჯერ კიდევ ხელმისაწვდომია.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">იწურება %s</string>
     <string name="label_expiresIn">იწურება</string>
     <string name="label_FileNameHint">ფაილის სახელი</string>
+    <string name="label_FindInstruct">შეიყვანეთ სახელი გსურთ სხვები, როდესაც ურთიერთობისას უსაფრთხოდ:</string>
     <string name="label_FirstName">სახელი</string>
-    <string name="label_Home">შეამოწმეთ ნივთები გსურთ გაუზიაროს და ლიბერალიზაცია \' დასაწყისი Exchange \' როცა სხვები მზად ვართ, გაცვლა.</string>
+    <string name="label_Home">Tap თქვენი სახელი დამატება ან წაშლა საკონტაქტო მონაცემები, გადაამოწმოთ ელემენტი გსურთ გაუზიაროს, და ლიბერალიზაცია \'დასაწყისი Exchange\' როცა სხვები მზად ვართ გაცვლა:</string>
     <string name="label_hometag">მთავარი</string>
     <string name="label_hours">%d საათი</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ჩართულია. ლიბერალიზაცია \' შესრულებულია \' ღილაკს, როდესაც დასრულდა.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger სარეზერვო გადაიდო</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">გადავარჩინოთ ანგარიში</string>
-    <string name="label_SaveInstruct">გაცვლითი დაასრულეთ! აირჩიეთ წევრები მონაცემები გადარჩენა თქვენს მისამართზე წიგნაკი:</string>
+    <string name="label_SaveInstruct">შეამოწმეთ კონტაქტები გსურთ განახლება თქვენი მისამართი წიგნი, მაშინ ლიბერალიზაცია \'იმპორტი\' გადარჩენა უსაფრთხო კონტაქტები:</string>
     <string name="label_seconds">%d წამში</string>
     <string name="label_selectLabel">აირჩიეთ ეტიკეტების</string>
     <string name="label_SelectRecip">აირჩიეთ მიმღები</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">შეტყობინებები</string>
     <string name="menu_UseAnother">გამოიყენეთ სხვა</string>
+    <string name="menu_UseContactPerson">გამოიყენეთ Contact \'%s \'</string>
+    <string name="menu_UseNoContact">გამოყენების სახელი მხოლოდ</string>
+    <string name="menu_UseProfilePerson">გამოიყენეთ პროფილი \'%s \'</string>
 
     <string name="prog_CollectingOthersCommitVerify">ელოდება გადამოწმება ყველა წევრი…</string>
     <string name="prog_CollectingOthersItems">ელოდება ყველა მომხმარებლის შეუერთდეს…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">ენები გათვალისწინებული:</string>
     <string name="text_RelatedSearchTerms">დაკავშირებული პირობები:</string>
     <string name="text_Requirements">მოთხოვნები:\n1. უნდა იყოს დამონტაჟებული მინიმუმ 2 მოწყობილობები.\n2. ინტერნეტი უნდა იყოს აქტიური.</string>
+    <string name="text_SourceCodeRepo">ღია წყარო: %s</string>
     <string name="text_WhatsNew">- სტაბილურობის აფიქსირებს.</string>
 
     <string name="title_About">მომხმარებლის</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">მთავარი</string>
     <string name="title_MessageDetail">შეტყობინება</string>
     <string name="title_Messages">შეტყობინებები</string>
-    <string name="title_MyIdentity">ჩემი Identity</string>
+    <string name="title_MyIdentity">პერსონალური კონტაქტი</string>
     <string name="title_NotifyFileAvailable">SafeSlinger შეტყობინება საუზმით</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger შეტყობინებები საუზმით</string>
     <string name="title_passphrase">Passphrase</string>

@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">ទិន្នន័យ ទំនាក់ទំនងដែល ត្រូវបាន ធ្វើទ្រង់ទ្រាយ មិនត្រឹមត្រូវ។</string>
     <string name="error_WebCancelledByUser">អ្នកប្រើ បានបោះបង់ សំណើ ម៉ាស៊ីនបម្រើ។</string>
 
+    <string name="help_find">ប្រើអេក្រង់នេះដើម្បីកំណត់ឈ្មោះរបស់អ្នកដើម្បីផ្លាស់ប្តូរជាមួយអ្នកផ្សេង។ ប៉ះប៊ូតុង \'ធ្វើ \'ពេលបញ្ចប់។</string>
     <string name="help_home">ដើម្បីផ្លាស់ប្តូរ ទិន្នន័យ អត្តសញ្ញាណ ធានាបាននូវ អ្នកប្រើប្រាស់ ទាំងអស់ គឺមាន នៅក្បែរ ឬនៅលើ ទូរស័ព្ទ។ ប៊ូតុង \' ចាប់ផ្តើម ផ្លាស់ប្តូរ \' នឹង ផ្លាស់ប្តូរ តែទិន្នន័យដែល ទំនាក់ទំនង បានធីក ។</string>
     <string name="help_identity_menu">\n\nអ្នកក៏អាច ផ្លាស់ប្តូរ ទិន្នន័យផ្ទាល់ខ្លួន អំពី អត្តសញ្ញាណ របស់អ្នកនៅលើ អេក្រង់នេះ ដោយគ្រាន់តែប៉ះ លើប៊ូតុង ដែលមានឈ្មោះ របស់អ្នក។ ការ នេះនឹងបង្ហាញ ម៉ឺនុយ ដែលអនុញ្ញាតឱ្យអ្នក ទៅ \' កែសម្រួល \' ទំនាក់ទំនងរបស់អ្នក \' បង្កើតថ្មី \' ការទំនាក់ទំនង ឬ \' ប្រើ មួយផ្សេងទៀត \' ទំនាក់ទំនង មួយ។</string>
     <string name="help_Messages">អេក្រង់នេះ បង្ហាញ សារដែល កន្លងមក ទាំងអស់ហើយ ឯកសារភ្ជាប់ ដែល នៅតែ មានសម្រាប់ទាញយក ។</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">ផុតកំណត់ %s</string>
     <string name="label_expiresIn">ផុតកំណត់ក្នុង</string>
     <string name="label_FileNameHint">ឈ្មោះ ឯកសារ</string>
+    <string name="label_FindInstruct">បញ្ចូលឈ្មោះដែលអ្នកចង់អ្នកដទៃទៀតឱ្យមើលឃើញនៅពេលដែលការទំនាក់ទំនងមានសុវត្ថិភាព:</string>
     <string name="label_FirstName">ឈ្មោះ ដំបូង</string>
-    <string name="label_Home">ពិនិត្យមើល ធាតុ ដែលអ្នកចង់ ចែករំលែកនិង ទាញយក \' ចាប់ផ្តើម ផ្លាស់ប្តូរ \' នៅពេលដែល អ្នកដទៃទៀត គឺ ត្រៀមខ្លួនជាស្រេច ក្នុងការ ផ្លាស់ប្តូរ ។</string>
+    <string name="label_Home">ប៉ះឈ្មោះរបស់អ្នកដើម្បីបន្ថែមឬយកទិន្នន័យទំនាក់ទំនងពិនិត្យធាតុដែលអ្នកចង់ចែករំលែកនិងការប៉ះ \'ចាប់ផ្តើមផ្លាស់ប្តូរ\' នៅពេលដែលអ្នកដទៃទៀតគឺត្រៀមខ្លួនជាស្រេចដើម្បីការផ្លាស់ប្តូរ:</string>
     <string name="label_hometag">ទំព័រដើម</string>
     <string name="label_hours">%d ម៉ោង</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ត្រូវបានអនុញ្ញាត។ ប៉ះ ប៊ូតុង \' ធ្វើ \' ពេលបញ្ចប់។</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">ពន្យាពេល ការបម្រុងទុក SafeSlinger</string>
     <string name="label_safeslingered">(SafeSlinger ផ្លាស់ប្តូរ ដោយផ្ទាល់)</string>
     <string name="label_SaveAccount">រក្សាទុក គណនី</string>
-    <string name="label_SaveInstruct">ការផ្លាស់ប្តូរ បំពេញ! ជ្រើស ទិន្នន័យ ជាសមាជិក ដើម្បីរក្សាទុក ទៅកាន់សៀវភៅអាសយដ្ឋាន របស់អ្នក:</string>
+    <string name="label_SaveInstruct">ពិនិត្យមើលទំនាក់ទំនងដែលអ្នកចង់ធ្វើឱ្យទាន់សម័យនៅក្នុងសៀវភៅអាសយដ្ឋានរបស់អ្នកបន្ទាប់មកយក \'នាំចូល\' ដើម្បីរក្សាទុកការទំនាក់ទំនងសុវត្ថិភាព:</string>
     <string name="label_seconds">%d វិនាទី</string>
     <string name="label_selectLabel">ជ្រើស ស្លាក</string>
     <string name="label_SelectRecip">ជ្រើស អ្នកទទួល</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling គ្រាប់ចុច</string>
     <string name="menu_TagListMessages">សារ</string>
     <string name="menu_UseAnother">ប្រើ មួយផ្សេងទៀត</string>
+    <string name="menu_UseContactPerson">ប្រើទំនាក់ទំនង \'%s\'</string>
+    <string name="menu_UseNoContact">ការប្រើប្រាស់ឈ្មោះតែ</string>
+    <string name="menu_UseProfilePerson">ប្រើពត៌មាន \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">រង់ចាំ សម្រាប់ការផ្ទៀងផ្ទាត់ ពីសមាជិក ទាំងអស់…</string>
     <string name="prog_CollectingOthersItems">រង់ចាំ សម្រាប់អ្នកប្រើ ទាំងអស់ទៅ ចូលរួម…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">ភាសា ដែលបានផ្ដល់ ដោយ:</string>
     <string name="text_RelatedSearchTerms">លក្ខខណ្ឌទាក់ទងនឹង:</string>
     <string name="text_Requirements">តម្រូវការ:\n1 ។ ត្រូវតែបានដំឡើងនៅលើអប្បបរមានៃឧបករណ៍ 2 ។\n2 ។ ការតភ្ជាប់អ៊ីធឺណិតមួយដែលត្រូវតែសកម្ម។</string>
+    <string name="text_SourceCodeRepo">ប្រភពបើកចំហ: %s</string>
     <string name="text_WhatsNew">- ជួសជុលស្ថេរភាព។</string>
 
     <string name="title_About">អំពី</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">ទំព័រដើម</string>
     <string name="title_MessageDetail">សារ</string>
     <string name="title_Messages">សារ</string>
-    <string name="title_MyIdentity">អត្តសញ្ញាណ របស់ខ្ញុំ</string>
+    <string name="title_MyIdentity">ទំនាក់ទំនងផ្ទាល់ខ្លួន</string>
     <string name="title_NotifyFileAvailable">សារ SafeSlinger ដែលអាចប្រើបាន</string>
     <string name="title_NotifyMulFileAvailable">%d សារ SafeSlinger ដែលអាចប្រើបាន</string>
     <string name="title_passphrase">ឃ្លាសម្ងាត់</string>

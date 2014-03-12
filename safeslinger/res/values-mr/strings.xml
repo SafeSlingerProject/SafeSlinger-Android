@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">संपर्क डेटा चुकीचा स्वरुपित आली.</string>
     <string name="error_WebCancelledByUser">वापरकर्ता सर्व्हरशी विनंती रद्द केली.</string>
 
+    <string name="help_find">इतरांशी देवाणघेवाण करण्यासाठी आपले नाव निश्चित करण्यासाठी ही स्क्रीन वापरा. पूर्ण झाल्यावर \'पूर्ण झाले\' बटण टॅप करा.</string>
     <string name="help_home">ओळख डेटा अदलाबदल करण्यासाठी, सर्व वापरकर्त्यांसाठी जवळपास किंवा फोनवर असल्याची खात्री करा. \' सुरू एक्सचेंज \' बटण फक्त चेक संपर्क माहिती देवाणघेवाण होईल.</string>
     <string name="help_identity_menu">\n\nआपण आपल्या नावासह बटणावर टॅप करून या पडद्यावर आपली ओळख बद्दल वैयक्तिक डेटा बदलू शकता. हे आपण \' संपादन\' आपल्या संपर्क संपर्क \' नवीन तयार करा\', किंवा संपर्क \' आणखी वापरा\' करण्यास परवानगी देते मेनू प्रदर्शित होईल.</string>
     <string name="help_Messages">हा पडदा सर्व गेल्या संदेश, आणि तरीही डाउनलोड उपलब्ध आहेत संलग्नक दाखवतो.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">%s कालबाह्य</string>
     <string name="label_expiresIn">मध्ये कालबाह्य</string>
     <string name="label_FileNameHint">फाइल नाव</string>
+    <string name="label_FindInstruct">नाव प्रविष्ट करा आपण सुरक्षितपणे संप्रेषण करताना पाहण्यासाठी इतरांना इच्छा:</string>
     <string name="label_FirstName">प्रथम नाव</string>
-    <string name="label_Home">आपण सामायिक आणि \' एक्सचेंज सुरू \' टॅप इच्छित आयटम चेक इतरांना देवाणघेवाण करण्यासाठी सज्ज असतील तेव्हा.</string>
+    <string name="label_Home">जोडण्यास किंवा काढण्यास संपर्क डेटा, आपल्याला शेअर इच्छित आयटम तपासा, आणि टॅप आपले नाव टॅप \'एक्सचेंज सुरू\' इतरांना विनिमय करण्यासाठी सज्ज असताना:</string>
     <string name="label_hometag">घर</string>
     <string name="label_hours">%d तास</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud सक्षम आहे. पूर्ण झाल्यावर \' पूर्ण झाले \' बटण टॅप करा.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">विलंबित SafeSlinger बॅकअप</string>
     <string name="label_safeslingered">(SafeSlinger थेट एक्सचेंज)</string>
     <string name="label_SaveAccount">खाते जतन</string>
-    <string name="label_SaveInstruct">एक्सचेंज पूर्ण! आपल्या अॅड्रेस बुकमध्ये जतन करण्यासाठी सदस्य डेटा निवडा:</string>
+    <string name="label_SaveInstruct">सुरक्षित संपर्क जतन करण्यासाठी \'आयात\' टॅप नंतर, आपण आपल्या अॅड्रेस बुकमध्ये अद्यतनित करू इच्छित संपर्क तपासा:</string>
     <string name="label_seconds">%d सेकंद</string>
     <string name="label_selectLabel">निवडा लेबल</string>
     <string name="label_SelectRecip">निवडा प्राप्तकर्ता</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">गोफण की</string>
     <string name="menu_TagListMessages">संदेश</string>
     <string name="menu_UseAnother">आणखी वापरा</string>
+    <string name="menu_UseContactPerson">संपर्क \'%s\' वापरा</string>
+    <string name="menu_UseNoContact">वापरा नाव केवळ</string>
+    <string name="menu_UseProfilePerson">प्रोफाइल \'%s\' वापरा</string>
 
     <string name="prog_CollectingOthersCommitVerify">सर्व सदस्यांकडून सत्यापन प्रतीक्षेत…</string>
     <string name="prog_CollectingOthersItems">सर्व वापरकर्त्यांना सहभागी होण्यासाठी वाट…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">द्वारे प्रदान भाषा:</string>
     <string name="text_RelatedSearchTerms">संबंधित अटी:</string>
     <string name="text_Requirements">आवश्यकता:\n1. 2 साधने किमान प्रतिष्ठापीत करणे आवश्यक आहे.\n2. इंटरनेट कनेक्शन सक्रिय असणे आवश्यक आहे.</string>
+    <string name="text_SourceCodeRepo">ओपन सोअर्स: %s</string>
     <string name="text_WhatsNew">- स्थिरता निर्धारण.</string>
 
     <string name="title_About">विषयी</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">घर</string>
     <string name="title_MessageDetail">संदेश</string>
     <string name="title_Messages">संदेश</string>
-    <string name="title_MyIdentity">माझी ओळख</string>
+    <string name="title_MyIdentity">वैयक्तिक संपर्क</string>
     <string name="title_NotifyFileAvailable">उपलब्ध SafeSlinger संदेश</string>
     <string name="title_NotifyMulFileAvailable">उपलब्ध %d SafeSlinger संदेश</string>
     <string name="title_passphrase">सांकेतिक वाक्यांश</string>

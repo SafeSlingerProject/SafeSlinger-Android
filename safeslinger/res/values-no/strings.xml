@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Kontaktdata ble formatert feil.</string>
     <string name="error_WebCancelledByUser">Bruker avbrutt server forespørsel.</string>
 
+    <string name="help_find">Bruk denne skjermen til å legge inn navn for å utveksle med andre. Trykk på \'Done\'-knappen når du er ferdig.</string>
     <string name="help_home">Å utveksle identitetsdata, sikre at alle brukere er i nærheten eller på telefonen. The \' Begynn Exchange \'-knappen vil utveksle kun de sjekket kontaktdata.</string>
     <string name="help_identity_menu">\n\nDu kan også endre personopplysninger om din identitet på denne skjermen ved å trykke på knappen med navnet ditt. Dette vil vise en meny som lar deg Rediger kontakt din, \' Opprett ny \' kontakt, eller \'Bruk en annen \'kontakt.</string>
     <string name="help_Messages">Denne skjermen viser alle tidligere meldinger og vedlegg som fortsatt er tilgjengelige for nedlasting.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">utløper %s</string>
     <string name="label_expiresIn">utløper i</string>
     <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Skriv inn navnet du ønsker at andre skal se når vi kommuniserer sikkert:</string>
     <string name="label_FirstName">Fornavn</string>
-    <string name="label_Home">Kontroller elementene du ønsker å dele og trykk \' Begynn Exchange \' når andre er klar til å utveksle.</string>
+    <string name="label_Home">Klikk på navnet for å legge til eller fjerne kontaktdata, sjekke elementene du ønsker å dele, og trykk \'Begynn Exchange \'når andre er klare til utveksling:</string>
     <string name="label_hometag">Hjem</string>
     <string name="label_hours">%d timer</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud er aktivert. Trykk på\' Done\'-knappen når du er ferdig.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup forsinket</string>
     <string name="label_safeslingered">(SafeSlinger Direkte Exchange)</string>
     <string name="label_SaveAccount">Spar konto</string>
-    <string name="label_SaveInstruct">Utveksling Complete! Velg medlemsdata for å lagre til adresseboken:</string>
+    <string name="label_SaveInstruct">Sjekk kontaktene du ønsker å oppdatere i adresseboken, og trykk deretter på \'Import\' for å lagre sikre kontakter:</string>
     <string name="label_seconds">%d sekunder</string>
     <string name="label_selectLabel">Velg etiketten</string>
     <string name="label_SelectRecip">Velg mottaker</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Meldinger</string>
     <string name="menu_UseAnother">Bruk en annen</string>
+    <string name="menu_UseContactPerson">Bruk Kontakt \'%s\'</string>
+    <string name="menu_UseNoContact">Bruk Name Only</string>
+    <string name="menu_UseProfilePerson">Bruk profil \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">venter på bekreftelse fra alle medlemmer…</string>
     <string name="prog_CollectingOthersItems">venter for alle brukere til å delta…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Språk levert av:</string>
     <string name="text_RelatedSearchTerms">Relaterte ord:</string>
     <string name="text_Requirements">Krav:\n1. Må være installert på et minimum av 2 enheter.\n2. En Internett-tilkobling må være aktiv.</string>
+    <string name="text_SourceCodeRepo">åpen kildekode: %s</string>
     <string name="text_WhatsNew">- Stabilitet rettinger.</string>
 
     <string name="title_About">Om</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Hjem</string>
     <string name="title_MessageDetail">Melding</string>
     <string name="title_Messages">Meldinger</string>
-    <string name="title_MyIdentity">Min identitet</string>
+    <string name="title_MyIdentity">Personlig kontakt</string>
     <string name="title_NotifyFileAvailable">SafeSlinger melding Tilgjengelig</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Meldinger Tilgjengelige</string>
     <string name="title_passphrase">Passphrase</string>

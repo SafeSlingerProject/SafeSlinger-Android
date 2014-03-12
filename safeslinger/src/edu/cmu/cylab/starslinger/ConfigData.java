@@ -181,7 +181,9 @@ public class ConfigData {
         public static final String ALLOW_EXCH = "AllowExchRecip";
         public static final String ALLOW_INTRO = "AllowIntroRecip";
         public static final String CHANGE_PASS_PHRASE = "ChangePassPhrase";
+        public static final String CONTACT_KEYNAME_PREFIX = "Key";
         public static final String CONTACT_LOOKUP_KEY = "ContactLookupKey";
+        public static final String CONTACT_VALUE_PREFIX = "Value";
         public static final String CREATE_PASS_PHRASE = "CreatePassPhrase";
         public static final String CREATED = "Created";
         public static final String DIRS = "DirectoryStack";
@@ -194,6 +196,7 @@ public class ConfigData {
         public static final String FPATH = "FILE PATH";
         public static final String INTRO_NAME = "IntroName";
         public static final String MAX = "max";
+        public static final String MEMBER_DATA = "MemberData";
         public static final String MESSAGE_ROW_ID = "MessageRowId";
         public static final String NAME = "Name";
         public static final String PASS_PHRASE = "PassPhrase";
@@ -214,11 +217,11 @@ public class ConfigData {
         public static final String RESID_MSG = "ResIdMsg";
         public static final String RESID_TITLE = "ResIdTitle";
         public static final String RESULT_CODE = "ResultCode";
-        public static final String SELECTED_TOTAL = "SelectedTotal";
         public static final String TEXT_MESSAGE = "TextMessage";
         public static final String TEXT_MESSAGE1 = "TextMessage1";
         public static final String TEXT_MESSAGE2 = "TextMessage2";
         public static final String THUMBNAIL = "Thumbnail";
+        public static final String USER_DATA = "UserData";
         public static final String VERIFY_PASS_PHRASE = "VerifyPassPhrase";
     }
 

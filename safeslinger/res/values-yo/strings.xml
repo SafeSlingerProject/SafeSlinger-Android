@@ -155,6 +155,7 @@
     <string name="error_VcardParseFailure">Olubasọrọ data ti a pa ti ko tọ sii.</string>
     <string name="error_WebCancelledByUser">Olumulo pawonre olupin ba beere fun.</string>
 
+    <string name="help_find">Lo yi iboju lati ṣeto orukọ rẹ lati ṣe paṣipaarọ pẹlu awọn omiiran. Tẹ \'ṣee\' bọtini nigba ti pari.</string>
     <string name="help_home">Lati pa awọn idanimo data, rii daju gbogbo awọn olumulo ni o wa nitosi tabi lori foonu. Ni \' Bẹrẹ Exchange \' bọtini yoo pa awọn nikan ni ẹnikeji olubasọrọ data.</string>
     <string name="help_identity_menu">\n\nO tun le yi data ara ẹni nipa rẹ idanimo loju iboju yi nipa fifọwọ lori bọtini pẹlu orukọ rẹ. Eleyi yoo han si akojọ ašayan kan gbigba o si \' Ṣatunkọ \' rẹ olubasọrọ, \' Ṣẹda titun \' olubasọrọ, tabi \' Lo miran \' olubasọrọ kan.</string>
     <string name="help_Messages">Iboju yi han gbogbo awọn ti o ti kọja awọn ifiranṣẹ, ati awọn asomọ ti o ba wa ni ṣi wa fun gbigba.</string>
@@ -193,8 +194,9 @@
     <string name="label_expires">dopin %s</string>
     <string name="label_expiresIn">dopin ni</string>
     <string name="label_FileNameHint">Faili Orukọ</string>
+    <string name="label_FindInstruct">Tẹ orukọ ti o fẹ lati ri awọn miran nigbati o ba soro labeabo:</string>
     <string name="label_FirstName">Akọkọ Orukọ</string>
-    <string name="label_Home">Ṣayẹwo awọn ohun ti o fẹ lati pin ki o si tẹ \' Bẹrẹ Exchange \' nigba ti awọn miran ni o wa setan lati ṣe paṣipaarọ.</string>
+    <string name="label_Home">Tẹ orukọ rẹ lati fi awọn olubasọrọ tabi yọ data, ṣayẹwo awọn ohun ti o fẹ lati pin, ki o si tẹ \'Bẹrẹ Exchange\' nigba ti awọn miran ni o wa setan lati paṣipaarọ:</string>
     <string name="label_hometag">Ile</string>
     <string name="label_hours">%d wakati</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ti wa ni sise. Tẹ \' ṣee \' bọtini nigba ti pari.</string>
@@ -240,7 +242,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger afẹyinti leti</string>
     <string name="label_safeslingered">( SafeSlinger Dari awọn Exchange )</string>
     <string name="label_SaveAccount">Fi Account</string>
-    <string name="label_SaveInstruct">Exchange pari! Yan egbe data lati fipamọ si adirẹsi iwe rẹ:</string>
+    <string name="label_SaveInstruct">Ṣayẹwo awọn olubasọrọ ti o fẹ lati mu ninu rẹ adirẹsi iwe, ki o si tẹ ni kia kia \'wole\' ni aabo lati fi awọn olubasọrọ:</string>
     <string name="label_seconds">%d aaya</string>
     <string name="label_selectLabel">Yan aami</string>
     <string name="label_SelectRecip">Yan olugba</string>
@@ -297,6 +299,9 @@
     <string name="menu_TagExchange">Sling bötini</string>
     <string name="menu_TagListMessages">Awọn ifiranṣẹ</string>
     <string name="menu_UseAnother">Lo miran</string>
+    <string name="menu_UseContactPerson">Lo Kan \'%s\'</string>
+    <string name="menu_UseNoContact">Lo Orukọ nikan</string>
+    <string name="menu_UseProfilePerson">Lo Profaili \'%s\'</string>
 
     <string name="prog_CollectingOthersCommitVerify">nduro fun ayewo lati gbogbo awọn ọmọ ẹgbẹ…</string>
     <string name="prog_CollectingOthersItems">nduro fun gbogbo awọn olumulo lati da…</string>
@@ -344,6 +349,7 @@
     <string name="text_LanguagesProvidedBy">Awọn ede ti a pese nipa:</string>
     <string name="text_RelatedSearchTerms">Jẹmọ Ofin:</string>
     <string name="text_Requirements">Awọn Ibeere:\n1. Gbọdọ wa ni fi sori ẹrọ lori kan ti o kere 2 ẹrọ.\n2. Ẹya ayelujara ti isopọ gbodo je lọwọ.</string>
+    <string name="text_SourceCodeRepo">ìmọ orisun: %s</string>
     <string name="text_WhatsNew">- Iduroṣinṣin atunse.</string>
 
     <string name="title_About">Nipa</string>
@@ -359,7 +365,7 @@
     <string name="title_HomePanel">Ile</string>
     <string name="title_MessageDetail">Ifiranṣẹ</string>
     <string name="title_Messages">Awọn ifiranṣẹ</string>
-    <string name="title_MyIdentity">Mi Identity</string>
+    <string name="title_MyIdentity">Ti ara ẹni Kan</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Ifiranṣẹ to wanile</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Awọn ifiranṣẹ to wanile</string>
     <string name="title_passphrase">Kukuru</string>

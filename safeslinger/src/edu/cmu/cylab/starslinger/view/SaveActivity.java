@@ -1,5 +1,5 @@
 
-package edu.cmu.cylab.keyslinger.lib;
+package edu.cmu.cylab.starslinger.view;
 
 /*
  * The MIT License (MIT)
@@ -36,7 +36,10 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
 import android.accounts.OnAccountsUpdateListener;
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -60,14 +63,18 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
 
-import edu.cmu.cylab.keyslinger.lib.KsConfig.extra;
 import edu.cmu.cylab.starslinger.ConfigData;
+import edu.cmu.cylab.starslinger.ConfigData.extra;
+import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.model.AccountData;
+import edu.cmu.cylab.starslinger.model.ContactAccessor;
+import edu.cmu.cylab.starslinger.util.SSUtil;
 
-public class SaveActivity extends ContactActivity implements OnAccountsUpdateListener {
+public class SaveActivity extends BaseActivity implements OnAccountsUpdateListener {
 
     private final ContactAccessor mAccessor = ContactAccessor.getInstance();
-    private static final String TAG = KsConfig.LOG_TAG;
+    private static final String TAG = ConfigData.LOG_TAG;
     private static final int MENU_HELP = 1;
     public static final int RESULT_SELNONE = 23;
     public static final int RESULT_SAVE = 24;
@@ -92,6 +99,8 @@ public class SaveActivity extends ContactActivity implements OnAccountsUpdateLis
     private String mUnsyncType = null;
     private static final String UNSYNC_PKG = "unsynchronized";
     private TableLayout mTableLayoutSpin;
+    private ProgressDialog mDlgProg;
+    private String mProgressMsg = null;
 
     @Override
     public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
@@ -156,8 +165,8 @@ public class SaveActivity extends ContactActivity implements OnAccountsUpdateLis
         if (mMemData != null) {
             mContacts = parseVCards(mMemData);
 
-            SaveContactAdapter mAdapter = new SaveContactAdapter(SaveActivity.this, mContacts);
-            mListViewSaveContacts.setAdapter(mAdapter);
+            SaveContactAdapter adapter = new SaveContactAdapter(SaveActivity.this, mContacts);
+            mListViewSaveContacts.setAdapter(adapter);
 
             // restore list position
             mListViewSaveContacts.setSelectionFromTop(mListVisiblePos, mListTopOffset);
@@ -275,86 +284,83 @@ public class SaveActivity extends ContactActivity implements OnAccountsUpdateLis
         int exchanged = mContacts.size();
         for (int i = 0; i < exchanged; i++) {
 
-            final boolean checked = true;
-            if (checked) {
+            // save if selected
+            String contactLookupKey = null;
+            ContactStruct mem = mContacts.get(i);
 
-                // save if selected
-                String contactLookupKey = null;
-                ContactStruct mem = mContacts.get(i);
-
-                // create custom data for export to third party as well...
-                data.putExtra(extra.NAME + selected, mem.name.toString());
-                data.putExtra(extra.PHOTO + selected, mem.photoBytes);
-                if (mem.contactmethodList != null) {
-                    for (ContactMethod item : mem.contactmethodList) {
-                        if (item.kind == Contacts.KIND_IM && mAccessor.isCustomIm(item.label)) {
-                            data.putExtra(item.label + selected,
-                                    KsConfig.finalDecode(item.data.getBytes()));
-                        }
+            // create custom data for export to third party as well...
+            data.putExtra(extra.NAME + selected, mem.name.toString());
+            data.putExtra(extra.PHOTO + selected, mem.photoBytes);
+            if (mem.contactmethodList != null) {
+                for (ContactMethod item : mem.contactmethodList) {
+                    if (item.kind == Contacts.KIND_IM && mAccessor.isCustomIm(item.label)) {
+                        data.putExtra(item.label + selected,
+                                SSUtil.finalDecode(item.data.getBytes()));
                     }
                 }
-                if (isValidContact(mem)) {
-                    Name name = mem.name;
-                    if (name == null || name.toString() == null
-                            || TextUtils.isEmpty(name.toString().trim())) {
-                        errors.append("\n  Bad Name found");
+            }
+
+            boolean checked = SaveContactAdapter.isPositionChecked(i);
+            if (checked && isValidContact(mem)) {
+                Name name = mem.name;
+                if (name == null || name.toString() == null
+                        || TextUtils.isEmpty(name.toString().trim())) {
+                    errors.append("\n  Bad Name found");
+                    continue;
+                }
+                contactLookupKey = getContactLookupKeyByName(name.toString());
+
+                String rawContactId = null;
+                if (!TextUtils.isEmpty(contactLookupKey)) {
+                    String where = Data.LOOKUP_KEY + " = ?";
+                    String[] whereParameters = new String[] {
+                        contactLookupKey
+                    };
+                    Cursor c = getContentResolver().query(Data.CONTENT_URI, null, where,
+                            whereParameters, null);
+                    if (c != null) {
+                        while (c.moveToNext()) {
+                            rawContactId = c.getString(c.getColumnIndex(Data.RAW_CONTACT_ID));
+                        }
+                        c.close();
+                    }
+
+                    // for an update we have to be careful to prevent import
+                    // of duplicate data, so here we can query the aggregate
+                    // contact for equivalently matching contact fields and
+                    // prevent the import so we won't get duplicate phone
+                    // numbers for example, one with international prefix
+                    // and one without.
+                    mem = loadContactDataNoDuplicates(this, contactLookupKey, mem, true);
+                }
+
+                if (!TextUtils.isEmpty(rawContactId)) {
+
+                    if (!mAccessor.updateOldContact(mem, SaveActivity.this, mSelectedAcctType,
+                            mSelectedAcctName, rawContactId)) {
+                        errors.append("\n  ").append(name.toString()).append(" ")
+                                .append(getString(R.string.error_ContactUpdateFailed));
                         continue;
                     }
-                    contactLookupKey = getContactLookupKeyByName(name.toString());
-
-                    String rawContactId = null;
-                    if (!TextUtils.isEmpty(contactLookupKey)) {
-                        String where = Data.LOOKUP_KEY + " = ?";
-                        String[] whereParameters = new String[] {
-                            contactLookupKey
-                        };
-                        Cursor c = getContentResolver().query(Data.CONTENT_URI, null, where,
-                                whereParameters, null);
-                        if (c != null) {
-                            while (c.moveToNext()) {
-                                rawContactId = c.getString(c.getColumnIndex(Data.RAW_CONTACT_ID));
-                            }
-                            c.close();
-                        }
-
-                        // for an update we have to be careful to prevent import
-                        // of duplicate data, so here we can query the aggregate
-                        // contact for equivalently matching contact fields and
-                        // prevent the import so we won't get duplicate phone
-                        // numbers for example, one with international prefix
-                        // and one without.
-                        mem = loadContactDataNoDuplicates(this, contactLookupKey, mem, true);
-                    }
-
+                } else {
+                    rawContactId = mAccessor.insertNewContact(mem, mSelectedAcctType,
+                            mSelectedAcctName, SaveActivity.this);
                     if (!TextUtils.isEmpty(rawContactId)) {
-
-                        if (!mAccessor.updateOldContact(mem, SaveActivity.this, mSelectedAcctType,
-                                mSelectedAcctName, rawContactId)) {
-                            errors.append("\n  ").append(name.toString()).append(" ")
-                                    .append(getString(R.string.error_ContactUpdateFailed));
-                            continue;
-                        }
+                        contactLookupKey = getContactLookupKeyByContactId(rawContactId);
                     } else {
-                        rawContactId = mAccessor.insertNewContact(mem, mSelectedAcctType,
-                                mSelectedAcctName, SaveActivity.this);
-                        if (!TextUtils.isEmpty(rawContactId)) {
-                            contactLookupKey = getContactLookupKeyByContactId(rawContactId);
-                        } else {
-                            errors.append("\n  ").append(name.toString()).append(" ")
-                                    .append(getString(R.string.error_ContactInsertFailed));
-                            continue;
-                        }
+                        errors.append("\n  ").append(name.toString()).append(" ")
+                                .append(getString(R.string.error_ContactInsertFailed));
+                        continue;
                     }
-
-                    data.putExtra(extra.CONTACT_LOOKUP_KEY + selected, contactLookupKey);
                 }
-                selected++;
 
+                data.putExtra(extra.CONTACT_LOOKUP_KEY + selected, contactLookupKey);
             }
+
+            selected++;
         }
 
         // add redundant check for correct number of contacts imported...
-        data.putExtra(extra.SELECTED_TOTAL, selected);
         data.putExtra(extra.EXCHANGED_TOTAL, exchanged);
 
         if (errors.length() > 0) {
@@ -363,10 +369,12 @@ public class SaveActivity extends ContactActivity implements OnAccountsUpdateLis
             return;
         }
 
-        if (selected == 0)
-            setResultForParent(RESULT_SELNONE, data);
-        else
-            setResultForParent(RESULT_SAVE, data);
+        if (selected == 0) {
+            setResult(RESULT_SELNONE, data);
+        } else {
+            setResult(RESULT_SAVE, data);
+        }
+        finish();
     }
 
     private boolean isValidContact(ContactStruct mem) {
@@ -380,8 +388,15 @@ public class SaveActivity extends ContactActivity implements OnAccountsUpdateLis
         switch (id) {
             case DIALOG_HELP:
                 return xshowHelp(SaveActivity.this, args).create();
+            case DIALOG_QUESTION:
+                return xshowQuestion(SaveActivity.this, args).create();
         }
         return super.onCreateDialog(id);
+    }
+
+    @Override
+    public void onBackPressed() {
+        showQuestion(getString(R.string.ask_QuitConfirmation));
     }
 
     @Override
@@ -478,5 +493,68 @@ public class SaveActivity extends ContactActivity implements OnAccountsUpdateLis
         // save selected
         ConfigData.savePrefAccountName(this, mSelectedAcctName);
         ConfigData.savePrefAccountType(this, mSelectedAcctType);
+    }
+
+    private void showQuestion(String msg) {
+        Bundle args = new Bundle();
+        args.putString(extra.RESID_MSG, msg);
+        if (!isFinishing()) {
+            removeDialog(DIALOG_QUESTION);
+            showDialog(DIALOG_QUESTION, args);
+        }
+    }
+
+    private AlertDialog.Builder xshowQuestion(Activity act, Bundle args) {
+        String msg = args.getString(extra.RESID_MSG);
+        MyLog.i(TAG, msg);
+        AlertDialog.Builder ad = new AlertDialog.Builder(act);
+        ad.setTitle(R.string.title_Question);
+        ad.setMessage(msg);
+        ad.setCancelable(false);
+        ad.setPositiveButton(R.string.btn_Yes, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+                setResult(RESULT_CANCELED);
+                finish();
+            }
+        });
+        ad.setNegativeButton(R.string.btn_No, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        return ad;
+    }
+
+    private void showProgress(String msg, boolean indeterminate) {
+        MyLog.i(TAG, msg);
+        mDlgProg = new ProgressDialog(this);
+        mDlgProg.setProgressStyle(indeterminate ? ProgressDialog.STYLE_SPINNER
+                : ProgressDialog.STYLE_HORIZONTAL);
+        mDlgProg.setMessage(msg);
+        mProgressMsg = msg;
+        mDlgProg.setCancelable(true);
+        mDlgProg.setIndeterminate(indeterminate);
+        mDlgProg.setProgress(0);
+        mDlgProg.show();
+    }
+
+    private void showProgressUpdate(int value, String msg) {
+        if (mDlgProg != null) {
+            mDlgProg.setProgress(value);
+            if (msg != null) {
+                mDlgProg.setMessage(msg);
+            }
+        }
+    }
+
+    private void hideProgress() {
+        if (mDlgProg != null) {
+            mDlgProg.dismiss();
+        }
     }
 }
