@@ -1085,14 +1085,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             }
         }
 
-        String pass = SafeSlinger.getCachedPassPhrase(ConfigData
-                .loadPrefKeyIdString(getApplicationContext()));
-        if (TextUtils.isEmpty(pass)) {
-            if (!SafeSlinger.isPassphraseOpen()) {
-                showPassPhrase(false, false);
-            }
+        if (showPassphraseWhenExpired()) {
             return;
         }
+
         if (recip == null) {
             showNote(R.string.error_InvalidRecipient);
             restart();
@@ -1485,12 +1481,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 }
             }
 
-            String pass = SafeSlinger.getCachedPassPhrase(ConfigData
-                    .loadPrefKeyIdString(getApplicationContext()));
-            if (TextUtils.isEmpty(pass)) {
-                if (!SafeSlinger.isPassphraseOpen()) {
-                    showPassPhrase(false, false);
-                }
+            if (showPassphraseWhenExpired()) {
                 return;
             }
         }
@@ -2308,8 +2299,9 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         super.onWindowFocusChanged(hasFocus);
 
         // require pass on wake...
-        if (hasFocus)
+        if (hasFocus) {
             showPassphraseWhenExpired();
+        }
     }
 
     @Override
@@ -2323,17 +2315,20 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         showPassphraseWhenExpired();
     }
 
-    private void showPassphraseWhenExpired() {
+    private boolean showPassphraseWhenExpired() {
         String contactName = ConfigData.loadPrefContactName(getApplicationContext());
         if (CryptTools.existsSecretKey(getApplicationContext()) && !TextUtils.isEmpty(contactName)) {
 
             String pass = SafeSlinger.getCachedPassPhrase(ConfigData
                     .loadPrefKeyIdString(getApplicationContext()));
             if (TextUtils.isEmpty(pass)) {
-                if (!SafeSlinger.isPassphraseOpen())
+                if (!SafeSlinger.isPassphraseOpen()) {
                     showPassPhrase(false, false);
+                    return true;
+                }
             }
         }
+        return false;
     }
 
     @Override

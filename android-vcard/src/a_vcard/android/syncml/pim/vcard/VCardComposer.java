@@ -359,6 +359,9 @@ public class VCardComposer {
         if (phoneTypeMap.containsKey(phoneType)) {
             typeStr = phoneTypeMap.get(phoneType);
         } else if (phoneType == Contacts.Phones.TYPE_CUSTOM) {
+            if (phone.label == null) {
+                return "";
+            }
             label = phone.label.toUpperCase();
             if (phoneTypes.contains(label) || label.startsWith("X-")) {
                 typeStr = label;
