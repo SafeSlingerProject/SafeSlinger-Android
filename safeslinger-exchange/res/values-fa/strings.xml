@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">ترک ؟ آیا مطمئن هستید؟</string>
+
+    <string name="btn_Match">بعد</string>
+    <string name="btn_NoMatch">بدون در نظر گرفتن</string>
+
+    <string name="choice_NumUsers">کاربران %d</string>
+
+    <string name="error_AllMembersMustUpgrade">برخی از اعضای با استفاده از نسخه قدیمی تر و همه اعضای حداقل باید استفاده %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">همه اعضا باید ارتقاء داده شده، برخی از آنها با استفاده از فرمت های قدیمی تر فشار ثبت نام.</string>
+    <string name="error_CorrectYourInternetConnection">اینترنت در دسترس نیست ، تنظیمات خود را چک کنید.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">فاصله تبادل بیش از حد. دوباره آغاز ارز.</string>
+    <string name="error_HttpCode">خطا در سرور HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">داده های نادرست موجود در ارز. دوباره آغاز ارز.</string>
+    <string name="error_InvalidCommonUserId">لطفا یک عدد صحیح مثبت را وارد کنید.</string>
+    <string name="error_LocalGroupCommitDiffer">شما تفاوت در عبارات را گزارش کرده اند. دوباره آغاز ارز.</string>
+    <string name="error_MinUsersRequired">حداقل %d عضو ملزم به تبادل اطلاعات.</string>
+    <string name="error_MoreDataThanUsers">داده های غیر منتظره که در ارز. دوباره آغاز ارز.</string>
+    <string name="error_NoWordListSelected">شما باید یکی از عبارات قبل از اقدام انتخاب کنید.</string>
+    <string name="error_OtherGroupCommitDiffer">کسی گزارش تفاوت در عبارات. دوباره آغاز ارز.</string>
+    <string name="error_OutOfMemoryError">حافظه بسیار کم است برای تکمیل این عملیات است.</string>
+    <string name="error_ServerAppMessage">سرور پیام: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">سرور پیام: \'%s\'</string>
+    <string name="error_ServerNotResponding">هیچ پاسخی از سرور.</string>
+    <string name="error_TimeoutWaitingForAllMembers">پایان زمان انتظار برای برخی از اعضای گروه به اضافه کردن اطلاعات.</string>
+    <string name="error_WebCancelledByUser">کاربر لغو درخواست سرور.</string>
+
+    <string name="help_size">تعداد زیادی از مردم که در حال تلاش برای تبادل اطلاعات با هم و فشار \' OK \' را انتخاب کنید.</string>
+    <string name="help_userid">این تعداد در این صفحه نمایش استفاده می شود برای ایجاد یک گروه منحصر به فرد از کاربران. بررسی اعداد بر روی تمام کاربران OK \' \' صفحه نمایش ، پس از آن همه کاربران باید به همان تعداد پایین ترین و مطبوعات را وارد کنید.</string>
+    <string name="help_verify">در حال حاضر، شما باید یکی از این عبارات 3 کلمه با تمام کاربران هماهنگ باشد. هر کاربر باید که عبارت معمول همان ، و مطبوعات \' بعدی \' را انتخاب کنید.</string>
+
+    <string name="label_NumericModeHint">غیر انگلیسی</string>
+    <string name="label_PromptInstruct">این عدد استفاده می شود برای ایجاد یک گروه منحصر به فرد از کاربران. مقایسه ، و سپس وارد کمترین تعداد در میان همه کاربران.</string>
+    <string name="label_ReceivedNItems">%d مورد دریافت</string>
+    <string name="label_UserIdHint">پایین ترین</string>
+    <string name="label_VerifyInstruct">همه تلفن باید یکی از عبارات 3 کلمه. مقایسه ، و سپس عبارت تطبیق انتخاب کنید.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">انتظار برای تایید از همه اعضای…</string>
+    <string name="prog_CollectingOthersItems">انتظار برای همه کاربران برای پیوستن به…</string>
+    <string name="prog_ConstructingGroupKey">ساخت کلید گروه…</string>
+    <string name="prog_RequestingUserId">درخواست عضویت در…</string>
+
+    <string name="title_size">چگونه بسیاری از کاربران در تبادل ؟</string>
+    <string name="title_userid">گروه بندی</string>
+    <string name="title_verify">تایید</string>
+
+</resources>

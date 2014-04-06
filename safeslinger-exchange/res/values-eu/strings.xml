@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Irten? Ziur zaude?</string>
+
+    <string name="btn_Match">Hurrengo</string>
+    <string name="btn_NoMatch">No Match</string>
+
+    <string name="choice_NumUsers">%d erabiltzaile</string>
+
+    <string name="error_AllMembersMustUpgrade">Kide batzuk bertsio zaharrago bat erabiltzen dira, kide guztien gutxienez erabili behar %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Kide guztiak berritzea behar, batzuk bultza erregistroa formatuak zaharragoak erabiliz.</string>
+    <string name="error_CorrectYourInternetConnection">Internet ez dago, egiaztatu zure ezarpenak.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Truke denbora-muga gainditu da. Berriro hasiko da trukatzea.</string>
+    <string name="error_HttpCode">Zerbitzari HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Okerrak datuak truke aurkitu. Berriro hasiko da trukatzea.</string>
+    <string name="error_InvalidCommonUserId">Mesedez idatzi zenbaki oso bat.</string>
+    <string name="error_LocalGroupCommitDiffer">Esaldi diferentzia bat jakinarazi dute duzu. Berriro hasiko da trukatzea.</string>
+    <string name="error_MinUsersRequired">%d kidek, gutxienez, datuak trukatzeko beharrezkoak dira.</string>
+    <string name="error_MoreDataThanUsers">Ustekabeko datuak truke aurkitu. Berriro hasiko da trukatzea.</string>
+    <string name="error_NoWordListSelected">Esaldi bat hautatu behar duzu jarraitu aurretik.</string>
+    <string name="error_OtherGroupCommitDiffer">Norbaitek esaldi diferentzia bat du. Berriro hasiko da trukatzea.</string>
+    <string name="error_OutOfMemoryError">Txikiegia memoria eragiketa hau osatzeko.</string>
+    <string name="error_ServerAppMessage">Zerbitzari Mezua: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Zerbitzari Mezua: \'%s\'</string>
+    <string name="error_ServerNotResponding">Ez dago erantzunik zerbitzaritik.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout talde kide batzuk datuak gehitzeko zain.</string>
+    <string name="error_WebCancelledByUser">Erabiltzaileak bertan behera utzi zerbitzari eskaera.</string>
+
+    <string name="help_size">Hautatu direnek datuak elkarrekin trukatzeko eta \'Ados\' sakatu saiatu diren pertsonen kopurua.</string>
+    <string name="help_userid">Pantaila honetan zenbaki hau erabiltzaileen talde berezia sortzeko erabiltzen da. Berrikusi erabiltzaile guztietara zenbakiak Ados \' \' pantailak, ondoren erabiltzaile guztien kopurua txikiena bera idatzi eta sakatu behar du \'.</string>
+    <string name="help_verify">Orain, 3-hitza esaldi horiek bat etorri behar duzu erabiltzaile guztiekin. Erabiltzaile bakoitzak esaldi komun bera, eta sakatu \'Hurrengoa\' hautatu behar.</string>
+
+    <string name="label_NumericModeHint">Ez ingelesez</string>
+    <string name="label_PromptInstruct">Zenbaki hau erabiltzaileen talde berezia sortzeko erabiltzen da. Alderatu, eta gero idatzi erabiltzaile guztien artean kopuru txikiena.</string>
+    <string name="label_ReceivedNItems">%d elementuak jaso</string>
+    <string name="label_UserIdHint">Txikiena</string>
+    <string name="label_VerifyInstruct">Telefono guztiek 3 hitzeko esaldi bat etorri behar dute. Alderatu, eta ondoren jaso bat datorren esaldia.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">egiaztatze zain kideak guztietatik…</string>
+    <string name="prog_CollectingOthersItems">egiteko erabiltzaile guztiei batzeko zain…</string>
+    <string name="prog_ConstructingGroupKey">Taldeko kode eraikitzen…</string>
+    <string name="prog_RequestingUserId">partaidetza eskatzen…</string>
+
+    <string name="title_size">Zenbat erabiltzaile trukea?</string>
+    <string name="title_userid">Taldekatze</string>
+    <string name="title_verify">Egiaztatzeko</string>
+
+</resources>

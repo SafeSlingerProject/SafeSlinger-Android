@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Çıxın? Siz əminsinizmi?</string>
+
+    <string name="btn_Match">Sonrakı</string>
+    <string name="btn_NoMatch">No Match</string>
+
+    <string name="choice_NumUsers">%d users</string>
+
+    <string name="error_AllMembersMustUpgrade">Bəzi üzvləri eski bir versiyasını istifadə; bütün üzvləri ən azı %s istifadə etməlidirlər.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Bütün üzvləri bəzi köhnə push qeydiyyat format istifadə olunur, yükseltmek lazımdır.</string>
+    <string name="error_CorrectYourInternetConnection">Mövcud deyil Internet, ayarlarınızı kontrol.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange fasiləsi ötüb. Yenidən mübadiləsi başlayın.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Mübadilə aşkar yanlış data. Yenidən mübadiləsi başlayın.</string>
+    <string name="error_InvalidCommonUserId">Bir müsbət tam daxil edin.</string>
+    <string name="error_LocalGroupCommitDiffer">Siz ifadələr bir fərq bildirilmiştir. Yenidən mübadiləsi başlayın.</string>
+    <string name="error_MinUsersRequired">%d üzvlərinin minimum məlumat mübadiləsi üçün tələb olunur.</string>
+    <string name="error_MoreDataThanUsers">Mübadilə aşkar gözlənilməz data. Yenidən mübadiləsi başlayır.</string>
+    <string name="error_NoWordListSelected">Siz davam əvvəl söz birini seçməlisiniz.</string>
+    <string name="error_OtherGroupCommitDiffer">Biri ifadələr bir fərq üzvlük. Yenidən mübadiləsi başlayın.</string>
+    <string name="error_OutOfMemoryError">Yaddaş bu əməliyyatı başa çatdırmaq üçün çox aşağıdır.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Server heç bir cavab.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Bir qrup üzvləri məlumat əlavə etmək üçün gözləyir fasiləsi.</string>
+    <string name="error_WebCancelledByUser">İstifadəçi server sorğu ləğv.</string>
+
+    <string name="help_size">\'OK \' Birlikdə məlumat mübadiləsi və basın cəhd edən insanların sayı seçin.</string>
+    <string name="help_userid">Bu ekranda bu sayı istifadəçilərin unikal qrup yaratmaq üçün istifadə olunur. Bütün istifadəçilərin nömrələri nəzərdən \'OK\' ekranlarında, sonra bütün istifadəçilər eyni aşağı sayı və basın daxil olmalıdır.</string>
+    <string name="help_verify">İndi bütün istifadəçilər bu 3-söz ifadələr biri uyğun olmalıdır. Hər bir istifadəçi eyni ortaq söz və mətbuat \' Sonrakı\' seçmelisiniz.</string>
+
+    <string name="label_NumericModeHint">Qeyri-English</string>
+    <string name="label_PromptInstruct">Bu sayı istifadəçilər bir unikal qrup yaratmaq üçün istifadə olunur. Müqayisə və sonra bütün istifadəçilər arasında ən aşağı nömrəsini daxil edin.</string>
+    <string name="label_ReceivedNItems">%d maddələr qəbul</string>
+    <string name="label_UserIdHint">En Düşük</string>
+    <string name="label_VerifyInstruct">Bütün telefonlar Bütün telefonlar 3-söz ifadələr biri uyğun olmalıdır. Müqayisə, və sonra uyğun söz seçin.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">bütün üzvlərinin yoxlama gözləyir…</string>
+    <string name="prog_CollectingOthersItems">bütün istifadəçilər qoşulmaq üçün gözləyir…</string>
+    <string name="prog_ConstructingGroupKey">qrup düyməsini tikintisi…</string>
+    <string name="prog_RequestingUserId">üzvlük tələb…</string>
+
+    <string name="title_size">Necə bir çox istifadəçilər mübadiləsi?</string>
+    <string name="title_userid">Qruplaşdırma</string>
+    <string name="title_verify">Yoxlamaq</string>
+
+</resources>

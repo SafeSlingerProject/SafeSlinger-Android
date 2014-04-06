@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">ສົ່ງ ເຊື້ອເຊີນ ການເຊື່ອມຕໍ່ ກັບ…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup ເປັນຜູ້ພິການ. ທ່ານຕ້ອງການ ປັບ ຄ່າ ຮອງ ແລະຮັກສາ ການເຕືອນ ນີ້?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s ມີ ອຸປະກອນ ບໍ່ດົນມານີ້ ທີ່ສໍາຄັນຫຼື, ທ່ານ ແນ່ໃຈວ່າທ່ານ ຕ້ອງການນໍາໃຊ້ ນີ້ ຂຶ້ນ?</string>
+    <string name="ask_FileExistsOverwrite">%s ຊື່ ໄຟລ໌ ແລ້ວ. ທັບ?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">ໂດຍບໍ່ມີການ ບັນຊີ ກູໂກ ທ່ານພຽງແຕ່ ຈະສາມາດ ສົ່ງ, ບໍ່ ໄດ້ຮັບຂໍ້ຄວາມ. ທ່ານຕ້ອງການ ເພີ່ມ ບັນຊີ ກູໂກ?</string>
+    <string name="ask_SendErrorData">ພວກເຮົາຕ້ອງການ ຄວາມຊ່ວຍເຫຼືອ ຂອງທ່ານ ປັບປຸງ SafeSlinger. ທ່ານຢາກຈະ ອັດຕະໂນມັດ ສົ່ງ ຜິດພາດ ກັບ ພວກເຮົາ?</string>
+
+    <string name="btn_Accept">ຍອມຮັບ</string>
+    <string name="btn_BeginExchangeProximity">ເລີ່ມຕົ້ນ ການແລກປ່ຽນ</string>
+    <string name="btn_Cancel">ຍົກເລີກການ</string>
+    <string name="btn_Close">ປິດ</string>
+    <string name="btn_Continue">ສືບຕໍ່ການ</string>
+    <string name="btn_discard">ຖິ້ມ</string>
+    <string name="btn_Done">ເຮັດ</string>
+    <string name="btn_Exit">ການທ່ອງທ່ຽວ</string>
+    <string name="btn_Import">ການນໍາເຂົ້າ</string>
+    <string name="btn_Introduce">ແນະນໍາ</string>
+    <string name="btn_No">ບໍ່ມີ</string>
+    <string name="btn_NotRemind">ລືມ</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">ປະຕິເສດ</string>
+    <string name="btn_Remind">ເຕືອນໃຈ</string>
+    <string name="btn_Save">ຊ່ວຍປະຢັດ</string>
+    <string name="btn_SelectFile">ຕື່ມການ ຄັດຕິດ</string>
+    <string name="btn_SendFile">ສົ່ງ</string>
+    <string name="btn_Yes">ແມ່ນແລ້ວ</string>
+
+    <string name="choice_10mins">10 ນາທີ</string>
+    <string name="choice_1hour">1 ຊົ່ວໂມງ</string>
+    <string name="choice_1min">1 ນາທີ</string>
+    <string name="choice_20mins">20 ນາທີ</string>
+    <string name="choice_2hours">2 ຊົ່ວໂມງ</string>
+    <string name="choice_3mins">3 ນາທີ</string>
+    <string name="choice_40mins">40 ນາທີ</string>
+    <string name="choice_4hours">4 ຊົ່ວໂມງ</string>
+    <string name="choice_5mins">5 ນາທີ</string>
+    <string name="choice_8hours">8 ຊົ່ວໂມງ</string>
+    <string name="choice_auto_storage">ການເກັບຮັກສາ ໄວ້ໃນຕອນຕົ້ນ</string>
+    <string name="choice_external_storage">ການເກັບຮັກສາ ຈາກພາຍນອກ</string>
+    <string name="choice_internal_storage">ການເກັບຮັກສາ ພາຍໃນປະເທດ</string>
+    <string name="choice_nolimit">ບໍ່ມີ ຂອບເຂດຈໍາກັດ</string>
+    <string name="choice_SaveDirectory">ນອກ ລະບົບ</string>
+    <string name="choice_SaveFile">ຊ່ວຍປະຢັດ ໄຟລ໌</string>
+    <string name="choice_Up">Up</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">ສະມາຊິກ ທັງຫມົດຕ້ອງໄດ້ ຍົກລະດັບ, ບາງຄົນກໍ່ຖືກ ນໍາໃຊ້ຮູບແບບ ທີ່ສໍາຄັນ ຂຶ້ນໄປ.</string>
+    <string name="error_AudioPlayerDecodeError">ສຽງ ຜິດພາດ decoding ຜູ້ນ.</string>
+    <string name="error_AudioPlayerError">ບໍ່ ສາມາດຫຼິ້ນ ການບັນທຶກການ.</string>
+    <string name="error_AudioRecorderEncodeError">ສຽງ ຄວາມຜິດພາດ ລະບົບພາສາ ທີ່ບັນທຶກ.</string>
+    <string name="error_AudioRecorderPermissionError">ການອະນຸຍາດ Microphone ຕ້ອງການ. ກະລຸນາ ໄປ iOS ຕັ້ງ ເພື່ອໃຫ້ສາມາດ ອະນຸຍາດ Microphone.</string>
+    <string name="error_BackupNotFound">ຮອງ ບໍ່ມີ ການ ປະຕິສັງຂອນ.</string>
+    <string name="error_BackupNotSupportedDevice">ອຸປະກອນ ບໍ່ໄດ້ ສະຫນັບສະຫນູນ ການຟື້ນຟູ ຮອງ.</string>
+    <string name="error_BadCopyProtectUpgrade">ເນື່ອງຈາກ bug ໃນ Android 4.1, ທ່ານຈະ ມີ ຖອນການຕິດຕັ້ງ ແລະ reinstall SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">A ບັນຊີ ກູໂກ ແມ່ນຕ້ອງການ. ກະລຸນາ ເປີດ ບັນຊີຄຸ້ມຄອງ ແລະເພີ່ມ ບັນຊີ ຂອງກູໂກ.</string>
+    <string name="error_C2DMRegAuthenticationFailed">ການຈົດທະບຽນ ບໍ່ authenticated, ກະລຸນາ retry ຄູ່ມື ຕໍ່ມາ.</string>
+    <string name="error_C2DMRegInvalidSender">ການຈົດທະບຽນ ແມ່ນ ບໍ່ ມີສໍາລັບການ ສະບັບ ນີ້, ກະລຸນາ ກວດເບິ່ງສໍາລັບ ສະບັບປັບປຸງ.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">ການຈົດທະບຽນ ອຸປະກອນ ບໍ່ຖືກຕ້ອງ ກັບກູໂກ. ອຸປະກອນນີ້ ບໍ່ໄດ້ ໃນປະຈຸບັນ ສະຫນັບສະຫນູນ ຂໍ້ຄວາມ ການຊຸກຍູ້.</string>
+    <string name="error_C2DMRegServiceNotAvailable">ການບໍລິການ ຈົດທະບຽນ ການຊຸກຍູ້ ບໍ່ມີ ຕາຕະລາງການ retry ໃນ %d ວິນາທີ.</string>
+    <string name="error_C2DMRegTooManyRegistrations">ຄໍາຮ້ອງສະຫມັກ ຈໍານວນຫຼາຍ ກໍ່ໄດ້ຖືກ ຈົດທະບຽນ ສໍາລັບການ ຊຸກຍູ້. ກະລຸນາ ຖອນການຕິດຕັ້ງ ຄໍາຮ້ອງສະຫມັກ ອື່ນໆ ແລະ retry.</string>
+    <string name="error_CannotSendEmptyFile">ບໍ່ສາມາດ ສົ່ງ ເປັນ ການຕິດ ເປົ່າຫວ່າງ.</string>
+    <string name="error_CannotSendFilesOver">ບໍ່ສາມາດ ສົ່ງ ໄຟລ໌ແນບ ຫຼາຍກ່ວາ %d ໄບຕ໌ ໃນຂະຫນາດ.</string>
+    <string name="error_CannotSendNullFile">ບໍ່ສາມາດ ສົ່ງ ໄດ້ ຕິດ return NULL ກັບ.</string>
+    <string name="error_contactCreationFailure">ການສ້າງ ການພົວພັນ ສົບຜົນສໍາເລັດ.</string>
+    <string name="error_ContactInsertFailed">ໃສ່ ຕິດຕໍ່ພົວພັນ ສົບຜົນສໍາເລັດ.</string>
+    <string name="error_ContactNameMissing">ການພົວພັນ ນີ້ແມ່ນໄດ້ຖືກ ຫາຍ ຊື່, ກະລຸນາ ດັດແກ້.</string>
+    <string name="error_ContactNameMissing2">ການພົວພັນ ນີ້ແມ່ນໄດ້ຖືກ ຫາຍ ຊື່, ກະລຸນາ reselect.</string>
+    <string name="error_ContactUpdateFailed">ຕິດຕໍ່ ປັບປຸງໃຫ້ທັນ ສົບຜົນສໍາເລັດ.</string>
+    <string name="error_couldNotExtractPrivateKey">ບໍ່ສາມາດ ສະກັດ ທີ່ສໍາຄັນ ຂອງເອກະຊົນ.</string>
+    <string name="error_FeatureIsNotSupport">%1$s ບໍ່ໄດ້ ສະຫນັບສະຫນູນ ກ່ຽວກັບການ %2$s ຢູ່ໃນເວລາ ນີ້.</string>
+    <string name="error_FileSave">ບໍ່ສາມາດ ທີ່ຈະ ຊ່ວຍປະຢັດ %s.</string>
+    <string name="error_FileStorageUnavailable">ການເກັບຮັກສາ ເອກະສານ ແມ່ນ ບໍ່ມີ.</string>
+    <string name="error_InvalidContactName">ຊື່ ການພົວພັນ ຖືກຕ້ອງ ແມ່ນຕ້ອງການ.</string>
+    <string name="error_InvalidIncomingMessage">ບໍ່ດີ ຮູບແບບ ຂໍ້ຄວາມ ມາ.</string>
+    <string name="error_InvalidMsg">ຮູບແບບ ຂໍ້ຄວາມ ທີ່ບໍ່ດີ.</string>
+    <string name="error_InvalidRecipient">ຜູ້ຮັບ ບໍ່ຖືກຕ້ອງ.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">ຮູບແບບ ທີ່ສໍາຄັນ ຂອງຫມູ່ເພື່ອນ ບໍ່ຖືກ.</string>
+    <string name="error_MessageSignatureVerificationFails">ການຢັ້ງຢືນ ລາຍເຊັນ ສົບຜົນສໍາເລັດ.</string>
+    <string name="error_minPassphraseRequire">Passphrases ຮຽກຮ້ອງໃຫ້ມີ ຢ່າງຫນ້ອຍ %d ລັກສະນະ.</string>
+    <string name="error_MissingNdk">SafeSlinger ບໍ່ໄດ້ ການກວດສອບ ສະຫນັບສະຫນູນ NDK ກ່ຽວກັບ ອຸປະກອນນີ້, ຊຶ່ງຈໍາເປັນຕ້ອງ.</string>
+    <string name="error_MultipleSendNotSupported">ເຈົ້າຍັງບໍ່ໄດ້ ພະຍາຍາມ ເພື່ອສົ່ງ ລາຍການລາຍການ ທີ່ຫຼາກຫຼາຍ. ໃນເວລານີ້, SafeSlinger ພຽງແຕ່ ສະຫນັບສະຫນູນ ການສົ່ງ ລາຍການຫນຶ່ງ ຢູ່ ໃຊ້ເວລາ ເປັນ.</string>
+    <string name="error_NoEmailAccount">ບັນຊີ ອີເມລ໌ ບໍ່ ແມ່ນ setup!</string>
+    <string name="error_noPassPhrase">Passphrase ບໍ່ ໄດ້ເຂົ້າໄປໃນ.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases ບໍ່ມີຄໍາວ່າ.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">ທ່ານໄດ້ ເກີນ ໂກຕາ ຂໍ້ຄວາມ ສໍາລັບ ຜູ້ຮັບ ທີ່. ກະລຸນາ retry ຕໍ່ມາ.</string>
+    <string name="error_PushMsgInvalidRegistration">ຜູ້ຮັບ ທີ່ມີ ການຈົດທະບຽນ ການຊຸກຍູ້ເປັນ ທີ່ຂາດຫາຍໄປ ຫຼືບໍ່ດີ. ທ່ານຄວນຈະ ຢຸດເຊົາການ ສົ່ງຂໍ້ຄວາມ ກັບ ອຸປະກອນນີ້.</string>
+    <string name="error_PushMsgMessageNotFound">ຂໍ້ ຫມົດລົງ.</string>
+    <string name="error_PushMsgMessageTooBig">ຂໍ້ຄວາມແມ່ນ ໃຫຍ່ ເກີນໄປ. ຫຼຸດຜ່ອນຂະຫນາດ ຂອງ ຂໍ້ຄວາມ ໄດ້.</string>
+    <string name="error_PushMsgNotRegistered">ການຈົດທະບຽນ ການຊຸກຍູ້ ຜູ້ ທີ່ ແມ່ນບໍ່ມີ ຕໍ່ໄປອີກແລ້ວ ຖືກຕ້ອງ. ຜູ້ໄດ້ຮັບ ອາດຈະມີ uninstalled SafeSlinger ຫຼື ປິດ ແຈ້ງການ. ທ່ານຄວນຈະ ຢຸດເຊົາການ ສົ່ງຂໍ້ຄວາມ ກັບ ອຸປະກອນນີ້.</string>
+    <string name="error_PushMsgNotSucceed">ບໍ່ມີຄວາມຜິດ ຕໍ່ສື່ສານກັບ ການບໍລິການ ການແຈ້ງການ ຊຸກຍູ້ ການ ນີ້.</string>
+    <string name="error_PushMsgQuotaExceeded">ທ່ານໄດ້ ເກີນ ໂກຕາ ຂໍ້ຄວາມ ສໍາລັບ ອຸປະກອນນີ້. ກະລຸນາ retry ຕໍ່ມາ.</string>
+    <string name="error_PushMsgServiceFail">ການບໍລິການ ການແຈ້ງການ ແມ່ນ ບໍ່ ມີ ທີ່ໃຊ້ເວລາ ນີ້. ກະລຸນາ ພະຍາຍາມສົ່ງ ຂໍ້ຄວາມ ຕໍ່ມາ.</string>
+    <string name="error_RecoderError">ບໍ່ ສາມາດກະກຽມ ບົດບັນທຶກການ ສຽງ.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">ເພື່ອເລີ່ມຕົ້ນການ, ຫຼັກ Sling ກັບ ໂທລະສັບ ອື່ນໃນເວລາ ດຽວກັນ.</string>
+    <string name="error_selectDataToSend">ທ່ານຈໍາເປັນຕ້ອງ ຕິດ ຫຼື ຂໍ້ຄວາມ ທີ່ຈະສົ່ງ.</string>
+    <string name="error_ShareFileDelError">ບໍ່ສາມາດເອົາ ໄຟລ໌ ແບ່ງປັນ ໄດ້.</string>
+    <string name="error_UnableFindPubKey">ບໍ່ສາມາດ ມີຄໍາວ່າ ທີ່ສໍາຄັນ ສາທາລະນະ ທີ່ສໍາຄັນ ຂອງເອກະຊົນ ໃນການ ໃຫ້ບໍລິການ crypto.</string>
+    <string name="error_UnableToSaveMessageInDB">ບໍ່ສາມາດ ທີ່ຈະ ຊ່ວຍປະຢັດກັບ ຖານຂໍ້ມູນ ຂ່າວສານ ໄດ້.</string>
+    <string name="error_UnableToSaveRecipientInDB">ບໍ່ສາມາດ ທີ່ຈະ ຊ່ວຍປະຢັດກັບ ຖານຂໍ້ມູນ ຜູ້ຮັບ.</string>
+    <string name="error_UnableToUpdateMessageInDB">ບໍ່ສາມາດ ທີ່ຈະປັບປຸງ ຖານຂໍ້ມູນ ຂ່າວສານ ໄດ້.</string>
+    <string name="error_UnableToUpdateRecipientInDB">ບໍ່ສາມາດ ທີ່ຈະປັບປຸງ ຖານຂໍ້ມູນ ຜູ້ຮັບ.</string>
+    <string name="error_UncaughtExceptionOccured">ຄວາມຜິດພາດ SafeSlinger, ກະລຸນາ restart.</string>
+    <string name="error_VcardParseFailure">ຂໍ້ມູນ ຕິດຕໍ່ ໄດ້ ແບບ ບໍ່ຖືກຕ້ອງ.</string>
+
+    <string name="help_find">ການນໍາໃຊ້ຫນ້າຈໍນີ້ຈະກໍານົດຊື່ຂອງທ່ານທີ່ຈະແລກປ່ຽນກັບຄົນອື່ນ. ປາດປຸ່ມ \'ເຮັດ\' ໃນເວລາສໍາເລັດແລ້ວ.</string>
+    <string name="help_home">ເພື່ອ ແລກປ່ຽນ ຂໍ້ມູນ ເອກະລັກ, ຮັບປະກັນການ ຊົມໃຊ້ ທັງຫມົດແມ່ນ ໃກ້ຄຽງຫຼື ຢູ່ໃນໂທລະສັບ ໄດ້. ປຸ່ມ \' ເລີ່ມຕົ້ນ ການແລກປ່ຽນ, ຈະ ແລກປ່ຽນ ພຽງແຕ່ ໄດ້ ຂໍ້ມູນ ການຕິດຕໍ່ ການກວດກາ.</string>
+    <string name="help_identity_menu">\n\nນອກນັ້ນທ່ານຍັງ ອາດຈະ ມີການປ່ຽນແປງ ຂໍ້ມູນ ສ່ວນຕົວກ່ຽວກັບ ຕົວຕົນ ຂອງທ່ານກ່ຽວກັບ ຫນ້າຈໍ ນີ້ ໂດຍ ປາດຢາງ ໃສ່ປຸ່ມ ທີ່ມີຊື່ ຂອງທ່ານ. ນີ້ ຈະສະແດງ ເມນູ ໃຫ້ທ່ານ \' ດັດແກ້ \' ຕິດຕໍ່ຂອງທ່ານ, ສ້າງ ໃຫມ່ \' ການຕິດຕໍ່, ຫຼື \' ການນໍາໃຊ້ ອີກປະການຫນຶ່ງ, ການພົວພັນ ເປັນ.</string>
+    <string name="help_Messages">ຫນ້າຈໍນີ້ ຈະສະແດງ ຂໍ້ຄວາມ ທີ່ຜ່ານມາ ທັງຫມົດ, ແລະຄັດຕິດ ທີ່ ຍັງມີ ສໍາລັບ ການດາວໂຫຼດ.</string>
+    <string name="help_passphrase">ການນໍາໃຊ້ ຫນ້າຈໍ ນີ້ ໃຫ້ ເຂົ້າສູ່ລະບົບ ຄໍາຮ້ອງສະຫມັກ ທີ່ມີ passphrase ຂອງທ່ານ.</string>
+    <string name="help_PickRecip">ຕິດຕໍ່ພົວພັນ ກັບ ທີ່ SafeSlinger ແມ່ນສະແດງ ຢູ່ທີ່ນີ້, ໃຫ້ເລືອກ ຫນຶ່ງ ໃນການສົ່ງ ຂໍ້ຄວາມ ຂອງທ່ານໄປ.</string>
+    <string name="help_save">ໃນເວລາ ສໍາເລັດການ, ອະນຸສັນຍາ ຈະເປີດເຜີຍ ບັນຊີລາຍຊື່ ຂອງ ຂໍ້ມູນ ເອກະລັກ ຂອງ ການແລກປ່ຽນ ເປັນ. ເລືອກ ຕິດຕໍ່ພົວພັນ ໄດ້ ທີ່ທ່ານຕ້ອງການ ເພື່ອຊ່ວຍປະຢັດ ແລະກົດ ນໍາເຂົ້າ.</string>
+    <string name="help_SecureIntroduction">ຫນ້າຈໍນີ້ ອະນຸຍາດໃຫ້ ທ່ານ ເພື່ອຄັດເລືອກເອົາ ປະຊາຊົນສອງ ທ່ານໄດ້ slung ທີ່ ມີ ກ່ອນ ເພື່ອຄວາມປອດໄພ ສົ່ງ ທີ່ ຂອງເຂົາເຈົ້າ ອື່ນໆໃນແຕ່ລະ. ພຽງແຕ່ ກົດ \' ແນະນໍາ \' ໃນເວລາທີ່ ພ້ອມທີ່ຈະ.</string>
+    <string name="help_Send">ຫນ້າຈໍນີ້ ອະນຸຍາດໃຫ້ ທ່ານ ເພື່ອຄັດເລືອກເອົາ ບາງ ຂໍ້ມູນ ແລະຜູ້ຮັບ ການສົ່ງ ກັບ. ພຽງແຕ່ ກົດ \' ສົ່ງ \' ໃນເວລາທີ່ ພ້ອມທີ່ຈະ.</string>
+
+    <string name="iOS_contactError">ການອະນຸຍາດ ການຕິດຕໍ່ ທີ່ຕ້ອງການ. ກະລຸນາ ໄປ iOS ຕັ້ງ ເພື່ອໃຫ້ສາມາດ ອະນຸຍາດ ການຕິດຕໍ່.</string>
+    <string name="iOS_errorpushtoken">ການຈົດທະບຽນ ການຊຸກຍູ້ ທີ່ຂາດຫາຍໄປ.</string>
+    <string name="iOS_notificationError1">ການອະນຸຍາດ ແຈ້ງການ ທີ່ກໍານົດໄວ້. ກະລຸນາ ໄປ iOS ຕັ້ງ ເພື່ອໃຫ້ສາມາດ ອະນຸຍາດ ແຈ້ງການ.</string>
+    <string name="iOS_notificationError2">ການອະນຸຍາດ %s ຕ້ອງການ. ກະລຸນາ ໄປ iOS ຕັ້ງ ເພື່ອໃຫ້ສາມາດ ອະນຸຍາດ ແຈ້ງການ.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger ບໍ່ໄດ້ ເຫມາະສໍາລັບ iOS ອຸປະກອນ 5.x. SafeSlinger ຮຽກຮ້ອງໃຫ້ iOS 6 ຫຼືສູງກວ່າ.</string>
+
+    <string name="label_ago">%s ກ່ອນຫນ້ານີ້</string>
+    <string name="label_backupCompleteDate">Backup ສຸດທ້າຍສໍາເລັດ</string>
+    <string name="label_backupRequestDate">ຄໍາຮ້ອງຂໍການ Backup ຫຼ້າສຸດ</string>
+    <string name="label_backupURL">ທີ່ຢູ່ເວັບໄຊ backup</string>
+    <string name="label_ClickForNMsgs">ການສໍາພັດກັບ ການທົບທວນຄືນ %d ສານຂໍ້ຄວາມ ຂອງທ່ານ</string>
+    <string name="label_ComposeHint">Compose ຂໍ້ຄວາມ</string>
+    <string name="label_ContactName">ຊື່ຂອງທ່ານ</string>
+    <string name="label_days">%d ມື້</string>
+    <string name="label_Device">ອຸປະກອນ:</string>
+    <string name="label_DeviceInSendOnlyMode">ຮູບແບບການ ສົ່ງ, ພຽງແຕ່</string>
+    <string name="label_DisabledExchSourceKeyChange">ທີ່ສໍາຄັນ ຂອງທ່ານ ໄດ້ປ່ຽນແປງ: ທີ່ Sling ອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="label_Draft">ຮ່າງ</string>
+    <string name="label_EnabledKeyFormatDeprecated">ຮູບແບບ ທີ່ສໍາຄັນ deprecated: ທີ່ Sling ອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="label_exchanged">ການແລກປ່ຽນ</string>
+    <string name="label_expired">ທາດສະເຕຣອຍ</string>
+    <string name="label_expires">ຫມົດ %s</string>
+    <string name="label_expiresIn">ຫມົດ ໃນ</string>
+    <string name="label_FileNameHint">ຊື່ ໄຟລ໌</string>
+    <string name="label_FindInstruct">ກະລຸນາໃສ່ຊື່ຂອງທ່ານຕ້ອງການໃຫ້ຄົນອື່ນເຫັນໃນເວລາຕິດຕໍ່ສື່ສານຢ່າງປອດໄພ:</string>
+    <string name="label_FirstName">ຊື່ ຫນ້າທໍາອິດ</string>
+    <string name="label_Home">ປາດຊື່ຂອງທ່ານທີ່ຈະເພີ່ມຫຼືເອົາຂໍ້ມູນການຕິດຕໍ່, ໃຫ້ກວດເບິ່ງລາຍການລາຍການທີ່ທ່ານຕ້ອງການທີ່ຈະແບ່ງປັນ, ແລະປາດ \'ເລີ່ມຕົ້ນການແລກປ່ຽນ, ໃນເວລາທີ່ຄົນອື່ນມີຄວາມພ້ອມທີ່ຈະແລກປ່ຽນເງິນຕາ:</string>
+    <string name="label_hometag">ຫນ້າທໍາອິດ</string>
+    <string name="label_hours">%d ຊົ່ວໂມງ</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud ເທີງ. ປາດ ປຸ່ມ \' ເຮັດ \' ໃນເວລາ ສໍາເລັດແລ້ວ.</string>
+    <string name="label_InstNoMessages">ຂໍ້ຄວາມ ທີ່ບໍ່ມີ. ທ່ານອາດຈະ ສົ່ງຂໍ້ຄວາມ ຈາກ \' Compose ຂໍ້ຄວາມ \' ປຸ່ມ ເມນູ ຫນ້າທໍາອິດ.</string>
+    <string name="label_InstNoMessagesAndroid">ຂໍ້ຄວາມ ທີ່ບໍ່ມີ. ທ່ານອາດຈະ ສົ່ງ ຂໍ້ຄວາມຈາກ ແຖບ \' Compose \'.</string>
+    <string name="label_InstNoRecipients">ຜູ້ໄດ້ຮັບການ ບໍ່ມີ. ຊອກຫາ ຄົນອື່ນ ຜູ້ SafeSlinger ໃກ້ຄຽງ ແລະຕ້ອງຈັບຂອງ ແຖບ \' Sling ຫຼັກ ໃນການ ແລກປ່ຽນ ທີ່.</string>
+    <string name="label_InstNoSharedFile">ແບ່ງປັນ ບໍ່ມີ ໄຟລ໌. ເຊື່ອມຕໍ່ ອຸປະກອນ ຂອງທ່ານ ກັບ iTunes ແລະ ໄຟລ໌ drag ກັບ ໂຟນເດີ ແບ່ງປັນກັນ ໄດ້.</string>
+    <string name="label_InstRecipients">ເອົາ ຜູ້ຮັບ ສົ່ງ ຂໍ້ຄວາມໄປຫາ ໄດ້:</string>
+    <string name="label_InstSendInvite">ເອົາ ຜູ້ທີ່ໄດ້ຮັບ ການ ແນະນໍາ ຢ່າງປອດໄພ:</string>
+    <string name="label_InstSharedFile">ເອົາ ເອກະສານ ຄັດຕິດ ໄດ້:</string>
+    <string name="label_introduced">ນໍາສະເຫນີ</string>
+    <string name="label_Key">ທີ່ສໍາຄັນ:</string>
+    <string name="label_LastName">ນາມສະກຸນ</string>
+    <string name="label_Me">ຂ້າພະເຈົ້າ</string>
+    <string name="label_messageIntroduceNameToYou">ຂ້າພະເຈົ້າ ຢາກຈະແນະນໍາ %s ກັບທ່ານ.</string>
+    <string name="label_minutes">%d ນາທີ</string>
+    <string name="label_mobiletag">ໂທລະສັບມືຖື</string>
+    <string name="label_MostRecentOnly">ທີ່ຜ່ານມາ ມີພຽງແຕ່</string>
+    <string name="label_MsgSendUpdate">ບໍາລຸງ SafeSlinger ຂ້າພະເຈົ້າ ສະບັບປັບປຸງ ແມ່ນຕິດ.</string>
+    <string name="label_None">ບໍ່ມີໃຜ</string>
+    <string name="label_numsharedfiles">%d ໄຟລ໌ ເພື່ອແບ່ງປັນຄວາມ:</string>
+    <string name="label_OldThreads">ກະທູ້ທີ່ ມີອາຍຸ</string>
+    <string name="label_othertag">ອື່ນ</string>
+    <string name="label_PassHintBackoff">Retry</string>
+    <string name="label_PassHintChange">Passphrase ສະບັບປັບປຸງ</string>
+    <string name="label_PassHintCreate">ສ້າງ Passphrase</string>
+    <string name="label_PassHintCurrent">Passphrase ໃນປະຈຸບັນ</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Passphrase ຊ້ໍ</string>
+    <string name="label_passPhraseCacheTtl">ຈໍາ Passphrase</string>
+    <string name="label_PassPhraseIsCached">ຈໍາ Passphrase</string>
+    <string name="label_phoneOnly">ໂທລະສັບ ເທົ່ານັ້ນ</string>
+    <string name="label_Photo">ພາບ</string>
+    <string name="label_PublicKeyID">ບັດປະຈໍາຕົວ ທີ່ສໍາຄັນ</string>
+    <string name="label_PushTokenID">ບັດປະຈໍາຕົວ ຈົດທະບຽນ ການຊຸກຍູ້</string>
+    <string name="label_RemindBackupDelay">ເຕືອນໃຈ backup</string>
+    <string name="label_ReportedInactive">ລາຍງານ %s inactive.</string>
+    <string name="label_restoreCompleteDate">ສຸດທ້າຍ ສໍາເລັດ ການຟື້ນຟູ</string>
+    <string name="label_SafeSlingerBackupDelayed">ຮອງ SafeSlinger ຊັກຊ້າ</string>
+    <string name="label_safeslingered">(SafeSlinger ໂດຍກົງ ຊັບ)</string>
+    <string name="label_SaveAccount">ເງິນຝາກປະຢັດ</string>
+    <string name="label_SaveInstruct">ກວດສອບການຕິດຕໍ່ພົວພັນທ່ານຕ້ອງການທີ່ຈະປັບປຸງໃນປື້ມທີ່ຢູ່ຂອງທ່ານ, ຫຼັງຈາກນັ້ນປາດນໍາເຂົ້າຈະຊ່ວຍປະຢັດການພົວພັນທີ່ປອດໄພ:</string>
+    <string name="label_seconds">%d ວິນາທີ</string>
+    <string name="label_SelectRecip">ເລືອກ ຮັບ</string>
+    <string name="label_sendErrorData">ສົ່ງ ຂໍ້ມູນ ຜິດພາດ</string>
+    <string name="label_SendFrom">From:</string>
+    <string name="label_SendTo">ເພື່ອ:</string>
+    <string name="label_ShowHintAtLaunch">ສະແດງໃຫ້ເຫັນ hint ນີ້ ທີ່ໃຊ້ເວລາ ຕໍ່ໄປ.</string>
+    <string name="label_step_1">ຂັ້ນຕອນທີ 1</string>
+    <string name="label_step_2">ຂັ້ນຕອນທີ 2</string>
+    <string name="label_step_3">ຂັ້ນຕອນທີ 3</string>
+    <string name="label_step_4">ຂັ້ນຕອນທີ 4</string>
+    <string name="label_step_5">ບາດກ້າວທີ 5</string>
+    <string name="label_TapToDecryptFile">ທໍ່ ກັບ decrypt ໄຟລ໌</string>
+    <string name="label_TapToDecryptMessage">ທໍ່ ກັບ decrypt</string>
+    <string name="label_TapToDownloadFile">ປາດ ດາວນ໌ໂຫລດ ໄຟລ໌</string>
+    <string name="label_TapToDownloadMessage">ປາດ ດາວນ໌ໂຫລດ ຂໍ້ຄວາມ</string>
+    <string name="label_TapToOpenFile">ທໍ່ ທີ່ຈະເປີດ ໄຟລ໌</string>
+    <string name="label_TapToResumeDraft">ທໍ່ ທີ່ຈະສືບຕໍ່ ຮ່າງ ຂໍ້</string>
+    <string name="label_TapToSendCredentialUpdate">ທໍ່ ແລະຖື ສົ່ງ ໃຫ້ ແລະບໍາລຸງ.</string>
+    <string name="label_targetAccountLabel">ບັນຊີ ການຕິດຕໍ່</string>
+    <string name="label_TouchToConfigureBackupSettings">ທ່ານ ທາງເລືອກ ອາດຈະເຮັດໃຫ້ າຮອງ SafeSlinger iCloud ໃນ iOS ຕັ້ງ. ປາດ ປຸ່ມ \' ເຮັດ \' ໃນເວລາ ສໍາເລັດແລ້ວ.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">ການສໍາພັດກັບ configure ປັບຄ່າ backup.</string>
+    <string name="label_TouchToConfigureCacheTimeout">ການສໍາພັດກັບ configure ປັບຄ່າ timeout ຖານຄວາມຈໍາ.</string>
+    <string name="label_undefinedTypeLabel">ບໍ່ຮູ້</string>
+    <string name="label_UnknownSender">ຜູ້ສົ່ງ encrypted</string>
+    <string name="label_UserName">ຊື່ຜູ້ໃຊ້</string>
+    <string name="label_worktag">ການເຮັດວຽກ</string>
+
+    <string name="menu_About">ກ່ຽວກັບ</string>
+    <string name="menu_Change">ການປ່ຽນແປງ</string>
+    <string name="menu_ChangePassphrase">ການປ່ຽນແປງ Passphrase</string>
+    <string name="menu_CreateNew">ສ້າງ ໃຫມ່</string>
+    <string name="menu_delete">ຄອມ</string>
+    <string name="menu_deleteThread">ລຶບກະທູ້ \'%s\'</string>
+    <string name="menu_Details">ລາຍລະອຽດ ເບິ່ງ</string>
+    <string name="menu_DownloadDirectory">ດາວນ໌ໂຫລດ ບົບ</string>
+    <string name="menu_Edit">ດັດແກ້</string>
+    <string name="menu_FileManager">ຈັດການໄຟລ໌</string>
+    <string name="menu_Help">ຊ່ວຍເຫຼືອ</string>
+    <string name="menu_Introduction">ການນໍາສະເຫນີ</string>
+    <string name="menu_License">ໃບອະນຸຍາດ</string>
+    <string name="menu_Logout">ເຊັນອອກ</string>
+    <string name="menu_messageCopyText">ຂໍ້ຄວາມ ສໍາເນົາ</string>
+    <string name="menu_messageForward">Forward</string>
+    <string name="menu_Remove">ເອົາ</string>
+    <string name="menu_SelectShareApp">ສົ່ງ ຄໍາຮ້ອງສະຫມັກ</string>
+    <string name="menu_sendFeedback">ສົ່ງ ຄໍາຄຶດຄໍາເຫັນ</string>
+    <string name="menu_SendUpdate">ສົ່ງ ປັບປຸງໃຫ້ທັນ</string>
+    <string name="menu_Settings">ການປັບຄ່າ</string>
+    <string name="menu_ShowTutorial">Tutorial ສະແດງໃຫ້ເຫັນ</string>
+    <string name="menu_TagComposeMessage">Compose</string>
+    <string name="menu_TagExchange">ຫຼັກ Sling</string>
+    <string name="menu_TagListMessages">ຂໍ້ຄວາມ</string>
+    <string name="menu_UseAnother">ການນໍາໃຊ້ ອີກປະການຫນຶ່ງ</string>
+    <string name="menu_UseContactPerson">ການນໍາໃຊ້ \'%s \'ຕິດຕໍ່ພົວພັນ</string>
+    <string name="menu_UseNoContact">ການນໍາໃຊ້ຊື່ພຽງແຕ່</string>
+    <string name="menu_UseProfilePerson">ການນໍາໃຊ້ຂໍ້ມູນ \'%s\'</string>
+
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">encrypting…</string>
+    <string name="prog_FileSent">ຂໍ້ຄວາມ ຖືກສົ່ງໄປ, ລໍຖ້າ ການຕອບສະຫນອງ…</string>
+    <string name="prog_findingKey">ຊອກຫາ ທີ່ສໍາຄັນ…</string>
+    <string name="prog_GeneratingKey">ການຜະລິດທີ່ ສໍາຄັນ, ນີ້ ສາມາດ ໃຊ້ເວລາ ໃນຂະນະທີ່…</string>
+    <string name="prog_generatingSignature">ການຜະລິດ ລາຍເຊັນ…</string>
+    <string name="prog_loadingContent">ເນື້ອໃນ Loading…</string>
+    <string name="prog_ReceivingFile">ໄດ້ຮັບ ເອກະສານ encrypted…</string>
+    <string name="prog_RequestingFile">ການຮ້ອງຂໍ ໄຟລ໌ encrypted…</string>
+    <string name="prog_RequestingMessage">ການຮ້ອງຂໍ ຂໍ້ຄວາມ encrypted…</string>
+    <string name="prog_RequestingPushReg">ການຮ້ອງຂໍ ຈົດທະບຽນ ການຊຸກຍູ້…</string>
+    <string name="prog_SavingContactsToAddressBook">ປື້ມທີ່ຢູ່ ການປັບປຸງ…</string>
+    <string name="prog_SavingContactsToKeyDatabase">ການປັບປຸງ ຖານຂໍ້ມູນ ທີ່ສໍາຄັນ…</string>
+    <string name="prog_SearchingForBackup">ການຊອກຫາ ສໍາລັບ backup…</string>
+    <string name="prog_SendingFile">ການສົ່ງ %s encrypted…</string>
+    <string name="prog_verifyingIntegrity">ກວດ ຄວາມຊື່ສັດ…</string>
+    <string name="prog_verifyingSignature">ກວດ ລາຍເຊັນ…</string>
+
+    <string name="section_advanced">ແບບພິເສດ</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">ໂດຍທົ່ວໄປ</string>
+
+    <string name="state_BackupRestored">Backup ການຟື້ນຟູ.</string>
+    <string name="state_FileDeleted">%s ລຶບໄຟລ໌.</string>
+    <string name="state_FileSent">ຂໍ້ຄວາມ ຖືກສົ່ງໄປ.</string>
+    <string name="state_MessageSavedAsDraft">ຂໍ້ ບັນທືກ ເປັນ ຮ່າງ.</string>
+    <string name="state_MessagesDeleted">%d ສານຂໍ້ຄວາມ ລຶບ.</string>
+    <string name="state_PassphraseUpdated">Passphrase ສະບັບປັບປຸງ.</string>
+    <string name="state_RecipientsDeleted">%d ຜູ້ຮັບ ການລຶບຖິ້ມ.</string>
+    <string name="state_SomeContactsImported">ຕິດຕໍ່ພົວພັນ %s ນໍາເຂົ້າ.</string>
+    <string name="state_TextCopiedToClipboard">ຂໍ້ຄວາມ ຄັດລອກໄປທີ່ clipboard.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger ຖືກອອກແບບເພື່ອໄດ້ຢ່າງງ່າຍດາຍສ່ວນແບ່ງຂໍ້ມູນເອກະລັກ, ໃນການບຸກຄົນຫຼືຜ່ານທາງໂທລະສັບ, authenticated, ເອກະຊົນ, ແລະ intact. ບຸກຄົນແຕ່ລະທ່ານກ່ຽວກັບການສ້າງເປັນຊ່ອງທາງໃນຕອນທ້າຍເພື່ອສຸດທ້າຍ, ຄວາມປອດໄພໃນການສົ່ງຂໍ້ຄວາມ.\n\nຄຸນນະສົມບັດ:\n- ໄດ້ຢ່າງງ່າຍດາຍແລກປ່ຽນຂໍ້ມູນຂ່າວສານຕິດຕໍ່ກັບຄົນອື່ນ\n- ບົດເລື່ອງຄວາມປອດໄພ Sling, ຮູບພາບ, ມີຫຍັງບໍ່?\n- cryptography ເຂັ້ມແຂງປົກປ້ອງຂໍ້ມູນຂອງທ່ານ\n\nອີເມລ໌: %2$s\nເວັບໄຊຕ໌: %3$s</string>
+    <string name="text_KeywordExchange">ການແລກປ່ຽນ</string>
+    <string name="text_KeywordIdentity">ທີ່</string>
+    <string name="text_KeywordKey">ທີ່ສໍາຄັນ</string>
+    <string name="text_KeywordMessaging">ຂໍ້ຄວາມ</string>
+    <string name="text_KeywordPrivacy">ຄວາມເປັນສ່ວນຕົວ</string>
+    <string name="text_KeywordSecurity">ຄວາມປອດໄພ</string>
+    <string name="text_LanguagesProvidedBy">ພາສາ ສະຫນອງໃຫ້ໂດຍ:</string>
+    <string name="text_RelatedSearchTerms">ເງື່ອນໄຂທີ່ກ່ຽວຂ້ອງ:</string>
+    <string name="text_Requirements">ຕ້ອງການ:\n1. ຕ້ອງໄດ້ຮັບການຕິດຕັ້ງຢູ່ໃນຕໍາ່ສຸດທີ່ຂອງອຸປະກອນ 2 ເປັນ.\n2. ການເຊື່ອມຕໍ່ອິນເຕີເນັດເປັນຕ້ອງມີການເຄື່ອນໄຫວ.</string>
+    <string name="text_SourceCodeRepo">ແຫຼ່ງເປີດເຜີຍ: %s</string>
+    <string name="text_WhatsNew">- ການແກ້ໄຂສະຖຽນລະພາບ.</string>
+
+    <string name="title_About">ກ່ຽວກັບ</string>
+    <string name="title_camera">ກ້ອງຖ່າຍຮູບ</string>
+    <string name="title_ChooseDirectory">ເລືອກ ລະບົບ</string>
+    <string name="title_ChooseFileLoad">ເລືອກ ຕິດ ຂອງທ່ານ</string>
+    <string name="title_comments">ຄໍາເຫັນແລະ ຄໍາຖາມ /</string>
+    <string name="title_Error">ຄວາມຜິດພາດ</string>
+    <string name="title_ExchangeWalkthrough">Sling ຫຼັກ ການ</string>
+    <string name="title_FileOptions">ທາງເລືອກ ການຕິດ</string>
+    <string name="title_find">Setup</string>
+    <string name="title_home">ເລີ່ມຕົ້ນ ການແລກປ່ຽນ</string>
+    <string name="title_HomePanel">ຫນ້າທໍາອິດ</string>
+    <string name="title_MessageDetail">ຂໍ້ຄວາມ</string>
+    <string name="title_Messages">ຂໍ້ຄວາມ</string>
+    <string name="title_MyIdentity">ຕິດຕໍ່ພົວພັນສ່ວນບຸກຄົນ</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger ຂໍ້ຄວາມ ທີ່ມີຢູ່</string>
+    <string name="title_NotifyMulFileAvailable">%d ຂໍ້ SafeSlinger ຫາ</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">ເວັບບອດພາບ</string>
+    <string name="title_photolibary">ຫໍສະຫມຸດ ຮູບພາບ</string>
+    <string name="title_PickRecipient">ຜູ້ທີ່ໄດ້ຮັບ</string>
+    <string name="title_Question">ຄໍາຖາມ</string>
+    <string name="title_RecipientDetail">ລາຍລະອຽດ ຜູ້ຮັບ</string>
+    <string name="title_save">ການແລກປ່ຽນ ໃນຕອນທ້າຍ</string>
+    <string name="title_SaveFileAs">ຊ່ວຍປະຢັດ ເອກະສານ ໃນຖານະເປັນ</string>
+    <string name="title_SecureIntroduction">ການນໍາສະເຫນີ ຄວາມປອດໄພ</string>
+    <string name="title_SecureIntroductionInvite">ຮັບປະກັນການ ເຊີນ ການນໍາສະເຫນີ!</string>
+    <string name="title_SelectSource">ສົ່ງ ທາງເລືອກ:</string>
+    <string name="title_SendFile">ສົ່ງ</string>
+    <string name="title_sharingfolder">ການແລກປ່ຽນ ແຟ້ມ</string>
+    <string name="title_soundrecoder">ການບັນທຶກສຽງ</string>
+    <string name="title_TextInviteMsg">ເຊີນ SafeSlinger</string>
+    <string name="title_Threads">ກະທູ້</string>
+    <string name="title_Warn">ການເຕືອນໄພ</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Berhenti? Adakah anda pasti?</string>
+
+    <string name="btn_Match">Seterusnya</string>
+    <string name="btn_NoMatch">Tiada Padanan</string>
+
+    <string name="choice_NumUsers">pengguna %d</string>
+
+    <string name="error_AllMembersMustUpgrade">Beberapa ahli menggunakan versi yang lebih tua; semua ahli sekurang-kurangnya mesti menggunakan %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Semua ahli mesti menaik taraf, ada yang menggunakan format pendaftaran menolak lebih tua.</string>
+    <string name="error_CorrectYourInternetConnection">Internet tidak boleh didapati, semak tetapan anda.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Tamat Exchange melebihi. Mulakan pertukaran lagi.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Data tidak benar yang terdapat dalam pertukaran. Mulakan pertukaran lagi.</string>
+    <string name="error_InvalidCommonUserId">Sila masukkan integer positif.</string>
+    <string name="error_LocalGroupCommitDiffer">Anda telah melaporkan perbezaan dalam frasa. Mulakan pertukaran lagi.</string>
+    <string name="error_MinUsersRequired">Mendapat sekurang-kurangnya %d Ahli-ahli dikehendaki untuk bertukar-tukar data.</string>
+    <string name="error_MoreDataThanUsers">Data yang tidak dijangka yang terdapat dalam pertukaran. Mulakan pertukaran lagi.</string>
+    <string name="error_NoWordListSelected">Anda mesti memilih satu daripada ungkapan sebelum meneruskan.</string>
+    <string name="error_OtherGroupCommitDiffer">Seseorang dilaporkan perbezaan dalam frasa. Mulakan pertukaran lagi.</string>
+    <string name="error_OutOfMemoryError">Memori adalah terlalu rendah untuk menyelesaikan operasi.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Tidak ada jawapan dari pelayan.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Had masa menunggu beberapa ahli-ahli kumpulan untuk menambah data.</string>
+    <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan pelayan.</string>
+
+    <string name="help_size">Pilih bilangan orang-orang yang cuba untuk bertukar-tukar data bersama-sama dan tekan \'OK\'.</string>
+    <string name="help_userid">Ini nombor pada skrin ini digunakan untuk membuat kumpulan yang unik dari pengguna. Mengkaji nombor tersebut pada semua pengguna \'skrin, maka semua pengguna perlu memasukkan nombor paling rendah yang sama dan tekan\' OK \'.</string>
+    <string name="help_verify">Sekarang, anda mesti sepadan dengan salah satu daripada frasa 3-perkataan dengan semua pengguna. Setiap pengguna mesti memilih frasa yang sama yang sama, dan tekan \' Next\'.</string>
+
+    <string name="label_NumericModeHint">Bukan-Bahasa Inggeris</string>
+    <string name="label_PromptInstruct">Nombor ini digunakan untuk membuat kumpulan yang unik dari pengguna. Membandingkan, dan kemudian masukkan nombor yang paling rendah di kalangan semua pengguna.</string>
+    <string name="label_ReceivedNItems">menerima %d item</string>
+    <string name="label_UserIdHint">Terendah</string>
+    <string name="label_VerifyInstruct">Semua telefon mesti sepadan dengan salah satu frasa 3-perkataan. Membandingkan, dan kemudian memilih frasa yang hampir sama.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">menunggu pengesahan daripada semua ahli…</string>
+    <string name="prog_CollectingOthersItems">menunggu untuk semua pengguna untuk menyertai…</string>
+    <string name="prog_ConstructingGroupKey">membina utama kumpulan…</string>
+    <string name="prog_RequestingUserId">meminta keahlian…</string>
+
+    <string name="title_size">Berapa ramai pengguna dalam pertukaran?</string>
+    <string name="title_userid">Kumpulan</string>
+    <string name="title_verify">Sahkan</string>
+
+</resources>

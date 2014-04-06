@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">چھوڑ دو ؟ تمہیں یقین ہے؟</string>
+
+    <string name="btn_Match">اگلا</string>
+    <string name="btn_NoMatch">کوئی مقابلہ نہیں</string>
+
+    <string name="choice_NumUsers">%d صارفین</string>
+
+    <string name="error_AllMembersMustUpgrade">بعض اراکین ایک پرانا ورژن استعمال کر رہے ہیں ، تمام اراکین کو کم از کم %s کا استعمال کرنا چاہئے.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">تمام اراکین کچھ بڑی عمر کے دھکا رجسٹریشن فارمیٹس استعمال کر رہے ہیں ، اپ گریڈ کرنا ضروری ہے.</string>
+    <string name="error_CorrectYourInternetConnection">دستیاب نہیں انٹرنیٹ ، آپ کی ترتیبات کی جانچ پڑتال.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">ایکسچینج ٹائم آؤٹ سے تجاوز کر گئی. پھر تبادلہ شروع.</string>
+    <string name="error_HttpCode">سرور HTTP خرابی: %d</string>
+    <string name="error_InvalidCommitVerify">بدلے میں پایا غلط اعداد و شمار. پھر تبادلہ شروع.</string>
+    <string name="error_InvalidCommonUserId">ایک مثبت عدد صحیح درج کریں.</string>
+    <string name="error_LocalGroupCommitDiffer">آپ کے جملے میں ایک فرق کی اطلاع دی ہے. پھر تبادلہ شروع.</string>
+    <string name="error_MinUsersRequired">%d ارکان کی ایک کم از کم ڈیٹا ایکسچینج کی ضرورت ہے.</string>
+    <string name="error_MoreDataThanUsers">بدلے میں پایا غیر متوقع اعداد و شمار. پھر تبادلہ شروع.</string>
+    <string name="error_NoWordListSelected">آپ آگے بڑھنے سے پہلے جملے میں سے ایک کا انتخاب کرنا ہوگا.</string>
+    <string name="error_OtherGroupCommitDiffer">کسی جملے میں ایک فرق کی رپورٹ. پھر تبادلہ شروع.</string>
+    <string name="error_OutOfMemoryError">یاد داشت کی اس آپریشن کے مکمل کرنے کے لئے بہت کم ہے.</string>
+    <string name="error_ServerAppMessage">سرور پیغام: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">سرور پیغام: \'%s\'</string>
+    <string name="error_ServerNotResponding">سرور سے کوئی جواب نہیں.</string>
+    <string name="error_TimeoutWaitingForAllMembers">کچھ گروپ کے ارکان کے اعداد و شمار شامل کرنے کے لئے انتظار کر رہے ہیں وقت ختم.</string>
+    <string name="error_WebCancelledByUser">یوزر کے سرور کی درخواست منسوخ.</string>
+
+    <string name="help_size">\'ٹھیک ہے\' ایک دوسرے کے ساتھ کے اعداد و شمار کا تبادلہ اور پریس کرنے کی کوشش کر رہے ہیں جو لوگوں کی تعداد کو منتخب کریں.</string>
+    <string name="help_userid">اس کی سکرین پر یہ تعداد صارفین کی ایک منفرد گروپ بنانے کے لئے استعمال کیا جاتا ہے. تمام صارفین پر تعداد کا جائزہ لیں \'ٹھیک ہے \' کی سکرین ، تو تمام صارفین کو ایک ہی سب سے کم تعداد اور پریس میں داخل چاہئے.</string>
+    <string name="help_verify">اب ، آپ کو تمام صارفین کے ساتھ ان 3 الفاظ کے جملے میں سے ایک سے مطابقت ضروری ہے. ہر ایک ہی صارف کے عام جملے ، اور پریس \' اگلا \' کو منتخب کرنا ہوگا.</string>
+
+    <string name="label_NumericModeHint">غیر انگریزی</string>
+    <string name="label_PromptInstruct">یہ تعداد صارفین کی ایک منفرد گروپ بنانے کے لئے استعمال کیا جاتا ہے. کا آپس میں موازنہ ، اور اس کے بعد تمام صارفین کے درمیان سب سے کم نمبر داخل کریں.</string>
+    <string name="label_ReceivedNItems">%d اشیاء موصول</string>
+    <string name="label_UserIdHint">سب سے کم</string>
+    <string name="label_VerifyInstruct">تمام فونز 3 لفظ کے جملے میں سے ایک سے مطابقت ضروری ہے. کا آپس میں موازنہ ، اور اس کے بعد کے ملاپ کے جملہ منتخب کریں.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">تمام ارکان کی طرف سے توثیق کے لئے انتظار کر رہے ہیں…</string>
+    <string name="prog_CollectingOthersItems">تمام صارفین کے ساتھ شامل کرنے کے لئے انتظار کر رہے…</string>
+    <string name="prog_ConstructingGroupKey">گروپ اہم کی تعمیر…</string>
+    <string name="prog_RequestingUserId">رکنیت کی درخواست کی…</string>
+
+    <string name="title_size">کس طرح بہت سے صارفین کو بدلے میں ؟</string>
+    <string name="title_userid">گروہ بندی</string>
+    <string name="title_verify">کی تصدیق کریں</string>
+
+</resources>

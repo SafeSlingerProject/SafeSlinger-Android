@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Ukončete? Jsi si jistý?</string>
+
+    <string name="btn_Match">Další</string>
+    <string name="btn_NoMatch">No Match</string>
+
+    <string name="choice_NumUsers">%d uživatelé</string>
+
+    <string name="error_AllMembersMustUpgrade">Někteří členové používáte starší verzi, všichni členové musí být alespoň použít %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Všichni členové se musí aktualizovat, některé jsou s použitím starších formátů registrační Push.</string>
+    <string name="error_CorrectYourInternetConnection">Internet není k dispozici, zkontrolujte nastavení.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange limit překročen. Začněte na výměnu znovu.</string>
+    <string name="error_HttpCode">Server HTTP Chyba: %d</string>
+    <string name="error_InvalidCommitVerify">Nesprávné údaje nalezené výměnou. Začněte na výměnu znovu.</string>
+    <string name="error_InvalidCommonUserId">Prosím, zadejte kladné celé číslo.</string>
+    <string name="error_LocalGroupCommitDiffer">Jste vykázala rozdíl v frází. Začněte na výměnu znovu.</string>
+    <string name="error_MinUsersRequired">Jsou zapotřebíminimálně %d členů pro výměnu dat.</string>
+    <string name="error_MoreDataThanUsers">Neočekávané údaje nalezené výměnou. Začněte na výměnu znovu.</string>
+    <string name="error_NoWordListSelected">Musíte vybrat jednu z vět před pokračováním.</string>
+    <string name="error_OtherGroupCommitDiffer">Někdo hlásil rozdíl v frází. Začněte na výměnu znovu.</string>
+    <string name="error_OutOfMemoryError">Paměť je příliš nízká na dokončení této operace.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Žádná odpověď ze serveru.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Časový limit čekání na některé členy skupiny přidat data.</string>
+    <string name="error_WebCancelledByUser">Uživatel zrušil požadavek serveru.</string>
+
+    <string name="help_size">Vyberte počet lidí, kteří se snaží pro výměnu dat dohromady a stiskněte tlačítko \' OK \'.</string>
+    <string name="help_userid">Toto číslo se na této obrazovce se používá k vytvoření unikátní skupinu uživatelů. Přečtěte si čísla na všech uživatelů obrazovek, pak by všichni uživatelé měli zadat stejnou nejnižší číslo a stiskněte tlačítko \' OK \'.</string>
+    <string name="help_verify">Nyní musíte odpovídat jeden z těchto 3-slovo fráze se všemi uživateli. Každý uživatel musí zvolit stejný společný frázi a stiskněte tlačítko \' Další \'.</string>
+
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Toto číslo se používá k vytvoření unikátní skupinu uživatelů. Porovnejte, a poté zadejte nejnižší číslo mezi všemi uživateli.</string>
+    <string name="label_ReceivedNItems">obdržel %d položek</string>
+    <string name="label_UserIdHint">Nejnižší</string>
+    <string name="label_VerifyInstruct">Všechny telefony musí odpovídat jedné z 3-slovo fráze. Porovnejte, a potom vybrat odpovídající výraz.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">čeká na ověření všech členů…</string>
+    <string name="prog_CollectingOthersItems">čeká na všechny uživatele se připojit…</string>
+    <string name="prog_ConstructingGroupKey">budování skupinové klíče…</string>
+    <string name="prog_RequestingUserId">žádající o členství…</string>
+
+    <string name="title_size">Kolik uživatelů na výměnu?</string>
+    <string name="title_userid">Seskupení</string>
+    <string name="title_verify">Ověřit si</string>
+
+</resources>

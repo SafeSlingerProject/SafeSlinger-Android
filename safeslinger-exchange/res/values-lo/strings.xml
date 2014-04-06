@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">ຢຸດສູບໄດ້? ທ່ານແນ່ໃຈວ່າ?</string>
+
+    <string name="btn_Match">ຕໍ່ໄປ</string>
+    <string name="btn_NoMatch">ຄໍາວ່າ ບໍ່ມີ</string>
+
+    <string name="choice_NumUsers">%d ຜູ້ຊົມໃຊ້</string>
+
+    <string name="error_AllMembersMustUpgrade">ສະມາຊິກ ບາງຄົນ ໄດ້ຖືກ ນໍາໃຊ້ ເປັນສະບັບ ຂຶ້ນໄປ; ສະມາຊິກ ທັງຫມົດ ຢ່າງຫນ້ອຍ ຕ້ອງການນໍາໃຊ້ %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">ສະມາຊິກ ທັງຫມົດຕ້ອງໄດ້ ຍົກລະດັບ, ບາງຄົນກໍ່ຖືກ ນໍາໃຊ້ ສູງອາຍຸ ຮູບແບບ ການຈົດທະບຽນ ການຊຸກຍູ້.</string>
+    <string name="error_CorrectYourInternetConnection">ອິນເຕີເນັດ ບໍ່ ມີ, ໃຫ້ກວດເບິ່ງ ການປັບຄ່າ ຂອງທ່ານ.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout ການແລກປ່ຽນ ເກີນ. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_HttpCode">ຄວາມຜິດພາດ HTTP Server: %d</string>
+    <string name="error_InvalidCommitVerify">ຂໍ້ມູນ ທີ່ບໍ່ຖືກຕ້ອງ ທີ່ພົບເຫັນ ໃນການແລກປ່ຽນ. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_InvalidCommonUserId">ກະລຸນາໃສ່ ເລກ ໃນທາງບວກ.</string>
+    <string name="error_LocalGroupCommitDiffer">ທ່ານໄດ້ ລາຍງານ ຄວາມແຕກຕ່າງກັນ ໃນ ປະໂຫຍກ ໄດ້. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_MinUsersRequired">ຕໍາ່ສຸດທີ່ ຂອງການ %d ສະມາຊິກ ທີ່ ຕ້ອງການໃຫ້ ແລກປ່ຽນ ຂໍ້ມູນ.</string>
+    <string name="error_MoreDataThanUsers">ຂໍ້ມູນ ທີ່ຄາດຫວັງ ໄດ້ພົບເຫັນ ໃນການແລກປ່ຽນ. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_NoWordListSelected">ທ່ານຕ້ອງເລືອກເອົາ ຫນຶ່ງໃນ ປະໂຫຍກທີ່ ກ່ອນທີ່ຈະ ດໍາເນີນຄະດີ.</string>
+    <string name="error_OtherGroupCommitDiffer">ມີບາງຄົນ ໄດ້ລາຍງານ ຄວາມແຕກຕ່າງກັນ ໃນ ປະໂຫຍກ ໄດ້. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_OutOfMemoryError">ຄວາມຈໍາ ເປັນ ຕ່ໍາ ເກີນໄປ ເພື່ອໃຫ້ສໍາເລັດ ການດໍາເນີນງານ ນີ້.</string>
+    <string name="error_ServerAppMessage">ຂໍ້ຄວາມ Server: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">ຂໍ້ຄວາມ Server: \'%s\'</string>
+    <string name="error_ServerNotResponding">ການຕອບສະຫນອງ ທີ່ບໍ່ມີຈາກ ເຄື່ອງແມ່ຂ່າຍຂອງ.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout ລໍຖ້າ ສໍາລັບ ສະມາຊິກກຸ່ມ ບາງຄົນ ຕື່ມ ຂໍ້ມູນ.</string>
+    <string name="error_WebCancelledByUser">ຜູ້ໃຊ້ ຍົກເລີກ ຄໍາຮ້ອງຂໍ ຂອງເຄື່ອງແມ່ຂ່າຍ.</string>
+
+    <string name="help_size">ເລືອກເອົາຈໍານວນ ຂອງປະຊາຊົນ ຜູ້ທີ່ຖືກ ພະຍາຍາມ ທີ່ຈະແລກປ່ຽນ ຂໍ້ມູນ ຮ່ວມກັນແລະ ກົດ \' OK \' ໄດ້.</string>
+    <string name="help_userid">ຈໍານວນ ໃນຫນ້າຈໍ ນີ້ ນີ້ຖືກນໍາໃຊ້ ເພື່ອສ້າງເປັນ ກຸ່ມ ເປັນເອກະລັກ ຂອງຜູ້ຊົມໃຊ້. ການທົບທວນຄືນ ຈໍານວນ ກ່ຽວກັບ ຜູ້ໃຊ້ ທັງຫມົດ \' ຫນ້າຈໍ, ຫຼັງຈາກນັ້ນ ຜູ້ຊົມໃຊ້ ທັງຫມົດ ຄວນເຂົ້າໄປ ຈໍານວນ ຕໍ່າສຸດ ຄືກັນ ແລະ ກົດ \' OK \'.</string>
+    <string name="help_verify">ໃນປັດຈຸບັນ, ທ່ານ ຈະຕ້ອງມີຄໍາ ຫນຶ່ງ ຂອງການເຫຼົ່ານີ້ ປະໂຫຍກ 3 ຄໍາ ທີ່ມີ ຜູ້ຊົມໃຊ້ ທັງຫມົດ. ຜູ້ໃຊ້ ທຸກ ຕ້ອງໄດ້ເລືອກເອົາ ປະໂຫຍກທີ່ ທົ່ວໄປ ຄືກັນ, ແລະໃຫ້ກົດ \' ຕໍ່ໄປ \'.</string>
+
+    <string name="label_NumericModeHint">ບໍ່ແມ່ນ ພາສາອັງກິດ</string>
+    <string name="label_PromptInstruct">ຈໍານວນ ນີ້ແມ່ນໄດ້ຖືກ ນໍາໃຊ້ເພື່ອສ້າງ ເປັນ ກຸ່ມ ເປັນເອກະລັກ ຂອງຜູ້ຊົມໃຊ້. ສົມທຽບ, ແລະຫຼັງຈາກນັ້ນ ໃສ່ລະຫັດ ທີ່ຕໍ່າສຸດ ໃນບັນດາ ຜູ້ຊົມໃຊ້ ທັງຫມົດ.</string>
+    <string name="label_ReceivedNItems">ໄດ້ຮັບ %d ລາຍການລາຍການ</string>
+    <string name="label_UserIdHint">ຕໍ່າສຸດ</string>
+    <string name="label_VerifyInstruct">ໂທລະສັບ ທັງຫມົດທີ່ ຈະຕ້ອງມີຄໍາ ຫນຶ່ງໃນ ປະໂຫຍກທີ່ 3 ຄໍາ. ສົມທຽບ, ແລະຫຼັງຈາກນັ້ນ ເລືອກເອົາ ຄໍາ ປະໂຫຍກ ໄດ້.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">ລໍຖ້າ ສໍາລັບ ການຢັ້ງຢືນ ຈາກ ສະມາຊິກ ທຸກຄົນ…</string>
+    <string name="prog_CollectingOthersItems">ລໍຖ້າ ສໍາລັບຜູ້ໃຊ້ ທັງຫມົດ ເພື່ອເຂົ້າຮ່ວມ…</string>
+    <string name="prog_ConstructingGroupKey">ການກໍ່ສ້າງ ທີ່ສໍາຄັນ ກຸ່ມ…</string>
+    <string name="prog_RequestingUserId">ການຮ້ອງຂໍ ເປັນສະມາຊິກ…</string>
+
+    <string name="title_size">ວິທີການ ຈໍານວນຫຼາຍ ຜູ້ຊົມໃຊ້ ໃນການແລກປ່ຽນ ແນວໃດ?</string>
+    <string name="title_userid">ກຸ່ມ</string>
+    <string name="title_verify">ຢັ້ງຢືນ</string>
+
+</resources>

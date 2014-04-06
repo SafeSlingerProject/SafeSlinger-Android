@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Цуцлагдсан үйл явцийг сэргээх? Та итгэлтэй байна уу?</string>
+
+    <string name="btn_Match">Дараа нь</string>
+    <string name="btn_NoMatch">NO байгаа эд зүйлс</string>
+
+    <string name="choice_NumUsers">%d хэрэглэгч</string>
+
+    <string name="error_AllMembersMustUpgrade">Зарим гишүүд хуучин хувилбарыг ашиглаж байгаа; бүх гишүүд наад зах нь %s ашиглах ёстой.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Бүх гишүүд зарим хуучин түлхэх бүртгэлийн форматыг ашиглаж байгаа, шинэчлэх ёстой.</string>
+    <string name="error_CorrectYourInternetConnection">Байхгүй байгаа интернэт, таны тохиргоонуудыг шалгах хэрэгтэй.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Валютын хугацаа хэтэрсэн байна. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
+    <string name="error_HttpCode">Серверүүд HTTP Алдаа: %d</string>
+    <string name="error_InvalidCommitVerify">Хариуд нь олж буруу мэдээлэл. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
+    <string name="error_InvalidCommonUserId">Эерэг бүхэл тоо оруулна уу.</string>
+    <string name="error_LocalGroupCommitDiffer">Та өгүүлбэрээс өөрчлөлт мэдээлсэн байна. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
+    <string name="error_MinUsersRequired">%d гишүүдийн доод тал нь мэдээлэл солилцох шаардлагатай байна.</string>
+    <string name="error_MoreDataThanUsers">Хариуд нь олсон гэнэтийн мэдээ. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
+    <string name="error_NoWordListSelected">Та өмнө өгүүлбэрээс аль нэгийг нь сонгох ёстой.</string>
+    <string name="error_OtherGroupCommitDiffer">Хэн нэгэн өгүүлбэрээс өөрчлөлт мэдээлсэн. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
+    <string name="error_OutOfMemoryError">Санах ой энэ үйлдлийг дуусгахын тулд хэтэрхий бага юм.</string>
+    <string name="error_ServerAppMessage">Серверүүд зурвас: \' %s \'</string>
+    <string name="error_ServerAppMessageCStr">Серверүүд зурвас: \' %s \'</string>
+    <string name="error_ServerNotResponding">Серверээс ямар ч хариу арга хэмжээ.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Зарим бүлгийн гишүүд өгөгдөл нэмэх хүлээж хугацаа.</string>
+    <string name="error_WebCancelledByUser">Хэрэглэгчийн сервер хүсэлтээ цуцалсан.</string>
+
+    <string name="help_size">\' OK \' хамтдаа мэдээллийг солилцох, дарж оролдож байгаа хүмүүсийн тоог сонго.</string>
+    <string name="help_userid">Хэрэв энэ дэлгэцэн Энэ тоо нь хэрэглэгчдийн өвөрмөц бүлэг үүсгэхийн тулд ашиглаж байна. Бүх хэрэглэгчдийн тоог нэгтгэн дүгнээд \' OK \' дэлгэц, дараа нь бүх хэрэглэгчид ижилхэн хамгийн бага тоо, Enter товч байх ёстой. \'</string>
+    <string name="help_verify">Одоо та нар бүх хэрэглэгчдэд эдгээр 3- гэдэг үгийг өгүүлбэрийн нэгийг нь таарч байх ёстой. Хэрэглэгч бүрд адил нийтлэг өгүүлбэр сонгоод \' Дараах \' сонгох ёстой.</string>
+
+    <string name="label_NumericModeHint">Non- Англи хэл</string>
+    <string name="label_PromptInstruct">Энэ тоо нь хэрэглэгчдийн өвөрмөц бүлэг үүсгэхийн тулд ашиглаж байна. Харьцуулж, дараа нь бүх хэрэглэгчдийн дунд хамгийн бага тоог оруул.</string>
+    <string name="label_ReceivedNItems">%d эд зүйлсийг хүлээн авсан</string>
+    <string name="label_UserIdHint">Хамгийн бага</string>
+    <string name="label_VerifyInstruct">Бүх гар утас 3- гэдэг үгийг өгүүлбэрийн нэгийг нь таарч байх ёстой. Харьцуулж, дараа нь тохирсон өгүүлбэр сонгоорой.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">бүх гишүүдийн нотолгоо хүлээж…</string>
+    <string name="prog_CollectingOthersItems">бүх хэрэглэгчид нэгдэж хүлээж…</string>
+    <string name="prog_ConstructingGroupKey">бүлгийн түлхүүр барих…</string>
+    <string name="prog_RequestingUserId">гишүүнчлэлийг хүсэлт…</string>
+
+    <string name="title_size">Хэрхэн олон хэрэглэгч солилцох вэ?</string>
+    <string name="title_userid">Бүлэглэх</string>
+    <string name="title_verify">Verify</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">मधून बाहेर? आपली खात्री आहे?</string>
+
+    <string name="btn_Match">पुढील</string>
+    <string name="btn_NoMatch">पासंगाला</string>
+
+    <string name="choice_NumUsers">%d वापरकर्ते</string>
+
+    <string name="error_AllMembersMustUpgrade">काही सदस्य जुनी आवृत्ती वापरत आहात; सर्व सदस्यांना किमान %s वापर करणे आवश्यक आहे.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">सर्व सदस्यांना काही जुन्या पुश नोंदणी स्वरूप वापरत आहात, सुधारणा करणे आवश्यक आहे.</string>
+    <string name="error_CorrectYourInternetConnection">उपलब्ध नाही इंटरनेट, आपली सेटिंग्ज तपासा.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">विनिमय कालबाह्य ओलांडली. पुन्हा विनिमय सुरू.</string>
+    <string name="error_HttpCode">सर्व्हर HTTP त्रुटी: %d</string>
+    <string name="error_InvalidCommitVerify">विनिमय आढळले चुकीचा डेटा. पुन्हा विनिमय सुरू.</string>
+    <string name="error_InvalidCommonUserId">धन पूर्णांक प्रविष्ट करा.</string>
+    <string name="error_LocalGroupCommitDiffer">आपण वाक्ये मध्ये एक फरक नोंदवली आहे. पुन्हा विनिमय सुरू.</string>
+    <string name="error_MinUsersRequired">%d सदस्यांची किमान डेटा अदलाबदल करणे आवश्यक असते.</string>
+    <string name="error_MoreDataThanUsers">विनिमय आढळले अनपेक्षित डेटा. पुन्हा विनिमय सुरू.</string>
+    <string name="error_NoWordListSelected">आपण पुढे जाण्यापूर्वी वाक्ये एक निवडणे आवश्यक आहे.</string>
+    <string name="error_OtherGroupCommitDiffer">कोणीतरी वाक्ये मध्ये एक फरक नोंदवले. पुन्हा विनिमय सुरू.</string>
+    <string name="error_OutOfMemoryError">मेमरी हे ऑपरेशन पूर्ण करण्यासाठी खूप कमी आहे.</string>
+    <string name="error_ServerAppMessage">सर्व्हर संदेश: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">सर्व्हर संदेश: \'%s\'</string>
+    <string name="error_ServerNotResponding">सर्व्हरकडून कोणताही प्रतिसाद.</string>
+    <string name="error_TimeoutWaitingForAllMembers">काही गट सदस्य डेटा जोडण्यासाठी प्रतीक्षेत कालबाह्य.</string>
+    <string name="error_WebCancelledByUser">वापरकर्ता सर्व्हरशी विनंती रद्द केली.</string>
+
+    <string name="help_size">\' ओके \' एकत्र डेटा देवाणघेवाण आणि दाबा प्रयत्न करणार्या लोकांची संख्या निवडा.</string>
+    <string name="help_userid">या पडद्यावरील ही संख्या वापरकर्त्यांची एक अद्वितीय गट तयार केला जातो. सर्व वापरकर्ते संख्या पुनरावलोकन \' ओके \' पडदे, नंतर सर्व वापरकर्त्यांना समान सर्वात कमी संख्या आणि एंटर दाबा पाहिजे \'.</string>
+    <string name="help_verify">आता, आपण सर्व वापरकर्त्यांना या 3-शब्द वाक्ये एक जुळणे आवश्यक. प्रत्येक ह्याच सामान्य वाक्यांश, आणि दाबा \' पुढील \' निवडणे आवश्यक आहे.</string>
+
+    <string name="label_NumericModeHint">बिगर इंग्रजी</string>
+    <string name="label_PromptInstruct">ही संख्या वापरकर्ते एक अद्वितीय गट तयार केला जातो. तुलना, आणि नंतर सर्व वापरकर्त्यांसाठी आपापसांत सर्वात कमी संख्या प्रविष्ट करा.</string>
+    <string name="label_ReceivedNItems">%d आयटम प्राप्त</string>
+    <string name="label_UserIdHint">सर्वात कमी</string>
+    <string name="label_VerifyInstruct">सर्व फोन 3-शब्द वाक्ये एक जुळणे आवश्यक. तुलना, आणि नंतर जुळणारा वाक्यांश निवडा.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">सर्व सदस्यांकडून सत्यापन प्रतीक्षेत…</string>
+    <string name="prog_CollectingOthersItems">सर्व वापरकर्त्यांना सहभागी होण्यासाठी वाट…</string>
+    <string name="prog_ConstructingGroupKey">गट की रचना…</string>
+    <string name="prog_RequestingUserId">सदस्यत्व विनंती…</string>
+
+    <string name="title_size">किती वापरकर्ते विनिमय मध्ये?</string>
+    <string name="title_userid">एकत्रीकरण</string>
+    <string name="title_verify">सत्यापित</string>
+
+</resources>

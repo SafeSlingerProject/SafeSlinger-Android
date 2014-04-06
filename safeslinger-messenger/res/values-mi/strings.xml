@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Tukua fakaafei hono ki…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Monokia pūrua te. E hiahia ana koe ki te whakarite i ngā tautuhinga pūrua, me te pupuri tēnei whakamaumahara?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s He whakaaro atu tata matua ranei, ko koutou te hiahia koe ki te whakamahi i tēnei kotahi pakeke?</string>
+    <string name="ask_FileExistsOverwrite">Kei te tīariari kē te ingoa kōnae %s. Tuhirua?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Te kore te Pūkete Google anake ka taea ki te tuku, NOT riro karere ki a koutou. E hiahia ana koe ki te tāpiri i tētahi pūkete Google?</string>
+    <string name="ask_SendErrorData">Te hinaaro nei tatou i to koutou āwhina whakapai SafeSlinger. E hiahia ana koe ki te tuku aunoa tetahi hapa ki a matou?</string>
+
+    <string name="btn_Accept">Manako</string>
+    <string name="btn_BeginExchangeProximity">Timata Exchange</string>
+    <string name="btn_Cancel">Whakakore</string>
+    <string name="btn_Close">Katia</string>
+    <string name="btn_Continue">Tonu</string>
+    <string name="btn_discard">Whuia</string>
+    <string name="btn_Done">Mea ai</string>
+    <string name="btn_Exit">Waiho</string>
+    <string name="btn_Import">Kawemai</string>
+    <string name="btn_Introduce">Whakauru</string>
+    <string name="btn_No">No</string>
+    <string name="btn_NotRemind">Wareware</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Te kore</string>
+    <string name="btn_Remind">Whakamahara</string>
+    <string name="btn_Save">Whakaora</string>
+    <string name="btn_SelectFile">Tāpiri Āpitihanga</string>
+    <string name="btn_SendFile">Tukua</string>
+    <string name="btn_Yes">Ae</string>
+
+    <string name="choice_10mins">10 meneti</string>
+    <string name="choice_1hour">1 haora</string>
+    <string name="choice_1min">1 meneti</string>
+    <string name="choice_20mins">20 meneti</string>
+    <string name="choice_2hours">2 haora</string>
+    <string name="choice_3mins">3 meneti</string>
+    <string name="choice_40mins">40 meneti</string>
+    <string name="choice_4hours">4 haora</string>
+    <string name="choice_5mins">5 meneti</string>
+    <string name="choice_8hours">8 haora</string>
+    <string name="choice_auto_storage">Storage taunoa</string>
+    <string name="choice_external_storage">Storage waho</string>
+    <string name="choice_internal_storage">Storage ā-</string>
+    <string name="choice_nolimit">No Tepe</string>
+    <string name="choice_SaveDirectory">Save Directory</string>
+    <string name="choice_SaveFile">Whakaora kōnae</string>
+    <string name="choice_Up">Ake</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Me whakahōu te mau melo o te katoa, etahi kei te whakamahi i ngā matua pakeke.</string>
+    <string name="error_AudioPlayerDecodeError">Hapa wetemuna kaitākaro Ororongo.</string>
+    <string name="error_AudioPlayerError">Kāore e taea te takaro i te tuhi.</string>
+    <string name="error_AudioRecorderEncodeError">Hapa kaiwhakamahara whakawaehere Ororongo.</string>
+    <string name="error_AudioRecorderPermissionError">Whakaaetanga hopuoro e hiahiatia ana. Tēnā haere ki Settings iOS ki te taea whakaaetanga Hopureo.</string>
+    <string name="error_BackupNotFound">No pūrua ki te whakahoki.</string>
+    <string name="error_BackupNotSupportedDevice">E kore e tautoko i Pūrere pūrua whakahoki.</string>
+    <string name="error_BadCopyProtectUpgrade">Nā ki te bug i Android 4.1, ka whai koe i tango mai me te tāuta anō SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">Hiahiatia te pūkete Google te. Koa whakat te kaiwhakahaere pūkete, me te tāpiri i tētahi pūkete Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Rehita kore whakamotuhēhē, tēnā ngana anō ā-ringa i muri mai.</string>
+    <string name="error_C2DMRegInvalidSender">E kore i te wātea mō tēnei putanga rēhita, koa tirohia hoki te putanga whakahoutia.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Te rēhitatanga pūrere hē ki a Google. E kore e tautoko i tēnei wā i tēnei pūrere pana karere.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Ratonga rēhita Pana kāore i te wātea, te whakahōtaka anō i roto i te %d hēkona.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Kua rēhitatia maha rawa tono mo Pana. Me wetetāuta etahi atu taupānga, me te ngana anō.</string>
+    <string name="error_CannotSendEmptyFile">Kāore e taea te unga tētahi āpitihanga kau.</string>
+    <string name="error_CannotSendFilesOver">Kāore e taea te unga tāpiritanga nui ake i te %d bytes i roto i te rahi.</string>
+    <string name="error_CannotSendNullFile">Kāore e taea te tuku āpitihanga null.</string>
+    <string name="error_contactCreationFailure">I rahua te hanganga Whakapā.</string>
+    <string name="error_ContactInsertFailed">I rahua te Whakapā whakauru.</string>
+    <string name="error_ContactNameMissing">Kei te ngaro tēnei whakapā te ingoa, koa whakatika.</string>
+    <string name="error_ContactNameMissing2">Kei te ngaro tēnei whakapā te ingoa, koa tīpako anō.</string>
+    <string name="error_ContactUpdateFailed">I rahua te whakahōu i Whakapā.</string>
+    <string name="error_couldNotExtractPrivateKey">Kāore i taea te tango matua tūmataiti.</string>
+    <string name="error_FeatureIsNotSupport">E kore te %1$s tautoko i runga i %2$s i tenei wa.</string>
+    <string name="error_FileSave">Kāore e taea te ki te whakaora %s.</string>
+    <string name="error_FileStorageUnavailable">E kore e wātea ana rokiroki kōnae.</string>
+    <string name="error_InvalidContactName">He ingoa whakapā tika hiahiatia te.</string>
+    <string name="error_InvalidIncomingMessage">Whakatakotoranga karere taumai kino.</string>
+    <string name="error_InvalidMsg">Whakatakotoranga karere kino.</string>
+    <string name="error_InvalidRecipient">Kaiwhiwhi muhu.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">He muhu te hōputu matua hoa.</string>
+    <string name="error_MessageSignatureVerificationFails">I rahua te whakaū Waitohu.</string>
+    <string name="error_minPassphraseRequire">Passphrases rapu utu i te iti rawa %d pūāhua.</string>
+    <string name="error_MissingNdk">Kihai SafeSlinger kitea tautoko NDK i runga i tenei whakaaro, e hiahiatia nei e te.</string>
+    <string name="error_MultipleSendNotSupported">E ngana ana koe ki te tuku i ngā tūemi maha. I tenei wa, anake te tautoko SafeSlinger te tuku i tetahi take i te wā.</string>
+    <string name="error_NoEmailAccount">E kore ko te tatū pūkete Īmēra!</string>
+    <string name="error_noPassPhrase">Tomo No kīangahipa.</string>
+    <string name="error_passPhrasesDoNotMatch">Kāore e ōrite ana Passphrases.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Kua nui koe te motunga karere mo taua kaiwhiwhi. Koa ngana anō ā muri.</string>
+    <string name="error_PushMsgInvalidRegistration">E kaiwhiwhi he rēhita pana e ngaro ana, ahakoa kino. Me mutu e koe te tuku karere ki tenei pūrere.</string>
+    <string name="error_PushMsgMessageNotFound">Ka hemo Message.</string>
+    <string name="error_PushMsgMessageTooBig">He nui rawa te karere. Whakaitia te rahi o te karere.</string>
+    <string name="error_PushMsgNotRegistered">Te rēhitatanga pana a e kaiwhiwhi he kore tika. Ko te kaiwhiwhi kia kua tangohia SafeSlinger ranei tahuri atu ngā whakamōhiotanga. Me mutu e koe te tuku karere ki tenei pūrere.</string>
+    <string name="error_PushMsgNotSucceed">He hapa i te kōrero ki te mahi pana whakamōhiotanga.</string>
+    <string name="error_PushMsgQuotaExceeded">Kua nui koe te motunga karere mō tēnei pūrere. Koa ngana anō ā muri.</string>
+    <string name="error_PushMsgServiceFail">E kore e wātea ana mahi whakamōhiotanga i tēnei wā. Me ngana ki te tuku i te karere i muri mai.</string>
+    <string name="error_RecoderError">Kāore e taea te faaineine i te kaiwhakamahara audio.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Hei tīmata, \' te kotaha Pātuhi \' ki tetahi waea i te wā kotahi.</string>
+    <string name="error_selectDataToSend">Me koe te tāpiritanga i te karere kuputuhi ki te unga ranei.</string>
+    <string name="error_ShareFileDelError">Kāore e taea te tango i te kōnae tiri.</string>
+    <string name="error_UnableFindPubKey">Kāore e taea te ki e taurite matua tūmatanui ki te matua i roto i tūmataiti crypto kaiwhakarato.</string>
+    <string name="error_UnableToSaveMessageInDB">Kāore e taea te ki te whakaora ki te pātengi raraunga karere.</string>
+    <string name="error_UnableToSaveRecipientInDB">Kāore e taea te ki te whakaora ki te pātengi raraunga kaiwhiwhi.</string>
+    <string name="error_UnableToUpdateMessageInDB">Kāore e taea te whakahōu i te pātengi raraunga ki te karere.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Kāore e taea te whakahōu i te pātengi raraunga ki te kaiwhiwhi.</string>
+    <string name="error_UncaughtExceptionOccured">Hapa SafeSlinger, koa tīmata anō.</string>
+    <string name="error_VcardParseFailure">Raraunga Whakapā whakahōputu i hē.</string>
+
+    <string name="help_find">Whakamahia tēnei mata ki te whakatakotoria tou ingoa ki te whakawhiti ki ētahi atu. Paoa i te pātene \'Fai\', ka mutu.</string>
+    <string name="help_home">Ki te whakawhiti raraunga tuakiri, te whakarite kei tata ranei i runga i te waea kaiwhakamahi katoa. Ka whakawhiti pātene te \' Kamata Exchange \' te raraunga whakapā takina anake.</string>
+    <string name="help_identity_menu">\n\nkia hoki e koe te huri i ngā raraunga whaiaro e pā ana ki o koutou i runga i tenei tuakiri mata i te ingoa i runga i te pātene ki tou ingoa. Tenei ka whakaatu te tahua tuku koe ki te \' Whakatika \' to koutou whakapā, \' Waihanga New \' whakapā, \' Whakamahia tētahi atu \' whakapā ranei.</string>
+    <string name="help_Messages">Ka whakaatu tēnei mata i ngā karere o mua katoa, me ngā tāpiritanga e wātea ana mō te download he tonu.</string>
+    <string name="help_passphrase">Whakamahia tēnei mata ki te takiuru ki te tono ki to koutou kīangahipa.</string>
+    <string name="help_PickRecip">Kua whakaaturia ngā Hoapā ki te mau taviri SafeSlinger konei, tīpako i tetahi ki te tuku i tō karere ki te.</string>
+    <string name="help_save">A, no ka oti, ka te kawa whakakitea he rārangi o te raraunga tuakiri hokona. Tīpakohia te whakapā e hiahia ana koe ki te whakaora me te pēhi \' Kawemai \'.</string>
+    <string name="help_SecureIntroduction">Mā tēnei mata ki a koe te tīpako e rua iwi kua piua atu e koe mau taviri ki te aroaro o ki he wehi unga ratou mau taviri ki tetahi ki tetahi. Noa pēhi \' whakataki ki \' ka rite.</string>
+    <string name="help_Send">Mā tēnei mata ki a koe te tīpako i ētahi raraunga me te kaiwhiwhi ki te tuku ki te. Noa pēhi \' Tukua \' ka rite.</string>
+
+    <string name="iOS_contactError">Whakaaetanga i ngā Hoapā e hiahiatia ana. Tēnā haere ki Settings iOS ki te taea whakaaetanga ngā Hoapā.</string>
+    <string name="iOS_errorpushtoken">Kei te ngaro te rēhitatanga Pana.</string>
+    <string name="iOS_notificationError1">Whakaaetanga ngā whakamōhiotanga e hiahiatia ana. Tēnā haere ki Settings iOS ki te taea Whakamōhiotanga whakaaetanga.</string>
+    <string name="iOS_notificationError2">Whakaaetanga %s e hiahiatia ana. Tēnā haere ki Settings iOS ki te taea Whakamōhiotanga whakaaetanga.</string>
+    <string name="iOS_oldOSWarn">E kore te SafeSlinger papaitia kia pūrere 5.x iOS. Me SafeSlinger iOS 6 teitei ranei.</string>
+
+    <string name="label_ago">%s i mua</string>
+    <string name="label_backupCompleteDate">Pūrua Last oti</string>
+    <string name="label_backupRequestDate">Tono pūrua Last</string>
+    <string name="label_backupURL">URL pūrua</string>
+    <string name="label_ClickForNMsgs">E pa ki te arotake i tō karere %d</string>
+    <string name="label_ComposeHint">Titoa Karere</string>
+    <string name="label_ContactName">Tō Ingoa</string>
+    <string name="label_days">%d nga ra</string>
+    <string name="label_Device">Pūrere:</string>
+    <string name="label_DeviceInSendOnlyMode">Aratau Tukua - anake</string>
+    <string name="label_DisabledExchSourceKeyChange">Puta ke to koutou matua i: te kotaha Pātuhi ano.</string>
+    <string name="label_Draft">TAUIRA</string>
+    <string name="label_EnabledKeyFormatDeprecated">Hōputu Kī tauwhāitihia: kotaha Pātuhi ano.</string>
+    <string name="label_exchanged">hokona</string>
+    <string name="label_expired">pau</string>
+    <string name="label_expires">Ka pau %s</string>
+    <string name="label_expiresIn">Ka pau i roto i te</string>
+    <string name="label_FileNameHint">Ingoa kōnae</string>
+    <string name="label_FindInstruct">Tomo i te ingoa e hiahia ana koe ki te kite i ētahi atu i te kōrero he wehi:</string>
+    <string name="label_FirstName">Ingoa Tuatahi</string>
+    <string name="label_Home">Paoa tou ingoa ki te tāpiri ranei tango raraunga whakapā, tirohia tūemi e hiahia ana koe ki te tiritiri, me te pato \'Tīmata Exchange\' ka e rite ki te whakawhiti etahi atu:</string>
+    <string name="label_hometag">Kāinga</string>
+    <string name="label_hours">%d haora</string>
+    <string name="label_iCloudEnable">Ngā makaurangi SafeSlinger iCloud te. Paoa i te pātene \' Fai \', ka mutu.</string>
+    <string name="label_InstNoMessages">No karere. Kia unga e koe he karere i te pātene \' Tuhia te kupu \' i runga i te tahua Home.</string>
+    <string name="label_InstNoMessagesAndroid">No karere. Kia unga e koe he karere i te ripa \' Tito \'.</string>
+    <string name="label_InstNoRecipients">No kaiwhiwhi. Kimihia tētahi atu kaiwhakamahi SafeSlinger tata, ka pa ki te ripa \' kotaha Pātuhi \' ki te faaite i te mau taviri.</string>
+    <string name="label_InstNoSharedFile">Kōnae No tiri. Hono tō pūrere ki iTunes, me ngā kōnae tōia ki te kōpaki tiri.</string>
+    <string name="label_InstRecipients">Tangohia te kaiwhiwhi ki te tuku i te karere ki te:</string>
+    <string name="label_InstSendInvite">Tangohia ngā kaiwhiwhi ki te humarie ngā:</string>
+    <string name="label_InstSharedFile">Tangohia te kōnae ki te tāpiri:</string>
+    <string name="label_introduced">whakaurua</string>
+    <string name="label_Key">Matua:</string>
+    <string name="label_LastName">Ingoa Last</string>
+    <string name="label_Me">Ahau</string>
+    <string name="label_messageIntroduceNameToYou">E hiahia ana ahau ki te whakauru ki a koutou %s.</string>
+    <string name="label_minutes">%d meneti</string>
+    <string name="label_mobiletag">Mobile</string>
+    <string name="label_MostRecentOnly">Te nuinga tata anake</string>
+    <string name="label_MsgSendUpdate">Kei te piri toku pūkenga SafeSlinger whakahoutia.</string>
+    <string name="label_None">Kahore</string>
+    <string name="label_numsharedfiles">%d ngā kōnae ki te Tiri:</string>
+    <string name="label_OldThreads">Miro Old</string>
+    <string name="label_othertag">Ētahi atu</string>
+    <string name="label_PassHintBackoff">Ngana anō</string>
+    <string name="label_PassHintChange">Kīangahipa whakahoutia</string>
+    <string name="label_PassHintCreate">Waihanga Kīangahipa</string>
+    <string name="label_PassHintCurrent">Kīangahipa o nāianei</string>
+    <string name="label_PassHintEnter">Kīangahipa</string>
+    <string name="label_PassHintRepeat">Tukurua Kīangahipa</string>
+    <string name="label_passPhraseCacheTtl">Keteroki kīangahipa</string>
+    <string name="label_PassPhraseIsCached">Keteroki kīangahipa</string>
+    <string name="label_phoneOnly">waea - anake</string>
+    <string name="label_Photo">Whakaahua</string>
+    <string name="label_PublicKeyID">ID matua</string>
+    <string name="label_PushTokenID">ID Rēhitatanga Pana</string>
+    <string name="label_RemindBackupDelay">Whakamaumahara pūrua</string>
+    <string name="label_ReportedInactive">Pūrongo %s tautauā.</string>
+    <string name="label_restoreCompleteDate">Whakahokia Last oti</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger pūrua roa</string>
+    <string name="label_safeslingered">( SafeSlinger Direct Exchange )</string>
+    <string name="label_SaveAccount">Whakaorangia Pūkete</string>
+    <string name="label_SaveInstruct">Tirohia ngā hoapā e hiahia ana koe ki te whakahou i roto i to koutou pukapuka wāhitau, ka pato \'Kawemai\' ki te whakaora i ngā hoapā haumaru:</string>
+    <string name="label_seconds">%d hēkona</string>
+    <string name="label_SelectRecip">Tīpako i te Kaiwhiwhi</string>
+    <string name="label_sendErrorData">Tukua Raraunga Hapa</string>
+    <string name="label_SendFrom">Mai i:</string>
+    <string name="label_SendTo">Ki te:</string>
+    <string name="label_ShowHintAtLaunch">Whakaaturia tenei tohu wā e whai ake.</string>
+    <string name="label_step_1">Hipanga 1</string>
+    <string name="label_step_2">Wāhanga 2</string>
+    <string name="label_step_3">Wāhanga 3</string>
+    <string name="label_step_4">Wāhanga 4</string>
+    <string name="label_step_5">Wāhanga 5</string>
+    <string name="label_TapToDecryptFile">Paoa ki te wetemuna kōnae</string>
+    <string name="label_TapToDecryptMessage">Paoa ki te wetemuna</string>
+    <string name="label_TapToDownloadFile">Paoa ki te tikiake i te kōnae</string>
+    <string name="label_TapToDownloadMessage">Paoa ki te tikiake i te karere</string>
+    <string name="label_TapToOpenFile">Paoa ki te whakatuwhera kōnae</string>
+    <string name="label_TapToResumeDraft">Paoa ki te tīmata anō tauira karere</string>
+    <string name="label_TapToSendCredentialUpdate">Paoa, ka pupuri ki te unga whakahou taipitopito.</string>
+    <string name="label_targetAccountLabel">Pūkete Ngā Hoapā</string>
+    <string name="label_TouchToConfigureBackupSettings">Te kōwhiri koe kia taea SafeSlinger iCloud pūrua i roto i Settings iOS. Paoa i te pātene \' Fai \', ka mutu.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">E pa ki te whirihora i ngā tautuhinga pūrua.</string>
+    <string name="label_TouchToConfigureCacheTimeout">E pa ki te whirihora i ngā tautuhinga wāhiki keteroki.</string>
+    <string name="label_undefinedTypeLabel">Unknown</string>
+    <string name="label_UnknownSender">Kaituku whakamuna</string>
+    <string name="label_UserName">Ingoa Kaiwhakamahi</string>
+    <string name="label_worktag">Work</string>
+
+    <string name="menu_About">Mō</string>
+    <string name="menu_Change">Change</string>
+    <string name="menu_ChangePassphrase">Change Kīangahipa</string>
+    <string name="menu_CreateNew">Waihanga New</string>
+    <string name="menu_delete">Muku</string>
+    <string name="menu_deleteThread">Mukua te Miro \' %s \'</string>
+    <string name="menu_Details">Tirohia Detail</string>
+    <string name="menu_DownloadDirectory">Tikiake Directory</string>
+    <string name="menu_Edit">Whakatika</string>
+    <string name="menu_FileManager">Kaiwhakahaere kōnae</string>
+    <string name="menu_Help">Āwhina</string>
+    <string name="menu_Introduction">Kupu Whakataki</string>
+    <string name="menu_License">Raihana</string>
+    <string name="menu_Logout">Takiputa</string>
+    <string name="menu_messageCopyText">Tārua Kuputuhi</string>
+    <string name="menu_messageForward">Forward</string>
+    <string name="menu_Remove">Tango</string>
+    <string name="menu_SelectShareApp">Tukua tono</string>
+    <string name="menu_sendFeedback">Tukua Urupare</string>
+    <string name="menu_SendUpdate">Tukua Update</string>
+    <string name="menu_Settings">Settings</string>
+    <string name="menu_ShowTutorial">Whakaatu Tutorial</string>
+    <string name="menu_TagComposeMessage">Titoa</string>
+    <string name="menu_TagExchange">Kotaha Kī</string>
+    <string name="menu_TagListMessages">Karere</string>
+    <string name="menu_UseAnother">Whakamahia tētahi atu</string>
+    <string name="menu_UseContactPerson">Whakamahia Whakapā \'%s\'</string>
+    <string name="menu_UseNoContact">Whakamahia te Ingoa anake</string>
+    <string name="menu_UseProfilePerson">Whakamahia Profile \'%s\'</string>
+
+    <string name="prog_decrypting">wetemunatanga i…</string>
+    <string name="prog_encrypting">whakamuna…</string>
+    <string name="prog_FileSent">ka tono karere, tatari whakautu…</string>
+    <string name="prog_findingKey">te kimi matua…</string>
+    <string name="prog_GeneratingKey">te whakaputa matua, e taea te tango i te i tenei…</string>
+    <string name="prog_generatingSignature">te whakaputa tohu…</string>
+    <string name="prog_loadingContent">te utanga ihirangi…</string>
+    <string name="prog_ReceivingFile">te fariiraa i te kōnae whakamuna…</string>
+    <string name="prog_RequestingFile">tono kōnae whakamuna…</string>
+    <string name="prog_RequestingMessage">tono karere i whakamunatia…</string>
+    <string name="prog_RequestingPushReg">tono rēhitatanga pana…</string>
+    <string name="prog_SavingContactsToAddressBook">pukapuka e whakahōu wāhitau…</string>
+    <string name="prog_SavingContactsToKeyDatabase">e whakahōu pātengi raraunga matua…</string>
+    <string name="prog_SearchingForBackup">rapu hoki pūrua…</string>
+    <string name="prog_SendingFile">te tuku %s whakamuna…</string>
+    <string name="prog_verifyingIntegrity">manatoko tapatahi…</string>
+    <string name="prog_verifyingSignature">whakamanatoko waitohu…</string>
+
+    <string name="section_advanced">Arā</string>
+    <string name="section_backup">Pūrua</string>
+    <string name="section_general">General</string>
+
+    <string name="state_BackupRestored">Faaho\'ihia mai te pūrua.</string>
+    <string name="state_FileDeleted">%s kōnae i Mukua.</string>
+    <string name="state_FileSent">Ka tono karere i.</string>
+    <string name="state_MessageSavedAsDraft">Message ora rite tauira.</string>
+    <string name="state_MessagesDeleted">%d karere mukua.</string>
+    <string name="state_PassphraseUpdated">Whakahōungia kīangahipa.</string>
+    <string name="state_RecipientsDeleted">Mukua %d kaiwhiwhi.</string>
+    <string name="state_SomeContactsImported">I ngā hoapā %s kawemai.</string>
+    <string name="state_TextCopiedToClipboard">Te tārua kuputuhi ki te papatopenga.</string>
+
+    <string name="text_About">%1$s\n\nHangaia SafeSlinger ki te tiri raraunga tuakiri, te tangata i roto i runga i te waea ranei, whakamotuhēhē, tümataiti, me te whakaū tonu. Ia tangata faaite koe ki te hanga i tētahi hongere haumaru mutunga-ki-mutu ki te unga karere.\n\nNgā Āhuatanga:\n- Ngāwari te whakawhiti whakapā atu mōhiohio ki ētahi atu\n- Tuhinga humarie te piupiu, whakaahua, tetahi mea!\n- Kaha tuhiwhakamuna tiaki koutou mōhiohio\n\nīmēra: %2$s\ntukutuku: %3$s</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Tuakiri</string>
+    <string name="text_KeywordKey">Matua</string>
+    <string name="text_KeywordMessaging">Karere</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Haumarutanga</string>
+    <string name="text_LanguagesProvidedBy">Reo e whakaratohia ana e:</string>
+    <string name="text_RelatedSearchTerms">Ngā ture e pā ana:</string>
+    <string name="text_Requirements">Whakaritenga:\n1. Me tāuta i runga i te iti o te 2 ngā pūrere.\n2. Me kaha te hononga Ipurangi.</string>
+    <string name="text_SourceCodeRepo">tuwhera pūtake: %s</string>
+    <string name="text_WhatsNew">- Pūmau whakatika.</string>
+
+    <string name="title_About">Mō</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_ChooseDirectory">Kōwhirihia te Whaiaronga</string>
+    <string name="title_ChooseFileLoad">Kōwhiri tō Āpitihanga</string>
+    <string name="title_comments">Comments / Questions</string>
+    <string name="title_Error">Hapa</string>
+    <string name="title_ExchangeWalkthrough">Kotaha Kaiāwhina Kī</string>
+    <string name="title_FileOptions">Kōwhiringa Āpitihanga</string>
+    <string name="title_find">Te Tatūnga</string>
+    <string name="title_home">Timata Exchange</string>
+    <string name="title_HomePanel">Kāinga</string>
+    <string name="title_MessageDetail">Message</string>
+    <string name="title_Messages">Karere</string>
+    <string name="title_MyIdentity">Whakapā whaiaro</string>
+    <string name="title_NotifyFileAvailable">Karere SafeSlinger wātea</string>
+    <string name="title_NotifyMulFileAvailable">%d Messages SafeSlinger wātea</string>
+    <string name="title_passphrase">Kīangahipa</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Kaiwhiwhi</string>
+    <string name="title_Question">Question</string>
+    <string name="title_RecipientDetail">Kaiwhiwhi Detail</string>
+    <string name="title_save">Whakamutunga Exchange</string>
+    <string name="title_SaveFileAs">Whakaorangia Kōnae I</string>
+    <string name="title_SecureIntroduction">Introduction haumaru</string>
+    <string name="title_SecureIntroductionInvite">Te mau Introduction Fakaafe!</string>
+    <string name="title_SelectSource">Kōwhiringa unga:</string>
+    <string name="title_SendFile">Tukua</string>
+    <string name="title_sharingfolder">Kōpaki te tiri</string>
+    <string name="title_soundrecoder">Kaihopu Oro</string>
+    <string name="title_TextInviteMsg">SafeSlinger Poroaki</string>
+    <string name="title_Threads">Ngā Miro</string>
+    <string name="title_Warn">Whakatūpato</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">প্রস্থান? আপনি কি নিশ্চিত?</string>
+
+    <string name="btn_Match">পরবর্তী</string>
+    <string name="btn_NoMatch">কোন ম্যাচ</string>
+
+    <string name="choice_NumUsers">%d জন ব্যবহারকারী</string>
+
+    <string name="error_AllMembersMustUpgrade">কিছু সদস্যদের একটি পুরোনো সংস্করণ ব্যবহার করছেন; সকল সদস্যদের অন্তত %s ব্যবহার করা আবশ্যক.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">সকল সদস্য কয়েকটি পুরোনো ধাক্কা রেজিস্ট্রেশন বিন্যাসের ব্যবহার করছেন, আপগ্রেড করা আবশ্যক.</string>
+    <string name="error_CorrectYourInternetConnection">পাওয়া যায় না ইন্টারনেট, আপনার সেটিংস চেক করুন.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">এক্সচেঞ্জ সময়সীমার ছাড়িয়ে গেছে. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_HttpCode">সার্ভার HTTP ত্রুটি: %d</string>
+    <string name="error_InvalidCommitVerify">বিনিময়ে পাওয়া ভুল তথ্য. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_InvalidCommonUserId">একটি ধনাত্মক পূর্ণসংখ্যা লিখুন.</string>
+    <string name="error_LocalGroupCommitDiffer">আপনি বাক্যাংশ একটি পার্থক্য প্রতিবেদন করেছ. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_MinUsersRequired">%d সদস্যের একটি সর্বনিম্ন তথ্য বিনিময় প্রয়োজন হয়.</string>
+    <string name="error_MoreDataThanUsers">বিনিময়ে পাওয়া অপ্রত্যাশিত তথ্য. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_NoWordListSelected">আপনি অগ্রসর হওয়ার আগে বাক্যাংশ একটি নির্বাচন করা আবশ্যক.</string>
+    <string name="error_OtherGroupCommitDiffer">কেউ বাক্যাংশ একটি পার্থক্য রিপোর্ট. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_OutOfMemoryError">স্মৃতি এই অপারেশন সম্পন্ন করতে খুব কম.</string>
+    <string name="error_ServerAppMessage">সার্ভার বার্তা: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">সার্ভার বার্তা: \'%s\'</string>
+    <string name="error_ServerNotResponding">সার্ভার থেকে কোনো প্রতিক্রিয়া.</string>
+    <string name="error_TimeoutWaitingForAllMembers">কিছু দলের সদস্যদের তথ্য যোগ করার জন্য অপেক্ষা সময়সীমা সমাপ্ত.</string>
+    <string name="error_WebCancelledByUser">ব্যবহারকারী সার্ভারটি অনুরোধটি বাতিল.</string>
+
+    <string name="help_size">\'ঠিক আছে \' একসাথে তথ্য বিনিময় এবং প্রেস করার চেষ্টা করছেন যারা ​​মানুষের সংখ্যা নির্বাচন করুন.</string>
+    <string name="help_userid">এই পর্দায় এই সংখ্যা ব্যবহারকারীদের একটি অনন্য গ্রুপ তৈরি করতে ব্যবহার করা হয়. সব ব্যবহারের সংখ্যার পর্যালোচনা করুন \'ঠিক আছে \' পর্দা, তারপর সব ব্যবহারকারীদের একই সর্বনিম্ন নম্বর লিখে এন্টার টিপুন উচিত \'.</string>
+    <string name="help_verify">এখন, আপনি সমস্ত ব্যবহারকারীদের সাথে এই 3 শব্দ বাক্যাংশ এক মেলানো. প্রত্যেক ব্যবহারকারী একই সাধারণ ফ্রেজ, এবং প্রেস \' পরবর্তী \' নির্বাচন করতে হবে.</string>
+
+    <string name="label_NumericModeHint">অ ইংরেজি</string>
+    <string name="label_PromptInstruct">এই সংখ্যা ব্যবহারকারীদের একটি অনন্য গ্রুপ তৈরি করতে ব্যবহার করা হয়. তুলনা, এবং তারপর সব ব্যবহারকারীদের মধ্যে সর্বনিম্ন নম্বর লিখুন.</string>
+    <string name="label_ReceivedNItems">%d আইটেম প্রাপ্তি</string>
+    <string name="label_UserIdHint">অধম</string>
+    <string name="label_VerifyInstruct">সব ফোনের 3 শব্দ বাক্যাংশ এক মেলানো. তুলনা, এবং তারপর মিলে ফ্রেজ বাছাই.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">সকল সদস্যদের থেকে যাচাইয়ের জন্য অপেক্ষা করছে…</string>
+    <string name="prog_CollectingOthersItems">সব ব্যবহারকারীদের যোগদানের জন্য অপেক্ষা করছে…</string>
+    <string name="prog_ConstructingGroupKey">গ্রুপ কী নির্মাণের…</string>
+    <string name="prog_RequestingUserId">সদস্যপদ অনুরোধ…</string>
+
+    <string name="title_size">কিভাবে অনেক ব্যবহারকারী বিনিময়ে?</string>
+    <string name="title_userid">গোষ্ঠী</string>
+    <string name="title_verify">যাচাই করুন</string>
+
+</resources>

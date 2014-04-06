@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">छोड़ो? क्या आपको यकीन है?</string>
+
+    <string name="btn_Match">अगला</string>
+    <string name="btn_NoMatch">कोई मुकाबला नहीं</string>
+
+    <string name="choice_NumUsers">%d उपयोगकर्ताओं</string>
+
+    <string name="error_AllMembersMustUpgrade">कुछ सदस्यों ने एक पुराने संस्करण का उपयोग कर रहे हैं, सभी सदस्यों को कम से कम %s का उपयोग करना चाहिए.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">सभी सदस्यों को कुछ पुराने धक्का पंजीकरण स्वरूपों का उपयोग कर रहे हैं, नवीनीकरण करना होगा.</string>
+    <string name="error_CorrectYourInternetConnection">उपलब्ध नहीं इंटरनेट, अपनी सेटिंग्स की जाँच करें.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">विनिमय मध्यांतर से अधिक था. फिर विनिमय शुरू करो.</string>
+    <string name="error_HttpCode">सर्वर HTTP त्रुटि: %d</string>
+    <string name="error_InvalidCommitVerify">बदले में पाया गलत डेटा. फिर विनिमय शुरू करो.</string>
+    <string name="error_InvalidCommonUserId">एक सकारात्मक पूर्णांक दर्ज करें.</string>
+    <string name="error_LocalGroupCommitDiffer">आप वाक्यांश में एक अंतर की सूचना है. फिर विनिमय शुरू करो.</string>
+    <string name="error_MinUsersRequired">%d सदस्यों में से कम से कम डेटा का आदान प्रदान करने के लिए आवश्यक हैं.</string>
+    <string name="error_MoreDataThanUsers">बदले में पाया अप्रत्याशित डेटा. फिर विनिमय शुरू करो.</string>
+    <string name="error_NoWordListSelected">आगे बढ़ने से पहले वाक्यांशों में से एक का चयन करना होगा.</string>
+    <string name="error_OtherGroupCommitDiffer">किसी वाक्यांश में एक अंतर की सूचना दी. फिर विनिमय शुरू करो.</string>
+    <string name="error_OutOfMemoryError">स्मृति इस कार्य को पूरा करने के लिए बहुत कम है.</string>
+    <string name="error_ServerAppMessage">सर्वर संदेश: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">सर्वर संदेश: \'%s\'</string>
+    <string name="error_ServerNotResponding">सर्वर से कोई जवाब नहीं.</string>
+    <string name="error_TimeoutWaitingForAllMembers">कुछ समूह सदस्यों डेटा जोड़ने के लिए इंतज़ार कर समय समाप्ति.</string>
+    <string name="error_WebCancelledByUser">उपयोगकर्ता सर्वर अनुरोध को रद्द कर दिया.</string>
+
+    <string name="help_size">\'ठीक है\' एक साथ डेटा विनिमय और प्रेस करने के लिए प्रयास कर रहे हैं, जो लोगों की संख्या का चयन करें.</string>
+    <string name="help_userid">इस स्क्रीन पर यह संख्या प्रयोक्ताओं की एक अद्वितीय समूह बनाने के लिए प्रयोग किया जाता है. सभी उपयोगकर्ताओं पर संख्या की समीक्षा करें \'ठीक है\' स्क्रीन है, तो सभी उपयोगकर्ताओं को एक ही सबसे कम संख्या और प्रेस दर्ज करना चाहिए \'.</string>
+    <string name="help_verify">अब, आप सभी उपयोगकर्ताओं के साथ इन 3 शब्द वाक्यांश में से एक से मेल खाना चाहिए. प्रत्येक उपयोगकर्ता एक ही आम वाक्यांश, और प्रेस \'अगला\' का चयन करना होगा.</string>
+
+    <string name="label_NumericModeHint">गैर अंग्रेजी</string>
+    <string name="label_PromptInstruct">यह संख्या प्रयोक्ताओं की एक अद्वितीय समूह बनाने के लिए प्रयोग किया जाता है. तुलना करें, और तब सभी उपयोगकर्ताओं के बीच सबसे कम संख्या दर्ज करें.</string>
+    <string name="label_ReceivedNItems">%d आइटम प्राप्त</string>
+    <string name="label_UserIdHint">निम्नतम</string>
+    <string name="label_VerifyInstruct">सभी फोन 3 शब्द वाक्यांश में से एक से मेल खाना चाहिए. तुलना करें, और उसके बाद मिलान वाक्यांश उठाओ.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">सभी सदस्यों से सत्यापन के लिए इंतजार कर…</string>
+    <string name="prog_CollectingOthersItems">सभी उपयोगकर्ताओं में शामिल होने के लिए इंतजार कर…</string>
+    <string name="prog_ConstructingGroupKey">समूह कुंजी के निर्माण…</string>
+    <string name="prog_RequestingUserId">सदस्यता का अनुरोध…</string>
+
+    <string name="title_size">कितने उपयोगकर्ताओं को विदेशी मुद्रा में?</string>
+    <string name="title_userid">समूहीकरण</string>
+    <string name="title_verify">सत्यापित करना</string>
+
+</resources>

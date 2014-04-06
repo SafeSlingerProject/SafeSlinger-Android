@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Etre? Ị ji n\'aka?</string>
+
+    <string name="btn_Match">-abia n\'ihu</string>
+    <string name="btn_NoMatch">Ọ dịghị egwuregwu</string>
+
+    <string name="choice_NumUsers">%d ọrụ</string>
+
+    <string name="error_AllMembersMustUpgrade">Ụfọdụ n\'ime ndị òtù na-eji otu okenye version niile so ga- na ọ dịghị ihe ọzọ na-eji %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Niile so ga kwalite, ụfọdụ ndị na-eji okenye push ndebanye formats.</string>
+    <string name="error_CorrectYourInternetConnection">Internet adịghị, lelee mwube gị.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout emewokwa ihe karịrị. Na-amalite mgbanwe ọzọ.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Ezughị oke data dị mgbanwe. Na-amalite mgbanwe ọzọ.</string>
+    <string name="error_InvalidCommonUserId">Biko tinye nti integer.</string>
+    <string name="error_LocalGroupCommitDiffer">Ị kọrọ a dị kwuo okwu. Na-amalite mgbanwe ọzọ.</string>
+    <string name="error_MinUsersRequired">A opekempe nke %d ndị na- achọrọ ịgbanwe data.</string>
+    <string name="error_MoreDataThanUsers">Na-atụghị anya data dị mgbanwe. Na-amalite mgbanwe ọzọ.</string>
+    <string name="error_NoWordListSelected">Ị ga- họrọ otu n\'ime ndị kwuo okwu tupu ya.</string>
+    <string name="error_OtherGroupCommitDiffer">Onye kọrọ a dị kwuo okwu. Na-amalite mgbanwe ọzọ.</string>
+    <string name="error_OutOfMemoryError">Ebe nchekwa oke ala iji wuchaa a ime ihe.</string>
+    <string name="error_ServerAppMessage">Server Ozi: \' %s \'</string>
+    <string name="error_ServerAppMessageCStr">Server Ozi: \' %s \'</string>
+    <string name="error_ServerNotResponding">Ọ dịghị ibọrọ nkesa.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout eche ụfọdụ otu òtù ịgbakwunye data.</string>
+    <string name="error_WebCancelledByUser">Onye ọrụ na onye kagbuo ihe nkesa na- arịọ arịrịọ.</string>
+
+    <string name="help_size">Họrọ nọmba nke ndị na-agbali ịgbanwe data ọnụ ma pịa \' OK.</string>
+    <string name="help_userid">Nke a na ọnụ ọgụgụ a na ihuenyo iji ike a pụrụ iche otu ọrụ. Nyochaa nọmba nile ọrụ \' hụ na i meziri, mgbe ahụ, ihe niile ndị ọrụ kwesịrị itinye otu ntakịrị nọmba ma pịa \' OK.</string>
+    <string name="help_verify">Ugbu a, ị ga-adakọrịrị kiet ke otu mme 3- okwu kwuo okwu niile ọrụ. Ọ bụla onye ọrụ ga- họrọ otu jikọrọ nkebi okwu, ma pịa \' abia n\'ihu.</string>
+
+    <string name="label_NumericModeHint">Na-abụghị Bekee</string>
+    <string name="label_PromptInstruct">Nke a na nọmba iji ike a pụrụ iche otu ọrụ. Tụlee, mgbe ahụ, tinye ákwà n\'ime ọtụtụ n\'etiti ndị ọrụ.</string>
+    <string name="label_ReceivedNItems">natara %d anaghị</string>
+    <string name="label_UserIdHint">Ntakịrị</string>
+    <string name="label_VerifyInstruct">All igwe ga-adakọrịrị otu 3- okwu kwuo okwu. Tụlee, mgbe ahụ, ịkpọrọ ndị kenha ahịrịokwu.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">na-eche maka nkwenye niile so…</string>
+    <string name="prog_CollectingOthersItems">na-eche maka ihe niile ọrụ isonyere…</string>
+    <string name="prog_ConstructingGroupKey">arụ otu isi…</string>
+    <string name="prog_RequestingUserId">arịọ otu…</string>
+
+    <string name="title_size">Olee otú ọtụtụ ndị ọrụ na ego?</string>
+    <string name="title_userid">Nkụzị</string>
+    <string name="title_verify">Nyochaa</string>
+
+</resources>

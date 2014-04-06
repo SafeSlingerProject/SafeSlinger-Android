@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Beëindigen? Ben je zeker?</string>
+
+    <string name="btn_Match">Volgende</string>
+    <string name="btn_NoMatch">Geen overeenstemming</string>
+
+    <string name="choice_NumUsers">%d gebruikers</string>
+
+    <string name="error_AllMembersMustUpgrade">Sommige leden gebruiken een oudere versie, alle leden moeten tenminste %s gebruiken.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Alle leden moeten upgraden, wat gebruik maakt van oudere push registratie formaten.</string>
+    <string name="error_CorrectYourInternetConnection">Internet niet beschikbaar is, controleer uw instellingen.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout overschreden. Begin de uitwisseling weer.</string>
+    <string name="error_HttpCode">Server HTTP-fout: %d</string>
+    <string name="error_InvalidCommitVerify">Onjuiste gegevens gevonden in ruil. Begin de uitwisseling weer.</string>
+    <string name="error_InvalidCommonUserId">A.u.b. vul een positief geheel getal in.</string>
+    <string name="error_LocalGroupCommitDiffer">Je hebt een verschil in zinnen gemeld. Begin de uitwisseling weer.</string>
+    <string name="error_MinUsersRequired">Minimum van %d leden is nodig om gegevens te ruilen.</string>
+    <string name="error_MoreDataThanUsers">Onverwachte gegevens gevonden in ruil. Begin de uitwisseling weer.</string>
+    <string name="error_NoWordListSelected">U moet een van de combinaties kiezen voordat U verder gaat.</string>
+    <string name="error_OtherGroupCommitDiffer">Iemand rapporteerde een verschil in zinnen. Begin de uitwisseling weer.</string>
+    <string name="error_OutOfMemoryError">Geheugen te laag is om deze bewerking te voltooien.</string>
+    <string name="error_ServerAppMessage">Server bericht: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server bericht: \'%s\'</string>
+    <string name="error_ServerNotResponding">Server reageerde niet.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Time-out wacht op sommige groep leden om gegevens toe te voegen.</string>
+    <string name="error_WebCancelledByUser">Bewerking geannuleerd door gebruiker.</string>
+
+    <string name="help_size">Kies het aantal mensen die samen proberen gegevens om te ruilen, en druk op \'OK\'.</string>
+    <string name="help_userid">Dit nummer op deze scherm wordt gebruikt om een unieke gebruiker groep te maken. Vindt de laagste gemeenschappelijke nummer van de schermen van alle gebruikers, dan moeten alle gebruikers deze nummer ingeven en \'OK\' drukken.</string>
+    <string name="help_verify">Nu moet een van deze drie woord combinaties met alle gebruikers overeenstemmen. Iedere gebruiker moet dezelfde gemeenschappelijke combinatie kiezen, en druk op \'Volgende\'.</string>
+
+    <string name="label_NumericModeHint">Niet-Engels</string>
+    <string name="label_PromptInstruct">Dit nummer wordt gebruikt om een unieke gebruiker groep te maken. Vergelijk en dan vul het laagste nummer van alle gebruikers in.</string>
+    <string name="label_ReceivedNItems">ontvangen %d artikelen</string>
+    <string name="label_UserIdHint">Laagste</string>
+    <string name="label_VerifyInstruct">Alle telefoons moeten overeenkomen met een van de drie woord combinaties. Vergelijk, dan kies de passende combinatie.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">Wachten op verificatie van de alle leden…</string>
+    <string name="prog_CollectingOthersItems">Wachten op alle leden zich aan te sluiten…</string>
+    <string name="prog_ConstructingGroupKey">de bouw van groeptoets…</string>
+    <string name="prog_RequestingUserId">Aanvragen van het lidmaatschap…</string>
+
+    <string name="title_size">Hoeveel gebruikers in de ruil?</string>
+    <string name="title_userid">Groepering</string>
+    <string name="title_verify">Controleren</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Kite? Èske ou sèten?</string>
+
+    <string name="btn_Match">Next</string>
+    <string name="btn_NoMatch">Pa gen koresponn ak</string>
+
+    <string name="choice_NumUsers">%d itilizatè</string>
+
+    <string name="error_AllMembersMustUpgrade">Kèk manm yo lè l sèvi avèk yon vèsyon plis; tout manm yo dwe omwen sèvi ak %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tout manm yo dwe ajou, gen kèk ki lè l sèvi avèk pi gran fòma enskripsyon pouse.</string>
+    <string name="error_CorrectYourInternetConnection">Entènèt pa disponib, tcheke anviwònman ou yo.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Echanj poz depase. Kòmanse echanj la ankò.</string>
+    <string name="error_HttpCode">Sèvè HTTP Erè: %d</string>
+    <string name="error_InvalidCommitVerify">Done kòrèk yo te jwenn nan echanj. Kòmanse echanj la ankò.</string>
+    <string name="error_InvalidCommonUserId">Tanpri antre yon nonb antye ki pè pozitif.</string>
+    <string name="error_LocalGroupCommitDiffer">Ou te rapòte yon diferans nan fraz. Kòmanse echanj la ankò.</string>
+    <string name="error_MinUsersRequired">Yon minimòm de %d manm oblije echanj done.</string>
+    <string name="error_MoreDataThanUsers">Done inatandi yo te jwenn nan echanj. Kòmanse echanj la ankò.</string>
+    <string name="error_NoWordListSelected">Ou dwe chwazi youn nan fraz yo anvan yo.</string>
+    <string name="error_OtherGroupCommitDiffer">Yon moun total yon diferans nan fraz. Kòmanse echanj la ankò.</string>
+    <string name="error_OutOfMemoryError">Memwa a twò ba yo fini operasyon sa a.</string>
+    <string name="error_ServerAppMessage">Sèvè Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Sèvè Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Pa gen repons nan men sèvè.</string>
+    <string name="error_TimeoutWaitingForAllMembers">La resevwa yon pinisyon ap tann pou kèk manm gwoup yo ajoute done.</string>
+    <string name="error_WebCancelledByUser">Itilizatè anile sèvè mande sa.</string>
+
+    <string name="help_size">Chwazi nimewo a nan moun k ap eseye fè echanj done yo ansanm ak laprès \' OK \'.</string>
+    <string name="help_userid">Yo itilize nimewo sa a sou ekran sa a yo kreye yon gwoup inik nan itilizatè. Revize chif yo sou tout divinò yo ekran, lè sa a tout itilizatè ta dwe antre menm ki pi ba kantite ak laprès \' OK \'.</string>
+    <string name="help_verify">Koulye a, ou dwe matche ak youn nan fraz sa yo 3-mo ak tout divinò. Chak itilizatè dwe chwazi menm fraz la ki komen yo, ak laprès \' Next \'.</string>
+
+    <string name="label_NumericModeHint">Ki pa Peye-angle</string>
+    <string name="label_PromptInstruct">Yo itilize nimewo sa a yo kreye yon gwoup inik nan itilizatè. Konpare, ak Lè sa a, antre nan nimewo ki pi ba nan mitan tout divinò.</string>
+    <string name="label_ReceivedNItems">resevwa %d atik</string>
+    <string name="label_UserIdHint">Pi ba</string>
+    <string name="label_VerifyInstruct">Tout telefòn dwe matche ak youn nan 3-mo fraz yo. Konpare, ak Lè sa a, chwazi fraz la matche.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">ap tann pou verifikasyon ki soti nan tout manm…</string>
+    <string name="prog_CollectingOthersItems">ap tann pou tout itilizatè yo rantre nan…</string>
+    <string name="prog_ConstructingGroupKey">konstwi kle gwoup…</string>
+    <string name="prog_RequestingUserId">mande rapòte…</string>
+
+    <string name="title_size">Konbyen itilizatè an echanj a?</string>
+    <string name="title_userid">Gwoupman</string>
+    <string name="title_verify">Verify la</string>
+
+</resources>

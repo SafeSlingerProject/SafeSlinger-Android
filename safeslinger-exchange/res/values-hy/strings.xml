@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Quit. Համոզված եք</string>
+
+    <string name="btn_Match">Հաջորդ</string>
+    <string name="btn_NoMatch">Ոչ Match</string>
+
+    <string name="choice_NumUsers">%d օգտվողներ</string>
+
+    <string name="error_AllMembersMustUpgrade">Որոշ անդամներ օգտվում եք մի հին տարբերակը. Բոլոր անդամները պետք է առնվազն օգտագործել %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Բոլոր անդամները պետք է բարելավել, ոմանք օգտվում են ավելի հին հրում գրանցման ձեւաչափեր.</string>
+    <string name="error_CorrectYourInternetConnection">Ինտերնետ չէ, ստուգել Ձեր կարգավորումները.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout գերազանցել. Սկիզբ փոխանակումը կրկին.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Սխալ տվյալների հայտնաբերվել դիմաց. Սկիզբ փոխանակումը կրկին.</string>
+    <string name="error_InvalidCommonUserId">Խնդրում ենք մուտքագրել դրական ամբողջ թիվ.</string>
+    <string name="error_LocalGroupCommitDiffer">Դուք հաղորդում է փոխել արտահայտություններ. Սկիզբ փոխանակումը կրկին.</string>
+    <string name="error_MinUsersRequired">Առնվազն %d անդամներից պահանջվում փոխանակման տվյալները.</string>
+    <string name="error_MoreDataThanUsers">Անսպասելի տվյալների հայտնաբերվել դիմաց. Սկիզբ փոխանակումը կրկին.</string>
+    <string name="error_NoWordListSelected">Դուք պետք է ընտրել մեկ արտահայտություններ, շարունակելուց առաջ.</string>
+    <string name="error_OtherGroupCommitDiffer">Ինչ-որ մեկը հաղորդում է փոխել արտահայտություններ. Սկիզբ փոխանակումը կրկին.</string>
+    <string name="error_OutOfMemoryError">Հիշողության շատ ցածր է լրացնել այս գործողությունը.</string>
+    <string name="error_ServerAppMessage">Server հաղորդագրություն: \' %s.</string>
+    <string name="error_ServerAppMessageCStr">Server հաղորդագրություն: \' %s.</string>
+    <string name="error_ServerNotResponding">Ոչ պատասխան սերվերի.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout սպասում են խմբի անդամները ավելացնել տվյալներ.</string>
+    <string name="error_WebCancelledByUser">User չեղյալ սերվերի խնդրանքով.</string>
+
+    <string name="help_size">Ընտրեք մի շարք մարդիկ, ովքեր փորձում են փոխանակել տվյալների հետ եւ սեղմեք « OK ».</string>
+    <string name="help_userid">Այս թիվը այս էկրանին, որն օգտագործվում է ստեղծել յուրահատուկ խումբ օգտագործողներ. Վերանայել համարները բոլոր օգտագործողներին \' էկրաններին, ապա բոլոր օգտագործողները պետք է մտնի նույն ամենացածր համարը եւ սեղմեք «OK».</string>
+    <string name="help_verify">Այժմ դուք պետք է համընկնի մեկը այս 3-Word արտահայտություններ է բոլոր օգտվողներին. Յուրաքանչյուր օգտվող պարտավոր է ընտրել նույն ընդհանուր արտահայտությունը, եւ սեղմեք \' Հաջորդ \'.</string>
+
+    <string name="label_NumericModeHint">Ոչ, Անգլերեն</string>
+    <string name="label_PromptInstruct">Այս թիվը, որն օգտագործվում է ստեղծել յուրահատուկ խումբ օգտագործողներ. Համեմատեք, ապա մուտքագրեք ամենացածր շարք միջեւ բոլոր օգտվողներին.</string>
+    <string name="label_ReceivedNItems">ստացել է %d իրեր</string>
+    <string name="label_UserIdHint">Նվազագույն</string>
+    <string name="label_VerifyInstruct">Բոլոր հեռախոսները պետք է համընկնի մեկը 3 բառի արտահայտություններ. Համեմատեք, ապա ընտրել համապատասխանող արտահայտությունը.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">սպասում ստուգման բոլոր անդամները…</string>
+    <string name="prog_CollectingOthersItems">սպասում բոլոր օգտվողները միանալ…</string>
+    <string name="prog_ConstructingGroupKey">կառուցման խմբի բանալին…</string>
+    <string name="prog_RequestingUserId">պահանջելով անդամակցությունը…</string>
+
+    <string name="title_size">Քանի օգտվողները են փոխանակման.</string>
+    <string name="title_userid">Խմբավորումը</string>
+    <string name="title_verify">Ստուգել</string>
+
+</resources>

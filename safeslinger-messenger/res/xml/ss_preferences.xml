@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:key="changePassphrase"
+        android:title="@string/menu_ChangePassphrase" >
+    </Preference>
+
+    <PreferenceCategory android:title="@string/section_general" >
+        <EditTextPreference
+            android:inputType="textCapWords|textPersonName"
+            android:key="ContactName"
+            android:persistent="false"
+            android:title="@string/label_ContactName" />
+
+        <edu.cmu.cylab.starslinger.model.IntegerListPreference
+            android:defaultValue="300"
+            android:entries="@array/pass_phrase_cache_ttl_entries"
+            android:entryValues="@array/pass_phrase_cache_ttl_values"
+            android:key="passPhraseCacheTtl"
+            android:persistent="false"
+            android:title="@string/label_passPhraseCacheTtl" />
+
+        <ListPreference
+            android:defaultValue="18"
+            android:dialogTitle="@string/title_font_size"
+            android:entries="@array/font_size_entries"
+            android:entryValues="@array/font_size_values"
+            android:key="fontSize"
+            android:persistent="false"
+            android:title="@string/menu_message_font_size" />
+        <ListPreference
+            android:dialogTitle="@string/label_targetAccountLabel"
+            android:key="keyTempListContactSyncAccount"
+            android:title="@string/label_targetAccountLabel" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="ShowWalkthrough"
+            android:persistent="false"
+            android:summary="@string/label_summary_show_tutorial"
+            android:title="@string/menu_ShowTutorial" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/section_advanced" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="autoDecrypt"
+            android:summary="@string/label_summary_auto_decrypt"
+            android:title="@string/menu_auto_decrypt" />
+        <!--
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="autoDecrypt"
+            android:key="autoRetrieval"
+            android:summary="@string/msgr_pref_summary_mms_auto_retrieval"
+            android:title="@string/msgr_pref_title_mms_auto_retrieval" />
+        -->
+        <Preference
+            android:key="PushRegistrationIdDirect"
+            android:persistent="false"
+            android:title="@string/label_PushTokenID" />
+        <Preference
+            android:key="KeyIdString"
+            android:persistent="false"
+            android:title="@string/label_PublicKeyID" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/section_backup" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="RemindBackupDelay"
+            android:persistent="false"
+            android:summary="@string/label_summary_remind_backup_delay"
+            android:title="@string/label_RemindBackupDelay" />
+
+        <Preference
+            android:key="backupRequestDate"
+            android:persistent="false"
+            android:title="@string/label_backupRequestDate" />
+        <Preference
+            android:key="backupCompleteDate"
+            android:persistent="false"
+            android:title="@string/label_backupCompleteDate" />
+        <Preference
+            android:key="restoreCompleteDate"
+            android:persistent="false"
+            android:title="@string/label_restoreCompleteDate" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/msgr_pref_sms_storage_title" >
+        <Preference
+            android:key="downloadDirectory"
+            android:title="@string/menu_DownloadDirectory" >
+        </Preference>
+
+        <ListPreference
+            android:dialogTitle="@string/menu_FileManager"
+            android:key="fileManagerRootDir"
+            android:title="@string/menu_FileManager" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/msgr_pref_notification_settings_title" >
+        <RingtonePreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:key="ringtone_notification"
+            android:ringtoneType="notification"
+            android:title="@string/msgr_pref_title_notification_ringtone" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="vibrate_notification"
+            android:title="@string/msgr_pref_title_notification_vibrateWhen" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_About" >
+        <Preference
+            android:key="showLicense"
+            android:title="@string/title_Eula" >
+        </Preference>
+        <Preference
+            android:key="showAbout"
+            android:title="@string/menu_About" >
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

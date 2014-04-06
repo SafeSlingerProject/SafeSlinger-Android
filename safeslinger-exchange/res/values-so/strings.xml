@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Jooji? Waa inaad hubiso?</string>
+
+    <string name="btn_Match">Next</string>
+    <string name="btn_NoMatch">Match No</string>
+
+    <string name="choice_NumUsers">%d users</string>
+
+    <string name="error_AllMembersMustUpgrade">Xubnaha qaarkood waxay isticmaalayaan version waayeel ah; dhammaan xubnaha waa in ugu yaraan ay isticmaalaan %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Dhammaan xubnaha waa in la tayogeliyo, qaar baa isticmaalaya qaabab diiwaangelinta riix ka weyn.</string>
+    <string name="error_CorrectYourInternetConnection">Internet ma laga heli karo, hubi goobaha aad.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Exchange dhaafto. Ku bilow sarrifku mar kale.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Xogtu khaldan laga helay beddelkeeda. Ku bilow sarrifku mar kale.</string>
+    <string name="error_InvalidCommonUserId">Fadlan qor abyoonaha togan.</string>
+    <string name="error_LocalGroupCommitDiffer">Waxaad la sheegay inay kala duwan yihiin jumlado. Ku bilow sarrifku mar kale.</string>
+    <string name="error_MinUsersRequired">Ugu yaraan %d xubnood oo waxaa looga baahan yahay in ay isu dhaafsadaan xogta.</string>
+    <string name="error_MoreDataThanUsers">Xog -filaan ah oo laga helay beddelkeeda. Ku bilow sarrifku mar kale.</string>
+    <string name="error_NoWordListSelected">Waa in aad ka dooro mid ka mid ah jumlado ka hor u socdaa.</string>
+    <string name="error_OtherGroupCommitDiffer">Qof la sheegay in farqi jumlado. Ku bilow sarrifku mar kale.</string>
+    <string name="error_OutOfMemoryError">Memory waa mid aad u yar yahay si uu dhammeeyo qalliinka this.</string>
+    <string name="error_ServerAppMessage">Message Server: \' %s \'</string>
+    <string name="error_ServerAppMessageCStr">Message Server: \' %s \'</string>
+    <string name="error_ServerNotResponding">No jawaab ka soo server.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout sugaya xubnaha kooxda qaar ka mid ah ku darto xogta.</string>
+    <string name="error_WebCancelledByUser">User kansal server codsi.</string>
+
+    <string name="help_size">Dooro tirada dadka waxa ay isku dayaysaa in ay wada beddelan xogta iyo taabo \' OK \'.</string>
+    <string name="help_userid">Tani tirada on screen this waxaa loo isticmaalaa si loo abuuro koox gaar ah ee isticmaala. Dib u eeg lambarada ku qoran oo dhan isticmaala \' screens, ka dibna dhamaan isticmaalayaasha waa in la galo tiro isku mid ah ugu hooseeya iyo saxaafadda \' OK \'.</string>
+    <string name="help_verify">Haddaba, waa in aad mid ka mid ah ereyadan 3 - hadalka oo dhan isticmaala. User kastaa waa inuu ka dooro weedha ah, isla markaana caadi ah, oo saxaafadda \' Next \'.</string>
+
+    <string name="label_NumericModeHint">Non- Ingiriisi</string>
+    <string name="label_PromptInstruct">Lambarka waxa loo isticmaalay si loo abuuro koox gaar ah ee isticmaala. Is barbar dhig, ka dibna ku qor lambarka ugu hooseeya oo dhan isticmaala.</string>
+    <string name="label_ReceivedNItems">helay %d items</string>
+    <string name="label_UserIdHint">Ugu horeyay</string>
+    <string name="label_VerifyInstruct">All telefoonada waa dhigma mid ka mid ah jumlado 3 - hadalka. Is barbar dhig, ka dibna ka qaadan weedhani ku habboon ee.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">sugeyso xaqiijinta dhammaan xubnaha…</string>
+    <string name="prog_CollectingOthersItems">sugaya oo dhan isticmaala si ay ugu biiraan…</string>
+    <string name="prog_ConstructingGroupKey">dhismaha muhiimka ah ee kooxda…</string>
+    <string name="prog_RequestingUserId">codsanayo xubin ka…</string>
+
+    <string name="title_size">Imisa dadka isticmaala ee isweydaarsiga?</string>
+    <string name="title_userid">Kooxeeyada</string>
+    <string name="title_verify">Hubi</string>
+
+</resources>

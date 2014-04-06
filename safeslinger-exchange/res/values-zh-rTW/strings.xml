@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">退出？你確定嗎？</string>
+
+    <string name="btn_Match">下一步</string>
+    <string name="btn_NoMatch">沒有匹配</string>
+
+    <string name="choice_NumUsers">%d位成員</string>
+
+    <string name="error_AllMembersMustUpgrade">一些成員使用舊版本軟體，所有成員必須使用版本至少%s</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">所有成員都必須升級，一些正在使用舊的推註冊格式。</string>
+    <string name="error_CorrectYourInternetConnection">網路不可使用，請檢查您的網路設定。</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">交易所超時超標。重新開始交流。</string>
+    <string name="error_HttpCode">伺服器HTTP錯誤：%d</string>
+    <string name="error_InvalidCommitVerify">在交流中找到不正確的數據。重新開始交流。</string>
+    <string name="error_InvalidCommonUserId">請輸入一個正整數。</string>
+    <string name="error_LocalGroupCommitDiffer">您已舉報的短語的差別。重新開始交流。</string>
+    <string name="error_MinUsersRequired">至少需要%d個成員進行交換資料。</string>
+    <string name="error_MoreDataThanUsers">在交流中找到意外的數據。重新開始交流。</string>
+    <string name="error_NoWordListSelected">你必須選擇一個詞組使程式繼續進行。</string>
+    <string name="error_OtherGroupCommitDiffer">有人舉報在短語的差別。重新開始交流。</string>
+    <string name="error_OutOfMemoryError">內存太低不能夠完成這個操作。</string>
+    <string name="error_ServerAppMessage">伺服器訊息：\'%s\'。</string>
+    <string name="error_ServerAppMessageCStr">伺服器訊息：\'%s\'。</string>
+    <string name="error_ServerNotResponding">伺服器沒有回應。</string>
+    <string name="error_TimeoutWaitingForAllMembers">等待收集成員數據逾時。</string>
+    <string name="error_WebCancelledByUser">使用者取消伺服器請求。</string>
+
+    <string name="help_size">選擇試圖與您交換資訊的成員數目，然後按\'確定\'。</string>
+    <string name="help_userid">螢幕上的號碼是用來建立一個專有的群體，每位成員審視其他成員的號碼後，所有成員必須輸入相同的最低號碼，接著按\'確定\'。</string>
+    <string name="help_verify">現在你必須從這三個詞組中找出和所有成員相同(匹配)的詞組，每位成員必須選擇相同的詞組，然後按\'下一步\'。</string>
+
+    <string name="label_NumericModeHint">非英語</string>
+    <string name="label_PromptInstruct">該數字是用來創建一個專有的群體，請您比較該數字並輸入所有成員之間最小的數字。</string>
+    <string name="label_ReceivedNItems">收到%d個項目</string>
+    <string name="label_UserIdHint">最低數字</string>
+    <string name="label_VerifyInstruct">所有的手機都必須符合3字詞組之一。比較，然後選擇匹配的短語。</string>
+
+    <string name="prog_CollectingOthersCommitVerify">等待所有成員被驗證…</string>
+    <string name="prog_CollectingOthersItems">等待所有成員加入…</string>
+    <string name="prog_ConstructingGroupKey">構建群組密鑰…</string>
+    <string name="prog_RequestingUserId">要求成員認證碼…</string>
+
+    <string name="title_size">和多少人交換資訊？</string>
+    <string name="title_userid">分組</string>
+    <string name="title_verify">確認</string>
+
+</resources>

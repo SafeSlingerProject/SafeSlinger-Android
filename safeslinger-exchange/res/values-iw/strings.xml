@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">צא? האם אתה בטוח?</string>
+
+    <string name="btn_Match">הבא</string>
+    <string name="btn_NoMatch">אין התאמה</string>
+
+    <string name="choice_NumUsers">%d משתמשים</string>
+
+    <string name="error_AllMembersMustUpgrade">חלק מהחברים משתמשים בגרסה ישנה יותר, כל החברים לפחות חייבים להשתמש %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">כל החברים חייבים לשדרג, חלקם באמצעות פורמטי רישום דחיפה מעלה.</string>
+    <string name="error_CorrectYourInternetConnection">אינטרנט אינו זמין, בדוק את ההגדרות שלך.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">פסק זמן שערי חריגה. בגיןמטבע שוב.</string>
+    <string name="error_HttpCode">שגיאת HTTP שרת: %d</string>
+    <string name="error_InvalidCommitVerify">שגויים נמצאו נתונים בתמורה. בגיןמטבע שוב.</string>
+    <string name="error_InvalidCommonUserId">נא להזין מספר חיובי.</string>
+    <string name="error_LocalGroupCommitDiffer">דיווחת עלהבדל בביטויים. בגיןמטבע שוב.</string>
+    <string name="error_MinUsersRequired">מינימום של %d חברים נדרשים להחליף נתונים.</string>
+    <string name="error_MoreDataThanUsers">לא צפויים נתונים שנמצאו בתמורה. בגיןמטבע שוב.</string>
+    <string name="error_NoWordListSelected">עליך לבחור אחדמהביטויים לפני שתמשיך.</string>
+    <string name="error_OtherGroupCommitDiffer">מישהו דיווח על הבדל בביטויים. בגיןמטבע שוב.</string>
+    <string name="error_OutOfMemoryError">הזיכרון הוא נמוך מדי כדי להשלים את הפעולה.</string>
+    <string name="error_ServerAppMessage">הודעת שרת: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">הודעת שרת: \'%s\'</string>
+    <string name="error_ServerNotResponding">אין תגובה מהשרת.</string>
+    <string name="error_TimeoutWaitingForAllMembers">פסק זמן מחכה לחלק מחברי הקבוצה כדי להוסיף נתונים.</string>
+    <string name="error_WebCancelledByUser">משתמש ביטל את בקשת שרת.</string>
+
+    <string name="help_size">בחר את מספר האנשים שמנסים להחליף נתונים ביחד ולחץ על \'אישור\'.</string>
+    <string name="help_userid">מספר זה במסך זה משמש ליצירת קבוצה ייחודית של משתמשים. סקרו את המספרים על כל המשתמשים \'מסכים, אז כל המשתמשים צריכים להזין את אותו המספר הנמוך ביותר ולחץ על \'אישור\'.</string>
+    <string name="help_verify">עכשיו, אתה חייב להתאים אחד מביטויי 3-מילה אלה עם כל המשתמשים. כל משתמש חייב לבחור את אותו ביטוי נפוץ, ולחץ על \'הבאה\'.</string>
+
+    <string name="label_NumericModeHint">שאינה באנגלית</string>
+    <string name="label_PromptInstruct">מספר זה משמש ליצירת קבוצה ייחודית של משתמשים. השווה, ולאחר מכן להזין את המספר הנמוך ביותר בין כל המשתמשים.</string>
+    <string name="label_ReceivedNItems">קיבל %d פריטים</string>
+    <string name="label_UserIdHint">הנמוך ביותר</string>
+    <string name="label_VerifyInstruct">כל הטלפונים חייבים להתאים אחד3 מילות הביטויים. השווה, ולאחר מכן לבחור את הביטוי המתאים.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">ממתין לאימות מכל החברים…</string>
+    <string name="prog_CollectingOthersItems">מחכה לכל המשתמשים להצטרף…</string>
+    <string name="prog_ConstructingGroupKey">בניית מפתח קבוצה…</string>
+    <string name="prog_RequestingUserId">בקשת חברות…</string>
+
+    <string name="title_size">כמה משתמשיםבתמורה?</string>
+    <string name="title_userid">הקבצה</string>
+    <string name="title_verify">לאמת</string>
+
+</resources>

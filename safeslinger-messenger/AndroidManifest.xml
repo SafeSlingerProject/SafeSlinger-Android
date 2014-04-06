@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.cmu.cylab.starslinger"
+    android:versionCode="0x01060C00"
+    android:versionName="1.6.12" >
+
+    
+    <!-- API 9 is the minimum required for password-based encryption PBKDF2WithHmacSHA1. -->
+    <!-- API 8 is the minimum required to receive push messages. -->
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <permission
+        android:name="edu.cmu.cylab.starslinger.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="edu.cmu.cylab.starslinger.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="SafeSlinger"
+        android:allowBackup="true"
+        android:allowClearUserData="false"
+        android:backupAgent="KeyBackupAgent"
+        android:exported="false"
+        android:icon="@drawable/ic_launcher"
+        android:killAfterRestore="true"
+        android:label="@string/app_name"
+        android:restoreAnyVersion="true"
+        android:supportsRtl="true" >
+        <activity
+            android:name=".view.HomeActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/*" />
+                <data android:mimeType="text/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="edu.cmu.cylab.starslinger.action.MESSAGES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="edu.cmu.cylab.starslinger.action.BACKUPREMINDER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.PickRecipientsActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".view.SettingsActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".view.PassPhraseActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".view.FilePickerActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".view.FileSaveActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".view.FindContactActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".view.IntroductionActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+
+        <service android:name=".Service" />
+        <service android:name=".transaction.C2DMReceiver" />
+
+        <!--
+             Only C2DM servers can send messages for the app. If permission is 
+			not set - any other app can generate it
+        -->
+        <receiver
+            android:name=".transaction.C2DMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+
+            <!-- Receive the actual message -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="edu.cmu.cylab.starslinger" />
+            </intent-filter>
+
+            <!-- Receive the registration id -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="edu.cmu.cylab.starslinger" />
+            </intent-filter>
+
+            <!-- Receive registration retry -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RETRY" />
+
+                <category android:name="edu.cmu.cylab.starslinger" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAI7_yGMc3zxFFyU8yALTvp3x7-6Uvy60zTsqPchg" />
+
+        <activity
+            android:name=".view.SaveActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+
+        <!-- we must include all activities declared by library manifests as well: -->
+        <activity
+            android:name="edu.cmu.cylab.starslinger.exchange.ExchangeActivity"
+            android:label="@string/lib_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="edu.cmu.cylab.starslinger.exchange.VerifyActivity"
+            android:label="@string/lib_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="edu.cmu.cylab.starslinger.exchange.GroupingActivity"
+            android:label="@string/lib_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+    </application>
+
+</manifest>

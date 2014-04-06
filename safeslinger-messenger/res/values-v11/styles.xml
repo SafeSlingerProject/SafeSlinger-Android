@@ -1,0 +1,11 @@
+<resources>
+
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        Theme_SafeSlinger_PassPhrase_Base from res/values/styles.xml on API 11+ devices.
+    -->
+    <style name="Theme_SafeSlinger_PassPhrase_Base" parent="android:Theme.Light.NoTitleBar">
+        <!-- API 11 theme customizations can go here. -->
+    </style>
+
+</resources>

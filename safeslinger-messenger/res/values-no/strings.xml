@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Send invitere med…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup er deaktivert. Ønsker du å justere innstillingene for sikkerhetskopiering og holde denne påminnelsen?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s har en nyere enhet eller nøkkel, er du sikker på at du vil bruke denne eldre en?</string>
+    <string name="ask_FileExistsOverwrite">Filnavn %s finnes allerede. Overskrive?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Uten en Google-konto vil du bare være i stand til å sende, ikke motta meldinger. Ønsker du å legge til en Google-konto?</string>
+    <string name="ask_SendErrorData">Vi ønsker din hjelp forbedre SafeSlinger. Har du lyst til å automatisk sende eventuelle feil til oss?</string>
+
+    <string name="btn_Accept">Godta</string>
+    <string name="btn_BeginExchangeProximity">Begynn Utveksling</string>
+    <string name="btn_Cancel">Avbryt</string>
+    <string name="btn_Close">Lukk</string>
+    <string name="btn_Continue">Fortsett</string>
+    <string name="btn_discard">Kast</string>
+    <string name="btn_Done">Ferdig</string>
+    <string name="btn_Exit">Utgang</string>
+    <string name="btn_Import">Import</string>
+    <string name="btn_Introduce">Introduser</string>
+    <string name="btn_No">Nei</string>
+    <string name="btn_NotRemind">Glem</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Nekter</string>
+    <string name="btn_Remind">Minn</string>
+    <string name="btn_Save">Lagre</string>
+    <string name="btn_SelectFile">Legg til vedlegg</string>
+    <string name="btn_SendFile">Send</string>
+    <string name="btn_Yes">Ja</string>
+
+    <string name="choice_10mins">10 minutter</string>
+    <string name="choice_1hour">1 time</string>
+    <string name="choice_1min">1 minutt</string>
+    <string name="choice_20mins">20 minutter</string>
+    <string name="choice_2hours">2 timer</string>
+    <string name="choice_3mins">3 minutter</string>
+    <string name="choice_40mins">40 minutter</string>
+    <string name="choice_4hours">4 timer</string>
+    <string name="choice_5mins">5 minutter</string>
+    <string name="choice_8hours">8 timer</string>
+    <string name="choice_auto_storage">Standard Lagring</string>
+    <string name="choice_external_storage">Ekstern lagring</string>
+    <string name="choice_internal_storage">Intern lagring</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_SaveDirectory">Lagre Directory</string>
+    <string name="choice_SaveFile">Lagre filen</string>
+    <string name="choice_Up">Opp</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Alle medlemmer må oppgradere, noen bruker eldre viktige formater.</string>
+    <string name="error_AudioPlayerDecodeError">Audio spiller dekoding feil.</string>
+    <string name="error_AudioPlayerError">Kan ikke spille av opptaket.</string>
+    <string name="error_AudioRecorderEncodeError">Lydopptaker koding feil.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofon Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Mikrofon tillatelser.</string>
+    <string name="error_BackupNotFound">Ingen backup til gjenoppretting.</string>
+    <string name="error_BackupNotSupportedDevice">Enheten støtter ikke backup gjenoppretting.</string>
+    <string name="error_BadCopyProtectUpgrade">På grunn av en bug i Android 4.1, vil du ha avinstallere og installere SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">En Google-konto er nødvendig. Vennligst åpne account manager og legge til en Google-konto.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Registrering er ikke godkjent, kan du prøve på nytt manuelt senere.</string>
+    <string name="error_C2DMRegInvalidSender">Registrering er ikke tilgjengelig for denne versjonen, kan du se etter en oppdatert versjon.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Feil enhetsregistreringmed Google. Denne enheten støtter foreløpig ikke push-meldinger.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Push registreringstjenesten ikke er tilgjengelig, planlegging prøve på nytt i %d sekunder.</string>
+    <string name="error_C2DMRegTooManyRegistrations">For mange programmer er registrert for Push. Vennligst avinstallere noen andre programmer og prøv på nytt.</string>
+    <string name="error_CannotSendEmptyFile">Kan ikke sende en tom vedlegg.</string>
+    <string name="error_CannotSendFilesOver">Kan ikke sende vedlegg større enn %d byte i størrelse.</string>
+    <string name="error_CannotSendNullFile">Kan ikke sende en null vedlegg.</string>
+    <string name="error_contactCreationFailure">Kontakt feilet.</string>
+    <string name="error_ContactInsertFailed">Kontaktinnsats mislyktes.</string>
+    <string name="error_ContactNameMissing">Denne kontakten mangler et navn, kan du redigere.</string>
+    <string name="error_ContactNameMissing2">Denne kontakten mangler et navn, kan du velge om igjen.</string>
+    <string name="error_ContactUpdateFailed">Kontakt oppdatering mislyktes.</string>
+    <string name="error_couldNotExtractPrivateKey">Kunne ikke pakke privat nøkkel.</string>
+    <string name="error_FeatureIsNotSupport">Støttes ikke %1$s på %2$s på dette tidspunktet.</string>
+    <string name="error_FileSave">Kan ikke lagre %s.</string>
+    <string name="error_FileStorageUnavailable">Fillagring er ikke tilgjengelig.</string>
+    <string name="error_InvalidContactName">En gyldig kontaktnavn er nødvendig.</string>
+    <string name="error_InvalidIncomingMessage">Bad meldingsformat innkommende.</string>
+    <string name="error_InvalidMsg">Meldingsformat dårlig.</string>
+    <string name="error_InvalidRecipient">Ugyldig mottaker.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Den peer-nøkkelformat er ugyldig.</string>
+    <string name="error_MessageSignatureVerificationFails">Signatur verifisering mislyktes.</string>
+    <string name="error_minPassphraseRequire">Passfraser krever minst %d tegn.</string>
+    <string name="error_MissingNdk">SafeSlinger ikke oppdage NDK støtte på denne enheten, som er nødvendig.</string>
+    <string name="error_MultipleSendNotSupported">Du prøver å sende flere elementer. På denne tiden, SafeSlinger støtter bare sende ett element om gangen.</string>
+    <string name="error_NoEmailAccount">E-postkontoen er ikke setup!</string>
+    <string name="error_noPassPhrase">Ingen passphrase angitt.</string>
+    <string name="error_passPhrasesDoNotMatch">Passfraser stemmer ikke overens.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Du har overskredet meldingen kvoten for at mottakeren. Vennligst prøv igjen senere.</string>
+    <string name="error_PushMsgInvalidRegistration">At mottakeren har en manglende eller dårlig presse registrering. Du bør slutte å sende meldinger til denne enheten.</string>
+    <string name="error_PushMsgMessageNotFound">Melding utløpt.</string>
+    <string name="error_PushMsgMessageTooBig">Meldingen er for stor. Redusere størrelsen på meldingen.</string>
+    <string name="error_PushMsgNotRegistered">At mottakerens trykkregistreringer ikke lenger gyldig. Mottakeren kan ha avinstallert SafeSlinger eller slått av varslinger. Du bør slutte å sende meldinger til denne enheten.</string>
+    <string name="error_PushMsgNotSucceed">Det var en kommunikasjonsfeil med push varslingstjenesten.</string>
+    <string name="error_PushMsgQuotaExceeded">Du har overskredet meldingen kvoten for denne enheten. Vennligst prøv igjen senere.</string>
+    <string name="error_PushMsgServiceFail">Varslingstjenesten er ikke tilgjengelig denne gangen. Vennligst prøv å sende meldingen senere.</string>
+    <string name="error_RecoderError">Kan ikke forberede lydopptaker.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">For å starte, \' Sling Keys\' med en annen telefon samtidig.</string>
+    <string name="error_selectDataToSend">Du trenger et vedlegg eller en tekstmelding til å sende.</string>
+    <string name="error_ShareFileDelError">Kan ikke fjerne den delte filen.</string>
+    <string name="error_UnableFindPubKey">Klarer å matche offentlig nøkkel til privat nøkkel i krypto leverandør.</string>
+    <string name="error_UnableToSaveMessageInDB">Kan ikke lagre til meldingsdatabasen.</string>
+    <string name="error_UnableToSaveRecipientInDB">Kan ikke lagre til mottakeren databasen.</string>
+    <string name="error_UnableToUpdateMessageInDB">Kan ikke oppdatere meldingsdatabasen.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Kan ikke oppdatere mottakeren databasen.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger feil, må du starte.</string>
+    <string name="error_VcardParseFailure">Kontaktdata ble formatert feil.</string>
+
+    <string name="help_find">Bruk denne skjermen til å legge inn navn for å utveksle med andre. Trykk på \'Done\'-knappen når du er ferdig.</string>
+    <string name="help_home">Å utveksle identitetsdata, sikre at alle brukere er i nærheten eller på telefonen. The \' Begynn Exchange \'-knappen vil utveksle kun de sjekket kontaktdata.</string>
+    <string name="help_identity_menu">\n\nDu kan også endre personopplysninger om din identitet på denne skjermen ved å trykke på knappen med navnet ditt. Dette vil vise en meny som lar deg Rediger kontakt din, \' Opprett ny \' kontakt, eller \'Bruk en annen \'kontakt.</string>
+    <string name="help_Messages">Denne skjermen viser alle tidligere meldinger og vedlegg som fortsatt er tilgjengelige for nedlasting.</string>
+    <string name="help_passphrase">Bruk dette skjermbildet til å logge inn på søknaden med passordet.</string>
+    <string name="help_PickRecip">Kontakter med SafeSlinger tastene vises her, velg en å sende meldingen til.</string>
+    <string name="help_save">Når du er ferdig, vil protokollen avsløre en liste over identitetsdata utveksles. Velg kontaktene du ønsker å lagre og trykk \' Import \'.</string>
+    <string name="help_SecureIntroduction">Dette skjermbildet kan du velge to personer du har slengt nøkler med før å sikkert sende sine nøkler til hverandre. Bare trykk \' Introduser \' når du er klar.</string>
+    <string name="help_Send">Dette skjermbildet kan du velge noen data og en mottaker for å sende til. Bare trykk \' Send \' når du er klar.</string>
+
+    <string name="iOS_contactError">Kontakter Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Kontakter tillatelser.</string>
+    <string name="iOS_errorpushtoken">Push registrering mangler.</string>
+    <string name="iOS_notificationError1">Påminnelser Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Varsler tillatelser.</string>
+    <string name="iOS_notificationError2">%s Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Varsler tillatelser.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger er ikke optimalisert for iOS 5.x enheter. SafeSlinger krever iOS 6 eller høyere.</string>
+
+    <string name="label_ago">%s siden</string>
+    <string name="label_backupCompleteDate">Siste Backup Fullført</string>
+    <string name="label_backupRequestDate">Siste Backup Request</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Trykk for å se gjennom %d meldinger</string>
+    <string name="label_ComposeHint">Komponer melding</string>
+    <string name="label_ContactName">Ditt navn</string>
+    <string name="label_days">%d dager</string>
+    <string name="label_Device">Enhet:</string>
+    <string name="label_DeviceInSendOnlyMode">Send beskyttet modus</string>
+    <string name="label_DisabledExchSourceKeyChange">Din nøkkel har endret: Sling Keys igjen.</string>
+    <string name="label_Draft">UTKAST</string>
+    <string name="label_EnabledKeyFormatDeprecated">Key format deprecated: Sling Keys igjen.</string>
+    <string name="label_exchanged">utvekslet</string>
+    <string name="label_expired">utløpt</string>
+    <string name="label_expires">utløper %s</string>
+    <string name="label_expiresIn">utløper i</string>
+    <string name="label_FileNameHint">File Name</string>
+    <string name="label_FindInstruct">Skriv inn navnet du ønsker at andre skal se når vi kommuniserer sikkert:</string>
+    <string name="label_FirstName">Fornavn</string>
+    <string name="label_Home">Klikk på navnet for å legge til eller fjerne kontaktdata, sjekke elementene du ønsker å dele, og trykk \'Begynn Exchange \'når andre er klare til utveksling:</string>
+    <string name="label_hometag">Hjem</string>
+    <string name="label_hours">%d timer</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud er aktivert. Trykk på\' Done\'-knappen når du er ferdig.</string>
+    <string name="label_InstNoMessages">Ingen meldinger. Du kan sende en melding fra \' Skriv melding \'-knappen på startmenyen.</string>
+    <string name="label_InstNoMessagesAndroid">Ingen meldinger. Du kan sende en melding fra \' Compose \'-fanen.</string>
+    <string name="label_InstNoRecipients">Ingen mottakere. Finn et annet SafeSlinger bruker i nærheten, og berør \' Sling Keys \' tab for å dele nøkler.</string>
+    <string name="label_InstNoSharedFile">Ingen delte filen. Koble til enheten med iTunes og dra filer til den delte mappen.</string>
+    <string name="label_InstRecipients">Plukk en mottaker for å sende en melding til:</string>
+    <string name="label_InstSendInvite">Plukk mottakerne til å innføre sikkert:</string>
+    <string name="label_InstSharedFile">Plukk en fil for å legge til:</string>
+    <string name="label_introduced">introdusert</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Etternavn</string>
+    <string name="label_Me">Me</string>
+    <string name="label_messageIntroduceNameToYou">Jeg ønsker å presentere %s til deg.</string>
+    <string name="label_minutes">%d minutter</string>
+    <string name="label_mobiletag">Mobil</string>
+    <string name="label_MostRecentOnly">Nyeste bare</string>
+    <string name="label_MsgSendUpdate">Mine oppdaterte SafeSlinger legitimasjon er vedlagt.</string>
+    <string name="label_None">Ingen</string>
+    <string name="label_numsharedfiles">%d filer å dele:</string>
+    <string name="label_OldThreads">Gamle tråder</string>
+    <string name="label_othertag">Annet</string>
+    <string name="label_PassHintBackoff">Prøv på nytt</string>
+    <string name="label_PassHintChange">Oppdatert Passphrase</string>
+    <string name="label_PassHintCreate">Lag Passphrase</string>
+    <string name="label_PassHintCurrent">Nåværende Passphrase</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Gjenta Passphrase</string>
+    <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
+    <string name="label_PassPhraseIsCached">Passphrase bufret</string>
+    <string name="label_phoneOnly">telefon-bare</string>
+    <string name="label_Photo">Bilde</string>
+    <string name="label_PublicKeyID">Key ID</string>
+    <string name="label_PushTokenID">Push registrerings-ID</string>
+    <string name="label_RemindBackupDelay">Backup Påminnelse</string>
+    <string name="label_ReportedInactive">Rapportert inaktiv %s.</string>
+    <string name="label_restoreCompleteDate">Siste Gjenopprett Fullført</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup forsinket</string>
+    <string name="label_safeslingered">(SafeSlinger Direkte Exchange)</string>
+    <string name="label_SaveAccount">Spar konto</string>
+    <string name="label_SaveInstruct">Sjekk kontaktene du ønsker å oppdatere i adresseboken, og trykk deretter på \'Import\' for å lagre sikre kontakter:</string>
+    <string name="label_seconds">%d sekunder</string>
+    <string name="label_SelectRecip">Velg mottaker</string>
+    <string name="label_sendErrorData">Send feildata</string>
+    <string name="label_SendFrom">Fra:</string>
+    <string name="label_SendTo">Til:</string>
+    <string name="label_ShowHintAtLaunch">Vis denne hint neste gang.</string>
+    <string name="label_step_1">Trinn 1</string>
+    <string name="label_step_2">Trinn 2</string>
+    <string name="label_step_3">Trinn 3</string>
+    <string name="label_step_4">Trinn 4</string>
+    <string name="label_step_5">Trinn 5</string>
+    <string name="label_TapToDecryptFile">Trykk for å dekryptere filen</string>
+    <string name="label_TapToDecryptMessage">Trykk for å dekryptere</string>
+    <string name="label_TapToDownloadFile">Trykk for å laste ned filen</string>
+    <string name="label_TapToDownloadMessage">Trykk for å laste ned melding</string>
+    <string name="label_TapToOpenFile">Klikk for å åpne filen</string>
+    <string name="label_TapToResumeDraft">Trykk for å gjenoppta meldingsutkast</string>
+    <string name="label_TapToSendCredentialUpdate">Trykk og hold for å sende legitimasjon oppdatering.</string>
+    <string name="label_targetAccountLabel">Kontakter konto</string>
+    <string name="label_TouchToConfigureBackupSettings">Du kan eventuelt aktivere SafeSlinger iCloud backup i iOS-innstillinger. Trykk på\' Done\'-knappen når du er ferdig.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Trykk for å konfigurere innstillinger for sikkerhetskopiering.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Trykk for å konfigurere cache timeout innstillinger.</string>
+    <string name="label_undefinedTypeLabel">Ukjent</string>
+    <string name="label_UnknownSender">Kryptert Avsender</string>
+    <string name="label_UserName">Brukernavn</string>
+    <string name="label_worktag">Arbeid</string>
+
+    <string name="menu_About">Om</string>
+    <string name="menu_Change">Endring</string>
+    <string name="menu_ChangePassphrase">Endre Passphrase</string>
+    <string name="menu_CreateNew">Opprett ny</string>
+    <string name="menu_delete">Slett</string>
+    <string name="menu_deleteThread">Slett tråden \'%s\'</string>
+    <string name="menu_Details">Vis Detalj</string>
+    <string name="menu_DownloadDirectory">Last ned katalog</string>
+    <string name="menu_Edit">Rediger</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_Help">Hjelp</string>
+    <string name="menu_Introduction">Innledning</string>
+    <string name="menu_License">Lisens</string>
+    <string name="menu_Logout">Logg ut</string>
+    <string name="menu_messageCopyText">Kopier tekst</string>
+    <string name="menu_messageForward">Forward</string>
+    <string name="menu_Remove">Fjern</string>
+    <string name="menu_SelectShareApp">Send Application</string>
+    <string name="menu_sendFeedback">Send tilbakemelding</string>
+    <string name="menu_SendUpdate">Send oppdatering</string>
+    <string name="menu_Settings">Innstillinger</string>
+    <string name="menu_ShowTutorial">Vis Tutorial</string>
+    <string name="menu_TagComposeMessage">Komponer</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">Meldinger</string>
+    <string name="menu_UseAnother">Bruk en annen</string>
+    <string name="menu_UseContactPerson">Bruk Kontakt \'%s\'</string>
+    <string name="menu_UseNoContact">Bruk Name Only</string>
+    <string name="menu_UseProfilePerson">Bruk profil \'%s\'</string>
+
+    <string name="prog_decrypting">dekryptering…</string>
+    <string name="prog_encrypting">kryptere…</string>
+    <string name="prog_FileSent">melding sendt, venter på svar…</string>
+    <string name="prog_findingKey">finne nøkkelen…</string>
+    <string name="prog_GeneratingKey">genererer nøkkelen, kan dette ta en stund…</string>
+    <string name="prog_generatingSignature">genererer signatur…</string>
+    <string name="prog_loadingContent">lasting innhold…</string>
+    <string name="prog_ReceivingFile">motta kryptert fil…</string>
+    <string name="prog_RequestingFile">ber kryptert fil…</string>
+    <string name="prog_RequestingMessage">ber kryptert melding…</string>
+    <string name="prog_RequestingPushReg">ber om push-registrering…</string>
+    <string name="prog_SavingContactsToAddressBook">oppdatering adressebok…</string>
+    <string name="prog_SavingContactsToKeyDatabase">oppdatere nøkkel database…</string>
+    <string name="prog_SearchingForBackup">søker etter backup…</string>
+    <string name="prog_SendingFile">sende kryptert %s…</string>
+    <string name="prog_verifyingIntegrity">verifisere integritet…</string>
+    <string name="prog_verifyingSignature">verifisere signaturen…</string>
+
+    <string name="section_advanced">Avansert</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">Generelt</string>
+
+    <string name="state_BackupRestored">Backup restaurert.</string>
+    <string name="state_FileDeleted">Slettet fil %s.</string>
+    <string name="state_FileSent">Melding sendt.</string>
+    <string name="state_MessageSavedAsDraft">Melding lagret som kladd.</string>
+    <string name="state_MessagesDeleted">%d meldinger slettet.</string>
+    <string name="state_PassphraseUpdated">Passphrase oppdatert.</string>
+    <string name="state_RecipientsDeleted">%d mottakere slettet.</string>
+    <string name="state_SomeContactsImported">%s kontakter importert.</string>
+    <string name="state_TextCopiedToClipboard">Tekst kopiert til utklippstavlen.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger er designet for enkelt å dele identitetsdata, i person eller over telefon, autentisert, privat, og intakt. Hver person du deler med oppretter en sikker ende-til-ende-kanal for å sende meldinger.\n\nFunksjoner:\n- Lett utveksle kontaktinformasjon med andre\n- Trygt slynge tekster, bilder, noe!\n- Sterk kryptografi beskytter din informasjon\n\ne-post: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Utveksling</string>
+    <string name="text_KeywordIdentity">Identitet</string>
+    <string name="text_KeywordKey">Nøkkel</string>
+    <string name="text_KeywordMessaging">Meldinger</string>
+    <string name="text_KeywordPrivacy">Personvern</string>
+    <string name="text_KeywordSecurity">Sikkerhet</string>
+    <string name="text_LanguagesProvidedBy">Språk levert av:</string>
+    <string name="text_RelatedSearchTerms">Relaterte ord:</string>
+    <string name="text_Requirements">Krav:\n1. Må være installert på et minimum av 2 enheter.\n2. En Internett-tilkobling må være aktiv.</string>
+    <string name="text_SourceCodeRepo">åpen kildekode: %s</string>
+    <string name="text_WhatsNew">- Stabilitet rettinger.</string>
+
+    <string name="title_About">Om</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_ChooseDirectory">Velg Directory</string>
+    <string name="title_ChooseFileLoad">Velg din Vedlegg</string>
+    <string name="title_comments">Kommentarer/Spørsmål</string>
+    <string name="title_Error">Feil</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
+    <string name="title_FileOptions">Attachment Options</string>
+    <string name="title_find">Setup</string>
+    <string name="title_home">Begynn Utveksling</string>
+    <string name="title_HomePanel">Hjem</string>
+    <string name="title_MessageDetail">Melding</string>
+    <string name="title_Messages">Meldinger</string>
+    <string name="title_MyIdentity">Personlig kontakt</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger melding Tilgjengelig</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Meldinger Tilgjengelige</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Fotoalbum</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Mottakere</string>
+    <string name="title_Question">Spørsmål</string>
+    <string name="title_RecipientDetail">Mottaker Detalj</string>
+    <string name="title_save">Slutt Utveksling</string>
+    <string name="title_SaveFileAs">Lagre fil som</string>
+    <string name="title_SecureIntroduction">Sikker Innledning</string>
+    <string name="title_SecureIntroductionInvite">Sikre Innledning Invitasjon!</string>
+    <string name="title_SelectSource">Sende Alternativer:</string>
+    <string name="title_SendFile">Send</string>
+    <string name="title_sharingfolder">Dele mappe</string>
+    <string name="title_soundrecoder">Sound Recorder</string>
+    <string name="title_TextInviteMsg">SafeSlinger Invitasjon</string>
+    <string name="title_Threads">Tråder</string>
+    <string name="title_Warn">Advarsel</string>
+
+</resources>

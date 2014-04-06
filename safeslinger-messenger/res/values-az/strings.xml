@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Ilə link dəvət göndərmək…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup aradan. Siz backup parametrləri tənzimləmək və bu öyüd-nəsihət saxlamaq istəyirsiniz?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s daha yeni cihaz və ya düyməsini var, siz bu older bir istifadə etmək əminsinizmi?</string>
+    <string name="ask_FileExistsOverwrite">Fayl adı %s artıq mövcuddur. Yazır?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Google Hesabi olmadan yalnız almaq, mesaj göndərmək olacaq. Bir Google hesabı əlavə etmək istəyirsiniz?</string>
+    <string name="ask_SendErrorData">Biz yardım SafeSlinger təkmilləşdirilməsi istərdim. Avtomatik bizə hər hansı bir səhv göndərmək istəyirsiniz?</string>
+
+    <string name="btn_Accept">Qəbul</string>
+    <string name="btn_BeginExchangeProximity">Exchange başlayın</string>
+    <string name="btn_Cancel">Ləğv etmək</string>
+    <string name="btn_Close">Yaxın</string>
+    <string name="btn_Continue">Davam etdirmək</string>
+    <string name="btn_discard">Rədd etmək</string>
+    <string name="btn_Done">Işlənmiş</string>
+    <string name="btn_Exit">Çıxış</string>
+    <string name="btn_Import">Idxal</string>
+    <string name="btn_Introduce">Tanıtmaq</string>
+    <string name="btn_No">Heç bir</string>
+    <string name="btn_NotRemind">Unutmaq</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Imtina etmək</string>
+    <string name="btn_Remind">Xatırlatmaq</string>
+    <string name="btn_Save">Saxla</string>
+    <string name="btn_SelectFile">Əlavə et</string>
+    <string name="btn_SendFile">Göndərmək</string>
+    <string name="btn_Yes">Bəli</string>
+
+    <string name="choice_10mins">10 dəqiqə</string>
+    <string name="choice_1hour">1 saat</string>
+    <string name="choice_1min">1 dəqiqə</string>
+    <string name="choice_20mins">20 dəqiqə</string>
+    <string name="choice_2hours">2 saat</string>
+    <string name="choice_3mins">3 dəqiqə</string>
+    <string name="choice_40mins">40 dəqiqə</string>
+    <string name="choice_4hours">4 saat</string>
+    <string name="choice_5mins">5 dəqiqə</string>
+    <string name="choice_8hours">8 saat</string>
+    <string name="choice_auto_storage">Default Storage</string>
+    <string name="choice_external_storage">Xarici Storage</string>
+    <string name="choice_internal_storage">Daxili Storage</string>
+    <string name="choice_nolimit">No Limit</string>
+    <string name="choice_SaveDirectory">Save Directory</string>
+    <string name="choice_SaveFile">Fayl saxla</string>
+    <string name="choice_Up">Up</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Bütün üzvləri bəzi köhnə əsas format istifadə olunur, yükseltmek lazımdır.</string>
+    <string name="error_AudioPlayerDecodeError">Audio player decoding səhv.</string>
+    <string name="error_AudioPlayerError">Qeyd oynaya bilməz.</string>
+    <string name="error_AudioRecorderEncodeError">Audio recorder encoding səhv.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofon icazə tələb olunur. Mikrofon icazələrin imkan iOS Ayarlar getmək edin.</string>
+    <string name="error_BackupNotFound">Bərpa No backup.</string>
+    <string name="error_BackupNotSupportedDevice">Device backup bərpa bilmir.</string>
+    <string name="error_BadCopyProtectUpgrade">Android 4.1 bir səhv üçün, sil və SafeSlinger yeniden olacaq.</string>
+    <string name="error_C2DMRegAccountMissing">A Google hesabı tələb olunur. Hesab meneceri açmaq və Google hesabı əlavə edin.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Daxil olmaq qeydiyyat təsdiq deyil, sonra əl yeniden keçir.</string>
+    <string name="error_C2DMRegInvalidSender">Qeydiyyat bu versiyası üçün mövcud deyil, yenilənmiş versiyası üçün kontrol edin.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Google ilə yanlış cihaz qeydiyyat. Bu cihaz hazırda təkan mesajlaşma bilmir.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Push qeydiyyatı xidməti mövcud deyil, planlaşdırma %d saniyə təkrar edin.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Çox applications Push üçün qeydə alınır. Digər applications aradan qaldırılması və yeniden keçir.</string>
+    <string name="error_CannotSendEmptyFile">Boş eki göndərmək bilməz.</string>
+    <string name="error_CannotSendFilesOver">Ölçüsü %d bayt daha böyük faylları göndərmək bilməz.</string>
+    <string name="error_CannotSendNullFile">Bir null eki göndərmək bilməz.</string>
+    <string name="error_contactCreationFailure">Əlaqə yaradılması uğursuz.</string>
+    <string name="error_ContactInsertFailed">Əlaqə insert bilmədi.</string>
+    <string name="error_ContactNameMissing">Bu əlaqə bir ad itkin, redaktə edin.</string>
+    <string name="error_ContactNameMissing2">Bu əlaqə bir ad itkin, reselect edin.</string>
+    <string name="error_ContactUpdateFailed">Əlaqə yeniləmə bilmədi.</string>
+    <string name="error_couldNotExtractPrivateKey">Xüsusi açarı çıxarış bilmədi.</string>
+    <string name="error_FeatureIsNotSupport">%1$s bu zaman %2$s dəstəklənmir.</string>
+    <string name="error_FileSave">%s saxlaya bilmir.</string>
+    <string name="error_FileStorageUnavailable">Fayl storage mövcud deyil.</string>
+    <string name="error_InvalidContactName">A etibarlı əlaqə adı tələb olunur.</string>
+    <string name="error_InvalidIncomingMessage">Bad gələn mesaj format.</string>
+    <string name="error_InvalidMsg">Bad mesaj format.</string>
+    <string name="error_InvalidRecipient">Yanlış alan.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Bu peer əsas format yanlışdır.</string>
+    <string name="error_MessageSignatureVerificationFails">Imza yoxlama uğursuz.</string>
+    <string name="error_minPassphraseRequire">Passphrases azı %d simvol tələb edir.</string>
+    <string name="error_MissingNdk">SafeSlinger tələb olunur ki, bu cihaz NDK dəstək aşkar etməyib.</string>
+    <string name="error_MultipleSendNotSupported">Siz çox maddələr göndərmək üçün cəhd. Bu zaman, SafeSlinger yalnız bir zaman bir maddə göndərilməsi dəstəkləyir.</string>
+    <string name="error_NoEmailAccount">Email haqq-hesab quraşdırma deyil!</string>
+    <string name="error_noPassPhrase">No passphrase girdi.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases uyğun gəlmir.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Siz alıcı üçün mesaj kvota ötüb. Sonra yeniden keçir.</string>
+    <string name="error_PushMsgInvalidRegistration">Ki, alıcı eksik və ya pis push qeydiyyatı vardır. Bu cihaz göndərilməsi dayandırmaq lazımdır.</string>
+    <string name="error_PushMsgMessageNotFound">Mesaj başa çatıb.</string>
+    <string name="error_PushMsgMessageTooBig">Mesaj çox böyük. Mesaj ölçüsünü azaldır.</string>
+    <string name="error_PushMsgNotRegistered">Ki, alıcının push qeydiyyat artıq etibarlıdır. Alıcı SafeSlinger silindi və ya reports söndürüldükdə ola bilər. Bu cihaz göndərilməsi dayandırmaq lazımdır.</string>
+    <string name="error_PushMsgNotSucceed">Təkan bildiriş xidməti ilə ünsiyyət bir səhv var idi.</string>
+    <string name="error_PushMsgQuotaExceeded">Bu cihaz üçün mesaj kvota ötüb. Sonra yeniden keçir.</string>
+    <string name="error_PushMsgServiceFail">Notification xidmət bu dəfə mövcud deyil. Mesajı göndərmək üçün cəhd edin.</string>
+    <string name="error_RecoderError">Audio recorder hazırlamaq bilməz.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">, Eyni zamanda başqa bir telefon ilə \' Sling Keys \' başlamaq üçün.</string>
+    <string name="error_selectDataToSend">Siz eki və ya göndərmək üçün mətn mesajı lazımdır.</string>
+    <string name="error_ShareFileDelError">Paylaşılan faylını aradan qaldırılması bilməz.</string>
+    <string name="error_UnableFindPubKey">Kripto provayderi xüsusi açarı ictimai düyməsini uyğun bilmir.</string>
+    <string name="error_UnableToSaveMessageInDB">Mesaj bazasında saxlaya bilmir.</string>
+    <string name="error_UnableToSaveRecipientInDB">Alıcı bazasında saxlaya bilmir.</string>
+    <string name="error_UnableToUpdateMessageInDB">Mesaj bazası yeniləmə bilmir.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Alıcı bazası yeniləmə bilmir.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger səhv, yenidən başladın edin.</string>
+    <string name="error_VcardParseFailure">Əlaqə data səhv biçimlendirilmiş edilib.</string>
+
+    <string name="help_find">Başqaları ilə mübadiləsi üçün adını təyin etmək üçün bu ekran istifadə edin. Başa zaman \'Bitti\' düyməsini dokunun.</string>
+    <string name="help_home">Şəxsiyyət data mübadiləsi, bütün istifadəçilər yaxın və ya telefon təmin edir. The \' başlayın Birjası \' düyməsini yalnız yoxlanılır əlaqə məlumatları mübadiləsi aparacaqlar.</string>
+    <string name="help_identity_menu">\n\nSiz həmçinin adı ilə düyməsini tıqqıltı ilə bu ekranda şəxsiyyət haqqında şəxsi məlumatları dəyişə bilər. Bu \'Düzenle\' əlaqə, əlaqə \'Yeni yarat \', və ya əlaqə \' Digər istifadə \' üçün imkan bir menyu göstərilir.</string>
+    <string name="help_Messages">Bu ekran bütün keçmiş messages, və hələ də download üçün mövcuddur ki, əlavə göstərilir.</string>
+    <string name="help_passphrase">Sizin passphrase ilə ərizə daxil bu ekran istifadə edin.</string>
+    <string name="help_PickRecip">SafeSlinger düymələri ilə əlaqə üçün mesaj göndərmək üçün birini seçin, burada göstərilir.</string>
+    <string name="help_save">Başa zaman, protokol mübadiləsi şəxsiyyət məlumatların siyahısını aşkar edəcək. Siz \'İdxal \' saxlamaq və basın istədiyiniz kontaktlar seçin.</string>
+    <string name="help_SecureIntroduction">Bu ekran siz təhlükəsiz bir-birinə onların açarları göndərmək üçün əvvəl düymələri slung var iki nəfər seçin imkan verir. Zaman hazır sadəcə \' tətbiq \'düyməsini basın.</string>
+    <string name="help_Send">Bu ekran bəzi məlumat və göndərmək üçün qəbul edən seçin imkan verir. Zaman sadəcə hazır \'Gönder \' düyməsini basın.</string>
+
+    <string name="iOS_contactError">Əlaqə icazə tələb olunur. Əlaqə icazələrin imkan iOS Ayarlar getmək edin.</string>
+    <string name="iOS_errorpushtoken">Push qeydiyyat yoxdur.</string>
+    <string name="iOS_notificationError1">Sayt haqda məlumat icazə tələb olunur. Bildirişlər icazələrin imkan iOS Ayarlar getmək edin.</string>
+    <string name="iOS_notificationError2">%s icazə tələb olunur. Bildirişlər icazələrin imkan iOS Ayarlar getmək edin.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x cihazlar üçün optimize deyil. SafeSlinger iOS 6 və ya daha yüksək tələb edir.</string>
+
+    <string name="label_ago">%s əvvəl</string>
+    <string name="label_backupCompleteDate">Tamamlanmış Son Backup</string>
+    <string name="label_backupRequestDate">Son Backup Filmlərin</string>
+    <string name="label_backupURL">Backup URL</string>
+    <string name="label_ClickForNMsgs">Sizin %d mesaj nəzərdən Touch</string>
+    <string name="label_ComposeHint">Mesaj Yarat</string>
+    <string name="label_ContactName">Adınız</string>
+    <string name="label_days">%d gün</string>
+    <string name="label_Device">Device:</string>
+    <string name="label_DeviceInSendOnlyMode">Göndər-yalnız rejimi</string>
+    <string name="label_DisabledExchSourceKeyChange">Sizin əsas dəyişdi: Sling Keys yenidən.</string>
+    <string name="label_Draft">DRAFT</string>
+    <string name="label_EnabledKeyFormatDeprecated">Açar format deprecated: Sling Keys yenidən.</string>
+    <string name="label_exchanged">mübadiləsi</string>
+    <string name="label_expired">bitmiş</string>
+    <string name="label_expires">%s başa çatır</string>
+    <string name="label_expiresIn">ildə başa çatır</string>
+    <string name="label_FileNameHint">Fayl adı</string>
+    <string name="label_FindInstruct">Adını daxil edin təhlükəsiz ünsiyyət zaman görmək üçün başqaları arzu:</string>
+    <string name="label_FirstName">Ad</string>
+    <string name="label_Home">Əlavə və ya aradan qaldırılması əlaqə məlumatları, siz bölüşmək istədiyiniz maddələr yoxlamaq və kran üçün adı dokunun \'mübadiləsi başlayın digərlərinin mübadiləsi üçün hazır olduqda:</string>
+    <string name="label_hometag">Ev</string>
+    <string name="label_hours">%d saat</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud effektiv. Başa zaman \'Bitti\' düyməsini dokunun.</string>
+    <string name="label_InstNoMessages">No messages. Siz Home menyusundan \' Mesaj Yarat \' düyməsinə bir mesaj göndərə bilər.</string>
+    <string name="label_InstNoMessagesAndroid">No messages. Siz \' Yarat \' sekmesini bir mesaj göndərə bilər.</string>
+    <string name="label_InstNoRecipients">No alanlar. Yaxın başqa SafeSlinger istifadəçi tap və düymələri bölüşmək üçün \' Sling Keys \' sekmesini toxunmaq.</string>
+    <string name="label_InstNoSharedFile">No paylaşılan fayl. Paylaşılan qovluq üçün iTunes və drag faylları ilə cihaz qoşun.</string>
+    <string name="label_InstRecipients">Bir mesaj göndərmək üçün qəbul edən seçin:</string>
+    <string name="label_InstSendInvite">Təhlükəsiz təqdim alıcılar seçin:</string>
+    <string name="label_InstSharedFile">Əlavə etmək üçün fayl seçin:</string>
+    <string name="label_introduced">təqdim</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Soyadı</string>
+    <string name="label_Me">Mən</string>
+    <string name="label_messageIntroduceNameToYou">Mən sizə %s təqdim etmək istəyirəm.</string>
+    <string name="label_minutes">%d dəqiqə</string>
+    <string name="label_mobiletag">Səyyar</string>
+    <string name="label_MostRecentOnly">Ən son yalnız</string>
+    <string name="label_MsgSendUpdate">Mənim yenilənir SafeSlinger etimadnaməsini əlavə olunur.</string>
+    <string name="label_None">Heç kim</string>
+    <string name="label_numsharedfiles">%d Files Share:</string>
+    <string name="label_OldThreads">Köhnə Threads</string>
+    <string name="label_othertag">Digər</string>
+    <string name="label_PassHintBackoff">Yeniden Dene</string>
+    <string name="label_PassHintChange">Yenilənib Passphrase</string>
+    <string name="label_PassHintCreate">Passphrase yarat</string>
+    <string name="label_PassHintCurrent">Cari Passphrase</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Repeat Passphrase</string>
+    <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
+    <string name="label_PassPhraseIsCached">Passphrase cached</string>
+    <string name="label_phoneOnly">telefon yalnız</string>
+    <string name="label_Photo">Foto</string>
+    <string name="label_PublicKeyID">Key ID</string>
+    <string name="label_PushTokenID">Push Qeydiyyat ID</string>
+    <string name="label_RemindBackupDelay">Backup Reminder</string>
+    <string name="label_ReportedInactive">Effektiv %s bildirildi.</string>
+    <string name="label_restoreCompleteDate">Son Tamamlanmış bərpa</string>
+    <string name="label_SafeSlingerBackupDelayed">Təxirə SafeSlinger backup</string>
+    <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
+    <string name="label_SaveAccount">Hesabi saxla</string>
+    <string name="label_SaveInstruct">Təhlükəsiz saxlamaq üçün \'İdxal\' kran sonra, Siz ünvanı kitab güncellemek istəyirsinizsə əlaqə edin:</string>
+    <string name="label_seconds">%d saniyə</string>
+    <string name="label_SelectRecip">Select Alan</string>
+    <string name="label_sendErrorData">Error Data göndər</string>
+    <string name="label_SendFrom">From:</string>
+    <string name="label_SendTo">To:</string>
+    <string name="label_ShowHintAtLaunch">Bu işarə növbəti dəfə göstərir.</string>
+    <string name="label_step_1">Addım 1</string>
+    <string name="label_step_2">Step 2</string>
+    <string name="label_step_3">Addım 3</string>
+    <string name="label_step_4">Addım 4</string>
+    <string name="label_step_5">Addım 5</string>
+    <string name="label_TapToDecryptFile">Fayl decrypt üçün dokunun</string>
+    <string name="label_TapToDecryptMessage">Decrypt üçün dokunun</string>
+    <string name="label_TapToDownloadFile">Faylı yükləmək üçün dokunun</string>
+    <string name="label_TapToDownloadMessage">Yükləmək üçün dokunun</string>
+    <string name="label_TapToOpenFile">Faylı açmaq üçün dokunun</string>
+    <string name="label_TapToResumeDraft">Mesaj layihəsini davam etmək üçün dokunun</string>
+    <string name="label_TapToSendCredentialUpdate">Tap və etimadnamə yeniləmə göndərmək üçün basıb saxlayın.</string>
+    <string name="label_targetAccountLabel">Əlaqə Account</string>
+    <string name="label_TouchToConfigureBackupSettings">Siz isteğe iOS Ayarlar SafeSlinger iCloud backup imkan bilər. Başa zaman \'Bitti\' düyməsini dokunun.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Backup parametrləri konfiqurasiya Touch.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Cache zaman aşımı parametrləri konfiqurasiya Touch.</string>
+    <string name="label_undefinedTypeLabel">Naməlum</string>
+    <string name="label_UnknownSender">Şifrelenmiş Sender</string>
+    <string name="label_UserName">İstifadəçi adı</string>
+    <string name="label_worktag">Iş</string>
+
+    <string name="menu_About">Haqqında</string>
+    <string name="menu_Change">Dəyişiklik</string>
+    <string name="menu_ChangePassphrase">Change Passphrase</string>
+    <string name="menu_CreateNew">Yeni yarat</string>
+    <string name="menu_delete">Sil</string>
+    <string name="menu_deleteThread">Thread \'%s\' Sil</string>
+    <string name="menu_Details">View Detail</string>
+    <string name="menu_DownloadDirectory">Directory Download</string>
+    <string name="menu_Edit">Redaktə etmək</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_Help">Kömək</string>
+    <string name="menu_Introduction">Giriş</string>
+    <string name="menu_License">Lisenziya</string>
+    <string name="menu_Logout">Çıxış</string>
+    <string name="menu_messageCopyText">Copy Text</string>
+    <string name="menu_messageForward">Irəli</string>
+    <string name="menu_Remove">Çıxarmaq</string>
+    <string name="menu_SelectShareApp">Application göndər</string>
+    <string name="menu_sendFeedback">Əlaqə göndər</string>
+    <string name="menu_SendUpdate">Yenilə göndər</string>
+    <string name="menu_Settings">Settings</string>
+    <string name="menu_ShowTutorial">Show Tutorial</string>
+    <string name="menu_TagComposeMessage">Bəstələmək</string>
+    <string name="menu_TagExchange">Sling Keys</string>
+    <string name="menu_TagListMessages">İsmarıclar</string>
+    <string name="menu_UseAnother">Digər istifadə</string>
+    <string name="menu_UseContactPerson">Əlaqə \'%s\' istifadə edin</string>
+    <string name="menu_UseNoContact">İstifadə Adı Yalnız</string>
+    <string name="menu_UseProfilePerson">Profile \'%s\' istifadə edin</string>
+
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">Şifreleme…</string>
+    <string name="prog_FileSent">mesaj cavab gözləyir, göndərdi…</string>
+    <string name="prog_findingKey">düyməsini tapmaq…</string>
+    <string name="prog_GeneratingKey">əsas yaradan, bu bir müddət bilər…</string>
+    <string name="prog_generatingSignature">imza yaradan…</string>
+    <string name="prog_loadingContent">loading content…</string>
+    <string name="prog_ReceivingFile">şifreli fayl qəbul…</string>
+    <string name="prog_RequestingFile">şifreli fayl tələb…</string>
+    <string name="prog_RequestingMessage">şifrəli mesaj tələb…</string>
+    <string name="prog_RequestingPushReg">push qeydiyyat tələb…</string>
+    <string name="prog_SavingContactsToAddressBook">yenilənməsi ünvanı kitab…</string>
+    <string name="prog_SavingContactsToKeyDatabase">əsas bazası təzələyirik…</string>
+    <string name="prog_SearchingForBackup">backup üçün axtarış…</string>
+    <string name="prog_SendingFile">şifrelenmiş %s göndərilməsi…</string>
+    <string name="prog_verifyingIntegrity">bütövlüyünü təsdiq…</string>
+    <string name="prog_verifyingSignature">imza təsdiq…</string>
+
+    <string name="section_advanced">Qabaqcıl</string>
+    <string name="section_backup">Backup</string>
+    <string name="section_general">Ümumi</string>
+
+    <string name="state_BackupRestored">Backup bərpa.</string>
+    <string name="state_FileDeleted">Silinmiş fayl %s.</string>
+    <string name="state_FileSent">Göndərildi.</string>
+    <string name="state_MessageSavedAsDraft">Qaralama olaraq qeyd Mesaj.</string>
+    <string name="state_MessagesDeleted">Silindi %d messages.</string>
+    <string name="state_PassphraseUpdated">Passphrase yeniləndi.</string>
+    <string name="state_RecipientsDeleted">%d alanlar silindi.</string>
+    <string name="state_SomeContactsImported">%s əlaqə idxal.</string>
+    <string name="state_TextCopiedToClipboard">Mətn panoya kopyalanır.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger, şəxsən və ya telefon, asanlıqla şəxsiyyət məlumatları bölüşmək üçün nəzərdə təsdiq, özəl və bütöv olunur. Ilə bölüşmək hər bir şəxs mesaj göndərmək üçün təhlükəsiz son-to-end kanal yaradır.\n\nFeatures:\n- Asanlıqla başqaları ilə əlaqə məlumatı mübadiləsi\n- Təhlükəsiz sapand mətnlər, şəkillər, bir şey!\n- Güclü Kriptoqrafiya məlumat qoruyur\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_KeywordExchange">Mübadilə</string>
+    <string name="text_KeywordIdentity">Identiklik</string>
+    <string name="text_KeywordKey">Açar</string>
+    <string name="text_KeywordMessaging">Messaging</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Təhlükəsizlik</string>
+    <string name="text_LanguagesProvidedBy">Tərəfindən təmin Dillər:</string>
+    <string name="text_RelatedSearchTerms">Related şərtləri:</string>
+    <string name="text_Requirements">Tələblər:\n1. 2 cihazlar minimum yüklü olmalıdır.\n2. İnternet bağlantısı aktiv olmalıdır.</string>
+    <string name="text_SourceCodeRepo">açıq mənbə: %s</string>
+    <string name="text_WhatsNew">- Sabitlik giderir.</string>
+
+    <string name="title_About">Haqqında</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_ChooseDirectory">Qovluq seçin</string>
+    <string name="title_ChooseFileLoad">Sizin Okt seçin</string>
+    <string name="title_comments">Şərhlər/Suallar</string>
+    <string name="title_Error">Səhv</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys köməkçisi</string>
+    <string name="title_FileOptions">Əlavə Seçimlər</string>
+    <string name="title_find">Setup</string>
+    <string name="title_home">Exchange başlayın</string>
+    <string name="title_HomePanel">Ev</string>
+    <string name="title_MessageDetail">Məlumat</string>
+    <string name="title_Messages">İsmarıclar</string>
+    <string name="title_MyIdentity">Şəxsi ünsiyyət</string>
+    <string name="title_NotifyFileAvailable">Available SafeSlinger Mesaj</string>
+    <string name="title_NotifyMulFileAvailable">Available %d SafeSlinger Mesajlarım</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Fotoalbom</string>
+    <string name="title_photolibary">Şəkil Kitabxana</string>
+    <string name="title_PickRecipient">Alıcılar</string>
+    <string name="title_Question">Sual</string>
+    <string name="title_RecipientDetail">Alan Ətraflı</string>
+    <string name="title_save">End Exchange</string>
+    <string name="title_SaveFileAs">Fayl kimi saxlaya</string>
+    <string name="title_SecureIntroduction">Secure Giriş</string>
+    <string name="title_SecureIntroductionInvite">Giriş dəvət Secure!</string>
+    <string name="title_SelectSource">Seçimlər göndərilməsi:</string>
+    <string name="title_SendFile">Göndərmək</string>
+    <string name="title_sharingfolder">Qovluq Paylaşma</string>
+    <string name="title_soundrecoder">Səsyazan aparat</string>
+    <string name="title_TextInviteMsg">SafeSlinger dəvət</string>
+    <string name="title_Threads">Mövzular</string>
+    <string name="title_Warn">Xəbərdarlıq</string>
+
+</resources>

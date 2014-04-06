@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <LinearLayout
+        android:id="@+id/TopFrame"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/size_5dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <ImageView
+            android:id="@+id/PassImageViewCylab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/label_Photo"
+            android:scaleType="fitStart"
+            android:src="@drawable/logo_cylab_large" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/PassImageViewIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.90"
+            android:contentDescription="@string/label_Photo"
+            android:src="@drawable/logo_safeslinger_large" >
+        </ImageView>
+
+        <ImageButton
+            android:id="@+id/PassButtonHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:background="@color/white"
+            android:contentDescription="@string/menu_Help"
+            android:src="@drawable/ic_action_about" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BottomFrame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_5dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:id="@+id/FirstFrame"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/size_5dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/PassTextViewAppName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/app_name"
+                android:textSize="@dimen/text_size_40" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/PassTextViewVersion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/text_size_small" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SecondFrame"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/size_5dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/PassSpinnerUserName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_small" >
+            </Spinner>
+
+            <EditText
+                android:id="@+id/EditTextPassphrase"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_PassHintCreate"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:privateImeOptions="nm"
+                android:textSize="@dimen/text_size_medium" />
+
+            <EditText
+                android:id="@+id/EditTextPassphraseAgain"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_PassHintRepeat"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:privateImeOptions="nm"
+                android:textSize="@dimen/text_size_medium" />
+
+            <RelativeLayout
+                android:id="@+id/PassFrameButtonPass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp" >
+
+                <Button
+                    android:id="@+id/PassButtonOK"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_3d"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/button_side_margin"
+                    android:paddingRight="@dimen/button_side_margin"
+                    android:text="@string/btn_OK"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/text_size_medium" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

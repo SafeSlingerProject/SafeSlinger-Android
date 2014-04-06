@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">الإقلاع عن التدخين ؟ هل أنت متأكد؟</string>
+
+    <string name="btn_Match">التالي</string>
+    <string name="btn_NoMatch">لا المباراة</string>
+
+    <string name="choice_NumUsers">%d المستخدمين</string>
+
+    <string name="error_AllMembersMustUpgrade">بعض أعضاء تستخدم نسخة قديمة ؛ يجب على جميع أعضاء على الأقل استخدام %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">يجب على جميع أعضاء الترقية ، وبعض كبار السن تستخدم صيغ تسجيل دفعة.</string>
+    <string name="error_CorrectYourInternetConnection">الإنترنت غير متوفرة ، والتحقق من الإعدادات الخاصة بك.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">تجاوز الصرف المهلة. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_HttpCode">خطأ HTTP الملقم: %d</string>
+    <string name="error_InvalidCommitVerify">بيانات غير صحيحة وجدت في الصرف. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_InvalidCommonUserId">الرجاء إدخال عدد صحيح موجب.</string>
+    <string name="error_LocalGroupCommitDiffer">كنت قد ذكرت اختلاف في العبارات. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_MinUsersRequired">وثمة حاجة إلى الحد الأدنى من %d أعضاء يتم فيها تبادل البيانات.</string>
+    <string name="error_MoreDataThanUsers">البيانات غير متوقعة وجدت في الصرف. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_NoWordListSelected">يجب عليك اختيار واحدة من العبارات قبل المتابعة.</string>
+    <string name="error_OtherGroupCommitDiffer">ذكرت شخص اختلاف في العبارات. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_OutOfMemoryError">الذاكرة منخفضة جدا لإكمال هذه العملية.</string>
+    <string name="error_ServerAppMessage">الخادم رسالة: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">الخادم رسالة: \'%s\'</string>
+    <string name="error_ServerNotResponding">أي رد من الخادم.</string>
+    <string name="error_TimeoutWaitingForAllMembers">مهلة الانتظار لبعض أعضاء المجموعة لإضافة البيانات.</string>
+    <string name="error_WebCancelledByUser">إلغاء طلب المعلن الخادم.</string>
+
+    <string name="help_size">حدد عدد من الناس الذين يحاولون لتبادل البيانات معا واضغط على \'موافق\'.</string>
+    <string name="help_userid">ويستخدم هذا الرقم على هذه الشاشة لإنشاء مجموعة فريدة من نوعها للمستخدمين. مراجعة الأرقام على جميع المستخدمين شاشات ، ثم كل المستخدمين يجب إدخال نفس أقل عدد واضغط على \'موافق\'.</string>
+    <string name="help_verify">الآن ، يجب أن تتطابق مع واحدة من هذه العبارات 3 الكلمة مع جميع المستخدمين. يجب على كل مستخدم اختيار نفس العبارة الشائعة ، ثم اضغط على \'التالي\'.</string>
+
+    <string name="label_NumericModeHint">غير الإنجليزية</string>
+    <string name="label_PromptInstruct">ويستخدم هذا الرقم لإنشاء مجموعة فريدة من نوعها للمستخدمين. مقارنة، ثم أدخل أقل عدد بين جميع المستخدمين.</string>
+    <string name="label_ReceivedNItems">تلقى %d البنود</string>
+    <string name="label_UserIdHint">أدنى</string>
+    <string name="label_VerifyInstruct">يجب على جميع الهواتف مباراة واحدة من العبارات 3 كلمة. مقارنة، ومن ثم اختيار عبارة مطابقة.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">في انتظار التحقق من جميع أعضاء…</string>
+    <string name="prog_CollectingOthersItems">في انتظار لجميع المستخدمين للانضمام…</string>
+    <string name="prog_ConstructingGroupKey">بناء مجموعة المفتاح…</string>
+    <string name="prog_RequestingUserId">طلب عضوية…</string>
+
+    <string name="title_size">كيفية العديد من المستخدمين في الصرف؟</string>
+    <string name="title_userid">تجمع</string>
+    <string name="title_verify">تحقق من</string>
+
+</resources>

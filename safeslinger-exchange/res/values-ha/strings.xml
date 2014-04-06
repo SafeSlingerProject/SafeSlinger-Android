@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Sallama? Ka tabbata?</string>
+
+    <string name="btn_Match">Next</string>
+    <string name="btn_NoMatch">Babu Match</string>
+
+    <string name="choice_NumUsers">%d masu amfani</string>
+
+    <string name="error_AllMembersMustUpgrade">Wasu mambobin amfani da mazan version; duk members dole ne a kalla amfani da %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">All members dole ne ha_aka, wasu na amfani da mazan tura rajista Formats.</string>
+    <string name="error_CorrectYourInternetConnection">Babu yanar-gizo, a bincika saituna.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout wuce. Za a fara musayar sake.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Ba daidai ba data samu a musayar. Za a fara musayar sake.</string>
+    <string name="error_InvalidCommonUserId">A shigar da lamba tabbatacce.</string>
+    <string name="error_LocalGroupCommitDiffer">Ka bayar da rahoton wani bambanci a cikin kalmomi. Za a fara musayar sake.</string>
+    <string name="error_MinUsersRequired">A m of %d members ana bu_atar musanya bayanai.</string>
+    <string name="error_MoreDataThanUsers">M data samu a musayar. Za a fara musayar sake.</string>
+    <string name="error_NoWordListSelected">Dole ne ku za_i _aya daga cikin kalmomin kafin a ci gaba.</string>
+    <string name="error_OtherGroupCommitDiffer">Wani ya bayar da rahoton wani bambanci a cikin kalmomi. Za a fara musayar sake.</string>
+    <string name="error_OutOfMemoryError">Memory ya yi yawa low don kammala wannan aiki.</string>
+    <string name="error_ServerAppMessage">Server Message: \' %s \'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \' %s \'</string>
+    <string name="error_ServerNotResponding">Babu amsa daga uwar garken.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Fitar lokaci jiran wata kungiyar wakilan don _ara bayanai.</string>
+    <string name="error_WebCancelledByUser">User soke uwar garken request.</string>
+
+    <string name="help_size">A zabi yawan mutanen da suke yun_urin musanya bayanai tare da latsa \' Ok \'.</string>
+    <string name="help_userid">Wannan lamba a kan wannan allon da ake amfani da ya halicci musamman kungiyar masu amfani. Bitar lambobin duk masu amfani \' fuska, sannan duk masu amfani ya shiga guda mafi _as_anci lamba kuma latsa \' Ok \'.</string>
+    <string name="help_verify">Yanzu, dole ne ka yi daidai da daya daga wadannan kalmomi 3- kalma tare da duk masu amfani. Kowane mai amfani dole ya zabi daya na kowa magana, kuma latsa \' Next \'.</string>
+
+    <string name="label_NumericModeHint">Non- Turanci</string>
+    <string name="label_PromptInstruct">Wannan lambar da ake amfani da ya halicci musamman kungiyar masu amfani. Compare, sa\'an nan kuma shigar da lambar mafi _as_anci daga duk masu amfani.</string>
+    <string name="label_ReceivedNItems">%d sun sami abubuwa</string>
+    <string name="label_UserIdHint">Mafi _as_anci</string>
+    <string name="label_VerifyInstruct">All wayoyin da dole ne daidai da daya daga cikin 3- kalma kalmomi. Compare, sa\'an nan kuma sama da daidai da magana.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">jiran tabbaci daga dukan membobin…</string>
+    <string name="prog_CollectingOthersItems">jiran duk masu amfani don shiga…</string>
+    <string name="prog_ConstructingGroupKey">gina kungiyar key…</string>
+    <string name="prog_RequestingUserId">neman mambobin…</string>
+
+    <string name="title_size">Da yawa masu amfani a cikin musayar?</string>
+    <string name="title_userid">Ra\'ayoyi</string>
+    <string name="title_verify">Tantance</string>
+
+</resources>

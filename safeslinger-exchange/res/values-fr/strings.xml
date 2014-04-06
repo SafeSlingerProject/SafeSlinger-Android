@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Quitter? Êtes-vous sûr?</string>
+
+    <string name="btn_Match">Suivant</string>
+    <string name="btn_NoMatch">Non trouvé</string>
+
+    <string name="choice_NumUsers">%d utilisateurs</string>
+
+    <string name="error_AllMembersMustUpgrade">Certains membres utilisent une version ancienne, tous les membres doivent utiliser au minimum %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tous les membres doivent mettre à niveau, certains utilisent les formats d\'enregistrement des poussoirs âgées.</string>
+    <string name="error_CorrectYourInternetConnection">Internet n\'est pas disponible, vérifiez vos paramètres.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Bourse délai dépassé. Recommencez l\'échange.</string>
+    <string name="error_HttpCode">Erreur serveur HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">Des données incorrectes trouvés en échange. Recommencez l\'échange.</string>
+    <string name="error_InvalidCommonUserId">Entrez un nombre entier positif.</string>
+    <string name="error_LocalGroupCommitDiffer">Vous avez fait état d\'une différence de phrases. Recommencez l\'échange.</string>
+    <string name="error_MinUsersRequired">Un minimum de %d membres est nécessaire pour échanger des données.</string>
+    <string name="error_MoreDataThanUsers">Données inattendues trouvés en échange. Recommencez l\'échange.</string>
+    <string name="error_NoWordListSelected">Vous devez sélectionner l\'une des phrases avant de poursuivre.</string>
+    <string name="error_OtherGroupCommitDiffer">Quelqu\'un a signalé une différence dans les phrases. Recommencez l\'échange.</string>
+    <string name="error_OutOfMemoryError">La mémoire est trop faible pour effectuer cette opération.</string>
+    <string name="error_ServerAppMessage">Message serveur: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Message serveur: \'%s\'</string>
+    <string name="error_ServerNotResponding">Le serveur n\'a pas répondu.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Le délai d\'attente donné aux membres du groupe pour ajouter des données a expiré.</string>
+    <string name="error_WebCancelledByUser">L\'utilisateur a annulé la demande du serveur.</string>
+
+    <string name="help_size">Sélectionnez le nombre de personnes qui tentent d\'échanger des données ensemble et appuyez sur \'OK\'.</string>
+    <string name="help_userid">Le nombre sur cet écran est utilisé pour créer un groupe unique d\'utilisateurs. Passez en revue les chiffres présents sur les écrans de tous les utilisateurs. Tous les utilisateurs doivent saisir le même chiffre le plus bas et appuyer sur \'OK\'.</string>
+    <string name="help_verify">Maintenant, vous devez faire correspondre une de ces phrases de trois mots avec tous les utilisateurs. Chaque utilisateur doit sélectionner la même phrase commune, et appuyer sur \'Suivant\'.</string>
+
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Ce chiffre est utilisé pour créer un groupe unique d\'utilisateurs. Comparez, puis entrez le chiffre le plus bas parmi tous les utilisateurs.</string>
+    <string name="label_ReceivedNItems">a reçu %d articles</string>
+    <string name="label_UserIdHint">Le plus bas</string>
+    <string name="label_VerifyInstruct">Tous les téléphones doivent correspondre à l\'une des phrases de 3 mots. Comparez, puis choisissez la phrase correspondante.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">en attente de vérification de tous les membres…</string>
+    <string name="prog_CollectingOthersItems">en attente de l\'arrivée de tous les utilisateurs…</string>
+    <string name="prog_ConstructingGroupKey">construction de la clé de groupe…</string>
+    <string name="prog_RequestingUserId">demande d\'adhésion…</string>
+
+    <string name="title_size">Combien d\'utilisateurs dans l\'échange?</string>
+    <string name="title_userid">Regroupement</string>
+    <string name="title_verify">Vérifier</string>
+
+</resources>

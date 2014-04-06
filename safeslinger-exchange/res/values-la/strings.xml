@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Abire? Numquid et tu securus?</string>
+
+    <string name="btn_Match">Next</string>
+    <string name="btn_NoMatch">Impares</string>
+
+    <string name="choice_NumUsers">%d users</string>
+
+    <string name="error_AllMembersMustUpgrade">Et inventi sunt usus version maior, ab omnibus oportet quod saltem %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Qui mundus est upgrade, uti maior pars eu blandit urna.</string>
+    <string name="error_CorrectYourInternetConnection">Varius non, reprehendo vestri occasus.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout excederet. Incipit etiam in commutatione eius.</string>
+    <string name="error_HttpCode">Error Server HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">Non recta data in vicem. Incipit etiam in commutatione eius.</string>
+    <string name="error_InvalidCommonUserId">Lorem ipsum integer positivus.</string>
+    <string name="error_LocalGroupCommitDiffer">Differt Recitasti phrases. Incipit etiam in commutatione eius.</string>
+    <string name="error_MinUsersRequired">A minimum de %d membris requiruntur ad commutare notitia.</string>
+    <string name="error_MoreDataThanUsers">Improviso dolor in hendrerit. Incipit etiam in commutatione eius.</string>
+    <string name="error_NoWordListSelected">Prius oportet eligere unum de verbo.</string>
+    <string name="error_OtherGroupCommitDiffer">Differt nuntiatum phrases. Incipit etiam in commutatione eius.</string>
+    <string name="error_OutOfMemoryError">Memoria est humilis perficere opus.</string>
+    <string name="error_ServerAppMessage">Nuntius Sanctus: %s,</string>
+    <string name="error_ServerAppMessageCStr">Nuntius Sanctus: %s,</string>
+    <string name="error_ServerNotResponding">Saeculo non est responsum.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout expectantes coetus membra augere notitia.</string>
+    <string name="error_WebCancelledByUser">Aliquam ornare tempus remittuntur tibi petitionem.</string>
+
+    <string name="help_size">Mauris imperdiet permutare numerum simul comprimunt conantis ruber.</string>
+    <string name="help_userid">Ad hoc unicum est, numerus tincidunt eget elit. Vestibulum in tellus numeri in omnibus, tegumenta, omnia et omnes users, ut veniat ad eundem numerum, imo et torcular OK.</string>
+    <string name="help_verify">Nunc opus est compositus ex omnibus verbis illis sermo III users. Quisque id dignissim communi necessaria sunt, et torcular Next.</string>
+
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Suspendisse sit amet mauris eu numerus. Luctus, et ita intrare in infima inter omnes users.</string>
+    <string name="label_ReceivedNItems">accepit items %d</string>
+    <string name="label_UserIdHint">Lowest</string>
+    <string name="label_VerifyInstruct">Omnia luctus, necesse est paria, III de verbo loqui. Luctus, et in matching amet enim.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">Lorem membra exspectare a…</string>
+    <string name="prog_CollectingOthersItems">expectans users ad…</string>
+    <string name="prog_ConstructingGroupKey">key pars ad constitutionem…</string>
+    <string name="prog_RequestingUserId">iis petentibus,…</string>
+
+    <string name="title_size">Quot Suspendisse commutatio?</string>
+    <string name="title_userid">COMPRENSIO</string>
+    <string name="title_verify">Quin</string>
+
+</resources>

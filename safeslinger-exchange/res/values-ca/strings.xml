@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">¿ Sortir? Està segur?</string>
+
+    <string name="btn_Match">Pròxim</string>
+    <string name="btn_NoMatch">No Match</string>
+
+    <string name="choice_NumUsers">%d usuaris</string>
+
+    <string name="error_AllMembersMustUpgrade">Alguns membres estan utilitzant una versió més antiga, tots els membres han, almenys, utilitzar %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tots els membres han de actualitzar, alguns estan utilitzant els formats de registre d\'empenta grans.</string>
+    <string name="error_CorrectYourInternetConnection">Internet no està disponible, comproveu la configuració.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Tipus excedit. Comença l\'intercanvi de nou.</string>
+    <string name="error_HttpCode">Servidor HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Dades incorrectes que es troben en l\'intercanvi. Comença l\'intercanvi de nou.</string>
+    <string name="error_InvalidCommonUserId">Introduïu un enter positiu.</string>
+    <string name="error_LocalGroupCommitDiffer">Assenyalat una diferència en les frases. Comença l\'intercanvi de nou.</string>
+    <string name="error_MinUsersRequired">Un mínim de %d membres estan obligats a intercanviar dades.</string>
+    <string name="error_MoreDataThanUsers">Dades inesperats que es troben en l\'intercanvi. Comença l\'intercanvi de nou.</string>
+    <string name="error_NoWordListSelected">Heu de seleccionar una de les frases abans.</string>
+    <string name="error_OtherGroupCommitDiffer">Algú ha informat una diferència en frases. Comença l\'intercanvi de nou.</string>
+    <string name="error_OutOfMemoryError">La memòria és massa baixa per completar aquesta operació.</string>
+    <string name="error_ServerAppMessage">Missatge del servidor: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Missatge del servidor: \'%s\'</string>
+    <string name="error_ServerNotResponding">No hi ha resposta del servidor.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Temps d\'espera d\'espera d\'alguns membres del grup per afegir dades.</string>
+    <string name="error_WebCancelledByUser">L\'usuari cancel · lar la sol · licitud del servidor.</string>
+
+    <string name="help_size">Seleccioneu el nombre de persones que estan tractant d\'intercanviar dades entre si i premi \' D\'acord\'.</string>
+    <string name="help_userid">Aquest número en aquesta pantalla s\'utilitza per crear un grup únic d\'usuaris. Revisi els números de tots els usuaris \' pantalles, tots els usuaris han d\'introduir el mateix nombre més baix i premi \' D\'acord\'.</string>
+    <string name="help_verify">Ara, ha de coincidir amb una d\'aquestes frases de 3 paraules amb tots els usuaris. Cada usuari ha de seleccionar la mateixa frase comuna, i premi \' Següent \'.</string>
+
+    <string name="label_NumericModeHint">Non-Anglès</string>
+    <string name="label_PromptInstruct">Aquest número s\'utilitza per crear un grup únic d\'usuaris. Compari, a continuació, introduïu el número més baix entre tots els usuaris.</string>
+    <string name="label_ReceivedNItems">rebut %d articles</string>
+    <string name="label_UserIdHint">Menor</string>
+    <string name="label_VerifyInstruct">Tots els telèfons han de coincidir amb una de les frases de 3 paraules. Compari, i després recollir la frase corresponent.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">l\'espera de la verificació de tots els membres…</string>
+    <string name="prog_CollectingOthersItems">esperant que tots els usuaris s\'uneixin…</string>
+    <string name="prog_ConstructingGroupKey">la construcció de clau de grup…</string>
+    <string name="prog_RequestingUserId">que sol · liciti ser membre…</string>
+
+    <string name="title_size">Quants usuaris en l\'intercanvi?</string>
+    <string name="title_userid">Agrupament</string>
+    <string name="title_verify">Verificar</string>
+
+</resources>

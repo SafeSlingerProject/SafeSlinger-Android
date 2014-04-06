@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Txiav Luam? Yog koj paub tseeb?</string>
+
+    <string name="btn_Match">Next</string>
+    <string name="btn_NoMatch">Tsis Match</string>
+
+    <string name="choice_NumUsers">%d cov neeg siv</string>
+
+    <string name="error_AllMembersMustUpgrade">Ib txhia mej zeej uas siv ib tug laus version; tag nrho cov tswv cuab yuav tsum siv tsawg kawg yog %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tag nrho cov tswv cuab yuav tsum tau upgrade, ib txhia siv laus dua laub sau npe hom.</string>
+    <string name="error_CorrectYourInternetConnection">Internet tsis muaj, kos koj lub chaw.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Txauv timeout tshaj. Pib lub pauv dua.</string>
+    <string name="error_HttpCode">Rau zaub mov http Error: %d</string>
+    <string name="error_InvalidCommitVerify">Tsis yog cov ntaub ntawv pom nyob rau hauv pauv. Pib lub pauv dua.</string>
+    <string name="error_InvalidCommonUserId">Thov nkag mus rau ib tug zoo integer.</string>
+    <string name="error_LocalGroupCommitDiffer">Koj tau qhia ib tug txawv nyob rau hauv zaj lus. Pib lub pauv dua.</string>
+    <string name="error_MinUsersRequired">Ib yam tsawg kawg nkaus ntawm %d cov mej zeej yuav tsum tau mus sib pauv cov ntaub ntawv.</string>
+    <string name="error_MoreDataThanUsers">Npaj txhij txog cov ntaub ntawv pom nyob rau hauv pauv. Pib lub pauv dua.</string>
+    <string name="error_NoWordListSelected">Koj yuav tsum xaiv ib tug ntawm cov zaj lus ua ntej plaub ntug.</string>
+    <string name="error_OtherGroupCommitDiffer">Ib tug neeg qhia ib tug sib txawv nyob rau hauv zaj lus. Pib lub pauv dua.</string>
+    <string name="error_OutOfMemoryError">Nco yog heev tsawg ua kom tiav no hauj lwm.</string>
+    <string name="error_ServerAppMessage">Rau zaub mov Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Rau zaub mov Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Tsis muaj lus teb los ntawm cov neeg rau zaub mov.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout tos rau tej pab pawg neeg tswv cuab mus ntxiv cov ntaub ntawv.</string>
+    <string name="error_WebCancelledByUser">Tus neeg siv yuav tso tseg rau zaub mov thov.</string>
+
+    <string name="help_size">Xaiv tus naj npawb ntawm cov neeg uas npaj mus pauv cov ntaub ntawv ua ke thiab nias lub \' OK \'.</string>
+    <string name="help_userid">Qhov no pes tsawg tus rau no screen yog siv los mus tsim ib tug tshwj xeeb pab pawg ntawm cov neeg siv. Ke tshab xyuas cov xov tooj nyob rau tag nrho cov neeg siv \' ntxaij, ces tag nrho cov neeg siv yuav tsum nkag mus rau hauv tib qis tshaj tus naj npawb thiab nias \' OK \'.</string>
+    <string name="help_verify">Tam sim no, koj yuav tsum tau ib qho ntawm cov phim 3-lus zaj lus nrog rau tag nrho cov neeg siv. Txhua tus neeg siv yuav tsum xaiv tib cov kab lus, thiab nias \' Next \'.</string>
+
+    <string name="label_NumericModeHint">Uas tsis yog lus Askiv-</string>
+    <string name="label_PromptInstruct">Qhov no pes tsawg tus yog siv los mus tsim ib tug tshwj xeeb pab pawg ntawm cov neeg siv. Sib piv, thiab ces nkag qis tshaj tus naj npawb ntawm tag nrho cov neeg siv.</string>
+    <string name="label_ReceivedNItems">tau txais %d yam khoom</string>
+    <string name="label_UserIdHint">Qis tshaj</string>
+    <string name="label_VerifyInstruct">Tag nrho cov xov tooj yuav tsum phim ib tug ntawm 3-lus zaj lus. Sib piv, thiab ces tuaj tos lub sib xws kab lus.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">tos pov thawj los ntawm tag nrho cov tswv cuab…</string>
+    <string name="prog_CollectingOthersItems">tos rau tag nrho cov neeg siv koom…</string>
+    <string name="prog_ConstructingGroupKey">constructing pab pawg neeg tseem ceeb…</string>
+    <string name="prog_RequestingUserId">thov ua tswv cuab…</string>
+
+    <string name="title_size">Yuav ua li cas ntau cov neeg siv nyob rau hauv lub pauv?</string>
+    <string name="title_userid">Grouping</string>
+    <string name="title_verify">Soj ntsuam xyuas</string>
+
+</resources>

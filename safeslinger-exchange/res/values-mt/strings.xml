@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Nieqaf? Int żgur?</string>
+
+    <string name="btn_Match">Li jmiss</string>
+    <string name="btn_NoMatch">Nru Match</string>
+
+    <string name="choice_NumUsers">%d utenti</string>
+
+    <string name="error_AllMembersMustUpgrade">Uħud mill-membri qed tuża verżjoni anzjani; membri kollha jridu għal inqas użu %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Il-membri kollha għandhom jaġġornaw, xi wħud huma jużaw formats anzjani reġistrazzjoni push.</string>
+    <string name="error_CorrectYourInternetConnection">Internet ma tkunx disponibbli, iċċekkja settings tiegħek.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Skambju timeout jinqabeż. Tibda l-iskambju mill-ġdid.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Data żbaljata misjuba fil-kambju. Tibda l-iskambju mill-ġdid.</string>
+    <string name="error_InvalidCommonUserId">Jekk jogħġbok daħħal numru sħiħ pożittiv.</string>
+    <string name="error_LocalGroupCommitDiffer">Inti rrappurtaw differenza fil frażijiet. Tibda l-iskambju mill-ġdid.</string>
+    <string name="error_MinUsersRequired">Minimu ta \' %d membri huma obbligati li jiskambjaw data.</string>
+    <string name="error_MoreDataThanUsers">Data mhux mistennija misjuba fil-kambju. Tibda l-iskambju mill-ġdid.</string>
+    <string name="error_NoWordListSelected">Inti għandek tagħżel waħda mill-frażijiet qabel ma tipproċedi.</string>
+    <string name="error_OtherGroupCommitDiffer">Xi ħadd rrappurtat differenza fil frażijiet. Tibda l-iskambju mill-ġdid.</string>
+    <string name="error_OutOfMemoryError">Memorja huwa baxx wisq biex jitlesta din l-operazzjoni.</string>
+    <string name="error_ServerAppMessage">Message server: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Message server: \'%s\'</string>
+    <string name="error_ServerNotResponding">Ebda risposta mill server.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout stennija għal xi membri tal-grupp biex iżidu data.</string>
+    <string name="error_WebCancelledByUser">User kkanċellati talba server.</string>
+
+    <string name="help_size">Agħżel in-numru ta \'nies li qed jippruvaw biex jiskambjaw data flimkien u agħfas \' OK \'.</string>
+    <string name="help_userid">Dan in-numru fuq dan l-iskrin hija użata biex jinħoloq grupp uniku ta \' utenti. Tirrevedi l-numri fuq utenti kollha iskrins, allura l-utenti kollha għandhom jidħlu l-istess numru aktar baxx u agħfas \' OK \'.</string>
+    <string name="help_verify">Issa, inti għandhom jaqblu wieħed minn dawn il-frażijiet 3-kelma għall-utenti kollha. Kull utent għandu jagħżel l-istess frażi komuni, u agħfas \' Next \'.</string>
+
+    <string name="label_NumericModeHint">Non-Ingliż</string>
+    <string name="label_PromptInstruct">Dan in-numru huwa użat biex jinħoloq grupp uniku ta \' utenti. Qabbel, u mbagħad tidħol l-inqas numru fost l-utenti kollha.</string>
+    <string name="label_ReceivedNItems">rċeviet %d oġġetti</string>
+    <string name="label_UserIdHint">Irħas</string>
+    <string name="label_VerifyInstruct">Kollha phones għandhom jaqblu waħda mill-frażijiet 3-kelma. Qabbel, u mbagħad pick-frażi tqabbil.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">stennija għall-verifika mill-membri kollha…</string>
+    <string name="prog_CollectingOthersItems">stennija għall-utenti kollha biex jingħaqdu…</string>
+    <string name="prog_ConstructingGroupKey">kostruzzjoni ewlenin grupp…</string>
+    <string name="prog_RequestingUserId">jitlob li jsir membru…</string>
+
+    <string name="title_size">Kemm l-utenti fl-iskambju?</string>
+    <string name="title_userid">Raggruppament</string>
+    <string name="title_verify">Ivverifika</string>
+
+</resources>

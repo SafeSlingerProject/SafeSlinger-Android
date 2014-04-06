@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Quit? Сигурен ли си?</string>
+
+    <string name="btn_Match">До</string>
+    <string name="btn_NoMatch">Не Match</string>
+
+    <string name="choice_NumUsers">%d потребители</string>
+
+    <string name="error_AllMembersMustUpgrade">Някои членове използват по-стара версия, всички членове трябва най-малко да използват %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Всички членове трябва да ъпгрейд, някои от тях се използват по-стари формати регистрационни лицеви.</string>
+    <string name="error_CorrectYourInternetConnection">Интернет не е на разположение, проверете настройките си.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange таймаут надхвърлен. Започнете обмена отново.</string>
+    <string name="error_HttpCode">Сървър HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Неправилни данни, намерени в замяна. Започнете обмена отново.</string>
+    <string name="error_InvalidCommonUserId">Моля, въведете цяло положително число.</string>
+    <string name="error_LocalGroupCommitDiffer">Можете да отчете разликата в фрази. Започнете обмена отново.</string>
+    <string name="error_MinUsersRequired">Най-малко %d членове се изисква да обменят данни.</string>
+    <string name="error_MoreDataThanUsers">Неочаквани данни, намерени в замяна. Започнете обмена отново.</string>
+    <string name="error_NoWordListSelected">Вие трябва да изберете една от фразите, преди да продължите.</string>
+    <string name="error_OtherGroupCommitDiffer">Някой отчете разлика в фрази. Започнете обмена отново.</string>
+    <string name="error_OutOfMemoryError">Паметта е твърде ниска, за да изпълните тази операция.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Няма отговор от сървъра.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout чака за някои членове на групата, за да добавите данни.</string>
+    <string name="error_WebCancelledByUser">Потребителят отменен искане сървър.</string>
+
+    <string name="help_size">Изберете броя на хората, които се опитват да обменят данни, заедно и натиснете \'OK\'.</string>
+    <string name="help_userid">Този номер на този екран се използва за създаване на уникална група от потребители. Прегледайте номера на всички потребители екрани, а след това всички потребители трябва да влязат в една и съща най-малък брой и натиснете \'OK\'.</string>
+    <string name="help_verify">Сега, вие трябва да съответства на един от тези три-фрази думата с всички потребители. Всеки потребител трябва да изберете една и съща обща фраза, и натиснете \'Next\'.</string>
+
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Този номер се използва за създаване на уникална група от потребители. Сравни и след това въведете най-малък брой сред всички потребители.</string>
+    <string name="label_ReceivedNItems">получи %d позиции</string>
+    <string name="label_UserIdHint">Най-ниска</string>
+    <string name="label_VerifyInstruct">Всички телефони трябва да съответстват на един от 3-фрази думата. Сравни и след това изберете съвпадение по фраза.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">чака потвърждение от всички членове…</string>
+    <string name="prog_CollectingOthersItems">чака за всички потребители да се присъединят към…</string>
+    <string name="prog_ConstructingGroupKey">конструиране ключов група…</string>
+    <string name="prog_RequestingUserId">поиска да стане член…</string>
+
+    <string name="title_size">Колко потребители в размяната?</string>
+    <string name="title_userid">Групировка</string>
+    <string name="title_verify">Уверете се,</string>
+
+</resources>

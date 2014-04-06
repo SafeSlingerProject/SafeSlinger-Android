@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Prestanite? Jeste li sigurni?</string>
+
+    <string name="btn_Match">Sljedeći</string>
+    <string name="btn_NoMatch">Bez odgovarajuće</string>
+
+    <string name="choice_NumUsers">%d korisnik</string>
+
+    <string name="error_AllMembersMustUpgrade">Neki članovi koriste stariju verziju, svi članovi barem mora koristiti %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Svi članovi moraju nadograditi, neki koriste starije registracijskih formate gurati.</string>
+    <string name="error_CorrectYourInternetConnection">Internet nije dostupan, provjeriti svoje postavke.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Razmjena timeout premašen. Opet početi razmjenu.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Pogrešni podaci nalaze u zamjenu. Opet početi razmjenu.</string>
+    <string name="error_InvalidCommonUserId">Unesite prirodan broj.</string>
+    <string name="error_LocalGroupCommitDiffer">Ti su izvijestili razliku u frazama. Opet početi razmjenu.</string>
+    <string name="error_MinUsersRequired">Najmanje %d članova moraju razmjenjivati ​​podatke.</string>
+    <string name="error_MoreDataThanUsers">Neočekivani podaci nalaze u zamjenu. Opet početi razmjenu.</string>
+    <string name="error_NoWordListSelected">Morate odabrati jednu od fraze prije nego što nastavite.</string>
+    <string name="error_OtherGroupCommitDiffer">Netko je prijavio razliku u frazama. Opet početi razmjenu.</string>
+    <string name="error_OutOfMemoryError">Memorija je preniska završiti ovu operaciju.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">Nema odgovora od poslužitelja.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout čeka neki članovi grupe dodati podatke.</string>
+    <string name="error_WebCancelledByUser">Korisnik je otkazao zahtjev poslužitelja.</string>
+
+    <string name="help_size">Odaberite broj ljudi koji su pokušavali da razmjenjuju podatke zajedno i pritisnite \' OK \'.</string>
+    <string name="help_userid">Taj broj na zaslonu se koristi za stvaranje jedinstvene skupinu korisnika. Pregledajte brojeve za sve korisnike \' ekranima, onda svi korisnici bi trebali ući u istu najmanji broj i pritisnite \' OK \'.</string>
+    <string name="help_verify">Sada, morate odgovarati jedan od tih 3-riječ fraza sa svim korisnicima. Svaki korisnik mora odabrati isti zajednički izraz, i pritisnite \' Next \'.</string>
+
+    <string name="label_NumericModeHint">Non-Engleski</string>
+    <string name="label_PromptInstruct">Taj broj se koristi za stvaranje jedinstvene skupinu korisnika. Usporedite, a zatim ući u najmanji broj među svim korisnicima.</string>
+    <string name="label_ReceivedNItems">dobila %d predmeta</string>
+    <string name="label_UserIdHint">Najniža</string>
+    <string name="label_VerifyInstruct">Svi telefoni moraju odgovarati jednom od 3-riječi izraze. Usporedite, a zatim odabrati odgovarajući izraz.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">čeka verifikaciju od svih članova…</string>
+    <string name="prog_CollectingOthersItems">čeka svim korisnicima da se pridruže…</string>
+    <string name="prog_ConstructingGroupKey">izgradnju grupni ključ…</string>
+    <string name="prog_RequestingUserId">traži članstvo…</string>
+
+    <string name="title_size">Koliko korisnika u zamjenu?</string>
+    <string name="title_userid">Grupiranje</string>
+    <string name="title_verify">Provjeriti</string>
+
+</resources>

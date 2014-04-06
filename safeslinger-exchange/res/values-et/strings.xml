@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Lõpeta? Oled sa kindel?</string>
+
+    <string name="btn_Match">Järgmine</string>
+    <string name="btn_NoMatch">Ei sobi</string>
+
+    <string name="choice_NumUsers">%d kasutajad</string>
+
+    <string name="error_AllMembersMustUpgrade">Mõned liikmed kasutate vanemat versiooni, kõik liikmed peavad vähemalt kasutada %s.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Kõik liikmed peavad uuendama, mõned kasutavad vanemad lükke registreerimine formaate.</string>
+    <string name="error_CorrectYourInternetConnection">Internet ei ole, kontrollige oma seadeid.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ületatud. Alustada vahetamist uuesti.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Valeandmeid leitud vahetada. Alustada vahetamist uuesti.</string>
+    <string name="error_InvalidCommonUserId">Palun sisesta positiivne täisarv.</string>
+    <string name="error_LocalGroupCommitDiffer">Sa teatasiderinevus väljendeid. Alustada vahetamist uuesti.</string>
+    <string name="error_MinUsersRequired">Vähemalt %d nõutakse, et vahetada andmeid.</string>
+    <string name="error_MoreDataThanUsers">Ootamatu leitud andmete vahetus. Alustada vahetamist uuesti.</string>
+    <string name="error_NoWordListSelected">Sa pead valima ühelaused enne jätkamist.</string>
+    <string name="error_OtherGroupCommitDiffer">Keegi teataserinevus väljendeid. Alustada vahetamist uuesti.</string>
+    <string name="error_OutOfMemoryError">Mälu on liiga madal, et seda toimingut lõpule viia.</string>
+    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerNotResponding">No vastust server.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout ootab mõned grupi liikmed andmeid lisada.</string>
+    <string name="error_WebCancelledByUser">Kasutaja tühistatud server taotluse.</string>
+
+    <string name="help_size">Vali hulk inimesi, kes üritavad vahetada andmeid koos ja vajuta \' OK \'.</string>
+    <string name="help_userid">See number on see ekraan on kasutatud, et luua ainulaadne kasutajate rühm. Vaadake numbreid kõik kasutaja ekraanid, siis kõik kasutajad peaksid kandma sama väikseim number ja vajutage \' OK \'.</string>
+    <string name="help_verify">Nüüd peate sobitada üks neist 3-sõna laused logima. Iga kasutaja peab valima sama levinud fraas ja vajutage \'Next\'.</string>
+
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">See number on kasutatud, et luua ainulaadne kasutajate rühm. Võrdle ja sisestage väikseima arvu seas kõikidele kasutajatele.</string>
+    <string name="label_ReceivedNItems">saanud %d esemeid</string>
+    <string name="label_UserIdHint">Madalaim</string>
+    <string name="label_VerifyInstruct">Kõik telefonid peab vastama üks 3-fraasid. Võrdle ja seejärel valida sobitamine fraas.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">ootab kontrollimine kõigi liikmete…</string>
+    <string name="prog_CollectingOthersItems">ootab kõiki kasutajaid liituma…</string>
+    <string name="prog_ConstructingGroupKey">ehitamise Grupivõtme…</string>
+    <string name="prog_RequestingUserId">esitanud liikmeks…</string>
+
+    <string name="title_size">Mitu kasutajat vahetada?</string>
+    <string name="title_userid">Rühmitamine</string>
+    <string name="title_verify">Kontrollima</string>
+
+</resources>

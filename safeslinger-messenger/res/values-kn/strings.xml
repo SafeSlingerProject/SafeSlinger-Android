@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">ಲಿಂಕ್ ಆಹ್ವಾನ ಕಳುಹಿಸಿ…</string>
+
+    <string name="app_name">SafeSlinger</string>
+    <string name="app_TranslatorName">Google Translate</string>
+
+    <string name="ask_BackupDisabledRemindLater">ಬ್ಯಾಕಪ್ ಅಶಕ್ತಗೊಳಿಸಲಾಗಿರುತ್ತದೆ. ನೀವು ಬ್ಯಾಕ್ಅಪ್ ಸರಿಹೊಂದಿಸಲು ಮತ್ತು ಈ ಜ್ಞಾಪನೆ ಇರಿಸಿಕೊಳ್ಳಲು ಬಯಸುವಿರಾ?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s ಇತ್ತೀಚಿನ ಸಾಧನ ಅಥವಾ ಕೀಲಿ ಹೊಂದಿದೆ, ನೀವು ಈ ಹಳೆಯ ಒಂದು ಬಳಸಲು ಖಚಿತವೆ?</string>
+    <string name="ask_FileExistsOverwrite">ಫೈಲ್ ಹೆಸರು %s ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ. ತಿದ್ದಿಬರೆ?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Google ಖಾತೆ ಇಲ್ಲದೆಯೇ ನೀವು ಮಾತ್ರ ಸ್ವೀಕರಿಸಲು, ಸಂದೇಶಗಳನ್ನು ಅಲ್ಲ ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. ನೀವು Google ಖಾತೆಯನ್ನು ಸೇರಿಸಲು ಬಯಸುತ್ತೀರಿ?</string>
+    <string name="ask_SendErrorData">ನಿಮ್ಮ ಸಹಾಯ SafeSlinger ಸುಧಾರಣೆ ಬಯಸುವ. ನೀವು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಮಗೆ ಯಾವುದೇ ದೋಷಗಳು ಕಳುಹಿಸಲು ಬಯಸುವಿರಾ?</string>
+
+    <string name="btn_Accept">ಸ್ವೀಕರಿಸಿ</string>
+    <string name="btn_BeginExchangeProximity">ವಿನಿಮಯ ಆರಂಭಿಸಲು</string>
+    <string name="btn_Cancel">ರದ್ದು</string>
+    <string name="btn_Close">ಮುಚ್ಚಿ</string>
+    <string name="btn_Continue">ಮುಂದುವರಿಸಿ</string>
+    <string name="btn_discard">ಕಳೆ</string>
+    <string name="btn_Done">ಮಾಡಿದ</string>
+    <string name="btn_Exit">ನಿರ್ಗಮನ</string>
+    <string name="btn_Import">ಆಮದು</string>
+    <string name="btn_Introduce">ಪರಿಚಯಿಸಲು</string>
+    <string name="btn_No">ಇಲ್ಲ</string>
+    <string name="btn_NotRemind">ಫರ್ಗೆಟ್</string>
+    <string name="btn_OK">ಸರಿ</string>
+    <string name="btn_Refuse">ನಿರಾಕರಿಸು</string>
+    <string name="btn_Remind">ಜ್ಞಾಪಿಸು</string>
+    <string name="btn_Save">ಉಳಿಸಿ</string>
+    <string name="btn_SelectFile">ಲಗತ್ತು ಸೇರಿಸಿ</string>
+    <string name="btn_SendFile">ಕಳುಹಿಸು</string>
+    <string name="btn_Yes">ಹೌದು</string>
+
+    <string name="choice_10mins">10 ನಿಮಿಷಗಳ</string>
+    <string name="choice_1hour">1 ಗಂಟೆ</string>
+    <string name="choice_1min">1 ನಿಮಿಷ</string>
+    <string name="choice_20mins">20 ನಿಮಿಷಗಳ</string>
+    <string name="choice_2hours">2 ಗಂಟೆಗಳ</string>
+    <string name="choice_3mins">3 ನಿಮಿಷಗಳ</string>
+    <string name="choice_40mins">40 ನಿಮಿಷಗಳ</string>
+    <string name="choice_4hours">4 ಗಂಟೆಗಳ</string>
+    <string name="choice_5mins">5 ನಿಮಿಷಗಳ</string>
+    <string name="choice_8hours">8 ಗಂಟೆಗಳ</string>
+    <string name="choice_auto_storage">ಡೀಫಾಲ್ಟ್ ಶೇಖರಣಾ</string>
+    <string name="choice_external_storage">ಬಾಹ್ಯ ಸಂಗ್ರಹಣೆ</string>
+    <string name="choice_internal_storage">ಆಂತರಿಕ ಸಂಗ್ರಹಣೆ</string>
+    <string name="choice_nolimit">ಮಿತಿಯಿಲ್ಲ</string>
+    <string name="choice_SaveDirectory">ಉಳಿಸಿ ಡೈರೆಕ್ಟರಿ</string>
+    <string name="choice_SaveFile">ಫೈಲ್ ಉಳಿಸಿ</string>
+    <string name="choice_Up">ಮೇಲೆ</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">ಎಲ್ಲಾ ಸದಸ್ಯರು ಕೆಲವು ಹಳೆಯ ಪ್ರಮುಖ ಸ್ವರೂಪಗಳು ಬಳಸಿ, ನವೀಕರಿಸಬೇಕು.</string>
+    <string name="error_AudioPlayerDecodeError">ಆಡಿಯೋ ಪ್ಲೇಯರ್ ಡಿಕೋಡಿಂಗ್ ದೋಷ.</string>
+    <string name="error_AudioPlayerError">ರೆಕಾರ್ಡಿಂಗ್ ಆಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="error_AudioRecorderEncodeError">ಆಡಿಯೋ ರೆಕಾರ್ಡರ್ ಎನ್ಕೋಡಿಂಗ್ ದೋಷ.</string>
+    <string name="error_AudioRecorderPermissionError">ಮೈಕ್ರೊಫೋನ್ ಅನುಮತಿ ಅಗತ್ಯವಿದೆ. ಮೈಕ್ರೊಫೋನ್ ಅನುಮತಿಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಐಒಎಸ್ ಸೆಟ್ಟಿಂಗ್ಗಳು ಹೋಗಿ ದಯವಿಟ್ಟು.</string>
+    <string name="error_BackupNotFound">ಪುನಃಸ್ಥಾಪಿಸಲು ಯಾವುದೇ ಬ್ಯಾಕ್ಅಪ್.</string>
+    <string name="error_BackupNotSupportedDevice">ಸಾಧನ ಬ್ಯಾಕ್ಅಪ್ ಪುನಃಸ್ಥಾಪಿಸಲು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.</string>
+    <string name="error_BadCopyProtectUpgrade">ಕಾರಣ ಆಂಡ್ರಾಯ್ಡ್ 4.1 ಒಂದು ದೋಷವನ್ನು, ನೀವು ಅನ್ಇನ್ಸ್ಟಾಲ್ ಮತ್ತು SafeSlinger ಮರುಸ್ಥಾಪಿಸುವ ಕಾಣಿಸುತ್ತದೆ.</string>
+    <string name="error_C2DMRegAccountMissing">ಒಂದು Google ಖಾತೆಯನ್ನು ಅಗತ್ಯವಿದೆ. ಖಾತೆ ವ್ಯವಸ್ಥಾಪಕ ತೆರೆಯಲು ಮತ್ತು Google ಖಾತೆಯನ್ನು ಸೇರಿಸಿ ದಯವಿಟ್ಟು.</string>
+    <string name="error_C2DMRegAuthenticationFailed">ನೋಂದಣಿ ದೃಢೀಕರಿಸದ, ನಂತರ ಕೈಯಾರೆ ದಯವಿಟ್ಟು ಮರುಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="error_C2DMRegInvalidSender">ನೋಂದಣಿ ಈ ಆವೃತ್ತಿ ಲಭ್ಯವಿಲ್ಲ, ಒಂದು ಅಪ್ಡೇಟೆಡ್ ಆವೃತ್ತಿ ದಯವಿಟ್ಟು ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Google ನೊಂದಿಗೆ ತಪ್ಪಾದ ಸಾಧನ ನೋಂದಣಿ. ಈ ಸಾಧನವನ್ನು ಪ್ರಸ್ತುತ ಪುಶ್ ಸಂದೇಶ ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.</string>
+    <string name="error_C2DMRegServiceNotAvailable">ಪುಷ್ ನೋಂದಣಿ ಸೇವೆ ಲಭ್ಯವಿಲ್ಲ, ಶೆಡ್ಯೂಲಿಂಗ್ %d ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಮರುಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="error_C2DMRegTooManyRegistrations">ಹಲವಾರು ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು ಪುಷ್ ನೋಂದಣಿಯಾಗಿವೆ. ಕೆಲವು ಅನ್ವಯಗಳನ್ನು ಅನ್ಇನ್ಸ್ಟಾಲ್ ಹಾಗೂ ಮರುಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="error_CannotSendEmptyFile">ಖಾಲಿ ಬಾಂಧವ್ಯ ಕಳುಹಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="error_CannotSendFilesOver">ಗಾತ್ರದಲ್ಲಿ %d ಬೈಟ್ಗಳು ಹೆಚ್ಚಿನ ಲಗತ್ತುಗಳನ್ನು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="error_CannotSendNullFile">ಒಂದು ಶೂನ್ಯ ಬಾಂಧವ್ಯ ಕಳುಹಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="error_contactCreationFailure">ಸಂಪರ್ಕಿಸಿ ಸೃಷ್ಟಿ ವಿಫಲವಾಗಿದೆ.</string>
+    <string name="error_ContactInsertFailed">ಸಂಪರ್ಕಿಸಿ ಇನ್ಸರ್ಟ್ ವಿಫಲವಾಗಿದೆ.</string>
+    <string name="error_ContactNameMissing">ಈ ಸಂಪರ್ಕ ಹೆಸರು ಕಾಣೆಯಾಗಿದೆ, ಸಂಪಾದಿಸಲು ದಯವಿಟ್ಟು.</string>
+    <string name="error_ContactNameMissing2">ಈ ಸಂಪರ್ಕ ಹೆಸರು ಕಾಣೆಯಾಗಿದೆ, ಪುನರಾಯ್ಕೆಮಾಡು ದಯವಿಟ್ಟು.</string>
+    <string name="error_ContactUpdateFailed">ಸಂಪರ್ಕಿಸಿ ನವೀಕರಣ ವಿಫಲವಾಗಿದೆ.</string>
+    <string name="error_couldNotExtractPrivateKey">ಖಾಸಗಿ ಕೀಲಿಯನ್ನು ಸಂಗ್ರಹಿಸಲಾಗಲಿಲ್ಲ.</string>
+    <string name="error_FeatureIsNotSupport">%1$s ಈ ಸಮಯದಲ್ಲಿ %2$s ಬೆಂಬಲವಿಲ್ಲ.</string>
+    <string name="error_FileSave">%s ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.</string>
+    <string name="error_FileStorageUnavailable">ಕಡತ ಸಂಗ್ರಹ ಲಭ್ಯವಿಲ್ಲ.</string>
+    <string name="error_InvalidContactName">ಮಾನ್ಯವಾದ ಸಂಪರ್ಕ ಹೆಸರು ಅಗತ್ಯವಿದೆ.</string>
+    <string name="error_InvalidIncomingMessage">ಬ್ಯಾಡ್ ಒಳಬರುವ ಸಂದೇಶವನ್ನು ರೂಪದಲ್ಲಿ.</string>
+    <string name="error_InvalidMsg">ಬ್ಯಾಡ್ ಮೆಸೇಜ್ ಫಾರ್ಮ್ಯಾಟ್.</string>
+    <string name="error_InvalidRecipient">ಅಮಾನ್ಯ ಸ್ವೀಕರಿಸುವವರು.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">ಪೀರ್ ಕೀಲಿ ಸ್ವರೂಪ ಅಮಾನ್ಯವಾಗಿದೆ.</string>
+    <string name="error_MessageSignatureVerificationFails">ಸಹಿ ಪರಿಶೀಲನೆಯನ್ನು ವಿಫಲವಾಗಿದೆ.</string>
+    <string name="error_minPassphraseRequire">ಗುಪ್ತವಾಕ್ಯಾಂಶಗಳನ್ನು ಕನಿಷ್ಠ %d ಪಾತ್ರಗಳು ಅಗತ್ಯವಿರುತ್ತದೆ.</string>
+    <string name="error_MissingNdk">SafeSlinger ಅಗತ್ಯವಿದೆ, ಈ ಸಾಧನದಲ್ಲಿ NDK ಬೆಂಬಲ ಪತ್ತೇ ಮಾಡಲಿಲ್ಲ.</string>
+    <string name="error_MultipleSendNotSupported">ನೀವು ಅನೇಕ ವಸ್ತುಗಳನ್ನು ಕಳುಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿರುವ. ಈ ಸಮಯದಲ್ಲಿ, SafeSlinger ಮಾತ್ರ ಒಂದು ಸಮಯದಲ್ಲಿ ಒಂದು ಐಟಂ ಕಳುಹಿಸುವ ಬೆಂಬಲಿಸುತ್ತದೆ.</string>
+    <string name="error_NoEmailAccount">ಇಮೇಲ್ ಖಾತೆ ಸೆಟಪ್ ಅಲ್ಲ!</string>
+    <string name="error_noPassPhrase">ಯಾವುದೇ ಪಾಸ್ಫ್ರೇಸ್ ಪ್ರವೇಶಿಸಿತು.</string>
+    <string name="error_passPhrasesDoNotMatch">ಪಾಸ್ಫ್ರೇಸ್ಗಳು ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">ನೀವು ಸ್ವೀಕರಿಸುವವರ ಸಂದೇಶವನ್ನು ಕೋಟಾವನ್ನು ಮೀರಿರುವ. ದಯವಿಟ್ಟು ನಂತರ ಮರುಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="error_PushMsgInvalidRegistration">ಆ ಸ್ವೀಕರಿಸುವವರ ಕಾಣೆಯಾಗಿರುವ ಅಥವಾ ಕೆಟ್ಟ ಪುಶ್ ನೋಂದಣಿ ಹೊಂದಿದೆ. ನೀವು ಈ ಸಾಧನವನ್ನು ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸುವ ನಿಲ್ಲಿಸಲು ಮಾಡಬೇಕು.</string>
+    <string name="error_PushMsgMessageNotFound">ಸಂದೇಶ ಅವಧಿ.</string>
+    <string name="error_PushMsgMessageTooBig">ಸಂದೇಶ ತುಂಬಾ ದೊಡ್ಡದಾಗಿದೆ. ಸಂದೇಶ ಗಾತ್ರ ಕಡಿಮೆ.</string>
+    <string name="error_PushMsgNotRegistered">ಆ ಸ್ವೀಕರಿಸುವವರ ಪುಶ್ ನೋಂದಣಿ ಅಮಾನ್ಯವಾಗಿದೆ. ಸ್ವೀಕರಿಸುವವರ SafeSlinger ತೆಗೆಯಲು ಅಥವಾ ಅಧಿಸೂಚನೆಗಳನ್ನು ಆಫ್ ಮಾಡಿರಬಹುದು. ನೀವು ಈ ಸಾಧನವನ್ನು ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸುವ ನಿಲ್ಲಿಸಲು ಮಾಡಬೇಕು.</string>
+    <string name="error_PushMsgNotSucceed">ಪುಶ್ ಅಧಿಸೂಚನೆಯನ್ನು ಸೇವೆ ಸಂವಹನ ದೋಷ ಕಂಡುಬಂದಿದೆ.</string>
+    <string name="error_PushMsgQuotaExceeded">ನೀವು ಈ ಸಾಧನಕ್ಕೆ ಸಂದೇಶ ಕೋಟಾವನ್ನು ಮೀರಿರುವ. ದಯವಿಟ್ಟು ನಂತರ ಮರುಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="error_PushMsgServiceFail">ಅಧಿಸೂಚನೆ ಸೇವೆ ಈ ಸಮಯದಲ್ಲಿ ಲಭ್ಯವಿಲ್ಲ. ನಂತರ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="error_RecoderError">ಆಡಿಯೋ ರೆಕಾರ್ಡರ್ ತಯಾರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">, ಅದೇ ಸಮಯದಲ್ಲಿ ಇನ್ನೊಂದು ಫೋನ್ \' ಜೋಲಿ ಕೀಸ್ \' ಆರಂಭಿಸಲು.</string>
+    <string name="error_selectDataToSend">ನೀವು ಲಗತ್ತು ಅಥವಾ ಕಳುಹಿಸಲು ಒಂದು ಸಂದೇಶವನ್ನು ಅಗತ್ಯವಿದೆ.</string>
+    <string name="error_ShareFileDelError">ಹಂಚಿಕೆಯ ಕಡತ ತೆಗೆದುಹಾಕಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="error_UnableFindPubKey">ಕ್ರಿಪ್ಟೋ ಒದಗಿಸುವವರು ಖಾಸಗಿ ಕೀಲಿ ಸಾರ್ವಜನಿಕ ಕೀಲಿ ಹೊಂದಾಣಿಕೆ ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="error_UnableToSaveMessageInDB">ಸಂದೇಶ ಡೇಟಾಬೇಸ್ ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.</string>
+    <string name="error_UnableToSaveRecipientInDB">ಸ್ವೀಕರಿಸುವವರ ಡೇಟಾಬೇಸ್ ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.</string>
+    <string name="error_UnableToUpdateMessageInDB">ಸಂದೇಶ ಡೇಟಾಬೇಸ್ ನವೀಕರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="error_UnableToUpdateRecipientInDB">ಸ್ವೀಕರಿಸುವವರ ಡೇಟಾಬೇಸ್ ನವೀಕರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger ದೋಷ, ದಯವಿಟ್ಟು ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ.</string>
+    <string name="error_VcardParseFailure">ಸಂಪರ್ಕಿಸಿ ಡೇಟಾ ತಪ್ಪಾಗಿ ಸ್ವರೂಪಗೊಳಿಸಲಾಗಿದೆ ಮಾಡಲಾಯಿತು.</string>
+
+    <string name="help_find">ಇತರರೊಂದಿಗೆ ವಿನಿಮಯ ನಿಮ್ಮ ಹೆಸರು ಸೆಟ್ ಇದನ್ನು ಬಳಸಿ. ಮುಗಿದಮೇಲೆ \'ಡನ್\' ಬಟನ್ ಟ್ಯಾಪ್.</string>
+    <string name="help_home">ಗುರುತನ್ನು ದಶಮಾಂಶ ವಿನಿಮಯ, ಎಲ್ಲಾ ಬಳಕೆದಾರರು ಹತ್ತಿರದ ಅಥವಾ ಫೋನ್ನಲ್ಲಿ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು. \' ಆರಂಭಿಸಲು ಎಕ್ಸ್ಚೇಂಜ್ \' ಗುಂಡಿಯನ್ನು ಮಾತ್ರ ಪರಿಶೀಲಿಸಿದ ಸಂಪರ್ಕ ದಶಮಾಂಶ ವಿನಿಮಯ.</string>
+    <string name="help_identity_menu">\n\nನಿಮ್ಮ ಹೆಸರಿನ ಗುಂಡಿಯನ್ನು ಟ್ಯಾಪಿಂಗ್ ಮೂಲಕ ಈ ತೆರೆಯಲ್ಲಿ ನಿಮ್ಮ ಗುರುತನ್ನು ಬಗ್ಗೆ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಬದಲಾಯಿಸಬಹುದು. ನೀವು \'ಸಂಪಾದಿಸು\' ನಿಮ್ಮ ಸಂಪರ್ಕ, ಸಂಪರ್ಕ \' ಹೊಸ ರಚಿಸಿ \', ಅಥವಾ ಸಂಪರ್ಕ \' ಮತ್ತೊಂದು ಬಳಸಿ \' ಅವಕಾಶ ಮೆನುವನ್ನು ತೋರಿಸುತ್ತದೆ.</string>
+    <string name="help_Messages">ಈ ಪರದೆಯ ಎಲ್ಲಾ ಕಳೆದ ಸಂದೇಶಗಳನ್ನು, ಮತ್ತು ಇನ್ನೂ ಡೌನ್ಲೋಡ್ ಲಭ್ಯವಿರುವ ಲಗತ್ತುಗಳನ್ನು ತೋರಿಸುತ್ತದೆ.</string>
+    <string name="help_passphrase">ನಿಮ್ಮ ಪಾಸ್ಫ್ರೇಸ್ನೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ ಲಾಗಿನ್ ಇದನ್ನು ಬಳಸಿ.</string>
+    <string name="help_PickRecip">SafeSlinger ಕೀಲಿಗಳನ್ನು ಸಂಪರ್ಕಗಳು ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಒಂದು ಆಯ್ಕೆ, ಇಲ್ಲಿ ಪ್ರದರ್ಶಿಸುತ್ತದೆ.</string>
+    <string name="help_save">ಕೊನೆಗೊಂಡಾಗ, ಪ್ರೋಟೋಕಾಲ್ ವಿನಿಮಯ ಗುರುತನ್ನು ಮಾಹಿತಿ ಪಟ್ಟಿ ತೋರಿಸುತ್ತವೆ. ನೀವು \' ಆಮದು \' ಉಳಿಸಲು ಮತ್ತು ಒತ್ತಿ ಬಯಸುವ ಸಂಪರ್ಕಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ.</string>
+    <string name="help_SecureIntroduction">ಈ ಸ್ಕ್ರೀನ್ ನೀವು ಸುರಕ್ಷಿತವಾಗಿ ಪರಸ್ಪರ ತಮ್ಮ ಕೀಲಿಗಳನ್ನು ಕಳುಹಿಸಲು ಮೊದಲು ಕೀಲಿಗಳನ್ನು ನೇತುಹಾಕಿದ ಎರಡು ಜನರು ಆಯ್ಕೆ ಅನುಮತಿಸುತ್ತದೆ. ಸಿದ್ಧವಿರುವಾಗ ಸರಳವಾಗಿ \' ಪರಿಚಯಿಸಲು \' ಒತ್ತಿ.</string>
+    <string name="help_Send">ಈ ಪರದೆಯ ನೀವು ಕೆಲವು ಡೇಟಾವನ್ನು ಮತ್ತು ಕಳುಹಿಸಲು ಒಂದು ಸ್ವೀಕರಿಸುವವರ ಆಯ್ಕೆ ಅನುಮತಿಸುತ್ತದೆ. ಸಿದ್ಧವಿರುವಾಗ ಸರಳವಾಗಿ \' ಮಾಡಿ \' ಒತ್ತಿ.</string>
+
+    <string name="iOS_contactError">ಸಂಪರ್ಕಗಳು ಅನುಮತಿ ಅಗತ್ಯವಿದೆ. ಸಂಪರ್ಕಗಳು ಅನುಮತಿಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಐಒಎಸ್ ಸೆಟ್ಟಿಂಗ್ಗಳು ಹೋಗಿ ದಯವಿಟ್ಟು.</string>
+    <string name="iOS_errorpushtoken">ಪುಷ್ ನೋಂದಣಿ ಕಾಣೆಯಾಗಿದೆ.</string>
+    <string name="iOS_notificationError1">ಸೂಚನೆಗಳು ಅನುಮತಿ ಅಗತ್ಯವಿದೆ. ಸೂಚನೆಗಳು ಅನುಮತಿಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಐಒಎಸ್ ಸೆಟ್ಟಿಂಗ್ಗಳು ಹೋಗಿ ದಯವಿಟ್ಟು.</string>
+    <string name="iOS_notificationError2">%s ಅನುಮತಿ ಅಗತ್ಯವಿದೆ. ಸೂಚನೆಗಳು ಅನುಮತಿಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಐಒಎಸ್ ಸೆಟ್ಟಿಂಗ್ಗಳು ಹೋಗಿ ದಯವಿಟ್ಟು.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger ಐಒಎಸ್ 5.x ಸಾಧನಗಳನ್ನು ಹೊಂದುವಂತೆ ಇದೆ. SafeSlinger ಐಒಎಸ್ 6 ಅಥವಾ ಹೆಚ್ಚಿನ ಅಗತ್ಯವಿದೆ.</string>
+
+    <string name="label_ago">%s ಹಿಂದೆ</string>
+    <string name="label_backupCompleteDate">ಪೂರ್ಣಗೊಂಡಿದೆ ಕೊನೆಯ ಬ್ಯಾಕ್ಅಪ್</string>
+    <string name="label_backupRequestDate">ಕೊನೆಯ ಬ್ಯಾಕ್ಅಪ್ ವಿನಂತಿ</string>
+    <string name="label_backupURL">ಬ್ಯಾಕಪ್ URL ಅನ್ನು</string>
+    <string name="label_ClickForNMsgs">ನಿಮ್ಮ %d ಸಂದೇಶಗಳನ್ನು ಪರಿಶೀಲಿಸಲು ಟಚ್</string>
+    <string name="label_ComposeHint">ಸಂದೇಶ ರಚಿಸಿ</string>
+    <string name="label_ContactName">ನಿಮ್ಮ ಹೆಸರು</string>
+    <string name="label_days">%d ದಿನಗಳ</string>
+    <string name="label_Device">ಸಾಧನ:</string>
+    <string name="label_DeviceInSendOnlyMode">ಕಳುಹಿಸಿ ಮಾತ್ರ ಕ್ರಮ</string>
+    <string name="label_DisabledExchSourceKeyChange">ನಿಮ್ಮ ಪ್ರಮುಖ ಬದಲಾಗಿದೆ: ಜೋಲಿ ಕೀಸ್ ಮತ್ತೆ.</string>
+    <string name="label_Draft">DRAFT</string>
+    <string name="label_EnabledKeyFormatDeprecated">ಕೀ ರೂಪದಲ್ಲಿ ಅಸಮ್ಮತಿ: ಜೋಲಿ ಕೀಸ್ ಮತ್ತೆ.</string>
+    <string name="label_exchanged">ವಿನಿಮಯ</string>
+    <string name="label_expired">ಅವಧಿ ಮುಗಿದ</string>
+    <string name="label_expires">%s ಅವಧಿಯು</string>
+    <string name="label_expiresIn">ರಲ್ಲಿ ಮುಕ್ತಾಯಗೊಳ್ಳುತ್ತದೆ</string>
+    <string name="label_FileNameHint">ಫೈಲ್ ಹೆಸರು</string>
+    <string name="label_FindInstruct">ಹೆಸರನ್ನು ನಮೂದಿಸಿ ನೀವು ಸುರಕ್ಷಿತವಾಗಿ ಸಂವಹನ ಇತರರಿಗಾಗಿ ಬಯಸುವ:</string>
+    <string name="label_FirstName">ಮೊದಲ ಹೆಸರು</string>
+    <string name="label_Home">ಸೇರಿಸಲು ಅಥವ ತೆಗೆದು ಸಂಪರ್ಕ ದಶಮಾಂಶ, ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಬಯಸುವ ಐಟಂಗಳನ್ನು ಪರಿಶೀಲಿಸಲು, ಮತ್ತು ಸ್ಪರ್ಶಿಸಿ ನಿಮ್ಮ ಹೆಸರು ಟ್ಯಾಪ್ \'ಎಕ್ಸ್ಚೇಂಜ್ ಆರಂಭಿಸಲು\' ಇತರರು ವಿನಿಮಯ ತಯಾರಾದ:</string>
+    <string name="label_hometag">ಮುಖಪುಟ</string>
+    <string name="label_hours">%d ಗಂಟೆಗಳ</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಮುಗಿದಮೇಲೆ \' ಡನ್ \' ಬಟನ್ ಟ್ಯಾಪ್.</string>
+    <string name="label_InstNoMessages">ಯಾವುದೇ ಸಂದೇಶಗಳನ್ನು. ನೀವು ಮುಖಪುಟ ಮೆನುವಿನಲ್ಲಿ \' ಸಂದೇಶ ರಚಿಸಿ \' ಬಟನ್ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಬಹುದು.</string>
+    <string name="label_InstNoMessagesAndroid">ಯಾವುದೇ ಸಂದೇಶಗಳನ್ನು. ನೀವು \' ಪತ್ರ \' ಟ್ಯಾಬ್ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಬಹುದು.</string>
+    <string name="label_InstNoRecipients">ಯಾವುದೇ ಪಡೆದವರು. ಹತ್ತಿರದ ಮತ್ತೊಂದು SafeSlinger ಬಳಕೆದಾರ ಕ್ಲಿಕ್ ಮತ್ತು ಕೀಲಿಗಳನ್ನು ಷೇರು \' ಜೋಲಿ ಕೀಸ್ \' ಟ್ಯಾಬ್ ಸ್ಪರ್ಶಕ್ಕೆ.</string>
+    <string name="label_InstNoSharedFile">ಯಾವುದೇ ಹಂಚಿಕೊಂಡ ಕಡತ. ಹಂಚಿದ ಫೋಲ್ಡರ್ ಐಟ್ಯೂನ್ಸ್ ಮತ್ತು ಡ್ರ್ಯಾಗ್ ಕಡತಗಳನ್ನು ನಿಮ್ಮ ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಲು.</string>
+    <string name="label_InstRecipients">ಒಂದು ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಸ್ವೀಕರಿಸುವವರ ಆರಿಸಿ:</string>
+    <string name="label_InstSendInvite">ಸುರಕ್ಷಿತವಾಗಿ ಪರಿಚಯಿಸಲು ಪಡೆದವರು ಆರಿಸಿ:</string>
+    <string name="label_InstSharedFile">ಲಗತ್ತಿಸುವುದು ಒಂದು ಕಡತವನ್ನು ಆಯ್ಕೆ:</string>
+    <string name="label_introduced">ಪರಿಚಯಿಸಿತು</string>
+    <string name="label_Key">ಕೀ:</string>
+    <string name="label_LastName">ಕೊನೆಯ ಹೆಸರು</string>
+    <string name="label_Me">ನನಗೆ</string>
+    <string name="label_messageIntroduceNameToYou">ನಾನು ನಿಮಗೆ %s ಪರಿಚಯಿಸಲು ಬಯಸುತ್ತೇವೆ.</string>
+    <string name="label_minutes">%d ನಿಮಿಷಗಳ</string>
+    <string name="label_mobiletag">ಚರ</string>
+    <string name="label_MostRecentOnly">ಇತ್ತೀಚಿನ ಮಾತ್ರ</string>
+    <string name="label_MsgSendUpdate">ನನ್ನ ಅಪ್ಡೇಟ್ಗೊಳಿಸಲಾಗಿದೆ SafeSlinger ರುಜುವಾತುಗಳನ್ನು ಜೋಡಿಸಲಾಗುತ್ತದೆ.</string>
+    <string name="label_None">ಯಾವುದೂ ಇಲ್ಲ</string>
+    <string name="label_numsharedfiles">%d ಫೈಲ್ಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಗೆ:</string>
+    <string name="label_OldThreads">ಓಲ್ಡ್ ಥ್ರೆಡ್ಸ್</string>
+    <string name="label_othertag">ಇತರ</string>
+    <string name="label_PassHintBackoff">ಮರುಪ್ರಯತ್ನಿಸಿ</string>
+    <string name="label_PassHintChange">ನವೀಕರಿಸಲಾಗಿದೆ ಪಾಸ್ಫ್ರೇಸ್</string>
+    <string name="label_PassHintCreate">ಪಾಸ್ಫ್ರೇಸ್ ರಚಿಸಿ</string>
+    <string name="label_PassHintCurrent">ಪ್ರಸ್ತುತ ಪಾಸ್ಫ್ರೇಸ್</string>
+    <string name="label_PassHintEnter">ಪಾಸ್ಫ್ರೇಸ್</string>
+    <string name="label_PassHintRepeat">ಪುನರಾವರ್ತನೆ ಪಾಸ್ಫ್ರೇಸ್</string>
+    <string name="label_passPhraseCacheTtl">ಪಾಸ್ಫ್ರೇಸ್ ಸಂಗ್ರಹ</string>
+    <string name="label_PassPhraseIsCached">ಪಾಸ್ಫ್ರೇಸ್ ಕ್ಯಾಶೆ</string>
+    <string name="label_phoneOnly">ಫೋನ್ ಮಾತ್ರ</string>
+    <string name="label_Photo">ಭಾವಚಿತ್ರ</string>
+    <string name="label_PublicKeyID">ಕೀಲಿ ID</string>
+    <string name="label_PushTokenID">ಪುಷ್ ನೋಂದಣಿ ID ಯನ್ನು</string>
+    <string name="label_RemindBackupDelay">ಬ್ಯಾಕಪ್ ಜ್ಞಾಪನೆ</string>
+    <string name="label_ReportedInactive">ನಿಷ್ಕ್ರಿಯ %s ವರದಿ.</string>
+    <string name="label_restoreCompleteDate">ಕೊನೆಯ ಸಂಪೂರ್ಣಗೊಂಡ ಮರುಸ್ಥಾಪಿಸಿ</string>
+    <string name="label_SafeSlingerBackupDelayed">ತಡವಾಗಿ SafeSlinger ಬ್ಯಾಕ್ಅಪ್</string>
+    <string name="label_safeslingered">(SafeSlinger ನೇರ ವಿನಿಮಯ)</string>
+    <string name="label_SaveAccount">ಖಾತೆ ಉಳಿಸಿ</string>
+    <string name="label_SaveInstruct">ಸುರಕ್ಷಿತ ಸಂಪರ್ಕಗಳು ಉಳಿಸಲು \'ಆಮದು\' ಟ್ಯಾಪ್ ನಂತರ, ನೀವು ನಿಮ್ಮ ವಿಳಾಸ ಪುಸ್ತಕದಲ್ಲಿ ನವೀಕರಿಸಲು ಬಯಸುತ್ತೀರಾ ಸಂಪರ್ಕಗಳು ಪರಿಶೀಲಿಸಿ:</string>
+    <string name="label_seconds">%d ಸೆಕೆಂಡುಗಳ</string>
+    <string name="label_SelectRecip">ಸ್ವೀಕರಿಸುವವರ ಆಯ್ಕೆ</string>
+    <string name="label_sendErrorData">ದೋಷ ಡೇಟಾ ಕಳಿಸಿ</string>
+    <string name="label_SendFrom">ಗೆ:</string>
+    <string name="label_SendTo">ಗೆ:</string>
+    <string name="label_ShowHintAtLaunch">ಈ ಸುಳಿವು ಮುಂದಿನ ಬಾರಿ ತೋರಿಸಿ.</string>
+    <string name="label_step_1">ಹಂತ 1</string>
+    <string name="label_step_2">ಹಂತ 2</string>
+    <string name="label_step_3">ಹಂತ 3</string>
+    <string name="label_step_4">ಹಂತ 4</string>
+    <string name="label_step_5">ಹಂತ 5</string>
+    <string name="label_TapToDecryptFile">ಕಡತ ಡೀಕ್ರಿಪ್ಟ್ ಟ್ಯಾಪ್</string>
+    <string name="label_TapToDecryptMessage">ಡೀಕ್ರಿಪ್ಟ್ ಟ್ಯಾಪ್</string>
+    <string name="label_TapToDownloadFile">ಫೈಲ್ ಡೌನ್ಲೋಡ್ ಟ್ಯಾಪ್</string>
+    <string name="label_TapToDownloadMessage">ಸಂದೇಶ ಡೌನ್ಲೋಡ್ ಟ್ಯಾಪ್</string>
+    <string name="label_TapToOpenFile">ಕಡತವನ್ನು ತೆರೆಯಲು ಟ್ಯಾಪ್</string>
+    <string name="label_TapToResumeDraft">ಸಂದೇಶವನ್ನು ಡ್ರಾಫ್ಟ್ ಪುನರಾರಂಭಿಸಿ ಟ್ಯಾಪ್</string>
+    <string name="label_TapToSendCredentialUpdate">ಟ್ಯಾಪ್ ಮತ್ತು ದೃಢೀಕರಣ ಅಪ್ಡೇಟ್ ಕಳುಹಿಸಲು ಹಿಡಿದುಕೊಳ್ಳಿ.</string>
+    <string name="label_targetAccountLabel">ಸಂಪರ್ಕಗಳು ಖಾತೆ</string>
+    <string name="label_TouchToConfigureBackupSettings">ನೀವು ಐಚ್ಛಿಕವಾಗಿ ಐಒಎಸ್ ಸೆಟ್ಟಿಂಗ್ಗಳು SafeSlinger iCloud ಬ್ಯಾಕ್ಅಪ್ ಸಾಧ್ಯವಾಗಿಸುತ್ತದೆ. ಮುಗಿದಮೇಲೆ \' ಡನ್ \' ಬಟನ್ ಟ್ಯಾಪ್.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">ಬ್ಯಾಕ್ಅಪ್ ಸಿದ್ಧತೆಗಳನ್ನು ಸಂರಚಿಸಲು ಟಚ್.</string>
+    <string name="label_TouchToConfigureCacheTimeout">ಸಂಗ್ರಹ ಕಾಲಾವಧಿ ಸಿದ್ಧತೆಗಳನ್ನು ಸಂರಚಿಸಲು ಟಚ್.</string>
+    <string name="label_undefinedTypeLabel">ಅಜ್ಞಾತ</string>
+    <string name="label_UnknownSender">ಎನ್ಕ್ರಿಪ್ಟ್ ಕಳುಹಿಸಿದವರ</string>
+    <string name="label_UserName">ಬಳಕೆದಾರ ಹೆಸರು</string>
+    <string name="label_worktag">ಕೆಲಸ</string>
+
+    <string name="menu_About">ಕುರಿತು</string>
+    <string name="menu_Change">ಚೇಂಜ್</string>
+    <string name="menu_ChangePassphrase">ಚೇಂಜ್ ಪಾಸ್ಫ್ರೇಸ್</string>
+    <string name="menu_CreateNew">ಹೊಸ ರಚಿಸಿ</string>
+    <string name="menu_delete">ಅಳಿಸಿ</string>
+    <string name="menu_deleteThread">ಥ್ರೆಡ್ \'%s\' ಅಳಿಸಿ</string>
+    <string name="menu_Details">ವೀಕ್ಷಿಸು ವಿವರ</string>
+    <string name="menu_DownloadDirectory">ಡೈರೆಕ್ಟರಿ ಡೌನ್ಲೋಡ್</string>
+    <string name="menu_Edit">ಸಂಪಾದಿಸು</string>
+    <string name="menu_FileManager">ಕಡತ ವ್ಯವಸ್ಥಾಪಕ</string>
+    <string name="menu_Help">ಸಹಾಯ</string>
+    <string name="menu_Introduction">ಪರಿಚಯ</string>
+    <string name="menu_License">ಪರವಾನಗಿ</string>
+    <string name="menu_Logout">ಲಾಗ್ಔಟ್</string>
+    <string name="menu_messageCopyText">ಪಠ್ಯವನ್ನು ನಕಲಿಸಿ</string>
+    <string name="menu_messageForward">ಫಾರ್ವರ್ಡ್</string>
+    <string name="menu_Remove">ತೆಗೆದುಹಾಕುವುದು</string>
+    <string name="menu_SelectShareApp">ಅಪ್ಲಿಕೇಶನ್ ಕಳುಹಿಸಿ</string>
+    <string name="menu_sendFeedback">ಪ್ರತಿಕ್ರಿಯೆ ಕಳುಹಿಸಿ</string>
+    <string name="menu_SendUpdate">ಅಪ್ಡೇಟ್ ಮಾಡಿ</string>
+    <string name="menu_Settings">ಸೆಟ್ಟಿಂಗ್ಗಳು</string>
+    <string name="menu_ShowTutorial">ಶೋ ಟ್ಯುಟೋರಿಯಲ್</string>
+    <string name="menu_TagComposeMessage">ಕೂಡಿರು</string>
+    <string name="menu_TagExchange">ಜೋಲಿ ಕೀಸ್</string>
+    <string name="menu_TagListMessages">ಸಂದೇಶಗಳು</string>
+    <string name="menu_UseAnother">ಮತ್ತೊಂದು ಬಳಸಿ</string>
+    <string name="menu_UseContactPerson">ಸಂಪರ್ಕಿಸಿ \'%s\' ಬಳಸಿ</string>
+    <string name="menu_UseNoContact">ಬಳಸಿ ಹೆಸರು ಮಾತ್ರ</string>
+    <string name="menu_UseProfilePerson">ಪ್ರೊಫೈಲ್ \'%s\' ಬಳಸಿ</string>
+
+    <string name="prog_decrypting">ಡೀಕ್ರಿಪ್ಟ್…</string>
+    <string name="prog_encrypting">ಎನ್ಕ್ರಿಪ್ಟ್…</string>
+    <string name="prog_FileSent">ಸಂದೇಶ ಪ್ರತಿಕ್ರಿಯೆಯ ಕಾಯುತ್ತಾ ಕಳುಹಿಸಿದ…</string>
+    <string name="prog_findingKey">ಕೀಲಿ ಕಂಡುಹಿಡಿಯುವ…</string>
+    <string name="prog_GeneratingKey">ಪ್ರಮುಖ ಉತ್ಪಾದನಾ, ಈ ಸ್ವಲ್ಪ ತೆಗೆದುಕೊಳ್ಳಬಹುದು…</string>
+    <string name="prog_generatingSignature">ಸಹಿ ಉತ್ಪಾದಿಸುವ…</string>
+    <string name="prog_loadingContent">ಲೋಡ್ ವಿಷಯ…</string>
+    <string name="prog_ReceivingFile">ಎನ್ಕ್ರಿಪ್ಟ್ ಕಡತ ಪಡೆದ…</string>
+    <string name="prog_RequestingFile">ಗೂಢಲಿಪೀಕರಣಗೊಂಡ ಕಡತ ಮನವಿ…</string>
+    <string name="prog_RequestingMessage">ಎನ್ಕ್ರಿಪ್ಟ್ ಸಂದೇಶವನ್ನು ಮನವಿ…</string>
+    <string name="prog_RequestingPushReg">ಪುಶ್ ನೋಂದಣಿ ಮನವಿ…</string>
+    <string name="prog_SavingContactsToAddressBook">ಅಪ್ಡೇಟ್ ವಿಳಾಸ ಪುಸ್ತಕ…</string>
+    <string name="prog_SavingContactsToKeyDatabase">ಪ್ರಮುಖ ಡೇಟಾಬೇಸ್ ಅಪ್ಡೇಟ್…</string>
+    <string name="prog_SearchingForBackup">ಬ್ಯಾಕ್ಅಪ್ ಹುಡುಕುವ…</string>
+    <string name="prog_SendingFile">ಎನ್ಕ್ರಿಪ್ಟ್ %s ಕಳುಹಿಸುವ…</string>
+    <string name="prog_verifyingIntegrity">ಸಮಗ್ರತೆಯನ್ನು ಪರಿಶೀಲಿಸುವ…</string>
+    <string name="prog_verifyingSignature">ಸಹಿ ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ…</string>
+
+    <string name="section_advanced">ವಿಸ್ತೃತ</string>
+    <string name="section_backup">ಬ್ಯಾಕಪ್</string>
+    <string name="section_general">ಜನರಲ್</string>
+
+    <string name="state_BackupRestored">ಬ್ಯಾಕಪ್ ಪುನಃಸ್ಥಾಪನೆ.</string>
+    <string name="state_FileDeleted">ಅಳಿಸಲಾಗಿದೆ ಕಡತ %s.</string>
+    <string name="state_FileSent">ಕಳುಹಿಸಿದ ಸಂದೇಶ.</string>
+    <string name="state_MessageSavedAsDraft">ಕರಡು ಉಳಿಸಿದ ಸಂದೇಶ.</string>
+    <string name="state_MessagesDeleted">ಅಳಿಸಲಾಗಿದೆ %d ಸಂದೇಶಗಳನ್ನು.</string>
+    <string name="state_PassphraseUpdated">ಪಾಸ್ಫ್ರೇಸ್ ಅಪ್ಡೇಟ್ಗೊಳಿಸಲಾಗಿದೆ.</string>
+    <string name="state_RecipientsDeleted">%d ಪಡೆದವರು ಅಳಿಸಲಾಗಿದೆ.</string>
+    <string name="state_SomeContactsImported">%s ಸಂಪರ್ಕಗಳನ್ನು.</string>
+    <string name="state_TextCopiedToClipboard">ಪಠ್ಯ ಕ್ಲಿಪ್ಬೋರ್ಡ್ಗೆ ನಕಲು.</string>
+
+    <string name="text_About">%1$s\n\nSafeSlinger ಖುದ್ದಾಗಿ ಅಥವಾ ದೂರವಾಣಿ, ಸುಲಭವಾಗಿ ಗುರುತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ವಿನ್ಯಾಸ ದೃಢೀಕರಿಸಬಹುದು, ಖಾಸಗಿ, ಮತ್ತು ಹಾಗೇ ಇದೆ. ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಪ್ರತಿ ವ್ಯಕ್ತಿಯ ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸಲು ಸುರಕ್ಷಿತ ಕೊನೆಯಲ್ಲಿ ಕೊನೆಗೆ ಚಾನಲ್ ಸೃಷ್ಟಿಸುತ್ತದೆ.\n\nವೈಶಿಷ್ಟ್ಯಗಳು:\n- ಸುಲಭವಾಗಿ ಇತರರೊಂದಿಗೆ ಮಾಹಿತಿಯನ್ನು ಸಂಪರ್ಕಿಸಿ ವಿನಿಮಯ\n- ಸುರಕ್ಷಿತವಾಗಿ ಜೋಲಿ ಗ್ರಂಥಗಳು, ಫೋಟೋಗಳನ್ನು, ಏನು!\n- ಬಲವಾದ ಗೂಢಲಿಪಿ ನಿಮ್ಮ ಮಾಹಿತಿ ರಕ್ಷಿಸುತ್ತದೆ\n\nಇಮೇಲ್: %2$s\nವೆಬ್: %3$s</string>
+    <string name="text_KeywordExchange">ವಿನಿಮಯ</string>
+    <string name="text_KeywordIdentity">ಗುರುತು</string>
+    <string name="text_KeywordKey">ಕೀಲಿಕೈ</string>
+    <string name="text_KeywordMessaging">ಸಂದೇಶ</string>
+    <string name="text_KeywordPrivacy">ಖಾಸಗಿತನ</string>
+    <string name="text_KeywordSecurity">ಭದ್ರತೆ</string>
+    <string name="text_LanguagesProvidedBy">ಒದಗಿಸಿದ ಭಾಷೆಗಳು:</string>
+    <string name="text_RelatedSearchTerms">ಸಂಬಂಧಿತ ನಿಯಮಗಳು:</string>
+    <string name="text_Requirements">ಬೇಡಿಕೆಗಳು:\n1. 2 ಸಾಧನಗಳ ಕನಿಷ್ಠ ಇನ್ಸ್ಟಾಲ್ ಮಾಡಬೇಕು.\n2. ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಸಕ್ರಿಯ ಇರಬೇಕು.</string>
+    <string name="text_SourceCodeRepo">ತೆರೆದ ಮೂಲ: %s</string>
+    <string name="text_WhatsNew">- ಸ್ಟೆಬಿಲಿಟಿ ಪರಿಹಾರಗಳನ್ನು.</string>
+
+    <string name="title_About">ಕುರಿತು</string>
+    <string name="title_camera">ಕ್ಯಾಮೆರಾ</string>
+    <string name="title_ChooseDirectory">ಡೈರೆಕ್ಟರಿ ಆನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</string>
+    <string name="title_ChooseFileLoad">ನಿಮ್ಮ ಬಾಂಧವ್ಯ ಆಯ್ಕೆ</string>
+    <string name="title_comments">ಪ್ರತಿಕ್ರಿಯೆಗಳು/ಪ್ರಶ್ನೆಗಳು</string>
+    <string name="title_Error">ದೋಷ</string>
+    <string name="title_ExchangeWalkthrough">ಜೋಲಿ ಕೀಸ್ ಸಹಾಯಕ</string>
+    <string name="title_FileOptions">ಬಾಂಧವ್ಯ ಆಯ್ಕೆಗಳು</string>
+    <string name="title_find">ಸೆಟಪ್</string>
+    <string name="title_home">ವಿನಿಮಯ ಆರಂಭಿಸಲು</string>
+    <string name="title_HomePanel">ಮುಖಪುಟ</string>
+    <string name="title_MessageDetail">ಸಂದೇಶ</string>
+    <string name="title_Messages">ಸಂದೇಶಗಳು</string>
+    <string name="title_MyIdentity">ವೈಯಕ್ತಿಕ ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="title_NotifyFileAvailable">ಲಭ್ಯವಿರುವ SafeSlinger ಸಂದೇಶ</string>
+    <string name="title_NotifyMulFileAvailable">ಲಭ್ಯವಿರುವ %d SafeSlinger ಸಂದೇಶಗಳು</string>
+    <string name="title_passphrase">ಪಾಸ್ಫ್ರೇಸ್</string>
+    <string name="title_photoalbum">ಫೋಟೋ ಆಲ್ಬಮ್</string>
+    <string name="title_photolibary">ಫೋಟೋ ಲೈಬ್ರರಿ</string>
+    <string name="title_PickRecipient">ಸ್ವೀಕೃತದಾರರ</string>
+    <string name="title_Question">ಪ್ರಶ್ನೆ</string>
+    <string name="title_RecipientDetail">ಸ್ವೀಕರಿಸುವವರ ವಿವರ</string>
+    <string name="title_save">ಎಂಡ್ ಎಕ್ಸ್ಚೇಂಜ್</string>
+    <string name="title_SaveFileAs">ಕಡತವನ್ನು ಉಳಿಸಿ</string>
+    <string name="title_SecureIntroduction">ಸುರಕ್ಷಿತ ಪರಿಚಯ</string>
+    <string name="title_SecureIntroductionInvite">ಪರಿಚಯ ಆಮಂತ್ರಣ Secure!</string>
+    <string name="title_SelectSource">ಆಯ್ಕೆಗಳು ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ:</string>
+    <string name="title_SendFile">ಕಳುಹಿಸು</string>
+    <string name="title_sharingfolder">ಫೋಲ್ಡರ್ ಹಂಚಿಕೆ</string>
+    <string name="title_soundrecoder">ಧ್ವನಿ ರೆಕಾರ್ಡರ್</string>
+    <string name="title_TextInviteMsg">SafeSlinger ಆಮಂತ್ರಣ</string>
+    <string name="title_Threads">ಥ್ರೆಡ್ಸ್</string>
+    <string name="title_Warn">ಎಚ್ಚರಿಕೆ</string>
+
+</resources>

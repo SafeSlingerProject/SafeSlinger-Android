@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">정말 종료하시겠습니까?</string>
+
+    <string name="btn_Match">다음</string>
+    <string name="btn_NoMatch">일치하는 항목이 없습니다</string>
+
+    <string name="choice_NumUsers">%d명의 사용자</string>
+
+    <string name="error_AllMembersMustUpgrade">회원 일부가 이전 버전을 사용하고 있습니다. 모든 회원은 적어도 %s을(를) 사용해야합니다.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">모든 구성원은 어떤 나이 푸시 등록 형식을 사용하고, 업그레이드해야합니다.</string>
+    <string name="error_CorrectYourInternetConnection">인터넷에 접속할 수 없습니다. 설정을 확인해주세요.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">환율 의 제한 시간이 초과했습니다. 다시 교환을 시작합니다.</string>
+    <string name="error_HttpCode">서버 HTTP 오류: %d</string>
+    <string name="error_InvalidCommitVerify">교환 에있는 잘못된 데이터. 다시 교환을 시작합니다.</string>
+    <string name="error_InvalidCommonUserId">양의 정수를 입력하십시오.</string>
+    <string name="error_LocalGroupCommitDiffer">당신은 구문 의 차이 를 보고있다. 다시 교환을 시작합니다.</string>
+    <string name="error_MinUsersRequired">정보교환에 최소한 %d명의 회원이 필요합니다.</string>
+    <string name="error_MoreDataThanUsers">교환 에있는 예기치 않은 데이터입니다. 다시 교환을 시작합니다.</string>
+    <string name="error_NoWordListSelected">계속하기 전에 문구 하나를 선택해야합니다.</string>
+    <string name="error_OtherGroupCommitDiffer">누군가 는 문구 의 차이 를보고했다. 다시 교환을 시작합니다.</string>
+    <string name="error_OutOfMemoryError">메모리는이 작업을 완료하는 데 너무 낮습니다.</string>
+    <string name="error_ServerAppMessage">서버 메시지: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">서버 메시지: \'%s\'</string>
+    <string name="error_ServerNotResponding">서버가 응답하지 않았습니다.</string>
+    <string name="error_TimeoutWaitingForAllMembers">일부 그룹 회원의 데이터를 추가 할 시간이 초과하였습니다.</string>
+    <string name="error_WebCancelledByUser">사용자가 서버 요청을 취소했습니다.</string>
+
+    <string name="help_size">데이터를 교환하고자 하는 그룹의 인원수를 입력한 후 \'확인\'버튼을 눌러주십시오.</string>
+    <string name="help_userid">화면 위의 숫자는 사용자 고유 그룹 생성에 사용됩니다. 서로의 화면을 비교하여 가장 낮은 숫자를 찾아 모든 사용자가 해당 숫자를 입력한 후 \'확인\' 버튼을 눌러주십시오.</string>
+    <string name="help_verify">자, 이제 모든 사용자의 3개의 단어가 일치해야합니다. 모든 사용자가 같은 문구를 선택한 후 \'다음\'을 눌러주십시오.</string>
+
+    <string name="label_NumericModeHint">영어 이외의 언어</string>
+    <string name="label_PromptInstruct">이 번호는 사용자 고유 그룹 생성에 사용됩니다. 서로 비교하여 모든 사용자들 중 가장 낮은 번호를 입력해주세요.</string>
+    <string name="label_ReceivedNItems">%d개의 항목을 받았습니다.</string>
+    <string name="label_UserIdHint">맨아래</string>
+    <string name="label_VerifyInstruct">모든 단말기는 3개의 단어가 일치해야 합니다. 서로 비교해보며 다음의 리스트 중 하나를 선택해주십시오.</string>
+
+    <string name="prog_CollectingOthersCommitVerify">모든 회원의 확인을 기다리는 중…</string>
+    <string name="prog_CollectingOthersItems">모든 사용자의 가입을 기다리는 중…</string>
+    <string name="prog_ConstructingGroupKey">그룹 키를 생성하는 중…</string>
+    <string name="prog_RequestingUserId">회원가입 요청 중…</string>
+
+    <string name="title_size">몇 명의 사용자와 교환하시겠습니까?</string>
+    <string name="title_userid">그룹으로 나누기</string>
+    <string name="title_verify">확인하기</string>
+
+</resources>
