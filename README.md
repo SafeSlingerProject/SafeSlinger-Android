@@ -179,7 +179,7 @@ License
  [5]: http://code.google.com/p/android-vcard
  [6]: http://www.youtube.com/watch?v=IFXL8fUqNKY
  [7]: http://www.cylab.cmu.edu/safeslinger/faq.html
- [8]: http://www.cylab.cmu.edu/safeslinger/images/android-StartDemo.png
+ [8]: http://www.cylab.cmu.edu/safeslinger/images/android-StartDemo.png?raw=true 
  [9]: http://www.cylab.cmu.edu/safeslinger
  [10]: http://sparrow.ece.cmu.edu/group/pub/farb_safeslinger_mobicom2013.pdf
  [11]: http://github.com/SafeSlingerProject/SafeSlinger-iOS
