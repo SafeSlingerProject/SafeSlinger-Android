@@ -32,7 +32,7 @@ Demo Requirements:
 3. 'Server Host Name' can be your own server, OR use ours: `slinger-demo.appspot.com`
 4. 'My Secret' can be any information since it is just a demo.
 
-![Demo Main Screen][8]
+![Demo Main Screen](http://www.cylab.cmu.edu/safeslinger/images/android-StartDemo.png?raw=true)
 
 Add Secure Exchange to your Android App
 ========
