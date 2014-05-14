@@ -93,6 +93,7 @@ public class RecipientAdapter extends BaseAdapter {
         boolean deprecated = recip.isDeprecated();
         boolean registered = recip.isRegistered();
         boolean useableKey = pushable && !secretChanged && !deprecated && fromExch;
+        boolean invited = recip.isInvited();
         StringBuilder detailStr = new StringBuilder();
 
         // show activation
@@ -126,50 +127,83 @@ public class RecipientAdapter extends BaseAdapter {
         TextView tvNotify = (TextView) convertView.findViewById(R.id.tvNotify);
         tvNotify.setText(SSUtil.getSimpleDeviceDisplayName(mContext, recip.getNotify()));
 
-        // set key dates
+        // set key date, status, last update
         TextView tvDates = (TextView) convertView.findViewById(R.id.tvDetail);
         if (recip.getKeydate() > 0) {
             detailStr.append(mContext.getText(R.string.label_Key)).append(" ")
                     .append(DateUtils.getRelativeTimeSpanString(mContext, recip.getKeydate()));
         }
-        if (recip.getSource() == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
-            detailStr.append(" (").append(mContext.getText(R.string.label_exchanged)).append(" ")
-                    .append(DateUtils.getRelativeTimeSpanString(mContext, recip.getExchdate()))
-                    .append(")");
-        } else if (recip.getSource() == RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION) {
-            detailStr.append(" (").append(mContext.getText(R.string.label_introduced)).append(" ")
-                    .append(DateUtils.getRelativeTimeSpanString(mContext, recip.getExchdate()))
-                    .append(")");
+        switch (recip.getSource()) {
+            case RecipientDbAdapter.RECIP_SOURCE_INVITED:
+                detailStr.append(mContext.getText(R.string.label_inviteSent)).append(" ")
+                        .append(DateUtils.getRelativeTimeSpanString(mContext, recip.getExchdate()))
+                        .append(".");
+                break;
+            case RecipientDbAdapter.RECIP_SOURCE_EXCHANGE:
+                detailStr.append(" (").append(mContext.getText(R.string.label_exchanged))
+                        .append(" ")
+                        .append(DateUtils.getRelativeTimeSpanString(mContext, recip.getExchdate()))
+                        .append(")");
+                break;
+            case RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION:
+                detailStr.append(" (").append(mContext.getText(R.string.label_introduced))
+                        .append(" ")
+                        .append(DateUtils.getRelativeTimeSpanString(mContext, recip.getExchdate()))
+                        .append(")");
+                break;
+            case RecipientDbAdapter.RECIP_SOURCE_CONTACTSDB:
+                detailStr.append(" (").append(mContext.getText(R.string.label_exchanged))
+                        .append(" ")
+                        .append(DateUtils.getRelativeTimeSpanString(mContext, recip.getExchdate()))
+                        .append(")");
+                break;
+            default:
+                break;
+
         }
         tvDates.setText(detailStr);
 
-        // set key id
+        // set key id and device/token id
         TextView tvDetail2 = (TextView) convertView.findViewById(R.id.tvDetailSingleLine);
-        tvDetail2.setText(mContext.getText(R.string.label_Key) + " " + recip.getKeyid());
-
-        // set device/token id
         TextView tvDetail3 = (TextView) convertView.findViewById(R.id.tvDetailSingleLine2);
-        tvDetail3.setText(mContext.getText(R.string.label_Device) + " " + recip.getPushtoken());
+        if (!TextUtils.isEmpty(recip.getKeyid()) || !TextUtils.isEmpty(recip.getPushtoken())) {
+            tvDetail2.setText(mContext.getText(R.string.label_Key) + " " + recip.getKeyid());
+            tvDetail3.setText(mContext.getText(R.string.label_Device) + " " + recip.getPushtoken());
+            tvDetail2.setVisibility(View.VISIBLE);
+            tvDetail3.setVisibility(View.VISIBLE);
+        } else {
+            tvDetail2.setVisibility(View.GONE);
+            tvDetail3.setVisibility(View.GONE);
+        }
 
         // set errors
         TextView tvError = (TextView) convertView.findViewById(R.id.tvError);
         StringBuilder err = new StringBuilder();
-        if (secretChanged) { // error: their key out of date
+        if (invited) { // error: invite only, need to slings keys to connect
+            if (err.length() > 0)
+                err.append("\n");
+            err.append(mContext.getText(R.string.label_DisabledNextSlingKeysWithThisPerson));
+            err.append(" ");
+            err.append(mContext.getText(R.string.label_TapToSlingKeys));
+            tvError.setTextAppearance(mContext, R.style.fromDirectionAvailableText);
+        } else if (secretChanged) { // error: their key out of date
             if (err.length() > 0)
                 err.append("\n");
             err.append(mContext.getText(R.string.label_DisabledExchSourceKeyChange));
+            tvError.setTextAppearance(mContext, R.style.fromFileExpiredText);
         } else if (deprecated) { // error: old format, usable for a time...
             if (err.length() > 0)
                 err.append("\n");
             err.append(mContext.getText(R.string.label_EnabledKeyFormatDeprecated));
+            tvError.setTextAppearance(mContext, R.style.fromFileExpiredText);
         } else if (!registered) { // warning: last reported non-registered...
             if (err.length() > 0)
                 err.append("\n");
             err.append(String.format(mContext.getString(R.string.label_ReportedInactive), DateUtils
                     .getRelativeTimeSpanString(recip.getNotRegDate(), new Date().getTime(),
                             DateUtils.MINUTE_IN_MILLIS)));
+            tvError.setTextAppearance(mContext, R.style.fromFileExpiredText);
         }
-
         if (TextUtils.isEmpty(err)) {
             tvError.setVisibility(View.GONE);
         } else {

@@ -33,6 +33,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
@@ -51,8 +52,11 @@ import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgPacketSizeException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
+import edu.cmu.cylab.starslinger.model.InboxDbAdapter;
+import edu.cmu.cylab.starslinger.model.MessageData;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessagePacket;
+import edu.cmu.cylab.starslinger.model.MessageRow;
 import edu.cmu.cylab.starslinger.view.HomeActivity;
 
 public class C2DMReceiver extends C2DMBaseReceiver {
@@ -79,8 +83,10 @@ public class C2DMReceiver extends C2DMBaseReceiver {
     protected void onMessage(Context context, Intent intent) {
         MyLog.i(TAG, "C2DM message arrived.");
 
+        InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this);
         MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this);
-        long rowId = 0;
+        long rowIdInbox = 0;
+        long rowIdMsg = 0;
 
         boolean reattempt = true;
         while (reattempt) {
@@ -110,9 +116,9 @@ public class C2DMReceiver extends C2DMBaseReceiver {
             }
 
             // save retrieval id
-            rowId = dbMessage.createRecvEncMessage(msgHash,
+            rowIdInbox = dbInbox.createRecvEncInbox(msgHash,
                     MessageDbAdapter.MESSAGE_STATUS_GOTPUSH, MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
-            if (rowId == -1) {
+            if (rowIdInbox == -1) {
                 // TODO: pre rowId, so provide notice that database failed
                 break; // ignore on error, perhaps duplicate
             }
@@ -162,7 +168,7 @@ public class C2DMReceiver extends C2DMBaseReceiver {
                     break;
                 }
                 // save downloaded initial message
-                if (!dbMessage.updateMessageDownloaded(rowId, encMsg,
+                if (!dbInbox.updateInboxDownloaded(rowIdInbox, encMsg,
                         MessageDbAdapter.MESSAGE_IS_NOT_SEEN, keyid)) {
                     break; // unable to save progress
                 }
@@ -175,10 +181,25 @@ public class C2DMReceiver extends C2DMBaseReceiver {
                 try {
                     StringBuilder keyidout = new StringBuilder();
                     byte[] plain = CryptTools.decryptMessage(encMsg, pass, keyidout);
-
                     MessagePacket push = new MessagePacket(plain);
-                    if (!dbMessage.updateMessageDecrypted(rowId, push, keyidout.toString())) {
-                        break; // unable to save progress
+
+                    // move encrypted message to decrypted storage...
+                    MessageData inRow = null;
+                    Cursor c = dbInbox.fetchInboxSmall(rowIdInbox);
+                    if (c != null) {
+                        inRow = new MessageRow(c, true);
+                        c.close();
+                    }
+                    if (inRow != null) {
+                        // add decrypted
+                        rowIdMsg = dbMessage.createMessageDecrypted(inRow, push,
+                                keyidout.toString());
+                        if (rowIdMsg == -1) {
+                            break; // unable to save progress
+                        } else {
+                            // remove encrypted
+                            dbInbox.deleteInbox(rowIdInbox);
+                        }
                     }
 
                     // if requested, and logged in, try to get attachment
@@ -239,13 +260,15 @@ public class C2DMReceiver extends C2DMBaseReceiver {
         }
 
         // attempt to update messages if in view...
-        if (rowId > -1) {
-            int msgCount = dbMessage.fetchUnseenMessageCount();
-            doUnseenMessagesNotification(this, msgCount);
+        if (rowIdInbox > -1) {
+            int inCount = dbInbox.getUnseenInboxCount();
+            int msgCount = dbMessage.getUnseenMessageCount();
+            int allCount = inCount + msgCount;
+            doUnseenMessagesNotification(this, allCount);
 
             // attempt to update messages if in view...
             Intent updateIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEUPDATE);
-            updateIntent.putExtra(extra.MESSAGE_ROW_ID, rowId);
+            updateIntent.putExtra(extra.MESSAGE_ROW_ID, rowIdMsg);
             sendBroadcast(updateIntent);
         }
     }

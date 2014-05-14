@@ -65,9 +65,9 @@
     <!-- error message (sentence case, period); used to warn when a request for memory is made that cannot be satisfied using the available platform resources. Such a request may be made by both the running application or by an internal function of the VM. -->
     <string name="error_OutOfMemoryError">Memory is too low to complete this operation.</string>
     <!-- error message (sentence case, period); used to warn when the server has an error message to send back to the client. %s = an English (non-localized) error message sent by our App Engine server code. Android-only. -->
-    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
     <!-- error message (sentence case, period); this is a duplicate message with alternate formatting for iOS, see error_ServerAppMessage. iOS-only. -->
-    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <!-- error message (sentence case, period); used to warn when the server timeout occurs, usually after 30 seconds and did not respond to the client. -->
     <string name="error_ServerNotResponding">No response from server.</string>
     <!-- error message (sentence case, period); used to warn during the key exchange protocol when at least one of the members of the group has not submitted their data to the server or client itself is not able to retrieve the data within the timeout window, currently 2 minutes. -->
@@ -76,11 +76,11 @@
     <string name="error_WebCancelledByUser">User canceled server request.</string>
 
     <!-- help message (sentence case, period); used via Help button on the Group Size screen and also the key exchange walkthrough tutorial to describe in more detail what the Group Size screen does. -->
-    <string name="help_size">Select the number of people who are attempting to exchange data together and press \'OK\'.</string>
+    <string name="help_size">Select the number of people who are attempting to exchange data together and press OK.</string>
     <!-- help message (sentence case, period); used via Help button on the Grouping screen and also the key exchange walkthrough tutorial to describe in more detail what the Grouping screen does. -->
-    <string name="help_userid">This number on this screen is used to create a unique group of users. Review the numbers on all users\' screens, then all users should enter the same lowest number and press \'OK\'.</string>
+    <string name="help_userid">This number on this screen is used to create a unique group of users. Review the numbers on all users\' screens, then all users should enter the same lowest number and press OK.</string>
     <!-- help message (sentence case, period); used via Help button on the Verify screen and also the key exchange walkthrough tutorial to describe in more detail what the Verify screen does. -->
-    <string name="help_verify">Now, you must match one of these 3-word phrases with all users. Every user must select the same common phrase, and press \'Next\'.</string>
+    <string name="help_verify">Now, you must match one of these 3-word phrases with all users. Every user must select the same common phrase, and press Next.</string>
 
     <!-- screen label (match English casing); used with arrows and phone graphics to remind user to compare mutiple views, not just their own. %s = the number of users. -->
     <string name="label_CompareScreensNDevices">Compare screens on %s devices.</string>

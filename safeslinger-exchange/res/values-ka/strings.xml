@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d მომხმარებლის</string>
 
-    <string name="error_AllMembersMustUpgrade">ზოგიერთი წევრი იყენებთ ძველ ვერსიას, ყველა წევრები მინიმუმ უნდა გამოიყენოთ %s.</string>
+    <string name="error_AllMembersMustUpgrade">ზოგიერთი წევრი იყენებთ ძველ ვერსიას; ყველა წევრი მინიმუმ უნდა გამოიყენოთ %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">ყველა წევრი უნდა განაახლოს, ზოგიერთ გამოყენებით ძველი ბიძგი რეგისტრაციის ფორმატებში.</string>
     <string name="error_CorrectYourInternetConnection">ინტერნეტი არ არის ხელმისაწვდომი, გადაამოწმოთ პარამეტრები.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">გაცვლითი შეყოვნება გადააჭარბა. დასაწყისი გაცვლა ერთხელ.</string>
@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">თქვენ არ ინფორმაციით განსხვავება ფრაზები. დასაწყისი გაცვლა ერთხელ.</string>
     <string name="error_MinUsersRequired">მინიმუმ %d წევრი საჭირო მონაცემების გაცვლა.</string>
     <string name="error_MoreDataThanUsers">მოულოდნელი მონაცემები ვერ მოიძებნა სანაცვლოდ. დასაწყისი გაცვლა ერთხელ.</string>
+    <string name="error_NoDataToExchange">გაცვლა აკლია საჭირო მონაცემები.</string>
     <string name="error_NoWordListSelected">თქვენ უნდა აირჩიოთ ერთი ფრაზის გაგრძელებამდე.</string>
     <string name="error_OtherGroupCommitDiffer">საყვარელი ცნობით განსხვავება ფრაზები. დასაწყისი გაცვლა ერთხელ.</string>
     <string name="error_OutOfMemoryError">Memory ძალიან დაბალია, შეავსოთ ეს ოპერაცია.</string>
-    <string name="error_ServerAppMessage">Server შეტყობინება: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Server შეტყობინება: \'%s\'</string>
+    <string name="error_ServerAppMessage">Server შეტყობინება: %s</string>
+    <string name="error_ServerAppMessageCStr">Server შეტყობინება: %s</string>
     <string name="error_ServerNotResponding">პასუხი არ სერვერიდან.</string>
     <string name="error_TimeoutWaitingForAllMembers">დროის ელოდება რამდენიმე ჯგუფის წევრები დაამატოთ მონაცემები.</string>
     <string name="error_WebCancelledByUser">პროფაილი გაუქმდა სერვერზე მოთხოვნით.</string>
 
-    <string name="help_size">აირჩიეთ რაოდენობის ხალხი, რომელიც ცდილობს მონაცემების გაცვლა ერთად და დააჭირეთ \' OK \'.</string>
-    <string name="help_userid">ეს რიცხვი ამ ეკრანზე გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის მომხმარებლებს. მიმოხილვა ნომრები ყველა მომხმარებლების ეკრანები, მაშინ ყველა მომხმარებლის უნდა შევიდეს და იგივე ყველაზე დაბალი და დააჭირეთ \' OK \'.</string>
-    <string name="help_verify">ახლა, თქვენ უნდა ემთხვეოდეს ერთი ამ 3 სიტყვის ფრაზის ყველა მომხმარებლებს. ყველა მომხმარებელი უნდა აირჩიოთ ერთი და იგივე საერთო ფრაზა, დააჭირეთ \'შემდეგი \'.</string>
+    <string name="help_size">აირჩიეთ რაოდენობის ხალხი, რომელიც ცდილობს მონაცემების გაცვლა ერთად და OK.</string>
+    <string name="help_userid">ეს რიცხვი ამ ეკრანზე გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის მომხმარებლებს. მიმოხილვა ნომრები ყველა მომხმარებლების ეკრანები, მაშინ ყველა მომხმარებლის უნდა შევიდეს და იგივე ყველაზე დაბალი ნომერი და OK.</string>
+    <string name="help_verify">ახლა, თქვენ უნდა ემთხვეოდეს ერთი ამ 3 სიტყვის ფრაზის ყველა მომხმარებლებს. ყველა მომხმარებელი უნდა აირჩიოთ ერთი და იგივე საერთო ფრაზა და დააჭირეთ შემდეგი.</string>
 
+    <string name="label_CompareScreensNDevices">შეადარეთ ეკრანებზე %s მოწყობილობები.</string>
     <string name="label_NumericModeHint">Non-English</string>
     <string name="label_PromptInstruct">ეს რიცხვი გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის მომხმარებლებს. შედარება, და მხოლოდ შემდეგ შეიყვანოთ ყველაზე დაბალი შორის მომხმარებლებს.</string>
     <string name="label_ReceivedNItems">მიიღო %d ელემენტი</string>
     <string name="label_UserIdHint">ყველაზე</string>
     <string name="label_VerifyInstruct">ტელეფონები დამთხვევა ერთი 3 სიტყვით ფრაზები. შეადარეთ და შემდეგ აირჩიოთ შესაბამისი ფრაზა.</string>
+
+    <string name="lib_name">SafeSlinger გაცვლა</string>
 
     <string name="prog_CollectingOthersCommitVerify">ელოდება გადამოწმება ყველა წევრი…</string>
     <string name="prog_CollectingOthersItems">ელოდება ყველა მომხმარებლის შეუერთდეს…</string>

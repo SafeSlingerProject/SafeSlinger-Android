@@ -66,8 +66,12 @@ import edu.cmu.cylab.starslinger.util.StorageOptions;
 
 public class SettingsActivity extends PreferenceActivity {
 
+    private static final int MENU_RESTORE_DEFAULTS = 1;
+    public static final int RESULT_CHANGE_PASSTTL = 2;
     public static final int RESULT_NEW_PASSPHRASE = 5;
     private static final int VIEW_FILEDIR_ID = 6;
+    public static final int RESULT_LOGOUT = 7;
+    public static final int RESULT_DELETE_KEYS = 8;
     private IntegerListPreference mPassPhraseCacheTtl;
     private CheckBoxPreference mRemindBackupDelay;
     private ListPreference mAccountNameType;
@@ -82,18 +86,18 @@ public class SettingsActivity extends PreferenceActivity {
     private CheckBoxPreference mShowTutorial;
     private Preference mShowAbout;
     private Preference mChangePassphrase;
+    private Preference mManagePassphrase;
+    private Preference mLogout;
     private Preference mChangeDownloadDir;
     private CheckBoxPreference mNotificationVibrate;
     private RingtonePreference mNotificationRingtone;
     private ListPreference mFontSize;
     private CheckBoxPreference mAutoDecrypt;
     private ArrayList<AccountData> mAccounts = new ArrayList<AccountData>();
+    private static boolean sTtlChanged = false;
     private String mUnsyncName = null;
     private String mUnsyncType = null;
     private static final String UNSYNC_PKG = "unsynchronized";
-
-    // Menu entries
-    private static final int MENU_RESTORE_DEFAULTS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,12 +115,6 @@ public class SettingsActivity extends PreferenceActivity {
         // TODO: actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-    }
-
     private void setPrefs() {
         addPreferencesFromResource(R.xml.ss_preferences);
 
@@ -125,6 +123,8 @@ public class SettingsActivity extends PreferenceActivity {
         mShowAbout = findPreference(SafeSlingerPrefs.pref.SHOW_ABOUT);
         mShowLicense = findPreference(SafeSlingerPrefs.pref.SHOW_LICENSE);
         mChangePassphrase = findPreference(SafeSlingerPrefs.pref.CHANGE_PASSPHRASE);
+        mManagePassphrase = findPreference(SafeSlingerPrefs.pref.MANAGE_PASSPHRASE);
+        mLogout = findPreference(SafeSlingerPrefs.pref.LOGOUT);
         mChangeDownloadDir = findPreference(SafeSlingerPrefs.pref.DOWNLOAD_DIRECTORY);
         mShowTutorial = (CheckBoxPreference) findPreference(SafeSlingerPrefs.pref.SHOW_WALKTHROUGH);
         mRemindBackupDelay = (CheckBoxPreference) findPreference(SafeSlingerPrefs.pref.REMIND_BACKUP_DELAY);
@@ -169,6 +169,8 @@ public class SettingsActivity extends PreferenceActivity {
         setVibrate();
         setFontSize();
         setAutoDecrypt();
+        setManagePassphrase();
+        setLogout();
     }
 
     protected void setContactSyncAccount() {
@@ -346,6 +348,30 @@ public class SettingsActivity extends PreferenceActivity {
         });
     }
 
+    protected void setManagePassphrase() {
+        mManagePassphrase.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                setResult(RESULT_DELETE_KEYS);
+                finish();
+                return true;
+            }
+        });
+    }
+
+    protected void setLogout() {
+        mLogout.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                setResult(RESULT_LOGOUT);
+                finish();
+                return true;
+            }
+        });
+    }
+
     protected void setChangeDownloadDir() {
         mChangeDownloadDir.setSummary(SafeSlingerPrefs.getDownloadDir());
         mChangeDownloadDir.setOnPreferenceClickListener(new OnPreferenceClickListener() {
@@ -405,7 +431,7 @@ public class SettingsActivity extends PreferenceActivity {
                         mPassPhraseCacheTtl.setValue(newValue.toString());
                         mPassPhraseCacheTtl.setSummary(mPassPhraseCacheTtl.getEntry());
                         SafeSlingerPrefs.setPassPhraseCacheTtl(Integer.parseInt(newValue.toString()));
-                        SafeSlinger.startCacheService(SettingsActivity.this);
+                        sTtlChanged = true;
                         return false;
                     }
                 });
@@ -474,7 +500,7 @@ public class SettingsActivity extends PreferenceActivity {
         Uri soundUri = TextUtils.isEmpty(soundValue) ? null : Uri.parse(soundValue);
         Ringtone tone = soundUri != null ? RingtoneManager.getRingtone(this, soundUri) : null;
         return (tone != null ? tone.getTitle(this) : getResources().getString(
-                R.string.msgr_silent_ringtone));
+                R.string.menu_ringtone));
     }
 
     protected void setVibrate() {
@@ -531,7 +557,6 @@ public class SettingsActivity extends PreferenceActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         switch (requestCode) {
             case VIEW_FILEDIR_ID:
                 switch (resultCode) {
@@ -577,10 +602,29 @@ public class SettingsActivity extends PreferenceActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        SafeSlinger.activityResumed();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SafeSlinger.activityPaused();
+
+        // exit and update timer when pass ttl changes
+        if (sTtlChanged) {
+            setResult(RESULT_CHANGE_PASSTTL);
+            finish();
+            sTtlChanged = false;
+        }
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         menu.clear();
-        menu.add(0, MENU_RESTORE_DEFAULTS, 0, R.string.msgr_restore_default);
+        menu.add(0, MENU_RESTORE_DEFAULTS, 0, R.string.menu_restore_default);
         return true;
     }
 
@@ -591,9 +635,6 @@ public class SettingsActivity extends PreferenceActivity {
                 restoreDefaultPreferences();
                 return true;
             case android.R.id.home:
-                // The user clicked on the Messaging icon in the action bar.
-                // Take them back from
-                // wherever they came from
                 finish();
                 return true;
             default:
@@ -601,5 +642,4 @@ public class SettingsActivity extends PreferenceActivity {
         }
         return false;
     }
-
 }

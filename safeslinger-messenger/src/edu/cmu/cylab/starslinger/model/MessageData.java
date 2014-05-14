@@ -49,6 +49,7 @@ public class MessageData {
     protected String mRetPushToken;
     protected String mRetReceipt;
     protected String mProgress = null;
+    protected boolean mIsInboxTable = false;
 
     public MessageData() {
         super();
@@ -128,6 +129,10 @@ public class MessageData {
         return mPerson;
     }
 
+    public boolean isInboxTable() {
+        return mIsInboxTable;
+    }
+
     // setters...
 
     public void setFileType(String value) {
@@ -192,7 +197,6 @@ public class MessageData {
 
     public void setFileData(byte[] fileData) {
         mRawFile = fileData;
-        mFileSize = fileData == null ? 0 : fileData.length;
     }
 
     public void setFileHash(byte[] value) {
@@ -201,6 +205,10 @@ public class MessageData {
 
     public void setPerson(String value) {
         mPerson = value;
+    }
+
+    public void setInboxTable(boolean value) {
+        mIsInboxTable = value;
     }
 
     // Others...

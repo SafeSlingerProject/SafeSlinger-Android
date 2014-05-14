@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d صارفین</string>
 
-    <string name="error_AllMembersMustUpgrade">بعض اراکین ایک پرانا ورژن استعمال کر رہے ہیں ، تمام اراکین کو کم از کم %s کا استعمال کرنا چاہئے.</string>
+    <string name="error_AllMembersMustUpgrade">بعض اراکین ایک پرانا ورژن استعمال کر رہے ہیں ؛ تمام ارکان میں کم از کم %s کا استعمال کرنا چاہئے.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">تمام اراکین کچھ بڑی عمر کے دھکا رجسٹریشن فارمیٹس استعمال کر رہے ہیں ، اپ گریڈ کرنا ضروری ہے.</string>
     <string name="error_CorrectYourInternetConnection">دستیاب نہیں انٹرنیٹ ، آپ کی ترتیبات کی جانچ پڑتال.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">ایکسچینج ٹائم آؤٹ سے تجاوز کر گئی. پھر تبادلہ شروع.</string>
@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">آپ کے جملے میں ایک فرق کی اطلاع دی ہے. پھر تبادلہ شروع.</string>
     <string name="error_MinUsersRequired">%d ارکان کی ایک کم از کم ڈیٹا ایکسچینج کی ضرورت ہے.</string>
     <string name="error_MoreDataThanUsers">بدلے میں پایا غیر متوقع اعداد و شمار. پھر تبادلہ شروع.</string>
+    <string name="error_NoDataToExchange">تبادلے کی ضرورت ہے اعداد و شمار کے لاپتہ ہے.</string>
     <string name="error_NoWordListSelected">آپ آگے بڑھنے سے پہلے جملے میں سے ایک کا انتخاب کرنا ہوگا.</string>
     <string name="error_OtherGroupCommitDiffer">کسی جملے میں ایک فرق کی رپورٹ. پھر تبادلہ شروع.</string>
     <string name="error_OutOfMemoryError">یاد داشت کی اس آپریشن کے مکمل کرنے کے لئے بہت کم ہے.</string>
-    <string name="error_ServerAppMessage">سرور پیغام: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">سرور پیغام: \'%s\'</string>
+    <string name="error_ServerAppMessage">سرور پیغام: %s</string>
+    <string name="error_ServerAppMessageCStr">سرور پیغام: %s</string>
     <string name="error_ServerNotResponding">سرور سے کوئی جواب نہیں.</string>
     <string name="error_TimeoutWaitingForAllMembers">کچھ گروپ کے ارکان کے اعداد و شمار شامل کرنے کے لئے انتظار کر رہے ہیں وقت ختم.</string>
     <string name="error_WebCancelledByUser">یوزر کے سرور کی درخواست منسوخ.</string>
 
-    <string name="help_size">\'ٹھیک ہے\' ایک دوسرے کے ساتھ کے اعداد و شمار کا تبادلہ اور پریس کرنے کی کوشش کر رہے ہیں جو لوگوں کی تعداد کو منتخب کریں.</string>
-    <string name="help_userid">اس کی سکرین پر یہ تعداد صارفین کی ایک منفرد گروپ بنانے کے لئے استعمال کیا جاتا ہے. تمام صارفین پر تعداد کا جائزہ لیں \'ٹھیک ہے \' کی سکرین ، تو تمام صارفین کو ایک ہی سب سے کم تعداد اور پریس میں داخل چاہئے.</string>
-    <string name="help_verify">اب ، آپ کو تمام صارفین کے ساتھ ان 3 الفاظ کے جملے میں سے ایک سے مطابقت ضروری ہے. ہر ایک ہی صارف کے عام جملے ، اور پریس \' اگلا \' کو منتخب کرنا ہوگا.</string>
+    <string name="help_size">ایک دوسرے کے ساتھ اور پریس ٹھیک ڈیٹا ایکسچینج کی کوشش کر رہے ہیں جو لوگوں کی تعداد کو منتخب کریں.</string>
+    <string name="help_userid">اس کی سکرین پر یہ تعداد صارفین کی ایک منفرد گروپ بنانے کے لئے استعمال کیا جاتا ہے. تمام صارفین کے سکرین پر تعداد کا جائزہ لیں ، تو تمام صارفین کو ایک ہی سب سے کم تعداد درج کریں اور پریس کو ٹھیک کرنا چاہئے.</string>
+    <string name="help_verify">اب ، آپ کو تمام صارفین کے ساتھ ان 3 الفاظ کے جملے میں سے ایک سے مطابقت ضروری ہے. ہر ایک ہی صارف کے عام جملے کا انتخاب ، اور دبائیں اگلا ضروری ہے.</string>
 
+    <string name="label_CompareScreensNDevices">%s آلات پر سکرین کا آپس میں موازنہ.</string>
     <string name="label_NumericModeHint">غیر انگریزی</string>
     <string name="label_PromptInstruct">یہ تعداد صارفین کی ایک منفرد گروپ بنانے کے لئے استعمال کیا جاتا ہے. کا آپس میں موازنہ ، اور اس کے بعد تمام صارفین کے درمیان سب سے کم نمبر داخل کریں.</string>
     <string name="label_ReceivedNItems">%d اشیاء موصول</string>
     <string name="label_UserIdHint">سب سے کم</string>
     <string name="label_VerifyInstruct">تمام فونز 3 لفظ کے جملے میں سے ایک سے مطابقت ضروری ہے. کا آپس میں موازنہ ، اور اس کے بعد کے ملاپ کے جملہ منتخب کریں.</string>
+
+    <string name="lib_name">SafeSlinger ایکسچینج</string>
 
     <string name="prog_CollectingOthersCommitVerify">تمام ارکان کی طرف سے توثیق کے لئے انتظار کر رہے ہیں…</string>
     <string name="prog_CollectingOthersItems">تمام صارفین کے ساتھ شامل کرنے کے لئے انتظار کر رہے…</string>

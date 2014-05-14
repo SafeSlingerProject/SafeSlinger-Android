@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Dërgo ftoj lidhje me…</string>
+    <string name="action_NewUserRequest">Shto një kontakt Sling Keys ftesë nëpërmjet…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Anuloj</string>
     <string name="btn_Close">Afër</string>
     <string name="btn_Continue">Vazhdoj</string>
+    <string name="btn_CreateNewKey">Krijo New Key</string>
+    <string name="btn_DeleteKeys">Fshij Keys</string>
     <string name="btn_discard">Heq dorë nga</string>
     <string name="btn_Done">E bërë</string>
     <string name="btn_Exit">Dalje</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 orë</string>
     <string name="choice_auto_storage">Default Storage</string>
     <string name="choice_external_storage">Storage e jashtme</string>
+    <string name="choice_font_large">I madh</string>
+    <string name="choice_font_medium">Mesatare</string>
+    <string name="choice_font_micro">Shumë të vogla</string>
+    <string name="choice_font_small">I vogël</string>
     <string name="choice_internal_storage">Magazinimi i brendshëm</string>
     <string name="choice_nolimit">No Limit</string>
     <string name="choice_SaveDirectory">Ruaj Directory</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Leje Mikrofoni nevojshme. Ju lutem shkoni në iOS Settings për të mundësuar leje mikrofon.</string>
     <string name="error_BackupNotFound">Asnjë rezervë për të rivendosur.</string>
     <string name="error_BackupNotSupportedDevice">Pajisje nuk mbeshtet backup rivendosur.</string>
-    <string name="error_BadCopyProtectUpgrade">Për shkak të një bug në Android 4.1, ju do të keni uninstall dhe reinstall SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">Për shkak të një bug në Android 4.1, ju do të keni për të uninstall dhe reinstall SafeSlinger.</string>
     <string name="error_C2DMRegAccountMissing">Një llogari Google është e nevojshme. Ju lutemi të hapur menaxherin e llogarisë dhe të shtoni një llogari Google.</string>
     <string name="error_C2DMRegAuthenticationFailed">Regjistrimi nuk vërtetuar, ju lutem provoni përsëri më vonë me dorë.</string>
     <string name="error_C2DMRegInvalidSender">Regjistrimi nuk është në dispozicion për këtë version, ju lutem kontrolloni për një version të përditësuar.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Ju keni tejkaluar kuotën mesazh për këtë pajisje. Ju lutem provoni përsëri më vonë.</string>
     <string name="error_PushMsgServiceFail">Shërbimi Njoftimi nuk është në dispozicion këtë herë. Ju lutemi provoni të dërguar mesazhin më vonë.</string>
     <string name="error_RecoderError">Nuk mund të përgatitur regjistrues audio.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Për të filluar, \' Sling Keys \' me një telefon tjetër në të njëjtën kohë.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Për të filluar, Sling Keys me një telefon tjetër në të njëjtën kohë.</string>
     <string name="error_selectDataToSend">Ju duhet një shtojcë ose një mesazh me tekst të dërguar.</string>
     <string name="error_ShareFileDelError">Nuk mund të hiqni fotografi të përbashkët.</string>
     <string name="error_UnableFindPubKey">Në pamundësi që të shkojë me çelësin publik të kyç privat në ofrues të shifruar.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger gabim, ju lutem rinisni.</string>
     <string name="error_VcardParseFailure">Të dhënat e kontaktit u formatuar gabimisht.</string>
 
-    <string name="help_find">Përdoreni këtë ekran për të vendosur emrin tuaj për të shkëmbyer me të tjerët. Tap butonin \'Done\' kur mbaruar.</string>
-    <string name="help_home">Të shkëmbejnë të dhëna të identitetit, të sigurojë të gjithë përdoruesit janë të afërt ose në telefon. Butonin \' fillojnë Shkëmbim \' do të shkëmbejnë vetëm të dhëna të kontrolluar kontaktit.</string>
-    <string name="help_identity_menu">\n\nJu gjithashtu mund të ndryshojë të dhënat personale për identitetin tuaj në këtë ekran nga përgjimi mbi butonin me emrin tuaj. Kjo do të shfaq një menu që ju lejon të \' Edit \' kontakt tuaj, \'Krijo të re\' kontakt, ose \' Përdor Një tjetër \' kontakt.</string>
+    <string name="help_find">Përdoreni këtë ekran për të vendosur emrin tuaj për të shkëmbyer me të tjerët. Tap butonin Done kur mbaron.</string>
+    <string name="help_home">Të shkëmbejnë të dhëna të identitetit, të sigurojë të gjithë përdoruesit janë të afërt ose në telefon. ButtonFilloni Exchange do të shkëmbejnë vetëm të dhëna të kontrolluar kontaktit.</string>
+    <string name="help_identity_menu">\n\n\nJu gjithashtu mund të ndryshojë të dhënat personale për identitetin tuaj në këtë ekran nga përgjimi mbi butonin me emrin tuaj. Kjo do të shfaq një menu të lejuar ju që të Edit kontaktoni tuaj, Krijo kontakt të ri, ose përdorin një tjetër kontakt.</string>
     <string name="help_Messages">Ky ekran tregon të gjitha mesazhet e kaluara dhe të bashkëngjitni skedarë që janë ende në dispozicion për shkarkim.</string>
-    <string name="help_passphrase">Përdoreni këtë ekran për të hyni brënda për aplikimin me fjalëkalim tuaj.</string>
+    <string name="help_passphrase">Përdoreni këtë ekran për të hyni brënda për aplikimin me fjalëkalim tuaj. Nëse keni harruar fjalëkalim tuaj, ju mund të gjenerojnë një çelës i ri i mbrojtur nga një fjalëkalim të ri nga përgjimi fjalëkalim fjalëkalimin? button. Trokitni lehtë mbi emrin e përdoruesit për të kaloni në mes të çelësat të shumta.</string>
     <string name="help_PickRecip">Kontaktet me çelësat SafeSlinger janë shfaqur këtu, zgjidhni një për të dërguar mesazhin tuaj për të.</string>
-    <string name="help_save">Kur përfundoi, protokolli do të zbulojë një listë të të dhënave të identitetit të shkëmbyera. Zgjidhni kontaktet që dëshironi të ruani dhe të shtypni \' Import \'.</string>
-    <string name="help_SecureIntroduction">Ky ekran ju lejon të zgjidhni dy njerëz që keni hodhi me hobenë çelësat me të para se të sigurt të dërguar çelësat e tyre për njëri-tjetrin. Thjesht shtypni \' Prezantoni \' kur gati.</string>
-    <string name="help_Send">Ky ekran ju lejon të zgjidhni disa të dhëna dhe një marrës për të dërguar për të. Thjesht shtypni \' Send \' kur gati.</string>
+    <string name="help_save">Kur përfundoi, protokolli do të zbulojë një listë të të dhënave të identitetit të shkëmbyera. Zgjidhni kontaktet që dëshironi të ruani dhe të shtypni Import.</string>
+    <string name="help_SecureIntroduction">Ky ekran ju lejon të zgjidhni dy njerëz që keni hodhi me hobenë çelësat me të para se të sigurt të dërguar çelësat e tyre për njëri-tjetrin. Thjesht shtypni Prezantoni kur gati.</string>
+    <string name="help_Send">Ky ekran ju lejon të zgjidhni disa të dhëna dhe një marrës për të dërguar për të. Thjesht shtypni Dërgo kur gati.</string>
 
     <string name="iOS_contactError">Leje Kontaktet e kërkuar. Ju lutem shkoni në iOS Settings për të mundësuar Kontakte leje.</string>
     <string name="iOS_errorpushtoken">Regjistrimi shtytje mungon.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Device:</string>
     <string name="label_DeviceInSendOnlyMode">Send-vetëm mënyrë</string>
     <string name="label_DisabledExchSourceKeyChange">Kyç juaj ka ndryshuar: Sling Keys përsëri.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Për të filluar mesazheve, të dy përdoruesit duhet Sling Keys në të njëjtën kohë.</string>
     <string name="label_Draft">DRAFT</string>
     <string name="label_EnabledKeyFormatDeprecated">Formati Key deprecated: Sling Keys përsëri.</string>
     <string name="label_exchanged">shkëmbyen</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">File Name</string>
     <string name="label_FindInstruct">Shkruani emrin që ju dëshironi të tjerët për të parë gjatë komunikimit të sigurt:</string>
     <string name="label_FirstName">Emër</string>
-    <string name="label_Home">Trokitni lehtë mbi emrin tuaj për të shtuar ose hequr dhënat e kontaktit, sendet që ju dëshironi për të ndarë të kontrolluar, dhe trokitje e lehtë \'Filloni Exchange \'kur të tjerët janë të gatshëm për shkëmbimin:</string>
+    <string name="label_Home">Trokitni lehtë mbi emrin tuaj për të shtuar ose hequr dhënat e kontaktit, sendet që ju dëshironi për të ndarë të kontrolluar, dhe trokitje e lehtë Filloni Exchange kur të tjerët janë të gatshëm për shkëmbimin:</string>
     <string name="label_hometag">Shtëpi</string>
     <string name="label_hours">%d orë</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud është aktivizuar. Tap butonin \' Done \' kur mbaruar.</string>
-    <string name="label_InstNoMessages">Nuk ka mesazhe. Ju mund të dërgoni një mesazh nga \'Sillne mesazh \' button në menu shtëpi.</string>
-    <string name="label_InstNoMessagesAndroid">Nuk ka mesazhe. Ju mund të dërgoni një mesazh nga tab \' compose \'.</string>
-    <string name="label_InstNoRecipients">Nuk marrësit. Gjej një përdorues SafeSlinger afër dhe kontakt skedën \' hobe Keys për të ndarë çelësat.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud është aktivizuar. Tap butonin Done kur mbaron.</string>
+    <string name="label_InstNoMessages">Nuk ka mesazhe. Ju mund të dërgoni një mesazh nga butonin Shkruaj Mesazh në menu shtëpi.</string>
+    <string name="label_InstNoMessagesAndroid">Nuk ka mesazhe. Ju mund të dërgoni një mesazh nga tab kompozoj.</string>
+    <string name="label_InstNoRecipients">Për të shtuar marrës, ju duhet së pari Sling Keys me një ose më shumë përdorues të tjerë në të njëjtën kohë. Ju mund të dërgoni një Sling Keys ftesë miqve nga menuja.</string>
     <string name="label_InstNoSharedFile">Nuk ka fotografi të përbashkët. Lidhu pajisjen tuaj me iTunes dhe fotografi Tërhiqni për dosje të përbashkët.</string>
     <string name="label_InstRecipients">Zgjidh një marrës për të dërguar një mesazh për të:</string>
     <string name="label_InstSendInvite">Pick marrësit për të futur të sigurt:</string>
     <string name="label_InstSharedFile">Zgjidh një skedar të bashkëngjitni:</string>
     <string name="label_introduced">futur</string>
+    <string name="label_inviteSent">Të ftuar</string>
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Mbiemër</string>
     <string name="label_Me">Mua</string>
     <string name="label_messageIntroduceNameToYou">Unë do të doja të prezantoj %s për ju.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Të setup një lidhje të sigurt mesazheve, ne mund të takohen apo telefon njëri-tjetrin në të njëjtën kohë, dhe pastaj Sling Keys vetëm një herë për të verifikuar lidhjen.</string>
+    <string name="label_messageInviteStartMsg">A mund të fillojë të sigurtë mesazheve me burim të hapur SafeSlinger iPhone ose Android app?</string>
     <string name="label_minutes">%d minuta</string>
     <string name="label_mobiletag">I lëvizshëm</string>
     <string name="label_MostRecentOnly">Të fundit vetëm</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup vonuar</string>
     <string name="label_safeslingered">(SafeSlinger Exchange Direct)</string>
     <string name="label_SaveAccount">Ruaj Llogari</string>
-    <string name="label_SaveInstruct">Kontrolloni kontaktet që dëshironi për të rinovuar në librin tuaj adresën, pastaj takoni \'Import\' për të ruajtur kontakte të sigurta:</string>
+    <string name="label_SaveInstruct">Kontrolloni kontaktet që dëshironi për të rinovuar në librin tuaj adresën, pastaj takoni Importo të ruajtur kontakte të sigurta:</string>
     <string name="label_seconds">%d seconds</string>
     <string name="label_SelectRecip">Marrësi Zgjidh</string>
     <string name="label_sendErrorData">Dërgo dhënave gabim</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Hapi 3</string>
     <string name="label_step_4">Hapi 4</string>
     <string name="label_step_5">Hapi 5</string>
+    <string name="label_summary_auto_attach_retrieval">Automatikisht të shkarkuar attachments mesazhin kur i loguar</string>
+    <string name="label_summary_auto_decrypt">Automatikisht decrypt mesazhe kur i loguar</string>
+    <string name="label_summary_remind_backup_delay">Marrin njoftim kur backup është në linjë.</string>
+    <string name="label_summary_show_tutorial">Trego një tutorial para attemping të hobe Keys.</string>
     <string name="label_TapToDecryptFile">Trokitni lehtë për të decrypt fotografi</string>
     <string name="label_TapToDecryptMessage">Trokitni lehtë për të decrypt</string>
     <string name="label_TapToDownloadFile">Trokitje e lehtë për të shkarkuar fotografi</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Takoni për të hapur dosjen</string>
     <string name="label_TapToResumeDraft">Trokitni lehtë për të rifilluar mesazh draft</string>
     <string name="label_TapToSendCredentialUpdate">Trokitje e lehtë dhe të mbajë për të dërguar përditësim kredenciale.</string>
+    <string name="label_TapToSlingKeys">Trokitni lehtë për të hobe Keys.</string>
     <string name="label_targetAccountLabel">Kontakte Llogaria</string>
-    <string name="label_TouchToConfigureBackupSettings">Ju mund të opsionale të mundësojë backup SafeSlinger iCloud në iOS Settings. Tap butonin \' Done \' kur mbaruar.</string>
+    <string name="label_TouchToConfigureBackupSettings">Ju mund të opsionale të mundësojë backup SafeSlinger iCloud në iOS Settings. Tap butonin Done kur mbaron.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Prekni për të konfiguroni parametrat backup.</string>
     <string name="label_TouchToConfigureCacheTimeout">Prekni të konfiguroni cilësimet cache timeout.</string>
     <string name="label_undefinedTypeLabel">I panjohur</string>
     <string name="label_UnknownSender">Dërguesi i mbyllur</string>
     <string name="label_UserName">Emri i përdoruesit</string>
+    <string name="label_WarnForgotPassphrase">Për të mbrojtur të dhënat tuaja, SafeSlinger nuk ka dyqan passphrase tuaj kudo për shërim. Ju mund të hyni vetëm marrësit dhe mesazhe të krijuara nën të njëjtën login fjalëkalim. Megjithatë, ju mund të krijuar një kyç të ri dhe fjalëkalim, pastaj të përsëritur Sling Keys me marrësit tuaj.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Çelësat e mëposhtme do të fshihen:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Nuk ka çelësat më të fundit se sa tuajat.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Vetëm çelësat gjeneruar më shumë kohët e fundit se juaji, të krijuara në %s, mund të fshihen.</string>
     <string name="label_worktag">Punë</string>
 
     <string name="menu_About">Për</string>
+    <string name="menu_auto_attach_retrieval">Auto-rifitoj attachments</string>
+    <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Ndryshim</string>
     <string name="menu_ChangePassphrase">Ndryshimi fjalëkalim</string>
+    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteSms">Tekst (SMS/MMS)</string>
     <string name="menu_CreateNew">Krijo re</string>
     <string name="menu_delete">Fshij</string>
-    <string name="menu_deleteThread">Fshij Temë \'%s\'</string>
+    <string name="menu_deleteThread">Fshij Thread %s</string>
     <string name="menu_Details">Shiko Detail</string>
     <string name="menu_DownloadDirectory">Download Direktoria</string>
     <string name="menu_Edit">Redaktoj</string>
+    <string name="menu_EditContact">Edit Kontakt</string>
+    <string name="menu_EditName">Edit Emri</string>
     <string name="menu_FileManager">File Manager</string>
+    <string name="menu_ForgotPassphrase">Keni harruar fjalëkalim?</string>
     <string name="menu_Help">Ndihmë</string>
     <string name="menu_Introduction">Paraqitje</string>
     <string name="menu_License">Leje</string>
     <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Menaxho passphrases</string>
+    <string name="menu_message_font_size">Mesazh Font Size</string>
     <string name="menu_messageCopyText">Copy Text</string>
     <string name="menu_messageForward">Përpara</string>
     <string name="menu_Remove">Heq</string>
-    <string name="menu_SelectShareApp">Dërgo Aplikimi</string>
+    <string name="menu_restore_default">Restore Default Settings</string>
+    <string name="menu_ringtone">Zë</string>
+    <string name="menu_SelectShareApp">Shto Kontakt Ftesë</string>
     <string name="menu_sendFeedback">Dergo Reagimin</string>
     <string name="menu_SendUpdate">Dërgo Update</string>
     <string name="menu_Settings">Cilësimet</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Mesazhet</string>
     <string name="menu_UseAnother">Përdorimi Një tjetër</string>
-    <string name="menu_UseContactPerson">Përdorni kontakt \'%s\'</string>
+    <string name="menu_UseContactPerson">Përdorimi Kontakto %s</string>
     <string name="menu_UseNoContact">Përdorimi Emri Vetëm</string>
-    <string name="menu_UseProfilePerson">Përdorimi Profile \'%s\'</string>
+    <string name="menu_UseProfilePerson">Përdorimi %s Profile</string>
+    <string name="menu_vibrate">Lëkund</string>
 
     <string name="prog_decrypting">decrypting…</string>
     <string name="prog_encrypting">encrypting…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">I përparuar</string>
     <string name="section_backup">Rezervë</string>
     <string name="section_general">I përgjithshëm</string>
+    <string name="section_notification">Njoftime</string>
+    <string name="section_storage">Ruajtje</string>
 
     <string name="state_BackupRestored">Backup rivendosur.</string>
     <string name="state_FileDeleted">Deleted %s fotografi.</string>
     <string name="state_FileSent">Mesazhi dërguar.</string>
+    <string name="state_InvitationAdded">Ftesë shtuar.</string>
     <string name="state_MessageSavedAsDraft">Mesazh ruhen si projekt.</string>
     <string name="state_MessagesDeleted">%d mesazhe fshihet.</string>
     <string name="state_PassphraseUpdated">Passphrase updated.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">Kontaktet %s importuar.</string>
     <string name="state_TextCopiedToClipboard">Tekst kopjuar në Clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger është projektuar të lehtë të ndajnë të dhëna të identitetit, personalisht ose me telefon, vërtetuar, private, dhe të paprekur. Çdo person i ndani me të krijon një kanal të sigurtë fund-te-fund për të dërguar mesazhe.\n\nFeatures:\n- Easily shkëmbejnë informacion kontaktoni me të tjerët\n- Tekste Sigurt hobe, photos, çdo gjë!\n- Kriptografia fortë mbron të dhënat tuaja\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger është projektuar të lehtë të ndajnë të dhëna të identitetit, personalisht ose me telefon, vërtetuar, private, dhe të paprekur. Çdo person i ndani me të krijon një kanal të sigurtë fund-te-fund për të dërguar mesazhe.\n\nFeatures:\n-Easily shkëmbejnë informacionin e kontaktit me të tjerët\n-sigurt tekste hobe, foto, çdo gjë! Kriptografia\n-fortë mbron të dhënat tuaja\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_KeywordExchange">Shkëmbim</string>
     <string name="text_KeywordIdentity">Identitet</string>
     <string name="text_KeywordKey">Kyç</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Siguri</string>
     <string name="text_LanguagesProvidedBy">Gjuhë të ofruara nga:</string>
     <string name="text_RelatedSearchTerms">Related Terms:</string>
-    <string name="text_Requirements">Kërkesat:\n1. Duhet të jetë i instaluar në një minimum prej 2 pajisjeve.\n2. Një lidhje në Internet duhet të jetë aktive.</string>
+    <string name="text_Requirements">Kërkesat: 1.\nDuhet të jetë i instaluar në një minimum prej 2 pajisjeve.\n2. Një lidhje në Internet duhet të jetë aktive.</string>
     <string name="text_SourceCodeRepo">burim të hapur: %s</string>
-    <string name="text_WhatsNew">- Fixes Stabilitetit.</string>
+    <string name="text_WhatsNew">-Stabilitetit fixes.</string>
 
     <string name="title_About">Për</string>
     <string name="title_camera">Aparat fotografik</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Sling Keys Ndihmës</string>
     <string name="title_FileOptions">Attachment Options</string>
     <string name="title_find">Setup</string>
+    <string name="title_font_size">Zgjidhni një font size</string>
     <string name="title_home">Filloni Exchange</string>
     <string name="title_HomePanel">Shtëpi</string>
     <string name="title_MessageDetail">Mesazh</string>

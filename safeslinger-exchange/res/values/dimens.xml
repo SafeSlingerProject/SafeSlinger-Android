@@ -25,22 +25,13 @@
 
 <resources>
 
-    <dimen name="sse__size_1dp">1dp</dimen>
-    <dimen name="sse__size_3dp">3dp</dimen>
     <dimen name="sse__size_5dp">5dp</dimen>
-    <dimen name="sse__size_10dp">10dp</dimen>
     <dimen name="sse__size_20dp">20dp</dimen>
-    <dimen name="sse__size_25dp">25dp</dimen>
     <dimen name="sse__button_side_margin">15dp</dimen>
-    <dimen name="sse__size_50dp">50dp</dimen>
-    <dimen name="sse__size_60dp">60dp</dimen>
-    <dimen name="sse__size_100dp">100dp</dimen>
-    <dimen name="sse__avatar_size_list">50dp</dimen>
     <dimen name="sse__text_size_micro">12sp</dimen>
     <dimen name="sse__text_size_small">14sp</dimen>
     <dimen name="sse__text_size_medium">18sp</dimen>
     <dimen name="sse__text_size_large">22sp</dimen>
-    <dimen name="sse__text_size_40">40sp</dimen>
     <dimen name="sse__text_size_50">50sp</dimen>
 
 </resources>

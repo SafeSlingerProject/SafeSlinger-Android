@@ -106,6 +106,7 @@ public class ComposeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         updateValues(savedInstanceState);
     }
 
@@ -164,10 +165,6 @@ public class ComposeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                // if soft input open, close it...
-                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(
-                        Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(mEditTextMessage.getWindowToken(), 0);
 
                 if (!TextUtils.isEmpty(mEditTextMessage.getText()) || !TextUtils.isEmpty(mFilePath)) {
                     doSend(mEditTextMessage.getText().toString());
@@ -195,7 +192,6 @@ public class ComposeFragment extends Fragment {
     }
 
     public void updateValues(Bundle extras) {
-
         String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
         if (extras != null) {
             mFilePath = extras.getString(extra.FILE_PATH);
@@ -210,8 +206,7 @@ public class ComposeFragment extends Fragment {
             return;
         }
 
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity()
-                .getApplicationContext());
+        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity());
         mRecip = null;
         Cursor c = dbRecipient.fetchRecipient(mRowIdRecipient);
         if (c != null) {
@@ -287,6 +282,8 @@ public class ComposeFragment extends Fragment {
         if (mRecip != null) {
             intent.putExtra(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
         }
+        // remove local version after sending
+        mEditTextMessage.setTextKeepState("");
         sendResultToHost(RESULT_SEND, intent.getExtras());
     }
 
@@ -433,7 +430,6 @@ public class ComposeFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        // The activity has become not visible (it is now "paused").
 
         // save draft when view is lost
         doSave(mEditTextMessage.getText().toString());
@@ -442,7 +438,6 @@ public class ComposeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        // The activity has become visible (it is now "resumed").
 
         updateValues(null);
     }
@@ -537,4 +532,13 @@ public class ComposeFragment extends Fragment {
         newFragment.show(getFragmentManager(), "dialog");
     }
 
+    public void updateKeypad() {
+        // if soft input open, close it...
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(
+                Context.INPUT_METHOD_SERVICE);
+        View focus = getActivity().getCurrentFocus();
+        if (focus != null) {
+            imm.hideSoftInputFromWindow(focus.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
 }

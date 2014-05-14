@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Senda bjóða tengil með…</string>
+    <string name="action_NewUserRequest">Bæta við Sling Keys snerting boð um…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Hætta</string>
     <string name="btn_Close">Loka</string>
     <string name="btn_Continue">Halda áfram</string>
+    <string name="btn_CreateNewKey">Búa nýjan lykil</string>
+    <string name="btn_DeleteKeys">Eyða lyklum</string>
     <string name="btn_discard">Fargið</string>
     <string name="btn_Done">Lokið</string>
     <string name="btn_Exit">Hætta</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 klukkustundir</string>
     <string name="choice_auto_storage">Sjálfgefið Bílskúr</string>
     <string name="choice_external_storage">Ytri Bílskúr</string>
+    <string name="choice_font_large">Stór</string>
+    <string name="choice_font_medium">Medium</string>
+    <string name="choice_font_micro">Mjög lítill</string>
+    <string name="choice_font_small">Small</string>
     <string name="choice_internal_storage">Innri Bílskúr</string>
     <string name="choice_nolimit">No Limit</string>
     <string name="choice_SaveDirectory">Vista Directory</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Hljóðnema leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Hljóðnemi heimildir.</string>
     <string name="error_BackupNotFound">Engin afrit til að endurheimta.</string>
     <string name="error_BackupNotSupportedDevice">Tækið styður ekki afrit aftur.</string>
-    <string name="error_BadCopyProtectUpgrade">Vegna galla í Android 4.1, þú vilja hafa uninstall og setja aftur SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">Vegna galla í Android 4.1, þá verður þú að uninstall og setja aftur SafeSlinger.</string>
     <string name="error_C2DMRegAccountMissing">Google reikningur er krafist. Vinsamlegast opna reikning framkvæmdastjóri og bæta við Google reikning.</string>
     <string name="error_C2DMRegAuthenticationFailed">Skráning ekki staðfest, reyndu aftur handvirkt síðar.</string>
     <string name="error_C2DMRegInvalidSender">Skráning er ekki í boði fyrir þessa útgáfu, vinsamlegast stöðva fyrir endurnýja útgáfa.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Þú hefur farið yfir skilaboð kvóta fyrir þetta tæki. Reyndu aftur síðar.</string>
     <string name="error_PushMsgServiceFail">Tilkynning er ekki í boði að þessu sinni. Vinsamlegast reyndu að senda skilaboðin síðar.</string>
     <string name="error_RecoderError">Getur ekki undirbúa hljóð upptökutæki.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Til að byrja, \' Sling Keys með annan síma á sama tíma.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Til að byrja, Sling takkana með annan síma á sama tíma.</string>
     <string name="error_selectDataToSend">Þú þarft viðhengi eða textaskilaboð til að senda.</string>
     <string name="error_ShareFileDelError">Getur ekki fjarlægt sameiginlega skrá.</string>
     <string name="error_UnableFindPubKey">Ófær um að passa dreifilykil gagnvart einkalykil í dulritunarstjórneiningunni té.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger villa, vinsamlegast endurræsa.</string>
     <string name="error_VcardParseFailure">Tengiliðagögn var sniðinn rangt.</string>
 
-    <string name="help_find">Notaðu þennan skjá til að setja nafn þitt til að skiptast á við aðra. Tappa á hnappinn \'gert\' þegar því er lokið.</string>
-    <string name="help_home">Að skiptast á persónuskilríki gögn skal gæta allir notendur eru nálægt eða í símanum. Hnappinn \' BEGIN skipti \' munu skiptast users.cpp tengiliðagögn.</string>
-    <string name="help_identity_menu">\n\nÞú getur líka breyst persónuleg gögn um persónuupplýsingar þínar á þessum skjá með því að slá á hnappinn með nafni þínu. Þetta birtir valmynd sem gerir þér kleift að \' Breyta\' þinn snerting, \' Búa til nýjan \' tengilið eða \' Nota annar\' tengilið.</string>
+    <string name="help_find">Notaðu þennan skjá til að setja nafn þitt til að skiptast á við aðra. Bankaðu á Lokið hnappinn þegar lokið.</string>
+    <string name="help_home">Að skiptast á persónuskilríki gögn skal gæta allir notendur eru nálægt eða í símanum. Byrjaðu á húsum hnappinn munu skiptast users.cpp tengiliðagögn.</string>
+    <string name="help_identity_menu">\n\n\nÞú getur líka breyst persónuleg gögn um persónuupplýsingar þínar á þessum skjá með því að slá á hnappinn með nafni þínu. Þetta birtir valmynd leyfir þér að breyta samband þitt, Búa til nýjan tengilið, eða nota annan tengilið.</string>
     <string name="help_Messages">Þessi skjár sýnir öll fyrri skilaboð og viðhengi sem eru enn í boði fyrir niðurhal.</string>
-    <string name="help_passphrase">Notaðu þennan skjá til tenging til the umsókn með lykilorð þitt.</string>
+    <string name="help_passphrase">Notaðu þennan skjá til tenging til the umsókn með lykilorð þitt. Ef þú hefur gleymt lykilorð þitt, getur þú búið til nýjan lykil verndað af nýjum lykilorð með því að pikka á Gleymt lykilorð? hnappinn. Tappa notandanafn til að skipta á milli margra lykla.</string>
     <string name="help_PickRecip">Tengiliði með SafeSlinger lykla sjást hér, velja einn til að senda skilaboð til.</string>
-    <string name="help_save">Þegar þessu er lokið, siðareglur mun koma í ljós lista yfir sjálfsmynd gögn skiptanna. Veldu tengiliðina sem þú vilt vista og ýta á \' innflutningur\'.</string>
-    <string name="help_SecureIntroduction">Þessi skjár gerir þér kleift að velja tvo menn sem þú hefur slöngði takkana með áður að tryggilega senda takka þeirra við hvert annað. Einfaldlega ýta \' Kynntu \' þegar tilbúin.</string>
-    <string name="help_Send">Þessi skjár gerir þér kleift að velja nokkur gögn og viðtakandinn að senda til. Einfaldlega ýta á \'Senda\' þegar tilbúin.</string>
+    <string name="help_save">Þegar þessu er lokið, siðareglur mun koma í ljós lista yfir sjálfsmynd gögn skiptanna. Veldu tengiliðina sem þú vilt vista og ýta á Flytja.</string>
+    <string name="help_SecureIntroduction">Þessi skjár gerir þér kleift að velja tvo menn sem þú hefur slöngði takkana með áður að tryggilega senda takka þeirra við hvert annað. Einfaldlega ýta Kynntu þegar tilbúin.</string>
+    <string name="help_Send">Þessi skjár gerir þér kleift að velja nokkur gögn og viðtakandinn að senda til. Einfaldlega stutt á Send þegar tilbúin.</string>
 
     <string name="iOS_contactError">Tengiliði leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Tengiliðir heimildir.</string>
     <string name="iOS_errorpushtoken">Ýta skráning vantar.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Tæki:</string>
     <string name="label_DeviceInSendOnlyMode">Senda eingöngu háttur</string>
     <string name="label_DisabledExchSourceKeyChange">Lykillinn hefur breyst: Sling Takkar aftur.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Til að byrja skilaboð, bæði notendur verða Sling Takkar á sama tíma.</string>
     <string name="label_Draft">Drög</string>
     <string name="label_EnabledKeyFormatDeprecated">Lykill snið vanþóknun: Sling Takkar aftur.</string>
     <string name="label_exchanged">skipst</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">File Name</string>
     <string name="label_FindInstruct">Sláðu inn nafnið sem þú vilt að aðrir sjá í samskiptum tryggilega:</string>
     <string name="label_FirstName">Fornafn</string>
-    <string name="label_Home">Bankaðu á Nafn þitt til að bæta við eða fjarlægja mjúkar gögn, athuga hluti sem þú vilt deila, og tappa \'Byrja á húsum\' þegar aðrir eru tilbúnir til að skiptast á:</string>
+    <string name="label_Home">Bankaðu á Nafn þitt til að bæta við eða fjarlægja mjúkar gögn, athuga hluti sem þú vilt deila, og tappa Byrja húsum þegar aðrir eru tilbúnir til að skiptast á:</string>
     <string name="label_hometag">Forsíða</string>
     <string name="label_hours">%d klst</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud er virkt. Tappa á hnappinn \' gert\' þegar því er lokið.</string>
-    <string name="label_InstNoMessages">Engin skilaboð. Þú getur sent skilaboð frá \'Skrifa skilaboð \' hnappinn á aðalvalmyndinni.</string>
-    <string name="label_InstNoMessagesAndroid">Engin skilaboð. Þú getur sent skilaboð úr \'Skrifa \' flipanum.</string>
-    <string name="label_InstNoRecipients">Engir viðtakendur. Finna annan SafeSlinger notanda nágrenninu og snerta á flipann \' Sling Keys að deila lykla.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud er virkt. Bankaðu á Lokið hnappinn þegar lokið.</string>
+    <string name="label_InstNoMessages">Engin skilaboð. Þú getur sent skilaboð úr saman skilaboð hnappinn á aðalvalmyndinni.</string>
+    <string name="label_InstNoMessagesAndroid">Engin skilaboð. Þú getur sent skilaboð úr Semja flipann.</string>
+    <string name="label_InstNoRecipients">Til að bæta við viðtakendum, verður þú fyrst Sling takkana með einn eða fleiri notendur á sama tíma. Þú gætir líka sent Sling Keys snerting boð frá the matseðill.</string>
     <string name="label_InstNoSharedFile">Ekki hluti skrá. Tengja tækið við iTunes og draga skrár til the hluti mappa.</string>
     <string name="label_InstRecipients">Velja viðtakanda til að senda skilaboð til:</string>
     <string name="label_InstSendInvite">Velja viðtakendur að kynna tryggilega:</string>
     <string name="label_InstSharedFile">Velja skrá til að hengja:</string>
     <string name="label_introduced">kynnt</string>
+    <string name="label_inviteSent">Boðið</string>
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Last Name</string>
     <string name="label_Me">Me</string>
     <string name="label_messageIntroduceNameToYou">Mig langar að kynna %s til þín.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Að setja upp örugga skilaboð tengingu, getum við að mæta eða síma hvert öðru á sama tíma, og þá Sling Keys bara einu sinni til að staðfesta tenginguna.</string>
+    <string name="label_messageInviteStartMsg">Getum við byrjað öruggt skilaboð með the opinn uppspretta SafeSlinger iPhone eða Android app?</string>
     <string name="label_minutes">%d mínútur</string>
     <string name="label_mobiletag">Farsími</string>
     <string name="label_MostRecentOnly">Nýjustu aðeins</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger öryggisafrit seinkað</string>
     <string name="label_safeslingered">(SafeSlinger Bein Exchange)</string>
     <string name="label_SaveAccount">Vista reikning</string>
-    <string name="label_SaveInstruct">Kanna tengiliði sem þú vilt uppfæra í bók netfangið þitt, bankaðu síðan á \'Flytja inn\' til að vista örugga tengiliði:</string>
+    <string name="label_SaveInstruct">Kanna tengiliði sem þú vilt uppfæra í bók netfangið þitt, pikkaðu síðan á Flytja til að vista örugga tengiliði:</string>
     <string name="label_seconds">%d sekúndur</string>
     <string name="label_SelectRecip">Velja móttakanda</string>
     <string name="label_sendErrorData">Senda villu Gögn</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Step 3</string>
     <string name="label_step_4">Step 4</string>
     <string name="label_step_5">Skref 5</string>
+    <string name="label_summary_auto_attach_retrieval">Sjálfkrafa sækja viðhengi þegar innskráður</string>
+    <string name="label_summary_auto_decrypt">Sjálfkrafa afkóða skilaboð þegar skráður inn</string>
+    <string name="label_summary_remind_backup_delay">Fá tilkynningu þegar öryggisafrit er offline.</string>
+    <string name="label_summary_show_tutorial">Sýna eitthvert áður attemping að Sling Keys.</string>
     <string name="label_TapToDecryptFile">Pikkaðu til að hallmæla skrá</string>
     <string name="label_TapToDecryptMessage">Pikkaðu til að hallmæla</string>
     <string name="label_TapToDownloadFile">Pikkaðu til að sækja skrána</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Bankaðu til að opna skrá</string>
     <string name="label_TapToResumeDraft">Bankaðu á til að halda áfram skilaboð drög</string>
     <string name="label_TapToSendCredentialUpdate">Bankaðu og haltu til að senda persónuskilríki uppfærslu.</string>
+    <string name="label_TapToSlingKeys">Pikkaðu til að Sling Keys.</string>
     <string name="label_targetAccountLabel">Tengiliðir reikning</string>
-    <string name="label_TouchToConfigureBackupSettings">Þú gætir mögulega gera SafeSlinger iCloud öryggisafrit í iOS Stillingar. Tappa á hnappinn \' gert\' þegar því er lokið.</string>
+    <string name="label_TouchToConfigureBackupSettings">Þú gætir mögulega gera SafeSlinger iCloud öryggisafrit í iOS Stillingar. Bankaðu á Lokið hnappinn þegar lokið.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Snerta til að stilla öryggisafrit stillingar.</string>
     <string name="label_TouchToConfigureCacheTimeout">Snerta til að stilla skyndiminni hve langan tíma netaðgerðir stillingar.</string>
     <string name="label_undefinedTypeLabel">Unknown</string>
     <string name="label_UnknownSender">Brengla Sendandi</string>
     <string name="label_UserName">User Name</string>
+    <string name="label_WarnForgotPassphrase">Til að vernda gögnin þín, SafeSlinger ekki geyma lykilorð þitt einhvers staðar fyrir bata. Þú getur aðeins aðgang viðtakendum og skilaboð búið undir sama lykilorð innskráningu. Hins vegar getur þú búa til nýjan lykil og lykilorð, þá endurtaka Sling Takkar með viðtakendur þinn.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Eftirfarandi lyklar verður eytt:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Það eru ekki fleiri nýlegar takka en þú.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Aðeins lykla mynda nýlega en þinn, mynda á %s, getur verið eytt.</string>
     <string name="label_worktag">Vinna</string>
 
     <string name="menu_About">Um</string>
+    <string name="menu_auto_attach_retrieval">Auto-sækja viðhengi</string>
+    <string name="menu_auto_decrypt">Auto-hallmæla</string>
     <string name="menu_Change">Breyting</string>
     <string name="menu_ChangePassphrase">Breyta lykilorð</string>
+    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteSms">Texti (SMS/MMS)</string>
     <string name="menu_CreateNew">Búa til nýtt</string>
     <string name="menu_delete">Eyða</string>
-    <string name="menu_deleteThread">Eyða Thread \'%s\'</string>
+    <string name="menu_deleteThread">Eyða Thread %s</string>
     <string name="menu_Details">Skoða Detail</string>
     <string name="menu_DownloadDirectory">Sækja Directory</string>
     <string name="menu_Edit">Breyta</string>
+    <string name="menu_EditContact">Breyta tengilið</string>
+    <string name="menu_EditName">Breyta nafni</string>
     <string name="menu_FileManager">File Manager</string>
+    <string name="menu_ForgotPassphrase">Gleymt lykilorð?</string>
     <string name="menu_Help">Hjálp</string>
     <string name="menu_Introduction">Inngangur</string>
     <string name="menu_License">Leyfi</string>
     <string name="menu_Logout">Útskrá</string>
+    <string name="menu_ManagePassphrases">Stjórna passphrases</string>
+    <string name="menu_message_font_size">Skilaboð Leturstærð</string>
     <string name="menu_messageCopyText">Afrita texta</string>
     <string name="menu_messageForward">Forward</string>
     <string name="menu_Remove">Fjarlægja</string>
-    <string name="menu_SelectShareApp">Senda umsókn</string>
+    <string name="menu_restore_default">Upprunalegar stillingar í Stillingar</string>
+    <string name="menu_ringtone">Hljóð</string>
+    <string name="menu_SelectShareApp">Bæta við tengilið boðskort</string>
     <string name="menu_sendFeedback">Senda á síðunni</string>
     <string name="menu_SendUpdate">Senda uppfæra</string>
     <string name="menu_Settings">Stillingar</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Skilaboð</string>
     <string name="menu_UseAnother">Nota annað</string>
-    <string name="menu_UseContactPerson">Hafðu \'%s\'</string>
+    <string name="menu_UseContactPerson">Hafðu %s</string>
     <string name="menu_UseNoContact">Nota nafn Aðeins</string>
-    <string name="menu_UseProfilePerson">Nota upplýsingar \'%s\'</string>
+    <string name="menu_UseProfilePerson">Nota upplýsingar %s</string>
+    <string name="menu_vibrate">Titra</string>
 
     <string name="prog_decrypting">Afkóðun…</string>
     <string name="prog_encrypting">dulkóða…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Advanced</string>
     <string name="section_backup">Backup</string>
     <string name="section_general">General</string>
+    <string name="section_notification">Tilkynningar</string>
+    <string name="section_storage">Bílskúr</string>
 
     <string name="state_BackupRestored">Backup aftur.</string>
     <string name="state_FileDeleted">Eytt skrá %s.</string>
     <string name="state_FileSent">Skilaboð send.</string>
+    <string name="state_InvitationAdded">Boð við.</string>
     <string name="state_MessageSavedAsDraft">Skilaboð vistuð sem drög.</string>
     <string name="state_MessagesDeleted">%d Skilaboðum er eytt.</string>
     <string name="state_PassphraseUpdated">Lykilorð uppfærð.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s tengiliðir fluttir inn.</string>
     <string name="state_TextCopiedToClipboard">Texti afritaður í klemmuspjald.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger er hannað til auðveldlega deila sjálfsmynd gögn, í eigin persónu eða í gegnum síma, staðfest, einka, og ósnortinn. Hver einstaklingur sem þú deilir með skapar öruggt endir-til-endir rás til að senda skilaboð.\n\nFeatures:\n- Skiptast auðveldlega samband upplýsingum með öðrum\n- Öruggur Sling textar, myndir, nokkuð!\n- Strong dulmál ver þínar\n\nemail: %2$s\nVefur: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger er hannað til auðveldlega deila sjálfsmynd gögn, í eigin persónu eða í gegnum síma, staðfest, einka, og ósnortinn. Hver einstaklingur sem þú deilir með skapar öruggt endir-til-endir rás til að senda skilaboð.\n\nFeatures:\n-Auðveldlega skiptast snerting upplýsingar með öðrum\n-tryggilega Sling texta, myndir, neitt!\n-Strong dulmál ver þínar\n\nemail: %2$s\nvefur: %3$s</string>
     <string name="text_KeywordExchange">Skipti</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">Key</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Öryggi</string>
     <string name="text_LanguagesProvidedBy">Tungumál veittar af:</string>
     <string name="text_RelatedSearchTerms">Skyld hugtök:</string>
-    <string name="text_Requirements">Kröfur:\n1. Verður að vera uppsett á amk 2 tæki.\n2.. An Internet tenging þarf að vera virkt.</string>
+    <string name="text_Requirements">Kröfur:.\n1 verður að vera uppsett á amk 2 tæki.\n2. An Internet tenging þarf að vera virkt.</string>
     <string name="text_SourceCodeRepo">Open Source: %s</string>
-    <string name="text_WhatsNew">- Stöðugleiki fastur.</string>
+    <string name="text_WhatsNew">-Stöðugleiki fastur.</string>
 
     <string name="title_About">Um</string>
     <string name="title_camera">Myndavél</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Sling Keys Aðstoðarmaður</string>
     <string name="title_FileOptions">Viðhengi Valkostir</string>
     <string name="title_find">Skipulag</string>
+    <string name="title_font_size">Veldu leturstærð</string>
     <string name="title_home">Byrja Exchange</string>
     <string name="title_HomePanel">Forsíða</string>
     <string name="title_MessageDetail">Skilaboð</string>

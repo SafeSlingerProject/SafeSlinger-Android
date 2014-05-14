@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">तपाईं वाक्यांश मा एक फरक सूचना दिएको छ । फेरि विनिमय सुरु ।</string>
     <string name="error_MinUsersRequired">%d सदस्यले न्यूनतम डेटा आदान प्रदान गर्न आवश्यक छ ।</string>
     <string name="error_MoreDataThanUsers">विनिमय पाइने अप्रत्याशित डेटा । फेरि विनिमय सुरु ।</string>
+    <string name="error_NoDataToExchange">विनिमय आवश्यक डाटा हराइरहेको छ ।</string>
     <string name="error_NoWordListSelected">तपाईं अघि बढ्नु भन्दा पहिले वाक्यांश एउटा चयन गर्नुपर्छ ।</string>
     <string name="error_OtherGroupCommitDiffer">कसैले वाक्यांश भिन्नता दी । फेरि विनिमय सुरु ।</string>
     <string name="error_OutOfMemoryError">स्मरण गर्नुपर्ने यो कार्य पूरा गर्न पनि कम छ ।</string>
-    <string name="error_ServerAppMessage">सर्भर सन्देश: \' %s \'</string>
-    <string name="error_ServerAppMessageCStr">सर्भर सन्देश: \' %s \'</string>
+    <string name="error_ServerAppMessage">सर्भर सन्देश: %s</string>
+    <string name="error_ServerAppMessageCStr">सर्भर सन्देश: %s</string>
     <string name="error_ServerNotResponding">सर्भरबाट कुनै प्रतिक्रिया ।</string>
     <string name="error_TimeoutWaitingForAllMembers">केही समूह सदस्यहरू डेटा थप्न लागि प्रतीक्षा समय समाप्त ।</string>
     <string name="error_WebCancelledByUser">प्रयोगकर्ता सर्भर अनुरोध रद्द ।</string>
 
-    <string name="help_size">\' ठीक छ \' सँगै डेटा आदान र प्रेस प्रयास गर्ने मान्छे को संख्या चयन गर्नुहोस्।</string>
-    <string name="help_userid">यस स्क्रीन मा यो संख्या प्रयोगकर्ताहरू एक अद्वितीय समूह सिर्जना गर्न प्रयोग गरिन्छ । सबै प्रयोगकर्ताहरू मा संख्या पुनरावृत्ति \' ठीक छ \' स्क्रीन, तब सबै प्रयोगकर्ताहरू नै सबै भन्दा कम संख्या र प्रेस प्रवेश गर्नु पर्छ \' ।</string>
-    <string name="help_verify">अब, तपाईं सबै प्रयोगकर्ताहरु संग यिनी 3 - शब्द वाक्यांश एक मिल्नु पर्छ । प्रत्येक प्रयोगकर्ता नै साधारण वाक्यांश, र प्रेस \' अर्को \' चयन गर्नुपर्छ ।</string>
+    <string name="help_size">सँगै र प्रेस ठीक डेटा आदान प्रदान गर्न प्रयास गर्ने मान्छे को संख्या चयन गर्नुहोस्।</string>
+    <string name="help_userid">यस स्क्रीन मा यो संख्या प्रयोगकर्ताहरू एक अद्वितीय समूह सिर्जना गर्न प्रयोग गरिन्छ । सबै प्रयोगकर्ताहरू \' स्क्रीन मा संख्या समीक्षा, तब सबै प्रयोगकर्ताहरू नै सबै भन्दा कम नम्बर प्रविष्ट गर्नुहोस् र ठीक प्रेस पर्छ ।</string>
+    <string name="help_verify">अब, तपाईं सबै प्रयोगकर्ताहरु संग यिनी 3-शब्द वाक्यांश एक मिल्नु पर्छ । प्रत्येक प्रयोगकर्ता नै साधारण वाक्यांश चयन, र अर्को प्रेस पर्छ ।</string>
 
+    <string name="label_CompareScreensNDevices">%s उपकरणहरूमा स्क्रीन तुलना ।</string>
     <string name="label_NumericModeHint">गैह्र अंग्रेजी</string>
     <string name="label_PromptInstruct">यो संख्या प्रयोगकर्ताहरू एक अद्वितीय समूह सिर्जना गर्न प्रयोग गरिन्छ । तुलना, र त्यसपछि सबै प्रयोगकर्ताहरू बीच सबै भन्दा कम सङ्ख्या प्रविष्ट गर्नुहोस्।</string>
     <string name="label_ReceivedNItems">%d आइटम प्राप्त</string>
     <string name="label_UserIdHint">सबै भन्दा कम</string>
-    <string name="label_VerifyInstruct">सबै फोनहरुका 3 - शब्द वाक्यांश एक मिल्नु पर्छ । तुलना, र त्यसपछि मिल्दो वाक्यांश लेने ।</string>
+    <string name="label_VerifyInstruct">सबै फोनहरुका 3-शब्द वाक्यांश एक मिल्नु पर्छ । तुलना, र त्यसपछि मिल्दो वाक्यांश लेने ।</string>
+
+    <string name="lib_name">SafeSlinger विनिमय</string>
 
     <string name="prog_CollectingOthersCommitVerify">सबै सदस्यबाट प्रमाणिकरण लागि प्रतीक्षा…</string>
     <string name="prog_CollectingOthersItems">सबै प्रयोगकर्ताहरू समावेस गर्न को लागि प्रतीक्षा…</string>

@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Bidali batera esteka gonbidatzen…</string>
+    <string name="action_NewUserRequest">Gehitu Sling Keys kontaktua gonbidapen baten bidez…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Utzi</string>
     <string name="btn_Close">Itxi</string>
     <string name="btn_Continue">Jarraitu</string>
+    <string name="btn_CreateNewKey">Sortu gako berria</string>
+    <string name="btn_DeleteKeys">Ezabatu Keys</string>
     <string name="btn_discard">Baztertu</string>
     <string name="btn_Done">Done</string>
     <string name="btn_Exit">Irteera</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 ordu</string>
     <string name="choice_auto_storage">Biltegiratzea lehenetsi</string>
     <string name="choice_external_storage">Kanpo Biltegiratzea</string>
+    <string name="choice_font_large">Handiak</string>
+    <string name="choice_font_medium">Ertain</string>
+    <string name="choice_font_micro">Oso Txikia</string>
+    <string name="choice_font_small">Txiki</string>
     <string name="choice_internal_storage">Barne Biltegiratzea</string>
     <string name="choice_nolimit">No Limit</string>
     <string name="choice_SaveDirectory">Save Directory</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Mikrofono baimena eskatzen. Mesedez joan iOS Ezarpenak Mikrofonoa baimenak gaitu.</string>
     <string name="error_BackupNotFound">No segurtasun kopia berreskuratu.</string>
     <string name="error_BackupNotSupportedDevice">Gailu onartzen ez segurtasun kopia berreskuratu.</string>
-    <string name="error_BadCopyProtectUpgrade">Dela Android 4.1 akats bat, uninstall dute eta berriro instalatu SafeSlinger duzu.</string>
+    <string name="error_BadCopyProtectUpgrade">Dela Android 4.1 akats bat, desinstalatzeko eta berrinstalatu SafeSlinger izango dituzu.</string>
     <string name="error_C2DMRegAccountMissing">Google kontua eduki behar da. Mesedez, ireki kontu kudeatzailea eta gehitu Google kontu bat.</string>
     <string name="error_C2DMRegAuthenticationFailed">Erregistroa ez autentifikatutako, mesedez saiatu berriz geroago eskuz.</string>
     <string name="error_C2DMRegInvalidSender">Izen-ematea ez da bertsio hau eskuragarri, jo ezazu bertsio eguneratua da.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Mezu kuota gainditu duzu telefono honentzat. Mesedez, saiatu berriro beranduago.</string>
     <string name="error_PushMsgServiceFail">Jakinarazpen-zerbitzua ez dago erabilgarri une honetan. Saiatu mezua beranduago bidaltzeko.</string>
     <string name="error_RecoderError">Ezin da audio-grabagailua prestatzeko.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Hasteko, \' Sling Keys \' beste telefono batekin aldi berean.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Hasteko, Sling beste telefono batekin Keys aldi berean.</string>
     <string name="error_selectDataToSend">Eranskin bat edo testu-mezu bat bidali behar duzu.</string>
     <string name="error_ShareFileDelError">Ezin kendu partekatutako fitxategiak.</string>
     <string name="error_UnableFindPubKey">Ezin kripto-hornitzaileak gako pribatua eta gako publiko bat etortzeko.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger error, mesedez berrabiarazi.</string>
     <string name="error_VcardParseFailure">Harremanetarako datuak gaizki formateatua zen.</string>
 
-    <string name="help_find">Erabili pantaila hau besteekin trukatzeko zure izena ezartzeko. Punteatu \'Done\' botoia amaitutakoan.</string>
-    <string name="help_home">Nortasun datuak trukatzeko, ziurtatu erabiltzaile guztiak dira Gertuko edo telefonoz. The \' Hasi Exchange \' botoia hautatuta kontaktu datuak bakarrik trukatu.</string>
-    <string name="help_identity_menu">\n\nEre zure identitatea pantaila honetan buruzko datu pertsonalak alda ditzake botoia punteatuz izen batekin. Hau menu bat ahalbidetuz \' Edit \' Zure kontaktu, \' Sortu berria\' kontaktu, edo \' Erabili beste \' kontaktu nahi duzu bistaratuko du.</string>
+    <string name="help_find">Erabili pantaila hau besteekin trukatzeko zure izena ezartzeko. Ukitu Done botoia amaitutakoan.</string>
+    <string name="help_home">Nortasun datuak trukatzeko, ziurtatu erabiltzaile guztiak dira Gertuko edo telefonoz. Hasi Exchange botoia hautatuta kontaktu datuak bakarrik trukatu.</string>
+    <string name="help_identity_menu">\n\n\nEre zure identitatea pantaila honetan buruzko datu pertsonalak alda ditzake botoia punteatuz izen batekin. Hau menu bat zure kontaktu editatu aukera ematen bistaratuko du, Sortu Kontaktu berria, edo erabili harremanetarako beste.</string>
     <string name="help_Messages">Pantaila hau iragan mezu guztiak, eta hori deskargatzeko aukera ematen du, oraindik eranskinak erakusten du.</string>
-    <string name="help_passphrase">Erabili pantaila hau identifikatzera aplikazioa zure pasaesaldi batekin.</string>
+    <string name="help_passphrase">Erabili pantaila hau identifikatzera aplikazioa zure pasaesaldi batekin. Ahaztu egin duzu zure pasaesaldia, gako berri bat pasaesaldi berri bat ahaztu egin Pasaesaldia kolpatuta babestuta sortu ahal izango duzu? botoia. Ukitu erabiltzaile izenari anitz gakoak artean aldatzeko.</string>
     <string name="help_PickRecip">SafeSlinger gakoak kontaktuak hemen agertuko dira, aukera bat zure mezua bidaltzeko.</string>
-    <string name="help_save">Amaitutakoan, protokoloaren trukatu nortasun datuen zerrenda bat agertuko dira. Hautatu gordetzeko, eta sakatu \'Inportatu\' nahi dituzun kontaktuak.</string>
-    <string name="help_SecureIntroduction">Pantaila honetako gakoak slung dituzun aurretik beren gakoak seguruan bidaltzeko elkarri bi pertsona hautatu ahal izango dituzu. Besterik gabe, sakatu \' Sar \' denean prest.</string>
-    <string name="help_Send">Pantaila honetan datu batzuk: eta hartzaile bat bidali hautatu ahal izango dituzu. Besterik gabe, sakatu \' Bidali \' denean prest.</string>
+    <string name="help_save">Amaitutakoan, protokoloaren trukatu nortasun datuen zerrenda bat agertuko dira. Hautatu gorde eta sakatu Inportatu nahi dituzun kontaktuak.</string>
+    <string name="help_SecureIntroduction">Pantaila honetako gakoak slung dituzun aurretik beren gakoak seguruan bidaltzeko elkarri bi pertsona hautatu ahal izango dituzu. Besterik gabe, sakatu Sar denean prest.</string>
+    <string name="help_Send">Pantaila honetan datu batzuk: eta hartzaile bat bidali hautatu ahal izango dituzu. Besterik gabe, sakatu Bidali denean prest.</string>
 
     <string name="iOS_contactError">Kontaktu baimena eskatzen. Mesedez joan iOS Ingurunea Kontaktua baimenak gaitu.</string>
     <string name="iOS_errorpushtoken">Push erregistroa falta da.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Gailua:</string>
     <string name="label_DeviceInSendOnlyMode">Bidali soilik moduan</string>
     <string name="label_DisabledExchSourceKeyChange">Zure gakoa aldatu: Sling Keys berriro.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Mezularitza hasteko, bai erabiltzaile muztioa Sling aldi berean gakoak.</string>
     <string name="label_Draft">DRAFT</string>
     <string name="label_EnabledKeyFormatDeprecated">Giltza formatu zaharkitua: Sling Keys berriro.</string>
     <string name="label_exchanged">trukatu</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">Fitxategiaren izena</string>
     <string name="label_FindInstruct">Idatzi izena besteen denean segurtasunez komunikatzeko ikusi nahi duzun:</string>
     <string name="label_FirstName">Lehenengoa izena</string>
-    <string name="label_Home">Kolpatu izena harremanetarako datuak gehitzeko edo ezabatzeko, partekatu nahi dituzun elementuak kontrol, eta sakatu \'Hasi Exchange\' besteek truke prest daude:</string>
+    <string name="label_Home">Kolpatu izena harremanetarako datuak gehitzeko edo ezabatzeko, partekatu nahi dituzun elementuak kontrol, eta sakatu Hasi Exchange denean besteen truke prest daude:</string>
     <string name="label_hometag">Hasiera</string>
     <string name="label_hours">%d ordu</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud gaituta dago. Punteatu \' Done \' botoia amaitutakoan.</string>
-    <string name="label_InstNoMessages">Ez dago mezurik. The \' Idatzi mezua \' botoia mezu bat bidali ahal izango duzu Hasiera menuan.</string>
-    <string name="label_InstNoMessagesAndroid">Ez dago mezurik. Mezu bat bidali ahal izango dituzu \' Compose \' fitxa from.</string>
-    <string name="label_InstNoRecipients">No hartzaileei. Aurkitu beste SafeSlinger erabiltzaileari Gertuko eta ukitu \' Sling Keys \' fitxan gakoak partekatzeko.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud gaituta dago. Ukitu Done botoia amaitutakoan.</string>
+    <string name="label_InstNoMessages">Ez dago mezurik. Mezu bat bidali ahal izango duzu mezua prestatzeko botoia Hasierako menuan.</string>
+    <string name="label_InstNoMessagesAndroid">Ez dago mezurik. Mezu bat bidali ahal izango duzu konposaturiko fitxan from.</string>
+    <string name="label_InstNoRecipients">Hartzaileak gehitzeko, lehenengo muztioa duzun Sling beste erabiltzaile bat edo gehiago dituzten Keys aldi berean. Halaber Sling Keys kontaktua gonbidapen bat menuan bidali ahal izango duzu.</string>
     <string name="label_InstNoSharedFile">Fitxategia partekatu. Konektatzen dira iTunes eta arrastatu fitxategiak partekatutako karpeta batera.</string>
-    <string name="label_InstRecipients">Hartu hartzaile bat mezu bat bidaltzeko:</string>
+    <string name="label_InstRecipients">Hartu hartzaile bat mezu bat bidali ahal izateko:</string>
     <string name="label_InstSendInvite">Hartu hartzaile segurtasunez sartzea:</string>
     <string name="label_InstSharedFile">Hautatzeko fitxategi bat eransteko:</string>
     <string name="label_introduced">sartu</string>
+    <string name="label_inviteSent">Gonbidatu</string>
     <string name="label_Key">Gakoa:</string>
     <string name="label_LastName">Abizenak</string>
     <string name="label_Me">Me</string>
     <string name="label_messageIntroduceNameToYou">%s aurkeztu zuk nahi nuke.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Konfigurazioa seguru mezularitza konexio bat egiteko, bete dugu dezake edo telefono elkarrengandik aldi berean, eta, ondoren, Sling Keys behin bakarrik konexioa egiaztatzeko.</string>
+    <string name="label_messageInviteStartMsg">Daiteke mezularitza seguru hasten gara kode irekiko SafeSlinger iPhone edo Android aplikazio batekin?</string>
     <string name="label_minutes">%d minutu</string>
     <string name="label_mobiletag">Mugikorra</string>
     <string name="label_MostRecentOnly">Berriena bakarrik</string>
@@ -200,7 +211,7 @@
     <string name="label_PassHintRepeat">Errepikatu Pasaesaldia</string>
     <string name="label_passPhraseCacheTtl">Pasaesaldi Cache</string>
     <string name="label_PassPhraseIsCached">Pasaesaldi erantzunak</string>
-    <string name="label_phoneOnly">telefono-bakarrik</string>
+    <string name="label_phoneOnly">Telefono-bakarrik</string>
     <string name="label_Photo">Argazkia</string>
     <string name="label_PublicKeyID">Gakoaren identifikazioa</string>
     <string name="label_PushTokenID">Push Izenematea ID</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup atzeratu</string>
     <string name="label_safeslingered">(SafeSlinger Zuzeneko Exchange)</string>
     <string name="label_SaveAccount">Gorde kontua</string>
-    <string name="label_SaveInstruct">Egiaztatu zure helbide-liburuan eguneratu nahi dituzun kontaktuak, ondoren, sakatu \'Inportatu\' kontaktu seguru gorde:</string>
+    <string name="label_SaveInstruct">Egiaztatu zure helbide-liburuan eguneratu nahi dituzun kontaktuak eta punteatu Inportatu kontaktu seguru gorde:</string>
     <string name="label_seconds">%d segundo</string>
     <string name="label_SelectRecip">Hartzaile</string>
     <string name="label_sendErrorData">Bidali Akatsa Datuen</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Urratsa 3</string>
     <string name="label_step_4">4 urrats</string>
     <string name="label_step_5">5 urrats</string>
+    <string name="label_summary_auto_attach_retrieval">Deskargatzeko automatikoki mezua eranskinak denean oraindik sartu</string>
+    <string name="label_summary_auto_decrypt">Automatikoki desenkriptatzeko mezuak denean oraindik sartu</string>
+    <string name="label_summary_remind_backup_delay">Jakinarazpenak jaso backup lineaz kanpo dago.</string>
+    <string name="label_summary_show_tutorial">Erakusteko tutorial bat Sling Keys attemping aurretik.</string>
     <string name="label_TapToDecryptFile">Ukitu fitxategia desenkriptatu</string>
     <string name="label_TapToDecryptMessage">Ukitu desenkriptatu</string>
     <string name="label_TapToDownloadFile">Ukitu fitxategia deskargatzeko</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Ukitu fitxategia ireki</string>
     <string name="label_TapToResumeDraft">Sakatu mezuaren zirriborroa jarraitzeko</string>
     <string name="label_TapToSendCredentialUpdate">Ukitu eta mantendu kredentzial eguneratzea bidaltzeko.</string>
+    <string name="label_TapToSlingKeys">Sling Keys ukitu.</string>
     <string name="label_targetAccountLabel">Kontaktu kontua</string>
-    <string name="label_TouchToConfigureBackupSettings">Dezakete aukeran gaitu SafeSlinger iCloud iOS ezarpenetan babeskopia. Punteatu \' Done \' botoia amaitutakoan.</string>
+    <string name="label_TouchToConfigureBackupSettings">Dezakete aukeran gaitu SafeSlinger iCloud iOS ezarpenetan babeskopia. Ukitu Done botoia amaitutakoan.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Ukitu babeskopiaren ezarpenak konfiguratzeko.</string>
     <string name="label_TouchToConfigureCacheTimeout">Ukitu cache timeout ezarpenak konfiguratzeko.</string>
     <string name="label_undefinedTypeLabel">Ezezaguna</string>
     <string name="label_UnknownSender">Enkriptatuta Sender</string>
     <string name="label_UserName">Erabiltzaile izena</string>
+    <string name="label_WarnForgotPassphrase">Zure datuak babesteko, SafeSlinger ez du gordetzeko zure pasaesaldia edonon berreskuratzeko. Hartzaileak eta bera pasaesaldi login pean sortu mezuak bakarrik izango duzu sartzeko. Hala ere, funtsezko eta pasaesaldi berri bat sortu dezakezu, eta gero errepikatu Sling Keys zure hartzaileekin.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Ondorengo gakoak ezabatuko dira:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Badira zurea baino ez berriagoa gakoak.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Giltzak bakarrik sortutako berriki zurea, %s sortzen, ezaba daitezke baino.</string>
     <string name="label_worktag">Lana</string>
 
     <string name="menu_About">Buruz</string>
+    <string name="menu_auto_attach_retrieval">Auto-eskuratzeko eranskinak</string>
+    <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Aldaketaren</string>
     <string name="menu_ChangePassphrase">Aldaketaren Pasaesaldia</string>
+    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteSms">Testua (SMS/MMS)</string>
     <string name="menu_CreateNew">Sortu berria</string>
     <string name="menu_delete">Ezabatu</string>
-    <string name="menu_deleteThread">Ezabatu Haria \'%s\'</string>
+    <string name="menu_deleteThread">Ezabatu Thread %s</string>
     <string name="menu_Details">Ikuspegi xehetasuna</string>
     <string name="menu_DownloadDirectory">Download Directory</string>
     <string name="menu_Edit">Editatu</string>
+    <string name="menu_EditContact">Editatu Harremanetarako</string>
+    <string name="menu_EditName">Editatu izena</string>
     <string name="menu_FileManager">Fitxategi-kudeatzailea</string>
+    <string name="menu_ForgotPassphrase">Forgot Pasaesaldia?</string>
     <string name="menu_Help">Laguntza</string>
     <string name="menu_Introduction">Sarrera</string>
     <string name="menu_License">Lizentzia</string>
     <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Kudeatu Pasaesaldiak</string>
+    <string name="menu_message_font_size">Mezu Font Size</string>
     <string name="menu_messageCopyText">Kopia Testua</string>
     <string name="menu_messageForward">Aurrera</string>
     <string name="menu_Remove">Kendu</string>
-    <string name="menu_SelectShareApp">Bidali Aplikazioa</string>
+    <string name="menu_restore_default">Berrezarri lehenetsiak</string>
+    <string name="menu_ringtone">Soinua</string>
+    <string name="menu_SelectShareApp">Gehitu kontaktua Gonbit</string>
     <string name="menu_sendFeedback">Bidali iradokizunak</string>
     <string name="menu_SendUpdate">Bidali Update</string>
     <string name="menu_Settings">Ezarpenak</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Mezuak</string>
     <string name="menu_UseAnother">Erabili Another</string>
-    <string name="menu_UseContactPerson">Erabili Kontaktu \'%s\'</string>
+    <string name="menu_UseContactPerson">Erabili Harremanetarako %s</string>
     <string name="menu_UseNoContact">Erabilera Izena Only</string>
-    <string name="menu_UseProfilePerson">Erabili Profile \'%s\'</string>
+    <string name="menu_UseProfilePerson">Erabili Profile %s</string>
+    <string name="menu_vibrate">Dardara</string>
 
     <string name="prog_decrypting">desenkriptatu…</string>
     <string name="prog_encrypting">enkriptatzeari…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Aurreratua</string>
     <string name="section_backup">Backup</string>
     <string name="section_general">General</string>
+    <string name="section_notification">Jakinarazpenak</string>
+    <string name="section_storage">Biltegiratze</string>
 
     <string name="state_BackupRestored">Backup zaharberritu.</string>
     <string name="state_FileDeleted">Ezabatu fitxategia %s.</string>
     <string name="state_FileSent">Mezua bidali.</string>
+    <string name="state_InvitationAdded">Gonbidapena gehitu.</string>
     <string name="state_MessageSavedAsDraft">Mezua zirriborro gisa gorde.</string>
     <string name="state_MessagesDeleted">%d mezuak ezabatu.</string>
     <string name="state_PassphraseUpdated">Pasaesaldi eguneratu.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s kontakturik inportatu.</string>
     <string name="state_TextCopiedToClipboard">Testua arbelean kopiatzen.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger den identitate datuak erraz partekatzeko diseinatuta dago, pertsona edo telefonoz, autentifikatutako, pribatuak, eta oso-osorik. Partekatu egiten duzun pertsona bakoitzaren amaiera-to-end-kanal seguru baten mezuak bidaltzeko sortzen.\n\nEzaugarriak:\n- Erraz trukatzeko informazio harremanetan besteekin\n- Testuak Seguruan sling, argazkiak, ezer!\n- Kriptografia Strong zure informazio babesten\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger den identitate datuak erraz partekatzeko diseinatuta dago, pertsona edo telefonoz, autentifikatutako, pribatuak, eta oso-osorik. Partekatu egiten duzun pertsona bakoitzaren amaiera-to-end-kanal seguru baten mezuak bidaltzeko sortzen.\n\nEzaugarriak:\n-Erraz harremanetarako informazioa trukatzeko besteek\n-Segurtasunez sling testuak, argazkiak, ezer ez! %2$s\nweb:: %3$s kriptografia\n-Strong zure informazio\n\nemail babesten</string>
     <string name="text_KeywordExchange">Truke</string>
     <string name="text_KeywordIdentity">Nortasuna</string>
     <string name="text_KeywordKey">Giltza</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Segurtasuna</string>
     <string name="text_LanguagesProvidedBy">Emandako hizkuntzak:</string>
     <string name="text_RelatedSearchTerms">Zerikusia duten baldintzak:</string>
-    <string name="text_Requirements">Baldintzak:\n1. Behar 2 gailuak gutxienez instalatuta egon.\n2. Internet konexio bat aktibo egon behar du.</string>
+    <string name="text_Requirements">Baldintzak:.\n1 Nahitaez 2 gailuak gutxienez instalatuta egon.\n2. Interneteko konexioa aktibo izan behar du.</string>
     <string name="text_SourceCodeRepo">kode irekia: %s</string>
-    <string name="text_WhatsNew">- Egonkortasuna konponketak.</string>
+    <string name="text_WhatsNew">-Egonkortasuna konpontzen.</string>
 
     <string name="title_About">Buruz</string>
     <string name="title_camera">Kamara</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Sling Keys laguntzailea</string>
     <string name="title_FileOptions">Eranskin Aukerak</string>
     <string name="title_find">Konfigurazioa</string>
+    <string name="title_font_size">Aukeratu letraren tamaina bat</string>
     <string name="title_home">Hasiko Exchange</string>
     <string name="title_HomePanel">Hasiera</string>
     <string name="title_MessageDetail">Mezu</string>

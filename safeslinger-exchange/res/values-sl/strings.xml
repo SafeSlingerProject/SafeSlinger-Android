@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d uporabnikov</string>
 
-    <string name="error_AllMembersMustUpgrade">Nekateri člani uporabljate starejšo različico, vsi člani morajo vsaj uporabiti %s.</string>
+    <string name="error_AllMembersMustUpgrade">Nekateri člani uporabljate starejšo različico; Vsi člani morajo vsaj uporabiti %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Vsi člani morajo nadgraditi, nekateri uporabljate starejše formate registraciji naročena.</string>
     <string name="error_CorrectYourInternetConnection">Internet ni na voljo, preverite nastavitve.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Izmenjava timeout presežena. Spet začeli izmenjavo.</string>
@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Ti so poročali razliko v stavki. Spet začeli izmenjavo.</string>
     <string name="error_MinUsersRequired">Najmanj %d članov zahteva, da si izmenjujejo podatke.</string>
     <string name="error_MoreDataThanUsers">Nepričakovane podatke, najdene v zameno. Spet začeli izmenjavo.</string>
+    <string name="error_NoDataToExchange">Izmenjava manjka zahtevane podatke.</string>
     <string name="error_NoWordListSelected">Morate izbrati enega od stavkov, preden nadaljujete.</string>
     <string name="error_OtherGroupCommitDiffer">Nekdo poročali razliko v stavki. Spet začeli izmenjavo.</string>
     <string name="error_OutOfMemoryError">Pomnilnika je prenizka za dokončanje te operacije.</string>
-    <string name="error_ServerAppMessage">Strežnik sporočil: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Strežnik sporočil: \'%s\'</string>
+    <string name="error_ServerAppMessage">Strežnik Sporočilo: %s</string>
+    <string name="error_ServerAppMessageCStr">Strežnik Sporočilo: %s</string>
     <string name="error_ServerNotResponding">Ni odziva od strežnika.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout čaka nekateri člani skupine za dodajanje podatkov.</string>
     <string name="error_WebCancelledByUser">Uporabnik prekliče zahtevo strežnika.</string>
 
-    <string name="help_size">Izberite število ljudi, ki so poskušali izmenjujejo podatke skupaj in pritisnite \'OK\'.</string>
-    <string name="help_userid">Ta številka na tem zaslonu se uporablja za ustvarjanje edinstveno skupino uporabnikov. Pregledati številke na vseh uporabnikov zasloni, potem bi vsi uporabniki vnesete isto najnižjo številko in pritisnite \' OK \'.</string>
-    <string name="help_verify">Zdaj, morate ujemajo eno od teh 3-besednih fraz z vsemi uporabniki. Vsak uporabnik mora izbrati enako skupno zvezo, in pritisnite \' Next \'.</string>
+    <string name="help_size">Izberite število ljudi, ki so poskušali izmenjujejo podatke skupaj in pritisnite OK.</string>
+    <string name="help_userid">Ta številka na tem zaslonu se uporablja za ustvarjanje edinstveno skupino uporabnikov. Pregledati številke na zaslonih vseh uporabnikov, potem bi vsi uporabniki vnesete isto najnižjo številko in pritisnite OK.</string>
+    <string name="help_verify">Zdaj, morate ujemajo eno od teh 3-besednih fraz z vsemi uporabniki. Vsak uporabnik mora izbrati enako skupno zvezo, in pritisnite Next.</string>
 
+    <string name="label_CompareScreensNDevices">Pa jih primerjati med zasloni na %s naprav.</string>
     <string name="label_NumericModeHint">Non-angleški</string>
     <string name="label_PromptInstruct">Ta številka se uporablja za ustvarjanje edinstveno skupino uporabnikov. Primerjati in nato vnesite najmanjšo številko med vsemi uporabniki.</string>
     <string name="label_ReceivedNItems">prejetih %d predmetov</string>
     <string name="label_UserIdHint">Najnižja</string>
     <string name="label_VerifyInstruct">Vsi telefoni morajo ujemati eden od stavkov 3-besedil. Primerjati in izbrati ujemanje stavek.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">čakanja na preverjanje vseh članov…</string>
     <string name="prog_CollectingOthersItems">čakanja za vse uporabnike, da se pridružijo…</string>

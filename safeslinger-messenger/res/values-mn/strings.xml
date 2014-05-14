@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Нь холбоосыг урьж илгээх…</string>
+    <string name="action_NewUserRequest">Нь Sling Түлхүүрүүд холбоо барих урилгыг-ээр нэмнэ…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Болих</string>
     <string name="btn_Close">Close</string>
     <string name="btn_Continue">Continue</string>
+    <string name="btn_CreateNewKey">Нью түлхүүрийг үүсгэх</string>
+    <string name="btn_DeleteKeys">Түлхүүрүүд устгах</string>
     <string name="btn_discard">Хаяна</string>
     <string name="btn_Done">Аллага</string>
     <string name="btn_Exit">Гарах</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 цаг</string>
     <string name="choice_auto_storage">Анхдагч хадгалах</string>
     <string name="choice_external_storage">Гадаад Хадгалалт</string>
+    <string name="choice_font_large">Том</string>
+    <string name="choice_font_medium">Дунд зэрэг</string>
+    <string name="choice_font_micro">Маш бага</string>
+    <string name="choice_font_small">Жижиг</string>
     <string name="choice_internal_storage">Дотоод хадгалах</string>
     <string name="choice_nolimit">Ямар ч хязгаарлалт</string>
     <string name="choice_SaveDirectory">Хадгалах лавлах</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Микрофон зөвшөөрөл шаардлагатай. Микрофон зөвшөөрөл идэвхжүүлэхийн тулд Тагийн Settings явах уу.</string>
     <string name="error_BackupNotFound">Нөхөн сэргээх ямар нэгэн нөөц.</string>
     <string name="error_BackupNotSupportedDevice">Төхөөрөмжийн нөөц нөхөн сэргээх дэмждэггүй.</string>
-    <string name="error_BadCopyProtectUpgrade">Болоод Android 4.1-д алдаа, та устгах байх ба SafeSlinger суулгах болно.</string>
+    <string name="error_BadCopyProtectUpgrade">Болоод Android 4.1-д алдаа, та SafeSlinger устгах бүтээж суулгаарай хэрэгтэй болно.</string>
     <string name="error_C2DMRegAccountMissing">Нь Google-ийн данс шаардлагатай байна. Дансны менежерийг нээж, Google-ийн данс нэмэхийн уу.</string>
     <string name="error_C2DMRegAuthenticationFailed">Бүртгэл нэвтрэлт танилт, дараа нь гараар retry уу.</string>
     <string name="error_C2DMRegInvalidSender">Бүртгэл Энэ хувилбар нь бэлэн биш, шинэчилсэн хувилбар шалгана уу.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Та энэ төхөөрөмжид зориулсан зурвас квот давсан байна. Хожим нь retry уу.</string>
     <string name="error_PushMsgServiceFail">Мэдэгдэл үйлчилгээ энэ удаа байхгүй байна. Дараа нь зурвас илгээх оролдоно уу.</string>
     <string name="error_RecoderError">Дуу хураагч бэлтгэж чадахгүй байна.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Нэг цаг хугацаанд өөр утастай хамт \' Sling Товчнууд \' эхлүүлэхийн тулд.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Нэг цаг хугацаанд өөр утастай Sling Товчнууд эхлүүлэхийн тулд.</string>
     <string name="error_selectDataToSend">Та Хавсралт болон илгээхийн тулд текст мессеж хэрэгтэй.</string>
     <string name="error_ShareFileDelError">Хуваалцсан файлыг устгаж чадахгүй байна.</string>
     <string name="error_UnableFindPubKey">Crypto үзүүлэгч хувийн түлхүүр нь нийтийн түлхүүр тааруулах боломжгүй.</string>
@@ -132,21 +138,21 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger алдаа дахин эхлүүлэх уу.</string>
     <string name="error_VcardParseFailure">Холбоо барих мэдээлэл буруу форматлагдсан байна.</string>
 
-    <string name="help_find">Бусадтай солилцох дүн таны хайсан нэрийг тогтоохын тулд энэ дэлгэцийн ашигла. Дуусахдаа \'Үүнийг\' товчлуур дээр дар.</string>
-    <string name="help_home">Биеийн өгөгдөл солилцох тулд бүх хэрэглэгчид ойр, эсвэл утсаар эсэхийг шалгаарай. \' Эхлэх Биржийн \' товчийг л шалгаж холбоо барих мэдээлэл солилцох болно.</string>
-    <string name="help_identity_menu">\n\nТа мөн нэрээр товчийг илрүүлэх замаар дэлгэцэн дээр таны биеийн тухай хувийн мэдээллийг өөрчилж болно. Энэ нь та \'Засах \' дүн таны хайсан холбоо, харилцаа холбоо \'шинэ үүсгэх \', эсвэл холбоо \' Өөр нэг ашигла \' боломж олгох цэсийг үзүүлэх болно.</string>
+    <string name="help_find">Бусадтай солилцох дүн таны хайсан нэрийг тогтоохын тулд энэ дэлгэцийн ашигла. Дуусахдаа Үүнийг товчлуур дээр дар.</string>
+    <string name="help_home">Биеийн өгөгдөл солилцох тулд бүх хэрэглэгчид ойр, эсвэл утсаар эсэхийг шалгаарай. Эхлэх Валютын товчийг л шалгаж холбоо барих мэдээлэл солилцох болно.</string>
+    <string name="help_identity_menu">\n\n\nТа мөн нэрээр товчийг илрүүлэх замаар дэлгэцэн дээр таны биеийн тухай хувийн мэдээллийг өөрчилж болно. Энэ нь та холбоо засварлах боломж олгох цэс харуулагддаг шинэ холбоо бий болгох, эсвэл өөр нэг холбоо ашиглах болно.</string>
     <string name="help_Messages">Энэхүү дэлгэц бүхий л өнгөрсөн зурвас, одоо ч гэсэн татаж авах боломжтой байгаа хавсралтуудыг харуулна.</string>
-    <string name="help_passphrase">Таны нэвтрэх нь програм руу нэвтрэх Хэрэв энэ дэлгэц ашиглах хэрэгтэй.</string>
+    <string name="help_passphrase">Таны нэвтрэх нь програм руу нэвтрэх Хэрэв энэ дэлгэц ашиглах хэрэгтэй. Хэрэв та өөрийн нэвтрэх үгийг мартчихсан бол та үгээ мартсан нэвтрэх үгнүүдийг дахин дахин түншээд шинэ нэвтрэх үгээр хамгаалагдсан шинэ түлхүүрийг үүсгэж болох вэ? товчийг дар. Олон товчлууруудын хооронд шилжихийн тулд хэрэглэгчийн нэр дээр дар.</string>
     <string name="help_PickRecip">SafeSlinger товчлуур бүхий Холбоо барих таны зурвас илгээх нэгийг сонгож, энд ирнэ.</string>
-    <string name="help_save">Дуусаад протокол солилцож биеийн өгөгдлийн жагсаалт илчлэх болно. Хэрэв та \' Импорт \' хадгалж, дарж хүссэн харилцахаа сонго.</string>
-    <string name="help_SecureIntroduction">Энэхүү дэлгэц та аюулгүйгээр бие биедээ өөрсдийн түлхүүрүүдийг илгээхийн тулд өмнө нь түлхүүрийг slung байсан хоёр хүн сонгох боломжийг олгодог. Үед бэлэн Зүгээр л \' нэвтрүүлэх \' -г дар.</string>
-    <string name="help_Send">Энэхүү дэлгэц Хэрэв та зарим өгөгдлийг болон илгээхийн тулд хүлээн авагчийг сонгох боломжийг олгодог. Үед бэлэн Зүгээр л \' Илгээх \' -г дар.</string>
+    <string name="help_save">Дуусаад протокол солилцож биеийн өгөгдлийн жагсаалт илчлэх болно. Хэрэв та Анхааруулга хадгалж, дарж хүссэн харилцахыг сонго.</string>
+    <string name="help_SecureIntroduction">Энэхүү дэлгэц та аюулгүйгээр бие биедээ өөрсдийн түлхүүрүүдийг илгээхийн тулд өмнө нь түлхүүрийг slung байсан хоёр хүн сонгох боломжийг олгодог. Ердөө л үед бэлэн нэвтрүүлэх дээр дарах хэрэгтэй.</string>
+    <string name="help_Send">Энэхүү дэлгэц Хэрэв та зарим өгөгдлийг болон илгээхийн тулд хүлээн авагчийг сонгох боломжийг олгодог. Зүгээр л бэлэн болсон үед илгээх дар.</string>
 
     <string name="iOS_contactError">Холбоо барих зөвшөөрөл шаардлагатай. Холбоо барих зөвшөөрөл идэвхжүүлэхийн тулд Тагийн Settings явах уу.</string>
     <string name="iOS_errorpushtoken">Түлхэх бүртгэл байхгүй байна.</string>
     <string name="iOS_notificationError1">Мэдэгдэл зөвшөөрөл шаардлагатай. Мэдэгдэл зөвшөөрөл идэвхжүүлэхийн тулд Тагийн Settings явах уу.</string>
     <string name="iOS_notificationError2">%s зөвшөөрөл шаардлагатай. Мэдэгдэл зөвшөөрөл идэвхжүүлэхийн тулд Тагийн Settings явах уу.</string>
-    <string name="iOS_oldOSWarn">SafeSlinger Тагийн 5.x төхөөрөмжүүдийн хувьд оновчтой биш. SafeSlinger IOS 6 буюу түүнээс дээш байх шаардлагатай.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger Тагийн 5.x төхөөрөмжүүдийн хувьд оновчтой биш. SafeSlinger iOS 6 буюу түүнээс дээш байх шаардлагатай.</string>
 
     <string name="label_ago">%s өмнө</string>
     <string name="label_backupCompleteDate">Дууссан Сүүлд Нөөцлөх</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Төхөөрөмжийн:</string>
     <string name="label_DeviceInSendOnlyMode">Илгээх зөвхөн горим</string>
     <string name="label_DisabledExchSourceKeyChange">Таны гол өөрчлөгдсөн байна: Sling Товчнууд дахин.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Зурвас илгээх эхлэхийн тулд аль аль нь хэрэглэгчдэд нэг цагт Sling түлхүүрүүд ёстой.</string>
     <string name="label_Draft">DRAFT</string>
     <string name="label_EnabledKeyFormatDeprecated">Түлхүүр хэлбэр нь хуучирсан: Sling Товчнууд дахин.</string>
     <string name="label_exchanged">солилцов</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">Файлын нэр</string>
     <string name="label_FindInstruct">Та нэрээ оруулна уу Та найдвартай дамжуулах үед харж бусдыг хүсвэл:</string>
     <string name="label_FirstName">Нэр</string>
-    <string name="label_Home">Нэмэх эсвэл устгах холбоо барих мэдээллийг та хуваалцахыг хүссэн эд зүйлсийг шалгаж холбох таны нэр дээр дар \'Exchange эхлэх\' Бусад хүмүүс солилцоход бэлэн байгаа үед:</string>
+    <string name="label_Home">Нэмэх эсвэл устгах холбоо барих мэдээллийг та хуваалцахыг хүссэн эд зүйлсийг шалгаж, бусад нь солилцох бэлэн байгаа үед Exchange эхлэх чагнахыг дүн таны хайсан нэр дээр дар:</string>
     <string name="label_hometag">Нүүр хуудас</string>
     <string name="label_hours">%d цаг</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud идэвхжүүлсэн байна. Дуусахдаа \' Үүнийг \' товчлуур дээр дар.</string>
-    <string name="label_InstNoMessages">Зурвас алга. Та Нүүр цэс \' зурвас зохиох \'товчийг нэг зурвас илгээж болно.</string>
-    <string name="label_InstNoMessagesAndroid">Зурвас алга. Та \' зохиох \' таб -аас зурвас илгээж болно.</string>
-    <string name="label_InstNoRecipients">Ямар ч хүлээн авагч. Ойролцоох нэг SafeSlinger хэрэглэгч хай, түлхүүрийг хуваалцах \' Sling түлхүүрүүд \' табыг барих.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud идэвхжүүлсэн байна. Дуусахдаа Үүнийг товчлуур дээр дар.</string>
+    <string name="label_InstNoMessages">Зурвас алга. Та Нүүр цэс зохиох зурвас илгээх товчийг нэг зурвас илгээж болно.</string>
+    <string name="label_InstNoMessagesAndroid">Зурвас алга. Та Зохиох таб-аас зурвас илгээж болно.</string>
+    <string name="label_InstNoRecipients">Хүлээн авагч нэмэхийн тулд та эхлээд тэр үед нэг буюу түүнээс дээш бусад хэрэглэгчидтэй Sling Товчнууд ёстой. Та бас цэснээс нь Sling Түлхүүрүүд холбоо барих урилга илгээж болно.</string>
     <string name="label_InstNoSharedFile">NO хуваалцсан файл. Хуваалцсан Хавтсанд ITunes болон татах файлууд нь холбо.</string>
     <string name="label_InstRecipients">Нь зурвас илгээхийн тулд хүлээн авагч Pick:</string>
     <string name="label_InstSendInvite">Аюулгүй нэвтрүүлэх хүлээн авах сонгох:</string>
     <string name="label_InstSharedFile">Хавсаргах файлыг сонгоно:</string>
     <string name="label_introduced">танилцуулав</string>
+    <string name="label_inviteSent">Урилгаар</string>
     <string name="label_Key">Жич:</string>
     <string name="label_LastName">Сүүлд нэр</string>
     <string name="label_Me">Намайг</string>
     <string name="label_messageIntroduceNameToYou">Би та %s нэвтрүүлэх хэлмээр байна.</string>
+    <string name="label_messageInviteInstall">SafeSlinger апп: %s</string>
+    <string name="label_messageInviteSetupInst">Тохиргоон аюулгүй зурвасын холболтыг хийхийн тулд бид хангасан буюу утасны тус бүр өөр нэг цагт, дараа нь Sling түлхүүрүүд зөвхөн нэг удаа холболтыг шалгах боломжтой.</string>
+    <string name="label_messageInviteStartMsg">Бид нээлттэй эх SafeSlinger Iphone, эсвэл Андройд апп нь аюулгүй зурвас илгээх эхлэх үү?</string>
     <string name="label_minutes">%d минут</string>
     <string name="label_mobiletag">Гар утас</string>
     <string name="label_MostRecentOnly">Хамгийн сүүлийн үеийн зөвхөн</string>
@@ -208,9 +219,9 @@
     <string name="label_ReportedInactive">Идэвхгүй %s мэдээлсэн байна.</string>
     <string name="label_restoreCompleteDate">Сүүлд Дууссан сэргээх</string>
     <string name="label_SafeSlingerBackupDelayed">Хойшлогдож SafeSlinger нөөц</string>
-    <string name="label_safeslingered">( SafeSlinger Шууд бирж)</string>
+    <string name="label_safeslingered">(SafeSlinger Шууд бирж)</string>
     <string name="label_SaveAccount">Данс ивээх</string>
-    <string name="label_SaveInstruct">Найдвартай харилцаа холбоо аврахын тулд \'импортын\' холбох, дараа нь та нар номонд хаяг шинэчлэхийг хүсвэл харилцах шалгана:</string>
+    <string name="label_SaveInstruct">Та өөрийн хаяг номонд шинэчлэхийг хүсэж холбоо шалга, дараа нь аюулгүй харилцахыг хэмнэх Анхааруулга холбох:</string>
     <string name="label_seconds">%d секунд</string>
     <string name="label_SelectRecip">Сонгох Хүлээн авагч</string>
     <string name="label_sendErrorData">Алдааны өгөгдлийг илгээдэг</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">3-р алхам</string>
     <string name="label_step_4">4-р алхам</string>
     <string name="label_step_5">5-р алхам</string>
+    <string name="label_summary_auto_attach_retrieval">СБС үед автоматаар зурвас хавсралтуудыг татаж авах</string>
+    <string name="label_summary_auto_decrypt">СБС үед автоматаар зурвас буцааж шифрлэнэ</string>
+    <string name="label_summary_remind_backup_delay">Нөөцлөх офлайн үед мэдэгдэл хүлээн авах.</string>
+    <string name="label_summary_show_tutorial">Sling түлхүүрүүдийг нь attemping өмнө заавраас үзүүл.</string>
     <string name="label_TapToDecryptFile">Файлыг буцааж шифрлэнэ ерген</string>
     <string name="label_TapToDecryptMessage">Буцаах дар</string>
     <string name="label_TapToDownloadFile">Файлыг татаж авахын тулд дар</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Файлыг онгойлгохдоо дээр дар</string>
     <string name="label_TapToResumeDraft">Зурвас төслийг үргэлжлүүлэн дээр дар</string>
     <string name="label_TapToSendCredentialUpdate">Товш болон үгийнхээ итгэмжлэлийн шинэчлэлтийг илгээхийн тулд удаан дар.</string>
+    <string name="label_TapToSlingKeys">Sling түлхүүрүүдийг нь дар.</string>
     <string name="label_targetAccountLabel">Холбоо барих бүртгэл</string>
-    <string name="label_TouchToConfigureBackupSettings">Та сонголтоороо Тагийн Settings -д SafeSlinger iCloud нөөц боломж олгох болно. Дуусахдаа \' Үүнийг \' товчлуур дээр дар.</string>
+    <string name="label_TouchToConfigureBackupSettings">Та сонголтоороо Тагийн Settings-д SafeSlinger iCloud нөөц боломж олгох болно. Дуусахдаа Үүнийг товчлуур дээр дар.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Нөөц тохиргоог хийх хүр.</string>
     <string name="label_TouchToConfigureCacheTimeout">Кэш хугацаа тохиргоог хийх хүр.</string>
     <string name="label_undefinedTypeLabel">Үл мэдэгдэх</string>
     <string name="label_UnknownSender">Шифрлэгдсэн Sender</string>
     <string name="label_UserName">Хэрэглэгчийн нэр</string>
+    <string name="label_WarnForgotPassphrase">Таны өгөгдлийг хамгаалах, нөхөн сэргээх SafeSlinger хаана ч байсан гэсэн таны нэвтрэх үгийг хадгалах биш юм. Та зөвхөн хүлээн авагч, ижил нэвтрэх үгийг нэвтрэх дагуу байгуулагдсан зурвас руу нэвтэрч болно. Гэсэн хэдий ч, та шинэ түлхүүр болон нэвтрэх үгийг үүсгэх болно дараа нь хүлээн авагч нь Sling Товчнууд давтан хийнэ.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Дараах түлхүүрүүд устгагдах болно:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Та нарынхаас илүү ямар ч илүү сүүлийн үеийн түлхүүрүүд байдаг.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Зөвхөн түлхүүрүүд саяхнаас %s дээр үүсгэсэн танайх, устаж болно-ээс үүсгэсэн юм.</string>
     <string name="label_worktag">Ажил</string>
 
     <string name="menu_About">Тухай</string>
+    <string name="menu_auto_attach_retrieval">Хавсралтуудыг Auto-Сэргээх</string>
+    <string name="menu_auto_decrypt">Авто-буцааж шифрлэнэ</string>
     <string name="menu_Change">Өөрчлөлтийн</string>
     <string name="menu_ChangePassphrase">Өөрчлөлтийн нэвтрэх үгнүүдийг дахин дахин</string>
+    <string name="menu_ContactInviteEmail">И-мэйл хаяг</string>
+    <string name="menu_ContactInviteSms">Текст (SMS/MMS)</string>
     <string name="menu_CreateNew">Шинээр бий болгох</string>
     <string name="menu_delete">Устгах</string>
-    <string name="menu_deleteThread">Thread \' %s \' Устгах</string>
+    <string name="menu_deleteThread">Thread %s устгах</string>
     <string name="menu_Details">Дэлгэрэнгүйг харах</string>
     <string name="menu_DownloadDirectory">Сан нь татаж авах</string>
     <string name="menu_Edit">Засах</string>
+    <string name="menu_EditContact">Засах Холбоо барих</string>
+    <string name="menu_EditName">Засах нэр</string>
     <string name="menu_FileManager">Файлын менежер</string>
+    <string name="menu_ForgotPassphrase">Нэвтрэх үгнүүдийг дахин дахин үгээ мартсан?</string>
     <string name="menu_Help">Тусал</string>
     <string name="menu_Introduction">Танилцуулга</string>
     <string name="menu_License">Лиценз</string>
     <string name="menu_Logout">Гарах</string>
+    <string name="menu_ManagePassphrases">Нэвтрэх үгнүүдийг Manage</string>
+    <string name="menu_message_font_size">Зурвас Фонтын хэмжээ</string>
     <string name="menu_messageCopyText">Хуулбар Текст</string>
     <string name="menu_messageForward">Форвард</string>
     <string name="menu_Remove">Remove</string>
-    <string name="menu_SelectShareApp">Програмаа илгээх</string>
+    <string name="menu_restore_default">Үндсэн Тохиргоо сэргээх</string>
+    <string name="menu_ringtone">Дууны</string>
+    <string name="menu_SelectShareApp">Холбоо барих урилга нэмэх</string>
     <string name="menu_sendFeedback">Санал хүсэлт илгээх</string>
     <string name="menu_SendUpdate">ШИНЭ МЭДЭЭ илгээх</string>
     <string name="menu_Settings">Тохиргоо</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Sling түлхүүрүүд</string>
     <string name="menu_TagListMessages">Мессеж</string>
     <string name="menu_UseAnother">Өөр нэг ашиглах</string>
-    <string name="menu_UseContactPerson">Харилцах \'%s \'ашиглах</string>
+    <string name="menu_UseContactPerson">Холбоо барих %s ашиглах</string>
     <string name="menu_UseNoContact">Ашиглах Нэр Зөвхөн</string>
-    <string name="menu_UseProfilePerson">Хувийн \'%s \'ашиглах</string>
+    <string name="menu_UseProfilePerson">Хувийн %s ашиглах</string>
+    <string name="menu_vibrate">Доргих</string>
 
     <string name="prog_decrypting">буцааж тайлахаас…</string>
     <string name="prog_encrypting">шифрлэж…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Нарийвчилсан</string>
     <string name="section_backup">Нөөцлөх</string>
     <string name="section_general">Ерөнхий</string>
+    <string name="section_notification">Мэдэгдэл</string>
+    <string name="section_storage">Хадгалалт</string>
 
     <string name="state_BackupRestored">Нөөцлөх сэргээсэн.</string>
     <string name="state_FileDeleted">Deleted файл %s.</string>
     <string name="state_FileSent">Илгээсэн зурвас.</string>
+    <string name="state_InvitationAdded">Урилга нэмсэн.</string>
     <string name="state_MessageSavedAsDraft">Төсөл байдлаар хадгалсан зурвас.</string>
     <string name="state_MessagesDeleted">Устгагдсан %d мэдэгдлүүд.</string>
     <string name="state_PassphraseUpdated">Нэвтрэх үгнүүдийг дахин дахин шинэчилсэн.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s харилцах оруулсан.</string>
     <string name="state_TextCopiedToClipboard">Текст Clipboard хуулсан.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger, биеэр буюу утсаар, амархан биеийн өгөгдөл солилцох зорилготой нэвтрэлт танилт, хувийн болон бүрэн бүтэн байна. Хэрэв та хуваалцах хүн бүр зурвас илгээх нь аюулгүй төгсгөл-тегсгел-сувгийг бий болгож байна.\n\nШинж Чанар:\n- Амархан бусадтай холбоо барих мэдээллийг солилцох\n- Аюулгүйгээр сур текст, зураг, ямар нэг зүйл!\n- Хүчтэй криптограф таны мэдээллийг хамгаалах\n\nи-мэйл: %2$s\nвэб: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger хувийн нэвтрэлт танилт, биеэр буюу утсаар, амархан биеийн өгөгдөл солилцох зориулалттай, бүрэн бүтэн байна. Хэрэв та хуваалцах хүн бүр зурвас илгээх нь аюулгүй төгсгөл-тегсгел-сувгийг бий болгож байна.\n\nонцлог:\n-Хялбараар бусад\n-аюулгүйгээр сур ном судар, фото зураг, ямар ч үед холбоо барих мэдээлэл солилцох! %2$s\nвэб: %3$s\n-Хүчтэй криптограф таны мэдээлэл\n\nи-мэйл хамгаалдаг</string>
     <string name="text_KeywordExchange">Бирж</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">Түлхүүр</string>
@@ -309,19 +344,20 @@
     <string name="text_KeywordSecurity">Аюулгүй байдал</string>
     <string name="text_LanguagesProvidedBy">Өгсөн Хэл:</string>
     <string name="text_RelatedSearchTerms">Холбогдох нөхцөл:</string>
-    <string name="text_Requirements">Тавигдах Шаардлага:\n1. 2 төхөөрөмжүүдийн хамгийн багадаа суусан байх ёстой.\n2. Интернет холболт идэвхтэй байх ёстой.</string>
+    <string name="text_Requirements">Тавигдах шаардлага:.\n1 2 төхөөрөмжүүд нь доод тал нь суулгасан байх ёстой.\n2. Интернет холболт идэвхтэй байх ёстой.</string>
     <string name="text_SourceCodeRepo">нээлттэй эх сурвалж: %s</string>
-    <string name="text_WhatsNew">- Тогтвортой байдлын засварууд.</string>
+    <string name="text_WhatsNew">-Тогтвортой байдлын засварладаг.</string>
 
     <string name="title_About">Тухай</string>
     <string name="title_camera">Камер</string>
     <string name="title_ChooseDirectory">Санг сонгоно</string>
     <string name="title_ChooseFileLoad">Таны Хавсралт сонгох</string>
-    <string name="title_comments">Тайлбар / Асуулт</string>
+    <string name="title_comments">Тайлбар/Асуулт</string>
     <string name="title_Error">Алдааны</string>
     <string name="title_ExchangeWalkthrough">Sling түлхүүрүүд Туслах</string>
     <string name="title_FileOptions">Хавсралт хувилбарууд</string>
     <string name="title_find">Тохируулга</string>
+    <string name="title_font_size">Нь фонтын хэмжээг сонгох</string>
     <string name="title_home">Бирж эхлэх</string>
     <string name="title_HomePanel">Нүүр хуудас</string>
     <string name="title_MessageDetail">Зурвас илгээх</string>
@@ -336,7 +372,7 @@
     <string name="title_Question">Асуулт</string>
     <string name="title_RecipientDetail">Хүлээн авагч нарийвчилсан</string>
     <string name="title_save">Төгсгөл бирж</string>
-    <string name="title_SaveFileAs">Файл болгон хадгалж,</string>
+    <string name="title_SaveFileAs">Файл болгон хадгалж</string>
     <string name="title_SecureIntroduction">Аюулгүй танилцуулга</string>
     <string name="title_SecureIntroductionInvite">Танилцуулга урилга Secure!</string>
     <string name="title_SelectSource">Сонголт илгээх:</string>

@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">ನೀವು ನುಡಿಗಟ್ಟುಗಳು ವ್ಯತ್ಯಾಸವನ್ನು ವರದಿ ಮಾಡಿದ್ದಾರೆ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
     <string name="error_MinUsersRequired">%d ಸದಸ್ಯರು ಕನಿಷ್ಠ ದಶಮಾಂಶ ವಿನಿಮಯ ಅಗತ್ಯವಿದೆ.</string>
     <string name="error_MoreDataThanUsers">ವಿನಿಮಯ ಕಂಡುಬರುವ ಅನಿರೀಕ್ಷಿತ ದಶಮಾಂಶ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
+    <string name="error_NoDataToExchange">ವಿನಿಮಯ ಅಗತ್ಯವಿದೆ ಡೇಟಾ ಕಾಣೆಯಾಗಿದೆ.</string>
     <string name="error_NoWordListSelected">ನೀವು ಮುಂದುವರೆಯುವುದಕ್ಕೆ ಮುಂಚಿತವಾಗಿ ನುಡಿಗಟ್ಟುಗಳು ಒಂದು ಆಯ್ಕೆ ಮಾಡಬೇಕು.</string>
     <string name="error_OtherGroupCommitDiffer">ಯಾರೋ ನುಡಿಗಟ್ಟುಗಳು ವ್ಯತ್ಯಾಸವನ್ನು ವರದಿ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
     <string name="error_OutOfMemoryError">ಮೆಮೊರಿ ಈ ಕಾರ್ಯವನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ತುಂಬಾ ಕಡಿಮೆ.</string>
-    <string name="error_ServerAppMessage">ಸರ್ವರ್ ಸಂದೇಶ: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">ಸರ್ವರ್ ಸಂದೇಶ: \'%s\'</string>
+    <string name="error_ServerAppMessage">ಸರ್ವರ್ ಸಂದೇಶ: %s</string>
+    <string name="error_ServerAppMessageCStr">ಸರ್ವರ್ ಸಂದೇಶ: %s</string>
     <string name="error_ServerNotResponding">ಸರ್ವರ್ ಯಾವುದೇ ಪ್ರತಿಕ್ರಿಯೆ.</string>
     <string name="error_TimeoutWaitingForAllMembers">ಕೆಲವು ಗುಂಪಿನ ಸದಸ್ಯರು ದಶಮಾಂಶ ಸೇರಿಸಲು ಕಾಯುತ್ತಿದೆ ಮುಗಿಯಿತು.</string>
     <string name="error_WebCancelledByUser">ಬಳಕೆದಾರ ಸರ್ವರ್ ಮನವಿಯನ್ನು ತಳ್ಳಿಹಾಕಿದರು.</string>
 
-    <string name="help_size">\'ಸರಿ\' ಒಟ್ಟಿಗೆ ದಶಮಾಂಶ ವಿನಿಮಯ ಮತ್ತು ಒತ್ತಿ ಪ್ರಯತ್ನಿಸುತ್ತಿರುವ ಜನರ ಸಂಖ್ಯೆ ಮಾಡಿ.</string>
-    <string name="help_userid">ಈ ಪರದೆಯ ಮೇಲೆ ಈ ಸಂಖ್ಯೆ ಬಳಕೆದಾರರಿಗೆ ಒಂದು ಅನನ್ಯ ಗುಂಪು ರಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಸಂಖ್ಯೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ \'ಸರಿ\' ಪರದೆಗಳು, ನಂತರ ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಅದೇ ಕಡಿಮೆ ಸಂಖ್ಯೆಯ ಒತ್ತಿ ಮಾಡಬೇಕು \'.</string>
-    <string name="help_verify">ಈಗ, ನೀವು ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಈ 3 ಪದ ನುಡಿಗಟ್ಟುಗಳು ಒಂದು ಹೊಂದಿಕೆಯಾಗಬೇಕು. ಪ್ರತಿ ಬಳಕೆದಾರ ಅದೇ ಸಾಮಾನ್ಯ ನುಡಿಗಟ್ಟು, ಮತ್ತು ಪತ್ರಿಕಾ \'ಮುಂದಕ್ಕೆ\' ಆಯ್ಕೆ ಮಾಡಬೇಕು.</string>
+    <string name="help_size">ಒಟ್ಟಿಗೆ ಮತ್ತು ಸರಿ ಒತ್ತಿರಿ ದಶಮಾಂಶ ವಿನಿಮಯ ಪ್ರಯತ್ನಿಸುತ್ತಿರುವ ಜನರ ಸಂಖ್ಯೆ ಮಾಡಿ.</string>
+    <string name="help_userid">ಈ ಪರದೆಯ ಮೇಲೆ ಈ ಸಂಖ್ಯೆ ಬಳಕೆದಾರರಿಗೆ ಒಂದು ಅನನ್ಯ ಗುಂಪು ರಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ \'ಪರದೆಯ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ, ನಂತರ ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಅದೇ ಕಡಿಮೆ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ ಮತ್ತು ಸರಿ ಒತ್ತಬೇಕು.</string>
+    <string name="help_verify">ಈಗ, ನೀವು ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಈ 3 ಪದ ನುಡಿಗಟ್ಟುಗಳು ಒಂದು ಹೊಂದಿಕೆಯಾಗಬೇಕು. ಪ್ರತಿ ಬಳಕೆದಾರ ಅದೇ ಸಾಮಾನ್ಯ ನುಡಿಗಟ್ಟು ಆಯ್ಕೆ, ಮತ್ತು ಮುಂದಿನ ಒತ್ತಿ ಮಾಡಬೇಕು.</string>
 
+    <string name="label_CompareScreensNDevices">%s ಸಾಧನಗಳಲ್ಲಿ ಪರದೆಯ ಹೋಲಿಸಿ.</string>
     <string name="label_NumericModeHint">ಅಲ್ಲದ ಇಂಗ್ಲೀಷ್</string>
     <string name="label_PromptInstruct">ಈ ಸಂಖ್ಯೆ ಬಳಕೆದಾರರಿಗೆ ಒಂದು ಅನನ್ಯ ಗುಂಪು ರಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ಹೋಲಿಸಿ, ಮತ್ತು ನಂತರ ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಅತ್ಯಂತ ಕಡಿಮೆ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ.</string>
     <string name="label_ReceivedNItems">%d ಐಟಂಗಳನ್ನು ಪಡೆದರು</string>
     <string name="label_UserIdHint">ಕಡಿಮೆ</string>
     <string name="label_VerifyInstruct">ಎಲ್ಲಾ ದೂರವಾಣಿಗಳು 3 ಪದ ನುಡಿಗಟ್ಟುಗಳು ಒಂದು ಹೊಂದಿಕೆಯಾಗಬೇಕು. ಹೋಲಿಸಿ, ಮತ್ತು ನಂತರ ಹೊಂದಿಕೆ ನುಡಿಗಟ್ಟು ಆಯ್ಕೆ.</string>
+
+    <string name="lib_name">SafeSlinger ಎಕ್ಸ್ಚೇಂಜ್</string>
 
     <string name="prog_CollectingOthersCommitVerify">ಎಲ್ಲಾ ಸದಸ್ಯರು ಪರಿಶೀಲನೆ ಕಾಯುತ್ತಿದೆ…</string>
     <string name="prog_CollectingOthersItems">ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಸೇರಲು ಕಾಯುತ್ತಿದೆ…</string>

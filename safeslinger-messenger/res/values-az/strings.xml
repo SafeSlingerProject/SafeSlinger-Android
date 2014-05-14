@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Ilə link dəvət göndərmək…</string>
+    <string name="action_NewUserRequest">Bir Sling Keys əlaqə dəvəti vasitəsilə əlavə edin…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Ləğv etmək</string>
     <string name="btn_Close">Yaxın</string>
     <string name="btn_Continue">Davam etdirmək</string>
+    <string name="btn_CreateNewKey">Yeni Açar Yarat</string>
+    <string name="btn_DeleteKeys">Açarları silmək</string>
     <string name="btn_discard">Rədd etmək</string>
     <string name="btn_Done">Işlənmiş</string>
     <string name="btn_Exit">Çıxış</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 saat</string>
     <string name="choice_auto_storage">Default Storage</string>
     <string name="choice_external_storage">Xarici Storage</string>
+    <string name="choice_font_large">Böyük</string>
+    <string name="choice_font_medium">Mühit</string>
+    <string name="choice_font_micro">Çox Kiçik</string>
+    <string name="choice_font_small">Kiçik</string>
     <string name="choice_internal_storage">Daxili Storage</string>
     <string name="choice_nolimit">No Limit</string>
     <string name="choice_SaveDirectory">Save Directory</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Mikrofon icazə tələb olunur. Mikrofon icazələrin imkan iOS Ayarlar getmək edin.</string>
     <string name="error_BackupNotFound">Bərpa No backup.</string>
     <string name="error_BackupNotSupportedDevice">Device backup bərpa bilmir.</string>
-    <string name="error_BadCopyProtectUpgrade">Android 4.1 bir səhv üçün, sil və SafeSlinger yeniden olacaq.</string>
+    <string name="error_BadCopyProtectUpgrade">Android 4.1 bir səhv üçün, SafeSlinger aradan qaldırılması və yeniden olacaq.</string>
     <string name="error_C2DMRegAccountMissing">A Google hesabı tələb olunur. Hesab meneceri açmaq və Google hesabı əlavə edin.</string>
     <string name="error_C2DMRegAuthenticationFailed">Daxil olmaq qeydiyyat təsdiq deyil, sonra əl yeniden keçir.</string>
     <string name="error_C2DMRegInvalidSender">Qeydiyyat bu versiyası üçün mövcud deyil, yenilənmiş versiyası üçün kontrol edin.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Bu cihaz üçün mesaj kvota ötüb. Sonra yeniden keçir.</string>
     <string name="error_PushMsgServiceFail">Notification xidmət bu dəfə mövcud deyil. Mesajı göndərmək üçün cəhd edin.</string>
     <string name="error_RecoderError">Audio recorder hazırlamaq bilməz.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">, Eyni zamanda başqa bir telefon ilə \' Sling Keys \' başlamaq üçün.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">, Eyni zamanda başqa bir telefon ilə Sling Keys başlamaq üçün.</string>
     <string name="error_selectDataToSend">Siz eki və ya göndərmək üçün mətn mesajı lazımdır.</string>
     <string name="error_ShareFileDelError">Paylaşılan faylını aradan qaldırılması bilməz.</string>
     <string name="error_UnableFindPubKey">Kripto provayderi xüsusi açarı ictimai düyməsini uyğun bilmir.</string>
@@ -132,19 +138,19 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger səhv, yenidən başladın edin.</string>
     <string name="error_VcardParseFailure">Əlaqə data səhv biçimlendirilmiş edilib.</string>
 
-    <string name="help_find">Başqaları ilə mübadiləsi üçün adını təyin etmək üçün bu ekran istifadə edin. Başa zaman \'Bitti\' düyməsini dokunun.</string>
-    <string name="help_home">Şəxsiyyət data mübadiləsi, bütün istifadəçilər yaxın və ya telefon təmin edir. The \' başlayın Birjası \' düyməsini yalnız yoxlanılır əlaqə məlumatları mübadiləsi aparacaqlar.</string>
-    <string name="help_identity_menu">\n\nSiz həmçinin adı ilə düyməsini tıqqıltı ilə bu ekranda şəxsiyyət haqqında şəxsi məlumatları dəyişə bilər. Bu \'Düzenle\' əlaqə, əlaqə \'Yeni yarat \', və ya əlaqə \' Digər istifadə \' üçün imkan bir menyu göstərilir.</string>
+    <string name="help_find">Başqaları ilə mübadiləsi üçün adını təyin etmək üçün bu ekran istifadə edin. Başa zaman Done düyməsini dokunun.</string>
+    <string name="help_home">Şəxsiyyət data mübadiləsi, bütün istifadəçilər yaxın və ya telefon təmin edir. Begin Exchange düyməsini yalnız yoxlanılır əlaqə məlumatları mübadiləsi aparacaqlar.</string>
+    <string name="help_identity_menu">\n\n\nSiz həmçinin adı ilə düyməsini tıqqıltı ilə bu ekranda şəxsiyyət haqqında şəxsi məlumatları dəyişə bilər. Bu, sizin əlaqə redaktə etmək üçün imkan verən menyu keçirmək New əlaqə yaradın, və ya başqa bir əlaqə istifadə edin.</string>
     <string name="help_Messages">Bu ekran bütün keçmiş messages, və hələ də download üçün mövcuddur ki, əlavə göstərilir.</string>
-    <string name="help_passphrase">Sizin passphrase ilə ərizə daxil bu ekran istifadə edin.</string>
+    <string name="help_passphrase">Sizin passphrase ilə ərizə daxil bu ekran istifadə edin. Siz passphrase unutdun varsa, siz unutdunuz Passphrase tıqqıltı ilə yeni bir passphrase tərəfindən qorunur yeni bir əsas yarada bilər? düyməsini basın. Çox düymələri arasında keçid üçün istifadəçi adı dokunun.</string>
     <string name="help_PickRecip">SafeSlinger düymələri ilə əlaqə üçün mesaj göndərmək üçün birini seçin, burada göstərilir.</string>
-    <string name="help_save">Başa zaman, protokol mübadiləsi şəxsiyyət məlumatların siyahısını aşkar edəcək. Siz \'İdxal \' saxlamaq və basın istədiyiniz kontaktlar seçin.</string>
-    <string name="help_SecureIntroduction">Bu ekran siz təhlükəsiz bir-birinə onların açarları göndərmək üçün əvvəl düymələri slung var iki nəfər seçin imkan verir. Zaman hazır sadəcə \' tətbiq \'düyməsini basın.</string>
-    <string name="help_Send">Bu ekran bəzi məlumat və göndərmək üçün qəbul edən seçin imkan verir. Zaman sadəcə hazır \'Gönder \' düyməsini basın.</string>
+    <string name="help_save">Başa zaman, protokol mübadiləsi şəxsiyyət məlumatların siyahısını aşkar edəcək. Siz İdxal saxlamaq və basın istədiyiniz kontaktlar seçin.</string>
+    <string name="help_SecureIntroduction">Bu ekran siz təhlükəsiz bir-birinə onların açarları göndərmək üçün əvvəl düymələri slung var iki nəfər seçin imkan verir. Sadəcə zaman hazır tətbiq basın.</string>
+    <string name="help_Send">Bu ekran bəzi məlumat və göndərmək üçün qəbul edən seçin imkan verir. Sadəcə hazır olduqda göndər düyməsini basın.</string>
 
     <string name="iOS_contactError">Əlaqə icazə tələb olunur. Əlaqə icazələrin imkan iOS Ayarlar getmək edin.</string>
     <string name="iOS_errorpushtoken">Push qeydiyyat yoxdur.</string>
-    <string name="iOS_notificationError1">Sayt haqda məlumat icazə tələb olunur. Bildirişlər icazələrin imkan iOS Ayarlar getmək edin.</string>
+    <string name="iOS_notificationError1">Bildirişlər icazə tələb olunur. Bildirişlər icazələrin imkan iOS Ayarlar getmək edin.</string>
     <string name="iOS_notificationError2">%s icazə tələb olunur. Bildirişlər icazələrin imkan iOS Ayarlar getmək edin.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x cihazlar üçün optimize deyil. SafeSlinger iOS 6 və ya daha yüksək tələb edir.</string>
 
@@ -159,6 +165,7 @@
     <string name="label_Device">Device:</string>
     <string name="label_DeviceInSendOnlyMode">Göndər-yalnız rejimi</string>
     <string name="label_DisabledExchSourceKeyChange">Sizin əsas dəyişdi: Sling Keys yenidən.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Mesajlaşma başlamaq üçün, həm də istifadəçilər eyni zamanda Sling Keys lazımdır.</string>
     <string name="label_Draft">DRAFT</string>
     <string name="label_EnabledKeyFormatDeprecated">Açar format deprecated: Sling Keys yenidən.</string>
     <string name="label_exchanged">mübadiləsi</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">Fayl adı</string>
     <string name="label_FindInstruct">Adını daxil edin təhlükəsiz ünsiyyət zaman görmək üçün başqaları arzu:</string>
     <string name="label_FirstName">Ad</string>
-    <string name="label_Home">Əlavə və ya aradan qaldırılması əlaqə məlumatları, siz bölüşmək istədiyiniz maddələr yoxlamaq və kran üçün adı dokunun \'mübadiləsi başlayın digərlərinin mübadiləsi üçün hazır olduqda:</string>
+    <string name="label_Home">Əlavə və ya aradan qaldırılması əlaqə məlumatları, siz bölüşmək istədiyiniz maddələr yoxlamaq və başqaları mübadiləsi üçün hazır olduqda mübadiləsi başlayın kran üçün adı dokunun:</string>
     <string name="label_hometag">Ev</string>
     <string name="label_hours">%d saat</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud effektiv. Başa zaman \'Bitti\' düyməsini dokunun.</string>
-    <string name="label_InstNoMessages">No messages. Siz Home menyusundan \' Mesaj Yarat \' düyməsinə bir mesaj göndərə bilər.</string>
-    <string name="label_InstNoMessagesAndroid">No messages. Siz \' Yarat \' sekmesini bir mesaj göndərə bilər.</string>
-    <string name="label_InstNoRecipients">No alanlar. Yaxın başqa SafeSlinger istifadəçi tap və düymələri bölüşmək üçün \' Sling Keys \' sekmesini toxunmaq.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud effektiv. Başa zaman Done düyməsini dokunun.</string>
+    <string name="label_InstNoMessages">No messages. Siz Home menyu Yarat Mesaj düyməsinə bir mesaj göndərə bilər.</string>
+    <string name="label_InstNoMessagesAndroid">No messages. Siz Yarat nişanı bir mesaj göndərə bilər.</string>
+    <string name="label_InstNoRecipients">Resipient əlavə etmək üçün, ilk, eyni zamanda bir və ya daha çox digər istifadəçiləri ilə Sling Keys lazımdır. Siz həmçinin menudan bir Sling Keys əlaqə dəvət göndərə bilər.</string>
     <string name="label_InstNoSharedFile">No paylaşılan fayl. Paylaşılan qovluq üçün iTunes və drag faylları ilə cihaz qoşun.</string>
     <string name="label_InstRecipients">Bir mesaj göndərmək üçün qəbul edən seçin:</string>
     <string name="label_InstSendInvite">Təhlükəsiz təqdim alıcılar seçin:</string>
     <string name="label_InstSharedFile">Əlavə etmək üçün fayl seçin:</string>
     <string name="label_introduced">təqdim</string>
+    <string name="label_inviteSent">Dəvət</string>
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Soyadı</string>
     <string name="label_Me">Mən</string>
     <string name="label_messageIntroduceNameToYou">Mən sizə %s təqdim etmək istəyirəm.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Quraşdırma təhlükəsiz mesajlaşma keçid etmək üçün, biz cavab və ya telefon bir-birinə eyni zamanda, və sonra Sling Keys yalnız bir dəfə keçid yoxlamaq bilər.</string>
+    <string name="label_messageInviteStartMsg">Biz açıq mənbə SafeSlinger iPhone və ya Android app ilə təhlükəsiz mesajlaşma başlamaq edə bilərəmmi?</string>
     <string name="label_minutes">%d dəqiqə</string>
     <string name="label_mobiletag">Səyyar</string>
     <string name="label_MostRecentOnly">Ən son yalnız</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">Təxirə SafeSlinger backup</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Hesabi saxla</string>
-    <string name="label_SaveInstruct">Təhlükəsiz saxlamaq üçün \'İdxal\' kran sonra, Siz ünvanı kitab güncellemek istəyirsinizsə əlaqə edin:</string>
+    <string name="label_SaveInstruct">Siz ünvanı kitab güncellemek istəyirsinizsə əlaqə yoxlamaq, sonra təhlükəsiz saxlamaq üçün İdxal tap:</string>
     <string name="label_seconds">%d saniyə</string>
     <string name="label_SelectRecip">Select Alan</string>
     <string name="label_sendErrorData">Error Data göndər</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Addım 3</string>
     <string name="label_step_4">Addım 4</string>
     <string name="label_step_5">Addım 5</string>
+    <string name="label_summary_auto_attach_retrieval">Daxil olmamısınız zaman avtomatik olaraq mesaj faylları download</string>
+    <string name="label_summary_auto_decrypt">Daxil olmamısınız zaman avtomatik decrypt mesaj</string>
+    <string name="label_summary_remind_backup_delay">Backup offline zaman bildiriş almaq.</string>
+    <string name="label_summary_show_tutorial">Sling Keys attemping əvvəl tutorial göstər.</string>
     <string name="label_TapToDecryptFile">Fayl decrypt üçün dokunun</string>
     <string name="label_TapToDecryptMessage">Decrypt üçün dokunun</string>
     <string name="label_TapToDownloadFile">Faylı yükləmək üçün dokunun</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Faylı açmaq üçün dokunun</string>
     <string name="label_TapToResumeDraft">Mesaj layihəsini davam etmək üçün dokunun</string>
     <string name="label_TapToSendCredentialUpdate">Tap və etimadnamə yeniləmə göndərmək üçün basıb saxlayın.</string>
+    <string name="label_TapToSlingKeys">Sling Keys üçün dokunun.</string>
     <string name="label_targetAccountLabel">Əlaqə Account</string>
-    <string name="label_TouchToConfigureBackupSettings">Siz isteğe iOS Ayarlar SafeSlinger iCloud backup imkan bilər. Başa zaman \'Bitti\' düyməsini dokunun.</string>
+    <string name="label_TouchToConfigureBackupSettings">Siz isteğe iOS Ayarlar SafeSlinger iCloud backup imkan bilər. Başa zaman Done düyməsini dokunun.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Backup parametrləri konfiqurasiya Touch.</string>
     <string name="label_TouchToConfigureCacheTimeout">Cache zaman aşımı parametrləri konfiqurasiya Touch.</string>
     <string name="label_undefinedTypeLabel">Naməlum</string>
     <string name="label_UnknownSender">Şifrelenmiş Sender</string>
     <string name="label_UserName">İstifadəçi adı</string>
+    <string name="label_WarnForgotPassphrase">Sizin data qorumaq üçün, SafeSlinger bərpası üçün hər hansı passphrase saxlamaq deyil. Siz yalnız alıcı və eyni passphrase giriş altında yaradılmışdır messages daxil ola bilərsiniz. Lakin, yeni bir əsas və passphrase yaratmaq bilər sonra alıcı ilə Sling Keys deyirəm.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Aşağıdakı düymələri silinəcək:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Sizin çox son düymələri var.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Yalnız düymələri daha yaxınlarda %s yaranan sizin, silinə bilər daha yaradılan.</string>
     <string name="label_worktag">Iş</string>
 
     <string name="menu_About">Haqqında</string>
+    <string name="menu_auto_attach_retrieval">Əlavə Auto-geri</string>
+    <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Dəyişiklik</string>
     <string name="menu_ChangePassphrase">Change Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteSms">Mətn (SMS/MMS)</string>
     <string name="menu_CreateNew">Yeni yarat</string>
     <string name="menu_delete">Sil</string>
-    <string name="menu_deleteThread">Thread \'%s\' Sil</string>
+    <string name="menu_deleteThread">Thread %s sil</string>
     <string name="menu_Details">View Detail</string>
     <string name="menu_DownloadDirectory">Directory Download</string>
     <string name="menu_Edit">Redaktə etmək</string>
+    <string name="menu_EditContact">Edit Əlaqə</string>
+    <string name="menu_EditName">Edit Ad</string>
     <string name="menu_FileManager">File Manager</string>
+    <string name="menu_ForgotPassphrase">Passphrase unutdunuz?</string>
     <string name="menu_Help">Kömək</string>
     <string name="menu_Introduction">Giriş</string>
     <string name="menu_License">Lisenziya</string>
     <string name="menu_Logout">Çıxış</string>
+    <string name="menu_ManagePassphrases">Passphrases idarə</string>
+    <string name="menu_message_font_size">Mesaj Font Size</string>
     <string name="menu_messageCopyText">Copy Text</string>
     <string name="menu_messageForward">Irəli</string>
     <string name="menu_Remove">Çıxarmaq</string>
-    <string name="menu_SelectShareApp">Application göndər</string>
+    <string name="menu_restore_default">Default parametrlərini bərpa</string>
+    <string name="menu_ringtone">Səs</string>
+    <string name="menu_SelectShareApp">Əlaqə dəvət et</string>
     <string name="menu_sendFeedback">Əlaqə göndər</string>
     <string name="menu_SendUpdate">Yenilə göndər</string>
     <string name="menu_Settings">Settings</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">İsmarıclar</string>
     <string name="menu_UseAnother">Digər istifadə</string>
-    <string name="menu_UseContactPerson">Əlaqə \'%s\' istifadə edin</string>
+    <string name="menu_UseContactPerson">Əlaqə %s istifadə</string>
     <string name="menu_UseNoContact">İstifadə Adı Yalnız</string>
-    <string name="menu_UseProfilePerson">Profile \'%s\' istifadə edin</string>
+    <string name="menu_UseProfilePerson">Profile %s istifadə</string>
+    <string name="menu_vibrate">Titrəmək</string>
 
     <string name="prog_decrypting">decrypting…</string>
     <string name="prog_encrypting">Şifreleme…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Qabaqcıl</string>
     <string name="section_backup">Backup</string>
     <string name="section_general">Ümumi</string>
+    <string name="section_notification">Bildirişlər</string>
+    <string name="section_storage">Saxlama</string>
 
     <string name="state_BackupRestored">Backup bərpa.</string>
     <string name="state_FileDeleted">Silinmiş fayl %s.</string>
     <string name="state_FileSent">Göndərildi.</string>
+    <string name="state_InvitationAdded">Dəvət əlavə edib.</string>
     <string name="state_MessageSavedAsDraft">Qaralama olaraq qeyd Mesaj.</string>
     <string name="state_MessagesDeleted">Silindi %d messages.</string>
     <string name="state_PassphraseUpdated">Passphrase yeniləndi.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s əlaqə idxal.</string>
     <string name="state_TextCopiedToClipboard">Mətn panoya kopyalanır.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger, şəxsən və ya telefon, asanlıqla şəxsiyyət məlumatları bölüşmək üçün nəzərdə təsdiq, özəl və bütöv olunur. Ilə bölüşmək hər bir şəxs mesaj göndərmək üçün təhlükəsiz son-to-end kanal yaradır.\n\nFeatures:\n- Asanlıqla başqaları ilə əlaqə məlumatı mübadiləsi\n- Təhlükəsiz sapand mətnlər, şəkillər, bir şey!\n- Güclü Kriptoqrafiya məlumat qoruyur\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger özəl, təsdiq, şəxsən və ya telefon, asanlıqla şəxsiyyət məlumatları bölüşmək üçün nəzərdə tutulmuşdur və bütöv olunur. Ilə bölüşmək hər bir şəxs mesaj göndərmək üçün təhlükəsiz son-to-end kanal yaradır.\n\nXüsusiyyətlər:\n-Asanlıqla başqaları\n-Təhlükəsiz sapand mətnləri, foto, bir şey ilə əlaqə informasiya mübadiləsi! %2$s\nweb: %3$s\n-Güclü Kriptoqrafiya məlumat\n\nemail qoruyur</string>
     <string name="text_KeywordExchange">Mübadilə</string>
     <string name="text_KeywordIdentity">Identiklik</string>
     <string name="text_KeywordKey">Açar</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Təhlükəsizlik</string>
     <string name="text_LanguagesProvidedBy">Tərəfindən təmin Dillər:</string>
     <string name="text_RelatedSearchTerms">Related şərtləri:</string>
-    <string name="text_Requirements">Tələblər:\n1. 2 cihazlar minimum yüklü olmalıdır.\n2. İnternet bağlantısı aktiv olmalıdır.</string>
+    <string name="text_Requirements">Tələblər:.\n1 2 cihazlar minimum yüklü olmalıdır.\n2. İnternet bağlantısı aktiv olmalıdır.</string>
     <string name="text_SourceCodeRepo">açıq mənbə: %s</string>
-    <string name="text_WhatsNew">- Sabitlik giderir.</string>
+    <string name="text_WhatsNew">-Sabitlik giderir.</string>
 
     <string name="title_About">Haqqında</string>
     <string name="title_camera">Kamera</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Sling Keys köməkçisi</string>
     <string name="title_FileOptions">Əlavə Seçimlər</string>
     <string name="title_find">Setup</string>
+    <string name="title_font_size">Bir font ölçüsü seçə</string>
     <string name="title_home">Exchange başlayın</string>
     <string name="title_HomePanel">Ev</string>
     <string name="title_MessageDetail">Məlumat</string>

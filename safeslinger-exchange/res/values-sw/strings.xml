@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Una taarifa tofauti katika maneno. Kuanza kubadilishana tena.</string>
     <string name="error_MinUsersRequired">Chini ya %d wanachama wanatakiwa kubadilishana data.</string>
     <string name="error_MoreDataThanUsers">Data isiyotarajiwa kupatikana katika kubadilishana. Kuanza kubadilishana tena.</string>
+    <string name="error_NoDataToExchange">Kubadilishana ni kukosa data required.</string>
     <string name="error_NoWordListSelected">Lazima kuchagua moja ya maneno kabla ya kuendelea.</string>
     <string name="error_OtherGroupCommitDiffer">Mtu taarifa tofauti katika maneno. Kuanza kubadilishana tena.</string>
     <string name="error_OutOfMemoryError">Kumbukumbu ni ya chini sana kwa kukamilisha kazi hii.</string>
-    <string name="error_ServerAppMessage">Server Ujumbe: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Server Ujumbe: \'%s\'</string>
+    <string name="error_ServerAppMessage">Server Ujumbe: %s</string>
+    <string name="error_ServerAppMessageCStr">Server Ujumbe: %s</string>
     <string name="error_ServerNotResponding">Hakuna jibu kutoka kwa seva.</string>
     <string name="error_TimeoutWaitingForAllMembers">Ngoja ukisubiri kwa baadhi ya wanakikundi kuongeza data.</string>
     <string name="error_WebCancelledByUser">Mtumiaji kufutwa ombi server.</string>
 
-    <string name="help_size">Kuchagua idadi ya watu ambao ni kujaribu kubadilishana data pamoja na vyombo vya habari \'OK\'.</string>
-    <string name="help_userid">Idadi hii juu ya screen hii ni kutumika kwa kuunda kundi kipekee ya watumiaji. Kupitia idadi ya watumiaji wote \' skrini, kisha watumiaji wote wanapaswa kuingia idadi sawa ya chini na vyombo vya habari \' OK \'.</string>
-    <string name="help_verify">Sasa, lazima mechi moja ya hizi 3-neno maneno na watumiaji wote. Kila user lazima kuchagua moja ya kawaida maneno, na vyombo vya habari \'Next \'.</string>
+    <string name="help_size">Kuchagua idadi ya watu ambao ni kujaribu kubadilishana data pamoja na vyombo vya habari OK.</string>
+    <string name="help_userid">Idadi hii juu ya screen hii ni kutumika kwa kuunda kundi kipekee ya watumiaji. Kupitia idadi ya skrini ya watumiaji \', basi watumiaji wote wanapaswa kuingia sawa idadi ya chini kabisa na vyombo vya habari OK.</string>
+    <string name="help_verify">Sasa, lazima mechi moja ya hizi 3-neno maneno na watumiaji wote. Kila user lazima kuchagua moja ya kawaida maneno, na vyombo vya habari Next.</string>
 
+    <string name="label_CompareScreensNDevices">Kulinganisha skrini juu ya vifaa %s.</string>
     <string name="label_NumericModeHint">Mashirika yasiyo ya Kiingereza</string>
     <string name="label_PromptInstruct">Idadi hii ni kutumika kujenga kundi kipekee ya watumiaji. Kulinganisha, na kisha kuingia idadi ya chini kabisa kati ya watumiaji wote.</string>
     <string name="label_ReceivedNItems">kupokea vitu %d</string>
     <string name="label_UserIdHint">Chini</string>
     <string name="label_VerifyInstruct">Zote za lazima mechi moja ya 3-neno maneno. Kulinganisha, na kisha kuchukua vinavyolingana maneno.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">kusubiri kwa ajili ya ukaguzi kutoka kwa wanachama wote…</string>
     <string name="prog_CollectingOthersItems">kusubiri kwa watumiaji wote kujiunga na…</string>

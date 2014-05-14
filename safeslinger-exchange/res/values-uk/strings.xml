@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d користувачів</string>
 
-    <string name="error_AllMembersMustUpgrade">Деякі члени використовуєте стару версію, всі члени повинні принаймні використовувати %s.</string>
+    <string name="error_AllMembersMustUpgrade">Деякі члени використовуєте стару версію; всі члени повинні принаймні використовувати %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Всі члени повинні оновити, деякі використовують старі формати реєстрації поштовх.</string>
     <string name="error_CorrectYourInternetConnection">Інтернет не доступний, перевірте налаштування.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Обмін таймаут перевищений. Почніть обмін знову.</string>
@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Ви заявили різницю у фрази. Почніть обмін знову.</string>
     <string name="error_MinUsersRequired">Мінімум %d членів зобов\'язані обмінюватися даними.</string>
     <string name="error_MoreDataThanUsers">Несподівані дані, знайдені в результаті обмінних операцій. Почніть обмін знову.</string>
+    <string name="error_NoDataToExchange">Обмін відсутні необхідні дані.</string>
     <string name="error_NoWordListSelected">Ви повинні вибрати один з фраз, перш ніж приступити.</string>
     <string name="error_OtherGroupCommitDiffer">Хтось повідомив різницю у фрази. Почніть обмін знову.</string>
     <string name="error_OutOfMemoryError">Пам\'ять є занадто низьким для завершення цієї операції.</string>
-    <string name="error_ServerAppMessage">Повідомлення Сервер: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Повідомлення Сервер: \'%s\'</string>
+    <string name="error_ServerAppMessage">Повідомлення Сервер: %s</string>
+    <string name="error_ServerAppMessageCStr">Повідомлення Сервер: %s</string>
     <string name="error_ServerNotResponding">Немає відповіді від сервера.</string>
     <string name="error_TimeoutWaitingForAllMembers">Тайм-аут в очікуванні деякі члени групи, щоб додати дані.</string>
     <string name="error_WebCancelledByUser">Користувач скасував запит сервера.</string>
 
-    <string name="help_size">Виберіть кількість людей, які намагаються обмінюватися даними один з одним і натисніть « OK ».</string>
-    <string name="help_userid">Це число на цьому екрані використовується, щоб створити унікальний групу користувачів. Перегляньте номери на всіх користувачів екранів, то всі користувачі повинні ввести той же найнижчий номер і натисніть « OK ».</string>
-    <string name="help_verify">Тепер ви повинні відповідати одному з цих фраз 3-слів з ​​усіма користувачами. Кожен користувач повинен вибрати один і той же загальний фразу та натисніть «Далі».</string>
+    <string name="help_size">Виберіть кількість людей, які намагаються обмінюватися даними один з одним і натисніть ОК.</string>
+    <string name="help_userid">Це число на цьому екрані використовується, щоб створити унікальний групу користувачів. Перегляньте номера на екранах всіх користувачів, то всі користувачі повинні ввести той же найнижчий номер і натисніть ОК.</string>
+    <string name="help_verify">Тепер ви повинні відповідати одному з цих фраз 3-слів з ​​усіма користувачами. Кожен користувач повинен вибрати один і той же загальний фразу та натисніть Далі.</string>
 
+    <string name="label_CompareScreensNDevices">Порівняння екранів на %s пристроїв.</string>
     <string name="label_NumericModeHint">Номери для Англійська</string>
     <string name="label_PromptInstruct">Цей номер використовується для створення унікального групу користувачів. Порівняти, а потім введіть найменшу кількість серед всіх користувачів.</string>
     <string name="label_ReceivedNItems">отримав %d пунктів</string>
     <string name="label_UserIdHint">Низька</string>
     <string name="label_VerifyInstruct">Всі телефони повинні відповідати одному з фраз 3-слів. Порівняйте, а потім вибрати відповідний фразу.</string>
+
+    <string name="lib_name">SafeSlinger біржа</string>
 
     <string name="prog_CollectingOthersCommitVerify">чекає перевірки від усіх членів…</string>
     <string name="prog_CollectingOthersItems">чекає всі користувачі приєднатися…</string>

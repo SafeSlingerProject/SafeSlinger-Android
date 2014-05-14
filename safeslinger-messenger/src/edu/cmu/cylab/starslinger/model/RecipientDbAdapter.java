@@ -36,6 +36,7 @@ import android.database.sqlite.SQLiteException;
 import android.text.TextUtils;
 import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
+import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 /***
@@ -48,6 +49,7 @@ import edu.cmu.cylab.starslinger.util.SSUtil;
  */
 public class RecipientDbAdapter {
     private static RecipientDbAdapter sInstance = null;
+    private static int sUserNumber = 0;
 
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
     public static final String DATABASE_TABLE = "recipient";
@@ -102,7 +104,16 @@ public class RecipientDbAdapter {
 
     public static RecipientDbAdapter openInstance(Context ctx) {
         if (sInstance == null) {
+            // open for currently selected user
+            sUserNumber = SafeSlingerPrefs.getUser();
             sInstance = new RecipientDbAdapter(ctx.getApplicationContext());
+        } else {
+            // if user has changed in this instance, close instance and reopen
+            if (sUserNumber != SafeSlingerPrefs.getUser()) {
+                sUserNumber = SafeSlingerPrefs.getUser();
+                closeInstance();
+                sInstance = new RecipientDbAdapter(ctx.getApplicationContext());
+            }
         }
         return sInstance;
     }
@@ -187,26 +198,79 @@ public class RecipientDbAdapter {
         return query;
     }
 
-    /**
-     * Create a new recipient If the recipient is successfully created return
-     * the new rowId for that note, otherwise return a -1 to indicate failure.
+    /***
+     * Add invitation from add contact invite method.
      */
-    public long createRecipient(String mykeyid, long exchdate, String contactid, String contactlu,
-            String rawid, String name, byte[] photo, String keyid, long keydate, String keyuserid,
-            String pushtoken, int notify, byte[] pubkey, int source, int appver, long histdate,
-            boolean active, String introkeyid, String mypushtoken, int mynotify) {
+    public long createInvitedRecipient(long exchdate, String contactid, String contactlu,
+            String rawid, String name, byte[] photo, long matchingInviteRowId) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(contactid) || TextUtils.isEmpty(contactlu)
-                    || TextUtils.isEmpty(rawid) || TextUtils.isEmpty(name) || keydate == 0
-                    || notify == -1 || pubkey == null || source == -1 || appver == 0
-                    || TextUtils.isEmpty(mykeyid) || TextUtils.isEmpty(keyid)) {
+                    || TextUtils.isEmpty(rawid) || TextUtils.isEmpty(name)) {
                 return -1;
             }
-            ContentValues initialValues = createContentValues(mykeyid, exchdate, contactid,
-                    contactlu, rawid, name, photo, keyid, keydate, keyuserid, pushtoken, notify,
-                    pubkey, source, appver, histdate, active, introkeyid, mypushtoken, mynotify);
 
-            return insert(DATABASE_TABLE, null, initialValues);
+            ContentValues values = new ContentValues();
+            values.put(KEY_MYKEYID, "");
+            values.put(KEY_EXCHDATE, exchdate);
+            if (!TextUtils.isEmpty(contactid))
+                values.put(KEY_CONTACTID, contactid);
+            if (!TextUtils.isEmpty(contactlu))
+                values.put(KEY_CONTACTLKUP, contactlu);
+            if (!TextUtils.isEmpty(rawid))
+                values.put(KEY_RAWCONTACTID, rawid);
+            if (!TextUtils.isEmpty(name))
+                values.put(KEY_NAME, name);
+            if (photo != null)
+                values.put(KEY_PHOTO, photo);
+            values.put(KEY_KEYID, "");
+            values.put(KEY_KEYDATE, 0);
+            values.put(KEY_PUSHTOKEN, "");
+            values.put(KEY_NOTIFY, SafeSlingerConfig.NOTIFY_NOPUSH);
+            values.put(KEY_PUBKEY, new byte[0]);
+            values.put(KEY_SOURCE, RECIP_SOURCE_INVITED);
+            values.put(KEY_APPVERSION, SafeSlingerConfig.getVersionCode());
+            values.put(KEY_ACTIVE, RECIP_IS_ACTIVE);
+
+            if (matchingInviteRowId > -1) {
+                StringBuilder where = new StringBuilder();
+                where.append("(");
+                where.append(KEY_ROWID + "="
+                        + DatabaseUtils.sqlEscapeString("" + matchingInviteRowId));
+                where.append(")");
+
+                Cursor c = query(true, DATABASE_TABLE, new String[] {
+                        KEY_ROWID, KEY_SOURCE
+                }, where.toString(), null, null, null, null, null);
+
+                if (c != null) {
+                    if (c.moveToFirst()) {
+                        long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
+
+                        int source = c.getInt(c.getColumnIndexOrThrow(KEY_SOURCE));
+                        if (source == RECIP_SOURCE_EXCHANGE || source == RECIP_SOURCE_INTRODUCTION
+                                || source == RECIP_SOURCE_CONTACTSDB) {
+                            // invite is lower priority than exchange,
+                            // introduction, and address book
+                            c.close();
+                            return rowId;
+                        }
+
+                        if (update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0) {
+                            c.close();
+                            return rowId;
+                        }
+                        c.close();
+                        return -1;
+                    }
+                    c.close();
+                }
+            }
+
+            // backward compatibility for upgraded databases....
+            values.put(KEY_MYKEYIDLONG, 0);
+            values.put(KEY_KEYIDLONG, 0);
+
+            return insert(DATABASE_TABLE, null, values);
         }
     }
 
@@ -216,7 +280,7 @@ public class RecipientDbAdapter {
     public long createExchangedRecipient(String mykeyid, long exchdate, String contactid,
             String contactlu, String rawid, String name, byte[] photo, String keyid, long keydate,
             String keyuserid, String pushtoken, int notify, byte[] pubkey, String mypushtoken,
-            int mynotify) {
+            int mynotify, long matchingInviteRowId) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(contactid) || TextUtils.isEmpty(contactlu)
                     || TextUtils.isEmpty(rawid) || TextUtils.isEmpty(name) || keydate == 0
@@ -256,11 +320,25 @@ public class RecipientDbAdapter {
             values.put(KEY_APPVERSION, SafeSlingerConfig.getVersionCode());
             values.put(KEY_ACTIVE, RECIP_IS_ACTIVE);
 
-            String where = KEY_PUSHTOKEN + "=" + DatabaseUtils.sqlEscapeString("" + pushtoken)
-                    + " AND " + KEY_KEYID + "=" + DatabaseUtils.sqlEscapeString("" + keyid);
+            StringBuilder where = new StringBuilder();
+            where.append("(");
+            where.append(KEY_PUSHTOKEN + "=" + DatabaseUtils.sqlEscapeString("" + pushtoken));
+            where.append(" AND ");
+            where.append(KEY_KEYID + "=" + DatabaseUtils.sqlEscapeString("" + keyid));
+            where.append(")");
+            if (matchingInviteRowId > -1) {
+                where.append(" OR ");
+                where.append("(");
+                where.append(KEY_ROWID + "="
+                        + DatabaseUtils.sqlEscapeString("" + matchingInviteRowId));
+                where.append(" AND ");
+                where.append(KEY_SOURCE + "=" + RECIP_SOURCE_INVITED);
+                where.append(")");
+            }
+
             Cursor c = query(true, DATABASE_TABLE, new String[] {
                     KEY_KEYID, KEY_ROWID, KEY_PUSHTOKEN
-            }, where, null, null, null, null, null);
+            }, where.toString(), null, null, null, null, null);
 
             if (c != null) {
                 if (c.moveToFirst()) {
@@ -289,7 +367,7 @@ public class RecipientDbAdapter {
     public long createIntroduceRecipient(String mykeyid, long exchdate, String contactid,
             String contactlu, String rawid, String name, byte[] photo, String keyid, long keydate,
             String keyuserid, String pushtoken, int notify, byte[] pubkey, String introkeyid,
-            String mypushtoken, int mynotify) {
+            String mypushtoken, int mynotify, long matchingInviteRowId) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(contactid) || TextUtils.isEmpty(contactlu)
                     || TextUtils.isEmpty(rawid) || TextUtils.isEmpty(name) || keydate == 0
@@ -331,20 +409,32 @@ public class RecipientDbAdapter {
             values.put(KEY_ACTIVE, RECIP_IS_ACTIVE);
             values.put(KEY_INTROKEYID, introkeyid);
 
-            String where = KEY_PUSHTOKEN + "=" + DatabaseUtils.sqlEscapeString("" + pushtoken)
-                    + " AND " + KEY_KEYID + "=" + DatabaseUtils.sqlEscapeString("" + keyid);
+            StringBuilder where = new StringBuilder();
+            where.append("(");
+            where.append(KEY_PUSHTOKEN + "=" + DatabaseUtils.sqlEscapeString("" + pushtoken));
+            where.append(" AND ");
+            where.append(KEY_KEYID + "=" + DatabaseUtils.sqlEscapeString("" + keyid));
+            where.append(")");
+            if (matchingInviteRowId > -1) {
+                where.append(" OR ");
+                where.append("(");
+                where.append(KEY_ROWID + "="
+                        + DatabaseUtils.sqlEscapeString("" + matchingInviteRowId));
+                where.append(" AND ");
+                where.append(KEY_SOURCE + "=" + RECIP_SOURCE_INVITED);
+                where.append(")");
+            }
+
             Cursor c = query(true, DATABASE_TABLE, new String[] {
                     KEY_KEYID, KEY_ROWID, KEY_SOURCE, KEY_PUSHTOKEN
-            }, where, null, null, null, null, null);
+            }, where.toString(), null, null, null, null, null);
             if (c != null) {
                 if (c.moveToFirst()) {
                     long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
 
                     int source = c.getInt(c.getColumnIndexOrThrow(KEY_SOURCE));
                     if (source == RECIP_SOURCE_EXCHANGE) {
-                        // do nothing when receiving 1 hop trust in presence of
-                        // 0
-                        // hop trust, 0 hop trust takes priority
+                        // introduction is lower priority than exchange
                         c.close();
                         return rowId;
                     }
@@ -390,7 +480,7 @@ public class RecipientDbAdapter {
         }
     }
 
-    public Cursor fetchAllNewerRecipients(RecipientRow r, boolean sameNotification) {
+    public int getAllNewerRecipients(RecipientRow r, boolean sameNotification) {
         synchronized (SafeSlinger.sDataLock) {
             StringBuilder where = new StringBuilder();
             // where active and (name=Rname or keyid=Rkeyid or token=Rtoken) and
@@ -414,17 +504,13 @@ public class RecipientDbAdapter {
             where.append(KEY_EXCHDATE + ">" + r.getExchdate());
             where.append(")");
 
-            Cursor c = query(DATABASE_TABLE, new String[] {
-                    KEY_ROWID, KEY_MYKEYIDLONG, KEY_EXCHDATE, KEY_CONTACTID, KEY_CONTACTLKUP,
-                    KEY_RAWCONTACTID, KEY_NAME, KEY_PHOTO, KEY_KEYIDLONG, KEY_KEYDATE,
-                    KEY_KEYUSERID, KEY_PUSHTOKEN, KEY_NOTIFY, KEY_PUBKEY, KEY_SOURCE,
-                    KEY_APPVERSION, KEY_HISTDATE, KEY_ACTIVE, KEY_MYKEYID, KEY_KEYID,
-                    KEY_INTROKEYID, KEY_NOTREGDATE, KEY_MYNOTIFY, KEY_MYPUSHTOKEN
-            }, where.toString(), null, null, null, null);
+            Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                return c;
+                int count = c.getCount();
+                c.close();
+                return count;
             }
-            return null;
+            return -1;
         }
     }
 
@@ -440,9 +526,6 @@ public class RecipientDbAdapter {
             if (hideInactive) {
                 where.append(" AND ").append(KEY_ACTIVE + "=" + RECIP_IS_ACTIVE);
             }
-
-            // ignore deprecated key formats...
-            where.append(" AND (LENGTH(").append(KEY_KEYID + ") > 15)");
 
             Cursor c = query(DATABASE_TABLE, new String[] {
                     KEY_ROWID, KEY_MYKEYIDLONG, KEY_EXCHDATE, KEY_CONTACTID, KEY_CONTACTLKUP,
@@ -471,9 +554,7 @@ public class RecipientDbAdapter {
                 where.append(" AND ").append(KEY_ACTIVE + "=" + RECIP_IS_ACTIVE);
             }
             where.append(" AND ").append(KEY_SOURCE + "!=" + RECIP_SOURCE_INTRODUCTION);
-
-            // ignore deprecated key formats...
-            where.append(" AND (LENGTH(").append(KEY_KEYID + ") > 15)");
+            where.append(" AND ").append(KEY_SOURCE + "!=" + RECIP_SOURCE_INVITED);
 
             Cursor c = query(DATABASE_TABLE, new String[] {
                     KEY_ROWID, KEY_MYKEYIDLONG, KEY_EXCHDATE, KEY_CONTACTID, KEY_CONTACTLKUP,
@@ -567,51 +648,6 @@ public class RecipientDbAdapter {
         }
     }
 
-    private ContentValues createContentValues(String mykeyid, long exchdate, String contactid,
-            String contactlu, String rawid, String name, byte[] photo, String keyid, long keydate,
-            String keyuserid, String pushtoken, int notify, byte[] pubkey, int source, int appver,
-            long histdate, boolean active, String introkeyid, String mypushtoken, int mynotify) {
-        ContentValues values = new ContentValues();
-        values.put(KEY_MYKEYID, mykeyid);
-        values.put(KEY_EXCHDATE, exchdate);
-        if (!TextUtils.isEmpty(contactid))
-            values.put(KEY_CONTACTID, contactid);
-        if (!TextUtils.isEmpty(contactlu))
-            values.put(KEY_CONTACTLKUP, contactlu);
-        if (!TextUtils.isEmpty(rawid))
-            values.put(KEY_RAWCONTACTID, rawid);
-        if (!TextUtils.isEmpty(name))
-            values.put(KEY_NAME, name);
-        if (photo != null)
-            values.put(KEY_PHOTO, photo);
-        values.put(KEY_KEYID, keyid);
-        values.put(KEY_KEYDATE, keydate);
-        if (!TextUtils.isEmpty(keyuserid))
-            values.put(KEY_KEYUSERID, keyuserid);
-        if (!TextUtils.isEmpty(pushtoken)) {
-            values.put(KEY_PUSHTOKEN, pushtoken);
-        }
-        values.put(KEY_NOTIFY, notify);
-        if (pubkey != null)
-            values.put(KEY_PUBKEY, pubkey);
-        values.put(KEY_SOURCE, source);
-        values.put(KEY_APPVERSION, appver);
-        values.put(KEY_HISTDATE, histdate);
-        values.put(KEY_ACTIVE, active ? RECIP_IS_ACTIVE : RECIP_IS_NOT_ACTIVE);
-        if (!TextUtils.isEmpty(introkeyid))
-            values.put(KEY_INTROKEYID, introkeyid);
-        if (!TextUtils.isEmpty(mypushtoken)) {
-            values.put(KEY_MYPUSHTOKEN, mypushtoken);
-        }
-        values.put(KEY_MYNOTIFY, mynotify);
-
-        // backward compatibility for upgraded databases....
-        values.put(KEY_MYKEYIDLONG, 0);
-        values.put(KEY_KEYIDLONG, 0);
-
-        return values;
-    }
-
     public boolean updateRecipientActiveState(RecipientRow r, int recipIsActive) {
         synchronized (SafeSlinger.sDataLock) {
             if (r.isActive() != (recipIsActive == RECIP_IS_ACTIVE)) {
@@ -665,9 +701,11 @@ public class RecipientDbAdapter {
         }
     }
 
-    public int fetchRecipientCount() throws SQLException {
+    public int getTrustedRecipientCount() throws SQLException {
         synchronized (SafeSlinger.sDataLock) {
-            Cursor c = query(DATABASE_TABLE, null, null, null, null, null, null);
+            StringBuilder where = new StringBuilder();
+            where.append(KEY_SOURCE + "!=" + RECIP_SOURCE_INVITED);
+            Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();
                 c.close();

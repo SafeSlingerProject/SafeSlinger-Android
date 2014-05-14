@@ -76,7 +76,11 @@ public class GroupingActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            setTheme(android.R.style.Theme_Holo_Light_DarkActionBar);
+        } else {
+            setTheme(android.R.style.Theme_Light);
+        }
         super.onCreate(savedInstanceState);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {

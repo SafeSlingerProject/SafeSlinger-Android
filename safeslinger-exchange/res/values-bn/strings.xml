@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">আপনি বাক্যাংশ একটি পার্থক্য প্রতিবেদন করেছ. আবার বিনিময় শুরু করুন.</string>
     <string name="error_MinUsersRequired">%d সদস্যের একটি সর্বনিম্ন তথ্য বিনিময় প্রয়োজন হয়.</string>
     <string name="error_MoreDataThanUsers">বিনিময়ে পাওয়া অপ্রত্যাশিত তথ্য. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_NoDataToExchange">বিনিময়ে প্রয়োজনীয় তথ্য অনুপস্থিত.</string>
     <string name="error_NoWordListSelected">আপনি অগ্রসর হওয়ার আগে বাক্যাংশ একটি নির্বাচন করা আবশ্যক.</string>
     <string name="error_OtherGroupCommitDiffer">কেউ বাক্যাংশ একটি পার্থক্য রিপোর্ট. আবার বিনিময় শুরু করুন.</string>
     <string name="error_OutOfMemoryError">স্মৃতি এই অপারেশন সম্পন্ন করতে খুব কম.</string>
-    <string name="error_ServerAppMessage">সার্ভার বার্তা: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">সার্ভার বার্তা: \'%s\'</string>
+    <string name="error_ServerAppMessage">সার্ভার বার্তা: %s</string>
+    <string name="error_ServerAppMessageCStr">সার্ভার বার্তা: %s</string>
     <string name="error_ServerNotResponding">সার্ভার থেকে কোনো প্রতিক্রিয়া.</string>
     <string name="error_TimeoutWaitingForAllMembers">কিছু দলের সদস্যদের তথ্য যোগ করার জন্য অপেক্ষা সময়সীমা সমাপ্ত.</string>
     <string name="error_WebCancelledByUser">ব্যবহারকারী সার্ভারটি অনুরোধটি বাতিল.</string>
 
-    <string name="help_size">\'ঠিক আছে \' একসাথে তথ্য বিনিময় এবং প্রেস করার চেষ্টা করছেন যারা ​​মানুষের সংখ্যা নির্বাচন করুন.</string>
-    <string name="help_userid">এই পর্দায় এই সংখ্যা ব্যবহারকারীদের একটি অনন্য গ্রুপ তৈরি করতে ব্যবহার করা হয়. সব ব্যবহারের সংখ্যার পর্যালোচনা করুন \'ঠিক আছে \' পর্দা, তারপর সব ব্যবহারকারীদের একই সর্বনিম্ন নম্বর লিখে এন্টার টিপুন উচিত \'.</string>
-    <string name="help_verify">এখন, আপনি সমস্ত ব্যবহারকারীদের সাথে এই 3 শব্দ বাক্যাংশ এক মেলানো. প্রত্যেক ব্যবহারকারী একই সাধারণ ফ্রেজ, এবং প্রেস \' পরবর্তী \' নির্বাচন করতে হবে.</string>
+    <string name="help_size">একসঙ্গে এবং প্রেস ওকে তথ্য বিনিময় করতে চেষ্টা করছেন যারা ​​মানুষের সংখ্যা নির্বাচন করুন.</string>
+    <string name="help_userid">এই পর্দায় এই সংখ্যা ব্যবহারকারীদের একটি অনন্য গ্রুপ তৈরি করতে ব্যবহার করা হয়. সব ব্যবহারকারীদের স্ক্রিনে সংখ্যার পর্যালোচনা করুন, তারপর সব ব্যবহারকারীদের একই সর্বনিম্ন নম্বর লিখুন এবং OK চাপুন উচিত.</string>
+    <string name="help_verify">এখন, আপনি সমস্ত ব্যবহারকারীদের সাথে এই 3 শব্দ বাক্যাংশ এক মেলানো. প্রত্যেক ব্যবহারকারী একই সাধারণ শব্দগুচ্ছ নির্বাচন করে পরবর্তী টিপুন আবশ্যক.</string>
 
+    <string name="label_CompareScreensNDevices">%s ডিভাইসের পর্দা তুলনা.</string>
     <string name="label_NumericModeHint">অ ইংরেজি</string>
     <string name="label_PromptInstruct">এই সংখ্যা ব্যবহারকারীদের একটি অনন্য গ্রুপ তৈরি করতে ব্যবহার করা হয়. তুলনা, এবং তারপর সব ব্যবহারকারীদের মধ্যে সর্বনিম্ন নম্বর লিখুন.</string>
     <string name="label_ReceivedNItems">%d আইটেম প্রাপ্তি</string>
     <string name="label_UserIdHint">অধম</string>
     <string name="label_VerifyInstruct">সব ফোনের 3 শব্দ বাক্যাংশ এক মেলানো. তুলনা, এবং তারপর মিলে ফ্রেজ বাছাই.</string>
+
+    <string name="lib_name">SafeSlinger এক্সচেঞ্জ</string>
 
     <string name="prog_CollectingOthersCommitVerify">সকল সদস্যদের থেকে যাচাইয়ের জন্য অপেক্ষা করছে…</string>
     <string name="prog_CollectingOthersItems">সব ব্যবহারকারীদের যোগদানের জন্য অপেক্ষা করছে…</string>

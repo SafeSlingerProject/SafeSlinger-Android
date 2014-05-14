@@ -211,6 +211,13 @@ public class CryptTools {
         }
     }
 
+    public static boolean deleteKeyFile(int userNumber) {
+        synchronized (SafeSlinger.sDataLock) {
+            Context ctx = SafeSlinger.getApplication();
+            return ctx.deleteFile(CryptTools.getKeyFile(userNumber));
+        }
+    }
+
     public static boolean existsSecretKey(Context ctx) {
         try {
             synchronized (SafeSlinger.sDataLock) {
@@ -277,7 +284,7 @@ public class CryptTools {
             CryptoMsgProvider tool = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
             CryptoMsgPrivateData mine = CryptTools.getSecretKey(pass);
             keyidout.append(tool.ExtractKeyIDfromPacket(encData));
-            String theirs = BaseActivity.getSignersContact(keyidout.toString());
+            String theirs = BaseActivity.getSignersPublicKey(keyidout.toString());
 
             if (TextUtils.isEmpty(theirs)) {
                 throw new CryptoMsgException(ctx.getString(R.string.error_UnableFindPubKey));

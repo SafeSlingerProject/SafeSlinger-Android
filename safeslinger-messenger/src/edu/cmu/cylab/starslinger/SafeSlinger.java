@@ -52,10 +52,12 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
+import android.text.TextUtils;
+import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.crypto.PRNGFixes;
 import edu.cmu.cylab.starslinger.model.CachedPassPhrase;
-import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
+import edu.cmu.cylab.starslinger.model.InboxDbAdapter;
 import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
@@ -68,6 +70,7 @@ public class SafeSlinger extends Application {
     private static SafeSlinger sSafeSlinger = null;
     private ConnectivityManager mConnectivityManager;
     private static boolean sPassEntryOpen = false;
+    private static boolean sAppVisible;
 
     @Override
     public void onCreate() {
@@ -94,13 +97,16 @@ public class SafeSlinger extends Application {
         // manage preferences...
         SafeSlingerPrefs.removePrefDeprecated();
         SafeSlingerPrefs.setPusgRegBackoff(SafeSlingerPrefs.DEFAULT_PUSHREG_BACKOFF);
+
+        startCacheService(this);
     }
 
     private void checkForPendingMessages() throws SQLException {
-        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this);
-        int msgCount = dbMessage.fetchUnseenMessageCount();
-        if (msgCount > 0) {
-            C2DMReceiver.doUnseenMessagesNotification(this, msgCount);
+        // only fetch encrypted, decrypted will always be locked on startup
+        InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this);
+        int inCount = dbInbox.getUnseenInboxCount();
+        if (inCount > 0) {
+            C2DMReceiver.doUnseenMessagesNotification(this, inCount);
         }
     }
 
@@ -135,10 +141,10 @@ public class SafeSlinger extends Application {
 
     // static methods to manage static variables...
 
-    public static void startCacheService(Activity activity) {
-        Intent intent = new Intent(activity, Service.class);
-        intent.putExtra(Service.EXTRA_TTL, SafeSlingerPrefs.getPassPhraseCacheTtl());
-        activity.startService(intent);
+    public static void startCacheService(Context ctx) {
+        Intent intent = new Intent(ctx, Service.class);
+        intent.putExtra(extra.PASSPHRASE_CACHE_TTL, SafeSlingerPrefs.getPassPhraseCacheTtl());
+        ctx.startService(intent);
     }
 
     public static void setCachedPassPhrase(String keyId, String passPhrase) {
@@ -147,6 +153,22 @@ public class SafeSlinger extends Application {
 
     public static void removeCachedPassPhrase(String keyId) {
         mPassPhraseCache.remove(keyId);
+    }
+
+    public static long getPassPhraseCacheTimeRemaining(String keyId) {
+        String realId = keyId;
+        CachedPassPhrase cpp = mPassPhraseCache.get(realId);
+        if (cpp != null) {
+            long now = new Date().getTime();
+            long timeout = SafeSlingerPrefs.getPassPhraseCacheTtl() * 1000;
+            long lived = now - cpp.timestamp;
+            long remain = timeout - lived;
+
+            // add 2 seconds to allow service to run cache cleanup
+            return remain > 0 ? remain + 2000 : 0;
+        } else {
+            return 0;
+        }
     }
 
     public static String getCachedPassPhrase(String keyId) {
@@ -319,6 +341,18 @@ public class SafeSlinger extends Application {
         return sPassEntryOpen;
     }
 
+    synchronized public static boolean isAppVisible() {
+        return sAppVisible;
+    }
+
+    synchronized public static void activityResumed() {
+        sAppVisible = true;
+    }
+
+    synchronized public static void activityPaused() {
+        sAppVisible = false;
+    }
+
     /***
      * List all threads and recursively list all subgroup
      */
@@ -365,5 +399,23 @@ public class SafeSlinger extends Application {
         BackupManager bm = new BackupManager(ctx);
         bm.dataChanged();
         SafeSlingerPrefs.setBackupRequestDate(new Date().getTime());
+    }
+
+    public static int getTotalUsers() {
+        String userName;
+        long keyDate;
+        int userNumber = 0;
+        do {
+            userName = null;
+            keyDate = 0;
+            userName = SafeSlingerPrefs.getContactName(userNumber);
+            keyDate = SafeSlingerPrefs.getKeyDate(userNumber);
+            if (!TextUtils.isEmpty(userName)) {
+                userNumber++;
+            }
+        } while (keyDate > 0);
+
+        // always at least 1
+        return userNumber > 1 ? userNumber : 1;
     }
 }

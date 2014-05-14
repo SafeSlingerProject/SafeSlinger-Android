@@ -30,13 +30,16 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import edu.cmu.cylab.starslinger.MyLog;
+import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
+import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 
 public class RecipientDatabaseHelper extends SQLiteOpenHelper {
     private static RecipientDatabaseHelper sInstance = null;
 
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
-    public static final String DATABASE_NAME = "safeslinger.recipient";
+    private static int sUserNumber = 0;
+    public static final String DATABASE_NAME_ROOT = "safeslinger.recipient";
 
     public static final int DATABASE_VERSION = 8;
 
@@ -95,24 +98,32 @@ public class RecipientDatabaseHelper extends SQLiteOpenHelper {
 
     public static RecipientDatabaseHelper getInstance(Context ctx) {
         if (sInstance == null) {
+            // open for currently selected user
+            sUserNumber = SafeSlingerPrefs.getUser();
             sInstance = new RecipientDatabaseHelper(ctx.getApplicationContext());
+        } else {
+            // if user has changed in this instance, close instance and reopen
+            if (sUserNumber != SafeSlingerPrefs.getUser()) {
+                sUserNumber = SafeSlingerPrefs.getUser();
+                sInstance.close();
+                sInstance = new RecipientDatabaseHelper(ctx.getApplicationContext());
+            }
         }
         return sInstance;
     }
 
     private RecipientDatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, getDatabaseNameByUser(), null, DATABASE_VERSION);
     }
 
-    // Method is called during creation of the database
+    private static String getDatabaseNameByUser() {
+        return (sUserNumber == 0) ? DATABASE_NAME_ROOT : (DATABASE_NAME_ROOT + sUserNumber);
+    }
 
     @Override
     public void onCreate(SQLiteDatabase database) {
         database.execSQL(DATABASE_CREATE);
     }
-
-    // Method is called during an upgrade of the database, e.g. if you increase
-    // the database version
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
@@ -147,4 +158,20 @@ public class RecipientDatabaseHelper extends SQLiteOpenHelper {
                 break;
         }
     }
+
+    public static boolean deleteRecipientDatabase(int userNumber) {
+        synchronized (SafeSlinger.sDataLock) {
+            if (sUserNumber == userNumber) {
+                sInstance.close();
+            }
+
+            Context ctx = SafeSlinger.getApplication();
+            if (userNumber != 0) {
+                return ctx.deleteDatabase(DATABASE_NAME_ROOT + userNumber);
+            } else {
+                return false; // never delete root
+            }
+        }
+    }
+
 }

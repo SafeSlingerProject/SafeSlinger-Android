@@ -88,6 +88,7 @@ public class RecipientRow extends RecipientData {
 
     public boolean isFromTrustedSource() {
         // - direct from exchange ACL good
+        // - one hop trust ok
         // - pulled from address book, only older versions good
         return (mSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE
                 || mSource == RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION || mSource == RecipientDbAdapter.RECIP_SOURCE_CONTACTSDB);
@@ -106,6 +107,10 @@ public class RecipientRow extends RecipientData {
     public boolean isSendable() {
         return (mActive && isRegistered() && isPushable() && !isDeprecated()
                 && isFromTrustedSource() && !hasMyKeyChanged());
+    }
+
+    public boolean isInvited() {
+        return (mSource == RecipientDbAdapter.RECIP_SOURCE_INVITED);
     }
 
 }

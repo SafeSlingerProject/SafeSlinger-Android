@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">អ្នកបាន រាយការណ៍ថា មានភាពខុសគ្នា នៅក្នុង ឃ្លា មួយ។ ចាប់ផ្តើម ការផ្លាស់ប្តូរ ម្តងទៀត។</string>
     <string name="error_MinUsersRequired">អប្បរមានៃ សមាជិក %d មួយ ត្រូវបានតម្រូវឱ្យ ផ្លាស់ប្តូរ ទិន្នន័យ។</string>
     <string name="error_MoreDataThanUsers">ទិន្នន័យដែល មិនបានរំពឹងទុក រកឃើញនៅក្នុង ការផ្លាស់ប្តូរ ។ ចាប់ផ្តើម ការផ្លាស់ប្តូរ ម្តងទៀត។</string>
+    <string name="error_NoDataToExchange">ការផ្លាស់ប្តូរ ត្រូវបាន បាត់ ទិន្នន័យ បានទាមទារ។</string>
     <string name="error_NoWordListSelected">អ្នកត្រូវតែជ្រើស មួយក្នុងចំណោម ឃ្លា នេះ មុនពេល បន្ត ។</string>
     <string name="error_OtherGroupCommitDiffer">មាននរណាម្នាក់ បានរាយការណ៍ ខុសគ្នានៅក្នុង ឃ្លា មួយ។ ចាប់ផ្តើម ការផ្លាស់ប្តូរ ម្តងទៀត។</string>
     <string name="error_OutOfMemoryError">ការចងចាំ មានកម្រិតទាប ពេក ដើម្បីបំពេញ ប្រតិបត្ដិការ នេះ។</string>
-    <string name="error_ServerAppMessage">សារ ម៉ាស៊ីនបម្រើ: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">សារ ម៉ាស៊ីនបម្រើ: \'%s\'</string>
+    <string name="error_ServerAppMessage">សារ ម៉ាស៊ីនបម្រើ: %s</string>
+    <string name="error_ServerAppMessageCStr">សារ ម៉ាស៊ីនបម្រើ: %s</string>
     <string name="error_ServerNotResponding">មិនមាន ការឆ្លើយតប ពីម៉ាស៊ីនបម្រើ។</string>
     <string name="error_TimeoutWaitingForAllMembers">អស់ពេល រង់ចាំ សម្រាប់សមាជិក ក្រុម មួយចំនួន ដើម្បីបន្ថែម ទិន្នន័យ។</string>
     <string name="error_WebCancelledByUser">អ្នកប្រើ បានបោះបង់ សំណើ ម៉ាស៊ីនបម្រើ។</string>
 
-    <string name="help_size">ជ្រើស ចំនួនមនុស្សដែល ត្រូវបានគេ ប៉ុនប៉ង ផ្លាស់ប្តូរទិន្នន័យ ជាមួយគ្នា ហើយចុច \' យល់ព្រម \' នេះ។</string>
-    <string name="help_userid">លេខ នៅលើអេក្រង់ នេះ ត្រូវបានប្រើដើម្បី បង្កើត ជាក្រុម តែមួយគត់ របស់អ្នកប្រើ ។ ពិនិត្យឡើងវិញនូវ លេខ នៅលើ អ្នកប្រើទាំងអស់ \' អេក្រង់ បន្ទាប់មក អ្នកប្រើទាំងអស់ គួរបញ្ចូល លេខ ទាបបំផុត ដូចគ្នា ហើយចុច \' យល់ព្រម \'។</string>
-    <string name="help_verify">ឥឡូវនេះ អ្នកត្រូវតែ ផ្គូផ្គង មួយនៃ ឃ្លា 3 ពាក្យ ទាំងនេះ ជាមួយនឹង អ្នកប្រើប្រាស់ ទាំងអស់។ គ្រប់អ្នកប្រើទាំងអស់ ត្រូវតែជ្រើស ឃ្លា ទូទៅ ដូចគ្នា ហើយ ចុច \' បន្ទាប់ \' ។</string>
+    <string name="help_size">ជ្រើស ចំនួនមនុស្សដែល ត្រូវបានគេ ប៉ុនប៉ង ផ្លាស់ប្តូរទិន្នន័យ ជាមួយគ្នា ហើយចុច យល់ព្រម។</string>
+    <string name="help_userid">លេខ នៅលើអេក្រង់ នេះ ត្រូវបានប្រើដើម្បី បង្កើត ជាក្រុម តែមួយគត់ របស់អ្នកប្រើ ។ ពិនិត្យឡើងវិញនូវ លេខ នៅលើអេក្រង់ អ្នកប្រើទាំងអស់ \' បន្ទាប់មក អ្នកប្រើទាំងអស់ គួរបញ្ចូល លេខ ទាបបំផុត ដូចគ្នា និងចុច យល់ព្រម។</string>
+    <string name="help_verify">ឥឡូវនេះ អ្នកត្រូវតែ ផ្គូផ្គង មួយនៃ ឃ្លា 3 ពាក្យ ទាំងនេះ ជាមួយនឹង អ្នកប្រើប្រាស់ ទាំងអស់។ គ្រប់អ្នកប្រើទាំងអស់ ត្រូវតែជ្រើស ឃ្លា ទូទៅ ដូចគ្នា ហើយ ចុច បន្ទាប់។</string>
 
+    <string name="label_CompareScreensNDevices">ប្រៀបធៀប អេក្រង់ នៅលើឧបករណ៍ %s ។</string>
     <string name="label_NumericModeHint">ដែលមិនមែនជា ភាសាអង់គ្លេស</string>
     <string name="label_PromptInstruct">ចំនួននេះ ត្រូវបានប្រើដើម្បី បង្កើត ជាក្រុម តែមួយគត់ របស់អ្នកប្រើ ។ ប្រៀបធៀប ហើយ បន្ទាប់មកបញ្ចូល លេខ ទាបបំផុត នៅក្នុងចំណោម អ្នកប្រើប្រាស់ ទាំងអស់។</string>
     <string name="label_ReceivedNItems">ទទួលបាន ធាតុ %d</string>
     <string name="label_UserIdHint">ទាបបំផុត</string>
     <string name="label_VerifyInstruct">ទូរស័ព្ទ ទាំងអស់ត្រូវតែ ផ្គូផ្គង មួយនៃ 3 ពាក្យ ឃ្លា ។ ប្រៀបធៀប និងបន្ទាប់មក យក ឃ្លា ប្រកួត។</string>
+
+    <string name="lib_name">SafeSlinger ផ្លាស់ប្តូរ</string>
 
     <string name="prog_CollectingOthersCommitVerify">រង់ចាំ សម្រាប់ការផ្ទៀងផ្ទាត់ ពីសមាជិក ទាំងអស់…</string>
     <string name="prog_CollectingOthersItems">រង់ចាំ សម្រាប់អ្នកប្រើ ទាំងអស់ទៅ ចូលរួម…</string>

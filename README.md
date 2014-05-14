@@ -1,27 +1,27 @@
 SafeSlinger Android Client
 ===================
-The open source SafeSlinger Exchange library is a secure and easy to use method of exchanging public keys or other authentication data, with strong protection from Man-In-The-Middle (MITM) attacks. Our goal is to make exchanging public keys as simple as possible without sacrificing security. Our [research paper][10], presented at MobiCom '13, provides a technical analysis of SafeSlinger's key exchange properties.
+The open source SafeSlinger Exchange library is a secure and easy to use method of exchanging public keys or other authentication data, with strong protection from Man-In-The-Middle (MITM) attacks. Our goal is to make exchanging public keys as simple as possible without sacrificing security. Our [research paper](http://sparrow.ece.cmu.edu/group/pub/farb_safeslinger_mobicom2013.pdf), presented at MobiCom '13, provides a technical analysis of SafeSlinger's key exchange properties.
 
 Library Features:
 
 - Open source makes security audits easy.
 - The only secure simultaneous key exchange for up to 10 people.
 - Easy to implement and use.
-- Cross-platform Android and iOS ([iOS library][11] coming Spring 2014).
+- Cross-platform Android and iOS ([iOS library](http://github.com/SafeSlingerProject/SafeSlinger-iOS) coming Spring 2014).
 - Protection from Man-In-The-Middle attacks during key exchanges.
 - Exchange keys either in person or remote.
 
-The SafeSlinger secure key exchange is implemented cross-platform for [Android][14] and [iOS][11] devices. Keys are exchanged using a simple server implementation on [App Engine][15].
+The SafeSlinger secure key exchange is implemented cross-platform for [Android](http://github.com/SafeSlingerProject/SafeSlinger-Android) and [iOS](http://github.com/SafeSlingerProject/SafeSlinger-iOS) devices. Keys are exchanged using a simple server implementation on [App Engine](http://github.com/SafeSlingerProject/SafeSlinger-AppEngine).
 
 Repository Android Projects
 =======
 
 - **/safeslinger-exchange** contains the library project you can add to your own Android applications. Both the safeslinger-demo and safeslinger-messenger application projects utilize this library to execute the exchange.
-- **/safeslinger-demo** contains the simple [SafeSlinger Exchange Demo][2] application project which shows the minimum requirements to run a safeslinger secure exchange.
-- **/safeslinger-messenger** contains the full application project source for the [SafeSlinger Messenger][1] application. This project is a very rich implementation of a safeslinger secure exchange if you want an example of how to use the exchange to verify public keys in your own applications.
-- **/sha3** contains only the Keccak portions of the [sphlib 3.0][4] library.
-- **/android-vcard** is a modified version of the [android-vcard][5] library.
-- **/android-support-v7-appcompat** is the backward-compatible [Android AppCompat][13] library to manage Action Bar features.
+- **/safeslinger-demo** contains the simple [SafeSlinger Exchange Demo](http://play.google.com/store/apps/details?id=edu.cmu.cylab.starslinger.demo) application project which shows the minimum requirements to run a safeslinger secure exchange.
+- **/safeslinger-messenger** contains the full application project source for the [SafeSlinger Messenger](http://play.google.com/store/apps/details?id=edu.cmu.cylab.starslinger) application. This project is a very rich implementation of a safeslinger secure exchange if you want an example of how to use the exchange to verify public keys in your own applications.
+- **/sha3** contains only the Keccak portions of the [sphlib 3.0](http://www.saphir2.com/sphlib) library.
+- **/android-vcard** is a modified version of the [android-vcard](http://code.google.com/p/android-vcard) library.
+- **/android-support-v7-appcompat** is the backward-compatible [Android AppCompat](http://developer.android.com/reference/android/support/v7/app/package-summary.html) library to manage Action Bar features.
 
 Running the Demo
 ========
@@ -39,18 +39,14 @@ Add Secure Exchange to your Android App
 
 Modify your `AndroidManifest.xml` to include required permissions.
 
-```
-...
+	...
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-...
-
-```
+	...
 
 Modify your `AndroidManifest.xml` to include required activities.
 
-```
-...
+	...
     <!-- we must include all activities declared by library manifests as well: -->
     <activity
         android:name="edu.cmu.cylab.starslinger.exchange.ExchangeActivity"
@@ -67,37 +63,30 @@ Modify your `AndroidManifest.xml` to include required activities.
         android:label="@string/lib_name"
         android:screenOrientation="portrait" >
     </activity>
-...
-
-```
+	...
 
 Modify your `Activity` that starts the exchange to import `Bundle` string extras for convenience and to avoid potential refactoring of names in future versions of the library.
 
-```
-...
-import edu.cmu.cylab.starslinger.exchange.ExchangeActivity;
-import edu.cmu.cylab.starslinger.exchange.ExchangeConfig;
+	...
+	import edu.cmu.cylab.starslinger.exchange.ExchangeActivity;
+	import edu.cmu.cylab.starslinger.exchange.ExchangeConfig;
 
-public class MainActivity extends Activity {
+	public class MainActivity extends Activity {
 
-    private static final int RESULT_EXCHANGE = 1;
-
-```
+    	private static final int RESULT_EXCHANGE = 1;
+	...
 
 Call the `ExchangeActivity` with required parameters.
 
-```
     private void beginExchange(String hostName, byte[] mySecret) {
         Intent intent = new Intent(getActivity(), ExchangeActivity.class);
         intent.putExtra(ExchangeConfig.extra.USER_DATA, mySecret);
         intent.putExtra(ExchangeConfig.extra.HOST_NAME, hostName);
         startActivityForResult(intent, RESULT_EXCHANGE);
     }
-```
 
 Handle the `ExchangeActivity` results.
 
-```
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
@@ -135,15 +124,13 @@ Handle the `ExchangeActivity` results.
         }
         return theirSecrets;
     }
-    ...
-```
 
 Contact
 =======
 
-* SafeSlinger [Project Website][9]
-* Please submit [Bug Reports][12]!
-* Looking for answers, try our [FAQ][7]!
+* SafeSlinger [Project Website](http://www.cylab.cmu.edu/safeslinger)
+* Please submit [Bug Reports](http://github.com/SafeSlingerProject/SafeSlinger-Android/issues)!
+* Looking for answers, try our [FAQ](http://www.cylab.cmu.edu/safeslinger/faq.html)!
 * Support: <safeslingerapp@gmail.com>
 
 License
@@ -169,23 +156,3 @@ License
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 	THE SOFTWARE.
-
-
-
- [1]: http://play.google.com/store/apps/details?id=edu.cmu.cylab.starslinger
- [2]: http://play.google.com/store/apps/details?id=edu.cmu.cylab.starslinger.demo
- [3]: http://itunes.apple.com/app/safeslinger/id493529867
- [4]: http://www.saphir2.com/sphlib
- [5]: http://code.google.com/p/android-vcard
- [6]: http://www.youtube.com/watch?v=IFXL8fUqNKY
- [7]: http://www.cylab.cmu.edu/safeslinger/faq.html
- [8]: http://www.cylab.cmu.edu/safeslinger/images/android-StartDemo.png?raw=true 
- [9]: http://www.cylab.cmu.edu/safeslinger
- [10]: http://sparrow.ece.cmu.edu/group/pub/farb_safeslinger_mobicom2013.pdf
- [11]: http://github.com/SafeSlingerProject/SafeSlinger-iOS
- [12]: http://github.com/SafeSlingerProject/SafeSlinger-Android/issues
- [13]: http://developer.android.com/reference/android/support/v7/app/package-summary.html 
- [14]: http://github.com/SafeSlingerProject/SafeSlinger-Android
- [15]: https://github.com/SafeSlingerProject/SafeSlinger-AppEngine
- 
- 

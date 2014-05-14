@@ -112,6 +112,7 @@
             android:hint="@string/label_UserIdHint"
             android:imeOptions="actionDone"
             android:inputType="number"
+            android:numeric="integer"
             android:privateImeOptions="nm"
             android:scrollHorizontally="true"
             android:textSize="@dimen/sse__text_size_large" >
@@ -123,9 +124,7 @@
             android:id="@+id/PromptFrameButtonPrompt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="@dimen/sse__size_5dp"
-            android:layout_marginTop="@dimen/sse__size_5dp" >
+            android:layout_gravity="bottom|right" >
 
             <Button
                 android:id="@+id/PromptButtonOK"

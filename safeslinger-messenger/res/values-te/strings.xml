@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">తో లింక్ ఆహ్వానం పంపు…</string>
+    <string name="action_NewUserRequest">స్లింగ్ కీస్ పరిచయం ఆహ్వానం ద్వారా జోడించండి…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">రద్దు</string>
     <string name="btn_Close">దగ్గరగా</string>
     <string name="btn_Continue">కొనసాగించు</string>
+    <string name="btn_CreateNewKey">న్యూ కీ సృష్టించు</string>
+    <string name="btn_DeleteKeys">కీస్ తొలగించు</string>
     <string name="btn_discard">వదిలివేయుట</string>
     <string name="btn_Done">అంగీకరించు</string>
     <string name="btn_Exit">నిష్క్రమణ</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 గంటల</string>
     <string name="choice_auto_storage">డిఫాల్ట్ నిల్వ</string>
     <string name="choice_external_storage">బాహ్య నిల్వ</string>
+    <string name="choice_font_large">పెద్ద</string>
+    <string name="choice_font_medium">మధ్యరకం</string>
+    <string name="choice_font_micro">చాలా చిన్న</string>
+    <string name="choice_font_small">చిన్న</string>
     <string name="choice_internal_storage">అంతర్గత నిల్వ</string>
     <string name="choice_nolimit">పరిమితి</string>
     <string name="choice_SaveDirectory">సేవ్ డైరెక్టరీ</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">మైక్రోఫోన్ అనుమతి అవసరం. మైక్రోఫోన్ అనుమతులు ప్రారంభించడానికి iOS సెట్టింగులు వెళ్ళి దయచేసి.</string>
     <string name="error_BackupNotFound">పునరుద్ధరించడానికి బ్యాకప్.</string>
     <string name="error_BackupNotSupportedDevice">పరికర బ్యాకప్ పునరుద్ధరించడానికి మద్దతు లేదు.</string>
-    <string name="error_BadCopyProtectUpgrade">కారణంగా Android 4.1 లో ఒక బగ్, మీరు అన్ఇన్స్టాల్ మరియు SafeSlinger మళ్ళీ ఇన్స్టాల్ ఉంటుంది.</string>
+    <string name="error_BadCopyProtectUpgrade">కారణంగా Android 4.1 లో ఒక బగ్, మీరు SafeSlinger అన్ఇన్స్టాల్ చేసి, మళ్ళీ ఇన్స్టాల్ ఉంటుంది.</string>
     <string name="error_C2DMRegAccountMissing">ఒక Google ఖాతా అవసరం. ఖాతా మేనేజర్ తెరిచి ఒక Google ఖాతాను జోడించండి.</string>
     <string name="error_C2DMRegAuthenticationFailed">నమోదు ప్రమాణీకరించబడని, తరువాత మానవీయంగా దయచేసి మళ్ళీ ప్రయత్నించండి.</string>
     <string name="error_C2DMRegInvalidSender">నమోదు ఈ వెర్షన్ అందుబాటులో లేదు, నవీకరించిన సంస్కరణను కోసం తనిఖీ చెయ్యండి.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">మీరు ఈ పరికరానికి సందేశం కోటాను అధిగమించారు. దయచేసి తర్వాత మళ్ళీ ప్రయత్నించండి.</string>
     <string name="error_PushMsgServiceFail">నోటిఫికేషన్ సర్వీసు సమయం అందుబాటులో లేదు. తరువాత సందేశాన్ని పంపడానికి ప్రయత్నించండి.</string>
     <string name="error_RecoderError">ఆడియో రికార్డర్ రూపొందించలేదు.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">, అదే సమయంలో మరొక ఫోన్ తో \' స్లింగ్ కీస్ ప్రారంభించడానికి.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">, అదే సమయంలో మరొక ఫోన్ తో స్లింగ్ కీస్ ప్రారంభించడానికి.</string>
     <string name="error_selectDataToSend">మీరు ఒక అటాచ్మెంట్ లేదా పంపడానికి ఒక టెక్స్ట్ సందేశం అవసరం.</string>
     <string name="error_ShareFileDelError">భాగస్వామ్య ఫైల్ తీసివేయలేరు.</string>
     <string name="error_UnableFindPubKey">క్రిప్టో ప్రొవైడర్ లో ప్రైవేట్ కీని పబ్లిక్ కీ జతచేయలేక.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger లోపం, మళ్ళీ ప్రారంభించండి.</string>
     <string name="error_VcardParseFailure">సంప్రదించండి డేటా తప్పుగా ఫార్మాట్ చేశారు.</string>
 
-    <string name="help_find">ఇతరులతో మార్పిడి మీ పేరు సెట్ తెరమీద ఉపయోగించండి. పూర్తవగానే \'డన్\' బటన్ నొక్కండి.</string>
-    <string name="help_home">గుర్తింపు డేటా మార్పిడి, యూజర్లు సమీపంలోని లేదా ఫోన్ ఉండేలా. \' ప్రారంభం SWF ఎక్సే్ఛంజీ బటన్ తనిఖీ పరిచయం డేటా మార్పిడి చేస్తుంది.</string>
-    <string name="help_identity_menu">\n\nమీరు కూడా మీ పేరుతో బటన్ నొక్కడం ద్వారా తెరమీద మీ ఐడెంటిటీ వ్యక్తిగత డేటా మార్చవచ్చు. మీరు \' మార్చు \' మీ పరిచయం, పరిచయం \' న్యూ సృష్టించు \', లేదా పరిచయం \' మరో ఉపయోగించండి \' అనుమతిస్తుంది ఒక మెను ప్రదర్శిస్తుంది.</string>
+    <string name="help_find">ఇతరులతో మార్పిడి మీ పేరు సెట్ తెరమీద ఉపయోగించండి. పూర్తవగానే డన్ బటన్ నొక్కండి.</string>
+    <string name="help_home">గుర్తింపు డేటా మార్పిడి, యూజర్లు సమీపంలోని లేదా ఫోన్ ఉండేలా. ప్రారంభం SWF ఎక్స్చేంజ్ బటన్ తనిఖీ పరిచయం డేటా మార్పిడి చేస్తుంది.</string>
+    <string name="help_identity_menu">\n\n\nమీరు కూడా మీ పేరుతో బటన్ నొక్కడం ద్వారా తెరమీద మీ ఐడెంటిటీ వ్యక్తిగత డేటా మార్చవచ్చు. ఈ మీరు మీ సంప్రదింపు సవరించు అనుమతించే మెనును ప్రదర్శిస్తుంది న్యూ పరిచయం సృష్టించు, లేదా మరొక పరిచయం ఉపయోగించండి ఉంటుంది.</string>
     <string name="help_Messages">ఈ తెర అన్ని గత సందేశాలను, మరియు ఇప్పటికీ డౌన్లోడ్ కోసం అందుబాటులో జోడింపులను ప్రదర్శిస్తుంది.</string>
-    <string name="help_passphrase">మీ పాస్ఫ్రేజ్తో అప్లికేషన్ మీరు లాగిన్ ఈ స్క్రీన్ ఉపయోగించండి.</string>
+    <string name="help_passphrase">మీ పాస్ఫ్రేజ్తో అప్లికేషన్ మీరు లాగిన్ ఈ స్క్రీన్ ఉపయోగించండి. మీరు మీ పాస్ఫ్రేజ్ని మర్చిపోతే, మీరు మర్చిపోయారా సంకేతపదమును నొక్కడం ద్వారా కొత్త సంకేతపదమును రక్షణలో కొత్త కీని ఉండవచ్చు? బటన్. బహుళ కీలు మధ్య మారడానికి యూజర్ పేరు కుళాయి.</string>
     <string name="help_PickRecip">SafeSlinger కీలను తో కాంటాక్ట్స్ మీ సందేశాన్ని పంపడానికి ఎనన్నుకొనండి, ఇక్కడ ప్రదర్శించబడతాయి.</string>
-    <string name="help_save">పూర్తి చేసినప్పుడు, ప్రోటోకాల్ మార్పిడి గుర్తింపు డేటా జాబితా బహిర్గతం చేస్తుంది. మీరు \' దిగుమతి \' సేవ్ మరియు నొక్కండి అనుకుంటున్నారా పరిచయాలను ఎంచుకోండి.</string>
-    <string name="help_SecureIntroduction">ఈ తెర మీరు సురక్షితంగా ప్రతి ఇతర వారి కీలు పంపడానికి ముందు కీలు slung చేశారు ఇద్దరు వ్యక్తులు ఎంచుకోండి అనుమతిస్తుంది. ఉన్నప్పుడు సిద్ధంగా కేవలం \' పరిచయం \' నొక్కండి.</string>
-    <string name="help_Send">ఈ తెర మీరు కొన్ని డేటా మరియు పంపడానికి ఒక గ్రహీత ఎంచుకోండి అనుమతిస్తుంది. ఉన్నప్పుడు సిద్ధంగా కేవలం \' ధన్యవాదాలు \' నొక్కండి.</string>
+    <string name="help_save">పూర్తి చేసినప్పుడు, ప్రోటోకాల్ మార్పిడి గుర్తింపు డేటా జాబితా బహిర్గతం చేస్తుంది. మీరు దిగుమతి సేవ్ మరియు నొక్కండి అనుకుంటున్నారా పరిచయాలను ఎంచుకోండి.</string>
+    <string name="help_SecureIntroduction">ఈ తెర మీరు సురక్షితంగా ప్రతి ఇతర వారి కీలు పంపడానికి ముందు కీలు slung చేశారు ఇద్దరు వ్యక్తులు ఎంచుకోండి అనుమతిస్తుంది. కేవలం ఉన్నప్పుడు సిద్ధంగా పరిచయం నొక్కండి.</string>
+    <string name="help_Send">ఈ తెర మీరు కొన్ని డేటా మరియు పంపడానికి ఒక గ్రహీత ఎంచుకోండి అనుమతిస్తుంది. కేవలం సిద్ధంగా ఉన్నప్పుడు పంపండి నొక్కండి.</string>
 
     <string name="iOS_contactError">కాంటాక్ట్స్ అనుమతి అవసరం. కాంటాక్ట్స్ అనుమతులు ప్రారంభించడానికి iOS సెట్టింగులు వెళ్ళి దయచేసి.</string>
     <string name="iOS_errorpushtoken">పుష్ గ్రామస్తులకు చెప్పడం.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">పరికర:</string>
     <string name="label_DeviceInSendOnlyMode">ధన్యవాదాలు మోడ్ను</string>
     <string name="label_DisabledExchSourceKeyChange">మీ కీ మార్చబడింది: స్లింగ్ కీస్.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">సందేశ ప్రారంభించడానికి, రెండు వినియోగదారులు అదే సమయంలో స్లింగ్ కీస్ తప్పక.</string>
     <string name="label_Draft">సోనియా</string>
     <string name="label_EnabledKeyFormatDeprecated">కీ ఆకృతి డీప్రికేటెడ్: స్లింగ్ కీస్.</string>
     <string name="label_exchanged">మార్చిన</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">దస్త్రం పేరు</string>
     <string name="label_FindInstruct">పేరు నమోదు మీరు సురక్షితంగా తెలుసుకొనేందుకు చూడటానికి ఇతరులు అనుకుంటున్నారా:</string>
     <string name="label_FirstName">మొదటి పేరు</string>
-    <string name="label_Home">జోడించడానికి లేదా తొలగించడానికి పరిచయం డేటా, మీరు భాగస్వామ్యం అనుకుంటున్నారా అంశాలను తనిఖీ, మరియు నొక్కండి మీ పేరు పంపు \'ఎక్స్చేంజ్ ప్రారంభం SWF\' ఇతరులు మార్పిడి సిద్ధంగా ఉన్నప్పుడు:</string>
+    <string name="label_Home">జోడించడానికి లేదా తొలగించడానికి పరిచయం డేటా, మీరు భాగస్వామ్యం అనుకుంటున్నారా అంశాలను తనిఖీ, మరియు ఇతరులు మార్పిడి సిద్ధంగా ఉన్నప్పుడు ఎక్స్చేంజ్ ప్రారంభం SWF కార్చు మీ పేరు పంపు:</string>
     <string name="label_hometag">హోం</string>
     <string name="label_hours">%d గంటల</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud ప్రారంభించబడింది. పూర్తవగానే \' డన్ \' బటన్ నొక్కండి.</string>
-    <string name="label_InstNoMessages">లేవు. మీరు హోం మెనులో \' సందేశం రూపొందించు \' బటన్ నుండి ఒక సందేశం పంపవచ్చు.</string>
-    <string name="label_InstNoMessagesAndroid">లేవు. మీరు \' కూర్పు \' టాబ్ నుండి ఒక సందేశం పంపవచ్చు.</string>
-    <string name="label_InstNoRecipients">గ్రహీతలు. సమీపంలోని మరో SafeSlinger యూజర్ కనుగొని కీలు భాగస్వామ్యం \' స్లింగ్ కీస్ టాబ్ టచ్.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud ప్రారంభించబడింది. పూర్తవగానే డన్ బటన్ నొక్కండి.</string>
+    <string name="label_InstNoMessages">లేవు. మీరు హోం మెనులో కూర్పు మెసేజ్ బటన్ నుండి ఒక సందేశం పంపవచ్చు.</string>
+    <string name="label_InstNoMessagesAndroid">లేవు. మీరు కూర్పు టాబ్ నుండి ఒక సందేశం పంపవచ్చు.</string>
+    <string name="label_InstNoRecipients">గ్రహీతలు జోడించడానికి, మీరు మొదటి అదే సమయంలో ఒకటి లేదా ఎక్కువ ఇతర వినియోగదారులతో స్లింగ్ కీస్ తప్పక. మీరు మెను నుండి స్లింగ్ కీస్ పరిచయం ఆహ్వానం పంపుతాము.</string>
     <string name="label_InstNoSharedFile">లేవు భాగస్వామ్యం ఫైలు. షేర్డ్ ఫోల్డర్కు ఐట్యూన్స్ మరియు డ్రాగ్ ఫైళ్లను మీ పరికరాన్ని కనెక్ట్ చేయండి.</string>
     <string name="label_InstRecipients">ఒక సందేశాన్ని పంపడానికి ఒక గ్రహీత ఎంచుకోండి:</string>
     <string name="label_InstSendInvite">సురక్షితంగా పరిచయం గ్రహీతలు ఎంచుకోండి:</string>
     <string name="label_InstSharedFile">అటాచ్ ఒక ఫైల్ ఎంచుకోండి:</string>
     <string name="label_introduced">పరిచయం</string>
+    <string name="label_inviteSent">ఆహ్వానించారు</string>
     <string name="label_Key">కీ:</string>
     <string name="label_LastName">చివరి పేరు</string>
     <string name="label_Me">నా</string>
     <string name="label_messageIntroduceNameToYou">నేను మీకు %s పరిచయం చేయాలనుకుంటున్నారు.</string>
+    <string name="label_messageInviteInstall">SafeSlinger అనువర్తనం: %s</string>
+    <string name="label_messageInviteSetupInst">సెటప్ సురక్షిత సందేశ కనెక్షన్, మేము కలిసే లేదా ఫోన్ ప్రతి ఇతర అదే సమయంలో, ఆపై స్లింగ్ కీస్ కేవలం ఒకసారి కనెక్షన్ ధ్రువీకరించడం చేయవచ్చు.</string>
+    <string name="label_messageInviteStartMsg">ఓపెన్ సోర్స్ SafeSlinger ఐఫోన్ లేదా Android అనువర్తనం తో సురక్షిత సందేశ ప్రారంభించవచ్చు?</string>
     <string name="label_minutes">%d నిమిషాల</string>
     <string name="label_mobiletag">మొబైల్</string>
     <string name="label_MostRecentOnly">ఇటీవల మాత్రమే</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">ఆలస్యం SafeSlinger బ్యాకప్</string>
     <string name="label_safeslingered">(SafeSlinger డైరెక్ట్ ఎక్స్చేంజ్)</string>
     <string name="label_SaveAccount">ఖాతా సేవ్</string>
-    <string name="label_SaveInstruct">సురక్షిత పరిచయాలను సేవ్ \'దిగుమతి\' నొక్కండి, మీరు మీ చిరునామా పుస్తకం లో నవీకరించాలనుకున్న పరిచయాలను తనిఖీ:</string>
+    <string name="label_SaveInstruct">మీరు మీ చిరునామా పుస్తకం లో నవీకరించాలనుకున్న పరిచయాలను తనిఖీ, అప్పుడు సురక్షిత పరిచయాలను సేవ్ దిగుమతి నొక్కండి:</string>
     <string name="label_seconds">%d సెకన్లు</string>
     <string name="label_SelectRecip">స్వీకర్త ఎంచుకోండి</string>
     <string name="label_sendErrorData">లోపం డేటా పంపండి</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">దశ 3</string>
     <string name="label_step_4">దశ 4</string>
     <string name="label_step_5">దశ 5</string>
+    <string name="label_summary_auto_attach_retrieval">లాగిన్ అయినప్పుడు స్వయంచాలకంగా సందేశాన్ని దించుకో</string>
+    <string name="label_summary_auto_decrypt">లాగిన్ అయినప్పుడు స్వయంచాలకంగా సందేశాలను వ్యక్తీకరించడానికి</string>
+    <string name="label_summary_remind_backup_delay">బ్యాకప్ ఆఫ్లైన్ ఉన్నప్పుడు నోటిఫికేషన్ పొందండి.</string>
+    <string name="label_summary_show_tutorial">స్లింగ్ కీస్ కు attemping ముందు ట్యుటోరియల్.</string>
     <string name="label_TapToDecryptFile">ఫైల్ను వ్యక్తీకరించడానికి నొక్కండి</string>
     <string name="label_TapToDecryptMessage">వ్యక్తీకరించడానికి నొక్కండి</string>
     <string name="label_TapToDownloadFile">ఫైల్ డౌన్లోడ్ కుళాయి</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">ఫైలు తెరవడానికి కుళాయి</string>
     <string name="label_TapToResumeDraft">సందేశం డ్రాఫ్ట్ తిరిగి నొక్కండి</string>
     <string name="label_TapToSendCredentialUpdate">టాప్ మరియు క్రెడెన్షియల్ నవీకరణ పంపడానికి కలిగి.</string>
+    <string name="label_TapToSlingKeys">స్లింగ్ కీస్ నొక్కండి.</string>
     <string name="label_targetAccountLabel">కాంటాక్ట్స్ ఖాతా</string>
-    <string name="label_TouchToConfigureBackupSettings">మీరు ఐచ్ఛికంగా iOS సెట్టింగ్లు SafeSlinger iCloud బ్యాకప్ చేతనం చేయవచ్చు. పూర్తవగానే \' డన్ \' బటన్ నొక్కండి.</string>
+    <string name="label_TouchToConfigureBackupSettings">మీరు ఐచ్ఛికంగా iOS సెట్టింగ్లు SafeSlinger iCloud బ్యాకప్ చేతనం చేయవచ్చు. పూర్తవగానే డన్ బటన్ నొక్కండి.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">బ్యాకప్ అమరికలను ఆకృతీకరించుటకు టచ్.</string>
     <string name="label_TouchToConfigureCacheTimeout">కాష్ సమయం ముగిసింది అమరికలను ఆకృతీకరించుటకు టచ్.</string>
     <string name="label_undefinedTypeLabel">తెలియని</string>
     <string name="label_UnknownSender">గుప్తీకరించిన పంపినవారు</string>
     <string name="label_UserName">యూజర్ పేరు</string>
+    <string name="label_WarnForgotPassphrase">మీ డేటాను రక్షించడానికి, SafeSlinger రికవరీ కోసం ఎక్కడైనా మీ పాస్ఫ్రేజ్ని నిల్వ లేదు. మీరు గురుశరణ్ అదే సంకేతపదమును లాగిన్ ఏర్పరచిన సందేశాలను ఉండవచ్చు. అయితే, మీరు, ఒక కొత్త కీ సంకేతపదము సృష్టించవచ్చు మీ గ్రహీతలకు స్లింగ్ కీస్ పునరావృతం.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">క్రింది కీలు తొలగించబడుతుంది:</string>
+    <string name="label_WarnManagePassNoMoreRecent">మీకంటే ఎక్కువ ఇటీవల కీలు ఉన్నాయి.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">కేవలం కీలు ఇటీవల %s న ఉత్పత్తి మీదే తొలగించబడతాయి కంటే ఉత్పత్తి.</string>
     <string name="label_worktag">పని</string>
 
     <string name="menu_About">గురించి</string>
+    <string name="menu_auto_attach_retrieval">జోడింపులను స్వీయ తిరిగి</string>
+    <string name="menu_auto_decrypt">స్వీయ వ్యక్తపరుచు</string>
     <string name="menu_Change">మార్పు</string>
     <string name="menu_ChangePassphrase">మార్చు సంకేతపదమును</string>
+    <string name="menu_ContactInviteEmail">ఇమెయిల్</string>
+    <string name="menu_ContactInviteSms">టెక్స్ట్ (SMS/MMS)</string>
     <string name="menu_CreateNew">న్యూ సృష్టించు</string>
     <string name="menu_delete">తొలగించు</string>
-    <string name="menu_deleteThread">Thread \'%s\' తొలగించు</string>
+    <string name="menu_deleteThread">Thread %s తొలగించు</string>
     <string name="menu_Details">చూడండి వివరాలు</string>
     <string name="menu_DownloadDirectory">డైరెక్టరీ డౌన్లోడ్</string>
     <string name="menu_Edit">మార్చు</string>
+    <string name="menu_EditContact">మార్చు సంప్రదించండి</string>
+    <string name="menu_EditName">సవరించు పేరు</string>
     <string name="menu_FileManager">ఫైల్ మేనేజర్</string>
+    <string name="menu_ForgotPassphrase">పాస్ఫ్రేజ్ మర్చిపోయారా?</string>
     <string name="menu_Help">సహాయం</string>
     <string name="menu_Introduction">పరిచయం</string>
     <string name="menu_License">అనుజ్ఞాపత్రము</string>
     <string name="menu_Logout">లాగ్ అవుట్</string>
+    <string name="menu_ManagePassphrases">సంకేతపదములను నిర్వహించండి</string>
+    <string name="menu_message_font_size">సందేశం ఫాంట్ సైజు</string>
     <string name="menu_messageCopyText">కాపీ టెక్స్ట్</string>
     <string name="menu_messageForward">ముందుకు</string>
     <string name="menu_Remove">తొలగించు</string>
-    <string name="menu_SelectShareApp">అప్లికేషన్ పంపండి</string>
+    <string name="menu_restore_default">డిఫాల్ట్ సెట్టింగులు పునరుద్ధరించు</string>
+    <string name="menu_ringtone">ధ్వని</string>
+    <string name="menu_SelectShareApp">సంప్రదించండి Invitation జోడించండి</string>
     <string name="menu_sendFeedback">ను పంపండి</string>
     <string name="menu_SendUpdate">నవీకరణ పంపండి</string>
     <string name="menu_Settings">సెట్టింగ్స్</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">స్లింగ్ కీస్</string>
     <string name="menu_TagListMessages">సందేశాలు</string>
     <string name="menu_UseAnother">మరో ఉపయోగించండి</string>
-    <string name="menu_UseContactPerson">సంప్రదించండి \'%s\' ఉపయోగించండి</string>
+    <string name="menu_UseContactPerson">సంప్రదించండి %s ఉపయోగించండి</string>
     <string name="menu_UseNoContact">వాడుక పేరు మాత్రమే</string>
-    <string name="menu_UseProfilePerson">ప్రొఫైల్ \'%s\' ఉపయోగించండి</string>
+    <string name="menu_UseProfilePerson">ప్రొఫైల్ %s ఉపయోగించండి</string>
+    <string name="menu_vibrate">ప్రకంపనాలను</string>
 
     <string name="prog_decrypting">మార్చడంలో…</string>
     <string name="prog_encrypting">ఎన్క్రిప్ట్…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">అధునాతన</string>
     <string name="section_backup">బ్యాకప్</string>
     <string name="section_general">జనరల్</string>
+    <string name="section_notification">ప్రకటనలు</string>
+    <string name="section_storage">నిల్వ</string>
 
     <string name="state_BackupRestored">బ్యాకప్ పునరుద్ధరించబడింది.</string>
     <string name="state_FileDeleted">తొలగించిన ఫైలు %s.</string>
     <string name="state_FileSent">సందేశం పంపబడింది.</string>
+    <string name="state_InvitationAdded">ఆహ్వానం జోడించారు.</string>
     <string name="state_MessageSavedAsDraft">డ్రాఫ్ట్ గా సేవ్ మెసేజ్.</string>
     <string name="state_MessagesDeleted">తొలగించారు %d సందేశాలను.</string>
     <string name="state_PassphraseUpdated">పాస్ఫ్రేజ్ నవీకరించబడింది.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s పరిచయాలను దిగుమతి.</string>
     <string name="state_TextCopiedToClipboard">టెక్స్ట్ కాపీ చేయబడి.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger, వ్యక్తి లేదా ఫోన్, సులభంగా గుర్తింపు డేటా భాగస్వామ్యం రూపొందించబడింది అధికారం, ప్రైవేట్, మరియు చెక్కుచెదరకుండా ఉంది. మీరు భాగస్వామ్యం ప్రతి వ్యక్తికి సందేశాలను పంపడానికి సురక్షిత ఎండ్ టు ఎండ్ ఛానల్ సృష్టిస్తుంది.\n\nఫీచర్స్\n- సులభంగా ఇతరులతో సమాచారాన్ని సంప్రదించండి మార్పిడి\n- సురక్షితంగా స్లింగ్ పాఠాలు, ఫోటోలు, ఏదైనా!\n- బలమైన గూఢ మీ సమాచారాన్ని రక్షించే\n\nఇమెయిల్: %2$s\nవెబ్: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ప్రైవేట్, అధికారం, వ్యక్తి లేదా ఫోన్, సులభంగా గుర్తింపు డేటా భాగస్వామ్యం రూపొందించబడింది, మరియు చెక్కుచెదరకుండా ఉంది. మీరు భాగస్వామ్యం ప్రతి వ్యక్తికి సందేశాలను పంపడానికి సురక్షిత ఎండ్ టు ఎండ్ ఛానల్ సృష్టిస్తుంది.\n\nఫీచర్స్:\n-సులభంగా ఇతరులు\n-సురక్షితంగా స్లింగ్ పాఠాలు, ఫోటోలు, ఏదైనా సంబంధం సమాచారాన్ని మార్పిడి! %2$s\nవెబ్: %3$s\n-బలమైన గూఢ మీ సమాచారాన్ని\n\nఇమెయిల్ రక్షిస్తుంది</string>
     <string name="text_KeywordExchange">మార్పిడి</string>
     <string name="text_KeywordIdentity">గుర్తింపు</string>
     <string name="text_KeywordKey">కీ</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">భద్రత</string>
     <string name="text_LanguagesProvidedBy">అందించిన భాషలు:</string>
     <string name="text_RelatedSearchTerms">సంబంధిత నిబంధనలు:</string>
-    <string name="text_Requirements">అవసరాలు:\n1. 2 పరికరాల కనీసం ఇన్స్టాల్ చేయాలి.\n2. ఒక ఇంటర్నెట్ కనెక్షన్ యాక్టివ్గా ఉండాలి.</string>
+    <string name="text_Requirements">అవసరాలు:.\n1 2 పరికరాల కనీసం ఇన్స్టాల్ చేయాలి.\n2. ఒక ఇంటర్నెట్ కనెక్షన్ యాక్టివ్గా ఉండాలి.</string>
     <string name="text_SourceCodeRepo">ఓపెన్ సోర్స్: %s</string>
-    <string name="text_WhatsNew">- స్టెబిలిటీ పరిష్కారాలను.</string>
+    <string name="text_WhatsNew">-స్టెబిలిటీ పరిష్కరిస్తుంది.</string>
 
     <string name="title_About">గురించి</string>
     <string name="title_camera">కెమెరా</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">స్లింగ్ కీస్ అసిస్టెంట్</string>
     <string name="title_FileOptions">జోడింపు ఐచ్ఛికాలు</string>
     <string name="title_find">సెటప్</string>
+    <string name="title_font_size">ఒక ఫాంట్ పరిమాణాన్ని ఎంచుకోండి</string>
     <string name="title_home">ఎక్స్చేంజ్ ప్రారంభం SWF</string>
     <string name="title_HomePanel">హోం</string>
     <string name="title_MessageDetail">మెసేజ్</string>

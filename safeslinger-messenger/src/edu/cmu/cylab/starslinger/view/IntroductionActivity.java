@@ -26,7 +26,6 @@ package edu.cmu.cylab.starslinger.view;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -44,7 +43,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -62,8 +60,6 @@ public class IntroductionActivity extends BaseActivity {
     public static final int VIEW_RECIPSEL2 = 722;
     public static final int RESULT_SEND = 724;
     public static final int RESULT_RESTART = 732;
-    private static final int MENU_HELP = 770;
-    private static final int MENU_FEEDBACK = 490;
 
     private TextView mTextViewRecipName2;
     private TextView mTextViewRecipName1;
@@ -132,10 +128,6 @@ public class IntroductionActivity extends BaseActivity {
 
             @Override
             public void onClick(View v) {
-                // if soft input open, close it...
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(mEditTextMessage1.getWindowToken(), 0);
-                imm.hideSoftInputFromWindow(mEditTextMessage2.getWindowToken(), 0);
 
                 sendResultToHost(RESULT_SEND, resultIntent().getExtras());
             }
@@ -163,6 +155,8 @@ public class IntroductionActivity extends BaseActivity {
                 R.drawable.ic_action_help);
         MenuCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
 
+        menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+                R.drawable.ic_action_add_person);
         menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);
 
@@ -178,6 +172,9 @@ public class IntroductionActivity extends BaseActivity {
                 return true;
             case MENU_FEEDBACK:
                 SafeSlinger.getApplication().showFeedbackEmail(IntroductionActivity.this);
+                return true;
+            case MENU_CONTACTINVITE:
+                showAddContactInvite();
                 return true;
         }
         return false;
@@ -364,7 +361,6 @@ public class IntroductionActivity extends BaseActivity {
     @Override
     public void onResume() {
         super.onResume();
-        // The activity has become visible (it is now "resumed").
 
         updateValues(null);
     }
@@ -422,6 +418,10 @@ public class IntroductionActivity extends BaseActivity {
         switch (id) {
             case DIALOG_HELP:
                 return xshowHelp(IntroductionActivity.this, args).create();
+            case DIALOG_CONTACTINVITE:
+                return xshowAddContactInvite(this).create();
+            case DIALOG_CONTACTTYPE:
+                return xshowCustomContactPicker(this, args).create();
         }
         return super.onCreateDialog(id);
     }

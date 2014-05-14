@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">کے ساتھ لنک کو مدعو ارسال کریں…</string>
+    <string name="action_NewUserRequest">ایک گوفن چابیاں رابطہ دعوت کے ذریعے شامل کریں…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">منسوخ کریں</string>
     <string name="btn_Close">بند کریں</string>
     <string name="btn_Continue">آگے</string>
+    <string name="btn_CreateNewKey">نئی چابی تیار</string>
+    <string name="btn_DeleteKeys">چابیاں حذف کریں</string>
     <string name="btn_discard">ضائع کر دیا جائے</string>
     <string name="btn_Done">ہو گیا</string>
     <string name="btn_Exit">باہر نکلیں</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 گھنٹے</string>
     <string name="choice_auto_storage">پہلے سے طے شدہ ذخیرہ</string>
     <string name="choice_external_storage">بیرونی سٹوریج</string>
+    <string name="choice_font_large">بڑے پیمانے پر</string>
+    <string name="choice_font_medium">میڈیم</string>
+    <string name="choice_font_micro">بہت چھوٹا</string>
+    <string name="choice_font_small">چھوٹے</string>
     <string name="choice_internal_storage">اندرونی سٹوریج</string>
     <string name="choice_nolimit">کوئی حد نہیں</string>
     <string name="choice_SaveDirectory">محفوظ ڈائرکٹری</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">مائیکروفون کی اجازت کی ضرورت ہے. مائیکروفون اجازت چالو کرنے کے لئے iOS کے کی ترتیبات پر جانے کے لئے ، براہ مہربانی.</string>
     <string name="error_BackupNotFound">بحال کرنے کے لئے کوئی بیک اپ.</string>
     <string name="error_BackupNotSupportedDevice">ڈیوائس بیک اپ بحال کی حمایت نہیں کرتا.</string>
-    <string name="error_BadCopyProtectUpgrade">کی وجہ سے لوڈ، اتارنا Android 4.1 میں ایک بگ کے لئے، آپ انسٹال ہے اور SafeSlinger دوبارہ انسٹال کریں گے.</string>
+    <string name="error_BadCopyProtectUpgrade">کی وجہ سے لوڈ، اتارنا Android 4.1 میں ایک بگ کے لئے، آپ SafeSlinger انسٹال کریں اور دوبارہ انسٹال کرنا پڑے گا.</string>
     <string name="error_C2DMRegAccountMissing">گوگل اکاؤنٹ کی ضرورت ہے. اکاؤنٹ کے مینیجر کھولنے اور ایک گوگل اکاؤنٹ میں شامل کریں.</string>
     <string name="error_C2DMRegAuthenticationFailed">رجسٹریشن توثیق نہیں ، بعد میں دستی طور پر دوبارہ کوشش کریں.</string>
     <string name="error_C2DMRegInvalidSender">رجسٹریشن اس ورژن کے لئے دستیاب نہیں ہے ، ایک تازہ ترین ورژن کے لئے چیک کریں براہ مہربانی.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">آپ اس آلہ کے لئے پیغام کے کوٹے سے تجاوز کر چکے. بعد میں دوبارہ کوشش کریں.</string>
     <string name="error_PushMsgServiceFail">اطلاعاتی خدمت اس وقت دستیاب نہیں ہے. بعد میں پیغام بھیجنے کی کوشش کریں براہ مہربانی.</string>
     <string name="error_RecoderError">آڈیو ریکارڈر تیار نہیں کر سکتے.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">، ایک ہی وقت میں کسی دوسرے فون کے ساتھ \' پھینکیں چابیاں \' شروع کرنے کے لئے.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">، ایک ہی وقت میں ایک اور فون کے ساتھ پھینکیں چابیاں شروع کرنے کے لئے.</string>
     <string name="error_selectDataToSend">آپ کو ایک ملحق یا بھیجنے کے لئے ایک متن پیغام کی ضرورت ہے.</string>
     <string name="error_ShareFileDelError">مشترکہ فائل کو ختم نہیں کر سکتے ہیں.</string>
     <string name="error_UnableFindPubKey">Crypto کی فراہم کرنے میں نجی کلید عوامی چابی سے ملنے کے لئے کے قابل نہیں.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger غلطی ، دوبارہ شروع کریں، براہ مہربانی.</string>
     <string name="error_VcardParseFailure">رابطے کی معلومات غلط طریقے سے فارمیٹ کیا گیا تھا.</string>
 
-    <string name="help_find">دوسروں کے ساتھ تبادلہ کرنے کے لئے آپ کے نام قائم کرنے کے لئے اس کی سکرین کا استعمال کریں. ختم جب \'کیا\' کے بٹن ٹیپ.</string>
-    <string name="help_home">شناخت کے اعداد و شمار کا تبادلہ کرنا ، تمام صارفین کے قریبی یا فون پر ہیں کو یقینی بنانے. \' شروع ایکسچینج \' کے بٹن پر صرف کی جانچ پڑتال کی رابطے کی معلومات کا تبادلہ کریں گے.</string>
-    <string name="help_identity_menu">\n\nآپ اپنے نام کے ساتھ بٹن پر ٹیپ کی طرف سے اس کی سکرین پر آپ کی شناخت کے بارے میں ذاتی ڈیٹا تبدیل کر سکتے ہیں. اس سے آپ کو \'ترمیم کریں\' آپ سے رابطہ کریں ، رابطہ کریں \'نئی تشکیل دیں\' ، یا رابطے \' ایک اور استعمال \' کرنے کی اجازت دی ایک مینو ظاہر کرے گا.</string>
+    <string name="help_find">دوسروں کے ساتھ تبادلہ کرنے کے لئے آپ کے نام قائم کرنے کے لئے اس کی سکرین کا استعمال کریں. ختم کیا جب بٹن ٹیپ.</string>
+    <string name="help_home">شناخت کے اعداد و شمار کا تبادلہ کرنا ، تمام صارفین کے قریبی یا فون پر ہیں کو یقینی بنانے. شروع ایکسچینج کے بٹن پر صرف کی جانچ پڑتال کی رابطے کی معلومات کا تبادلہ کریں گے.</string>
+    <string name="help_identity_menu">\n\n\nآپ اپنے نام کے ساتھ بٹن پر ٹیپ کی طرف سے اس کی سکرین پر آپ کی شناخت کے بارے میں ذاتی ڈیٹا تبدیل کر سکتے ہیں. یہ آپ کو آپ کے رابطے میں ترمیم کرنے کی اجازت دی ایک مینو ظاہر نیا رابطہ بنائیں ، یا کسی دوسرے سے رابطہ کریں کا استعمال کریں گے.</string>
     <string name="help_Messages">یہ سکرین کے تمام گزشتہ پیغامات ، اور اب بھی ڈاؤن لوڈ کے لئے دستیاب ہیں اٹیچمنٹ دکھاتا ہے.</string>
-    <string name="help_passphrase">آپ پاس فریز کے ساتھ کی درخواست پر لاگ ان کرنے کی اس کی سکرین کا استعمال کریں.</string>
+    <string name="help_passphrase">آپ پاس فریز کے ساتھ کی درخواست پر لاگ ان کرنے کی اس کی سکرین کا استعمال کریں. آپ کو آپ کے پاس فریز بھول گئے ہیں تو ، آپ کو بھول گئے ہیں پاس فریز ٹیپ کی طرف سے ایک نیا پاس فریز کی طرف سے محفوظ ایک نئی چابی پیدا کر سکتے ہیں ؟ بٹن. ایک سے زیادہ چابیاں کے درمیان سوئچ کرنے کے لئے رکن کا نام ٹیپ.</string>
     <string name="help_PickRecip">SafeSlinger چابیاں کے ساتھ رابطے کے لئے آپ کے پیغام کو بھیجنے کے لئے ایک کو منتخب کریں ، یہاں دکھائے جاتے ہیں.</string>
-    <string name="help_save">جب فارغ ، پروٹوکول تبادلہ شناخت کے اعداد و شمار کی ایک فہرست ظاہر کرے گا. آپ \'درآمد \' محفوظ کریں اور دبائیں کرنے کے لئے چاہتے رابطے منتخب کریں.</string>
-    <string name="help_SecureIntroduction">یہ سکرین آپ کو محفوظ طریقے سے ایک دوسرے کے لئے ان کی چابیاں بھیجنے کے لئے اس سے پہلے کے ساتھ چابیاں slung ہے دو لوگوں کو منتخب کرنے کے لئے کی اجازت دیتا ہے. جب تیار بس \' متعارف کرانے کے پریس.</string>
-    <string name="help_Send">یہ سکرین آپ کو کچھ اعداد و شمار اور کو بھیجنے کے لئے ایک وصول کنندہ کو منتخب کرنے کی اجازت دیتا ہے. جب تیار بس \'بھیجیں\' دبائیں.</string>
+    <string name="help_save">جب فارغ ، پروٹوکول تبادلہ شناخت کے اعداد و شمار کی ایک فہرست ظاہر کرے گا. آپ کو درآمد کو بچانے کے اور پریس کرنا چاہتے ہیں رابطے منتخب کریں.</string>
+    <string name="help_SecureIntroduction">یہ سکرین آپ کو محفوظ طریقے سے ایک دوسرے کے لئے ان کی چابیاں بھیجنے کے لئے اس سے پہلے کے ساتھ چابیاں slung ہے دو لوگوں کو منتخب کرنے کے لئے کی اجازت دیتا ہے. بس جب تیار متعارف کرانے دبائیں.</string>
+    <string name="help_Send">یہ سکرین آپ کو کچھ اعداد و شمار اور کو بھیجنے کے لئے ایک وصول کنندہ کو منتخب کرنے کی اجازت دیتا ہے. بس کے لئے تیار ہے جب ارسال دبائیں.</string>
 
     <string name="iOS_contactError">رابطے کی اجازت کی ضرورت ہے. رابطے کی اجازت کے چالو کرنے کے لئے iOS کے کی ترتیبات پر جانے کے لئے ، براہ مہربانی.</string>
     <string name="iOS_errorpushtoken">پش رجسٹریشن لاپتہ ہے.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">ڈیوائس:</string>
     <string name="label_DeviceInSendOnlyMode">ارسال صرف موڈ</string>
     <string name="label_DisabledExchSourceKeyChange">آپ کی چابی کو تبدیل کر دیا: گوفن چابیاں دوبارہ.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">پیغام رسانی کے شروع کرنے کے لئے ، دونوں صارفین کو ایک ہی وقت میں پھینکیں چابیاں ضروری ہے.</string>
     <string name="label_Draft">ڈرافٹس</string>
     <string name="label_EnabledKeyFormatDeprecated">کلیدی شکل فرسودہ: گوفن چابیاں دوبارہ.</string>
     <string name="label_exchanged">تبادلہ</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">فائل کا نام</string>
     <string name="label_FindInstruct">نام درج کریں آپ کو محفوظ طریقے سے بات چیت جب دیکھنے کے لئے دوسروں کی خواہش:</string>
     <string name="label_FirstName">پہلا نام</string>
-    <string name="label_Home">شامل کرنے یا ہٹانے کے رابطے کی معلومات، آپ اشتراک کرنا چاہتے ہیں اشیاء کی جانچ پڑتال، اور نل آپ کے نام کے نل کے تبادلے شروع دوسروں کے تبادلے کے لئے تیار ہیں جب:</string>
+    <string name="label_Home">شامل کرنے یا ہٹانے کے رابطے کی معلومات ، آپ اشتراک کرنا چاہتے ہیں اشیاء کی جانچ پڑتال ، اور دوسروں کے تبادلے کے لئے تیار ہیں جب ایکسچینج شروع نل آپ کا نام ٹیپ:</string>
     <string name="label_hometag">ہوم</string>
     <string name="label_hours">%d گھنٹے</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud کے چالو حالت میں ہے. ختم جب \' کیا \' کے بٹن ٹیپ.</string>
-    <string name="label_InstNoMessages">کوئی پیغام نہیں. آپ کے گھر کے مینو پر \' پیغام کی تحریر \' کے بٹن کی طرف سے ایک پیغام بھیج سکتے ہیں.</string>
-    <string name="label_InstNoMessagesAndroid">کوئی پیغام نہیں. آپ \' ترتیب \' کے ٹیب سے ایک پیغام بھیج سکتے ہیں.</string>
-    <string name="label_InstNoRecipients">کوئی وصول کنندگان کے. قریبی ایک اور SafeSlinger صارف کو تلاش کریں اور چابیاں کا اشتراک کرنے کے لئے \' پھینکیں چابیاں \' کے ٹیب کو چھو.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud کے چالو حالت میں ہے. ختم کیا جب بٹن ٹیپ.</string>
+    <string name="label_InstNoMessages">کوئی پیغام نہیں. آپ کے گھر کے مینو پر تحریر پیغام کے بٹن کی طرف سے ایک پیغام بھیج سکتے ہیں.</string>
+    <string name="label_InstNoMessagesAndroid">کوئی پیغام نہیں. آپ نے کمپوز ٹیب سے ایک پیغام بھیج سکتے ہیں.</string>
+    <string name="label_InstNoRecipients">وصول کنندگان شامل کرنے کے لئے ، سب سے پہلے آپ ایک ہی وقت میں ایک یا ایک سے زیادہ دوسرے صارفین کے ساتھ پھینکیں چابیاں ضروری ہے. تم نے بھی مینو میں سے ایک گوفن چابیاں رابطہ دعوت بھیج سکتے ہیں.</string>
     <string name="label_InstNoSharedFile">کوئی مشترکہ فائل. مشترکہ فولڈر پر آئی ٹیونز اور ڈریگ فائلوں کے ساتھ آپ کے آلہ کی جڑیں.</string>
     <string name="label_InstRecipients">ایک پیغام بھیجنے کے لئے ایک وصول کنندہ اٹھاو:</string>
     <string name="label_InstSendInvite">محفوظ طریقے سے متعارف کرانے کے لئے وصول کنندگان:</string>
     <string name="label_InstSharedFile">منسلک کرنے کے لئے ایک فائل منتخب کریں:</string>
     <string name="label_introduced">متعارف کرایا</string>
+    <string name="label_inviteSent">مدعو</string>
     <string name="label_Key">کلیدی:</string>
     <string name="label_LastName">آخری نام</string>
     <string name="label_Me">مجھے</string>
     <string name="label_messageIntroduceNameToYou">میں نے تم سے %s تعارف کرانا چاہوں گا.</string>
+    <string name="label_messageInviteInstall">SafeSlinger اپلی کیشن: %s</string>
+    <string name="label_messageInviteSetupInst">سیٹ اپ ایک محفوظ پیغام رسانی کے کنکشن ، ہم سے ملنے یا فون کے ایک دوسرے کے ایک ہی وقت میں ، اور پھر پھینکیں چابیاں صرف ایک بار کنکشن کی تصدیق کر سکتے ہیں.</string>
+    <string name="label_messageInviteStartMsg">ہم کھلا ماخذ SafeSlinger فون یا لوڈ، اتارنا Android اپلی کیشن کے ساتھ محفوظ پیغام رسانی شروع کر سکتے ہیں؟</string>
     <string name="label_minutes">%d منٹ</string>
     <string name="label_mobiletag">موبائل</string>
     <string name="label_MostRecentOnly">سب سے زیادہ حال ہی میں صرف</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">تاخیر SafeSlinger بیک اپ</string>
     <string name="label_safeslingered">(SafeSlinger براہ راست تبادلہ)</string>
     <string name="label_SaveAccount">اکاؤنٹ کو محفوظ کریں</string>
-    <string name="label_SaveInstruct">محفوظ رابطوں کو بچانے کے لئے \'درآمد\' نل تو، آپ کو آپ کی ایڈریس بک میں اپ ڈیٹ کرنا چاہتے رابطے کی جانچ پڑتال کریں:</string>
+    <string name="label_SaveInstruct">آپ کو آپ کی ایڈریس بک میں اپ ڈیٹ کرنا چاہتے رابطے کی جانچ پڑتال کریں ، اور پھر محفوظ رابطوں کو بچانے کے لئے درآمد نل:</string>
     <string name="label_seconds">%d چلیں</string>
     <string name="label_SelectRecip">منتخب وصول کنندہ</string>
     <string name="label_sendErrorData">خرابی ڈیٹا بھیجنے کے</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">مرحلہ 3</string>
     <string name="label_step_4">مرحلہ 4</string>
     <string name="label_step_5">مرحلہ نمبر 5</string>
+    <string name="label_summary_auto_attach_retrieval">لاگ ان جب خود کار طریقے پیغام اٹیچمنٹ ڈاؤن لوڈ کریں</string>
+    <string name="label_summary_auto_decrypt">لاگ ان جب خود کار طریقے پیغامات بےرمز</string>
+    <string name="label_summary_remind_backup_delay">بیک اپ آن لائن ہے جب اطلاع موصول.</string>
+    <string name="label_summary_show_tutorial">پھینکیں چابیاں attemping سے پہلے ایک سبق دکھائیں.</string>
     <string name="label_TapToDecryptFile">فائل بےرمز کرنے کے لئے تھپتھپائیں</string>
     <string name="label_TapToDecryptMessage">بےرمز کرنے کے لئے تھپتھپائیں</string>
     <string name="label_TapToDownloadFile">فائل ڈاؤن لوڈ کرنے کے لئے تھپتھپائیں</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">فائل کو کھولنے کے ٹیپ</string>
     <string name="label_TapToResumeDraft">پیغام مسودہ دوبارہ شروع کرنے کے لئے تھپتھپائیں</string>
     <string name="label_TapToSendCredentialUpdate">ٹیپ اور سند اپ ڈیٹ بھیجنے کے لئے منعقد.</string>
+    <string name="label_TapToSlingKeys">پھینکیں چابیاں کرنے کے لئے تھپتھپائیں.</string>
     <string name="label_targetAccountLabel">رابطے اکاؤنٹ</string>
-    <string name="label_TouchToConfigureBackupSettings">آپ اختیاری iOS کے ترتیبات میں SafeSlinger iCloud کے بیک اپ کے چالو کر سکتے ہیں. ختم جب \' کیا \' کے بٹن ٹیپ.</string>
+    <string name="label_TouchToConfigureBackupSettings">آپ اختیاری iOS کے ترتیبات میں SafeSlinger iCloud کے بیک اپ کے چالو کر سکتے ہیں. ختم کیا جب بٹن ٹیپ.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">بیک اپ کی ترتیبات کو ترتیب دینے کی ٹچ.</string>
     <string name="label_TouchToConfigureCacheTimeout">کیشے ٹائم آؤٹ کی ترتیبات کو ترتیب دینے کی ٹچ.</string>
     <string name="label_undefinedTypeLabel">نامعلوم</string>
     <string name="label_UnknownSender">خفیہ کردہ مرسل</string>
     <string name="label_UserName">رکن کا نام</string>
+    <string name="label_WarnForgotPassphrase">آپ کے ڈیٹا کی حفاظت کے لئے ، SafeSlinger وصولی کے لئے کہیں بھی آپ کے پاس فریز محفوظ نہیں ہے. آپ صرف وصول کنندگان اور ایک ہی پاس فریز لاگ ان کے تحت پیدا پیغامات تک رسائی حاصل کر سکتے ہیں. تاہم، آپ کو ایک نئی چابی اور پاس فریز پیدا کر سکتے ہیں تو پھر آپ کے وصول کنندگان کے ساتھ پھینکیں چابیاں دوبارہ.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">مندرجہ ذیل چابیاں کو خارج کر دیا جائے گا:</string>
+    <string name="label_WarnManagePassNoMoreRecent">آپ سے زیادہ حال ہی میں چابیاں ہیں.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">صرف چابیاں حال ہی میں %s پر پیدا تمہاری ، ، خارج کر دیا جا سکتا ہے سے پیدا.</string>
     <string name="label_worktag">کام</string>
 
     <string name="menu_About">کے بارے میں</string>
+    <string name="menu_auto_attach_retrieval">آئٹم کے ساتھ منسلک آٹو بازیافت</string>
+    <string name="menu_auto_decrypt">آٹو بےرمز</string>
     <string name="menu_Change">تبدیل</string>
     <string name="menu_ChangePassphrase">تبدیل پاس فریز</string>
+    <string name="menu_ContactInviteEmail">ای میل</string>
+    <string name="menu_ContactInviteSms">متن (SMS/MMS)</string>
     <string name="menu_CreateNew">نیا بنائیں</string>
     <string name="menu_delete">حذف کریں</string>
-    <string name="menu_deleteThread">موضوع \'%s\' حذف کریں</string>
+    <string name="menu_deleteThread">موضوع، فورم کے %s حذف کریں</string>
     <string name="menu_Details">دیکھیں تفصیل</string>
     <string name="menu_DownloadDirectory">ڈائریکٹری ڈاؤن لوڈ، اتارنا</string>
     <string name="menu_Edit">میں ترمیم کریں</string>
+    <string name="menu_EditContact">رابطے میں ترمیم کریں</string>
+    <string name="menu_EditName">نام میں ترمیم کریں</string>
     <string name="menu_FileManager">فائل مینیجر</string>
+    <string name="menu_ForgotPassphrase">پاس فریز بھول گئے ہیں؟</string>
     <string name="menu_Help">مدد</string>
     <string name="menu_Introduction">تعارف</string>
     <string name="menu_License">لائسنس</string>
     <string name="menu_Logout">لاگ آؤٹ کریں</string>
+    <string name="menu_ManagePassphrases">Passphrases لڑکا</string>
+    <string name="menu_message_font_size">پیغام فونٹ سائز</string>
     <string name="menu_messageCopyText">متن نقل کریں</string>
     <string name="menu_messageForward">فارورڈ</string>
     <string name="menu_Remove">ہٹا دیں</string>
-    <string name="menu_SelectShareApp">درخواست بھیجیں</string>
+    <string name="menu_restore_default">پہلے سے طے شدہ ترتیبات کو بحال</string>
+    <string name="menu_ringtone">آواز</string>
+    <string name="menu_SelectShareApp">رابطہ دعوت نامہ شامل کریں</string>
     <string name="menu_sendFeedback">رائے بھیجیں</string>
     <string name="menu_SendUpdate">اپ ڈیٹ ارسال کریں</string>
     <string name="menu_Settings">ترتیبات</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">پھینکیں چابیاں</string>
     <string name="menu_TagListMessages">پیغامات</string>
     <string name="menu_UseAnother">ایک اور استعمال</string>
-    <string name="menu_UseContactPerson">رابطہ کریں \'%s\' کا استعمال کریں</string>
+    <string name="menu_UseContactPerson">رابطہ %s استعمال کریں</string>
     <string name="menu_UseNoContact">استعمال نام صرف</string>
-    <string name="menu_UseProfilePerson">کوائف \'%s\' کا استعمال کریں</string>
+    <string name="menu_UseProfilePerson">پروفائل %s استعمال کریں</string>
+    <string name="menu_vibrate">کمپن</string>
 
     <string name="prog_decrypting">خفیہ کشائی…</string>
     <string name="prog_encrypting">خفیہ کاری کے…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">اعلی درجے کی</string>
     <string name="section_backup">بیک اپ</string>
     <string name="section_general">جنرل</string>
+    <string name="section_notification">نوٹیفیکیشن</string>
+    <string name="section_storage">ذخیرہ</string>
 
     <string name="state_BackupRestored">بیک اپ بحال.</string>
     <string name="state_FileDeleted">خارج کر دیا فائل %s.</string>
     <string name="state_FileSent">بھیجے گئے پیغام.</string>
+    <string name="state_InvitationAdded">دعوت شامل.</string>
     <string name="state_MessageSavedAsDraft">ڈرافٹ کے طور پر محفوظ شدہ پیغام.</string>
     <string name="state_MessagesDeleted">خارج کر دیا %d پیغامات.</string>
     <string name="state_PassphraseUpdated">پاس فریز اپ ڈیٹ.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s رابطے درآمد.</string>
     <string name="state_TextCopiedToClipboard">متن کلپ بورڈ پر کاپی.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger، ذاتی طور پر یا فون پر، آسانی سے شناخت کے ڈیٹا کا اشتراک کرنے کے لئے ڈیزائن توثیق، نجی، اور برقرار ہے. آپ کے ساتھ اشتراک ہر شخص پیغامات بھیجنے کے لئے ایک محفوظ آخر میں کے آخر میں چینل کی تخلیق کرتا ہے.\n\nخصوصیات:\n- آسانی سے دوسروں کے ساتھ رابطہ کی معلومات کا تبادلہ\n- محفوظ طریقے سے گوفن نصوص، تصاویر، کچھ بھی!\n- مضبوط خفیہ نگاری آپ کی معلومات کی حفاظت کرتا ہے\n\nای میل: %2$s\nویب سائٹ: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger نجی ، توثیق ، ذاتی طور پر یا فون پر ، آسانی سے شناخت کے ڈیٹا کا اشتراک کرنے کے لئے ڈیزائن ، اور برقرار ہے. آپ کے ساتھ اشتراک ہر شخص پیغامات بھیجنے کے لئے ایک محفوظ آخر میں کے آخر میں چینل کی تخلیق کرتا ہے.\n\nخصوصیات:\nآسانی سے دوسروں\n-محفوظ طریقے سے پھینکیں نصوص ، تصاویر ، کچھ کے ساتھ رابطے کی معلومات کا تبادلہ! %2$s\nویب: %3$s\nمضبوط خفیہ نگاری آپ کی معلومات\n\nای میل کی حفاظت کرتا ہے</string>
     <string name="text_KeywordExchange">ایکسچینج</string>
     <string name="text_KeywordIdentity">شناخت</string>
     <string name="text_KeywordKey">کلیدی</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">سیکورٹی</string>
     <string name="text_LanguagesProvidedBy">کی طرف سے فراہم زبانیں:</string>
     <string name="text_RelatedSearchTerms">متعلقہ اصطلاحات:</string>
-    <string name="text_Requirements">کے تقاضے:\n1. 2 آلات کی ایک کم از کم پر انسٹال ہونا ضروری ہے.\n2. ایک انٹرنیٹ کنکشن فعال ہونا ضروری ہے.</string>
+    <string name="text_Requirements">کے تقاضے:.\n1 2 آلات کی ایک کم از کم پر انسٹال ہونا ضروری ہے.\n2. ایک انٹرنیٹ کنکشن فعال ہونا ضروری ہے.</string>
     <string name="text_SourceCodeRepo">کھلا ماخذ: %s</string>
-    <string name="text_WhatsNew">- استحکام اصلاحات.</string>
+    <string name="text_WhatsNew">-استحکام اصلاحات.</string>
 
     <string name="title_About">کے بارے میں</string>
     <string name="title_camera">کیمرے</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">پھینکیں چابیاں اسسٹنٹ</string>
     <string name="title_FileOptions">لف دستاویز کے اختیارات</string>
     <string name="title_find">سیٹ اپ</string>
+    <string name="title_font_size">ایک فونٹ سائز کا انتخاب</string>
     <string name="title_home">ایکسچینج شروع</string>
     <string name="title_HomePanel">ہوم</string>
     <string name="title_MessageDetail">پیغام</string>

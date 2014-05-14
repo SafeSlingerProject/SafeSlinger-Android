@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Xa caw txuas nrog…</string>
+    <string name="action_NewUserRequest">Ntxiv ib rab ka xus yuam sij hu caw via…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Ntawv cia Ncua tseg</string>
     <string name="btn_Close">Kaw</string>
     <string name="btn_Continue">Mus</string>
+    <string name="btn_CreateNewKey">Tsim Tshiab Ntsiab</string>
+    <string name="btn_DeleteKeys">Delete yuam sij</string>
     <string name="btn_discard">Discard</string>
     <string name="btn_Done">Ua</string>
     <string name="btn_Exit">Exit</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 teev</string>
     <string name="choice_auto_storage">Ua neej ntawd hais Cia</string>
     <string name="choice_external_storage">Sab nraud Cia</string>
+    <string name="choice_font_large">Loj</string>
+    <string name="choice_font_medium">Zuaj dav hlau</string>
+    <string name="choice_font_micro">Heev Me</string>
+    <string name="choice_font_small">Me me</string>
     <string name="choice_internal_storage">Internal Cia</string>
     <string name="choice_nolimit">Tsis txhob</string>
     <string name="choice_SaveDirectory">Txuag Directory</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Microphone kev tso cai yuav tsum tau. Thov mus rau iOS chaw kom microphone tso cai.</string>
     <string name="error_BackupNotFound">Tsis thaub qab tig los nrog.</string>
     <string name="error_BackupNotSupportedDevice">Ntaus tsis pab txhawb backup restore.</string>
-    <string name="error_BadCopyProtectUpgrade">Vim ib tug kab laum nyob hauv Android 4.1, koj yuav muaj uninstall thiab reinstall SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">Vim ib tug kab laum nyob hauv Android 4.1, koj yuav tau uninstall thiab reinstall SafeSlinger.</string>
     <string name="error_C2DMRegAccountMissing">Ib tug Google account yog yuav tsum tau. Thov qhib lub account saib xyuas thiab ntxiv ib tug account Google.</string>
     <string name="error_C2DMRegAuthenticationFailed">Sau npe tsis authenticated, thov retry manually tom qab.</string>
     <string name="error_C2DMRegInvalidSender">Sau npe yog tsis muaj nyob rau zaj dab neeg no, thov mus saib rau ib tug tshiab version.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Koj tau tshaj lus pes tsawg rau no ntaus ntawv. Thov retry tom qab.</string>
     <string name="error_PushMsgServiceFail">Ceeb toom kev pab yog tsis muaj lub sij hawm no. Thov koj sim xa cov lus tom qab.</string>
     <string name="error_RecoderError">Yuav tsis npaj lub suab Recorder.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Yog xav hais, \' rab ka xus yuam sij \' nrog lwm xov tooj nyob rau ntawm tib lub sij hawm.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Mus pib, rab ka xus yuam sij nrog lwm xov tooj nyob rau ntawm tib lub sij hawm.</string>
     <string name="error_selectDataToSend">Koj xav tau ib tug los yog ib tug txuas lus lus rau xa.</string>
     <string name="error_ShareFileDelError">Muaj peev xwm tsis tshem tawm cov ntaub ntawv qhia.</string>
     <string name="error_UnableFindPubKey">Tsis tau kom phim rau pej xeem tseem ceeb mus ntiav tseem ceeb nyob rau hauv crypto kws kho mob.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger yuam kev, thov kaspivtaw rau pib dua.</string>
     <string name="error_VcardParseFailure">Sib cuag cov ntaub ntawv twb formatted incorrectly.</string>
 
-    <string name="help_find">Siv no screen mus teem koj lub npe mus pauv nrog lwm tus. Khob qhov \'Tas\' khawm thaum tiav lawm.</string>
-    <string name="help_home">Mus pauv tus kheej cov ntaub ntawv, kom tag nrho cov neeg siv yog cov nyob ze los yog hauv xov tooj. Qhov \' Pib Txauv \' khawm yuav sib pauv xwb lub soj ntsuam cov ntaub ntawv sib tiv tauj.</string>
-    <string name="help_identity_menu">\n\nTej zaum koj kuj yuav hloov koj tus kheej cov ntaub ntawv txog koj tus kheej nyob rau hauv kev tshuaj ntsuam no los tapping rau lub khawm nrog koj lub npe. Qhov no yuav tso saib ib lub hom phiaj rau cov zaub mov koj mus \' Kho kom raug neeg \' koj cov lus hu, \' Tsim Tshiab \' kev sib cuag, los yog \' Siv Lwm \' kev sib cuag.</string>
+    <string name="help_find">Siv no screen mus teem koj lub npe mus pauv nrog lwm tus. Khob kom lub Tas khawm thaum tiav lawm.</string>
+    <string name="help_home">Mus pauv tus kheej cov ntaub ntawv, kom tag nrho cov neeg siv yog cov nyob ze los yog hauv xov tooj. Pib lub Exchange khawm yuav sib pauv xwb lub soj ntsuam cov ntaub ntawv sib tiv tauj.</string>
+    <string name="help_identity_menu">\n\n\nTej zaum koj kuj yuav hloov koj tus kheej cov ntaub ntawv txog koj tus kheej nyob rau hauv kev tshuaj ntsuam no los tapping rau lub khawm nrog koj lub npe. Qhov no yuav tso saib ib lub hom phiaj rau cov zaub mov koj mus Kho kom raug neeg koj tiv tauj, Tsim Tshiab hu xovtooj rau, los sis Siv Lwm sib cuag.</string>
     <string name="help_Messages">Qhov no qhia tag nrho cov kev tshuaj ntsuam yav dhau los lus, thiab txuas hais tias yog tseem muaj nyob rau download.</string>
-    <string name="help_passphrase">Siv no kev tshuaj ntsuam login mus rau hauv daim ntawv thov nrog koj passphrase.</string>
+    <string name="help_passphrase">Siv no kev tshuaj ntsuam login mus rau hauv daim ntawv thov nrog koj passphrase. Yog hais tias koj tsis nco qab koj passphrase, tej zaum koj yuav tsim kom muaj ib tug tshiab tseem ceeb tiv thaiv los ntawm ib tug tshiab passphrase by tapping lub Passphrase Tsis nco qab? khawm. Khob kom tus neeg siv lub npe hloov ntawm ntau cov yuam sij.</string>
     <string name="help_PickRecip">Tiv tauj nrog SafeSlinger yuam sij yog displayed no, xaiv ib tug xa koj cov lus rau.</string>
-    <string name="help_save">Thaum tiav lawm, tus raws tu qauv yuav tshwm sim ib daim ntawv teev qhia cov ntaub ntawv exchanged. Xaiv lub tiv tauj koj xav cawm thiab nias lub \' Import \'.</string>
-    <string name="help_SecureIntroduction">Qhov no screen tso cai rau koj mus xaiv ob tug neeg koj muaj slung yuam sij ua ntej nrog rau securely xa lawv cov yuam sij rau txhua lwm yam. Cias nias lub \' Thaum \' thaum npaj txhij.</string>
-    <string name="help_Send">Qhov no screen tso cai rau koj mus xaiv ib txhia cov ntaub ntawv thiab ib tus neeg tau xa mus. Cias nias lub \' Xa \' thaum npaj txhij.</string>
+    <string name="help_save">Thaum tiav lawm, tus raws tu qauv yuav tshwm sim ib daim ntawv teev qhia cov ntaub ntawv exchanged. Xaiv lub tiv tauj koj xav cawm thiab nias Import.</string>
+    <string name="help_SecureIntroduction">Qhov no screen tso cai rau koj mus xaiv ob tug neeg koj muaj slung yuam sij ua ntej nrog rau securely xa lawv cov yuam sij rau txhua lwm yam. Cias nias Thaum thaum npaj txhij.</string>
+    <string name="help_Send">Qhov no screen tso cai rau koj mus xaiv ib txhia cov ntaub ntawv thiab ib tus neeg tau xa mus. Cias nias Xa thaum npaj txhij.</string>
 
     <string name="iOS_contactError">Tiv tauj yuav tsum tau kev tso cai. Thov mus rau iOS chaw kom neeg tso cai.</string>
     <string name="iOS_errorpushtoken">Laub sau npe yog ploj lawm.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Ntaus ntawv:</string>
     <string name="label_DeviceInSendOnlyMode">Xa-tsuas hom</string>
     <string name="label_DisabledExchSourceKeyChange">Koj tseem ceeb tau hloov: rab ka xus yuam sij dua.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Yuav pib messaging, ob qho tib si cov neeg siv yuav tsum rab ka xus yuam sij nyob rau tib lub sij hawm.</string>
     <string name="label_Draft">kev kee</string>
     <string name="label_EnabledKeyFormatDeprecated">Ntsiab hom ntawv deprecated: rab ka xus yuam sij dua.</string>
     <string name="label_exchanged">exchanged</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">Cov ntaub ntawv lub npe</string>
     <string name="label_FindInstruct">Sau lub npe koj xav lwm tus pom thaum sib txuas lus securely:</string>
     <string name="label_FirstName">Npe</string>
-    <string name="label_Home">Siv koj lub npe mus ntxiv los yog tshem tawm cov ntaub ntawv tiv tauj, kos tej yam khoom uas koj xav qhia, thiab khob \'Pib Txauv\' thaum lwm tus neeg npaj txhij mus pauv:</string>
+    <string name="label_Home">Siv koj lub npe mus ntxiv los yog tshem tawm cov ntaub ntawv tiv tauj, kos tej yam khoom uas koj xav qhia, thiab khob Pib Txauv thaum lwm tus neeg npaj txhij mus pauv:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d teev</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud yog enabled. Khob qhov \' Tas \' khawm thaum tiav lawm.</string>
-    <string name="label_InstNoMessages">Tsis muaj lus. Tej zaum koj yuav xa lus los ntawm lub \' Compose Message \' khawm nyob rau lub Tsev ntawv qhia zaub mov.</string>
-    <string name="label_InstNoMessagesAndroid">Tsis muaj lus. Tej zaum koj yuav xa lus los ntawm lub \' Compose \' tab.</string>
-    <string name="label_InstNoRecipients">Tsis muaj tus tau txais. Nrhiav lwm SafeSlinger neeg siv nyob ze thiab kov qhov \' rab ka xus yuam sij \' tab qhia yuam sij.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud yog enabled. Khob kom lub Tas khawm thaum tiav lawm.</string>
+    <string name="label_InstNoMessages">Tsis muaj lus. Tej zaum koj yuav xa lus los ntawm cov Compose Message khawm nyob rau lub Tsev ntawv qhia zaub mov.</string>
+    <string name="label_InstNoMessagesAndroid">Tsis muaj lus. Tej zaum koj yuav xa lus los ntawm cov Compose tab.</string>
+    <string name="label_InstNoRecipients">Mus ntxiv tus tau txais, koj yuav tsum thawj rab ka xus yuam sij nrog rau ib los yog ntau tshaj lwm yam neeg siv nyob rau tib lub sij hawm. Tej zaum koj yuav tau xa ib rab ka xus yuam sij hu rau kev caw los ntawm cov ntawv qhia zaub mov.</string>
     <string name="label_InstNoSharedFile">Tsis muaj muab qhia ntaub ntawv. Txuas koj ntaus nrog iTunes thiab rub ntaub ntawv rau tus qhia daim nplaub tshev.</string>
     <string name="label_InstRecipients">Mus nqa ib tus neeg tau xa lus mus rau:</string>
     <string name="label_InstSendInvite">Mus nqa tus tau txais los qhia securely:</string>
     <string name="label_InstSharedFile">Mus nqa ib cov ntaub ntawv los mus muab:</string>
     <string name="label_introduced">tswvcuab</string>
+    <string name="label_inviteSent">Caw</string>
     <string name="label_Key">Ntsiab:</string>
     <string name="label_LastName">Lub xeem lub npe</string>
     <string name="label_Me">Kuv</string>
     <string name="label_messageIntroduceNameToYou">Kuv xav los qhia %s rau koj.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Mus teeb ib tug ruaj ntseg messaging kev twb kev txuas, peb yuav tau sib ntsib los yog hu xov tooj txhua lwm yam nyob rau tib lub sij hawm, thiab ces cia li rab ka xus yuam sij ib zaug mus taug xyuas kev twb kev txuas.</string>
+    <string name="label_messageInviteStartMsg">Peb yuav pib ruaj ntseg messaging nrog lub qhib qhov SafeSlinger iPhone los yog hauv xov tooj ntawd app?</string>
     <string name="label_minutes">%d feeb</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Feem ntau tsis ntev los no xwb</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup ncua</string>
     <string name="label_safeslingered">(SafeSlinger Direct txauv)</string>
     <string name="label_SaveAccount">Txuag Account</string>
-    <string name="label_SaveInstruct">Kos tiv tauj koj xav hloov nyob rau hauv koj phau ntawv chaw nyob, ces khob \'Import\' kom txuag tau ruaj ntseg tiv tauj:</string>
+    <string name="label_SaveInstruct">Kos tiv tauj koj xav hloov nyob rau hauv koj phau ntawv chaw nyob, ces khob Import kom txuag tau ruaj ntseg tiv tauj:</string>
     <string name="label_seconds">%d seconds</string>
     <string name="label_SelectRecip">Xaiv tau txais kev pabcuam</string>
     <string name="label_sendErrorData">Xa Error Data</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Kauj ruam 3</string>
     <string name="label_step_4">Kauj ruam 4</string>
     <string name="label_step_5">Kauj ruam 5</string>
+    <string name="label_summary_auto_attach_retrieval">Cia download lus txuas thaum logged Cia</string>
+    <string name="label_summary_auto_decrypt">Cia decrypt lus thaum logged Cia</string>
+    <string name="label_summary_remind_backup_delay">Tau txais kev ceeb toom thaum backup yog offline.</string>
+    <string name="label_summary_show_tutorial">Qhia ib tug nyeem ua ntej attemping mus rab ka xus yuam sij.</string>
     <string name="label_TapToDecryptFile">Khob mus rau cov ntaub ntawv decrypt</string>
     <string name="label_TapToDecryptMessage">Khob mus decrypt</string>
     <string name="label_TapToDownloadFile">Khob mus download tau cov ntaub ntawv</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Khob qhib cov ntaub ntawv</string>
     <string name="label_TapToResumeDraft">Khob kom rov pib dua lus kev kee</string>
     <string name="label_TapToSendCredentialUpdate">Khob thiab tuav kom xa daim ntawv pov thawj hloov tshiab.</string>
+    <string name="label_TapToSlingKeys">Khob mus rau rab ka xus yuam sij.</string>
     <string name="label_targetAccountLabel">Tiv tauj Account</string>
-    <string name="label_TouchToConfigureBackupSettings">Tej zaum koj yuav Optionally pab SafeSlinger iCloud backup nyob rau hauv iOS chaw. Khob qhov \' Tas \' khawm thaum tiav lawm.</string>
+    <string name="label_TouchToConfigureBackupSettings">Tej zaum koj yuav Optionally pab SafeSlinger iCloud backup nyob rau hauv iOS chaw. Khob kom lub Tas khawm thaum tiav lawm.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Kov mus kho backup chaw.</string>
     <string name="label_TouchToConfigureCacheTimeout">Kov mus kho cache timeout kev teeb tsa.</string>
     <string name="label_undefinedTypeLabel">Unknown</string>
     <string name="label_UnknownSender">Encrypted Sender</string>
     <string name="label_UserName">Neeg siv npe</string>
+    <string name="label_WarnForgotPassphrase">Yuav kom tiv thaiv koj cov ntaub ntawv, SafeSlinger tsis cia koj passphrase nyob qhov twg rau rov qab. Tej zaum koj tsuas yog tus tau txais ntawv thiab lus tsim nyob rau hauv cov tib passphrase login. Txawm li ntawd los, tej zaum koj yuav tsim kom muaj ib tug tshiab tseem ceeb thiab passphrase, ces rov hais dua rab ka xus yuam sij nrog koj tus tau txais.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Cov nram qab no yuam sij yuav raug tshem:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Muaj tsis muaj ntau tsis ntev los no cov yawm sij tshaj koj li.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Tsuas yog cov yuam sij generated ntau tsis ntev los no tshaj koj li, generated rau %s, tej zaum yuav raug tshem.</string>
     <string name="label_worktag">Ua hauj lwm</string>
 
     <string name="menu_About">Txog</string>
+    <string name="menu_auto_attach_retrieval">Auto-muab txuas</string>
+    <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Hloov</string>
     <string name="menu_ChangePassphrase">Hloov Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteSms">Lus (SMS/MMS)</string>
     <string name="menu_CreateNew">Tsim Tshiab</string>
     <string name="menu_delete">Delete</string>
-    <string name="menu_deleteThread">Delete Thread \'%s\'</string>
+    <string name="menu_deleteThread">Delete Thread %s</string>
     <string name="menu_Details">View Piav</string>
     <string name="menu_DownloadDirectory">Download Directory</string>
     <string name="menu_Edit">Kho kom raug neeg</string>
+    <string name="menu_EditContact">Kho kom raug neeg Sib cuag</string>
+    <string name="menu_EditName">Kho kom raug neeg npe</string>
     <string name="menu_FileManager">Cov ntaub ntawv Manager</string>
+    <string name="menu_ForgotPassphrase">Tsis nco qab Passphrase?</string>
     <string name="menu_Help">Pab</string>
     <string name="menu_Introduction">Introduction</string>
     <string name="menu_License">Daim ntawv tso cai</string>
     <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Tswj Passphrases</string>
+    <string name="menu_message_font_size">Xov koos pis loj</string>
     <string name="menu_messageCopyText">Daim ntawv ntsiab lus no</string>
     <string name="menu_messageForward">Forward</string>
     <string name="menu_Remove">Tshem</string>
-    <string name="menu_SelectShareApp">Xa Daim Ntawv Thov</string>
+    <string name="menu_restore_default">Restore ua neej ntawd hais chaw</string>
+    <string name="menu_ringtone">Sound</string>
+    <string name="menu_SelectShareApp">Ntxiv cuag caw</string>
     <string name="menu_sendFeedback">Xa tswv yim</string>
     <string name="menu_SendUpdate">Xa hloov tshiab</string>
     <string name="menu_Settings">Chaw</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Rab ka xus yuam sij</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Siv Lwm</string>
-    <string name="menu_UseContactPerson">Siv cuag \'%s\'</string>
+    <string name="menu_UseContactPerson">Siv cuag %s</string>
     <string name="menu_UseNoContact">Siv npe Tsuas</string>
-    <string name="menu_UseProfilePerson">Siv Profile \'%s\'</string>
+    <string name="menu_UseProfilePerson">Siv Profile %s</string>
+    <string name="menu_vibrate">Co</string>
 
     <string name="prog_decrypting">decrypting…</string>
     <string name="prog_encrypting">encrypting…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Advanced</string>
     <string name="section_backup">Backup</string>
     <string name="section_general">General</string>
+    <string name="section_notification">Cov ntawv qhia txog</string>
+    <string name="section_storage">Cia</string>
 
     <string name="state_BackupRestored">Thaub qab rov qab los.</string>
     <string name="state_FileDeleted">Tshem cov ntaub ntawv %s.</string>
     <string name="state_FileSent">Xov xa.</string>
+    <string name="state_InvitationAdded">Caw ntxiv.</string>
     <string name="state_MessageSavedAsDraft">Xov tau txais kev cawmdim li kev kee.</string>
     <string name="state_MessagesDeleted">%d lus tshem.</string>
     <string name="state_PassphraseUpdated">Passphrase tshiab.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s tiv tauj txawv.</string>
     <string name="state_TextCopiedToClipboard">Lus copied rau daim ntawv tiag.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger yog tsim los yooj yim qhia yog leejtwg cov ntaub ntawv, nyob rau hauv tus neeg los yog hauv xov tooj, authenticated, ntiav, thiab si tauv. Txhua tus neeg uas koj qhia nrog tsim ib tug ruaj ntseg kawg-rau-kawg channel xa lus.\n\nNta:\n- Yooj yim sib pauv hu rau cov ntaub ntawv nrog lwm tus\n- Securely rab ka xus phau ntawv, cov duab, txhua yam!\n- Muaj zog cryptography tiv thaiv koj cov ntaub ntawv\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger yog tsim los yooj yim qhia yog leejtwg cov ntaub ntawv, nyob rau hauv tus neeg los yog hauv xov tooj, authenticated, ntiav, thiab si tauv. Txhua tus neeg uas koj qhia nrog tsim ib tug ruaj ntseg kawg-rau-kawg channel xa lus.\n\nnta:\n-yooj yim sib pauv kev sib cuag cov ntaub ntawv nrog lwm tus\n-Securely rab ka xus phau ntawv, cov duab, txhua yam!\n-Muaj zog cryptography tiv thaiv koj cov ntaub ntawv\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_KeywordExchange">Txauv</string>
     <string name="text_KeywordIdentity">Yog leejtwg</string>
     <string name="text_KeywordKey">Ntsiab</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Security</string>
     <string name="text_LanguagesProvidedBy">Lus muab los ntawm:</string>
     <string name="text_RelatedSearchTerms">Related Cov ntsiab lus:</string>
-    <string name="text_Requirements">Yuav Tsum tau Muaj:\n1. Yuav tsum tau ntsia ib yam tsawg kawg nkaus ntawm 2 pab kiag li.\n2. Ib Internet kev twb kev txuas yuav tsum nquag.</string>
+    <string name="text_Requirements">Yuav tsum tau muaj:\n1. Yuav tsum tau ntsia ib yam tsawg kawg nkaus ntawm 2 pab kiag li.\n2. Ib Internet kev twb kev txuas yuav tsum nquag.</string>
     <string name="text_SourceCodeRepo">qhib tau qhov twg los: %s</string>
-    <string name="text_WhatsNew">- Ruaj ntseg kho.</string>
+    <string name="text_WhatsNew">-Ruaj ntseg kho.</string>
 
     <string name="title_About">Txog</string>
     <string name="title_camera">Lub koob yees duab</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Rab ka xus yuam sij Assistant</string>
     <string name="title_FileOptions">Symptoms Options</string>
     <string name="title_find">Setup</string>
+    <string name="title_font_size">Xaiv ib lub koos pis loj</string>
     <string name="title_home">Pib txauv</string>
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Message</string>

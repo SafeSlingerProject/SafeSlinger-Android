@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -50,7 +51,6 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
@@ -59,7 +59,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.provider.BaseColumns;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Email;
@@ -71,6 +70,7 @@ import android.provider.ContactsContract.Contacts;
 import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.RawContacts;
 import android.provider.Settings;
+import android.provider.Telephony;
 import android.support.v7.app.ActionBarActivity;
 import android.telephony.PhoneNumberUtils;
 import android.telephony.TelephonyManager;
@@ -78,10 +78,9 @@ import android.text.TextUtils;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.inputmethod.InputMethodInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.webkit.MimeTypeMap;
 import android.widget.CheckBox;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import edu.cmu.cylab.starslinger.Eula;
@@ -92,14 +91,11 @@ import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
-import edu.cmu.cylab.starslinger.crypto.CryptTools;
-import edu.cmu.cylab.starslinger.crypto.CryptToolsLegacy;
-import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgPeerKeyFormatException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
 import edu.cmu.cylab.starslinger.model.ContactAccessor;
 import edu.cmu.cylab.starslinger.model.ContactImpp;
-import edu.cmu.cylab.starslinger.model.CryptoMsgPrivateData;
+import edu.cmu.cylab.starslinger.model.ContactNameMethodComparator;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageRow;
 import edu.cmu.cylab.starslinger.model.PushTokenKeyDateComparator;
@@ -114,24 +110,37 @@ import edu.cmu.cylab.starslinger.model.UseContactItem.UCType;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class BaseActivity extends ActionBarActivity {
-    private static final String GOOGLE_TRANSLATE = "Google Translate";
-    public static final int RESULT_NEW_PASSPHRASE = 12358971;
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
-    public static final int DIALOG_HELP = 1;
-    public static final int DIALOG_ERREXIT = 2;
-    public static final int DIALOG_QUESTION = 3;
-    public static final int DIALOG_INTRO = 4;
-    public static final int DIALOG_ABOUT = 5;
-    public static final int DIALOG_LICENSE = 6;
-    public static final int DIALOG_TUTORIAL = 7;
-    public static final int DIALOG_LICENSE_CONFIRM = 8;
-    public static final int DIALOG_PROGRESS = 9;
-    public static final int DIALOG_USEROPTIONS = 10;
-    public static final int DIALOG_FILEOPTIONS = 11;
-    public static final int DIALOG_LOAD_FILE = 12;
-    public static final int DIALOG_TEXT_ENTRY = 13;
-    public static final int DIALOG_REFERENCE = 14;
-    public static final int DIALOG_BACKUPQUERY = 15;
+    public static final int RESULT_NEW_PASSPHRASE = 12358971;
+    protected static final int MENU_HELP = 400;
+    protected static final int MENU_FEEDBACK = 490;
+    protected static final int MENU_LOGOUT = 440;
+    protected static final int MENU_CONTACTINVITE = 450;
+    protected static final int MENU_SETTINGS = 460;
+    protected static final int MENU_REFERENCE = 470;
+    protected static final int MENU_SENDINTRO = 480;
+    protected static final int DIALOG_HELP = 1;
+    protected static final int DIALOG_ERREXIT = 2;
+    protected static final int DIALOG_QUESTION = 3;
+    protected static final int DIALOG_INTRO = 4;
+    protected static final int DIALOG_ABOUT = 5;
+    protected static final int DIALOG_LICENSE = 6;
+    protected static final int DIALOG_TUTORIAL = 7;
+    protected static final int DIALOG_LICENSE_CONFIRM = 8;
+    protected static final int DIALOG_PROGRESS = 9;
+    protected static final int DIALOG_USEROPTIONS = 10;
+    protected static final int DIALOG_FILEOPTIONS = 11;
+    protected static final int DIALOG_LOAD_FILE = 12;
+    protected static final int DIALOG_TEXT_ENTRY = 13;
+    protected static final int DIALOG_REFERENCE = 14;
+    protected static final int DIALOG_BACKUPQUERY = 15;
+    protected static final int DIALOG_CONTACTINVITE = 16;
+    private static final int RESULT_SEND_INVITE = 17;
+    private static final int RESULT_SELECT_SMS = 18;
+    private static final int RESULT_SELECT_EMAIL = 19;
+    protected static final int DIALOG_MANAGE_PASS = 20;
+    protected static final int DIALOG_CONTACTTYPE = 21;
+    protected static String mInviteContactLookupKey;
 
     protected static Bundle writeSingleExportExchangeArgs(ContactImpp out) {
 
@@ -342,7 +351,7 @@ public class BaseActivity extends ActionBarActivity {
     /**
      * Retrieve the user data that uses the same public key.
      */
-    public static String getSignersContact(String publicKeyId) {
+    public static String getSignersPublicKey(String publicKeyId) {
         if (TextUtils.isEmpty(publicKeyId)) {
             return null;
         }
@@ -381,6 +390,97 @@ public class BaseActivity extends ActionBarActivity {
             }
         }
         return u.size();
+    }
+
+    protected long getRecipientRowIdMatchingInvite(String contactLookupKey) {
+        long rowId = -1;
+        if (TextUtils.isEmpty(contactLookupKey)) {
+            return rowId;
+        }
+
+        // find current aggregate contact id (must check in real time)
+        String contactId = getContactIdByLookup(contactLookupKey);
+
+        // find matching aggregate contact id (must check in real time)
+        if (!TextUtils.isEmpty(contactId)) {
+            RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
+            String myName = SafeSlingerPrefs.getContactName();
+            String mySecretKeyId = SafeSlingerPrefs.getKeyIdString();
+            String myPushToken = SafeSlingerPrefs.getPushRegistrationId();
+
+            Cursor c = dbRecipient.fetchAllRecipientsMessage(true, mySecretKeyId, myPushToken,
+                    myName);
+            if (c != null) {
+                while (c.moveToNext()) {
+                    RecipientRow recip = new RecipientRow(c);
+                    String otherContactId = getContactIdByLookup(recip.getContactlu());
+                    if (contactId.equals(otherContactId)) {
+                        rowId = recip.getRowId();
+                    }
+                }
+                c.close();
+            }
+        }
+
+        return rowId;
+    }
+
+    protected String getContactIdByLookup(String contactLookupKey) {
+        String contactId = null;
+        if (TextUtils.isEmpty(contactLookupKey)) {
+            return contactId;
+        }
+
+        Uri personUri = getPersonUri(contactLookupKey);
+        String[] projection = new String[] {
+            BaseColumns._ID
+        };
+
+        if (personUri != null) {
+            Cursor c = getContentResolver().query(personUri, projection, null, null, null);
+            if (c != null) {
+                while (c.moveToNext()) {
+                    contactId = c.getString(c.getColumnIndexOrThrow(BaseColumns._ID));
+                }
+                c.close();
+            }
+        }
+
+        return contactId;
+    }
+
+    protected SlingerContact getContactByLookup(String contactLookupKey) {
+        SlingerContact sc = null;
+        if (TextUtils.isEmpty(contactLookupKey)) {
+            return sc;
+        }
+
+        Uri personUri = getPersonUri(contactLookupKey);
+        String[] projection = new String[] {
+            BaseColumns._ID
+        };
+
+        if (personUri != null) {
+            Cursor c = getContentResolver().query(personUri, projection, null, null, null);
+            if (c != null) {
+                while (c.moveToNext()) {
+                    byte[] photo = getContactPhoto(contactLookupKey);
+                    String name = getContactName(contactLookupKey);
+                    String contactId = c.getString(c.getColumnIndexOrThrow(BaseColumns._ID));
+                    String rawContactId = null;
+                    if (contactId != null) {
+                        ArrayList<RawContactData> v = getRawContactIds(contactId);
+                        if (v != null && v.size() > 0)
+                            rawContactId = v.get(0).getRawContactId();
+                    }
+                    SlingerIdentity si = new SlingerIdentity();
+                    sc = SlingerContact.createContact(contactId, contactLookupKey, rawContactId,
+                            name, photo, si);
+                }
+                c.close();
+            }
+        }
+        return sc;
     }
 
     protected String getContactIdByName(String name) {
@@ -763,8 +863,8 @@ public class BaseActivity extends ActionBarActivity {
         textViewAbout.setText(String.format(act.getString(R.string.text_About),
                 SafeSlingerConfig.getFullVersion(), SafeSlingerConfig.HELP_EMAIL,
                 SafeSlingerConfig.HELP_URL)
-                + "\n\n"
-                + act.getString(R.string.text_Requirements)
+        // + "\n\n"
+        // + act.getString(R.string.text_Requirements)
                 + "\n\n" + getCredits(act));
         ad.setView(layout);
         ad.setCancelable(true);
@@ -885,7 +985,7 @@ public class BaseActivity extends ActionBarActivity {
         config.locale = deflocale;
         act.getResources().updateConfiguration(config, act.getResources().getDisplayMetrics());
 
-        cred.append("\n  ").append(GOOGLE_TRANSLATE);
+        cred.append("\n  ").append(SafeSlingerConfig.GOOGLE_TRANSLATE);
 
         return cred.toString();
     }
@@ -896,7 +996,7 @@ public class BaseActivity extends ActionBarActivity {
         config.locale = locale;
         act.getResources().updateConfiguration(config, act.getResources().getDisplayMetrics());
         String transName = act.getString(R.string.app_TranslatorName);
-        if (transName.compareToIgnoreCase(GOOGLE_TRANSLATE) != 0) {
+        if (transName.compareToIgnoreCase(SafeSlingerConfig.GOOGLE_TRANSLATE) != 0) {
             return new StringBuilder().append("\n  ").append(locale.getDisplayName(deflocale))
                     .append(": ").append(transName).toString();
         } else {
@@ -945,10 +1045,14 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     protected void showFileActionChooser(File downloadedFile, String fileType) {
-        if (TextUtils.isEmpty(fileType)) {
-            String extension = SSUtil.getFileExtensionOnly(downloadedFile.getName());
-            fileType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+        // always second-guess mimetype, since send/recv mimetype could be
+        // innactuare
+        String extension = SSUtil.getFileExtensionOnly(downloadedFile.getName());
+        fileType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+        if (fileType == null) {
+            fileType = SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF;
         }
+
         Intent intent = new Intent();
         Uri uri = Uri.fromFile(downloadedFile);
         intent.setAction(Intent.ACTION_VIEW);
@@ -961,70 +1065,7 @@ public class BaseActivity extends ActionBarActivity {
         }
     }
 
-    /***
-     * @return When returns false we allow a new key to be generated.
-     */
-    protected boolean doPassEntryCheck(String pass, String passOld, boolean changePass) {
-        CryptoMsgPrivateData mine = null;
-        boolean changeSuccess = false;
-
-        // check for legacy support, migrate if needed
-        if (!CryptTools.existsSecretKey(getApplicationContext())) {
-            // key not found, try migrating older version
-            if (!CryptToolsLegacy.updateKeyFormatOld(pass)) {
-                // unable to migrate old key, just continue...
-            }
-        }
-
-        // decrypt correct private key
-        try {
-            mine = CryptTools.getSecretKey(changePass ? passOld : pass);
-        } catch (IOException e) {
-            e.printStackTrace(); // key not found
-            // The only valid reason to generate key is when it does not exist,
-            // when it should exist.
-            return false;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace(); // unable to deserialize same key format
-            showNote(R.string.error_couldNotExtractPrivateKey);
-        } catch (CryptoMsgException e) {
-            e.printStackTrace(); // key formatted incorrectly
-            showNote(R.string.error_couldNotExtractPrivateKey);
-        }
-
-        // if change, confirm unlock, and resave
-        if (changePass) {
-            try {
-                changeSuccess = CryptTools.changeSecretKeyPassphrase(pass, passOld);
-            } catch (IOException e) {
-                e.printStackTrace(); // key not found
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace(); // unable to deserialize same key format
-                showNote(R.string.error_couldNotExtractPrivateKey);
-            } catch (CryptoMsgException e) {
-                e.printStackTrace(); // key formatted incorrectly
-                showNote(R.string.error_couldNotExtractPrivateKey);
-            }
-            if (changeSuccess) {
-                SafeSlinger.setCachedPassPhrase(SafeSlingerPrefs.getKeyIdString(), pass);
-                SafeSlinger.startCacheService(BaseActivity.this);
-                showNote(R.string.state_PassphraseUpdated);
-                setPassphraseStatus(true);
-            } else {
-                setPassphraseStatus(false);
-            }
-        } else { // check against current key
-            if (mine != null) {
-                SafeSlinger.setCachedPassPhrase(SafeSlingerPrefs.getKeyIdString(), pass);
-                setPassphraseStatus(true);
-            } else {
-                setPassphraseStatus(false);
-            }
-        }
-        return true;
-    }
-
-    private void setPassphraseStatus(boolean valid) {
+    protected void setPassphraseStatus(boolean valid) {
         if (valid) {
             SafeSlingerPrefs.setPassBackoffTimeout(SafeSlingerPrefs.DEFAULT_PASSPHRASE_BACKOFF);
             SafeSlingerPrefs.setNextPassAttemptDate(new Date().getTime());
@@ -1077,22 +1118,29 @@ public class BaseActivity extends ActionBarActivity {
             if (r != null) {
                 boolean pushable = r.isPushable();
                 boolean deprecated = r.isDeprecated();
+                boolean invited = r.isInvited();
 
-                if (TextUtils.isEmpty(t1) || !pushable || deprecated) {
-                    // unusable tokens should be removed...
-                    dbRecipient.updateRecipientActiveState(r,
-                            RecipientDbAdapter.RECIP_IS_NOT_ACTIVE);
-
-                } else if (!TextUtils.isEmpty(t1) && !TextUtils.isEmpty(t2)
-                        && t1.compareToIgnoreCase(t2) == 0) {
-                    // in date order, mark inactive only when previous was
-                    // active...
-                    dbRecipient.updateRecipientActiveState(r,
-                            RecipientDbAdapter.RECIP_IS_NOT_ACTIVE);
-
-                } else if (!TextUtils.isEmpty(t1)) {
-                    // show the most recent one...
+                if (invited) {
+                    // invites are always active
                     dbRecipient.updateRecipientActiveState(r, RecipientDbAdapter.RECIP_IS_ACTIVE);
+                } else {
+                    if (TextUtils.isEmpty(t1) || !pushable || deprecated) {
+                        // unusable tokens should be removed...
+                        dbRecipient.updateRecipientActiveState(r,
+                                RecipientDbAdapter.RECIP_IS_NOT_ACTIVE);
+
+                    } else if (!TextUtils.isEmpty(t1) && !TextUtils.isEmpty(t2)
+                            && t1.compareToIgnoreCase(t2) == 0) {
+                        // in date order, mark inactive only when previous was
+                        // active...
+                        dbRecipient.updateRecipientActiveState(r,
+                                RecipientDbAdapter.RECIP_IS_NOT_ACTIVE);
+
+                    } else if (!TextUtils.isEmpty(t1)) {
+                        // show the most recent one...
+                        dbRecipient.updateRecipientActiveState(r,
+                                RecipientDbAdapter.RECIP_IS_ACTIVE);
+                    }
                 }
             }
         }
@@ -1209,18 +1257,19 @@ public class BaseActivity extends ActionBarActivity {
                     exchKeyDate = p.ExtractDateTimefromSafeSlingerString(ce.pubKey);
                 }
 
-                long ret = -1;
+                long matchingInviteRowId = getRecipientRowIdMatchingInvite(ce.lookup);
 
+                long ret = -1;
                 if (recipSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
                     ret = dbRecipient.createExchangedRecipient(currentKeyId, exchdate.getTime(),
                             ce.contactId, ce.lookup, ce.rawid, ce.name, ce.photoBytes, exchKeyId,
                             exchKeyDate, userid, ce.pushTok, ce.notify, ce.pubKey.getBytes(),
-                            currentToken, currentNotify);
+                            currentToken, currentNotify, matchingInviteRowId);
                 } else if (recipSource == RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION) {
                     ret = dbRecipient.createIntroduceRecipient(currentKeyId, exchdate.getTime(),
                             ce.contactId, ce.lookup, ce.rawid, ce.name, ce.photoBytes, exchKeyId,
                             exchKeyDate, userid, ce.pushTok, ce.notify, ce.pubKey.getBytes(),
-                            introkeyid, currentToken, currentNotify);
+                            introkeyid, currentToken, currentNotify, matchingInviteRowId);
                 }
 
                 if (ret < 0) {
@@ -1285,6 +1334,10 @@ public class BaseActivity extends ActionBarActivity {
                 break;
             case RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION:
                 s.append(dat(SSUtil.toTitleCase(act.getString(R.string.label_introduced)),
+                        r.getExchdate()));
+                break;
+            case RecipientDbAdapter.RECIP_SOURCE_INVITED:
+                s.append(dat(SSUtil.toTitleCase(act.getString(R.string.label_inviteSent)),
                         r.getExchdate()));
                 break;
         }
@@ -1471,25 +1524,6 @@ public class BaseActivity extends ActionBarActivity {
         return ver(act.getString(id), v);
     }
 
-    protected InputMethodInfo getCurrentImeInfo() {
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        List<InputMethodInfo> mInputMethodProperties = imm.getEnabledInputMethodList();
-
-        final int n = mInputMethodProperties.size();
-        for (int i = 0; i < n; i++) {
-
-            InputMethodInfo imeInfo = mInputMethodProperties.get(i);
-
-            if (imeInfo.getId().equals(
-                    Settings.Secure.getString(getContentResolver(),
-                            Settings.Secure.DEFAULT_INPUT_METHOD))) {
-
-                return imeInfo;
-            }
-        }
-        return null;
-    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -1499,6 +1533,18 @@ public class BaseActivity extends ActionBarActivity {
     public void onUserInteraction() {
         // update the cache timeout
         SafeSlinger.updateCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SafeSlinger.activityResumed();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SafeSlinger.activityPaused();
     }
 
     protected void showBackupQuery() {
@@ -1635,47 +1681,233 @@ public class BaseActivity extends ActionBarActivity {
         return ad;
     }
 
-    protected void showSendApplication() {
-        // ask them to pick the sending method...
-        // query possible message methods first
-        String msg = SafeSlingerConfig.URL_SS_INSTALL;
-        CharSequence title = getString(R.string.action_NewUserRequest);
-        List<Intent> targetedShareIntents = new ArrayList<Intent>();
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setType("text/plain");
-        List<ResolveInfo> resInfo = getPackageManager().queryIntentActivities(shareIntent, 0);
+    protected void showAddContactInvite() {
+        if (!isFinishing()) {
+            removeDialog(DIALOG_CONTACTINVITE);
+            showDialog(DIALOG_CONTACTINVITE);
+        }
+    }
 
-        if (!resInfo.isEmpty()) {
-            for (ResolveInfo resolveInfo : resInfo) {
-                String packageName = resolveInfo.activityInfo.packageName;
+    protected AlertDialog.Builder xshowAddContactInvite(final Activity act) {
+        final CharSequence[] items = new CharSequence[] { //
+                act.getText(R.string.menu_ContactInviteSms), //
+                act.getText(R.string.menu_ContactInviteEmail), //
+        };
+        AlertDialog.Builder ad = new AlertDialog.Builder(act);
+        ad.setTitle(R.string.action_NewUserRequest);
+        ad.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
 
-                // exclude our own app...
-                if (!packageName.startsWith(getPackageName())) {
-                    Intent targetedShareIntent = new Intent(Intent.ACTION_SEND);
-                    targetedShareIntent.setType("text/plain");
-                    targetedShareIntent.putExtra(Intent.EXTRA_SUBJECT,
-                            getString(R.string.title_TextInviteMsg));
-                    targetedShareIntent.putExtra(Intent.EXTRA_TEXT, msg);
-                    targetedShareIntent.setPackage(packageName);
-
-                    targetedShareIntents.add(targetedShareIntent);
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                dialog.dismiss();
+                switch (item) {
+                    case 0: // sms
+                        showPickPhone();
+                        break;
+                    case 1: // email
+                        showPickEmail();
+                        break;
+                    default:
+                        break;
                 }
             }
+        });
+        ad.setOnCancelListener(new DialogInterface.OnCancelListener() {
 
-            Intent chooserIntent = null;
-            if (targetedShareIntents.size() > 0) {
-                chooserIntent = Intent.createChooser(targetedShareIntents.remove(0), title);
-            } else {
-                chooserIntent = Intent.createChooser(shareIntent, title);
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                dialog.dismiss();
             }
-            chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS,
-                    targetedShareIntents.toArray(new Parcelable[] {}));
-            try {
-                startActivity(chooserIntent);
-            } catch (ActivityNotFoundException e) {
-                showNote(getUnsupportedFeatureString(Intent.ACTION_SEND));
-            }
+        });
+        return ad;
+    }
+
+    private void showPickPhone() {
+        boolean phonePickable = getPackageManager().resolveActivity(getPickPhoneIntent(), 0) != null;
+        if (phonePickable) {
+            startActivityForResult(getPickPhoneIntent(), RESULT_SELECT_SMS);
+        } else {
+            showCustomContactPicker(RESULT_SELECT_SMS);
         }
+    }
+
+    private void showPickEmail() {
+        boolean emailPickable = getPackageManager().resolveActivity(getPickEmailIntent(), 0) != null;
+        if (emailPickable) {
+            startActivityForResult(getPickEmailIntent(), RESULT_SELECT_EMAIL);
+        } else {
+            showCustomContactPicker(RESULT_SELECT_EMAIL);
+        }
+    }
+
+    public static Intent getPickPhoneIntent() {
+        Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
+        intent.setType(Phone.CONTENT_TYPE);
+        return intent;
+    }
+
+    public static Intent getPickEmailIntent() {
+        Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
+        intent.setType(Email.CONTENT_TYPE);
+        return intent;
+    }
+
+    private String getInviteShortMessage() {
+        String smsText = String.format("%s %s %s", getString(R.string.label_messageInviteStartMsg),
+                getString(R.string.label_messageInviteSetupInst), String.format(
+                        getString(R.string.label_messageInviteInstall),
+                        SafeSlingerConfig.URL_SS_INSTALL));
+        return smsText;
+    }
+
+    private String getInviteLongMessage() {
+        return String.format("%s\n\n%s\n\n%s\n", getString(R.string.label_messageInviteStartMsg),
+                getString(R.string.label_messageInviteSetupInst), String.format(
+                        getString(R.string.label_messageInviteInstall),
+                        SafeSlingerConfig.URL_SS_INSTALL));
+    }
+
+    private void sendInviteToSlingEmail(String[] emailsTo) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("message/rfc822");
+        if (emailsTo != null) {
+            intent.putExtra(Intent.EXTRA_EMAIL, emailsTo);
+        }
+        intent.putExtra(Intent.EXTRA_SUBJECT, String.format("%s %s",
+                getString(R.string.title_TextInviteMsg), getString(R.string.menu_TagExchange)));
+        intent.putExtra(Intent.EXTRA_TEXT, getInviteLongMessage());
+
+        try {
+            startActivityForResult(intent, RESULT_SEND_INVITE);
+        } catch (ActivityNotFoundException e) {
+            // If there is nothing that can send a text/html MIME type
+            e.printStackTrace();
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+    private void sendInviteToSlingPhones(String phone) {
+        Intent intent;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            String defaultSmsPackageName = Telephony.Sms
+                    .getDefaultSmsPackage(getApplicationContext());
+            intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + Uri.encode(phone)));
+            intent.putExtra("sms_body", getInviteShortMessage());
+            if (defaultSmsPackageName != null) {
+                intent.setPackage(defaultSmsPackageName);
+            }
+        } else {
+            intent = new Intent(Intent.ACTION_VIEW);
+            intent.setType("vnd.android-dir/mms-sms");
+            intent.putExtra("address", phone);
+            intent.putExtra("sms_body", getInviteShortMessage());
+        }
+        try {
+            startActivityForResult(intent, RESULT_SEND_INVITE);
+        } catch (ActivityNotFoundException e) {
+            // If there is nothing that can send a text/html MIME type
+            e.printStackTrace();
+        }
+    }
+
+    protected void showCustomContactPicker(int resultCode) {
+        Bundle args = new Bundle();
+        args.putInt(extra.RESULT_CODE, resultCode);
+        if (!isFinishing()) {
+            removeDialog(DIALOG_CONTACTTYPE);
+            showDialog(DIALOG_CONTACTTYPE, args);
+        }
+    }
+
+    protected AlertDialog.Builder xshowCustomContactPicker(final Activity act, Bundle args) {
+        final int resultCode = args.getInt(extra.RESULT_CODE);
+        Uri contentUri;
+        String contactId2;
+        String data2;
+        String title;
+        switch (resultCode) {
+            case RESULT_SELECT_EMAIL:
+                title = getString(R.string.menu_ContactInviteEmail);
+                contentUri = Email.CONTENT_URI;
+                contactId2 = Email.CONTACT_ID;
+                data2 = Email.DATA;
+                break;
+            case RESULT_SELECT_SMS:
+                title = getString(R.string.menu_ContactInviteSms);
+                contentUri = Phone.CONTENT_URI;
+                contactId2 = Phone.CONTACT_ID;
+                data2 = Phone.DATA;
+                break;
+            default:
+                return null;
+        }
+
+        final ArrayList<HashMap<String, String>> contacts = new ArrayList<HashMap<String, String>>();
+        ContentResolver cr = getContentResolver();
+        Cursor c = cr.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
+        while (c.moveToNext()) {
+            String contactId = c.getString(c.getColumnIndex(BaseColumns._ID));
+            String contactLookupKey = c.getString(c
+                    .getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY));
+            String contactName = c.getString(c
+                    .getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+
+            // Pull out every address for this particular contact
+            Cursor cm = cr.query(contentUri, null, contactId2 + " = " + contactId, null, null);
+            while (cm.moveToNext()) {
+                // Add address to our array
+                String data = cm.getString(cm.getColumnIndex(data2));
+
+                HashMap<String, String> contact = new HashMap<String, String>();
+                contact.put(extra.CONTACT_LOOKUP_KEY, contactLookupKey);
+                contact.put(extra.NAME, contactName);
+                contact.put(extra.DATA, data);
+
+                if (!contacts.contains(contact)) {
+                    contacts.add(contact);
+                }
+            }
+            cm.close();
+        }
+        c.close();
+
+        Collections.sort(contacts, new ContactNameMethodComparator());
+
+        // Make an adapter to display the list
+        SimpleAdapter adapter = new SimpleAdapter(this, contacts,
+                android.R.layout.two_line_list_item, new String[] {
+                        extra.NAME, extra.DATA
+                }, new int[] {
+                        android.R.id.text1, android.R.id.text2
+                });
+
+        // Show the list and let the user pick an address
+        AlertDialog.Builder ad = new AlertDialog.Builder(act);
+        ad.setTitle(title);
+        ad.setAdapter(adapter, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                HashMap<String, String> contact = contacts.get(which);
+                final String theData = contact.get(extra.DATA);
+                mInviteContactLookupKey = contact.get(extra.CONTACT_LOOKUP_KEY);
+
+                switch (resultCode) {
+                    case RESULT_SELECT_EMAIL:
+                        sendInviteToSlingEmail(new String[] {
+                            theData
+                        });
+                        break;
+                    case RESULT_SELECT_SMS:
+                        sendInviteToSlingPhones(theData);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        return ad;
     }
 
     protected void showBackupSettings() {
@@ -1855,4 +2087,81 @@ public class BaseActivity extends ActionBarActivity {
         return contact;
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        switch (requestCode) {
+            case RESULT_SELECT_SMS:
+                if (data != null) {
+                    Uri uri = data.getData();
+                    if (uri != null) {
+                        Cursor c = null;
+                        try {
+                            c = getContentResolver().query(uri, null, null, null, null);
+                            if (c != null && c.moveToFirst()) {
+                                String number = c.getString(c.getColumnIndexOrThrow(Phone.NUMBER));
+                                mInviteContactLookupKey = c.getString(c
+                                        .getColumnIndexOrThrow(Phone.LOOKUP_KEY));
+                                sendInviteToSlingPhones(number);
+                            }
+                        } finally {
+                            if (c != null && !c.isClosed()) {
+                                c.close();
+                            }
+                        }
+                    }
+                }
+                break;
+            case RESULT_SELECT_EMAIL:
+                if (data != null) {
+                    Uri uri = data.getData();
+                    if (uri != null) {
+                        Cursor c = null;
+                        try {
+                            c = getContentResolver().query(uri, null, null, null, null);
+                            if (c != null && c.moveToFirst()) {
+                                String address = c.getString(c.getColumnIndexOrThrow(Email.DATA));
+                                mInviteContactLookupKey = c.getString(c
+                                        .getColumnIndexOrThrow(Email.LOOKUP_KEY));
+                                sendInviteToSlingEmail(new String[] {
+                                    address
+                                });
+                            }
+                        } finally {
+                            if (c != null && !c.isClosed()) {
+                                c.close();
+                            }
+                        }
+                    }
+                }
+                break;
+            case RESULT_SEND_INVITE:
+                if (!TextUtils.isEmpty(mInviteContactLookupKey)) {
+                    RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                            .openInstance(getApplicationContext());
+                    SlingerContact sc = getContactByLookup(mInviteContactLookupKey);
+                    mInviteContactLookupKey = null; // reset
+                    if (sc != null) {
+                        long matchingInviteRowId = getRecipientRowIdMatchingInvite(sc.lookup);
+                        long ret = dbRecipient.createInvitedRecipient(System.currentTimeMillis(),
+                                sc.contactId, sc.lookup, sc.rawid, sc.name, sc.photoBytes,
+                                matchingInviteRowId);
+                        if (ret > -1) {
+                            // TODO: update view for android 2.x
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                                recreate();
+                            }
+                            showNote(R.string.state_InvitationAdded);
+                        } else {
+                            showNote(R.string.error_UnableToSaveRecipientInDB);
+                        }
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }

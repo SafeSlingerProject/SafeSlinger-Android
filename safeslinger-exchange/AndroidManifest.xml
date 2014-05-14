@@ -31,24 +31,23 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
-    <application android:label="@string/lib_name" >
+    <application
+        android:allowBackup="false"
+        android:label="@string/lib_name" >
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.ExchangeActivity"
             android:label="@string/lib_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.GroupingActivity"
             android:label="@string/lib_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.VerifyActivity"
             android:label="@string/lib_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" >
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

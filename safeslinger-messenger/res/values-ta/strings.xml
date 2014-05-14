@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">இணைப்பு அழை…</string>
+    <string name="action_NewUserRequest">ஒரு கவண் விசைகள் தொடர்பு அழைப்பின் வழியாக சேர்…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">ரத்து</string>
     <string name="btn_Close">Close</string>
     <string name="btn_Continue">தொடர்</string>
+    <string name="btn_CreateNewKey">புதிய குறியீட்டை உருவாக்க</string>
+    <string name="btn_DeleteKeys">விசைகள்</string>
     <string name="btn_discard">கைவிடு</string>
     <string name="btn_Done">செய்த</string>
     <string name="btn_Exit">வெளியேறு</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 மணி நேரம்</string>
     <string name="choice_auto_storage">இயல்புநிலை சேமிப்பு</string>
     <string name="choice_external_storage">வெளி சேமிப்பு</string>
+    <string name="choice_font_large">பெரிய</string>
+    <string name="choice_font_medium">ஊடகம்</string>
+    <string name="choice_font_micro">மிக சிறிய</string>
+    <string name="choice_font_small">சிறிய</string>
     <string name="choice_internal_storage">உள்நாட்டு சேமிப்பு</string>
     <string name="choice_nolimit">வரம்பு இல்லை</string>
     <string name="choice_SaveDirectory">சேமி அடைவு</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">ஒலிவாங்கி அனுமதி தேவை. ஒலிவாங்கி அனுமதிகள் செயல்படுத்த iOS அமைப்புகள் செல்க.</string>
     <string name="error_BackupNotFound">மீட்க இல்லை காப்பு.</string>
     <string name="error_BackupNotSupportedDevice">சாதன காப்பு மீண்டும் ஆதரிக்கவில்லை.</string>
-    <string name="error_BadCopyProtectUpgrade">காரணமாக அண்ட்ராய்டு 4.1 இல் ஒரு பிழை, நீங்கள் நீக்க வேண்டும் மற்றும் SafeSlinger மீண்டும்.</string>
+    <string name="error_BadCopyProtectUpgrade">காரணமாக அண்ட்ராய்டு 4.1 இல் ஒரு பிழை, நீங்கள் SafeSlinger நீக்க மற்றும் மீண்டும் நிறுவ வேண்டும்.</string>
     <string name="error_C2DMRegAccountMissing">ஒரு Google கணக்கை தேவைப்படுகிறது. கணக்கு மேலாளர் திறக்க மற்றும் ஒரு Google கணக்கு சேர்க்க தயவு செய்து.</string>
     <string name="error_C2DMRegAuthenticationFailed">பதிவு அங்கீகரிக்காத, பின்னர் கைமுறையாக மீண்டும் முயற்சிக்கவும்.</string>
     <string name="error_C2DMRegInvalidSender">பதிவு இந்த பதிப்பு கிடைக்கவில்லை, ஒரு மேம்படுத்தப்பட்ட பதிப்பு சரிபார்க்கவும்.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">நீங்கள் இந்த சாதனம் செய்தி ஒதுக்கீட்டை மீறிவிட்டீர்கள். பின்னர் மீண்டும் முயற்சி செய்க.</string>
     <string name="error_PushMsgServiceFail">அறிவித்தல் சேவை இந்த நேரத்தில் இல்லை. பின்னர் செய்தி அனுப்ப முயற்சி செய்யுங்கள்.</string>
     <string name="error_RecoderError">ஆடியோ ரெக்கார்டர் தயாராக முடியாது.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">அதே நேரத்தில், மற்றொரு தொலைபேசி மூலம் \' ஸ்லிங் விசைகள்\' தொடங்க.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">அதே நேரத்தில், மற்றொரு தொலைபேசி ஸ்லிங் விசைகள் தொடங்க.</string>
     <string name="error_selectDataToSend">நீங்கள் ஒரு இணைப்பு அல்லது அனுப்ப ஒரு உரை செய்தியை வேண்டும்.</string>
     <string name="error_ShareFileDelError">பகிர்வு கோப்பு நீக்க முடியாது.</string>
     <string name="error_UnableFindPubKey">பரமேஸ்வரன் வழங்குநர் தனியார் முக்கிய பொது முக்கிய பொருத்த முடியவில்லை.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger பிழை, மறுதொடக்கம் செய்யவும்.</string>
     <string name="error_VcardParseFailure">தொடர்பு தரவு தவறாக வடிவமைக்கப்பட்டுள்ளது.</string>
 
-    <string name="help_find">மற்றவர்களுடன் பரிமாறி உங்கள் பெயர் அமைக்க இந்த திரையை பயன்படுத்தவும். முடித்த போது \'முடிந்தது\' பொத்தானை தட்டவும்.</string>
-    <string name="help_home">அடையாள பரிமாற்றம் தரவு, அனைத்து பயனர்கள் அருகிலுள்ள அல்லது தொலைபேசியில் உறுதி. \' தொடங்கியிருக்கவேண்டும் செலாவணி \' பொத்தானை மட்டுமே சரிபார்க்கப்பட தொடர்பு தரவு மாற்றித்தரும்.</string>
-    <string name="help_identity_menu">\n\nஉங்கள் பெயர் பொத்தானை தட்டுவதன் மூலம் இந்த திரையில் உங்கள் அடையாளம் பற்றி தனிப்பட்ட தரவு மாற்றலாம். இந்த \'Edit\' தொடர்பு, தொடர்பு \' நியூ உருவாக்கவும் \', அல்லது தொடர்பு \' மற்றொரு பயன்பாடு \' அனுமதிக்கும் ஒரு மெனு காண்பிக்கும்.</string>
+    <string name="help_find">மற்றவர்களுடன் பரிமாறி உங்கள் பெயர் அமைக்க இந்த திரையை பயன்படுத்தவும். முடித்த போது முடிந்தது பொத்தானை தட்டவும்.</string>
+    <string name="help_home">அடையாள பரிமாற்றம் தரவு, அனைத்து பயனர்கள் அருகிலுள்ள அல்லது தொலைபேசியில் உறுதி. தொடங்கியிருக்கவேண்டும் செலாவணி பொத்தானை மட்டுமே சரிபார்க்கப்பட தொடர்பு தரவு மாற்றித்தரும்.</string>
+    <string name="help_identity_menu">\n\n\nஉங்கள் பெயர் பொத்தானை தட்டுவதன் மூலம் இந்த திரையில் உங்கள் அடையாளம் பற்றி தனிப்பட்ட தரவு மாற்றலாம். இந்த, உங்கள் தொடர்பு எடிட் செய்ய அனுமதிப்பது ஒரு மெனு காண்பிக்கும் புதிய தொடர்பை உருவாக்க, அல்லது மற்றொரு பயன்படுத்த தொடர்பு.</string>
     <string name="help_Messages">இந்த திரையில் அனைத்து கடந்த செய்திகள், மற்றும் இன்னும் பதிவிறக்க கிடைக்க உள்ளன என்று இணைப்புகளை காட்டுகிறது.</string>
-    <string name="help_passphrase">உங்கள் கடவுச்சொல்லை பயன்பாட்டு உள்நுழைய இந்த திரையை பயன்படுத்தவும்.</string>
+    <string name="help_passphrase">உங்கள் கடவுச்சொல்லை பயன்பாட்டு உள்நுழைய இந்த திரையை பயன்படுத்தவும். உங்கள் கடவுச்சொல்லை மறந்துவிட்டால், நீங்கள் மறந்து விட்டீர்களா கடவுச்சொல்லை தட்டுவதன் மூலம் ஒரு புதிய கடவுச்சொல்லை பாதுகாக்கப்பட்ட ஒரு புதிய விசையை உருவாக்க கூடும்? பொத்தானை அழுத்தவும். பல விசைகள் மாற பயனர் பெயர் தட்டவும்.</string>
     <string name="help_PickRecip">SafeSlinger விசைகளை தொடர்புகள் உங்கள் செய்தியை அனுப்ப தேர்ந்தெடுத்து, இங்கே காட்டப்படும்.</string>
-    <string name="help_save">முடிந்ததும், நெறிமுறை பரிமாறி அடையாளத்தை தரவு பட்டியலில் வெளிப்படுத்த வேண்டும். நீங்கள் \' இறக்குமதி \' காப்பாற்ற அழுத்தவும் விரும்புகிறேன் தொடர்புகளை தேர்ந்தெடுக்கவும்.</string>
-    <string name="help_SecureIntroduction">இந்த திரையில் நீங்கள் பாதுகாப்பாக ஒருவருக்கொருவர் தங்களது விசைகளை அனுப்ப முன் விசைகளை ஓடும் இரண்டு மக்கள் தேர்ந்தெடுக்க அனுமதிக்கிறது. போது தயாராக வெறுமனே \' அறிமுகம் \' அழுத்தவும்.</string>
-    <string name="help_Send">இந்த திரை நீங்கள் சில தரவு மற்றும் அனுப்ப பெறுநர் தேர்ந்தெடுக்க அனுமதிக்கிறது. போது தயாராக வெறுமனே \' அனுப்பவும் \' அழுத்தவும்.</string>
+    <string name="help_save">முடிந்ததும், நெறிமுறை பரிமாறி அடையாளத்தை தரவு பட்டியலில் வெளிப்படுத்த வேண்டும். நீங்கள் இறக்குமதி சேமிக்க மற்றும் அழுத்தவும் விரும்புகிறேன் தொடர்புகளை தேர்ந்தெடுக்கவும்.</string>
+    <string name="help_SecureIntroduction">இந்த திரையில் நீங்கள் பாதுகாப்பாக ஒருவருக்கொருவர் தங்களது விசைகளை அனுப்ப முன் விசைகளை ஓடும் இரண்டு மக்கள் தேர்ந்தெடுக்க அனுமதிக்கிறது. வெறுமனே போது தயாராக அறிமுகம் அழுத்தவும்.</string>
+    <string name="help_Send">இந்த திரை நீங்கள் சில தரவு மற்றும் அனுப்ப பெறுநர் தேர்ந்தெடுக்க அனுமதிக்கிறது. வெறுமனே தயாராக போது அனுப்பவும் அழுத்தவும்.</string>
 
     <string name="iOS_contactError">தொடர்புகள் அனுமதி தேவை. தொடர்புகள் அனுமதிகள் செயல்படுத்த iOS அமைப்புகள் செல்க.</string>
     <string name="iOS_errorpushtoken">புஷ் பதிவு காணவில்லை.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">சாதனம்:</string>
     <string name="label_DeviceInSendOnlyMode">அனுப்புக மட்டுமே முறையில்</string>
     <string name="label_DisabledExchSourceKeyChange">உங்கள் முக்கிய மாறிவிட்டது: ஸ்லிங் விசைகள் மீண்டும்.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">செய்தி தொடங்குவதற்கு, பயனர்கள் அதே நேரத்தில் ஸ்லிங் விசைகள் வேண்டும்.</string>
     <string name="label_Draft">வரைவு</string>
     <string name="label_EnabledKeyFormatDeprecated">முக்கிய வடிவம் நீக்கப்பட்டது: ஸ்லிங் விசைகள் மீண்டும்.</string>
     <string name="label_exchanged">பரிமாறி</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">கோப்பு பெயர்</string>
     <string name="label_FindInstruct">பெயர் சேர்க்கவும் நீங்கள் பாதுகாப்பாக தொடர்பு போது பார்க்க மற்றவர்கள் விரும்புகிறேன்:</string>
     <string name="label_FirstName">முதல் பெயர்</string>
-    <string name="label_Home">சேர்க்க அல்லது நீக்க தொடர்பு தரவு, நீங்கள் பகிர்ந்து கொள்ள விரும்பும் பொருட்களை சரிபார்த்து, மற்றும் குழாய் உங்கள் பெயரை தட்டுக \'எக்ஸ்சேஞ்ச் தொடங்கியிருக்கவேண்டும்\' மற்றவர்கள் பரிமாற்றம் தயாராக இருக்கும் போது:</string>
+    <string name="label_Home">சேர்க்க அல்லது நீக்க தொடர்பு தரவு, நீங்கள் பகிர்ந்து கொள்ள விரும்பும் பொருட்களை சரிபார்த்து, மற்றும் பலர் பரிமாற்றம் தயாராக இருக்கும் போது பங்கு சந்தை தொடங்கியிருக்கவேண்டும் தட்டியெழுப்பும் உங்கள் பெயரை தட்டுக:</string>
     <string name="label_hometag">முகப்பு</string>
     <string name="label_hours">%d மணி நேரம்</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud செயல்படுத்தப்படும். முடித்த போது \' முடிந்தது \' பொத்தானை தட்டவும்.</string>
-    <string name="label_InstNoMessages">செய்திகள் இல்லை. நீங்கள் முகப்பு மெனுவில் \' செய்தி எழுது \' பொத்தானை ஒரு செய்தியை அனுப்ப வேண்டும்.</string>
-    <string name="label_InstNoMessagesAndroid">செய்திகள் இல்லை. நீங்கள் \' தொகுத்தல் \' தாவலில் இருந்து ஒரு செய்தியை அனுப்ப வேண்டும்.</string>
-    <string name="label_InstNoRecipients">இல்லை பெறுபவர்கள். அருகில் உள்ள மற்றொரு SafeSlinger பயனர் கண்டறிய மற்றும் விசைகளை பகிர்ந்து கொள்ள \' ஸ்லிங் விசைகள்\' தாவலை தொட்டு.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud செயல்படுத்தப்படும். முடித்த போது முடிந்தது பொத்தானை தட்டவும்.</string>
+    <string name="label_InstNoMessages">செய்திகள் இல்லை. நீங்கள் வீட்டில் மெனு தொகுத்தல் செய்தி பொத்தானை ஒரு செய்தியை அனுப்ப வேண்டும்.</string>
+    <string name="label_InstNoMessagesAndroid">செய்திகள் இல்லை. நீங்கள் உருவாக்கும் தாவலில் இருந்து ஒரு செய்தியை அனுப்ப வேண்டும்.</string>
+    <string name="label_InstNoRecipients">பெற்றவர்கள் சேர்க்க, நீங்கள் முதல் அதே நேரத்தில் ஒன்று அல்லது அதற்கு மேற்பட்ட மற்ற பயனர்கள் ஸ்லிங் விசைகள் வேண்டும். நீங்கள் மெனுவிலிருந்து ஒரு ஸ்லிங் விசைகள் தொடர்பு அழைப்பிதழ் அனுப்ப வேண்டும்.</string>
     <string name="label_InstNoSharedFile">இல்லை பகிர்வு கோப்பு. பகிரப்பட்ட கோப்புறை ஐடியூன்ஸ் மற்றும் இழுவை கோப்புகளை உங்கள் சாதனத்தை இணைக்க.</string>
     <string name="label_InstRecipients">ஒரு செய்தியை அனுப்ப, ஒரு பெறுநர் தேர்வு:</string>
     <string name="label_InstSendInvite">பாதுகாப்பாக அறிமுகப்படுத்த பெறுபவர்கள் தேர்வு:</string>
     <string name="label_InstSharedFile">இணைக்க ஒரு கோப்பு தேர்வு:</string>
     <string name="label_introduced">அறிமுகம்</string>
+    <string name="label_inviteSent">அழைப்பு</string>
     <string name="label_Key">முக்கிய:</string>
     <string name="label_LastName">கடைசி பெயர்</string>
     <string name="label_Me">என்னை</string>
     <string name="label_messageIntroduceNameToYou">நான் உங்களுக்கு %s அறிமுகப்படுத்த விரும்புகிறேன்.</string>
+    <string name="label_messageInviteInstall">SafeSlinger பயன்பாட்டை: %s</string>
+    <string name="label_messageInviteSetupInst">அமைப்பு ஒரு பாதுகாப்பான செய்தி இணைப்பு, நாம் சந்திக்க அல்லது தொலைபேசி ஒருவருக்கொருவர் அதே நேரத்தில், பின்னர் ஸ்லிங் விசைகள் ஒருமுறை இணைப்பு சரிபார்க்க முடியும்.</string>
+    <string name="label_messageInviteStartMsg">நாம் திறந்த மூல SafeSlinger iPhone அல்லது Android பயன்பாட்டை பாதுகாப்பான செய்தி தொடங்க முடியுமா?</string>
     <string name="label_minutes">%d நிமிடங்கள்</string>
     <string name="label_mobiletag">மொபைல்</string>
     <string name="label_MostRecentOnly">மிக சமீபத்திய மட்டுமே</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">தாமதமாக SafeSlinger காப்பு</string>
     <string name="label_safeslingered">(SafeSlinger நேரடி எக்ஸ்சேஞ்ச்)</string>
     <string name="label_SaveAccount">கணக்கு சேமிக்கவும்</string>
-    <string name="label_SaveInstruct">பாதுகாப்பான தொடர்புகள் காப்பாற்ற \'இறக்குமதி\' தட்டி, நீங்கள் உங்கள் முகவரி புத்தகத்தில் உள்ள மேம்படுத்த வேண்டும் தொடர்புகள் பாருங்கள்:</string>
+    <string name="label_SaveInstruct">நீங்கள் உங்கள் முகவரி புத்தகத்தில் உள்ள மேம்படுத்த வேண்டும் தொடர்புகள் பாருங்கள், பின்னர் பாதுகாப்பான தொடர்புகள் காப்பாற்ற இறக்குமதி தட்டி:</string>
     <string name="label_seconds">%d வினாடிகள்</string>
     <string name="label_SelectRecip">தேர்வு பெற்றவர்</string>
     <string name="label_sendErrorData">பிழை என்பது தரவு அனுப்பவும்</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">படி 3</string>
     <string name="label_step_4">படி 4</string>
     <string name="label_step_5">படி 5</string>
+    <string name="label_summary_auto_attach_retrieval">இன்னும் உள்நுழைவு போது தானாகவே செய்தியை இணைப்புகளை பதிவிறக்க</string>
+    <string name="label_summary_auto_decrypt">இன்னும் உள்நுழைவு போது தானாக செய்திகளை டிக்ரிப்ட்</string>
+    <string name="label_summary_remind_backup_delay">காப்பு என்று இருக்கும் போது அறிவிப்பை பெறவும்.</string>
+    <string name="label_summary_show_tutorial">ஸ்லிங் விசைகளை attemping முன் ஒரு பயிற்சி காட்டு.</string>
     <string name="label_TapToDecryptFile">கோப்பை டிக்ரிப்ட் செய்ய தட்டுக</string>
     <string name="label_TapToDecryptMessage">டிக்ரிப்ட் தட்டவும்</string>
     <string name="label_TapToDownloadFile">கோப்பை பதிவிறக்க தட்டவும்</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">கோப்பு திறக்க தட்டுக</string>
     <string name="label_TapToResumeDraft">செய்தி வரைவு மீண்டும் தட்டவும்</string>
     <string name="label_TapToSendCredentialUpdate">தட்டி அறிமுக மேம்படுத்தல் அனுப்ப நடத்த.</string>
+    <string name="label_TapToSlingKeys">ஸ்லிங் விசைகள் தட்டவும்.</string>
     <string name="label_targetAccountLabel">தொடர்புகள் கணக்கு</string>
-    <string name="label_TouchToConfigureBackupSettings">நீங்கள் விருப்பப்பட்டால் iOS அமைப்புகள் SafeSlinger iCloud காப்பு இயக்க வேண்டும். முடித்த போது \' முடிந்தது \' பொத்தானை தட்டவும்.</string>
+    <string name="label_TouchToConfigureBackupSettings">நீங்கள் விருப்பப்பட்டால் iOS அமைப்புகள் SafeSlinger iCloud காப்பு இயக்க வேண்டும். முடித்த போது முடிந்தது பொத்தானை தட்டவும்.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">காப்பு அமைப்புகளை கட்டமைக்க டச்.</string>
     <string name="label_TouchToConfigureCacheTimeout">கேச் நேரம் அமைப்புகளை கட்டமைக்க டச்.</string>
     <string name="label_undefinedTypeLabel">தெரியாத</string>
     <string name="label_UnknownSender">மறைகுறியாக்கப்பட்ட அனுப்புநர்</string>
     <string name="label_UserName">பயனர் பெயர்</string>
+    <string name="label_WarnForgotPassphrase">உங்கள் தரவை பாதுகாக்க, SafeSlinger மீட்பு எங்கும் உங்கள் கடவுச்சொல்லை சேமிக்க முடியாது. நீங்கள் மட்டுமே பெறுபவர்கள் மற்றும் அதே கடவுச்சொல்லை உள்நுழைவு கீழ் உருவாக்கப்பட்ட செய்திகளை அணுகலாம். எனினும், நீங்கள் ஒரு புதிய விசையை கடவுச்சொல்லை உருவாக்க பின்னர் உங்கள் பெறுபவர்கள் கொண்டு ஸ்லிங் விசைகள் மீண்டும்.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">பின்வரும் விசைகள் நீக்கப்படும்:</string>
+    <string name="label_WarnManagePassNoMoreRecent">உன் மேல் சமீபத்திய விசைகள் உள்ளன.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">சாவியை மட்டும் இன்னும் சமீபத்தில் %s உருவாக்கப்படும் உன், அழிக்கப்படலாம், விட உருவாயின.</string>
     <string name="label_worktag">வேலை</string>
 
     <string name="menu_About">பற்றி</string>
+    <string name="menu_auto_attach_retrieval">இணைப்புகளை ஆட்டோ மீட்டெடுக்க</string>
+    <string name="menu_auto_decrypt">ஆட்டோ குறிநீக்கு</string>
     <string name="menu_Change">மாறுதல்</string>
     <string name="menu_ChangePassphrase">மாற்றம் கடவுச்சொல்லை</string>
+    <string name="menu_ContactInviteEmail">மின்னஞ்சல்</string>
+    <string name="menu_ContactInviteSms">உரை (எஸ்எம்எஸ்/MMS)</string>
     <string name="menu_CreateNew">புதிய உருவாக்கவும்</string>
     <string name="menu_delete">நீக்கு</string>
-    <string name="menu_deleteThread">கயிற்றால் %s \' நீக்கு</string>
+    <string name="menu_deleteThread">என் %s நீக்கு</string>
     <string name="menu_Details">காட்சி விரிவாக</string>
     <string name="menu_DownloadDirectory">அடைவு பதிவிறக்க</string>
     <string name="menu_Edit">திருத்து</string>
+    <string name="menu_EditContact">திருத்து தொடர்பு</string>
+    <string name="menu_EditName">திருத்து பெயர்</string>
     <string name="menu_FileManager">கோப்பு மேலாளர்</string>
+    <string name="menu_ForgotPassphrase">கடவுச்சொல்லை மறந்து விட்டீர்களா?</string>
     <string name="menu_Help">உதவி</string>
     <string name="menu_Introduction">அறிமுகப்படுத்துதல்</string>
     <string name="menu_License">உரிமம்</string>
     <string name="menu_Logout">விடு பதிகை</string>
+    <string name="menu_ManagePassphrases">கடவுச்சொற்களை நிர்வகி</string>
+    <string name="menu_message_font_size">செய்தி எழுத்துரு அளவு</string>
     <string name="menu_messageCopyText">நகல் உரை</string>
     <string name="menu_messageForward">முன்</string>
     <string name="menu_Remove">நீக்கு</string>
-    <string name="menu_SelectShareApp">விண்ணப்ப அனுப்பவும்</string>
+    <string name="menu_restore_default">இயல்புநிலை அமைப்புகள் மீட்டமை</string>
+    <string name="menu_ringtone">பயமற்ற</string>
+    <string name="menu_SelectShareApp">தொடர்பு அழைப்பிதழ் சேர்</string>
     <string name="menu_sendFeedback">பின்னூட்டம் அனுப்பு</string>
     <string name="menu_SendUpdate">புதுப்பி அனுப்பு</string>
     <string name="menu_Settings">அமைப்புகள்</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">ஸ்லிங் விசைகள்</string>
     <string name="menu_TagListMessages">செய்திகள்</string>
     <string name="menu_UseAnother">மற்றொரு பயன்பாடு</string>
-    <string name="menu_UseContactPerson">தொடர்பு \'%s\' பயன்படுத்தவும்</string>
+    <string name="menu_UseContactPerson">தொடர்பு %s பயன்படுத்தவும்</string>
     <string name="menu_UseNoContact">பயன்பாட்டு பெயர் மட்டும்</string>
-    <string name="menu_UseProfilePerson">காண்க \'%s\' பயன்படுத்தவும்</string>
+    <string name="menu_UseProfilePerson">காண்க %s பயன்படுத்தவும்</string>
+    <string name="menu_vibrate">ஒலிக்கின்ற</string>
 
     <string name="prog_decrypting">டிக்ரிபிசன்…</string>
     <string name="prog_encrypting">என்க்ரிப்ட்…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">மேம்பட்ட</string>
     <string name="section_backup">காப்பு</string>
     <string name="section_general">பொதுவான</string>
+    <string name="section_notification">அறிவிப்புகள்</string>
+    <string name="section_storage">சேமிப்பு</string>
 
     <string name="state_BackupRestored">காப்பு மீண்டும்.</string>
     <string name="state_FileDeleted">நீக்கப்பட்ட கோப்பு %s.</string>
     <string name="state_FileSent">செய்தி அனுப்பப்பட்டது.</string>
+    <string name="state_InvitationAdded">அழைப்பிதழ் சேர்ந்தது.</string>
     <string name="state_MessageSavedAsDraft">சேமிக்கப்பட்டது செய்தி.</string>
     <string name="state_MessagesDeleted">நீக்கப்பட்ட %d செய்திகளை.</string>
     <string name="state_PassphraseUpdated">கடவுச்சொல்லை மேம்படுத்தப்பட்டது.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s தொடர்புகளை இறக்குமதி.</string>
     <string name="state_TextCopiedToClipboard">உரை இடைநிலைப்பலகையில் நகலெடுக்கப்படும்.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger, நபர் அல்லது தொலைபேசி, எளிதாக அடையாளம் தரவு பகிர்ந்து வடிவமைக்கப்பட்டுள்ளது அங்கீகரிக்கப்பட்ட தனியார், அப்படியே உள்ளது. நீங்கள் பகிர்ந்து ஒவ்வொரு நபர் செய்திகளை அனுப்ப ஒரு பாதுகாப்பான இறுதி வரை இறுதி சேனல் உருவாக்குகிறது.\n\nஅம்சங்கள்:\n- எளிதாக மற்றவர்களுடன் தொடர்பு தகவல்களை பரிமாறி\n- பாதுகாப்பாக உணர்த்துவது நூல்கள், புகைப்படங்கள், எதையும்!\n- வலுவான குறியாக்கவியல் உங்கள் தகவல் பாதுகாக்கிறது\n\nமின்னஞ்சல்: %2$s\nவலை: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger தனியார், அங்கீகரிக்கப்பட்ட நபர் அல்லது தொலைபேசி, எளிதாக அடையாளம் தரவு பகிர்ந்து வடிவமைக்கப்பட்டுள்ளது, அப்படியே உள்ளது. நீங்கள் பகிர்ந்து ஒவ்வொரு நபர் செய்திகளை அனுப்ப ஒரு பாதுகாப்பான இறுதி வரை இறுதி சேனல் உருவாக்குகிறது.\n\nஅம்சங்கள்:\nஎளிதாக மற்றவர்கள்\n-பாதுகாப்பாக கவண் நூல்கள், புகைப்படங்கள், எதையும் தொடர்பு தகவல்களை பரிமாறி! %2$s\nவலை: %3$s\nவலுவான குறியாக்க உங்கள் தகவல்\n\nமின்னஞ்சல் பாதுகாக்கிறது</string>
     <string name="text_KeywordExchange">சந்தை</string>
     <string name="text_KeywordIdentity">அடையாளம்</string>
     <string name="text_KeywordKey">சாவி</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">பாதுகாப்பு</string>
     <string name="text_LanguagesProvidedBy">வழங்கப்பட்ட மொழிகள்:</string>
     <string name="text_RelatedSearchTerms">தொடர்பான விதிமுறைகள்:</string>
-    <string name="text_Requirements">தேவைகள்:\n1. 2 சாதனங்களை ஒரு குறைந்தபட்ச நிறுவ வேண்டும்.\n2. இணைய இணைப்பு செயலில் இருக்க வேண்டும்.</string>
+    <string name="text_Requirements">தேவைகள்:.\n1 2 சாதனங்களை ஒரு குறைந்தபட்ச நிறுவ வேண்டும்.\n2. இணைய இணைப்பு செயலில் இருக்க வேண்டும்.</string>
     <string name="text_SourceCodeRepo">திறந்த மூல: %s</string>
-    <string name="text_WhatsNew">- உறுதிப்பாட்டு திருத்தங்கள்.</string>
+    <string name="text_WhatsNew">-உறுதிப்பாட்டு சரி.</string>
 
     <string name="title_About">பற்றி</string>
     <string name="title_camera">கேமரா</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">ஸ்லிங் விசைகள் உதவி</string>
     <string name="title_FileOptions">இணைப்பு விருப்பங்கள்</string>
     <string name="title_find">அமைப்பு</string>
+    <string name="title_font_size">ஒரு எழுத்துரு அளவு தேர்வு</string>
     <string name="title_home">சந்தை தொடங்கியிருக்கவேண்டும்</string>
     <string name="title_HomePanel">முகப்பு</string>
     <string name="title_MessageDetail">செய்தி</string>

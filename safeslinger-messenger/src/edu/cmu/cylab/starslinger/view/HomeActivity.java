@@ -59,6 +59,7 @@ import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -125,6 +126,7 @@ import edu.cmu.cylab.starslinger.exchange.ExchangeConfig;
 import edu.cmu.cylab.starslinger.model.ContactImpp;
 import edu.cmu.cylab.starslinger.model.CryptoMsgPrivateData;
 import edu.cmu.cylab.starslinger.model.ImppValue;
+import edu.cmu.cylab.starslinger.model.InboxDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageData;
 import edu.cmu.cylab.starslinger.model.MessageDatabaseHelper;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
@@ -138,6 +140,7 @@ import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.SlingerIdentity;
 import edu.cmu.cylab.starslinger.model.UseContactItem;
 import edu.cmu.cylab.starslinger.model.UseContactItem.UCType;
+import edu.cmu.cylab.starslinger.model.UserData;
 import edu.cmu.cylab.starslinger.transaction.C2DMBaseReceiver;
 import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
 import edu.cmu.cylab.starslinger.transaction.C2DMessaging;
@@ -153,7 +156,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
     // constants
-    public static final int RESULT_PASSPHRASE_EXPIRED = 7123;
     private static final int RESULT_PICK_CONTACT_SENDER = 1;
     private static final int RESULT_ERROR = 9;
     private static final int RESULT_PICK_MSGAPP = 13;
@@ -173,12 +175,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     private static final int RECOVERY_CREATEKEY = 340;
     private static final int RECOVERY_EXCHANGEIMPORT = 380;
     private static final int RECOVERY_BACKUP_RESTORE = 390;
-    private static final int MENU_LOGOUT = 440;
-    private static final int MENU_SENDAPP = 450;
-    private static final int MENU_SETTINGS = 460;
-    private static final int MENU_REFERENCE = 470;
-    private static final int MENU_SENDINTRO = 480;
-    private static final int MENU_FEEDBACK = 490;
     public static final int NOTIFY_NEW_MSG_ID = 500;
     public static final int NOTIFY_BACKUP_DELAY_ID = 501;
     public static final int NOTIFY_PASS_CACHED_ID = 502;
@@ -203,12 +199,37 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     private static boolean sAppOpened = false;
     private static ContactStruct sSecureIntro = null;
     private static Uri sTempCameraFileUri;
+
     private ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
 
     private enum Tabs {
         COMPOSE, MESSAGE, SLINGKEYS
     }
+
+    private Runnable updateMainView = new Runnable() {
+
+        @Override
+        public void run() {
+            restoreView();
+        }
+    };
+
+    private Runnable checkPassExpiration = new Runnable() {
+
+        @Override
+        public void run() {
+
+            // uniformly handle pass timeout from any activity...
+            if (!showPassphraseWhenExpired()) {
+                long remain = SafeSlinger.getPassPhraseCacheTimeRemaining(SafeSlingerPrefs
+                        .getKeyIdString());
+                if (remain > 0) {
+                    sHandler.postDelayed(this, remain);
+                }
+            }
+        }
+    };
 
     private BroadcastReceiver mPushRegReceiver = new BroadcastReceiver() {
 
@@ -337,6 +358,12 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             setTab(Tabs.SLINGKEYS);
             restart();
 
+        } else if (SafeSlingerConfig.Intent.ACTION_CHANGESETTINGS.equals(action)) {
+
+            // clicked on pass cache notification
+            showSettings();
+            restart();
+
         } else if (Intent.ACTION_SEND.equals(action) || Intent.ACTION_SEND_MULTIPLE.equals(action)) {
             // clicked share externally, load file, show compose
             if (handleSendToAction()) {
@@ -352,6 +379,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
         if (savedInstanceState != null) {
             setTab(Tabs.values()[savedInstanceState.getInt(extra.RECOVERY_TAB)]);
+            sProgressMsg = savedInstanceState.getString(extra.RESID_MSG);
             if (!TextUtils.isEmpty(sProgressMsg)) {
                 int newValue = savedInstanceState.getInt(extra.PCT);
                 int maxValue = savedInstanceState.getInt(extra.MAX);
@@ -400,8 +428,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         registerReceiver(mPushRegReceiver, new IntentFilter(C2DMReceiver.PUSH_REGISTERED));
         registerReceiver(mMsgUpdateReceiver, new IntentFilter(
                 SafeSlingerConfig.Intent.ACTION_MESSAGEUPDATE));
-
-        SafeSlinger.startCacheService(this);
 
         if (savedInstanceState == null) {
             // init app launch once all time
@@ -486,6 +512,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                             ComposeFragment cf = (ComposeFragment) findFragmentByPosition(Tabs.COMPOSE
                                     .ordinal());
                             if (cf != null) {
+                                cf.updateKeypad();
                                 cf.updateValues(getComposeArgs());
                             }
                             break;
@@ -493,6 +520,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                             MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
                                     .ordinal());
                             if (mf != null) {
+                                mf.updateKeypad();
                                 mf.updateValues(getMessagesArgs());
                             }
                             break;
@@ -500,6 +528,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                             SlingerFragment sf = (SlingerFragment) findFragmentByPosition(Tabs.SLINGKEYS
                                     .ordinal());
                             if (sf != null) {
+                                sf.updateKeypad();
                                 sf.updateValues(getSlingerArgs());
                                 if (SafeSlingerPrefs.getShowWalkthrough()) {
                                     sf.showWalkthrough();
@@ -525,6 +554,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     ComposeFragment cf = (ComposeFragment) findFragmentByPosition(Tabs.COMPOSE
                             .ordinal());
                     if (cf != null) {
+                        cf.updateKeypad();
                         cf.updateValues(getComposeArgs());
                     }
                     break;
@@ -532,6 +562,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
                             .ordinal());
                     if (mf != null) {
+                        mf.updateKeypad();
                         mf.updateValues(getMessagesArgs());
                     }
                     break;
@@ -539,6 +570,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     SlingerFragment sf = (SlingerFragment) findFragmentByPosition(Tabs.SLINGKEYS
                             .ordinal());
                     if (sf != null) {
+                        sf.updateKeypad();
                         sf.updateValues(getSlingerArgs());
                     }
 
@@ -672,7 +704,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             Cursor cm = dbMessage.fetchAllMessagesByThread(null);
             if (cm != null) {
                 while (cm.moveToNext()) {
-                    MessageRow messageRow = new MessageRow(cm);
+                    MessageRow messageRow = new MessageRow(cm, false);
                     byte[] encMsg = messageRow.getEncBody();
                     if (encMsg != null) {
                         CryptoMsgProvider tool = CryptoMsgProvider.createInstance(SafeSlinger
@@ -796,8 +828,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
         // look for proper key
         boolean hasSecretKey = CryptTools.existsSecretKey(getApplicationContext());
-        if (!hasSecretKey) {
-            // key not found, try loading older version
+        if (!hasSecretKey && SafeSlingerPrefs.getUser() == 0) {
+            // key not found, try loading older version for base user only
             hasSecretKey = CryptToolsLegacy.existsSecretKeyOld();
         }
 
@@ -869,20 +901,14 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         }
 
         // pass is good, determine what view to see...
-        sHandler = new Handler();
+        if (sHandler == null) {
+            sHandler = new Handler();
+        }
         sHandler.removeCallbacks(updateMainView);
         sHandler.post(updateMainView);
 
         return true;
     }
-
-    private Runnable updateMainView = new Runnable() {
-
-        @Override
-        public void run() {
-            restoreView();
-        }
-    };
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -897,16 +923,14 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         outState.putAll(getComposeArgs());
         outState.putAll(getSlingerArgs());
 
-        if (sProg != null) {
-            if (sProg.isShowing()) {
-                outState.putInt(extra.PCT, sProg.isIndeterminate() ? 0 : sProg.getProgress());
-                outState.putInt(extra.MAX, sProg.isIndeterminate() ? 0 : sProg.getMax());
-                outState.putString(extra.RESID_MSG, sProgressMsg);
-            } else {
-                outState.remove(extra.PCT);
-                outState.remove(extra.MAX);
-                outState.remove(extra.RESID_MSG);
-            }
+        if (sProg != null && sProg.isShowing()) {
+            outState.putInt(extra.PCT, sProg.isIndeterminate() ? 0 : sProg.getProgress());
+            outState.putInt(extra.MAX, sProg.isIndeterminate() ? 0 : sProg.getMax());
+            outState.putString(extra.RESID_MSG, sProgressMsg);
+        } else {
+            outState.remove(extra.PCT);
+            outState.remove(extra.MAX);
+            outState.remove(extra.RESID_MSG);
         }
     }
 
@@ -917,19 +941,17 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 R.drawable.ic_action_secintro);
         MenuCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
 
-        // do not crowd default action bar with these items, leave room for
-        // tabs...
-        menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(android.R.drawable.ic_menu_help);
         menu.add(0, MENU_SENDINTRO, 0, R.string.title_SecureIntroduction).setIcon(
                 R.drawable.ic_action_secintro);
-        menu.add(0, MENU_SENDAPP, 0, R.string.menu_SelectShareApp).setIcon(
-                android.R.drawable.ic_menu_share);
+        menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+                R.drawable.ic_action_add_person);
         menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);
         menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
                 android.R.drawable.ic_menu_close_clear_cancel);
         menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
                 android.R.drawable.ic_menu_preferences);
+        menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(android.R.drawable.ic_menu_help);
 
         return true;
     }
@@ -939,12 +961,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         switch (item.getItemId()) {
             case MENU_LOGOUT:
                 // remove cached pass
-                SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
-                SafeSlinger.startCacheService(HomeActivity.this);
-                showPassPhrase(false, false);
+                doLogout();
                 return true;
-            case MENU_SENDAPP:
-                showSendApplication();
+            case MENU_CONTACTINVITE:
+                showAddContactInvite();
                 return true;
             case MENU_SETTINGS:
                 showSettings();
@@ -960,6 +980,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 return true;
         }
         return false;
+    }
+
+    private void doLogout() {
+        reInitForExit();
+        SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
+        SafeSlinger.startCacheService(HomeActivity.this);
+        showPassPhrase(false, false);
     }
 
     private void doGenerateNewKey() {
@@ -993,7 +1020,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
             // update cache to avoid entering twice...
             SafeSlinger.setCachedPassPhrase(sKeyData.GetSelfKeyid(), sEditPassPhrase);
-            SafeSlinger.startCacheService(HomeActivity.this);
+            updatePassCacheTimer();
 
             // now that we have new key id, use it when updating contacts...
             runThreadBackgroundSyncUpdates();
@@ -1073,7 +1100,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         } else {
             Cursor c = dbMessage.fetchMessageSmall(sendMsg.getRowId());
             if (c != null) {
-                MessageRow msg = new MessageRow(c);
+                MessageRow msg = new MessageRow(c, false);
                 c.close();
                 if (msg.getMessageAction() != MsgAction.MSG_EDIT) {
                     return;
@@ -1086,10 +1113,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 restart();
                 return;
             }
-        }
-
-        if (showPassphraseWhenExpired()) {
-            return;
         }
 
         if (recip == null) {
@@ -1112,7 +1135,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         // confirm msg is queued
         Cursor c = dbMessage.fetchMessageSmall(sendMsg.getRowId());
         if (c != null) {
-            MessageRow queued = new MessageRow(c);
+            MessageRow queued = new MessageRow(c, false);
             c.close();
             if (queued.getStatus() != MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
                 showNote(R.string.error_UnableToUpdateMessageInDB);
@@ -1121,6 +1144,12 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             }
         }
 
+        // attempt to update messages if in view...
+        Intent sendIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEUPDATE);
+        sendIntent.putExtra(extra.MESSAGE_ROW_ID, sendMsg.getRowId());
+        sendIntent.putExtra(extra.RECIPIENT_ROW_ID, recip.getRowId());
+        getApplicationContext().sendBroadcast(sendIntent);
+
         // switch to message tab
         setTab(Tabs.MESSAGE);
         restart();
@@ -1128,12 +1157,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         // start background task to send
         SendFileTask task = new SendFileTask();
         task.execute(new MessageTransport(recip, sendMsg));
-
-        // attempt to update messages if in view...
-        Intent sendIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEUPDATE);
-        sendIntent.putExtra(extra.MESSAGE_ROW_ID, sendMsg.getRowId());
-        sendIntent.putExtra(extra.RECIPIENT_ROW_ID, recip.getRowId());
-        getApplicationContext().sendBroadcast(sendIntent);
     }
 
     private void setTab(Tabs tab) {
@@ -1164,8 +1187,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                             doCreateKeyEnd();
                             break;
                         case RECOVERY_PUSHREG:
-                            // we can only wait for an error, or success from
-                            // receiver...
+                            // we can only wait for an error, or success
                             break;
                         case RECOVERY_EXCHANGEIMPORT:
                             // updated databases, restart to use...
@@ -1218,7 +1240,9 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                                 sSendMsg.setText(extra_text.toString());
                             } else {
                                 sSendMsg.setFileType("text/plain");
-                                sSendMsg.setFileData(extra_text.toString().getBytes());
+                                final byte[] textBytes = extra_text.toString().getBytes();
+                                sSendMsg.setFileData(textBytes);
+                                sSendMsg.setFileSize(textBytes.length);
                                 SimpleDateFormat sdf = new SimpleDateFormat(
                                         SafeSlingerConfig.DATETIME_FILENAME, Locale.US);
                                 sSendMsg.setFileName(sdf.format(new Date()) + ".txt");
@@ -1334,7 +1358,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 String extension = SSUtil.getFileExtensionOnly(name);
                 contentType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
                 if (contentType == null) {
-                    contentType = "*/*";
+                    contentType = SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF;
                 }
             }
         }
@@ -1346,7 +1370,9 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         }
         baos.flush();
 
-        sSendMsg.setFileData(baos.toByteArray());
+        final byte[] fileBytes = baos.toByteArray();
+        sSendMsg.setFileData(fileBytes);
+        sSendMsg.setFileSize(fileBytes.length);
         sSendMsg.setFileType(contentType);
         sSendMsg.setFileName(name);
         if (f != null && f.exists()) {
@@ -1400,7 +1426,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 } else {
                     Cursor c = dbMessage.fetchMessageSmall(sSendMsg.getRowId());
                     if (c != null) {
-                        MessageRow msg = new MessageRow(c);
+                        MessageRow msg = new MessageRow(c, false);
                         c.close();
                         if (msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_DRAFT) {
                             break;
@@ -1424,7 +1450,11 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
                 break;
             case ComposeFragment.RESULT_SEND:
-                sSendMsg.setText(text);
+                // create new
+                MessageData sendMsg = sSendMsg;
+                sendMsg.setText(text);
+                // remove draft
+                sSendMsg = new MessageData();
                 // user wants to post the file and notify recipient
                 if (sRecip == null) {
                     showNote(R.string.error_InvalidRecipient);
@@ -1436,7 +1466,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     restart();
                     break;
                 }
-                doSendFileStart(sRecip, sSendMsg);
+                doSendFileStart(sRecip, sendMsg);
                 break;
             case ComposeFragment.RESULT_RESTART:
                 restart();
@@ -1467,9 +1497,11 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         String text = null;
         RecipientRow recip = null;
         long rowIdMessage = -1;
+        long rowIdInbox = -1;
         if (data != null) {
             text = data.getString(extra.TEXT_MESSAGE);
             rowIdMessage = data.getLong(extra.MESSAGE_ROW_ID, -1);
+            rowIdInbox = data.getLong(extra.INBOX_ROW_ID, -1);
             long rowIdRecipient = data.getLong(extra.RECIPIENT_ROW_ID, -1);
             if (rowIdRecipient > -1) {
                 RecipientDbAdapter dbRecipient = RecipientDbAdapter
@@ -1482,10 +1514,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     showNote(R.string.error_InvalidRecipient);
                     return;
                 }
-            }
-
-            if (showPassphraseWhenExpired()) {
-                return;
             }
         }
 
@@ -1512,7 +1540,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 } else {
                     Cursor c = dbMessage.fetchMessageSmall(saveMsg.getRowId());
                     if (c != null) {
-                        MessageRow msg = new MessageRow(c);
+                        MessageRow msg = new MessageRow(c, false);
                         c.close();
                         if (msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_DRAFT) {
                             break;
@@ -1560,7 +1588,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 sSendMsg.setRowId(rowIdMessage);
                 Cursor cfm = dbMessage.fetchMessageSmall(sSendMsg.getRowId());
                 if (cfm != null) {
-                    MessageRow edit = new MessageRow(cfm);
+                    MessageRow edit = new MessageRow(cfm, false);
                     cfm.close();
                     sSendMsg.setText(edit.getText());
                     try {
@@ -1589,7 +1617,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 sSendMsg.setRowId(rowIdMessage);
                 Cursor cem = dbMessage.fetchMessageSmall(sSendMsg.getRowId());
                 if (cem != null) {
-                    MessageRow edit = new MessageRow(cem);
+                    MessageRow edit = new MessageRow(cem, false);
                     cem.close();
                     sRecip = recip;
                     sSendMsg.setText(edit.getText());
@@ -1608,13 +1636,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 restart();
                 break;
             case MessagesFragment.RESULT_GETMESSAGE:
-                MessageData recvMsg = new MessageData();
-                recvMsg.setRowId(rowIdMessage);
-                recvMsg.setMsgHash(data.getString(extra.PUSH_MSG_HASH));
+                MessageData inbox = new MessageData();
+                inbox.setRowId(rowIdInbox);
+                inbox.setMsgHash(data.getString(extra.PUSH_MSG_HASH));
 
-                if (recvMsg.getMsgHash() != null) {
+                if (inbox.getMsgHash() != null) {
                     GetMessageTask getMessageTask = new GetMessageTask();
-                    getMessageTask.execute(recvMsg);
+                    getMessageTask.execute(inbox);
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
                     restart();
@@ -1654,13 +1682,72 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         }
     }
 
+    /***
+     * @return When returns false we allow a new key to be generated.
+     */
+    protected boolean doPassEntryCheck(String pass, String passOld, boolean changePass) {
+        CryptoMsgPrivateData mine = null;
+        boolean changeSuccess = false;
+
+        // check for legacy support, migrate if needed
+        if (!CryptTools.existsSecretKey(getApplicationContext())) {
+            // key not found, try migrating older version
+            if (!CryptToolsLegacy.updateKeyFormatOld(pass)) {
+                // unable to migrate old key, just continue...
+            }
+        }
+
+        // decrypt correct private key
+        try {
+            mine = CryptTools.getSecretKey(changePass ? passOld : pass);
+        } catch (IOException e) {
+            e.printStackTrace(); // key not found
+            // The only valid reason to generate key is when it does not exist,
+            // when it should exist.
+            return false;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace(); // unable to deserialize same key format
+            showNote(R.string.error_couldNotExtractPrivateKey);
+        } catch (CryptoMsgException e) {
+            e.printStackTrace(); // key formatted incorrectly
+            showNote(R.string.error_couldNotExtractPrivateKey);
+        }
+
+        // if change, confirm unlock, and resave
+        if (changePass) {
+            try {
+                changeSuccess = CryptTools.changeSecretKeyPassphrase(pass, passOld);
+            } catch (IOException e) {
+                e.printStackTrace(); // key not found
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace(); // unable to deserialize same key format
+                showNote(R.string.error_couldNotExtractPrivateKey);
+            } catch (CryptoMsgException e) {
+                e.printStackTrace(); // key formatted incorrectly
+                showNote(R.string.error_couldNotExtractPrivateKey);
+            }
+            if (changeSuccess) {
+                SafeSlinger.setCachedPassPhrase(SafeSlingerPrefs.getKeyIdString(), pass);
+                updatePassCacheTimer();
+                showNote(R.string.state_PassphraseUpdated);
+                setPassphraseStatus(true);
+            } else {
+                setPassphraseStatus(false);
+            }
+        } else { // check against current key
+            if (mine != null) {
+                SafeSlinger.setCachedPassPhrase(SafeSlingerPrefs.getKeyIdString(), pass);
+                updatePassCacheTimer();
+                setPassphraseStatus(true);
+            } else {
+                setPassphraseStatus(false);
+            }
+        }
+        return true;
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        // uniformly handle pass timeout from any activity...
-        if (resultCode == HomeActivity.RESULT_PASSPHRASE_EXPIRED) {
-            showPassphraseWhenExpired();
-        }
 
         switch (requestCode) {
 
@@ -1701,7 +1788,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                                 // if requested, and logged in, try to decrypt
                                 // messages
                                 if (SafeSlingerPrefs.getAutoDecrypt()) {
-                                    doDecryptPending(pass);
+                                    runThreadDecryptPending(pass);
                                 }
                             }
                         }
@@ -1738,6 +1825,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
             case VIEW_RECIPSEL_ID:
                 switch (resultCode) {
+                    case PickRecipientsActivity.RESULT_SLINGKEYS:
+                        setTab(Tabs.SLINGKEYS);
+                        restart();
+                        break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         RecipientDbAdapter dbRecipient = RecipientDbAdapter
                                 .openInstance(getApplicationContext());
@@ -1773,6 +1864,17 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                         SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
                         SafeSlinger.startCacheService(HomeActivity.this);
                         showPassPhraseVerify();
+                        break;
+                    case SettingsActivity.RESULT_LOGOUT:
+                        doLogout();
+                        break;
+                    case SettingsActivity.RESULT_DELETE_KEYS:
+                        // allow deletion of newer keys only
+                        showManagePassphrases(getMoreRecentKeys());
+                        break;
+                    case SettingsActivity.RESULT_CHANGE_PASSTTL:
+                        // update timer since ttl has changed
+                        updatePassCacheTimer();
                         break;
                     case Activity.RESULT_CANCELED:
                         // nothing to change...
@@ -1863,11 +1965,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                             }
 
                             sendMsg1.setFileData(vCard2);
+                            sendMsg1.setFileSize(vCard2.length);
                             sendMsg1.setFileName(SafeSlingerConfig.INTRODUCTION_VCF);
                             sendMsg1.setFileType(SafeSlingerConfig.MIMETYPE_CLASS + "/"
                                     + SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO);
 
                             sendMsg2.setFileData(vCard1);
+                            sendMsg2.setFileSize(vCard1.length);
                             sendMsg2.setFileName(SafeSlingerConfig.INTRODUCTION_VCF);
                             sendMsg2.setFileType(SafeSlingerConfig.MIMETYPE_CLASS + "/"
                                     + SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO);
@@ -2052,36 +2156,103 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void doDecryptPending(String pass) {
-        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-        Cursor c = dbMessage.fetchAllMessagesDecryptPending();
-        if (c != null) {
-            try {
-                while (c.moveToNext()) {
-                    long rowId = c.getLong(c.getColumnIndexOrThrow(MessageDbAdapter.KEY_ROWID));
-                    byte[] encMsg = c
-                            .getBlob(c.getColumnIndexOrThrow(MessageDbAdapter.KEY_ENCBODY));
+    private void updatePassCacheTimer() {
+        SafeSlinger.startCacheService(HomeActivity.this);
+        long remain = SafeSlinger
+                .getPassPhraseCacheTimeRemaining(SafeSlingerPrefs.getKeyIdString());
+        if (remain > 0) {
+            if (sHandler == null) {
+                sHandler = new Handler();
+            }
+            sHandler.removeCallbacks(checkPassExpiration);
+            sHandler.postDelayed(checkPassExpiration, remain);
+        }
+    }
 
-                    StringBuilder keyidout = new StringBuilder();
-                    byte[] plain = CryptTools.decryptMessage(encMsg, pass, keyidout);
-
-                    MessagePacket push = new MessagePacket(plain);
-                    if (!dbMessage.updateMessageDecrypted(rowId, push, keyidout.toString())) {
-                        return; // unable to save progress
-                    }
-                }
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (CryptoMsgException e) {
-                e.printStackTrace();
-            } catch (GeneralException e) {
-                e.printStackTrace();
-            } finally {
-                c.close();
+    private ArrayList<UserData> getMoreRecentKeys() {
+        ArrayList<UserData> recentKeys = new ArrayList<UserData>();
+        int totalUsers = SafeSlinger.getTotalUsers();
+        for (int i = 0; i < totalUsers; i++) {
+            long date = SafeSlingerPrefs.getKeyDate(i);
+            String name = SafeSlingerPrefs.getContactName(i);
+            if (i > SafeSlingerPrefs.getUser()) {
+                recentKeys.add(new UserData(name, date, false));
             }
         }
+        return recentKeys;
+    }
+
+    private void runThreadDecryptPending(final String pass) {
+
+        final Handler decMsgHandler = new Handler(new Callback() {
+            @Override
+            public boolean handleMessage(Message msg) {
+                postProgressMsgList(msg.arg1 == 1, msg.arg2, getString(R.string.prog_decrypting));
+                return false;
+            }
+        });
+
+        final Handler doneMsgHandler = new Handler(new Callback() {
+            @Override
+            public boolean handleMessage(Message msg) {
+                postProgressMsgList(msg.arg1 == 1, msg.arg2, null);
+                return false;
+            }
+        });
+
+        Thread t = new Thread() {
+
+            @Override
+            public void run() {
+                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+                InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(getApplicationContext());
+                Message msg = new Message();
+
+                Cursor c = dbInbox.fetchAllInboxDecryptPending();
+                if (c != null) {
+                    while (c.moveToNext()) {
+                        try {
+                            MessageData inRow = new MessageRow(c, true);
+                            StringBuilder keyidout = new StringBuilder();
+                            msg = new Message();
+                            msg.arg1 = inRow.isInboxTable() ? 1 : 0;
+                            msg.arg2 = (int) inRow.getRowId();
+                            decMsgHandler.sendMessage(msg);
+
+                            byte[] plain = CryptTools.decryptMessage(inRow.getEncBody(), pass,
+                                    keyidout);
+                            MessagePacket push = new MessagePacket(plain);
+
+                            // move encrypted message to decrypted storage...
+                            // add decrypted
+                            long rowIdMsg = dbMessage.createMessageDecrypted(inRow, push,
+                                    keyidout.toString());
+                            if (rowIdMsg == -1) {
+                                return; // unable to save progress
+                            } else {
+                                // remove encrypted
+                                dbInbox.deleteInbox(inRow.getRowId());
+                            }
+                            msg = new Message();
+                            msg.arg1 = inRow.isInboxTable() ? 1 : 0;
+                            msg.arg2 = (int) inRow.getRowId();
+                            doneMsgHandler.sendMessage(msg);
+
+                        } catch (ClassNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (CryptoMsgException e) {
+                            e.printStackTrace();
+                        } catch (GeneralException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    c.close();
+                }
+            }
+        };
+        t.start();
     }
 
     private void doLoadAttachment(String path) throws FileNotFoundException {
@@ -2093,6 +2264,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             byte[] outFileData = new byte[is.available()];
             is.read(outFileData);
             sSendMsg.setFileData(outFileData);
+            sSendMsg.setFileSize(outFileData.length);
 
             if (sSendMsg.getFileSize() > SafeSlingerConfig.MAX_FILEBYTES) {
                 is.close();
@@ -2108,10 +2280,11 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             else {
                 String extension = SSUtil.getFileExtensionOnly(vir.getName());
                 type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
-                if (type != null)
+                if (type != null) {
                     sSendMsg.setFileType(type);
-                else
-                    sSendMsg.setFileType("*/*");
+                } else {
+                    sSendMsg.setFileType(SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF);
+                }
             }
             is.close();
 
@@ -2137,6 +2310,46 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         } else {
             showNote(String.format(getString(R.string.error_FileSave), recvMsg.getFileName()));
             restart();
+        }
+    }
+
+    private void doSelectRecipientPostExchange(Bundle args, int recipSource) {
+        // check for presence of one key only to pre-select recipient
+        CryptoMsgProvider p = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
+        byte[] keyBytes = null;
+        String keyStr = null;
+        String keyId = null;
+        int exchanged = 0;
+        do {
+            keyBytes = args.getByteArray(SafeSlingerConfig.APP_KEY_PUBKEY + exchanged);
+            if (keyBytes != null) {
+                keyStr = new String(keyBytes);
+                exchanged++;
+            }
+        } while (keyBytes != null);
+
+        if (!TextUtils.isEmpty(keyStr)) {
+            try {
+                keyId = p.ExtractKeyIDfromSafeSlingerString(keyStr);
+            } catch (CryptoMsgPeerKeyFormatException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (exchanged == 1 && !TextUtils.isEmpty(keyId)
+                && recipSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
+            RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                    .openInstance(getApplicationContext());
+            Cursor cr = dbRecipient.fetchRecipientByKeyId(keyId);
+            if (cr != null) {
+                sRecip = new RecipientRow(cr);
+                cr.close();
+            }
+            if (sRecip != null) {
+                sSendMsg = new MessageData();
+                setTab(Tabs.COMPOSE);
+                restart();
+            }
         }
     }
 
@@ -2195,7 +2408,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
                 Cursor c = dbMessage.fetchMessageSmall(recvMsg.getRowId());
                 if (c != null) {
-                    inviteMsg = new MessageRow(c);
+                    inviteMsg = new MessageRow(c, false);
                     c.close();
                 }
                 if (inviteMsg == null) {
@@ -2248,6 +2461,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                         showNote(String.format(getString(R.string.state_SomeContactsImported),
                                 imported));
                     }
+
+                    doSelectRecipientPostExchange(args, recipSource);
                 } else {
                     showNote(error);
                 }
@@ -2331,12 +2546,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        // The activity is about to become visible.
-    }
-
-    @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
 
@@ -2349,8 +2558,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     @Override
     protected void onResume() {
         super.onResume();
-        // The activity has become visible (it is now "resumed").
-
         restoreView();
 
         // require pass on wake...
@@ -2360,10 +2567,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     private boolean showPassphraseWhenExpired() {
         String contactName = SafeSlingerPrefs.getContactName();
         if (CryptTools.existsSecretKey(getApplicationContext()) && !TextUtils.isEmpty(contactName)) {
-
-            String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
-            if (TextUtils.isEmpty(pass)) {
-                if (!SafeSlinger.isPassphraseOpen()) {
+            if (SafeSlinger.isCacheEmpty()) {
+                if (SafeSlinger.isAppVisible()) {
                     showPassPhrase(false, false);
                     return true;
                 }
@@ -2375,22 +2580,12 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     @Override
     protected void onPause() {
         super.onPause();
-        // Another activity is taking focus (this activity is about to be
-        // "paused").
-
         restoreView();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        // The activity is no longer visible (it is now "stopped")
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // The activity is about to be destroyed.
 
         // attempt to unregister, however we can safely ignore the
         // "IllegalArgumentException: Receiver not registered" called when
@@ -2438,13 +2633,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         initOnReload();
     }
 
-    protected void postProgressMsgList(long rowId, String msg) {
+    protected void postProgressMsgList(boolean inInboxTable, long rowId, String msg) {
         try {
             if (mTabsAdapter != null) {
                 MessagesFragment mf = (MessagesFragment) mTabsAdapter
                         .findFragmentByPosition(Tabs.MESSAGE.ordinal());
                 if (mf != null) {
-                    mf.postProgressMsgList(rowId, msg);
+                    mf.postProgressMsgList(inInboxTable, rowId, msg);
                 }
             }
         } catch (IllegalStateException e) {
@@ -2457,14 +2652,17 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         private long mRowId;
         private WebEngine mWeb = new WebEngine(HomeActivity.this,
                 SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
-        private MessageData mRecvMsg;
+        private MessageData mInbox;
 
         @Override
         protected String doInBackground(MessageData... mds) {
-            mRecvMsg = mds[0];
-            mRowId = mRecvMsg.getRowId();
+            mInbox = mds[0];
+            mRowId = mInbox.getRowId();
 
             try {
+                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+                InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(getApplicationContext());
+
                 if (!SafeSlinger.getApplication().isOnline()) {
                     return getString(R.string.error_CorrectYourInternetConnection);
                 }
@@ -2473,7 +2671,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
                 byte[] msgHashBytes;
                 try {
-                    msgHashBytes = Base64.decode(mRecvMsg.getMsgHash().getBytes(), Base64.NO_WRAP);
+                    msgHashBytes = Base64.decode(mInbox.getMsgHash().getBytes(), Base64.NO_WRAP);
                 } catch (IllegalArgumentException e) {
                     e.printStackTrace();
                     return getString(R.string.error_InvalidIncomingMessage);
@@ -2493,7 +2691,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
                 publishProgress(getString(R.string.prog_verifyingIntegrity));
 
-                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
                 if (Arrays.equals(msgHashBytes, CryptTools.computeSha3Hash(encMsg))) {
                     CryptoMsgProvider tool = CryptoMsgProvider.createInstance(SafeSlinger
                             .isLoggable());
@@ -2504,7 +2701,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                         e.printStackTrace();
                     }
                     // save downloaded initial message
-                    if (!dbMessage.updateMessageDownloaded(mRowId, encMsg,
+                    if (!dbInbox.updateInboxDownloaded(mRowId, encMsg,
                             MessageDbAdapter.MESSAGE_IS_SEEN, keyid)) {
                         return getString(R.string.error_UnableToUpdateMessageInDB);
                     }
@@ -2515,11 +2712,17 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 publishProgress(getString(R.string.prog_decrypting));
                 StringBuilder keyIdOut = new StringBuilder();
                 byte[] rawMsg = CryptTools.decryptMessage(encMsg, pass, keyIdOut);
-                MessagePacket msg = new MessagePacket(rawMsg);
-                mRecvMsg.setFileHash(msg.getFileHash());
+                MessagePacket push = new MessagePacket(rawMsg);
+                mInbox.setFileHash(push.getFileHash());
 
-                if (!dbMessage.updateMessageDecrypted(mRowId, msg, keyIdOut.toString())) {
-                    return getString(R.string.error_UnableToUpdateMessageInDB);
+                // move encrypted message to decrypted storage...
+                // add decrypted
+                long rowIdMsg = dbMessage.createMessageDecrypted(mInbox, push, keyIdOut.toString());
+                if (rowIdMsg == -1) {
+                    return getString(R.string.error_UnableToSaveMessageInDB);
+                } else {
+                    // remove encrypted
+                    dbInbox.deleteInbox(mRowId);
                 }
 
             } catch (OutOfMemoryError e) {
@@ -2537,8 +2740,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             } catch (CryptoMsgException e) {
                 return e.getLocalizedMessage();
             } catch (MessageNotFoundException e) {
-                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-                if (!dbMessage.updateMessageExpired(mRecvMsg.getRowId())) {
+                InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(getApplicationContext());
+                if (!dbInbox.updateInboxExpired(mInbox.getRowId())) {
                     return getString(R.string.error_UnableToUpdateMessageInDB);
                 }
 
@@ -2548,12 +2751,12 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
         @Override
         protected void onProgressUpdate(String... progress) {
-            postProgressMsgList(mRowId, progress[0]);
+            postProgressMsgList(mInbox.isInboxTable(), mRowId, progress[0]);
         }
 
         @Override
         protected void onPostExecute(String error) {
-            postProgressMsgList(mRowId, null);
+            postProgressMsgList(mInbox.isInboxTable(), mRowId, null);
             if (TextUtils.isEmpty(error)) {
                 setTab(Tabs.MESSAGE);
                 restart();
@@ -2578,7 +2781,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 int rxCurr = (int) mWeb.get_rxCurrentBytes();
                 if (rxCurr > 0) {
                     int pct = (int) ((rxCurr / (float) mRxTotalSize) * 100);
-                    postProgressMsgList(mRowId, String.format("%s %d%%",
+                    postProgressMsgList(mRecvMsg.isInboxTable(), mRowId, String.format("%s %d%%",
                             getString(R.string.prog_ReceivingFile), pct > 100 ? 100 : pct));
                 }
                 mHandler.postDelayed(this, MS_POLL_INTERVAL);
@@ -2592,6 +2795,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             mRxTotalSize = 0;
 
             try {
+                mRxTotalSize += 4; // version size
+
                 if (!SafeSlinger.getApplication().isOnline()) {
                     return getString(R.string.error_CorrectYourInternetConnection);
                 }
@@ -2607,7 +2812,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     return getString(R.string.error_InvalidIncomingMessage);
                 }
 
-                // TODO implement more accurate calculation of ciphertext size
+                mRxTotalSize += 4; // file len size
                 mRxTotalSize += mRecvMsg.getFileSize();
 
                 mHandler.postDelayed(mUpdateRxProgress, MS_POLL_INTERVAL);
@@ -2634,6 +2839,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
                 if (rawFile != null) {
                     mRecvMsg.setFileData(rawFile);
+                    mRecvMsg.setFileSize(rawFile.length);
 
                     MessageDbAdapter dbMessage = MessageDbAdapter
                             .openInstance(getApplicationContext());
@@ -2665,13 +2871,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
         @Override
         protected void onProgressUpdate(String... progress) {
-            postProgressMsgList(mRowId, progress[0]);
+            postProgressMsgList(mRecvMsg.isInboxTable(), mRowId, progress[0]);
         }
 
         @Override
         protected void onPostExecute(String error) {
             mHandler.removeCallbacks(mUpdateRxProgress);
-            postProgressMsgList(mRowId, null);
+            postProgressMsgList(mRecvMsg.isInboxTable(), mRowId, null);
             if (TextUtils.isEmpty(error)) {
                 if (mRecvMsg.getFileType().startsWith(SafeSlingerConfig.MIMETYPE_CLASS + "/")) {
                     doProcessSafeSlingerMimeType(mRecvMsg);
@@ -2712,7 +2918,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 int txCurr = (int) mWeb.get_txCurrentBytes();
                 int pct = (int) ((txCurr / (float) mTxTotalSize) * 100);
                 String str = String.format(getString(R.string.prog_SendingFile), "");
-                postProgressMsgList(mRowId, String.format("%s %d%%", str, pct > 100 ? 100 : pct));
+                postProgressMsgList(mSendMsg.isInboxTable(), mRowId,
+                        String.format("%s %d%%", str, pct > 100 ? 100 : pct));
                 mHandler.postDelayed(this, MS_POLL_INTERVAL);
             }
         };
@@ -2725,6 +2932,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             mTxTotalSize = 0;
 
             try {
+                mTxTotalSize += 4; // version size
+
                 // encrypt file data...
                 publishProgress(getString(R.string.prog_encrypting));
                 String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
@@ -2736,6 +2945,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 } else {
                     encFile = new byte[0];
                 }
+                mTxTotalSize += 4; // file len size
                 mTxTotalSize += encFile.length;
 
                 // format message data, including hash of encrypted file
@@ -2757,12 +2967,18 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 // encrypt message data...
                 publishProgress(getString(R.string.prog_encrypting));
                 encMsg = CryptTools.encryptMessage(msgData, pass, mRecip.getPubkey());
+                mTxTotalSize += 4; // msg len size
                 mTxTotalSize += encMsg.length;
 
                 // message id = hash of encrypted message data...
                 publishProgress(getString(R.string.prog_generatingSignature));
                 byte[] msgHashBytes = CryptTools.computeSha3Hash(encMsg);
                 mSendMsg.setMsgHash(new String(Base64.encode(msgHashBytes, Base64.NO_WRAP)));
+                mTxTotalSize += 4; // hash len size
+                mTxTotalSize += msgHashBytes.length;
+
+                mTxTotalSize += 4; // token len size
+                mTxTotalSize += mRecip.getPushtoken().length();
 
                 // send...
                 mHandler.postDelayed(mUpdateTxProgress, MS_POLL_INTERVAL);
@@ -2815,13 +3031,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
         @Override
         protected void onProgressUpdate(String... progress) {
-            postProgressMsgList(mRowId, progress[0]);
+            postProgressMsgList(mSendMsg.isInboxTable(), mRowId, progress[0]);
         }
 
         @Override
         protected void onPostExecute(String error) {
             mHandler.removeCallbacks(mUpdateTxProgress);
-            postProgressMsgList(mRowId, null);
+            postProgressMsgList(mSendMsg.isInboxTable(), mRowId, null);
             if (TextUtils.isEmpty(error)) {
                 // send complete, remove secret sent
                 sSendMsg = new MessageData();
@@ -3040,6 +3256,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         SafeSlingerPrefs.setPusgRegBackoff(SafeSlingerPrefs.DEFAULT_PUSHREG_BACKOFF);
         sProg = null;
         sProgressMsg = null;
+        sRecip = null;
+        sSenderKey = null;
         sSendMsg = new MessageData();
         sWebError = null;
         sEditPassPhrase = null;
@@ -3072,7 +3290,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
         // all openable...
         Intent contentIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        contentIntent.setType("*/*");
+        contentIntent.setType(SafeSlingerConfig.MIMETYPE_ADD_ATTACH);
         contentIntent.addCategory(Intent.CATEGORY_OPENABLE);
 
         // camera
@@ -3158,45 +3376,135 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     }
 
     private void showPassPhrase(boolean create, boolean change) {
-        Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
-        intent.putExtra(extra.CREATE_PASS_PHRASE, create);
-        intent.putExtra(extra.CHANGE_PASS_PHRASE, change);
-        intent.putExtra(extra.VERIFY_PASS_PHRASE, false);
-        int view = change ? VIEW_PASSPHRASE_CHANGE_ID : VIEW_PASSPHRASE_ID;
-        startActivityForResult(intent, view);
-        SafeSlinger.setPassphraseOpen(true);
+        if (!SafeSlinger.isPassphraseOpen()) {
+            if (sHandler != null) {
+                sHandler.removeCallbacks(checkPassExpiration);
+            }
+            Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
+            intent.putExtra(extra.USER_TOTAL, SafeSlinger.getTotalUsers());
+            intent.putExtra(extra.CREATE_PASS_PHRASE, create);
+            intent.putExtra(extra.CHANGE_PASS_PHRASE, change);
+            intent.putExtra(extra.VERIFY_PASS_PHRASE, false);
+            int view = change ? VIEW_PASSPHRASE_CHANGE_ID : VIEW_PASSPHRASE_ID;
+            startActivityForResult(intent, view);
+            SafeSlinger.setPassphraseOpen(true);
+        }
     }
 
     private void showPassPhraseVerify() {
-        Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
-        intent.putExtra(extra.CREATE_PASS_PHRASE, false);
-        intent.putExtra(extra.CHANGE_PASS_PHRASE, false);
-        intent.putExtra(extra.VERIFY_PASS_PHRASE, true);
-        startActivityForResult(intent, VIEW_PASSPHRASE_VERIFY_ID);
-        SafeSlinger.setPassphraseOpen(true);
-    }
-
-    public int getTotalUsers() {
-        String userName;
-        long keyDate;
-        int userNumber = 0;
-        do {
-            userName = null;
-            keyDate = 0;
-            userName = SafeSlingerPrefs.getContactName(userNumber);
-            keyDate = SafeSlingerPrefs.getKeyDate(userNumber);
-            if (!TextUtils.isEmpty(userName)) {
-                userNumber++;
+        if (!SafeSlinger.isPassphraseOpen()) {
+            if (sHandler != null) {
+                sHandler.removeCallbacks(checkPassExpiration);
             }
-        } while (keyDate > 0);
-
-        // always at least 1
-        return userNumber > 1 ? userNumber : 1;
+            Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
+            intent.putExtra(extra.USER_TOTAL, SafeSlinger.getTotalUsers());
+            intent.putExtra(extra.CREATE_PASS_PHRASE, false);
+            intent.putExtra(extra.CHANGE_PASS_PHRASE, false);
+            intent.putExtra(extra.VERIFY_PASS_PHRASE, true);
+            startActivityForResult(intent, VIEW_PASSPHRASE_VERIFY_ID);
+            SafeSlinger.setPassphraseOpen(true);
+        }
     }
 
     private void showSendIntroduction() {
         Intent intent = new Intent(HomeActivity.this, IntroductionActivity.class);
         startActivityForResult(intent, VIEW_SENDINVITE_ID);
+    }
+
+    private void showManagePassphrases(ArrayList<UserData> recentKeys) {
+        StringBuilder msg = new StringBuilder();
+        long myKeyDate = SafeSlingerPrefs.getKeyDate();
+        msg.append(String.format(getString(R.string.label_WarnManagePassOnlyRecentDeleted),
+                new Date(myKeyDate).toLocaleString()));
+        msg.append(" ");
+        msg.append(getString(R.string.label_WarnManagePassFollowsAreRecent));
+        msg.append("\n");
+        if (recentKeys.size() == 0) {
+            msg.append("  ");
+            msg.append(getString(R.string.label_WarnManagePassNoMoreRecent));
+        } else {
+            for (UserData key : recentKeys) {
+                msg.append("  ");
+                msg.append(key.getUserName());
+                msg.append(": ");
+                msg.append(new Date(key.getKeyDate()).toLocaleString());
+                msg.append("\n");
+            }
+        }
+
+        Bundle args = new Bundle();
+        args.putString(extra.RESID_MSG, msg.toString());
+        args.putBoolean(extra.ALLOW_DELETE, (recentKeys.size() != 0));
+        if (!isFinishing()) {
+            removeDialog(DIALOG_MANAGE_PASS);
+            showDialog(DIALOG_MANAGE_PASS, args);
+        }
+    }
+
+    private AlertDialog.Builder xshowManagePassphrases(final Activity act, Bundle args) {
+        String msg = args.getString(extra.RESID_MSG);
+        boolean allowDelete = args.getBoolean(extra.ALLOW_DELETE);
+        AlertDialog.Builder ad = new AlertDialog.Builder(act);
+        View layout;
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
+            layout = View.inflate(new ContextThemeWrapper(act, R.style.Theme_AppCompat),
+                    R.layout.about, null);
+        } else {
+            LayoutInflater inflater = (LayoutInflater) act
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            layout = inflater.inflate(R.layout.about, null);
+        }
+        TextView textViewAbout = (TextView) layout.findViewById(R.id.TextViewAbout);
+        ad.setTitle(R.string.menu_ManagePassphrases);
+        textViewAbout.setText(msg);
+        ad.setView(layout);
+        ad.setCancelable(true);
+        if (allowDelete) { // only have delete key when recent keys exist
+            ad.setPositiveButton(R.string.btn_DeleteKeys, new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                    // delete all more recent keys for now...
+                    doRemoveMoreRecentKeys();
+                    restart();
+                }
+            });
+        }
+        ad.setNegativeButton(R.string.btn_Cancel, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        ad.setOnCancelListener(new OnCancelListener() {
+
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                dialog.dismiss();
+            }
+        });
+        return ad;
+    }
+
+    protected static void doRemoveMoreRecentKeys() {
+        int totalUsers = SafeSlinger.getTotalUsers();
+        for (int i = 0; i < totalUsers; i++) {
+            if (i > SafeSlingerPrefs.getUser()) {
+                deleteUser(i);
+            }
+        }
+
+        // update backups as well
+        SafeSlinger.queueBackup();
+    }
+
+    private static void deleteUser(int userNumber) {
+        CryptTools.deleteKeyFile(userNumber);
+        SafeSlingerPrefs.deletePrefs(userNumber);
+        RecipientDatabaseHelper.deleteRecipientDatabase(userNumber);
+        MessageDatabaseHelper.deleteMessageDatabase(userNumber);
     }
 
     private void showIntroductionInvite(String exchName, String introName, byte[] introPhoto,
@@ -3278,7 +3586,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
                 Cursor c = dbMessage.fetchMessageSmall(msgRowId);
                 if (c != null) {
-                    inviteMsg = new MessageRow(c);
+                    inviteMsg = new MessageRow(c, false);
                     c.close();
                 }
 
@@ -3603,6 +3911,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 return xshowErrorExit(HomeActivity.this, args).create();
             case DIALOG_QUESTION:
                 return xshowQuestion(HomeActivity.this, args).create();
+            case DIALOG_MANAGE_PASS:
+                return xshowManagePassphrases(HomeActivity.this, args).create();
             case DIALOG_INTRO:
                 return xshowIntroductionInvite(HomeActivity.this, args).create();
             case DIALOG_TUTORIAL:
@@ -3617,6 +3927,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 return xshowBackupQuery(HomeActivity.this).create();
             case DIALOG_USEROPTIONS:
                 return xshowChangeSenderOptions(HomeActivity.this, args).create();
+            case DIALOG_CONTACTINVITE:
+                return xshowAddContactInvite(this).create();
+            case DIALOG_CONTACTTYPE:
+                return xshowCustomContactPicker(this, args).create();
         }
         return super.onCreateDialog(id);
     }

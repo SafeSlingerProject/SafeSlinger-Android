@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d utenti</string>
 
-    <string name="error_AllMembersMustUpgrade">Alcuni membri utilizzano una versione precedente, tutti i membri devono utilizzare almeno %s.</string>
+    <string name="error_AllMembersMustUpgrade">Alcuni membri utilizzano una versione precedente; tutti i membri devono utilizzare almeno %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tutti i membri devono aggiornare, alcuni utilizzano più vecchi formati di registrazione push.</string>
     <string name="error_CorrectYourInternetConnection">Internet non è disponibile, verificare le impostazioni.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Timeout di Exchange superato. Iniziare di nuovo lo scambio.</string>
@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Hai segnalato una differenza di frasi. Iniziare di nuovo lo scambio.</string>
     <string name="error_MinUsersRequired">Un minimo di %d membri sono tenuti a scambiare dati.</string>
     <string name="error_MoreDataThanUsers">Dati imprevisti trovati in cambio. Iniziare di nuovo lo scambio.</string>
+    <string name="error_NoDataToExchange">Lo scambio è mancante dati richiesti.</string>
     <string name="error_NoWordListSelected">È necessario selezionare una delle frasi prima di procedere.</string>
     <string name="error_OtherGroupCommitDiffer">Qualcuno ha segnalato una differenza di frasi. Iniziare di nuovo lo scambio.</string>
     <string name="error_OutOfMemoryError">La memoria è insufficiente per completare questa operazione.</string>
-    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nessuna risposta dal server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout in attesa di alcuni membri del gruppo per aggiungere dati.</string>
     <string name="error_WebCancelledByUser">Utente cancellato richiesta del server.</string>
 
-    <string name="help_size">Selezionare il numero di persone che tentano di scambiare dati insieme e premere \' OK \'.</string>
-    <string name="help_userid">Questo numero in questa schermata è utilizzata per creare un unico gruppo di utenti. Esaminare i numeri su tutti gli utenti \'schermate, quindi tutti gli utenti devono inserire lo stesso numero più basso e premere\' OK \'.</string>
-    <string name="help_verify">Ora, è necessario corrispondere a uno di questi tre parole frasi con tutti gli utenti. Ogni utente deve selezionare la stessa frase comune, e premere \' Avanti\'.</string>
+    <string name="help_size">Selezionare il numero di persone che tentano di scambiare dati insieme e premere OK.</string>
+    <string name="help_userid">Questo numero in questa schermata è utilizzata per creare un unico gruppo di utenti. Rivedere i numeri sugli schermi di tutti gli utenti, tutti gli utenti devono inserire lo stesso numero più basso e premere OK.</string>
+    <string name="help_verify">Ora, è necessario corrispondere a uno di questi tre parole frasi con tutti gli utenti. Ogni utente deve selezionare la stessa frase comune, e premere Avanti.</string>
 
+    <string name="label_CompareScreensNDevices">Confronta schermi su dispositivi %s.</string>
     <string name="label_NumericModeHint">Non-English</string>
     <string name="label_PromptInstruct">Questo numero viene utilizzato per creare un unico gruppo di utenti. Confronto, quindi immettere il numero più basso tra tutti gli utenti.</string>
-    <string name="label_ReceivedNItems">ricevuto %d Articoli</string>
+    <string name="label_ReceivedNItems">ricevuto %d articoli</string>
     <string name="label_UserIdHint">Minore</string>
     <string name="label_VerifyInstruct">Tutti i telefoni devono corrispondere una delle 3 parole frasi. Confronto, e poi scegliere l\'abbinamento frase.</string>
+
+    <string name="lib_name">SafeSlinger di Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">in attesa di verifica di tutti i membri…</string>
     <string name="prog_CollectingOthersItems">attesa per tutti gli utenti di unirsi…</string>

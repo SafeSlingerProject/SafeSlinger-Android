@@ -44,9 +44,6 @@ import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 
 public final class FindContactActivity extends BaseActivity {
 
-    private static final int MENU_HELP = 170;
-    private static final int MENU_FEEDBACK = 490;
-
     private EditText mEditTextName;
     private Button mButtonDone;
     private static String mSelectedName = null;

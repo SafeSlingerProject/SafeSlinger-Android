@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d kullanıcıları</string>
 
-    <string name="error_AllMembersMustUpgrade">Bazı üyeler eski bir sürümünü kullanıyorsanız, tüm üyeler, en az %s kullanmanız gerekir.</string>
+    <string name="error_AllMembersMustUpgrade">Bazı üyeler eski bir sürümünü kullanıyorsanız; tüm üyeler en az %s kullanmanız gerekir.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tüm üyeler bazı eski itme kayıt biçimleri kullanarak, yükseltmeniz gerekir.</string>
     <string name="error_CorrectYourInternetConnection">Mevcut değil internet, ayarlarınızı kontrol edin.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Döviz zaman aşımı aşıldı. Yinealışverişi başlar.</string>
@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Siz cümleleri bir fark bildirdi. Yinealışverişi başlar.</string>
     <string name="error_MinUsersRequired">%d üyelerinin minimum veri alışverişi için gereklidir.</string>
     <string name="error_MoreDataThanUsers">Karşılığında bulundu beklenmedik veri. Yinealışverişi başlar.</string>
+    <string name="error_NoDataToExchange">Değişimi gerekli verileri eksik.</string>
     <string name="error_NoWordListSelected">Ilerlemeden önceifadelerin birini seçmelisiniz.</string>
     <string name="error_OtherGroupCommitDiffer">Birisi cümleleri bir fark bildirdi. Yinealışverişi başlar.</string>
     <string name="error_OutOfMemoryError">Bellek Bu işlemi tamamlamak için çok düşük.</string>
-    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Sunucudan yanıt yok.</string>
     <string name="error_TimeoutWaitingForAllMembers">Bazı grup üyeleri veri eklemek için bekleyen zaman aşımı.</string>
     <string name="error_WebCancelledByUser">Kullanıcı sunucu isteği iptal edildi.</string>
 
-    <string name="help_size">\'Tamam \' birlikte veri alışverişi ve basın çalışıyorsunuz insanlarınsayısını seçin.</string>
-    <string name="help_userid">Bu ekranda bu sayı benzersiz bir kullanıcı grubu oluşturmak için kullanılır. Tüm kullanıcı sayıları inceleyin \'Tamam \' ekranlarında, daha sonra tüm kullanıcılaraynı en düşük numarasını girin ve tuşuna basın gerekir \'.</string>
-    <string name="help_verify">Şimdi, tüm kullanıcılar ile bu 3 kelime öbekleri biri eşleşmelidir. Her kullanıcıaynı ortak ifade ve basın \' İleri\' seçmelisiniz.</string>
+    <string name="help_size">Birlikte ve OK tuşuna basın veri alışverişi için çalışan insanlarınsayısını seçin.</string>
+    <string name="help_userid">Bu ekranda bu sayı benzersiz bir kullanıcı grubu oluşturmak için kullanılır. Tüm kullanıcıların ekranlarındanumaralarını inceleyin, daha sonra tüm kullanıcılaraynı en düşük numarasını girin ve OK tuşuna basın gerekir.</string>
+    <string name="help_verify">Şimdi, tüm kullanıcılar ile bu 3 kelime öbekleri biri eşleşmelidir. Her kullanıcıaynı ortak ifade seçin ve İleri\'ye basın gerekir.</string>
 
+    <string name="label_CompareScreensNDevices">%s cihazlarda ekranları karşılaştırın.</string>
     <string name="label_NumericModeHint">Non-İngilizce</string>
     <string name="label_PromptInstruct">Bu sayı benzersiz bir kullanıcı grubu oluşturmak için kullanılır. Karşılaştırmak, ve sonra tüm kullanıcıları arasındaen düşük numarasını girin.</string>
     <string name="label_ReceivedNItems">%d ürün alınan</string>
     <string name="label_UserIdHint">En düşük</string>
     <string name="label_VerifyInstruct">Tüm telefonlar3-sözcük öbekleri biri eşleşmelidir. Karşılaştırın ve ardındaneşleşen ifade almak.</string>
+
+    <string name="lib_name">SafeSlinger Değişimi</string>
 
     <string name="prog_CollectingOthersCommitVerify">tüm üyelerin doğrulama için bekliyor…</string>
     <string name="prog_CollectingOthersItems">Tüm kullanıcıların katılmak için bekliyor…</string>

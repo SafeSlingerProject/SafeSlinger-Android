@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Send invitere med…</string>
+    <string name="action_NewUserRequest">Legg en Sling Keys kontakt invitasjon via…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Avbryt</string>
     <string name="btn_Close">Lukk</string>
     <string name="btn_Continue">Fortsett</string>
+    <string name="btn_CreateNewKey">Opprett ny Key</string>
+    <string name="btn_DeleteKeys">Slett Keys</string>
     <string name="btn_discard">Kast</string>
     <string name="btn_Done">Ferdig</string>
     <string name="btn_Exit">Utgang</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 timer</string>
     <string name="choice_auto_storage">Standard Lagring</string>
     <string name="choice_external_storage">Ekstern lagring</string>
+    <string name="choice_font_large">Stor</string>
+    <string name="choice_font_medium">Medium</string>
+    <string name="choice_font_micro">Veldig liten</string>
+    <string name="choice_font_small">Liten</string>
     <string name="choice_internal_storage">Intern lagring</string>
     <string name="choice_nolimit">No Limit</string>
     <string name="choice_SaveDirectory">Lagre Directory</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Mikrofon Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Mikrofon tillatelser.</string>
     <string name="error_BackupNotFound">Ingen backup til gjenoppretting.</string>
     <string name="error_BackupNotSupportedDevice">Enheten støtter ikke backup gjenoppretting.</string>
-    <string name="error_BadCopyProtectUpgrade">På grunn av en bug i Android 4.1, vil du ha avinstallere og installere SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">På grunn av en bug i Android 4.1, må du avinstallere og installere SafeSlinger.</string>
     <string name="error_C2DMRegAccountMissing">En Google-konto er nødvendig. Vennligst åpne account manager og legge til en Google-konto.</string>
     <string name="error_C2DMRegAuthenticationFailed">Registrering er ikke godkjent, kan du prøve på nytt manuelt senere.</string>
     <string name="error_C2DMRegInvalidSender">Registrering er ikke tilgjengelig for denne versjonen, kan du se etter en oppdatert versjon.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Du har overskredet meldingen kvoten for denne enheten. Vennligst prøv igjen senere.</string>
     <string name="error_PushMsgServiceFail">Varslingstjenesten er ikke tilgjengelig denne gangen. Vennligst prøv å sende meldingen senere.</string>
     <string name="error_RecoderError">Kan ikke forberede lydopptaker.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">For å starte, \' Sling Keys\' med en annen telefon samtidig.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">For å starte, Sling Keys med en annen telefon samtidig.</string>
     <string name="error_selectDataToSend">Du trenger et vedlegg eller en tekstmelding til å sende.</string>
     <string name="error_ShareFileDelError">Kan ikke fjerne den delte filen.</string>
     <string name="error_UnableFindPubKey">Klarer å matche offentlig nøkkel til privat nøkkel i krypto leverandør.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger feil, må du starte.</string>
     <string name="error_VcardParseFailure">Kontaktdata ble formatert feil.</string>
 
-    <string name="help_find">Bruk denne skjermen til å legge inn navn for å utveksle med andre. Trykk på \'Done\'-knappen når du er ferdig.</string>
-    <string name="help_home">Å utveksle identitetsdata, sikre at alle brukere er i nærheten eller på telefonen. The \' Begynn Exchange \'-knappen vil utveksle kun de sjekket kontaktdata.</string>
-    <string name="help_identity_menu">\n\nDu kan også endre personopplysninger om din identitet på denne skjermen ved å trykke på knappen med navnet ditt. Dette vil vise en meny som lar deg Rediger kontakt din, \' Opprett ny \' kontakt, eller \'Bruk en annen \'kontakt.</string>
+    <string name="help_find">Bruk denne skjermen til å legge inn navn for å utveksle med andre. Trykk på Ferdig-knappen når du er ferdig.</string>
+    <string name="help_home">Å utveksle identitetsdata, sikre at alle brukere er i nærheten eller på telefonen. The Begin Exchange-knappen vil utveksle kun de sjekket kontaktdata.</string>
+    <string name="help_identity_menu">\n\n\nDu kan også endre personopplysninger om din identitet på denne skjermen ved å trykke på knappen med navnet ditt. Dette vil vise en meny som lar deg redigere kontakten, Opprett ny kontakt, eller bruk en annen kontakt.</string>
     <string name="help_Messages">Denne skjermen viser alle tidligere meldinger og vedlegg som fortsatt er tilgjengelige for nedlasting.</string>
-    <string name="help_passphrase">Bruk dette skjermbildet til å logge inn på søknaden med passordet.</string>
+    <string name="help_passphrase">Bruk dette skjermbildet til å logge inn på søknaden med passordet. Hvis du har glemt passordet ditt, kan du generere en ny nøkkel beskyttet av en ny-passordet ved å trykke på Glemt Passphrase? knappen. Trykk på brukernavnet for å bytte mellom flere nøkler.</string>
     <string name="help_PickRecip">Kontakter med SafeSlinger tastene vises her, velg en å sende meldingen til.</string>
-    <string name="help_save">Når du er ferdig, vil protokollen avsløre en liste over identitetsdata utveksles. Velg kontaktene du ønsker å lagre og trykk \' Import \'.</string>
-    <string name="help_SecureIntroduction">Dette skjermbildet kan du velge to personer du har slengt nøkler med før å sikkert sende sine nøkler til hverandre. Bare trykk \' Introduser \' når du er klar.</string>
-    <string name="help_Send">Dette skjermbildet kan du velge noen data og en mottaker for å sende til. Bare trykk \' Send \' når du er klar.</string>
+    <string name="help_save">Når du er ferdig, vil protokollen avsløre en liste over identitetsdata utveksles. Velg kontaktene du ønsker å lagre og trykk på Importer.</string>
+    <string name="help_SecureIntroduction">Dette skjermbildet kan du velge to personer du har slengt nøkler med før å sikkert sende sine nøkler til hverandre. Bare trykk Innføre når du er klar.</string>
+    <string name="help_Send">Dette skjermbildet kan du velge noen data og en mottaker for å sende til. Bare trykk Send når du er klar.</string>
 
     <string name="iOS_contactError">Kontakter Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Kontakter tillatelser.</string>
     <string name="iOS_errorpushtoken">Push registrering mangler.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Enhet:</string>
     <string name="label_DeviceInSendOnlyMode">Send beskyttet modus</string>
     <string name="label_DisabledExchSourceKeyChange">Din nøkkel har endret: Sling Keys igjen.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Til å begynne meldinger, både brukere må Sling Keys på samme tid.</string>
     <string name="label_Draft">UTKAST</string>
     <string name="label_EnabledKeyFormatDeprecated">Key format deprecated: Sling Keys igjen.</string>
     <string name="label_exchanged">utvekslet</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">File Name</string>
     <string name="label_FindInstruct">Skriv inn navnet du ønsker at andre skal se når vi kommuniserer sikkert:</string>
     <string name="label_FirstName">Fornavn</string>
-    <string name="label_Home">Klikk på navnet for å legge til eller fjerne kontaktdata, sjekke elementene du ønsker å dele, og trykk \'Begynn Exchange \'når andre er klare til utveksling:</string>
+    <string name="label_Home">Klikk på navnet for å legge til eller fjerne kontaktdata, sjekke elementene du ønsker å dele, og tapp Begynn Veksling når andre er klare til utveksling:</string>
     <string name="label_hometag">Hjem</string>
     <string name="label_hours">%d timer</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud er aktivert. Trykk på\' Done\'-knappen når du er ferdig.</string>
-    <string name="label_InstNoMessages">Ingen meldinger. Du kan sende en melding fra \' Skriv melding \'-knappen på startmenyen.</string>
-    <string name="label_InstNoMessagesAndroid">Ingen meldinger. Du kan sende en melding fra \' Compose \'-fanen.</string>
-    <string name="label_InstNoRecipients">Ingen mottakere. Finn et annet SafeSlinger bruker i nærheten, og berør \' Sling Keys \' tab for å dele nøkler.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud er aktivert. Trykk på Ferdig-knappen når du er ferdig.</string>
+    <string name="label_InstNoMessages">Ingen meldinger. Du kan sende en melding fra Compose Message-knappen på startmenyen.</string>
+    <string name="label_InstNoMessagesAndroid">Ingen meldinger. Du kan sende en melding fra kategorien Compose.</string>
+    <string name="label_InstNoRecipients">For å legge til mottakere, må du først Sling Keys med en eller flere andre brukere på samme tid. Du kan også sende en Sling Keys kontakt invitasjon fra menyen.</string>
     <string name="label_InstNoSharedFile">Ingen delte filen. Koble til enheten med iTunes og dra filer til den delte mappen.</string>
     <string name="label_InstRecipients">Plukk en mottaker for å sende en melding til:</string>
     <string name="label_InstSendInvite">Plukk mottakerne til å innføre sikkert:</string>
     <string name="label_InstSharedFile">Plukk en fil for å legge til:</string>
     <string name="label_introduced">introdusert</string>
+    <string name="label_inviteSent">Invitert</string>
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Etternavn</string>
     <string name="label_Me">Me</string>
     <string name="label_messageIntroduceNameToYou">Jeg ønsker å presentere %s til deg.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Å sette opp en sikker meldingstilkobling, kan vi møte eller telefon hverandre på samme tid, og deretter Sling Keys bare én gang for å kontrollere forbindelsen.</string>
+    <string name="label_messageInviteStartMsg">Kan vi begynne å sikre meldinger med åpen kildekode SafeSlinger iPhone eller Android-app?</string>
     <string name="label_minutes">%d minutter</string>
     <string name="label_mobiletag">Mobil</string>
     <string name="label_MostRecentOnly">Nyeste bare</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup forsinket</string>
     <string name="label_safeslingered">(SafeSlinger Direkte Exchange)</string>
     <string name="label_SaveAccount">Spar konto</string>
-    <string name="label_SaveInstruct">Sjekk kontaktene du ønsker å oppdatere i adresseboken, og trykk deretter på \'Import\' for å lagre sikre kontakter:</string>
+    <string name="label_SaveInstruct">Sjekk kontaktene du ønsker å oppdatere i adresseboken din, og deretter Importer å spare sikre kontakter:</string>
     <string name="label_seconds">%d sekunder</string>
     <string name="label_SelectRecip">Velg mottaker</string>
     <string name="label_sendErrorData">Send feildata</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Trinn 3</string>
     <string name="label_step_4">Trinn 4</string>
     <string name="label_step_5">Trinn 5</string>
+    <string name="label_summary_auto_attach_retrieval">Automatisk laste ned meldingsvedlegg når logget inn</string>
+    <string name="label_summary_auto_decrypt">Automatisk dekryptere meldinger når logget inn</string>
+    <string name="label_summary_remind_backup_delay">Motta varsel når backup er offline.</string>
+    <string name="label_summary_show_tutorial">Vis en tutorial før attemping til Sling Keys.</string>
     <string name="label_TapToDecryptFile">Trykk for å dekryptere filen</string>
     <string name="label_TapToDecryptMessage">Trykk for å dekryptere</string>
     <string name="label_TapToDownloadFile">Trykk for å laste ned filen</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Klikk for å åpne filen</string>
     <string name="label_TapToResumeDraft">Trykk for å gjenoppta meldingsutkast</string>
     <string name="label_TapToSendCredentialUpdate">Trykk og hold for å sende legitimasjon oppdatering.</string>
+    <string name="label_TapToSlingKeys">Trykk for å Sling Keys.</string>
     <string name="label_targetAccountLabel">Kontakter konto</string>
-    <string name="label_TouchToConfigureBackupSettings">Du kan eventuelt aktivere SafeSlinger iCloud backup i iOS-innstillinger. Trykk på\' Done\'-knappen når du er ferdig.</string>
+    <string name="label_TouchToConfigureBackupSettings">Du kan eventuelt aktivere SafeSlinger iCloud backup i iOS-innstillinger. Trykk på Ferdig-knappen når du er ferdig.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Trykk for å konfigurere innstillinger for sikkerhetskopiering.</string>
     <string name="label_TouchToConfigureCacheTimeout">Trykk for å konfigurere cache timeout innstillinger.</string>
     <string name="label_undefinedTypeLabel">Ukjent</string>
     <string name="label_UnknownSender">Kryptert Avsender</string>
     <string name="label_UserName">Brukernavn</string>
+    <string name="label_WarnForgotPassphrase">For å beskytte dine data, betyr SafeSlinger ikke lagre frasen hvor som helst for å bli frisk. Du kan bare få tilgang til mottakere og meldinger som er opprettet under samme passphrase innlogging. Men, kan du generere en ny nøkkel og passord, og deretter gjenta Sling Keys med mottakerne.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Følgende nøkler vil bli slettet:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Det er ingen nyere nøkler enn din.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Bare nøkler generert mer nylig enn din, generert på %s, kan bli slettet.</string>
     <string name="label_worktag">Arbeid</string>
 
     <string name="menu_About">Om</string>
+    <string name="menu_auto_attach_retrieval">Auto-hente vedlegg</string>
+    <string name="menu_auto_decrypt">Auto-dekryptere</string>
     <string name="menu_Change">Endring</string>
     <string name="menu_ChangePassphrase">Endre Passphrase</string>
+    <string name="menu_ContactInviteEmail">E-post</string>
+    <string name="menu_ContactInviteSms">Tekst (SMS/MMS)</string>
     <string name="menu_CreateNew">Opprett ny</string>
     <string name="menu_delete">Slett</string>
-    <string name="menu_deleteThread">Slett tråden \'%s\'</string>
+    <string name="menu_deleteThread">Slett tråden %s</string>
     <string name="menu_Details">Vis Detalj</string>
     <string name="menu_DownloadDirectory">Last ned katalog</string>
     <string name="menu_Edit">Rediger</string>
+    <string name="menu_EditContact">Rediger kontakt</string>
+    <string name="menu_EditName">Rediger navn</string>
     <string name="menu_FileManager">File Manager</string>
+    <string name="menu_ForgotPassphrase">Glemt Passphrase?</string>
     <string name="menu_Help">Hjelp</string>
     <string name="menu_Introduction">Innledning</string>
     <string name="menu_License">Lisens</string>
     <string name="menu_Logout">Logg ut</string>
+    <string name="menu_ManagePassphrases">Administrer Passordsetningene</string>
+    <string name="menu_message_font_size">Message Font Size</string>
     <string name="menu_messageCopyText">Kopier tekst</string>
     <string name="menu_messageForward">Forward</string>
     <string name="menu_Remove">Fjern</string>
-    <string name="menu_SelectShareApp">Send Application</string>
+    <string name="menu_restore_default">Gjenopprett standardinnstillinger</string>
+    <string name="menu_ringtone">Lyd</string>
+    <string name="menu_SelectShareApp">Legg til kontakt Invitasjon</string>
     <string name="menu_sendFeedback">Send tilbakemelding</string>
     <string name="menu_SendUpdate">Send oppdatering</string>
     <string name="menu_Settings">Innstillinger</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Sling Keys</string>
     <string name="menu_TagListMessages">Meldinger</string>
     <string name="menu_UseAnother">Bruk en annen</string>
-    <string name="menu_UseContactPerson">Bruk Kontakt \'%s\'</string>
+    <string name="menu_UseContactPerson">Bruk Kontakt %s</string>
     <string name="menu_UseNoContact">Bruk Name Only</string>
-    <string name="menu_UseProfilePerson">Bruk profil \'%s\'</string>
+    <string name="menu_UseProfilePerson">Bruk profil %s</string>
+    <string name="menu_vibrate">Vibrering</string>
 
     <string name="prog_decrypting">dekryptering…</string>
     <string name="prog_encrypting">kryptere…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Avansert</string>
     <string name="section_backup">Backup</string>
     <string name="section_general">Generelt</string>
+    <string name="section_notification">Påminnelser</string>
+    <string name="section_storage">Lagring</string>
 
     <string name="state_BackupRestored">Backup restaurert.</string>
     <string name="state_FileDeleted">Slettet fil %s.</string>
     <string name="state_FileSent">Melding sendt.</string>
+    <string name="state_InvitationAdded">Invitasjon lagt.</string>
     <string name="state_MessageSavedAsDraft">Melding lagret som kladd.</string>
     <string name="state_MessagesDeleted">%d meldinger slettet.</string>
     <string name="state_PassphraseUpdated">Passphrase oppdatert.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s kontakter importert.</string>
     <string name="state_TextCopiedToClipboard">Tekst kopiert til utklippstavlen.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger er designet for enkelt å dele identitetsdata, i person eller over telefon, autentisert, privat, og intakt. Hver person du deler med oppretter en sikker ende-til-ende-kanal for å sende meldinger.\n\nFunksjoner:\n- Lett utveksle kontaktinformasjon med andre\n- Trygt slynge tekster, bilder, noe!\n- Sterk kryptografi beskytter din informasjon\n\ne-post: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger er designet for enkelt å dele identitetsdata, i person eller over telefon, autentisert, privat, og intakt. Hver person du deler med oppretter en sikker ende-til-ende-kanal for å sende meldinger.\n\nFunksjoner:\n-enkelt utveksle kontaktinformasjon med andre\n-Trygt slynge tekster, bilder, noe!\n-Strong kryptografi beskytter din informasjon\n\nepost: %2$s\nnettet: %3$s</string>
     <string name="text_KeywordExchange">Utveksling</string>
     <string name="text_KeywordIdentity">Identitet</string>
     <string name="text_KeywordKey">Nøkkel</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Sikkerhet</string>
     <string name="text_LanguagesProvidedBy">Språk levert av:</string>
     <string name="text_RelatedSearchTerms">Relaterte ord:</string>
-    <string name="text_Requirements">Krav:\n1. Må være installert på et minimum av 2 enheter.\n2. En Internett-tilkobling må være aktiv.</string>
+    <string name="text_Requirements">Krav:.\nen Må være installert på et minimum av to enheter.\nto. Internettilkobling må være aktiv.</string>
     <string name="text_SourceCodeRepo">åpen kildekode: %s</string>
-    <string name="text_WhatsNew">- Stabilitet rettinger.</string>
+    <string name="text_WhatsNew">-Stabilitet fikser.</string>
 
     <string name="title_About">Om</string>
     <string name="title_camera">Kamera</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
     <string name="title_FileOptions">Attachment Options</string>
     <string name="title_find">Setup</string>
+    <string name="title_font_size">Velg en skriftstørrelse</string>
     <string name="title_home">Begynn Utveksling</string>
     <string name="title_HomePanel">Hjem</string>
     <string name="title_MessageDetail">Melding</string>

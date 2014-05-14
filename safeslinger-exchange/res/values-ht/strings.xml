@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d itilizatè</string>
 
-    <string name="error_AllMembersMustUpgrade">Kèk manm yo lè l sèvi avèk yon vèsyon plis; tout manm yo dwe omwen sèvi ak %s.</string>
+    <string name="error_AllMembersMustUpgrade">Kèk manm yo lè l sèvi avèk yon vèsyon plis; Tout manm yo dwe omwen sèvi ak %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tout manm yo dwe ajou, gen kèk ki lè l sèvi avèk pi gran fòma enskripsyon pouse.</string>
     <string name="error_CorrectYourInternetConnection">Entènèt pa disponib, tcheke anviwònman ou yo.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Echanj poz depase. Kòmanse echanj la ankò.</string>
@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Ou te rapòte yon diferans nan fraz. Kòmanse echanj la ankò.</string>
     <string name="error_MinUsersRequired">Yon minimòm de %d manm oblije echanj done.</string>
     <string name="error_MoreDataThanUsers">Done inatandi yo te jwenn nan echanj. Kòmanse echanj la ankò.</string>
+    <string name="error_NoDataToExchange">Echanj la ki manke done yo mande yo.</string>
     <string name="error_NoWordListSelected">Ou dwe chwazi youn nan fraz yo anvan yo.</string>
     <string name="error_OtherGroupCommitDiffer">Yon moun total yon diferans nan fraz. Kòmanse echanj la ankò.</string>
     <string name="error_OutOfMemoryError">Memwa a twò ba yo fini operasyon sa a.</string>
-    <string name="error_ServerAppMessage">Sèvè Message: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Sèvè Message: \'%s\'</string>
+    <string name="error_ServerAppMessage">Sèvè Message: %s</string>
+    <string name="error_ServerAppMessageCStr">Sèvè Message: %s</string>
     <string name="error_ServerNotResponding">Pa gen repons nan men sèvè.</string>
     <string name="error_TimeoutWaitingForAllMembers">La resevwa yon pinisyon ap tann pou kèk manm gwoup yo ajoute done.</string>
     <string name="error_WebCancelledByUser">Itilizatè anile sèvè mande sa.</string>
 
-    <string name="help_size">Chwazi nimewo a nan moun k ap eseye fè echanj done yo ansanm ak laprès \' OK \'.</string>
-    <string name="help_userid">Yo itilize nimewo sa a sou ekran sa a yo kreye yon gwoup inik nan itilizatè. Revize chif yo sou tout divinò yo ekran, lè sa a tout itilizatè ta dwe antre menm ki pi ba kantite ak laprès \' OK \'.</string>
-    <string name="help_verify">Koulye a, ou dwe matche ak youn nan fraz sa yo 3-mo ak tout divinò. Chak itilizatè dwe chwazi menm fraz la ki komen yo, ak laprès \' Next \'.</string>
+    <string name="help_size">Chwazi nimewo a nan moun k ap eseye fè echanj done yo ansanm ak laprès OK.</string>
+    <string name="help_userid">Yo itilize nimewo sa a sou ekran sa a yo kreye yon gwoup inik nan itilizatè. Revize chif yo sou ekran tout itilizatè \', Lè sa a, tout itilizatè ta dwe antre nan menm nimewo ki pi ba epi peze OK.</string>
+    <string name="help_verify">Koulye a, ou dwe matche ak youn nan fraz sa yo 3-mo ak tout divinò. Chak itilizatè dwe chwazi menm fraz la ki komen yo, ak laprès kap vini an.</string>
 
+    <string name="label_CompareScreensNDevices">Konpare ekran sou aparèy %s.</string>
     <string name="label_NumericModeHint">Ki pa Peye-angle</string>
     <string name="label_PromptInstruct">Yo itilize nimewo sa a yo kreye yon gwoup inik nan itilizatè. Konpare, ak Lè sa a, antre nan nimewo ki pi ba nan mitan tout divinò.</string>
     <string name="label_ReceivedNItems">resevwa %d atik</string>
     <string name="label_UserIdHint">Pi ba</string>
     <string name="label_VerifyInstruct">Tout telefòn dwe matche ak youn nan 3-mo fraz yo. Konpare, ak Lè sa a, chwazi fraz la matche.</string>
+
+    <string name="lib_name">SafeSlinger Echanj</string>
 
     <string name="prog_CollectingOthersCommitVerify">ap tann pou verifikasyon ki soti nan tout manm…</string>
     <string name="prog_CollectingOthersItems">ap tann pou tout itilizatè yo rantre nan…</string>

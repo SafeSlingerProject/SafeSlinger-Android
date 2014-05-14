@@ -33,7 +33,7 @@ import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
 /***
  * This class is designed to store the data from the Wrapper class in an
  * unencrypted form. All storage of this object should first serialize then
- * encrypt, to write; and deserialize, then decrypt, to read. WARNING: do not
+ * encrypt, to write; and decrypt, then deserialize, to read. WARNING: do not
  * change package or class or any variable names of this class, it will break
  * it's serialization.
  */

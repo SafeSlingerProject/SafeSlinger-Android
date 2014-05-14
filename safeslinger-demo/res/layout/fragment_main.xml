@@ -35,7 +35,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical" >
 
         <TextView
@@ -67,7 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/demo_hostname_hint"
-            android:inputType="textUri" />
+            android:inputType="textUri"
+            android:privateImeOptions="nm" />
 
         <TextView
             android:id="@+id/textViewMySecret"
@@ -81,15 +82,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/demo_secret_hint"
-            android:inputType="textNoSuggestions" />
+            android:inputType="textNoSuggestions"
+            android:privateImeOptions="nm" />
 
-        <Button
-            android:id="@+id/buttonBeginExchange"
+        <LinearLayout
+            android:id="@+id/Buttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="15dp"
-            android:text="@string/demo_button_begin_exchange" />
+            android:layout_marginBottom="15dp" >
+
+            <ToggleButton
+                android:id="@+id/toggleButtonUseNfc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="@string/demo_button_nfc_off"
+                android:textOn="@string/demo_button_nfc_on" />
+
+            <Button
+                android:id="@+id/buttonBeginExchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/demo_button_begin_exchange" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textViewResults"

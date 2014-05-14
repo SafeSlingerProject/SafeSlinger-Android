@@ -45,6 +45,9 @@ public class SafeSlingerConfig {
     public static final String INTRODUCTION_VCF = "introduction.vcf";
     public static final String DATETIME_FILENAME = "yyyyMMdd_HHmmss";
     public static final String FEEDBACK_TXT = "feedback.txt";
+    public static final String GOOGLE_TRANSLATE = "Google Translate";
+    public static final String MIMETYPE_ADD_ATTACH = "*/*";
+    public static final String MIMETYPE_OPEN_ATTACH_DEF = "image/*";
     public static final String LOG_TAG = "SafeSlinger-Messenger";
 
     @Deprecated
@@ -60,7 +63,6 @@ public class SafeSlingerConfig {
 
     public static final String FILENAME_SECKEY_CRYPTOMSG = "SafeSlingerSecretKeyCryptoMsg.enc";
 
-    // TODO some of these values could be exported into an xml prefs file
     public static final int MAX_C2DM_PAYLOAD = 1024;
     public static final int MAX_APNS_PAYLOAD = 256;
     public static final int MAX_TEXTMESSAGE = 2000;
@@ -100,6 +102,7 @@ public class SafeSlingerConfig {
         public static final String ACTION_MESSAGEUPDATE = "edu.cmu.cylab.starslinger.action.MESSAGESUPDATE";
         public static final String ACTION_BACKUPNOTIFY = "edu.cmu.cylab.starslinger.action.BACKUPREMINDER";
         public static final String ACTION_SLINGKEYSNOTIFY = "edu.cmu.cylab.starslinger.action.SLINGKEYSNOTIFY";
+        public static final String ACTION_CHANGESETTINGS = "edu.cmu.cylab.starslinger.action.CHANGESETTINGS";
     }
 
     /***
@@ -107,6 +110,7 @@ public class SafeSlingerConfig {
      */
     public static final class extra {
 
+        public static final String ALLOW_DELETE = "AllowDelete";
         public static final String ALLOW_EXCH = "AllowExchRecip";
         public static final String ALLOW_INTRO = "AllowIntroRecip";
         public static final String CHANGE_PASS_PHRASE = "ChangePassPhrase";
@@ -115,6 +119,7 @@ public class SafeSlingerConfig {
         public static final String CONTACT_VALUE_PREFIX = "Value";
         public static final String CREATE_PASS_PHRASE = "CreatePassPhrase";
         public static final String CREATED = "Created";
+        public static final String DATA = "Data";
         public static final String DIRS = "DirectoryStack";
         public static final String ERROR = "Error";
         public static final String EXCH_NAME = "ExchName";
@@ -126,8 +131,10 @@ public class SafeSlingerConfig {
         public static final String INTRO_NAME = "IntroName";
         public static final String MAX = "max";
         public static final String MESSAGE_ROW_ID = "MessageRowId";
+        public static final String INBOX_ROW_ID = "InboxRowId";
         public static final String NAME = "Name";
         public static final String PASS_PHRASE = "PassPhrase";
+        public static final String PASSPHRASE_CACHE_TTL = "passPhraseCacheTtl";
         public static final String PCT = "pct";
         public static final String PHOTO = "Photo";
         public static final String POSITION = "Position";
@@ -149,6 +156,7 @@ public class SafeSlingerConfig {
         public static final String TEXT_MESSAGE1 = "TextMessage1";
         public static final String TEXT_MESSAGE2 = "TextMessage2";
         public static final String THUMBNAIL = "Thumbnail";
+        public static final String USER_TOTAL = "UserTotal";
         public static final String VERIFY_PASS_PHRASE = "VerifyPassPhrase";
     }
 

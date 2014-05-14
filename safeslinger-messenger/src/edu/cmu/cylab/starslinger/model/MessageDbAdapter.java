@@ -35,17 +35,18 @@ import android.text.TextUtils;
 import edu.cmu.cylab.starslinger.GeneralException;
 import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
+import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 /***
  * This is adapter is meant to store the messages sent and received from the
- * user, and the state of each messages download and cryptography. When a push
- * message is first received one row is created and updated. When a message is
- * first composed one row is created and updated.
+ * user. When a message is first decrypted, one row is created and updated. When
+ * a message is first composed one row is created and updated.
  */
 public class MessageDbAdapter {
     private static MessageDbAdapter sInstance = null;
+    private static int sUserNumber = 0;
 
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
@@ -103,7 +104,16 @@ public class MessageDbAdapter {
 
     public static MessageDbAdapter openInstance(Context ctx) {
         if (sInstance == null) {
+            // open for currently selected user
+            sUserNumber = SafeSlingerPrefs.getUser();
             sInstance = new MessageDbAdapter(ctx.getApplicationContext());
+        } else {
+            // if user has changed in this instance, close instance and reopen
+            if (sUserNumber != SafeSlingerPrefs.getUser()) {
+                sUserNumber = SafeSlingerPrefs.getUser();
+                closeInstance();
+                sInstance = new MessageDbAdapter(ctx.getApplicationContext());
+            }
         }
         return sInstance;
     }
@@ -295,64 +305,19 @@ public class MessageDbAdapter {
         }
     }
 
-    public long createRecvEncMessage(String msgHash, int status, int seen) {
-        synchronized (SafeSlinger.sDataLock) {
-            // ignore duplicate message identifiers...
-            String where = KEY_MSGHASH + "=" + DatabaseUtils.sqlEscapeString("" + msgHash);
-            Cursor c = query(true, DATABASE_TABLE, new String[] {
-                KEY_MSGHASH
-            }, where, null, null, null, null, null);
-            if (c != null) {
-                if (c.getCount() > 0) {
-                    c.close();
-                    return -1;
-                }
-                c.close();
-            }
-
-            ContentValues values = new ContentValues();
-            values.put(KEY_DATE_RECV, System.currentTimeMillis()); // Received
-                                                                   // UTC
-            values.put(KEY_READ, MESSAGE_IS_NOT_READ); // decoded
-            values.put(KEY_STATUS, status); // complete/failed
-            values.put(KEY_TYPE, MESSAGE_TYPE_INBOX); // inbox/sent
-            values.put(KEY_SEEN, seen); // seen in list
-            if (msgHash != null)
-                values.put(KEY_MSGHASH, msgHash); // file retrieval id
-
-            // backward compatibility for upgraded databases....
-            values.put(KEY_KEYIDLONG, 0);
-
-            return insert(DATABASE_TABLE, null, values);
-        }
-    }
-
-    public boolean updateMessageExpired(long rowId) {
+    public long createMessageDecrypted(MessageData data, MessagePacket msg, String keyid) {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
-            values.put(KEY_STATUS, MESSAGE_STATUS_EXPIRED); // complete/failed
 
-            return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;
-        }
-    }
+            // move values from inbox database
+            values.put(KEY_DATE_RECV, data.getDateRecv()); // Received
+            values.put(KEY_TYPE, data.isInbox() ? MESSAGE_TYPE_INBOX : MESSAGE_TYPE_SENT); // inbox/sent
+            values.put(KEY_SEEN, data.isSeen() ? MESSAGE_IS_SEEN : MESSAGE_IS_NOT_SEEN); // seen
+            values.put(KEY_MSGHASH, data.getMsgHash()); // file
+            values.put(KEY_ENCBODY, data.getEncBody()); // encoded
+            values.put(KEY_STATUS, data.getStatus()); // complete/failed
 
-    public boolean updateMessageDownloaded(long rowId, byte[] encbody, int seen, String keyid) {
-        synchronized (SafeSlinger.sDataLock) {
-            ContentValues values = new ContentValues();
-            values.put(KEY_SEEN, seen); // seen in list
-            if (encbody != null)
-                values.put(KEY_ENCBODY, encbody); // encoded body
-            values.put(KEY_STATUS, MESSAGE_STATUS_COMPLETE_MSG); // complete/failed
-            if (!TextUtils.isEmpty(keyid))
-                values.put(KEY_KEYID, keyid); // key id of the sig...
-
-            return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;
-        }
-    }
-
-    public boolean updateMessageDecrypted(long rowId, MessagePacket msg, String keyid) {
-        synchronized (SafeSlinger.sDataLock) {
-            ContentValues values = new ContentValues();
+            // new values from decrypted message packet
             values.put(KEY_DATE_SENT, msg.getDateSent()); // Sent UTC
             values.put(KEY_READ, MESSAGE_IS_READ); // decoded
             values.put(KEY_KEYID, keyid); // key id of the sig...
@@ -366,7 +331,10 @@ public class MessageDbAdapter {
             if (!TextUtils.isEmpty(msg.getPerson()))
                 values.put(KEY_PERSON, msg.getPerson()); // name
 
-            return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;
+            // backward compatibility for upgraded databases....
+            values.put(KEY_KEYIDLONG, 0);
+
+            return insert(DATABASE_TABLE, null, values);
         }
     }
 
@@ -436,26 +404,6 @@ public class MessageDbAdapter {
         }
     }
 
-    /**
-     * Return a Cursor over the list of all message in the database
-     * 
-     * @return Cursor over all notes
-     */
-    public Cursor fetchAllMessagesSmall() {
-        synchronized (SafeSlinger.sDataLock) {
-            Cursor c = query(DATABASE_TABLE, new String[] {
-                    KEY_ROWID, KEY_DATE_RECV, KEY_DATE_SENT, KEY_ENCBODY, KEY_FILEDIR,
-                    KEY_MSGHASH_BLOB, KEY_FILELEN, KEY_FILENAME, KEY_FILETYPE, KEY_KEYIDLONG,
-                    KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
-                    KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
-            }, null, null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
-        }
-    }
-
     public Cursor fetchAllMessagesUpgradeTo6() {
         synchronized (SafeSlinger.sDataLock) {
             Cursor c = query(DATABASE_TABLE, new String[] {
@@ -468,9 +416,6 @@ public class MessageDbAdapter {
         }
     }
 
-    /**
-     * Return a Cursor positioned at the defined message
-     */
     public Cursor fetchMessageSmall(long rowId) throws SQLException {
         synchronized (SafeSlinger.sDataLock) {
             String where = KEY_ROWID + "=" + rowId;
@@ -489,27 +434,28 @@ public class MessageDbAdapter {
         }
     }
 
-    public Cursor fetchAllMessagesDecryptPending() {
+    public int getAllMessageCountByThread(String keyId) {
         synchronized (SafeSlinger.sDataLock) {
             StringBuilder where = new StringBuilder();
-            where.append("(");
-            where.append(KEY_TYPE + "=" + MESSAGE_TYPE_INBOX);
-            where.append(" AND ");
-            where.append(KEY_STATUS + "=" + MESSAGE_STATUS_COMPLETE_MSG);
-            where.append(" AND ");
-            where.append(KEY_READ + "=" + MESSAGE_IS_NOT_READ);
-            where.append(")");
-
-            Cursor c = query(true, DATABASE_TABLE, new String[] {
-                    KEY_ROWID, KEY_DATE_RECV, KEY_DATE_SENT, KEY_ENCBODY, KEY_FILEDIR,
-                    KEY_MSGHASH_BLOB, KEY_FILELEN, KEY_FILENAME, KEY_FILETYPE, KEY_KEYIDLONG,
-                    KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
-                    KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
-            }, where.toString(), null, null, null, null, null);
-            if (c != null) {
-                return c;
+            if (TextUtils.isEmpty(keyId)) {
+                where.append("(");
+                where.append(KEY_KEYID + " IS NULL");
+                where.append(" OR ");
+                where.append(KEY_KEYID + "=\'\'");
+                where.append(")");
+            } else {
+                where.append("(");
+                where.append(KEY_KEYID + "=" + DatabaseUtils.sqlEscapeString("" + keyId));
+                where.append(")");
             }
-            return null;
+
+            Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
+            if (c != null) {
+                int count = c.getCount();
+                c.close();
+                return count;
+            }
+            return -1;
         }
     }
 
@@ -541,6 +487,35 @@ public class MessageDbAdapter {
         }
     }
 
+    public Cursor fetchMessageRecent(String keyId) {
+        synchronized (SafeSlinger.sDataLock) {
+            StringBuilder where = new StringBuilder();
+            if (TextUtils.isEmpty(keyId)) {
+                where.append("(");
+                where.append(KEY_KEYID + " IS NULL");
+                where.append(" OR ");
+                where.append(KEY_KEYID + "=\'\'");
+                where.append(")");
+            } else {
+                where.append("(");
+                where.append(KEY_KEYID + "=" + DatabaseUtils.sqlEscapeString("" + keyId));
+                where.append(")");
+            }
+
+            String groupBy = KEY_KEYID;
+            Cursor c = query(DATABASE_TABLE, new String[] {
+                    KEY_ROWID, KEY_DATE_RECV, KEY_DATE_SENT, KEY_ENCBODY, KEY_FILEDIR,
+                    KEY_MSGHASH_BLOB, KEY_FILELEN, KEY_FILENAME, KEY_FILETYPE, KEY_KEYIDLONG,
+                    KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
+                    KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
+            }, where.toString(), null, groupBy, null, null);
+            if (c != null) {
+                return c;
+            }
+            return null;
+        }
+    }
+
     public Cursor fetchMessagesRecentByUniqueKeyIds() {
         synchronized (SafeSlinger.sDataLock) {
             String groupBy = KEY_KEYID;
@@ -557,15 +532,13 @@ public class MessageDbAdapter {
         }
     }
 
-    public int fetchUnseenMessageCount() throws SQLException {
+    public int getUnseenMessageCount() throws SQLException {
         synchronized (SafeSlinger.sDataLock) {
             StringBuilder where = new StringBuilder();
             where.append("(");
             where.append(KEY_SEEN + "=" + MESSAGE_IS_NOT_SEEN);
             where.append(")");
-            Cursor c = query(DATABASE_TABLE, new String[] {
-                KEY_SEEN
-            }, where.toString(), null, null, null, null);
+            Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();
                 c.close();
@@ -575,7 +548,7 @@ public class MessageDbAdapter {
         }
     }
 
-    public int fetchActionRequiredMessageCountByThread(String keyId) throws SQLException {
+    public int getActionRequiredMessageCountByThread(String keyId) throws SQLException {
         synchronized (SafeSlinger.sDataLock) {
             StringBuilder where = new StringBuilder();
             if (TextUtils.isEmpty(keyId)) {
@@ -604,9 +577,7 @@ public class MessageDbAdapter {
             where.append(KEY_STATUS + "=" + MESSAGE_STATUS_GOTPUSH);
 
             where.append(")");
-            Cursor c = query(DATABASE_TABLE, new String[] {
-                KEY_SEEN
-            }, where.toString(), null, null, null, null);
+            Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();
                 c.close();
@@ -616,7 +587,7 @@ public class MessageDbAdapter {
         }
     }
 
-    public int fetchDraftMessageCountByThread(String keyId) throws SQLException {
+    public int getDraftMessageCountByThread(String keyId) throws SQLException {
         synchronized (SafeSlinger.sDataLock) {
             StringBuilder where = new StringBuilder();
             if (TextUtils.isEmpty(keyId)) {
@@ -634,9 +605,7 @@ public class MessageDbAdapter {
             where.append("(");
             where.append(KEY_STATUS + "=" + MESSAGE_STATUS_DRAFT);
             where.append(")");
-            Cursor c = query(DATABASE_TABLE, new String[] {
-                KEY_STATUS
-            }, where.toString(), null, null, null, null);
+            Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();
                 c.close();

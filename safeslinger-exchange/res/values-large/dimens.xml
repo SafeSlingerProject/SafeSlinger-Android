@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
     The MIT License (MIT)
     
@@ -24,12 +25,13 @@
 
 <resources>
 
-    <!--
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
-        <!-- API 11 theme customizations can go here. -->
-    </style>
+    <dimen name="sse__size_5dp">8dp</dimen>
+    <dimen name="sse__size_20dp">30dp</dimen>
+    <dimen name="sse__button_side_margin">23dp</dimen>
+    <dimen name="sse__text_size_micro">18sp</dimen>
+    <dimen name="sse__text_size_small">21sp</dimen>
+    <dimen name="sse__text_size_medium">27sp</dimen>
+    <dimen name="sse__text_size_large">33sp</dimen>
+    <dimen name="sse__text_size_50">75sp</dimen>
 
 </resources>

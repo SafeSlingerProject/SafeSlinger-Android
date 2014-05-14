@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Send jistiednu rabta ma \'…</string>
+    <string name="action_NewUserRequest">Żid stedina kuntatt Braga Keys via…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Ikkanċella</string>
     <string name="btn_Close">Agħlaq</string>
     <string name="btn_Continue">Kompli</string>
+    <string name="btn_CreateNewKey">Oħloq New Ewlenin</string>
+    <string name="btn_DeleteKeys">Ħassar Keys</string>
     <string name="btn_discard">Armi</string>
     <string name="btn_Done">Magħmul</string>
     <string name="btn_Exit">Ħruġ</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 sigħat</string>
     <string name="choice_auto_storage">Default Ħażna</string>
     <string name="choice_external_storage">Ħażna esterna</string>
+    <string name="choice_font_large">Kbir</string>
+    <string name="choice_font_medium">Medju</string>
+    <string name="choice_font_micro">Żgħar ħafna</string>
+    <string name="choice_font_small">Żgħar</string>
     <string name="choice_internal_storage">Ħażna intern</string>
     <string name="choice_nolimit">No Limit</string>
     <string name="choice_SaveDirectory">Save Directory</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Permess mikrofonu meħtieġa. Jekk jogħġbok mur iOS Settings biex jippermettu permessi mikrofonu.</string>
     <string name="error_BackupNotFound">Nru backup biex jirrestawraw.</string>
     <string name="error_BackupNotSupportedDevice">Apparat mhux kompatibbli backup jirrestawraw.</string>
-    <string name="error_BadCopyProtectUpgrade">Minħabba bug fil Android 4.1, ser ikollok uninstall u jerġa SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">Minħabba bug fil Android 4.1, ser ikollok biex uninstall u jerġa SafeSlinger.</string>
     <string name="error_C2DMRegAccountMissing">A kont Google hija meħtieġa. Jekk jogħġbok tiftaħ il-amministratur ta \'kont u żid kont tal-Google.</string>
     <string name="error_C2DMRegAuthenticationFailed">Reġistrazzjoni mhux awtentikati, jekk jogħġbok retry manwalment aktar tard.</string>
     <string name="error_C2DMRegInvalidSender">Reġistrazzjoni mhijiex disponibbli għal din il-verżjoni, jekk jogħġbok iċċekkja għal verżjoni aġġornata.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Inti qabżu l-kwota messaġġ għal dan l-apparat. Jekk jogħġbok retry aktar tard.</string>
     <string name="error_PushMsgServiceFail">Notifika tas-servizz ma jkunx disponibbli f\'dan il-ħin. Jekk jogħġbok erġa li tibgħat il-messaġġ aktar tard.</string>
     <string name="error_RecoderError">Ma jistgħux jippreparaw il-recorder awdjo.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Biex tibda, \' Braga Keys \' ma phone ieħor fl-istess ħin.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Biex tibda, Braga Keys bi ieħor telefon fl-istess ħin.</string>
     <string name="error_selectDataToSend">Għandek bżonn ta \' sekwestru jew messaġġ li jibgħat.</string>
     <string name="error_ShareFileDelError">Ma tistax tneħħi l-fajl maqsuma.</string>
     <string name="error_UnableFindPubKey">Mhux biex jaqblu ċavetta pubblika biex ċavetta privata fl fornitur kripto.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">Żball SafeSlinger, jekk jogħġbok terġa \'tibda.</string>
     <string name="error_VcardParseFailure">Informazzjoni ta \'kuntatt kien formattjati b\'mod żbaljat.</string>
 
-    <string name="help_find">Uża dan l-iskrin li jiġu stabbiliti l-isem tiegħek għal skambju ma \'oħrajn. Tektek il-\'Magħmul\' buttuna meta lest.</string>
-    <string name="help_home">Li jiskambja data identità, tiżgura l-utenti kollha huma fil-qrib jew fuq it-telefon. Buttuna \' Tibda Exchange \' se jiskambjaw biss id-dejta ta\' kuntatt ċċekkjati.</string>
-    <string name="help_identity_menu">\n\nInti tista \'wkoll jibdlu data personali dwar l-identità tiegħek fuq dan l-iskrin billi ttektek fuq il-buttuna bl-isem tiegħek. Dan se display menu li jippermettilek li \' Edit \' kuntatt tiegħek, \' Oħloq New \' kuntatt, jew \'Użu ieħor \' kuntatt.</string>
+    <string name="help_find">Uża dan l-iskrin li jiġu stabbiliti l-isem tiegħek għal skambju ma \'oħrajn. Tektek il-buttuna Magħmul meta lest.</string>
+    <string name="help_home">Li jiskambja data identità, tiżgura l-utenti kollha huma fil-qrib jew fuq it-telefon. Il Tibda buttuna Exchange se jiskambjaw biss id-dejta ta \'kuntatt ċċekkjati.</string>
+    <string name="help_identity_menu">\n\n\nInti tista \'wkoll jibdlu data personali dwar l-identità tiegħek fuq dan l-iskrin billi ttektek fuq il-buttuna bl-isem tiegħek. Dan se display menu tippermetti li inti Edit kuntatt tiegħek, Oħloq kuntatt New, jew l-użu ta \'kuntatt ieħor.</string>
     <string name="help_Messages">Dan screen displays messaġġi kollha tal-passat, u l-annessi li għadhom disponibbli għal download.</string>
-    <string name="help_passphrase">Uża dan l-iskrin login l-applikazzjoni mingħajr passphrase tiegħek.</string>
+    <string name="help_passphrase">Uża dan l-iskrin login l-applikazzjoni mingħajr passphrase tiegħek. Jekk insejt passphrase tiegħek, inti tista \'tiġġenera ewlieni ġdid protett minn passphrase ġdid billi jutilizza l-passphrase Insejt? buttuna. Tektek il-isem l-utent biex jaqilbu bejn keys multipli.</string>
     <string name="help_PickRecip">Kuntatti ma \' ċwievet SafeSlinger huma murija hawnhekk, wieħed jagħżel li jibgħat messaġġ tiegħek.</string>
-    <string name="help_save">Meta jkun lest, il-protokoll se jiżvelaw lista ta \' data identità skambjata. Agħżel il-kuntatti tixtieq li jsalva u agħfas \' Importazzjoni \'.</string>
-    <string name="help_SecureIntroduction">Dan screen jippermettilek li tagħżel żewġ persuni inti sospiżi ċwievet bl qabel li sigur jibgħat ċwievet tagħhom lil xulxin. Sempliċement agħfas \' Introduċi \' meta lest.</string>
-    <string name="help_Send">Dan screen jippermetti li inti tagħżel xi data u r-riċevitur li tibgħat lill. Sempliċement agħfas \' Ibgħat \' meta lest.</string>
+    <string name="help_save">Meta jkun lest, il-protokoll se jiżvelaw lista ta \' data identità skambjata. Agħżel il-kuntatti tixtieq li jsalva u istampa Importazzjoni.</string>
+    <string name="help_SecureIntroduction">Dan screen jippermettilek li tagħżel żewġ persuni inti sospiżi ċwievet bl qabel li sigur jibgħat ċwievet tagħhom lil xulxin. Sempliċement agħfas Introduċi meta jkun lest.</string>
+    <string name="help_Send">Dan screen jippermetti li inti tagħżel xi data u r-riċevitur li tibgħat lill. Sempliċement agħfas Ibgħat meta jkun lest.</string>
 
     <string name="iOS_contactError">Kuntatti permess meħtieġ. Jekk jogħġbok mur iOS Settings biex jippermettu Kuntatti permessi.</string>
     <string name="iOS_errorpushtoken">Reġistrazzjoni Imbotta hija nieqsa.</string>
@@ -159,31 +165,36 @@
     <string name="label_Device">Device:</string>
     <string name="label_DeviceInSendOnlyMode">Ibgħat biss mode</string>
     <string name="label_DisabledExchSourceKeyChange">Prinċipali tiegħek inbidel: Braga Keys mill-ġdid.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Biex tibda messaġġi, kemm utenti għandhom Braga Keys fl-istess ħin.</string>
     <string name="label_Draft">ABBOZZ</string>
     <string name="label_EnabledKeyFormatDeprecated">Format Key deprecated: Braga Keys mill-ġdid.</string>
     <string name="label_exchanged">skambjata</string>
     <string name="label_expired">skada</string>
     <string name="label_expires">jiskadi %s</string>
-    <string name="label_expiresIn">jiskadi fl-</string>
+    <string name="label_expiresIn">jiskadi fl</string>
     <string name="label_FileNameHint">Isem tal-fajl</string>
     <string name="label_FindInstruct">Daħħal l-isem inti tixtieq oħrajn biex tara meta tikkomunika sikur:</string>
     <string name="label_FirstName">Isem</string>
-    <string name="label_Home">Tektek ismek biex iżżid jew tneħħi informazzjoni ta \'kuntatt, oġġetti li tixtieq li jaqsmu jivverifikaw, u vit \'Tibda Exchange\' meta oħrajn huma lesti li jiskambjaw:</string>
+    <string name="label_Home">Tektek ismek biex iżżid jew tneħħi informazzjoni ta \'kuntatt, oġġetti li tixtieq li jaqsmu jivverifikaw, u vit Tibda Skambju meta oħrajn huma lesti li jiskambjaw:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d siegħa</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud hija ppermettiet. Tektek il-\' Magħmul \' buttuna meta lest.</string>
-    <string name="label_InstNoMessages">Nru messaġġi. Tista \'tibgħat messaġġ mill-\' Ikteb messaġġ \' buttuna fuq il-Home menu.</string>
-    <string name="label_InstNoMessagesAndroid">Nru messaġġi. Tista \'tibgħat messaġġ mill-tab \' Ikteb \'.</string>
-    <string name="label_InstNoRecipients">Ebda riċevituri. Sib utent ieħor SafeSlinger qrib u tmissx il-tab \' Braga Keys biex jaqsmu keys.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud hija ppermettiet. Tektek il-buttuna Magħmul meta lest.</string>
+    <string name="label_InstNoMessages">Nru messaġġi. Tista \'tibgħat messaġġ mill-buttuna Ikteb messaġġ fuq il-Home menu.</string>
+    <string name="label_InstNoMessagesAndroid">Nru messaġġi. Tista \'tibgħat messaġġ mill-tab Ikteb.</string>
+    <string name="label_InstNoRecipients">Biex iżżid riċevituri, int trid l-ewwel Braga Keys ma \'Stat jew utenti oħra fl-istess ħin. Tista \'wkoll tibgħat stedina kuntatt Braga Keys mill-menu.</string>
     <string name="label_InstNoSharedFile">Fajl Nru maqsuma. Qabbad it-tagħmir tiegħek ma \' iTunes u fajls drag għall-folder maqsuma.</string>
     <string name="label_InstRecipients">Pick riċevitur li jibgħat messaġġ lil:</string>
     <string name="label_InstSendInvite">Pick riċevituri li jintroduċu sikur:</string>
     <string name="label_InstSharedFile">Pick fajl li tehmeż:</string>
     <string name="label_introduced">introdotti</string>
+    <string name="label_inviteSent">Mistiedna</string>
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Kunjom</string>
     <string name="label_Me">Me</string>
     <string name="label_messageIntroduceNameToYou">Nixtieq li jintroduċu %s lilek.</string>
+    <string name="label_messageInviteInstall">App SafeSlinger: %s</string>
+    <string name="label_messageInviteSetupInst">Biex setup konnessjoni b\'messaġġi siguri, nistgħu jissodisfaw jew phone xulxin fl-istess ħin, u mbagħad Braga Keys darba biss biex tivverifika l-konnessjoni.</string>
+    <string name="label_messageInviteStartMsg">Nistgħu tibda messaġġi siguri b\'sors miftuħ SafeSlinger iPhone jew app Android?</string>
     <string name="label_minutes">%d minuti</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Aktar reċenti biss</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup mdewma</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Ħlief Kont</string>
-    <string name="label_SaveInstruct">Iċċekkja kuntatti inti tixtieq li taġġorna fil-ktieb l-indirizz tiegħek, imbagħad vit \'Importazzjoni\' li tiffranka kuntatti siguri:</string>
+    <string name="label_SaveInstruct">Iċċekkja kuntatti inti tixtieq li taġġorna fil-ktieb l-indirizz tiegħek, imbagħad vit Import li tiffranka kuntatti siguri:</string>
     <string name="label_seconds">%d sekondi</string>
     <string name="label_SelectRecip">Riċevitur Agħżel</string>
     <string name="label_sendErrorData">Send Data Error</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Stadju 3</string>
     <string name="label_step_4">Pass 4</string>
     <string name="label_step_5">Pass 5</string>
+    <string name="label_summary_auto_attach_retrieval">Awtomatikament tniżżel attachments messaġġ meta logged pulzieri</string>
+    <string name="label_summary_auto_decrypt">Awtomatikament jiddekripta messaġġi meta logged pulzieri</string>
+    <string name="label_summary_remind_backup_delay">Tirċievi notifika meta backup huwa offline.</string>
+    <string name="label_summary_show_tutorial">Uri tutorja qabel attemping biex Braga Keys.</string>
     <string name="label_TapToDecryptFile">Tektek biex decrypt fajl</string>
     <string name="label_TapToDecryptMessage">Tektek biex decrypt</string>
     <string name="label_TapToDownloadFile">Tektek biex tniżżel fajl</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Tektek li tiftaħ fajl</string>
     <string name="label_TapToResumeDraft">Tektek biex jerġa \'jibda abbozz messaġġ</string>
     <string name="label_TapToSendCredentialUpdate">Tektek u żżomm biex jibagħtu aġġornament Credential.</string>
+    <string name="label_TapToSlingKeys">Tektek għall Braga Keys.</string>
     <string name="label_targetAccountLabel">Kuntatti Kont</string>
-    <string name="label_TouchToConfigureBackupSettings">Inti tista \' voluntarjament tippermetti SafeSlinger iCloud backup fil iOS Settings. Tektek il-\' Magħmul \' buttuna meta lest.</string>
+    <string name="label_TouchToConfigureBackupSettings">Inti tista \' voluntarjament tippermetti SafeSlinger iCloud backup fil iOS Settings. Tektek il-buttuna Magħmul meta lest.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Touch biex jiġi kkonfigurat settings backup.</string>
     <string name="label_TouchToConfigureCacheTimeout">Touch biex jiġi kkonfigurat settings timeout cache.</string>
     <string name="label_undefinedTypeLabel">Mhux magħruf</string>
     <string name="label_UnknownSender">Sender encrypted</string>
     <string name="label_UserName">User Name</string>
+    <string name="label_WarnForgotPassphrase">Biex tipproteġi d-data tiegħek, SafeSlinger ma taħżen passphrase tiegħek kullimkien għall-irkupru. Inti jista \'jkollhom aċċess biss riċevituri u messaġġi maħluqa taħt l-istess login passphrase. Madankollu, inti tista \'tiġġenera ewlieni ġdid u passphrase, imbagħad irrepeti Braga Keys ma\' riċevituri tiegħek.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">L-imfietaħ li ġejjin se jitħassru:</string>
+    <string name="label_WarnManagePassNoMoreRecent">M\'hemm l-ebda ċwievet aktar riċenti minn tiegħek.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Keys biss ġġenerat iktar reċentement minn tiegħek, iġġenerat fuq %s, jistgħu jitħassru.</string>
     <string name="label_worktag">Xogħol</string>
 
     <string name="menu_About">Dwar</string>
+    <string name="menu_auto_attach_retrieval">Auto-irkuprata attachments</string>
+    <string name="menu_auto_decrypt">Auto-jiddekripta</string>
     <string name="menu_Change">Bidla</string>
     <string name="menu_ChangePassphrase">Bidla passphrase</string>
+    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteSms">Test (SMS/MMS)</string>
     <string name="menu_CreateNew">Oħloq New</string>
     <string name="menu_delete">Ħassar</string>
-    <string name="menu_deleteThread">Ħassar Thread \'%s\'</string>
+    <string name="menu_deleteThread">Ħassar %s Thread</string>
     <string name="menu_Details">Dettall View</string>
     <string name="menu_DownloadDirectory">Download Directory</string>
     <string name="menu_Edit">Edit</string>
+    <string name="menu_EditContact">Edit Kuntatt</string>
+    <string name="menu_EditName">Edit Isem</string>
     <string name="menu_FileManager">File Manager</string>
+    <string name="menu_ForgotPassphrase">Insejt passphrase?</string>
     <string name="menu_Help">Jgħinu</string>
     <string name="menu_Introduction">Introduzzjoni</string>
     <string name="menu_License">License</string>
     <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Manage passphrases</string>
+    <string name="menu_message_font_size">Messaġġ Daqs Font</string>
     <string name="menu_messageCopyText">Kopja Test</string>
     <string name="menu_messageForward">Forward</string>
     <string name="menu_Remove">Neħħi</string>
-    <string name="menu_SelectShareApp">Send Applikazzjoni</string>
+    <string name="menu_restore_default">Restore Settings default</string>
+    <string name="menu_ringtone">Sound</string>
+    <string name="menu_SelectShareApp">Żid Stedina Kuntatt</string>
     <string name="menu_sendFeedback">Send Feedback</string>
     <string name="menu_SendUpdate">Ibgħat Aġġornament</string>
     <string name="menu_Settings">Settings</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Braga Keys</string>
     <string name="menu_TagListMessages">Messaġġi</string>
     <string name="menu_UseAnother">Użu ieħor</string>
-    <string name="menu_UseContactPerson">Uża Kuntatt \'%s\'</string>
+    <string name="menu_UseContactPerson">Użu Kuntatt %s</string>
     <string name="menu_UseNoContact">Użu Isem Biss</string>
-    <string name="menu_UseProfilePerson">Uża Profile \'%s\'</string>
+    <string name="menu_UseProfilePerson">Uża %s Profile</string>
+    <string name="menu_vibrate">Vibrate</string>
 
     <string name="prog_decrypting">decrypting…</string>
     <string name="prog_encrypting">encrypting…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Avvanzata</string>
     <string name="section_backup">Backup</string>
     <string name="section_general">Ġenerali</string>
+    <string name="section_notification">Notifiki</string>
+    <string name="section_storage">Ħażna</string>
 
     <string name="state_BackupRestored">Backup restawrata.</string>
     <string name="state_FileDeleted">%s imħassar fajl.</string>
     <string name="state_FileSent">Messaġġ mibgħut.</string>
+    <string name="state_InvitationAdded">Stedina miżjud.</string>
     <string name="state_MessageSavedAsDraft">Message ffrankati bħala abbozz.</string>
     <string name="state_MessagesDeleted">%d messaġġi mħassra.</string>
     <string name="state_PassphraseUpdated">Passphrase aġġornata.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">Kuntatti %s importati.</string>
     <string name="state_TextCopiedToClipboard">Test ikkuppjata lill clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger hija mfassla biex faċilment sehem data identità, personalment jew permezz tat-telefon, awtentikat, privati​​, u intatt. Kull persuna int taqsam ma toħloq kanal sigur end-to-end biex jibagħtu messaġġi.\n\nKaratteristiċi:\n- Faċilment jiskambjaw informazzjoni ta \'kuntatt ma\' oħrajn\n- Testi Sikur braga b\'ħafna truf, ritratti, xejn!\n- Kriptografija Strong tipproteġi l-informazzjoni tiegħek\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger hija mfassla biex faċilment sehem data identità, personalment jew permezz tat-telefon, awtentikat, privati ​​, u intatt. Kull persuna int taqsam ma toħloq kanal sigur end-to-end biex jibagħtu messaġġi.\n\nKaratteristiċi:\nFaċilment jiskambjaw informazzjoni ta \'kuntatt ma\' oħrajn testi braga\n-sikur, ritratti, xejn! Kriptografija\n-Strong tipproteġi l-informazzjoni tiegħek\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_KeywordExchange">Skambju</string>
     <string name="text_KeywordIdentity">Identità</string>
     <string name="text_KeywordKey">Key</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Sigurtà</string>
     <string name="text_LanguagesProvidedBy">Lingwi pprovduti minn:</string>
     <string name="text_RelatedSearchTerms">Termini relatati:</string>
-    <string name="text_Requirements">Rekwiżiti:\n1. Għandu jiġi installat fuq minimu ta \'2 apparati.\n2. Konnessjoni Internet għandhom ikunu attivi.</string>
+    <string name="text_Requirements">Rekwiżiti:.\n1 għandu jiġi installat fuq minimu ta \' 2 apparati.\n2. An Internet b\'konnessjoni għandhom ikunu attivi.</string>
     <string name="text_SourceCodeRepo">sors miftuħ: %s</string>
-    <string name="text_WhatsNew">- Jiffissa l-istabbiltà.</string>
+    <string name="text_WhatsNew">-Istabbiltà jiffissa.</string>
 
     <string name="title_About">Dwar</string>
     <string name="title_camera">Camera</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Braga Keys Assistent</string>
     <string name="title_FileOptions">Għażliet sekwestru</string>
     <string name="title_find">Setup</string>
+    <string name="title_font_size">Tagħżel id-daqs tat-tipa</string>
     <string name="title_home">Tibda Exchange</string>
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Messaġġ</string>

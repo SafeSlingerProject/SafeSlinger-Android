@@ -42,8 +42,10 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -120,7 +122,11 @@ public class ExchangeActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            setTheme(android.R.style.Theme_Holo_Light_DarkActionBar);
+        } else {
+            setTheme(android.R.style.Theme_Light);
+        }
         super.onCreate(savedInstanceState);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
@@ -141,11 +147,14 @@ public class ExchangeActivity extends BaseActivity {
         // method
         mProt = new ExchangeController(this);
 
+        byte[] userData = null;
+        String hostName = null;
+        boolean pairwiseLocal = false; // TODO: future BT/NFC option
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         if (extras != null) {
-            byte[] userData = extras.getByteArray(extra.USER_DATA);
-            String hostName = extras.getString(extra.HOST_NAME);
+            userData = extras.getByteArray(extra.USER_DATA);
+            hostName = extras.getString(extra.HOST_NAME);
 
             // confirm data exists
             if (userData == null || userData.length == 0) {
@@ -154,23 +163,41 @@ public class ExchangeActivity extends BaseActivity {
             }
             mProt.setData(userData);
 
-            // confirm server
-            try {
-                URI uri = new URI("http", hostName, "", "");
-                URL url = uri.toURL();
-            } catch (URISyntaxException e) {
-                showError("Hostname " + hostName + " is not well formed.");
-                return;
-            } catch (MalformedURLException e) {
-                showError("Hostname " + hostName + " is not well formed.");
-                return;
+            if (pairwiseLocal) {
+                // TODO: future ensure proper BT/NFC permissions
+                mProt.setHostName(null);
+            } else {
+                // confirm server
+                try {
+                    URI uri = new URI("http", hostName, "", "");
+                    URL url = uri.toURL();
+                } catch (URISyntaxException e) {
+                    showError("Hostname " + hostName + " is not well formed.");
+                    return;
+                } catch (MalformedURLException e) {
+                    showError("Hostname " + hostName + " is not well formed.");
+                    return;
+                }
+                mProt.setHostName(hostName);
             }
-            mProt.setHostName(hostName);
         }
 
         // initialize exchange
         if (handled(mProt.doInitialize())) {
-            showGroupSizePicker();
+            if (handled(mProt.doGenerateCommitment())) {
+                if (pairwiseLocal) {
+                    // when pairwise and local we are always 2 users
+                    // in a local exchange, in the same group
+                    mProt.setNumUsers(2);
+                    mProt.setUserIdLink(1);
+                    runThreadGetCommitmentsGetData();
+                } else {
+                    // Server supports multiple users in remote,
+                    // arbitrary configurations so request group
+                    // size as well as unique group id
+                    showGroupSizePicker();
+                }
+            }
         }
 
         if (!mLaunched) {
@@ -178,9 +205,20 @@ public class ExchangeActivity extends BaseActivity {
         }
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
+    public static boolean callerHasBlueToothPermission(Context ctx) {
+        String PERMISSION_BLUETOOTH = "android.permission.BLUETOOTH";
+        String PERMISSION_BLUETOOTH_ADMIN = "android.permission.BLUETOOTH_ADMIN";
+        PackageManager pm = ctx.getPackageManager();
+        int bt = pm.checkPermission(PERMISSION_BLUETOOTH, ctx.getPackageName());
+        int bt_admin = pm.checkPermission(PERMISSION_BLUETOOTH_ADMIN, ctx.getPackageName());
+        return (bt == PackageManager.PERMISSION_GRANTED && bt_admin == PackageManager.PERMISSION_GRANTED);
+    }
+
+    public static boolean callerHasNfcPermission(Context ctx) {
+        String PERMISSION_NFC = "android.permission.NFC";
+        PackageManager pm = ctx.getPackageManager();
+        int nfc = pm.checkPermission(PERMISSION_NFC, ctx.getPackageName());
+        return (nfc == PackageManager.PERMISSION_GRANTED);
     }
 
     @Override
@@ -271,12 +309,6 @@ public class ExchangeActivity extends BaseActivity {
                 break;
             default:
                 break;
-        }
-    }
-
-    private void doGroupFormation() {
-        if (handled(mProt.doGenerateCommitment())) {
-            runThreadGetUserId();
         }
     }
 
@@ -528,7 +560,7 @@ public class ExchangeActivity extends BaseActivity {
             public void onClick(DialogInterface dialog, int id) {
                 if (mProt.getNumUsers() > 0) {
                     dialog.dismiss();
-                    doGroupFormation();
+                    runThreadGetUserId();
                 } else {
                     // reset and error
                     mProt.setNumUsers(0);

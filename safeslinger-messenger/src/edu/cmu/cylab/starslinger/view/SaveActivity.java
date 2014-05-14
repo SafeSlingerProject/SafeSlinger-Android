@@ -67,6 +67,7 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
@@ -79,7 +80,6 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
 
     private final ContactAccessor mAccessor = ContactAccessor.getInstance();
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
-    private static final int MENU_HELP = 1;
     public static final int RESULT_SELNONE = 23;
     public static final int RESULT_SAVE = 24;
 
@@ -113,6 +113,9 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
                 R.drawable.ic_action_help);
         MenuCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
 
+        menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
+                android.R.drawable.ic_menu_send);
+
         return true;
     }
 
@@ -121,6 +124,9 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
         switch (item.getItemId()) {
             case MENU_HELP:
                 showHelp(getString(R.string.title_save), getString(R.string.help_save));
+                return true;
+            case MENU_FEEDBACK:
+                SafeSlinger.getApplication().showFeedbackEmail(SaveActivity.this);
                 return true;
         }
         return false;

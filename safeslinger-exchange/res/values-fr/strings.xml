@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Vous avez fait état d\'une différence de phrases. Recommencez l\'échange.</string>
     <string name="error_MinUsersRequired">Un minimum de %d membres est nécessaire pour échanger des données.</string>
     <string name="error_MoreDataThanUsers">Données inattendues trouvés en échange. Recommencez l\'échange.</string>
+    <string name="error_NoDataToExchange">L\'échange est manquant données requises.</string>
     <string name="error_NoWordListSelected">Vous devez sélectionner l\'une des phrases avant de poursuivre.</string>
     <string name="error_OtherGroupCommitDiffer">Quelqu\'un a signalé une différence dans les phrases. Recommencez l\'échange.</string>
     <string name="error_OutOfMemoryError">La mémoire est trop faible pour effectuer cette opération.</string>
-    <string name="error_ServerAppMessage">Message serveur: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Message serveur: \'%s\'</string>
+    <string name="error_ServerAppMessage">Message serveur: %s</string>
+    <string name="error_ServerAppMessageCStr">Message serveur: %s</string>
     <string name="error_ServerNotResponding">Le serveur n\'a pas répondu.</string>
     <string name="error_TimeoutWaitingForAllMembers">Le délai d\'attente donné aux membres du groupe pour ajouter des données a expiré.</string>
     <string name="error_WebCancelledByUser">L\'utilisateur a annulé la demande du serveur.</string>
 
-    <string name="help_size">Sélectionnez le nombre de personnes qui tentent d\'échanger des données ensemble et appuyez sur \'OK\'.</string>
-    <string name="help_userid">Le nombre sur cet écran est utilisé pour créer un groupe unique d\'utilisateurs. Passez en revue les chiffres présents sur les écrans de tous les utilisateurs. Tous les utilisateurs doivent saisir le même chiffre le plus bas et appuyer sur \'OK\'.</string>
-    <string name="help_verify">Maintenant, vous devez faire correspondre une de ces phrases de trois mots avec tous les utilisateurs. Chaque utilisateur doit sélectionner la même phrase commune, et appuyer sur \'Suivant\'.</string>
+    <string name="help_size">Sélectionnez le nombre de personnes qui tentent d\'échanger des données ensemble et appuyez sur OK.</string>
+    <string name="help_userid">Le nombre sur cet écran est utilisé pour créer un groupe unique d\'utilisateurs. Passez en revue les chiffres présents sur les écrans de tous les utilisateurs. Tous les utilisateurs doivent saisir le même chiffre le plus bas et appuyer sur OK.</string>
+    <string name="help_verify">Maintenant, vous devez faire correspondre une de ces phrases de trois mots avec tous les utilisateurs. Chaque utilisateur doit sélectionner la même phrase commune, et appuyer sur Suivant.</string>
 
+    <string name="label_CompareScreensNDevices">Comparer les écrans des appareils de %s.</string>
     <string name="label_NumericModeHint">Non-English</string>
     <string name="label_PromptInstruct">Ce chiffre est utilisé pour créer un groupe unique d\'utilisateurs. Comparez, puis entrez le chiffre le plus bas parmi tous les utilisateurs.</string>
     <string name="label_ReceivedNItems">a reçu %d articles</string>
     <string name="label_UserIdHint">Le plus bas</string>
     <string name="label_VerifyInstruct">Tous les téléphones doivent correspondre à l\'une des phrases de 3 mots. Comparez, puis choisissez la phrase correspondante.</string>
+
+    <string name="lib_name">SafeSlinger Bourse</string>
 
     <string name="prog_CollectingOthersCommitVerify">en attente de vérification de tous les membres…</string>
     <string name="prog_CollectingOthersItems">en attente de l\'arrivée de tous les utilisateurs…</string>

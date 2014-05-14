@@ -70,6 +70,8 @@ public class SafeSlingerPrefs {
 
         public static final String ACCOUNT_NAME = "AccountName";
         public static final String ACCOUNT_TYPE = "AccountType";
+        public static final String AUTO_DECRYPT = "autoDecrypt";
+        public static final String AUTO_RETRIEVAL = "autoRetrieval";
         public static final String BACKUP_COMPLETE_DATE = "backupCompleteDate";
         public static final String BACKUP_REQUEST_DATE = "backupRequestDate";
         public static final String CHANGE_PASSPHRASE = "changePassphrase";
@@ -83,12 +85,17 @@ public class SafeSlingerPrefs {
         public static final String EULA_ACCEPTED = "eula20140106.accepted";
         public static final String FILEMANAGER_ROOTDIR = "fileManagerRootDir";
         public static final String FIRST_EXCH_COMPLETE = "firstExchangeComplete";
+        public static final String FONT_SIZE = "fontSize";
         public static final String HAS_SEEN_HELP = "seenHelp";
         public static final String KEYDATE = "KeyDate";
         public static final String KEYHARDNESS = "KeyHardness";
         public static final String KEYID_STRING = "KeyIdString";
         public static final String KEYSALT = "KeySalt";
+        public static final String LOGOUT = "logout";
+        public static final String MANAGE_PASSPHRASE = "managePassphrase";
         public static final String NEXT_PASS_ATTEMPT_DATE = "nextPassAttemptDate";
+        public static final String NOTIFICATION_RINGTONE = "ringtone_notification";
+        public static final String NOTIFICATION_VIBRATE = "vibrate_notification";
         public static final String PASS_BACKOFF_TIMEOUT = "passBackoffTimeout";
         public static final String PASSPHRASE_CACHE_TTL = "passPhraseCacheTtl";
         public static final String PUSH_BACKOFF = "PushBackoff";
@@ -104,11 +111,6 @@ public class SafeSlingerPrefs {
         public static final String SHOW_SLING_KEYS_REMIND = "showSlingKeysReminder";
         public static final String SHOW_WALKTHROUGH = "ShowWalkthrough";
         public static final String TEMPKEY_SYNCACCOUNT_LIST = "keyTempListContactSyncAccount";
-        public static final String NOTIFICATION_VIBRATE = "vibrate_notification";
-        public static final String NOTIFICATION_RINGTONE = "ringtone_notification";
-        public static final String FONT_SIZE = "fontSize";
-        public static final String AUTO_DECRYPT = "autoDecrypt";
-        public static final String AUTO_RETRIEVAL = "autoRetrieval";
     }
 
     public static final String PREFS_RECOVER_YES = "MyPrefsFile";
@@ -136,6 +138,22 @@ public class SafeSlingerPrefs {
         removePref(pref.CONTACT_PHONE_TYPE, true);
     }
 
+    public static void deletePrefs(int userNumber) {
+        removePref(pref.ACCOUNT_NAME + userNumber, true);
+        removePref(pref.ACCOUNT_TYPE + userNumber, true);
+        removePref(pref.AUTO_DECRYPT + userNumber, true);
+        removePref(pref.AUTO_RETRIEVAL + userNumber, true);
+        removePref(pref.CONTACT_LOOKUP_KEY + userNumber, true);
+        removePref(pref.CONTACT_NAME + userNumber, true);
+        removePref(pref.FONT_SIZE + userNumber, true);
+        removePref(pref.KEYDATE + userNumber, true);
+        removePref(pref.KEYHARDNESS + userNumber, true);
+        removePref(pref.KEYID_STRING + userNumber, true);
+        removePref(pref.KEYSALT + userNumber, true);
+        removePref(pref.PASSPHRASE_CACHE_TTL + userNumber, true);
+        removePref(pref.SHOW_RECENT_RECIPONLY + userNumber, true);
+    }
+
     // persist to backup account...
 
     public static boolean getContactField(String field) {
@@ -152,14 +170,6 @@ public class SafeSlingerPrefs {
 
     public static void setContactLookupKey(String lookupKey) {
         setString(getUserKeyName(pref.CONTACT_LOOKUP_KEY), lookupKey, true);
-    }
-
-    public static boolean getEulaAccepted() {
-        return getBoolean(getUserKeyName(pref.EULA_ACCEPTED), DEFAULT_EULA_ACCEPTED, true);
-    }
-
-    public static void setEulaAccepted(boolean accepted) {
-        setBoolean(getUserKeyName(pref.EULA_ACCEPTED), accepted, true);
     }
 
     public static String getContactName() {
@@ -234,14 +244,6 @@ public class SafeSlingerPrefs {
         setInt(getUserKeyName(pref.PASSPHRASE_CACHE_TTL), pass_phrase_cache_ttl, true);
     }
 
-    public static boolean getShowWalkthrough() {
-        return getBoolean(getUserKeyName(pref.SHOW_WALKTHROUGH), DEFAULT_SHOW_WALKTHROUGH, true);
-    }
-
-    public static void setShowWalkthrough(boolean showWalkthrough) {
-        setBoolean(getUserKeyName(pref.SHOW_WALKTHROUGH), showWalkthrough, true);
-    }
-
     public static boolean getShowRecentRecipOnly() {
         if (!getShowRecentRecipOnlyEdited()) {
             // now unedited, use default
@@ -254,44 +256,8 @@ public class SafeSlingerPrefs {
 
     public static void setShowRecentRecipOnly(boolean showRecentRecipOnly) {
         // now edited
-        setBoolean(getUserKeyName(pref.SHOW_RECENT_RECIPONLY_EDITED), true, true);
+        setBoolean(pref.SHOW_RECENT_RECIPONLY_EDITED, true, true);
         setBoolean(getUserKeyName(pref.SHOW_RECENT_RECIPONLY), showRecentRecipOnly, true);
-    }
-
-    public static boolean getShowRecentRecipOnlyEdited() {
-        return getBoolean(getUserKeyName(pref.SHOW_RECENT_RECIPONLY_EDITED),
-                DEFAULT_SHOW_RECENT_RECIPONLY_EDITED, true);
-    }
-
-    public static void setShowRecentRecipOnlyEdited(boolean showRecentRecipOnlyEdited) {
-        setBoolean(getUserKeyName(pref.SHOW_RECENT_RECIPONLY_EDITED), showRecentRecipOnlyEdited,
-                true);
-    }
-
-    public static boolean getShowSlingKeysReminder() {
-        return getBoolean(getUserKeyName(pref.SHOW_SLING_KEYS_REMIND),
-                DEFAULT_SHOW_REMINDSLINGKEYS, true);
-    }
-
-    public static void setShowSlingKeysReminder(boolean showSlingKeysReminder) {
-        setBoolean(getUserKeyName(pref.SHOW_SLING_KEYS_REMIND), showSlingKeysReminder, true);
-    }
-
-    public static boolean getNotificationVibrate() {
-        return getBoolean(getUserKeyName(pref.NOTIFICATION_VIBRATE), DEFAULT_NOTIFICATION_VIBRATE,
-                true);
-    }
-
-    public static void setNotificationVibrate(boolean notificationVibrate) {
-        setBoolean(getUserKeyName(pref.NOTIFICATION_VIBRATE), notificationVibrate, true);
-    }
-
-    public static String getNotificationRingTone() {
-        return getString(getUserKeyName(pref.NOTIFICATION_RINGTONE), DEFAULT_RINGTONE, true);
-    }
-
-    public static void setNotificationRingTone(String notificationRingTone) {
-        setString(getUserKeyName(pref.NOTIFICATION_RINGTONE), notificationRingTone, true);
     }
 
     public static int getFontSize() {
@@ -334,6 +300,55 @@ public class SafeSlingerPrefs {
 
     public static void setCurrentMessageDBVer(int ver) {
         setInt(pref.CURR_MSG_DB_VER, ver, true);
+    }
+
+    public static boolean getEulaAccepted() {
+        return getBoolean(pref.EULA_ACCEPTED, DEFAULT_EULA_ACCEPTED, true);
+    }
+
+    public static void setEulaAccepted(boolean accepted) {
+        setBoolean(pref.EULA_ACCEPTED, accepted, true);
+    }
+
+    public static boolean getShowSlingKeysReminder() {
+        return getBoolean(pref.SHOW_SLING_KEYS_REMIND, DEFAULT_SHOW_REMINDSLINGKEYS, true);
+    }
+
+    public static void setShowSlingKeysReminder(boolean showSlingKeysReminder) {
+        setBoolean(pref.SHOW_SLING_KEYS_REMIND, showSlingKeysReminder, true);
+    }
+
+    public static boolean getShowWalkthrough() {
+        return getBoolean(pref.SHOW_WALKTHROUGH, DEFAULT_SHOW_WALKTHROUGH, true);
+    }
+
+    public static void setShowWalkthrough(boolean showWalkthrough) {
+        setBoolean(pref.SHOW_WALKTHROUGH, showWalkthrough, true);
+    }
+
+    public static boolean getShowRecentRecipOnlyEdited() {
+        return getBoolean(pref.SHOW_RECENT_RECIPONLY_EDITED, DEFAULT_SHOW_RECENT_RECIPONLY_EDITED,
+                true);
+    }
+
+    public static void setShowRecentRecipOnlyEdited(boolean showRecentRecipOnlyEdited) {
+        setBoolean(pref.SHOW_RECENT_RECIPONLY_EDITED, showRecentRecipOnlyEdited, true);
+    }
+
+    public static boolean getNotificationVibrate() {
+        return getBoolean(pref.NOTIFICATION_VIBRATE, DEFAULT_NOTIFICATION_VIBRATE, true);
+    }
+
+    public static void setNotificationVibrate(boolean notificationVibrate) {
+        setBoolean(pref.NOTIFICATION_VIBRATE, notificationVibrate, true);
+    }
+
+    public static String getNotificationRingTone() {
+        return getString(pref.NOTIFICATION_RINGTONE, DEFAULT_RINGTONE, true);
+    }
+
+    public static void setNotificationRingTone(String notificationRingTone) {
+        setString(pref.NOTIFICATION_RINGTONE, notificationRingTone, true);
     }
 
     // do NOT persist to backup account...

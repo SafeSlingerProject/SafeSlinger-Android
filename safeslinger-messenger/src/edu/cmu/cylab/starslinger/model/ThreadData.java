@@ -36,6 +36,9 @@ public class ThreadData {
     private String mLastPerson;
     private boolean mNewerExists;
 
+    /***
+     * create raw thread
+     */
     public ThreadData(String keyId, int msgs, int newMsgs, long lastDate, boolean hasDraft,
             String lastPerson, boolean isDetail, boolean newerExists, RecipientRow recip) {
         mKeyId = keyId;
@@ -47,6 +50,21 @@ public class ThreadData {
         mHasDraft = hasDraft;
         mLastPerson = lastPerson;
         mNewerExists = newerExists;
+    }
+
+    /***
+     * create merged thread
+     */
+    public ThreadData(ThreadData old, ThreadData up) {
+        mKeyId = old.getKeyId();
+        mMsgCount = old.getMsgCount() + up.getMsgCount();
+        mNewCount = old.getNewCount() + up.getNewCount();
+        mLastDate = old.getLastDate() > up.getLastDate() ? old.getLastDate() : up.getLastDate();
+        mIsDetail = old.isDetail();
+        mRecipient = old.getRecipient();
+        mHasDraft = old.hasDraft() || up.hasDraft();
+        mLastPerson = old.getLastPerson();
+        mNewerExists = old.isNewerExists() || up.isNewerExists();
     }
 
     public String getKeyId() {

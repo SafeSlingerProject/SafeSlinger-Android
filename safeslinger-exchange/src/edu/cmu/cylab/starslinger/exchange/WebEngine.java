@@ -26,7 +26,6 @@ package edu.cmu.cylab.starslinger.exchange;
  */
 
 import java.io.UnsupportedEncodingException;
-import java.nio.ByteBuffer;
 import java.util.Date;
 
 import org.apache.http.HttpResponse;
@@ -55,30 +54,18 @@ import android.util.Log;
  * web_spate specific functions to get the group size, get the commitments,
  * create the group on the server, send data, ....
  */
-public class WebEngine {
+public class WebEngine extends ConnectionEngine {
 
     private static final String TAG = ExchangeConfig.LOG_TAG;
-
-    private String mUrlPrefix;
+    private String mUrlPrefix = ExchangeConfig.HTTPURL_PREFIX;
     private String mHost;
-    private String mUrlSuffix;
-    private boolean mCancelable = false;
-    private int mVersion;
-    private int mLatestServerVersion = 0;
-    private Context mCtx;
+    private String mUrlSuffix = ExchangeConfig.HTTPURL_SUFFIX;
     private HttpClient mHttpClient;
-
-    private Date mExchStartTimer;
 
     private ConnectivityManager mConnectivityManager;
 
-    public WebEngine(Context ctx, String hostName) {
-        mCtx = ctx;
-        mUrlPrefix = ExchangeConfig.HTTPURL_PREFIX;
-        mHost = hostName;
-        mUrlSuffix = ExchangeConfig.HTTPURL_SUFFIX;
-
-        mVersion = ExchangeConfig.getVersionCode();
+    public void setHost(String host) {
+        mHost = host;
     }
 
     public boolean isOnline() {
@@ -168,225 +155,46 @@ public class WebEngine {
         return reqData;
     }
 
+    @Override
     public void shutdownConnection() {
         if (mHttpClient != null) {
             ClientConnectionManager cm = mHttpClient.getConnectionManager();
-            if (cm != null)
+            if (cm != null) {
                 cm.shutdown();
-        }
-    }
-
-    /**
-     * send commitment, receives unique short user id
-     */
-    public byte[] assign_user(byte[] commitB) throws ExchangeException {
-        ByteBuffer msg = ByteBuffer.allocate(4 + commitB.length);
-        msg.putInt(mVersion);
-        msg.put(commitB);
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/assignUser" + mUrlSuffix, msg.array());
-        handleResponseExceptions(resp, 0);
-
-        mExchStartTimer = new Date();
-
-        Log.i(TAG, "User id created");
-        return resp;
-    }
-
-    /**
-     * send our own matches once, list of all users we have, gathers all others
-     * when available receives the group id, total user number (including ours),
-     * actual user number, list of users we did not get yet
-     */
-    public byte[] sync_commits(int usrid, int sameusrid, int[] usridList, byte[] commitB)
-            throws ExchangeException {
-
-        handleTimeoutException();
-
-        ByteBuffer msg = ByteBuffer.allocate(4 + 4 + 4 + 4 + (usridList.length * 4)
-                + commitB.length);
-        msg.putInt(mVersion);
-        msg.putInt(usrid);
-        msg.putInt(sameusrid);
-        msg.putInt(usridList.length);
-        for (int user : usridList) {
-            msg.putInt(user);
-        }
-        msg.put(commitB);
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/syncUsers" + mUrlSuffix, msg.array());
-        handleResponseExceptions(resp, 0);
-
-        Log.i(TAG, "User created");
-        return resp;
-    }
-
-    /**
-     * send our own data once, list of all data we have, gathers all others when
-     * available receives the total data number (including ours), actual data
-     * number, list of data we did not get yet
-     */
-    public byte[] sync_data(int usrid, int[] usridList, byte[] data) throws ExchangeException {
-
-        handleTimeoutException();
-
-        ByteBuffer msg = ByteBuffer.allocate(4 + 4 + 4 + (usridList.length * 4) + data.length);
-        msg.putInt(mVersion);
-        msg.putInt(usrid);
-        msg.putInt(usridList.length);
-        for (int user : usridList) {
-            msg.putInt(user);
-        }
-        msg.put(data);
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/syncData" + mUrlSuffix, msg.array());
-        handleResponseExceptions(resp, 0);
-
-        Log.i(TAG, "User updated");
-        return resp;
-    }
-
-    /**
-     * send our own signature once, list of all signatures we have, gathers all
-     * others when available receives the total signatures number (including
-     * ours), actual sig number, list of signatures we did not get yet
-     */
-    public byte[] sync_signatures(int usrid, int[] usridList, byte[] signature)
-            throws ExchangeException {
-
-        handleTimeoutException();
-
-        ByteBuffer msg = ByteBuffer.allocate(4 + 4 + 4 + (usridList.length * 4) + signature.length);
-        msg.putInt(mVersion);
-        msg.putInt(usrid);
-        msg.putInt(usridList.length);
-        for (int user : usridList) {
-            msg.putInt(user);
-        }
-        msg.put(signature);
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/syncSignatures" + mUrlSuffix, msg.array());
-        handleResponseExceptions(resp, 0);
-
-        Log.i(TAG, "Signature sent");
-        return resp;
-    }
-
-    /**
-     * this method is used by members to post one public key node. send: node to
-     * submit (user id, node length, node);
-     */
-    public byte[] put_keynode(int usrid, int nodeusrid, byte[] node) throws ExchangeException {
-
-        handleTimeoutException();
-
-        ByteBuffer msg = ByteBuffer.allocate(4 + 4 + 4 + 4 + node.length);
-        msg.putInt(mVersion);
-        msg.putInt(usrid);
-        msg.putInt(nodeusrid);
-        msg.putInt(node.length);
-        msg.put(node);
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/syncKeyNodes" + mUrlSuffix, msg.array());
-        handleResponseExceptions(resp, 2);
-
-        Log.i(TAG, "key node sent");
-        return resp;
-    }
-
-    /**
-     * this method is used by members to discover if their key node node has
-     * been submitted. receive: the total nodes number for themselves (0 or 1),
-     * our own key node if available.
-     */
-    public byte[] get_keynode(int usrid) throws ExchangeException {
-
-        handleTimeoutException();
-
-        ByteBuffer msg = ByteBuffer.allocate(4 + 4);
-        msg.putInt(mVersion);
-        msg.putInt(usrid);
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/syncKeyNodes" + mUrlSuffix, msg.array());
-        handleResponseExceptions(resp, 2);
-
-        Log.i(TAG, "key node requested");
-        return resp;
-    }
-
-    /**
-     * send our own match nonce once, list of all match nonces we have, gathers
-     * all others when available receives the total match nonces number
-     * (including ours), actual match nonce number, list of match nonces we did
-     * not get yet
-     */
-    public byte[] sync_match(int usrid, int[] usridList, byte[] matchNonce)
-            throws ExchangeException {
-
-        handleTimeoutException();
-
-        ByteBuffer msg = ByteBuffer
-                .allocate(4 + 4 + 4 + (usridList.length * 4) + matchNonce.length);
-        msg.putInt(mVersion);
-        msg.putInt(usrid);
-        msg.putInt(usridList.length);
-        for (int user : usridList) {
-            msg.putInt(user);
-        }
-        msg.put(matchNonce);
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/syncMatch" + mUrlSuffix, msg.array());
-        handleResponseExceptions(resp, 0);
-
-        Log.i(TAG, "Match nonce sent");
-        return resp;
-    }
-
-    public void handleTimeoutException() throws ExchangeException {
-        long elapsedMs = new Date().getTime() - mExchStartTimer.getTime();
-        if (elapsedMs > ExchangeConfig.MSSVR_EXCH_PROT_MAX) {
-            throw new ExchangeException(
-                    mCtx.getString(R.string.error_ExchangeProtocolTimeoutExceeded));
-        }
-    }
-
-    private byte[] handleResponseExceptions(byte[] resp, int errMax) throws ExchangeException {
-        int firstInt = 0;
-        ByteBuffer result = ByteBuffer.wrap(resp);
-        if (mCancelable)
-            throw new ExchangeException(mCtx.getString(R.string.error_WebCancelledByUser));
-        else if (resp == null)
-            throw new ExchangeException(mCtx.getString(R.string.error_ServerNotResponding));
-        else if (resp.length < 4)
-            throw new ExchangeException(mCtx.getString(R.string.error_ServerNotResponding));
-        else {
-            firstInt = result.getInt();
-            byte[] bytes = new byte[result.remaining()];
-            result.get(bytes);
-            if (firstInt <= errMax) { // error int
-                Log.e(TAG, "server error code: " + firstInt);
-                throw new ExchangeException(String.format(
-                        mCtx.getString(R.string.error_ServerAppMessage), new String(bytes).trim()));
+                mHttpClient = null;
             }
-            // else strip off server version
-            mLatestServerVersion = firstInt;
-            return bytes;
         }
     }
 
-    public boolean isCancelable() {
-        return mCancelable;
+    @Override
+    protected byte[] assignUser(byte[] requestBody) throws ExchangeException {
+        mExchStartTimer = new Date(); // total timeout begins at first online
+                                      // call
+        return doPost(mUrlPrefix + mHost + "/assignUser" + mUrlSuffix, requestBody);
     }
 
-    public void setCancelable(boolean cancelable) {
-        mCancelable = cancelable;
+    @Override
+    protected byte[] syncUsers(byte[] requestBody) throws ExchangeException {
+        return doPost(mUrlPrefix + mHost + "/syncUsers" + mUrlSuffix, requestBody);
     }
 
-    public int getLatestServerVersion() {
-        return mLatestServerVersion;
+    @Override
+    protected byte[] syncData(byte[] requestBody) throws ExchangeException {
+        return doPost(mUrlPrefix + mHost + "/syncData" + mUrlSuffix, requestBody);
     }
 
-    public Date getExchStartTimer() {
-        return mExchStartTimer;
+    @Override
+    protected byte[] syncSignatures(byte[] requestBody) throws ExchangeException {
+        return doPost(mUrlPrefix + mHost + "/syncSignatures" + mUrlSuffix, requestBody);
+    }
+
+    @Override
+    protected byte[] syncKeyNodes(byte[] requestBody) throws ExchangeException {
+        return doPost(mUrlPrefix + mHost + "/syncKeyNodes" + mUrlSuffix, requestBody);
+    }
+
+    @Override
+    protected byte[] syncMatch(byte[] requestBody) throws ExchangeException {
+        return doPost(mUrlPrefix + mHost + "/syncMatch" + mUrlSuffix, requestBody);
     }
 }

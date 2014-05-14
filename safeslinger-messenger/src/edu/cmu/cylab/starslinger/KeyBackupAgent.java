@@ -64,7 +64,14 @@ public class KeyBackupAgent extends BackupAgentHelper {
         ArrayList<String> allFiles = new ArrayList<String>();
 
         // add databases
-        allFiles.add("../databases/" + RecipientDatabaseHelper.DATABASE_NAME);
+        int users = SafeSlinger.getTotalUsers();
+        for (int i = 0; i < users; i++) {
+            if (i == 0) {
+                allFiles.add("../databases/" + RecipientDatabaseHelper.DATABASE_NAME_ROOT);
+            } else {
+                allFiles.add("../databases/" + RecipientDatabaseHelper.DATABASE_NAME_ROOT + i);
+            }
+        }
 
         // add encrypted private keys
         int userNumber = 0;

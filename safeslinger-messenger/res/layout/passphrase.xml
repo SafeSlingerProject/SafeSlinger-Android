@@ -146,15 +146,47 @@
             android:scaleType="fitCenter"
             android:src="@drawable/logo_safeslinger_large" >
         </ImageView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/MenuFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/PassFrameButtonForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:layout_marginTop="@dimen/size_5dp" >
+
+            <Button
+                android:id="@+id/PassButtonForgot"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_3d"
+                android:gravity="center"
+                android:paddingLeft="@dimen/button_side_margin"
+                android:paddingRight="@dimen/button_side_margin"
+                android:text="@string/menu_ForgotPassphrase"
+                android:textColor="@color/black"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/text_size_small" />
+        </RelativeLayout>
 
         <ImageButton
             android:id="@+id/PassButtonHelp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:background="@color/white"
             android:contentDescription="@string/menu_Help"
-            android:src="@drawable/ic_action_about" />
-    </LinearLayout>
+            android:src="@drawable/ic_information" />
+    </RelativeLayout>
 
 </LinearLayout>

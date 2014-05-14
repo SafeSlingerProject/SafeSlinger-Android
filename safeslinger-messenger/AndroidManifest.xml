@@ -25,10 +25,9 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.cmu.cylab.starslinger"
-    android:versionCode="0x01060C00"
-    android:versionName="1.6.12" >
+    android:versionCode="0x01060D00"
+    android:versionName="1.6.13" >
 
-    
     <!-- API 9 is the minimum required for password-based encryption PBKDF2WithHmacSHA1. -->
     <!-- API 8 is the minimum required to receive push messages. -->
     <uses-sdk
@@ -182,20 +181,17 @@
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.ExchangeActivity"
             android:label="@string/lib_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.VerifyActivity"
             android:label="@string/lib_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.GroupingActivity"
             android:label="@string/lib_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" >
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

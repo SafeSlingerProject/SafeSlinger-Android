@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d uživatelé</string>
 
-    <string name="error_AllMembersMustUpgrade">Někteří členové používáte starší verzi, všichni členové musí být alespoň použít %s.</string>
+    <string name="error_AllMembersMustUpgrade">Někteří členové používáte starší verzi; všichni členové musí být alespoň použít %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Všichni členové se musí aktualizovat, některé jsou s použitím starších formátů registrační Push.</string>
     <string name="error_CorrectYourInternetConnection">Internet není k dispozici, zkontrolujte nastavení.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange limit překročen. Začněte na výměnu znovu.</string>
@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Jste vykázala rozdíl v frází. Začněte na výměnu znovu.</string>
     <string name="error_MinUsersRequired">Jsou zapotřebíminimálně %d členů pro výměnu dat.</string>
     <string name="error_MoreDataThanUsers">Neočekávané údaje nalezené výměnou. Začněte na výměnu znovu.</string>
+    <string name="error_NoDataToExchange">Výměna chybí potřebné údaje.</string>
     <string name="error_NoWordListSelected">Musíte vybrat jednu z vět před pokračováním.</string>
     <string name="error_OtherGroupCommitDiffer">Někdo hlásil rozdíl v frází. Začněte na výměnu znovu.</string>
     <string name="error_OutOfMemoryError">Paměť je příliš nízká na dokončení této operace.</string>
-    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Žádná odpověď ze serveru.</string>
     <string name="error_TimeoutWaitingForAllMembers">Časový limit čekání na některé členy skupiny přidat data.</string>
     <string name="error_WebCancelledByUser">Uživatel zrušil požadavek serveru.</string>
 
-    <string name="help_size">Vyberte počet lidí, kteří se snaží pro výměnu dat dohromady a stiskněte tlačítko \' OK \'.</string>
-    <string name="help_userid">Toto číslo se na této obrazovce se používá k vytvoření unikátní skupinu uživatelů. Přečtěte si čísla na všech uživatelů obrazovek, pak by všichni uživatelé měli zadat stejnou nejnižší číslo a stiskněte tlačítko \' OK \'.</string>
-    <string name="help_verify">Nyní musíte odpovídat jeden z těchto 3-slovo fráze se všemi uživateli. Každý uživatel musí zvolit stejný společný frázi a stiskněte tlačítko \' Další \'.</string>
+    <string name="help_size">Vyberte počet lidí, kteří se snaží pro výměnu dat dohromady a stiskněte tlačítko OK.</string>
+    <string name="help_userid">Toto číslo se na této obrazovce se používá k vytvoření unikátní skupinu uživatelů. Přečtěte si čísla na obrazovkách všech uživatelů, pak by všichni uživatelé měli zadat stejnou nejnižší číslo a stiskněte tlačítko OK.</string>
+    <string name="help_verify">Nyní musíte odpovídat jeden z těchto 3-slovo fráze se všemi uživateli. Každý uživatel musí zvolit stejný společný frázi a stiskněte tlačítko Další.</string>
 
+    <string name="label_CompareScreensNDevices">Porovnání obrazovek na %s zařízení.</string>
     <string name="label_NumericModeHint">Non-English</string>
     <string name="label_PromptInstruct">Toto číslo se používá k vytvoření unikátní skupinu uživatelů. Porovnejte, a poté zadejte nejnižší číslo mezi všemi uživateli.</string>
     <string name="label_ReceivedNItems">obdržel %d položek</string>
     <string name="label_UserIdHint">Nejnižší</string>
     <string name="label_VerifyInstruct">Všechny telefony musí odpovídat jedné z 3-slovo fráze. Porovnejte, a potom vybrat odpovídající výraz.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">čeká na ověření všech členů…</string>
     <string name="prog_CollectingOthersItems">čeká na všechny uživatele se připojit…</string>

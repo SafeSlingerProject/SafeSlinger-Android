@@ -33,33 +33,37 @@
     <string name="choice_NumUsers">%d masu amfani</string>
 
     <string name="error_AllMembersMustUpgrade">Wasu mambobin amfani da mazan version; duk members dole ne a kalla amfani da %s.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">All members dole ne ha_aka, wasu na amfani da mazan tura rajista Formats.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">All members dole ne hažaka, wasu na amfani da mazan tura rajista Formats.</string>
     <string name="error_CorrectYourInternetConnection">Babu yanar-gizo, a bincika saituna.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout wuce. Za a fara musayar sake.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
     <string name="error_InvalidCommitVerify">Ba daidai ba data samu a musayar. Za a fara musayar sake.</string>
     <string name="error_InvalidCommonUserId">A shigar da lamba tabbatacce.</string>
     <string name="error_LocalGroupCommitDiffer">Ka bayar da rahoton wani bambanci a cikin kalmomi. Za a fara musayar sake.</string>
-    <string name="error_MinUsersRequired">A m of %d members ana bu_atar musanya bayanai.</string>
+    <string name="error_MinUsersRequired">A m of %d members ana buƙatar musanya bayanai.</string>
     <string name="error_MoreDataThanUsers">M data samu a musayar. Za a fara musayar sake.</string>
-    <string name="error_NoWordListSelected">Dole ne ku za_i _aya daga cikin kalmomin kafin a ci gaba.</string>
+    <string name="error_NoDataToExchange">Musayar bayanai da ake bukata ya bace.</string>
+    <string name="error_NoWordListSelected">Dole ne ku zaɓi ɗaya daga cikin kalmomin kafin a ci gaba.</string>
     <string name="error_OtherGroupCommitDiffer">Wani ya bayar da rahoton wani bambanci a cikin kalmomi. Za a fara musayar sake.</string>
     <string name="error_OutOfMemoryError">Memory ya yi yawa low don kammala wannan aiki.</string>
-    <string name="error_ServerAppMessage">Server Message: \' %s \'</string>
-    <string name="error_ServerAppMessageCStr">Server Message: \' %s \'</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Babu amsa daga uwar garken.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Fitar lokaci jiran wata kungiyar wakilan don _ara bayanai.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Fitar lokaci jiran wata kungiyar wakilan don ƙara bayanai.</string>
     <string name="error_WebCancelledByUser">User soke uwar garken request.</string>
 
-    <string name="help_size">A zabi yawan mutanen da suke yun_urin musanya bayanai tare da latsa \' Ok \'.</string>
-    <string name="help_userid">Wannan lamba a kan wannan allon da ake amfani da ya halicci musamman kungiyar masu amfani. Bitar lambobin duk masu amfani \' fuska, sannan duk masu amfani ya shiga guda mafi _as_anci lamba kuma latsa \' Ok \'.</string>
-    <string name="help_verify">Yanzu, dole ne ka yi daidai da daya daga wadannan kalmomi 3- kalma tare da duk masu amfani. Kowane mai amfani dole ya zabi daya na kowa magana, kuma latsa \' Next \'.</string>
+    <string name="help_size">A zabi yawan mutanen da suke yunƙurin musanya bayanai kuma latsa Ok tare.</string>
+    <string name="help_userid">Wannan lamba a kan wannan allon da ake amfani da ya halicci musamman kungiyar masu amfani. Bitar lambobin duk masu amfani \' fuska, sannan duk masu amfani ya shiga guda mafi ƙasƙanci da lambar kuma latsa Ok.</string>
+    <string name="help_verify">Yanzu, dole ne ka yi daidai da daya daga wadannan kalmomi 3-kalma tare da duk masu amfani. Kowane mai amfani dole ya zabi daya na kowa magana, ka kuma danna Next.</string>
 
-    <string name="label_NumericModeHint">Non- Turanci</string>
-    <string name="label_PromptInstruct">Wannan lambar da ake amfani da ya halicci musamman kungiyar masu amfani. Compare, sa\'an nan kuma shigar da lambar mafi _as_anci daga duk masu amfani.</string>
+    <string name="label_CompareScreensNDevices">Compare fuska a ranar %s na\'urorin.</string>
+    <string name="label_NumericModeHint">Non-Turanci</string>
+    <string name="label_PromptInstruct">Wannan lambar da ake amfani da ya halicci musamman kungiyar masu amfani. Compare, sa\'an nan kuma shigar da lambar mafi ƙasƙanci daga duk masu amfani.</string>
     <string name="label_ReceivedNItems">%d sun sami abubuwa</string>
-    <string name="label_UserIdHint">Mafi _as_anci</string>
-    <string name="label_VerifyInstruct">All wayoyin da dole ne daidai da daya daga cikin 3- kalma kalmomi. Compare, sa\'an nan kuma sama da daidai da magana.</string>
+    <string name="label_UserIdHint">Mafi ƙasƙanci</string>
+    <string name="label_VerifyInstruct">All wayoyin da dole ne daidai da daya daga cikin 3-kalma kalmomi. Compare, sa\'an nan kuma sama da daidai da magana.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">jiran tabbaci daga dukan membobin…</string>
     <string name="prog_CollectingOthersItems">jiran duk masu amfani don shiga…</string>

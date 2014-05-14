@@ -25,17 +25,19 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <Preference
-        android:key="changePassphrase"
-        android:title="@string/menu_ChangePassphrase" >
-    </Preference>
-
-    <PreferenceCategory android:title="@string/section_general" >
-        <EditTextPreference
-            android:inputType="textCapWords|textPersonName"
-            android:key="ContactName"
-            android:persistent="false"
-            android:title="@string/label_ContactName" />
+    <PreferenceCategory android:title="@string/label_PassHintEnter" >
+        <Preference
+            android:key="logout"
+            android:title="@string/menu_Logout" >
+        </Preference>
+        <Preference
+            android:key="changePassphrase"
+            android:title="@string/menu_ChangePassphrase" >
+        </Preference>
+        <Preference
+            android:key="managePassphrase"
+            android:title="@string/menu_ManagePassphrases" >
+        </Preference>
 
         <edu.cmu.cylab.starslinger.model.IntegerListPreference
             android:defaultValue="300"
@@ -44,6 +46,13 @@
             android:key="passPhraseCacheTtl"
             android:persistent="false"
             android:title="@string/label_passPhraseCacheTtl" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/section_general" >
+        <EditTextPreference
+            android:inputType="textCapWords|textPersonName"
+            android:key="ContactName"
+            android:persistent="false"
+            android:title="@string/label_ContactName" />
 
         <ListPreference
             android:defaultValue="18"
@@ -76,8 +85,8 @@
             android:defaultValue="false"
             android:dependency="autoDecrypt"
             android:key="autoRetrieval"
-            android:summary="@string/msgr_pref_summary_mms_auto_retrieval"
-            android:title="@string/msgr_pref_title_mms_auto_retrieval" />
+            android:summary="@string/label_summary_auto_attach_retrieval"
+            android:title="@string/menu_auto_attach_retrieval" />
         -->
         <Preference
             android:key="PushRegistrationIdDirect"
@@ -109,7 +118,7 @@
             android:persistent="false"
             android:title="@string/label_restoreCompleteDate" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/msgr_pref_sms_storage_title" >
+    <PreferenceCategory android:title="@string/section_storage" >
         <Preference
             android:key="downloadDirectory"
             android:title="@string/menu_DownloadDirectory" >
@@ -120,17 +129,17 @@
             android:key="fileManagerRootDir"
             android:title="@string/menu_FileManager" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/msgr_pref_notification_settings_title" >
+    <PreferenceCategory android:title="@string/section_notification" >
         <RingtonePreference
             android:defaultValue="content://settings/system/notification_sound"
             android:key="ringtone_notification"
             android:ringtoneType="notification"
-            android:title="@string/msgr_pref_title_notification_ringtone" />
+            android:title="@string/menu_ringtone" />
 
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="vibrate_notification"
-            android:title="@string/msgr_pref_title_notification_vibrateWhen" />
+            android:title="@string/menu_vibrate" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/title_About" >
         <Preference

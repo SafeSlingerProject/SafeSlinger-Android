@@ -44,7 +44,8 @@ public class MessageRow extends MessageData {
         FILE_OPEN, //
     }
 
-    public MessageRow(Cursor c) {
+    public MessageRow(Cursor c, boolean isInboxTable) {
+        mIsInboxTable = isInboxTable;
         if (c == null)
             return;
 

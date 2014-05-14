@@ -65,8 +65,12 @@ import edu.cmu.cylab.starslinger.model.UserData;
 
 public class PassPhraseActivity extends Activity {
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
-    private static final int DIALOG_HELP = 1;
+    private static final int MENU_HELP = 1;
+    private static final int MENU_FEEDBACK = 2;
+    private static final int DIALOG_FORGOT = 3;
+    private static final int DIALOG_HELP = 4;
     private Button mButtonOk;
+    private Button mButtonForgot;
     private ImageButton mButtonHelp;
     private TextView mTextViewVersion;
     private EditText mEditTextPassNext;
@@ -78,8 +82,6 @@ public class PassPhraseActivity extends Activity {
     private Handler mHandler;
     private final static int mMsPollInterval = 1000;
     public static final int RESULT_CLOSEANDCONTINUE = 999;
-    private static final int MENU_HELP = 10;
-    private static final int MENU_FEEDBACK = 490;
     private ArrayList<UserData> mUsers;
     private UserAdapter mUserAdapter;
     private Spinner mSpinnerUser;
@@ -88,12 +90,14 @@ public class PassPhraseActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_SafeSlinger_PassPhrase);
         super.onCreate(savedInstanceState);
+        SafeSlinger.setPassphraseOpen(true);
 
         setContentView(R.layout.passphrase);
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         mButtonOk = (Button) findViewById(R.id.PassButtonOK);
+        mButtonForgot = (Button) findViewById(R.id.PassButtonForgot);
         mButtonHelp = (ImageButton) findViewById(R.id.PassButtonHelp);
         mSpinnerUser = (Spinner) findViewById(R.id.PassSpinnerUserName);
         mTextViewVersion = (TextView) findViewById(R.id.PassTextViewVersion);
@@ -102,7 +106,9 @@ public class PassPhraseActivity extends Activity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
+        int userTotal = 0;
         if (extras != null) {
+            userTotal = extras.getInt(extra.USER_TOTAL);
             mCreatePassPhrase = extras.getBoolean(extra.CREATE_PASS_PHRASE);
             mChangePassPhrase = extras.getBoolean(extra.CHANGE_PASS_PHRASE);
             mVerifyPassPhrase = extras.getBoolean(extra.VERIFY_PASS_PHRASE);
@@ -112,8 +118,6 @@ public class PassPhraseActivity extends Activity {
 
         // find all user accounts
         mUsers = new ArrayList<UserData>();
-        int userTotal = 1;
-        // future features may be able to utilize multple users
         for (int userNumber = 0; userNumber < userTotal; userNumber++) {
             String name = SafeSlingerPrefs.getContactName(userNumber);
             long date = SafeSlingerPrefs.getKeyDate(userNumber);
@@ -149,6 +153,14 @@ public class PassPhraseActivity extends Activity {
                 imm.hideSoftInputFromWindow(mEditTextPassDone.getWindowToken(), 0);
 
                 doValidatePassphrase();
+            }
+        });
+
+        mButtonForgot.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                showForgot();
             }
         });
 
@@ -202,14 +214,31 @@ public class PassPhraseActivity extends Activity {
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SafeSlinger.setPassphraseOpen(false);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SafeSlinger.activityResumed();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SafeSlinger.activityPaused();
+    }
+
     private void doUpdateUserSelection(int position) {
         // Read current user selection
         if (mUserNumber != position) {
             mUserNumber = position;
             // save selected
-            // if position of create new account, set new user choice and
-            // exit...
             SafeSlingerPrefs.setUser(mUserNumber);
+            // set new user choice and exit...
             setResult(RESULT_OK);
             finish();
         }
@@ -302,6 +331,8 @@ public class PassPhraseActivity extends Activity {
     @Override
     protected Dialog onCreateDialog(int id, Bundle args) {
         switch (id) {
+            case DIALOG_FORGOT:
+                return xshowForgot(PassPhraseActivity.this).create();
             case DIALOG_HELP:
                 return xshowHelp(PassPhraseActivity.this, args).create();
             default:
@@ -337,6 +368,44 @@ public class PassPhraseActivity extends Activity {
                 showHelp(getString(R.string.app_name), msg);
             }
         }
+    }
+
+    protected void showForgot() {
+        if (!isFinishing()) {
+            removeDialog(DIALOG_FORGOT);
+            showDialog(DIALOG_FORGOT);
+        }
+    }
+
+    protected AlertDialog.Builder xshowForgot(Activity act) {
+        AlertDialog.Builder ad = new AlertDialog.Builder(act);
+        ad.setTitle(R.string.menu_ForgotPassphrase);
+        ad.setMessage(R.string.label_WarnForgotPassphrase);
+        ad.setCancelable(true);
+        ad.setPositiveButton(R.string.btn_CreateNewKey, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                // new key generation, by setting last position +1
+                doUpdateUserSelection(mUsers.size());
+            }
+        });
+        ad.setNegativeButton(R.string.btn_Cancel, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        ad.setOnCancelListener(new OnCancelListener() {
+
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                dialog.dismiss();
+            }
+        });
+        return ad;
     }
 
     protected void showHelp(String title, String msg) {

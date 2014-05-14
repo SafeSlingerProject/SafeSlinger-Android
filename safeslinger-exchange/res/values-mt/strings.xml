@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Inti rrappurtaw differenza fil frażijiet. Tibda l-iskambju mill-ġdid.</string>
     <string name="error_MinUsersRequired">Minimu ta \' %d membri huma obbligati li jiskambjaw data.</string>
     <string name="error_MoreDataThanUsers">Data mhux mistennija misjuba fil-kambju. Tibda l-iskambju mill-ġdid.</string>
+    <string name="error_NoDataToExchange">L-iskambju hija nieqsa dejta meħtieġa.</string>
     <string name="error_NoWordListSelected">Inti għandek tagħżel waħda mill-frażijiet qabel ma tipproċedi.</string>
     <string name="error_OtherGroupCommitDiffer">Xi ħadd rrappurtat differenza fil frażijiet. Tibda l-iskambju mill-ġdid.</string>
     <string name="error_OutOfMemoryError">Memorja huwa baxx wisq biex jitlesta din l-operazzjoni.</string>
-    <string name="error_ServerAppMessage">Message server: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Message server: \'%s\'</string>
+    <string name="error_ServerAppMessage">Messaġġ Server: %s</string>
+    <string name="error_ServerAppMessageCStr">Messaġġ Server: %s</string>
     <string name="error_ServerNotResponding">Ebda risposta mill server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout stennija għal xi membri tal-grupp biex iżidu data.</string>
     <string name="error_WebCancelledByUser">User kkanċellati talba server.</string>
 
-    <string name="help_size">Agħżel in-numru ta \'nies li qed jippruvaw biex jiskambjaw data flimkien u agħfas \' OK \'.</string>
-    <string name="help_userid">Dan in-numru fuq dan l-iskrin hija użata biex jinħoloq grupp uniku ta \' utenti. Tirrevedi l-numri fuq utenti kollha iskrins, allura l-utenti kollha għandhom jidħlu l-istess numru aktar baxx u agħfas \' OK \'.</string>
-    <string name="help_verify">Issa, inti għandhom jaqblu wieħed minn dawn il-frażijiet 3-kelma għall-utenti kollha. Kull utent għandu jagħżel l-istess frażi komuni, u agħfas \' Next \'.</string>
+    <string name="help_size">Agħżel in-numru ta \'nies li qed jippruvaw biex jiskambjaw data flimkien u istampa OK.</string>
+    <string name="help_userid">Dan in-numru fuq dan l-iskrin hija użata biex jinħoloq grupp uniku ta \' utenti. Tirrevedi l-numri fuq l-iskrins utenti kollha, allura l-utenti kollha għandhom jidħlu l-istess numru aktar baxx u l-istampa OK.</string>
+    <string name="help_verify">Issa, inti għandhom jaqblu wieħed minn dawn il-frażijiet 3-kelma għall-utenti kollha. Kull utent għandu jagħżel l-istess frażi komuni, u agħfas Next.</string>
 
+    <string name="label_CompareScreensNDevices">Qabbel screens fuq mezzi %s.</string>
     <string name="label_NumericModeHint">Non-Ingliż</string>
     <string name="label_PromptInstruct">Dan in-numru huwa użat biex jinħoloq grupp uniku ta \' utenti. Qabbel, u mbagħad tidħol l-inqas numru fost l-utenti kollha.</string>
     <string name="label_ReceivedNItems">rċeviet %d oġġetti</string>
     <string name="label_UserIdHint">Irħas</string>
     <string name="label_VerifyInstruct">Kollha phones għandhom jaqblu waħda mill-frażijiet 3-kelma. Qabbel, u mbagħad pick-frażi tqabbil.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">stennija għall-verifika mill-membri kollha…</string>
     <string name="prog_CollectingOthersItems">stennija għall-utenti kollha biex jingħaqdu…</string>

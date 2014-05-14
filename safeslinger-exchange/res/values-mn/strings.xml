@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Та өгүүлбэрээс өөрчлөлт мэдээлсэн байна. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
     <string name="error_MinUsersRequired">%d гишүүдийн доод тал нь мэдээлэл солилцох шаардлагатай байна.</string>
     <string name="error_MoreDataThanUsers">Хариуд нь олсон гэнэтийн мэдээ. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
+    <string name="error_NoDataToExchange">Солилцох шаардлагатай мэдээллийг байхгүй байна.</string>
     <string name="error_NoWordListSelected">Та өмнө өгүүлбэрээс аль нэгийг нь сонгох ёстой.</string>
     <string name="error_OtherGroupCommitDiffer">Хэн нэгэн өгүүлбэрээс өөрчлөлт мэдээлсэн. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
     <string name="error_OutOfMemoryError">Санах ой энэ үйлдлийг дуусгахын тулд хэтэрхий бага юм.</string>
-    <string name="error_ServerAppMessage">Серверүүд зурвас: \' %s \'</string>
-    <string name="error_ServerAppMessageCStr">Серверүүд зурвас: \' %s \'</string>
+    <string name="error_ServerAppMessage">Серверүүд зурвас: %s</string>
+    <string name="error_ServerAppMessageCStr">Серверүүд зурвас: %s</string>
     <string name="error_ServerNotResponding">Серверээс ямар ч хариу арга хэмжээ.</string>
     <string name="error_TimeoutWaitingForAllMembers">Зарим бүлгийн гишүүд өгөгдөл нэмэх хүлээж хугацаа.</string>
     <string name="error_WebCancelledByUser">Хэрэглэгчийн сервер хүсэлтээ цуцалсан.</string>
 
-    <string name="help_size">\' OK \' хамтдаа мэдээллийг солилцох, дарж оролдож байгаа хүмүүсийн тоог сонго.</string>
-    <string name="help_userid">Хэрэв энэ дэлгэцэн Энэ тоо нь хэрэглэгчдийн өвөрмөц бүлэг үүсгэхийн тулд ашиглаж байна. Бүх хэрэглэгчдийн тоог нэгтгэн дүгнээд \' OK \' дэлгэц, дараа нь бүх хэрэглэгчид ижилхэн хамгийн бага тоо, Enter товч байх ёстой. \'</string>
-    <string name="help_verify">Одоо та нар бүх хэрэглэгчдэд эдгээр 3- гэдэг үгийг өгүүлбэрийн нэгийг нь таарч байх ёстой. Хэрэглэгч бүрд адил нийтлэг өгүүлбэр сонгоод \' Дараах \' сонгох ёстой.</string>
+    <string name="help_size">Хамт, хэвлэлийн OK мэдээлэл солилцох гэж байгаа хүмүүсийн тоог сонго.</string>
+    <string name="help_userid">Хэрэв энэ дэлгэцэн Энэ тоо нь хэрэглэгчдийн өвөрмөц бүлэг үүсгэхийн тулд ашиглаж байна. Бүх хэрэглэгчдийн дэлгэцээр тоог нэгтгэн дүгнэ, дараа нь бүх хэрэглэгчид ижилхэн хамгийн бага дугаарыг оруулж, OK-г дарах хэрэгтэй.</string>
+    <string name="help_verify">Одоо та нар бүх хэрэглэгчдэд эдгээр 3-гэдэг үгийг өгүүлбэрийн нэгийг нь таарч байх ёстой. Хэрэглэгч бүрд адил нийтлэг өгүүлбэр сонгоод Next тэмүүлэх ёстой.</string>
 
-    <string name="label_NumericModeHint">Non- Англи хэл</string>
+    <string name="label_CompareScreensNDevices">%s төхөөрөмжийн дэлгэцтэй харьцуул.</string>
+    <string name="label_NumericModeHint">Non-Англи хэл</string>
     <string name="label_PromptInstruct">Энэ тоо нь хэрэглэгчдийн өвөрмөц бүлэг үүсгэхийн тулд ашиглаж байна. Харьцуулж, дараа нь бүх хэрэглэгчдийн дунд хамгийн бага тоог оруул.</string>
     <string name="label_ReceivedNItems">%d эд зүйлсийг хүлээн авсан</string>
     <string name="label_UserIdHint">Хамгийн бага</string>
-    <string name="label_VerifyInstruct">Бүх гар утас 3- гэдэг үгийг өгүүлбэрийн нэгийг нь таарч байх ёстой. Харьцуулж, дараа нь тохирсон өгүүлбэр сонгоорой.</string>
+    <string name="label_VerifyInstruct">Бүх гар утас 3-гэдэг үгийг өгүүлбэрийн нэгийг нь таарч байх ёстой. Харьцуулж, дараа нь тохирсон өгүүлбэр сонгоорой.</string>
+
+    <string name="lib_name">SafeSlinger бирж</string>
 
     <string name="prog_CollectingOthersCommitVerify">бүх гишүүдийн нотолгоо хүлээж…</string>
     <string name="prog_CollectingOthersItems">бүх хэрэглэгчид нэгдэж хүлээж…</string>

@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Enviar invitar conexión con…</string>
+    <string name="action_NewUserRequest">Engadir un convite para contacto Sling Chaves vía…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Cancelar</string>
     <string name="btn_Close">Preto</string>
     <string name="btn_Continue">Continuar</string>
+    <string name="btn_CreateNewKey">Crear nova clave</string>
+    <string name="btn_DeleteKeys">Borrar Chaves</string>
     <string name="btn_discard">Descartar</string>
     <string name="btn_Done">Feito</string>
     <string name="btn_Exit">Saída</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 horas</string>
     <string name="choice_auto_storage">Almacenamento defecto</string>
     <string name="choice_external_storage">Almacenamento externo</string>
+    <string name="choice_font_large">Grande</string>
+    <string name="choice_font_medium">Medio</string>
+    <string name="choice_font_micro">Very Small</string>
+    <string name="choice_font_small">Pequeno</string>
     <string name="choice_internal_storage">Almacenamento interno</string>
     <string name="choice_nolimit">No Limit</string>
     <string name="choice_SaveDirectory">Gardar Directorio</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Permiso Micrófono necesario. Por favor, vai a Configuración de iOS para activar os permisos de micrófono.</string>
     <string name="error_BackupNotFound">Ningún backup para restaurar.</string>
     <string name="error_BackupNotSupportedDevice">O dispositivo non soporta a copia de seguridade de restauración.</string>
-    <string name="error_BadCopyProtectUpgrade">Debido a un erro en Android 4.1, terá que desinstalar e reinstalar SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">Debido a un erro en Android 4.1, vai ter que desinstalar e reinstalar SafeSlinger.</string>
     <string name="error_C2DMRegAccountMissing">A conta de Google é necesaria. Por favor, abra o xestor de conta e engadir unha conta de Google.</string>
     <string name="error_C2DMRegAuthenticationFailed">O rexistro non está dentro do sistema, por favor, ténteo de novo máis tarde, manual.</string>
     <string name="error_C2DMRegInvalidSender">O rexistro non está dispoñible para esta versión, por favor, asegúrese de que hai unha versión actualizada.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Superou a cota mensaxe para este dispositivo. Por favor, inténteo de novo máis tarde.</string>
     <string name="error_PushMsgServiceFail">Servizo de notificación non está dispoñible neste momento. Ténteo enviar a mensaxe máis tarde.</string>
     <string name="error_RecoderError">Non se pode preparar a gravadora de son.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Para comezar, \' Sling Chaves \' con outro teléfono ao mesmo tempo.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Para comezar, Sling Chaves con outro teléfono ao mesmo tempo.</string>
     <string name="error_selectDataToSend">Debe dun anexo ou unha mensaxe de texto para enviar.</string>
     <string name="error_ShareFileDelError">Non se puido eliminar o ficheiro compartido.</string>
     <string name="error_UnableFindPubKey">Non se pode corresponde á clave pública para a chave privada en proveedor de cifrado.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger erro, reinicie.</string>
     <string name="error_VcardParseFailure">Datos de contacto foi formatado incorrectamente.</string>
 
-    <string name="help_find">Use esta pantalla para configurar o nome para intercambiar cos outros. Preme o botón \'Done\' cando rematar.</string>
-    <string name="help_home">Para cambiar datos de identidade, garantir que todos os usuarios están nas proximidades ou no teléfono. O botón \' Comezar de cambio \' van intercambiar só os datos de contacto verificados.</string>
-    <string name="help_identity_menu">\n\nTamén pode cambiar os datos persoais sobre a súa identidade na pantalla, tocando o botón co seu nome. Isto amosará un menú que lle permite \'Editar \' o seu contacto, \'Crear Novo contacto ou\' Usar Outro \' contacto.</string>
+    <string name="help_find">Use esta pantalla para configurar o nome para intercambiar cos outros. Preme no botón Feito cando rematar.</string>
+    <string name="help_home">Para cambiar datos de identidade, garantir que todos os usuarios están nas proximidades ou no teléfono. O botón Inicio Exchange pode cambiar só os datos de contacto verificados.</string>
+    <string name="help_identity_menu">\n\n\nTamén pode cambiar os datos persoais sobre a súa identidade na pantalla, tocando o botón co seu nome. Isto amosará un menú que lle permite editar o seu contacto, crear novos contactos, ou empregar outro contacto.</string>
     <string name="help_Messages">Esta pantalla amosa tódalas mensaxes pasadas e anexos que aínda están dispoñibles para descargar.</string>
-    <string name="help_passphrase">Use esta pantalla para acceder á aplicación con seu contrasinal.</string>
+    <string name="help_passphrase">Use esta pantalla para acceder á aplicación con seu contrasinal. Se esqueciches o teu contrasinal, pode xerar unha nova clave protexida por un contrasinal novo premendo no Passphrase Esqueceches? botón. Preme no nome de usuario para cambiar entre varias claves.</string>
     <string name="help_PickRecip">Contactos con claves SafeSlinger amósanse aquí, seleccione un para enviar a súa mensaxe.</string>
-    <string name="help_save">Cando terminou, o protocolo revela unha lista dos datos de identificación trocados. Seleccione os contactos que quere gardar e prema \'Importar \'.</string>
-    <string name="help_SecureIntroduction">Esta pantalla permite escoller dúas persoas que ten colgados con claves antes de enviar de forma segura as súas claves para o outro. Só ten que premer \' Intro \' cando estea listo.</string>
-    <string name="help_Send">Esta pantalla permite escoller algúns datos e un destinatario para enviar a. Só ten que premer \'Enviar\' cando estea listo.</string>
+    <string name="help_save">Cando terminou, o protocolo revela unha lista dos datos de identificación trocados. Seleccione os contactos que quere gardar e prema Importar.</string>
+    <string name="help_SecureIntroduction">Esta pantalla permite escoller dúas persoas que ten colgados con claves antes de enviar de forma segura as súas claves para o outro. Só ten que premer Intro cando estea listo.</string>
+    <string name="help_Send">Esta pantalla permite escoller algúns datos e un destinatario para enviar a. Só ten que premer en Subir cando remates.</string>
 
     <string name="iOS_contactError">Contactos permiso requirida. Por favor, vai a Configuración do iOS para permitir Axenda permisos.</string>
     <string name="iOS_errorpushtoken">Rexistro de envío falta.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Teléfono:</string>
     <string name="label_DeviceInSendOnlyMode">Enviar modo de só</string>
     <string name="label_DisabledExchSourceKeyChange">A súa clave cambiou: Sling Chaves novo.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Para comezar de mensaxes, os usuarios deben Sling teclas á vez.</string>
     <string name="label_Draft">PROXECTO</string>
     <string name="label_EnabledKeyFormatDeprecated">Formato de clave obsoleta: Sling Chaves novo.</string>
     <string name="label_exchanged">trocadas</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">Nome do ficheiro</string>
     <string name="label_FindInstruct">Introduza o nome que quere que os outros vexan cando se comunicar de forma segura:</string>
     <string name="label_FirstName">Nome</string>
-    <string name="label_Home">Preme no seu nome para engadir ou eliminar datos de contacto, comprobe os elementos que quere compartir, e toque \'Comezar de cambio\', cando outros están dispostos a cambio:</string>
+    <string name="label_Home">Preme no seu nome para engadir ou eliminar datos de contacto, comprobe os elementos que quere compartir e toque Comezar de cambio cando os outros están dispostos a cambio:</string>
     <string name="label_hometag">Casa</string>
     <string name="label_hours">%d horas</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud está activado. Preme o botón \' Done \' cando rematar.</string>
-    <string name="label_InstNoMessages">Non hai mensaxes. Pode enviar unha mensaxe a partir do botón \' Compoñer mensaxe no menú Inicio.</string>
-    <string name="label_InstNoMessagesAndroid">Non hai mensaxes. Pode enviar unha mensaxe a partir da guía \' Compose \'.</string>
-    <string name="label_InstNoRecipients">Ningún destinatario. Atope outro usuario SafeSlinger seguinte e logo na pestana \' Sling Chaves \' para compartir chaves.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud está activado. Preme no botón Feito cando rematar.</string>
+    <string name="label_InstNoMessages">Non hai mensaxes. Pode enviar unha mensaxe a partir do botón de composición de mensaxes no menú Inicio.</string>
+    <string name="label_InstNoMessagesAndroid">Non hai mensaxes. Pode enviar unha mensaxe a partir da guía Compoñer.</string>
+    <string name="label_InstNoRecipients">Para engadir destinatarios, ten que primeiro Sling Chaves cun ou máis usuarios á vez. Tamén podes enviar un convite para contacto Sling Chaves dende o menú.</string>
     <string name="label_InstNoSharedFile">No ficheiro compartido. Conecte o dispositivo co iTunes e arrastra os arquivos ao cartafol compartido.</string>
     <string name="label_InstRecipients">Escolla un destinatario para enviar unha mensaxe a:</string>
     <string name="label_InstSendInvite">Elixe os destinatarios a introducir de forma segura:</string>
     <string name="label_InstSharedFile">Escolla un ficheiro para engadir:</string>
     <string name="label_introduced">introducido</string>
+    <string name="label_inviteSent">Invitado</string>
     <string name="label_Key">Clave:</string>
     <string name="label_LastName">Apelidos</string>
     <string name="label_Me">Me</string>
     <string name="label_messageIntroduceNameToYou">Gustaríame presentar %s contigo.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Para configurar unha conexión de mensaxes seguras, podemos atender ou un do outro, á vez, e logo Sling Chaves só unha vez para comprobar a conexión.</string>
+    <string name="label_messageInviteStartMsg">Podemos comezar mensaxes seguras co código aberto iPhone SafeSlinger ou aplicación Android?</string>
     <string name="label_minutes">%d minutos</string>
     <string name="label_mobiletag">Móbil</string>
     <string name="label_MostRecentOnly">Última só</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger de copia de seguridade atrasado</string>
     <string name="label_safeslingered">(SafeSlinger directo Exchange)</string>
     <string name="label_SaveAccount">Salva conta</string>
-    <string name="label_SaveInstruct">Comprobe os contactos que quere actualizar no seu libro de enderezos, e despois toque \'Importar\' para gardar contactos seguros:</string>
+    <string name="label_SaveInstruct">Comprobe os contactos que quere actualizar no seu libro de enderezos, e despois toque Importar a gardar contactos seguros:</string>
     <string name="label_seconds">%d segundo</string>
     <string name="label_SelectRecip">Seleccionar Destinatario</string>
     <string name="label_sendErrorData">Enviar datos de erro</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Paso 3</string>
     <string name="label_step_4">Paso 4</string>
     <string name="label_step_5">Paso 5</string>
+    <string name="label_summary_auto_attach_retrieval">Descargar automaticamente anexos de mensaxes cando está no sistema</string>
+    <string name="label_summary_auto_decrypt">Descifrar mensaxes automaticamente cando está no sistema</string>
+    <string name="label_summary_remind_backup_delay">Para recibir unha notificación cando a copia de seguridade está conectado.</string>
+    <string name="label_summary_show_tutorial">Amosar un tutorial antes attemping para Sling Keys.</string>
     <string name="label_TapToDecryptFile">Preme para descifrar arquivo</string>
     <string name="label_TapToDecryptMessage">Preme para descifrar</string>
     <string name="label_TapToDownloadFile">Preme para descargar o ficheiro</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Preme para abrir o ficheiro</string>
     <string name="label_TapToResumeDraft">Preme para retomar a mensaxe de borrador</string>
     <string name="label_TapToSendCredentialUpdate">Toque e manteña para enviar actualización credencial.</string>
+    <string name="label_TapToSlingKeys">Chamada para Sling Keys.</string>
     <string name="label_targetAccountLabel">Contactos conta</string>
-    <string name="label_TouchToConfigureBackupSettings">Pode opcionalmente permitir SafeSlinger iCloud backup en iOS Configuración. Preme o botón \' Done \' cando rematar.</string>
+    <string name="label_TouchToConfigureBackupSettings">Pode opcionalmente permitir SafeSlinger iCloud backup en iOS Configuración. Preme no botón Feito cando rematar.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Preme para definir as opcións de copia de seguridade.</string>
     <string name="label_TouchToConfigureCacheTimeout">Chamada para definir os axustes de tempo de caché.</string>
     <string name="label_undefinedTypeLabel">Descoñecido</string>
     <string name="label_UnknownSender">Sender cifrada</string>
     <string name="label_UserName">Nome de Usuario</string>
+    <string name="label_WarnForgotPassphrase">Para protexer os seus datos, SafeSlinger non almacena o seu contrasinal en calquera lugar para a recuperación. Só pode acceder destinatarios e mensaxes creadas baixo o mesmo login contrasinal. Con todo, pode xerar unha nova clave e contrasinal, a continuación, repita Sling Chaves con seus destinatarios.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">As seguintes teclas serán eliminados:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Non hai claves máis recentes do que o seu.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Só claves xerado máis recentemente do que o seu, xerados en %s, poderán ser excluídos.</string>
     <string name="label_worktag">Traballo</string>
 
     <string name="menu_About">Sobre</string>
+    <string name="menu_auto_attach_retrieval">Auto-recuperar anexos</string>
+    <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Cambio</string>
     <string name="menu_ChangePassphrase">Cambio Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteSms">Texto (SMS/MMS)</string>
     <string name="menu_CreateNew">Crear Novo</string>
     <string name="menu_delete">Borrar</string>
-    <string name="menu_deleteThread">Borrar Tema \'%s\'</string>
+    <string name="menu_deleteThread">Borrar %s tema</string>
     <string name="menu_Details">Ver Detalle</string>
     <string name="menu_DownloadDirectory">Directorio de descarga</string>
     <string name="menu_Edit">Editar</string>
+    <string name="menu_EditContact">Editar Contacto</string>
+    <string name="menu_EditName">Editar nome</string>
     <string name="menu_FileManager">Xestor de ficheiros</string>
+    <string name="menu_ForgotPassphrase">Esqueceu da frase de paso?</string>
     <string name="menu_Help">Axudar</string>
     <string name="menu_Introduction">Introdución</string>
     <string name="menu_License">Licenza</string>
     <string name="menu_Logout">Saír</string>
+    <string name="menu_ManagePassphrases">Xestionar Passphrases</string>
+    <string name="menu_message_font_size">Mensaxe Tamaño da Fonte</string>
     <string name="menu_messageCopyText">Copiar Texto</string>
     <string name="menu_messageForward">Para adiante</string>
     <string name="menu_Remove">Eliminar</string>
-    <string name="menu_SelectShareApp">Enviar Aplicación</string>
+    <string name="menu_restore_default">Restaurar configuración por defecto</string>
+    <string name="menu_ringtone">Opinión</string>
+    <string name="menu_SelectShareApp">Engadir contacto invitación</string>
     <string name="menu_sendFeedback">Enviar comentario</string>
     <string name="menu_SendUpdate">Enviar actualización</string>
     <string name="menu_Settings">Configuración</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Sling Chaves</string>
     <string name="menu_TagListMessages">Mensaxes</string>
     <string name="menu_UseAnother">Usar Outro</string>
-    <string name="menu_UseContactPerson">Use Contacto \'%s\'</string>
+    <string name="menu_UseContactPerson">Use Contacto %s</string>
     <string name="menu_UseNoContact">Use nome só</string>
-    <string name="menu_UseProfilePerson">Usar perfil \'%s\'</string>
+    <string name="menu_UseProfilePerson">Use %s Perfil</string>
+    <string name="menu_vibrate">Vibrar</string>
 
     <string name="prog_decrypting">descifrar…</string>
     <string name="prog_encrypting">cifrar…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Avanzado</string>
     <string name="section_backup">Backup</string>
     <string name="section_general">Xeral</string>
+    <string name="section_notification">Notificacións</string>
+    <string name="section_storage">Almacenamento</string>
 
     <string name="state_BackupRestored">Backup restaurado.</string>
     <string name="state_FileDeleted">%s arquivo eliminado.</string>
     <string name="state_FileSent">Mensaxe enviada.</string>
+    <string name="state_InvitationAdded">Invitación engadiu.</string>
     <string name="state_MessageSavedAsDraft">A mensaxe gardouse en borrador.</string>
     <string name="state_MessagesDeleted">%d mensaxes borradas.</string>
     <string name="state_PassphraseUpdated">Passphrase actualizado.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">Contactos %s importado.</string>
     <string name="state_TextCopiedToClipboard">Texto copiado para portapapeis.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger está deseñado para compartir facilmente datos de identidade, en persoa ou por teléfono, dentro do sistema, privado, e intacto. Cada persoa que comparte con crea unha canle segura end-to-end para enviar mensaxes.\n\nCaracterísticas:\n- Cambiar facilmente a información de contacto con outras persoas\n- Textos seguridade funda, fotos, calquera cousa!\n- Forte cifrado protexe a súa información\n\ne-mail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger está deseñado para compartir facilmente datos de identidade, en persoa ou por teléfono, dentro do sistema, privado, e intacto. Cada persoa que comparte con crea unha canle segura end-to-end para enviar mensaxes.\n\nCaracterísticas: intercambiar\n-Facilmente información de contacto con outros\n-firmemente textos estilingue, fotos, calquera cousa!\n-forte cifrado protexe a súa información\n\ncorreo electrónico: %2$s\nweb: %3$s</string>
     <string name="text_KeywordExchange">Intercambio</string>
     <string name="text_KeywordIdentity">Identidade</string>
     <string name="text_KeywordKey">Clave</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Seguridade</string>
     <string name="text_LanguagesProvidedBy">Idiomas proporcionados por:</string>
     <string name="text_RelatedSearchTerms">Termos relacionados:</string>
-    <string name="text_Requirements">Requisitos:\n1. Debe ser instalado en un mínimo de 2 dispositivos.\n2. Unha conexión a Internet debe estar activa.</string>
+    <string name="text_Requirements">Requisitos:.\n1 Debe ser instalado en un mínimo de 2 dispositivos.\n2. Unha conexión a Internet debe estar activa.</string>
     <string name="text_SourceCodeRepo">de código aberto: %s</string>
-    <string name="text_WhatsNew">- Correccións de estabilidade.</string>
+    <string name="text_WhatsNew">-Estabilidade fixa.</string>
 
     <string name="title_About">Sobre</string>
     <string name="title_camera">Cámara</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Sling Chaves Assistant</string>
     <string name="title_FileOptions">Opcións de anexos</string>
     <string name="title_find">Instalación</string>
+    <string name="title_font_size">Escolla un tamaño de fonte</string>
     <string name="title_home">Comezar cambio</string>
     <string name="title_HomePanel">Casa</string>
     <string name="title_MessageDetail">Mensaxe</string>

@@ -68,8 +68,7 @@ import edu.cmu.cylab.starslinger.model.RecipientRow;
 public class PickRecipientsActivity extends BaseActivity implements OnItemClickListener {
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
     protected static final int RESULT_RECIPSEL = 4;
-    private static final int MENU_HELP = 170;
-    private static final int MENU_FEEDBACK = 490;
+    protected static final int RESULT_SLINGKEYS = 5;
 
     private boolean mallowExch = false;
     private boolean mallowIntro = false;
@@ -139,10 +138,17 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        MenuItem item = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
-                R.drawable.ic_action_help);
-        MenuCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+        MenuItem iAdd = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+                R.drawable.ic_action_add_person);
 
+        MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
+
+        MenuItem iHelp = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
+                R.drawable.ic_action_help);
+        MenuCompat.setShowAsAction(iHelp, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+
+        menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+                R.drawable.ic_action_add_person);
         menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);
 
@@ -158,6 +164,9 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
                 return true;
             case MENU_FEEDBACK:
                 SafeSlinger.getApplication().showFeedbackEmail(PickRecipientsActivity.this);
+                return true;
+            case MENU_CONTACTINVITE:
+                showAddContactInvite();
                 return true;
             default:
                 break;
@@ -197,24 +206,24 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         }
         if (c != null) {
             if (c.getCount() <= 0) {
-                tvInstruct.setText(R.string.label_InstNoRecipients);
-
                 // turn reminder on so they will know how to find recipients
                 SafeSlingerPrefs.setShowSlingKeysReminder(true);
+
+                tvInstruct.setText(R.string.label_InstNoRecipients);
+                cbMostRecentOnly.setVisibility(View.GONE);
+            } else {
+                cbMostRecentOnly.setVisibility(View.VISIBLE);
             }
             while (c.moveToNext()) {
                 RecipientRow recipientRow = new RecipientRow(c);
 
                 boolean foundNewer = false;
                 // ignore if needed...
-                if (cbMostRecentOnly.isChecked()) {
-                    Cursor b = dbRecipient.fetchAllNewerRecipients(recipientRow, true);
-                    if (b != null) {
-                        while (b.moveToNext()) {
-                            // there are some newer keys, this should not be
-                            foundNewer = true;
-                        }
-                        b.close();
+                if (cbMostRecentOnly.isChecked() && !recipientRow.isInvited()) {
+                    int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
+                    if (newerRecips > 0) {
+                        // there are some newer keys, this should not be
+                        foundNewer = true;
                     }
                 }
 
@@ -253,22 +262,28 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         RecipientRow recip = mcontacts.get(pos);
         boolean doselection = true;
 
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
-        Cursor c = dbRecipient.fetchAllNewerRecipients(recip, false);
-        if (c != null) {
-            if (c.moveToNext()) {
+        if (recip.isInvited()) {
+            doSlingKeys();
+        } else {
+            RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
+            int newerRecips = dbRecipient.getAllNewerRecipients(recip, false);
+            if (newerRecips > 0) {
                 // there are some newer keys, we should warn them
                 showQuestion(
                         String.format(getString(R.string.ask_ConfirmUseOlderDeviceOrKey),
                                 recip.getName()), pos);
                 doselection = false;
             }
-            c.close();
-        }
 
-        if (doselection) {
-            doRecipientSelection(recip);
+            if (doselection) {
+                doRecipientSelection(recip);
+            }
         }
+    }
+
+    public void doSlingKeys() {
+        setResult(RESULT_SLINGKEYS);
+        finish();
     }
 
     public void doRecipientSelection(RecipientRow recip) {
@@ -380,6 +395,10 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
                 return xshowHelp(PickRecipientsActivity.this, args).create();
             case DIALOG_QUESTION:
                 return xshowQuestion(PickRecipientsActivity.this, args).create();
+            case DIALOG_CONTACTINVITE:
+                return xshowAddContactInvite(this).create();
+            case DIALOG_CONTACTTYPE:
+                return xshowCustomContactPicker(this, args).create();
             default:
                 break;
         }

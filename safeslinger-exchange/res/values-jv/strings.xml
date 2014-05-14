@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Sampeyan wis dilapurake prabédan ing frasa. Miwiti ngganti maneh.</string>
     <string name="error_MinUsersRequired">A minimal %d anggota sing dibutuhaké ijolan data.</string>
     <string name="error_MoreDataThanUsers">Data ora kaduga ditemokaké ing ngganti. Miwiti ngganti maneh.</string>
+    <string name="error_NoDataToExchange">Ing ngganti wis ilang data dibutuhake.</string>
     <string name="error_NoWordListSelected">Sampeyan kudu milih salah siji saka phrases sadurungé dibanjuraké.</string>
     <string name="error_OtherGroupCommitDiffer">Wong sing dilapurake prabédan ing frasa. Miwiti ngganti maneh.</string>
     <string name="error_OutOfMemoryError">Memori banget kurang kanggo ngrampungake operasi iki.</string>
-    <string name="error_ServerAppMessage">Server Pesen: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Server Pesen: \'%s\'</string>
+    <string name="error_ServerAppMessage">Server Pesen: %s</string>
+    <string name="error_ServerAppMessageCStr">Server Pesen: %s</string>
     <string name="error_ServerNotResponding">Ora ana respon saka server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Wektu entek nunggu sawetara anggota grup kanggo nambah data.</string>
     <string name="error_WebCancelledByUser">Anggota dibatalake server request.</string>
 
-    <string name="help_size">Pilih nomer wong sing nyoba kanggo ijolan data bebarengan banjur pencet \'OK \'.</string>
-    <string name="help_userid">Iki nomer ing layar iki digunakake kanggo nggawe grup unik saka kedhaftar. Maneh nomer ing kabeh kedhaftar \' layar, banjur kabeh kedhaftar ngirim ketik padha paling nomer banjur pencet \' OK \'.</string>
-    <string name="help_verify">Saiki, sampeyan kudu cocog siji iki phrases 3-tembung karo kabeh kedhaftar. Saben panganggo kudu milih padha umum tembung, banjur penet \' Sabanjure \'.</string>
+    <string name="help_size">Pilih nomer wong sing nyoba kanggo ijolan data bebarengan banjur pencet OK.</string>
+    <string name="help_userid">Iki nomer ing layar iki digunakake kanggo nggawe grup unik saka kedhaftar. Maneh nomer ing layar kabeh kedhaftar \', banjur kabeh kedhaftar ngirim ketik padha paling nomer banjur pencet OK.</string>
+    <string name="help_verify">Saiki, sampeyan kudu cocog siji iki phrases 3-tembung karo kabeh kedhaftar. Saben panganggo kudu milih padha umum tembung, banjur pencet Sabanjure.</string>
 
+    <string name="label_CompareScreensNDevices">Bandingake layar ing %s piranti.</string>
     <string name="label_NumericModeHint">Non-English</string>
     <string name="label_PromptInstruct">Iki nomer digunakake kanggo nggawe grup unik saka kedhaftar. Bandingake, banjur ketik nomer paling antarane kabeh kedhaftar.</string>
     <string name="label_ReceivedNItems">ditampa %d item</string>
     <string name="label_UserIdHint">Paling</string>
     <string name="label_VerifyInstruct">Kabeh telpon kudu cocog salah siji saka phrases 3-tembung. Bandingake, banjur methik ukara cocog.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">nunggu verifikasi saka kabeh anggota…</string>
     <string name="prog_CollectingOthersItems">nunggu kabeh kedhaftar kanggo nggabungake…</string>

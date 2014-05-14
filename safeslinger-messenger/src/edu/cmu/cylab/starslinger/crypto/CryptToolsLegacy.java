@@ -22,10 +22,8 @@ import android.os.Build;
 import android.text.TextUtils;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlinger;
-import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.model.CryptoMsgPrivateData;
 import edu.cmu.cylab.starslinger.model.PolarSslPrivateData;
-import edu.cmu.cylab.starslinger.util.SSUtil;
 
 @Deprecated
 public class CryptToolsLegacy extends CryptTools {
@@ -72,7 +70,7 @@ public class CryptToolsLegacy extends CryptTools {
         // 1 - read
         byte[] encRaw = null;
         synchronized (SafeSlinger.sDataLock) {
-            FileInputStream encKeyFile = ctx.openFileInput(getCurrentKeyFileOld());
+            FileInputStream encKeyFile = ctx.openFileInput(getKeyFileOld());
             encRaw = new byte[encKeyFile.available()];
             encKeyFile.read(encRaw);
             encKeyFile.close();
@@ -124,14 +122,10 @@ public class CryptToolsLegacy extends CryptTools {
     }
 
     @Deprecated
-    public static String getCurrentKeyFileOld() {
-        int currUser = SafeSlingerPrefs.getUser();
-        if (currUser == 0) {
-            return FILENAME_SECKEY_LEGACY_PSSLPD;
-        } else {
-            return (SSUtil.getFileNameOnly(FILENAME_SECKEY_LEGACY_PSSLPD) + currUser + "." + SSUtil
-                    .getFileExtensionOnly(FILENAME_SECKEY_LEGACY_PSSLPD));
-        }
+    public static String getKeyFileOld() {
+        // multiple keys not allowed in legacy crypto releases,
+        // so only check main key file
+        return FILENAME_SECKEY_LEGACY_PSSLPD;
     }
 
     @Deprecated
@@ -140,7 +134,7 @@ public class CryptToolsLegacy extends CryptTools {
         try {
             synchronized (SafeSlinger.sDataLock) {
 
-                FileInputStream f = ctx.openFileInput(getCurrentKeyFileOld());
+                FileInputStream f = ctx.openFileInput(getKeyFileOld());
                 f.close();
             }
             return true;

@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">आपण वाक्ये मध्ये एक फरक नोंदवली आहे. पुन्हा विनिमय सुरू.</string>
     <string name="error_MinUsersRequired">%d सदस्यांची किमान डेटा अदलाबदल करणे आवश्यक असते.</string>
     <string name="error_MoreDataThanUsers">विनिमय आढळले अनपेक्षित डेटा. पुन्हा विनिमय सुरू.</string>
+    <string name="error_NoDataToExchange">विनिमय आवश्यक डेटा गहाळ आहे.</string>
     <string name="error_NoWordListSelected">आपण पुढे जाण्यापूर्वी वाक्ये एक निवडणे आवश्यक आहे.</string>
     <string name="error_OtherGroupCommitDiffer">कोणीतरी वाक्ये मध्ये एक फरक नोंदवले. पुन्हा विनिमय सुरू.</string>
     <string name="error_OutOfMemoryError">मेमरी हे ऑपरेशन पूर्ण करण्यासाठी खूप कमी आहे.</string>
-    <string name="error_ServerAppMessage">सर्व्हर संदेश: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">सर्व्हर संदेश: \'%s\'</string>
+    <string name="error_ServerAppMessage">सर्व्हर संदेश: %s</string>
+    <string name="error_ServerAppMessageCStr">सर्व्हर संदेश: %s</string>
     <string name="error_ServerNotResponding">सर्व्हरकडून कोणताही प्रतिसाद.</string>
     <string name="error_TimeoutWaitingForAllMembers">काही गट सदस्य डेटा जोडण्यासाठी प्रतीक्षेत कालबाह्य.</string>
     <string name="error_WebCancelledByUser">वापरकर्ता सर्व्हरशी विनंती रद्द केली.</string>
 
-    <string name="help_size">\' ओके \' एकत्र डेटा देवाणघेवाण आणि दाबा प्रयत्न करणार्या लोकांची संख्या निवडा.</string>
-    <string name="help_userid">या पडद्यावरील ही संख्या वापरकर्त्यांची एक अद्वितीय गट तयार केला जातो. सर्व वापरकर्ते संख्या पुनरावलोकन \' ओके \' पडदे, नंतर सर्व वापरकर्त्यांना समान सर्वात कमी संख्या आणि एंटर दाबा पाहिजे \'.</string>
-    <string name="help_verify">आता, आपण सर्व वापरकर्त्यांना या 3-शब्द वाक्ये एक जुळणे आवश्यक. प्रत्येक ह्याच सामान्य वाक्यांश, आणि दाबा \' पुढील \' निवडणे आवश्यक आहे.</string>
+    <string name="help_size">एकत्र आणि OK दाबा डेटा अदलाबदल करण्यासाठी प्रयत्न करणार्या लोकांची संख्या निवडा.</string>
+    <string name="help_userid">या पडद्यावरील ही संख्या वापरकर्त्यांची एक अद्वितीय गट तयार केला जातो. सर्व वापरकर्ते \' पडद्यावर क्रमांक पुनरावलोकन, नंतर सर्व वापरकर्त्यांना समान सर्वात कमी संख्या प्रविष्ट करा आणि ओके दाबले पाहिजे.</string>
+    <string name="help_verify">आता, आपण सर्व वापरकर्त्यांना या 3-शब्द वाक्ये एक जुळणे आवश्यक. प्रत्येक ह्याच सामान्य वाक्यांश निवडा, आणि पुढे दाबा आवश्यक आहे.</string>
 
+    <string name="label_CompareScreensNDevices">%s डिव्हाइसवर पडदे तुलना करा.</string>
     <string name="label_NumericModeHint">बिगर इंग्रजी</string>
     <string name="label_PromptInstruct">ही संख्या वापरकर्ते एक अद्वितीय गट तयार केला जातो. तुलना, आणि नंतर सर्व वापरकर्त्यांसाठी आपापसांत सर्वात कमी संख्या प्रविष्ट करा.</string>
     <string name="label_ReceivedNItems">%d आयटम प्राप्त</string>
     <string name="label_UserIdHint">सर्वात कमी</string>
     <string name="label_VerifyInstruct">सर्व फोन 3-शब्द वाक्ये एक जुळणे आवश्यक. तुलना, आणि नंतर जुळणारा वाक्यांश निवडा.</string>
+
+    <string name="lib_name">SafeSlinger एक्सचेंज</string>
 
     <string name="prog_CollectingOthersCommitVerify">सर्व सदस्यांकडून सत्यापन प्रतीक्षेत…</string>
     <string name="prog_CollectingOthersItems">सर्व वापरकर्त्यांना सहभागी होण्यासाठी वाट…</string>

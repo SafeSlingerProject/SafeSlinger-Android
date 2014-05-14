@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Send kugu marti- link leh…</string>
+    <string name="action_NewUserRequest">Add a martiqaad xiriir shakaalka Furayaasha via…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Cancel</string>
     <string name="btn_Close">Close</string>
     <string name="btn_Continue">Continue</string>
+    <string name="btn_CreateNewKey">Create an New Key</string>
+    <string name="btn_DeleteKeys">Delete Furayaasha</string>
     <string name="btn_discard">Daadi</string>
     <string name="btn_Done">QABTAY</string>
     <string name="btn_Exit">Exit</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 hours</string>
     <string name="choice_auto_storage">Kaydinta Default</string>
     <string name="choice_external_storage">Kaydinta External</string>
+    <string name="choice_font_large">Large</string>
+    <string name="choice_font_medium">Dhexdhexaad</string>
+    <string name="choice_font_micro">Aad bay u yar</string>
+    <string name="choice_font_small">Small</string>
     <string name="choice_internal_storage">Kaydinta Gudaha</string>
     <string name="choice_nolimit">Limit No</string>
     <string name="choice_SaveDirectory">Save Directory</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Ogolaansho Manbar loo baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Manbar.</string>
     <string name="error_BackupNotFound">No raad raac ah si loo soo celiyo.</string>
     <string name="error_BackupNotSupportedDevice">Device taageeraan uusan raad raac celiyo.</string>
-    <string name="error_BadCopyProtectUpgrade">Maaddaama ay kutaan ah ee Android 4.1, waxaad yeelan doontaa uninstall iyo dib SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">Maaddaama ay kutaan ah ee Android 4.1, waxaad yeelan doontaa in ay uninstall iyo dib SafeSlinger.</string>
     <string name="error_C2DMRegAccountMissing">Account Google A waxaa loo baahan yahay. Fadlan furi maamulaha account markaasna ku dar xisaabta ku Google a.</string>
     <string name="error_C2DMRegAuthenticationFailed">Diiwaan-gelinta oo aan lagana sugaa, fadlan retry joogu u dambe.</string>
     <string name="error_C2DMRegInvalidSender">Diiwaangelinta aan la heli karin, waayo version this, fadlan hubi for version ah updated.</string>
@@ -121,10 +127,10 @@
     <string name="error_PushMsgQuotaExceeded">Waxaad sii badnayeen soo qaato fariinta aallada this. Fadlan dambe retry.</string>
     <string name="error_PushMsgServiceFail">Adeegga Notification aan la heli karin waqtigan. Fadlan isku day in aad soo dirto fariin uu mar dambe.</string>
     <string name="error_RecoderError">Ma ku diyaarin karaa recorder maqal ah.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Si aad u bilaabaan, \' shakaalka Furayaasha \' with phone kale waqti isku mid ah.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Si aad u bilaabaan, shakaalka Furayaasha leh phone kale waqti isku mid ah.</string>
     <string name="error_selectDataToSend">Waxaad u baahan tahay lifaaq ama fariin qoraal u soo diri a.</string>
     <string name="error_ShareFileDelError">Ma ka saari kartaa faylka la wadaago.</string>
-    <string name="error_UnableFindPubKey">Awoodi waayay inuu ku muhiimka ah ee dadweynaha si ay ugu muhiimsan ee gaarka loo leeyahay ee bixiye -xegeeno.</string>
+    <string name="error_UnableFindPubKey">Awoodi waayay inuu ku muhiimka ah ee dadweynaha si ay ugu muhiimsan ee gaarka loo leeyahay ee bixiye-xegeeno.</string>
     <string name="error_UnableToSaveMessageInDB">Awoodin in uu badbaadiyo in ay database fariinta.</string>
     <string name="error_UnableToSaveRecipientInDB">Awoodin in uu badbaadiyo in ay database qaataha.</string>
     <string name="error_UnableToUpdateMessageInDB">Awoodin in ay cusboonaysiiso database fariinta.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">Qalad SafeSlinger, fadlan la bilaabi.</string>
     <string name="error_VcardParseFailure">Xogta Contact ahaa Fedaral si qaldan.</string>
 
-    <string name="help_find">Isticmaal screen this to dhigay magacaaga si ay isu dhaafsadaan dadka kale. Qasabadda \'qabtay\' button markaad dhamaysid.</string>
-    <string name="help_home">Si aad isu dhaafsadaan xogta aqoonsiga, si loo hubiyo dhamaan isticmaalayaasha u dhow ama telefoonka ku yihiin. \' Ka bilow Exchange \' The badhanka beddelan doonaa oo keliya xogta xiriir la hubiyaa.</string>
-    <string name="help_identity_menu">\n\nWaxa kale oo aad beddeli kartaa macluumaadka shakhsiyeed oo ku saabsan aqoonsiga on screen this haray adigoo on badhanka leh magacaaga. Tani waxay muujiyaan doonaa menu a kuu oggolaadaan in aad \' Edit \' xidhiidhka aad, \' Create New \' xiriir, ama \' Isticmaal kale oo \' xiriir.</string>
+    <string name="help_find">Isticmaal screen this to dhigay magacaaga si ay isu dhaafsadaan dadka kale. Qasabada badhanka qabtay markaad dhamaysid.</string>
+    <string name="help_home">Si aad isu dhaafsadaan xogta aqoonsiga, si loo hubiyo dhamaan isticmaalayaasha u dhow ama telefoonka ku yihiin. The Ku bilow badhanka Exchange beddelan doonaa oo keliya xogta xiriir la hubiyaa.</string>
+    <string name="help_identity_menu">\n\n\nWaxa kale oo aad beddeli kartaa macluumaadka shakhsiyeed oo ku saabsan aqoonsiga on screen this haray adigoo on badhanka leh magacaaga. Tani waxay muujiyaan doonaa menu a kuu oggolaadaan in aad Edit xidhiidhka aad, Create an xiriir New, ama isticmaal xiriir kale oo.</string>
     <string name="help_Messages">Shaashada Tan waxay ku tusaysaa oo dhan farriimaha la soo dhaafay, iyo lifaaqyada in weli waxaa laga heli karaa for download.</string>
-    <string name="help_passphrase">Isticmaal shaashada si login codsiga aad u passphrase.</string>
+    <string name="help_passphrase">Isticmaal shaashada si login codsiga aad u passphrase. Haddii aad illowday passphrase, aad dhalin laga yaabaa in muhiimka ah oo cusub oo la ilaaliyo by passphrase cusub ku haray Passphrase ee Forgot? badhanka. Qasabada magaca user ay u kala bedesho furayaasha kala duwan.</string>
     <string name="help_PickRecip">La xiriirida furayaasha SafeSlinger halkan bandhigay, dooro mid u soo dirto fariin ay u.</string>
-    <string name="help_save">Marka ay dhammaadaan, maamuuska u muujin doonaa liiska data aqoonsiga ku badelay. Dooro xiriirrada aad rabtid in aad ku badbaadin iyo taabo \' Soodejineed \'.</string>
-    <string name="help_SecureIntroduction">Shaashada kuu ogolaanayaa inaad xulo laba qof oo aad wadhfiyey ayuu furayaasha leh ka hor si ammaan ah u diri furayaasha ay si midba midka kale. Simply riix \' Isbar \' marka uu diyaar.</string>
-    <string name="help_Send">Shaashada kuu ogolaanayaa inaad dooro qaar ka mid ah macluumaadka iyo qaataha ah in ay u dirto. Simply riix \' Send \' marka uu diyaar.</string>
+    <string name="help_save">Marka ay dhammaadaan, maamuuska u muujin doonaa liiska data aqoonsiga ku badelay. Dooro xiriirrada aad rabtid in aad ku badbaadin iyo taabo gelinta.</string>
+    <string name="help_SecureIntroduction">Shaashada kuu ogolaanayaa inaad xulo laba qof oo aad wadhfiyey ayuu furayaasha leh ka hor si ammaan ah u diri furayaasha ay si midba midka kale. Simply riix Isbar marka uu diyaar.</string>
+    <string name="help_Send">Shaashada kuu ogolaanayaa inaad dooro qaar ka mid ah macluumaadka iyo qaataha ah in ay u dirto. Simply riix soo dir marka uu diyaar.</string>
 
     <string name="iOS_contactError">Contacts ogolaansho looga baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Contacts.</string>
     <string name="iOS_errorpushtoken">Diiwaangelinta riixdo maqan yahay.</string>
@@ -153,12 +159,13 @@
     <string name="label_backupRequestDate">Request ee kaabta Last</string>
     <string name="label_backupURL">Kaabta URL</string>
     <string name="label_ClickForNMsgs">Taabanina inay dib u eegaan %d farriimo aad</string>
-    <string name="label_ComposeHint">-ridi Message</string>
+    <string name="label_ComposeHint">-Ridi Message</string>
     <string name="label_ContactName">Your Name</string>
     <string name="label_days">%d maalmood</string>
     <string name="label_Device">Device:</string>
-    <string name="label_DeviceInSendOnlyMode">Mode soo dir - kaliya</string>
+    <string name="label_DeviceInSendOnlyMode">Mode soo dir-kaliya</string>
     <string name="label_DisabledExchSourceKeyChange">Your fure is bedeshay: shakaalka Furayaasha mar kale.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Si aad u bilawdo Fariin, labada users shakaalka Furayaasha waqti isku mid ah waa in.</string>
     <string name="label_Draft">MABDAI\'GA</string>
     <string name="label_EnabledKeyFormatDeprecated">Format Key maxay HIV: shakaalka Furayaasha mar kale.</string>
     <string name="label_exchanged">ku badelay</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">File Name</string>
     <string name="label_FindInstruct">Geli magaca aad rabto inaad dadka kale si aad u aragto marka la xidhiidhka dadka si ammaan ah:</string>
     <string name="label_FirstName">Magaca Hore</string>
-    <string name="label_Home">Qasabada magacaaga ama ku darto ciribtiro xiriir, hubi alaabta aad rabto in aad la wadaagto, loo hormariyo \'Ka bilow Exchange\' dadka kale marka ay diyaar u yihiin is dhaafsiga:</string>
+    <string name="label_Home">Qasabada magacaaga ama ku darto ciribtiro xiriir, hubi alaabta aad rabto in aad la wadaagto, loo hormariyo Ku bilow Exchange dadka kale marka ay diyaar u yihiin is dhaafsiga:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d saacadood</string>
-    <string name="label_iCloudEnable">SafeSlinger oodaa laguusoo. Qasabadda \' qabtay \' button markaad dhamaysid.</string>
-    <string name="label_InstNoMessages">No fariimaha. Waxaa laga yaabaa inaad soo dirto fariin ka timid \' -ridi Message \' button on menu Home.</string>
-    <string name="label_InstNoMessagesAndroid">No fariimaha. Waxaa laga yaabaa inaad fariin ka soo tab \' koobanahay \' diri.</string>
-    <string name="label_InstNoRecipients">Qaata No. Find user kale SafeSlinger dhow iyo taaban tab \' shakaalka Furayaasha \' si ay u wadaagaan furayaasha.</string>
+    <string name="label_iCloudEnable">SafeSlinger oodaa laguusoo. Qasabada badhanka qabtay markaad dhamaysid.</string>
+    <string name="label_InstNoMessages">No fariimaha. Waxaa laga yaabaa inaad fariin ka badhanka koobanahay Message soo diri on menu Home.</string>
+    <string name="label_InstNoMessagesAndroid">No fariimaha. Waxaa laga yaabaa inaad fariin ka tab koobanahay u diri.</string>
+    <string name="label_InstNoRecipients">Si aad ku dari qaata, waa in marka hore aad shakaalka Furayaasha leh hal ama in ka badan kuwa kale ee isticmaala waqti isku mid ah. Waxa kale oo aad soo diri kartaa xiriir martiqaad shakaalka Furayaasha ka soo menu.</string>
     <string name="label_InstNoSharedFile">File No la wadaago. Connect qalab aad ula Lugood iyo files jiidid si buugyaraha la wadaago.</string>
     <string name="label_InstRecipients">Soo qaado qaataha ah u soo dirto fariin to:</string>
     <string name="label_InstSendInvite">Soo qaado qaata in ay si ammaan ah ku bilaabi:</string>
     <string name="label_InstSharedFile">Soo qaado faylka ay u soo lifaaq:</string>
     <string name="label_introduced">soo bandhigay</string>
+    <string name="label_inviteSent">Casuumay</string>
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Name Last</string>
     <string name="label_Me">Me</string>
     <string name="label_messageIntroduceNameToYou">Waxaan jeclaan lahaa in aan soo saarno %s in aad.</string>
+    <string name="label_messageInviteInstall">App SafeSlinger: %s</string>
+    <string name="label_messageInviteSetupInst">Si aad computer xiriir ah ayaa fariin ammaan, waxaanu kula kulmi kartaa ama telefoon kasta oo kale oo wakhti isku mid ah, ka dibna shakaalka Furayaasha kaliya hal jeer si loo xaqiijiyo xidhiidhka ka.</string>
+    <string name="label_messageInviteStartMsg">Waxaan ku bilaabi karaa Fariin ammaan leh isha ugu furan yahay SafeSlinger iPhone ama app Android?</string>
     <string name="label_minutes">%d daqiiqo</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Most Recent kaliya</string>
@@ -200,7 +211,7 @@
     <string name="label_PassHintRepeat">Passphrase Repeat</string>
     <string name="label_passPhraseCacheTtl">Cache Passphrase</string>
     <string name="label_PassPhraseIsCached">Cached Passphrase</string>
-    <string name="label_phoneOnly">phone - kaliya</string>
+    <string name="label_phoneOnly">phone-kaliya</string>
     <string name="label_Photo">Photo</string>
     <string name="label_PublicKeyID">ID Key</string>
     <string name="label_PushTokenID">ID Registration riixdo</string>
@@ -208,9 +219,9 @@
     <string name="label_ReportedInactive">Reported %s aan firfircooneyn.</string>
     <string name="label_restoreCompleteDate">Last Celinta Dhameystiray</string>
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger raad raac dib u</string>
-    <string name="label_safeslingered">( SafeSlinger Direct Exchange )</string>
+    <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Save the Account</string>
-    <string name="label_SaveInstruct">Hubi xiriirada aad doonayso inaad cusboonaysiiso in aad buug cinwaanka, ka dibna tubbada ah \'Soodejineed\' si ay u badbaadiyaan xiriirka la aamin ah:</string>
+    <string name="label_SaveInstruct">Hubi xiriirada aad doonayso inaad cusboonaysiiso in aad buug cinwaanka, ka dibna tubbada ah Soodejineed si loo badbaadiyo contacts ammaan:</string>
     <string name="label_seconds">%d seconds</string>
     <string name="label_SelectRecip">Select Qaate</string>
     <string name="label_sendErrorData">Send Error Data</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Tallaabada 3</string>
     <string name="label_step_4">Tallaabada 4</string>
     <string name="label_step_5">Talaabada 5</string>
+    <string name="label_summary_auto_attach_retrieval">Si toos ah download attachments fariin marka meesha maadan</string>
+    <string name="label_summary_auto_decrypt">Si toos ah decrypt fariimaha marka meesha maadan</string>
+    <string name="label_summary_remind_backup_delay">Helitaanka wargelinta marka raad raac offline waa.</string>
+    <string name="label_summary_show_tutorial">Tus umeerin ay ka hor attemping si shakaalka Furayaasha.</string>
     <string name="label_TapToDecryptFile">Qasabada si decrypt file</string>
     <string name="label_TapToDecryptMessage">Qasabada si decrypt</string>
     <string name="label_TapToDownloadFile">Qasabada si file</string>
@@ -229,44 +244,61 @@
     <string name="label_TapToOpenFile">Qasabada in la furo file</string>
     <string name="label_TapToResumeDraft">Tuubada si ay u bilaabaan qabyada farriin</string>
     <string name="label_TapToSendCredentialUpdate">Qasabada iyo Qabsada soo diri update shahaadada aqoonsiga.</string>
+    <string name="label_TapToSlingKeys">Qasabada si shakaalka Furayaasha.</string>
     <string name="label_targetAccountLabel">Contacts Account</string>
-    <string name="label_TouchToConfigureBackupSettings">Waxaad optionally awood laga yaabaa in raad raac SafeSlinger oodaa in Settings arrimo. Qasabadda \' qabtay \' button markaad dhamaysid.</string>
+    <string name="label_TouchToConfigureBackupSettings">Waxaad optionally awood laga yaabaa in raad raac SafeSlinger oodaa in Settings arrimo. Qasabada badhanka qabtay markaad dhamaysid.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Taabanina reserved goobaha raad raac ah.</string>
     <string name="label_TouchToConfigureCacheTimeout">Taabanina reserved cache goobaha timeout.</string>
     <string name="label_undefinedTypeLabel">Unknown</string>
     <string name="label_UnknownSender">Qofka dirayo laga fiirsado ka</string>
     <string name="label_UserName">User Name</string>
+    <string name="label_WarnForgotPassphrase">Si loo ilaaliyo xogta aad, SafeSlinger ma kaydka passphrase meel kasta for soo kabashada. Waxaad heli karaa oo keliya dadka iyo fariimaha abuuray ka yar login ee passphrase isku. Si kastaba ha ahaatee, aad dhalin laga yaabaa in muhiimka ah ee cusub iyo passphrase, kadibna ku celi shakaalka Furayaasha kula qaata aad.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">The furayaasha soo socdo waa laga tirtirayaa:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Ma jiraan wax furayaasha more dhawaan sidaadoo kale.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Furayaasha oo kaliya guud more dhawaan ka badan adigaa iska leh, guud ahaan on %s, in la tirtiro.</string>
     <string name="label_worktag">Work</string>
 
     <string name="menu_About">About</string>
+    <string name="menu_auto_attach_retrieval">Auto-ceshano attachments</string>
+    <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Change</string>
     <string name="menu_ChangePassphrase">Change Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteSms">Texte (SMS/MMS)</string>
     <string name="menu_CreateNew">Create an New</string>
     <string name="menu_delete">Delete</string>
-    <string name="menu_deleteThread">Delete Thread \' %s \'</string>
+    <string name="menu_deleteThread">Delete %s Thread</string>
     <string name="menu_Details">View Detail</string>
     <string name="menu_DownloadDirectory">Download Directory</string>
     <string name="menu_Edit">Edit</string>
+    <string name="menu_EditContact">Edit Contact</string>
+    <string name="menu_EditName">Edit Magaca</string>
     <string name="menu_FileManager">File Manager</string>
+    <string name="menu_ForgotPassphrase">Forgot Passphrase?</string>
     <string name="menu_Help">Ka caawi</string>
     <string name="menu_Introduction">Hordhac</string>
     <string name="menu_License">License</string>
     <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Maaray Passphrases</string>
+    <string name="menu_message_font_size">Message Font Size</string>
     <string name="menu_messageCopyText">Copy Text</string>
     <string name="menu_messageForward">Forward</string>
     <string name="menu_Remove">Ka saar</string>
-    <string name="menu_SelectShareApp">Send Application</string>
+    <string name="menu_restore_default">Soo Celinta Settings Default</string>
+    <string name="menu_ringtone">Sound</string>
+    <string name="menu_SelectShareApp">Add Contact Casuumaad</string>
     <string name="menu_sendFeedback">Send Feedback</string>
     <string name="menu_SendUpdate">Send Update</string>
     <string name="menu_Settings">Settings</string>
     <string name="menu_ShowTutorial">Show Tutorial</string>
-    <string name="menu_TagComposeMessage">-ridi</string>
+    <string name="menu_TagComposeMessage">-Ridi</string>
     <string name="menu_TagExchange">Shakaalka Furayaasha</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Isticmaal kale oo</string>
-    <string name="menu_UseContactPerson">Isticmaal Contact \'%s\'</string>
+    <string name="menu_UseContactPerson">Isticmaal Contact %s</string>
     <string name="menu_UseNoContact">Isticmaalka Magaca oo kaliya</string>
-    <string name="menu_UseProfilePerson">Isticmaal Profile \'%s\'</string>
+    <string name="menu_UseProfilePerson">Isticmaal %s Profile</string>
+    <string name="menu_vibrate">Gariirin</string>
 
     <string name="prog_decrypting">Version…</string>
     <string name="prog_encrypting">encrypting…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Advanced</string>
     <string name="section_backup">Kaabta</string>
     <string name="section_general">General</string>
+    <string name="section_notification">Notifications</string>
+    <string name="section_storage">Kaydinta</string>
 
     <string name="state_BackupRestored">Kaabta dib loo soo celiyo.</string>
     <string name="state_FileDeleted">Tirtiray file %s.</string>
     <string name="state_FileSent">Know u diray.</string>
+    <string name="state_InvitationAdded">Casuumaad ku daray.</string>
     <string name="state_MessageSavedAsDraft">Message badbaadiyey sida qabyada ah.</string>
     <string name="state_MessagesDeleted">%d farriimo la tirtiray.</string>
     <string name="state_PassphraseUpdated">Passphrase updated.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">Contacts %s laga keeno.</string>
     <string name="state_TextCopiedToClipboard">Texte soo guuriyeen in ay choriomeningitis.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger waxaa loogu talagalay inay si fudud u wadaagaan xogta aqoonsiga, in qof ama telefoon, lagana sugaa, kuwa gaarka ah, iyo dhawrsan. Qof kasta oo aad la wadaagto abuuraa qaab ammaan ah dhamaadka-ka-dhamaadka soo dirin fariimo.\n\nFeatures:\n- Si fudud, warbixin la xiriir lala yeesho dadka kale\n- Qoraallada sugan loo dhaadhacay wadhafka, photos, wax!\n- Cryptography Strong difaacaa macluumaadkaaga\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger waxaa loogu talagalay inay si fudud u wadaagaan xogta aqoonsiga, in qof ama telefoon, lagana sugaa, kuwa gaarka ah, iyo dhawrsan. Qof kasta oo aad la wadaagto abuuraa qaab ammaan ah dhamaadka-ka-dhamaadka soo dirin fariimo.\n\nFeatures:\n-fudud, warbixin xiriirka dadka kale\n-sugan qoraallada wadhafka, photos, wax! Cryptography\n-Strong difaacaa macluumaadkaaga\n\nemail: %2$s\nweb: %3$s</string>
     <string name="text_KeywordExchange">Exchange</string>
     <string name="text_KeywordIdentity">Aqoonsiga</string>
     <string name="text_KeywordKey">Key</string>
@@ -309,19 +344,20 @@
     <string name="text_KeywordSecurity">Security</string>
     <string name="text_LanguagesProvidedBy">Luqadaha bixisay by:</string>
     <string name="text_RelatedSearchTerms">Related Terms:</string>
-    <string name="text_Requirements">Shuruudaha:\n1. Waa in lagu dhejiyaa on ugu yaraan 2 qalabka.\n2. Internet waa in ay ahaadaan kuwo firfircoon.</string>
+    <string name="text_Requirements">Shuruudaha:.\n1 waa in lagu dhejiyaa on ugu yaraan 2 qalabka.\n2. Xiriirka Internet-ka waa inay ahaadaan kuwo firfircoon.</string>
     <string name="text_SourceCodeRepo">source u furan: %s</string>
-    <string name="text_WhatsNew">- Ciidamada Kumandoska Xasiloonida.</string>
+    <string name="text_WhatsNew">-Stability dejista.</string>
 
     <string name="title_About">About</string>
     <string name="title_camera">Camera</string>
     <string name="title_ChooseDirectory">Dooro Directory</string>
     <string name="title_ChooseFileLoad">Dooro Your Attachment</string>
-    <string name="title_comments">Comments / Questions</string>
+    <string name="title_comments">Comments/Questions</string>
     <string name="title_Error">Error</string>
     <string name="title_ExchangeWalkthrough">Shakaalka Furayaasha Kaaliyaha</string>
     <string name="title_FileOptions">Qabsashada Options</string>
     <string name="title_find">Daaro</string>
+    <string name="title_font_size">Dooro font size</string>
     <string name="title_home">Ku bilow Exchange</string>
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Message</string>
@@ -345,6 +381,6 @@
     <string name="title_soundrecoder">Recorder Sound</string>
     <string name="title_TextInviteMsg">Casuumaad SafeSlinger</string>
     <string name="title_Threads">Threads</string>
-    <string name="title_Warn">Warning</string>
+    <string name="title_Warn">Warning </string>
 
 </resources>

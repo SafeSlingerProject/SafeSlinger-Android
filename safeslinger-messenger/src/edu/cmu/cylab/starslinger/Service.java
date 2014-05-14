@@ -26,27 +26,53 @@ package edu.cmu.cylab.starslinger;
 
 import java.util.Date;
 
+import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Binder;
+import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
+import android.provider.Settings;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
+import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.view.HomeActivity;
-import edu.cmu.cylab.starslinger.view.SettingsActivity;
 
 public class Service extends android.app.Service {
     private final IBinder mBinder = new LocalBinder();
 
-    public static final String EXTRA_TTL = "ttl";
-
     private long mPassPhraseCacheTtl = 15;
     private Handler mCacheHandler = new Handler();
+    static private boolean mIsRunning = false;
+
+    private BroadcastReceiver mAirplaneModeReceiver = new BroadcastReceiver() {
+        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            boolean airplaneOn = false;
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                airplaneOn = Settings.System.getInt(context.getContentResolver(),
+                        Settings.System.AIRPLANE_MODE_ON, 0) != 0;
+            } else {
+                airplaneOn = Settings.Global.getInt(context.getContentResolver(),
+                        Settings.Global.AIRPLANE_MODE_ON, 0) != 0;
+            }
+
+            // logout when in airplane mode
+            if (airplaneOn) {
+                SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
+                stopForeground(true);
+            }
+        }
+    };
+
     private Runnable mCacheTask = new Runnable() {
 
         @Override
@@ -79,13 +105,14 @@ public class Service extends android.app.Service {
         }
     };
 
-    static private boolean mIsRunning = false;
-
     @Override
     public void onCreate() {
         super.onCreate();
 
         mIsRunning = true;
+
+        registerReceiver(mAirplaneModeReceiver, new IntentFilter(
+                Intent.ACTION_AIRPLANE_MODE_CHANGED));
     }
 
     @Override
@@ -93,6 +120,15 @@ public class Service extends android.app.Service {
         super.onDestroy();
         stopForeground(true);
         mIsRunning = false;
+
+        // attempt to unregister, however we can safely ignore the
+        // "IllegalArgumentException: Receiver not registered" called when
+        // some hardware experiences a race condition here.
+        try {
+            unregisterReceiver(mAirplaneModeReceiver);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -100,7 +136,7 @@ public class Service extends android.app.Service {
         super.onStart(intent, startId);
 
         if (intent != null) {
-            mPassPhraseCacheTtl = intent.getIntExtra(EXTRA_TTL, 15);
+            mPassPhraseCacheTtl = intent.getIntExtra(extra.PASSPHRASE_CACHE_TTL, 15);
         }
         if (mPassPhraseCacheTtl < 15) {
             mPassPhraseCacheTtl = 15;
@@ -163,8 +199,8 @@ public class Service extends android.app.Service {
 
         // update exchanged status for older versions
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
-        int recipCount = dbRecipient.fetchRecipientCount();
-        if (recipCount > 0) {
+        int trustRecips = dbRecipient.getTrustedRecipientCount();
+        if (trustRecips > 0) {
             SafeSlingerPrefs.setFirstExchangeComplete(true);
             exchanged = true;
         }
@@ -218,7 +254,8 @@ public class Service extends android.app.Service {
         String contentTitle = String.format("%s: %s", getString(R.string.label_PassPhraseIsCached),
                 setting);
         String contentText = getString(R.string.label_TouchToConfigureCacheTimeout);
-        Intent intent = new Intent(Service.this, SettingsActivity.class);
+        Intent intent = new Intent(Service.this, HomeActivity.class);
+        intent.setAction(SafeSlingerConfig.Intent.ACTION_CHANGESETTINGS);
         PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         Context ctx = SafeSlinger.getApplication();

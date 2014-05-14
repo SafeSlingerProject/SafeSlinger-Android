@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d users</string>
 
-    <string name="error_AllMembersMustUpgrade">Bəzi üzvləri eski bir versiyasını istifadə; bütün üzvləri ən azı %s istifadə etməlidirlər.</string>
+    <string name="error_AllMembersMustUpgrade">Bəzi üzvləri eski bir versiyasını istifadə olunur; bütün üzvləri ən azı %s istifadə etməlidirlər.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Bütün üzvləri bəzi köhnə push qeydiyyat format istifadə olunur, yükseltmek lazımdır.</string>
     <string name="error_CorrectYourInternetConnection">Mövcud deyil Internet, ayarlarınızı kontrol.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange fasiləsi ötüb. Yenidən mübadiləsi başlayın.</string>
@@ -41,25 +41,29 @@
     <string name="error_InvalidCommonUserId">Bir müsbət tam daxil edin.</string>
     <string name="error_LocalGroupCommitDiffer">Siz ifadələr bir fərq bildirilmiştir. Yenidən mübadiləsi başlayın.</string>
     <string name="error_MinUsersRequired">%d üzvlərinin minimum məlumat mübadiləsi üçün tələb olunur.</string>
-    <string name="error_MoreDataThanUsers">Mübadilə aşkar gözlənilməz data. Yenidən mübadiləsi başlayır.</string>
+    <string name="error_MoreDataThanUsers">Mübadilə aşkar gözlənilməz data. Yenidən mübadiləsi başlayın.</string>
+    <string name="error_NoDataToExchange">Mübadilə tələb olunan məlumatları yoxdur.</string>
     <string name="error_NoWordListSelected">Siz davam əvvəl söz birini seçməlisiniz.</string>
     <string name="error_OtherGroupCommitDiffer">Biri ifadələr bir fərq üzvlük. Yenidən mübadiləsi başlayın.</string>
     <string name="error_OutOfMemoryError">Yaddaş bu əməliyyatı başa çatdırmaq üçün çox aşağıdır.</string>
-    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Server heç bir cavab.</string>
     <string name="error_TimeoutWaitingForAllMembers">Bir qrup üzvləri məlumat əlavə etmək üçün gözləyir fasiləsi.</string>
     <string name="error_WebCancelledByUser">İstifadəçi server sorğu ləğv.</string>
 
-    <string name="help_size">\'OK \' Birlikdə məlumat mübadiləsi və basın cəhd edən insanların sayı seçin.</string>
-    <string name="help_userid">Bu ekranda bu sayı istifadəçilərin unikal qrup yaratmaq üçün istifadə olunur. Bütün istifadəçilərin nömrələri nəzərdən \'OK\' ekranlarında, sonra bütün istifadəçilər eyni aşağı sayı və basın daxil olmalıdır.</string>
-    <string name="help_verify">İndi bütün istifadəçilər bu 3-söz ifadələr biri uyğun olmalıdır. Hər bir istifadəçi eyni ortaq söz və mətbuat \' Sonrakı\' seçmelisiniz.</string>
+    <string name="help_size">Birlikdə və mətbuat OK məlumat mübadiləsi cəhd edən insanların sayı seçin.</string>
+    <string name="help_userid">Bu ekranda bu sayı istifadəçilərin unikal qrup yaratmaq üçün istifadə olunur. Bütün istifadəçilərin ekranlarında nömrələri gözdən keçirin, sonra bütün istifadəçilər eyni aşağı nömrəsini daxil edin və OK basın lazımdır.</string>
+    <string name="help_verify">İndi bütün istifadəçilər bu 3-söz ifadələr biri uyğun olmalıdır. Hər bir istifadəçi eyni ortaq söz seçin və Next düyməsini basın lazımdır.</string>
 
+    <string name="label_CompareScreensNDevices">%s cihazlar ekranlar müqayisə.</string>
     <string name="label_NumericModeHint">Qeyri-English</string>
     <string name="label_PromptInstruct">Bu sayı istifadəçilər bir unikal qrup yaratmaq üçün istifadə olunur. Müqayisə və sonra bütün istifadəçilər arasında ən aşağı nömrəsini daxil edin.</string>
     <string name="label_ReceivedNItems">%d maddələr qəbul</string>
     <string name="label_UserIdHint">En Düşük</string>
     <string name="label_VerifyInstruct">Bütün telefonlar Bütün telefonlar 3-söz ifadələr biri uyğun olmalıdır. Müqayisə, və sonra uyğun söz seçin.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">bütün üzvlərinin yoxlama gözləyir…</string>
     <string name="prog_CollectingOthersItems">bütün istifadəçilər qoşulmaq üçün gözləyir…</string>

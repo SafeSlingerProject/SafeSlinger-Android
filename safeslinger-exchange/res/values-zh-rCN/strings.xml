@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">您已举报的短语的差别。重新开始交流。</string>
     <string name="error_MinUsersRequired">至少需要%d的成员进行交换资料。</string>
     <string name="error_MoreDataThanUsers">在交流中找到意外的数据。重新开始交流。</string>
+    <string name="error_NoDataToExchange">交换缺少必需的数据。</string>
     <string name="error_NoWordListSelected">你必须选择一个词组使程式继续进行。</string>
     <string name="error_OtherGroupCommitDiffer">有人举报在短语的差别。重新开始交流。</string>
     <string name="error_OutOfMemoryError">内存太低不能够完成这个操作。</string>
-    <string name="error_ServerAppMessage">伺服器讯息：\'%s\'。</string>
-    <string name="error_ServerAppMessageCStr">伺服器讯息：\'%s\'。</string>
+    <string name="error_ServerAppMessage">伺服器讯息：%s。</string>
+    <string name="error_ServerAppMessageCStr">伺服器讯息：%s。</string>
     <string name="error_ServerNotResponding">伺服器没有回应。</string>
     <string name="error_TimeoutWaitingForAllMembers">等待收集成员数据逾时。</string>
     <string name="error_WebCancelledByUser">使用者取消伺服器请求。</string>
 
-    <string name="help_size">选择试图与您交换资讯的成员数目，然後按\'确定\'。</string>
-    <string name="help_userid">萤幕上的号码是用来建立一个专有的群体，每位成员审视其他成员的号码後，所有成员必须输入相同的最低号码，接着按\'确定\'。</string>
-    <string name="help_verify">现在你必须从这三个词组中找出和所有成员相同(匹配)的词组，每位成员必须选择相同的词组，然後按\'下一步\'。</string>
+    <string name="help_size">选择试图与您交换资讯的成员数目，然後按确定。</string>
+    <string name="help_userid">萤幕上的号码是用来建立一个专有的群体，每位成员审视其他成员的号码後，所有成员必须输入相同的最低号码，接着按确定。</string>
+    <string name="help_verify">现在你必须从这三个词组中找出和所有成员相同(匹配)的词组，每位成员必须选择相同的词组，然後按下一步。</string>
 
+    <string name="label_CompareScreensNDevices">在%s设备比较屏幕。</string>
     <string name="label_NumericModeHint">非英语</string>
     <string name="label_PromptInstruct">该数字是用来创建一个专有的群体，请您比较该数字并输入所有成员之间最小的数字。</string>
     <string name="label_ReceivedNItems">收到%d个项目</string>
     <string name="label_UserIdHint">最低数字</string>
     <string name="label_VerifyInstruct">所有的手机都必须符合3字词组之一。比较，然後选择匹配的短语。</string>
+
+    <string name="lib_name">SafeSlinger交易所</string>
 
     <string name="prog_CollectingOthersCommitVerify">等待所有成员被验证…</string>
     <string name="prog_CollectingOthersItems">等待所有成员加入…</string>

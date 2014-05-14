@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">ਤੁਹਾਨੂੰ ਪੈਰ੍ਹੇ ਵਿੱਚ ਇੱਕ ਫਰਕ ਦੀ ਰਿਪੋਰਟ ਹੈ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
     <string name="error_MinUsersRequired">%d ਮਬਰ ਦੀ ਇੱਕ ਘੱਟੋ ਡਾਟਾ ਦਾ ਲੈਣ ਦੀ ਲੋੜ ਹੈ.</string>
     <string name="error_MoreDataThanUsers">ਮੁਦਰਾ ਵਿੱਚ ਲੱਭਿਆ ਅਚਾਨਕ ਡਾਟਾ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
+    <string name="error_NoDataToExchange">ਮੁਦਰਾ ਦੀ ਲੋੜ ਡਾਟਾ ਗੁੰਮ ਹੈ.</string>
     <string name="error_NoWordListSelected">ਤੁਹਾਨੂੰ ਜਾਰੀ ਅੱਗੇ ਪੈਰ੍ਹੇ ਦੇ ਇੱਕ ਦੀ ਚੋਣ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ.</string>
     <string name="error_OtherGroupCommitDiffer">ਕੋਈ ਿਵਅਕਤੀ ਪੈਰ੍ਹੇ ਵਿੱਚ ਇੱਕ ਫਰਕ ਦੀ ਰਿਪੋਰਟ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
     <string name="error_OutOfMemoryError">ਮੈਮੋਰੀ ਨੂੰ ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਬਹੁਤ ਘੱਟ ਹੈ.</string>
-    <string name="error_ServerAppMessage">ਸਰਵਰ ਸੁਨੇਹਾ: \' %s \'</string>
-    <string name="error_ServerAppMessageCStr">ਸਰਵਰ ਸੁਨੇਹਾ: \' %s \'</string>
+    <string name="error_ServerAppMessage">ਸਰਵਰ ਸੁਨੇਹਾ: %s</string>
+    <string name="error_ServerAppMessageCStr">ਸਰਵਰ ਸੁਨੇਹਾ: %s</string>
     <string name="error_ServerNotResponding">ਸਰਵਰ ਕੋਈ ਜਵਾਬ.</string>
     <string name="error_TimeoutWaitingForAllMembers">ਕੁਝ ਗਰੁੱਪ ਨੂੰ ਮਬਰ ਡਾਟਾ ਸ਼ਾਮਿਲ ਕਰਨ ਲਈ ਉਡੀਕ ਅੰਤਰਾਲ.</string>
     <string name="error_WebCancelledByUser">ਉਪਭੋਗੀ ਨੂੰ ਸਰਵਰ ਮੰਗ ਨੂੰ ਰੱਦ ਕਰ ਦਿੱਤਾ.</string>
 
-    <string name="help_size">\'ਠੀਕ ਹੈ\' ਨੂੰ ਇਕੱਠੇ ਡਾਟਾ ਦਾ ਲੈਣ ਅਤੇ ਦਬਾਓ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੇ ਹਨ, ਜੋ ਲੋਕ ਦੀ ਗਿਣਤੀ ਚੁਣੋ.</string>
-    <string name="help_userid">ਇਸ ਸਕਰੀਨ ਤੇ ਇਹ ਨੰਬਰ ਉਪਭੋਗੀ ਇੱਕ ਵਿਲੱਖਣ ਗਰੁੱਪ ਨੂੰ ਬਣਾਉਣ ਲਈ ਵਰਤਿਆ ਗਿਆ ਹੈ. ਸਭ ਯੂਜ਼ਰ \'ਤੇ ਨੰਬਰ ਦੀ ਮੁੜ \' ਠੀਕ ਹੈ \' ਸਕਰੀਨ, ਫਿਰ ਸਭ ਉਪਭੋਗੀ ਇੱਕੋ ਹੀ ਸਭ ਦਾ ਨੰਬਰ ਦਰਜ ਕਰੋ ਅਤੇ ਦਬਾਓ ਚਾਹੀਦਾ ਹੈ \'.</string>
-    <string name="help_verify">ਹੁਣ, ਤੁਹਾਨੂੰ ਸਭ ਉਪਭੋਗੀ ਨਾਲ ਇਹ 3 - ਸ਼ਬਦ ਨੂੰ ਸ਼ਬਦ ਦੀ ਇੱਕ ਮੇਲ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ. ਹਰ ਉਪਭੋਗੀ ਨੂੰ ਉਸੇ ਹੀ ਆਮ ਸ਼ਬਦ, ਅਤੇ Enter ਦਬਾਓ, ਅਤੇ \'ਅੱਗੇ \' ਚੋਣ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ.</string>
+    <string name="help_size">ਇੱਕਠੇ ਅਤੇ Enter ਦਬਾਓ ਠੀਕ ਹੈ ਡਾਟਾ ਦਾ ਲੈਣ ਦੀ ਕੋਸ਼ਿਸ ਕਰ ਰਹੇ ਹੋ, ਜਿਹੜੇ ਲੋਕ ਦੀ ਗਿਣਤੀ ਚੁਣੋ.</string>
+    <string name="help_userid">ਇਸ ਸਕਰੀਨ ਤੇ ਇਹ ਨੰਬਰ ਉਪਭੋਗੀ ਇੱਕ ਵਿਲੱਖਣ ਗਰੁੱਪ ਨੂੰ ਬਣਾਉਣ ਲਈ ਵਰਤਿਆ ਗਿਆ ਹੈ. ਸਭ ਯੂਜ਼ਰ \' ਸਕਰੀਨ \' ਤੇ ਨੰਬਰ ਦੀ ਮੁੜ, ਫਿਰ ਸਭ ਉਪਭੋਗੀ ਇੱਕੋ ਹੀ ਸਭ ਦਾ ਨੰਬਰ ਦਰਜ ਕਰੋ ਅਤੇ ਠੀਕ ਹੈ ਦਬਾਓ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
+    <string name="help_verify">ਹੁਣ, ਤੁਹਾਨੂੰ ਸਭ ਉਪਭੋਗੀ ਨਾਲ ਇਹ 3-ਸ਼ਬਦ ਨੂੰ ਸ਼ਬਦ ਦੀ ਇੱਕ ਮੇਲ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ. ਹਰ ਉਪਭੋਗੀ ਨੂੰ ਉਸੇ ਹੀ ਆਮ ਸ਼ਬਦ ਦੀ ਚੋਣ ਕਰੋ, ਅਤੇ ਅੱਗੇ ਦਬਾਓ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
 
-    <string name="label_NumericModeHint">ਗੈਰ - ਅੰਗਰੇਜ਼ੀ</string>
+    <string name="label_CompareScreensNDevices">%s ਜੰਤਰ ਤੇ ਸਕਰੀਨ ਦੀ ਤੁਲਨਾ ਕਰੋ.</string>
+    <string name="label_NumericModeHint">ਗੈਰ-ਅੰਗਰੇਜ਼ੀ</string>
     <string name="label_PromptInstruct">ਇਹ ਨੰਬਰ ਉਪਭੋਗੀ ਨੂੰ ਦੇ ਇੱਕ ਵਿਲੱਖਣ ਗਰੁੱਪ ਨੂੰ ਬਣਾਉਣ ਲਈ ਵਰਤਿਆ ਗਿਆ ਹੈ. ਦੀ ਤੁਲਨਾ ਕਰੋ, ਅਤੇ ਫਿਰ ਸਭ ਉਪਭੋਗੀ ਦਾ ਆਪਸ ਵਿੱਚ ਸਭ ਦਾ ਨੰਬਰ ਦਿਓ.</string>
     <string name="label_ReceivedNItems">%d ਇਕਾਈ ਪ੍ਰਾਪਤ ਕੀਤੀ</string>
     <string name="label_UserIdHint">ਸਭ</string>
-    <string name="label_VerifyInstruct">ਸਭ ਫੋਨ 3- ਸ਼ਬਦ ਨੂੰ ਸ਼ਬਦ ਦੀ ਇੱਕ ਮੇਲ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ. ਦੀ ਤੁਲਨਾ ਕਰੋ, ਅਤੇ ਫਿਰ ਮੇਲ ਵਾਕੰਸ਼ ਚੁਣੋ.</string>
+    <string name="label_VerifyInstruct">ਸਭ ਫੋਨ 3-ਸ਼ਬਦ ਨੂੰ ਸ਼ਬਦ ਦੀ ਇੱਕ ਮੇਲ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ. ਦੀ ਤੁਲਨਾ ਕਰੋ, ਅਤੇ ਫਿਰ ਮੇਲ ਵਾਕੰਸ਼ ਚੁਣੋ.</string>
+
+    <string name="lib_name">SafeSlinger ਐਕਸਚੇਜ਼</string>
 
     <string name="prog_CollectingOthersCommitVerify">ਸਾਰੇ ਅੰਗ ਤੱਕ ਤਸਦੀਕ ਲਈ ਉਡੀਕ…</string>
     <string name="prog_CollectingOthersItems">ਸਭ ਯੂਜ਼ਰ ਵਿੱਚ ਆਉਣ ਲਈ ਲਈ ਉਡੀਕ…</string>

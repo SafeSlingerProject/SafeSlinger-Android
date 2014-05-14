@@ -42,24 +42,28 @@
     <string name="error_LocalGroupCommitDiffer">Anda telah melaporkan perbezaan dalam frasa. Mulakan pertukaran lagi.</string>
     <string name="error_MinUsersRequired">Mendapat sekurang-kurangnya %d Ahli-ahli dikehendaki untuk bertukar-tukar data.</string>
     <string name="error_MoreDataThanUsers">Data yang tidak dijangka yang terdapat dalam pertukaran. Mulakan pertukaran lagi.</string>
+    <string name="error_NoDataToExchange">Pertukaran ini hilang data yang diperlukan.</string>
     <string name="error_NoWordListSelected">Anda mesti memilih satu daripada ungkapan sebelum meneruskan.</string>
     <string name="error_OtherGroupCommitDiffer">Seseorang dilaporkan perbezaan dalam frasa. Mulakan pertukaran lagi.</string>
     <string name="error_OutOfMemoryError">Memori adalah terlalu rendah untuk menyelesaikan operasi.</string>
-    <string name="error_ServerAppMessage">Server Message: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">Server Message: \'%s\'</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Tidak ada jawapan dari pelayan.</string>
     <string name="error_TimeoutWaitingForAllMembers">Had masa menunggu beberapa ahli-ahli kumpulan untuk menambah data.</string>
     <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan pelayan.</string>
 
-    <string name="help_size">Pilih bilangan orang-orang yang cuba untuk bertukar-tukar data bersama-sama dan tekan \'OK\'.</string>
-    <string name="help_userid">Ini nombor pada skrin ini digunakan untuk membuat kumpulan yang unik dari pengguna. Mengkaji nombor tersebut pada semua pengguna \'skrin, maka semua pengguna perlu memasukkan nombor paling rendah yang sama dan tekan\' OK \'.</string>
-    <string name="help_verify">Sekarang, anda mesti sepadan dengan salah satu daripada frasa 3-perkataan dengan semua pengguna. Setiap pengguna mesti memilih frasa yang sama yang sama, dan tekan \' Next\'.</string>
+    <string name="help_size">Pilih bilangan orang-orang yang cuba untuk bertukar-tukar data bersama-sama dan tekan OK.</string>
+    <string name="help_userid">Ini nombor pada skrin ini digunakan untuk membuat kumpulan yang unik dari pengguna. Mengkaji semula nombor di skrin semua pengguna \', maka semua pengguna perlu masukkan nombor yang sama paling rendah dan tekan OK.</string>
+    <string name="help_verify">Sekarang, anda mesti sepadan dengan salah satu daripada frasa 3-perkataan dengan semua pengguna. Setiap pengguna mesti memilih frasa biasa yang sama, dan tekan Next.</string>
 
+    <string name="label_CompareScreensNDevices">Bandingkan skrin pada peranti %s.</string>
     <string name="label_NumericModeHint">Bukan-Bahasa Inggeris</string>
     <string name="label_PromptInstruct">Nombor ini digunakan untuk membuat kumpulan yang unik dari pengguna. Membandingkan, dan kemudian masukkan nombor yang paling rendah di kalangan semua pengguna.</string>
     <string name="label_ReceivedNItems">menerima %d item</string>
     <string name="label_UserIdHint">Terendah</string>
     <string name="label_VerifyInstruct">Semua telefon mesti sepadan dengan salah satu frasa 3-perkataan. Membandingkan, dan kemudian memilih frasa yang hampir sama.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">menunggu pengesahan daripada semua ahli…</string>
     <string name="prog_CollectingOthersItems">menunggu untuk semua pengguna untuk menyertai…</string>

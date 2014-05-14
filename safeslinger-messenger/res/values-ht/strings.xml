@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Voye envite lyen ak…</string>
+    <string name="action_NewUserRequest">Add yon fistibal kle kontak envitasyon atravè…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Anile</string>
     <string name="btn_Close">Fèmen</string>
     <string name="btn_Continue">Kontinye</string>
+    <string name="btn_CreateNewKey">Kreye New Key</string>
+    <string name="btn_DeleteKeys">Efase kle</string>
     <string name="btn_discard">Jete</string>
     <string name="btn_Done">Fè</string>
     <string name="btn_Exit">Sòti</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 èdtan</string>
     <string name="choice_auto_storage">Default Depo</string>
     <string name="choice_external_storage">Ekstèn Depo</string>
+    <string name="choice_font_large">Gwo</string>
+    <string name="choice_font_medium">Mwayen</string>
+    <string name="choice_font_micro">Anpil ti</string>
+    <string name="choice_font_small">Ti</string>
     <string name="choice_internal_storage">Entèn Depo</string>
     <string name="choice_nolimit">Pa gen limit</string>
     <string name="choice_SaveDirectory">Save Anyè</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Mikwofòn pèmisyon yo mande yo. Tanpri, ale nan iOS Anviwònman yo ki ap pèmèt autorisations mikwofòn.</string>
     <string name="error_BackupNotFound">Pa gen backup retabli.</string>
     <string name="error_BackupNotSupportedDevice">Aparèy pa sipòte backup retabli.</string>
-    <string name="error_BadCopyProtectUpgrade">Akòz yon ensèk nan android 4.1, w ap gen désinstaller ak réinstaller SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">Akòz yon ensèk nan android 4.1, w ap gen unenstal ak réinstaller SafeSlinger.</string>
     <string name="error_C2DMRegAccountMissing">Yon kont Google yo mande yo. Tanpri louvri manadjè a kont epi ajoute yon kont Google.</string>
     <string name="error_C2DMRegAuthenticationFailed">Anrejistreman an pa otantifye, tanpri rekoumanse manyèlman pita.</string>
     <string name="error_C2DMRegInvalidSender">Enskripsyon a pa disponib pou vèsyon sa a, tanpri tcheke pou yon vèsyon ki ajou.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Ou gen depase mesaj kota a pou aparèy sa a. Tanpri rekoumanse pita.</string>
     <string name="error_PushMsgServiceFail">Sèvis Notifikasyon a pa disponib moman sa a. Tanpri eseye voye mesaj la pita.</string>
     <string name="error_RecoderError">Yo pa ka prepare achiv la odyo.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Pou kòmanse, \' bandlèt kle \' ak yon lòt telefòn nan menm tan an.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Pou kòmanse, bandlèt kle ak yon lòt telefòn nan menm tan an.</string>
     <string name="error_selectDataToSend">Ou bezwen yon atachman oswa yon mesaj tèks yo voye.</string>
     <string name="error_ShareFileDelError">Pa kapab retire dosye a pataje.</string>
     <string name="error_UnableFindPubKey">Kapab fè koresponn kle piblik la kle prive nan kriptografik founisè yo.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger erè, tanpri rekòmanse.</string>
     <string name="error_VcardParseFailure">Done Kontakte te fòma mal.</string>
 
-    <string name="help_find">Sèvi ak ekran sa a yo mete non ou nan echanj ak lòt moun. Tape \'Fè\' bouton an lè fini.</string>
-    <string name="help_home">Fè echanj done idantite, asire tout itilizatè yo ki tou pre oswa nan telefòn lan. Bouton \' Echanj nan Kòmanse \' ap echanje sèlman done yo tcheke kontak.</string>
-    <string name="help_identity_menu">\n\nOu kapab tou chanje done pèsonèl sou idantite ou sou ekran sa a pa frapan sou bouton an ak non w. Sa a ap montre yon meni ki pèmèt ou \' Edit \' kontak ou a, \'Kreye New \' kontak, \'oswa\' sèvi ak yon lòt \' kontak.</string>
+    <string name="help_find">Sèvi ak ekran sa a yo mete non ou nan echanj ak lòt moun. Tape bouton an fèt lè fini.</string>
+    <string name="help_home">Fè echanj done idantite, asire tout itilizatè yo ki tou pre oswa nan telefòn lan. Bouton an kòmanse Echanj ap echanje sèlman done yo tcheke kontak.</string>
+    <string name="help_identity_menu">\n\n\nOu kapab tou chanje done pèsonèl sou idantite ou sou ekran sa a pa frapan sou bouton an ak non w. Sa a ap montre yon meni ki pèmèt ou Edit kontak ou a, kreye New kontak, oswa sèvi ak yon lòt kontak.</string>
     <string name="help_Messages">Ekran sa a montre tout mesaj sot pase yo, ak dokiman ki toujou disponib pou download.</string>
-    <string name="help_passphrase">Sèvi ak ekran sa a konekte ak aplikasyon an ak pasfraz ou.</string>
+    <string name="help_passphrase">Sèvi ak ekran sa a konekte ak aplikasyon an ak pasfraz ou. Si ou te bliye pasfraz ou, ou ka jenere yon nouvo kle pwoteje pa yon nouvo pasfraz pa frapan pasfraz la Bliye? bouton. Tape non an itilizatè ta chanje ant kle miltip.</string>
     <string name="help_PickRecip">Kontak ak kle SafeSlinger yo ap parèt isit la, chwazi youn voye mesaj ou a.</string>
-    <string name="help_save">Lè fini, pwotokòl la vle fè konnen yon lis nan done yo idantite echanje. Chwazi kontak yo ou vle pou konsève pou ak laprès \' Import \'.</string>
-    <string name="help_SecureIntroduction">Ekran sa a pèmèt ou chwazi de moun ou te asye pandye kle ak anvan yo byen voye kle yo youn ak lòt. Senpleman peze \' entwodwi \' lè pare.</string>
-    <string name="help_Send">Ekran sa a pèmèt ou chwazi kèk done ak yon moun k ap resevwa pou voye bay. Senpleman peze \'Voye \' lè pare.</string>
+    <string name="help_save">Lè fini, pwotokòl la vle fè konnen yon lis nan done yo idantite echanje. Chwazi kontak yo ou vle pou konsève pou ak laprès Import.</string>
+    <string name="help_SecureIntroduction">Ekran sa a pèmèt ou chwazi de moun ou te asye pandye kle ak anvan yo byen voye kle yo youn ak lòt. Senpleman peze entwodwi lè pare.</string>
+    <string name="help_Send">Ekran sa a pèmèt ou chwazi kèk done ak yon moun k ap resevwa pou voye bay. Senpleman peze Voye lè pare.</string>
 
     <string name="iOS_contactError">Kontak pèmisyon yo mande yo. Tanpri, ale nan iOS Anviwònman yo ki ap pèmèt Kontak autorisations.</string>
     <string name="iOS_errorpushtoken">Enskripsyon Pouse ki manke.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Aparèy:</string>
     <string name="label_DeviceInSendOnlyMode">Voye-sèlman mòd</string>
     <string name="label_DisabledExchSourceKeyChange">Te kle ou chanje: bandlèt Repons ankò.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Pou kòmanse messagerie, tou de itilizatè yo dwe bandlèt kle nan menm tan an.</string>
     <string name="label_Draft">DRAFT</string>
     <string name="label_EnabledKeyFormatDeprecated">Fòma Kle obsoletes: bandlèt Repons ankò.</string>
     <string name="label_exchanged">echanje</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">File name</string>
     <string name="label_FindInstruct">Ekri non an ou vle lòt moun yo wè lè kominike byen:</string>
     <string name="label_FirstName">Prenon</string>
-    <string name="label_Home">Tape non ou yo ajoute oswa retire done kontak, tcheke atik ou ta vle pataje, ak yon wobinè \'Kòmanse Echanj\' lè lòt moun yo pare yo echanj:</string>
+    <string name="label_Home">Tape non ou yo ajoute oswa retire done kontak, tcheke atik ou ta vle pataje, ak yon wobinè Kòmanse Echanj lè lòt moun yo pare yo echanj:</string>
     <string name="label_hometag">Kay</string>
     <string name="label_hours">%d èdtan</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud se pèmèt. Tape \' Fè \' bouton an lè fini.</string>
-    <string name="label_InstNoMessages">Pa gen mesaj. Ou ka voye yon mesaj soti nan \' Konpoze mesaj\' bouton an sou menu an lakay yo.</string>
-    <string name="label_InstNoMessagesAndroid">Pa gen mesaj. Ou ka voye yon mesaj ki soti nan tab la \' konpoze \'.</string>
-    <string name="label_InstNoRecipients">Pa gen moun ki resevwa. Jwenn yon lòt itilizatè SafeSlinger ki tou pre ak manyen tab la \' bandlèt kle \' yo pataje kle.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud se pèmèt. Tape bouton an fèt lè fini.</string>
+    <string name="label_InstNoMessages">Pa gen mesaj. Ou ka voye yon mesaj ki soti nan bouton an konpoze Mesaj sou menu an lakay yo.</string>
+    <string name="label_InstNoMessagesAndroid">Pa gen mesaj. Ou ka voye yon mesaj ki soti nan tab la konpoze.</string>
+    <string name="label_InstNoRecipients">Pou ajoute moun ki resevwa, ou dwe premye bandlèt kle ak youn oubyen plis lòt moun kap itilize an menm tan an. Ou kapab voye yon fistibal kle kontak envitasyon soti nan meni an tou.</string>
     <string name="label_InstNoSharedFile">Pa gen pataje dosye-a. Konekte aparèy ou an ak iTunes ak dosye trennenfolder nan pataje.</string>
     <string name="label_InstRecipients">Chwazi yon moun k ap resevwa a voye yon mesaj bay:</string>
     <string name="label_InstSendInvite">Chwazi moun ki resevwa prezante byen:</string>
     <string name="label_InstSharedFile">Chwazi yon dosye yo tache:</string>
     <string name="label_introduced">prezante</string>
+    <string name="label_inviteSent">Envite</string>
     <string name="label_Key">Kle:</string>
     <string name="label_LastName">Siyati</string>
     <string name="label_Me">M \'</string>
     <string name="label_messageIntroduceNameToYou">Mwen ta renmen prezante %s ba ou.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Konfigirasyon yon koneksyon messagerie ki an sekirite, nou ka satisfè oswa telefòn youn ak lòt nan menm tan an, ak Lè sa a, bandlèt Repons sèlman yon fwa yo verifye koneksyon la.</string>
+    <string name="label_messageInviteStartMsg">Èske nou ka kòmanse an sekirite messagerie ak sous la louvri SafeSlinger iPhone oswa android app?</string>
     <string name="label_minutes">%d minit</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Ki pi resan sèlman</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup reta</string>
     <string name="label_safeslingered">(SafeSlinger Echanj dirèk)</string>
     <string name="label_SaveAccount">Save Kont</string>
-    <string name="label_SaveInstruct">Tcheke kontak ou vle mete nan liv adrès ou, Lè sa a, tape \'Import\' pou konsève pou kontak an sekirite:</string>
+    <string name="label_SaveInstruct">Tcheke kontak ou vle mete nan liv adrès ou, lè sa a tiyo Import pou konsève pou kontak an sekirite:</string>
     <string name="label_seconds">%d segonn</string>
     <string name="label_SelectRecip">Chwazi Moun Kap Resevwa Asistans</string>
     <string name="label_sendErrorData">Voye Done Erè</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Etap 3</string>
     <string name="label_step_4">Etap 4</string>
     <string name="label_step_5">Etap 5</string>
+    <string name="label_summary_auto_attach_retrieval">Otomatikman download mesaj atachman lè louvri sesyon pous</string>
+    <string name="label_summary_auto_decrypt">Otomatikman dechifre mesaj lè louvri sesyon pous</string>
+    <string name="label_summary_remind_backup_delay">Resevwa notifikasyon lè backup hors.</string>
+    <string name="label_summary_show_tutorial">Montre yon leson patikilye anvan attempingbandlèt kle.</string>
     <string name="label_TapToDecryptFile">Tapedechifre dosye</string>
     <string name="label_TapToDecryptMessage">Tapedechifre</string>
     <string name="label_TapToDownloadFile">Tape a download dosye</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Tape yo louvri dosye</string>
     <string name="label_TapToResumeDraft">Tape kourikouloum-vite mesaj bouyon</string>
     <string name="label_TapToSendCredentialUpdate">Tape epi kenbe yo voye diplòm aktyalizasyon.</string>
+    <string name="label_TapToSlingKeys">Tapebandlèt kle.</string>
     <string name="label_targetAccountLabel">Kontak Kont</string>
-    <string name="label_TouchToConfigureBackupSettings">Ou ka opsyonèlman pèmèt SafeSlinger iCloud backup nan yo Anviwònman. Tape \' Fè \' bouton an lè fini.</string>
+    <string name="label_TouchToConfigureBackupSettings">Ou ka opsyonèlman pèmèt SafeSlinger iCloud backup nan yo Anviwònman. Tape bouton an fèt lè fini.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Manyen nan konfigirasyon anviwònman sipò.</string>
     <string name="label_TouchToConfigureCacheTimeout">Manyen nan konfigirasyon anviwònman poz kachèt.</string>
     <string name="label_undefinedTypeLabel">Unknown</string>
     <string name="label_UnknownSender">Chiffres Sender</string>
     <string name="label_UserName">Non itilizatè</string>
+    <string name="label_WarnForgotPassphrase">Pou pwoteje done ou a, SafeSlinger Pa sere pasfraz ou nenpòt kote pou rekiperasyon. Ou kapab sèlman aksè nan moun ki resevwa ak mesaj ki te kreye anba login la pasfraz menm. Sepandan, ou ka jenere yon kle ak nouvo pasfraz, lè sa a repete bandlèt kle ak moun ki resevwa w la.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Kle sa yo yo pral efase:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Pa gen okenn kle pi resan pase ou.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Se sèlman kle pwodwi plis dènyèman pase nou, pwodwi sou %s, yo ka efase.</string>
     <string name="label_worktag">Travay</string>
 
     <string name="menu_About">Sou</string>
+    <string name="menu_auto_attach_retrieval">Auto-rekipere atachman</string>
+    <string name="menu_auto_decrypt">Auto-dekriptaj</string>
     <string name="menu_Change">Chanjman</string>
     <string name="menu_ChangePassphrase">Chanjman pasfraz</string>
+    <string name="menu_ContactInviteEmail">Imèl</string>
+    <string name="menu_ContactInviteSms">Tèks (SMS/MMS)</string>
     <string name="menu_CreateNew">Kreye New</string>
     <string name="menu_delete">Efase</string>
-    <string name="menu_deleteThread">Efase Thread \'%s\'</string>
+    <string name="menu_deleteThread">Efase Thread %s</string>
     <string name="menu_Details">View Detay</string>
     <string name="menu_DownloadDirectory">Download Anyè</string>
     <string name="menu_Edit">Edit</string>
+    <string name="menu_EditContact">Edit Kontakte</string>
+    <string name="menu_EditName">Non Edit</string>
     <string name="menu_FileManager">File Manadjè</string>
+    <string name="menu_ForgotPassphrase">Bliye pasfraz?</string>
     <string name="menu_Help">Ede</string>
     <string name="menu_Introduction">Yon ti rale</string>
     <string name="menu_License">Lisans pou</string>
     <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Jere fraz</string>
+    <string name="menu_message_font_size">Mesaj Font size</string>
     <string name="menu_messageCopyText">Tèks kopi</string>
     <string name="menu_messageForward">Pou pi devan</string>
     <string name="menu_Remove">Retire</string>
-    <string name="menu_SelectShareApp">Voye aplikasyon</string>
+    <string name="menu_restore_default">Renmèt Default Anviwònman</string>
+    <string name="menu_ringtone">Son</string>
+    <string name="menu_SelectShareApp">Add Kontakte Envitasyon</string>
     <string name="menu_sendFeedback">Voye Feedback</string>
     <string name="menu_SendUpdate">Voye Mizajou</string>
     <string name="menu_Settings">Anviwònman</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Fistibal Repons</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Sèvi ak yon lòt</string>
-    <string name="menu_UseContactPerson">Itilize | Kontakte \'%s\'</string>
+    <string name="menu_UseContactPerson">Itilize | Kontakte %s</string>
     <string name="menu_UseNoContact">Sèvi ak non sèlman</string>
-    <string name="menu_UseProfilePerson">Sèvi ak Profile \'%s\'</string>
+    <string name="menu_UseProfilePerson">Sèvi ak Profile %s</string>
+    <string name="menu_vibrate">Vibre</string>
 
     <string name="prog_decrypting">dechifre…</string>
     <string name="prog_encrypting">chifreman…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Avanse</string>
     <string name="section_backup">Sovgad</string>
     <string name="section_general">Jeneral</string>
+    <string name="section_notification">Notifikasyon</string>
+    <string name="section_storage">Depo</string>
 
     <string name="state_BackupRestored">Sovgad restore.</string>
     <string name="state_FileDeleted">Efase dosye %s.</string>
     <string name="state_FileSent">Mesaj te voye yo.</string>
+    <string name="state_InvitationAdded">Envitasyon te ajoute.</string>
     <string name="state_MessageSavedAsDraft">Mesaj sove kòm bouyon.</string>
     <string name="state_MessagesDeleted">%d mesaj efase.</string>
     <string name="state_PassphraseUpdated">Pasfraz mete ajou.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">Kontak %s enpòte.</string>
     <string name="state_TextCopiedToClipboard">Tèks kopye nan papye.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger se fèt yo fasil pataje done idantite, nan moun oswa nan telefòn lan, otantifye, prive ak entak. Chak moun ou pataje ak kreye yon fen-a-fen chanèl ki an sekirite yo voye mesaj.\n\nFeatures:\n- Fasil echanj enfòmasyon kontak ak lòt moun\n- Solidman fistibal tèks, foto, anyen!\n- Bonjan chifreman pwoteje enfòmasyon ou\n\nemail: %2$s\nsit entènèt: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger se fèt yo fasil pataje done idantite, nan moun oswa nan telefòn lan, otantifye, prive ak entak. Chak moun ou pataje ak kreye yon fen-a-fen chanèl ki an sekirite yo voye mesaj.\n\nFeatures:\n-Fasil echanj enfòmasyon kontak ak lòt moun\n-solidman tèks fistibal, foto, anyen!\n-Bonjan chifreman pwoteje enfòmasyon ou\n\nimel: %2$s\nentènèt: %3$s</string>
     <string name="text_KeywordExchange">Echanj</string>
     <string name="text_KeywordIdentity">Idantite</string>
     <string name="text_KeywordKey">Kle</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Sekirite</string>
     <string name="text_LanguagesProvidedBy">Lang ki ofri pa:</string>
     <string name="text_RelatedSearchTerms">Ki gen rapò Regleman:</string>
-    <string name="text_Requirements">Kondisyon:\n1. Yo dwe enstale sou yon minimòm de 2 ki bay sipò.\n2. Yon koneksyon entènèt yo dwe aktif.</string>
+    <string name="text_Requirements">Kondisyon:.\n1 Yo dwe enstale sou yon minimòm de 2 ki bay sipò.\n2. Yon koneksyon entènèt yo dwe aktif.</string>
     <string name="text_SourceCodeRepo">sous louvri: %s</string>
-    <string name="text_WhatsNew">- Estabilite fikse.</string>
+    <string name="text_WhatsNew">-Estabilite fiks.</string>
 
     <string name="title_About">Sou</string>
     <string name="title_camera">Pou Kamera</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Fistibal kle Asistan</string>
     <string name="title_FileOptions">Opsyon nan Dokiman siplemantè</string>
     <string name="title_find">Enstalasyon</string>
+    <string name="title_font_size">Chwazi yon gwosè font</string>
     <string name="title_home">Kòmanse Echanj</string>
     <string name="title_HomePanel">Kay</string>
     <string name="title_MessageDetail">Mesaj</string>

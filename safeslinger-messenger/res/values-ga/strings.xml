@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Seol cuireadh nasc le…</string>
+    <string name="action_NewUserRequest">Cuir cuireadh teagmhála Eochracha Sling trí…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Cealaigh</string>
     <string name="btn_Close">Dún</string>
     <string name="btn_Continue">Leanúint ar aghaidh</string>
+    <string name="btn_CreateNewKey">Cruthaigh Eochair Nua</string>
+    <string name="btn_DeleteKeys">Scrios Eochracha</string>
     <string name="btn_discard">Scrios</string>
     <string name="btn_Done">Déanta</string>
     <string name="btn_Exit">Scoir</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 uair an chloig</string>
     <string name="choice_auto_storage">Réamhshocrú Stóráil</string>
     <string name="choice_external_storage">Stóráil Sheachtrach</string>
+    <string name="choice_font_large">Móra</string>
+    <string name="choice_font_medium">Meánach</string>
+    <string name="choice_font_micro">An-Bheaga</string>
+    <string name="choice_font_small">Beag</string>
     <string name="choice_internal_storage">Stóráil Inmheánach</string>
     <string name="choice_nolimit">Gan Teorainn</string>
     <string name="choice_SaveDirectory">Sábháil Eolaire</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">Cead Micreafón ag teastáil. Do thoil, téigh go Socruithe iOS a chur ar chumas ceadanna Micreafón.</string>
     <string name="error_BackupNotFound">Uimh cúltaca a chur ar ais.</string>
     <string name="error_BackupNotSupportedDevice">Ní Gléas tacú cúltaca ais.</string>
-    <string name="error_BadCopyProtectUpgrade">Mar gheall ar a bug in Android 4.1, beidh ort dhíshuiteáil agus reinstall SafeSlinger.</string>
+    <string name="error_BadCopyProtectUpgrade">Mar gheall ar a bug in Android 4.1, beidh ort a dhíshuiteáil agus reinstall SafeSlinger.</string>
     <string name="error_C2DMRegAccountMissing">Tá cuntas Google teastáil. Cuir oscailt an bainisteoir cuntas agus add a chuntas Google.</string>
     <string name="error_C2DMRegAuthenticationFailed">Clárú Ní fíordheimhnithe, le do thoil scríobh an láimh níos déanaí.</string>
     <string name="error_C2DMRegInvalidSender">Ní Clárú ar fáil don leagan seo, seiceáil le do thoil do leagan cothrom le dáta.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Tá tú níos mó ná an cuóta teachtaireacht den ghléas. Cuir scríobh an níos déanaí.</string>
     <string name="error_PushMsgServiceFail">Nach bhfuil seirbhís Fógra ar fáil an uair seo. Déan iarracht a sheoladh chuig an teachtaireacht níos déanaí.</string>
     <string name="error_RecoderError">Ní féidir a ullmhú ar an taifeadán fuaime.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Chun tús a chur, \' Eochracha Sling \' le fón eile ag an am céanna.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Chun tús a chur, Eochracha Sling le fón eile ag an am céanna.</string>
     <string name="error_selectDataToSend">Ní mór duit cheangaltán nó teachtaireacht téacs a sheoladh.</string>
     <string name="error_ShareFileDelError">Ní féidir an comhad a bhaint roinnte.</string>
     <string name="error_UnableFindPubKey">Ní féidir a mheaitseáil eochair phoiblí a eochair phríobháideach i soláthraí criptithe.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger earráid, le do thoil atosú.</string>
     <string name="error_VcardParseFailure">Cuireadh formáidithe sonraí Teagmháil mícheart.</string>
 
-    <string name="help_find">Bain úsáid as an scáileán a leagan d\'ainm a mhalartú le daoine eile. Beartaíonn an cnaipe \'Arna dhéanamh\' nuair críochnaithe.</string>
-    <string name="help_home">Chun sonraí aitheantais a mhalartú, a chinntiú go bhfuil gach úsáideoir in aice láimhe nó ar an teileafón. Beidh an cnaipe an \' Tosaigh Malartú \' a mhalartú ach amháin na sonraí teagmhála a sheiceáil.</string>
-    <string name="help_identity_menu">\n\nIs féidir leat sonraí pearsanta faoi do chéannacht ar an scáileán a athrú freisin ag cnagadh ar an gcnaipe le do ainm. Beidh sé seo a thaispeáint roghchlár a ligeann duit \'Cuir in eagar \' do teagmháil a dhéanamh, \' Cruthaigh Nua \' teagmhála, nó \' Bain úsáid eile \' teagmhála.</string>
+    <string name="help_find">Bain úsáid as an scáileán a leagan d\'ainm a mhalartú le daoine eile. Beartaíonn an cnaipe Arna dhéanamh nuair críochnaithe.</string>
+    <string name="help_home">Chun sonraí aitheantais a mhalartú, a chinntiú go bhfuil gach úsáideoir in aice láimhe nó ar an teileafón. Beidh an Tosaigh Malartú cnaipe a mhalartú ach amháin na sonraí teagmhála a sheiceáil.</string>
+    <string name="help_identity_menu">\n\n\nIs féidir leat sonraí pearsanta faoi do chéannacht ar an scáileán a athrú freisin ag cnagadh ar an gcnaipe le do ainm. Beidh sé seo a thaispeáint roghchlár a ligeann duit a Cuir do teagmháil, teagmháil Cruthaigh Nua, nó Bain úsáid as teagmháil eile.</string>
     <string name="help_Messages">Taispeánann an scáileán gach teachtaireacht atá caite, agus ceangaltáin atá fós ar fáil le híoslódáil.</string>
-    <string name="help_passphrase">Bain úsáid as an scáileán logáil isteach chun an t-iarratas le do frása faire.</string>
+    <string name="help_passphrase">Bain úsáid as an scáileán logáil isteach chun an t-iarratas le do frása faire. Má tá tú dearmad ar do frása faire, is féidir leat eochair nua cosanta le frása faire nua ag cnagadh ar an Frása Faire dearmadta ghiniúint? cnaipe. Beartaíonn an t-ainm úsáideora a aistriú idir eochracha il.</string>
     <string name="help_PickRecip">Teagmhálacha le heochracha SafeSlinger taispeáint anseo, roghnaigh ceann amháin le do theachtaireacht a sheoladh chuig.</string>
-    <string name="help_save">Nuair a chríochnaigh, beidh an prótacal nochtann liosta de na sonraí a mhalartófar aitheantais. Roghnaigh na teagmhálacha is mian leat a shábháil agus brúigh \' Iompórtáil \'.</string>
-    <string name="help_SecureIntroduction">Ceadaíonn an scáileán seo duit a roghnú beirt tú eochracha slung leis sula a n-eochracha a sheoladh go daingean le gach ceann eile. Níl ort ach brúigh \'a thabhairt isteach \' nuair atá tú réidh.</string>
-    <string name="help_Send">Ceadaíonn an scáileán seo duit a roghnú cuid de na sonraí agus faighteoir a sheoladh chuig. Níl ort ach brúigh \' Seol \' nuair atá tú réidh.</string>
+    <string name="help_save">Nuair a chríochnaigh, beidh an prótacal nochtann liosta de na sonraí a mhalartófar aitheantais. Roghnaigh na teagmhálacha is mian leat a shábháil agus brúigh Iompórtáil.</string>
+    <string name="help_SecureIntroduction">Ceadaíonn an scáileán seo duit a roghnú beirt tú eochracha slung leis sula a n-eochracha a sheoladh go daingean le gach ceann eile. Níl ort ach brúigh isteach nuair atá tú réidh.</string>
+    <string name="help_Send">Ceadaíonn an scáileán seo duit a roghnú cuid de na sonraí agus faighteoir a sheoladh chuig. Níl ort ach brúigh Seol nuair atá tú réidh.</string>
 
     <string name="iOS_contactError">Cead Teagmhálacha teastáil. Do thoil, téigh go Socruithe iOS a chur ar chumas Teagmhálacha ceadanna.</string>
     <string name="iOS_errorpushtoken">Tá clárú Brúigh ar iarraidh.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Gléas:</string>
     <string name="label_DeviceInSendOnlyMode">Mód Seol amháin</string>
     <string name="label_DisabledExchSourceKeyChange">Tá do eochair athrú: Eochracha Sling arís.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Chun tús a chur teachtaireachtaí, ní mór an dá n-úsáideoirí Eochracha Sling ag an am céanna.</string>
     <string name="label_Draft">DRÉACHT</string>
     <string name="label_EnabledKeyFormatDeprecated">Bhformáid Eochair léig: Eochracha Sling arís.</string>
     <string name="label_exchanged">a mhalartú</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">Comhad Ainm</string>
     <string name="label_FindInstruct">Cuir isteach an t-ainm mian leat daoine eile a fheiceáil nuair a cumarsáid a dhéanamh go daingean:</string>
     <string name="label_FirstName">Céad Ainm</string>
-    <string name="label_Home">Beartaíonn d\'ainm a chur leis nó a bhaint sonraí teagmhála, nithe is mian leat a roinnt a sheiceáil, agus sconna \'Tosaigh Malartú\' nuair a bhíonn daoine eile réidh chun malartú:</string>
+    <string name="label_Home">Beartaíonn d\'ainm a chur leis nó a bhaint sonraí teagmhála, nithe is mian leat a roinnt a sheiceáil, agus sconna Tosaigh Malartú nuair a bhíonn daoine eile réidh chun malartú:</string>
     <string name="label_hometag">Baile</string>
     <string name="label_hours">%d uair an chloig</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud atá cumasaithe. Beartaíonn an cnaipe \' Arna dhéanamh \' nuair críochnaithe.</string>
-    <string name="label_InstNoMessages">Ní raibh aon teachtaireacht. Is féidir leat a sheoladh teachtaireacht ó an cnaipe \' Cum Teachtaireacht \' ar an roghchlár Baile.</string>
-    <string name="label_InstNoMessagesAndroid">Ní raibh aon teachtaireacht. Is féidir leat teachtaireacht a sheoladh as an cluaisín \' Compose \'.</string>
-    <string name="label_InstNoRecipients">Níl aon fhaighteoir. Aimsigh úsáideoir SafeSlinger eile in aice láimhe agus teagmháil leis an cluaisín \' Sling Eochracha \' chun eochracha a roinnt.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud atá cumasaithe. Beartaíonn an cnaipe Arna dhéanamh nuair críochnaithe.</string>
+    <string name="label_InstNoMessages">Ní raibh aon teachtaireacht. Is féidir leat teachtaireacht a sheoladh as an cnaipe Cum Teachtaireacht ar an roghchlár Baile.</string>
+    <string name="label_InstNoMessagesAndroid">Ní raibh aon teachtaireacht. Is féidir leat teachtaireacht a sheoladh as an cluaisín Cum.</string>
+    <string name="label_InstNoRecipients">Chun faighteoirí chur leis, ní mór duit an chéad Eochracha Sling le húsáideoirí amháin eile nó níos mó ag an am céanna. Is féidir leat a sheoladh freisin cuireadh teagmhála Eochracha Sling ón roghchlár.</string>
     <string name="label_InstNoSharedFile">Comhad Uimh roinnte. Ceangail do gléas le iTunes agus comhaid a tharraingt go dtí an fillteán roinnte.</string>
     <string name="label_InstRecipients">Roghnaigh faighteoir chun teachtaireacht a sheoladh chuig:</string>
     <string name="label_InstSendInvite">Faighteoirí Pioc a thabhairt isteach go daingean:</string>
     <string name="label_InstSharedFile">Roghnaigh comhad a chur ag gabháil:</string>
     <string name="label_introduced">a tugadh isteach</string>
+    <string name="label_inviteSent">Chuiridh</string>
     <string name="label_Key">Eochair:</string>
     <string name="label_LastName">Sloinne</string>
     <string name="label_Me">Mise</string>
     <string name="label_messageIntroduceNameToYou">Ba mhaith liom buíochas a %s thabhairt isteach chun tú.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Chun thus nasc teachtaireachta, is féidir linn freastal nó ar an bhfón a chéile ag an am céanna, agus ansin Eochracha Sling ach aon uair amháin chun a fhíorú an nasc.</string>
+    <string name="label_messageInviteStartMsg">An féidir linn tús a chur teachtaireachta leis an foinse oscailte SafeSlinger iPhone nó Android app?</string>
     <string name="label_minutes">%d nóiméad</string>
     <string name="label_mobiletag">Soghluaiste</string>
     <string name="label_MostRecentOnly">An chuid is mó le déanaí ach</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger cúltaca moill</string>
     <string name="label_safeslingered">(SafeSlinger Malartú Díreach)</string>
     <string name="label_SaveAccount">Sábháil Cuntas</string>
-    <string name="label_SaveInstruct">Teagmhálacha is mian leat a thabhairt cothrom le dáta i do leabhar seoltaí Seiceáil, ansin Beartaíonn \'Iompórtáil\' a shábháil teagmhálacha slán:</string>
+    <string name="label_SaveInstruct">Teagmhálacha is mian leat a thabhairt cothrom le dáta i do leabhar seoltaí Seiceáil, sconna ansin Iompórtáil teagmhálacha a shábháil slán:</string>
     <string name="label_seconds">%d soicind</string>
     <string name="label_SelectRecip">Roghnaigh Faighteoir</string>
     <string name="label_sendErrorData">Seol Earráid Sonraí</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Céim 3</string>
     <string name="label_step_4">Céim 4</string>
     <string name="label_step_5">Céim 5</string>
+    <string name="label_summary_auto_attach_retrieval">Huathoibríoch íoslódáil iatáin teachtaireacht nuair a logáilte isteach</string>
+    <string name="label_summary_auto_decrypt">Go huathoibríoch teachtaireachtaí a dhíchriptiú nuair a logáilte isteach</string>
+    <string name="label_summary_remind_backup_delay">Fógra a fháil nuair a bhíonn cúltaca ar líne.</string>
+    <string name="label_summary_show_tutorial">Taispeáin teagaisc roimh attemping do Eochracha Sling.</string>
     <string name="label_TapToDecryptFile">Beartaíonn an comhad a dhíchriptiú</string>
     <string name="label_TapToDecryptMessage">Beartaíonn a dhíchriptiú</string>
     <string name="label_TapToDownloadFile">Beartaíonn an comhad a íoslódáil</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Beartaíonn an comhad a oscailt</string>
     <string name="label_TapToResumeDraft">Beartaíonn go n-atosóidh an teachtaireacht dréacht</string>
     <string name="label_TapToSendCredentialUpdate">Beartaíonn agus a shealbhú a sheoladh cothrom le dáta credential.</string>
+    <string name="label_TapToSlingKeys">Beartaíonn do Eochracha Sling.</string>
     <string name="label_targetAccountLabel">Cuntas Teagmhálacha</string>
-    <string name="label_TouchToConfigureBackupSettings">Is féidir leat a chumasú optionally SafeSlinger iCloud cúltaca i Suímh iOS. Beartaíonn an cnaipe \' Arna dhéanamh \' nuair críochnaithe.</string>
+    <string name="label_TouchToConfigureBackupSettings">Is féidir leat a chumasú optionally SafeSlinger iCloud cúltaca i Suímh iOS. Beartaíonn an cnaipe Arna dhéanamh nuair críochnaithe.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Dteagmháil a chumrú suímh cúltaca.</string>
     <string name="label_TouchToConfigureCacheTimeout">Dteagmháil a chumrú suímh Teorainn ama taisce.</string>
     <string name="label_undefinedTypeLabel">Anaithnid</string>
     <string name="label_UnknownSender">Seoltóir criptithe</string>
     <string name="label_UserName">Úsáideoir An cuimhin</string>
+    <string name="label_WarnForgotPassphrase">Chun do shonraí a chosaint, ní SafeSlinger stóráil do frása faire áit ar bith do ghnóthú. Is féidir leat rochtain a fháil ach le faighteoirí agus teachtaireachtaí a cruthaíodh faoin logáil frása faire céanna. Mar sin féin, is féidir leat a ghiniúint eochair nua agus frása faire, arís ansin Eochracha Sling le do faighteoirí.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Beidh na heochracha seo a leanas a scriosadh:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Níl aon eochracha níos déanaí ná mise.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Ach eochracha a ghintear níos déanaí ná mise, a ghintear ar %s féidir, a scriosadh.</string>
     <string name="label_worktag">Obair</string>
 
     <string name="menu_About">Maidir</string>
+    <string name="menu_auto_attach_retrieval">Iatáin Auto-aisghabháil</string>
+    <string name="menu_auto_decrypt">Auto-dhíchriptiú</string>
     <string name="menu_Change">Athrú</string>
     <string name="menu_ChangePassphrase">Athraigh Frása Faire</string>
+    <string name="menu_ContactInviteEmail">Ríomhphost</string>
+    <string name="menu_ContactInviteSms">Téacs (SMS/MMS)</string>
     <string name="menu_CreateNew">Cruthaigh Nua</string>
     <string name="menu_delete">Scrios</string>
-    <string name="menu_deleteThread">Scrios Snáithe \'%s\'</string>
+    <string name="menu_deleteThread">Scrios %s Snáithe</string>
     <string name="menu_Details">Féach Sonraigh</string>
     <string name="menu_DownloadDirectory">Download Eolaire</string>
     <string name="menu_Edit">Eagar</string>
+    <string name="menu_EditContact">Cuir Teagmháil in Eagar</string>
+    <string name="menu_EditName">Cuir Ainm</string>
     <string name="menu_FileManager">Bainisteoir Comhad</string>
+    <string name="menu_ForgotPassphrase">Forgot Frása Faire?</string>
     <string name="menu_Help">Cabhair</string>
     <string name="menu_Introduction">Réamhrá</string>
     <string name="menu_License">Ceadúnas</string>
     <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Pasnathanna Bainistigh</string>
+    <string name="menu_message_font_size">Teachtaireacht Cló</string>
     <string name="menu_messageCopyText">Cóipeáil Téacs</string>
     <string name="menu_messageForward">Ar Aghaidh</string>
     <string name="menu_Remove">Bain</string>
-    <string name="menu_SelectShareApp">Seol Iarratas</string>
+    <string name="menu_restore_default">Athchóirigh Socruithe Réamhshocrú</string>
+    <string name="menu_ringtone">Fuaim</string>
+    <string name="menu_SelectShareApp">Cuir Teagmháil Cuireadh</string>
     <string name="menu_sendFeedback">Seol Aiseolas</string>
     <string name="menu_SendUpdate">Seol Nuashonrú</string>
     <string name="menu_Settings">Socruithe</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Eochracha Sling</string>
     <string name="menu_TagListMessages">Teachtaireachtaí</string>
     <string name="menu_UseAnother">Bain úsáid as eile</string>
-    <string name="menu_UseContactPerson">Úsáid Teagmháil \'%s\'</string>
+    <string name="menu_UseContactPerson">Úsáid Teagmháil %s</string>
     <string name="menu_UseNoContact">Úsáid Ainm Amháin</string>
-    <string name="menu_UseProfilePerson">Bain úsáid as Próifíl \'%s\'</string>
+    <string name="menu_UseProfilePerson">Bain úsáid as %s Próifíl</string>
+    <string name="menu_vibrate">Vibrate</string>
 
     <string name="prog_decrypting">decrypting…</string>
     <string name="prog_encrypting">encrypting…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Casta</string>
     <string name="section_backup">Cúltaca</string>
     <string name="section_general">Ginearálta</string>
+    <string name="section_notification">Fógraí</string>
+    <string name="section_storage">Stóráil</string>
 
     <string name="state_BackupRestored">Cúltaca ar ais.</string>
     <string name="state_FileDeleted">%s comhad Scriosta.</string>
     <string name="state_FileSent">Teachtaireacht seolta.</string>
+    <string name="state_InvitationAdded">Cuireadh leis.</string>
     <string name="state_MessageSavedAsDraft">Teachtaireacht shábháil mar dhréacht.</string>
     <string name="state_MessagesDeleted">%d teachtaireachtaí a scriosadh.</string>
     <string name="state_PassphraseUpdated">Frása Faire suas chun dáta.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">Teagmhálacha %s allmhairithe.</string>
     <string name="state_TextCopiedToClipboard">Téacs cóip a chur chuig gearrthaisce.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger tá sé deartha chun a roinnt go héasca sonraí aitheantais, go pearsanta nó ar an nguthán, fíordheimhnithe, príobháideach, agus slán. Gach duine a bhfuil tú a roinnt le gcruthaíonn cainéal slán-deireadh le deireadh chun teachtaireachtaí a sheoladh.\n\nGnéithe:\n- A mhalartú go héasca faisnéis teagmhála le daoine eile\n- Téacsanna daingean sling, grianghraif, rud ar bith!\n- Cosnaíonn cripteagrafaíochta láidir do chuid faisnéise\n\nr-phost: %2$s\ngréasáin: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger tá sé deartha chun a roinnt go héasca sonraí aitheantais, go pearsanta nó ar an nguthán, fíordheimhnithe, príobháideach, agus slán. Gach duine a bhfuil tú a roinnt le gcruthaíonn cainéal slán-deireadh le deireadh chun teachtaireachtaí a sheoladh.\n\nGnéithe:\n-Go héasca eolas teagmhála a mhalartú le daoine eile\n-daingean téacsanna sling, grianghraif, rud ar bith! Cosnaíonn cripteagrafaíochta\n-láidir do chuid faisnéise\n\nr-phost: %2$s\ngréasáin: %3$s</string>
     <string name="text_KeywordExchange">Malartú</string>
     <string name="text_KeywordIdentity">Céannacht</string>
     <string name="text_KeywordKey">Eochair</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Slándáil</string>
     <string name="text_LanguagesProvidedBy">Teangacha ar fáil ag:</string>
     <string name="text_RelatedSearchTerms">Téarmaí ghaolmhara:</string>
-    <string name="text_Requirements">Riachtanais:\n1. Ní mór a bheith suiteáilte ar a laghad 2 feistí.\n2. Ní mór nasc Idirlín a bheith gníomhach.</string>
+    <string name="text_Requirements">Riachtanais:. Caithfear\n1 a bheith suiteáilte ar a laghad 2 feistí.\n2. Caithfidh nasc Idirlín a bheith gníomhach.</string>
     <string name="text_SourceCodeRepo">foinse oscailte: %s</string>
-    <string name="text_WhatsNew">- Ceartúcháin Cobhsaíochta.</string>
+    <string name="text_WhatsNew">-Cobhsaíochta Ceartúcháin.</string>
 
     <string name="title_About">Maidir</string>
     <string name="title_camera">Ceamara</string>
@@ -322,6 +357,7 @@
     <string name="title_ExchangeWalkthrough">Eochracha Sling Cúnta</string>
     <string name="title_FileOptions">Roghanna iatán</string>
     <string name="title_find">Socrú</string>
+    <string name="title_font_size">Roghnaigh clómhéid</string>
     <string name="title_home">Tosaigh Malartú</string>
     <string name="title_HomePanel">Baile</string>
     <string name="title_MessageDetail">Teachtaireacht</string>

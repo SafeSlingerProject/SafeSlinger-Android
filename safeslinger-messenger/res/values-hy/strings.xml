@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">ՈՒղարկել հրավիրել կապը…</string>
+    <string name="action_NewUserRequest">Ավելացնել գցել Keys կոնտակտային հրավերը միջոցով…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">Վերացնել</string>
     <string name="btn_Close">Մոտիկ</string>
     <string name="btn_Continue">Շարունակել</string>
+    <string name="btn_CreateNewKey">Ստեղծել նոր բանալին</string>
+    <string name="btn_DeleteKeys">Ջնջել Keys</string>
     <string name="btn_discard">Հրաժարվել</string>
     <string name="btn_Done">Կատարած</string>
     <string name="btn_Exit">Ելք</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 ժամ</string>
     <string name="choice_auto_storage">Default Storage</string>
     <string name="choice_external_storage">Արտաքին Storage</string>
+    <string name="choice_font_large">Մեծ</string>
+    <string name="choice_font_medium">Միջին</string>
+    <string name="choice_font_micro">Շատ փոքր է</string>
+    <string name="choice_font_small">Փոքր</string>
     <string name="choice_internal_storage">Ներքին Storage</string>
     <string name="choice_nolimit">Ոչ Սահմանափակել</string>
     <string name="choice_SaveDirectory">Save Directory</string>
@@ -104,7 +110,7 @@
     <string name="error_InvalidIncomingMessage">Bad մուտքային հաղորդագրությունը ձեւաչափը.</string>
     <string name="error_InvalidMsg">Bad հաղորդագրություն ֆորմատ.</string>
     <string name="error_InvalidRecipient">Անվավեր ստացողը.</string>
-    <string name="error_MessageInvalidPeerKeyFormat">The հասակակիցների բանալին ձեւաչափը սխալ է.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Գործընկերների բանալին ձեւաչափը սխալ է.</string>
     <string name="error_MessageSignatureVerificationFails">Ստորագրության ստուգման ձախողվեց.</string>
     <string name="error_minPassphraseRequire">Passphrases պահանջում է առնվազն %d նիշ.</string>
     <string name="error_MissingNdk">SafeSlinger չի հայտնաբերել NDK աջակցություն այս սարքի, որը պահանջվում.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">Դուք գերազանցել հաղորդագրություն քվոտան այս սարքի համար Խնդրում ենք նորից փորձել ավելի ուշ:</string>
     <string name="error_PushMsgServiceFail">Notification ծառայությունը մատչելի չէ այս անգամ. Խնդրում ենք ուղարկել հաղորդագրություն ուշ.</string>
     <string name="error_RecoderError">Հնարավոր չէ պատրաստել աուդիո ձայնագրիչ.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">Խումբը, պարսատիկ բանալիները » հետ մեկ այլ հեռախոսի, միեւնույն ժամանակ.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Խումբը, պարսատիկ բանալիների հետ մեկ այլ հեռախոսի, միեւնույն ժամանակ.</string>
     <string name="error_selectDataToSend">Հաղորդագրություն փակցնելուց համար պետք է արգելանքից կամ տեքստային հաղորդագրություն է ուղարկել.</string>
     <string name="error_ShareFileDelError">Չեք կարող հեռացնել ընդհանուր ֆայլը.</string>
     <string name="error_UnableFindPubKey">Անհնար է համապատասխանի հանրային բանալին անձնական ընտ crypto մատակարար.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger սխալ, խնդրում վերսկսել.</string>
     <string name="error_VcardParseFailure">Կապ տվյալները չափագրված սխալ.</string>
 
-    <string name="help_find">Օգտագործեք այս էկրանի ստեղծել Ձեր անունը փոխանակել ուրիշների հետ միասին. Ծորակ է «Կատարված» կոճակը, երբ ավարտեցի.</string>
-    <string name="help_home">Փոխանակման նույնականացման տվյալները, ապահովել բոլոր օգտագործողների մոտ են կամ հեռախոսով. The \' BEGIN Exchange \' կոճակը կփոխանակեն միայն նշված կոնտակտային տվյալները.</string>
-    <string name="help_identity_menu">\n\nԴուք կարող եք նաեւ փոխել անձնական տվյալները ձեր ինքնությունը: Այս էկրանի կտկտոցը կոճակը ձեր անունով. Սա ցույց է մենյու տալիս to \' Խմբագրել \' Ձեր կապը, ստեղծել նոր շփման, կամ \' օգտագործել մեկ այլ \' կոնտակտ.</string>
+    <string name="help_find">Օգտագործեք այս էկրանի ստեղծել Ձեր անունը փոխանակել ուրիշների հետ միասին. Ծորակ է արել կոճակը, երբ ավարտեցի.</string>
+    <string name="help_home">Փոխանակման նույնականացման տվյալները, ապահովել բոլոր օգտագործողների մոտ են կամ հեռախոսով. The Սկիզբ Exchange կոճակը կփոխանակեն միայն նշված կոնտակտային տվյալները.</string>
+    <string name="help_identity_menu">\n\n\nԴուք կարող եք նաեւ փոխել անձնական տվյալները ձեր ինքնությունը: Այս էկրանի կտկտոցը կոճակը ձեր անունով. Սա ցույց է ընտրացանկը թույլ է տալիս Ձեզ խմբագրել ձեր կապը, ստեղծել նոր կապեր, կամ օգտագործել այլ կոնտակտ.</string>
     <string name="help_Messages">Այս էկրանի ցուցադրում է անցյալի բոլոր հաղորդագրությունները, եւ հավելվածները, որոնք դեռեւս հասանելի է ներբեռնման համար.</string>
-    <string name="help_passphrase">Օգտագործեք այս էկրանի մուտք դիմումի ձեր passphrase.</string>
+    <string name="help_passphrase">Օգտագործեք այս էկրանի մուտք դիմումի ձեր passphrase. Եթե ​​դուք մոռացել եք Ձեր passphrase, դուք կարող եք առաջացնում է նոր բանալի պաշտպանված է նոր passphrase կտկտոցը Մոռացել եք passphrase. կոճակը: Ծորակ օգտագործողի անունը կայանների միջեւ բազմաթիվ բանալիներ.</string>
     <string name="help_PickRecip">Կապ հետ SafeSlinger բանալիներ են ցուցադրվում այստեղ, ընտրեք հետեւյալ ուղարկել Ձեր հաղորդագրությունը `</string>
-    <string name="help_save">Երբ ավարտվեց, ապա արձանագրությունում կբացահայտի ցանկը ինքնության տվյալների փոխանակել. Ընտրեք շփումները ցանկանում եք պահել եւ սեղմեք \'Ներմուծել \'.</string>
-    <string name="help_SecureIntroduction">Այս էկրանի թույլ է տալիս Ձեզ ընտրել է երկու մարդ, դուք slung բանալիները, ինչպես նաեւ ապահով ուղարկել իրենց բանալիներ միմյանց. Պարզապես սեղմեք \' ներդրում \', երբ պատրաստ է.</string>
-    <string name="help_Send">Այս էկրանի թույլ է տալիս Ձեզ ընտրել որոշ տվյալներ եւ հասցեատեր է ուղարկել. Պարզապես սեղմեք \'Ուղարկել \', երբ պատրաստ է.</string>
+    <string name="help_save">Երբ ավարտվեց, ապա արձանագրությունում կբացահայտի ցանկը ինքնության տվյալների փոխանակել. Ընտրեք շփումները ցանկանում եք պահել եւ սեղմեք ներմուծումը.</string>
+    <string name="help_SecureIntroduction">Այս էկրանի թույլ է տալիս Ձեզ ընտրել է երկու մարդ, դուք slung բանալիները, ինչպես նաեւ ապահով ուղարկել իրենց բանալիներ միմյանց. Պարզապես սեղմեք Ներկայացնել այն ժամանակ, երբ պատրաստ է.</string>
+    <string name="help_Send">Այս էկրանի թույլ է տալիս Ձեզ ընտրել որոշ տվյալներ եւ հասցեատեր է ուղարկել. Պարզապես սեղմեք Send երբ պատրաստ է.</string>
 
     <string name="iOS_contactError">Կոնտակտներ համար անհրաժեշտ թույալտվություն: Խնդրում ենք գնալ iOS Կառավարում որպեսզի Կապ թույլտվությունները.</string>
     <string name="iOS_errorpushtoken">Հրել գրանցումը բացակայում է.</string>
@@ -159,6 +165,7 @@
     <string name="label_Device">Սարքի:</string>
     <string name="label_DeviceInSendOnlyMode">ՈՒղարկել միայն ռեժիմ</string>
     <string name="label_DisabledExchSourceKeyChange">Ձեր բանալին է փոխվել: պարսատիկ Keys կրկին.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Սկսելու հաղորդագրությունների, երկու օգտվողները պետք Պարսատիկ Keys, միեւնույն ժամանակ.</string>
     <string name="label_Draft">ՆԱԽԱԳԻԾ</string>
     <string name="label_EnabledKeyFormatDeprecated">Key ձեւաչափը հնացել: պարսատիկ Keys կրկին.</string>
     <string name="label_exchanged">փոխանակեցին</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">Պատկեր Անունը</string>
     <string name="label_FindInstruct">Մուտքագրեք անունը ցանկանում ուրիշներին տեսնել, երբ շփվելու ապահով:</string>
     <string name="label_FirstName">Անուն</string>
-    <string name="label_Home">Թակել ձեր անունը ավելացնել կամ հեռացնել կոնտակտային տվյալները, ստուգելու տարրեր ցանկանում եք կիսվել, եւ թակել «Սկիզբ Exchange, երբ մյուսները պատրաստ են բորսայում:</string>
+    <string name="label_Home">Թակել ձեր անունը ավելացնել կամ հեռացնել կոնտակտային տվյալները, ստուգելու տարրեր ցանկանում եք կիսվել, եւ թակել Սկիզբ Exchange երբ մյուսները պատրաստ են բորսայում:</string>
     <string name="label_hometag">Տուն</string>
     <string name="label_hours">%d ժամ</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud միացված. Ծորակ է « Կատարված » կոճակը, երբ ավարտեցի.</string>
-    <string name="label_InstNoMessages">Հաղորդագրություններ, Դուք կարող եք ուղարկել հաղորդագրություն է « ստեղծագործել հաղորդագրությունը կոճակը Գլխավոր մենյու.</string>
-    <string name="label_InstNoMessagesAndroid">Հաղորդագրություններ, Դուք կարող եք ուղարկել հաղորդագրություն ից « Կազմել \' կոճակը.</string>
-    <string name="label_InstNoRecipients">Ոչ ստացողների. Գտնել մեկ այլ SafeSlinger օգտվողին մոտակայքում եւ ձեռք է « Պարսատիկ բանալիները » պիտակը կիսել բանալիները.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud միացված. Ծորակ է արել կոճակը, երբ ավարտեցի.</string>
+    <string name="label_InstNoMessages">Հաղորդագրություններ, Դուք կարող եք ուղարկել հաղորդագրություն է կազմել հաղորդագրություն կոճակը Գլխավոր մենյու.</string>
+    <string name="label_InstNoMessagesAndroid">Հաղորդագրություններ, Դուք կարող եք ուղարկել հաղորդագրություն ից Կազմել կոճակը.</string>
+    <string name="label_InstNoRecipients">Հասցեատեր ավելացնելու համար պետք է նախ պարսատիկ Keys մեկ կամ մի քանի այլ օգտվողների, միեւնույն ժամանակ. Դուք կարող եք նաեւ ուղարկել է նետել Keys կոնտակտային հրավերով ցանկի մեջ.</string>
     <string name="label_InstNoSharedFile">Ոչ կիսել ֆայլը. Միացրեք Ձեր սարքը iTunes եւ քաշել ֆայլեր է ընդհանուր թղթապանակում.</string>
     <string name="label_InstRecipients">Ընտրեք ստացողը ուղարկել հաղորդագրություն:</string>
     <string name="label_InstSendInvite">Ընտրեք հասցեատերեր ներդնել ապահով:</string>
     <string name="label_InstSharedFile">Ընտրեք ֆայլը կցել:</string>
     <string name="label_introduced">ներկայացրել</string>
+    <string name="label_inviteSent">Հրավիրված</string>
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Ազգանուն</string>
     <string name="label_Me">Ինձ</string>
     <string name="label_messageIntroduceNameToYou">Ուզում եմ ներկայացնել %s ձեզ.</string>
+    <string name="label_messageInviteInstall">SafeSlinger ծրագիրը: %s</string>
+    <string name="label_messageInviteSetupInst">To setup ապահով հաղորդագրությունների կապը, մենք կարող ենք հանդիպել, կամ Հեռախոս միմյանց, միեւնույն ժամանակ, եւ ապա Պարսատիկ Keys միայն մեկ անգամ ստուգել կապը.</string>
+    <string name="label_messageInviteStartMsg">Կարող ենք սկսել ապահով հաղորդագրությունների հետ բաց կոդով SafeSlinger iPhone կամ Android ծրագրում.</string>
     <string name="label_minutes">%d րոպե</string>
     <string name="label_mobiletag">Շարժական</string>
     <string name="label_MostRecentOnly">Ամենավերջին միայն</string>
@@ -210,7 +221,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger կրկնօրինակում հետաձգվել</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
     <string name="label_SaveAccount">Պահել հաշիվ</string>
-    <string name="label_SaveInstruct">Ստուգեք կոնտակտները ցանկանում եք թարմացնել Ձեր հասցեն գիրքը, ապա թակել «ներմուծում» պահպանել անվտանգ Կոնտակտներ:</string>
+    <string name="label_SaveInstruct">Ստուգեք կոնտակտները ցանկանում եք թարմացնել Ձեր հասցեն գիրքը, ապա թակել ներմուծումը պահպանել անվտանգ Կոնտակտներ:</string>
     <string name="label_seconds">%d վայրկյան</string>
     <string name="label_SelectRecip">Ընտրել Ստացող</string>
     <string name="label_sendErrorData">Ուղարկել Սխալ Data</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">Քայլ 3</string>
     <string name="label_step_4">Քայլ 4</string>
     <string name="label_step_5">Քայլ 5</string>
+    <string name="label_summary_auto_attach_retrieval">Ավտոմատ բեռնել հաղորդագրություն կցորդներ, երբ մուտք չեք գործել համակարգ</string>
+    <string name="label_summary_auto_decrypt">Ավտոմատ decrypt հաղորդագրություններ, երբ մուտք չեք գործել համակարգ</string>
+    <string name="label_summary_remind_backup_delay">Ստանալ ծանուցում կրկնօրինակում չէ.</string>
+    <string name="label_summary_show_tutorial">Ցույց տալ ձեռնարկը առաջ attemping են նետել բանալիներ.</string>
     <string name="label_TapToDecryptFile">Նշել է decrypt ֆայլ</string>
     <string name="label_TapToDecryptMessage">Ծորակ է decrypt</string>
     <string name="label_TapToDownloadFile">Նշել բեռնել ֆայլը</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">Նշել բացել ֆայլը</string>
     <string name="label_TapToResumeDraft">Նշել է վերսկսել հաղորդագրություն նախագիծը</string>
     <string name="label_TapToSendCredentialUpdate">Սեղմել եւ պահել է ուղարկել հավատարմագիր թարմացում.</string>
+    <string name="label_TapToSlingKeys">Նշել են նետել բանալիներ.</string>
     <string name="label_targetAccountLabel">Կապ Հաշվի</string>
-    <string name="label_TouchToConfigureBackupSettings">Դուք կարող եք ընտրովի հնարավորություն SafeSlinger iCloud կրկնօրնկ է iOS պարամետրերը. Ծորակ է « Կատարված » կոճակը, երբ ավարտեցի.</string>
+    <string name="label_TouchToConfigureBackupSettings">Դուք կարող եք ընտրովի հնարավորություն SafeSlinger iCloud կրկնօրնկ է iOS պարամետրերը. Ծորակ է արել կոճակը, երբ ավարտեցի.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Touch կարգավորել կրկնօրինակում պարամետրեր.</string>
     <string name="label_TouchToConfigureCacheTimeout">Touch կարգավորել cache timeout պարամետրեր.</string>
     <string name="label_undefinedTypeLabel">Անհայտ</string>
     <string name="label_UnknownSender">Կոդավորված Sender</string>
     <string name="label_UserName">Օգտվողի անունը</string>
+    <string name="label_WarnForgotPassphrase">Պաշտպանել ձեր տվյալները, SafeSlinger չի պահել ձեր passphrase ամենուր վերականգնման. Դուք կարող եք միայն մուտք գործել հասցեատերեր եւ ուղերձներ ստեղծվում է նույն passphrase մտնելիս. Սակայն, դուք կարող եք առաջացնում է նոր ստեղնը եւ passphrase, ապա կրկնում պարսատիկ Keys ձեր ստացողների.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Հետեւյալ բանալիներ կհանվեն:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Չկան ավելի վերջին բանալիներ քան ձերն է.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Միայն բանալիներ գեներացվել վերջերս քան ձերն է, գեներացվում է %s, կարող է ջնջվել:</string>
     <string name="label_worktag">Աշխատանք</string>
 
     <string name="menu_About">Մոտ</string>
+    <string name="menu_auto_attach_retrieval">Auto-վերստանալ կցորդներ տեղադրել</string>
+    <string name="menu_auto_decrypt">Auto-վերծանել</string>
     <string name="menu_Change">Փոփոխություն</string>
     <string name="menu_ChangePassphrase">Փոխել passphrase</string>
+    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Ստեղծել նոր</string>
     <string name="menu_delete">Ջնջել</string>
-    <string name="menu_deleteThread">Ջնջել թեմա \'%s\'</string>
+    <string name="menu_deleteThread">Ջնջել Thread %s</string>
     <string name="menu_Details">Դիտել մանրամասն</string>
     <string name="menu_DownloadDirectory">Download Directory</string>
     <string name="menu_Edit">Խմբագրել</string>
+    <string name="menu_EditContact">Խմբագրել Կապ</string>
+    <string name="menu_EditName">Խմբագրել Անվանում</string>
     <string name="menu_FileManager">File Manager</string>
+    <string name="menu_ForgotPassphrase">Մոռացել եք passphrase.</string>
     <string name="menu_Help">Օգնություն</string>
     <string name="menu_Introduction">Ներածություն</string>
     <string name="menu_License">Լիցենզիա</string>
     <string name="menu_Logout">Ելք</string>
+    <string name="menu_ManagePassphrases">Կառավարեք passphrases</string>
+    <string name="menu_message_font_size">Հաղորդագրություն Տառատեսակի Չափ</string>
     <string name="menu_messageCopyText">Copy Text</string>
     <string name="menu_messageForward">Առաջ</string>
     <string name="menu_Remove">Հեռացնել</string>
-    <string name="menu_SelectShareApp">Ուղարկել Դիմում</string>
+    <string name="menu_restore_default">Վերականգնել լռելյայն կայանքները</string>
+    <string name="menu_ringtone">Հնչել</string>
+    <string name="menu_SelectShareApp">Ավելացնել կոնտակտ հրավերը</string>
     <string name="menu_sendFeedback">Ուղարկել Հետադարձ կապ</string>
     <string name="menu_SendUpdate">Ուղարկել Թարմացնել</string>
     <string name="menu_Settings">Կառավարում</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">Պարսատիկ Keys</string>
     <string name="menu_TagListMessages">Messages</string>
     <string name="menu_UseAnother">Օգտագործել այլ</string>
-    <string name="menu_UseContactPerson">Կապ \'%s\'</string>
+    <string name="menu_UseContactPerson">Կապ %s</string>
     <string name="menu_UseNoContact">Օգտագործեք միայն անունով</string>
-    <string name="menu_UseProfilePerson">Օգտագործեք Անձնագիր \'%s\'</string>
+    <string name="menu_UseProfilePerson">Օգտագործեք Անձնագիր %s</string>
+    <string name="menu_vibrate">Դողալ</string>
 
     <string name="prog_decrypting">decrypting…</string>
     <string name="prog_encrypting">encrypting…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">Առաջադեմ</string>
     <string name="section_backup">Պահուստ</string>
     <string name="section_general">Գլխավոր</string>
+    <string name="section_notification">Ծանուցումներ</string>
+    <string name="section_storage">Պահում</string>
 
     <string name="state_BackupRestored">Backup վերականգնվել.</string>
     <string name="state_FileDeleted">Ջնջված ֆայլ %s.</string>
     <string name="state_FileSent">Հաղորդագրություն ուղարկվել.</string>
+    <string name="state_InvitationAdded">Invitation ավելացվել.</string>
     <string name="state_MessageSavedAsDraft">Հաղորդագրություն փրկեց, ինչպես նաեւ նախագծի.</string>
     <string name="state_MessagesDeleted">%d հաղորդագրությունները ջնջված</string>
     <string name="state_PassphraseUpdated">Passphrase թարմացվել.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s Կապ ներմուծվել.</string>
     <string name="state_TextCopiedToClipboard">Text պատճենահանվել է clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger նախագծված է հեշտությամբ կիսել նույնականացման տվյալները, անձամբ կամ ավելի հեռախոսով, իսկությունը, մասնավոր եւ անձեռնմխելի. Յուրաքանչյուր անձ եք կիսվել ստեղծում է անվտանգ վերջ-to-end ալիքը ուղարկել հաղորդագրություն.\n\nՆկարագրություն:\n- Հեշտությամբ փոխանակել կոնտակտային տվյալները ուրիշների հետ\n- Ապահով Պարսատիկ տեքստեր, լուսանկարներ, բան.\n- Ուժեղ Գաղտնագրությունը պաշտպանում ձեր\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger նախագծված է հեշտությամբ կիսել նույնականացման տվյալները, անձամբ կամ ավելի հեռախոսով, իսկությունը, մասնավոր եւ անձեռնմխելի. Յուրաքանչյուր անձ եք կիսվել ստեղծում է անվտանգ վերջ-to-end ալիքը ուղարկել հաղորդագրություն.\n\nՆկարագրություն:\n-Հեշտությամբ փոխանակել կոնտակտային տեղեկատվություն ուրիշների\n-ապահով պարսատիկ տեքստերի, լուսանկարներ, ոչինչ.\n-Ուժեղ ծածկագիտություն պաշտպանում է Ձեր տվյալները\n\nEmail: %2$s\nWeb: %3$s</string>
     <string name="text_KeywordExchange">Փոխանակել</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">Հիմնական</string>
@@ -309,9 +344,9 @@
     <string name="text_KeywordSecurity">Անվտանգություն</string>
     <string name="text_LanguagesProvidedBy">Լեզուներ կողմից:</string>
     <string name="text_RelatedSearchTerms">Առնչվող Պայմանաբառ:</string>
-    <string name="text_Requirements">Պահանջները:\n1. Պետք է տեղադրված է առնվազն 2 սարքերի.\n2. An ինտերնետ կապ պետք է լինի ակտիվ.</string>
+    <string name="text_Requirements">Պահանջներ:\n1. Պետք է տեղադրված է առնվազն 2 սարքերի.\n2 An ինտերնետ կապ պետք է լինի ակտիվ.</string>
     <string name="text_SourceCodeRepo">բաց կոդով: %s</string>
-    <string name="text_WhatsNew">- Կայունության ամրագրում.</string>
+    <string name="text_WhatsNew">-Կայունություն ամրագրում.</string>
 
     <string name="title_About">Մոտ</string>
     <string name="title_camera">Ֆոտոխցիկ</string>
@@ -322,12 +357,13 @@
     <string name="title_ExchangeWalkthrough">Պարսատիկ Keys օգնական</string>
     <string name="title_FileOptions">Հավելված Ընտրանքներ</string>
     <string name="title_find">Մատչ</string>
+    <string name="title_font_size">Ընտրել տառաչափը</string>
     <string name="title_home">Սկիզբ բորսան</string>
     <string name="title_HomePanel">Տուն</string>
     <string name="title_MessageDetail">Հաղորդագրություն</string>
     <string name="title_Messages">Messages</string>
     <string name="title_MyIdentity">Personal Կապ</string>
-    <string name="title_NotifyFileAvailable">SafeSlinger Message Դուք փնտրել էք-</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Message Դուք փնտրել էք</string>
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages նյութեր</string>
     <string name="title_passphrase">Passphrase</string>
     <string name="title_photoalbum">Լուսանկարչական ալբոմ</string>

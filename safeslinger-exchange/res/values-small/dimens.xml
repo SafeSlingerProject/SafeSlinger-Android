@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
     The MIT License (MIT)
     
@@ -24,21 +25,13 @@
 
 <resources>
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
-
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-    </style>
+    <dimen name="sse__size_5dp">4dp</dimen>
+    <dimen name="sse__size_20dp">15dp</dimen>
+    <dimen name="sse__button_side_margin">11dp</dimen>
+    <dimen name="sse__text_size_micro">9sp</dimen>
+    <dimen name="sse__text_size_small">11sp</dimen>
+    <dimen name="sse__text_size_medium">14sp</dimen>
+    <dimen name="sse__text_size_large">17sp</dimen>
+    <dimen name="sse__text_size_50">38sp</dimen>
 
 </resources>

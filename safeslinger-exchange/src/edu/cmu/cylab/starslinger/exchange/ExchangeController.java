@@ -54,7 +54,7 @@ public class ExchangeController {
     private int mUsrId;
     private int mUsrIdLink;
     private int mNumUsers;
-    private WebEngine mServConn;
+    private ConnectionEngine mConnect;
     private static SecureRandom mRandom = new SecureRandom();
     private byte[] mPackedData;
     private int[] mGroupIds;
@@ -136,7 +136,7 @@ public class ExchangeController {
         mErrMsg = null;
         mError = false;
 
-        mServConn = new WebEngine(mCtx, mHost);
+        mConnect = ConnectionEngine.getServerInstance(mCtx, mHost);
 
         mNumUsers = 0;
 
@@ -148,7 +148,7 @@ public class ExchangeController {
 
         // Select a random user id to use to identify yourself when
         // talking with the web server.
-        mUsrId = mRandom.nextInt(500);
+        mUsrId = mRandom.nextInt(Integer.MAX_VALUE);
 
         return true;
     }
@@ -203,7 +203,7 @@ public class ExchangeController {
         int id = 0;
         ByteBuffer res = null;
         try {
-            res = ByteBuffer.wrap(mServConn.assign_user(mCommitB));
+            res = ByteBuffer.wrap(mConnect.assign_user(mCommitB));
         } catch (ExchangeException e) {
             return handleError(e);
         }
@@ -246,7 +246,7 @@ public class ExchangeController {
 
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
-                theirs = ByteBuffer.wrap(mServConn.sync_commits(mUsrId, mUsrIdLink, usridList,
+                theirs = ByteBuffer.wrap(mConnect.sync_commits(mUsrId, mUsrIdLink, usridList,
                         (postCommit ? mCommitB : new byte[0])));
                 postCommit = false; // done!
 
@@ -328,8 +328,8 @@ public class ExchangeController {
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
                 try {
-                    theirs = ByteBuffer.wrap(mServConn.sync_data(mUsrId, usridList,
-                            (postData ? data : new byte[0])));
+                    theirs = ByteBuffer.wrap(mConnect.sync_data(mUsrId, usridList, (postData ? data
+                            : new byte[0])));
                 } catch (ExchangeException e) {
                     return handleError(e);
                 }
@@ -470,7 +470,7 @@ public class ExchangeController {
 
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
-                theirs = ByteBuffer.wrap(mServConn.sync_signatures(mUsrId, usridList, sig.array()));
+                theirs = ByteBuffer.wrap(mConnect.sync_signatures(mUsrId, usridList, sig.array()));
 
                 // add updates
                 mLatestServerVersion = theirs.getInt();
@@ -523,7 +523,7 @@ public class ExchangeController {
 
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
-                theirs = ByteBuffer.wrap(mServConn.sync_signatures(mUsrId, usridList, postSig ? sig
+                theirs = ByteBuffer.wrap(mConnect.sync_signatures(mUsrId, usridList, postSig ? sig
                         : new byte[0]));
                 postSig = false; // done!
 
@@ -611,15 +611,15 @@ public class ExchangeController {
                 // can send node? then send node.
                 if (pos < 2) {
                     // send(node)
-                    ours = ByteBuffer.wrap(mServConn.put_keynode(mUsrId, orderedIDs[curNodePos],
-                            pub));
+                    ours = ByteBuffer.wrap(mConnect
+                            .put_keynode(mUsrId, orderedIDs[curNodePos], pub));
                     mLatestServerVersion = ours.getInt();
                 }
 
                 // can recv mynode? then recv node.
                 if (pos >= 2 && mynode == null) {
                     // mynode = recv()
-                    ours = ByteBuffer.wrap(mServConn.get_keynode(mUsrId));
+                    ours = ByteBuffer.wrap(mConnect.get_keynode(mUsrId));
 
                     int offset = 0;
                     mLatestServerVersion = ours.getInt();
@@ -702,7 +702,7 @@ public class ExchangeController {
 
                 // get what is on the server now and create a new group
                 // this should be a bunch of signatures
-                theirs = ByteBuffer.wrap(mServConn.sync_match(mUsrId, usridList,
+                theirs = ByteBuffer.wrap(mConnect.sync_match(mUsrId, usridList,
                         postNonce ? nonceData : new byte[0]));
                 postNonce = false; // done!
 
@@ -1082,22 +1082,22 @@ public class ExchangeController {
     }
 
     public void cancelProtocol() {
-        if (mServConn != null) {
-            mServConn.setCancelable(true);
+        if (mConnect != null) {
+            mConnect.setCancelable(true);
         }
     }
 
     public boolean isCanceled() {
-        if (mServConn != null) {
-            return mServConn.isCancelable();
+        if (mConnect != null) {
+            return mConnect.isCancelable();
         } else {
             return true;
         }
     }
 
     public void endProtocol() {
-        if (mServConn != null) {
-            mServConn.shutdownConnection();
+        if (mConnect != null) {
+            mConnect.shutdownConnection();
         }
     }
 
@@ -1140,8 +1140,8 @@ public class ExchangeController {
     }
 
     public long getExchStartTimeMs() {
-        if (mServConn != null && mServConn.getExchStartTimer() != null) {
-            return mServConn.getExchStartTimer().getTime();
+        if (mConnect != null && mConnect.getExchStartTimer() != null) {
+            return mConnect.getExchStartTimer().getTime();
         } else {
             return 0;
         }

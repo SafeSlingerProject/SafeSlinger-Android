@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">ਦੇ ਨਾਲ ਸਬੰਧ ਨੂੰ ਸੱਦਾ ਭੇਜੋ…</string>
+    <string name="action_NewUserRequest">ਇੱਕ ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਸੰਪਰਕ ਨੂੰ ਸੱਦਾ ਰਾਹੀ ਸ਼ਾਮਲ ਕਰੋ…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Google Translate</string>
@@ -41,6 +41,8 @@
     <string name="btn_Cancel">ਰੱਦ ਕਰੋ</string>
     <string name="btn_Close">ਬੰਦ ਕਰੋ</string>
     <string name="btn_Continue">ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="btn_CreateNewKey">ਨਿਊ ਕੁੰਜੀ ਬਣਾਓ</string>
+    <string name="btn_DeleteKeys">ਕੁੰਜੀ ਹਟਾਓ</string>
     <string name="btn_discard">ਰੱਦ</string>
     <string name="btn_Done">ਸਮਾਪਤ</string>
     <string name="btn_Exit">ਐਗਜ਼ਿਟ</string>
@@ -68,6 +70,10 @@
     <string name="choice_8hours">8 ਘੰਟੇ</string>
     <string name="choice_auto_storage">ਮੂਲ ਸਟੋਰੇਜ਼</string>
     <string name="choice_external_storage">ਬਾਹਰੀ ਸਟੋਰੇਜ਼</string>
+    <string name="choice_font_large">ਵੱਡੇ</string>
+    <string name="choice_font_medium">ਦਰਮਿਆਨੇ</string>
+    <string name="choice_font_micro">ਬਹੁਤ ਛੋਟਾ</string>
+    <string name="choice_font_small">ਛੋਟਾ</string>
     <string name="choice_internal_storage">ਅੰਦਰੂਨੀ ਸਟੋਰੇਜ਼</string>
     <string name="choice_nolimit">ਕੋਈ ਸੀਮਾ</string>
     <string name="choice_SaveDirectory">ਸੰਭਾਲੋ ਡਾਇਰੈਕਟਰੀ</string>
@@ -81,7 +87,7 @@
     <string name="error_AudioRecorderPermissionError">ਮਾਈਕਰੋਫੋਨ ਦੀ ਇਜਾਜ਼ਤ ਦੀ ਲੋੜ. ਮਾਈਕਰੋਫੋਨ ਅਧਿਕਾਰ ਨੂੰ ਯੋਗ ਕਰਨ ਲਈ ਆਈਓਐਸ ਸੈਟਿੰਗ ਕਰਨ ਲਈ ਜਾਓ ਜੀ.</string>
     <string name="error_BackupNotFound">ਨੂੰ ਬਹਾਲ ਕਰਨ ਲਈ ਕੋਈ ਬੈਕਅੱਪ ਹੈ.</string>
     <string name="error_BackupNotSupportedDevice">ਜੰਤਰ ਬੈਕਅੱਪ ਨੂੰ ਮੁੜ ਨੂੰ ਸਹਿਯੋਗ ਨਹੀ ਹੈ.</string>
-    <string name="error_BadCopyProtectUpgrade">ਕਰਕੇ, ਛੁਪਾਓ 4.1 ਵਿੱਚ ਇੱਕ ਬੱਗ ਨੂੰ, ਤੁਹਾਡੇ ਅਣ ਹਨ ਅਤੇ SafeSlinger ਮੁੜ ਕਰੇਗਾ.</string>
+    <string name="error_BadCopyProtectUpgrade">ਕਰਕੇ, ਛੁਪਾਓ 4.1 ਵਿੱਚ ਇੱਕ ਬੱਗ ਨੂੰ, ਤੁਹਾਨੂੰ SafeSlinger ਅਨ ਅਤੇ ਮੁੜ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਹੋਵੇਗੀ.</string>
     <string name="error_C2DMRegAccountMissing">ਇੱਕ ਗੂਗਲ ਖਾਤੇ ਦੀ ਲੋੜ ਹੈ. ਖਾਤੇ ਮੈਨੇਜਰ ਨੂੰ ਖੋਲ੍ਹਣ ਦੇ ਹੈ ਅਤੇ ਇੱਕ ਗੂਗਲ ਖਾਤੇ ਸ਼ਾਮਲ ਕਰੋ ਜੀ.</string>
     <string name="error_C2DMRegAuthenticationFailed">ਰਜਿਸਟਰੇਸ਼ਨ ਪਰਮਾਣਿਤ ਨਾ, ਬਾਅਦ ਵਿੱਚ ਦਸਤੀ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜੀ.</string>
     <string name="error_C2DMRegInvalidSender">ਰਜਿਸਟਰੇਸ਼ਨ ਇਸ ਵਰਜਨ ਲਈ ਉਪਲੱਬਧ ਨਹੀ ਹੈ, ਇੱਕ ਅੱਪਡੇਟ ਵਰਜਨ ਲਈ ਚੈੱਕ ਕਰੋ.</string>
@@ -121,7 +127,7 @@
     <string name="error_PushMsgQuotaExceeded">ਤੁਹਾਨੂੰ ਇਸ ਜੰਤਰ ਲਈ ਸੁਨੇਹੇ ਨੂੰ ਕੋਟਾ ਖਤਮ ਹੈ. ਬਾਅਦ ਵਿੱਚ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜੀ.</string>
     <string name="error_PushMsgServiceFail">ਸੂਚਨਾ ਸੇਵਾ ਇਸ ਵਾਰ ਉਪਲੱਬਧ ਨਹੀ ਹੈ. ਬਾਅਦ ਵਿੱਚ ਸੁਨੇਹਾ ਭੇਜਣ ਲਈ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜੀ.</string>
     <string name="error_RecoderError">ਆਡੀਓ ਰਿਕਾਰਡਰ ਨੂੰ ਤਿਆਰ ਨਹੀ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">, ਉਸੇ ਵੇਲੇ ਇੱਕ ਹੋਰ ਫ਼ੋਨ ਦੇ ਨਾਲ \' ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ \' ਸ਼ੁਰੂ ਕਰਨ ਲਈ.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">, ਉਸੇ ਵੇਲੇ ਇੱਕ ਹੋਰ ਫ਼ੋਨ ਦੇ ਨਾਲ ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਸ਼ੁਰੂ ਕਰਨ ਲਈ.</string>
     <string name="error_selectDataToSend">ਤੁਹਾਨੂੰ ਇੱਕ ਨੱਥੀ ਜ ਭੇਜਣ ਲਈ ਇੱਕ ਟੈਕਸਟ ਸੁਨੇਹੇ ਦੀ ਲੋੜ ਹੈ.</string>
     <string name="error_ShareFileDelError">ਸ਼ੇਅਰ ਫਾਇਲ ਨੂੰ ਹਟਾ ਨਹੀ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ.</string>
     <string name="error_UnableFindPubKey">ਕ੍ਰਿਪਟੂ ਪ੍ਰਦਾਤਾ ਵਿੱਚ ਨਿੱਜੀ ਕੁੰਜੀ ਨੂੰ ਪਬਲਿਕ ਕੁੰਜੀ ਨਾਲ ਮੇਲ ਕਰਨ ਲਈ ਅਸਮਰੱਥ ਹੈ.</string>
@@ -132,15 +138,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger ਗਲਤੀ, ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰੋ.</string>
     <string name="error_VcardParseFailure">ਸੰਪਰਕ ਡਾਟਾ ਗਲਤ ਫਾਰਮੈਟ ਕੀਤੇ ਗਿਆ ਸੀ.</string>
 
-    <string name="help_find">ਹੋਰ ਨਾਲ ਬਦਲੀ ਕਰਨ ਲਈ ਆਪਣੇ ਨਾਮ ਨੂੰ ਸੈੱਟ ਕਰਨ ਲਈ ਇਹ ਸਕਰੀਨ ਵਰਤੋ. ਨਿਬੇੜ ਕੇ \'ਸੰਪੰਨ\' ਬਟਨ ਟੈਪ ਕਰੋ.</string>
-    <string name="help_home">ਪਛਾਣ ਦੀ ਡਾਟਾ ਬਦਲੀ ਕਰਨ ਲਈ, ਸਭ ਉਪਭੋਗੀ ਨੇੜਲੇ ਜ ਫੋਨ \'ਤੇ ਹਨ, ਇਹ ਯਕੀਨੀ ਬਣਾਉਣ. \' ਸ਼ੁਰੂ ਐਕਸਚੇਜ਼ \' ਬਟਨ ਸਿਰਫ਼ ਕੀਤੀ ਗਈ ਦੇ ਸੰਪਰਕ ਡਾਟਾ ਦਾ ਲੈਣ ਜਾਵੇਗਾ.</string>
-    <string name="help_identity_menu">\n\nਤੁਹਾਨੂੰ ਇਹ ਵੀ ਤੁਹਾਡਾ ਨਾਮ ਨਾਲ ਬਟਨ ਨੂੰ ਦਬਾ ਕੇ ਇਸ ਸਕਰੀਨ \'ਤੇ ਤੁਹਾਡੀ ਪਛਾਣ ਬਾਰੇ ਨਿੱਜੀ ਡਾਟਾ ਤਬਦੀਲ ਕਰ ਸਕਦੇ ਹੋ. ਇਸ ਨਾਲ ਤੁਹਾਨੂੰ \' ਸੋਧ \' ਨੂੰ ਆਪਣੇ ਸੰਪਰਕ ਨੂੰ, ਨਾਲ ਸੰਪਰਕ ਕਰੋ \' ਨਿਊ ਬਣਾਓ \', ਜ ਦੇ ਸੰਪਰਕ \' ਇੱਕ ਹੋਰ ਵਰਤੋ \' ਨੂੰ, ਜਿਸ ਨਾਲ ਇੱਕ ਮੇਨੂ ਵੇਖਾਏਗਾ.</string>
+    <string name="help_find">ਹੋਰ ਨਾਲ ਬਦਲੀ ਕਰਨ ਲਈ ਆਪਣੇ ਨਾਮ ਨੂੰ ਸੈੱਟ ਕਰਨ ਲਈ ਇਹ ਸਕਰੀਨ ਵਰਤੋ. ਨਿਬੇੜ ਕੇ ਸੰਪੰਨ ਬਟਨ ਨੂੰ ਟੈਪ ਕਰੋ.</string>
+    <string name="help_home">ਪਛਾਣ ਦੀ ਡਾਟਾ ਬਦਲੀ ਕਰਨ ਲਈ, ਸਭ ਉਪਭੋਗੀ ਨੇੜਲੇ ਜ ਫੋਨ \'ਤੇ ਹਨ, ਇਹ ਯਕੀਨੀ ਬਣਾਉਣ. ਸ਼ੁਰੂ ਕਰੋ ਐਕਸਚੇਜ਼ ਬਟਨ ਸਿਰਫ਼ ਕੀਤੀ ਗਈ ਦੇ ਸੰਪਰਕ ਡਾਟਾ ਦਾ ਲੈਣ ਜਾਵੇਗਾ.</string>
+    <string name="help_identity_menu">\n\n\nਤੁਹਾਨੂੰ ਇਹ ਵੀ ਤੁਹਾਡਾ ਨਾਮ ਨਾਲ ਬਟਨ ਨੂੰ ਦਬਾ ਕੇ ਇਸ ਸਕਰੀਨ \'ਤੇ ਤੁਹਾਡੀ ਪਛਾਣ ਬਾਰੇ ਨਿੱਜੀ ਡਾਟਾ ਤਬਦੀਲ ਕਰ ਸਕਦੇ ਹੋ. ਇਸ ਲਈ, ਤੁਹਾਨੂੰ ਆਪਣੀ ਸੰਪਰਕ ਸੋਧ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ, ਇੱਕ ਮੇਨੂ ਨੂੰ ਵੇਖਾਉਣ ਨਵ ਸੰਪਰਕ ਬਣਾਓ, ਜ ਹੋਰ ਸੰਪਰਕ ਵਰਤੋ ਕਰੇਗਾ.</string>
     <string name="help_Messages">ਇਹ ਸਕਰੀਨ ਸਭ ਬੀਤੇ ਸੁਨੇਹੇ, ਅਤੇ ਹਾਲੇ ਵੀ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ ਉਪਲੱਬਧ ਹਨ, ਜੋ ਕਿ ਨੱਥੀ ਵਿਖਾਉਦਾ ਹੈ.</string>
-    <string name="help_passphrase">ਆਪਣੇ ਪ੍ਹੈਰਾ ਨਾਲ ਦੀ ਅਰਜ਼ੀ ਨੂੰ ਲਾਗਇਨ ਕਰਨ ਲਈ ਇਸ ਸਕਰੀਨ ਵਰਤੋ.</string>
+    <string name="help_passphrase">ਆਪਣੇ ਪ੍ਹੈਰਾ ਨਾਲ ਦੀ ਅਰਜ਼ੀ ਨੂੰ ਲਾਗਇਨ ਕਰਨ ਲਈ ਇਸ ਸਕਰੀਨ ਵਰਤੋ. ਤੁਹਾਨੂੰ ਆਪਣੇ ਪ੍ਹੈਰਾ ਭੁੱਲ ਗਿਆ ਹੈ, ਤੁਹਾਨੂੰ ਭੁੱਲ ਗਿਆ ਪ੍ਹੈਰਾ ਟੈਪ ਕਰ ਕੇ ਕੋਈ ਨਵ ਗੁਪਤਕੋਡ ਦੁਆਰਾ ਸੁਰੱਖਿਅਤ ਇੱਕ ਨਵ ਕੁੰਜੀ ਨੂੰ ਤਿਆਰ ਕਰ ਸਕਦੇ ਹੋ? ਬਟਨ ਨੂੰ. ਮਲਟੀਪਲ ਕੁੰਜੀ ਵਿੱਚ ਸਵਿੱਚ ਕਰਨ ਲਈ ਯੂਜ਼ਰ ਨੂੰ ਨਾਮ ਟੈਪ ਕਰੋ.</string>
     <string name="help_PickRecip">SafeSlinger ਸਵਿੱਚ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਸੁਨੇਹਾ ਭੇਜਣ ਲਈ ਇੱਕ ਦੀ ਚੋਣ ਕਰੋ, ਇੱਥੇ ਵਿਖਾਈ ਹਨ.</string>
-    <string name="help_save">ਮੁਕੰਮਲ ਹੋਣ ਤੇ, ਪਰੋਟੋਕਾਲ ਵਟਾਏ ਪਛਾਣ ਦੀ ਡਾਟਾ ਦੀ ਇੱਕ ਸੂਚੀ ਪ੍ਰਗਟ ਕਰੇਗਾ. ਜੇਕਰ \' ਆਯਾਤ ਕਰੋ \' ਨੂੰ ਬਚਾਉਣ ਅਤੇ ਦਬਾਓ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਦੀ ਚੋਣ ਕਰੋ ਸੰਪਰਕ.</string>
-    <string name="help_SecureIntroduction">ਇਹ ਸਕਰੀਨ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਸੁਰੱਖਿਅਤ ਇੱਕ ਦੂਜੇ ਨੂੰ ਆਪਣੇ ਕੁੰਜੀ ਭੇਜਣ ਲਈ ਅੱਗੇ ਦੇ ਨਾਲ ਕੁੰਜੀ slung ਹੈ ਦੋ ਲੋਕ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ. ਜਦ ਤਿਆਰ ਬਸ \' ਪੇਸ਼ \' ਦਬਾਓ.</string>
-    <string name="help_Send">ਇਹ ਸਕਰੀਨ ਤੁਹਾਨੂੰ ਕੁਝ ਡਾਟਾ ਅਤੇ ਨੂੰ ਭੇਜਣ ਲਈ ਇੱਕ ਪ੍ਰਾਪਤ ਕਰਤਾ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ. ਜਦ ਤਿਆਰ ਬਸ \' ਭੇਜੋ \' ਨੂੰ ਦਬਾਓ.</string>
+    <string name="help_save">ਮੁਕੰਮਲ ਹੋਣ ਤੇ, ਪਰੋਟੋਕਾਲ ਵਟਾਏ ਪਛਾਣ ਦੀ ਡਾਟਾ ਦੀ ਇੱਕ ਸੂਚੀ ਪ੍ਰਗਟ ਕਰੇਗਾ. ਤੁਹਾਨੂੰ ਆਯਾਤ ਕਰੋ ਸੰਭਾਲਣ ਅਤੇ ਦਬਾਓ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਦੀ ਚੋਣ ਕਰੋ ਸੰਪਰਕ.</string>
+    <string name="help_SecureIntroduction">ਇਹ ਸਕਰੀਨ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਸੁਰੱਖਿਅਤ ਇੱਕ ਦੂਜੇ ਨੂੰ ਆਪਣੇ ਕੁੰਜੀ ਭੇਜਣ ਲਈ ਅੱਗੇ ਦੇ ਨਾਲ ਕੁੰਜੀ slung ਹੈ ਦੋ ਲੋਕ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ. ਬਸ ਜਦ ਤਿਆਰ ਪੇਸ਼ ਦਬਾਓ.</string>
+    <string name="help_Send">ਇਹ ਸਕਰੀਨ ਤੁਹਾਨੂੰ ਕੁਝ ਡਾਟਾ ਅਤੇ ਨੂੰ ਭੇਜਣ ਲਈ ਇੱਕ ਪ੍ਰਾਪਤ ਕਰਤਾ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ. ਬਸ ਤਿਆਰ ਹੋਣ ਭੇਜੋ ਦਬਾਓ.</string>
 
     <string name="iOS_contactError">ਸੰਪਰਕ ਦੀ ਆਗਿਆ ਦੀ ਲੋੜ. ਸੰਪਰਕ ਅਧਿਕਾਰ ਨੂੰ ਯੋਗ ਕਰਨ ਲਈ ਆਈਓਐਸ ਸੈਟਿੰਗ ਕਰਨ ਲਈ ਜਾਓ ਜੀ.</string>
     <string name="iOS_errorpushtoken">ਧੱਕਾ ਰਜਿਸਟਰੇਸ਼ਨ ਗੁੰਮ ਹੈ.</string>
@@ -157,8 +163,9 @@
     <string name="label_ContactName">ਤੁਹਾਡਾ ਨਾਮ ਨੂੰ</string>
     <string name="label_days">%d ਦਿਨ</string>
     <string name="label_Device">ਜੰਤਰ:</string>
-    <string name="label_DeviceInSendOnlyMode">ਭੇਜੋ - ਸਿਰਫ ਮੋਡ</string>
+    <string name="label_DeviceInSendOnlyMode">ਭੇਜੋ-ਸਿਰਫ ਮੋਡ</string>
     <string name="label_DisabledExchSourceKeyChange">ਤੁਹਾਡੀ ਕੁੰਜੀ ਨੂੰ ਤਬਦੀਲ ਹੋ ਗਿਆ ਹੈ: ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਮੁੜ.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">ਸੁਨੇਹਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ, ਦੋਨੋ ਉਪਭੋਗੀ ਨੂੰ ਇੱਕੋ ਸਮ \'ਤੇ ਗੋਪੀਆ ਸਵਿੱਚ ਲਈ ਲਾਜ਼ਮੀ ਹੈ.</string>
     <string name="label_Draft">ਖਰੜਾ</string>
     <string name="label_EnabledKeyFormatDeprecated">ਕੁੰਜੀ ਨੂੰ ਬਰਤਰਫ਼ ਕਰ ਦਿੱਤਾ ਫਾਰਮੈਟ: ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਮੁੜ.</string>
     <string name="label_exchanged">ਵਟਾਏ</string>
@@ -168,22 +175,26 @@
     <string name="label_FileNameHint">ਫਾਇਲ ਦਾ ਨਾਮ</string>
     <string name="label_FindInstruct">ਨਾਮ ਦਰਜ ਕਰੋ ਤੁਹਾਡੇ ਸੁਰੱਖਿਅਤ ਸੰਚਾਰ ਦੀ ਜਦ ਨੂੰ ਵੇਖਣ ਲਈ ਹੋਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ:</string>
     <string name="label_FirstName">ਪਿਹਲਾ ਨਾਮ</string>
-    <string name="label_Home">ਸ਼ਾਮਿਲ ਜ ਹਟਾਉਣ ਲਈ, ਸੰਪਰਕ ਡਾਟਾ, ਤੁਹਾਨੂੰ ਹਿੱਸਾ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਆਈਟਮ ਚੈੱਕ, ਅਤੇ ਟੈਪ ਕਰਨ ਲਈ ਆਪਣੇ ਨਾਮ ਲਈ ਟੈਪ ਕਰੋ \'ਐਕਸਚੇਜ਼ ਸ਼ੁਰੂ\' ਹੋਰ ਹੋਰ ਮੁਦਰਾ ਕਰਨ ਲਈ ਤਿਆਰ ਹੁੰਦੇ ਹਨ, ਜਦ:</string>
+    <string name="label_Home">ਸ਼ਾਮਿਲ ਜ ਹਟਾਉਣ ਲਈ, ਸੰਪਰਕ ਡਾਟਾ, ਤੁਹਾਨੂੰ ਹਿੱਸਾ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਆਈਟਮ ਚੈੱਕ, ਅਤੇ ਹੋਰ ਮੁਦਰਾ ਕਰਨ ਲਈ ਤਿਆਰ ਹਨ, ਜਦ ਐਕਸਚੇਜ਼ ਸ਼ੁਰੂ ਟੈਪ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਨਾਮ ਟੈਪ ਕਰੋ:</string>
     <string name="label_hometag">ਘਰ</string>
     <string name="label_hours">%d ਘੰਟੇ</string>
-    <string name="label_iCloudEnable">SafeSlinger iCloud ਯੋਗ ਕੀਤਾ ਗਿਆ ਹੈ. ਨਿਬੇੜ ਕੇ \' ਸੰਪੰਨ \' ਬਟਨ ਟੈਪ ਕਰੋ.</string>
-    <string name="label_InstNoMessages">ਕੋਈ ਸੁਨੇਹਾ. ਤੁਹਾਨੂੰ ਘਰ ਨੂੰ ਮੇਨੂ \'ਤੇ \' ਸੁਨੇਹਾ ਭੇਜੋ \'ਬਟਨ ਤੱਕ ਇੱਕ ਸੁਨੇਹਾ ਭੇਜ ਸਕਦਾ ਹੈ.</string>
-    <string name="label_InstNoMessagesAndroid">ਕੋਈ ਸੁਨੇਹਾ. ਤੁਹਾਨੂੰ \' ਸੰਰਚਨਾ \' ਟੈਬ ਤੱਕ ਇੱਕ ਸੁਨੇਹਾ ਭੇਜ ਸਕਦਾ ਹੈ.</string>
-    <string name="label_InstNoRecipients">ਕੋਈ ਪ੍ਰਾਪਤ ਕਰਤਾ. ਨੇੜੇ ਦੇ ਇਕ ਹੋਰ SafeSlinger ਯੂਜ਼ਰ ਨੂੰ ਲੱਭੋ ਅਤੇ ਕੁੰਜੀ ਸ਼ੇਅਰ ਕਰਨ ਲਈ \' ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ \' ਟੈਬ ਛੂਹ.</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud ਯੋਗ ਕੀਤਾ ਗਿਆ ਹੈ. ਨਿਬੇੜ ਕੇ ਸੰਪੰਨ ਬਟਨ ਨੂੰ ਟੈਪ ਕਰੋ.</string>
+    <string name="label_InstNoMessages">ਕੋਈ ਸੁਨੇਹਾ. ਤੁਹਾਨੂੰ ਘਰ ਨੂੰ ਮੇਨੂ \'ਤੇ ਸੰਰਚਨਾ ਸੁਨੇਹਾ ਬਟਨ ਨੂੰ ਤੱਕ ਇੱਕ ਸੁਨੇਹਾ ਭੇਜ ਸਕਦਾ ਹੈ.</string>
+    <string name="label_InstNoMessagesAndroid">ਕੋਈ ਸੁਨੇਹਾ. ਤੁਹਾਨੂੰ ਸੰਰਚਨਾ ਟੈਬ ਤੱਕ ਇੱਕ ਸੁਨੇਹਾ ਭੇਜ ਸਕਦਾ ਹੈ.</string>
+    <string name="label_InstNoRecipients">ਪ੍ਰਾਪਤ ਕਰਤਾ ਸ਼ਾਮਿਲ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਪਹਿਲੀ ਇੱਕੋ ਸਮ \'ਤੇ ਇੱਕ ਹੋਰ ਜਿਆਦਾ ਉਪਭੋਗਤਾ, ਨਾਲ ਗੋਪੀਆ ਸਵਿੱਚ ਲਈ ਲਾਜ਼ਮੀ ਹੈ. ਤੁਹਾਨੂੰ ਇਹ ਵੀ ਮੇਨੂ ਇਕ ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਦੇ ਸੰਪਰਕ ਸੱਦਾ ਭੇਜ ਸਕਦਾ ਹੈ.</string>
     <string name="label_InstNoSharedFile">ਕੋਈ ਸ਼ੇਅਰ ਫਾਇਲ ਨੂੰ. ਸ਼ੇਅਰ ਫੋਲਡਰ ਵਿੱਚ iTunes ਦੇ ਅਤੇ ਖਿੱਚੋ ਫਾਇਲ ਨਾਲ ਤੁਹਾਡੇ ਜੰਤਰ ਨੂੰ ਜੁੜੋ.</string>
     <string name="label_InstRecipients">ਨੂੰ ਇੱਕ ਸੁਨੇਹਾ ਭੇਜਣ ਲਈ ਇੱਕ ਪ੍ਰਾਪਤ ਕਰਤਾ ਚੁਣੋ:</string>
     <string name="label_InstSendInvite">ਸੁਰੱਖਿਅਤ ਪੇਸ਼ ਕਰਨ ਲਈ ਪ੍ਰਾਪਤ ਕਰਤਾ ਚੁਣੋ:</string>
     <string name="label_InstSharedFile">ਨੱਥੀ ਕਰਨ ਲਈ ਇੱਕ ਫਾਇਲ ਚੁਣੋ:</string>
     <string name="label_introduced">ਤੇ ਪੇਸ਼</string>
+    <string name="label_inviteSent">ਦਾ ਸੱਦਾ</string>
     <string name="label_Key">ਕੁੰਜੀ:</string>
     <string name="label_LastName">ਆਖਰੀ ਨਾਮ ਦਾ</string>
     <string name="label_Me">ਮੈਨੂੰ</string>
     <string name="label_messageIntroduceNameToYou">ਮੈਨੂੰ ਤੁਹਾਡੇ ਲਈ %s ਪੇਸ਼ ਕਰਨਾ ਚਾਹੁੰਦੇ.</string>
+    <string name="label_messageInviteInstall">SafeSlinger ਅਨੁਪ੍ਰਯੋਗ: %s</string>
+    <string name="label_messageInviteSetupInst">ਸੈੱਟਅੱਪ ਲਈ ਇੱਕ ਸੁਰੱਖਿਅਤ ਮੈਸੇਿਜੰਗ ਕੁਨੈਕਸ਼ਨ ਕਰਨ ਲਈ, ਸਾਨੂੰ ਪੂਰਾ ਕਰਨ ਜ ਫੋਨ ਇਕ ਦੂਜੇ ਨੂੰ ਉਸੇ ਵੇਲੇ, ਅਤੇ ਫਿਰ ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਹੁਣੇ ਹੀ ਇੱਕ ਵਾਰ ਕੁਨੈਕਸ਼ਨ ਦੀ ਪੜਤਾਲ ਕਰਨ ਲਈ ਕਰ ਸਕਦੇ ਹੋ.</string>
+    <string name="label_messageInviteStartMsg">ਸਾਨੂੰ ਓਪਨ ਸਰੋਤ SafeSlinger ਆਈਫੋਨ ਜ ਐਡਰਾਇਡ ਅਨੁਪ੍ਰਯੋਗ ਨਾਲ ਸੁਰੱਖਿਅਤ ਸੁਨੇਹਾ ਨੂੰ ਸ਼ੁਰੂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ?</string>
     <string name="label_minutes">%d ਮਿੰਟ</string>
     <string name="label_mobiletag">ਮੋਬਾਈਲ</string>
     <string name="label_MostRecentOnly">ਬਹੁਤੇ ਹਾਲ ਹੀ ਸਿਰਫ</string>
@@ -200,7 +211,7 @@
     <string name="label_PassHintRepeat">ਦੁਹਰਾਓ ਪ੍ਹੈਰਾ</string>
     <string name="label_passPhraseCacheTtl">ਪ੍ਹੈਰਾ ਕੈਸ਼</string>
     <string name="label_PassPhraseIsCached">ਪ੍ਹੈਰਾ ਕੈਸ਼</string>
-    <string name="label_phoneOnly">ਫੋਨ - ਸਿਰਫ</string>
+    <string name="label_phoneOnly">ਫੋਨ-ਸਿਰਫ</string>
     <string name="label_Photo">ਫੋਟੋ</string>
     <string name="label_PublicKeyID">ਕੁੰਜੀ ID</string>
     <string name="label_PushTokenID">ਧੱਕਾ ਰਜਿਸਟਰੇਸ਼ਨ ID</string>
@@ -208,9 +219,9 @@
     <string name="label_ReportedInactive">ਸਰਗਰਮ %s ਦੀ ਰਿਪੋਰਟ.</string>
     <string name="label_restoreCompleteDate">ਆਖਰੀ ਮੁਕੰਮਲ ਮੁੜ</string>
     <string name="label_SafeSlingerBackupDelayed">ਦੇਰੀ SafeSlinger ਬੈਕਅੱਪ</string>
-    <string name="label_safeslingered">( SafeSlinger ਡਾਇਰੈਕਟ ਐਕਸਚੇਜ਼ )</string>
+    <string name="label_safeslingered">(SafeSlinger ਡਾਇਰੈਕਟ ਐਕਸਚੇਜ਼)</string>
     <string name="label_SaveAccount">ਖਾਤਾ ਨੂੰ ਸੰਭਾਲੋ</string>
-    <string name="label_SaveInstruct">ਸੁਰੱਖਿਅਤ ਸੰਪਰਕ ਨੂੰ ਬਚਾਉਣ ਲਈ \'ਅਯਾਤ\' ਟੈਪ ਕਰੋ, ਫਿਰ, ​​ਤੁਹਾਨੂੰ ਤੁਹਾਡੀ ਐਡਰੈੱਸ ਬੁੱਕ ਵਿੱਚ ਅੱਪਡੇਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਸੰਪਰਕ ਚੈੱਕ ਕਰੋ:</string>
+    <string name="label_SaveInstruct">ਜੇਕਰ ਤੁਹਾਨੂੰ ਤੁਹਾਡੀ ਐਡਰੈੱਸ ਬੁੱਕ ਵਿੱਚ ਅੱਪਡੇਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਸੰਪਰਕ ਚੈੱਕ ਕਰੋ, ਫਿਰ ਸੁਰੱਖਿਅਤ ਸੰਪਰਕ ਨੂੰ ਬਚਾਉਣ ਲਈ ਅਯਾਤ ਟੈਪ:</string>
     <string name="label_seconds">%d ਸਕਿੰਟ</string>
     <string name="label_SelectRecip">ਚੁਣੋ ਕਰਤਾ</string>
     <string name="label_sendErrorData">ਗਲਤੀ: ਡਾਟਾ ਭੇਜੋ</string>
@@ -222,6 +233,10 @@
     <string name="label_step_3">ਕਦਮ 3</string>
     <string name="label_step_4">ਕਦਮ 4</string>
     <string name="label_step_5">ਕਦਮ 5</string>
+    <string name="label_summary_auto_attach_retrieval">ਲਾਗਿੰਨ ਜਦ ਆਟੋਮੈਟਿਕ ਹੀ ਸੁਨੇਹੇ ਨੂੰ ਨੱਥੀ ਡਾਊਨਲੋਡ ਕਰੋ</string>
+    <string name="label_summary_auto_decrypt">ਲਾਗਿੰਨ ਜਦ ਆਟੋਮੈਟਿਕ ਹੀ ਸੁਨੇਹੇ ਡਿਸਕ੍ਰਿਪਟ</string>
+    <string name="label_summary_remind_backup_delay">ਬੈਕਅੱਪ ਆਫਲਾਈਨ ਹੈ, ਜਦ ਨੋਟੀਫਿਕੇਸ਼ਨ ਪ੍ਰਾਪਤ ਕਰਨਾ.</string>
+    <string name="label_summary_show_tutorial">ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਕਰਨ ਲਈ attemping ਅੱਗੇ ਇੱਕ ਟਟੋਰੀਅਲ ਵੇਖੋ.</string>
     <string name="label_TapToDecryptFile">ਫਾਇਲ ਨੂੰ ਡਿਸਕ੍ਰਿਪਟ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="label_TapToDecryptMessage">ਡਿਸਕ੍ਰਿਪਟ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="label_TapToDownloadFile">ਫਾਇਲ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ, ਇਸ ਟੈਪ ਕਰੋ</string>
@@ -229,33 +244,49 @@
     <string name="label_TapToOpenFile">ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹਣ ਲਈ, ਇਸ ਟੈਪ ਕਰੋ</string>
     <string name="label_TapToResumeDraft">ਸੁਨੇਹੇ ਨੂੰ ਡਰਾਫਟ ਮੁੜ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="label_TapToSendCredentialUpdate">ਟੈਪ ਕਰੋ ਅਤੇ ਪ੍ਰਮਾਣ ਪੱਤਰ ਅੱਪਡੇਟ ਵਿੱਚ ਭੇਜਣ ਲਈ ਰੱਖੋ.</string>
+    <string name="label_TapToSlingKeys">ਗੋਪੀਆ ਸਵਿੱਚ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ.</string>
     <string name="label_targetAccountLabel">ਸੰਪਰਕ ਖਾਤਾ</string>
-    <string name="label_TouchToConfigureBackupSettings">ਤੁਹਾਨੂੰ ਆਈਓਐਸ ਸੈਟਿੰਗ ਵਿੱਚ SafeSlinger iCloud ਬੈਕਅੱਪ ਨੂੰ ਯੋਗ ਕਰ ਸਕਦੇ ਹੋ. ਨਿਬੇੜ ਕੇ \' ਸੰਪੰਨ \' ਬਟਨ ਟੈਪ ਕਰੋ.</string>
+    <string name="label_TouchToConfigureBackupSettings">ਤੁਹਾਨੂੰ ਆਈਓਐਸ ਸੈਟਿੰਗ ਵਿੱਚ SafeSlinger iCloud ਬੈਕਅੱਪ ਨੂੰ ਯੋਗ ਕਰ ਸਕਦੇ ਹੋ. ਨਿਬੇੜ ਕੇ ਸੰਪੰਨ ਬਟਨ ਨੂੰ ਟੈਪ ਕਰੋ.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">ਬੈਕਅੱਪ ਸੈਟਿੰਗ ਨੂੰ ਸੰਰਚਿਤ ਕਰਨ ਲਈ ਛੂਹੋ.</string>
     <string name="label_TouchToConfigureCacheTimeout">ਕੈਸ਼ ਅੰਤਰਾਲ ਦੀ ਸੈਟਿੰਗ ਦੀ ਸੰਰਚਨਾ ਕਰਨ ਲਈ ਛੂਹੋ.</string>
     <string name="label_undefinedTypeLabel">ਅਣਜਾਣ</string>
     <string name="label_UnknownSender">ਇਨਕਰਿਪਟਡ ਪ੍ਰੇਸ਼ਕ</string>
     <string name="label_UserName">ਯੂਜ਼ਰ ਦਾ ਨਾਮ</string>
+    <string name="label_WarnForgotPassphrase">ਤੁਹਾਡੇ ਡਾਟਾ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ, SafeSlinger ਵਸੂਲੀ ਲਈ ਕਿਤੇ ਵੀ ਆਪਣੇ ਪ੍ਹੈਰਾ ਨੂੰ ਸਟੋਰ ਨਹ ਕਰਦਾ ਹੈ. ਤੁਹਾਨੂੰ ਸਿਰਫ ਪ੍ਰਾਪਤਕਰਤਾ ਅਤੇ ਉਸੇ ਪ੍ਹੈਰਾ ਲਾਗਇਨ ਤਹਿਤ ਬਣਾਇਆ ਸੁਨੇਹੇ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਦਾ ਹੈ. ਪਰ, ਤੁਹਾਨੂੰ, ਇੱਕ ਨਵ ਕੁੰਜੀ ਅਤੇ ਪ੍ਹੈਰਾ ਤਿਆਰ ਕਰ ਸਕਦੇ ਹੋ, ਤਦ ਤੁਹਾਡੀ ਪ੍ਰਾਪਤ ਕਰਤਾ ਨਾਲ ਗੋਪੀਆ ਸਵਿੱਚ ਦੁਹਰਾਓ.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">ਹੇਠ ਦਿੱਤੇ ਸਵਿੱਚ ਨੂੰ ਹਟਾਇਆ ਜਾਵੇਗਾ:</string>
+    <string name="label_WarnManagePassNoMoreRecent">ਤੁਹਾਡਾ ਵੱਧ ਕੋਈ ਹੋਰ ਹਾਲ ਕੁੰਜੀ ਹੁੰਦੇ ਹਨ.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">ਕੇਵਲ ਕੁੰਜੀ ਹੋਰ ਨੇ ਹਾਲ ਹੀ %s ਤੇ ਤਿਆਰ ਤੇਰਾ,, ਹਟਾਇਆ ਜਾ ਸਕਦਾ ਹੈ ਵੱਧ ਤਿਆਰ.</string>
     <string name="label_worktag">ਵਰਕ</string>
 
     <string name="menu_About">ਬਾਰੇ</string>
+    <string name="menu_auto_attach_retrieval">ਨੱਥੀ ਆਟੋ-ਪ੍ਰਾਪਤ ਕਰਨ</string>
+    <string name="menu_auto_decrypt">ਆਟੋ-ਕ੍ਰਿਪਸ਼ਨ</string>
     <string name="menu_Change">ਬਦਲੋ</string>
     <string name="menu_ChangePassphrase">ਬਦਲੋ ਪ੍ਹੈਰਾ</string>
+    <string name="menu_ContactInviteEmail">ਮਿੱਤਰ ਨੂੰ ਈ ਮੇਲ</string>
+    <string name="menu_ContactInviteSms">ਪਾਠ (ਐਸਐਮਐਸ/MMS)</string>
     <string name="menu_CreateNew">ਨਿਊ ਬਣਾਓ</string>
     <string name="menu_delete">ਹਟਾਓ</string>
-    <string name="menu_deleteThread">ਥਰਿੱਡ \' %s \' ਹਟਾਓ</string>
+    <string name="menu_deleteThread">ਥਰਿੱਡ %s ਹਟਾਓ</string>
     <string name="menu_Details">ਵੇਖੋ ਵੇਰਵੇ</string>
     <string name="menu_DownloadDirectory">ਡਾਇਰੈਕਟਰੀ ਡਾਊਨਲੋਡ ਕਰੋ</string>
     <string name="menu_Edit">ਸੋਧ</string>
+    <string name="menu_EditContact">ਸੋਧ ਸੰਪਰਕ</string>
+    <string name="menu_EditName">ਸੋਧ ਦੇ ਨਾਮ</string>
     <string name="menu_FileManager">ਫਾਇਲ ਮੈਨੇਜਰ</string>
+    <string name="menu_ForgotPassphrase">ਪ੍ਹੈਰਾ ਭੁੱਲ ਗਏ ਹੋ?</string>
     <string name="menu_Help">ਦੀ ਮਦਦ ਕਰੋ</string>
     <string name="menu_Introduction">ਜਾਣ ਪਛਾਣ</string>
     <string name="menu_License">ਲਾਈਸਿੰਸ</string>
     <string name="menu_Logout">ਲਾਗਆਉਟ</string>
+    <string name="menu_ManagePassphrases">ਗੁਪਤਕੋਡ ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ</string>
+    <string name="menu_message_font_size">ਸੁਨੇਹਾ ਫੋਟ ਅਕਾਰ</string>
     <string name="menu_messageCopyText">ਟੈਕਸਟ ਕਾਪੀ ਕਰੋ</string>
     <string name="menu_messageForward">ਅੱਗੇ</string>
     <string name="menu_Remove">ਹਟਾਓ</string>
-    <string name="menu_SelectShareApp">ਐਪਲੀਕੇਸ਼ਨ ਭੇਜੋ</string>
+    <string name="menu_restore_default">ਮੂਲ ਸੈਟਿੰਗ ਨੂੰ ਮੁੜ</string>
+    <string name="menu_ringtone">Sound</string>
+    <string name="menu_SelectShareApp">ਸੰਪਰਕ ਸੱਦਾ ਸ਼ਾਮਲ ਕਰੋ</string>
     <string name="menu_sendFeedback">ਸੁਝਾਅ ਭੇਜੋ</string>
     <string name="menu_SendUpdate">ਅੱਪਡੇਟ ਭੇਜੋ</string>
     <string name="menu_Settings">ਸੈਟਿੰਗ</string>
@@ -264,9 +295,10 @@
     <string name="menu_TagExchange">ਗੋਪੀਆ ਸਵਿੱਚ</string>
     <string name="menu_TagListMessages">ਸੁਨੇਹੇ</string>
     <string name="menu_UseAnother">ਹੋਰ ਵਰਤੋ</string>
-    <string name="menu_UseContactPerson">ਸੰਪਰਕ \'%s\' ਵਰਤੋ</string>
+    <string name="menu_UseContactPerson">ਸੰਪਰਕ %s ਵਰਤੋ</string>
     <string name="menu_UseNoContact">ਵਰਤੋ ਦੇ ਨਾਮ ਕੇਵਲ</string>
-    <string name="menu_UseProfilePerson">ਪਰੋਫਾਇਲ \'%s\' ਵਰਤੋ</string>
+    <string name="menu_UseProfilePerson">ਪਰੋਫਾਈਲ %s ਵਰਤੋ</string>
+    <string name="menu_vibrate">ਵਿਲੀਨ</string>
 
     <string name="prog_decrypting">ਡੀਕ੍ਰਿਪਟ…</string>
     <string name="prog_encrypting">ਨੂੰ ਇਨਕ੍ਰਿਪਟ…</string>
@@ -289,10 +321,13 @@
     <string name="section_advanced">ਤਕਨੀਕੀ</string>
     <string name="section_backup">ਬੈਕਅੱਪ</string>
     <string name="section_general">ਜਨਰਲ</string>
+    <string name="section_notification">ਸੂਚਨਾ</string>
+    <string name="section_storage">ਸਟੋਰੇਜ਼</string>
 
     <string name="state_BackupRestored">ਬੈਕਅੱਪ ਨੂੰ ਮੁੜ.</string>
     <string name="state_FileDeleted">ਨੂੰ ਹਟਾਇਆ ਫਾਇਲ ਨੂੰ %s.</string>
     <string name="state_FileSent">ਭੇਜਿਆ ਸੁਨੇਹਾ.</string>
+    <string name="state_InvitationAdded">ਦਾ ਸੱਦਾ ਸ਼ਾਮਿਲ ਕੀਤਾ.</string>
     <string name="state_MessageSavedAsDraft">ਡਰਾਫਟ ਦੇ ਤੌਰ ਤੇ ਸੰਭਾਲਿਆ ਸੁਨੇਹਾ.</string>
     <string name="state_MessagesDeleted">ਨੂੰ ਹਟਾਇਆ %d ਸੁਨੇਹੇ.</string>
     <string name="state_PassphraseUpdated">ਪ੍ਹੈਰਾ ਅੱਪਡੇਟ ਕੀਤਾ.</string>
@@ -300,7 +335,7 @@
     <string name="state_SomeContactsImported">%s ਸੰਪਰਕ ਆਯਾਤ.</string>
     <string name="state_TextCopiedToClipboard">ਪਾਠ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਰਨ ਲਈ ਨਕਲ ਕੀਤਾ.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger, ਵਿਅਕਤੀ ਨੂੰ ਵਿੱਚ ਜ ਫੋਨ ਉੱਤੇ, ਅਸਾਨੀ ਨਾਲ ਪਛਾਣ ਦੀ ਡਾਟਾ ਸ਼ੇਅਰ ਕਰਨ ਲਈ ਤਿਆਰ ਕੀਤਾ ਪਰਮਾਣਿਤ, ਪ੍ਰਾਈਵੇਟ, ਅਤੇ ਬਰਕਰਾਰ ਰਿਹਾ ਹੈ. ਤੁਹਾਡੇ ਨਾਲ ਸ਼ੇਅਰ ਹਰ ਵਿਅਕਤੀ ਨੂੰ ਸੁਨੇਹੇ ਭੇਜਣ ਲਈ ਇੱਕ ਸੁਰੱਖਿਅਤ ਅੰਤ ਵਿੱਚ-ਕਰਨ ਲਈ-ਅੰਤ ਵਿੱਚ ਚੈਨਲ ਨੂੰ ਬਣਾਉਦਾ ਹੈ.\n\nਫੀਚਰ:\n- ਸੌਖੀ ਹੋਰ ਨਾਲ ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਦਾ ਲੈਣ\n- ਸੁਰੱਖਿਅਤ ਗੋਪੀਆ ਹਵਾਲੇ, ਫੋਟੋ, ਕੁਝ ਵੀ!\n- ਮਜਬੂਤ ਕਰਿਪਟੋਗਰਾਫੀ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਨੂੰ ਰੱਖਿਆ ਕਰਦਾ ਹੈ\n\nਈਮੇਲ: %2$s\nਵੈੱਬ: %3$s</string>
+    <string name="text_About">%1$s\n\nSafeSlinger ਪ੍ਰਾਈਵੇਟ, ਪਰਮਾਣਿਤ, ਵਿਅਕਤੀ ਵਿੱਚ ਜ ਫੋਨ ਉੱਤੇ, ਅਸਾਨੀ ਨਾਲ ਪਛਾਣ ਦੀ ਡਾਟਾ ਸ਼ੇਅਰ ਕਰਨ ਲਈ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ, ਅਤੇ ਬਰਕਰਾਰ ਰਿਹਾ ਹੈ. ਤੁਹਾਡੇ ਨਾਲ ਸ਼ੇਅਰ ਹਰ ਵਿਅਕਤੀ ਨੂੰ ਸੁਨੇਹੇ ਭੇਜਣ ਲਈ ਇੱਕ ਸੁਰੱਖਿਅਤ ਅੰਤ ਵਿੱਚ-ਕਰਨ ਲਈ-ਅੰਤ ਵਿੱਚ ਚੈਨਲ ਨੂੰ ਬਣਾਉਦਾ ਹੈ.\n\nਫੀਚਰ:\n-ਸੌਖੀ ਹੋਰ ਹੋਰ\n-ਸੁਰੱਖਿਅਤ ਗੋਪੀਆ ਹਵਾਲੇ, ਫੋਟੋ, ਕੁਝ ਵੀ ਨਾਲ ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਦਾ ਲੈਣ! %2$s\nਵੈਬ:: %3$s\n-ਮਜਬੂਤ ਕਰਿਪਟੋਗਰਾਫੀ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਨੂੰ\n\nਈ ਦੀ ਰੱਖਿਆ ਕਰਦਾ ਹੈ</string>
     <string name="text_KeywordExchange">ਐਕਸਚੇਜ਼</string>
     <string name="text_KeywordIdentity">ਪਛਾਣ</string>
     <string name="text_KeywordKey">ਕੁੰਜੀ</string>
@@ -309,19 +344,20 @@
     <string name="text_KeywordSecurity">ਸੁਰੱਖਿਆ</string>
     <string name="text_LanguagesProvidedBy">ਦੁਆਰਾ ਮੁਹੱਈਆ ਕੀਤੀ ਭਾਸ਼ਾ:</string>
     <string name="text_RelatedSearchTerms">ਸੰਬੰਧਿਤ ਸ਼ਰਤਾ:</string>
-    <string name="text_Requirements">ਲੋੜ:\n1. 2 ਜੰਤਰ ਦਾ ਘੱਟੋ ਘੱਟ ਤੇ ਇੰਸਟਾਲ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ.\n2. ਇੱਕ ਇੰਟਰਨੈੱਟ ਕੁਨੈਕਸ਼ਨ ਨੂੰ ਸਰਗਰਮ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ.</string>
+    <string name="text_Requirements">ਲੋੜ:.\n1 2 ਜੰਤਰ ਦਾ ਘੱਟੋ ਘੱਟ ਤੇ ਇੰਸਟਾਲ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ.\n2. ਇੱਕ ਇੰਟਰਨੈੱਟ ਕੁਨੈਕਸ਼ਨ ਨੂੰ ਸਰਗਰਮ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ.</string>
     <string name="text_SourceCodeRepo">ਓਪਨ ਸਰੋਤ: %s</string>
-    <string name="text_WhatsNew">- ਸਥਿਰਤਾ ਫਿਕਸ.</string>
+    <string name="text_WhatsNew">-ਸਥਿਰਤਾ ਫਿਕਸ ਕੀਤਾ.</string>
 
     <string name="title_About">ਬਾਰੇ</string>
     <string name="title_camera">ਕੈਮਰਾ</string>
     <string name="title_ChooseDirectory">ਡਾਇਰੈਕਟਰੀ ਚੁਣੋ</string>
     <string name="title_ChooseFileLoad">ਤੁਹਾਡਾ ਲਗਾਵ ਚੁਣੋ</string>
-    <string name="title_comments">Comments / ਸਵਾਲ</string>
+    <string name="title_comments">Comments/ਸਵਾਲ</string>
     <string name="title_Error">ਗਲਤੀ ਹੈ</string>
     <string name="title_ExchangeWalkthrough">ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਸਹਾਇਕ</string>
     <string name="title_FileOptions">ਲਗਾਵ ਵਿਕਲਪ</string>
     <string name="title_find">ਸੈੱਟਅੱਪ</string>
+    <string name="title_font_size">ਇੱਕ ਫੋਟ ਆਕਾਰ ਚੁਣੋ</string>
     <string name="title_home">ਐਕਸਚੇਜ਼ ਸ਼ੁਰੂ</string>
     <string name="title_HomePanel">ਘਰ</string>
     <string name="title_MessageDetail">ਸੁਨੇਹਾ</string>
