@@ -140,7 +140,7 @@
 
     <string name="help_find">Ezen a képernyőn állítsa be a nevet cserélni másokkal. Érintse meg a Kész gombot, ha végzett.</string>
     <string name="help_home">A csere azonosító adatok, hogy minden felhasználó a közelben, vagy a telefon. A Begin csere gomb csere csak az ellenőrzött elérhetőségeit.</string>
-    <string name="help_identity_menu">\n\n\nÖn is megváltoztathatja személyes adatait az Ön személyazonosságát a képernyőn megérinti a gombot a neved. Ekkor megjelenik egy menü, amely lehetővé teszi, hogy módosítsa a kapcsolatot, új kapcsolatot, vagy használjon másik kapcsolatot.</string>
+    <string name="help_identity_menu">Ön is megváltoztathatja személyes adatait az Ön személyazonosságát a képernyőn megérinti a gombot a neved. Ekkor megjelenik egy menü, amely lehetővé teszi, hogy módosítsa a kapcsolatot, új kapcsolatot, vagy használjon másik kapcsolatot.</string>
     <string name="help_Messages">Ez a képernyő összes eddigi üzeneteket és csatolmányokat, hogy továbbra is letölthető.</string>
     <string name="help_passphrase">Ezen a képernyőn be, hogy a kérelmet a jelszót. Ha elfelejtette a jelszót, akkor létrehoz egy új kulcsot védi egy új jelszót, ha megérinti a Elfelejtetted Passphrase? gombot. Érintse meg a felhasználónevet közötti váltáshoz több kulcsot.</string>
     <string name="help_PickRecip">Névjegyek SafeSlinger gombok jelennek meg itt, válasszon egyet küldeni az üzenetet.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kapcsolatokat importált.</string>
     <string name="state_TextCopiedToClipboard">Szöveget másolni a vágólapra.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger úgy tervezték, hogy könnyen megoszthatja az azonosítási adatokat, személyesen vagy telefonon keresztül, hitelesített, saját, és ép. Minden személy megosztani létrehoz egy biztonságos end-to-end csatorna üzeneteket küldeni.\n\nJellemzők:\n-Könnyen információcseréhez másokkal\n-biztonságosan parittya szövegek, fotók, semmit!\n-erős titkosítás védi az adatokat\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger úgy tervezték, hogy könnyen megoszthatja az azonosítási adatokat, személyesen vagy telefonon keresztül, hitelesített, magán-, és ép. Minden személy megosztani létrehoz egy biztonságos end-to-end csatorna üzeneteket küldeni.</string>
+    <string name="text_About1">Könnyen csere Contact információkat másokkal</string>
+    <string name="text_About2">Biztonságosan parittyával szövegek, fotók, semmit!</string>
+    <string name="text_About3">Erős titkosítás védi az adatokat</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Jellemzők:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Csere</string>
     <string name="text_KeywordIdentity">Identitás</string>
     <string name="text_KeywordKey">Kulcs</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Biztonság</string>
     <string name="text_LanguagesProvidedBy">Nyelvek által:</string>
     <string name="text_RelatedSearchTerms">Kapcsolódó kifejezések:</string>
-    <string name="text_Requirements">Elvárások:\n1.. Kell telepíteni minimum 2 eszközök.\n2.. Internetkapcsolat aktívnak kell lennie.</string>
+    <string name="text_Requirements">Szükséglet:</string>
+    <string name="text_Requirements1">Kell telepíteni minimum 2 eszközök.</string>
+    <string name="text_Requirements2">Az Internet-kapcsolat aktívnak kell lennie.</string>
     <string name="text_SourceCodeRepo">Open Source: %s</string>
-    <string name="text_WhatsNew">-Stabilitás javítások.</string>
+    <string name="text_WhatsNew">Stabilitás javítások.</string>
 
     <string name="title_About">Körülbelül</string>
     <string name="title_camera">Kamera</string>

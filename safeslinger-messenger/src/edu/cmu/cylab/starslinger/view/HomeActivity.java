@@ -186,7 +186,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     private static ProgressDialog sProg = null;
     private static Handler sHandler;
     private static MessageData sSendMsg = new MessageData();
-    private static SlingerIdentity sSenderKey;
+    private static String sSenderKey;
     private static RecipientRow sRecip;
     private static String sWebError = null;
     private static String sProgressMsg = null;
@@ -267,11 +267,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     return;
                 }
             }
-
-            if (sSenderKey == null)
-                sSenderKey = new SlingerIdentity();
-            sSenderKey.setToken(SafeSlingerPrefs.getPushRegistrationId());
-
             restart();
         }
     };
@@ -635,17 +630,21 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
 
         // valid key and push token is required
-        if (TextUtils.isEmpty(SlingerIdentity.sidPush2DBPush(sSenderKey))) {
+        SlingerIdentity si = new SlingerIdentity(SafeSlingerPrefs.getPushRegistrationId(),
+                SSUtil.getLocalNotification(SafeSlinger.getApplication()), sSenderKey);
+        final String token = SlingerIdentity.sidPush2DBPush(si);
+        final String pubkey = SlingerIdentity.sidKey2DBKey(si);
+        if (TextUtils.isEmpty(token)) {
             return args;
-        } else if (TextUtils.isEmpty(SlingerIdentity.sidKey2DBKey(sSenderKey))) {
+        } else if (TextUtils.isEmpty(pubkey)) {
             return args;
         }
 
         ArrayList<ImppValue> impps = new ArrayList<ImppValue>();
-        impps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUSHTOKEN, SSUtil
-                .finalEncode(SlingerIdentity.sidPush2DBPush(sSenderKey).getBytes())));
-        impps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUBKEY, SSUtil
-                .finalEncode(SlingerIdentity.sidKey2DBKey(sSenderKey).getBytes())));
+        impps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUSHTOKEN, SSUtil.finalEncode(token
+                .getBytes())));
+        impps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUBKEY, SSUtil.finalEncode(pubkey
+                .getBytes())));
         args.putAll(writeSingleExportExchangeArgs(new ContactImpp(contactLookupKey, impps)));
 
         return args;
@@ -808,18 +807,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             return false;
         }
 
-        boolean savePub = false;
         // if push token bad....
         // ...request a push token... (restart)
-        if (sSenderKey == null) {
-            sSenderKey = new SlingerIdentity();
-        }
-        sSenderKey.setNotification(notify);
-        sSenderKey.setToken(token);
-        // ensure a good push token is available
         if (notify != SafeSlingerConfig.NOTIFY_NOPUSH) {
-            if (TextUtils.isEmpty(sSenderKey.getToken())
-                    && notify == SafeSlingerConfig.NOTIFY_ANDROIDC2DM) {
+            if (TextUtils.isEmpty(token) && notify == SafeSlingerConfig.NOTIFY_ANDROIDC2DM) {
                 // ensure that user has registered with push service...
                 runThreadGetPushReg();
                 return false;
@@ -844,59 +835,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     showPassPhrase(false, false); // normal
                 }
             }
-            return false;
-        }
-
-        // ensure that a valid pub key is installed...
-        CryptoMsgPrivateData secret = null;
-        try {
-            String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
-            secret = CryptTools.getSecretKey(pass);
-            if (secret != null) {
-                sSenderKey.setPublicKey(secret.getSafeSlingerString());
-            } else {
-                return false;
-            }
-        } catch (IOException e) {
-            // key not found
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            // unable to deserialize same key format
-            e.printStackTrace();
-        } catch (CryptoMsgException e) {
-            // key formatted incorrectly
-            e.printStackTrace();
-        } finally {
-            if (secret == null) {
-                return false;
-            }
-        }
-
-        // update key details
-        try {
-            // public must be in contact, or we must store it
-            String pubKey = sSenderKey.getPublicKey();
-            if (pubKey == null) {
-                savePub = true;
-            } else {
-                CryptoMsgProvider tool = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
-                String keyIdFromConfig = "" + SafeSlingerPrefs.getKeyIdString();
-                String keyIdFromContactsDB = "" + tool.ExtractKeyIDfromSafeSlingerString(pubKey);
-                String keyIdFromSecretFile = "" + secret.getKeyId();
-
-                if (keyIdFromSecretFile.compareTo(keyIdFromContactsDB) != 0) {
-                    savePub = true;
-                } else if (keyIdFromSecretFile.compareTo(keyIdFromConfig) != 0) {
-                    SafeSlingerPrefs.setKeyIdString(keyIdFromSecretFile);
-                    SafeSlingerPrefs.setKeyDate(tool.ExtractDateTimefromSafeSlingerString(pubKey));
-                }
-            }
-
-            if (savePub) {
-                sSenderKey.setPublicKey(secret.getSafeSlingerString());
-            }
-        } catch (CryptoMsgPeerKeyFormatException e) {
-            showErrorExit(R.string.error_MessageInvalidPeerKeyFormat);
             return false;
         }
 
@@ -1007,10 +945,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
             CryptoMsgPrivateData mine = new CryptoMsgPrivateData(sKeyData);
 
-            // save public portion in address book...
-            if (sSenderKey == null)
-                sSenderKey = new SlingerIdentity();
-            sSenderKey.setPublicKey(mine.getSafeSlingerString());
+            // save public portion
+            sSenderKey = mine.getSafeSlingerString();
 
             SafeSlingerPrefs.setKeyIdString(mine.getKeyId());
             SafeSlingerPrefs.setKeyDate(mine.getGenDate());
@@ -1739,6 +1675,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 SafeSlinger.setCachedPassPhrase(SafeSlingerPrefs.getKeyIdString(), pass);
                 updatePassCacheTimer();
                 setPassphraseStatus(true);
+                // save loaded pub key for slinging keys later
+                sSenderKey = mine.getSafeSlingerString();
             } else {
                 setPassphraseStatus(false);
             }
@@ -1812,12 +1750,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     case RESULT_CANCELED:
                         SafeSlingerPrefs
                                 .setPushRegistrationIdWriteOnlyC2dm(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA);
-
-                        if (sSenderKey == null)
-                            sSenderKey = new SlingerIdentity();
-                        sSenderKey.setNotification(SafeSlingerConfig.NOTIFY_NOPUSH);
-                        sSenderKey.setToken(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA);
-
                         restart();
                         break;
                 }
@@ -2781,8 +2713,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 int rxCurr = (int) mWeb.get_rxCurrentBytes();
                 if (rxCurr > 0) {
                     int pct = (int) ((rxCurr / (float) mRxTotalSize) * 100);
-                    postProgressMsgList(mRecvMsg.isInboxTable(), mRowId, String.format("%s %d%%",
-                            getString(R.string.prog_ReceivingFile), pct > 100 ? 100 : pct));
+                    if (pct > 0 && pct < 100) {
+                        postProgressMsgList(mRecvMsg.isInboxTable(), mRowId, String.format(
+                                "%s %d%%", getString(R.string.prog_ReceivingFile), pct));
+                    } else {
+                        postProgressMsgList(mRecvMsg.isInboxTable(), mRowId,
+                                String.format("%s", getString(R.string.prog_ReceivingFile)));
+                    }
                 }
                 mHandler.postDelayed(this, MS_POLL_INTERVAL);
             }
@@ -2918,8 +2855,12 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 int txCurr = (int) mWeb.get_txCurrentBytes();
                 int pct = (int) ((txCurr / (float) mTxTotalSize) * 100);
                 String str = String.format(getString(R.string.prog_SendingFile), "");
-                postProgressMsgList(mSendMsg.isInboxTable(), mRowId,
-                        String.format("%s %d%%", str, pct > 100 ? 100 : pct));
+                if (pct > 0 && pct < 100) {
+                    postProgressMsgList(mSendMsg.isInboxTable(), mRowId,
+                            String.format("%s %d%%", str, pct));
+                } else {
+                    postProgressMsgList(mSendMsg.isInboxTable(), mRowId, String.format("%s", str));
+                }
                 mHandler.postDelayed(this, MS_POLL_INTERVAL);
             }
         };
@@ -2982,21 +2923,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
                 // send...
                 mHandler.postDelayed(mUpdateTxProgress, MS_POLL_INTERVAL);
-                switch (mRecip.getNotify()) {
-
-                    default:
-                    case SafeSlingerConfig.NOTIFY_NOPUSH:
-                        return getString(R.string.error_InvalidRecipient);
-
-                    case SafeSlingerConfig.NOTIFY_ANDROIDC2DM:
-                        mWeb.postFileAndroidC2DM(msgHashBytes, encMsg, encFile,
-                                mRecip.getPushtoken());
-                        break;
-
-                    case SafeSlingerConfig.NOTIFY_APPLEUA:
-                        mWeb.postFileAppleUA(msgHashBytes, encMsg, encFile, mRecip.getPushtoken());
-                        break;
-                }
+                mWeb.postMessage(msgHashBytes, encMsg, encFile, mRecip.getPushtoken(),
+                        mRecip.getNotify());
                 mHandler.removeCallbacks(mUpdateTxProgress);
 
                 // file sent ok, recipient notified...
@@ -3081,12 +3009,11 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             try {
                 int notify = recip.getNotify();
                 switch (notify) {
-                    default:
-                    case SafeSlingerConfig.NOTIFY_NOPUSH:
-                    case SafeSlingerConfig.NOTIFY_ANDROIDC2DM:
-                        break;
                     case SafeSlingerConfig.NOTIFY_APPLEUA:
                         mWeb.checkStatusAppleUA(recip.getPushtoken());
+                        break;
+                    default:
+                        // do nothing for non-UA types
                         break;
                 }
             } catch (ExchangeException e) {
@@ -3647,7 +3574,7 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
     protected AlertDialog.Builder xshowChangeSenderOptions(final Activity act, Bundle args) {
         final ArrayList<UseContactItem> items = new ArrayList<UseContactItem>();
         boolean isContactInUse = args.getBoolean(extra.CREATED);
-        String pName = args.getString(extra.NAME);
+        final String pName = args.getString(extra.NAME);
         byte[] pPhoto = args.getByteArray(extra.PHOTO);
         String pLookupKey = args.getString(extra.CONTACT_LOOKUP_KEY);
         if (!TextUtils.isEmpty(pName)) {
@@ -3720,11 +3647,14 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 switch (items.get(item).type) {
                     case PROFILE:
                         // user wants to use found profile as a personal contact
+                        // save these for lookup and display purposes
+                        SafeSlingerPrefs.setContactName(pName);
                         SafeSlingerPrefs.setContactLookupKey(items.get(item).contactLookupKey);
                         restart();
                         break;
                     case CONTACT:
                         // user wants to use found contact as a personal contact
+                        SafeSlingerPrefs.setContactName(getContactName(items.get(item).contactLookupKey));
                         SafeSlingerPrefs.setContactLookupKey(items.get(item).contactLookupKey);
                         restart();
                         break;

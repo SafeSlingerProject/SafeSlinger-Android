@@ -140,7 +140,7 @@
 
     <string name="help_find">他の人と交換するために自分の名前を設定するには、この画面を使用します。終了したら[完了]ボタンをタップします。</string>
     <string name="help_home">IDデータを交換するために、すべてのユーザーが近くいるか携帯電話をもっていなければなりません。 交換開始ボタンを押すとチェックされている連絡先データだけ交換します。</string>
-    <string name="help_identity_menu">\n\nは便利自分の名前の付いたボタンをタップしてこの画面であなたの身元に関する個人データを変更することがあります。これは、メニューができ、あなたのタッチを編集に新規作成接触を表示したり、連絡先のもう一つを使用してます。</string>
+    <string name="help_identity_menu">は便利自分の名前の付いたボタンをタップしてこの画面であなたの身元に関する個人データを変更することがあります。これは、メニューができ、あなたのタッチを編集に新規作成接触を表示したり、連絡先のもう一つを使用してます。</string>
     <string name="help_Messages">この画面では、過去のすべてのメッセージと、まだダウンロード可能なファイルが表示されます。</string>
     <string name="help_passphrase">パスフレーズを使用してアプリケーションにログインするには、この画面を使用します。パスフレーズを忘れた場合は、 「パスフレーズを忘れた方はこちら」をタップして、新しいパスフレーズで保護された新しいキーを生成することがありますボタンを押します。複数のキーを切り替えることがユーザー名をタップします。</string>
     <string name="help_PickRecip">SafeSlingerキーを使用している連絡先がここに表示されます。メッセージを送信したい相手を選択してください。</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%sの連絡先をインポートしました。</string>
     <string name="state_TextCopiedToClipboard">テキストをクリップボードにコピー。</string>
 
-    <string name="text_About">%1$s\n\nSafeSlingerは、直接もしくは電話によって簡単にIDを共有できるソフトウェアです。あなたと共有する一人一人は、メッセージを送るために、安全なエンドツーエンドのチャネルを作成します。\n\n特徴：\n-連絡先を簡単に交換できる\n-テキスト、写真などの安全な共有\n-強力な暗号による情報の保護\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlingerは、直接もしくは電話によって簡単にIDを共有できるソフトウェアです。あなたと共有する一人一人は、メッセージを送るために、安全なエンドツーエンドのチャネルを作成します。</string>
+    <string name="text_About1">連絡先を簡単に交換できる</string>
+    <string name="text_About2">テキスト、写真などの安全な共有</string>
+    <string name="text_About3">強力な暗号による情報の保護</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">特徴：</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">交換</string>
     <string name="text_KeywordIdentity">アイデンティティ</string>
     <string name="text_KeywordKey">キー</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">セキュリティー</string>
     <string name="text_LanguagesProvidedBy">利用可能な言語:</string>
     <string name="text_RelatedSearchTerms">関連用語：</string>
-    <string name="text_Requirements">要件：\n1。 2デバイスの最小にインストールする必要があります。\n2。インターネット接続がアクティブである必要があります。</string>
+    <string name="text_Requirements">要件：</string>
+    <string name="text_Requirements1">2デバイスの最小にインストールする必要があります。</string>
+    <string name="text_Requirements2">インターネット接続がアクティブである必要があります。</string>
     <string name="text_SourceCodeRepo">オープンソース：%s</string>
-    <string name="text_WhatsNew">-安定性の修正。</string>
+    <string name="text_WhatsNew">安定性の修正。</string>
 
     <string name="title_About">このソフトウエアについて</string>
     <string name="title_camera">カメラ</string>

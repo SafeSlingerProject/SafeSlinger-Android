@@ -140,7 +140,7 @@
 
     <string name="help_find">Utilice esta pantalla para configurar su nombre de intercambiar con los demás. Pulse el botón Hecho cuando haya terminado.</string>
     <string name="help_home">Para el intercambio de datos de identidad, asegúrese de que todos los usuarios estén cerca o en el teléfono. El botón Comenzar Cambio canjeará únicamente los datos de contacto chequeados.</string>
-    <string name="help_identity_menu">\n\nTambién puede cambiar los datos personales sobre su identidad en esta pantalla pulsando sobre el botón con su nombre. Esto mostrará un menú que le permite Editar su contacto Crear nuevo contacto, o Utilizar Otro contacto.</string>
+    <string name="help_identity_menu">También puede cambiar los datos personales sobre su identidad en esta pantalla pulsando sobre el botón con su nombre. Esto mostrará un menú que le permite Editar su contacto Crear nuevo contacto, o Utilizar Otro contacto.</string>
     <string name="help_Messages">Esta pantalla muestra todos los mensajes anteriores y los anexos que aún están disponibles para su descarga.</string>
     <string name="help_passphrase">Utilice esta pantalla para iniciar sesión en la aplicación con su contraseña. Si ha olvidado su contraseña, puede generar una nueva clave protegida por una nueva frase de paso tocando el ¿Ha olvidado la frase de contraseña? botón. Toque en el nombre de usuario para cambiar entre varias claves.</string>
     <string name="help_PickRecip">Aquí se muestran los contactos con teclas SafeSlinger, seleccione uno para enviar su mensaje a.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s contactos importados.</string>
     <string name="state_TextCopiedToClipboard">Texto copiado al portapapeles</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger está diseñado para compartir fácilmente los datos de identidad, en persona o por teléfono, autenticado, privado, e intacto. Cada persona con la que usted comparte crea un canal seguro de extremo a extremo para enviar mensajes.\n\nCaracterísticas:\n-Fácil intercambio de la información de contacto con otros\n-Los textos de forma segura honda, fotos, cualquier cosa!\n-La criptografía fuerte protege su información\n\ncorreo electrónico: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger está diseñado para compartir fácilmente los datos de identidad, en persona o por teléfono, autenticado, privado, e intacto. Cada persona con la que usted comparte crea un canal seguro de extremo a extremo para enviar mensajes.</string>
+    <string name="text_About1">Fácil intercambio de la información de contacto con otros</string>
+    <string name="text_About2">Los textos de forma segura honda, fotos, cualquier cosa!</string>
+    <string name="text_About3">La criptografía fuerte protege su información</string>
+    <string name="text_AboutEmail">correo electrónico: %s</string>
+    <string name="text_AboutFeat">Características:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Intercambio</string>
     <string name="text_KeywordIdentity">Identidad</string>
     <string name="text_KeywordKey">Clave</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Seguridad</string>
     <string name="text_LanguagesProvidedBy">Idiomas proporcionados por:</string>
     <string name="text_RelatedSearchTerms">Términos relacionados:</string>
-    <string name="text_Requirements">Requisitos:\n1. Debe instalarse en un mínimo de 2 dispositivos.\n2. Una conexión a Internet debe estar activa.</string>
+    <string name="text_Requirements">Requisitos:</string>
+    <string name="text_Requirements1">Debe instalarse en un mínimo de 2 dispositivos.</string>
+    <string name="text_Requirements2">Una conexión a Internet debe estar activa.</string>
     <string name="text_SourceCodeRepo">de código abierto: %s</string>
-    <string name="text_WhatsNew">-Correcciones de estabilidad.</string>
+    <string name="text_WhatsNew">Correcciones de estabilidad.</string>
 
     <string name="title_About">Acerca de</string>
     <string name="title_camera">Cámara</string>

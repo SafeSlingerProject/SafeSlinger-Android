@@ -43,8 +43,12 @@ import edu.cmu.cylab.starslinger.exchange.ExchangeConfig.extra;
 public class VerifyActivity extends BaseActivity {
 
     private static final int MENU_HELP = 1;
-    public static final int RESULT_DECOYWORDLIST = 30;
+    public static final int RESULT_CORRECTWORDLIST = 30;
+    public static final int RESULT_DECOYWORDLIST1 = 31;
+    public static final int RESULT_DECOYWORDLIST2 = 32;
     private int mCorrectButton;
+    private int mDecoy1Button;
+    private int mDecoy2Button;
     private Button mButtonSame;
     private Button mButtonDiffer;
     private RadioButton mRadioPrimary1;
@@ -154,9 +158,11 @@ public class VerifyActivity extends BaseActivity {
             } else {
                 if (first) {
                     // decoy list 1
+                    mDecoy1Button = i;
                     hashes[i] = topDecoy ? decoyHash1 : decoyHash2;
                 } else {
                     // decoy list 2
+                    mDecoy2Button = i;
                     hashes[i] = topDecoy ? decoyHash2 : decoyHash1;
                     first = true;
                 }
@@ -165,19 +171,19 @@ public class VerifyActivity extends BaseActivity {
 
         // update buttons
         if (english) {
-            mRadioPrimary1.setText(getWordList(hashes[0], bytesOfHash));
-            mTextViewSecondary1.setText(getNumbersList(hashes[0], bytesOfHash));
-            mRadioPrimary2.setText(getWordList(hashes[1], bytesOfHash));
-            mTextViewSecondary2.setText(getNumbersList(hashes[1], bytesOfHash));
-            mRadioPrimary3.setText(getWordList(hashes[2], bytesOfHash));
-            mTextViewSecondary3.setText(getNumbersList(hashes[2], bytesOfHash));
+            mRadioPrimary1.setText(WordList.getWordList(hashes[0], bytesOfHash));
+            mTextViewSecondary1.setText(WordList.getNumbersList(hashes[0], bytesOfHash));
+            mRadioPrimary2.setText(WordList.getWordList(hashes[1], bytesOfHash));
+            mTextViewSecondary2.setText(WordList.getNumbersList(hashes[1], bytesOfHash));
+            mRadioPrimary3.setText(WordList.getWordList(hashes[2], bytesOfHash));
+            mTextViewSecondary3.setText(WordList.getNumbersList(hashes[2], bytesOfHash));
         } else {
-            mRadioPrimary1.setText(getNumbersList(hashes[0], bytesOfHash));
-            mTextViewSecondary1.setText(getWordList(hashes[0], bytesOfHash));
-            mRadioPrimary2.setText(getNumbersList(hashes[1], bytesOfHash));
-            mTextViewSecondary2.setText(getWordList(hashes[1], bytesOfHash));
-            mRadioPrimary3.setText(getNumbersList(hashes[2], bytesOfHash));
-            mTextViewSecondary3.setText(getWordList(hashes[2], bytesOfHash));
+            mRadioPrimary1.setText(WordList.getNumbersList(hashes[0], bytesOfHash));
+            mTextViewSecondary1.setText(WordList.getWordList(hashes[0], bytesOfHash));
+            mRadioPrimary2.setText(WordList.getNumbersList(hashes[1], bytesOfHash));
+            mTextViewSecondary2.setText(WordList.getWordList(hashes[1], bytesOfHash));
+            mRadioPrimary3.setText(WordList.getNumbersList(hashes[2], bytesOfHash));
+            mTextViewSecondary3.setText(WordList.getWordList(hashes[2], bytesOfHash));
         }
 
         // set button handlers
@@ -185,30 +191,26 @@ public class VerifyActivity extends BaseActivity {
 
             @Override
             public void onClick(View view) {
-
+                int checked = -1;
                 if (mRadioPrimary1.isChecked()) {
-                    if (mCorrectButton == 0) {
-                        setResultForParent(RESULT_OK);
-                    } else {
-                        setResultForParent(RESULT_DECOYWORDLIST);
-                    }
-                    finish();
+                    checked = 0;
                 } else if (mRadioPrimary2.isChecked()) {
-                    if (mCorrectButton == 1) {
-                        setResultForParent(RESULT_OK);
-                    } else {
-                        setResultForParent(RESULT_DECOYWORDLIST);
-                    }
-                    finish();
+                    checked = 1;
                 } else if (mRadioPrimary3.isChecked()) {
-                    if (mCorrectButton == 2) {
-                        setResultForParent(RESULT_OK);
-                    } else {
-                        setResultForParent(RESULT_DECOYWORDLIST);
-                    }
-                    finish();
+                    checked = 2;
                 } else {
                     showNote(R.string.error_NoWordListSelected);
+                }
+
+                if (checked > -1) {
+                    if (checked == mCorrectButton) {
+                        setResultForParent(RESULT_CORRECTWORDLIST);
+                    } else if (checked == mDecoy1Button) {
+                        setResultForParent(RESULT_DECOYWORDLIST1);
+                    } else if (checked == mDecoy2Button) {
+                        setResultForParent(RESULT_DECOYWORDLIST2);
+                    }
+                    finish();
                 }
             }
         });
@@ -221,26 +223,6 @@ public class VerifyActivity extends BaseActivity {
                 finish();
             }
         });
-    }
-
-    private static String getWordList(byte[] hash, int length) {
-        StringBuilder hashList = new StringBuilder();
-        for (int i = 0; i < length; i++) {
-            hashList.append(WordList.getWord(hash[i], (i % 2 == 0)));
-            hashList.append(" ");
-        }
-        return hashList.toString().trim();
-    }
-
-    private static String getNumbersList(byte[] hash, int length) {
-        StringBuilder hashList = new StringBuilder();
-        for (int i = 0; i < length; i++) {
-            int number = WordList.btoi(hash[i]);
-            // even = 1-256, odd = 257-512
-            hashList.append(((i % 2 == 0) ? number : (number + 256)) + 1);
-            hashList.append("  ");
-        }
-        return hashList.toString().trim();
     }
 
     @Override

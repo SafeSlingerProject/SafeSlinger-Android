@@ -140,7 +140,7 @@
 
     <string name="help_find">استخدام هذه الشاشة لتحديد اسم ل تبادل مع الآخرين. اضغط على الزر تم عند الانتهاء.</string>
     <string name="help_home">لتبادل البيانات الهوية ، وضمان جميع المستخدمين في مكان قريب أو على الهاتف. سوف تبدأ صرف زر تبادل البيانات فقط الاتصال فحصها.</string>
-    <string name="help_identity_menu">\nغير متوافر غير متوافر يمكنك أيضا تغيير البيانات الشخصية حول الهوية الخاصة بك على هذه الشاشة من خلال النقر على زر مع اسمك. وهذا عرض قائمة مما يسمح لك ل تحرير الاتصال الخاصة بك ، وخلق اسم جديد ، أو استخدام اتصال آخر.</string>
+    <string name="help_identity_menu">غير متوافر غير متوافر يمكنك أيضا تغيير البيانات الشخصية حول الهوية الخاصة بك على هذه الشاشة من خلال النقر على زر مع اسمك. وهذا عرض قائمة مما يسمح لك ل تحرير الاتصال الخاصة بك ، وخلق اسم جديد ، أو استخدام اتصال آخر.</string>
     <string name="help_Messages">يعرض هذه الشاشة كل الرسائل الماضية، و المرفقات التي لا تزال متاحة للتنزيل.</string>
     <string name="help_passphrase">استخدام هذه الشاشة لتسجيل الدخول إلى التطبيق مع عبارة المرور. إذا كنت قد نسيت عبارة المرور الخاصة بك ، يمكنك إنشاء مفتاح جديد تحميها عبارة مرور جديدة من خلال الاستفادة من عبارة المرور نسيت ؟ الزر. اضغط على اسم مستخدم التبديل بين المفاتيح متعددة.</string>
     <string name="help_PickRecip">يتم عرض الاتصالات مع مفاتيح SafeSlinger هنا ، حدد واحد لإرسال رسالة ل.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">الاتصالات %s المستوردة.</string>
     <string name="state_TextCopiedToClipboard">النص المنسوخ إلى الحافظة.</string>
 
-    <string name="text_About">تم تصميم %1$s غير متوافر غير متوافر SafeSlinger لتبادل البيانات بسهولة الهوية، في شخص أو عبر الهاتف، مصادقة ، والخاصة، و سليمة. كل شخص كنت تشارك مع يخلق نهاية إلى نهاية قناة آمنة لإرسال الرسائل. غير متوافر غير متوافر الميزات: تبادل غير متوافر-معلومات الاتصال بسهولة مع الآخرين غير متوافر-غرفتك النصوص حبال والصور و أي شيء! التشفير غير متوافر-قوي يحمي معلوماتك غير متوافر غير متوافر البريد الإلكتروني: %2$s غير متوافر على شبكة الإنترنت: %3$s</string>
+    <string name="text_About">تم تصميم SafeSlinger لتبادل البيانات بسهولة الهوية، في شخص أو عبر الهاتف، مصادقة، والخاصة، وسليمة. كل شخص كنت تشارك مع يخلق نهاية إلى نهاية قناة آمنة لإرسال الرسائل.</string>
+    <string name="text_About1">تبادل المعلومات بسهولة الاتصال مع الآخرين</string>
+    <string name="text_About2">النصوص حبال بإحكام، والصور، أي شيء!</string>
+    <string name="text_About3">تشفير قوي يحمي معلوماتك</string>
+    <string name="text_AboutEmail">البريد الإلكتروني: %s</string>
+    <string name="text_AboutFeat">الميزات:</string>
+    <string name="text_AboutWeb">على شبكة الإنترنت: %s</string>
     <string name="text_KeywordExchange">تبادل</string>
     <string name="text_KeywordIdentity">هوية</string>
     <string name="text_KeywordKey">مفتاح</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">أمن</string>
     <string name="text_LanguagesProvidedBy">اللغات التي تقدمها:</string>
     <string name="text_RelatedSearchTerms">شروط ذات الصلة:</string>
-    <string name="text_Requirements">المتطلبات:. غير متوافر 1 يجب أن تكون مثبتة على الحد الأدنى من الأجهزة 2. غير متوافر 2. يجب أن يكون اتصال إنترنت نشط.</string>
+    <string name="text_Requirements">المتطلبات:</string>
+    <string name="text_Requirements1">يجب أن تكون مثبتة على الحد الأدنى من الأجهزة 2.</string>
+    <string name="text_Requirements2">يجب أن يكون اتصال إنترنت نشط.</string>
     <string name="text_SourceCodeRepo">المصدر المفتوح: %s</string>
-    <string name="text_WhatsNew">-الاستقرار إصلاح.</string>
+    <string name="text_WhatsNew">الاستقرار إصلاح.</string>
 
     <string name="title_About">حول</string>
     <string name="title_camera">كاميرا</string>

@@ -248,9 +248,9 @@ public class SSUtil {
 
         String token = recip.getPushtoken();
         int notification = recip.getNotify();
-        String pubKeyPolar = new String(recip.getPubkey());
+        String pubKey = new String(recip.getPubkey());
 
-        SlingerIdentity slinger = new SlingerIdentity(token, notification, pubKeyPolar);
+        SlingerIdentity slinger = new SlingerIdentity(token, notification, pubKey);
         ContactStruct contact = new ContactStruct();
 
         contact.name = new Name(recip.getName());
@@ -358,8 +358,14 @@ public class SSUtil {
                 return ctx.getString(R.string.label_AndroidC2DMServiceName);
             case SafeSlingerConfig.NOTIFY_APPLEUA:
                 return ctx.getString(R.string.label_iOSAPNServiceName);
+            case SafeSlingerConfig.NOTIFY_ANDROIDGCM:
+                return ctx.getString(R.string.label_AndroidGCMServiceName);
+            case SafeSlingerConfig.NOTIFY_WINPHONEMPNS:
+                return ctx.getString(R.string.label_WinPhoneMPNServiceName);
+            case SafeSlingerConfig.NOTIFY_BLACKBERRYPS:
+                return ctx.getString(R.string.label_BlackberryPushServiceName);
             default:
-                return ctx.getString(R.string.label_undefinedTypeLabel);
+                return String.format("%s %d", ctx.getString(R.string.label_Device), notify);
         }
     }
 
@@ -371,8 +377,14 @@ public class SSUtil {
                 return ctx.getString(R.string.label_AndroidOS);
             case SafeSlingerConfig.NOTIFY_APPLEUA:
                 return ctx.getString(R.string.label_iOS);
+            case SafeSlingerConfig.NOTIFY_ANDROIDGCM:
+                return ctx.getString(R.string.label_AndroidOS);
+            case SafeSlingerConfig.NOTIFY_WINPHONEMPNS:
+                return ctx.getString(R.string.label_WinPhoneOS);
+            case SafeSlingerConfig.NOTIFY_BLACKBERRYPS:
+                return ctx.getString(R.string.label_BlackberryOS);
             default:
-                return ctx.getString(R.string.label_undefinedTypeLabel);
+                return String.format("%s %d", ctx.getString(R.string.label_Device), notify);
         }
     }
 

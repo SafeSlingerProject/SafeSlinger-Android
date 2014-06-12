@@ -46,11 +46,11 @@
     <application
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/demo_app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name="edu.cmu.cylab.starslinger.demo.MainActivity"
-            android:label="@string/app_name"
+            android:label="@string/demo_app_name"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

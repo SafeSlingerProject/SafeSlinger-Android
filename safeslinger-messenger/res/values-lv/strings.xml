@@ -140,7 +140,7 @@
 
     <string name="help_find">Izmantojiet šo ekrānu, lai uzstādītu savu vārdu, lai apmainītos ar citiem. Pieskarieties Done pogu, kad pabeigta.</string>
     <string name="help_home">Lai apmainītos ar identitātes datiem, nodrošinātu, ka visi lietotāji ir tuvumā, vai pa tālruni. Sākt Exchange poga apmainīsies tikai pārbaudīt kontaktu datus.</string>
-    <string name="help_identity_menu">\n\n\nJūs varat mainīt arī personiskos datus par savu identitāti šajā ekrānā, pieskaroties uz pogas ar savu vārdu. Tas parādīs izvēlni, kas ļauj jums rediģēt kontaktu, Izveidot jaunu kontaktu, vai izmantojiet citu kontaktu.</string>
+    <string name="help_identity_menu">Jūs varat mainīt arī personiskos datus par savu identitāti šajā ekrānā, pieskaroties uz pogas ar savu vārdu. Tas parādīs izvēlni, kas ļauj jums rediģēt kontaktu, Izveidot jaunu kontaktu, vai izmantojiet citu kontaktu.</string>
     <string name="help_Messages">Šis ekrāns parāda visas iepriekšējās ziņas un pielikumus, kas joprojām ir pieejams lejupielādei.</string>
     <string name="help_passphrase">Izmantojiet šo ekrānu, lai pieteiktos uz pieteikumu ar savu ieejas frāzi. Ja esat aizmirsis savu ieejas frāzi, jūs varat radīt jaunu atslēgu aizsargāta ar jaunu ieejas frāzi, pieskaroties Aizmirsāt ieejas frāzi? pogu. Pieskarieties lietotāja vārdu, lai pārslēgtos starp vairākiem taustiņiem.</string>
     <string name="help_PickRecip">Kontakti ar SafeSlinger taustiņi ir parādīti šeit, izvēlieties vienu, lai nosūtītu savu ziņojumu.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kontakti importēts.</string>
     <string name="state_TextCopiedToClipboard">Teksts iekopēts starpliktuvē.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ir paredzēts, lai viegli dalīties identitātes datus, personīgi vai pa tālruni, autentiskums, privātā un neskarts. Katra persona jums dalīties ar rada drošu end-to-end kanālu, lai nosūtītu ziņojumus.\n\nFeatures: kontaktinformāciju\n-Viegli apmaiņu ar citiem\n-droši sling tekstu, fotogrāfijas, neko!\n-Strong kriptogrāfija aizsargā jūsu informāciju\n\ne-pasts: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger ir paredzēts, lai viegli dalīties identitātes datus, personīgi vai pa tālruni, autentiskums, privātā un neskarts. Katra persona jums dalīties ar rada drošu end-to-end kanālu, lai nosūtītu ziņojumus.</string>
+    <string name="text_About1">Kontaktinformāciju vieglāk apmainīties ar citiem</string>
+    <string name="text_About2">Droši Sling teksti, fotogrāfijas, neko!</string>
+    <string name="text_About3">Stipra kriptogrāfijas aizsargā jūsu informāciju</string>
+    <string name="text_AboutEmail">e-pasts: %s</string>
+    <string name="text_AboutFeat">Funkcijas:</string>
+    <string name="text_AboutWeb">mājas lapa: %s</string>
     <string name="text_KeywordExchange">Maiņa</string>
     <string name="text_KeywordIdentity">Identitāte</string>
     <string name="text_KeywordKey">Taustiņš</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Drošība</string>
     <string name="text_LanguagesProvidedBy">Valodas, ko sniedz:</string>
     <string name="text_RelatedSearchTerms">Saistītie noteikumi:</string>
-    <string name="text_Requirements">Prasības:.\n1 jāuzstāda uz vismaz 2 ierīcēm.\n2.Interneta pieslēgums ir aktīvs.</string>
+    <string name="text_Requirements">Prasības:</string>
+    <string name="text_Requirements1">Jāuzstāda uz vismaz 2 ierīcēm.</string>
+    <string name="text_Requirements2">Interneta pieslēgums ir aktīvs.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Stabilitāte nosaka.</string>
+    <string name="text_WhatsNew">Stabilitāte nosaka.</string>
 
     <string name="title_About">Par</string>
     <string name="title_camera">Kamera</string>

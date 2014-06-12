@@ -140,7 +140,7 @@
 
     <string name="help_find">Defnyddiwch y sgrin hon i osod eich enw i gyfnewid gydag eraill. Tap y botwm Done ar ôl gorffen.</string>
     <string name="help_home">I gyfnewid data hunaniaeth, sicrhau bod yr holl ddefnyddwyr yn gerllaw neu ar y ffôn. Bydd y botwm Dechrau Cyfnewid cyfnewid dim ond y data cyswllt gwirio.</string>
-    <string name="help_identity_menu">\n\n\nGallwch hefyd newid data personol am eich hunaniaeth ar y sgrin hon drwy fanteisio ar y botwm gyda\'ch enw. Bydd hyn yn dangos bwydlen sy\'n eich galluogi i Golygu eich cyswllt, Creu cysylltiad newydd, neu Defnyddio cyswllt arall.</string>
+    <string name="help_identity_menu">Gallwch hefyd newid data personol am eich hunaniaeth ar y sgrin hon drwy fanteisio ar y botwm gyda\'ch enw. Bydd hyn yn dangos bwydlen sy\'n eich galluogi i Golygu eich cyswllt, Creu cysylltiad newydd, neu Defnyddio cyswllt arall.</string>
     <string name="help_Messages">Mae\'r sgrin hon yn dangos pob neges yn y gorffennol, ac atodiadau sydd yn dal ar gael i\'w llwytho i lawr.</string>
     <string name="help_passphrase">Defnyddiwch y sgrin hon i fewngofnodi i\'r cais gyda\'ch cyfrin-ymadrodd. Os ydych wedi anghofio eich cyfrinair, efallai y byddwch yn creu allwedd newydd a ddiogelir gan cyfrinair newydd drwy fanteisio i\'r cyfrinair Forgot? botwm. Tap yr enw defnyddiwr i newid rhwng allweddi lluosog.</string>
     <string name="help_PickRecip">Cysylltiadau gydag allweddi SafeSlinger yn cael eu harddangos yma, dewiswch un i anfon eich neges at.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Cysylltiadau %s fewnforio.</string>
     <string name="state_TextCopiedToClipboard">Testun gopïo i\'r clipfwrdd.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger wedi ei gynllunio i rannu data hunaniaeth yn hawdd, yn bersonol neu dros y ffôn, a ddilyswyd, preifat, ac yn gyfan. Mae pob person yr ydych yn rhannu gyda creu sianel ddiogel pen-i-ben i anfon negeseuon.\n\nNodweddion:\n-Hawdd cyfnewid gwybodaeth gyswllt ag eraill\n-Ddiogel testunau sling, lluniau, unrhyw beth! Cryptograffeg\n-Cryf diogelu eich gwybodaeth\n\ne-bost: %2$s\ngwefan: %3$s</string>
+    <string name="text_About">SafeSlinger wedi\'i chynllunio i rannu data hunaniaeth yn hawdd, yn bersonol neu dros y ffôn, a ddilyswyd, preifat, ac yn gyfan. Mae pob person yr ydych yn rhannu gyda creu sianel ddiogel pen-i-ben i anfon negeseuon.</string>
+    <string name="text_About1">Hawdd cyfnewid gwybodaeth gyswllt ag eraill</string>
+    <string name="text_About2">Testunau Ddiogel sling, lluniau, unrhyw beth!</string>
+    <string name="text_About3">Cryptograffeg gryf diogelu eich gwybodaeth</string>
+    <string name="text_AboutEmail">e-bost: %s</string>
+    <string name="text_AboutFeat">Nodweddion:</string>
+    <string name="text_AboutWeb">y we: %s</string>
     <string name="text_KeywordExchange">Cyfnewid</string>
     <string name="text_KeywordIdentity">Hunaniaeth</string>
     <string name="text_KeywordKey">Allweddol</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Diogelwch</string>
     <string name="text_LanguagesProvidedBy">Ieithoedd ddarperir gan:</string>
     <string name="text_RelatedSearchTerms">Termau cysylltiedig:</string>
-    <string name="text_Requirements">Gofynion:. Rhaid\n1 yn cael ei osod ar o leiaf 2 ddyfeisiau.\n2. Rhaid i cysylltiad Rhyngrwyd fod yn egnïol.</string>
+    <string name="text_Requirements">Gofynion:</string>
+    <string name="text_Requirements1">Rhaid gosod ar o leiaf 2 ddyfeisiau.</string>
+    <string name="text_Requirements2">Rhaid i cysylltiad Rhyngrwyd fod yn egnïol.</string>
     <string name="text_SourceCodeRepo">ffynhonnell agored: %s</string>
-    <string name="text_WhatsNew">-Sefydlogrwydd chyfyngderau.</string>
+    <string name="text_WhatsNew">Sefydlogrwydd chyfyngderau.</string>
 
     <string name="title_About">Amdanom ni</string>
     <string name="title_camera">Camera</string>

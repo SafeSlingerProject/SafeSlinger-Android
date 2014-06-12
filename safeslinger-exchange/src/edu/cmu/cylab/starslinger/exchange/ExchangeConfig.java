@@ -36,6 +36,7 @@ public class ExchangeConfig {
     public static final String HTTPURL_SUFFIX = "";
     public static final int HTTPPORT = 80;
     public static final int VER_SHA3 = 0x01060000;
+    public static final int VER_NOTIFY_BACKCOMPAT = 0x01070000;
     public static final int MIN_USERS = 2;
     public static final int MIN_USERS_AUTOCOUNT = 11;
     public static final int MAX_USERS = 63;
@@ -69,7 +70,7 @@ public class ExchangeConfig {
     }
 
     public static int getVersionCode() {
-        return VER_SHA3;
+        return VER_NOTIFY_BACKCOMPAT;
     }
 
 }

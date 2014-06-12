@@ -140,7 +140,7 @@
 
     <string name="help_find">Erabili pantaila hau besteekin trukatzeko zure izena ezartzeko. Ukitu Done botoia amaitutakoan.</string>
     <string name="help_home">Nortasun datuak trukatzeko, ziurtatu erabiltzaile guztiak dira Gertuko edo telefonoz. Hasi Exchange botoia hautatuta kontaktu datuak bakarrik trukatu.</string>
-    <string name="help_identity_menu">\n\n\nEre zure identitatea pantaila honetan buruzko datu pertsonalak alda ditzake botoia punteatuz izen batekin. Hau menu bat zure kontaktu editatu aukera ematen bistaratuko du, Sortu Kontaktu berria, edo erabili harremanetarako beste.</string>
+    <string name="help_identity_menu">Ere zure identitatea pantaila honetan buruzko datu pertsonalak alda ditzake botoia punteatuz izen batekin. Hau menu bat zure kontaktu editatu aukera ematen bistaratuko du, Sortu Kontaktu berria, edo erabili harremanetarako beste.</string>
     <string name="help_Messages">Pantaila hau iragan mezu guztiak, eta hori deskargatzeko aukera ematen du, oraindik eranskinak erakusten du.</string>
     <string name="help_passphrase">Erabili pantaila hau identifikatzera aplikazioa zure pasaesaldi batekin. Ahaztu egin duzu zure pasaesaldia, gako berri bat pasaesaldi berri bat ahaztu egin Pasaesaldia kolpatuta babestuta sortu ahal izango duzu? botoia. Ukitu erabiltzaile izenari anitz gakoak artean aldatzeko.</string>
     <string name="help_PickRecip">SafeSlinger gakoak kontaktuak hemen agertuko dira, aukera bat zure mezua bidaltzeko.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kontakturik inportatu.</string>
     <string name="state_TextCopiedToClipboard">Testua arbelean kopiatzen.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger den identitate datuak erraz partekatzeko diseinatuta dago, pertsona edo telefonoz, autentifikatutako, pribatuak, eta oso-osorik. Partekatu egiten duzun pertsona bakoitzaren amaiera-to-end-kanal seguru baten mezuak bidaltzeko sortzen.\n\nEzaugarriak:\n-Erraz harremanetarako informazioa trukatzeko besteek\n-Segurtasunez sling testuak, argazkiak, ezer ez! %2$s\nweb:: %3$s kriptografia\n-Strong zure informazio\n\nemail babesten</string>
+    <string name="text_About">SafeSlinger den identitate datuak erraz partekatzeko diseinatuta dago, pertsona edo telefonoz, autentifikatutako, pribatuak, eta oso-osorik. Partekatu egiten duzun pertsona bakoitzaren amaiera-to-end-kanal seguru baten mezuak bidaltzeko sortzen.</string>
+    <string name="text_About1">Erraz harremanetarako informazioa trukatzeko besteekin</string>
+    <string name="text_About2">Testuak segurtasunez sling, argazkiak, ezer!</string>
+    <string name="text_About3">Kriptografia sendoa zure informazio babesten</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Ezaugarriak:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Truke</string>
     <string name="text_KeywordIdentity">Nortasuna</string>
     <string name="text_KeywordKey">Giltza</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Segurtasuna</string>
     <string name="text_LanguagesProvidedBy">Emandako hizkuntzak:</string>
     <string name="text_RelatedSearchTerms">Zerikusia duten baldintzak:</string>
-    <string name="text_Requirements">Baldintzak:.\n1 Nahitaez 2 gailuak gutxienez instalatuta egon.\n2. Interneteko konexioa aktibo izan behar du.</string>
+    <string name="text_Requirements">Baldintzak:</string>
+    <string name="text_Requirements1">Behar 2 gailuak gutxienez instalatuta egon.</string>
+    <string name="text_Requirements2">Internet konexio bat aktibo egon behar du.</string>
     <string name="text_SourceCodeRepo">kode irekia: %s</string>
-    <string name="text_WhatsNew">-Egonkortasuna konpontzen.</string>
+    <string name="text_WhatsNew">Egonkortasuna konpontzen.</string>
 
     <string name="title_About">Buruz</string>
     <string name="title_camera">Kamara</string>

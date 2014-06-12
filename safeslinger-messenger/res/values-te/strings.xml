@@ -140,7 +140,7 @@
 
     <string name="help_find">ఇతరులతో మార్పిడి మీ పేరు సెట్ తెరమీద ఉపయోగించండి. పూర్తవగానే డన్ బటన్ నొక్కండి.</string>
     <string name="help_home">గుర్తింపు డేటా మార్పిడి, యూజర్లు సమీపంలోని లేదా ఫోన్ ఉండేలా. ప్రారంభం SWF ఎక్స్చేంజ్ బటన్ తనిఖీ పరిచయం డేటా మార్పిడి చేస్తుంది.</string>
-    <string name="help_identity_menu">\n\n\nమీరు కూడా మీ పేరుతో బటన్ నొక్కడం ద్వారా తెరమీద మీ ఐడెంటిటీ వ్యక్తిగత డేటా మార్చవచ్చు. ఈ మీరు మీ సంప్రదింపు సవరించు అనుమతించే మెనును ప్రదర్శిస్తుంది న్యూ పరిచయం సృష్టించు, లేదా మరొక పరిచయం ఉపయోగించండి ఉంటుంది.</string>
+    <string name="help_identity_menu">మీరు కూడా మీ పేరుతో బటన్ నొక్కడం ద్వారా తెరమీద మీ ఐడెంటిటీ వ్యక్తిగత డేటా మార్చవచ్చు. ఈ మీరు మీ సంప్రదింపు సవరించు అనుమతించే మెనును ప్రదర్శిస్తుంది న్యూ పరిచయం సృష్టించు, లేదా మరొక పరిచయం ఉపయోగించండి ఉంటుంది.</string>
     <string name="help_Messages">ఈ తెర అన్ని గత సందేశాలను, మరియు ఇప్పటికీ డౌన్లోడ్ కోసం అందుబాటులో జోడింపులను ప్రదర్శిస్తుంది.</string>
     <string name="help_passphrase">మీ పాస్ఫ్రేజ్తో అప్లికేషన్ మీరు లాగిన్ ఈ స్క్రీన్ ఉపయోగించండి. మీరు మీ పాస్ఫ్రేజ్ని మర్చిపోతే, మీరు మర్చిపోయారా సంకేతపదమును నొక్కడం ద్వారా కొత్త సంకేతపదమును రక్షణలో కొత్త కీని ఉండవచ్చు? బటన్. బహుళ కీలు మధ్య మారడానికి యూజర్ పేరు కుళాయి.</string>
     <string name="help_PickRecip">SafeSlinger కీలను తో కాంటాక్ట్స్ మీ సందేశాన్ని పంపడానికి ఎనన్నుకొనండి, ఇక్కడ ప్రదర్శించబడతాయి.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s పరిచయాలను దిగుమతి.</string>
     <string name="state_TextCopiedToClipboard">టెక్స్ట్ కాపీ చేయబడి.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ప్రైవేట్, అధికారం, వ్యక్తి లేదా ఫోన్, సులభంగా గుర్తింపు డేటా భాగస్వామ్యం రూపొందించబడింది, మరియు చెక్కుచెదరకుండా ఉంది. మీరు భాగస్వామ్యం ప్రతి వ్యక్తికి సందేశాలను పంపడానికి సురక్షిత ఎండ్ టు ఎండ్ ఛానల్ సృష్టిస్తుంది.\n\nఫీచర్స్:\n-సులభంగా ఇతరులు\n-సురక్షితంగా స్లింగ్ పాఠాలు, ఫోటోలు, ఏదైనా సంబంధం సమాచారాన్ని మార్పిడి! %2$s\nవెబ్: %3$s\n-బలమైన గూఢ మీ సమాచారాన్ని\n\nఇమెయిల్ రక్షిస్తుంది</string>
+    <string name="text_About">SafeSlinger, వ్యక్తి లేదా ఫోన్, సులభంగా గుర్తింపు డేటా భాగస్వామ్యం రూపొందించబడింది అధికారం, ప్రైవేట్, మరియు చెక్కుచెదరకుండా ఉంది. మీరు భాగస్వామ్యం ప్రతి వ్యక్తికి సందేశాలను పంపడానికి సురక్షిత ఎండ్ టు ఎండ్ ఛానల్ సృష్టిస్తుంది.</string>
+    <string name="text_About1">సులభంగా ఇతరులతో సంప్రదింపు సమాచారం మార్పిడి</string>
+    <string name="text_About2">సురక్షితంగా స్లింగ్ పాఠాలు, ఫోటోలు, ఏదైనా!</string>
+    <string name="text_About3">బలమైన గూఢ మీ సమాచారాన్ని రక్షించే</string>
+    <string name="text_AboutEmail">ఇమెయిల్: %s</string>
+    <string name="text_AboutFeat">ఫీచర్స్</string>
+    <string name="text_AboutWeb">వెబ్: %s</string>
     <string name="text_KeywordExchange">మార్పిడి</string>
     <string name="text_KeywordIdentity">గుర్తింపు</string>
     <string name="text_KeywordKey">కీ</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">భద్రత</string>
     <string name="text_LanguagesProvidedBy">అందించిన భాషలు:</string>
     <string name="text_RelatedSearchTerms">సంబంధిత నిబంధనలు:</string>
-    <string name="text_Requirements">అవసరాలు:.\n1 2 పరికరాల కనీసం ఇన్స్టాల్ చేయాలి.\n2. ఒక ఇంటర్నెట్ కనెక్షన్ యాక్టివ్గా ఉండాలి.</string>
+    <string name="text_Requirements">అవసరాలు:</string>
+    <string name="text_Requirements1">2 పరికరాల కనీసం ఇన్స్టాల్ చేయాలి.</string>
+    <string name="text_Requirements2">ఒక ఇంటర్నెట్ కనెక్షన్ యాక్టివ్గా ఉండాలి.</string>
     <string name="text_SourceCodeRepo">ఓపెన్ సోర్స్: %s</string>
-    <string name="text_WhatsNew">-స్టెబిలిటీ పరిష్కరిస్తుంది.</string>
+    <string name="text_WhatsNew">స్టెబిలిటీ పరిష్కరిస్తుంది.</string>
 
     <string name="title_About">గురించి</string>
     <string name="title_camera">కెమెరా</string>

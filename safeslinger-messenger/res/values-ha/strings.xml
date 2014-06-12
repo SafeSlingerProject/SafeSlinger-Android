@@ -140,7 +140,7 @@
 
     <string name="help_find">Yi amfani da wannan allo domin saita Sunan ka yi musayar wasu. Tap da Anyi button lokacin da ya gama.</string>
     <string name="help_home">Don musanya ainihi bayanai, tabbatar da duk masu amfani ne a nan kusa ko a waya. A Begin Exchange button zai musanya kawai bari lamba bayanai.</string>
-    <string name="help_identity_menu">\n\n\nnan ƙila ka canza bayanan sirri game da ainihi a kan wannan allon da tapping a kan button da sunanka. Wannan zai nuna menu bar ka ka shirya lambar sadarwa, Create Sabuwar lamba, ko yi amfani da wata lambar sadarwa.</string>
+    <string name="help_identity_menu">Nan ƙila ka canza bayanan sirri game da ainihi a kan wannan allon da tapping a kan button da sunanka. Wannan zai nuna menu bar ka ka shirya lambar sadarwa, Create Sabuwar lamba, ko yi amfani da wata lambar sadarwa.</string>
     <string name="help_Messages">Wannan allon nuna duk saƙonnin da suka gabata, da haše-haše da cewa har yanzu don saukewa.</string>
     <string name="help_passphrase">Yi amfani da wannan allo don shiga cikin aikace-aikacen da ka passphrase. Idan ka manta ka passphrase, za ka iya samar da wani sabon key kiyaye shi ta sabon passphrase by tapping da Forgot Passphrase? button. Tap da sunan mai amfani domin sauyawa tsakanin mahara makullin.</string>
     <string name="help_PickRecip">Lambobin sadarwa da SafeSlinger mažallan ne yake nuna su a nan, zaɓi daya kafin a aika da sako zuwa.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s lambobin sadarwa shigo da.</string>
     <string name="state_TextCopiedToClipboard">Text kofe zuwa allo mai rike takarda.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger an tsara su iya raba bayanai ainihi, in mutum ko a kan tarho, ya tabbata daga, masu zaman kansu, da kuma m. Kowane mutum ka raba tare da halitta da kafaffen karshen-da-karshen tashar don aika saƙonni.\n\nFeatures:\n-saukake musanya bayanin lamba tare da wasu\n-tam majayijawa texts, photos, wani abu!\nƙarfi cryptography kare abokan bayani\n\nemail: %2$s\nyanar gizo: %3$s</string>
+    <string name="text_About">SafeSlinger an tsara su iya raba bayanai ainihi, in mutum ko a kan tarho, ya tabbata daga, masu zaman kansu, da kuma m. Kowane mutum ka raba tare da halitta da kafaffen karshen-da-karshen tashar don aika saƙonni.</string>
+    <string name="text_About1">A saukake musanya bayanin lamba tare da sauran</string>
+    <string name="text_About2">Tam majayijawa texts, photos, wani abu!</string>
+    <string name="text_About3">Strong cryptography kare abokan bayanai</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Features:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Exchange</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">Key</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Tsaro</string>
     <string name="text_LanguagesProvidedBy">Languages ​​bayar by:</string>
     <string name="text_RelatedSearchTerms">Related Terms:</string>
-    <string name="text_Requirements">Bukatun:\n1. Dole ne a shigar a kan m of 2 na\'urorin.\n2. An jona dole ne aiki.</string>
+    <string name="text_Requirements">Bukatun:</string>
+    <string name="text_Requirements1">Dole ne a shigar a kan m of 2 na\'urorin.</string>
+    <string name="text_Requirements2">An jona dole ne aiki.</string>
     <string name="text_SourceCodeRepo">bude source: %s</string>
-    <string name="text_WhatsNew">-Stability gyaran gaba daya.</string>
+    <string name="text_WhatsNew">Stability gyaran gaba daya.</string>
 
     <string name="title_About">Game da</string>
     <string name="title_camera">Kamara</string>

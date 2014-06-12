@@ -140,7 +140,7 @@
 
     <string name="help_find">Kutumia screen hii kuweka jina lako ili kubadilishana na watu wengine. Bomba kifungo Done wakati kumaliza.</string>
     <string name="help_home">Kubadilishana data utambulisho, kuhakikisha watumiaji wote ni jirani au kwa simu. Anza Exchange kifungo kubadilishana tu kuchunguzwa data mawasiliano.</string>
-    <string name="help_identity_menu">\n\n\nUnaweza pia kubadilisha data binafsi kuhusu utambulisho wako wa juu ya screen hii na kugonga kifungo kwa jina lako. Hii kuonyesha orodha ya kuruhusu wewe Hariri kuwasiliana yako, Kujenga mawasiliano New, au kutumia mawasiliano mwingine.</string>
+    <string name="help_identity_menu">Unaweza pia kubadilisha data binafsi kuhusu utambulisho wako wa juu ya screen hii na kugonga kifungo kwa jina lako. Hii kuonyesha orodha ya kuruhusu wewe Hariri kuwasiliana yako, Kujenga mawasiliano New, au kutumia mawasiliano mwingine.</string>
     <string name="help_Messages">Screen hii inaonyesha ujumbe wote siku za nyuma, na attachments kwamba bado ni inapatikana kwa shusha.</string>
     <string name="help_passphrase">Kutumia screen hii ya kuingia kwa maombi na passphrase yako. Kama wamesahau passphrase yako, unaweza kuzalisha ufunguo mpya ulinzi na passphrase mpya na kugonga passphrase Umesahau? button. Bomba jina la mtumiaji kubadili kati ya funguo nyingi.</string>
     <string name="help_PickRecip">Mawasiliano na SafeSlinger funguo ni kuonyeshwa hapa, teua mmoja kwa kutuma ujumbe wako.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Mawasiliano %s nje.</string>
     <string name="state_TextCopiedToClipboard">Nakala kunakiliwa kwa clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ni iliyoundwa na kushiriki kwa urahisi data utambulisho, katika mtu au juu ya simu, kuthibitishwa, binafsi, na intact. Kila mtu kushiriki na inajenga salama hadi mwisho-mwisho channel kutuma ujumbe.\n\nSifa:\n-Urahisi kubadilishana mawasiliano ya habari na wengine\n-Salama kombeo maandiko, photos, kitu chochote!\n-Strong cryptography kulinda taarifa yako\n\nemail: %2$s\nmtandao: %3$s</string>
+    <string name="text_About">SafeSlinger ni iliyoundwa na kushiriki kwa urahisi data utambulisho, katika mtu au juu ya simu, kuthibitishwa, binafsi, na intact. Kila mtu kushiriki na inajenga salama hadi mwisho-mwisho channel kutuma ujumbe.</string>
+    <string name="text_About1">Kwa urahisi kubadilishana mawasiliano ya habari na wengine</string>
+    <string name="text_About2">Salama kombeo maandiko, photos, kitu chochote!</string>
+    <string name="text_About3">Nguvu cryptography kulinda habari yako</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Features:</string>
+    <string name="text_AboutWeb">mtandao: %s</string>
     <string name="text_KeywordExchange">Exchange</string>
     <string name="text_KeywordIdentity">Utambulisho</string>
     <string name="text_KeywordKey">Muhimu</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Usalama</string>
     <string name="text_LanguagesProvidedBy">Lugha zinazotolewa na:</string>
     <string name="text_RelatedSearchTerms">Kuhusiana Terms:</string>
-    <string name="text_Requirements">Mahitaji:.\n1 Lazima imewekwa kwenye kiwango cha chini ya 2 vifaa.\n2. Uhusiano Internet lazima kuwa hai.</string>
+    <string name="text_Requirements">Mahitaji:</string>
+    <string name="text_Requirements1">Lazima kuwa imewekwa kwenye kiwango cha chini ya 2 vifaa.</string>
+    <string name="text_Requirements2">Uhusiano Internet lazima kuwa hai.</string>
     <string name="text_SourceCodeRepo">wazi chanzo: %s</string>
-    <string name="text_WhatsNew">-Utulivu kunasa.</string>
+    <string name="text_WhatsNew">Utulivu kunasa.</string>
 
     <string name="title_About">Kuhusu</string>
     <string name="title_camera">Camera</string>

@@ -274,10 +274,16 @@ public class ExchangeActivity extends BaseActivity {
 
     private void handleVerifyActivity(int resultCode) {
         switch (resultCode) {
-            case RESULT_OK: // Verify button Match
+            case VerifyActivity.RESULT_CORRECTWORDLIST: // Verify button Match
+                mProt.setHashSelection(0);
                 runThreadSendValidSignatureGetSignatures();
                 break;
-            case VerifyActivity.RESULT_DECOYWORDLIST: // send bad match
+            case VerifyActivity.RESULT_DECOYWORDLIST1: // send bad match
+                mProt.setHashSelection(1);
+                runThreadSendInvalidSignature();
+                break;
+            case VerifyActivity.RESULT_DECOYWORDLIST2: // send bad match
+                mProt.setHashSelection(2);
                 runThreadSendInvalidSignature();
                 break;
             case RESULT_CANCELED: // Verify button No Match

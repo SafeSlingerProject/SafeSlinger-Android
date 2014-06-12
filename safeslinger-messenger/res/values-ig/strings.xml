@@ -140,7 +140,7 @@
 
     <string name="help_find">Jiri ihe a na ihuenyo ka aha gị ịgbanwe ndị ọzọ. Mgbata na Emela button mgbe okokụre.</string>
     <string name="help_home">Ịgbanwe njirimara data, hụ na ihe niile ọrụ ndị dị nso ma ọ bụ na ekwentị. Na Malite Exchange button ga ịgbanwe naanị enyocha kọntaktị data.</string>
-    <string name="help_identity_menu">\n\n\nỊ nwekwara ike ịgbanwe data onwe gị njirimara a ihuenyo site + Ọ na bọtịnụ gị aha ya. Nke a ga-egosipụta a menu ikwe gị Dezie kọntaktị gị, Mepụta na Kọntaktị ọhụrụ, ma ọ bụ Jiri ọzọ kọntaktị.</string>
+    <string name="help_identity_menu">Ị nwekwara ike ịgbanwe data onwe gị njirimara a ihuenyo site + Ọ na bọtịnụ gị aha ya. Nke a ga-egosipụta a menu ikwe gị Dezie kọntaktị gị, Mepụta na Kọntaktị ọhụrụ, ma ọ bụ Jiri ọzọ kọntaktị.</string>
     <string name="help_Messages">Nke a na-egosipụta na ihuenyo niile n\'oge gara aga ozi, na Mgbakwụnye ndị ka na-maka nbudata.</string>
     <string name="help_passphrase">Jiri ihe a na ihuenyo na nbanye nke ngwa gị passphrase. Ọ bụrụ na i chefuola gị passphrase, i nwere ike igbanye ọhụrụ isi na-echebe site ọhụrụ passphrase by + Ọ Chefuru Passphrase? button. Mgbata aha njirimara ka ịgbanwee n\'etiti otutu igodo.</string>
     <string name="help_PickRecip">Ndi ana-akpo na SafeSlinger igodo na-egosipụta n\'ebe a, họrọ otu izipu gị ozi.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kọntaktị ihe dị.</string>
     <string name="state_TextCopiedToClipboard">Ederede Baịbụl na clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger bụ iji mfe ịkọrọ njirimara data, na mmadụ ma ọ bụ ihe karịrị ekwentị, authenticated, na nzuzo, na-emebibeghị. Onye ọ bụla ị na-eso emepụta nchebe ọgwụgwụ na-ọgwụgwụ ọwa ka izipu ozi.\n\nFeatures:\n-mfe ịgbanwe ozi kọntaktị ndị ọzọ\n-nweghịkwa obi slingi odide, foto, na ihe ọ bụla!\n-Ike cryptography na-echebe gị ozi\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger bụ iji mfe ịkọrọ njirimara data, na mmadụ ma ọ bụ ihe karịrị ekwentị, authenticated, na nzuzo, na-emebibeghị. Onye ọ bụla ị na-eso emepụta nchebe ọgwụgwụ na-ọgwụgwụ ọwa ka izipu ozi.</string>
+    <string name="text_About1">Mfe ịgbanwe ozi kọntaktị ndị ọzọ</string>
+    <string name="text_About2">Nweghịkwa obi slingi odide, foto, na ihe ọ bụla!</string>
+    <string name="text_About3">Ike cryptography na-echebe gị ozi</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Atụmatụ:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Exchange</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">Key</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Nchebe</string>
     <string name="text_LanguagesProvidedBy">Asụsụ nye site na:</string>
     <string name="text_RelatedSearchTerms">Metụtara Okwu:</string>
-    <string name="text_Requirements">Chọrọ:\n1. Ga-arụnyere na nke kacha nta 2 ngwaọrụ.\n2. Otu njikọ Ịntanetị ga-arụsi ọrụ ike.</string>
+    <string name="text_Requirements">Chọrọ:</string>
+    <string name="text_Requirements1">A ga-arụnyere na nke kacha nta 2 ngwaọrụ.</string>
+    <string name="text_Requirements2">Njikọ Ịntanetị ga-arụsi ọrụ ike.</string>
     <string name="text_SourceCodeRepo">oghe si: %s</string>
-    <string name="text_WhatsNew">-Kwụsie ike fixes.</string>
+    <string name="text_WhatsNew">Kwụsie ike fixes.</string>
 
     <string name="title_About">Banyere</string>
     <string name="title_camera">Igwefoto</string>

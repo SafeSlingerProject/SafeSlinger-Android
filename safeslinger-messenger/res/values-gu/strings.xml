@@ -140,7 +140,7 @@
 
     <string name="help_find">અન્ય લોકો સાથે અદલા તમારું નામ સુયોજિત કરવા માટે આ સ્ક્રીનને વાપરો. જ્યારે સમાપ્ત થાય ત્યારે આ પૂર્ણ બટન ટેપ કરો.</string>
     <string name="help_home">ઓળખ માહિતી વિનિમય માટે, બધા વપરાશકર્તાઓ નજીકના અથવા ફોન પર હોય છે તેની ખાતરી કરો. આ શરૂ એક્સચેન્જ બટન માત્ર ચકાસાયેલ સંપર્ક માહિતી લે કરશે.</string>
-    <string name="help_identity_menu">\n\n\nતમે પણ તમારા નામ સાથે બટન પર ટેપ દ્વારા આ સ્ક્રીન પર તમારી ઓળખ વિશે વ્યક્તિગત માહિતી બદલી શકો છો. આ, તમે તમારી સંપર્ક સંપાદિત કરો માટે પરવાનગી આપે છે મેનુ પ્રદર્શિત નવો સંપર્ક બનાવો, અથવા અન્ય સંપર્ક ઉપયોગ કરશે.</string>
+    <string name="help_identity_menu">તમે પણ તમારા નામ સાથે બટન પર ટેપ દ્વારા આ સ્ક્રીન પર તમારી ઓળખ વિશે વ્યક્તિગત માહિતી બદલી શકો છો. આ, તમે તમારી સંપર્ક સંપાદિત કરો માટે પરવાનગી આપે છે મેનુ પ્રદર્શિત નવો સંપર્ક બનાવો, અથવા અન્ય સંપર્ક ઉપયોગ કરશે.</string>
     <string name="help_Messages">આ સ્ક્રીન બધા છેલ્લા સંદેશાઓ, અને હજુ પણ ડાઉનલોડ માટે ઉપલબ્ધ છે કે જોડાણો દર્શાવે છે.</string>
     <string name="help_passphrase">તમારો પાસફ્રેઝ ના કેટલાક એપ્લિકેશન માં પ્રવેશ કરવા માટે આ સ્ક્રીનને વાપરો. જો તમે તમારો પાસફ્રેઝ ભૂલી ગયા છો, તમે ભૂલી ગયા છો પાસફ્રેઝ ટેપ કરીને એક નવી પાસફ્રેઝ દ્વારા સુરક્ષિત નવી કી બનાવી શકો છો? બટન. ઘણી કીઓ વચ્ચે સ્વિચ કરવા માટે વપરાશકર્તા નામ ટેપ કરો.</string>
     <string name="help_PickRecip">SafeSlinger કીઓ સાથે સંપર્કો આપનો સંદેશ મોકલવા માટે એક પસંદ કરો, અહીં દર્શાવવામાં આવે છે.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s સંપર્કો આયાત કરી છે.</string>
     <string name="state_TextCopiedToClipboard">લખાણ ક્લિપબોર્ડ પર નકલ.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ખાનગી, પ્રમાણિત, વ્યક્તિ અથવા ફોન પર, સરળતાથી ઓળખ માહિતી શેર કરે છે, અને અકબંધ છે. તમારી સાથે શેર દરેક વ્યક્તિ સંદેશાઓ મોકલવા માટે એક સુરક્ષિત અંત માટે અંતે ચેનલ બનાવે છે.\n\nસુવિધાઓ\n-સરળતાથી અન્ય\n-સુરક્ષિત sling ગ્રંથો, ફોટા, ગમે સાથે સંપર્ક માહિતી બદલી! %2$s\nવેબ:: %3$s\nમજબૂત ક્રિપ્ટોગ્રાફી તમારી માહિતી\n\nઇમેઇલ સામે રક્ષણ આપે છે</string>
+    <string name="text_About">SafeSlinger, વ્યક્તિ અથવા ફોન પર, સરળતાથી ઓળખ માહિતી શેર કરવા માટે રચાયેલ સત્તાધિકારીત, ખાનગી અને અખંડ છે. તમારી સાથે શેર દરેક વ્યક્તિ સંદેશાઓ મોકલવા માટે એક સુરક્ષિત અંત માટે અંતે ચેનલ બનાવે છે.</string>
+    <string name="text_About1">સરળતાથી અન્ય લોકો સાથે સંપર્ક માહિતી વિનિમય</string>
+    <string name="text_About2">સુરક્ષિત sling ગ્રંથો, ફોટા, ખાવા!</string>
+    <string name="text_About3">મજબૂત ક્રિપ્ટોગ્રાફી તમારી માહિતી રક્ષણ આપે છે</string>
+    <string name="text_AboutEmail">ઇમેઇલ: %s</string>
+    <string name="text_AboutFeat">લક્ષણો:</string>
+    <string name="text_AboutWeb">વેબ: %s</string>
     <string name="text_KeywordExchange">વિનિમય</string>
     <string name="text_KeywordIdentity">ઓળખ</string>
     <string name="text_KeywordKey">કી</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">સુરક્ષા</string>
     <string name="text_LanguagesProvidedBy">દ્વારા પૂરી પાડવામાં આવેલ ભાષા:</string>
     <string name="text_RelatedSearchTerms">સંબંધિત શરતો:</string>
-    <string name="text_Requirements">જરૂરીયાતો:.\n1 2 ઉપકરણો ઓછામાં ઓછા પર સ્થાપિત હોવું જ જોઈએ.\n2. ઈન્ટરનેટ જોડાણ સક્રિય હોવા જ જોઈએ.</string>
+    <string name="text_Requirements">જરૂરીયાતો:</string>
+    <string name="text_Requirements1">2 ઉપકરણો ઓછામાં ઓછા પર સ્થાપિત હોવું જ જોઈએ.</string>
+    <string name="text_Requirements2">ઈન્ટરનેટ જોડાણ સક્રિય હોવા જ જોઈએ.</string>
     <string name="text_SourceCodeRepo">ઓપન સોર્સ: %s</string>
-    <string name="text_WhatsNew">-સ્થિરતા સુધારે છે.</string>
+    <string name="text_WhatsNew">સ્થિરતા સુધારે છે.</string>
 
     <string name="title_About">લગભગ</string>
     <string name="title_camera">કેમેરા</string>

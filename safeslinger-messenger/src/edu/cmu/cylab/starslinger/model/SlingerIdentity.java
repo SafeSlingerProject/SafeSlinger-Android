@@ -38,7 +38,7 @@ import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
 
 public class SlingerIdentity {
 
-    private String mPublicKeyPolar = null;
+    private String mPublicKey = null;
     private String mToken = "";
     private int mNotification;
 
@@ -46,20 +46,20 @@ public class SlingerIdentity {
         super();
     }
 
-    public SlingerIdentity(String token, int notification, String pubKeyPolar) {
-        if (pubKeyPolar != null)
-            mPublicKeyPolar = pubKeyPolar;
+    public SlingerIdentity(String token, int notification, String pubKey) {
+        if (pubKey != null)
+            mPublicKey = pubKey;
         if (token != null)
             mToken = token;
         mNotification = notification;
     }
 
     public String getPublicKey() {
-        return mPublicKeyPolar;
+        return mPublicKey;
     }
 
     public void setPublicKey(String public_key) {
-        mPublicKeyPolar = public_key;
+        mPublicKey = public_key;
     }
 
     public int getNotification() {
@@ -80,7 +80,7 @@ public class SlingerIdentity {
     }
 
     /***
-     * Transform address book Base 64 public key to string form
+     * Transform Base 64 public key to string form
      */
     public static String dbKey2BytesKey(String keyData) throws CryptoMsgException,
             CryptoMsgPeerKeyFormatException {
@@ -97,7 +97,7 @@ public class SlingerIdentity {
     }
 
     /***
-     * Transform address book Base 64 push token data to string form of token
+     * Transform Base 64 push token data to string form of token
      * 
      * @throws GeneralException
      */
@@ -109,15 +109,7 @@ public class SlingerIdentity {
                 ByteBuffer buf = ByteBuffer.wrap(t);
 
                 int pushType = buf.getInt();
-                switch (pushType) {
-                    case SafeSlingerConfig.NOTIFY_NOPUSH:
-                    case SafeSlingerConfig.NOTIFY_ANDROIDC2DM:
-                    case SafeSlingerConfig.NOTIFY_APPLEUA:
-                        // correct code, check next item...
-                        break;
-                    default:
-                        throw new GeneralException("Unknown push type code.");
-                }
+                // correct code, check next item...
 
                 int len = buf.getInt();
                 if (len > (buf.capacity() - 8) || len < 0) {
@@ -136,8 +128,7 @@ public class SlingerIdentity {
     }
 
     /***
-     * Transform address book Base 64 push token data to integer form of
-     * notification type
+     * Transform Base 64 push token data to integer form of notification type
      * 
      * @throws GeneralException
      */
@@ -148,14 +139,7 @@ public class SlingerIdentity {
                 ByteBuffer buf = ByteBuffer.wrap(t);
 
                 int pushType = buf.getInt();
-                switch (pushType) {
-                    case SafeSlingerConfig.NOTIFY_NOPUSH:
-                    case SafeSlingerConfig.NOTIFY_ANDROIDC2DM:
-                    case SafeSlingerConfig.NOTIFY_APPLEUA:
-                        return pushType;
-                    default:
-                        throw new GeneralException("Unknown push type code.");
-                }
+                return pushType;
             } catch (IllegalArgumentException e) {
                 e.printStackTrace();
                 return SafeSlingerConfig.NOTIFY_NOPUSH;// unable to read
@@ -165,8 +149,8 @@ public class SlingerIdentity {
     }
 
     /***
-     * Transform address book Base 64 public key and push token data items to
-     * rich form of Slinger identity
+     * Transform Base 64 public key and push token data items to rich form of
+     * Slinger identity
      */
     public static SlingerIdentity dbAll2sidAll(String tokenData, String keyData) {
 
@@ -196,8 +180,7 @@ public class SlingerIdentity {
     }
 
     /***
-     * Transform rich Slinger identity to Base 64 push token data form for
-     * address book
+     * Transform rich Slinger identity to Base 64 push token data
      */
     public static String sidPush2DBPush(SlingerIdentity slinger) {
         if (slinger != null) {
@@ -212,8 +195,7 @@ public class SlingerIdentity {
     }
 
     /***
-     * Transform rich Slinger identity to Base 64 public key data form for
-     * address book
+     * Transform rich Slinger identity to Base 64 public key data form
      */
     public static String sidKey2DBKey(SlingerIdentity slinger) {
         if (slinger != null) {

@@ -140,7 +140,7 @@
 
     <string name="help_find">Го користите овој екран да го поставите вашето име за размена со другите. Допрете Готово копчето кога ќе заврши.</string>
     <string name="help_home">Да се ​​разменуваат идентитет податоци, се обезбеди сите корисници се во близина или на телефон. Започнете Размена копчето ќе разменат само на проверени податоци за контакт.</string>
-    <string name="help_identity_menu">\n\n\nМожете исто така може да се промени на личните податоци за вашиот идентитет на овој екран со прислушување на копчето со вашето име. Ова ќе прикаже менито што ќе ви овозможи да ги менувате вашите контакти, Креирај нов контакт, или да користите друг контакт.</string>
+    <string name="help_identity_menu">Можете исто така може да се промени на личните податоци за вашиот идентитет на овој екран со прислушување на копчето со вашето име. Ова ќе прикаже менито што ќе ви овозможи да ги менувате вашите контакти, Креирај нов контакт, или да користите друг контакт.</string>
     <string name="help_Messages">Овој екран прикажува сите минати пораки, и додатоци кои се уште се достапни за преземање.</string>
     <string name="help_passphrase">Го користите овој екранот, за да се најавите на апликација со вашите тајна фраза. Ако сте ја заборавиле Вашата лозинка, може да генерирате нов клуч заштитени со нова тајна фраза со допирање на Заборавена Лозинка? копче. Допрете на името на корисникот да се префрлате помеѓу повеќе клучеви.</string>
     <string name="help_PickRecip">Контакти со SafeSlinger копчињата се прикажани тука, изберете една да ја испратите вашата порака до.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Увезени %s контакти.</string>
     <string name="state_TextCopiedToClipboard">Текст копирани на таблата со исечоци.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger е дизајниран за лесно споделување на идентитет податоци, во лице или по телефон, проверено, приватниот и непроменети. Секој човек ќе ги споделите со создава безбедна крај-до-крај канал за да праќате пораки.\n\nКарактеристики:\n-Лесно размена контакт информации со другите\n-Сигурно прашка текстови, фотографии, ништо!\n-Силен криптографијата штити вашите информации\n\ne-mail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger е дизајниран за лесно споделување на идентитет податоци, во лице или по телефон, проверено, приватниот и непроменети. Секој човек ќе ги споделите со создава безбедна крај-до-крај канал за да праќате пораки.</string>
+    <string name="text_About1">Лесно размена контакт информации со другите</string>
+    <string name="text_About2">Безбедно прашка текстови, фотографии, ништо!</string>
+    <string name="text_About3">Силна криптографија штити вашите информации</string>
+    <string name="text_AboutEmail">e-mail: %s</string>
+    <string name="text_AboutFeat">Карактеристики:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Размена</string>
     <string name="text_KeywordIdentity">Идентитет</string>
     <string name="text_KeywordKey">Клучни</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Безбедност</string>
     <string name="text_LanguagesProvidedBy">Јазици обезбедена од:</string>
     <string name="text_RelatedSearchTerms">Поврзани Услови:</string>
-    <string name="text_Requirements">Потребно:.\n1 мора да биде инсталиран на минимум 2 уреди.\n2. Интернет конекција мора да бидат активни.</string>
+    <string name="text_Requirements">Барања:</string>
+    <string name="text_Requirements1">Мора да биде инсталиран на минимум 2 уреди.</string>
+    <string name="text_Requirements2">Интернет конекција мора да бидат активни.</string>
     <string name="text_SourceCodeRepo">Open Source: %s</string>
-    <string name="text_WhatsNew">-Стабилност поправки.</string>
+    <string name="text_WhatsNew">Стабилност поправки.</string>
 
     <string name="title_About">За</string>
     <string name="title_camera">Камера</string>

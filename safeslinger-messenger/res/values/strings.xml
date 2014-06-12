@@ -254,7 +254,7 @@
     <!-- help message (sentence case, period); used via Help button on the Begin Exchange screen and also the key exchange walkthrough tutorial to describe in more detail what the Begin Exchange screen does. -->
     <string name="help_home">To exchange identity data, ensure all users are nearby or on the phone. The Begin Exchange button will exchange only the checked contact data.</string>
     <!-- help message (sentence case, period); Additional help text, which is appended to the Help button text on the Compose and Begin Exchange screens. -->
-    <string name="help_identity_menu">\n\nYou may also change personal data about your identity on this screen by tapping on the button with your name. This will display a menu allowing you to Edit your contact, Create New contact, or Use Another contact.</string>
+    <string name="help_identity_menu">You may also change personal data about your identity on this screen by tapping on the button with your name. This will display a menu allowing you to Edit your contact, Create New contact, or Use Another contact.</string>
     <!-- help message (sentence case, period); used via Help button on the Messages list screen to describe in more detail what the Messages list screen does. -->
     <string name="help_Messages">This screen displays all past messages, and attachments that are still available for download.</string>
     <!-- help message (sentence case, period); used via Help button on the Passphrase screen to describe in more detail what the Passphrase screen does. -->
@@ -283,6 +283,8 @@
     <string name="label_ago">%s ago</string>
     <!-- screen label (match English casing); used to display the name of the push service Type 1 = Android C2DM. -->
     <string name="label_AndroidC2DMServiceName" translatable="false">Android C2DM</string>
+    <!-- screen label (match English casing); used to display the name of the push service Type 3 = Android GCM. -->
+    <string name="label_AndroidGCMServiceName" translatable="false">Android GCM</string>
     <!-- screen label (match English casing); used to display the name of the Android OS. -->
     <string name="label_AndroidOS" translatable="false">Android</string>
     <!-- screen label (match English casing); used to indicate file size on the Messages list and Compose Message screens. %.0f = the number of whole bytes. -->
@@ -293,6 +295,10 @@
     <string name="label_backupRequestDate">Last Backup Request</string>
     <!-- screen label (match English casing); used on the Settings screen above the URL used for iCloud backups. iOS-only. -->
     <string name="label_backupURL">Backup URL</string>
+    <!-- screen label (match English casing); used to display the name of the Blackberry OS. -->
+    <string name="label_BlackberryOS" translatable="false">Blackberry</string>
+    <!-- screen label (match English casing); used to display the name of the push service Type 5 = Blackberry Push Service. -->
+    <string name="label_BlackberryPushServiceName" translatable="false">Blackberry Push</string>
     <!-- screen label (match English casing); used in the notification drop down window to indicate what will happen when received messages notification is touched. %d = the number of unseen messages received. -->
     <string name="label_ClickForNMsgs">Touch to review your %d messages</string>
     <!-- screen label (match English casing); used as a text box hint on the Compose Message screen where the user can type a message in the box. -->
@@ -499,6 +505,10 @@
     <string name="label_WarnManagePassNoMoreRecent">There are no more recent keys than yours.</string>
     <!-- screen label (match English casing); used to show which keys may be deleted. %s = the key generation date of the current key -->
     <string name="label_WarnManagePassOnlyRecentDeleted">Only keys generated more recently than yours, generated on %s, may be deleted.</string>
+    <!-- screen label (match English casing); used to display the name of the push service Type 4 = Windows Phone MPNS. -->
+    <string name="label_WinPhoneMPNServiceName" translatable="false">Windows Phone MPNS</string>
+    <!-- screen label (match English casing); used to display the name of the Windows Phone OS. -->
+    <string name="label_WinPhoneOS" translatable="false">Windows Phone</string>
     <!-- screen label (match English casing); used to denote a 'work' type of email or phone on the Setup screen. iOS-only. -->
     <string name="label_worktag">Work</string>
 
@@ -656,8 +666,20 @@
     <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm the message text has been copied to the device native clipboard. -->
     <string name="state_TextCopiedToClipboard">Text copied to clipboard.</string>
 
-    <!-- application description (sentence case); used at the beginning of the about box and app store listing to describe the application features. %1$s = application name and version number, %2$s = SafeSlinger support email address, %3$s = SafeSlinger project web page address. -->
-    <string name="text_About">%1$s\n\nSafeSlinger is designed to easily share identity data, in person or over the phone, authenticated, private, and intact. Each person you share with creates a secure end-to-end channel to send messages.\n\nFeatures:\n-Easily exchange contact information with others\n-Securely sling texts, photos, anything!\n-Strong cryptography protects your information\n\nemail: %2$s\nweb: %3$s</string>
+    <!-- application description (sentence case); used at the beginning of the about box and app store listing to describe the application. -->
+    <string name="text_About">SafeSlinger is designed to easily share identity data, in person or over the phone, authenticated, private, and intact. Each person you share with creates a secure end-to-end channel to send messages.</string>
+    <!-- application description (sentence case); used in the about box and app store listing to describe the application features. -->
+    <string name="text_About1">Easily exchange contact information with others</string>
+    <!-- application description (sentence case); used in the about box and app store listing to describe the application features. -->
+    <string name="text_About2">Securely sling texts, photos, anything!</string>
+    <!-- application description (sentence case); used in the about box and app store listing to describe the application features. -->
+    <string name="text_About3">Strong cryptography protects your information</string>
+    <!-- application description (sentence case); used in the app store listing, %s = SafeSlinger support email address. -->
+    <string name="text_AboutEmail">email: %s</string>
+    <!-- application description (sentence case); used in the about box and app store listing to describe the application features. -->
+    <string name="text_AboutFeat">Features:</string>
+    <!-- application description (sentence case); used in the app store listing, %s = SafeSlinger project web page address. -->
+    <string name="text_AboutWeb">web: %s</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
     <string name="text_KeywordAdHoc" translatable="false">ad hoc</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
@@ -691,11 +713,15 @@
     <!-- application description (sentence case); used in the app store listing to list related search terms to help users looking for secure key exchange and messaging. -->
     <string name="text_RelatedSearchTerms">Related Terms:</string>
     <!-- application description (sentence case); used in the about box and app store listing to enumerate requirements. -->
-    <string name="text_Requirements">Requirements:\n1. Must be installed on a minimum of 2 devices.\n2. An Internet connection must be active.</string>
-    <!-- application description (sentence case); used in the app store listing to show the location of the open source code repository. -->
+    <string name="text_Requirements">Requirements:</string>
+    <!-- application description (sentence case); used in the about box and app store listing to enumerate requirements. -->
+    <string name="text_Requirements1">Must be installed on a minimum of 2 devices.</string>
+    <!-- application description (sentence case); used in the about box and app store listing to enumerate requirements. -->
+    <string name="text_Requirements2">An Internet connection must be active.</string>
+    <!-- application description (sentence case); used in the app store listing to show the location of the open source code repository. %s = source code URL. -->
     <string name="text_SourceCodeRepo">open source: %s</string>
     <!-- application description (sentence case); used to list what changes have been made to updated versions. -->
-    <string name="text_WhatsNew">-Stability fixes.</string>
+    <string name="text_WhatsNew">Stability fixes.</string>
 
     <!-- title (title case); used as the -->
     <string name="title_About">About</string>

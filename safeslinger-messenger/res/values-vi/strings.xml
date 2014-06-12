@@ -140,7 +140,7 @@
 
     <string name="help_find">Sử dụng màn hình này để thiết lập tên của bạn để trao đổi với người khác. Bấm vào nút Done khi hoàn tất.</string>
     <string name="help_home">Trao đổi dữ liệu nhận dạng, đảm bảo tất cả người dùng đang ở gần hoặc trên điện thoại. Nút Bắt đầu Exchange sẽ trao đổi chỉ có dữ liệu liên lạc kiểm tra.</string>
-    <string name="help_identity_menu">\n\n\nBạn cũng có thể thay đổi dữ liệu cá nhân về danh tính của bạn trên màn hình này bằng cách khai thác vào nút có tên của bạn. Điều này sẽ hiển thị một menu cho phép bạn chỉnh sửa liên lạc của bạn, Tạo liên lạc mới, hoặc sử dụng liên lạc khác.</string>
+    <string name="help_identity_menu">Bạn cũng có thể thay đổi dữ liệu cá nhân về danh tính của bạn trên màn hình này bằng cách khai thác vào nút có tên của bạn. Điều này sẽ hiển thị một menu cho phép bạn chỉnh sửa liên lạc của bạn, Tạo liên lạc mới, hoặc sử dụng liên lạc khác.</string>
     <string name="help_Messages">Màn hình này hiển thị tất cả các thông điệp qua, và file đính kèm vẫn có sẵn để tải về.</string>
     <string name="help_passphrase">Sử dụng màn hình này để đăng nhập vào ứng dụng với cụm từ mật khẩu của bạn. Nếu bạn quên mật khẩu, bạn có thể tạo một khóa mới được bảo vệ bởi một mật khẩu mới bằng cách khai thác các cụm mật khẩu Quên? nút. Bấm vào tên người dùng chuyển đổi giữa nhiều phím.</string>
     <string name="help_PickRecip">Liên hệ với các phím SafeSlinger được hiển thị ở đây, hãy chọn một để gửi thông điệp của bạn.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Địa chỉ liên lạc %s nhập khẩu.</string>
     <string name="state_TextCopiedToClipboard">Sao chép văn bản vào clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger được thiết kế để dễ dàng chia sẻ dữ liệu nhận dạng, trực tiếp hoặc qua điện thoại, chứng thực, tư nhân, và nguyên vẹn. Mỗi người bạn chia sẻ với tạo ra một kênh end-to-end an toàn để gửi tin nhắn.\n\ntính năng:\n-Dễ dàng trao đổi thông tin liên lạc với những người khác\n-an toàn các văn bản sling, hình ảnh, bất cứ điều gì! Mật mã\n-mạnh mẽ bảo vệ thông tin của bạn\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger được thiết kế để dễ dàng chia sẻ dữ liệu nhận dạng, trực tiếp hoặc qua điện thoại, chứng thực, tư nhân, và nguyên vẹn. Mỗi người bạn chia sẻ với tạo ra một kênh end-to-end an toàn để gửi tin nhắn.</string>
+    <string name="text_About1">Dễ dàng trao đổi thông tin liên lạc với những người khác</string>
+    <string name="text_About2">Các văn bản an toàn sling, hình ảnh, bất cứ điều gì!</string>
+    <string name="text_About3">Mật mã mạnh mẽ bảo vệ thông tin của bạn</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Các tính năng:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Ngoại tệ</string>
     <string name="text_KeywordIdentity">Bản sắc</string>
     <string name="text_KeywordKey">Chính</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">An ninh</string>
     <string name="text_LanguagesProvidedBy">Ngôn ngữ được cung cấp bởi:</string>
     <string name="text_RelatedSearchTerms">Điều khoản liên quan:</string>
-    <string name="text_Requirements">Yêu cầu:.\n1 Phải được cài đặt trên tối thiểu là 2 thiết bị.\n2. Một kết nối Internet phải được hoạt động.</string>
+    <string name="text_Requirements">Yêu cầu:</string>
+    <string name="text_Requirements1">Phải được cài đặt trên tối thiểu là 2 thiết bị.</string>
+    <string name="text_Requirements2">Kết nối Internet phải được hoạt động.</string>
     <string name="text_SourceCodeRepo">mã nguồn mở: %s</string>
-    <string name="text_WhatsNew">-Ổn định các bản sửa lỗi.</string>
+    <string name="text_WhatsNew">Ổn định các bản sửa lỗi.</string>
 
     <string name="title_About">Về</string>
     <string name="title_camera">Máy ảnh</string>

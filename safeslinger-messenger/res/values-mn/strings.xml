@@ -140,7 +140,7 @@
 
     <string name="help_find">Бусадтай солилцох дүн таны хайсан нэрийг тогтоохын тулд энэ дэлгэцийн ашигла. Дуусахдаа Үүнийг товчлуур дээр дар.</string>
     <string name="help_home">Биеийн өгөгдөл солилцох тулд бүх хэрэглэгчид ойр, эсвэл утсаар эсэхийг шалгаарай. Эхлэх Валютын товчийг л шалгаж холбоо барих мэдээлэл солилцох болно.</string>
-    <string name="help_identity_menu">\n\n\nТа мөн нэрээр товчийг илрүүлэх замаар дэлгэцэн дээр таны биеийн тухай хувийн мэдээллийг өөрчилж болно. Энэ нь та холбоо засварлах боломж олгох цэс харуулагддаг шинэ холбоо бий болгох, эсвэл өөр нэг холбоо ашиглах болно.</string>
+    <string name="help_identity_menu">Та мөн нэрээр товчийг илрүүлэх замаар дэлгэцэн дээр таны биеийн тухай хувийн мэдээллийг өөрчилж болно. Энэ нь та холбоо засварлах боломж олгох цэс харуулагддаг шинэ холбоо бий болгох, эсвэл өөр нэг холбоо ашиглах болно.</string>
     <string name="help_Messages">Энэхүү дэлгэц бүхий л өнгөрсөн зурвас, одоо ч гэсэн татаж авах боломжтой байгаа хавсралтуудыг харуулна.</string>
     <string name="help_passphrase">Таны нэвтрэх нь програм руу нэвтрэх Хэрэв энэ дэлгэц ашиглах хэрэгтэй. Хэрэв та өөрийн нэвтрэх үгийг мартчихсан бол та үгээ мартсан нэвтрэх үгнүүдийг дахин дахин түншээд шинэ нэвтрэх үгээр хамгаалагдсан шинэ түлхүүрийг үүсгэж болох вэ? товчийг дар. Олон товчлууруудын хооронд шилжихийн тулд хэрэглэгчийн нэр дээр дар.</string>
     <string name="help_PickRecip">SafeSlinger товчлуур бүхий Холбоо барих таны зурвас илгээх нэгийг сонгож, энд ирнэ.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s харилцах оруулсан.</string>
     <string name="state_TextCopiedToClipboard">Текст Clipboard хуулсан.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger хувийн нэвтрэлт танилт, биеэр буюу утсаар, амархан биеийн өгөгдөл солилцох зориулалттай, бүрэн бүтэн байна. Хэрэв та хуваалцах хүн бүр зурвас илгээх нь аюулгүй төгсгөл-тегсгел-сувгийг бий болгож байна.\n\nонцлог:\n-Хялбараар бусад\n-аюулгүйгээр сур ном судар, фото зураг, ямар ч үед холбоо барих мэдээлэл солилцох! %2$s\nвэб: %3$s\n-Хүчтэй криптограф таны мэдээлэл\n\nи-мэйл хамгаалдаг</string>
+    <string name="text_About">SafeSlinger, биеэр буюу утсаар, амархан биеийн өгөгдөл солилцох зорилготой нэвтрэлт танилт, хувийн болон бүрэн бүтэн байна. Хэрэв та хуваалцах хүн бүр зурвас илгээх нь аюулгүй төгсгөл-тегсгел-сувгийг бий болгож байна.</string>
+    <string name="text_About1">Хялбараар бусадтай холбоо барих мэдээлэл солилцох</string>
+    <string name="text_About2">Найдвартай сур текст, зураг, ямар нэг зүйл!</string>
+    <string name="text_About3">Хүчтэй криптограф таны мэдээллийг хамгаалах</string>
+    <string name="text_AboutEmail">и-мэйл: %s</string>
+    <string name="text_AboutFeat">Шинж чанар:</string>
+    <string name="text_AboutWeb">вэб: %s</string>
     <string name="text_KeywordExchange">Бирж</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">Түлхүүр</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Аюулгүй байдал</string>
     <string name="text_LanguagesProvidedBy">Өгсөн Хэл:</string>
     <string name="text_RelatedSearchTerms">Холбогдох нөхцөл:</string>
-    <string name="text_Requirements">Тавигдах шаардлага:.\n1 2 төхөөрөмжүүд нь доод тал нь суулгасан байх ёстой.\n2. Интернет холболт идэвхтэй байх ёстой.</string>
+    <string name="text_Requirements">Тавигдах шаардлага:</string>
+    <string name="text_Requirements1">2 төхөөрөмжүүдийн хамгийн багадаа суусан байх ёстой.</string>
+    <string name="text_Requirements2">Интернет холболт идэвхтэй байх ёстой.</string>
     <string name="text_SourceCodeRepo">нээлттэй эх сурвалж: %s</string>
-    <string name="text_WhatsNew">-Тогтвортой байдлын засварладаг.</string>
+    <string name="text_WhatsNew">Тогтвортой байдлын засварладаг.</string>
 
     <string name="title_About">Тухай</string>
     <string name="title_camera">Камер</string>

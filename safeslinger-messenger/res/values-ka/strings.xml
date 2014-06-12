@@ -140,7 +140,7 @@
 
     <string name="help_find">გამოიყენეთ ეს ეკრანზე თქვენი სახელი გაცვლა სხვები. ლიბერალიზაცია შესრულებულია ღილაკს, როდესაც დასრულდა.</string>
     <string name="help_home">გაცვლა პირადობის მონაცემებით, უზრუნველყონ ყველა მომხმარებლის მიმდებარე ან ტელეფონით. დასაწყისი Exchange ღილაკს გაცვლიან მხოლოდ გადამოწმებული საკონტაქტო მონაცემები.</string>
-    <string name="help_identity_menu">\n\n\nთქვენ შესაძლებელია აგრეთვე შეცვალოს პერსონალური მონაცემების შესახებ თქვენი პიროვნება ამ ეკრანზე მიერ მოსმენების ღილაკს თქვენი სახელი. ეს არის მენიუ, რომელიც საშუალებას გაძლევთ რედაქტირება თქვენი საკონტაქტო, შექმნა ახალი კონტაქტის, ან გამოიყენეთ სხვა კონტაქტი.</string>
+    <string name="help_identity_menu">თქვენ შესაძლებელია აგრეთვე შეცვალოს პერსონალური მონაცემების შესახებ თქვენი პიროვნება ამ ეკრანზე მიერ მოსმენების ღილაკს თქვენი სახელი. ეს არის მენიუ, რომელიც საშუალებას გაძლევთ რედაქტირება თქვენი საკონტაქტო, შექმნა ახალი კონტაქტის, ან გამოიყენეთ სხვა კონტაქტი.</string>
     <string name="help_Messages">ამ ეკრანზე აჩვენებს ყველა წარსულში შეტყობინებები და attachments, რომ ჯერ კიდევ ხელმისაწვდომია.</string>
     <string name="help_passphrase">გამოიყენეთ ეს ეკრანზე შესვლაზე განაცხადის თქვენი passphrase. თუ თქვენ დაგავიწყდათ თქვენი passphrase, შეგიძლიათ გენერირება ახალი გასაღები დაცულია new passphrase მიერ მოსმენების პაროლი passphrase? ღილაკს. Tap მომხმარებლის სახელი გადაერთოთ სხვადასხვა ღილაკები.</string>
     <string name="help_PickRecip">კონტაქტები SafeSlinger გასაღებები ნაჩვენები აქ, აირჩიეთ გამოაგზავნოთ თქვენი გზავნილი.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s კონტაქტები იმპორტირებული.</string>
     <string name="state_TextCopiedToClipboard">ტექსტი დაკოპირებული ბუფერში.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger განკუთვნილია ადვილად გაუზიაროთ პირადობის მონაცემებით, პირის ან სატელეფონო, დამოწმებული, კერძო და უცვლელი. ყოველი პირი თქვენ გაუზიარებთ ქმნის უსაფრთხო ბოლომდე-to-end არხი გააგზავნოთ შეტყობინებები.\n\nმახასიათებლები:\n-ადვილად გაცვლა საკონტაქტო ინფორმაცია სხვებთან\n-უსაფრთხოდ sling ტექსტები, ფოტოები, არაფერი!\nძლიერი კრიპტოგრაფიის იცავს თქვენს ინფორმაციას\n\nელ: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger განკუთვნილია ადვილად გაუზიაროთ პირადობის მონაცემებით, პირის ან სატელეფონო, დამოწმებული, კერძო და უცვლელი. ყოველი პირი თქვენ გაუზიარებთ ქმნის უსაფრთხო ბოლომდე-to-end არხი გააგზავნოთ შეტყობინებები.</string>
+    <string name="text_About1">ადვილად გაცვლა საკონტაქტო ინფორმაცია სხვებთან</string>
+    <string name="text_About2">უსაფრთხოდ Sling ტექსტები, ფოტოები, არაფერი!</string>
+    <string name="text_About3">ძლიერი კრიპტოგრაფიის იცავს თქვენს ინფორმაციას</string>
+    <string name="text_AboutEmail">ელფოსტა: %s</string>
+    <string name="text_AboutFeat">მახასიათებლები:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">გაცვლა</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">ძირითადი</string>
@@ -344,7 +350,9 @@
     <string name="text_KeywordSecurity">უსაფრთხოება</string>
     <string name="text_LanguagesProvidedBy">ენები გათვალისწინებული:</string>
     <string name="text_RelatedSearchTerms">დაკავშირებული პირობები:</string>
-    <string name="text_Requirements">მოთხოვნები:\n1. უნდა იყოს დამონტაჟებული მინიმუმ 2 მოწყობილობები.\n2.ინტერნეტი უნდა იყოს აქტიური.</string>
+    <string name="text_Requirements">მოთხოვნები:</string>
+    <string name="text_Requirements1">უნდა იყოს დამონტაჟებული მინიმუმ 2 მოწყობილობები.</string>
+    <string name="text_Requirements2">ინტერნეტი უნდა იყოს აქტიური.</string>
     <string name="text_SourceCodeRepo">ღია წყარო: %s</string>
     <string name="text_WhatsNew">სტაბილურობის აფიქსირებს.</string>
 

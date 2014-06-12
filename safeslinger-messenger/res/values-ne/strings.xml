@@ -140,7 +140,7 @@
 
     <string name="help_find">अरूलाई आदान प्रदान गर्न आफ्नो नाम सेट गर्न यो स्क्रिनको प्रयोग गर्नुहोस् । जब समाप्त Done बटन ट्याप गर्नुहोस् ।</string>
     <string name="help_home">पहिचान डेटा विनिमय, सबै प्रयोगकर्ताहरू नजिकै वा फोनमा हो सुनिश्चित । सुरू विनिमय बटन मात्र जाँच सम्पर्क डाटा आदान प्रदान गर्नेछ ।</string>
-    <string name="help_identity_menu">\n\n\nतपाईं पनि आफ्नो नाम संग बटन मा दोहन द्वारा यो पर्दामा मा आफ्नो चिनारी व्यक्तिगत डेटा परिवर्तन हुन सक्छ । यो, तपाईं आफ्नो सम्पर्क सम्पादन गर्न अनुमति मेनु प्रदर्शन नयाँ सम्पर्क सिर्जना, वा अर्को संपर्क प्रयोग हुनेछ ।</string>
+    <string name="help_identity_menu">तपाईं पनि आफ्नो नाम संग बटन मा दोहन द्वारा यो पर्दामा मा आफ्नो चिनारी व्यक्तिगत डेटा परिवर्तन हुन सक्छ । यो, तपाईं आफ्नो सम्पर्क सम्पादन गर्न अनुमति मेनु प्रदर्शन नयाँ सम्पर्क सिर्जना, वा अर्को संपर्क प्रयोग हुनेछ ।</string>
     <string name="help_Messages">यो स्क्रीन विगतका सबै सन्देशहरू, र अझै पनि डाउनलोड को लागि उपलब्ध एट्याचमेन्ट प्रदर्शित ।</string>
     <string name="help_passphrase">आफ्नो पासफ्रेज संग आवेदन प्रवेश गर्न यो स्क्रिनको प्रयोग गर्नुहोस् । तपाईं आफ्नो पासफ्रेज बिर्सेका छन् भने, तपाईं भूल पासफ्रेज ट्याप गरेर नयाँ पासफ्रेज द्वारा सुरक्षित नयाँ कुञ्जी उत्पन्न हुन सक्छ? बटन । बहुँविधकुञ्जी बीच स्विच गर्न प्रयोगकर्ता नाम ट्याप गर्नुहोस् ।</string>
     <string name="help_PickRecip">SafeSlinger कुञ्जीहरू संग संपर्क गर्न आफ्नो सन्देश पठाउन एक चयन, यहाँ प्रदर्शित छन् ।</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s सम्पर्कहरू आयात ।</string>
     <string name="state_TextCopiedToClipboard">क्लिपबोर्डमा प्रतिलिपि ।</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger निजी, प्रमाणीकरण, व्यक्ति वा फोनबाट, सजिलै पहिचान डाटा साझेदारी गर्न सक्छन्, र पूर्ण छ । तपाईं बाँड्न प्रत्येक व्यक्ति सन्देश पठाउन एक सुरक्षित अन्त-to-अन्त च्यानल सिर्जना गर्दछ।\n\nविशेषताहरु:\n-सजिलै अरूलाई\n-सुरक्षित रूपमा गोफन पदहरू, फोटो, केहि पनि सम्पर्कमा गछौर्ँ! %2$s\nवेब:: %3$s\nबलियो क्रिप्टोग्राफी आफ्नो जानकारी\n\nइमेल सुरक्षा</string>
+    <string name="text_About">SafeSlinger, व्यक्ति वा फोनबाट, सजिलै पहिचान डाटा साझेदारी गर्न सक्छन् प्रमाणीकरण, निजी, र पूर्ण छ। तपाईं बाँड्न प्रत्येक व्यक्ति सन्देश पठाउन एक सुरक्षित अन्त-to-अन्त च्यानल सिर्जना गर्दछ।</string>
+    <string name="text_About1">सजिलै अरूलाई सम्पर्कमा गछौर्ँ</string>
+    <string name="text_About2">सुरक्षित गोफन पदहरू, फोटो, केहि पनि!</string>
+    <string name="text_About3">बलियो क्रिप्टोग्राफी आफ्नो जानकारी सुरक्षा</string>
+    <string name="text_AboutEmail">इमेल: %s</string>
+    <string name="text_AboutFeat">विशेषताहरु:</string>
+    <string name="text_AboutWeb">वेब: %s</string>
     <string name="text_KeywordExchange">विनिमय</string>
     <string name="text_KeywordIdentity">पहिचान</string>
     <string name="text_KeywordKey">प्रमुख</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">सुरक्षा</string>
     <string name="text_LanguagesProvidedBy">प्रदान भाषा:</string>
     <string name="text_RelatedSearchTerms">सम्बन्धित नियमहरु:</string>
-    <string name="text_Requirements">नाम: ।\n1 2 यन्त्रहरू को एक न्यूनतम मा स्थापित गरिनु पर्छ ।\n2 । एक इन्टरनेट जडान सक्रिय हुनु पर्छ ।</string>
+    <string name="text_Requirements">नाम:</string>
+    <string name="text_Requirements1">2 यन्त्रहरू को एक न्यूनतम मा स्थापित गरिनु पर्छ।</string>
+    <string name="text_Requirements2">एक इन्टरनेट जडान सक्रिय हुनु पर्छ।</string>
     <string name="text_SourceCodeRepo">खुला स्रोत: %s</string>
-    <string name="text_WhatsNew">-स्थिरता हल गर्दछ ।</string>
+    <string name="text_WhatsNew">स्थिरता हल गर्दछ ।</string>
 
     <string name="title_About">बारेमा</string>
     <string name="title_camera">क्यामेरा</string>

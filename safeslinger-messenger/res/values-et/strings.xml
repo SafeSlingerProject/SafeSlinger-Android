@@ -140,7 +140,7 @@
 
     <string name="help_find">Kasutage seda ekraani, et määrata oma nime vahetada teistega. Puuduta nuppu Valmis, kui olete lõpetanud.</string>
     <string name="help_home">Vahetada identiteedi andmed, et kõik kasutajad on lähedal või telefoni teel. Alustada Exchange nupp vahetavad ainultkontrollitud kontaktandmed.</string>
-    <string name="help_identity_menu">\n\n\nVõite muuta isikuandmeid oma identiteeti selle ekraani puudutades nuppu oma nimi. See avab menüü, mis võimaldab teil muuta oma kontaktandmeid, luua uusi kontakte, või kasutage muud kontaktandmed.</string>
+    <string name="help_identity_menu">Võite muuta isikuandmeid oma identiteeti selle ekraani puudutades nuppu oma nimi. See avab menüü, mis võimaldab teil muuta oma kontaktandmeid, luua uusi kontakte, või kasutage muud kontaktandmed.</string>
     <string name="help_Messages">See ekraan kuvab kõik viimase sõnumeid ja manuseid, mis on veel saadaval allalaadimiseks.</string>
     <string name="help_passphrase">Kasutage seda ekraani login taotluse koos oma parool. Kui oled unustanud oma parooli, siis võib uus võti kaitstuduus parool puudutades Unustasid Parooli? nuppu. Puudutakasutajanime vaheldumisi mitu võtmed.</string>
     <string name="help_PickRecip">Kontaktid SafeSlinger võtmed kuvatakse siin, valida üks, et saata sõnum.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kontakte importida.</string>
     <string name="state_TextCopiedToClipboard">Tekst kopeeritakse lõikelauale.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger eesmärk on lihtsalt jagada identiteedi andmed, isiklikult või telefoni teel, kinnitatud, era-ja puutumatu. Iga inimene jagate loob turvalise end-to-end kanal sõnumite saatmiseks.\n\nOmadused:\n-lihtsalt vahetada kontaktandmeid teistega\n-Turvaliseks pilduma tekstid, fotod, midagi!\n-Strong krüptograafia kaitseb teie andmed\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger eesmärk on lihtsalt jagada identiteedi andmed, isiklikult või telefoni teel, kinnitatud, era-ja puutumatu. Iga inimene jagate loob turvalise end-to-end kanal sõnumite saatmiseks.</string>
+    <string name="text_About1">Lihtsalt vahetada kontaktandmeid teistega</string>
+    <string name="text_About2">Turvaliseks pilduma tekstid, fotod, midagi!</string>
+    <string name="text_About3">Tugev krüptograafia kaitseb teie andmed</string>
+    <string name="text_AboutEmail">e-post: %s</string>
+    <string name="text_AboutFeat">Omadused:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Vahetus</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">Võti</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Turvalisus</string>
     <string name="text_LanguagesProvidedBy">Keeled, mida pakuvad:</string>
     <string name="text_RelatedSearchTerms">Seotud mõisted:</string>
-    <string name="text_Requirements">Nõuded:\n1. Tuleb paigaldada vähemalt 2 seadmeid.\n2.Internetiühendus peab olema aktiivne.</string>
+    <string name="text_Requirements">Nõuded:</string>
+    <string name="text_Requirements1">Tuleb paigaldada vähemalt 2 seadmeid.</string>
+    <string name="text_Requirements2">Internetiühendus peab olema aktiivne.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Stabiilsuse parandamiseks.</string>
+    <string name="text_WhatsNew">Stabiilsuse parandamiseks.</string>
 
     <string name="title_About">Kohta</string>
     <string name="title_camera">Kaamera</string>

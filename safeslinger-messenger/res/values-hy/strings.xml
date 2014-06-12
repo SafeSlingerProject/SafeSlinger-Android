@@ -140,7 +140,7 @@
 
     <string name="help_find">Օգտագործեք այս էկրանի ստեղծել Ձեր անունը փոխանակել ուրիշների հետ միասին. Ծորակ է արել կոճակը, երբ ավարտեցի.</string>
     <string name="help_home">Փոխանակման նույնականացման տվյալները, ապահովել բոլոր օգտագործողների մոտ են կամ հեռախոսով. The Սկիզբ Exchange կոճակը կփոխանակեն միայն նշված կոնտակտային տվյալները.</string>
-    <string name="help_identity_menu">\n\n\nԴուք կարող եք նաեւ փոխել անձնական տվյալները ձեր ինքնությունը: Այս էկրանի կտկտոցը կոճակը ձեր անունով. Սա ցույց է ընտրացանկը թույլ է տալիս Ձեզ խմբագրել ձեր կապը, ստեղծել նոր կապեր, կամ օգտագործել այլ կոնտակտ.</string>
+    <string name="help_identity_menu">Դուք կարող եք նաեւ փոխել անձնական տվյալները ձեր ինքնությունը: Այս էկրանի կտկտոցը կոճակը ձեր անունով. Սա ցույց է ընտրացանկը թույլ է տալիս Ձեզ խմբագրել ձեր կապը, ստեղծել նոր կապեր, կամ օգտագործել այլ կոնտակտ.</string>
     <string name="help_Messages">Այս էկրանի ցուցադրում է անցյալի բոլոր հաղորդագրությունները, եւ հավելվածները, որոնք դեռեւս հասանելի է ներբեռնման համար.</string>
     <string name="help_passphrase">Օգտագործեք այս էկրանի մուտք դիմումի ձեր passphrase. Եթե ​​դուք մոռացել եք Ձեր passphrase, դուք կարող եք առաջացնում է նոր բանալի պաշտպանված է նոր passphrase կտկտոցը Մոռացել եք passphrase. կոճակը: Ծորակ օգտագործողի անունը կայանների միջեւ բազմաթիվ բանալիներ.</string>
     <string name="help_PickRecip">Կապ հետ SafeSlinger բանալիներ են ցուցադրվում այստեղ, ընտրեք հետեւյալ ուղարկել Ձեր հաղորդագրությունը `</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s Կապ ներմուծվել.</string>
     <string name="state_TextCopiedToClipboard">Text պատճենահանվել է clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger նախագծված է հեշտությամբ կիսել նույնականացման տվյալները, անձամբ կամ ավելի հեռախոսով, իսկությունը, մասնավոր եւ անձեռնմխելի. Յուրաքանչյուր անձ եք կիսվել ստեղծում է անվտանգ վերջ-to-end ալիքը ուղարկել հաղորդագրություն.\n\nՆկարագրություն:\n-Հեշտությամբ փոխանակել կոնտակտային տեղեկատվություն ուրիշների\n-ապահով պարսատիկ տեքստերի, լուսանկարներ, ոչինչ.\n-Ուժեղ ծածկագիտություն պաշտպանում է Ձեր տվյալները\n\nEmail: %2$s\nWeb: %3$s</string>
+    <string name="text_About">SafeSlinger նախագծված է հեշտությամբ կիսել նույնականացման տվյալները, անձամբ կամ ավելի հեռախոսով, իսկությունը, մասնավոր եւ անձեռնմխելի. Յուրաքանչյուր անձ եք կիսվել ստեղծում է անվտանգ վերջ-to-end ալիքը ուղարկել հաղորդագրություն.</string>
+    <string name="text_About1">Հեշտությամբ փոխանակել կոնտակտային ուրիշների հետ</string>
+    <string name="text_About2">Ապահով Պարսատիկ տեքստեր, լուսանկարներ, բան.</string>
+    <string name="text_About3">Ուժեղ Գաղտնագրությունը պաշտպանում է Ձեր տվյալները</string>
+    <string name="text_AboutEmail">Email: %s</string>
+    <string name="text_AboutFeat">Նկարագրություն:</string>
+    <string name="text_AboutWeb">Web: %s</string>
     <string name="text_KeywordExchange">Փոխանակել</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">Հիմնական</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Անվտանգություն</string>
     <string name="text_LanguagesProvidedBy">Լեզուներ կողմից:</string>
     <string name="text_RelatedSearchTerms">Առնչվող Պայմանաբառ:</string>
-    <string name="text_Requirements">Պահանջներ:\n1. Պետք է տեղադրված է առնվազն 2 սարքերի.\n2 An ինտերնետ կապ պետք է լինի ակտիվ.</string>
+    <string name="text_Requirements">Պահանջները:</string>
+    <string name="text_Requirements1">Պետք է տեղադրված է առնվազն 2 սարքերի.</string>
+    <string name="text_Requirements2">An ինտերնետ կապ պետք է լինի ակտիվ.</string>
     <string name="text_SourceCodeRepo">բաց կոդով: %s</string>
-    <string name="text_WhatsNew">-Կայունություն ամրագրում.</string>
+    <string name="text_WhatsNew">Կայունություն ամրագրում.</string>
 
     <string name="title_About">Մոտ</string>
     <string name="title_camera">Ֆոտոխցիկ</string>

@@ -140,7 +140,7 @@
 
     <string name="help_find">Praesent id velit, ut te ad commutare cum aliis. ICTUS a puga pyga fieri effectum.</string>
     <string name="help_home">Permutare identitatem notitia accumsan omnia prope vel phone users. Initium mutationis in ipsum mutare tantum coercuit contactus notitia.</string>
-    <string name="help_identity_menu">\nItem alio notitia ad identitatem\n\nUt in elit ipsum, cum percussoque in nomine tuo. Is sino vos cito Duis lectus tuum contactum contactum Aliquam novo, aut alia necessitudo.</string>
+    <string name="help_identity_menu">Item alio notitia ad identitatemUt in elit ipsum, cum percussoque in nomine tuo. Is sino vos cito Duis lectus tuum contactum contactum Aliquam novo, aut alia necessitudo.</string>
     <string name="help_Messages">Haec verba proferat, sunt omnia, et quae sunt affectiones quae tractari possunt.</string>
     <string name="help_passphrase">Praesent id velit ut login ut vestri application passphrase. Si tu oblitus es passphrase tuam, ut tutus a key novam passphrase percussoque Aliquam passphrase? ipsum. ICTUS, nomen usoris ut switch inter multiple claves.</string>
     <string name="help_PickRecip">Aenean auctor wisi et SafeSlinger sunt quae hic monstratur, eligere ad mittere te.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s consuetudine alienum seminabis.</string>
     <string name="state_TextCopiedToClipboard">To clipboard osténde.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger est ad idem notitia facile participes, per se vel per phone, eius authenticitate, privati ​​, et in integrum. Unusquisque homo securus a fine usque ad finem, vos quoque per creationem, ut viam mittere.\n\nnulla: amet felis\n, facile mutare, cum aliis textibus\nfunda-secura, imagines, nihil!\nprotegit, fortis cryptography leo\n\nemail: %2$s\ntexuerunt %3$s</string>
+    <string name="text_About">Idem facile est ad participandam SafeSlinger Mauris interdum in vel, compertum, moralis, et integer. Unusquisque homo securus a fine usque ad finem, vos quoque per creationem, ut viam mittere.</string>
+    <string name="text_About1">Facile erat volutpat commutare cum aliis</string>
+    <string name="text_About2">Secure longe locis, imagines, nihil!</string>
+    <string name="text_About3">Cryptography forte protegat te ipsum</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Features:</string>
+    <string name="text_AboutWeb">Latin: %s</string>
     <string name="text_KeywordExchange">Exchange</string>
     <string name="text_KeywordIdentity">Aliquam</string>
     <string name="text_KeywordKey">Key</string>
@@ -344,7 +350,9 @@
     <string name="text_KeywordSecurity">Lorem ipsum</string>
     <string name="text_LanguagesProvidedBy">Provisum est a lingua:</string>
     <string name="text_RelatedSearchTerms">Aliquam rhoncus</string>
-    <string name="text_Requirements">Aliquam: I\n. Necesse est velit quae ad tres saltem II modis.\nII. An Internet nexu, necesse est quod sit agens.</string>
+    <string name="text_Requirements">Requisita:</string>
+    <string name="text_Requirements1">Necesse est velit quae ad tres saltem II modis.</string>
+    <string name="text_Requirements2">Agentibus tortor.</string>
     <string name="text_SourceCodeRepo">patenti: %s</string>
     <string name="text_WhatsNew">Stabilitate, non meretur poenam aeternam.</string>
 

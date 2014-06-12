@@ -140,7 +140,7 @@
 
     <string name="help_find">Bain úsáid as an scáileán a leagan d\'ainm a mhalartú le daoine eile. Beartaíonn an cnaipe Arna dhéanamh nuair críochnaithe.</string>
     <string name="help_home">Chun sonraí aitheantais a mhalartú, a chinntiú go bhfuil gach úsáideoir in aice láimhe nó ar an teileafón. Beidh an Tosaigh Malartú cnaipe a mhalartú ach amháin na sonraí teagmhála a sheiceáil.</string>
-    <string name="help_identity_menu">\n\n\nIs féidir leat sonraí pearsanta faoi do chéannacht ar an scáileán a athrú freisin ag cnagadh ar an gcnaipe le do ainm. Beidh sé seo a thaispeáint roghchlár a ligeann duit a Cuir do teagmháil, teagmháil Cruthaigh Nua, nó Bain úsáid as teagmháil eile.</string>
+    <string name="help_identity_menu">Is féidir leat sonraí pearsanta faoi do chéannacht ar an scáileán a athrú freisin ag cnagadh ar an gcnaipe le do ainm. Beidh sé seo a thaispeáint roghchlár a ligeann duit a Cuir do teagmháil, teagmháil Cruthaigh Nua, nó Bain úsáid as teagmháil eile.</string>
     <string name="help_Messages">Taispeánann an scáileán gach teachtaireacht atá caite, agus ceangaltáin atá fós ar fáil le híoslódáil.</string>
     <string name="help_passphrase">Bain úsáid as an scáileán logáil isteach chun an t-iarratas le do frása faire. Má tá tú dearmad ar do frása faire, is féidir leat eochair nua cosanta le frása faire nua ag cnagadh ar an Frása Faire dearmadta ghiniúint? cnaipe. Beartaíonn an t-ainm úsáideora a aistriú idir eochracha il.</string>
     <string name="help_PickRecip">Teagmhálacha le heochracha SafeSlinger taispeáint anseo, roghnaigh ceann amháin le do theachtaireacht a sheoladh chuig.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Teagmhálacha %s allmhairithe.</string>
     <string name="state_TextCopiedToClipboard">Téacs cóip a chur chuig gearrthaisce.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger tá sé deartha chun a roinnt go héasca sonraí aitheantais, go pearsanta nó ar an nguthán, fíordheimhnithe, príobháideach, agus slán. Gach duine a bhfuil tú a roinnt le gcruthaíonn cainéal slán-deireadh le deireadh chun teachtaireachtaí a sheoladh.\n\nGnéithe:\n-Go héasca eolas teagmhála a mhalartú le daoine eile\n-daingean téacsanna sling, grianghraif, rud ar bith! Cosnaíonn cripteagrafaíochta\n-láidir do chuid faisnéise\n\nr-phost: %2$s\ngréasáin: %3$s</string>
+    <string name="text_About">SafeSlinger tá sé deartha chun a roinnt go héasca sonraí aitheantais, go pearsanta nó ar an nguthán, fíordheimhnithe, príobháideach, agus slán. Gach duine a bhfuil tú a roinnt le gcruthaíonn cainéal slán-deireadh le deireadh chun teachtaireachtaí a sheoladh.</string>
+    <string name="text_About1">Go héasca eolas teagmhála a mhalartú le daoine eile</string>
+    <string name="text_About2">Téacsanna daingean sling, grianghraif, rud ar bith!</string>
+    <string name="text_About3">Cosnaíonn cripteagrafaíochta láidir do chuid faisnéise</string>
+    <string name="text_AboutEmail">r-phost: %s</string>
+    <string name="text_AboutFeat">Gnéithe:</string>
+    <string name="text_AboutWeb">gréasáin: %s</string>
     <string name="text_KeywordExchange">Malartú</string>
     <string name="text_KeywordIdentity">Céannacht</string>
     <string name="text_KeywordKey">Eochair</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Slándáil</string>
     <string name="text_LanguagesProvidedBy">Teangacha ar fáil ag:</string>
     <string name="text_RelatedSearchTerms">Téarmaí ghaolmhara:</string>
-    <string name="text_Requirements">Riachtanais:. Caithfear\n1 a bheith suiteáilte ar a laghad 2 feistí.\n2. Caithfidh nasc Idirlín a bheith gníomhach.</string>
+    <string name="text_Requirements">Riachtanais:</string>
+    <string name="text_Requirements1">Ní mór a bheith suiteáilte ar a laghad 2 feistí.</string>
+    <string name="text_Requirements2">Ní mór nasc Idirlín a bheith gníomhach.</string>
     <string name="text_SourceCodeRepo">foinse oscailte: %s</string>
-    <string name="text_WhatsNew">-Cobhsaíochta Ceartúcháin.</string>
+    <string name="text_WhatsNew">Cobhsaíochta Ceartúcháin.</string>
 
     <string name="title_About">Maidir</string>
     <string name="title_camera">Ceamara</string>

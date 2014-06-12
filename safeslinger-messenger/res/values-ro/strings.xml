@@ -140,7 +140,7 @@
 
     <string name="help_find">Utilizați acest ecran pentru a seta numele dvs. de a face schimb cu alte persoane. Apăsați butonul Done când ați terminat.</string>
     <string name="help_home">Pentru a face schimb de date de identitate, asigura toți utilizatorii sunt în apropiere sau la telefon. Inceput Butonul Exchange vor schimba doar datele de contact verificate.</string>
-    <string name="help_identity_menu">\n\n\nPuteți schimba, de asemenea, date cu caracter personal cu privire la identitatea pe acest ecran apăsând pe butonul cu numele tău. Aceasta va afișa un meniu care vă permite să Editare contact, Creare contact nou, sau folosiți un alt de contact.</string>
+    <string name="help_identity_menu">Puteți schimba, de asemenea, date cu caracter personal cu privire la identitatea pe acest ecran apăsând pe butonul cu numele tău. Aceasta va afișa un meniu care vă permite să Editare contact, Creare contact nou, sau folosiți un alt de contact.</string>
     <string name="help_Messages">Acest ecran afișează toate mesajele trecute, și accesorii, care sunt încă disponibile pentru descărcare.</string>
     <string name="help_passphrase">Utilizați acest ecran pentru a vă conecta la aplicarea cu fraza de autentificare. Dacă ați uitat expresia de acces, s-ar putea genera o nouă cheie protejat de un nou frază de acces atingând fraza de acces Ai uitat? buton. Apăsați pe numele de utilizator pentru a comuta între mai multe chei.</string>
     <string name="help_PickRecip">Contacte cu chei SafeSlinger sunt afișate aici, selectați unul pentru a trimite mesajul.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Contactele %s importate.</string>
     <string name="state_TextCopiedToClipboard">Textul copiat în clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger este conceput pentru a partaja cu ușurință date de identitate, în persoană sau la telefon, autentificat, privat, și intact. Fiecare persoană vă împărtășesc cu creeaza un canal securizat end-to-end pentru a trimite mesaje.\n\nCaracteristici: schimb de\n-ușor informații de contact cu alte\n-Sling siguranță texte, fotografii, nimic! Criptografie\n-Strong protejează informațiile dvs.\n\nde e-mail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger este conceput pentru a partaja cu ușurință date de identitate, în persoană sau la telefon, autentificat, privat, și intact. Fiecare persoană vă împărtășesc cu creeaza un canal securizat end-to-end pentru a trimite mesaje.</string>
+    <string name="text_About1">Schimba cu ușurință informații de contact cu alte persoane</string>
+    <string name="text_About2">Texte siguranță lanț, fotografii, nimic!</string>
+    <string name="text_About3">Criptografiei puternice protejează informațiile dvs.</string>
+    <string name="text_AboutEmail">e-mail: %s</string>
+    <string name="text_AboutFeat">Caracteristici:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Schimb</string>
     <string name="text_KeywordIdentity">Identitate</string>
     <string name="text_KeywordKey">Cheie</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Securitate</string>
     <string name="text_LanguagesProvidedBy">Limbi furnizate de:</string>
     <string name="text_RelatedSearchTerms">Termeni legate de:</string>
-    <string name="text_Requirements">Cerințe: 1.\nTrebuie să fie instalat pe un minim de 2 dispozitive.\n2. O conexiune la Internet trebuie să fie activ.</string>
+    <string name="text_Requirements">Cerințe:</string>
+    <string name="text_Requirements1">Trebuie să fie instalat pe un minim de 2 dispozitive.</string>
+    <string name="text_Requirements2">O conexiune la Internet trebuie să fie activ.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Stabilitate fixează.</string>
+    <string name="text_WhatsNew">Stabilitate fixează.</string>
 
     <string name="title_About">Despre</string>
     <string name="title_camera">Aparat foto</string>

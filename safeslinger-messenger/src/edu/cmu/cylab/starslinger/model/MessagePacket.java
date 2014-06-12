@@ -60,15 +60,13 @@ public class MessagePacket {
             throw new GeneralException("bad message format: person required");
         if (dateSent == 0)
             throw new GeneralException("bad message format: send date required");
-        if (!TextUtils.isEmpty(fileName) && !SSUtil.isPureAscii(fileName))
-            throw new GeneralException("bad message format: file name can be ASCII-only");
         if (!TextUtils.isEmpty(fileType) && !SSUtil.isPureAscii(fileType))
             throw new GeneralException("bad message format: mime-type can be ASCII-only");
 
         mVersion = version;
         mDateSent = dateSent;
         mFileSize = fileSize;
-        mFileName = fileName != null ? encodeASCII(fileName) : new byte[0];
+        mFileName = fileName != null ? encodeUTF8(fileName) : new byte[0];
         mFileType = fileType != null ? encodeASCII(fileType) : new byte[0];
         mText = text != null ? encodeUTF8(text) : new byte[0];
         mPerson = person != null ? encodeUTF8(person) : new byte[0];
@@ -93,7 +91,7 @@ public class MessagePacket {
             // file size as 32-bit integer
             mFileSize = buf.getInt();
 
-            // file name character encoding always ACSII-only
+            // file name character encoding always UTF-8
             szfnm = buf.getInt();
             bfnm = allocField(buf.remaining(), szfnm);
             buf.get(bfnm);
@@ -257,7 +255,7 @@ public class MessagePacket {
     }
 
     public String getFileName() {
-        return decodeASCII(mFileName);
+        return decodeUTF8(mFileName);
     }
 
     public int getFileSize() {

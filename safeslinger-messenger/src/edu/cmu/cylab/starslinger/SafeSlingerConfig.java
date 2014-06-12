@@ -37,11 +37,11 @@ public class SafeSlingerConfig {
     public static final String HTTPURL_MESSENGER_HOST = "starsling-server.appspot.com";
     public static final String HTTPURL_EXCHANGE_HOST = "keyslinger-server.appspot.com";
     public static final String HTTPURL_SUFFIX = "";
-    public static final String URL_SS_INSTALL = "http://www.cylab.cmu.edu/safeslinger/m.html";
     public static final String PUSH_SENDERID_EMAIL = "starslingerapp@gmail.com";
     public static final String KEY_COMMENT = "SafeSlinger";
     public static final String HELP_EMAIL = "safeslingerapp@gmail.com";
     public static final String HELP_URL = "www.cylab.cmu.edu/safeslinger";
+    public static final String SOURCE_URL = "github.com/safeslingerproject";
     public static final String INTRODUCTION_VCF = "introduction.vcf";
     public static final String DATETIME_FILENAME = "yyyyMMdd_HHmmss";
     public static final String FEEDBACK_TXT = "feedback.txt";
@@ -78,24 +78,40 @@ public class SafeSlingerConfig {
     public static final int MS_READ_PER_CHAR = 50; // 50 msrpc ~ 20 cps
     public static final int MIN_PASSLEN = 8;
 
+    // TODO remove RECEIVE_DISABLED and send-only mode when GCM is in use
     public static final String NOTIFY_NOPUSH_TOKENDATA = "RECEIVE_DISABLED";
     /***
      * This has no token type to receive messages. Messages cannot be received
      * by this type by any means. Define new types if there are other receiving
      * mechanisms, do not use this one. The token type will consistently appear
-     * as the string "RECEIVE_DISABLED".
+     * as the string "RECEIVE_DISABLED". Value: 0.
      */
     public static final int NOTIFY_NOPUSH = 0;
     /***
      * This token type receives messages via Google's Cloud to Device Messaging
-     * Service.
+     * Service for Android. Value: 1.
      */
     public static final int NOTIFY_ANDROIDC2DM = 1;
     /***
      * This token type receives messages via Apple's Notification Service,
-     * through Urban Airship.
+     * through Urban Airship for iOS. Value: 2.
      */
     public static final int NOTIFY_APPLEUA = 2;
+    /***
+     * This token type receives messages via Google's Cloud Messaging Service
+     * for Android. Value: 3.
+     */
+    public static final int NOTIFY_ANDROIDGCM = 3;
+    /***
+     * This token type receives messages via Microsoft Push Notification Service
+     * for Windows Phone. Value: 4.
+     */
+    public static final int NOTIFY_WINPHONEMPNS = 4;
+    /***
+     * This token type receives messages via RIM Blackberry Push Service for
+     * Blackberry. Value: 5.
+     */
+    public static final int NOTIFY_BLACKBERRYPS = 5;
 
     public static class Intent {
         public static final String ACTION_MESSAGENOTIFY = "edu.cmu.cylab.starslinger.action.MESSAGES";

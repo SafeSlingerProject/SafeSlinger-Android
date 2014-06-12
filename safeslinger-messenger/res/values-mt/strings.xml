@@ -140,7 +140,7 @@
 
     <string name="help_find">Uża dan l-iskrin li jiġu stabbiliti l-isem tiegħek għal skambju ma \'oħrajn. Tektek il-buttuna Magħmul meta lest.</string>
     <string name="help_home">Li jiskambja data identità, tiżgura l-utenti kollha huma fil-qrib jew fuq it-telefon. Il Tibda buttuna Exchange se jiskambjaw biss id-dejta ta \'kuntatt ċċekkjati.</string>
-    <string name="help_identity_menu">\n\n\nInti tista \'wkoll jibdlu data personali dwar l-identità tiegħek fuq dan l-iskrin billi ttektek fuq il-buttuna bl-isem tiegħek. Dan se display menu tippermetti li inti Edit kuntatt tiegħek, Oħloq kuntatt New, jew l-użu ta \'kuntatt ieħor.</string>
+    <string name="help_identity_menu">Inti tista \'wkoll jibdlu data personali dwar l-identità tiegħek fuq dan l-iskrin billi ttektek fuq il-buttuna bl-isem tiegħek. Dan se display menu tippermetti li inti Edit kuntatt tiegħek, Oħloq kuntatt New, jew l-użu ta \'kuntatt ieħor.</string>
     <string name="help_Messages">Dan screen displays messaġġi kollha tal-passat, u l-annessi li għadhom disponibbli għal download.</string>
     <string name="help_passphrase">Uża dan l-iskrin login l-applikazzjoni mingħajr passphrase tiegħek. Jekk insejt passphrase tiegħek, inti tista \'tiġġenera ewlieni ġdid protett minn passphrase ġdid billi jutilizza l-passphrase Insejt? buttuna. Tektek il-isem l-utent biex jaqilbu bejn keys multipli.</string>
     <string name="help_PickRecip">Kuntatti ma \' ċwievet SafeSlinger huma murija hawnhekk, wieħed jagħżel li jibgħat messaġġ tiegħek.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Kuntatti %s importati.</string>
     <string name="state_TextCopiedToClipboard">Test ikkuppjata lill clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger hija mfassla biex faċilment sehem data identità, personalment jew permezz tat-telefon, awtentikat, privati ​​, u intatt. Kull persuna int taqsam ma toħloq kanal sigur end-to-end biex jibagħtu messaġġi.\n\nKaratteristiċi:\nFaċilment jiskambjaw informazzjoni ta \'kuntatt ma\' oħrajn testi braga\n-sikur, ritratti, xejn! Kriptografija\n-Strong tipproteġi l-informazzjoni tiegħek\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger hija mfassla biex faċilment sehem data identità, personalment jew permezz tat-telefon, awtentikat, privati​​, u intatt. Kull persuna int taqsam ma toħloq kanal sigur end-to-end biex jibagħtu messaġġi.</string>
+    <string name="text_About1">Faċilment jiskambjaw informazzjoni ta \'kuntatt ma\' oħrajn</string>
+    <string name="text_About2">Testi sikur Braga, ritratti, xejn!</string>
+    <string name="text_About3">Kriptografija qawwija tipproteġi l-informazzjoni tiegħek</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Karatteristiċi:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Skambju</string>
     <string name="text_KeywordIdentity">Identità</string>
     <string name="text_KeywordKey">Key</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Sigurtà</string>
     <string name="text_LanguagesProvidedBy">Lingwi pprovduti minn:</string>
     <string name="text_RelatedSearchTerms">Termini relatati:</string>
-    <string name="text_Requirements">Rekwiżiti:.\n1 għandu jiġi installat fuq minimu ta \' 2 apparati.\n2. An Internet b\'konnessjoni għandhom ikunu attivi.</string>
+    <string name="text_Requirements">Rekwiżiti:</string>
+    <string name="text_Requirements1">Għandu jiġi installat fuq minimu ta \'2 apparati.</string>
+    <string name="text_Requirements2">Konnessjoni Internet għandhom ikunu attivi.</string>
     <string name="text_SourceCodeRepo">sors miftuħ: %s</string>
-    <string name="text_WhatsNew">-Istabbiltà jiffissa.</string>
+    <string name="text_WhatsNew">Istabbiltà jiffissa.</string>
 
     <string name="title_About">Dwar</string>
     <string name="title_camera">Camera</string>

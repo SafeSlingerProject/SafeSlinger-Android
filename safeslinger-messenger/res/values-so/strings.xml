@@ -140,7 +140,7 @@
 
     <string name="help_find">Isticmaal screen this to dhigay magacaaga si ay isu dhaafsadaan dadka kale. Qasabada badhanka qabtay markaad dhamaysid.</string>
     <string name="help_home">Si aad isu dhaafsadaan xogta aqoonsiga, si loo hubiyo dhamaan isticmaalayaasha u dhow ama telefoonka ku yihiin. The Ku bilow badhanka Exchange beddelan doonaa oo keliya xogta xiriir la hubiyaa.</string>
-    <string name="help_identity_menu">\n\n\nWaxa kale oo aad beddeli kartaa macluumaadka shakhsiyeed oo ku saabsan aqoonsiga on screen this haray adigoo on badhanka leh magacaaga. Tani waxay muujiyaan doonaa menu a kuu oggolaadaan in aad Edit xidhiidhka aad, Create an xiriir New, ama isticmaal xiriir kale oo.</string>
+    <string name="help_identity_menu">Waxa kale oo aad beddeli kartaa macluumaadka shakhsiyeed oo ku saabsan aqoonsiga on screen this haray adigoo on badhanka leh magacaaga. Tani waxay muujiyaan doonaa menu a kuu oggolaadaan in aad Edit xidhiidhka aad, Create an xiriir New, ama isticmaal xiriir kale oo.</string>
     <string name="help_Messages">Shaashada Tan waxay ku tusaysaa oo dhan farriimaha la soo dhaafay, iyo lifaaqyada in weli waxaa laga heli karaa for download.</string>
     <string name="help_passphrase">Isticmaal shaashada si login codsiga aad u passphrase. Haddii aad illowday passphrase, aad dhalin laga yaabaa in muhiimka ah oo cusub oo la ilaaliyo by passphrase cusub ku haray Passphrase ee Forgot? badhanka. Qasabada magaca user ay u kala bedesho furayaasha kala duwan.</string>
     <string name="help_PickRecip">La xiriirida furayaasha SafeSlinger halkan bandhigay, dooro mid u soo dirto fariin ay u.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Contacts %s laga keeno.</string>
     <string name="state_TextCopiedToClipboard">Texte soo guuriyeen in ay choriomeningitis.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger waxaa loogu talagalay inay si fudud u wadaagaan xogta aqoonsiga, in qof ama telefoon, lagana sugaa, kuwa gaarka ah, iyo dhawrsan. Qof kasta oo aad la wadaagto abuuraa qaab ammaan ah dhamaadka-ka-dhamaadka soo dirin fariimo.\n\nFeatures:\n-fudud, warbixin xiriirka dadka kale\n-sugan qoraallada wadhafka, photos, wax! Cryptography\n-Strong difaacaa macluumaadkaaga\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger waxaa loogu talagalay inay si fudud u wadaagaan xogta aqoonsiga, in qof ama telefoon, lagana sugaa, kuwa gaarka ah, iyo dhawrsan. Qof kasta oo aad la wadaagto abuuraa qaab ammaan ah dhamaadka-ka-dhamaadka soo dirin fariimo.</string>
+    <string name="text_About1">Si fudud, warbixin xiriirka dadka kale</string>
+    <string name="text_About2">Qoraallada sugan loo dhaadhacay wadhafka, photos, wax!</string>
+    <string name="text_About3">Cryptography Strong difaacaa macluumaadkaaga</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Features:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Exchange</string>
     <string name="text_KeywordIdentity">Aqoonsiga</string>
     <string name="text_KeywordKey">Key</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Security</string>
     <string name="text_LanguagesProvidedBy">Luqadaha bixisay by:</string>
     <string name="text_RelatedSearchTerms">Related Terms:</string>
-    <string name="text_Requirements">Shuruudaha:.\n1 waa in lagu dhejiyaa on ugu yaraan 2 qalabka.\n2. Xiriirka Internet-ka waa inay ahaadaan kuwo firfircoon.</string>
+    <string name="text_Requirements">Shuruudaha:</string>
+    <string name="text_Requirements1">Waa in lagu dhejiyaa on ugu yaraan 2 qalabka.</string>
+    <string name="text_Requirements2">Internet waa in ay ahaadaan kuwo firfircoon.</string>
     <string name="text_SourceCodeRepo">source u furan: %s</string>
-    <string name="text_WhatsNew">-Stability dejista.</string>
+    <string name="text_WhatsNew">Stability dejista.</string>
 
     <string name="title_About">About</string>
     <string name="title_camera">Camera</string>

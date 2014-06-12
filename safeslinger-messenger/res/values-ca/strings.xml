@@ -140,7 +140,7 @@
 
     <string name="help_find">Utilitzeu aquesta pantalla per configurar el seu nom d\'intercanviar amb els altres. Toqueu en el botó Fet quan hagi acabat.</string>
     <string name="help_home">Per a l\'intercanvi de dades d\'identitat, assegureu-vos que tots els usuaris estan a prop o per telèfon. El botó Començar Exchange intercanviar només les dades de contacte controlades.</string>
-    <string name="help_identity_menu">\n\n\nTambé pot canviar les dades personals sobre la seva identitat en aquesta pantalla prement sobre el botó amb el seu nom. Això mostrarà un menú que us permet editar el contacte, crear nou contacte, o utilitzar un altre contacte.</string>
+    <string name="help_identity_menu">També pot canviar les dades personals sobre la seva identitat en aquesta pantalla prement sobre el botó amb el seu nom. Això mostrarà un menú que us permet editar el contacte, crear nou contacte, o utilitzar un altre contacte.</string>
     <string name="help_Messages">Aquesta pantalla mostra tots els missatges anteriors i annexos que encara estan disponibles per a baixar.</string>
     <string name="help_passphrase">Utilitzeu aquesta pantalla per iniciar sessió en l\'aplicació amb la contrasenya. Si ha oblidat la seva contrasenya, pot generar una nova clau protegida per una nova frase de pas tocant la contrasenya Oblidat? botó. Toqueu en el nom d\'usuari per canviar entre diverses claus.</string>
     <string name="help_PickRecip">Es mostren els contactes amb tecles SafeSlinger aquí, escollir un per enviar el missatge.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Contactes %s importats.</string>
     <string name="state_TextCopiedToClipboard">Text copiat al porta-retalls.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger està dissenyat per compartir fàcilment les dades d\'identitat, en persona o per telèfon, autenticat, privat, i intacte. Cada persona amb la qual comparteixes amb crea un canal segur d\'extrem a extrem per enviar missatges.\n\nCaracterístiques: intercanviar\n-amb facilitat la informació de contacte amb altres\n-segura els textos de la fona, fotos, qualsevol cosa!\n-la criptografia forta protegeix la vostra informació\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger està dissenyat per compartir fàcilment les dades d\'identitat, en persona o per telèfon, autenticat, privada, i intacte. Cada persona amb la qual comparteixes amb crea un canal segur d\'extrem a extrem per enviar missatges.</string>
+    <string name="text_About1">Fàcil intercanvi d\'informació de contacte amb altres</string>
+    <string name="text_About2">Textos segura profunda, fotos, qualsevol cosa!</string>
+    <string name="text_About3">La criptografia forta protegeix la vostra informació</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Característiques:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Intercanvi</string>
     <string name="text_KeywordIdentity">Identitat</string>
     <string name="text_KeywordKey">Clau</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Seguretat</string>
     <string name="text_LanguagesProvidedBy">Idiomes proporcionades per:</string>
     <string name="text_RelatedSearchTerms">Termes relacionats:</string>
-    <string name="text_Requirements">Requisits: 1.\nha d\'estar instal · lat en un mínim de 2 dispositius.\n2. Una connexió a Internet ha d\'estar activa.</string>
+    <string name="text_Requirements">Requisits:</string>
+    <string name="text_Requirements1">Ha d\'instal · lar en un mínim de 2 dispositius.</string>
+    <string name="text_Requirements2">Una connexió a Internet ha d\'estar activa.</string>
     <string name="text_SourceCodeRepo">de codi obert: %s</string>
-    <string name="text_WhatsNew">-Estabilitat fixa.</string>
+    <string name="text_WhatsNew">Estabilitat fixa.</string>
 
     <string name="title_About">Sobre</string>
     <string name="title_camera">Cambra</string>

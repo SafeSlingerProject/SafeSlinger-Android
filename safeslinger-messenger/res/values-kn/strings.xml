@@ -140,7 +140,7 @@
 
     <string name="help_find">ಇತರರೊಂದಿಗೆ ವಿನಿಮಯ ನಿಮ್ಮ ಹೆಸರು ಸೆಟ್ ಇದನ್ನು ಬಳಸಿ. ಮುಗಿದಮೇಲೆ ಡನ್ ಬಟನ್ ಟ್ಯಾಪ್.</string>
     <string name="help_home">ಗುರುತನ್ನು ದಶಮಾಂಶ ವಿನಿಮಯ, ಎಲ್ಲಾ ಬಳಕೆದಾರರು ಹತ್ತಿರದ ಅಥವಾ ಫೋನ್ನಲ್ಲಿ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು. ಆರಂಭಿಸಲು ಎಕ್ಸ್ಚೇಂಜ್ ಬಟನ್ ಮಾತ್ರ ಪರಿಶೀಲಿಸಿದ ಸಂಪರ್ಕ ದಶಮಾಂಶ ವಿನಿಮಯ.</string>
-    <string name="help_identity_menu">\n\n\nನಿಮ್ಮ ಹೆಸರಿನ ಗುಂಡಿಯನ್ನು ಟ್ಯಾಪಿಂಗ್ ಮೂಲಕ ಈ ತೆರೆಯಲ್ಲಿ ನಿಮ್ಮ ಗುರುತನ್ನು ಬಗ್ಗೆ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಬದಲಾಯಿಸಬಹುದು. ಈ, ನೀವು ನಿಮ್ಮ ಸಂಪರ್ಕ ಸಂಪಾದಿಸಲು ಅವಕಾಶ ಒಂದು ಮೆನುವನ್ನು ತೋರಿಸುತ್ತದೆ ಹೊಸ ಸಂಪರ್ಕ ರಚಿಸಿ, ಅಥವಾ ಇನ್ನೊಂದು ಸಂಪರ್ಕ ಬಳಸುತ್ತದೆ.</string>
+    <string name="help_identity_menu">ನಿಮ್ಮ ಹೆಸರಿನ ಗುಂಡಿಯನ್ನು ಟ್ಯಾಪಿಂಗ್ ಮೂಲಕ ಈ ತೆರೆಯಲ್ಲಿ ನಿಮ್ಮ ಗುರುತನ್ನು ಬಗ್ಗೆ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಬದಲಾಯಿಸಬಹುದು. ಈ, ನೀವು ನಿಮ್ಮ ಸಂಪರ್ಕ ಸಂಪಾದಿಸಲು ಅವಕಾಶ ಒಂದು ಮೆನುವನ್ನು ತೋರಿಸುತ್ತದೆ ಹೊಸ ಸಂಪರ್ಕ ರಚಿಸಿ, ಅಥವಾ ಇನ್ನೊಂದು ಸಂಪರ್ಕ ಬಳಸುತ್ತದೆ.</string>
     <string name="help_Messages">ಈ ಪರದೆಯ ಎಲ್ಲಾ ಕಳೆದ ಸಂದೇಶಗಳನ್ನು, ಮತ್ತು ಇನ್ನೂ ಡೌನ್ಲೋಡ್ ಲಭ್ಯವಿರುವ ಲಗತ್ತುಗಳನ್ನು ತೋರಿಸುತ್ತದೆ.</string>
     <string name="help_passphrase">ನಿಮ್ಮ ಪಾಸ್ಫ್ರೇಸ್ನೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ ಲಾಗಿನ್ ಇದನ್ನು ಬಳಸಿ. ನಿಮ್ಮ ಪಾಸ್ಫ್ರೇಸ್ ಅನ್ನು ನೀವು ಮರೆತು ಹೋದಲ್ಲಿ, ನೀವು ಮರೆತಿರಾ ಪಾಸ್ಫ್ರೇಸ್ ಟ್ಯಾಪಿಂಗ್ ಮೂಲಕ ಒಂದು ಹೊಸ ಗುಪ್ತವಾಕ್ಯಾಂಶವನ್ನು ರಕ್ಷಿಸಲ್ಪಟ್ಟಿದೆ ಹೊಸ ಕೀಲಿಯನ್ನು ರಚಿಸಲು ಇರಬಹುದು? ಬಟನ್. ಅನೇಕ ಕೀಲಿಗಳನ್ನು ನಡುವೆ ಬದಲಾಯಿಸಲು ಬಳಕೆದಾರ ಹೆಸರು ಟ್ಯಾಪ್.</string>
     <string name="help_PickRecip">SafeSlinger ಕೀಲಿಗಳನ್ನು ಸಂಪರ್ಕಗಳು ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಒಂದು ಆಯ್ಕೆ, ಇಲ್ಲಿ ಪ್ರದರ್ಶಿಸುತ್ತದೆ.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s ಸಂಪರ್ಕಗಳನ್ನು.</string>
     <string name="state_TextCopiedToClipboard">ಪಠ್ಯ ಕ್ಲಿಪ್ಬೋರ್ಡ್ಗೆ ನಕಲು.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ಖಾಸಗಿ, ದೃಢೀಕರಿಸಬಹುದು ಖುದ್ದಾಗಿ ಅಥವಾ ದೂರವಾಣಿ, ಸುಲಭವಾಗಿ ಗುರುತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ವಿನ್ಯಾಸ, ಮತ್ತು ಹಾಗೇ ಇದೆ. ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಪ್ರತಿ ವ್ಯಕ್ತಿಯ ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸಲು ಸುರಕ್ಷಿತ ಕೊನೆಯಲ್ಲಿ ಕೊನೆಗೆ ಚಾನಲ್ ಸೃಷ್ಟಿಸುತ್ತದೆ.\n\nವೈಶಿಷ್ಟ್ಯಗಳು:\n-ಸುಲಭವಾಗಿ ಇತರರ\n-ಸುರಕ್ಷಿತವಾಗಿ ಜೋಲಿ ಗ್ರಂಥಗಳು, ಫೋಟೋಗಳನ್ನು, ಏನು ಸಂಪರ್ಕ ಮಾಹಿತಿಯನ್ನು ವಿನಿಮಯ! %2$s\nವೆಬ್:: %3$s\n-ಬಲವಾದ ಗೂಢಲಿಪಿ ನಿಮ್ಮ ಮಾಹಿತಿ\n\nಇಮೇಲ್ ರಕ್ಷಿಸುತ್ತದೆ</string>
+    <string name="text_About">SafeSlinger ಖುದ್ದಾಗಿ ಅಥವಾ ದೂರವಾಣಿ, ಸುಲಭವಾಗಿ ಗುರುತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ವಿನ್ಯಾಸ ದೃಢೀಕರಿಸಬಹುದು, ಖಾಸಗಿ, ಮತ್ತು ಹಾಗೇ ಇದೆ. ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಪ್ರತಿ ವ್ಯಕ್ತಿಯ ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸಲು ಸುರಕ್ಷಿತ ಕೊನೆಯಲ್ಲಿ ಕೊನೆಗೆ ಚಾನಲ್ ಸೃಷ್ಟಿಸುತ್ತದೆ.</string>
+    <string name="text_About1">ಸುಲಭವಾಗಿ ಇತರರೊಂದಿಗೆ ಸಂಪರ್ಕ ಮಾಹಿತಿ ವಿನಿಮಯ</string>
+    <string name="text_About2">ಸುರಕ್ಷಿತವಾಗಿ ಜೋಲಿ ಗ್ರಂಥಗಳು, ಫೋಟೋಗಳನ್ನು, ಏನು!</string>
+    <string name="text_About3">ಬಲವಾದ ಗೂಢಲಿಪಿ ನಿಮ್ಮ ಮಾಹಿತಿ ರಕ್ಷಿಸುತ್ತದೆ</string>
+    <string name="text_AboutEmail">ಇಮೇಲ್: %s</string>
+    <string name="text_AboutFeat">ವೈಶಿಷ್ಟ್ಯಗಳು:</string>
+    <string name="text_AboutWeb">ವೆಬ್: %s</string>
     <string name="text_KeywordExchange">ವಿನಿಮಯ</string>
     <string name="text_KeywordIdentity">ಗುರುತು</string>
     <string name="text_KeywordKey">ಕೀಲಿಕೈ</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">ಭದ್ರತೆ</string>
     <string name="text_LanguagesProvidedBy">ಒದಗಿಸಿದ ಭಾಷೆಗಳು:</string>
     <string name="text_RelatedSearchTerms">ಸಂಬಂಧಿತ ನಿಯಮಗಳು:</string>
-    <string name="text_Requirements">ಬೇಡಿಕೆಗಳು:.\n1 2 ಸಾಧನಗಳ ಕನಿಷ್ಠ ಇನ್ಸ್ಟಾಲ್ ಮಾಡಬೇಕು.\n2. ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಸಕ್ರಿಯ ಇರಬೇಕು.</string>
+    <string name="text_Requirements">ಬೇಡಿಕೆಗಳು:</string>
+    <string name="text_Requirements1">2 ಸಾಧನಗಳ ಕನಿಷ್ಠ ಇನ್ಸ್ಟಾಲ್ ಮಾಡಬೇಕು.</string>
+    <string name="text_Requirements2">ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಸಕ್ರಿಯ ಇರಬೇಕು.</string>
     <string name="text_SourceCodeRepo">ತೆರೆದ ಮೂಲ: %s</string>
-    <string name="text_WhatsNew">-ಸ್ಟೆಬಿಲಿಟಿ ಪರಿಹರಿಸುತ್ತದೆ.</string>
+    <string name="text_WhatsNew">ಸ್ಟೆಬಿಲಿಟಿ ಪರಿಹರಿಸುತ್ತದೆ.</string>
 
     <string name="title_About">ಕುರಿತು</string>
     <string name="title_camera">ಕ್ಯಾಮೆರಾ</string>

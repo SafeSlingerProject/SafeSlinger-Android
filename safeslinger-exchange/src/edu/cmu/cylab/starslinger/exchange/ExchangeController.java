@@ -32,6 +32,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.util.BitSet;
+import java.util.Locale;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
@@ -44,8 +45,8 @@ public class ExchangeController {
 
     private static final String TAG = ExchangeConfig.LOG_TAG;
     private byte[] mMyData = null;
-    private byte[] mNonceMatch = new byte[ExchangeConfig.HASH_LEN];
-    private byte[] mNonceWrong = new byte[ExchangeConfig.HASH_LEN];
+    private byte[] mNonceMatch;
+    private byte[] mNonceWrong;
     private byte[] mHashHashMatch;
     private byte[] mHashMatch;
     private byte[] mHashWrong;
@@ -72,13 +73,14 @@ public class ExchangeController {
     private int mVersion;
     private Context mCtx;
     private GroupData mSigsInfo;
-    private byte[] mDecoyHash1 = new byte[3];
-    private byte[] mDecoyHash2 = new byte[3];
+    private byte[] mDecoyHash1;
+    private byte[] mDecoyHash2;
     private byte[] mDHSecretKey;
     private byte[] mDHHalfKey;
     private CryptoAccess mCrypto;
     private int mRandomPosSrc;
     private String mHost = null;
+    private int mHashSelection;
 
     public ExchangeController(Context ctx) {
         mErrMsg = "";
@@ -86,6 +88,11 @@ public class ExchangeController {
 
         mVersion = ExchangeConfig.getVersionCode();
         mLowestClientVersion = mVersion;
+
+        mNonceMatch = new byte[ExchangeConfig.HASH_LEN];
+        mNonceWrong = new byte[ExchangeConfig.HASH_LEN];
+        mDecoyHash1 = new byte[3];
+        mDecoyHash2 = new byte[3];
     }
 
     private boolean handleError(int resId) {
@@ -139,6 +146,7 @@ public class ExchangeController {
         mConnect = ConnectionEngine.getServerInstance(mCtx, mHost);
 
         mNumUsers = 0;
+        mHashSelection = -1;
 
         mNumUsersCommit = 0;
         mNumUsersData = 0;
@@ -1129,11 +1137,28 @@ public class ExchangeController {
 
     public String getStatusBanner(Context ctx) {
         StringBuilder banner = new StringBuilder();
-        if (mNumUsers > 0) {
+        if (mHashVal != null) {
+            byte[] selectedHash = new byte[3];
+            if (mHashSelection == 0) {
+                selectedHash = mHashVal;
+            } else if (mHashSelection == 1) {
+                selectedHash = mDecoyHash1;
+            } else if (mHashSelection == 2) {
+                selectedHash = mDecoyHash2;
+            }
+            boolean english = Locale.getDefault().getLanguage().equals("en");
+            if (english) {
+                banner.append(WordList.getWordList(selectedHash, 3)).append("\n")
+                        .append(WordList.getNumbersList(selectedHash, 3));
+            } else {
+                banner.append(WordList.getNumbersList(selectedHash, 3)).append("\n")
+                        .append(WordList.getWordList(selectedHash, 3));
+            }
+        } else if (mNumUsers > 0) {
             banner.append(String.format(ctx.getString(R.string.choice_NumUsers), mNumUsers));
             if (mUsrIdLink > 0) {
-                banner.append(", " + ctx.getString(R.string.label_UserIdHint).toLowerCase() + " "
-                        + mUsrIdLink);
+                banner.append(", ").append(ctx.getString(R.string.label_UserIdHint).toLowerCase())
+                        .append(" ").append(mUsrIdLink);
             }
         }
         return banner.toString();
@@ -1145,5 +1170,9 @@ public class ExchangeController {
         } else {
             return 0;
         }
+    }
+
+    public void setHashSelection(int hashSelection) {
+        mHashSelection = hashSelection;
     }
 }

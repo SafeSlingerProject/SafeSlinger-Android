@@ -140,7 +140,7 @@
 
     <string name="help_find">Brug dette skærmbillede til at angive dit navn til at udveksle med andre. Tryk på knappen Udført når du er færdig.</string>
     <string name="help_home">At udveksle identitetsdata, sikre, at alle brugere er i nærheden eller på telefonen. Knappen Begin Exchange vil udveksle kun de kontrollerede kontaktoplysninger.</string>
-    <string name="help_identity_menu">\n\n\nDu kan også ændre personlige oplysninger om din identitet på denne skærm ved at trykke på knappen med dit navn. Dette vil vise en menu, så du kan redigere din kontaktperson, Opret ny kontakt, eller brug en anden kontakt.</string>
+    <string name="help_identity_menu">Du kan også ændre personlige oplysninger om din identitet på denne skærm ved at trykke på knappen med dit navn. Dette vil vise en menu, så du kan redigere din kontaktperson, Opret ny kontakt, eller brug en anden kontakt.</string>
     <string name="help_Messages">Denne skærm viser alle tidligere beskeder og vedhæftede filer, der stadig er til rådighed for download.</string>
     <string name="help_passphrase">Brug dette skærmbillede til at logge på programmet med din adgangskode. Hvis du har glemt din adgangskode, kan du generere en ny nøgle er beskyttet af en ny adgangskode ved at trykke på Glemt adgangskode? knappen. Tryk på brugernavnet for at skifte mellem flere nøgler.</string>
     <string name="help_PickRecip">Kontakter med SafeSlinger taster er vist her, skal du vælge en til at sende din besked til.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kontakter importeres.</string>
     <string name="state_TextCopiedToClipboard">Tekst kopieret til klippebordet.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger er designet til nemt at dele identitetsdata, personligt eller over telefonen, autentificeret, private og intakt. Hver person, du deler med opretter en sikker ende-til-ende kanal til at sende beskeder.\n\nFeatures:\n-let udveksle kontaktoplysninger med andre\n-Trygt slynge tekster, fotos, noget!\n-Stærk kryptografi beskytter dine oplysninger\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger er designet til nemt at dele identitetsdata, personligt eller over telefonen, autentificeret, private og intakt. Hver person, du deler med opretter en sikker ende-til-ende kanal til at sende beskeder.</string>
+    <string name="text_About1">Nemt udveksle kontaktoplysninger med andre</string>
+    <string name="text_About2">Sikker slynge tekster, fotos, noget!</string>
+    <string name="text_About3">Stærk kryptering beskytter dine oplysninger</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Features:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Exchange</string>
     <string name="text_KeywordIdentity">Identitet</string>
     <string name="text_KeywordKey">Nøgle</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Sikkerhed</string>
     <string name="text_LanguagesProvidedBy">Sprog, som:</string>
     <string name="text_RelatedSearchTerms">Relaterede Vilkår:</string>
-    <string name="text_Requirements">Krav:.\n1 Skal installeres på minimum 2 enheder.\n2.. En internetforbindelse skal være aktiv.</string>
+    <string name="text_Requirements">Krav:</string>
+    <string name="text_Requirements1">Skal monteres på et minimum af 2 enheder.</string>
+    <string name="text_Requirements2">En internetforbindelse skal være aktiv.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Stabilitet løser.</string>
+    <string name="text_WhatsNew">Stabilitet løser.</string>
 
     <string name="title_About">Om</string>
     <string name="title_camera">Kamera</string>

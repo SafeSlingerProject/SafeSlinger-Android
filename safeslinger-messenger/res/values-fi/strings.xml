@@ -140,7 +140,7 @@
 
     <string name="help_find">Tämän näytön avulla asettaa nimesi vaihtaa muiden kanssa. Paina painiketta Valmis, kun olet valmis.</string>
     <string name="help_home">Vaihtaa tunnistetietoja, jotta kaikki käyttäjät ovat lähellä tai puhelimessa. Aloita Exchange-painike vaihtavat vaintarkistanut yhteystietoja.</string>
-    <string name="help_identity_menu">\n\n\nVoit myös vaihtaa henkilötietoja henkilöllisyytesi napauttamalla painiketta nimesi. Tämä näyttää valikon, jonka avulla voit muokata yhteystietoja, Luo uusi nimi, tai käytä toista yhteyttä.</string>
+    <string name="help_identity_menu">Voit myös vaihtaa henkilötietoja henkilöllisyytesi napauttamalla painiketta nimesi. Tämä näyttää valikon, jonka avulla voit muokata yhteystietoja, Luo uusi nimi, tai käytä toista yhteyttä.</string>
     <string name="help_Messages">Tämä näyttö näyttää kaikki menneisyyden viestit ja liitetiedostot, jotka ovat vielä ladattavissa.</string>
     <string name="help_passphrase">Tämän näytön kirjautuasovelluksen tunnuslauseesi. Jos olet unohtanut tunnuslauseen, voit muodostaa uuden avaimen suojattuuusi tunnuslause napauttamallaUnohditko Tunnuslause? painiketta. Kosketakäyttäjätunnus vaihtaa useita avaimia.</string>
     <string name="help_PickRecip">Yhteyksiä SafeSlinger näppäimet näkyvät täällä, valitse yksi lähettää viestisi.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s tuotujen yhteystietojen.</string>
     <string name="state_TextCopiedToClipboard">Teksti kopioitu leikepöydälle.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger on suunniteltu helposti jakaa identiteetin tietoja, henkilökohtaisesti tai puhelimitse, todennettu, yksityisen ja ehjä. Jokainen henkilö jaat luoturvallisen end-to-end-kanava lähettää viestejä.\n\nOminaisuudet:\n-helposti vaihtaa yhteystietoja muiden kanssa\n-Turvallisesti rintareppu tekstejä, kuvia, mitään!\n-vahvan salauksen suojaa tietoja\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger on suunniteltu helposti jakaa identiteetin tietoja, henkilökohtaisesti tai puhelimitse, todennettu, yksityisen ja ehjä. Jokainen henkilö jaat luo turvallisen end-to-end-kanava lähettää viestejä.</string>
+    <string name="text_About1">Helposti vaihtaa yhteystietoja muiden kanssa</string>
+    <string name="text_About2">Turvallisesti rintareppu tekstejä, kuvia, mitään!</string>
+    <string name="text_About3">Vahvan salauksen suojaa tietoja</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Ominaisuudet:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Vaihto</string>
     <string name="text_KeywordIdentity">Identiteetti</string>
     <string name="text_KeywordKey">Avain</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Turvallisuus</string>
     <string name="text_LanguagesProvidedBy">Kielet tarjoaa:</string>
     <string name="text_RelatedSearchTerms">Asiaan liittyviä termejä:</string>
-    <string name="text_Requirements">Vaatimukset:\n1. On asennettavavähintään 2 laitetta.\n2.Internet yhteyden on oltava käytössä.</string>
+    <string name="text_Requirements">Vaatimukset:</string>
+    <string name="text_Requirements1">On asennettava vähintään 2 laitetta.</string>
+    <string name="text_Requirements2">Internet-yhteyden on oltava käytössä.</string>
     <string name="text_SourceCodeRepo">avoimen lähdekoodin: %s</string>
-    <string name="text_WhatsNew">-Vakaus korjaa.</string>
+    <string name="text_WhatsNew">Vakaus korjaa.</string>
 
     <string name="title_About">Noin</string>
     <string name="title_camera">Kamera</string>

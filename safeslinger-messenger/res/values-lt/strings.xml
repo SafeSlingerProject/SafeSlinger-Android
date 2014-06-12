@@ -140,7 +140,7 @@
 
     <string name="help_find">Naudokite šį ekraną nustatyti savo vardą keistis su kitais. Bakstelėkite mygtuką \'Atlikta\', kai baigsite.</string>
     <string name="help_home">Keistis tapatybės duomenis, užtikrinti, kad visi vartotojai yra netoliese arba telefonu. Pradžia Valiutų mygtuką keisis tik pažymėtus kontaktinius duomenis.</string>
-    <string name="help_identity_menu">\n\n\nJūs taip pat gali pakeisti asmens duomenis apie savo tapatybę šiame ekrane paliesdami mygtuką su jūsų vardu. Tai bus rodomas meniu leidžia jums redaguoti savo kontaktinę, Kurti naują adresatą arba naudoti kitą kontaktą.</string>
+    <string name="help_identity_menu">Jūs taip pat gali pakeisti asmens duomenis apie savo tapatybę šiame ekrane paliesdami mygtuką su jūsų vardu. Tai bus rodomas meniu leidžia jums redaguoti savo kontaktinę, Kurti naują adresatą arba naudoti kitą kontaktą.</string>
     <string name="help_Messages">Šis ekranas rodo visus ankstesnius pranešimus ir priedus, kurie yra vis dar prieinami atsisiųsti.</string>
     <string name="help_passphrase">Naudokite šį ekraną prisijungti prie paraiškos su savo slaptafraze. Jei ją pamiršote, galite sukurti naują raktą, saugomą naują slaptafraze bakstelėję Pamiršai slaptafrazę? mygtuką. Bakstelėkite vartotojo vardą, jei norite perjungti kelis raktus.</string>
     <string name="help_PickRecip">Kontaktai su SafeSlinger raktus Čia rodoma, pasirinkite siųsti jūsų pranešimą.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kontaktai importuojami.</string>
     <string name="state_TextCopiedToClipboard">Tekstas nukopijuotas į iškarpinę.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger skirtas lengvai dalintis tapatybės duomenis, asmeniškai arba telefonu, autentiškumą, privatus, ir sveika. Kiekvienas asmuo, pasidalinti su sukuriamas saugus \'end-to-end kanalą siųsti pranešimus.\n\nĮranga:\n-Geras keistis kontaktinę informaciją su kitais\n-Saugiai Sling tekstų, nuotraukų, nieko!\n-Stiprus kriptografija apsaugo jūsų informacija\n\npaštas: %2$s\nsvetainė: %3$s</string>
+    <string name="text_About">SafeSlinger skirtas lengvai dalintis tapatybės duomenis, asmeniškai arba telefonu, autentiškumą, privatus, ir sveika. Kiekvienas asmuo, pasidalinti su sukuriamas saugus \'end-to-end kanalą siųsti pranešimus.</string>
+    <string name="text_About1">Lengvai keistis kontaktinę informaciją su kitais</string>
+    <string name="text_About2">Saugiai diržas tekstai, nuotraukos, nieko!</string>
+    <string name="text_About3">Stiprus kriptografija saugo informaciją</string>
+    <string name="text_AboutEmail">paštas: %s</string>
+    <string name="text_AboutFeat">Savybės:</string>
+    <string name="text_AboutWeb">svetainė: %s</string>
     <string name="text_KeywordExchange">Mainai</string>
     <string name="text_KeywordIdentity">Tapatybė</string>
     <string name="text_KeywordKey">Raktas</string>
@@ -344,7 +350,9 @@
     <string name="text_KeywordSecurity">Saugumas</string>
     <string name="text_LanguagesProvidedBy">Teikiamos kalbos:</string>
     <string name="text_RelatedSearchTerms">Susiję sąlygos:</string>
-    <string name="text_Requirements">Reikalavimai:.\n1 Turi būti įdiegta nuo 2 prietaisus minimumo.\n2.Interneto ryšys turi būti aktyvus.</string>
+    <string name="text_Requirements">Reikalavimai:</string>
+    <string name="text_Requirements1">Turi būti sumontuoti ant 2 prietaisus minimumo.</string>
+    <string name="text_Requirements2">Interneto ryšys turi būti aktyvus.</string>
     <string name="text_SourceCodeRepo">atviro kodo: %s</string>
     <string name="text_WhatsNew">Stabilumas nustato.</string>
 

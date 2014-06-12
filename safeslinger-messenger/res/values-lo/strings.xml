@@ -140,7 +140,7 @@
 
     <string name="help_find">ການນໍາໃຊ້ ຫນ້າຈໍ ນີ້ ຈະກໍານົດ ຊື່ ຂອງທ່ານ ທີ່ຈະແລກປ່ຽນ ກັບຄົນອື່ນ. ປາດ ປຸ່ມ ເຮັດ ໄດ້ ໃນເວລາ ສໍາເລັດແລ້ວ.</string>
     <string name="help_home">ເພື່ອ ແລກປ່ຽນ ຂໍ້ມູນ ເອກະລັກ, ຮັບປະກັນການ ຊົມໃຊ້ ທັງຫມົດແມ່ນ ໃກ້ຄຽງຫຼື ຢູ່ໃນໂທລະສັບ ໄດ້. ການ ເລີ່ມຕົ້ນ ປຸ່ມ ການແລກປ່ຽນ ຈະໄດ້ ແລກປ່ຽນ ພຽງແຕ່ ໄດ້ ຂໍ້ມູນ ການຕິດຕໍ່ ການກວດກາ.</string>
-    <string name="help_identity_menu">\n\n\nນອກນັ້ນທ່ານຍັງ ອາດຈະ ມີການປ່ຽນແປງ ຂໍ້ມູນ ສ່ວນຕົວກ່ຽວກັບ ຕົວຕົນ ຂອງທ່ານກ່ຽວກັບ ຫນ້າຈໍ ນີ້ ໂດຍ ປາດຢາງ ໃສ່ປຸ່ມ ທີ່ມີຊື່ ຂອງທ່ານ. ນີ້ ຈະສະແດງ ເມນູ ໃຫ້ທ່ານ ແກ້ ການຕິດຕໍ່ ຂອງທ່ານ, ສ້າງ ການພົວພັນ ໃຫມ່, ຫຼື ນໍາໃຊ້ ການພົວພັນ ອີກປະການຫນຶ່ງ.</string>
+    <string name="help_identity_menu">ນອກນັ້ນທ່ານຍັງ ອາດຈະ ມີການປ່ຽນແປງ ຂໍ້ມູນ ສ່ວນຕົວກ່ຽວກັບ ຕົວຕົນ ຂອງທ່ານກ່ຽວກັບ ຫນ້າຈໍ ນີ້ ໂດຍ ປາດຢາງ ໃສ່ປຸ່ມ ທີ່ມີຊື່ ຂອງທ່ານ. ນີ້ ຈະສະແດງ ເມນູ ໃຫ້ທ່ານ ແກ້ ການຕິດຕໍ່ ຂອງທ່ານ, ສ້າງ ການພົວພັນ ໃຫມ່, ຫຼື ນໍາໃຊ້ ການພົວພັນ ອີກປະການຫນຶ່ງ.</string>
     <string name="help_Messages">ຫນ້າຈໍນີ້ ຈະສະແດງ ຂໍ້ຄວາມ ທີ່ຜ່ານມາ ທັງຫມົດ, ແລະຄັດຕິດ ທີ່ ຍັງມີ ສໍາລັບ ການດາວໂຫຼດ.</string>
     <string name="help_passphrase">ການນໍາໃຊ້ ຫນ້າຈໍ ນີ້ ໃຫ້ ເຂົ້າສູ່ລະບົບ ຄໍາຮ້ອງສະຫມັກ ທີ່ມີ passphrase ຂອງທ່ານ. ຖ້າຫາກວ່າ ທ່ານ ໄດ້ລືມ passphrase ຂອງທ່ານ, ທ່ານ ອາດຈະ ສ້າງ ເປັນ ທີ່ສໍາຄັນ ໃຫມ່ ປ້ອງກັນໂດຍ passphrase ໃຫມ່ ໂດຍ ປາດຢາງ Passphrase ລືມ ແນວໃດ? ກົດປຸ່ມ. ປາດ ຊື່ ຜູ້ໃຊ້ໃນການ ສະຫຼັບລະຫວ່າງ ທີ່ ຫຼາຍ.</string>
     <string name="help_PickRecip">ຕິດຕໍ່ພົວພັນ ກັບ ທີ່ SafeSlinger ແມ່ນສະແດງ ຢູ່ທີ່ນີ້, ໃຫ້ເລືອກ ຫນຶ່ງ ໃນການສົ່ງ ຂໍ້ຄວາມ ຂອງທ່ານໄປ.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">ຕິດຕໍ່ພົວພັນ %s ນໍາເຂົ້າ.</string>
     <string name="state_TextCopiedToClipboard">ຂໍ້ຄວາມ ຄັດລອກໄປທີ່ clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ຖືກອອກແບບເພື່ອ ໄດ້ຢ່າງງ່າຍດາຍ ສ່ວນແບ່ງ ຂໍ້ມູນ ເອກະລັກ, ໃນ ການບຸກຄົນຫຼື ຜ່ານທາງໂທລະສັບ, authenticated, ເອກະຊົນ, ແລະ intact. ບຸກຄົນ ແຕ່ລະ ທ່ານ ກ່ຽວກັບ ການສ້າງ ເປັນຊ່ອງທາງ ໃນຕອນທ້າຍ ເພື່ອສຸດທ້າຍ, ຄວາມປອດໄພ ໃນການສົ່ງ ຂໍ້ຄວາມ. ຄຸນນະສົມບັດ\n\n:\n, ໄດ້ຢ່າງງ່າຍດາຍ ແລກປ່ຽນ ຂໍ້ມູນຂ່າວສານ ການພົວພັນກັບ ຄົນອື່ນ\n, ຄວາມປອດໄພ ບົດເລື່ອງ sling, ຮູບພາບ, ມີຫຍັງບໍ່? cryptography\nທີ່ແຂງແຮງ ປົກປ້ອງ ຂໍ້ມູນຂອງທ່ານ\n\nອີເມລ: %3$s: ເວັບໄຊຕ໌ %2$s\n</string>
+    <string name="text_About">SafeSlinger ຖືກອອກແບບເພື່ອໄດ້ຢ່າງງ່າຍດາຍສ່ວນແບ່ງຂໍ້ມູນເອກະລັກ, ໃນການບຸກຄົນຫຼືຜ່ານທາງໂທລະສັບ, authenticated, ເອກະຊົນ, ແລະ intact. ບຸກຄົນແຕ່ລະທ່ານກ່ຽວກັບການສ້າງເປັນຊ່ອງທາງໃນຕອນທ້າຍເພື່ອສຸດທ້າຍ, ຄວາມປອດໄພໃນການສົ່ງຂໍ້ຄວາມ.</string>
+    <string name="text_About1">ໄດ້ຢ່າງງ່າຍດາຍແລກປ່ຽນຂໍ້ມູນຂ່າວສານການພົວພັນກັບຄົນອື່ນ</string>
+    <string name="text_About2">ບົດເລື່ອງອື່ນໆທີ່ປອດໄພ Sling, ຮູບພາບ, ມີຫຍັງບໍ່?</string>
+    <string name="text_About3">Cryptography ເຂັ້ມແຂງປົກປ້ອງຂໍ້ມູນຂອງທ່ານ</string>
+    <string name="text_AboutEmail">ອີເມລ໌: %s</string>
+    <string name="text_AboutFeat">ຄຸນນະສົມບັດ:</string>
+    <string name="text_AboutWeb">ເວັບໄຊຕ໌: %s</string>
     <string name="text_KeywordExchange">ການແລກປ່ຽນ</string>
     <string name="text_KeywordIdentity">ທີ່</string>
     <string name="text_KeywordKey">ທີ່ສໍາຄັນ</string>
@@ -344,7 +350,9 @@
     <string name="text_KeywordSecurity">ຄວາມປອດໄພ</string>
     <string name="text_LanguagesProvidedBy">ພາສາ ສະຫນອງໃຫ້ໂດຍ:</string>
     <string name="text_RelatedSearchTerms">ເງື່ອນໄຂ ທີ່ກ່ຽວຂ້ອງ:</string>
-    <string name="text_Requirements">ຕ້ອງການ:.\n1 ຕ້ອງໄດ້ຮັບການ ຕິດຕັ້ງຢູ່ໃນ ຕໍາ່ສຸດທີ່ ຂອງ ອຸປະກອນ 2 ເປັນ.\n2. ການເຊື່ອມຕໍ່ ອິນເຕີເນັດ ເປັນ ຕ້ອງ ມີການເຄື່ອນໄຫວ.</string>
+    <string name="text_Requirements">ຕ້ອງການ:</string>
+    <string name="text_Requirements1">ຕ້ອງໄດ້ຮັບການຕິດຕັ້ງຢູ່ໃນຕໍາ່ສຸດທີ່ຂອງອຸປະກອນ 2 ເປັນ.</string>
+    <string name="text_Requirements2">ການເຊື່ອມຕໍ່ອິນເຕີເນັດເປັນຕ້ອງມີການເຄື່ອນໄຫວ.</string>
     <string name="text_SourceCodeRepo">ແຫຼ່ງ ເປີດເຜີຍ: %s</string>
     <string name="text_WhatsNew">, ສະຖຽນລະພາບ ແກ້ໄຂ.</string>
 

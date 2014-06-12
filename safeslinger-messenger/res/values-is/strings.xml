@@ -140,7 +140,7 @@
 
     <string name="help_find">Notaðu þennan skjá til að setja nafn þitt til að skiptast á við aðra. Bankaðu á Lokið hnappinn þegar lokið.</string>
     <string name="help_home">Að skiptast á persónuskilríki gögn skal gæta allir notendur eru nálægt eða í símanum. Byrjaðu á húsum hnappinn munu skiptast users.cpp tengiliðagögn.</string>
-    <string name="help_identity_menu">\n\n\nÞú getur líka breyst persónuleg gögn um persónuupplýsingar þínar á þessum skjá með því að slá á hnappinn með nafni þínu. Þetta birtir valmynd leyfir þér að breyta samband þitt, Búa til nýjan tengilið, eða nota annan tengilið.</string>
+    <string name="help_identity_menu">Þú getur líka breyst persónuleg gögn um persónuupplýsingar þínar á þessum skjá með því að slá á hnappinn með nafni þínu. Þetta birtir valmynd leyfir þér að breyta samband þitt, Búa til nýjan tengilið, eða nota annan tengilið.</string>
     <string name="help_Messages">Þessi skjár sýnir öll fyrri skilaboð og viðhengi sem eru enn í boði fyrir niðurhal.</string>
     <string name="help_passphrase">Notaðu þennan skjá til tenging til the umsókn með lykilorð þitt. Ef þú hefur gleymt lykilorð þitt, getur þú búið til nýjan lykil verndað af nýjum lykilorð með því að pikka á Gleymt lykilorð? hnappinn. Tappa notandanafn til að skipta á milli margra lykla.</string>
     <string name="help_PickRecip">Tengiliði með SafeSlinger lykla sjást hér, velja einn til að senda skilaboð til.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s tengiliðir fluttir inn.</string>
     <string name="state_TextCopiedToClipboard">Texti afritaður í klemmuspjald.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger er hannað til auðveldlega deila sjálfsmynd gögn, í eigin persónu eða í gegnum síma, staðfest, einka, og ósnortinn. Hver einstaklingur sem þú deilir með skapar öruggt endir-til-endir rás til að senda skilaboð.\n\nFeatures:\n-Auðveldlega skiptast snerting upplýsingar með öðrum\n-tryggilega Sling texta, myndir, neitt!\n-Strong dulmál ver þínar\n\nemail: %2$s\nvefur: %3$s</string>
+    <string name="text_About">SafeSlinger er hannað til auðveldlega deila sjálfsmynd gögn, í eigin persónu eða í gegnum síma, staðfest, einka, og ósnortinn. Hver einstaklingur sem þú deilir með skapar öruggt endir-til-endir rás til að senda skilaboð.</string>
+    <string name="text_About1">Auðveldlega skiptast snerting upplýsingar með öðrum</string>
+    <string name="text_About2">Tryggilega Sling textar, myndir, nokkuð!</string>
+    <string name="text_About3">Strong dulmál ver þínar</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Features:</string>
+    <string name="text_AboutWeb">Vefur: %s</string>
     <string name="text_KeywordExchange">Skipti</string>
     <string name="text_KeywordIdentity">Identity</string>
     <string name="text_KeywordKey">Key</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Öryggi</string>
     <string name="text_LanguagesProvidedBy">Tungumál veittar af:</string>
     <string name="text_RelatedSearchTerms">Skyld hugtök:</string>
-    <string name="text_Requirements">Kröfur:.\n1 verður að vera uppsett á amk 2 tæki.\n2. An Internet tenging þarf að vera virkt.</string>
+    <string name="text_Requirements">Kröfur:</string>
+    <string name="text_Requirements1">Verður að vera uppsett á amk 2 tæki.</string>
+    <string name="text_Requirements2">An Internet tenging þarf að vera virkt.</string>
     <string name="text_SourceCodeRepo">Open Source: %s</string>
-    <string name="text_WhatsNew">-Stöðugleiki fastur.</string>
+    <string name="text_WhatsNew">Stöðugleiki fastur.</string>
 
     <string name="title_About">Um</string>
     <string name="title_camera">Myndavél</string>

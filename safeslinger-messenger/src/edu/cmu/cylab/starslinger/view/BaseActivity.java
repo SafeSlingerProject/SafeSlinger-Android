@@ -860,12 +860,29 @@ public class BaseActivity extends ActionBarActivity {
         }
         TextView textViewAbout = (TextView) layout.findViewById(R.id.TextViewAbout);
         ad.setTitle(R.string.title_About);
-        textViewAbout.setText(String.format(act.getString(R.string.text_About),
-                SafeSlingerConfig.getFullVersion(), SafeSlingerConfig.HELP_EMAIL,
-                SafeSlingerConfig.HELP_URL)
-        // + "\n\n"
-        // + act.getString(R.string.text_Requirements)
-                + "\n\n" + getCredits(act));
+
+        String msgHead = SafeSlingerConfig.getFullVersion();
+        String msgAbout = act.getString(R.string.text_About);
+        String msgAbFeat = act.getString(R.string.text_AboutFeat);
+        String msgAb1 = act.getString(R.string.text_About1);
+        String msgAb2 = act.getString(R.string.text_About2);
+        String msgAb3 = act.getString(R.string.text_About3);
+        String msgEmail = String.format(act.getString(R.string.text_AboutEmail),
+                SafeSlingerConfig.HELP_EMAIL);
+        String msgWeb = String.format(act.getString(R.string.text_AboutWeb),
+                SafeSlingerConfig.HELP_URL);
+        String msgSrc = String.format(act.getString(R.string.text_SourceCodeRepo),
+                SafeSlingerConfig.SOURCE_URL);
+        String msgReq = act.getString(R.string.text_Requirements);
+        String msgReq1 = act.getString(R.string.text_Requirements1);
+        String msgReq2 = act.getString(R.string.text_Requirements2);
+        String msgLang = getCredits(act);
+
+        textViewAbout.setText(String.format(
+                "%s\n\n%s\n\n%s\n- %s\n- %s\n- %s\n\n%s\n1. %s\n2. %s\n\n%s\n%s\n%s\n\n%s",
+                msgHead, msgAbout, msgAbFeat, msgAb1, msgAb2, msgAb3, msgReq, msgReq1, msgReq2,
+                msgEmail, msgWeb, msgSrc, msgLang));
+
         ad.setView(layout);
         ad.setCancelable(true);
         ad.setNeutralButton(R.string.btn_Close, new OnClickListener() {
@@ -1652,11 +1669,11 @@ public class BaseActivity extends ActionBarActivity {
                 act.getString(R.string.label_step_2)));
 
         TextView textViewWalkExchange = (TextView) layout.findViewById(R.id.textViewWalkExchange);
-        textViewWalkExchange.setText(act.getString(R.string.help_home)
+        textViewWalkExchange.setText(act.getString(R.string.help_home) + "\n\n"
                 + act.getString(R.string.help_identity_menu));
 
         TextView textViewWalkCompose = (TextView) layout.findViewById(R.id.textViewWalkCompose);
-        textViewWalkCompose.setText(act.getString(R.string.help_Send)
+        textViewWalkCompose.setText(act.getString(R.string.help_Send) + "\n\n"
                 + act.getString(R.string.help_identity_menu));
 
         String title = String.format("%s %s", act.getString(R.string.app_name),
@@ -1753,18 +1770,20 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     private String getInviteShortMessage() {
-        String smsText = String.format("%s %s %s", getString(R.string.label_messageInviteStartMsg),
-                getString(R.string.label_messageInviteSetupInst), String.format(
-                        getString(R.string.label_messageInviteInstall),
-                        SafeSlingerConfig.URL_SS_INSTALL));
+        String smsText = String
+                .format("%s %s %s", getString(R.string.label_messageInviteStartMsg),
+                        getString(R.string.label_messageInviteSetupInst), String.format(
+                                getString(R.string.label_messageInviteInstall),
+                                SafeSlingerConfig.HELP_URL));
         return smsText;
     }
 
     private String getInviteLongMessage() {
-        return String.format("%s\n\n%s\n\n%s\n", getString(R.string.label_messageInviteStartMsg),
-                getString(R.string.label_messageInviteSetupInst), String.format(
-                        getString(R.string.label_messageInviteInstall),
-                        SafeSlingerConfig.URL_SS_INSTALL));
+        return String
+                .format("%s\n\n%s\n\n%s\n", getString(R.string.label_messageInviteStartMsg),
+                        getString(R.string.label_messageInviteSetupInst), String.format(
+                                getString(R.string.label_messageInviteInstall),
+                                SafeSlingerConfig.HELP_URL));
     }
 
     private void sendInviteToSlingEmail(String[] emailsTo) {

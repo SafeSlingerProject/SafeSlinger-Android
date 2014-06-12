@@ -140,7 +140,7 @@
 
     <string name="help_find">Utilisez cet écran pour configurer votre nom d\'échanger avec les autres. Appuyez sur le bouton «Terminé» lorsque vous avez terminé.</string>
     <string name="help_home">Pour échanger des identités, assurez-vous que tous les utilisateurs se trouvent à proximité de leur téléphone. Le bouton Commencer échange échangera uniquement les contacts qui ont été cochés.</string>
-    <string name="help_identity_menu">\n\nVous Puissiez utile de modifier les données personnelles concernant votre identité sur cet écran en appuyant sur ​​le bouton avec votre nom. Cela permet d\'afficher un menu vous permettant de Edit votre contact, Créer un nouveau contact ou utiliser un autre contact.</string>
+    <string name="help_identity_menu">Vous Puissiez utile de modifier les données personnelles concernant votre identité sur cet écran en appuyant sur ​​le bouton avec votre nom. Cela permet d\'afficher un menu vous permettant de Edit votre contact, Créer un nouveau contact ou utiliser un autre contact.</string>
     <string name="help_Messages">Cet écran affiche tous les anciens messages et les fichiers qui sont encore disponibles pour le téléchargement.</string>
     <string name="help_passphrase">Utilisez cet écran pour accéder à l\'application avec votre mot de passe. Si vous avez oublié votre mot de passe, vous pouvez générer une nouvelle clé protégée par un nouveau mot de passe en appuyant sur le « phrase de passe oublié? bouton. Tapez le nom d\'utilisateur de basculer entre plusieurs clés.</string>
     <string name="help_PickRecip">Les contacts avec des clés SafeSlinger sont affichés ici, choisissez celui/celle à qui envoyer votre message.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s contacts importés.</string>
     <string name="state_TextCopiedToClipboard">Texte copié dans le presse-papiers.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger est conçu pour partager facilement des données authentifiées, privées et intactes, en personne ou par téléphone. Chaque personne que vous partagez avec crée un canal de bout en bout sécurisée pour envoyer des messages.\n\nCaractéristiques:\n-Échange facile de coordonnées\n-Échange sûr de textes, photos, ou autres!\n-Forte cryptographie pour protèger vos informations\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger est conçu pour partager facilement des données authentifiées, privées et intactes, en personne ou par téléphone. Chaque personne que vous partagez avec crée un canal de bout en bout sécurisée pour envoyer des messages.</string>
+    <string name="text_About1">Échange facile de coordonnées</string>
+    <string name="text_About2">Échange sûr de textes, photos, ou autres!</string>
+    <string name="text_About3">Forte cryptographie pour protèger vos informations</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Caractéristiques:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Échange</string>
     <string name="text_KeywordIdentity">Identité</string>
     <string name="text_KeywordKey">Clé</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Sécurité</string>
     <string name="text_LanguagesProvidedBy">Traductions fournies par:</string>
     <string name="text_RelatedSearchTerms">Termes reliés:</string>
-    <string name="text_Requirements">Exigences:\n1. Doit être installé sur un minimum de 2 appareils.\n2. Une connexion Internet doit être active.</string>
+    <string name="text_Requirements">Exigences:</string>
+    <string name="text_Requirements1">Doit être installé sur un minimum de 2 appareils.</string>
+    <string name="text_Requirements2">Une connexion Internet doit être active.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Correctifs de stabilité.</string>
+    <string name="text_WhatsNew">Correctifs de stabilité.</string>
 
     <string name="title_About">À propos</string>
     <string name="title_camera">Appareil photo</string>

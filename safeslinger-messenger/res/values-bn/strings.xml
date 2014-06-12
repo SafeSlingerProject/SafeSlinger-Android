@@ -140,7 +140,7 @@
 
     <string name="help_find">অন্যদের সাথে বিনিময় করতে আপনার নাম সেট করার জন্য এই পর্দা ব্যবহার করুন. কর্ম সমাপ্ত হলে সম্পন্ন বোতাম ট্যাপ.</string>
     <string name="help_home">পরিচয় তথ্য বিনিময় করার জন্য, সব ব্যবহারকারীদের কাছাকাছি বা ফোনে নিশ্চিত. শুরু এক্সচেঞ্জ বাটন শুধুমাত্র পরীক্ষিত যোগাযোগের তথ্য বিনিময় করবে.</string>
-    <string name="help_identity_menu">\n\n\nএছাড়াও আপনি আপনার নামের সঙ্গে বোতাম লঘুপাত দ্বারা এই পর্দায় আপনার পরিচয় সম্পর্কে ব্যক্তিগত তথ্য পরিবর্তন হতে পারে. এই, আপনি আপনার পরিচিতি সম্পাদনা করুন, যার ফলে একটি মেনু প্রদর্শন নতুন পরিচিতি তৈরি করুন, অথবা অন্য যোগাযোগের ব্যবহার করতে হবে.</string>
+    <string name="help_identity_menu">এছাড়াও আপনি আপনার নামের সঙ্গে বোতাম লঘুপাত দ্বারা এই পর্দায় আপনার পরিচয় সম্পর্কে ব্যক্তিগত তথ্য পরিবর্তন হতে পারে. এই, আপনি আপনার পরিচিতি সম্পাদনা করুন, যার ফলে একটি মেনু প্রদর্শন নতুন পরিচিতি তৈরি করুন, অথবা অন্য যোগাযোগের ব্যবহার করতে হবে.</string>
     <string name="help_Messages">এই পর্দায় সব অতীতের বার্তা, এবং এখনও ডাউনলোডের জন্য উপলব্ধ যে সংযুক্তি প্রদর্শন করা হয়.</string>
     <string name="help_passphrase">আপনার পাসফ্রেজ সহ আবেদন লগইন এই পর্দা ব্যবহার করুন. আপনি নিজের পাসফ্রেজ ভুলে গিয়ে থাকেন, আপনি ভুলে গেছেন পাসফ্রেজ লঘুপাত দ্বারা একটি নতুন পাসফ্রেজ দ্বারা সুরক্ষিত একটি নতুন কী উৎপন্ন হতে পারে? বোতাম. একাধিক নির্দেশক মধ্যে পরিবর্তনকালে ব্যবহারকারী নাম ট্যাপ.</string>
     <string name="help_PickRecip">SafeSlinger key ব্যবহার পরিচিতিতে আপনার বার্তা পাঠাতে একটি নির্বাচন, এখানে প্রদর্শিত হয়.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s পরিচিতি আমদানি করা.</string>
     <string name="state_TextCopiedToClipboard">টেক্সট ক্লিপবোর্ডে কপি করা.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ব্যক্তিগত, অনুমোদন যাচাই, ব্যক্তি বা ফোনের মাধ্যমে, সহজে পরিচয় তথ্য শেয়ার করার জন্য ডিজাইন করা, এবং অক্ষত হয়. আপনার সাথে ভাগ করে প্রতিটি ব্যক্তি বার্তা পাঠানোর জন্য একটি নিরাপদ শেষ যাও শেষ চ্যানেল তৈরি করে.\n\nবৈশিষ্ট্য:\nসহজেই অন্যদের\n-নিরাপদভাবে গুলতি গ্রন্থে, ছবি, কিছু সঙ্গে যোগাযোগ সংক্রান্ত তথ্য বিনিময়! %2$s\nওয়েব:: %3$s\n-স্ট্রং ক্রিপ্টোগ্রাফি আপনার তথ্য\n\nইমেইল রক্ষা করে</string>
+    <string name="text_About">SafeSlinger, ব্যক্তি বা ফোনের মাধ্যমে, সহজে পরিচয় তথ্য শেয়ার করার জন্য ডিজাইন অনুমোদন যাচাই করা, ব্যক্তিগত, এবং অক্ষত হয়. আপনার সাথে ভাগ করে প্রতিটি ব্যক্তি বার্তা পাঠানোর জন্য একটি নিরাপদ শেষ যাও শেষ চ্যানেল তৈরি করে.</string>
+    <string name="text_About1">সহজেই অন্যদের সঙ্গে যোগাযোগ সংক্রান্ত তথ্য বিনিময়</string>
+    <string name="text_About2">নিরাপদভাবে গুলতি গ্রন্থে, ছবি, কিছু!</string>
+    <string name="text_About3">স্ট্রং ক্রিপ্টোগ্রাফি আপনার তথ্য রক্ষা করে</string>
+    <string name="text_AboutEmail">ইমেইল: %s</string>
+    <string name="text_AboutFeat">বৈশিষ্ট্য:</string>
+    <string name="text_AboutWeb">ওয়েব: %s</string>
     <string name="text_KeywordExchange">বিনিময়</string>
     <string name="text_KeywordIdentity">পরিচয়</string>
     <string name="text_KeywordKey">চাবি</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">নিরাপত্তা</string>
     <string name="text_LanguagesProvidedBy">দ্বারা উপলব্ধ ভাষা:</string>
     <string name="text_RelatedSearchTerms">সম্পর্কিত শর্তাবলী:</string>
-    <string name="text_Requirements">আবশ্যক:.\n1 2 ডিভাইসের একটি সর্বনিম্ন ইনস্টল থাকা আবশ্যক.\n2. কোনো ধরনের ইন্টারনেট সংযোগ সক্রিয় হতে হবে.</string>
+    <string name="text_Requirements">আবশ্যক:</string>
+    <string name="text_Requirements1">2 ডিভাইসের একটি সর্বনিম্ন ইনস্টল থাকা আবশ্যক.</string>
+    <string name="text_Requirements2">কোনো ধরনের ইন্টারনেট সংযোগ সক্রিয় হতে হবে.</string>
     <string name="text_SourceCodeRepo">ওপেন সোর্স: %s</string>
-    <string name="text_WhatsNew">-স্থিতাবস্থা সমাধান করা হয়েছে.</string>
+    <string name="text_WhatsNew">স্থিতাবস্থা সমাধান করা হয়েছে.</string>
 
     <string name="title_About">সম্পর্কে</string>
     <string name="title_camera">ক্যামেরা</string>

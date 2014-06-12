@@ -140,7 +140,7 @@
 
     <string name="help_find">ใช้หน้าจอ นี้เพื่อตั้ง ชื่อของคุณไป แลกเปลี่ยนกับ คนอื่น ๆ แตะที่ปุ่ม เสร็จเมื่อเสร็จแล้ว</string>
     <string name="help_home">เพื่อแลกเปลี่ยนข้อมูล ตัวตน มั่นใจว่าผู้ใช้ ทั้งหมดที่อยู่ ใกล้เคียงหรือ ทางโทรศัพท์ ปุ่ม เริ่มต้นการ แลกเปลี่ยน จะแลกเปลี่ยน เฉพาะข้อมูล การตรวจสอบ รายชื่อผู้ติดต่อ</string>
-    <string name="help_identity_menu">\n\n\nนอกจากนี้คุณยัง อาจมีการเปลี่ยนแปลง ข้อมูล ส่วนบุคคลเกี่ยวกับ ตัวตนของคุณ บนหน้าจอนี้ โดยแตะที่ ปุ่มที่มี ชื่อของคุณ นี้จะ แสดงเมนู ช่วยให้คุณสามารถ แก้ไข รายชื่อผู้ติดต่อ ของคุณสร้าง รายชื่อผู้ติดต่อ ใหม่ หรือ ใช้ ติดต่อ อีก</string>
+    <string name="help_identity_menu">นอกจากนี้คุณยัง อาจมีการเปลี่ยนแปลง ข้อมูล ส่วนบุคคลเกี่ยวกับ ตัวตนของคุณ บนหน้าจอนี้ โดยแตะที่ ปุ่มที่มี ชื่อของคุณ นี้จะ แสดงเมนู ช่วยให้คุณสามารถ แก้ไข รายชื่อผู้ติดต่อ ของคุณสร้าง รายชื่อผู้ติดต่อ ใหม่ หรือ ใช้ ติดต่อ อีก</string>
     <string name="help_Messages">หน้าจอนี้จะ แสดงข้อความ ที่ผ่านมาทั้งหมด และสิ่งที่แนบ ที่ ยังคงมีอยู่ สำหรับการดาวน์โหลด</string>
     <string name="help_passphrase">ใช้หน้าจอ นี้ เพื่อเข้าสู่ระบบ ไปยังโปรแกรมประยุกต์ ที่มี รหัสผ่าน ของคุณ ถ้าคุณลืม รหัสผ่าน ของคุณคุณ อาจสร้างคีย์ใหม่ การป้องกันโดยรหัสผ่าน ใหม่โดยการ แตะที่ ข้อความรหัสผ่าน ลืม? ปุ่ม แตะ ชื่อ ผู้ใช้สามารถ สลับไปมาระหว่าง หลายคีย์</string>
     <string name="help_PickRecip">ติดต่อ กับคีย์ SafeSlinger จะมีการแสดง ที่นี่ เลือก หนึ่งในการส่ง ข้อความของคุณไป</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">ติดต่อ %s นำเข้า</string>
     <string name="state_TextCopiedToClipboard">ข้อความที่คัดลอก ไปยังคลิปบอร์ด</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ถูกออกแบบมาเพื่อ ใช้ข้อมูลร่วมกัน ได้อย่างง่ายดาย ตัวตน ด้วยตนเองหรือ ผ่านทางโทรศัพท์ ที่ รับรองความถูกต้อง ของภาคเอกชน และครบถ้วน คนที่คุณ แบ่งปัน ด้วยกัน สร้างช่อง end-to-end ที่ มีความปลอดภัย ในการส่งข้อความ\n\nคุณสมบัติ:\nอย่างง่ายดาย แลกเปลี่ยนข้อมูล การติดต่อกับ คนอื่น ๆ\n-ปลอดภัย ข้อความ สลิง ภาพถ่าย อะไร การเข้ารหัส\n-แข็งแกร่ง ปกป้อง ข้อมูลของคุณ\n\nอีเมล์: %2$s\nเว็บ: %3$s</string>
+    <string name="text_About">SafeSlinger ถูกออกแบบมาเพื่อใช้ข้อมูลร่วมกันได้อย่างง่ายดายตัวตนด้วยตนเองหรือผ่านทางโทรศัพท์ที่รับรองความถูกต้องของภาคเอกชนและครบถ้วน คนที่คุณแบ่งปันด้วยกันสร้างช่อง end-to-end ที่มีความปลอดภัยในการส่งข้อความ</string>
+    <string name="text_About1">ได้อย่างง่ายดายแลกเปลี่ยนข้อมูลการติดต่อกับคนอื่น ๆ</string>
+    <string name="text_About2">ข้อความอย่างปลอดภัยสลิงภาพถ่ายอะไร</string>
+    <string name="text_About3">การเข้ารหัสที่แข็งแกร่งปกป้องข้อมูลของคุณ</string>
+    <string name="text_AboutEmail">อีเมล์: %s</string>
+    <string name="text_AboutFeat">คุณสมบัติ:</string>
+    <string name="text_AboutWeb">เว็บ: %s</string>
     <string name="text_KeywordExchange">แลกเปลี่ยน</string>
     <string name="text_KeywordIdentity">เอกลักษณ์</string>
     <string name="text_KeywordKey">สำคัญ</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">ความปลอดภัย</string>
     <string name="text_LanguagesProvidedBy">ภาษา ที่ให้บริการโดย:</string>
     <string name="text_RelatedSearchTerms">ข้อตกลงและเงื่อนไข ที่เกี่ยวข้อง</string>
-    <string name="text_Requirements">ต้องการ:.\n1 จะต้อง ติดตั้งบน อย่างน้อย 2 อุปกรณ์\n2. การเชื่อมต่ออินเทอร์เน็ตจะต้องใช้งาน</string>
+    <string name="text_Requirements">ต้องการ:</string>
+    <string name="text_Requirements1">ต้องติดตั้งบนอย่างน้อย 2 อุปกรณ์</string>
+    <string name="text_Requirements2">การเชื่อมต่ออินเทอร์เน็ตจะต้องใช้งาน</string>
     <string name="text_SourceCodeRepo">เปิดแหล่งที่มา: %s</string>
-    <string name="text_WhatsNew">-เสถียรภาพ การแก้ไข</string>
+    <string name="text_WhatsNew">เสถียรภาพ การแก้ไข</string>
 
     <string name="title_About">เกี่ยวกับ</string>
     <string name="title_camera">กล้อง</string>

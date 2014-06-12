@@ -140,7 +140,7 @@
 
     <string name="help_find">Koristite ovaj ekran postaviti svoje ime na razmjenu sa drugima. Dodirnite Gotovo tipku kada završite.</string>
     <string name="help_home">Za razmjenu podataka identiteta, osigurati svim korisnicima su u blizini ili na telefon. The Begin tipku Exchange će razmjenjivati ​​samo provjeriti kontakt podatke.</string>
-    <string name="help_identity_menu">\n\n\nTakođer možete promijeniti osobne podatke o svom identitetu na ovom zaslonu dodirom na gumb sa svojim imenom. Tako će se prikazati izbornik omogućava vam da uredite svoj ​​kontakt, Create New kontakt, ili koristite drugi kontakt.</string>
+    <string name="help_identity_menu">Također možete promijeniti osobne podatke o svom identitetu na ovom zaslonu dodirom na gumb sa svojim imenom. Tako će se prikazati izbornik omogućava vam da uredite svoj ​​kontakt, Create New kontakt, ili koristite drugi kontakt.</string>
     <string name="help_Messages">Ovaj ekran prikazuje sve prošlosti poruke, i priloge koji su još uvijek dostupna za download.</string>
     <string name="help_passphrase">Koristite ovaj ekran za prijavu u aplikaciju sa svojim lozinku. Ako ste zaboravili svoju lozinku, možete generirati novi ključ zaštićen novu lozinku dodirivanjem Zaboravili Passphrase? tipku. Dodirnite korisničko ime za prebacivanje između više tipki.</string>
     <string name="help_PickRecip">Kontakti sa SafeSlinger tipke su prikazani ovdje, odaberite jednu poslati poruku.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kontakti uvoze.</string>
     <string name="state_TextCopiedToClipboard">Tekst kopiran u clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger je dizajniran da lako dijeliti podatke identitet, osobno ili preko telefona, autentičnost, privatne, i netaknuta. Svaka osoba koju dijele s stvara siguran kanal end-to-end za slanje poruka.\n\nKarakteristike:\n-Lako razmjenjuju podatke o kontaktu sa drugima\n-ekološki praćku tekstovi, fotografije, sve!\n-Strong kriptografije štiti vaše podatke\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger je dizajniran tako da se lako dijeliti podatke identitet, osobno ili preko telefona, autentičnost, privatne, i netaknuta. Svaka osoba koju dijele s stvara siguran kanal end-to-end za slanje poruka.</string>
+    <string name="text_About1">Lako razmjenjuju podatke o kontaktu sa drugima</string>
+    <string name="text_About2">Sigurno baca tekstovi, fotografije, sve!</string>
+    <string name="text_About3">Jaki kriptografije štiti vaše podatke</string>
+    <string name="text_AboutEmail">E-mail: %s</string>
+    <string name="text_AboutFeat">Karakteristike:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Razmjena</string>
     <string name="text_KeywordIdentity">Identitet</string>
     <string name="text_KeywordKey">Ključni</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Bezbjednost</string>
     <string name="text_LanguagesProvidedBy">Jezici koje:</string>
     <string name="text_RelatedSearchTerms">Related Uvjeti:</string>
-    <string name="text_Requirements">Zahtjevi:.\n1. mora biti instaliran na minimalno 2 uređaja.\n2. Internet veza mora biti aktivna.</string>
+    <string name="text_Requirements">Zahtjevi:</string>
+    <string name="text_Requirements1">Mora biti instaliran na minimalno 2 uređaja.</string>
+    <string name="text_Requirements2">Internet veza mora biti aktivna.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Stabilnost popravlja.</string>
+    <string name="text_WhatsNew">Stabilnost popravlja.</string>
 
     <string name="title_About">Oko</string>
     <string name="title_camera">Kamera</string>

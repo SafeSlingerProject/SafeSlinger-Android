@@ -140,7 +140,7 @@
 
     <string name="help_find">使用此屏幕来设置你的名字和别人交流。完成后，点击完成按钮。</string>
     <string name="help_home">为了交换联络资讯，请确保所有成员都在附近，并按下开始交换按钮，将开始与群体成员开始进行资料交换。</string>
-    <string name="help_identity_menu">\n\n您可以更改个人资料透过点击屏幕上显示你名字的按钮。它将显示一个菜单，允许你编辑你的资料，或建立一个新的联络人，或使用另一个联络人。</string>
+    <string name="help_identity_menu">您可以更改个人资料透过点击屏幕上显示你名字的按钮。它将显示一个菜单，允许你编辑你的资料，或建立一个新的联络人，或使用另一个联络人。</string>
     <string name="help_Messages">该画面显示所有以前的讯息，以及可能被下载的档案。</string>
     <string name="help_passphrase">使用此屏幕可以登录到应用程序与您的密码。如果您忘记了您的密码，您可以生成一个新的密码保护，通过点击忘记口令？ 一个新的密钥按钮。点击用户名多个键之间切换。</string>
     <string name="help_PickRecip">在此显示拥有SafeSlinger金钥的联络人，选择一个去寄送你的讯息。</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">加入%s位联系人。</string>
     <string name="state_TextCopiedToClipboard">文本复制到剪贴板。</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger是用来交换使用者资料，透过使用手机接触的方式，SafeSlinger可以确保交换资讯有经过认证并保护其私密性。每个人与你分享创造一个安全的终端到终端的信道来发送邮件。\n\n特点:\n-快速方便地与其他人交换联络资讯\n-安全地投递(sling)文字相片甚至任何形式的资料！\n-稳健密码系统保护你的个人资讯\n\n电子邮件: %2$s\n网页: %3$s</string>
+    <string name="text_About">SafeSlinger是用来交换使用者资料，透过使用手机接触的方式，SafeSlinger可以确保交换资讯有经过认证并保护其私密性。每个人与你分享创造一个安全的终端到终端的信道来发送邮件。</string>
+    <string name="text_About1">快速方便地与其他人交换联络资讯</string>
+    <string name="text_About2">安全地投递(sling)文字相片甚至任何形式的资料！</string>
+    <string name="text_About3">稳健密码系统保护你的个人资讯</string>
+    <string name="text_AboutEmail">电子邮件: %s</string>
+    <string name="text_AboutFeat">特点:</string>
+    <string name="text_AboutWeb">网页: %s</string>
     <string name="text_KeywordExchange">交换</string>
     <string name="text_KeywordIdentity">特性</string>
     <string name="text_KeywordKey">关键</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">安全</string>
     <string name="text_LanguagesProvidedBy">翻译：</string>
     <string name="text_RelatedSearchTerms">相关术语：</string>
-    <string name="text_Requirements">要求：\n1。必须安装在至少2设备。\n2。 Internet连接必须处于活动状态。</string>
+    <string name="text_Requirements">要求：</string>
+    <string name="text_Requirements1">必须安装在至少2设备。</string>
+    <string name="text_Requirements2">Internet连接必须处于活动状态。</string>
     <string name="text_SourceCodeRepo">开源：%s</string>
-    <string name="text_WhatsNew">-稳定性修正。</string>
+    <string name="text_WhatsNew">稳定性修正。</string>
 
     <string name="title_About">关於</string>
     <string name="title_camera">相机</string>

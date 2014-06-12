@@ -140,7 +140,7 @@
 
     <string name="help_find">Gebruik hierdie skerm jou naam in te stel om te ruil met ander. Tik die knoppie wanneer jy klaar gebraai.</string>
     <string name="help_home">Identiteit data te ruil, verseker dat alle gebruikers is naby of op die telefoon. Die Begin Exchange knoppie sal ruil net die nagegaan kontak data.</string>
-    <string name="help_identity_menu">\n\n\nJy kan ook verander persoonlike data oor jou identiteit op die skerm deur afluister op die knoppie met jou naam. Dit sal \'n spyskaart sodat jy jou kontakbesonderhede te wysig vertoon, nuwe kontak, of die gebruik van ander kontak.</string>
+    <string name="help_identity_menu">Jy kan ook verander persoonlike data oor jou identiteit op die skerm deur afluister op die knoppie met jou naam. Dit sal \'n spyskaart sodat jy jou kontakbesonderhede te wysig vertoon, nuwe kontak, of die gebruik van ander kontak.</string>
     <string name="help_Messages">Hierdie skerm vertoon al die afgelope boodskappe en aanhangsels wat nog beskikbaar is vir aflaai.</string>
     <string name="help_passphrase">Gebruik die skerm aan te meld by die aansoek met jou wagwoordfrase. As jy jou wagwoordfrase vergeet het, kan jy \'n nuwe sleutel beskerm deur \'n nuwe wagwoordfrase deur die afluister van die vergete Passphrase genereer? knoppie. Tik die gebruiker naam te skakel tussen verskeie sleutels.</string>
     <string name="help_PickRecip">Kontak met SafeSlinger sleutels word hier vertoon, kies een om jou boodskap te stuur na.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kontakte ingevoer.</string>
     <string name="state_TextCopiedToClipboard">Teks kopieer na die knipbord.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger is ontwerp om maklik te deel identiteit data, in persoon of oor die telefoon, bekragtig, private en ongeskonde. Elke persoon wat jy deel met skep van \'n veilige end-tot-end-kanaal boodskappe te stuur.\n\nKenmerke:\nMaklik ruil kontak inligting met ander\n-veilig slinger tekste, foto\'s, niks!\n-sterkkriptografiese beskerm jou inligting\n\ne-pos: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger is ontwerp om maklik te deel identiteit data, in persoon of oor die telefoon, bekragtig, private en ongeskonde. Elke persoon wat jy deel met skep van \'n veilige end-tot-end-kanaal boodskappe te stuur.</string>
+    <string name="text_About1">Maklik te ruil Kontak inligting met ander</string>
+    <string name="text_About2">Veilig slinger tekste, foto\'s, niks!</string>
+    <string name="text_About3">Sterkkriptografiese beskerm jou inligting</string>
+    <string name="text_AboutEmail">E-pos: %s</string>
+    <string name="text_AboutFeat">Kenmerke:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Ruil</string>
     <string name="text_KeywordIdentity">Identiteit</string>
     <string name="text_KeywordKey">Sleutel</string>
@@ -344,7 +350,9 @@
     <string name="text_KeywordSecurity">Sekuriteit</string>
     <string name="text_LanguagesProvidedBy">Tale verskaf deur:</string>
     <string name="text_RelatedSearchTerms">Verwante terme:</string>
-    <string name="text_Requirements">Vereistes:.\n1 moet geïnstalleer word op \'n minimum van 2 toestelle.\n2. \'N internet konneksie moet aktief te wees.</string>
+    <string name="text_Requirements">Vereistes:</string>
+    <string name="text_Requirements1">Moet geïnstalleer word op \'n minimum van 2 toestelle.</string>
+    <string name="text_Requirements2">\'N internet konneksie moet aktief te wees.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
     <string name="text_WhatsNew">Stabiliteit kapt.</string>
 

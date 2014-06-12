@@ -136,7 +136,13 @@ public class MessagesAdapter extends BaseAdapter {
 
         // set time
         long date = msg.getProbableDate();
-        String dateTime = DateUtils.getRelativeTimeSpanString(mCtx, date).toString();
+        String dateTime;
+        if (msg.getDateSent() > 0) {
+            dateTime = DateUtils.getRelativeTimeSpanString(mCtx, date).toString();
+        } else {
+            dateTime = "Received" + " "
+                    + DateUtils.getRelativeTimeSpanString(mCtx, date).toString();
+        }
         long diff = System.currentTimeMillis() - Long.valueOf(date);
         if (!TextUtils.isEmpty(msg.getProgress())) {
             tvDate.setText(msg.getProgress());

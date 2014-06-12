@@ -140,7 +140,7 @@
 
     <string name="help_find">השתמש במסך זה כדי להגדיר את שמך להחליף עם אחרים. הקש על כפתור Done בסיום.</string>
     <string name="help_home">כדי להחליף נתונים זהות, להבטיח שכל המשתמשים נמצאים בקרבת מקום, או בטלפון. כפתור Exchange בגין יחליף רק את נתוני אנשי קשר המסומנים.</string>
-    <string name="help_identity_menu">\n\n\nאתה יכול גם לשנות את הנתונים אישיים על הזהות שלך במסך זה על ידי הקשה על הכפתור עם השם שלך. זה יציגתפריט המאפשר לך לערוך את אנשי הקשר שלכם, צור קשר חדש, או השתמש במגע נוסף.</string>
+    <string name="help_identity_menu">אתה יכול גם לשנות את הנתונים אישיים על הזהות שלך במסך זה על ידי הקשה על הכפתור עם השם שלך. זה יציגתפריט המאפשר לך לערוך את אנשי הקשר שלכם, צור קשר חדש, או השתמש במגע נוסף.</string>
     <string name="help_Messages">מסך זה מציג את כל ההודעות האחרונות, ובקבצים מצורפים שעדיין זמינים להורדה.</string>
     <string name="help_passphrase">השתמש במסך זה כדי להיכנסליישום עם משפט הסיסמה שלך. אם שכחת את משפט הסיסמה שלך, אתה יכול ליצור מפתח חדש המוגן על ידיביטוי סיסמה חדשה על ידי הקשה על משפט הסיסמה שכחה את הסיסמה? כפתור. הקש על שם המשתמש כדי לעבור בין מקשים מרובים.</string>
     <string name="help_PickRecip">מגעים עם מפתחות SafeSlinger מוצגים כאן, בחר אחד כדי לשלוח את ההודעה שלך.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">קשר %s מיובא.</string>
     <string name="state_TextCopiedToClipboard">טקסט שהועתק ללוח.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger נועד לשתף נתוני זהויות בקלות, באופן אישי או בטלפון, מאומת, פרטי,וללא שינוי. כל אדם שאתה חולק עם יוצרערוץ מקצה לקצה מאובטח למשלוח הודעות.\n\nמאפיינים:\n, בקלות להחליף פרטי קשר עם אחרים טקסטים\n-מאובטחים קלע, תמונות, כל דבר! קריפטוגרפיה\n-חזקה מגנה על המידע שלך\n\nדוא\'ל: %2$s\nאינטרנט: %3$s</string>
+    <string name="text_About">SafeSlinger נועד לשתף נתוני זהויות בקלות, באופן אישי או בטלפון, מאומת, פרטי, וללא שינוי. כל אדם שאתה חולק עם יוצר ערוץ מקצה לקצה מאובטח למשלוח הודעות.</string>
+    <string name="text_About1">בקלות להחליף מידע ליצירת קשר עם אחרים</string>
+    <string name="text_About2">טקסטים מאובטחים קלע, תמונות, כל דבר!</string>
+    <string name="text_About3">הצפנה חזקה מגנה על המידע שלך</string>
+    <string name="text_AboutEmail">דוא\'ל: %s</string>
+    <string name="text_AboutFeat">מאפיינים:</string>
+    <string name="text_AboutWeb">אינטרנט: %s</string>
     <string name="text_KeywordExchange">בורסה</string>
     <string name="text_KeywordIdentity">זהות</string>
     <string name="text_KeywordKey">מפתח</string>
@@ -344,7 +350,9 @@
     <string name="text_KeywordSecurity">ביטחון</string>
     <string name="text_LanguagesProvidedBy">שפות הניתנות על ידי:</string>
     <string name="text_RelatedSearchTerms">תנאים נלווים:</string>
-    <string name="text_Requirements">דרישות:.\n1 חייבת להיות מותקנות עלמינימום של 2 מכשירים.\n2.חיבור לאינטרנט חייב להיות פעיל.</string>
+    <string name="text_Requirements">דרישות:</string>
+    <string name="text_Requirements1">חייב להיות מותקן במינימום של 2 מכשירים.</string>
+    <string name="text_Requirements2">חיבור לאינטרנט חייב להיות פעיל.</string>
     <string name="text_SourceCodeRepo">קוד פתוח: %s</string>
     <string name="text_WhatsNew">יציבות מתקנת.</string>
 

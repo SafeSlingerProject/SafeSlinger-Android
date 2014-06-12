@@ -140,7 +140,7 @@
 
     <string name="help_find">Başqaları ilə mübadiləsi üçün adını təyin etmək üçün bu ekran istifadə edin. Başa zaman Done düyməsini dokunun.</string>
     <string name="help_home">Şəxsiyyət data mübadiləsi, bütün istifadəçilər yaxın və ya telefon təmin edir. Begin Exchange düyməsini yalnız yoxlanılır əlaqə məlumatları mübadiləsi aparacaqlar.</string>
-    <string name="help_identity_menu">\n\n\nSiz həmçinin adı ilə düyməsini tıqqıltı ilə bu ekranda şəxsiyyət haqqında şəxsi məlumatları dəyişə bilər. Bu, sizin əlaqə redaktə etmək üçün imkan verən menyu keçirmək New əlaqə yaradın, və ya başqa bir əlaqə istifadə edin.</string>
+    <string name="help_identity_menu">Siz həmçinin adı ilə düyməsini tıqqıltı ilə bu ekranda şəxsiyyət haqqında şəxsi məlumatları dəyişə bilər. Bu, sizin əlaqə redaktə etmək üçün imkan verən menyu keçirmək New əlaqə yaradın, və ya başqa bir əlaqə istifadə edin.</string>
     <string name="help_Messages">Bu ekran bütün keçmiş messages, və hələ də download üçün mövcuddur ki, əlavə göstərilir.</string>
     <string name="help_passphrase">Sizin passphrase ilə ərizə daxil bu ekran istifadə edin. Siz passphrase unutdun varsa, siz unutdunuz Passphrase tıqqıltı ilə yeni bir passphrase tərəfindən qorunur yeni bir əsas yarada bilər? düyməsini basın. Çox düymələri arasında keçid üçün istifadəçi adı dokunun.</string>
     <string name="help_PickRecip">SafeSlinger düymələri ilə əlaqə üçün mesaj göndərmək üçün birini seçin, burada göstərilir.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s əlaqə idxal.</string>
     <string name="state_TextCopiedToClipboard">Mətn panoya kopyalanır.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger özəl, təsdiq, şəxsən və ya telefon, asanlıqla şəxsiyyət məlumatları bölüşmək üçün nəzərdə tutulmuşdur və bütöv olunur. Ilə bölüşmək hər bir şəxs mesaj göndərmək üçün təhlükəsiz son-to-end kanal yaradır.\n\nXüsusiyyətlər:\n-Asanlıqla başqaları\n-Təhlükəsiz sapand mətnləri, foto, bir şey ilə əlaqə informasiya mübadiləsi! %2$s\nweb: %3$s\n-Güclü Kriptoqrafiya məlumat\n\nemail qoruyur</string>
+    <string name="text_About">SafeSlinger, şəxsən və ya telefon, asanlıqla şəxsiyyət məlumatları bölüşmək üçün nəzərdə təsdiq, özəl və bütöv olunur. Ilə bölüşmək hər bir şəxs mesaj göndərmək üçün təhlükəsiz son-to-end kanal yaradır.</string>
+    <string name="text_About1">Asanlıqla başqaları ilə əlaqə informasiya mübadiləsi</string>
+    <string name="text_About2">Təhlükəsiz sapand mətnlər, şəkillər, bir şey!</string>
+    <string name="text_About3">Güclü Kriptoqrafiya məlumat qoruyur</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Features:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Mübadilə</string>
     <string name="text_KeywordIdentity">Identiklik</string>
     <string name="text_KeywordKey">Açar</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Təhlükəsizlik</string>
     <string name="text_LanguagesProvidedBy">Tərəfindən təmin Dillər:</string>
     <string name="text_RelatedSearchTerms">Related şərtləri:</string>
-    <string name="text_Requirements">Tələblər:.\n1 2 cihazlar minimum yüklü olmalıdır.\n2. İnternet bağlantısı aktiv olmalıdır.</string>
+    <string name="text_Requirements">Tələblər:</string>
+    <string name="text_Requirements1">2 cihazlar minimum yüklü olmalıdır.</string>
+    <string name="text_Requirements2">İnternet bağlantısı aktiv olmalıdır.</string>
     <string name="text_SourceCodeRepo">açıq mənbə: %s</string>
-    <string name="text_WhatsNew">-Sabitlik giderir.</string>
+    <string name="text_WhatsNew">Sabitlik giderir.</string>
 
     <string name="title_About">Haqqında</string>
     <string name="title_camera">Kamera</string>

@@ -140,7 +140,7 @@
 
     <string name="help_find">Verwenden Sie diesen Bildschirm, um Ihren Namen gesetzt, sich mit anderen auszutauschen. Tippen Sie auf die Schaltfläche Fertig, wenn Sie fertig.</string>
     <string name="help_home">Um Identitätsdaten auszutauschen, vergewissern Sie sich zuerst, dass alle Benutzer mit ihrem Handy bereit sind. Durch die Schaltfläche Austauschen werden nur die ausgewählten Kontaktdaten ausgetauscht.</string>
-    <string name="help_identity_menu">\n\nSie können auch Ihre personenbezogenen Identitätsdaten auf dieser Seite ändern, indem Sie auf die Schaltfläche mit Ihrem Namen tippen. es wird ein Menü angezeigt, auf dem Sie Ihren Kontakt editieren, einen neuen Kontakt anlegen oder einen anderen verwenden können.</string>
+    <string name="help_identity_menu">Sie können auch Ihre personenbezogenen Identitätsdaten auf dieser Seite ändern, indem Sie auf die Schaltfläche mit Ihrem Namen tippen. es wird ein Menü angezeigt, auf dem Sie Ihren Kontakt editieren, einen neuen Kontakt anlegen oder einen anderen verwenden können.</string>
     <string name="help_Messages">Dieses Fenster zeigt alle bisherigen Nachrichten und Dateien, die noch zum Download zur Verfügung sind.</string>
     <string name="help_passphrase">Verwenden Sie diesen Bildschirm, um die Anwendung mit Ihrem Passwort anmelden. Wenn Sie Ihr Passwort vergessen haben, können Sie einen neuen Schlüssel mit einem neuen Passwort geschützt, indem die  Passphrase vergessen? Generieren-Taste. Tippen Sie den Benutzernamen, um zwischen mehreren Tasten wechseln.</string>
     <string name="help_PickRecip">Kontakte mit SafeSlinger Schlüssel werden hier angezeigt; wählen Sie einen Empfänger für Ihre Nachricht.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s Kontakte importiert.</string>
     <string name="state_TextCopiedToClipboard">Text in die Zwischenablage kopiert.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger wurde entwickelt, um Identitätsdaten persönlich, oder über das Telefon, einfach und sicher auszutauschen. Jede Person, mit der Sie etwas teilen erzeugt einen sicheren Ende-zu-Ende-Kanal, um Nachrichten zu senden.\n\nFunktionen:\n-Einfacher Austausch von Kontaktinformationen\n-Sicheres Senden von Texten, Bildern, uvm.\n-Starke Kryptographie schützt Ihre Informationen.\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger wurde entwickelt, um Identitätsdaten persönlich, oder über das Telefon, einfach und sicher auszutauschen. Jede Person, mit der Sie etwas teilen erzeugt einen sicheren Ende-zu-Ende-Kanal, um Nachrichten zu senden.</string>
+    <string name="text_About1">Einfacher Austausch von Kontaktinformationen</string>
+    <string name="text_About2">Sicheres Senden von Texten, Bildern, uvm.</string>
+    <string name="text_About3">Starke Kryptographie schützt Ihre Informationen.</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Funktionen:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Austausch</string>
     <string name="text_KeywordIdentity">Identität</string>
     <string name="text_KeywordKey">Schlüssel</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Sicherheit</string>
     <string name="text_LanguagesProvidedBy">Übersetzer:</string>
     <string name="text_RelatedSearchTerms">Verwandte Begriffe:</string>
-    <string name="text_Requirements">Voraussetzungen:\n1. Muss auf ein Minimum von 2 Geräten installiert werden.\n2. Eine Internetverbindung muss aktiv sein.</string>
+    <string name="text_Requirements">Voraussetzungen:</string>
+    <string name="text_Requirements1">Muss auf ein Minimum von 2 Geräten installiert werden.</string>
+    <string name="text_Requirements2">Eine Internetverbindung muss aktiv sein.</string>
     <string name="text_SourceCodeRepo">Open-Source: %s</string>
-    <string name="text_WhatsNew">-Stabilität Fixes.</string>
+    <string name="text_WhatsNew">Stabilität Fixes.</string>
 
     <string name="title_About">Programminformationen</string>
     <string name="title_camera">Kamera</string>

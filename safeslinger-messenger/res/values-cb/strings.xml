@@ -140,7 +140,7 @@
 
     <string name="help_find">Gamita kini nga screen nga sa imong ngalan sa pagbaylo sa uban sa uban. Pindota ang Done butones sa diha nga nahuman.</string>
     <string name="help_home">Sa pagbaylo sa pag-ila data, masiguro sa tanan nga mga tiggamit mao ang mga duol nga o sa telepono. Ang Sugdi Exchange button makigbinayloay lang sa mga gitan-aw contact data.</string>
-    <string name="help_identity_menu">\n\n\nMahimo usab-usab sa personal nga data mahitungod sa imong pagkatawo niini nga screen sa tapping sa button uban sa imong ngalan. Kini mopakita sa usa ka menu sa pagtugot kaninyo sa Usba ang imong contact, Create Bag-ong contact, o Gamita laing contact.</string>
+    <string name="help_identity_menu">Mahimo usab-usab sa personal nga data mahitungod sa imong pagkatawo niini nga screen sa tapping sa button uban sa imong ngalan. Kini mopakita sa usa ka menu sa pagtugot kaninyo sa Usba ang imong contact, Create Bag-ong contact, o Gamita laing contact.</string>
     <string name="help_Messages">Kini nga screen pagpakita sa tanan nga sa miagi nga mga mensahe, ug mga sumpay, mga dugtong nga mga pa magamit alang sa download.</string>
     <string name="help_passphrase">Gamita kini nga screen nga Congratulations sa application uban sa imong passphrase. Kon nakalimot sa imong passphrase, nga kamo mahimo nga makamugna og usa ka bag-o nga yawe gipanalipdan sa usa ka bag-o nga passphrase pinaagi sa tapping sa mga Forgot Passphrase? button. Pindota ang user ngalan sa switch sa taliwala sa daghang mga yawe.</string>
     <string name="help_PickRecip">Mga kontak uban sa SafeSlinger yawe nga gipakita dinhi, pagpili sa usa sa ipadala ang imong mensahe ngadto sa.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s mga kontak imported.</string>
     <string name="state_TextCopiedToClipboard">Text gikopya sa Clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ang gihimo aron sa sayon ​​nga pagpakigbahin sa pag-ila data, sa tawo o sa ibabaw sa telepono, authenticated, pribado nga, ug hilabti, wala mabalhin. Ang matag tawo nga imong ipakigbahin sa nagmugna sa usa ka luwas nga katapusan-sa-katapusan channel sa pagpadala mensahe.\n\nFeatures:\n-Masayon ​​makigbinayloay impormasyon sa pagkontak sa uban\n-sa kasigurohan lambuyog mga teksto, litrato, sa bisan unsa!\n-Lig-on cryptography manalipod sa inyong mga impormasyon\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger ang gihimo aron sa sayon ​​nga pagpakigbahin sa pag-ila data, sa tawo o sa ibabaw sa telepono, authenticated, pribado nga, ug hilabti, wala mabalhin. Ang matag tawo nga imong ipakigbahin sa nagmugna sa usa ka luwas nga katapusan-sa-katapusan channel sa pagpadala mensahe.</string>
+    <string name="text_About1">Dali makigbinayloay impormasyon sa pagkontak sa uban</string>
+    <string name="text_About2">Sa kasigurohan saplongon teksto, litrato, sa bisan unsa!</string>
+    <string name="text_About3">Lig-on cryptography nanalipod sa imong impormasyon</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Features:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Exchange</string>
     <string name="text_KeywordIdentity">Ang identity</string>
     <string name="text_KeywordKey">Key</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Security</string>
     <string name="text_LanguagesProvidedBy">Pinulongan nga gihatag sa:</string>
     <string name="text_RelatedSearchTerms">May Kalabutan nga mga Terms:</string>
-    <string name="text_Requirements">Kinahanglanon:\n1. Kinahanglan nga-instalar sa usa ka minimum sa 2 mga lalang nga.\n2. Usa ka Internet koneksyon kinahanglan nga aktibo.</string>
+    <string name="text_Requirements">Kinahanglanon:</string>
+    <string name="text_Requirements1">Kinahanglan nga-instalar sa usa ka minimum sa 2 mga lalang nga.</string>
+    <string name="text_Requirements2">Usa ka Internet koneksyon kinahanglan nga aktibo.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Ayo sa Kalig-on.</string>
+    <string name="text_WhatsNew">Ayo sa Kalig-on.</string>
 
     <string name="title_About">About</string>
     <string name="title_camera">Camera</string>

@@ -140,7 +140,7 @@
 
     <string name="help_find">Użyj tego ekranu, aby ustawić swoje nazwisko do wymiany z innymi. Dotknij przycisku Gotowe.</string>
     <string name="help_home">Do wymiany danych identyfikacyjnych, zapewnić wszystkich użytkowników są w pobliżu lub na telefon. Przycisk Rozpocznij Wymiana będą wymieniać tylko sprawdzone dane kontaktowe.</string>
-    <string name="help_identity_menu">\n\n\nMożesz także zmienić dane osobowe na temat swojej tożsamości na tym ekranie, naciskając przycisk z nazwą. Spowoduje to wyświetlenie menu umożliwiające Edytuj kontakt, Utwórz nowy kontakt, lub użyć innego kontaktu.</string>
+    <string name="help_identity_menu">Możesz także zmienić dane osobowe na temat swojej tożsamości na tym ekranie, naciskając przycisk z nazwą. Spowoduje to wyświetlenie menu umożliwiające Edytuj kontakt, Utwórz nowy kontakt, lub użyć innego kontaktu.</string>
     <string name="help_Messages">Ten ekran wyświetla wszystkie stare wiadomości i załączników, które są wciąż dostępne do pobrania.</string>
     <string name="help_passphrase">Użyj tego ekranu, aby zalogować się do aplikacji z hasłem. Jeśli nie pamiętasz hasła, możesz wygenerować nowy klucz chroniony nowym hasłem przez dotknięcie Zapomniałeś długie hasło? przycisk. Stuknij nazwę użytkownika, aby przełączać się między wieloma kluczami.</string>
     <string name="help_PickRecip">Kontakt z kluczami SafeSlinger wyświetlane są tutaj, wybrać jedną, aby wysłać wiadomość.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Kontakt %s importowane.</string>
     <string name="state_TextCopiedToClipboard">Tekst skopiowany do schowka.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger przeznaczony jest do łatwego udostępniania danych identyfikacyjnych, osobiście lub przez telefon, uwierzytelnione, prywatne, i nienaruszone. Każda osoba, do dzielenia się z tworzy bezpieczny kanał end-to-end w celu wysłania wiadomości.\n\nCechy:\n-łatwo wymieniać informacje kontaktowe z innymi\n-bezpiecznie tekstów procy, zdjęcia, cokolwiek!\n-silnego szyfrowania chroni Twoje dane\n\nmail: %2$s\ninternetowej: %3$s</string>
+    <string name="text_About">SafeSlinger przeznaczony jest do łatwego udostępniania danych identyfikacyjnych, osobiście lub przez telefon, uwierzytelnione, prywatne, i nienaruszone. Każda osoba, do dzielenia się z tworzy bezpieczny kanał end-to-end w celu wysłania wiadomości.</string>
+    <string name="text_About1">Łatwo wymieniać informacje kontaktowe z innymi</string>
+    <string name="text_About2">Teksty bezpiecznie Sling, zdjęcia, cokolwiek!</string>
+    <string name="text_About3">Silna kryptografia chroni dane</string>
+    <string name="text_AboutEmail">e-mail: %s</string>
+    <string name="text_AboutFeat">Cechy:</string>
+    <string name="text_AboutWeb">WWW: %s</string>
     <string name="text_KeywordExchange">Wymiana</string>
     <string name="text_KeywordIdentity">Tożsamość</string>
     <string name="text_KeywordKey">Klucz</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Bezpieczeństwo</string>
     <string name="text_LanguagesProvidedBy">Języki świadczone przez:</string>
     <string name="text_RelatedSearchTerms">Związane:</string>
-    <string name="text_Requirements">Wymagania:.\n1 musi być zainstalowany na minimum 2 urządzeń.\n2.Połączenie internetowe musi być aktywne.</string>
+    <string name="text_Requirements">Wymagania:</string>
+    <string name="text_Requirements1">Musi być zainstalowany na minimum 2 urządzeń.</string>
+    <string name="text_Requirements2">Internet musi być aktywny.</string>
     <string name="text_SourceCodeRepo">Open Source: %s</string>
-    <string name="text_WhatsNew">-Stabilność rozwiązuje.</string>
+    <string name="text_WhatsNew">Stabilność rozwiązuje.</string>
 
     <string name="title_About">O</string>
     <string name="title_camera">Kamera</string>

@@ -140,7 +140,7 @@
 
     <string name="help_find">Sèvi ak ekran sa a yo mete non ou nan echanj ak lòt moun. Tape bouton an fèt lè fini.</string>
     <string name="help_home">Fè echanj done idantite, asire tout itilizatè yo ki tou pre oswa nan telefòn lan. Bouton an kòmanse Echanj ap echanje sèlman done yo tcheke kontak.</string>
-    <string name="help_identity_menu">\n\n\nOu kapab tou chanje done pèsonèl sou idantite ou sou ekran sa a pa frapan sou bouton an ak non w. Sa a ap montre yon meni ki pèmèt ou Edit kontak ou a, kreye New kontak, oswa sèvi ak yon lòt kontak.</string>
+    <string name="help_identity_menu">Ou kapab tou chanje done pèsonèl sou idantite ou sou ekran sa a pa frapan sou bouton an ak non w. Sa a ap montre yon meni ki pèmèt ou Edit kontak ou a, kreye New kontak, oswa sèvi ak yon lòt kontak.</string>
     <string name="help_Messages">Ekran sa a montre tout mesaj sot pase yo, ak dokiman ki toujou disponib pou download.</string>
     <string name="help_passphrase">Sèvi ak ekran sa a konekte ak aplikasyon an ak pasfraz ou. Si ou te bliye pasfraz ou, ou ka jenere yon nouvo kle pwoteje pa yon nouvo pasfraz pa frapan pasfraz la Bliye? bouton. Tape non an itilizatè ta chanje ant kle miltip.</string>
     <string name="help_PickRecip">Kontak ak kle SafeSlinger yo ap parèt isit la, chwazi youn voye mesaj ou a.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Kontak %s enpòte.</string>
     <string name="state_TextCopiedToClipboard">Tèks kopye nan papye.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger se fèt yo fasil pataje done idantite, nan moun oswa nan telefòn lan, otantifye, prive ak entak. Chak moun ou pataje ak kreye yon fen-a-fen chanèl ki an sekirite yo voye mesaj.\n\nFeatures:\n-Fasil echanj enfòmasyon kontak ak lòt moun\n-solidman tèks fistibal, foto, anyen!\n-Bonjan chifreman pwoteje enfòmasyon ou\n\nimel: %2$s\nentènèt: %3$s</string>
+    <string name="text_About">SafeSlinger se fèt yo fasil pataje done idantite, nan moun oswa nan telefòn lan, otantifye, prive ak entak. Chak moun ou pataje ak kreye yon fen-a-fen chanèl ki an sekirite yo voye mesaj.</string>
+    <string name="text_About1">Fasil echanj enfòmasyon kontak ak lòt moun</string>
+    <string name="text_About2">Byen fistibal tèks, foto, anyen!</string>
+    <string name="text_About3">Bonjan chifreman pwoteje enfòmasyon ou</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Features:</string>
+    <string name="text_AboutWeb">sit entènèt: %s</string>
     <string name="text_KeywordExchange">Echanj</string>
     <string name="text_KeywordIdentity">Idantite</string>
     <string name="text_KeywordKey">Kle</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Sekirite</string>
     <string name="text_LanguagesProvidedBy">Lang ki ofri pa:</string>
     <string name="text_RelatedSearchTerms">Ki gen rapò Regleman:</string>
-    <string name="text_Requirements">Kondisyon:.\n1 Yo dwe enstale sou yon minimòm de 2 ki bay sipò.\n2. Yon koneksyon entènèt yo dwe aktif.</string>
+    <string name="text_Requirements">Kondisyon:</string>
+    <string name="text_Requirements1">Yo dwe enstale sou yon minimòm de 2 ki bay sipò.</string>
+    <string name="text_Requirements2">Yon koneksyon entènèt yo dwe aktif.</string>
     <string name="text_SourceCodeRepo">sous louvri: %s</string>
-    <string name="text_WhatsNew">-Estabilite fiks.</string>
+    <string name="text_WhatsNew">Estabilite fiks.</string>
 
     <string name="title_About">Sou</string>
     <string name="title_camera">Pou Kamera</string>

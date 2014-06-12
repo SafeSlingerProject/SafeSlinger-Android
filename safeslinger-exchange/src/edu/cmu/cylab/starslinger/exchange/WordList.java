@@ -302,4 +302,24 @@ public class WordList {
         byte newVal = Integer.valueOf(i).byteValue();
         return newVal;
     }
+
+    public static String getWordList(byte[] hash, int length) {
+        StringBuilder hashList = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            hashList.append(WordList.getWord(hash[i], (i % 2 == 0)));
+            hashList.append(" ");
+        }
+        return hashList.toString().trim();
+    }
+
+    public static String getNumbersList(byte[] hash, int length) {
+        StringBuilder hashList = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            int number = WordList.btoi(hash[i]);
+            // even = 1-256, odd = 257-512
+            hashList.append(((i % 2 == 0) ? number : (number + 256)) + 1);
+            hashList.append("  ");
+        }
+        return hashList.toString().trim();
+    }
 }

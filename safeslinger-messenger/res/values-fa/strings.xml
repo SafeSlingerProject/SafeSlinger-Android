@@ -140,7 +140,7 @@
 
     <string name="help_find">با استفاده از این صفحه نمایش برای تنظیم نام و نام خانوادگی خود را به تبادل با دیگران است. را ضربه بزنید دکمه انجام می شود هنگامی که به پایان رسید.</string>
     <string name="help_home">برای تبادل اطلاعات هویت، اطمینان از تمام کاربران در نزدیکی و یا بر روی تلفن. روی دکمه آغاز اوراق بهادار خواهد تنها اطلاعات تماس چک مبادله.</string>
-    <string name="help_identity_menu">\n\n\nشما همچنین ممکن است داده های شخصی در مورد هویت خود را در این صفحه نمایش با ضربه زدن بر روی دکمه با نام خود را تغییر دهید. این منو به شما این امکان را ویرایش کنید تماس با شما را نمایش داده ، ایجاد مخاطب جدید ، یا استفاده از تماس با یکی دیگر.</string>
+    <string name="help_identity_menu">شما همچنین ممکن است داده های شخصی در مورد هویت خود را در این صفحه نمایش با ضربه زدن بر روی دکمه با نام خود را تغییر دهید. این منو به شما این امکان را ویرایش کنید تماس با شما را نمایش داده ، ایجاد مخاطب جدید ، یا استفاده از تماس با یکی دیگر.</string>
     <string name="help_Messages">این صفحه نمایش تمام پیام های گذشته، و فایل پیوست در که هنوز هم برای دانلود در دسترس است.</string>
     <string name="help_passphrase">با استفاده از این صفحه برای ورود به برنامه با عبارت عبور شما. اگر کلمه عبور خود را فراموش کرده اید، ممکن است شما یک کلید جدید حفاظت شده توسط یک کلمه عبور جدید را با ضربه زدن عبارت عبور را فراموش کرده اید تولید ؟ را فشار دهید. نام کاربری شیر برای سوئیچ بین کلید های متعدد.</string>
     <string name="help_PickRecip">تماس با کلید SafeSlinger اینجا نمایش داده وانتقادات تا پیام شما به</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">اطلاعات تماس %s وارد شده است.</string>
     <string name="state_TextCopiedToClipboard">متن کپی شده به کلیپ بورد.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger طراحی شده است تا به راحتی اطلاعات هویت به اشتراک گذاری ، حضوری و یا از طریق تلفن، تصدیق ، خصوصی ، و دست نخورده. هر شخصی که شما با به اشتراک گذاشتن یک کانال امن پایان به پایان برای ارسال پیام ایجاد می کند.\n\nویژگی ها:\n، به راحتی اطلاعات تماس تبادل با دیگران\n-ایمن متون زنجیر ، عکس ها، هر چیزی! %2$s\nوب:: %3$s رمزنگاری\n-قوی اطلاعات خود را\n\nایمیل به محافظت</string>
+    <string name="text_About">SafeSlinger طراحی شده است تا به راحتی اطلاعات هویت به اشتراک گذاری، حضوری و یا از طریق تلفن، تصدیق، خصوصی، و دست نخورده. هر شخصی که شما با به اشتراک گذاشتن یک کانال امن پایان به پایان برای ارسال پیام ایجاد می کند.</string>
+    <string name="text_About1">به راحتی اطلاعات تماس تبادل با دیگران</string>
+    <string name="text_About2">متون ایمن فلاخن، عکس ها، هر چیزی!</string>
+    <string name="text_About3">رمزنگاری قوی اطلاعات خود را محافظت می کند</string>
+    <string name="text_AboutEmail">ایمیل: %s</string>
+    <string name="text_AboutFeat">ویژگی ها:</string>
+    <string name="text_AboutWeb">وب: %s</string>
     <string name="text_KeywordExchange">مبادله</string>
     <string name="text_KeywordIdentity">هویت</string>
     <string name="text_KeywordKey">کلید</string>
@@ -344,7 +350,9 @@
     <string name="text_KeywordSecurity">امنیت</string>
     <string name="text_LanguagesProvidedBy">زبان های ارائه شده توسط:</string>
     <string name="text_RelatedSearchTerms">قوانین و مقررات مرتبط:</string>
-    <string name="text_Requirements">مورد نیاز:.\n1 باید در حداقل 2 دستگاه نصب شده است.\n2.اتصال به اینترنت باید فعال باشد.</string>
+    <string name="text_Requirements">مورد نیاز:</string>
+    <string name="text_Requirements1">باید در حداقل 2 دستگاه نصب شده است.</string>
+    <string name="text_Requirements2">اتصال به اینترنت باید فعال باشد.</string>
     <string name="text_SourceCodeRepo">منبع باز: %s</string>
     <string name="text_WhatsNew">ثبات رفع.</string>
 

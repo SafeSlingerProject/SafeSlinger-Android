@@ -140,7 +140,7 @@
 
     <string name="help_find">Gunakan layar ini untuk mengatur nama Anda untuk bertukar dengan orang lain. Tekan tombol Done ketika selesai.</string>
     <string name="help_home">Untuk bertukar data identitas, memastikan semua pengguna berada di dekatnya atau di telepon. Tombol Exchange Mulailah akan bertukar hanya data kontak diperiksa.</string>
-    <string name="help_identity_menu">\n\n\nAnda juga dapat mengubah data pribadi tentang identitas Anda pada layar ini dengan menekan tombol dengan nama Anda. Ini akan menampilkan menu yang memungkinkan Anda untuk mengedit kontak Anda, Buat kontak baru, atau Gunakan kontak lain.</string>
+    <string name="help_identity_menu">Anda juga dapat mengubah data pribadi tentang identitas Anda pada layar ini dengan menekan tombol dengan nama Anda. Ini akan menampilkan menu yang memungkinkan Anda untuk mengedit kontak Anda, Buat kontak baru, atau Gunakan kontak lain.</string>
     <string name="help_Messages">Layar ini menampilkan semua pesan masa lalu, dan lampiran yang masih tersedia untuk di-download.</string>
     <string name="help_passphrase">Gunakan layar ini untuk login ke aplikasi dengan passphrase Anda. Jika Anda lupa frasa sandi Anda, Anda dapat membuat kunci baru yang dilindungi oleh passphrase baru dengan mengetuk Passphrase Lupa? tombol. Ketuk nama pengguna untuk beralih di antara beberapa tombol.</string>
     <string name="help_PickRecip">Kontak dengan kunci SafeSlinger ditampilkan di sini, pilih salah satu untuk mengirim pesan ke.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Kontak %s impor.</string>
     <string name="state_TextCopiedToClipboard">Teks disalin ke clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger dirancang untuk dengan mudah berbagi data identitas, secara langsung atau melalui telepon, dikonfirmasi, swasta, dan utuh. Setiap orang yang Anda berbagi dengan menciptakan saluran aman end-to-end untuk mengirim pesan.\n\nFitur:\n-Mudah bertukar informasi kontak dengan orang lain\n-Aman teks sling, foto, apa saja! Kriptografi\n-kuat melindungi informasi Anda\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger dirancang untuk dengan mudah berbagi data identitas, secara langsung atau melalui telepon, dikonfirmasi, swasta, dan utuh. Setiap orang yang Anda berbagi dengan menciptakan saluran aman end-to-end untuk mengirim pesan.</string>
+    <string name="text_About1">Mudah bertukar informasi kontak dengan orang lain</string>
+    <string name="text_About2">Teks Aman sling, foto, apa saja!</string>
+    <string name="text_About3">Kriptografi yang kuat melindungi informasi Anda</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Fitur:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Pertukaran</string>
     <string name="text_KeywordIdentity">Identitas</string>
     <string name="text_KeywordKey">Kunci</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Keamanan</string>
     <string name="text_LanguagesProvidedBy">Bahasa yang disediakan oleh:</string>
     <string name="text_RelatedSearchTerms">Ketentuan terkait:</string>
-    <string name="text_Requirements">Persyaratan:.\n1 Harus diinstal pada minimal 2 perangkat.\n2. Koneksi Internet harus aktif.</string>
+    <string name="text_Requirements">Persyaratan:</string>
+    <string name="text_Requirements1">Harus diinstal pada minimal 2 perangkat.</string>
+    <string name="text_Requirements2">Koneksi Internet harus aktif.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Stabilitas perbaikan.</string>
+    <string name="text_WhatsNew">Stabilitas perbaikan.</string>
 
     <string name="title_About">Tentang</string>
     <string name="title_camera">Kamera</string>

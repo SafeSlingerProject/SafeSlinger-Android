@@ -140,7 +140,7 @@
 
     <string name="help_find">इतरांशी देवाणघेवाण करण्यासाठी आपले नाव निश्चित करण्यासाठी ही स्क्रीन वापरा. पूर्ण झाल्यावर पूर्ण झाले बटण टॅप करा.</string>
     <string name="help_home">ओळख डेटा अदलाबदल करण्यासाठी, सर्व वापरकर्त्यांसाठी जवळपास किंवा फोनवर असल्याची खात्री करा. सुरू एक्सचेंज बटण फक्त चेक संपर्क माहिती देवाणघेवाण होईल.</string>
-    <string name="help_identity_menu">\n\n\nआपण आपल्या नावासह बटणावर टॅप करून या पडद्यावर आपली ओळख बद्दल वैयक्तिक डेटा बदलू शकता. यामुळे आपण आपल्या संपर्क संपादित करण्यास परवानगी देते मेनू प्रदर्शित नवीन संपर्क तयार करा, किंवा इतर संपर्क वापरेल.</string>
+    <string name="help_identity_menu">आपण आपल्या नावासह बटणावर टॅप करून या पडद्यावर आपली ओळख बद्दल वैयक्तिक डेटा बदलू शकता. यामुळे आपण आपल्या संपर्क संपादित करण्यास परवानगी देते मेनू प्रदर्शित नवीन संपर्क तयार करा, किंवा इतर संपर्क वापरेल.</string>
     <string name="help_Messages">हा पडदा सर्व गेल्या संदेश, आणि तरीही डाउनलोड उपलब्ध आहेत संलग्नक दाखवतो.</string>
     <string name="help_passphrase">आपला सांकेतिक वाक्यांश ऍप्लिकेशनचा लॉगिन करण्यासाठी ही स्क्रीन वापरा. आपण आपला सांकेतिक वाक्यांश विसरल्यास, आपण विसरलात सांकेतिक वाक्यांश टॅप करून नवीन सांकेतिक संरक्षित एक नवीन की व्युत्पन्न करू शकता? बटण. एकाधिक कळा स्विच करण्यासाठी वापरकर्ता नाव टॅप करा.</string>
     <string name="help_PickRecip">SafeSlinger कळा वापरून संपर्क आपला संदेश पाठवण्यासाठी एक निवडा, येथे दाखवले जाते.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s संपर्क आयात.</string>
     <string name="state_TextCopiedToClipboard">मजकूर क्लिपबोर्डवर कॉपी केली गेली.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger खाजगी, प्रमाणीकृत, व्यक्ती किंवा फोनवर, सहज ओळख डेटा शेअर करण्यासाठी डिझाइन, आणि अखंड आहे. आपण शेअर प्रत्येक व्यक्तीला संदेश पाठवण्यासाठी एक सुरक्षित ओवरनंतर टू ओवरनंतर चॅनेल निर्माण करतो.\n\nवैशिष्ट्ये:\n-सुलभतेने इतर\n-सुरक्षितपणे गोफण ग्रंथ, फोटो, काहीही संपर्क माहिती देवाणघेवाण! %2$s\nवेब: %3$s\n-मजबूत क्रिप्टोग्राफी आपली माहिती\n\nईमेल रक्षण</string>
+    <string name="text_About">SafeSlinger, व्यक्ती किंवा फोनवर, सहज ओळख डेटा सामायिक करण्यासाठी डिझाइन प्रमाणीकृत, खाजगी, आणि अखंड आहे. आपण शेअर प्रत्येक व्यक्तीला संदेश पाठवण्यासाठी एक सुरक्षित ओवरनंतर टू ओवरनंतर चॅनेल निर्माण करतो.</string>
+    <string name="text_About1">सहज इतरांसह संपर्क माहिती देवाणघेवाण</string>
+    <string name="text_About2">सुरक्षितपणे गोफण ग्रंथ, फोटो, काहीही!</string>
+    <string name="text_About3">मजबूत क्रिप्टोग्राफी आपली माहिती रक्षण</string>
+    <string name="text_AboutEmail">ईमेल: %s</string>
+    <string name="text_AboutFeat">वैशिष्ट्ये:</string>
+    <string name="text_AboutWeb">वेब: %s</string>
     <string name="text_KeywordExchange">अदलाबदल</string>
     <string name="text_KeywordIdentity">ओळख</string>
     <string name="text_KeywordKey">किल्ली</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">सुरक्षितता</string>
     <string name="text_LanguagesProvidedBy">द्वारे प्रदान भाषा:</string>
     <string name="text_RelatedSearchTerms">संबंधित अटी:</string>
-    <string name="text_Requirements">आवश्यकता:.\n1 2 साधने किमान प्रतिष्ठापीत करणे आवश्यक आहे.\n2. इंटरनेट कनेक्शन सक्रिय असणे आवश्यक आहे.</string>
+    <string name="text_Requirements">आवश्यकता:</string>
+    <string name="text_Requirements1">2 साधने किमान प्रतिष्ठापीत करणे आवश्यक आहे.</string>
+    <string name="text_Requirements2">इंटरनेट कनेक्शन सक्रिय असणे आवश्यक आहे.</string>
     <string name="text_SourceCodeRepo">ओपन सोअर्स: %s</string>
-    <string name="text_WhatsNew">-स्थिरता निर्धारण करते.</string>
+    <string name="text_WhatsNew">स्थिरता निर्धारण करते.</string>
 
     <string name="title_About">विषयी</string>
     <string name="title_camera">कॅमेरा</string>

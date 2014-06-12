@@ -140,7 +140,7 @@
 
     <string name="help_find">Siv no screen mus teem koj lub npe mus pauv nrog lwm tus. Khob kom lub Tas khawm thaum tiav lawm.</string>
     <string name="help_home">Mus pauv tus kheej cov ntaub ntawv, kom tag nrho cov neeg siv yog cov nyob ze los yog hauv xov tooj. Pib lub Exchange khawm yuav sib pauv xwb lub soj ntsuam cov ntaub ntawv sib tiv tauj.</string>
-    <string name="help_identity_menu">\n\n\nTej zaum koj kuj yuav hloov koj tus kheej cov ntaub ntawv txog koj tus kheej nyob rau hauv kev tshuaj ntsuam no los tapping rau lub khawm nrog koj lub npe. Qhov no yuav tso saib ib lub hom phiaj rau cov zaub mov koj mus Kho kom raug neeg koj tiv tauj, Tsim Tshiab hu xovtooj rau, los sis Siv Lwm sib cuag.</string>
+    <string name="help_identity_menu">Tej zaum koj kuj yuav hloov koj tus kheej cov ntaub ntawv txog koj tus kheej nyob rau hauv kev tshuaj ntsuam no los tapping rau lub khawm nrog koj lub npe. Qhov no yuav tso saib ib lub hom phiaj rau cov zaub mov koj mus Kho kom raug neeg koj tiv tauj, Tsim Tshiab hu xovtooj rau, los sis Siv Lwm sib cuag.</string>
     <string name="help_Messages">Qhov no qhia tag nrho cov kev tshuaj ntsuam yav dhau los lus, thiab txuas hais tias yog tseem muaj nyob rau download.</string>
     <string name="help_passphrase">Siv no kev tshuaj ntsuam login mus rau hauv daim ntawv thov nrog koj passphrase. Yog hais tias koj tsis nco qab koj passphrase, tej zaum koj yuav tsim kom muaj ib tug tshiab tseem ceeb tiv thaiv los ntawm ib tug tshiab passphrase by tapping lub Passphrase Tsis nco qab? khawm. Khob kom tus neeg siv lub npe hloov ntawm ntau cov yuam sij.</string>
     <string name="help_PickRecip">Tiv tauj nrog SafeSlinger yuam sij yog displayed no, xaiv ib tug xa koj cov lus rau.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s tiv tauj txawv.</string>
     <string name="state_TextCopiedToClipboard">Lus copied rau daim ntawv tiag.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger yog tsim los yooj yim qhia yog leejtwg cov ntaub ntawv, nyob rau hauv tus neeg los yog hauv xov tooj, authenticated, ntiav, thiab si tauv. Txhua tus neeg uas koj qhia nrog tsim ib tug ruaj ntseg kawg-rau-kawg channel xa lus.\n\nnta:\n-yooj yim sib pauv kev sib cuag cov ntaub ntawv nrog lwm tus\n-Securely rab ka xus phau ntawv, cov duab, txhua yam!\n-Muaj zog cryptography tiv thaiv koj cov ntaub ntawv\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger yog tsim los yooj yim qhia yog leejtwg cov ntaub ntawv, nyob rau hauv tus neeg los yog hauv xov tooj, authenticated, ntiav, thiab si tauv. Txhua tus neeg uas koj qhia nrog tsim ib tug ruaj ntseg kawg-rau-kawg channel xa lus.</string>
+    <string name="text_About1">Yooj yim sib pauv kev sib cuag nrog lwm tus neeg cov ntaub ntawv</string>
+    <string name="text_About2">Securely rab ka xus phau ntawv, cov duab, txhua yam!</string>
+    <string name="text_About3">Muaj zog cryptography tiv thaiv koj cov ntaub ntawv</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Nta:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Txauv</string>
     <string name="text_KeywordIdentity">Yog leejtwg</string>
     <string name="text_KeywordKey">Ntsiab</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Security</string>
     <string name="text_LanguagesProvidedBy">Lus muab los ntawm:</string>
     <string name="text_RelatedSearchTerms">Related Cov ntsiab lus:</string>
-    <string name="text_Requirements">Yuav tsum tau muaj:\n1. Yuav tsum tau ntsia ib yam tsawg kawg nkaus ntawm 2 pab kiag li.\n2. Ib Internet kev twb kev txuas yuav tsum nquag.</string>
+    <string name="text_Requirements">Yuav tsum tau muaj:</string>
+    <string name="text_Requirements1">Yuav tsum tau ntsia ib yam tsawg kawg nkaus ntawm 2 pab kiag li.</string>
+    <string name="text_Requirements2">Ib Internet kev twb kev txuas yuav tsum nquag.</string>
     <string name="text_SourceCodeRepo">qhib tau qhov twg los: %s</string>
-    <string name="text_WhatsNew">-Ruaj ntseg kho.</string>
+    <string name="text_WhatsNew">Ruaj ntseg kho.</string>
 
     <string name="title_About">Txog</string>
     <string name="title_camera">Lub koob yees duab</string>

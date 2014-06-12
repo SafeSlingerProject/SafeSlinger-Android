@@ -140,7 +140,7 @@
 
     <string name="help_find">Na této obrazovce můžete nastavit své jméno vyměňovat s ostatními. Po dokončení klepněte na tlačítko Hotovo.</string>
     <string name="help_home">Pro výměnu dat identity, zajištění všichni uživatelé jsou v blízkosti nebo na telefonu. Tlačítko Začněte Exchange budou vyměňovat pouze zaškrtnuté kontaktní údaje.</string>
-    <string name="help_identity_menu">\n\n\nMůžete také změnit osobní údaje týkající se vaší identity na této obrazovce klepnutím na tlačítko s vaším jménem. Tím se zobrazí menu, která vám umožní upravit svůj kontakt, Vytvořit nový kontakt, nebo použijte jiný kontakt.</string>
+    <string name="help_identity_menu">Můžete také změnit osobní údaje týkající se vaší identity na této obrazovce klepnutím na tlačítko s vaším jménem. Tím se zobrazí menu, která vám umožní upravit svůj kontakt, Vytvořit nový kontakt, nebo použijte jiný kontakt.</string>
     <string name="help_Messages">Tato obrazovka zobrazuje všechny minulé zprávy a přílohy, které jsou stále k dispozici ke stažení.</string>
     <string name="help_passphrase">Na této obrazovce pro přihlášení do aplikace se svým přístupovým heslem. Pokud jste zapomněli své přístupové heslo, můžete vygenerovat nový klíč chráněn nové fráze, tím poklepáním na Zapomněli jste přístupové heslo? tlačítko. Klepněte na uživatelské jméno přepínat mezi více klíčů.</string>
     <string name="help_PickRecip">Zde jsou zobrazeny kontakty s SafeSlinger klíčů, vyberte jednu odeslat zprávu.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kontakty importovat.</string>
     <string name="state_TextCopiedToClipboard">Text zkopírován do schránky.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger je navržen tak, aby snadno sdílet data identity, osobně nebo po telefonu, ověřený, soukromí a neporušený. Každá osoba sdílíte s vytváří zabezpečený kanál end-to-end pro odesílání zpráv.\n\nVlastnosti:\n-Snadná výměna informací o kontaktech s ostatními\n-bezpečně praku texty, fotky, cokoliv!\n-Silné šifrování chrání vaše informace\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger je navržen tak, aby snadno sdílet data identity, osobně nebo po telefonu, ověřen, soukromé, a neporušený. Každá osoba sdílíte s vytváří zabezpečený kanál end-to-end pro odesílání zpráv.</string>
+    <string name="text_About1">Snadno vyměňovat kontaktní údaje s ostatními</string>
+    <string name="text_About2">Bezpečně Sling texty, fotky, cokoliv!</string>
+    <string name="text_About3">Silné šifrování chrání vaše informace</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Vlastnosti:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Výměna</string>
     <string name="text_KeywordIdentity">Identita</string>
     <string name="text_KeywordKey">Klíč</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Zabezpečení</string>
     <string name="text_LanguagesProvidedBy">Jazyky poskytované:</string>
     <string name="text_RelatedSearchTerms">Příbuzné termíny:</string>
-    <string name="text_Requirements">Požadavky:.\n1 Musí být nainstalována na minimálně 2 zařízení.\n2. Připojení kinternetu, musí být aktivní.</string>
+    <string name="text_Requirements">Požadavky:</string>
+    <string name="text_Requirements1">Musí být nainstalován na minimálně 2 zařízení.</string>
+    <string name="text_Requirements2">Připojení k Internetu musí být aktivní.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Stabilita řeší.</string>
+    <string name="text_WhatsNew">Stabilita řeší.</string>
 
     <string name="title_About">O</string>
     <string name="title_camera">Kamera</string>

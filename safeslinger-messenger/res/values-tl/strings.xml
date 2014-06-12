@@ -140,7 +140,7 @@
 
     <string name="help_find">Gamitin ang screen na ito upang itakda ang iyong pangalan upang magpalitan sa iba. I-tap ang pindutang Tapos na kapag tapos na.</string>
     <string name="help_home">Upang makipagpalitan ng data pagkakakilanlan, siguraduhin ang lahat ng mga gumagamit ay nasa malapit o sa telepono. Ang Simulan ang pindutan ng Exchange ay makipagpalitan lamang ang naka-check ang data ng contact.</string>
-    <string name="help_identity_menu">\n\n\nMaaari mo ring baguhin ang personal na data tungkol sa iyong pagkakakilanlan sa screen na ito sa pamamagitan ng pagtapik sa pindutan gamit ang iyong pangalan. Magpapakita ito ng menu na nagbibigay-daan sa iyo upang I-edit ang iyong mga contact, ang Lumikha ng Bagong contact, o Gamitin ang isa pang contact.</string>
+    <string name="help_identity_menu">Maaari mo ring baguhin ang personal na data tungkol sa iyong pagkakakilanlan sa screen na ito sa pamamagitan ng pagtapik sa pindutan gamit ang iyong pangalan. Magpapakita ito ng menu na nagbibigay-daan sa iyo upang I-edit ang iyong mga contact, ang Lumikha ng Bagong contact, o Gamitin ang isa pang contact.</string>
     <string name="help_Messages">Ipinapakita ng screen na ito ng lahat ng nakalipas mga mensahe, at mga kalakip na magagamit para sa pag-download pa rin.</string>
     <string name="help_passphrase">Gamitin ang screen na ito upang mag-login ang application gamit ang iyong passphrase. Kung nakalimutan mo ang iyong passphrase, maaari kang bumuo ng protektado ng isang bagong passphrase sa pamamagitan ng pag-tap sa Nakalimutan ang passphrase ng bagong key? na pindutan. I-tap ang user name upang lumipat sa pagitan ng maramihang mga susi.</string>
     <string name="help_PickRecip">Contacts na may SafeSlinger key ay ipinapakita dito, pumili ng isa upang ipadala ang iyong mensahe sa.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Import %s mga contact.</string>
     <string name="state_TextCopiedToClipboard">Teksto kinopya sa clipboard.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger ay dinisenyo upang madaling magbahagi ng data pagkakakilanlan, sa tao o sa telepono, sa napatotohanan, pribado, at buo. Ang bawat tao mong ibahagi sa lumilikha ng isang secure na end-to-end channel upang magpadala ng mga mensahe. Nagtatampok\n\n:\n-Madaling makipagpalitan ng impormasyon ng contact sa iba\n-Ligtas na mga teksto ng tirador, mga larawan, kahit ano!\n-Malakas cryptography pinoprotektahan ang iyong impormasyon\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger ay dinisenyo upang madaling magbahagi ng data pagkakakilanlan, sa tao o sa telepono, sa napatotohanan, pribado, at buo. Ang bawat tao mong ibahagi sa lumilikha ng isang secure na end-to-end channel upang magpadala ng mga mensahe.</string>
+    <string name="text_About1">Madaling makipagpalitan ng impormasyon sa pakikipag-ugnay sa iba</string>
+    <string name="text_About2">Ligtas na tirador mga teksto, mga larawan, kahit ano!</string>
+    <string name="text_About3">Malakas cryptography pinoprotektahan ang iyong impormasyon</string>
+    <string name="text_AboutEmail">e-mail: %s</string>
+    <string name="text_AboutFeat">Mga Tampok:</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Palitan</string>
     <string name="text_KeywordIdentity">Pagkakakilanlan</string>
     <string name="text_KeywordKey">Susi</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Katiwasayan</string>
     <string name="text_LanguagesProvidedBy">Mga wika na ibinigay ng:</string>
     <string name="text_RelatedSearchTerms">Mga kaugnay na Tuntunin:</string>
-    <string name="text_Requirements">Mga Kinakailangan:.\n1 Dapat mai-install sa isang minimum ng 2 mga aparato.\n2. Dapat maging aktibo ang isang koneksyon sa Internet.</string>
+    <string name="text_Requirements">Mga Kinakailangan:</string>
+    <string name="text_Requirements1">Dapat mai-install sa isang minimum ng 2 mga aparato.</string>
+    <string name="text_Requirements2">Dapat maging aktibo ang isang koneksyon sa Internet.</string>
     <string name="text_SourceCodeRepo">open source: %s</string>
-    <string name="text_WhatsNew">-Katatagan Inaayos.</string>
+    <string name="text_WhatsNew">Katatagan Inaayos.</string>
 
     <string name="title_About">Tungkol sa</string>
     <string name="title_camera">Camera</string>

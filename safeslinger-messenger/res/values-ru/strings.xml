@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">Импортировано %s контактов.</string>
     <string name="state_TextCopiedToClipboard">Текст скопирован в буфер обмена.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger предназначен для легкого обмена идентификационными данными, лично или по телефону, оставляя их приваными и неповрежденными. Каждый человек, которому вы поделиться с создает защищенный канал конца в конец, чтобы отправлять сообщения.\n\nОсобенности\n– Легкий обмен контактной информацией с другими\n-Надежно слинг тексты, фото, ничего!\n-Надежное шифрование защищает вашу информацию\n\nemail: %2$s\nweb: %3$s</string>
+    <string name="text_About">SafeSlinger предназначен для легкого обмена идентификационными данными, лично или по телефону, оставляя их приваными и неповрежденными. Каждый человек, которому вы поделиться с создает защищенный канал конца в конец, чтобы отправлять сообщения.</string>
+    <string name="text_About1">Легкий обмен контактной информацией с другими</string>
+    <string name="text_About2">Надежно слинг тексты, фото, ничего!</string>
+    <string name="text_About3">Надежное шифрование защищает вашу информацию</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Особенности</string>
+    <string name="text_AboutWeb">web: %s</string>
     <string name="text_KeywordExchange">Обмен</string>
     <string name="text_KeywordIdentity">Идентичность</string>
     <string name="text_KeywordKey">Ключ</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Безопасность</string>
     <string name="text_LanguagesProvidedBy">Переводы предоставлены:</string>
     <string name="text_RelatedSearchTerms">Связанные термины:</string>
-    <string name="text_Requirements">Требования:\n1. Должен быть установлен на минимум 2 устройства.\n2. Интернет-соединение должно быть активным.</string>
+    <string name="text_Requirements">Требования:</string>
+    <string name="text_Requirements1">Должен быть установлен на минимум 2 устройства.</string>
+    <string name="text_Requirements2">Интернет-соединение должно быть активным.</string>
     <string name="text_SourceCodeRepo">с открытым исходным кодом: %s</string>
-    <string name="text_WhatsNew">-Стабильность исправления.</string>
+    <string name="text_WhatsNew">Стабильность исправления.</string>
 
     <string name="title_About">О</string>
     <string name="title_camera">Камера</string>

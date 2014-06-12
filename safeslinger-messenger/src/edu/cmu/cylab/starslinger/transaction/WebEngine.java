@@ -42,6 +42,7 @@ import org.apache.http.params.HttpParams;
 import org.apache.http.params.HttpProtocolParams;
 
 import android.content.Context;
+import android.net.TrafficStats;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import edu.cmu.cylab.starslinger.ExchangeException;
@@ -118,9 +119,15 @@ public class WebEngine {
             httppost.setEntity(new ByteArrayEntity(requestBody));
 
             mTxTotalBytes = requestBody.length;
-            mTxStartBytes = android.net.TrafficStats.getTotalTxBytes();
-            mRxStartBytes = android.net.TrafficStats.getTotalRxBytes();
 
+            final long totalTxBytes = TrafficStats.getTotalTxBytes();
+            final long totalRxBytes = TrafficStats.getTotalRxBytes();
+            if (totalTxBytes != TrafficStats.UNSUPPORTED) {
+                mTxStartBytes = totalTxBytes;
+            }
+            if (totalRxBytes != TrafficStats.UNSUPPORTED) {
+                mRxStartBytes = totalRxBytes;
+            }
             response = mHttpClient.execute(httppost);
             reqData = responseHandler.handleResponse(response).getBytes("8859_1");
 
@@ -174,6 +181,7 @@ public class WebEngine {
      * 
      * @throws MessageNotFoundException
      */
+    @Deprecated
     public byte[] postFileAndroidC2DM(byte[] msgHashBytes, byte[] msgData, byte[] fileData,
             String recipientToken) throws ExchangeException, MessageNotFoundException {
         handleSizeRestictions(fileData);
@@ -210,6 +218,7 @@ public class WebEngine {
      * 
      * @throws MessageNotFoundException
      */
+    @Deprecated
     public byte[] postFileAppleUA(byte[] msgHashBytes, byte[] msgData, byte[] fileData,
             String recipientToken) throws ExchangeException, MessageNotFoundException {
 
@@ -234,6 +243,46 @@ public class WebEngine {
         mNotRegistered = false;
 
         byte[] resp = doPost(mUrlPrefix + mHost + "/postFile2" + mUrlSuffix, msg.array());
+
+        mNotRegistered = isNotRegisteredErrorCodes(resp);
+
+        resp = handleResponseExceptions(resp, 0);
+
+        return resp;
+    }
+
+    /**
+     * put a message, file, its meta-data, and retrieval id on the server
+     * 
+     * @throws MessageNotFoundException
+     */
+    public byte[] postMessage(byte[] msgHashBytes, byte[] msgData, byte[] fileData,
+            String recipientToken, int notifyType) throws ExchangeException,
+            MessageNotFoundException {
+
+        handleSizeRestictions(fileData);
+
+        int capacity = mVersionLen //
+                + 4 + msgHashBytes.length //
+                + 4 + recipientToken.length() //
+                + 4 + msgData.length //
+                + 4 + fileData.length //
+                + 4;
+        ByteBuffer msg = ByteBuffer.allocate(capacity);
+        msg.putInt(mVersion);
+        msg.putInt(msgHashBytes.length);
+        msg.put(msgHashBytes);
+        msg.putInt(recipientToken.length());
+        msg.put(recipientToken.getBytes());
+        msg.putInt(msgData.length);
+        msg.put(msgData);
+        msg.putInt(fileData.length);
+        msg.put(fileData);
+        msg.putInt(notifyType);
+
+        mNotRegistered = false;
+
+        byte[] resp = doPost(mUrlPrefix + mHost + "/postMessage" + mUrlSuffix, msg.array());
 
         mNotRegistered = isNotRegisteredErrorCodes(resp);
 
@@ -408,12 +457,22 @@ public class WebEngine {
     }
 
     public long get_txCurrentBytes() {
-        mTxCurrentBytes = android.net.TrafficStats.getTotalTxBytes() - mTxStartBytes;
+        final long totalTxBytes = TrafficStats.getTotalTxBytes();
+        if (totalTxBytes != TrafficStats.UNSUPPORTED) {
+            mTxCurrentBytes = totalTxBytes - mTxStartBytes;
+        } else {
+            mTxCurrentBytes = 0;
+        }
         return mTxCurrentBytes;
     }
 
     public long get_rxCurrentBytes() {
-        mRxCurrentBytes = android.net.TrafficStats.getTotalRxBytes() - mRxStartBytes;
+        final long totalRxBytes = TrafficStats.getTotalRxBytes();
+        if (totalRxBytes != TrafficStats.UNSUPPORTED) {
+            mRxCurrentBytes = totalRxBytes - mRxStartBytes;
+        } else {
+            mRxCurrentBytes = 0;
+        }
         return mRxCurrentBytes;
     }
 

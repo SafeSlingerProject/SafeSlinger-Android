@@ -140,7 +140,7 @@
 
     <string name="help_find">Uzu tiun ekranon por agordi vian nomon por interŝanĝi kun aliaj. Frapeti la Farita butonon kiam finis.</string>
     <string name="help_home">Interŝanĝi identecon datumoj, certigi al ĉiuj uzantoj estas proksimaj aŭ telefone. La Begin Interŝanĝo butono interŝanĝi nur la kontrolita kontakto datumojn.</string>
-    <string name="help_identity_menu">\n\n\nVi povas ankaŭ ŝanĝi personajn datumojn pri via identeco sur ĉi ekrano per frapeton sur la butono kun via nomo. Tio montros menuo kiu permesas vin Redaktu via kontakto, Create New kontakto, aŭ uzu alian kontakton.</string>
+    <string name="help_identity_menu">Vi povas ankaŭ ŝanĝi personajn datumojn pri via identeco sur ĉi ekrano per frapeton sur la butono kun via nomo. Tio montros menuo kiu permesas vin Redaktu via kontakto, Create New kontakto, aŭ uzu alian kontakton.</string>
     <string name="help_Messages">Ĉi ekrano montras ĉiujn pasinteco mesaĝoj, kaj ligiteco, kiuj estas ankoraŭ disponebla por elŝuti.</string>
     <string name="help_passphrase">Uzu tiun ekranon por ensaluti en la apliko kun via pasfrazon. Se vi forgesis vian pasfrazon, vi povas generi novan ŝlosilon protektitaj per nova pasfrazon per tapping la Forgot pasfrazon? butono. Frapeti la nomon de uzanto por ŝanĝi inter diversaj ŝlosiloj.</string>
     <string name="help_PickRecip">Kontaktoj kun SafeSlinger klavoj estas montrata tie, elektu unu por sendi vian mesaĝon al.</string>
@@ -335,7 +335,13 @@
     <string name="state_SomeContactsImported">%s kontaktoj importitaj.</string>
     <string name="state_TextCopiedToClipboard">Teksto kopiitaj al tondujo.</string>
 
-    <string name="text_About">%1$s\n\nSafeSlinger estas desegnita por facile kunhavigi identeco datumoj, en persono aŭ super la telefono, aŭtentikigita, privata, kaj la disfalinta. Ĉiu persono vin konigi kun kreas sekura finon al ekstrema kanalo por sendi mesaĝojn.\n\nElstaraĵoj:\n-Facile interŝanĝi kontakto informon kun aliaj\n-sekure jxetilo tekstojn, fotojn, nenion!\n-Fortaj ĉifriko protektas viajn informojn\n\nretadreso: %2$s\nretejon: %3$s</string>
+    <string name="text_About">SafeSlinger estas desegnita por facile kunhavigi identeco datumoj, en persono aŭ super la telefono, aŭtentikigita, privata, kaj la disfalinta. Ĉiu persono vin konigi kun kreas sekura finon al ekstrema kanalo por sendi mesaĝojn.</string>
+    <string name="text_About1">Facile interŝanĝi kontakto informon kun aliaj</string>
+    <string name="text_About2">Sekure jxeti tekstojn, fotojn, nenion!</string>
+    <string name="text_About3">Fortaj ĉifriko protektas viajn informojn</string>
+    <string name="text_AboutEmail">retpoŝto: %s</string>
+    <string name="text_AboutFeat">Elstaraĵoj:</string>
+    <string name="text_AboutWeb">retejo: %s</string>
     <string name="text_KeywordExchange">Interŝanĝo</string>
     <string name="text_KeywordIdentity">Identeco</string>
     <string name="text_KeywordKey">Ŝlosilo</string>
@@ -344,9 +350,11 @@
     <string name="text_KeywordSecurity">Sekureco</string>
     <string name="text_LanguagesProvidedBy">Lingvoj provizita per:</string>
     <string name="text_RelatedSearchTerms">Related Terms:</string>
-    <string name="text_Requirements">Postuloj:\n1. Devas esti instalita sur minimumo de 2 aparatoj.\n2. Interreta konekto devas esti aktiva.</string>
+    <string name="text_Requirements">Postuloj:</string>
+    <string name="text_Requirements1">Devas esti instalita sur minimumo de 2 aparatoj.</string>
+    <string name="text_Requirements2">Interreta konekto devas esti aktiva.</string>
     <string name="text_SourceCodeRepo">malfermita fonto: %s</string>
-    <string name="text_WhatsNew">-Stabileco korektas.</string>
+    <string name="text_WhatsNew">Stabileco korektas.</string>
 
     <string name="title_About">Pri</string>
     <string name="title_camera">Fotilo</string>
