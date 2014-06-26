@@ -168,9 +168,9 @@
     <string name="error_CannotSendFilesOver">Cannot send attachments greater than %d bytes in size.</string>
     <!-- error message (sentence case, period); used to warn when use attempts to attach an empty file to the message. -->
     <string name="error_CannotSendNullFile">Cannot send a null attachment.</string>
-    <!-- error message (sentence case, period); used to warn when failing to insert new contact data on the Setup screen. -->
+    <!-- error message (sentence case, period); used to warn when failing to insert new contact data. -->
     <string name="error_contactCreationFailure">Contact creation failed.</string>
-    <!-- error message (sentence case, period); used to warn when failing to insert new contact data after an exchange. -->
+    <!-- error message (sentence case, period); used to warn when failing to insert new contact data. -->
     <string name="error_ContactInsertFailed">Contact insert failed.</string>
     <!-- error message (sentence case, period); used to warn when the matching contact found on the Setup screen does not have a name. -->
     <string name="error_ContactNameMissing">This contact is missing a name, please edit.</string>
@@ -229,7 +229,7 @@
     <!-- error message (sentence case, period); used to warn when the audio recorder is unavailable from the system to record an audio message. iOS-only. -->
     <string name="error_RecoderError">Cannot prepare the audio recorder.</string>
     <!-- error message (sentence case, period); used to remind in a notification message that the user should exchange keys with at least one other user to make the app useful to them. -->
-    <string name="error_ReminderToSlingKeysToUseApp">To start, Sling Keys with another phone at the same time.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">To start, Sling Keys with another user at the same time.</string>
     <!-- error message (sentence case, period); used to warn when the user has not attached a file or typed any text message to send to the recipient after using the 'Send' button. -->
     <string name="error_selectDataToSend">You need an attachment or a text message to send.</string>
     <!-- error message (sentence case, period); used to warn when the shared file cannot be deleted. iOS-only. -->
@@ -281,6 +281,10 @@
 
     <!-- screen label (match English casing); used on the messages list screen and is used to describe how long ago a message was sent or received. %s = a time measurement, such as '5 minutes' or '2 hours'. -->
     <string name="label_ago">%s ago</string>
+    <!-- screen label (match English casing); used to display the name of the push service Type 7 = Amazon Device Messaging Service. -->
+    <string name="label_AmazonADMServiceName" translatable="false">Amazon Fire ADM</string>
+    <!-- screen label (match English casing); used to display the name of the Amazon Fire OS. -->
+    <string name="label_AmazonFireOS" translatable="false">Amazon</string>
     <!-- screen label (match English casing); used to display the name of the push service Type 1 = Android C2DM. -->
     <string name="label_AndroidC2DMServiceName" translatable="false">Android C2DM</string>
     <!-- screen label (match English casing); used to display the name of the push service Type 3 = Android GCM. -->
@@ -314,7 +318,7 @@
     <!-- error message (sentence case, period); used to warn the user that the key in the Recipients list screen has been exchanged once before with a different key from this user. -->
     <string name="label_DisabledExchSourceKeyChange">Your key has changed: Sling Keys again.</string>
     <!-- screen label (match English casing); used to remind users that an invite is only the beginning, and to Sling Keys before communicating. -->
-    <string name="label_DisabledNextSlingKeysWithThisPerson">To begin messaging, both users must Sling Keys at the same time.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">To begin messaging, Sling Keys with this user at the same time.</string>
     <!-- screen label (match English casing); used to label a message in the Messages list that has been saved in progress but not yet sent. -->
     <string name="label_Draft">DRAFT</string>
     <!-- error message (sentence case, period); used on the Recipient list screen to warn users that older key formats have been deprecated. Android-only. -->
@@ -337,7 +341,7 @@
     <string name="label_gb" translatable="false">%.1f GB</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Begin Exchange screen. -->
     <string name="label_Home">Tap your name to add or remove contact data, check items you wish to share, and tap Begin Exchange when others are ready to exchange:</string>
-    <!-- screen label (match English casing); used to denote a 'home' type of email or phone on the Setup screen. iOS-only. -->
+    <!-- screen label (match English casing); used to denote a 'home' type of email or phone contact type. iOS-only. -->
     <string name="label_hometag">Home</string>
     <!-- screen label (match English casing); used as a relative time label to the current time on the message list. %.0f = the number of whole hours. -->
     <string name="label_hours">%d hours</string>
@@ -363,8 +367,10 @@
     <string name="label_inviteSent">Invited</string>
     <!-- screen label (match English casing); used to display the name of the iPhone/iPad iOS. -->
     <string name="label_iOS" translatable="false">iOS</string>
-    <!-- screen label (match English casing); used to display the name of the push service Type 2 = Apple iOS APN. -->
-    <string name="label_iOSAPNServiceName" translatable="false">Apple iOS APN</string>
+    <!-- screen label (match English casing); used to display the name of the push service Type 6 = Apple iOS APN via APNS. -->
+    <string name="label_iOSAPNServiceName" translatable="false">Apple iOS APN direct</string>
+    <!-- screen label (match English casing); used to display the name of the push service Type 2 = Apple iOS APN via UA. -->
+    <string name="label_iOSUAServiceName" translatable="false">Apple iOS APN via UA</string>
     <!-- screen label (match English casing); used to indicate file size on the Messages list and Compose Message screens. %.0f = the number of whole kilobytes. -->
     <string name="label_kb" translatable="false">%.0f kb</string>
     <!-- screen label (match English casing); used to prefix the key generation date in the Recipients list and on the Compose Message screen. -->
@@ -385,7 +391,7 @@
     <string name="label_messageInviteStartMsg">Can we start secure messaging with the open source SafeSlinger iPhone or Android app?</string>
     <!-- screen label (match English casing); used as a relative time label to the current time on the message list. %.0f = the number of whole minutes. -->
     <string name="label_minutes">%d minutes</string>
-    <!-- screen label (match English casing); used to denote a 'mobile' type of email or phone on the Setup screen. iOS-only. -->
+    <!-- screen label (match English casing); used to denote a 'mobile' type of email or phone contact type. iOS-only. -->
     <string name="label_mobiletag">Mobile</string>
     <!-- screen label (match English casing); used as a label for the boolean toggle switching between all or recent-only recipients on recipient list. -->
     <string name="label_MostRecentOnly">Most recent only</string>
@@ -397,7 +403,7 @@
     <string name="label_numsharedfiles">%d Files to Share:</string>
     <!-- screen label (match English casing); used for the old thread (iOS only). -->
     <string name="label_OldThreads">Old Threads</string>
-    <!-- screen label (match English casing); used to denote a 'other' type of email or phone on the Setup screen. iOS-only. -->
+    <!-- screen label (match English casing); used to denote a 'other' type of email or phone contact type. iOS-only. -->
     <string name="label_othertag">Other</string>
     <!-- screen label (match English casing); used in the Passphrase screen text box as a prefix hint combined with a time measurement when, which is exponentially backed off on invalid passphrase entry, such as 'Retry in 14 seconds'. Used during back off while all user controls have been disabled. -->
     <string name="label_PassHintBackoff">Retry</string>
@@ -433,7 +439,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup delayed</string>
     <!-- screen label (match English casing); used on the Secure Introduction invitation dialog to denote the sender whom the user has performed a direct exchange with and holds direct trust. -->
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
-    <!-- screen label (match English casing); used above the editable field on the Setup and End Exchange screen to showing the address book account to use when saving or updating contacts. -->
+    <!-- screen label (match English casing); used above the editable field on the End Exchange screen to showing the address book account to use when saving or updating contacts. -->
     <string name="label_SaveAccount">Save Account</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the End Exchange screen. -->
     <string name="label_SaveInstruct">Check contacts you want to update in your address book, then tap Import to save secure contacts:</string>
@@ -509,7 +515,7 @@
     <string name="label_WinPhoneMPNServiceName" translatable="false">Windows Phone MPNS</string>
     <!-- screen label (match English casing); used to display the name of the Windows Phone OS. -->
     <string name="label_WinPhoneOS" translatable="false">Windows Phone</string>
-    <!-- screen label (match English casing); used to denote a 'work' type of email or phone on the Setup screen. iOS-only. -->
+    <!-- screen label (match English casing); used to denote a 'work' type of email or phone contact type. iOS-only. -->
     <string name="label_worktag">Work</string>
 
     <!-- menu option (title case); used to show the about dialog via the Settings screen. -->
@@ -741,7 +747,7 @@
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
     <!-- title (title case); used at the top of the menu when choosing whether to remove the current attachment or select a new one. -->
     <string name="title_FileOptions">Attachment Options</string>
-    <!-- title (title case); used at the top of the setup screen where we help the user find their own contact entry. -->
+    <!-- title (title case); used at the top of the setup screen. -->
     <string name="title_find">Setup</string>
     <!-- title (title case); used as the settings title when changing font size -->
     <string name="title_font_size">Select a font size</string>

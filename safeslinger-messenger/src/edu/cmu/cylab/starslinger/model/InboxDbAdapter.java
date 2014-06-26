@@ -273,6 +273,36 @@ public class InboxDbAdapter {
         }
     }
 
+    public Cursor fetchAllInboxGetMessagePending() {
+        synchronized (SafeSlinger.sDataLock) {
+            StringBuilder where = new StringBuilder();
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_TYPE + "=" + MessageDbAdapter.MESSAGE_TYPE_INBOX);
+            where.append(" AND ");
+            where.append(MessageDbAdapter.KEY_STATUS + "="
+                    + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
+            where.append(")");
+
+            Cursor c = query(true, DATABASE_TABLE, new String[] {
+                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
+                    MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
+                    MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
+                    MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
+                    MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
+                    MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ,
+                    MessageDbAdapter.KEY_SEEN, MessageDbAdapter.KEY_STATUS,
+                    MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
+                    MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
+                    MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
+                    MessageDbAdapter.KEY_RETRECEIPT
+            }, where.toString(), null, null, null, null, null);
+            if (c != null) {
+                return c;
+            }
+            return null;
+        }
+    }
+
     public Cursor fetchAllInboxDecryptPending() {
         synchronized (SafeSlinger.sDataLock) {
             StringBuilder where = new StringBuilder();
@@ -406,7 +436,11 @@ public class InboxDbAdapter {
             StringBuilder where = new StringBuilder();
             where.append("(");
             where.append(MessageDbAdapter.KEY_SEEN + "=" + MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
+            where.append(" AND ");
+            where.append(MessageDbAdapter.KEY_STATUS + "!="
+                    + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
             where.append(")");
+
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();
@@ -437,17 +471,12 @@ public class InboxDbAdapter {
             where.append(" AND ");
 
             where.append("(");
-
-            // not seen yet
             where.append(MessageDbAdapter.KEY_SEEN + "=" + MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
-
             where.append(" OR ");
-
-            // Received push nonce, but not Inbox body
             where.append(MessageDbAdapter.KEY_STATUS + "="
                     + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
-
             where.append(")");
+
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();

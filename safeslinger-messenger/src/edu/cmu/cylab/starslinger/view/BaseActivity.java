@@ -754,13 +754,13 @@ public class BaseActivity extends ActionBarActivity {
         if (msg != null) {
             int readDuration = msg.length() * SafeSlingerConfig.MS_READ_PER_CHAR;
             if (readDuration <= SafeSlingerConfig.SHORT_DELAY) {
-                Toast toast = Toast.makeText(BaseActivity.this, msg, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(BaseActivity.this, msg.trim(), Toast.LENGTH_SHORT);
                 toast.show();
             } else if (readDuration <= SafeSlingerConfig.LONG_DELAY) {
-                Toast toast = Toast.makeText(BaseActivity.this, msg, Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(BaseActivity.this, msg.trim(), Toast.LENGTH_LONG);
                 toast.show();
             } else {
-                showHelp(getString(R.string.app_name), msg);
+                showHelp(getString(R.string.app_name), msg.trim());
             }
         }
     }
@@ -1192,7 +1192,7 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     protected int doImportFromExchange(Bundle args, int recipSource, String introkeyid)
-            throws GeneralException {
+            throws GeneralException, CryptoMsgPeerKeyFormatException {
 
         if (args == null) {
             return 0;
@@ -1262,44 +1262,39 @@ public class BaseActivity extends ActionBarActivity {
         }
 
         ArrayList<String> importedKeys = new ArrayList<String>();
-        try {
 
-            // compare to list of references in address book, and save...
-            for (SlingerContact ce : cExch) {
-                String userid = null;
-                String exchKeyId = null;
-                long exchKeyDate = 0;
-                if (!TextUtils.isEmpty(ce.pubKey)) {
-                    exchKeyId = p.ExtractKeyIDfromSafeSlingerString(ce.pubKey);
-                    exchKeyDate = p.ExtractDateTimefromSafeSlingerString(ce.pubKey);
-                }
-
-                long matchingInviteRowId = getRecipientRowIdMatchingInvite(ce.lookup);
-
-                long ret = -1;
-                if (recipSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
-                    ret = dbRecipient.createExchangedRecipient(currentKeyId, exchdate.getTime(),
-                            ce.contactId, ce.lookup, ce.rawid, ce.name, ce.photoBytes, exchKeyId,
-                            exchKeyDate, userid, ce.pushTok, ce.notify, ce.pubKey.getBytes(),
-                            currentToken, currentNotify, matchingInviteRowId);
-                } else if (recipSource == RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION) {
-                    ret = dbRecipient.createIntroduceRecipient(currentKeyId, exchdate.getTime(),
-                            ce.contactId, ce.lookup, ce.rawid, ce.name, ce.photoBytes, exchKeyId,
-                            exchKeyDate, userid, ce.pushTok, ce.notify, ce.pubKey.getBytes(),
-                            introkeyid, currentToken, currentNotify, matchingInviteRowId);
-                }
-
-                if (ret < 0) {
-                    return importedKeys.size();
-                }
-
-                if (!importedKeys.contains(exchKeyId)) {
-                    importedKeys.add(exchKeyId);
-                }
+        // compare to list of references in address book, and save...
+        for (SlingerContact ce : cExch) {
+            String userid = null;
+            String exchKeyId = null;
+            long exchKeyDate = 0;
+            if (!TextUtils.isEmpty(ce.pubKey)) {
+                exchKeyId = p.ExtractKeyIDfromSafeSlingerString(ce.pubKey);
+                exchKeyDate = p.ExtractDateTimefromSafeSlingerString(ce.pubKey);
             }
 
-        } catch (CryptoMsgPeerKeyFormatException e) {
-            return importedKeys.size();
+            long matchingInviteRowId = getRecipientRowIdMatchingInvite(ce.lookup);
+
+            long ret = -1;
+            if (recipSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
+                ret = dbRecipient.createExchangedRecipient(currentKeyId, exchdate.getTime(),
+                        ce.contactId, ce.lookup, ce.rawid, ce.name, ce.photoBytes, exchKeyId,
+                        exchKeyDate, userid, ce.pushTok, ce.notify, ce.pubKey.getBytes(),
+                        currentToken, currentNotify, matchingInviteRowId);
+            } else if (recipSource == RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION) {
+                ret = dbRecipient.createIntroduceRecipient(currentKeyId, exchdate.getTime(),
+                        ce.contactId, ce.lookup, ce.rawid, ce.name, ce.photoBytes, exchKeyId,
+                        exchKeyDate, userid, ce.pushTok, ce.notify, ce.pubKey.getBytes(),
+                        introkeyid, currentToken, currentNotify, matchingInviteRowId);
+            }
+
+            if (ret < 0) {
+                return importedKeys.size();
+            }
+
+            if (!importedKeys.contains(exchKeyId)) {
+                importedKeys.add(exchKeyId);
+            }
         }
 
         return importedKeys.size();

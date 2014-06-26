@@ -512,13 +512,13 @@ public class ComposeFragment extends Fragment {
         if (msg != null) {
             int readDuration = msg.length() * SafeSlingerConfig.MS_READ_PER_CHAR;
             if (readDuration <= SafeSlingerConfig.SHORT_DELAY) {
-                Toast toast = Toast.makeText(this.getActivity(), msg, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(this.getActivity(), msg.trim(), Toast.LENGTH_SHORT);
                 toast.show();
             } else if (readDuration <= SafeSlingerConfig.LONG_DELAY) {
-                Toast toast = Toast.makeText(this.getActivity(), msg, Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this.getActivity(), msg.trim(), Toast.LENGTH_LONG);
                 toast.show();
             } else {
-                showHelp(getString(R.string.app_name), msg);
+                showHelp(getString(R.string.app_name), msg.trim());
             }
         }
     }

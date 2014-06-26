@@ -59,6 +59,7 @@ public class IntroductionActivity extends BaseActivity {
     public static final int VIEW_RECIPSEL1 = 721;
     public static final int VIEW_RECIPSEL2 = 722;
     public static final int RESULT_SEND = 724;
+    public static final int RESULT_SLINGKEYS = 723;
     public static final int RESULT_RESTART = 732;
 
     private TextView mTextViewRecipName2;
@@ -294,6 +295,10 @@ public class IntroductionActivity extends BaseActivity {
 
             case VIEW_RECIPSEL1:
                 switch (resultCode) {
+                    case PickRecipientsActivity.RESULT_SLINGKEYS:
+                        setResult(RESULT_SLINGKEYS);
+                        finish();
+                        break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient1 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
 
@@ -322,6 +327,10 @@ public class IntroductionActivity extends BaseActivity {
 
             case VIEW_RECIPSEL2:
                 switch (resultCode) {
+                    case PickRecipientsActivity.RESULT_SLINGKEYS:
+                        setResult(RESULT_SLINGKEYS);
+                        finish();
+                        break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient2 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
 
@@ -354,7 +363,7 @@ public class IntroductionActivity extends BaseActivity {
     private void showRecipientSelect(int requestCode) {
         Intent intent = new Intent(IntroductionActivity.this, PickRecipientsActivity.class);
         intent.putExtra(extra.ALLOW_EXCH, true);
-        intent.putExtra(extra.ALLOW_INTRO, false);
+        intent.putExtra(extra.ALLOW_INTRO, true);
         startActivityForResult(intent, requestCode);
     }
 

@@ -1667,6 +1667,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 updatePassCacheTimer();
                 showNote(R.string.state_PassphraseUpdated);
                 setPassphraseStatus(true);
+                if (mine != null) {
+                    // save loaded pub key for slinging keys later
+                    sSenderKey = mine.getSafeSlingerString();
+                }
             } else {
                 setPassphraseStatus(false);
             }
@@ -1816,6 +1820,10 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
 
             case VIEW_SENDINVITE_ID:
                 switch (resultCode) {
+                    case IntroductionActivity.RESULT_SLINGKEYS:
+                        setTab(Tabs.SLINGKEYS);
+                        restart();
+                        break;
                     case IntroductionActivity.RESULT_SEND:
                         if (data != null) {
 
@@ -1879,8 +1887,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                                 sendMsg2.setText(text2);
 
                             // create vcard data
-                            byte[] vCard1 = null;
-                            byte[] vCard2 = null;
+                            String vCard1 = null;
+                            String vCard2 = null;
                             try {
                                 vCard1 = SSUtil.generateRecipientVCard(recip1);
                                 vCard2 = SSUtil.generateRecipientVCard(recip2);
@@ -1890,20 +1898,43 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                                 break;
                             }
 
-                            if (vCard1 == null || vCard2 == null) {
+                            if (TextUtils.isEmpty(vCard1) || TextUtils.isEmpty(vCard2)) {
                                 showNote(R.string.error_VcardParseFailure);
                                 restart();
                                 break;
                             }
 
-                            sendMsg1.setFileData(vCard2);
-                            sendMsg1.setFileSize(vCard2.length);
+                            // ensure push token and pub key in vCard
+                            StringBuilder errors = new StringBuilder();
+                            if (!vCard1.contains(SafeSlingerConfig.APP_KEY_PUSHTOKEN)) {
+                                errors.append(recip1.getName() + " Push is missing").append("\n");
+                            }
+                            if (!vCard1.contains(SafeSlingerConfig.APP_KEY_PUBKEY)) {
+                                errors.append(recip1.getName() + " PubKey is missing").append("\n");
+                            }
+                            if (!vCard2.contains(SafeSlingerConfig.APP_KEY_PUSHTOKEN)) {
+                                errors.append(recip2.getName() + " Push is missing").append("\n");
+                            }
+                            if (!vCard2.contains(SafeSlingerConfig.APP_KEY_PUBKEY)) {
+                                errors.append(recip2.getName() + " PubKey is missing").append("\n");
+                            }
+                            if (errors.length() > 0) {
+                                showNote(errors.toString());
+                                restart();
+                                break;
+                            }
+
+                            byte[] bVC1 = vCard1.getBytes();
+                            byte[] bVC2 = vCard2.getBytes();
+
+                            sendMsg1.setFileData(bVC2);
+                            sendMsg1.setFileSize(bVC2.length);
                             sendMsg1.setFileName(SafeSlingerConfig.INTRODUCTION_VCF);
                             sendMsg1.setFileType(SafeSlingerConfig.MIMETYPE_CLASS + "/"
                                     + SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO);
 
-                            sendMsg2.setFileData(vCard1);
-                            sendMsg2.setFileSize(vCard1.length);
+                            sendMsg2.setFileData(bVC1);
+                            sendMsg2.setFileSize(bVC1.length);
                             sendMsg2.setFileName(SafeSlingerConfig.INTRODUCTION_VCF);
                             sendMsg2.setFileType(SafeSlingerConfig.MIMETYPE_CLASS + "/"
                                     + SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO);
@@ -1953,12 +1984,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
             case VIEW_SAVE_ID:
                 switch (resultCode) {
                     case SaveActivity.RESULT_SAVE:
-                        // locally store trusted exchanged items
                         SafeSlingerPrefs.setFirstExchangeComplete(true);
+                        // locally store trusted exchanged items
                         runThreadImportFromExchange(data.getExtras(),
                                 RecipientDbAdapter.RECIP_SOURCE_EXCHANGE, null);
                         break;
                     case SaveActivity.RESULT_SELNONE:
+                        SafeSlingerPrefs.setFirstExchangeComplete(true);
                         int exchanged = data.getExtras().getInt(extra.EXCHANGED_TOTAL);
                         showNote(String.format(getString(R.string.state_SomeContactsImported), "0/"
                                 + exchanged));
@@ -2419,6 +2451,8 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                     args.putString(extra.ERROR, getString(R.string.error_UnableToSaveRecipientInDB));
                 } catch (GeneralException e) {
                     args.putString(extra.ERROR, e.getLocalizedMessage());
+                } catch (CryptoMsgPeerKeyFormatException e) {
+                    args.putString(extra.ERROR, e.getLocalizedMessage());
                 }
 
                 msg.arg2 = imported;
@@ -2565,13 +2599,13 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         initOnReload();
     }
 
-    protected void postProgressMsgList(boolean inInboxTable, long rowId, String msg) {
+    protected void postProgressMsgList(boolean isInboxTable, long rowId, String msg) {
         try {
             if (mTabsAdapter != null) {
                 MessagesFragment mf = (MessagesFragment) mTabsAdapter
                         .findFragmentByPosition(Tabs.MESSAGE.ordinal());
                 if (mf != null) {
-                    mf.postProgressMsgList(inInboxTable, rowId, msg);
+                    mf.postProgressMsgList(isInboxTable, rowId, msg);
                 }
             }
         } catch (IllegalStateException e) {
@@ -2610,7 +2644,14 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 }
 
                 publishProgress(getString(R.string.prog_ReceivingFile));
-                byte[] resp = mWeb.getMessage(msgHashBytes);
+                byte[] resp = null;
+                try {
+                    resp = mWeb.getMessage(msgHashBytes);
+                } catch (MessageNotFoundException e) {
+                    if (!dbInbox.updateInboxExpired(mInbox.getRowId())) {
+                        return getString(R.string.error_UnableToUpdateMessageInDB);
+                    }
+                }
 
                 if (resp == null || resp.length == 0) {
                     return getString(R.string.error_InvalidIncomingMessage);
@@ -2671,12 +2712,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
                 return e.getLocalizedMessage();
             } catch (CryptoMsgException e) {
                 return e.getLocalizedMessage();
-            } catch (MessageNotFoundException e) {
-                InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(getApplicationContext());
-                if (!dbInbox.updateInboxExpired(mInbox.getRowId())) {
-                    return getString(R.string.error_UnableToUpdateMessageInDB);
-                }
-
             }
             return null;
         }
@@ -3184,7 +3219,6 @@ public class HomeActivity extends BaseActivity implements Eula.OnEulaAgreedTo,
         sProg = null;
         sProgressMsg = null;
         sRecip = null;
-        sSenderKey = null;
         sSendMsg = new MessageData();
         sWebError = null;
         sEditPassPhrase = null;

@@ -280,7 +280,7 @@ public abstract class C2DMBaseReceiver extends IntentService {
 
     protected void showNote(String msg) {
         MyLog.i(TAG, msg);
-        Toast toast = Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), msg.trim(), Toast.LENGTH_LONG);
         toast.show();
     }
 

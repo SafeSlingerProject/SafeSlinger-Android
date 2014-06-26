@@ -97,13 +97,13 @@ public class BaseActivity extends Activity {
         if (msg != null) {
             int readDuration = msg.length() * ExchangeConfig.MS_READ_PER_CHAR;
             if (readDuration <= ExchangeConfig.SHORT_DELAY) {
-                Toast toast = Toast.makeText(BaseActivity.this, msg, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(BaseActivity.this, msg.trim(), Toast.LENGTH_SHORT);
                 toast.show();
             } else if (readDuration <= ExchangeConfig.LONG_DELAY) {
-                Toast toast = Toast.makeText(BaseActivity.this, msg, Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(BaseActivity.this, msg.trim(), Toast.LENGTH_LONG);
                 toast.show();
             } else {
-                showHelp(getString(R.string.lib_name), msg);
+                showHelp(getString(R.string.lib_name), msg.trim());
             }
         }
     }

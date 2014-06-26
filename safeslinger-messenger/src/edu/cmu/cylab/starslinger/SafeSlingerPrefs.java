@@ -34,6 +34,7 @@ public class SafeSlingerPrefs {
 
     public static final int DEFAULT_CURRENT_USER = 0;
     public static final long DEFAULT_PUSHREG_BACKOFF = 5000;
+    public static final long DEFAULT_PENDING_GETMSG_BACKOFF = 1000;
     public static final long DEFAULT_PASSPHRASE_BACKOFF = 1000;
     private static final int DEFAULT_PPCACHETTL = (5 * 60);
     private static final boolean DEFAULT_SHOW_WALKTHROUGH = true;
@@ -111,6 +112,7 @@ public class SafeSlingerPrefs {
         public static final String SHOW_SLING_KEYS_REMIND = "showSlingKeysReminder";
         public static final String SHOW_WALKTHROUGH = "ShowWalkthrough";
         public static final String TEMPKEY_SYNCACCOUNT_LIST = "keyTempListContactSyncAccount";
+        public static final String PENDING_GETMSG_BACKOFF_TIMEOUT = "PendingGetMessageBackoff";
     }
 
     public static final String PREFS_RECOVER_YES = "MyPrefsFile";
@@ -473,6 +475,14 @@ public class SafeSlingerPrefs {
 
     public static void setFileManagerRootDir(String rootDir) {
         setString(pref.FILEMANAGER_ROOTDIR, rootDir, false);
+    }
+
+    public static long getPendingGetMessageBackoff() {
+        return getLong(pref.PENDING_GETMSG_BACKOFF_TIMEOUT, DEFAULT_PENDING_GETMSG_BACKOFF, false);
+    }
+
+    public static void setPendingGetMessageBackoff(long backoff) {
+        setLong(pref.PENDING_GETMSG_BACKOFF_TIMEOUT, backoff, false);
     }
 
     // Generic getters and setters....

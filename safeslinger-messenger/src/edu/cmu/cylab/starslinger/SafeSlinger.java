@@ -29,6 +29,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
@@ -46,19 +47,31 @@ import android.app.backup.BackupManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.Base64;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
+import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
+import edu.cmu.cylab.starslinger.crypto.CryptoMsgPacketSizeException;
+import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
 import edu.cmu.cylab.starslinger.crypto.PRNGFixes;
 import edu.cmu.cylab.starslinger.model.CachedPassPhrase;
 import edu.cmu.cylab.starslinger.model.InboxDbAdapter;
+import edu.cmu.cylab.starslinger.model.MessageData;
+import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
+import edu.cmu.cylab.starslinger.model.MessagePacket;
+import edu.cmu.cylab.starslinger.model.MessageRow;
 import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
+import edu.cmu.cylab.starslinger.transaction.MessageNotFoundException;
+import edu.cmu.cylab.starslinger.transaction.WebEngine;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class SafeSlinger extends Application {
@@ -71,6 +84,7 @@ public class SafeSlinger extends Application {
     private ConnectivityManager mConnectivityManager;
     private static boolean sPassEntryOpen = false;
     private static boolean sAppVisible;
+    private static Handler sHandler;
 
     @Override
     public void onCreate() {
@@ -108,6 +122,9 @@ public class SafeSlinger extends Application {
         if (inCount > 0) {
             C2DMReceiver.doUnseenMessagesNotification(this, inCount);
         }
+
+        // attempt to retry pending message downloads
+        checkForMissedMessages();
     }
 
     synchronized public static SafeSlinger getApplication() {
@@ -418,4 +435,162 @@ public class SafeSlinger extends Application {
         // always at least 1
         return userNumber > 1 ? userNumber : 1;
     }
+
+    public void checkForMissedMessages() {
+        SafeSlingerPrefs
+                .setPendingGetMessageBackoff(SafeSlingerPrefs.DEFAULT_PENDING_GETMSG_BACKOFF);
+        if (sHandler == null) {
+            sHandler = new Handler();
+        }
+        sHandler.removeCallbacks(getPendingMessageDownloads);
+        sHandler.postDelayed(getPendingMessageDownloads,
+                SafeSlingerPrefs.getPendingGetMessageBackoff());
+    }
+
+    private Runnable getPendingMessageDownloads = new Runnable() {
+
+        @Override
+        public void run() {
+            runThreadGetPendingMessages();
+        }
+    };
+
+    public void runThreadGetPendingMessages() {
+        Thread t = new Thread() {
+
+            @Override
+            public void run() {
+                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+                InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(getApplicationContext());
+                WebEngine web = new WebEngine(getApplication(),
+                        SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
+                int pendingDownloads = 0;
+                int successDownloads = 0;
+
+                Cursor c = dbInbox.fetchAllInboxGetMessagePending();
+                if (c != null) {
+                    pendingDownloads = c.getCount();
+                    while (c.moveToNext()) {
+                        try {
+                            MessageData inRow = new MessageRow(c, true);
+
+                            if (!SafeSlinger.getApplication().isOnline()) {
+                                break;
+                            }
+
+                            byte[] msgHashBytes;
+                            try {
+                                msgHashBytes = Base64.decode(inRow.getMsgHash().getBytes(),
+                                        Base64.NO_WRAP);
+                            } catch (IllegalArgumentException e) {
+                                e.printStackTrace();
+                                break;
+                            }
+
+                            byte[] resp = null;
+                            try {
+                                resp = web.getMessage(msgHashBytes);
+                            } catch (MessageNotFoundException e) {
+                                if (!dbInbox.updateInboxExpired(inRow.getRowId())) {
+                                    break;
+                                }
+                            }
+
+                            if (resp == null || resp.length == 0) {
+                                break;
+                            }
+
+                            byte[] encMsg = WebEngine.parseMessageResponse(resp);
+                            if (encMsg == null) {
+                                break;
+                            }
+
+                            if (Arrays.equals(msgHashBytes, CryptTools.computeSha3Hash(encMsg))) {
+                                CryptoMsgProvider tool = CryptoMsgProvider
+                                        .createInstance(SafeSlinger.isLoggable());
+                                String keyid = null;
+                                try {
+                                    keyid = tool.ExtractKeyIDfromPacket(encMsg);
+                                } catch (CryptoMsgPacketSizeException e) {
+                                    e.printStackTrace();
+                                }
+                                // save downloaded initial message
+                                if (!dbInbox.updateInboxDownloaded(inRow.getRowId(), encMsg,
+                                        MessageDbAdapter.MESSAGE_IS_SEEN, keyid)) {
+                                    break;
+                                }
+
+                                // got it! let the user know it's here...
+                                successDownloads++;
+                                C2DMReceiver.doUnseenMessagesNotification(
+                                        SafeSlinger.getApplication(), successDownloads);
+
+                            } else {
+                                break;
+                            }
+
+                            String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
+                                    .getKeyIdString());
+
+                            // if requested, and logged in, try to decrypt
+                            // message
+                            if (!TextUtils.isEmpty(pass) && SafeSlingerPrefs.getAutoDecrypt()) {
+                                StringBuilder keyidout = new StringBuilder();
+                                byte[] plain = CryptTools.decryptMessage(inRow.getEncBody(), pass,
+                                        keyidout);
+                                MessagePacket push = new MessagePacket(plain);
+
+                                // move encrypted message to decrypted
+                                // storage...
+                                // add decrypted
+                                long rowIdMsg = dbMessage.createMessageDecrypted(inRow, push,
+                                        keyidout.toString());
+                                if (rowIdMsg == -1) {
+                                    return; // unable to save progress
+                                } else {
+                                    // remove encrypted
+                                    dbInbox.deleteInbox(inRow.getRowId());
+                                }
+                            }
+                        } catch (OutOfMemoryError e) {
+                            e.printStackTrace();
+                        } catch (ExchangeException e) {
+                            e.printStackTrace();
+                        } catch (ClassNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (CryptoMsgException e) {
+                            e.printStackTrace();
+                        } catch (GeneralException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    c.close();
+                }
+
+                // if we missed any downloads, set to try again using
+                // exponential backoff later as long as message might be
+                // available
+                if (sHandler == null) {
+                    sHandler = new Handler();
+                }
+                sHandler.removeCallbacks(getPendingMessageDownloads);
+                long backoff = SafeSlingerPrefs.getPendingGetMessageBackoff();
+                if (pendingDownloads > successDownloads
+                        && backoff < SafeSlingerConfig.MESSAGE_EXPIRATION_MS) {
+                    // check later
+                    long newBackoff = backoff * 2;
+                    SafeSlingerPrefs.setPendingGetMessageBackoff(newBackoff);
+                    sHandler.postDelayed(getPendingMessageDownloads, newBackoff);
+                } else {
+                    // remove checking
+                    SafeSlingerPrefs
+                            .setPendingGetMessageBackoff(SafeSlingerPrefs.DEFAULT_PENDING_GETMSG_BACKOFF);
+                }
+            }
+        };
+        t.start();
+    }
+
 }

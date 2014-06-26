@@ -112,6 +112,16 @@ public class SafeSlingerConfig {
      * Blackberry. Value: 5.
      */
     public static final int NOTIFY_BLACKBERRYPS = 5;
+    /***
+     * This token type receives messages via Apple's Notification Service,
+     * directly through APNS for iOS. Value: 6.
+     */
+    public static final int NOTIFY_APPLEAPNS = 6;
+    /***
+     * This token type receives messages via Amazon Device Messaging for Amazon
+     * Fire OS. Value: 7.
+     */
+    public static final int NOTIFY_AMAZONADM = 7;
 
     public static class Intent {
         public static final String ACTION_MESSAGENOTIFY = "edu.cmu.cylab.starslinger.action.MESSAGES";

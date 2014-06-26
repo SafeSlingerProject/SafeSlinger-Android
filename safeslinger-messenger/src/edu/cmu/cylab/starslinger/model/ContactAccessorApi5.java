@@ -926,7 +926,7 @@ public class ContactAccessorApi5 extends ContactAccessor {
     protected void showNote(Activity act, String msg) {
         MyLog.i(TAG, msg);
         if (msg != null) {
-            Toast toast = Toast.makeText(act, msg, Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(act, msg.trim(), Toast.LENGTH_LONG);
             toast.show();
         }
     }

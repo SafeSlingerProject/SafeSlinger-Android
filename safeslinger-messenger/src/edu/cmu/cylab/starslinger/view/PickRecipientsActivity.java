@@ -102,6 +102,9 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         listViewRecipients = (ListView) findViewById(R.id.RecipPickTableLayoutMembers);
         tvInstruct = (TextView) findViewById(R.id.tvInstruct);
 
+        // always default to checked on view creation
+        SafeSlingerPrefs.setShowRecentRecipOnly(true);
+
         cbMostRecentOnly.setChecked(SafeSlingerPrefs.getShowRecentRecipOnly());
 
         listViewRecipients.setOnScrollListener(new OnScrollListener() {

@@ -143,9 +143,12 @@ public class C2DMReceiver extends C2DMBaseReceiver {
                     respGetMsg = mWeb.getMessage(msgHashBytes);
                 } catch (ExchangeException e) {
                     e.printStackTrace();
+                    SafeSlinger.getApplication().checkForMissedMessages();
                     break;
                 } catch (MessageNotFoundException e) {
-                    e.printStackTrace();
+                    if (!dbInbox.updateInboxExpired(rowIdInbox)) {
+                        break;
+                    }
                     break;
                 }
             }
@@ -264,12 +267,14 @@ public class C2DMReceiver extends C2DMBaseReceiver {
             int inCount = dbInbox.getUnseenInboxCount();
             int msgCount = dbMessage.getUnseenMessageCount();
             int allCount = inCount + msgCount;
-            doUnseenMessagesNotification(this, allCount);
+            if (allCount > 0) {
+                doUnseenMessagesNotification(this, allCount);
 
-            // attempt to update messages if in view...
-            Intent updateIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEUPDATE);
-            updateIntent.putExtra(extra.MESSAGE_ROW_ID, rowIdMsg);
-            sendBroadcast(updateIntent);
+                // attempt to update messages if in view...
+                Intent updateIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEUPDATE);
+                updateIntent.putExtra(extra.MESSAGE_ROW_ID, rowIdMsg);
+                sendBroadcast(updateIntent);
+            }
         }
     }
 

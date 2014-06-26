@@ -311,8 +311,8 @@ public class MessageDbAdapter {
 
             // move values from inbox database
             values.put(KEY_DATE_RECV, data.getDateRecv()); // Received
-            values.put(KEY_TYPE, data.isInbox() ? MESSAGE_TYPE_INBOX : MESSAGE_TYPE_SENT); // inbox/sent
-            values.put(KEY_SEEN, data.isSeen() ? MESSAGE_IS_SEEN : MESSAGE_IS_NOT_SEEN); // seen
+            values.put(KEY_TYPE, MESSAGE_TYPE_INBOX); // inbox/sent
+            values.put(KEY_SEEN, MESSAGE_IS_NOT_SEEN); // seen
             values.put(KEY_MSGHASH, data.getMsgHash()); // file
             values.put(KEY_ENCBODY, data.getEncBody()); // encoded
             values.put(KEY_STATUS, data.getStatus()); // complete/failed
@@ -537,7 +537,10 @@ public class MessageDbAdapter {
             StringBuilder where = new StringBuilder();
             where.append("(");
             where.append(KEY_SEEN + "=" + MESSAGE_IS_NOT_SEEN);
+            where.append(" AND ");
+            where.append(KEY_STATUS + "!=" + MESSAGE_STATUS_GOTPUSH);
             where.append(")");
+
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();
@@ -567,16 +570,11 @@ public class MessageDbAdapter {
             where.append(" AND ");
 
             where.append("(");
-
-            // not seen yet
             where.append(KEY_SEEN + "=" + MESSAGE_IS_NOT_SEEN);
-
             where.append(" OR ");
-
-            // Received push nonce, but not message body
             where.append(KEY_STATUS + "=" + MESSAGE_STATUS_GOTPUSH);
-
             where.append(")");
+
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();

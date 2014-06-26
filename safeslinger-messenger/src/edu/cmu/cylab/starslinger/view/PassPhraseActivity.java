@@ -128,10 +128,12 @@ public class PassPhraseActivity extends Activity {
             mEditTextPassNext.setVisibility(View.VISIBLE);
             mEditTextPassNext.setHint(R.string.label_PassHintCreate);
             mEditTextPassDone.setHint(R.string.label_PassHintRepeat);
+            mButtonForgot.setVisibility(View.INVISIBLE);
         } else if (mChangePassPhrase) {
             mEditTextPassNext.setVisibility(View.VISIBLE);
             mEditTextPassNext.setHint(R.string.label_PassHintChange);
             mEditTextPassDone.setHint(R.string.label_PassHintRepeat);
+            mButtonForgot.setVisibility(View.INVISIBLE);
         } else {
             mEditTextPassNext.setVisibility(View.GONE);
             if (mVerifyPassPhrase) {
@@ -139,6 +141,7 @@ public class PassPhraseActivity extends Activity {
             } else {
                 mEditTextPassDone.setHint(R.string.label_PassHintEnter);
             }
+            mButtonForgot.setVisibility(View.VISIBLE);
             mHandler = new Handler();
             mHandler.removeCallbacks(checkBackoffRelease);
             mHandler.post(checkBackoffRelease);
@@ -359,13 +362,15 @@ public class PassPhraseActivity extends Activity {
         if (msg != null) {
             int readDuration = msg.length() * SafeSlingerConfig.MS_READ_PER_CHAR;
             if (readDuration <= SafeSlingerConfig.SHORT_DELAY) {
-                Toast toast = Toast.makeText(PassPhraseActivity.this, msg, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(PassPhraseActivity.this, msg.trim(),
+                        Toast.LENGTH_SHORT);
                 toast.show();
             } else if (readDuration <= SafeSlingerConfig.LONG_DELAY) {
-                Toast toast = Toast.makeText(PassPhraseActivity.this, msg, Toast.LENGTH_LONG);
+                Toast toast = Toast
+                        .makeText(PassPhraseActivity.this, msg.trim(), Toast.LENGTH_LONG);
                 toast.show();
             } else {
-                showHelp(getString(R.string.app_name), msg);
+                showHelp(getString(R.string.app_name), msg.trim());
             }
         }
     }

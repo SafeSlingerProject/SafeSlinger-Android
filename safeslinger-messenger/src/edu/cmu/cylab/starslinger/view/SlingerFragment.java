@@ -224,8 +224,25 @@ public class SlingerFragment extends Fragment {
             ContactStruct contact = createSelectedContact(mContact);
             VCardComposer composer = new VCardComposer();
             mVCardString = composer.createVCard(contact, VCardComposer.VERSION_VCARD30_INT);
-
             MyLog.d(TAG, mVCardString);
+
+            // ensure push token and pub key in vCard
+            StringBuilder errors = new StringBuilder();
+            String name = mContact.name != null ? mContact.name.toString() : null;
+            if (TextUtils.isEmpty(name)) {
+                errors.append("Your Name is missing").append("\n");
+            }
+            if (!mVCardString.contains(SafeSlingerConfig.APP_KEY_PUSHTOKEN)) {
+                errors.append("Your Push is missing").append("\n");
+            }
+            if (!mVCardString.contains(SafeSlingerConfig.APP_KEY_PUBKEY)) {
+                errors.append("Your PubKey is missing").append("\n");
+            }
+            if (errors.length() > 0) {
+                showNote(errors.toString());
+                return false;
+            }
+
             return true;
         } catch (VCardException e) {
             showNote(e.getLocalizedMessage());
@@ -573,13 +590,13 @@ public class SlingerFragment extends Fragment {
         if (msg != null) {
             int readDuration = msg.length() * SafeSlingerConfig.MS_READ_PER_CHAR;
             if (readDuration <= SafeSlingerConfig.SHORT_DELAY) {
-                Toast toast = Toast.makeText(this.getActivity(), msg, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(this.getActivity(), msg.trim(), Toast.LENGTH_SHORT);
                 toast.show();
             } else if (readDuration <= SafeSlingerConfig.LONG_DELAY) {
-                Toast toast = Toast.makeText(this.getActivity(), msg, Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this.getActivity(), msg.trim(), Toast.LENGTH_LONG);
                 toast.show();
             } else {
-                showHelp(getString(R.string.app_name), msg);
+                showHelp(getString(R.string.app_name), msg.trim());
             }
         }
     }

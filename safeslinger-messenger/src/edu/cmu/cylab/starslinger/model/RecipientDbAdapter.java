@@ -204,20 +204,31 @@ public class RecipientDbAdapter {
     public long createInvitedRecipient(long exchdate, String contactid, String contactlu,
             String rawid, String name, byte[] photo, long matchingInviteRowId) {
         synchronized (SafeSlinger.sDataLock) {
-            if (TextUtils.isEmpty(contactid) || TextUtils.isEmpty(contactlu)
-                    || TextUtils.isEmpty(rawid) || TextUtils.isEmpty(name)) {
+            if (TextUtils.isEmpty(name)) {
                 return -1;
             }
 
             ContentValues values = new ContentValues();
             values.put(KEY_MYKEYID, "");
             values.put(KEY_EXCHDATE, exchdate);
-            if (!TextUtils.isEmpty(contactid))
+
+            // make sure db constraint is satisfied
+            if (!TextUtils.isEmpty(contactid)) {
                 values.put(KEY_CONTACTID, contactid);
-            if (!TextUtils.isEmpty(contactlu))
+            } else {
+                values.put(KEY_CONTACTID, "");
+            }
+            if (!TextUtils.isEmpty(contactlu)) {
                 values.put(KEY_CONTACTLKUP, contactlu);
-            if (!TextUtils.isEmpty(rawid))
+            } else {
+                values.put(KEY_CONTACTLKUP, "");
+            }
+            if (!TextUtils.isEmpty(rawid)) {
                 values.put(KEY_RAWCONTACTID, rawid);
+            } else {
+                values.put(KEY_RAWCONTACTID, "");
+            }
+
             if (!TextUtils.isEmpty(name))
                 values.put(KEY_NAME, name);
             if (photo != null)
@@ -282,10 +293,9 @@ public class RecipientDbAdapter {
             String keyuserid, String pushtoken, int notify, byte[] pubkey, String mypushtoken,
             int mynotify, long matchingInviteRowId) {
         synchronized (SafeSlinger.sDataLock) {
-            if (TextUtils.isEmpty(contactid) || TextUtils.isEmpty(contactlu)
-                    || TextUtils.isEmpty(rawid) || TextUtils.isEmpty(name) || keydate == 0
-                    || notify == -1 || pubkey == null || TextUtils.isEmpty(mykeyid)
-                    || TextUtils.isEmpty(keyid) || TextUtils.isEmpty(pushtoken) || mynotify == -1
+            if (TextUtils.isEmpty(name) || keydate == 0 || notify == -1 || pubkey == null
+                    || TextUtils.isEmpty(mykeyid) || TextUtils.isEmpty(keyid)
+                    || TextUtils.isEmpty(pushtoken) || mynotify == -1
                     || TextUtils.isEmpty(mypushtoken)) {
                 return -1;
             }
@@ -296,12 +306,24 @@ public class RecipientDbAdapter {
             }
             values.put(KEY_MYNOTIFY, mynotify);
             values.put(KEY_EXCHDATE, exchdate);
-            if (!TextUtils.isEmpty(contactid))
+
+            // make sure db constraint is satisfied
+            if (!TextUtils.isEmpty(contactid)) {
                 values.put(KEY_CONTACTID, contactid);
-            if (!TextUtils.isEmpty(contactlu))
+            } else {
+                values.put(KEY_CONTACTID, "");
+            }
+            if (!TextUtils.isEmpty(contactlu)) {
                 values.put(KEY_CONTACTLKUP, contactlu);
-            if (!TextUtils.isEmpty(rawid))
+            } else {
+                values.put(KEY_CONTACTLKUP, "");
+            }
+            if (!TextUtils.isEmpty(rawid)) {
                 values.put(KEY_RAWCONTACTID, rawid);
+            } else {
+                values.put(KEY_RAWCONTACTID, "");
+            }
+
             if (!TextUtils.isEmpty(name))
                 values.put(KEY_NAME, name);
             if (photo != null)
@@ -369,12 +391,10 @@ public class RecipientDbAdapter {
             String keyuserid, String pushtoken, int notify, byte[] pubkey, String introkeyid,
             String mypushtoken, int mynotify, long matchingInviteRowId) {
         synchronized (SafeSlinger.sDataLock) {
-            if (TextUtils.isEmpty(contactid) || TextUtils.isEmpty(contactlu)
-                    || TextUtils.isEmpty(rawid) || TextUtils.isEmpty(name) || keydate == 0
-                    || notify == -1 || pubkey == null || TextUtils.isEmpty(mykeyid)
-                    || TextUtils.isEmpty(keyid) || TextUtils.isEmpty(pushtoken)
-                    || TextUtils.isEmpty(introkeyid) || mynotify == -1
-                    || TextUtils.isEmpty(mypushtoken)) {
+            if (TextUtils.isEmpty(name) || keydate == 0 || notify == -1 || pubkey == null
+                    || TextUtils.isEmpty(mykeyid) || TextUtils.isEmpty(keyid)
+                    || TextUtils.isEmpty(pushtoken) || TextUtils.isEmpty(introkeyid)
+                    || mynotify == -1 || TextUtils.isEmpty(mypushtoken)) {
                 return -1;
             }
             ContentValues values = new ContentValues();
@@ -384,12 +404,24 @@ public class RecipientDbAdapter {
             }
             values.put(KEY_MYNOTIFY, mynotify);
             values.put(KEY_EXCHDATE, exchdate);
-            if (!TextUtils.isEmpty(contactid))
+
+            // make sure db constraint is satisfied
+            if (!TextUtils.isEmpty(contactid)) {
                 values.put(KEY_CONTACTID, contactid);
-            if (!TextUtils.isEmpty(contactlu))
+            } else {
+                values.put(KEY_CONTACTID, "");
+            }
+            if (!TextUtils.isEmpty(contactlu)) {
                 values.put(KEY_CONTACTLKUP, contactlu);
-            if (!TextUtils.isEmpty(rawid))
+            } else {
+                values.put(KEY_CONTACTLKUP, "");
+            }
+            if (!TextUtils.isEmpty(rawid)) {
                 values.put(KEY_RAWCONTACTID, rawid);
+            } else {
+                values.put(KEY_RAWCONTACTID, "");
+            }
+
             if (!TextUtils.isEmpty(name))
                 values.put(KEY_NAME, name);
             if (photo != null)

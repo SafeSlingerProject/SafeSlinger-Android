@@ -799,17 +799,34 @@ public class MessagesFragment extends Fragment {
     }
 
     public void doDeleteMessage(MessageRow msg) {
+        InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this.getActivity());
+        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this.getActivity());
+
         // make sure we know which table row id we need to use
         if (msg.isInboxTable()) {
-            InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this.getActivity());
             if (dbInbox.deleteInbox(msg.getRowId())) {
                 showNote(String.format(getString(R.string.state_MessagesDeleted), 1));
             }
         } else {
-            MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this.getActivity());
             if (dbMessage.deleteMessage(msg.getRowId())) {
                 showNote(String.format(getString(R.string.state_MessagesDeleted), 1));
             }
+        }
+
+        // if this was the last message, reset the recipient
+        int msgsInView = 0;
+        Cursor ci = dbInbox.fetchAllInboxByThread(mRecip.getKeyid());
+        if (ci != null) {
+            msgsInView += ci.getCount();
+            ci.close();
+        }
+        Cursor cm = dbMessage.fetchAllMessagesByThread(mRecip.getKeyid());
+        if (cm != null) {
+            msgsInView += cm.getCount();
+            cm.close();
+        }
+        if (msgsInView == 0) {
+            mRecip = null;
         }
     }
 
@@ -888,13 +905,13 @@ public class MessagesFragment extends Fragment {
         if (msg != null) {
             int readDuration = msg.length() * SafeSlingerConfig.MS_READ_PER_CHAR;
             if (readDuration <= SafeSlingerConfig.SHORT_DELAY) {
-                Toast toast = Toast.makeText(this.getActivity(), msg, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(this.getActivity(), msg.trim(), Toast.LENGTH_SHORT);
                 toast.show();
             } else if (readDuration <= SafeSlingerConfig.LONG_DELAY) {
-                Toast toast = Toast.makeText(this.getActivity(), msg, Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this.getActivity(), msg.trim(), Toast.LENGTH_LONG);
                 toast.show();
             } else {
-                showHelp(getString(R.string.app_name), msg);
+                showHelp(getString(R.string.app_name), msg.trim());
             }
         }
     }
@@ -934,9 +951,9 @@ public class MessagesFragment extends Fragment {
         }
     }
 
-    public void postProgressMsgList(boolean inInboxTable, long rowId, String msg) {
+    public void postProgressMsgList(boolean isInboxTable, long rowId, String msg) {
         for (int i = 0; i < mMessageList.size(); i++) {
-            if (mMessageList.get(i).isInboxTable() == inInboxTable
+            if (mMessageList.get(i).isInboxTable() == isInboxTable
                     && mMessageList.get(i).getRowId() == rowId) {
                 MessageRow mr = mMessageList.get(i);
                 mr.setProgress(msg);
