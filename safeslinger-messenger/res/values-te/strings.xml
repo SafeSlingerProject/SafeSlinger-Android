@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">ఆడియో ప్లేయర్ డీకోడింగ్ లోపం.</string>
     <string name="error_AudioPlayerError">రికార్డింగ్ ప్లే కాదు.</string>
     <string name="error_AudioRecorderEncodeError">ఆడియో రికార్డర్ ఎన్కోడింగ్ లోపం.</string>
-    <string name="error_AudioRecorderPermissionError">మైక్రోఫోన్ అనుమతి అవసరం. మైక్రోఫోన్ అనుమతులు ప్రారంభించడానికి iOS సెట్టింగులు వెళ్ళి దయచేసి.</string>
     <string name="error_BackupNotFound">పునరుద్ధరించడానికి బ్యాకప్.</string>
     <string name="error_BackupNotSupportedDevice">పరికర బ్యాకప్ పునరుద్ధరించడానికి మద్దతు లేదు.</string>
     <string name="error_BadCopyProtectUpgrade">కారణంగా Android 4.1 లో ఒక బగ్, మీరు SafeSlinger అన్ఇన్స్టాల్ చేసి, మళ్ళీ ఇన్స్టాల్ ఉంటుంది.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger లోపం, మళ్ళీ ప్రారంభించండి.</string>
     <string name="error_VcardParseFailure">సంప్రదించండి డేటా తప్పుగా ఫార్మాట్ చేశారు.</string>
 
-    <string name="help_find">ఇతరులతో మార్పిడి మీ పేరు సెట్ తెరమీద ఉపయోగించండి. పూర్తవగానే డన్ బటన్ నొక్కండి.</string>
     <string name="help_home">గుర్తింపు డేటా మార్పిడి, యూజర్లు సమీపంలోని లేదా ఫోన్ ఉండేలా. ప్రారంభం SWF ఎక్స్చేంజ్ బటన్ తనిఖీ పరిచయం డేటా మార్పిడి చేస్తుంది.</string>
     <string name="help_identity_menu">మీరు కూడా మీ పేరుతో బటన్ నొక్కడం ద్వారా తెరమీద మీ ఐడెంటిటీ వ్యక్తిగత డేటా మార్చవచ్చు. ఈ మీరు మీ సంప్రదింపు సవరించు అనుమతించే మెనును ప్రదర్శిస్తుంది న్యూ పరిచయం సృష్టించు, లేదా మరొక పరిచయం ఉపయోగించండి ఉంటుంది.</string>
     <string name="help_Messages">ఈ తెర అన్ని గత సందేశాలను, మరియు ఇప్పటికీ డౌన్లోడ్ కోసం అందుబాటులో జోడింపులను ప్రదర్శిస్తుంది.</string>
-    <string name="help_passphrase">మీ పాస్ఫ్రేజ్తో అప్లికేషన్ మీరు లాగిన్ ఈ స్క్రీన్ ఉపయోగించండి. మీరు మీ పాస్ఫ్రేజ్ని మర్చిపోతే, మీరు మర్చిపోయారా సంకేతపదమును నొక్కడం ద్వారా కొత్త సంకేతపదమును రక్షణలో కొత్త కీని ఉండవచ్చు? బటన్. బహుళ కీలు మధ్య మారడానికి యూజర్ పేరు కుళాయి.</string>
     <string name="help_PickRecip">SafeSlinger కీలను తో కాంటాక్ట్స్ మీ సందేశాన్ని పంపడానికి ఎనన్నుకొనండి, ఇక్కడ ప్రదర్శించబడతాయి.</string>
     <string name="help_save">పూర్తి చేసినప్పుడు, ప్రోటోకాల్ మార్పిడి గుర్తింపు డేటా జాబితా బహిర్గతం చేస్తుంది. మీరు దిగుమతి సేవ్ మరియు నొక్కండి అనుకుంటున్నారా పరిచయాలను ఎంచుకోండి.</string>
     <string name="help_SecureIntroduction">ఈ తెర మీరు సురక్షితంగా ప్రతి ఇతర వారి కీలు పంపడానికి ముందు కీలు slung చేశారు ఇద్దరు వ్యక్తులు ఎంచుకోండి అనుమతిస్తుంది. కేవలం ఉన్నప్పుడు సిద్ధంగా పరిచయం నొక్కండి.</string>
     <string name="help_Send">ఈ తెర మీరు కొన్ని డేటా మరియు పంపడానికి ఒక గ్రహీత ఎంచుకోండి అనుమతిస్తుంది. కేవలం సిద్ధంగా ఉన్నప్పుడు పంపండి నొక్కండి.</string>
 
-    <string name="iOS_contactError">కాంటాక్ట్స్ అనుమతి అవసరం. కాంటాక్ట్స్ అనుమతులు ప్రారంభించడానికి iOS సెట్టింగులు వెళ్ళి దయచేసి.</string>
     <string name="iOS_errorpushtoken">పుష్ గ్రామస్తులకు చెప్పడం.</string>
-    <string name="iOS_notificationError1">ప్రకటనలు అనుమతి అవసరం. ప్రకటనలు అనుమతులు ప్రారంభించడానికి iOS సెట్టింగులు వెళ్ళి దయచేసి.</string>
-    <string name="iOS_notificationError2">%s అనుమతి అవసరం. ప్రకటనలు అనుమతులు ప్రారంభించడానికి iOS సెట్టింగులు వెళ్ళి దయచేసి.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x పరికరాలు ఆప్టిమైజ్ లేదు. SafeSlinger iOS 6 లేదా ఎక్కువ అవసరం.</string>
 
     <string name="label_ago">%s క్రితం</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">స్వీయ వ్యక్తపరుచు</string>
     <string name="menu_Change">మార్పు</string>
     <string name="menu_ChangePassphrase">మార్చు సంకేతపదమును</string>
-    <string name="menu_ContactInviteEmail">ఇమెయిల్</string>
-    <string name="menu_ContactInviteSms">టెక్స్ట్ (SMS/MMS)</string>
     <string name="menu_CreateNew">న్యూ సృష్టించు</string>
     <string name="menu_delete">తొలగించు</string>
     <string name="menu_deleteThread">Thread %s తొలగించు</string>

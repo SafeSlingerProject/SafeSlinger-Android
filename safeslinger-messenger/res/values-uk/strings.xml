@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Аудіо плеєр помилка декодування.</string>
     <string name="error_AudioPlayerError">Неможливо відтворити запис.</string>
     <string name="error_AudioRecorderEncodeError">Аудіо помилка кодування рекордер.</string>
-    <string name="error_AudioRecorderPermissionError">Дозвіл Мікрофон потрібно. Будь ласка, перейдіть в меню Налаштування iOS для забезпечення дозволу мікрофон.</string>
     <string name="error_BackupNotFound">Ні резервного копіювання для відновлення.</string>
     <string name="error_BackupNotSupportedDevice">Пристрій не підтримує відновлення резервної копії.</string>
     <string name="error_BadCopyProtectUpgrade">Через помилку в Android 4.1, вам доведеться видалити і перевстановити SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger помилка, перезавантажте.</string>
     <string name="error_VcardParseFailure">Контактні дані відформатована неправильно.</string>
 
-    <string name="help_find">Використовуйте цей екран, щоб встановити своє ім\'я для обміну з іншими. Натисніть кнопку Готово.</string>
     <string name="help_home">Для обміну даними посвідчень, гарантувати, що всі користувачі знаходяться неподалік або по телефону. Почніть кнопку валютний обміняються тільки перевірені контактні дані.</string>
     <string name="help_identity_menu">Ви також можете змінити особисті дані про вашої особистості на цьому екрані, натиснувши на кнопку з вашим ім\'ям. Це відобразить меню дозволяє редагувати ваші контакти, створити новий контакт, або використовуйте інший контакт.</string>
     <string name="help_Messages">На цьому екрані відображається всі минулі повідомлення та вкладення, які все ще доступні для скачування.</string>
-    <string name="help_passphrase">Використовуйте цей екран для входу в додаток з вашим пароль. Якщо ви забули свій фразу, ви можете створити новий ключ, захищений нової пральний фрази по натиснувши Забули парольний фразу? Кнопка. Натисніть на ім\'я користувача перемикатися між кількома ключами.</string>
     <string name="help_PickRecip">Контакти з SafeSlinger ключів відображаються тут, то виберіть його, щоб відправити повідомлення.</string>
     <string name="help_save">Коли закінчите, протокол покаже список ідентифікаційних даних обмінюваних. Виберіть контакти, які ви хочете зберегти і натисніть Імпорт.</string>
     <string name="help_SecureIntroduction">Цей екран дозволяє вибрати один з двох людей, яких ви перекинув ключі с до безпечно відправляти свої ключі один до одного. Просто натисніть Уявіть, коли будете готові.</string>
     <string name="help_Send">Цей екран дозволяє вибрати деякі дані і одержувача для відправки. Просто натисніть Надіслати коли будете готові.</string>
 
-    <string name="iOS_contactError">Контакти дозволу потрібно. Будь ласка, перейдіть в меню Налаштування iOS, щоб дозволити Контакти дозволу.</string>
     <string name="iOS_errorpushtoken">Реєстрація Натисніть відсутня.</string>
-    <string name="iOS_notificationError1">Сповіщення дозвіл потрібно. Будь ласка, перейдіть в меню Налаштування iOS, щоб дозволити Сповіщення дозволу.</string>
-    <string name="iOS_notificationError2">Дозвіл %s потрібно. Будь ласка, перейдіть в меню Налаштування iOS, щоб дозволити Сповіщення дозволу.</string>
     <string name="iOS_oldOSWarn">SafeSlinger НЕ оптимізований для iOS 5.x пристроїв. SafeSlinger вимагається iOS 6 або вище.</string>
 
     <string name="label_ago">%s назад</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Авто-розшифровки</string>
     <string name="menu_Change">Зміна</string>
     <string name="menu_ChangePassphrase">Змінити Ключова фраза</string>
-    <string name="menu_ContactInviteEmail">E-mail</string>
-    <string name="menu_ContactInviteSms">Текст (SMS/MMS)</string>
     <string name="menu_CreateNew">Створити новий</string>
     <string name="menu_delete">Видаляти</string>
     <string name="menu_deleteThread">Видалити %s теми</string>

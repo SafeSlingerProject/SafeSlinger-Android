@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio jucător eroare de decodare.</string>
     <string name="error_AudioPlayerError">Nu se poate reda înregistrarea.</string>
     <string name="error_AudioRecorderEncodeError">Audio eroare de codare recorder.</string>
-    <string name="error_AudioRecorderPermissionError">Permisiunea microfon necesar. Vă rugăm să mergeți la iOS Settings pentru a permite permisiuni microfon.</string>
     <string name="error_BackupNotFound">Nu de rezervă pentru a restaura.</string>
     <string name="error_BackupNotSupportedDevice">Dispozitivul nu are suport de backup restaurare.</string>
     <string name="error_BadCopyProtectUpgrade">Din cauza unui bug în Android 4.1, va trebui să dezinstalați și reinstalați SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Eroare SafeSlinger, vă rugăm să reporniți.</string>
     <string name="error_VcardParseFailure">Datele de contact a fost formatat incorect.</string>
 
-    <string name="help_find">Utilizați acest ecran pentru a seta numele dvs. de a face schimb cu alte persoane. Apăsați butonul Done când ați terminat.</string>
     <string name="help_home">Pentru a face schimb de date de identitate, asigura toți utilizatorii sunt în apropiere sau la telefon. Inceput Butonul Exchange vor schimba doar datele de contact verificate.</string>
     <string name="help_identity_menu">Puteți schimba, de asemenea, date cu caracter personal cu privire la identitatea pe acest ecran apăsând pe butonul cu numele tău. Aceasta va afișa un meniu care vă permite să Editare contact, Creare contact nou, sau folosiți un alt de contact.</string>
     <string name="help_Messages">Acest ecran afișează toate mesajele trecute, și accesorii, care sunt încă disponibile pentru descărcare.</string>
-    <string name="help_passphrase">Utilizați acest ecran pentru a vă conecta la aplicarea cu fraza de autentificare. Dacă ați uitat expresia de acces, s-ar putea genera o nouă cheie protejat de un nou frază de acces atingând fraza de acces Ai uitat? buton. Apăsați pe numele de utilizator pentru a comuta între mai multe chei.</string>
     <string name="help_PickRecip">Contacte cu chei SafeSlinger sunt afișate aici, selectați unul pentru a trimite mesajul.</string>
     <string name="help_save">Când ați terminat, protocolul va dezvălui o listă cu datele de identitate schimbate. Selectați contactele pe care doriți să salvați și apăsați Import.</string>
     <string name="help_SecureIntroduction">Acest ecran vă permite să selectați doi oameni ai funii cu chei, înainte de a trimite în siguranță cheile de la fiecare alte. Pur și simplu apăsați Introducerea atunci când este gata.</string>
     <string name="help_Send">Acest ecran vă permite să selectați câteva date și un destinatar pentru a trimite la. Pur și simplu apăsați Trimite atunci când este gata.</string>
 
-    <string name="iOS_contactError">Contacte permisiunea necesară. Vă rugăm să mergeți la iOS Settings pentru a permite Contacte permisiuni.</string>
     <string name="iOS_errorpushtoken">Înregistrare împinge lipsește.</string>
-    <string name="iOS_notificationError1">Permisiunea notificări necesar. Vă rugăm să mergeți la iOS Settings pentru a permite Notificari permisiuni.</string>
-    <string name="iOS_notificationError2">Permisiunea %s necesar. Vă rugăm să mergeți la iOS Settings pentru a permite Notificari permisiuni.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nu este optimizat pentru dispozitive iOS 5.x. SafeSlinger necesită iOS 6 sau mai mare.</string>
 
     <string name="label_ago">%s în urmă</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decripta</string>
     <string name="menu_Change">Schimbare</string>
     <string name="menu_ChangePassphrase">Schimbare Passphrase</string>
-    <string name="menu_ContactInviteEmail">E-mail</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Crearea de noi</string>
     <string name="menu_delete">Șterge</string>
     <string name="menu_deleteThread">Șterge %s Subiect</string>

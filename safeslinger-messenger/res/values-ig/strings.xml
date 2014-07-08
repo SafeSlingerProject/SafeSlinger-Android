@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Ọdịyo player nyopụta njehie.</string>
     <string name="error_AudioPlayerError">Ike igwu ndekọ.</string>
     <string name="error_AudioRecorderEncodeError">Ọdịyo edekọ ịgbanwe njehie.</string>
-    <string name="error_AudioRecorderPermissionError">Igwe okwu ikike achọrọ. Biko gaa na iOS Ntọala aka Igwe ikikere.</string>
     <string name="error_BackupNotFound">Ọ dịghị ndabere na weghachite.</string>
     <string name="error_BackupNotSupportedDevice">Ngwaọrụ anaghị akwado nkwado ndabere na mpaghara weghachite.</string>
     <string name="error_BadCopyProtectUpgrade">N\'ihi ahụhụ na gam akporo 4.1, ị ga-uninstall na reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger njehie, biko Malitegharịa ekwentị.</string>
     <string name="error_VcardParseFailure">Kọntaktị data e formatted ọhụma.</string>
 
-    <string name="help_find">Jiri ihe a na ihuenyo ka aha gị ịgbanwe ndị ọzọ. Mgbata na Emela button mgbe okokụre.</string>
     <string name="help_home">Ịgbanwe njirimara data, hụ na ihe niile ọrụ ndị dị nso ma ọ bụ na ekwentị. Na Malite Exchange button ga ịgbanwe naanị enyocha kọntaktị data.</string>
     <string name="help_identity_menu">Ị nwekwara ike ịgbanwe data onwe gị njirimara a ihuenyo site + Ọ na bọtịnụ gị aha ya. Nke a ga-egosipụta a menu ikwe gị Dezie kọntaktị gị, Mepụta na Kọntaktị ọhụrụ, ma ọ bụ Jiri ọzọ kọntaktị.</string>
     <string name="help_Messages">Nke a na-egosipụta na ihuenyo niile n\'oge gara aga ozi, na Mgbakwụnye ndị ka na-maka nbudata.</string>
-    <string name="help_passphrase">Jiri ihe a na ihuenyo na nbanye nke ngwa gị passphrase. Ọ bụrụ na i chefuola gị passphrase, i nwere ike igbanye ọhụrụ isi na-echebe site ọhụrụ passphrase by + Ọ Chefuru Passphrase? button. Mgbata aha njirimara ka ịgbanwee n\'etiti otutu igodo.</string>
     <string name="help_PickRecip">Ndi ana-akpo na SafeSlinger igodo na-egosipụta n\'ebe a, họrọ otu izipu gị ozi.</string>
     <string name="help_save">Mgbe okokụre, na protocol ga-ekpughe na ndepụta nke njirimara data okpụhọ. Họrọ kọntaktị ị chọrọ ịzọpụta ma pịa Bubata.</string>
     <string name="help_SecureIntroduction">Nke a na ihuenyo-enye gị ohere iji họrọ mmadụ abụọ ị slung igodo na tupu ka o nweghịkwa obi-eziga ha igodo ọ bụla ọzọ. Naanị pịa ịme mgbe njikere.</string>
     <string name="help_Send">Nke a na ihuenyo-enye gị ohere ịhọrọ ụfọdụ data na nnata izipu gaa na. Naanị pịa Send mgbe njikere.</string>
 
-    <string name="iOS_contactError">Ndi ana-akpo ikike achọrọ. Biko gaa na iOS Ntọala aka Ndi ana-akpo ikikere.</string>
     <string name="iOS_errorpushtoken">Push ndebanye aha na-efu.</string>
-    <string name="iOS_notificationError1">Ịma Ọkwa ikike achọrọ. Biko gaa na iOS Ntọala aka Ịma Ọkwa ikikere.</string>
-    <string name="iOS_notificationError2">%s ikike achọrọ. Biko gaa na iOS Ntọala aka Ịma Ọkwa ikikere.</string>
     <string name="iOS_oldOSWarn">SafeSlinger bụ kachasị maka iOS 5.x ngwaọrụ. SafeSlinger chọrọ iOS 6 ma ọ bụ karịa.</string>
 
     <string name="label_ago">%s ago</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Nchekwa onwe-decrypt</string>
     <string name="menu_Change">Mgbanwe</string>
     <string name="menu_ChangePassphrase">Change Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Ederede (SMS/MMS)</string>
     <string name="menu_CreateNew">Ike New</string>
     <string name="menu_delete">Ihichapụ</string>
     <string name="menu_deleteThread">Hichapụ Eriri %s</string>

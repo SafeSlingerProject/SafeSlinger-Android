@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio speler dekodering fout.</string>
     <string name="error_AudioPlayerError">Kan nie die opname speel.</string>
     <string name="error_AudioRecorderEncodeError">Klank blokfluit encoding fout.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofoon toestemming nodig. Gaan na iOS instellings mikrofoon regte in staat te stel.</string>
     <string name="error_BackupNotFound">Geen Friends te herstel.</string>
     <string name="error_BackupNotSupportedDevice">Toestel nie ondersteun Friends herstel.</string>
     <string name="error_BadCopyProtectUpgrade">As gevolg van \'n fout in Android 4.1, sal jy het om te verwyder en weer SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger fout, weer asseblief.</string>
     <string name="error_VcardParseFailure">Kontak data is nie korrek geformateer.</string>
 
-    <string name="help_find">Gebruik hierdie skerm jou naam in te stel om te ruil met ander. Tik die knoppie wanneer jy klaar gebraai.</string>
     <string name="help_home">Identiteit data te ruil, verseker dat alle gebruikers is naby of op die telefoon. Die Begin Exchange knoppie sal ruil net die nagegaan kontak data.</string>
     <string name="help_identity_menu">Jy kan ook verander persoonlike data oor jou identiteit op die skerm deur afluister op die knoppie met jou naam. Dit sal \'n spyskaart sodat jy jou kontakbesonderhede te wysig vertoon, nuwe kontak, of die gebruik van ander kontak.</string>
     <string name="help_Messages">Hierdie skerm vertoon al die afgelope boodskappe en aanhangsels wat nog beskikbaar is vir aflaai.</string>
-    <string name="help_passphrase">Gebruik die skerm aan te meld by die aansoek met jou wagwoordfrase. As jy jou wagwoordfrase vergeet het, kan jy \'n nuwe sleutel beskerm deur \'n nuwe wagwoordfrase deur die afluister van die vergete Passphrase genereer? knoppie. Tik die gebruiker naam te skakel tussen verskeie sleutels.</string>
     <string name="help_PickRecip">Kontak met SafeSlinger sleutels word hier vertoon, kies een om jou boodskap te stuur na.</string>
     <string name="help_save">As jy klaar is, sal die protokol van \'n lys van die identiteit data uitgeruil openbaar. Kies die kontakte wat jy wil om te red en druk invoer.</string>
     <string name="help_SecureIntroduction">Hierdie skerm kan jy twee mense wat jy het gehang sleutels voordat veilig stuur hul sleutels aan mekaar te kies. Druk net op Stel wanneer dit gereed is.</string>
     <string name="help_Send">Hierdie skerm kan jy \'n paar data en \'n ontvanger te stuur om te kies. Druk net op Stuur wanneer dit gereed is.</string>
 
-    <string name="iOS_contactError">Kontakte toestemming nodig. Gaan na iOS instellings kontakte regte in staat te stel.</string>
     <string name="iOS_errorpushtoken">Druk registrasie ontbreek.</string>
-    <string name="iOS_notificationError1">Kennisgewings toestemming nodig. Gaan na iOS instellings Kennisgewings regte in staat te stel.</string>
-    <string name="iOS_notificationError2">%s toestemming nodig. Gaan na iOS instellings Kennisgewings regte in staat te stel.</string>
     <string name="iOS_oldOSWarn">SafeSlinger is nie geskik vir iOS 5.x toestelle. SafeSlinger vereis iOS 6 of hoër.</string>
 
     <string name="label_ago">%s gelede</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Verandering</string>
     <string name="menu_ChangePassphrase">Verandering Passphrase</string>
-    <string name="menu_ContactInviteEmail">E-pos</string>
-    <string name="menu_ContactInviteSms">Teks (SMS/MMS)</string>
     <string name="menu_CreateNew">Skep nuwe</string>
     <string name="menu_delete">Verwyder</string>
     <string name="menu_deleteThread">Verwyder onderwerp %s</string>

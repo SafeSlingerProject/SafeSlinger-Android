@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">ऑडिओ प्लेयर डिकोड त्रुटी.</string>
     <string name="error_AudioPlayerError">रेकॉर्डिंग प्ले करू शकत नाही.</string>
     <string name="error_AudioRecorderEncodeError">ऑडिओ रेकॉर्डरचा एन्कोडिंग त्रुटी.</string>
-    <string name="error_AudioRecorderPermissionError">मायक्रोफोन परवानगी आवश्यक. मायक्रोफोन परवानगी सक्षम करण्यासाठी iOS सेटिंग्ज वर जा.</string>
     <string name="error_BackupNotFound">पुनर्संचयित करण्यासाठी नाही बॅकअप.</string>
     <string name="error_BackupNotSupportedDevice">डिव्हाइस बॅकअप पुनर्संचयित समर्थन देत नाही.</string>
     <string name="error_BadCopyProtectUpgrade">संपुष्टात Android 4.1 त्रुटीमुळे, आपण SafeSlinger विस्थापित करा आणि पुन्हा स्थापित लागेल.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger त्रुटी, पुन्हा सुरू करा.</string>
     <string name="error_VcardParseFailure">संपर्क डेटा चुकीचा स्वरुपित आली.</string>
 
-    <string name="help_find">इतरांशी देवाणघेवाण करण्यासाठी आपले नाव निश्चित करण्यासाठी ही स्क्रीन वापरा. पूर्ण झाल्यावर पूर्ण झाले बटण टॅप करा.</string>
     <string name="help_home">ओळख डेटा अदलाबदल करण्यासाठी, सर्व वापरकर्त्यांसाठी जवळपास किंवा फोनवर असल्याची खात्री करा. सुरू एक्सचेंज बटण फक्त चेक संपर्क माहिती देवाणघेवाण होईल.</string>
     <string name="help_identity_menu">आपण आपल्या नावासह बटणावर टॅप करून या पडद्यावर आपली ओळख बद्दल वैयक्तिक डेटा बदलू शकता. यामुळे आपण आपल्या संपर्क संपादित करण्यास परवानगी देते मेनू प्रदर्शित नवीन संपर्क तयार करा, किंवा इतर संपर्क वापरेल.</string>
     <string name="help_Messages">हा पडदा सर्व गेल्या संदेश, आणि तरीही डाउनलोड उपलब्ध आहेत संलग्नक दाखवतो.</string>
-    <string name="help_passphrase">आपला सांकेतिक वाक्यांश ऍप्लिकेशनचा लॉगिन करण्यासाठी ही स्क्रीन वापरा. आपण आपला सांकेतिक वाक्यांश विसरल्यास, आपण विसरलात सांकेतिक वाक्यांश टॅप करून नवीन सांकेतिक संरक्षित एक नवीन की व्युत्पन्न करू शकता? बटण. एकाधिक कळा स्विच करण्यासाठी वापरकर्ता नाव टॅप करा.</string>
     <string name="help_PickRecip">SafeSlinger कळा वापरून संपर्क आपला संदेश पाठवण्यासाठी एक निवडा, येथे दाखवले जाते.</string>
     <string name="help_save">पूर्ण झाल्यावर, प्रोटोकॉल exchanged ओळख डेटा यादी प्रकट होईल. आपण आयात जतन आणि दाबा इच्छित संपर्क निवडा.</string>
     <string name="help_SecureIntroduction">हा पडदा तुम्हाला सुरक्षितपणे एकमेकांना त्यांच्या कळा पाठविण्यासाठी आधी सह कळा स्लिंग् चे भू.का. रुप आहेत दोन लोक नीवडण्यासाठी परवानगी देतो. फक्त जेव्हा तयार परिचय दाबा.</string>
     <string name="help_Send">हा पडदा तुम्हाला काही डेटा आणि पाठविणे एक प्राप्तकर्ता नीवडण्यासाठी परवानगी देतो. फक्त तयार करताना पाठवा दाबा.</string>
 
-    <string name="iOS_contactError">संपर्क परवानगी आवश्यक. संपर्क परवानगी सक्षम करण्यासाठी iOS सेटिंग्ज वर जा.</string>
     <string name="iOS_errorpushtoken">पुश नोंदणी गहाळ आहे.</string>
-    <string name="iOS_notificationError1">सूचना परवानगी आवश्यक. सूचना परवानग्या सक्षम करण्यासाठी iOS सेटिंग्ज वर जा.</string>
-    <string name="iOS_notificationError2">%s परवानगी आवश्यक. सूचना परवानग्या सक्षम करण्यासाठी iOS सेटिंग्ज वर जा.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x साधनांकरीता अनुकूलित नाही. SafeSlinger iOS 6 किंवा उच्चतम आवश्यक आहे.</string>
 
     <string name="label_ago">%s पूर्वी</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">ऑटो उकल</string>
     <string name="menu_Change">बदल</string>
     <string name="menu_ChangePassphrase">बदला वाक्यांश</string>
-    <string name="menu_ContactInviteEmail">ईमेल</string>
-    <string name="menu_ContactInviteSms">मजकूर (एसएमएस/MMS चे)</string>
     <string name="menu_CreateNew">नवीन तयार करा</string>
     <string name="menu_delete">हटवा</string>
     <string name="menu_deleteThread">थ्रेड %s हटवा</string>

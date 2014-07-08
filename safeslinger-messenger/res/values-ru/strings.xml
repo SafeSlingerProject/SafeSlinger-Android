@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Ошибка раскодирования проигрывания звука.</string>
     <string name="error_AudioPlayerError">Не удается воспроизвести запись.</string>
     <string name="error_AudioRecorderEncodeError">Ошибка кодирования звукозаписи.</string>
-    <string name="error_AudioRecorderPermissionError">Разрешение Микрофон требуется. Пожалуйста, перейдите в меню Настройки iOS для обеспечения разрешения микрофон.</string>
     <string name="error_BackupNotFound">Нет резервной копии для восстановления.</string>
     <string name="error_BackupNotSupportedDevice">Устройство не поддерживает восстановление резервной копии.</string>
     <string name="error_BadCopyProtectUpgrade">В связи с ошибкой в ​​Android 4.1, вам придется удалить и переустановить SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Ошибка в запуске SafeSlinger. Пожалуйста, перезапустите.</string>
     <string name="error_VcardParseFailure">Контактные данные отформатирована неправильно.</string>
 
-    <string name="help_find">Используйте этот экран, чтобы установить свое имя для обмена с другими. Нажмите кнопку Готово, когда закончите.</string>
     <string name="help_home">Для обмена идентификационными данными, убедитесь, что все пользователи находятся рядом или у телефона. Кнопка «Начать обмен» будет использовать для обмена только проверенные контактные данные.</string>
     <string name="help_identity_menu">Вы можете изменить ваши личные данные на этом экране, нажав на кнопку с вашим именем. На экране появится меню, позволяющее Изменить ваш контакт, Создать новый контакт, или Использовать другой контакт.</string>
     <string name="help_Messages">На этом экране отображаются все предыдущие сообщения, а также файлы, которые все еще доступны для скачивания.</string>
-    <string name="help_passphrase">Используйте этот экран для входа в приложение с вашим пароль. Если вы забыли свой фразу, вы можете создать новый ключ, защищенный новой парольной фразы, нажавЗабыли парольную фразу? Кнопка. Нажмите на имя пользователя переключаться между несколькими ключами.</string>
     <string name="help_PickRecip">Контакты с ключами SafeSlinger отображены здесь. Выберите один, чтобы отправить сообщение.</string>
     <string name="help_save">Когда закончите, протокол покажет список обмененных идентификационных данных. Выберите контакты, которые вы хотите сохранить и нажмите кнопку Импортировать’.</string>
     <string name="help_SecureIntroduction">Этот экран позволяет выбрать двух человек, с которыми вы обменялись ключами, чтобы безопасно отправить ключи друг другу. Просто нажмите кнопку Представить, когда будете готовы.</string>
     <string name="help_Send">Этот экран позволяет выбрать данные и их получателя. Нажмите на кнопку Отправить когда будете готовы.</string>
 
-    <string name="iOS_contactError">Контакты разрешения требуется. Пожалуйста, перейдите в меню Настройки iOS, чтобы позволить Контакты разрешения.</string>
     <string name="iOS_errorpushtoken">Отсутсвует ID уведомлений.</string>
-    <string name="iOS_notificationError1">Уведомления разрешение требуется. Пожалуйста, перейдите в меню Настройки iOS, чтобы позволить Уведомления разрешения.</string>
-    <string name="iOS_notificationError2">Разрешение %s требуется. Пожалуйста, перейдите в меню Настройки iOS, чтобы позволить Уведомления разрешения.</string>
     <string name="iOS_oldOSWarn">SafeSlinger не оптимизирован для iOS 5.x устройств. SafeSlinger требуется iOS 6 или выше.</string>
 
     <string name="label_ago">%s назад</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Авто-расшифровки</string>
     <string name="menu_Change">Изменить</string>
     <string name="menu_ChangePassphrase">Изменить секретную фразу</string>
-    <string name="menu_ContactInviteEmail">E-mail</string>
-    <string name="menu_ContactInviteSms">Текст (SMS/MMS)</string>
     <string name="menu_CreateNew">Создать новый</string>
     <string name="menu_delete">Удалить</string>
     <string name="menu_deleteThread">Удалить обсуждение %s</string>

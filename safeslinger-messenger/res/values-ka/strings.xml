@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">აუდიო დეკოდირების შეცდომა.</string>
     <string name="error_AudioPlayerError">ვერ ითამაშებს ჩაწერა.</string>
     <string name="error_AudioRecorderEncodeError">აუდიო ჩამწერი კოდირების შეცდომა.</string>
-    <string name="error_AudioRecorderPermissionError">მიკროფონი ნებართვა საჭირო. შედით iOS პარამეტრები, რათა მიკროფონი უფლებები.</string>
     <string name="error_BackupNotFound">სარეზერვო აღდგენას.</string>
     <string name="error_BackupNotSupportedDevice">მოწყობილობა მხარს არ უჭერს სარეზერვო აღდგენა.</string>
     <string name="error_BadCopyProtectUpgrade">იმის გამო, რომ შეცდომა Android 4.1, თქვენ უნდა წაშალოთ და გადააყენეთ SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger შეცდომა, გთხოვთ გადატვირთოთ.</string>
     <string name="error_VcardParseFailure">საკონტაქტო მონაცემები ფორმატირებული არასწორად.</string>
 
-    <string name="help_find">გამოიყენეთ ეს ეკრანზე თქვენი სახელი გაცვლა სხვები. ლიბერალიზაცია შესრულებულია ღილაკს, როდესაც დასრულდა.</string>
     <string name="help_home">გაცვლა პირადობის მონაცემებით, უზრუნველყონ ყველა მომხმარებლის მიმდებარე ან ტელეფონით. დასაწყისი Exchange ღილაკს გაცვლიან მხოლოდ გადამოწმებული საკონტაქტო მონაცემები.</string>
     <string name="help_identity_menu">თქვენ შესაძლებელია აგრეთვე შეცვალოს პერსონალური მონაცემების შესახებ თქვენი პიროვნება ამ ეკრანზე მიერ მოსმენების ღილაკს თქვენი სახელი. ეს არის მენიუ, რომელიც საშუალებას გაძლევთ რედაქტირება თქვენი საკონტაქტო, შექმნა ახალი კონტაქტის, ან გამოიყენეთ სხვა კონტაქტი.</string>
     <string name="help_Messages">ამ ეკრანზე აჩვენებს ყველა წარსულში შეტყობინებები და attachments, რომ ჯერ კიდევ ხელმისაწვდომია.</string>
-    <string name="help_passphrase">გამოიყენეთ ეს ეკრანზე შესვლაზე განაცხადის თქვენი passphrase. თუ თქვენ დაგავიწყდათ თქვენი passphrase, შეგიძლიათ გენერირება ახალი გასაღები დაცულია new passphrase მიერ მოსმენების პაროლი passphrase? ღილაკს. Tap მომხმარებლის სახელი გადაერთოთ სხვადასხვა ღილაკები.</string>
     <string name="help_PickRecip">კონტაქტები SafeSlinger გასაღებები ნაჩვენები აქ, აირჩიეთ გამოაგზავნოთ თქვენი გზავნილი.</string>
     <string name="help_save">როდესაც დაასრულა, ოქმის გამოავლენს სია პირადობის მონაცემები გაცვალეს. აირჩიეთ კონტაქტები გსურთ შეინახოთ და დააჭირეთ იმპორტი.</string>
     <string name="help_SecureIntroduction">ეს ეკრანი საშუალებას გაძლევთ აირჩიოთ ორი ადამიანი თქვენ არ slung გასაღებები სანამ უსაფრთხოდ გააგზავნოთ მათი გასაღებები ერთმანეთს. უბრალოდ დააჭირეთ დანერგვა, როდესაც მზად.</string>
     <string name="help_Send">ეს ეკრანი საშუალებას გაძლევთ აირჩიოთ გარკვეული მონაცემები და მიმღები უგზავნიდნენ. უბრალოდ დააჭირეთ პირადი როდესაც მზად.</string>
 
-    <string name="iOS_contactError">კონტაქტი ნებართვა საჭირო. შედით iOS პარამეტრები, რათა კონტაქტები უფლებები.</string>
     <string name="iOS_errorpushtoken">Push რეგისტრაციის დაკარგული.</string>
-    <string name="iOS_notificationError1">შეტყობინებები ნებართვა საჭირო. შედით iOS პარამეტრები, რათა შეტყობინებები უფლებები.</string>
-    <string name="iOS_notificationError2">%s ნებართვა საჭირო. შედით iOS პარამეტრები, რათა შეტყობინებები უფლებები.</string>
     <string name="iOS_oldOSWarn">SafeSlinger არ არის ოპტიმიზირებულია iOS 5.x მოწყობილობების. SafeSlinger მოითხოვს iOS 6 ან უფრო მაღალი.</string>
 
     <string name="label_ago">%s წინ</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-გაშიფვრა</string>
     <string name="menu_Change">ცვლილება</string>
     <string name="menu_ChangePassphrase">შეცვლა passphrase</string>
-    <string name="menu_ContactInviteEmail">ელ</string>
-    <string name="menu_ContactInviteSms">ტექსტური (SMS/MMS)</string>
     <string name="menu_CreateNew">შექმნა ახალი</string>
     <string name="menu_delete">წაშალე</string>
     <string name="menu_deleteThread">წაშალე თემა %s</string>

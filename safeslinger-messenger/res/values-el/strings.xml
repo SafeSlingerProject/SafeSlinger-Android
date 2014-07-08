@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio player σφάλμα αποκωδικοποίησης.</string>
     <string name="error_AudioPlayerError">Δεν είναι δυνατή η αναπαραγωγή της ηχογράφησης.</string>
     <string name="error_AudioRecorderEncodeError">Σφάλμα κωδικοποίησης της εγγραφής ήχου.</string>
-    <string name="error_AudioRecorderPermissionError">Μικρόφωνο άδεια που απαιτείται. Παρακαλώ πηγαίνετε στο Settings iOS να ενεργοποιήσετε τα δικαιώματα μικροφώνου.</string>
     <string name="error_BackupNotFound">Δεν βρέθηκε αντίγραφο ασφαλείας για επαναφορά.</string>
     <string name="error_BackupNotSupportedDevice">Η συσκευή δεν υποστηρίζει επαναφορά αντιγράφων ασφαλείας.</string>
     <string name="error_BadCopyProtectUpgrade">Λόγω ενός bug στο Android 4.1, θα έχετε απεγκατάσταση και επανεγκατάσταση SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger σφάλμα, παρακαλώ κάντε επανεκκίνηση.</string>
     <string name="error_VcardParseFailure">Στοιχεία επαφής μορφοποιηθεί σωστά.</string>
 
-    <string name="help_find">Χρησιμοποιήστε αυτήν την οθόνη για να ρυθμίσετε το όνομά σας για να ανταλλάξουν με άλλους. Πατήστε το κουμπί Τέλος όταν τελειώσετε.</string>
     <string name="help_home">Για την ανταλλαγή δεδομένων ταυτότητας, βεβαιωθείτε ότι όλοι οι χρήστες είναι κοντά ή στο τηλέφωνο. Το πλήκτρο Αρχίστε Ανταλλαγή θα ανταλλάξει μόνο τα επιλεγμένα στοιχεία επικοινωνίας.</string>
     <string name="help_identity_menu">Μπορείτε να αλλάξετε χρήσιμα δεδομένα προσωπικού χαρακτήρα σχετικά με την ταυτότητά σας σε αυτή την οθόνη πατώντας το κουμπί με το όνομά σας. Αυτό θα εμφανίσει ένα μενού που σας επιτρέπει να Επεξεργασία σας πινελιά, Δημιουργία νέου επαφής, ή Χρήση άλλο επαφής.</string>
     <string name="help_Messages">Αυτή η οθόνη εμφανίζει όλα τα προηγούμενα μηνύματα, και τα αρχεία που είναι ακόμα διαθέσιμα για λήψη.</string>
-    <string name="help_passphrase">Χρησιμοποιήστε αυτή την οθόνη για να συνδεθείτε στην εφαρμογή με τη φράση πρόσβασής σας. Αν έχετε ξεχάσει το συνθηματικό σας, μπορείτε να δημιουργήσετε ένα νέο κλειδί που προστατεύεται από ένα νέο συνθηματική φράση πατώντας το σύνδεσμο «Ξεχάσατε τον Κωδική φράση; κουμπί. Πατήστε το όνομα χρήστη για να κάνετε εναλλαγή μεταξύ πολλών πλήκτρων.</string>
     <string name="help_PickRecip">Οι επαφές με SafeSlinger εμφανίζονται εδώ, επιλέξτε κάποια για να στείλετε το μήνυμά σας.</string>
     <string name="help_save">Όταν τελειώσετε, το πρωτόκολλο θα αποκαλύψει μια λίστα με τα δεδομένα ταυτότητας που ανταλλάχθηκαν. Επιλέξτε τις επαφές που θέλετε να αποθηκεύσετε και πατήστε το πλήκτρο Εισαγωγή.</string>
     <string name="help_SecureIntroduction">Αυτή η οθόνη σας επιτρέπει να επιλέξετε δύο ανθρώπους με τους οποίους έχετε ήδη ανταλλάξει κλειδιά για να στείλετε τα κλειδιά του ενός στον άλλο. Απλά πατήστε το πλήκτρο Γνωριμία, όταν είστε έτοιμος.</string>
     <string name="help_Send">Αυτή η οθόνη σας επιτρέπει να επιλέξετε κάποια δεδομένα και έναν παραλήπτη για να τα στείλετε. Απλά πατήστε το πλήκτρο Αποστολή όταν είστε έτοιμος.</string>
 
-    <string name="iOS_contactError">Επαφές άδεια που απαιτείται. Παρακαλώ πηγαίνετε στο Settings iOS να ενεργοποιήσετε Επαφές δικαιώματα.</string>
     <string name="iOS_errorpushtoken">Εγγραφή Push λείπει.</string>
-    <string name="iOS_notificationError1">Ειδοποιήσεις άδεια που απαιτείται. Παρακαλώ πηγαίνετε στο Settings iOS να ενεργοποιήσετε Ειδοποιήσεις δικαιώματα.</string>
-    <string name="iOS_notificationError2">%s άδεια που απαιτείται. Παρακαλώ πηγαίνετε στο Settings iOS να ενεργοποιήσετε Ειδοποιήσεις δικαιώματα.</string>
     <string name="iOS_oldOSWarn">SafeSlinger δεν είναι βελτιστοποιημένη για συσκευές iOS 5.x. SafeSlinger απαιτεί iOS 6 ή νεότερη έκδοση.</string>
 
     <string name="label_ago">%s πριν</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-αποκρυπτογράφηση</string>
     <string name="menu_Change">Αλλαγή</string>
     <string name="menu_ChangePassphrase">Αλλαγή Κωδικού</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Κειμένου (SMS/MMS)</string>
     <string name="menu_CreateNew">Δημιουργία νέου</string>
     <string name="menu_delete">Διαγραφή</string>
     <string name="menu_deleteThread">Διαγραφή θέμα %s</string>

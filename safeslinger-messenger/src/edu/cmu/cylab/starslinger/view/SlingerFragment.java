@@ -563,8 +563,6 @@ public class SlingerFragment extends Fragment {
             switch (id) {
                 case BaseActivity.DIALOG_HELP:
                     return BaseActivity.xshowHelp(getActivity(), getArguments()).create();
-                case BaseActivity.DIALOG_TUTORIAL:
-                    return BaseActivity.xshowWalkthrough(getActivity()).create();
                 default:
                     break;
             }
@@ -607,12 +605,6 @@ public class SlingerFragment extends Fragment {
         args.putString(extra.RESID_MSG, msg);
         DialogFragment newFragment = SlingerAlertDialogFragment.newInstance(
                 BaseActivity.DIALOG_HELP, args);
-        newFragment.show(getFragmentManager(), "dialog");
-    }
-
-    public void showWalkthrough() {
-        DialogFragment newFragment = SlingerAlertDialogFragment
-                .newInstance(BaseActivity.DIALOG_TUTORIAL);
         newFragment.show(getFragmentManager(), "dialog");
     }
 

@@ -311,6 +311,7 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
         menu.add(Menu.NONE, R.id.item_key_details, Menu.NONE, R.string.menu_Details);
         menu.add(Menu.NONE, R.id.item_delete_recipient, Menu.NONE, R.string.menu_delete);
+        menu.add(Menu.NONE, R.id.item_link_contact, Menu.NONE, R.string.menu_link_contact);
 
         if (SafeSlingerConfig.isDebug()) {
             if (hideInactive) {
@@ -333,6 +334,9 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         } else if (item.getItemId() == R.id.item_delete_recipient) {
             doDeleteRecipient(recip);
             updateValues(null);
+            return true;
+        } else if (item.getItemId() == R.id.item_link_contact) {
+            showPickContact(recip);
             return true;
         } else if (item.getItemId() == R.id.item_showallinvalid) {
             hideInactive = false;

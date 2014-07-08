@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Hapa wetemuna kaitākaro Ororongo.</string>
     <string name="error_AudioPlayerError">Kāore e taea te takaro i te tuhi.</string>
     <string name="error_AudioRecorderEncodeError">Hapa kaiwhakamahara whakawaehere Ororongo.</string>
-    <string name="error_AudioRecorderPermissionError">Whakaaetanga hopuoro e hiahiatia ana. Tēnā haere ki Settings iOS ki te taea whakaaetanga Hopureo.</string>
     <string name="error_BackupNotFound">No pūrua ki te whakahoki.</string>
     <string name="error_BackupNotSupportedDevice">E kore e tautoko i Pūrere pūrua whakahoki.</string>
     <string name="error_BadCopyProtectUpgrade">Nā ki te bug i Android 4.1, ka whai koe ki te tango me te tāuta anō SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Hapa SafeSlinger, koa tīmata anō.</string>
     <string name="error_VcardParseFailure">Raraunga Whakapā whakahōputu i hē.</string>
 
-    <string name="help_find">Whakamahia tēnei mata ki te whakatakotoria tou ingoa ki te whakawhiti ki ētahi atu. Paoa i te pātene Fai ka oti.</string>
     <string name="help_home">Ki te whakawhiti raraunga tuakiri, te whakarite kei tata ranei i runga i te waea kaiwhakamahi katoa. Ka whakawhiti i te pātene Tīmata Exchange te raraunga whakapā takina anake.</string>
     <string name="help_identity_menu">Kia hoki e koe te huri i ngā raraunga whaiaro e pā ana ki o koutou i runga i tenei tuakiri mata i te ingoa i runga i te pātene ki tou ingoa. Tenei ka whakaatu te tahua tuku ki a koutou Whakatikaina koutou whakapā, Waihanga whakapā New, ranei Whakamahia tētahi atu whakapā.</string>
     <string name="help_Messages">Ka whakaatu tēnei mata i ngā karere o mua katoa, me ngā tāpiritanga e wātea ana mō te download he tonu.</string>
-    <string name="help_passphrase">Whakamahia tēnei mata ki te takiuru ki te tono ki to koutou kīangahipa. Ki te mea kua wareware koe tou kīangahipa, kia whakaputa e koe te kī hou tiakina e te kīangahipa hou mā te mirimiri i te Kīangahipa Kua wareware i? pātene. Paoa te ingoa kaiwhakamahi ki te whakawhiti i waenga i te mau taviri maha.</string>
     <string name="help_PickRecip">Kua whakaaturia ngā Hoapā ki te mau taviri SafeSlinger konei, tīpako i tetahi ki te tuku i tō karere ki te.</string>
     <string name="help_save">A, no ka oti, ka te kawa whakakitea he rārangi o te raraunga tuakiri hokona. Tīpakohia te whakapā e hiahia ana koe ki te whakaora me te pēhi Kawemai.</string>
     <string name="help_SecureIntroduction">Mā tēnei mata ki a koe te tīpako e rua iwi kua piua atu e koe mau taviri ki te aroaro o ki he wehi unga ratou mau taviri ki tetahi ki tetahi. Noa pēhi Whakamōhiotia ka rite.</string>
     <string name="help_Send">Mā tēnei mata ki a koe te tīpako i ētahi raraunga me te kaiwhiwhi ki te tuku ki te. Noa pēhi Tukua ka rite.</string>
 
-    <string name="iOS_contactError">Whakaaetanga i ngā Hoapā e hiahiatia ana. Tēnā haere ki Settings iOS ki te taea whakaaetanga ngā Hoapā.</string>
     <string name="iOS_errorpushtoken">Kei te ngaro te rēhitatanga Pana.</string>
-    <string name="iOS_notificationError1">Whakaaetanga ngā whakamōhiotanga e hiahiatia ana. Tēnā haere ki Settings iOS ki te taea Whakamōhiotanga whakaaetanga.</string>
-    <string name="iOS_notificationError2">Whakaaetanga %s e hiahiatia ana. Tēnā haere ki Settings iOS ki te taea Whakamōhiotanga whakaaetanga.</string>
     <string name="iOS_oldOSWarn">E kore te SafeSlinger papaitia kia pūrere 5.x iOS. Me SafeSlinger iOS 6 teitei ranei.</string>
 
     <string name="label_ago">%s i mua</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Wetemuna-aunoa</string>
     <string name="menu_Change">Change</string>
     <string name="menu_ChangePassphrase">Change Kīangahipa</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Waihanga New</string>
     <string name="menu_delete">Muku</string>
     <string name="menu_deleteThread">Mukua te Miro %s</string>

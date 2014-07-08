@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">שגיאת פענוח נגן אודיו.</string>
     <string name="error_AudioPlayerError">לא יכול לשחק את ההקלטה.</string>
     <string name="error_AudioRecorderEncodeError">שגיאת קידוד מקליט אודיו.</string>
-    <string name="error_AudioRecorderPermissionError">רשות מיקרופון נדרשת. בבקשה ללכתלהגדרות iOS כדי לאפשר הרשאות מיקרופון.</string>
     <string name="error_BackupNotFound">אין גיבוילשחזור.</string>
     <string name="error_BackupNotSupportedDevice">מכשיר אינו תומך בגיבוי לשחזר.</string>
     <string name="error_BadCopyProtectUpgrade">עקב באגבאנדרואיד 4.1, תצטרך להסיר ולהתקין מחדש SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">שגיאת SafeSlinger, אנא הפעל מחדש.</string>
     <string name="error_VcardParseFailure">צור קשר היה מעוצב בצורה לא נכונה.</string>
 
-    <string name="help_find">השתמש במסך זה כדי להגדיר את שמך להחליף עם אחרים. הקש על כפתור Done בסיום.</string>
     <string name="help_home">כדי להחליף נתונים זהות, להבטיח שכל המשתמשים נמצאים בקרבת מקום, או בטלפון. כפתור Exchange בגין יחליף רק את נתוני אנשי קשר המסומנים.</string>
     <string name="help_identity_menu">אתה יכול גם לשנות את הנתונים אישיים על הזהות שלך במסך זה על ידי הקשה על הכפתור עם השם שלך. זה יציגתפריט המאפשר לך לערוך את אנשי הקשר שלכם, צור קשר חדש, או השתמש במגע נוסף.</string>
     <string name="help_Messages">מסך זה מציג את כל ההודעות האחרונות, ובקבצים מצורפים שעדיין זמינים להורדה.</string>
-    <string name="help_passphrase">השתמש במסך זה כדי להיכנסליישום עם משפט הסיסמה שלך. אם שכחת את משפט הסיסמה שלך, אתה יכול ליצור מפתח חדש המוגן על ידיביטוי סיסמה חדשה על ידי הקשה על משפט הסיסמה שכחה את הסיסמה? כפתור. הקש על שם המשתמש כדי לעבור בין מקשים מרובים.</string>
     <string name="help_PickRecip">מגעים עם מפתחות SafeSlinger מוצגים כאן, בחר אחד כדי לשלוח את ההודעה שלך.</string>
     <string name="help_save">בסיום,הפרוטוקול יגלהרשימה של נתוני הזהות החליפו. בחר את אנשי הקשר שברצונך לשמור ולחץ על יבוא.</string>
     <string name="help_SecureIntroduction">מסך זה מאפשר לך לבחור שני אנשיםשתליתם את המפתחות עם לפני מאובטח לשלוח את המפתחות שלהם זה לזה. פשוט ללחוץ הציגו כאשר מוכן.</string>
     <string name="help_Send">מסך זה מאפשר לך לבחור נתונים מסוימיםונמען לשלוח ל. פשוט לחץ על שלחכשמוכן.</string>
 
-    <string name="iOS_contactError">מגעים אישור הנדרש. בבקשה ללכתלהגדרות iOS לאפשר את הרשאות מגעים.</string>
     <string name="iOS_errorpushtoken">רישום דחיפה חסר.</string>
-    <string name="iOS_notificationError1">הודעות אישור נדרשים. בבקשה ללכתלהגדרות iOS כדי לאפשר הרשאות הודעות.</string>
-    <string name="iOS_notificationError2">רשות %s הנדרשת. בבקשה ללכתלהגדרות iOS כדי לאפשר הרשאות הודעות.</string>
     <string name="iOS_oldOSWarn">SafeSlinger אינו אופטימלי עבור מכשירי iOS 5.x. SafeSlinger דורש iOS 6 ומעלה.</string>
 
     <string name="label_ago">לפני %s</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-לפענח</string>
     <string name="menu_Change">לשנות</string>
     <string name="menu_ChangePassphrase">משפט סיסמא שינוי</string>
-    <string name="menu_ContactInviteEmail">דוא\'ל</string>
-    <string name="menu_ContactInviteSms">טקסט (SMS/MMS)</string>
     <string name="menu_CreateNew">צור חדש</string>
     <string name="menu_delete">למחוק</string>
     <string name="menu_deleteThread">מחיקת %s אשכול</string>

@@ -83,6 +83,7 @@ public class SettingsActivity extends PreferenceActivity {
     private Preference mBackupCompleteDate;
     private Preference mRestoreCompleteDate;
     private Preference mShowLicense;
+    private Preference mShowPrivacy;
     private CheckBoxPreference mShowTutorial;
     private Preference mShowAbout;
     private Preference mChangePassphrase;
@@ -122,6 +123,7 @@ public class SettingsActivity extends PreferenceActivity {
         mFileManagerDirectory = (ListPreference) findPreference(SafeSlingerPrefs.pref.FILEMANAGER_ROOTDIR);
         mShowAbout = findPreference(SafeSlingerPrefs.pref.SHOW_ABOUT);
         mShowLicense = findPreference(SafeSlingerPrefs.pref.SHOW_LICENSE);
+        mShowPrivacy = findPreference(SafeSlingerPrefs.pref.SHOW_PRIVACY);
         mChangePassphrase = findPreference(SafeSlingerPrefs.pref.CHANGE_PASSPHRASE);
         mManagePassphrase = findPreference(SafeSlingerPrefs.pref.MANAGE_PASSPHRASE);
         mLogout = findPreference(SafeSlingerPrefs.pref.LOGOUT);
@@ -152,6 +154,7 @@ public class SettingsActivity extends PreferenceActivity {
     private void setMessagePreferences() {
         setShowAbout();
         setShowLicense();
+        setShowPrivacy();
         setChangePassphrase();
         setFileManagerRootDirectory();
         setChangeDownloadDir();
@@ -322,15 +325,29 @@ public class SettingsActivity extends PreferenceActivity {
         });
     }
 
+    protected void showWebPage(String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
     protected void setShowLicense() {
         mShowLicense.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                if (!isFinishing()) {
-                    removeDialog(BaseActivity.DIALOG_LICENSE);
-                    showDialog(BaseActivity.DIALOG_LICENSE);
-                }
+                showWebPage(SafeSlingerConfig.EULA_URL);
+                return false;
+            }
+        });
+    }
+
+    protected void setShowPrivacy() {
+        mShowPrivacy.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                showWebPage(SafeSlingerConfig.PRIVACY_URL);
                 return false;
             }
         });
@@ -583,8 +600,6 @@ public class SettingsActivity extends PreferenceActivity {
         switch (id) {
             case BaseActivity.DIALOG_ABOUT:
                 return BaseActivity.xshowAbout(SettingsActivity.this).create();
-            case BaseActivity.DIALOG_LICENSE:
-                return BaseActivity.xshowLicense(SettingsActivity.this).create();
             default:
                 break;
         }

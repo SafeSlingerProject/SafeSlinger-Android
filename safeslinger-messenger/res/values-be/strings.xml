@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Аўдыё плэер памылка дэкадавання.</string>
     <string name="error_AudioPlayerError">Не ўдаецца прайграць запіс.</string>
     <string name="error_AudioRecorderEncodeError">Аўдыё памылка кадавання рэкордэр.</string>
-    <string name="error_AudioRecorderPermissionError">Дазвол Мікрафон патрабуецца. Калі ласка, перайдзіце ў меню Налады iOS для забеспячэння дазволу мікрафон.</string>
     <string name="error_BackupNotFound">Няма рэзервовага капіявання для аднаўлення.</string>
     <string name="error_BackupNotSupportedDevice">Прылада не падтрымлівае аднаўлення рэзервовай копіі.</string>
     <string name="error_BadCopyProtectUpgrade">З-за памылкі ў Android 4.1, вам прыйдзецца выдаліць і пераўсталяваць SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger памылка, перазагрузіце.</string>
     <string name="error_VcardParseFailure">Кантактныя дадзеныя адфарматыраваная няправільна.</string>
 
-    <string name="help_find">Выкарыстоўвайце гэты экран, каб усталяваць сваё імя для абмену з іншымі. Націсніце кнопку Гатова.</string>
     <string name="help_home">Для абмену дадзенымі пасведчанняў, гарантаваць, што ўсе карыстальнікі знаходзяцца непадалёк або па тэлефоне. Пачніце кнопку валютны абмяняюцца толькі правераныя кантактныя дадзеныя.</string>
     <string name="help_identity_menu">Вы таксама можаце змяніць асабістыя дадзеныя аб вашай асобы на гэтым экране, націснуўшы на кнопку з вашым імем. Гэта адлюструе меню дазваляе рэдагаваць вашыя кантакты, стварыць новы кантакт, або выкарыстоўвайце іншы кантакт.</string>
     <string name="help_Messages">На гэтым экране адлюстроўваецца ўсе мінулыя паведамленні і ўкладанні, якія ўсё яшчэ даступныя для запампоўкі.</string>
-    <string name="help_passphrase">Выкарыстоўвайце гэты экран для ўваходу ў дадатак з вашым пароль. Калі вы забыліся свой ​​фразу, вы можаце стварыць новы ключ, абаронены новай парольной фразы па націснуўшы Забыліся парольную фразу? Кнопка. Націсніце на імя карыстальніка пераключацца паміж некалькімі ключамі.</string>
     <string name="help_PickRecip">Кантакты з SafeSlinger ключоў адлюстроўваюцца тут, то выберыце яго, каб адправіць паведамленне.</string>
     <string name="help_save">Калі скончыце, пратакол пакажа спіс ідэнтыфікацыйных дадзеных абменьваюцца. Выберыце кантакты, якія вы хочаце захаваць і націсніце Імпарт.</string>
     <string name="help_SecureIntroduction">Гэты экран дазваляе выбраць адзін з двух людзей, якіх вы перакінуў ключы з да бяспечна адпраўляць свае ключы адзін да аднаго. Проста націсніце Уявіце, калі будзеце гатовыя.</string>
     <string name="help_Send">Гэты экран дазваляе выбраць некаторыя дадзеныя і атрымальніка для адпраўкі. Проста націсніце Адаслаць калі будзеце гатовыя.</string>
 
-    <string name="iOS_contactError">Кантакты дазволу патрабуецца. Калі ласка, перайдзіце ў меню Налады iOS, каб дазволіць Кантакты дазволу.</string>
     <string name="iOS_errorpushtoken">Рэгістрацыя Націсніце адсутнічае.</string>
-    <string name="iOS_notificationError1">Апавяшчэнні дазвол патрабуецца. Калі ласка, перайдзіце ў меню Налады iOS, каб дазволіць Апавяшчэнні дазволу.</string>
-    <string name="iOS_notificationError2">Дазвол %s патрабуецца. Калі ласка, перайдзіце ў меню Налады iOS, каб дазволіць Апавяшчэнні дазволу.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ня аптымізаваны для iOS 5.x прылад. SafeSlinger патрабуецца iOS 6 або вышэй.</string>
 
     <string name="label_ago">%s назад</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Аўта-расшыфроўкі</string>
     <string name="menu_Change">Змена</string>
     <string name="menu_ChangePassphrase">Змяніць Ключавая фраза</string>
-    <string name="menu_ContactInviteEmail">E-mail</string>
-    <string name="menu_ContactInviteSms">Тэкст (SMS/MMS)</string>
     <string name="menu_CreateNew">Стварыць новы</string>
     <string name="menu_delete">Выдаляць</string>
     <string name="menu_deleteThread">Выдаліць %s тэмы</string>

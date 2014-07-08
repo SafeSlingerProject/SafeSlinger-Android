@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Chwaraewr gwall datgodio sain.</string>
     <string name="error_AudioPlayerError">Does dim modd chwarae y recordiad.</string>
     <string name="error_AudioRecorderEncodeError">Gwall amgodio recordydd sain.</string>
-    <string name="error_AudioRecorderPermissionError">Caniatâd Meicroffon angen. Os gwelwch yn dda ewch at Gosodiadau iOS i alluogi caniatâd Meicroffon.</string>
     <string name="error_BackupNotFound">Na backup i adfer.</string>
     <string name="error_BackupNotSupportedDevice">Nid yw dyfais yn cefnogi backup adfer.</string>
     <string name="error_BadCopyProtectUpgrade">O ganlyniad i nam yn Android 4.1, bydd rhaid i chi uninstall a ailosod SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Gwall SafeSlinger, os gwelwch yn dda ailgychwyn.</string>
     <string name="error_VcardParseFailure">Data cyswllt ei fformatio anghywir.</string>
 
-    <string name="help_find">Defnyddiwch y sgrin hon i osod eich enw i gyfnewid gydag eraill. Tap y botwm Done ar ôl gorffen.</string>
     <string name="help_home">I gyfnewid data hunaniaeth, sicrhau bod yr holl ddefnyddwyr yn gerllaw neu ar y ffôn. Bydd y botwm Dechrau Cyfnewid cyfnewid dim ond y data cyswllt gwirio.</string>
     <string name="help_identity_menu">Gallwch hefyd newid data personol am eich hunaniaeth ar y sgrin hon drwy fanteisio ar y botwm gyda\'ch enw. Bydd hyn yn dangos bwydlen sy\'n eich galluogi i Golygu eich cyswllt, Creu cysylltiad newydd, neu Defnyddio cyswllt arall.</string>
     <string name="help_Messages">Mae\'r sgrin hon yn dangos pob neges yn y gorffennol, ac atodiadau sydd yn dal ar gael i\'w llwytho i lawr.</string>
-    <string name="help_passphrase">Defnyddiwch y sgrin hon i fewngofnodi i\'r cais gyda\'ch cyfrin-ymadrodd. Os ydych wedi anghofio eich cyfrinair, efallai y byddwch yn creu allwedd newydd a ddiogelir gan cyfrinair newydd drwy fanteisio i\'r cyfrinair Forgot? botwm. Tap yr enw defnyddiwr i newid rhwng allweddi lluosog.</string>
     <string name="help_PickRecip">Cysylltiadau gydag allweddi SafeSlinger yn cael eu harddangos yma, dewiswch un i anfon eich neges at.</string>
     <string name="help_save">Pan fyddwch wedi gorffen, bydd y protocol yn datgelu rhestr o\'r data hunaniaeth cyfnewid. Dewiswch y cysylltiadau yr hoffech i arbed a phwyswch Mewnforio.</string>
     <string name="help_SecureIntroduction">Mae\'r sgrin hon yn caniatáu i chi ddewis dau berson yr ydych wedi slung allweddi gyda blaen i anfon eu allweddi yn ddiogel i\'w gilydd. Yn syml, pwyswch Cyflwyno pan fydd yn barod.</string>
     <string name="help_Send">Mae\'r sgrin hon yn eich galluogi i ddewis rhywfaint o ddata a derbynnydd i\'w hanfon at. Yn syml, pwyswch Anfon pan fydd yn barod.</string>
 
-    <string name="iOS_contactError">Caniatâd Cysylltiadau gofynnol. Os gwelwch yn dda ewch at Gosodiadau iOS i alluogi caniatâd Cysylltiadau.</string>
     <string name="iOS_errorpushtoken">Cofrestru gwthio ar goll.</string>
-    <string name="iOS_notificationError1">Caniatâd Hysbysiadau gofynnol. Os gwelwch yn dda ewch at Gosodiadau iOS er mwyn galluogi caniatâd Hysbysiadau.</string>
-    <string name="iOS_notificationError2">Caniatâd %s angen. Os gwelwch yn dda ewch at Gosodiadau iOS er mwyn galluogi caniatâd Hysbysiadau.</string>
     <string name="iOS_oldOSWarn">Nid SafeSlinger ei optimeiddio ar gyfer dyfeisiau iOS 5.x. SafeSlinger gwneud yn ofynnol i iOS 6 neu uwch.</string>
 
     <string name="label_ago">%s yn ôl</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-dadgryptio</string>
     <string name="menu_Change">Newid</string>
     <string name="menu_ChangePassphrase">Newid cyfrin-ymadrodd</string>
-    <string name="menu_ContactInviteEmail">E-bost</string>
-    <string name="menu_ContactInviteSms">Testun (SMS/MMS)</string>
     <string name="menu_CreateNew">Creu Newydd</string>
     <string name="menu_delete">Dileu</string>
     <string name="menu_deleteThread">Dileu %s Thread</string>

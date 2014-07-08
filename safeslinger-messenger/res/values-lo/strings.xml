@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">ສຽງ ຜິດພາດ decoding ຜູ້ນ.</string>
     <string name="error_AudioPlayerError">ບໍ່ ສາມາດຫຼິ້ນ ການບັນທຶກການ.</string>
     <string name="error_AudioRecorderEncodeError">ສຽງ ຄວາມຜິດພາດ ລະບົບພາສາ ທີ່ບັນທຶກ.</string>
-    <string name="error_AudioRecorderPermissionError">ການອະນຸຍາດ Microphone ຕ້ອງການ. ກະລຸນາ ໄປ iOS ຕັ້ງ ເພື່ອໃຫ້ສາມາດ ອະນຸຍາດ Microphone.</string>
     <string name="error_BackupNotFound">ຮອງ ບໍ່ມີ ການ ປະຕິສັງຂອນ.</string>
     <string name="error_BackupNotSupportedDevice">ອຸປະກອນ ບໍ່ໄດ້ ສະຫນັບສະຫນູນ ການຟື້ນຟູ ຮອງ.</string>
     <string name="error_BadCopyProtectUpgrade">ເນື່ອງຈາກ bug ໃນ Android 4.1, ທ່ານຈະ ມີການ ຖອນການຕິດຕັ້ງ ແລະ reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">ຄວາມຜິດພາດ SafeSlinger, ກະລຸນາ restart.</string>
     <string name="error_VcardParseFailure">ຂໍ້ມູນ ຕິດຕໍ່ ໄດ້ ແບບ ບໍ່ຖືກຕ້ອງ.</string>
 
-    <string name="help_find">ການນໍາໃຊ້ ຫນ້າຈໍ ນີ້ ຈະກໍານົດ ຊື່ ຂອງທ່ານ ທີ່ຈະແລກປ່ຽນ ກັບຄົນອື່ນ. ປາດ ປຸ່ມ ເຮັດ ໄດ້ ໃນເວລາ ສໍາເລັດແລ້ວ.</string>
     <string name="help_home">ເພື່ອ ແລກປ່ຽນ ຂໍ້ມູນ ເອກະລັກ, ຮັບປະກັນການ ຊົມໃຊ້ ທັງຫມົດແມ່ນ ໃກ້ຄຽງຫຼື ຢູ່ໃນໂທລະສັບ ໄດ້. ການ ເລີ່ມຕົ້ນ ປຸ່ມ ການແລກປ່ຽນ ຈະໄດ້ ແລກປ່ຽນ ພຽງແຕ່ ໄດ້ ຂໍ້ມູນ ການຕິດຕໍ່ ການກວດກາ.</string>
     <string name="help_identity_menu">ນອກນັ້ນທ່ານຍັງ ອາດຈະ ມີການປ່ຽນແປງ ຂໍ້ມູນ ສ່ວນຕົວກ່ຽວກັບ ຕົວຕົນ ຂອງທ່ານກ່ຽວກັບ ຫນ້າຈໍ ນີ້ ໂດຍ ປາດຢາງ ໃສ່ປຸ່ມ ທີ່ມີຊື່ ຂອງທ່ານ. ນີ້ ຈະສະແດງ ເມນູ ໃຫ້ທ່ານ ແກ້ ການຕິດຕໍ່ ຂອງທ່ານ, ສ້າງ ການພົວພັນ ໃຫມ່, ຫຼື ນໍາໃຊ້ ການພົວພັນ ອີກປະການຫນຶ່ງ.</string>
     <string name="help_Messages">ຫນ້າຈໍນີ້ ຈະສະແດງ ຂໍ້ຄວາມ ທີ່ຜ່ານມາ ທັງຫມົດ, ແລະຄັດຕິດ ທີ່ ຍັງມີ ສໍາລັບ ການດາວໂຫຼດ.</string>
-    <string name="help_passphrase">ການນໍາໃຊ້ ຫນ້າຈໍ ນີ້ ໃຫ້ ເຂົ້າສູ່ລະບົບ ຄໍາຮ້ອງສະຫມັກ ທີ່ມີ passphrase ຂອງທ່ານ. ຖ້າຫາກວ່າ ທ່ານ ໄດ້ລືມ passphrase ຂອງທ່ານ, ທ່ານ ອາດຈະ ສ້າງ ເປັນ ທີ່ສໍາຄັນ ໃຫມ່ ປ້ອງກັນໂດຍ passphrase ໃຫມ່ ໂດຍ ປາດຢາງ Passphrase ລືມ ແນວໃດ? ກົດປຸ່ມ. ປາດ ຊື່ ຜູ້ໃຊ້ໃນການ ສະຫຼັບລະຫວ່າງ ທີ່ ຫຼາຍ.</string>
     <string name="help_PickRecip">ຕິດຕໍ່ພົວພັນ ກັບ ທີ່ SafeSlinger ແມ່ນສະແດງ ຢູ່ທີ່ນີ້, ໃຫ້ເລືອກ ຫນຶ່ງ ໃນການສົ່ງ ຂໍ້ຄວາມ ຂອງທ່ານໄປ.</string>
     <string name="help_save">ໃນເວລາ ສໍາເລັດການ, ອະນຸສັນຍາ ຈະເປີດເຜີຍ ບັນຊີລາຍຊື່ ຂອງ ຂໍ້ມູນ ເອກະລັກ ຂອງ ການແລກປ່ຽນ ເປັນ. ເລືອກ ຕິດຕໍ່ພົວພັນ ໄດ້ ທີ່ທ່ານຕ້ອງການ ເພື່ອຊ່ວຍປະຢັດ ແລະກົດ ການນໍາເຂົ້າ.</string>
     <string name="help_SecureIntroduction">ຫນ້າຈໍນີ້ ອະນຸຍາດໃຫ້ ທ່ານ ເພື່ອຄັດເລືອກເອົາ ປະຊາຊົນສອງ ທ່ານໄດ້ slung ທີ່ ມີ ກ່ອນ ເພື່ອຄວາມປອດໄພ ສົ່ງ ທີ່ ຂອງເຂົາເຈົ້າ ອື່ນໆໃນແຕ່ລະ. ພຽງແຕ່ ກົດ ແນະນໍາ ໃນເວລາທີ່ ພ້ອມທີ່ຈະ.</string>
     <string name="help_Send">ຫນ້າຈໍນີ້ ອະນຸຍາດໃຫ້ ທ່ານ ເພື່ອຄັດເລືອກເອົາ ບາງ ຂໍ້ມູນ ແລະຜູ້ຮັບ ການສົ່ງ ກັບ. ພຽງແຕ່ ກົດ ສົ່ງ ໃນເວລາທີ່ ພ້ອມທີ່ຈະ.</string>
 
-    <string name="iOS_contactError">ການອະນຸຍາດ ການຕິດຕໍ່ ທີ່ຕ້ອງການ. ກະລຸນາ ໄປ iOS ຕັ້ງ ເພື່ອໃຫ້ສາມາດ ອະນຸຍາດ ການຕິດຕໍ່.</string>
     <string name="iOS_errorpushtoken">ການຈົດທະບຽນ ການຊຸກຍູ້ ທີ່ຂາດຫາຍໄປ.</string>
-    <string name="iOS_notificationError1">ການອະນຸຍາດ ແຈ້ງການ ທີ່ກໍານົດໄວ້. ກະລຸນາ ໄປ iOS ຕັ້ງ ເພື່ອໃຫ້ສາມາດ ອະນຸຍາດ ແຈ້ງການ.</string>
-    <string name="iOS_notificationError2">ການອະນຸຍາດ %s ຕ້ອງການ. ກະລຸນາ ໄປ iOS ຕັ້ງ ເພື່ອໃຫ້ສາມາດ ອະນຸຍາດ ແຈ້ງການ.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ບໍ່ໄດ້ ເຫມາະສໍາລັບ iOS ອຸປະກອນ 5.x. SafeSlinger ຮຽກຮ້ອງໃຫ້ iOS 6 ຫຼືສູງກວ່າ.</string>
 
     <string name="label_ago">%s ກ່ອນຫນ້ານີ້</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">ອັດຕະໂນມັດ decrypt</string>
     <string name="menu_Change">ການປ່ຽນແປງ</string>
     <string name="menu_ChangePassphrase">ການປ່ຽນແປງ Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">ຂໍ້ຄວາມ (SMS/MMS)</string>
     <string name="menu_CreateNew">ສ້າງ ໃຫມ່</string>
     <string name="menu_delete">ຄອມ</string>
     <string name="menu_deleteThread">ຄອມ %s ກະທູ້</string>

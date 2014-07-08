@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Lorem ipsum dolor decoding error.</string>
     <string name="error_AudioPlayerError">Nec actum agere.</string>
     <string name="error_AudioRecorderEncodeError">Audio scriptor Encoding error.</string>
-    <string name="error_AudioRecorderPermissionError">Etiam tortor ligula requiramus. Veni in iOS ut luctus tortor ligula, facilisis erat.</string>
     <string name="error_BackupNotFound">Tergum et non reddere.</string>
     <string name="error_BackupNotSupportedDevice">Fabrica non facit tergum restituunt.</string>
     <string name="error_BadCopyProtectUpgrade">Mendum in Android 4.1 Ex habebis ut amoveas SafeSlinger restituo.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger error, sileo velit.</string>
     <string name="error_VcardParseFailure">Est Lorem ipsum dolor cursu recte.</string>
 
-    <string name="help_find">Praesent id velit, ut te ad commutare cum aliis. ICTUS a puga pyga fieri effectum.</string>
     <string name="help_home">Permutare identitatem notitia accumsan omnia prope vel phone users. Initium mutationis in ipsum mutare tantum coercuit contactus notitia.</string>
     <string name="help_identity_menu">Item alio notitia ad identitatemUt in elit ipsum, cum percussoque in nomine tuo. Is sino vos cito Duis lectus tuum contactum contactum Aliquam novo, aut alia necessitudo.</string>
     <string name="help_Messages">Haec verba proferat, sunt omnia, et quae sunt affectiones quae tractari possunt.</string>
-    <string name="help_passphrase">Praesent id velit ut login ut vestri application passphrase. Si tu oblitus es passphrase tuam, ut tutus a key novam passphrase percussoque Aliquam passphrase? ipsum. ICTUS, nomen usoris ut switch inter multiple claves.</string>
     <string name="help_PickRecip">Aenean auctor wisi et SafeSlinger sunt quae hic monstratur, eligere ad mittere te.</string>
     <string name="help_save">Cum complevit elit idem commutaverunt protocollo elenchus indicabit. Suspendisse ac nisi uelis premas Import dolor.</string>
     <string name="help_SecureIntroduction">Quod sino vos ut lego duo, quas screen et funda iecit, ut cum inter se, ut prius, et habitans confidenter, claves suas. Iustus click in eos cum inferre parati.</string>
     <string name="help_Send">Mauris elit ac sino vos ut lego quod mitteret alicui. Cum iustus click in eos mittere paratus.</string>
 
-    <string name="iOS_contactError">Aenean auctor wisi et requiramus. Veni in iOS Vestibulum tortor ut erat.</string>
     <string name="iOS_errorpushtoken">Push dolor deest.</string>
-    <string name="iOS_notificationError1">Notifications requiramus. Veni in iOS Notifications tortor ut erat.</string>
-    <string name="iOS_notificationError2">%s requiramus. Veni in iOS Notifications tortor ut erat.</string>
     <string name="iOS_oldOSWarn">Non ad ipsum iOS adinventionum SafeSlinger 5.x. VI SafeSlinger opus iOS aut superius.</string>
 
     <string name="label_ago">ante %s</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-minutum</string>
     <string name="menu_Change">Disputatio</string>
     <string name="menu_ChangePassphrase">Vestibulum passphrase</string>
-    <string name="menu_ContactInviteEmail">Lorem ipsum dolor</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Lorem New</string>
     <string name="menu_delete">Delete</string>
     <string name="menu_deleteThread">Delete varius %s</string>

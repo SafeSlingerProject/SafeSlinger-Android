@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">오디오 플레이어 암호해제 오류가 발생했습니다.</string>
     <string name="error_AudioPlayerError">녹음자료를 재생할 수 없습니다.</string>
     <string name="error_AudioRecorderEncodeError">오디오 레코더 암호화 오류가 발생했습니다.</string>
-    <string name="error_AudioRecorderPermissionError">마이크 권한 이 필요합니다. 마이크 권한 을 사용하려면 아이폰 OS 설정으로 이동 하십시오.</string>
     <string name="error_BackupNotFound">복원할 백업정보가 없습니다.</string>
     <string name="error_BackupNotSupportedDevice">이 기기는 백업 복원을 지원하지 않습니다.</string>
     <string name="error_BadCopyProtectUpgrade">안드로이드 4.1의 버그로 인해, 당신은 SafeSlinger를 제거하고 다시 설치해야합니다.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger 오류가 발생했습니다. 다시 시작해주세요.</string>
     <string name="error_VcardParseFailure">연락처 데이터 의 형식이 잘못 되었습니다.</string>
 
-    <string name="help_find">다른 사람과 교환 할 당신의 이름을 설정할 수있는 화면입니다. 완료되면 \'완료\'버튼을 누릅니다.</string>
     <string name="help_home">신원정보를 교환하고자 하는 모든 사용자가 서로의 근처에 있어야 합니다. 교환하고자 하는 연락처 정보를 골라 선택한 후 \'교류 시작\' 버튼을 눌러주십시오.</string>
     <string name="help_identity_menu">당신은 유용한 이름을 가진 버튼을 눌러이 화면에서 사용자의 신원에 대한 개인 데이터를 변경할 수 있습니다. 이 메뉴 있도록 당신의 손길을 \'수정\'을, 접촉 \'새로 만들기\'를, 또는 \'을 사용하는 또 다른의 연락처를 표시합니다.</string>
     <string name="help_Messages">이 화면에는 과거에 교환했던 다운로드 가능한 메시지와 파일들을 표시합니다.</string>
-    <string name="help_passphrase">당신의 암호 를 사용하여 응용 프로그램 에 로그인 이 화면을 사용합니다. 당신은 당신의 암호를 잊어 버린 경우, 당신은 \' 비밀 문구 를 잊으셨습니까? \' 을 눌러 새 암호 에 의해 보호되는 새 키를 생성 할 수있다 버튼을 누릅니다. 여러 개의 키 사이를 전환 할 사용자 이름을 누릅니다.</string>
     <string name="help_PickRecip">SafeSlinger 키가 있는 연락처가 이곳에 표시됩니다. 메시지를 보내려면 하나를 선택해주십시오.</string>
     <string name="help_save">작업이 완료되면, 교환했던 신원정보 목록이 생성됩니다. 저장하고자 하는 연락처를 선택하여 \'가져 오기\'를 눌러주세요.</string>
     <string name="help_SecureIntroduction">이 화면에서는 예전에 이미 함께 교환했던 두명의 사람을 선택하여 그들이 서로의 키를 안전하게 교환하도록 수 있습니다. 준비가 되면 \'소개\'를 눌러주세요.</string>
     <string name="help_Send">이 화면에서는 데이터와 수신자를 선택할 수 있습니다. 준비가 되면 \'보내기\'를 눌러주세요.</string>
 
-    <string name="iOS_contactError">연락처 권한 이 필요합니다. 연락처 권한 을 사용하려면 아이폰 OS 설정으로 이동 하십시오.</string>
     <string name="iOS_errorpushtoken">푸시 등록 이 없습니다.</string>
-    <string name="iOS_notificationError1">알림 권한 이 필요합니다. 알림 권한 을 사용하려면 아이폰 OS 설정으로 이동 하십시오.</string>
-    <string name="iOS_notificationError2">%s 권한 이 필요합니다. 알림 권한 을 사용하려면 아이폰 OS 설정으로 이동 하십시오.</string>
     <string name="iOS_oldOSWarn">SafeSlinger는 아이폰 OS 5.x를 디바이스에 최적화되어 있지 않습니다. SafeSlinger는 아이폰 OS 6 이상이 필요합니다.</string>
 
     <string name="label_ago">%s전에</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">자동 해독</string>
     <string name="menu_Change">수정</string>
     <string name="menu_ChangePassphrase">암호 변경</string>
-    <string name="menu_ContactInviteEmail">이메일</string>
-    <string name="menu_ContactInviteSms">텍스트 (SMS/MMS)</string>
     <string name="menu_CreateNew">새로 만들기</string>
     <string name="menu_delete">삭제</string>
     <string name="menu_deleteThread">\'%s\'을(를) 삭제</string>

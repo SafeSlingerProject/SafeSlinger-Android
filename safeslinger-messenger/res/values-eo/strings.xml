@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Aŭdio ludanto malkodigo eraro.</string>
     <string name="error_AudioPlayerError">Ne eblas ludi la registrado.</string>
     <string name="error_AudioRecorderEncodeError">Aŭdio kronikisto kodado eraro.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofono permeso bezonata. Bonvolu iri al iOS Agordoj ebligi Mikrofono permesojn.</string>
     <string name="error_BackupNotFound">Neniu sekurkopioj redoni.</string>
     <string name="error_BackupNotSupportedDevice">Aparato ne apogas sekurkopioj redonos.</string>
     <string name="error_BadCopyProtectUpgrade">Pro cimo en Android 4.1, vi havos malinstali kaj reinstali SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger eraro, bonvolu rekomenci.</string>
     <string name="error_VcardParseFailure">Kontakto datumoj estis formatita malĝuste.</string>
 
-    <string name="help_find">Uzu tiun ekranon por agordi vian nomon por interŝanĝi kun aliaj. Frapeti la Farita butonon kiam finis.</string>
     <string name="help_home">Interŝanĝi identecon datumoj, certigi al ĉiuj uzantoj estas proksimaj aŭ telefone. La Begin Interŝanĝo butono interŝanĝi nur la kontrolita kontakto datumojn.</string>
     <string name="help_identity_menu">Vi povas ankaŭ ŝanĝi personajn datumojn pri via identeco sur ĉi ekrano per frapeton sur la butono kun via nomo. Tio montros menuo kiu permesas vin Redaktu via kontakto, Create New kontakto, aŭ uzu alian kontakton.</string>
     <string name="help_Messages">Ĉi ekrano montras ĉiujn pasinteco mesaĝoj, kaj ligiteco, kiuj estas ankoraŭ disponebla por elŝuti.</string>
-    <string name="help_passphrase">Uzu tiun ekranon por ensaluti en la apliko kun via pasfrazon. Se vi forgesis vian pasfrazon, vi povas generi novan ŝlosilon protektitaj per nova pasfrazon per tapping la Forgot pasfrazon? butono. Frapeti la nomon de uzanto por ŝanĝi inter diversaj ŝlosiloj.</string>
     <string name="help_PickRecip">Kontaktoj kun SafeSlinger klavoj estas montrata tie, elektu unu por sendi vian mesaĝon al.</string>
     <string name="help_save">Kiam finis, la protokolo malkaŝos listo de la identeco datumoj interŝanĝis. Elektu la kontaktoj vi deziras savi kaj premi importo.</string>
     <string name="help_SecureIntroduction">Ĉi ekrano permesas al vi elekti du personoj vi colgada klavoj kun antaŭe por sekure sendi iliajn sxlosilojn al ĉiu alia. Simple premu Enkondukas kiam preta.</string>
     <string name="help_Send">Ĉi ekrano permesas al vi elekti iujn datumojn kaj ricevinto ordoni. Simple premu Sendu kiam preta.</string>
 
-    <string name="iOS_contactError">Kontaktoj permeso bezonata. Bonvolu iri al iOS Agordoj ebligi Kontaktoj permesojn.</string>
     <string name="iOS_errorpushtoken">Puŝo enskribo mankas.</string>
-    <string name="iOS_notificationError1">Sciigoj permeso bezonata. Bonvolu iri al iOS Agordoj ebligi Sciigoj permesojn.</string>
-    <string name="iOS_notificationError2">%s permeso bezonata. Bonvolu iri al iOS Agordoj ebligi Sciigoj permesojn.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ne optimumigita por iOS 5.x aparatoj. SafeSlinger postulas iOS 6 aŭ pli alta.</string>
 
     <string name="label_ago">%s antaŭe</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Aŭto-malĉifri</string>
     <string name="menu_Change">Ŝanĝo</string>
     <string name="menu_ChangePassphrase">Ŝanĝo pasfrazon</string>
-    <string name="menu_ContactInviteEmail">Retpoŝto</string>
-    <string name="menu_ContactInviteSms">Teksto (SMS/MMS)</string>
     <string name="menu_CreateNew">Krei Novaj</string>
     <string name="menu_delete">Forigi</string>
     <string name="menu_deleteThread">Forigi Fadeno %s</string>

@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio player żball dekodifikazzjoni.</string>
     <string name="error_AudioPlayerError">Ma jistgħux jilagħbu l-irrekordjar.</string>
     <string name="error_AudioRecorderEncodeError">Audio żball kodifikazzjoni recorder.</string>
-    <string name="error_AudioRecorderPermissionError">Permess mikrofonu meħtieġa. Jekk jogħġbok mur iOS Settings biex jippermettu permessi mikrofonu.</string>
     <string name="error_BackupNotFound">Nru backup biex jirrestawraw.</string>
     <string name="error_BackupNotSupportedDevice">Apparat mhux kompatibbli backup jirrestawraw.</string>
     <string name="error_BadCopyProtectUpgrade">Minħabba bug fil Android 4.1, ser ikollok biex uninstall u jerġa SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Żball SafeSlinger, jekk jogħġbok terġa \'tibda.</string>
     <string name="error_VcardParseFailure">Informazzjoni ta \'kuntatt kien formattjati b\'mod żbaljat.</string>
 
-    <string name="help_find">Uża dan l-iskrin li jiġu stabbiliti l-isem tiegħek għal skambju ma \'oħrajn. Tektek il-buttuna Magħmul meta lest.</string>
     <string name="help_home">Li jiskambja data identità, tiżgura l-utenti kollha huma fil-qrib jew fuq it-telefon. Il Tibda buttuna Exchange se jiskambjaw biss id-dejta ta \'kuntatt ċċekkjati.</string>
     <string name="help_identity_menu">Inti tista \'wkoll jibdlu data personali dwar l-identità tiegħek fuq dan l-iskrin billi ttektek fuq il-buttuna bl-isem tiegħek. Dan se display menu tippermetti li inti Edit kuntatt tiegħek, Oħloq kuntatt New, jew l-użu ta \'kuntatt ieħor.</string>
     <string name="help_Messages">Dan screen displays messaġġi kollha tal-passat, u l-annessi li għadhom disponibbli għal download.</string>
-    <string name="help_passphrase">Uża dan l-iskrin login l-applikazzjoni mingħajr passphrase tiegħek. Jekk insejt passphrase tiegħek, inti tista \'tiġġenera ewlieni ġdid protett minn passphrase ġdid billi jutilizza l-passphrase Insejt? buttuna. Tektek il-isem l-utent biex jaqilbu bejn keys multipli.</string>
     <string name="help_PickRecip">Kuntatti ma \' ċwievet SafeSlinger huma murija hawnhekk, wieħed jagħżel li jibgħat messaġġ tiegħek.</string>
     <string name="help_save">Meta jkun lest, il-protokoll se jiżvelaw lista ta \' data identità skambjata. Agħżel il-kuntatti tixtieq li jsalva u istampa Importazzjoni.</string>
     <string name="help_SecureIntroduction">Dan screen jippermettilek li tagħżel żewġ persuni inti sospiżi ċwievet bl qabel li sigur jibgħat ċwievet tagħhom lil xulxin. Sempliċement agħfas Introduċi meta jkun lest.</string>
     <string name="help_Send">Dan screen jippermetti li inti tagħżel xi data u r-riċevitur li tibgħat lill. Sempliċement agħfas Ibgħat meta jkun lest.</string>
 
-    <string name="iOS_contactError">Kuntatti permess meħtieġ. Jekk jogħġbok mur iOS Settings biex jippermettu Kuntatti permessi.</string>
     <string name="iOS_errorpushtoken">Reġistrazzjoni Imbotta hija nieqsa.</string>
-    <string name="iOS_notificationError1">Notifiki permess meħtieġ. Jekk jogħġbok mur iOS Settings biex jippermettu permessi Notifiki.</string>
-    <string name="iOS_notificationError2">Permess %s meħtieġa. Jekk jogħġbok mur iOS Settings biex jippermettu permessi Notifiki.</string>
     <string name="iOS_oldOSWarn">SafeSlinger mhux ottimizzat għall-mezzi 5.x iOS. SafeSlinger teħtieġ iOS 6 jew ogħla.</string>
 
     <string name="label_ago">%s ilu</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-jiddekripta</string>
     <string name="menu_Change">Bidla</string>
     <string name="menu_ChangePassphrase">Bidla passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Test (SMS/MMS)</string>
     <string name="menu_CreateNew">Oħloq New</string>
     <string name="menu_delete">Ħassar</string>
     <string name="menu_deleteThread">Ħassar %s Thread</string>

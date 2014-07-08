@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Earráid díchódaithe imreoir Fuaime.</string>
     <string name="error_AudioPlayerError">Ní féidir imirt ar an taifeadadh.</string>
     <string name="error_AudioRecorderEncodeError">Earráid ionchódú taifeadta Fuaime.</string>
-    <string name="error_AudioRecorderPermissionError">Cead Micreafón ag teastáil. Do thoil, téigh go Socruithe iOS a chur ar chumas ceadanna Micreafón.</string>
     <string name="error_BackupNotFound">Uimh cúltaca a chur ar ais.</string>
     <string name="error_BackupNotSupportedDevice">Ní Gléas tacú cúltaca ais.</string>
     <string name="error_BadCopyProtectUpgrade">Mar gheall ar a bug in Android 4.1, beidh ort a dhíshuiteáil agus reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger earráid, le do thoil atosú.</string>
     <string name="error_VcardParseFailure">Cuireadh formáidithe sonraí Teagmháil mícheart.</string>
 
-    <string name="help_find">Bain úsáid as an scáileán a leagan d\'ainm a mhalartú le daoine eile. Beartaíonn an cnaipe Arna dhéanamh nuair críochnaithe.</string>
     <string name="help_home">Chun sonraí aitheantais a mhalartú, a chinntiú go bhfuil gach úsáideoir in aice láimhe nó ar an teileafón. Beidh an Tosaigh Malartú cnaipe a mhalartú ach amháin na sonraí teagmhála a sheiceáil.</string>
     <string name="help_identity_menu">Is féidir leat sonraí pearsanta faoi do chéannacht ar an scáileán a athrú freisin ag cnagadh ar an gcnaipe le do ainm. Beidh sé seo a thaispeáint roghchlár a ligeann duit a Cuir do teagmháil, teagmháil Cruthaigh Nua, nó Bain úsáid as teagmháil eile.</string>
     <string name="help_Messages">Taispeánann an scáileán gach teachtaireacht atá caite, agus ceangaltáin atá fós ar fáil le híoslódáil.</string>
-    <string name="help_passphrase">Bain úsáid as an scáileán logáil isteach chun an t-iarratas le do frása faire. Má tá tú dearmad ar do frása faire, is féidir leat eochair nua cosanta le frása faire nua ag cnagadh ar an Frása Faire dearmadta ghiniúint? cnaipe. Beartaíonn an t-ainm úsáideora a aistriú idir eochracha il.</string>
     <string name="help_PickRecip">Teagmhálacha le heochracha SafeSlinger taispeáint anseo, roghnaigh ceann amháin le do theachtaireacht a sheoladh chuig.</string>
     <string name="help_save">Nuair a chríochnaigh, beidh an prótacal nochtann liosta de na sonraí a mhalartófar aitheantais. Roghnaigh na teagmhálacha is mian leat a shábháil agus brúigh Iompórtáil.</string>
     <string name="help_SecureIntroduction">Ceadaíonn an scáileán seo duit a roghnú beirt tú eochracha slung leis sula a n-eochracha a sheoladh go daingean le gach ceann eile. Níl ort ach brúigh isteach nuair atá tú réidh.</string>
     <string name="help_Send">Ceadaíonn an scáileán seo duit a roghnú cuid de na sonraí agus faighteoir a sheoladh chuig. Níl ort ach brúigh Seol nuair atá tú réidh.</string>
 
-    <string name="iOS_contactError">Cead Teagmhálacha teastáil. Do thoil, téigh go Socruithe iOS a chur ar chumas Teagmhálacha ceadanna.</string>
     <string name="iOS_errorpushtoken">Tá clárú Brúigh ar iarraidh.</string>
-    <string name="iOS_notificationError1">Cead Fógraí teastáil. Do thoil, téigh go Socruithe iOS a chur ar chumas Fógraí ceadanna.</string>
-    <string name="iOS_notificationError2">Cead %s ag teastáil. Do thoil, téigh go Socruithe iOS a chur ar chumas Fógraí ceadanna.</string>
     <string name="iOS_oldOSWarn">Ní SafeSlinger optamaithe le haghaidh feistí iOS 5.x. Éilíonn SafeSlinger iOS 6 nó níos airde.</string>
 
     <string name="label_ago">%s ó shin</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-dhíchriptiú</string>
     <string name="menu_Change">Athrú</string>
     <string name="menu_ChangePassphrase">Athraigh Frása Faire</string>
-    <string name="menu_ContactInviteEmail">Ríomhphost</string>
-    <string name="menu_ContactInviteSms">Téacs (SMS/MMS)</string>
     <string name="menu_CreateNew">Cruthaigh Nua</string>
     <string name="menu_delete">Scrios</string>
     <string name="menu_deleteThread">Scrios %s Snáithe</string>

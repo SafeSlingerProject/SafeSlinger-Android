@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio mchezaji decoding makosa.</string>
     <string name="error_AudioPlayerError">Hawezi kucheza kurekodi.</string>
     <string name="error_AudioRecorderEncodeError">Audio kinasa encoding makosa.</string>
-    <string name="error_AudioRecorderPermissionError">Kipaza sauti ruhusa inahitajika. Tafadhali kwenda iOS Settings ili kuwawezesha ruhusa kipaza sauti.</string>
     <string name="error_BackupNotFound">No Backup kurejesha.</string>
     <string name="error_BackupNotSupportedDevice">Kifaa haina msaada Backup kurejesha.</string>
     <string name="error_BadCopyProtectUpgrade">Kutokana na mdudu katika Android 4.1, utakuwa na kufuta na reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger makosa, tafadhali upya.</string>
     <string name="error_VcardParseFailure">Kuwasiliana data ilikuwa mpangilio kimakosa.</string>
 
-    <string name="help_find">Kutumia screen hii kuweka jina lako ili kubadilishana na watu wengine. Bomba kifungo Done wakati kumaliza.</string>
     <string name="help_home">Kubadilishana data utambulisho, kuhakikisha watumiaji wote ni jirani au kwa simu. Anza Exchange kifungo kubadilishana tu kuchunguzwa data mawasiliano.</string>
     <string name="help_identity_menu">Unaweza pia kubadilisha data binafsi kuhusu utambulisho wako wa juu ya screen hii na kugonga kifungo kwa jina lako. Hii kuonyesha orodha ya kuruhusu wewe Hariri kuwasiliana yako, Kujenga mawasiliano New, au kutumia mawasiliano mwingine.</string>
     <string name="help_Messages">Screen hii inaonyesha ujumbe wote siku za nyuma, na attachments kwamba bado ni inapatikana kwa shusha.</string>
-    <string name="help_passphrase">Kutumia screen hii ya kuingia kwa maombi na passphrase yako. Kama wamesahau passphrase yako, unaweza kuzalisha ufunguo mpya ulinzi na passphrase mpya na kugonga passphrase Umesahau? button. Bomba jina la mtumiaji kubadili kati ya funguo nyingi.</string>
     <string name="help_PickRecip">Mawasiliano na SafeSlinger funguo ni kuonyeshwa hapa, teua mmoja kwa kutuma ujumbe wako.</string>
     <string name="help_save">Baada ya kumaliza, itifaki itaonyesha orodha ya data utambulisho kubadilishana. Kuchagua mawasiliano unataka kuokoa na waandishi wa habari Import.</string>
     <string name="help_SecureIntroduction">Screen hii utapata kuchagua watu wawili una slung funguo na kabla ya salama kutuma funguo zao kwa kila mmoja. Vyombo vya habari tu kuanzisha wakati tayari.</string>
     <string name="help_Send">Screen hii utapata kuchagua baadhi data na mpokeaji kutuma. Vyombo vya habari tu kutuma wakati tayari.</string>
 
-    <string name="iOS_contactError">Mawasiliano ruhusa inahitajika. Tafadhali kwenda iOS Settings ili kuwawezesha Mawasiliano ruhusa.</string>
     <string name="iOS_errorpushtoken">Push usajili ni kukosa.</string>
-    <string name="iOS_notificationError1">Kuarifiwa ruhusa inahitajika. Tafadhali kwenda iOS Settings ili kuwawezesha Notifications ruhusa.</string>
-    <string name="iOS_notificationError2">%s ruhusa inahitajika. Tafadhali kwenda iOS Settings ili kuwawezesha Notifications ruhusa.</string>
     <string name="iOS_oldOSWarn">SafeSlinger si optimized kwa iOS 5.x vifaa. SafeSlinger inahitaji iOS 6 au zaidi.</string>
 
     <string name="label_ago">%s iliyopita</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Mabadiliko ya</string>
     <string name="menu_ChangePassphrase">Mabadiliko ya passphrase</string>
-    <string name="menu_ContactInviteEmail">Barua pepe</string>
-    <string name="menu_ContactInviteSms">Maandishi (SMS/MMS)</string>
     <string name="menu_CreateNew">Kujenga New</string>
     <string name="menu_delete">Kufuta</string>
     <string name="menu_deleteThread">Kufuta Thread %s</string>

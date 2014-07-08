@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Error de descodificació d\'àudio del jugador.</string>
     <string name="error_AudioPlayerError">No es pot reproduir l\'enregistrament.</string>
     <string name="error_AudioRecorderEncodeError">Error de codificació d\'àudio gravadora.</string>
-    <string name="error_AudioRecorderPermissionError">Micròfon permís requerit. Si us plau, aneu a Configuració de iOS per permetre permisos de micròfon.</string>
     <string name="error_BackupNotFound">Sense seguretat per restaurar.</string>
     <string name="error_BackupNotSupportedDevice">El dispositiu no admet la còpia de seguretat de restauració.</string>
     <string name="error_BadCopyProtectUpgrade">A causa d\'un error en Android 4.1, haurà de desinstal · lar i tornar a instal lar SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Error SafeSlinger, si us plau reinicieu.</string>
     <string name="error_VcardParseFailure">Dades de contacte va ser un format incorrecte.</string>
 
-    <string name="help_find">Utilitzeu aquesta pantalla per configurar el seu nom d\'intercanviar amb els altres. Toqueu en el botó Fet quan hagi acabat.</string>
     <string name="help_home">Per a l\'intercanvi de dades d\'identitat, assegureu-vos que tots els usuaris estan a prop o per telèfon. El botó Començar Exchange intercanviar només les dades de contacte controlades.</string>
     <string name="help_identity_menu">També pot canviar les dades personals sobre la seva identitat en aquesta pantalla prement sobre el botó amb el seu nom. Això mostrarà un menú que us permet editar el contacte, crear nou contacte, o utilitzar un altre contacte.</string>
     <string name="help_Messages">Aquesta pantalla mostra tots els missatges anteriors i annexos que encara estan disponibles per a baixar.</string>
-    <string name="help_passphrase">Utilitzeu aquesta pantalla per iniciar sessió en l\'aplicació amb la contrasenya. Si ha oblidat la seva contrasenya, pot generar una nova clau protegida per una nova frase de pas tocant la contrasenya Oblidat? botó. Toqueu en el nom d\'usuari per canviar entre diverses claus.</string>
     <string name="help_PickRecip">Es mostren els contactes amb tecles SafeSlinger aquí, escollir un per enviar el missatge.</string>
     <string name="help_save">En acabar, el protocol revelarà una llista de les dades d\'identitat intercanviats. Seleccioneu els contactes que voleu desar i premeu Importar.</string>
     <string name="help_SecureIntroduction">Aquesta pantalla us permet seleccionar dues persones que han penjades les claus amb abans d\'enviar amb seguretat les seves claus entre si. Simplement premeu Introduir quan estigui llest.</string>
     <string name="help_Send">Aquesta pantalla us permet seleccionar algunes dades i un destinatari per enviar a. Només cal prémer Enviar quan estigui llest.</string>
 
-    <string name="iOS_contactError">Contactes permís requerit. Si us plau, aneu a Configuració de iOS per permetre Contactes permisos.</string>
     <string name="iOS_errorpushtoken">Registre d\'empenta no es troba.</string>
-    <string name="iOS_notificationError1">Notificacions permís requerit. Si us plau, aneu a Configuració de iOS per permetre Notificacions permisos.</string>
-    <string name="iOS_notificationError2">%s permís requerit. Si us plau, aneu a Configuració de iOS per permetre Notificacions permisos.</string>
     <string name="iOS_oldOSWarn">SafeSlinger no està optimitzat per a dispositius iOS 5.x. SafeSlinger requereix iOS 6 o superior.</string>
 
     <string name="label_ago">fa %s</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Canvi</string>
     <string name="menu_ChangePassphrase">Canviar Contrasenya</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Crear nou</string>
     <string name="menu_delete">Esborrar</string>
     <string name="menu_deleteThread">Eliminar %s Tema</string>

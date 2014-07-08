@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Error sa Audio player na decoding.</string>
     <string name="error_AudioPlayerError">Hindi ma-play ang nai-record.</string>
     <string name="error_AudioRecorderEncodeError">Error sa Audio recorder encoding.</string>
-    <string name="error_AudioRecorderPermissionError">Pahintulot Mikropono kinakailangan. Mangyaring pumunta sa Mga Setting ng iOS upang paganahin ang mga pahintulot ng mikropono.</string>
     <string name="error_BackupNotFound">Walang backup upang ibalik.</string>
     <string name="error_BackupNotSupportedDevice">Device ay hindi sumusuporta sa backup na ibalik.</string>
     <string name="error_BadCopyProtectUpgrade">Dahil sa isang bug sa Android 4.1, kailangan mong i-uninstall at muling i-install SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger error, mangyaring i-restart.</string>
     <string name="error_VcardParseFailure">Makipag-ugnay sa data ay hindi tama ang pagka-format.</string>
 
-    <string name="help_find">Gamitin ang screen na ito upang itakda ang iyong pangalan upang magpalitan sa iba. I-tap ang pindutang Tapos na kapag tapos na.</string>
     <string name="help_home">Upang makipagpalitan ng data pagkakakilanlan, siguraduhin ang lahat ng mga gumagamit ay nasa malapit o sa telepono. Ang Simulan ang pindutan ng Exchange ay makipagpalitan lamang ang naka-check ang data ng contact.</string>
     <string name="help_identity_menu">Maaari mo ring baguhin ang personal na data tungkol sa iyong pagkakakilanlan sa screen na ito sa pamamagitan ng pagtapik sa pindutan gamit ang iyong pangalan. Magpapakita ito ng menu na nagbibigay-daan sa iyo upang I-edit ang iyong mga contact, ang Lumikha ng Bagong contact, o Gamitin ang isa pang contact.</string>
     <string name="help_Messages">Ipinapakita ng screen na ito ng lahat ng nakalipas mga mensahe, at mga kalakip na magagamit para sa pag-download pa rin.</string>
-    <string name="help_passphrase">Gamitin ang screen na ito upang mag-login ang application gamit ang iyong passphrase. Kung nakalimutan mo ang iyong passphrase, maaari kang bumuo ng protektado ng isang bagong passphrase sa pamamagitan ng pag-tap sa Nakalimutan ang passphrase ng bagong key? na pindutan. I-tap ang user name upang lumipat sa pagitan ng maramihang mga susi.</string>
     <string name="help_PickRecip">Contacts na may SafeSlinger key ay ipinapakita dito, pumili ng isa upang ipadala ang iyong mensahe sa.</string>
     <string name="help_save">Kapag tapos na, ang protocol ay magbubunyag ng isang listahan ng mga data pagkakakilanlan ipinagpapalit. Piliin ang mga contact na nais mong i-save at pindutin ang I-import.</string>
     <string name="help_SecureIntroduction">Pinapayagan ka ng screen na ito ay sa iyo upang pumili ng dalawang tao mo pa slung susi sa bago upang secure na magpadala ng kanilang mga susi sa isa\'t isa. Pindutin lamang Ipakilala kapag handa na.</string>
     <string name="help_Send">Pinapayagan ka ng screen na ito ay sa iyo upang pumili ng ilang mga data at isang tatanggap upang ipadala sa. Pindutin lamang Magpadala kapag handa na.</string>
 
-    <string name="iOS_contactError">Kinakailangan ang pahintulot Contact. Mangyaring pumunta sa Mga Setting ng iOS upang paganahin ang mga pahintulot sa Mga Contact.</string>
     <string name="iOS_errorpushtoken">Itulak pagpaparehistro ay nawawala.</string>
-    <string name="iOS_notificationError1">Kinakailangan ang pahintulot Abiso. Mangyaring pumunta sa Mga Setting ng iOS upang paganahin ang mga pahintulot Abiso.</string>
-    <string name="iOS_notificationError2">Pahintulot %s kinakailangan. Mangyaring pumunta sa Mga Setting ng iOS upang paganahin ang mga pahintulot Abiso.</string>
     <string name="iOS_oldOSWarn">SafeSlinger hindi naka-optimize para sa mga aparatong iOS 5.x. SafeSlinger nangangailangan ng iOS 6 o mas mataas.</string>
 
     <string name="label_ago">%s ang nakalipas</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Pagbabago</string>
     <string name="menu_ChangePassphrase">Baguhin ang passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Lumikha ng Bagong</string>
     <string name="menu_delete">Alisin</string>
     <string name="menu_deleteThread">Tanggalin ang Thread %s</string>

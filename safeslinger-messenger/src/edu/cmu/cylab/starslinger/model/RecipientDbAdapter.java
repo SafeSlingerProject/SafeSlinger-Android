@@ -723,11 +723,46 @@ public class RecipientDbAdapter {
         }
     }
 
+    public boolean updateRecipientName(long rowId, String name) {
+        synchronized (SafeSlinger.sDataLock) {
+            ContentValues values = new ContentValues();
+            if (!TextUtils.isEmpty(name))
+                values.put(KEY_NAME, name);
+
+            return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;
+        }
+    }
+
     public boolean updateRecipientPhoto(long rowId, byte[] photo) {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
-            if (photo != null)
-                values.put(KEY_PHOTO, photo);
+            values.put(KEY_PHOTO, photo);
+
+            return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;
+        }
+    }
+
+    public boolean updateRecipientFromChosenLink(long rowId, String contactid, String contactlu,
+            String rawid) {
+        synchronized (SafeSlinger.sDataLock) {
+            ContentValues values = new ContentValues();
+
+            // make sure db constraint is satisfied
+            if (!TextUtils.isEmpty(contactid)) {
+                values.put(KEY_CONTACTID, contactid);
+            } else {
+                values.put(KEY_CONTACTID, "");
+            }
+            if (!TextUtils.isEmpty(contactlu)) {
+                values.put(KEY_CONTACTLKUP, contactlu);
+            } else {
+                values.put(KEY_CONTACTLKUP, "");
+            }
+            if (!TextUtils.isEmpty(rawid)) {
+                values.put(KEY_RAWCONTACTID, rawid);
+            } else {
+                values.put(KEY_RAWCONTACTID, "");
+            }
 
             return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;
         }
@@ -746,4 +781,5 @@ public class RecipientDbAdapter {
             return -1;
         }
     }
+
 }

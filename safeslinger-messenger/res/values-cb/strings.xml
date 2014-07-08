@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio player decoding sayop.</string>
     <string name="error_AudioPlayerError">Dili play sa recording.</string>
     <string name="error_AudioRecorderEncodeError">Audio kalihim pag-encode sayop.</string>
-    <string name="error_AudioRecorderPermissionError">Mikropono pagtugot sa gikinahanglan. Palihug adto sa iOS Settings aron mikropono Permissions.</string>
     <string name="error_BackupNotFound">Walay laing sa pagpasig-uli.</string>
     <string name="error_BackupNotSupportedDevice">Device wala mosuporta sa tabang sa pagpasig-uli.</string>
     <string name="error_BadCopyProtectUpgrade">Tungod sa usa ka bug sa Android 4.1, nga kamo kinahanglan nga uninstall ug reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger sayop, palihug pagsugod.</string>
     <string name="error_VcardParseFailure">Contact data nga nakahan-ay sayop.</string>
 
-    <string name="help_find">Gamita kini nga screen nga sa imong ngalan sa pagbaylo sa uban sa uban. Pindota ang Done butones sa diha nga nahuman.</string>
     <string name="help_home">Sa pagbaylo sa pag-ila data, masiguro sa tanan nga mga tiggamit mao ang mga duol nga o sa telepono. Ang Sugdi Exchange button makigbinayloay lang sa mga gitan-aw contact data.</string>
     <string name="help_identity_menu">Mahimo usab-usab sa personal nga data mahitungod sa imong pagkatawo niini nga screen sa tapping sa button uban sa imong ngalan. Kini mopakita sa usa ka menu sa pagtugot kaninyo sa Usba ang imong contact, Create Bag-ong contact, o Gamita laing contact.</string>
     <string name="help_Messages">Kini nga screen pagpakita sa tanan nga sa miagi nga mga mensahe, ug mga sumpay, mga dugtong nga mga pa magamit alang sa download.</string>
-    <string name="help_passphrase">Gamita kini nga screen nga Congratulations sa application uban sa imong passphrase. Kon nakalimot sa imong passphrase, nga kamo mahimo nga makamugna og usa ka bag-o nga yawe gipanalipdan sa usa ka bag-o nga passphrase pinaagi sa tapping sa mga Forgot Passphrase? button. Pindota ang user ngalan sa switch sa taliwala sa daghang mga yawe.</string>
     <string name="help_PickRecip">Mga kontak uban sa SafeSlinger yawe nga gipakita dinhi, pagpili sa usa sa ipadala ang imong mensahe ngadto sa.</string>
     <string name="help_save">Sa diha nga nahuman na, ang mga protocol mopadayag sa usa ka listahan sa mga pagkatawo data giilisan. Pagpili sa mga kontak nga imong gusto aron sa pagluwas ug mopadayon sa Import.</string>
     <string name="help_SecureIntroduction">Kini nga screen nagtugot kaninyo sa pagpili sa duha ka mga tawo nga inyong gilabyog yawe sa atubangan sa sa sa kasigurohan sa ilang mga yawe sa usag usa. Lang mopadayon sa Ipaila sa diha nga ang andam na.</string>
     <string name="help_Send">Kini nga screen nagtugot kaninyo sa pagpili sa pipila ka mga data ug sa usa ka recipient nga ipadala ngadto sa. Lang mopadayon sa Send sa diha nga ang andam na.</string>
 
-    <string name="iOS_contactError">Mga kontak pagtugot sa gikinahanglan. Palihug adto sa iOS Settings aron Contacts Permissions.</string>
     <string name="iOS_errorpushtoken">Nga madayon ang registration ang nawala.</string>
-    <string name="iOS_notificationError1">Notifications pagtugot sa gikinahanglan. Palihug adto sa iOS Settings aron notifications Permissions.</string>
-    <string name="iOS_notificationError2">%s pagtugot sa gikinahanglan. Palihug adto sa iOS Settings aron notifications Permissions.</string>
     <string name="iOS_oldOSWarn">SafeSlinger dili optimized alang sa iOS 5.x mga paagi. SafeSlinger nagkinahanglan iOS 6 o mas taas.</string>
 
     <string name="label_ago">%s ago</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">-usab</string>
     <string name="menu_ChangePassphrase">-usab Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Create New</string>
     <string name="menu_delete">Panas</string>
     <string name="menu_deleteThread">Panas Thread %s</string>

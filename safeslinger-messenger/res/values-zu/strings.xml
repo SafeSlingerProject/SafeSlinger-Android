@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio umdlali emagama Iphutha.</string>
     <string name="error_AudioPlayerError">Iyehluleka ukudlala ukuqopha.</string>
     <string name="error_AudioRecorderEncodeError">Audio rekhoda ukuqonda Iphutha.</string>
-    <string name="error_AudioRecorderPermissionError">Microphone imvume edingekayo. Sicela uye ku-iOS Izilungiselelo ukuvumela Microphone izimvume.</string>
     <string name="error_BackupNotFound">Ayikho isipele ukubuyisela.</string>
     <string name="error_BackupNotSupportedDevice">Idivayisi ayisekeli isipele buyisela.</string>
     <string name="error_BadCopyProtectUpgrade">Ngenxa ungenwe ku Android 4.1, kuzomele ukhiphe futhi faka SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger iphutha, sicela uqale kabusha.</string>
     <string name="error_VcardParseFailure">Idatha yothintana kwase ihlelwe ngokungesikho.</string>
 
-    <string name="help_find">Sebenzisa lesi sikrini ukuze usethe igama lakho ukushintshanisa nabanye. Thepha inkinobho Kwenziw uma usuqedile.</string>
     <string name="help_home">Ukushintshanisa ungubani idatha, ukuqinisekisa yonke abasebenzisi kukhona oseduze efonini. Inkinobho Qala Exchange izoba ukushintshanisa kuphela idatha yothintana kuhloliwe.</string>
     <string name="help_identity_menu">Ungase ushintshe idatha emayelana ubuwena kulolu esibukweni siqu evunyelwe kwi inkinobho negama lakho. Lokhu kuzokwenza babonisa yemenyu ukuvumela ukuba Hlela contact yakho, Yakha Oxhumene, noma Sebenzisa Enye contact.</string>
     <string name="help_Messages">Le screen ebonisa yonke imilayezo esidlule, nezinamathiselo ukuthi zisatholakala for thwebula.</string>
-    <string name="help_passphrase">Sebenzisa lesi sikrini ukuze ungene ku-isicelo igama lokungena sakho. Uma ukhohlwe igama lokungena lakho, ungase ukhiye omusha evikelwe ngumuntu igama lokungena omusha ngu ngokushaya igama lokungena Uyikhohliwe? Inkinobho. Thinta igama lomsebenzisi ukushintsha phakathi izinkinobho eziningi.</string>
     <string name="help_PickRecip">Oxhumene nabo nge SafeSlinger okhiye ayaboniswa lapha, khetha eyodwa ukuthumela umlayezo wakho ku-.</string>
     <string name="help_save">Lapho eqeda, protocol kuyokwembula uhlu idatha omazisi umklomelo. Khetha oxhumana nabo ofisa ugcine bese ucindezela Import.</string>
     <string name="help_SecureIntroduction">Le screen ikuvumela ukuba ukhethe abantu ababili niye slung okhiye ne ngaphambi ukuze ngokuphepha athumele okhiye zabo komunye nomunye. Simply cindezela Yethula uma sikulungele.</string>
     <string name="help_Send">Le screen ikuvumela ukuba ukhethe ezinye idatha kanye umemukeli ukuthumela. Simply cindezela Thumela uma sikulungele.</string>
 
-    <string name="iOS_contactError">Imvume Othintana nabo adingekayo. Sicela uye ku-iOS Izilungiselelo ukuvumela Oxhumana izimvume.</string>
     <string name="iOS_errorpushtoken">Ukubhalisa push entulekayo.</string>
-    <string name="iOS_notificationError1">Izaziso imvume edingekayo. Sicela uye ku-iOS Izilungiselelo ukuvumela Izaziso izimvume.</string>
-    <string name="iOS_notificationError2">%s imvume edingekayo. Sicela uye ku-iOS Izilungiselelo ukuvumela Izaziso izimvume.</string>
     <string name="iOS_oldOSWarn">SafeSlinger is hhayi eliphezulu iOS 5.x amadivaysi. SafeSlinger idinga iOS 6 noma ngaphezulu.</string>
 
     <string name="label_ago">%s edlule</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-guqulela</string>
     <string name="menu_Change">Shintsha</string>
     <string name="menu_ChangePassphrase">Shintsha igama lokungena</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Umbhalo (SMS/MMS)</string>
     <string name="menu_CreateNew">Yakha New</string>
     <string name="menu_delete">Susa</string>
     <string name="menu_deleteThread">Susa Thread %s</string>

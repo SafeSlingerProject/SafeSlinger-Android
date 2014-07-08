@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Аудио грешка играч декодиране.</string>
     <string name="error_AudioPlayerError">Не може да се играе на записа.</string>
     <string name="error_AudioRecorderEncodeError">Audio Recorder грешка кодиране.</string>
-    <string name="error_AudioRecorderPermissionError">Microphone разрешение се изисква. Моля, отидете на Settings iOS да се даде възможност за микрофон разрешения.</string>
     <string name="error_BackupNotFound">Не гръб да се възстанови.</string>
     <string name="error_BackupNotSupportedDevice">Устройството не поддържа архивиране възстановяване.</string>
     <string name="error_BadCopyProtectUpgrade">Поради бъг в Android 4.1, ще трябва да деинсталирате и преинсталирате SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger грешка, моля рестартирайте.</string>
     <string name="error_VcardParseFailure">Contact Data е форматиран неправилно.</string>
 
-    <string name="help_find">Използвайте този екран за да настроите вашето име да обменят с други страни. Натиснете върху бутона Готово, когато приключите.</string>
     <string name="help_home">За обмен на данни за самоличност, гарантира, че всички потребители са наблизо или по телефона. Започнете бутона The Exchange ще обменят само проверени данни за контакт.</string>
     <string name="help_identity_menu">Вие може също така да промените личните данни във връзка с идентичността си на този екран чрез потупване върху бутона с името си. Това ще покаже меню, което ви позволява да редактирате вашите контакти, да създавате нови контакти, или да използвате друг контакт.</string>
     <string name="help_Messages">Този екран показва всички последните съобщения и прикачени файлове, които са все още на разположение за изтегляне.</string>
-    <string name="help_passphrase">Използвайте този екран, за да влезете в заявлението с вашата парола. Ако сте забравили вашата парола, може да се генерира нов ключ защитен с нова парола, като натиснете Забравена парола? бутон. Докоснете името на потребителя, за да превключите между множество ключове.</string>
     <string name="help_PickRecip">Контакти с SafeSlinger бутони са показани тук, изберете една, за да изпратите съобщение до.</string>
     <string name="help_save">Когато приключите, протоколът ще разкрие списък на данните за самоличност се разменят. Изберете контактите, които искате да запазите и натиснете Import.</string>
     <string name="help_SecureIntroduction">Този екран ви позволява да изберете двама души сте преметнати ключове с преди за сигурно изпращане на ключовете си един към друг. Просто натиснете Въвеждане когато сте готови.</string>
     <string name="help_Send">Този екран ви позволява да изберете някои данни и на получател, за да изпратите. Просто натиснете Изпрати когато сте готови.</string>
 
-    <string name="iOS_contactError">Контакти разрешение се изисква. Моля, отидете на Settings iOS да се даде възможност Контакти разрешения.</string>
     <string name="iOS_errorpushtoken">Регистрация Push липсва.</string>
-    <string name="iOS_notificationError1">Известия разрешение се изисква. Моля, отидете на Settings iOS да се даде възможност Известия разрешения.</string>
-    <string name="iOS_notificationError2">%s разрешение се изисква. Моля, отидете на Settings iOS да се даде възможност Известия разрешения.</string>
     <string name="iOS_oldOSWarn">SafeSlinger не е оптимизирана за iOS 5.x устройства. SafeSlinger изисква iOS 6 или по-висока.</string>
 
     <string name="label_ago">%s преди</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-Разкодирай</string>
     <string name="menu_Change">Промяна</string>
     <string name="menu_ChangePassphrase">Промяна Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Текст (SMS/MMS)</string>
     <string name="menu_CreateNew">Създаване на нов</string>
     <string name="menu_delete">Изтрий</string>
     <string name="menu_deleteThread">Изтриване на тема %s</string>

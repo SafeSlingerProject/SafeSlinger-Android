@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio jwè Decoder erè.</string>
     <string name="error_AudioPlayerError">Pa ka jwe anrejistreman an.</string>
     <string name="error_AudioRecorderEncodeError">Audio erè achiv kodaj.</string>
-    <string name="error_AudioRecorderPermissionError">Mikwofòn pèmisyon yo mande yo. Tanpri, ale nan iOS Anviwònman yo ki ap pèmèt autorisations mikwofòn.</string>
     <string name="error_BackupNotFound">Pa gen backup retabli.</string>
     <string name="error_BackupNotSupportedDevice">Aparèy pa sipòte backup retabli.</string>
     <string name="error_BadCopyProtectUpgrade">Akòz yon ensèk nan android 4.1, w ap gen unenstal ak réinstaller SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger erè, tanpri rekòmanse.</string>
     <string name="error_VcardParseFailure">Done Kontakte te fòma mal.</string>
 
-    <string name="help_find">Sèvi ak ekran sa a yo mete non ou nan echanj ak lòt moun. Tape bouton an fèt lè fini.</string>
     <string name="help_home">Fè echanj done idantite, asire tout itilizatè yo ki tou pre oswa nan telefòn lan. Bouton an kòmanse Echanj ap echanje sèlman done yo tcheke kontak.</string>
     <string name="help_identity_menu">Ou kapab tou chanje done pèsonèl sou idantite ou sou ekran sa a pa frapan sou bouton an ak non w. Sa a ap montre yon meni ki pèmèt ou Edit kontak ou a, kreye New kontak, oswa sèvi ak yon lòt kontak.</string>
     <string name="help_Messages">Ekran sa a montre tout mesaj sot pase yo, ak dokiman ki toujou disponib pou download.</string>
-    <string name="help_passphrase">Sèvi ak ekran sa a konekte ak aplikasyon an ak pasfraz ou. Si ou te bliye pasfraz ou, ou ka jenere yon nouvo kle pwoteje pa yon nouvo pasfraz pa frapan pasfraz la Bliye? bouton. Tape non an itilizatè ta chanje ant kle miltip.</string>
     <string name="help_PickRecip">Kontak ak kle SafeSlinger yo ap parèt isit la, chwazi youn voye mesaj ou a.</string>
     <string name="help_save">Lè fini, pwotokòl la vle fè konnen yon lis nan done yo idantite echanje. Chwazi kontak yo ou vle pou konsève pou ak laprès Import.</string>
     <string name="help_SecureIntroduction">Ekran sa a pèmèt ou chwazi de moun ou te asye pandye kle ak anvan yo byen voye kle yo youn ak lòt. Senpleman peze entwodwi lè pare.</string>
     <string name="help_Send">Ekran sa a pèmèt ou chwazi kèk done ak yon moun k ap resevwa pou voye bay. Senpleman peze Voye lè pare.</string>
 
-    <string name="iOS_contactError">Kontak pèmisyon yo mande yo. Tanpri, ale nan iOS Anviwònman yo ki ap pèmèt Kontak autorisations.</string>
     <string name="iOS_errorpushtoken">Enskripsyon Pouse ki manke.</string>
-    <string name="iOS_notificationError1">Notifikasyon pèmisyon yo mande yo. Tanpri, ale nan iOS Anviwònman yo ki ap pèmèt Notifikasyon autorisations.</string>
-    <string name="iOS_notificationError2">%s pèmisyon yo mande yo. Tanpri, ale nan iOS Anviwònman yo ki ap pèmèt Notifikasyon autorisations.</string>
     <string name="iOS_oldOSWarn">SafeSlinger se pa sa optimisé pou iOS aparèy 5.x. SafeSlinger mande pou iOS, 6 oswa pi wo.</string>
 
     <string name="label_ago">%s Anons sa pibliye depi</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-dekriptaj</string>
     <string name="menu_Change">Chanjman</string>
     <string name="menu_ChangePassphrase">Chanjman pasfraz</string>
-    <string name="menu_ContactInviteEmail">Imèl</string>
-    <string name="menu_ContactInviteSms">Tèks (SMS/MMS)</string>
     <string name="menu_CreateNew">Kreye New</string>
     <string name="menu_delete">Efase</string>
     <string name="menu_deleteThread">Efase Thread %s</string>

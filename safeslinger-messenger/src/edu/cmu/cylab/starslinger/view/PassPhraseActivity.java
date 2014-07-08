@@ -34,6 +34,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -69,6 +70,9 @@ public class PassPhraseActivity extends Activity {
     private static final int MENU_FEEDBACK = 2;
     private static final int DIALOG_FORGOT = 3;
     private static final int DIALOG_HELP = 4;
+    private static final int MENU_EULA = 5;
+    private static final int MENU_PRIVACY = 6;
+    private static final int MENU_ABOUT = 7;
     private Button mButtonOk;
     private Button mButtonForgot;
     private ImageButton mButtonHelp;
@@ -311,6 +315,11 @@ public class PassPhraseActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(android.R.drawable.ic_menu_help);
+        menu.add(0, MENU_ABOUT, 0, R.string.menu_About).setIcon(
+                android.R.drawable.ic_menu_info_details);
+        menu.add(0, MENU_EULA, 0, R.string.menu_License).setIcon(android.R.drawable.ic_menu_edit);
+        menu.add(0, MENU_PRIVACY, 0, R.string.text_KeywordPrivacy).setIcon(
+                android.R.drawable.ic_menu_edit);
         menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);
         return true;
@@ -325,10 +334,28 @@ public class PassPhraseActivity extends Activity {
             case MENU_FEEDBACK:
                 SafeSlinger.getApplication().showFeedbackEmail(PassPhraseActivity.this);
                 return true;
+            case MENU_EULA:
+                showWebPage(SafeSlingerConfig.EULA_URL);
+                return true;
+            case MENU_PRIVACY:
+                showWebPage(SafeSlingerConfig.PRIVACY_URL);
+                return true;
+            case MENU_ABOUT:
+                if (!isFinishing()) {
+                    removeDialog(BaseActivity.DIALOG_ABOUT);
+                    showDialog(BaseActivity.DIALOG_ABOUT);
+                }
+                return true;
             default:
                 break;
         }
         return false;
+    }
+
+    protected void showWebPage(String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
     }
 
     @Override
@@ -338,6 +365,8 @@ public class PassPhraseActivity extends Activity {
                 return xshowForgot(PassPhraseActivity.this).create();
             case DIALOG_HELP:
                 return xshowHelp(PassPhraseActivity.this, args).create();
+            case BaseActivity.DIALOG_ABOUT:
+                return BaseActivity.xshowAbout(PassPhraseActivity.this).create();
             default:
                 break;
         }

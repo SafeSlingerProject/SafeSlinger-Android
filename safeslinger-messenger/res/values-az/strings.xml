@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio player decoding səhv.</string>
     <string name="error_AudioPlayerError">Qeyd oynaya bilməz.</string>
     <string name="error_AudioRecorderEncodeError">Audio recorder encoding səhv.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofon icazə tələb olunur. Mikrofon icazələrin imkan iOS Ayarlar getmək edin.</string>
     <string name="error_BackupNotFound">Bərpa No backup.</string>
     <string name="error_BackupNotSupportedDevice">Device backup bərpa bilmir.</string>
     <string name="error_BadCopyProtectUpgrade">Android 4.1 bir səhv üçün, SafeSlinger aradan qaldırılması və yeniden olacaq.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger səhv, yenidən başladın edin.</string>
     <string name="error_VcardParseFailure">Əlaqə data səhv biçimlendirilmiş edilib.</string>
 
-    <string name="help_find">Başqaları ilə mübadiləsi üçün adını təyin etmək üçün bu ekran istifadə edin. Başa zaman Done düyməsini dokunun.</string>
     <string name="help_home">Şəxsiyyət data mübadiləsi, bütün istifadəçilər yaxın və ya telefon təmin edir. Begin Exchange düyməsini yalnız yoxlanılır əlaqə məlumatları mübadiləsi aparacaqlar.</string>
     <string name="help_identity_menu">Siz həmçinin adı ilə düyməsini tıqqıltı ilə bu ekranda şəxsiyyət haqqında şəxsi məlumatları dəyişə bilər. Bu, sizin əlaqə redaktə etmək üçün imkan verən menyu keçirmək New əlaqə yaradın, və ya başqa bir əlaqə istifadə edin.</string>
     <string name="help_Messages">Bu ekran bütün keçmiş messages, və hələ də download üçün mövcuddur ki, əlavə göstərilir.</string>
-    <string name="help_passphrase">Sizin passphrase ilə ərizə daxil bu ekran istifadə edin. Siz passphrase unutdun varsa, siz unutdunuz Passphrase tıqqıltı ilə yeni bir passphrase tərəfindən qorunur yeni bir əsas yarada bilər? düyməsini basın. Çox düymələri arasında keçid üçün istifadəçi adı dokunun.</string>
     <string name="help_PickRecip">SafeSlinger düymələri ilə əlaqə üçün mesaj göndərmək üçün birini seçin, burada göstərilir.</string>
     <string name="help_save">Başa zaman, protokol mübadiləsi şəxsiyyət məlumatların siyahısını aşkar edəcək. Siz İdxal saxlamaq və basın istədiyiniz kontaktlar seçin.</string>
     <string name="help_SecureIntroduction">Bu ekran siz təhlükəsiz bir-birinə onların açarları göndərmək üçün əvvəl düymələri slung var iki nəfər seçin imkan verir. Sadəcə zaman hazır tətbiq basın.</string>
     <string name="help_Send">Bu ekran bəzi məlumat və göndərmək üçün qəbul edən seçin imkan verir. Sadəcə hazır olduqda göndər düyməsini basın.</string>
 
-    <string name="iOS_contactError">Əlaqə icazə tələb olunur. Əlaqə icazələrin imkan iOS Ayarlar getmək edin.</string>
     <string name="iOS_errorpushtoken">Push qeydiyyat yoxdur.</string>
-    <string name="iOS_notificationError1">Bildirişlər icazə tələb olunur. Bildirişlər icazələrin imkan iOS Ayarlar getmək edin.</string>
-    <string name="iOS_notificationError2">%s icazə tələb olunur. Bildirişlər icazələrin imkan iOS Ayarlar getmək edin.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x cihazlar üçün optimize deyil. SafeSlinger iOS 6 və ya daha yüksək tələb edir.</string>
 
     <string name="label_ago">%s əvvəl</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Dəyişiklik</string>
     <string name="menu_ChangePassphrase">Change Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Mətn (SMS/MMS)</string>
     <string name="menu_CreateNew">Yeni yarat</string>
     <string name="menu_delete">Sil</string>
     <string name="menu_deleteThread">Thread %s sil</string>

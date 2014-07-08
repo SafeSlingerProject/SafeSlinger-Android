@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio mängija dekodeerimine viga.</string>
     <string name="error_AudioPlayerError">Ei saa mängida salvestus.</string>
     <string name="error_AudioRecorderEncodeError">Audio Recorder kodeerimine viga.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofon õigusi. Palun minge iOS Settings võimaldada Mikrofon õigused.</string>
     <string name="error_BackupNotFound">Ei backup taastada.</string>
     <string name="error_BackupNotSupportedDevice">Seade ei toeta backup taastada.</string>
     <string name="error_BadCopyProtectUpgrade">Tänuviga Android 4.1, siis on uninstall ja uuesti SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger viga, palun taaskäivitage.</string>
     <string name="error_VcardParseFailure">Kontakt andmed vormindatud valesti.</string>
 
-    <string name="help_find">Kasutage seda ekraani, et määrata oma nime vahetada teistega. Puuduta nuppu Valmis, kui olete lõpetanud.</string>
     <string name="help_home">Vahetada identiteedi andmed, et kõik kasutajad on lähedal või telefoni teel. Alustada Exchange nupp vahetavad ainultkontrollitud kontaktandmed.</string>
     <string name="help_identity_menu">Võite muuta isikuandmeid oma identiteeti selle ekraani puudutades nuppu oma nimi. See avab menüü, mis võimaldab teil muuta oma kontaktandmeid, luua uusi kontakte, või kasutage muud kontaktandmed.</string>
     <string name="help_Messages">See ekraan kuvab kõik viimase sõnumeid ja manuseid, mis on veel saadaval allalaadimiseks.</string>
-    <string name="help_passphrase">Kasutage seda ekraani login taotluse koos oma parool. Kui oled unustanud oma parooli, siis võib uus võti kaitstuduus parool puudutades Unustasid Parooli? nuppu. Puudutakasutajanime vaheldumisi mitu võtmed.</string>
     <string name="help_PickRecip">Kontaktid SafeSlinger võtmed kuvatakse siin, valida üks, et saata sõnum.</string>
     <string name="help_save">Kui olete lõpetanud,protokoll paljastab nimekirjaidentiteedi andmeid vahetada. Valige kontaktid, mida soovite salvestada ja vajutage Import.</string>
     <string name="help_SecureIntroduction">See ekraan võimaldab valida kaks inimest olete tropitavad võtmeid enne turvaliselt saata oma võtmed üksteist. Lihtsalt vajutage Hakata kui oled valmis.</string>
     <string name="help_Send">See ekraan võimaldab teil valida mõned andmed jasaaja saatma. Lihtsalt vajutage Saada, kui oled valmis.</string>
 
-    <string name="iOS_contactError">Kontaktid õigusi. Palun minge iOS Settings võimaldada Kontaktid õigused.</string>
     <string name="iOS_errorpushtoken">Push registreerimiseks puudub.</string>
-    <string name="iOS_notificationError1">Teated õigusi. Palun minge iOS Settings võimaldada Teated õigused.</string>
-    <string name="iOS_notificationError2">%s õigusi. Palun minge iOS Settings võimaldada Teated õigused.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ei ole optimeeritud iOS 5.x seadmeid. SafeSlinger eeldab iOS 6 või kõrgem.</string>
 
     <string name="label_ago">%s tagasi</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Muutus</string>
     <string name="menu_ChangePassphrase">Muuda Passphrase</string>
-    <string name="menu_ContactInviteEmail">Post</string>
-    <string name="menu_ContactInviteSms">Tekst (SMS/MMS)</string>
     <string name="menu_CreateNew">Loo uus</string>
     <string name="menu_delete">Kustutama</string>
     <string name="menu_deleteThread">Kustuta teema %s</string>

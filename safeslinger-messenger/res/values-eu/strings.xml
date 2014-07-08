@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio jokalari deskodetzeko error.</string>
     <string name="error_AudioPlayerError">Ezin da grabazio play.</string>
     <string name="error_AudioRecorderEncodeError">Audio grabagailua encoding error.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofono baimena eskatzen. Mesedez joan iOS Ezarpenak Mikrofonoa baimenak gaitu.</string>
     <string name="error_BackupNotFound">No segurtasun kopia berreskuratu.</string>
     <string name="error_BackupNotSupportedDevice">Gailu onartzen ez segurtasun kopia berreskuratu.</string>
     <string name="error_BadCopyProtectUpgrade">Dela Android 4.1 akats bat, desinstalatzeko eta berrinstalatu SafeSlinger izango dituzu.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger error, mesedez berrabiarazi.</string>
     <string name="error_VcardParseFailure">Harremanetarako datuak gaizki formateatua zen.</string>
 
-    <string name="help_find">Erabili pantaila hau besteekin trukatzeko zure izena ezartzeko. Ukitu Done botoia amaitutakoan.</string>
     <string name="help_home">Nortasun datuak trukatzeko, ziurtatu erabiltzaile guztiak dira Gertuko edo telefonoz. Hasi Exchange botoia hautatuta kontaktu datuak bakarrik trukatu.</string>
     <string name="help_identity_menu">Ere zure identitatea pantaila honetan buruzko datu pertsonalak alda ditzake botoia punteatuz izen batekin. Hau menu bat zure kontaktu editatu aukera ematen bistaratuko du, Sortu Kontaktu berria, edo erabili harremanetarako beste.</string>
     <string name="help_Messages">Pantaila hau iragan mezu guztiak, eta hori deskargatzeko aukera ematen du, oraindik eranskinak erakusten du.</string>
-    <string name="help_passphrase">Erabili pantaila hau identifikatzera aplikazioa zure pasaesaldi batekin. Ahaztu egin duzu zure pasaesaldia, gako berri bat pasaesaldi berri bat ahaztu egin Pasaesaldia kolpatuta babestuta sortu ahal izango duzu? botoia. Ukitu erabiltzaile izenari anitz gakoak artean aldatzeko.</string>
     <string name="help_PickRecip">SafeSlinger gakoak kontaktuak hemen agertuko dira, aukera bat zure mezua bidaltzeko.</string>
     <string name="help_save">Amaitutakoan, protokoloaren trukatu nortasun datuen zerrenda bat agertuko dira. Hautatu gorde eta sakatu Inportatu nahi dituzun kontaktuak.</string>
     <string name="help_SecureIntroduction">Pantaila honetako gakoak slung dituzun aurretik beren gakoak seguruan bidaltzeko elkarri bi pertsona hautatu ahal izango dituzu. Besterik gabe, sakatu Sar denean prest.</string>
     <string name="help_Send">Pantaila honetan datu batzuk: eta hartzaile bat bidali hautatu ahal izango dituzu. Besterik gabe, sakatu Bidali denean prest.</string>
 
-    <string name="iOS_contactError">Kontaktu baimena eskatzen. Mesedez joan iOS Ingurunea Kontaktua baimenak gaitu.</string>
     <string name="iOS_errorpushtoken">Push erregistroa falta da.</string>
-    <string name="iOS_notificationError1">Jakinarazpenak baimena eskatzen. Mesedez joan iOS Ezarpenak jakinarazpenak baimenak gaitu.</string>
-    <string name="iOS_notificationError2">%s baimena eskatzen. Mesedez joan iOS Ezarpenak jakinarazpenak baimenak gaitu.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ez da iOS 5.x gailuak optimizatuta. SafeSlinger iOS 6 edo hobea behar du.</string>
 
     <string name="label_ago">Duela %s</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Aldaketaren</string>
     <string name="menu_ChangePassphrase">Aldaketaren Pasaesaldia</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Testua (SMS/MMS)</string>
     <string name="menu_CreateNew">Sortu berria</string>
     <string name="menu_delete">Ezabatu</string>
     <string name="menu_deleteThread">Ezabatu Thread %s</string>

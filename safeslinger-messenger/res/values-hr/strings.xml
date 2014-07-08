@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio player pogreška dekodiranje.</string>
     <string name="error_AudioPlayerError">Ne mogu igrati na snimanje.</string>
     <string name="error_AudioRecorderEncodeError">Audio pogreška snimač kodiranja.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofon dopuštenje potrebno. Molimo otiđite na iOS Settings omogućiti mikrofon dozvole.</string>
     <string name="error_BackupNotFound">Ne backup vratiti.</string>
     <string name="error_BackupNotSupportedDevice">Uređaj ne podržava backup vratiti.</string>
     <string name="error_BadCopyProtectUpgrade">Zbog greške u Android 4.1, što će morati deinstalirati i ponovno instalirati SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger pogreška, molim te ponovno pokrenuti.</string>
     <string name="error_VcardParseFailure">Kontakt podaci su pogrešno formatirana.</string>
 
-    <string name="help_find">Koristite ovaj ekran postaviti svoje ime razmijeniti s drugima. Dodirnite gumb Gotovo kada završite.</string>
     <string name="help_home">Razmjenjivati ​​podatke o identitetu, osigurali svi korisnici su u blizini ili na telefon. Započnite gumb Burza će razmjenjivati ​​samo podatke provjeriti kontakt.</string>
     <string name="help_identity_menu">Vi svibanj također promijeniti osobne podatke o svom identitetu na ovom zaslonu pritiskom na gumb sa svojim imenom. Tako će se prikazati izbornik omogućujući vam da uredite svoj ​​kontakt, stvarati nove, ili koristite neki drugi kontakt.</string>
     <string name="help_Messages">Ovaj ekran prikazuje sve prošlost poruke i privitke koje su još uvijek dostupna za preuzimanje.</string>
-    <string name="help_passphrase">Koristite ovaj zaslon za prijavu na aplikaciju s vašom zaporkom. Ako ste zaboravili svoju zaporku, možete generirati novi ključ zaštićena novom zaporkom doticanjem Zaboravili Passphrase? gumb. Dodirnite korisničko ime za prebacivanje između više tipki.</string>
     <string name="help_PickRecip">Kontakti s SafeSlinger tipke su prikazani ovdje, odaberite jednu poslati svoju poruku.</string>
     <string name="help_save">Kad je završio,protokol će otkriti popis podataka o identitetu razmijenjeni. Odaberite kontakte koje želite spremiti i pritisnite Uvoz.</string>
     <string name="help_SecureIntroduction">Ovaj ekran omogućuje vam da odaberete dvije osobe koje su se prebacio tipke sa prije sigurno poslati svoje ključeve međusobno. Jednostavno pritisnite Uvesti kada je spreman.</string>
     <string name="help_Send">Ovaj ekran omogućuje vam da odaberete neke podatke i primatelja za slanje. Jednostavno pritisnite Pošalji kada je spreman.</string>
 
-    <string name="iOS_contactError">Kontakti dopuštenje potrebno. Molimo otiđite na iOS Settings omogućiti Kontakti dozvole.</string>
     <string name="iOS_errorpushtoken">Registracija Push nedostaje.</string>
-    <string name="iOS_notificationError1">Obavijesti dopuštenje potrebno. Molimo otiđite na iOS Settings uključivanja obavijesti dozvole.</string>
-    <string name="iOS_notificationError2">%s dopuštenje potrebno. Molimo otiđite na iOS Settings uključivanja obavijesti dozvole.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nije optimiziran za iOS 5.x uređaja. SafeSlinger zahtijeva iOS 6 ili noviji.</string>
 
     <string name="label_ago">%s prije</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-Dekodiranje</string>
     <string name="menu_Change">Promjena</string>
     <string name="menu_ChangePassphrase">Promjena lozinka</string>
-    <string name="menu_ContactInviteEmail">E-mail</string>
-    <string name="menu_ContactInviteSms">Tekst (SMS/MMS)</string>
     <string name="menu_CreateNew">Stvori novo</string>
     <string name="menu_delete">Izbrisati</string>
     <string name="menu_deleteThread">Brisanje teme %s</string>

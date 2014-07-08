@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Erro de descodificação leitor de áudio.</string>
     <string name="error_AudioPlayerError">Não é possível reproduzir a gravação.</string>
     <string name="error_AudioRecorderEncodeError">Erro de codificação de áudio gravador.</string>
-    <string name="error_AudioRecorderPermissionError">Permissão Microfone necessário. Por favor, vá para Configurações de iOS para habilitar as permissões de microfone.</string>
     <string name="error_BackupNotFound">Nenhum backup para restaurar.</string>
     <string name="error_BackupNotSupportedDevice">O dispositivo não suporta o backup de restauração.</string>
     <string name="error_BadCopyProtectUpgrade">Devido a um bug no Android 4.1, você vai ter que desinstalar e reinstalar SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger erro, reinicie.</string>
     <string name="error_VcardParseFailure">Dados de contato foi formatado incorretamente.</string>
 
-    <string name="help_find">Use esta tela para definir o nome para trocar com os outros. Toque no botão Concluído quando terminar.</string>
     <string name="help_home">Para trocar dados de identidade, garantir que todos os usuários estão nas proximidades ou no telefone. O botão Iniciar Exchange irá trocar apenas os dados de contato verificados.</string>
     <string name="help_identity_menu">Você também pode alterar os dados pessoais sobre a sua identidade na tela, tocando no botão com seu nome. Isto irá mostrar um menu que lhe permite editar o seu contacto, criar novos contatos, ou utilizar outro contato.</string>
     <string name="help_Messages">Esta tela exibe todas as mensagens passadas e anexos que ainda estão disponíveis para download.</string>
-    <string name="help_passphrase">Use esta tela para acessar a aplicação com sua senha. Se você esqueceu sua senha, você pode gerar uma nova chave protegida por uma nova senha clicando no Passphrase Esqueceu? botão. Toque no nome de usuário para alternar entre várias chaves.</string>
     <string name="help_PickRecip">Contatos com chaves SafeSlinger são exibidos aqui, selecione um para enviar a sua mensagem.</string>
     <string name="help_save">Quando terminado, o protocolo irá revelar uma lista dos dados de identificação trocados. Selecione os contatos que você deseja salvar e pressione Importar.</string>
     <string name="help_SecureIntroduction">Esta tela permite que você selecione duas pessoas que você tem pendurados com chaves antes de enviar de forma segura suas chaves para o outro. Basta pressionar Introduzir quando estiver pronto.</string>
     <string name="help_Send">Esta tela permite que você selecione alguns dados e um destinatário para enviar para. Basta pressionar Enviar quando estiver pronto.</string>
 
-    <string name="iOS_contactError">Contatos permissão requerida. Por favor, vá para Configurações do iOS para permitir Contactos permissões.</string>
     <string name="iOS_errorpushtoken">Registro de envio está faltando.</string>
-    <string name="iOS_notificationError1">Notificações permissão requerida. Por favor, vá para Configurações de iOS para habilitar as permissões Notificações.</string>
-    <string name="iOS_notificationError2">Permissão %s necessária. Por favor, vá para Configurações de iOS para habilitar as permissões Notificações.</string>
     <string name="iOS_oldOSWarn">SafeSlinger não é otimizado para dispositivos iOS 5.x. SafeSlinger requer iOS 6 ou superior.</string>
 
     <string name="label_ago">%s atrás</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Mudança</string>
     <string name="menu_ChangePassphrase">Mudança Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Texto (SMS/MMS)</string>
     <string name="menu_CreateNew">Criar Novo</string>
     <string name="menu_delete">Excluir</string>
     <string name="menu_deleteThread">Excluir %s Tópico</string>

@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">ऑडियो प्लेयर डिकोडिंग त्रुटि.</string>
     <string name="error_AudioPlayerError">रिकॉर्डिंग नहीं चला सकता.</string>
     <string name="error_AudioRecorderEncodeError">ऑडियो रिकॉर्डर एन्कोडिंग त्रुटि.</string>
-    <string name="error_AudioRecorderPermissionError">माइक्रोफोन अनुमति की आवश्यकता है. माइक्रोफोन अनुमतियों को सक्षम करने के लिए आईओएस सेटिंग्स पर जाएं.</string>
     <string name="error_BackupNotFound">बहाल करने के लिए कोई बैकअप.</string>
     <string name="error_BackupNotSupportedDevice">डिवाइस बैकअप बहाल करने का समर्थन नहीं करता.</string>
     <string name="error_BadCopyProtectUpgrade">कारण एंड्रॉयड 4.1 में एक बग के लिए, आप SafeSlinger स्थापना रद्द करें और पुन: स्थापित करना होगा.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger त्रुटि, पुनः प्रारंभ करें.</string>
     <string name="error_VcardParseFailure">संपर्क डेटा को गलत ढंग से स्वरूपित किया गया था.</string>
 
-    <string name="help_find">दूसरों के साथ आदान प्रदान करने के लिए अपना नाम स्थापित करने के लिए इस स्क्रीन का प्रयोग करें. जब समाप्त हो गया बटन टैप करें.</string>
     <string name="help_home">पहचान डेटा का आदान प्रदान करने, सभी उपयोगकर्ताओं के पास या फोन पर कर रहे हैं सुनिश्चित करते हैं. शुरू एक्सचेंज बटन केवल जाँच संपर्क डेटा का आदान प्रदान करेंगे.</string>
     <string name="help_identity_menu">आप भी अपने नाम के साथ बटन पर टैप करके इस स्क्रीन पर अपनी पहचान के बारे में व्यक्तिगत डेटा बदल सकते हैं. यह आपको अपने संपर्क संपादित करने की अनुमति एक मेनू प्रदर्शित नया संपर्क बनाएं, या किसी अन्य संपर्क का उपयोग करेगा.</string>
     <string name="help_Messages">यह स्क्रीन सब अतीत संदेश, और अभी भी डाउनलोड के लिए उपलब्ध हैं कि अनुलग्नकों को प्रदर्शित करता है.</string>
-    <string name="help_passphrase">अपना पदबंध के साथ आवेदन करने के लिए लॉग इन करने के लिए इस स्क्रीन का प्रयोग करें. यदि आप अपना पासफ़्रेज़ भूल गए हैं, तो आप भूल गए कूटशब्द दोहन करके एक नया पासफ्रेज द्वारा संरक्षित एक नया कुंजी उत्पन्न हो सकता है? बटन. कई चाबियाँ के बीच स्विच करने के लिए उपयोगकर्ता नाम टैप करें.</string>
     <string name="help_PickRecip">SafeSlinger कुंजी के साथ संपर्क करने के लिए अपने संदेश भेजने के लिए चुन सकते हैं, यहां प्रदर्शित कर रहे हैं.</string>
     <string name="help_save">जब समाप्त हो, प्रोटोकॉल विमर्श पहचान डेटा की एक सूची खोलेगा. आप आयात बचाने और प्रेस करने के लिए इच्छा संपर्कों का चयन करें.</string>
     <string name="help_SecureIntroduction">यह स्क्रीन आपको आप सुरक्षित रूप से एक दूसरे के लिए अपनी चाबी भेजने के लिए पहले से चाबियाँ लटका रखा है दो लोगों को चुनने के लिए अनुमति देता है. बस जब तैयार परिचय दबाएँ.</string>
     <string name="help_Send">यह स्क्रीन आपको कुछ डेटा और करने के लिए भेजने के लिए एक प्राप्तकर्ता को चुनने के लिए अनुमति देता है. बस तैयार जब भेजें दबाएँ.</string>
 
-    <string name="iOS_contactError">संपर्क की अनुमति की आवश्यकता है. संपर्क अनुमतियों को सक्षम करने के लिए आईओएस सेटिंग्स पर जाएं.</string>
     <string name="iOS_errorpushtoken">पुश पंजीकरण लापता है.</string>
-    <string name="iOS_notificationError1">सूचनाएं अनुमति की आवश्यकता है. सूचनाएं अनुमतियों को सक्षम करने के लिए आईओएस सेटिंग्स पर जाएं.</string>
-    <string name="iOS_notificationError2">%s अनुमति की आवश्यकता है. सूचनाएं अनुमतियों को सक्षम करने के लिए आईओएस सेटिंग्स पर जाएं.</string>
     <string name="iOS_oldOSWarn">SafeSlinger आईओएस 5.x उपकरणों के लिए अनुकूल नहीं है. SafeSlinger आईओएस 6 या उच्चतर की आवश्यकता है.</string>
 
     <string name="label_ago">%s पहले</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">ऑटो डिक्रिप्ट</string>
     <string name="menu_Change">परिवर्तन</string>
     <string name="menu_ChangePassphrase">बदले पासफ़्रेज़</string>
-    <string name="menu_ContactInviteEmail">ईमेल</string>
-    <string name="menu_ContactInviteSms">पाठ (एसएमएस/एमएमएस)</string>
     <string name="menu_CreateNew">नई बनाएँ</string>
     <string name="menu_delete">हटाना</string>
     <string name="menu_deleteThread">धागा %s हटाएं</string>

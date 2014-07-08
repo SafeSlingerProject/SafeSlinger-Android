@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Erreur de décodage-lecteur audio.</string>
     <string name="error_AudioPlayerError">Impossible de jouer l\'enregistrement.</string>
     <string name="error_AudioRecorderEncodeError">Erreur de codage-enregistreur audio.</string>
-    <string name="error_AudioRecorderPermissionError">Autorisation de microphone requis. S\'il vous plaît allez dans Paramètres iOS pour activer les autorisations de microphones.</string>
     <string name="error_BackupNotFound">Pas de sauvegarde à restaurer.</string>
     <string name="error_BackupNotSupportedDevice">Cet appareil ne permet pas la restauration de sauvegarde.</string>
     <string name="error_BadCopyProtectUpgrade">En raison d\'un bogue dans Android 4.1, vous aurez désinstaller et réinstaller SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Erreur SafeSlinger, redémarrez.</string>
     <string name="error_VcardParseFailure">Les données de contact ont été formatés correctement.</string>
 
-    <string name="help_find">Utilisez cet écran pour configurer votre nom d\'échanger avec les autres. Appuyez sur le bouton «Terminé» lorsque vous avez terminé.</string>
     <string name="help_home">Pour échanger des identités, assurez-vous que tous les utilisateurs se trouvent à proximité de leur téléphone. Le bouton Commencer échange échangera uniquement les contacts qui ont été cochés.</string>
     <string name="help_identity_menu">Vous Puissiez utile de modifier les données personnelles concernant votre identité sur cet écran en appuyant sur ​​le bouton avec votre nom. Cela permet d\'afficher un menu vous permettant de Edit votre contact, Créer un nouveau contact ou utiliser un autre contact.</string>
     <string name="help_Messages">Cet écran affiche tous les anciens messages et les fichiers qui sont encore disponibles pour le téléchargement.</string>
-    <string name="help_passphrase">Utilisez cet écran pour accéder à l\'application avec votre mot de passe. Si vous avez oublié votre mot de passe, vous pouvez générer une nouvelle clé protégée par un nouveau mot de passe en appuyant sur le « phrase de passe oublié? bouton. Tapez le nom d\'utilisateur de basculer entre plusieurs clés.</string>
     <string name="help_PickRecip">Les contacts avec des clés SafeSlinger sont affichés ici, choisissez celui/celle à qui envoyer votre message.</string>
     <string name="help_save">Lorsque vous avez terminé, le protocole va révéler une liste d\'identités échangées. Sélectionnez les contacts que vous souhaitez enregistrer et appuyez sur Importer.</string>
     <string name="help_SecureIntroduction">Cet écran vous permet de sélectionner deux personnes avec qui vous avez échangé des clés auparavant pour qu\'elles s\'échangent leurs clés de manière sécurisée. Appuyez sur Présenter lorsque vous êtes prêt.</string>
     <string name="help_Send">Cet écran vous permet de sélectionner des données et un destinataire. Appuyez sur Envoyer lorsque vous êtes prêt.</string>
 
-    <string name="iOS_contactError">Contacts autorisation requise. S\'il vous plaît allez dans Paramètres iOS pour permettre les contacts autorisations.</string>
     <string name="iOS_errorpushtoken">Enregistrement Push est manquant.</string>
-    <string name="iOS_notificationError1">Autorisation de notifications requises. S\'il vous plaît allez dans Paramètres iOS pour activer les autorisations de Notifications.</string>
-    <string name="iOS_notificationError2">Permission de %s requis. S\'il vous plaît allez dans Paramètres iOS pour activer les autorisations de Notifications.</string>
     <string name="iOS_oldOSWarn">SafeSlinger n\'est pas optimisé pour les appareils iOS 5.x. SafeSlinger nécessite iOS 6 ou plus.</string>
 
     <string name="label_ago">Il y a %s</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-décryptage</string>
     <string name="menu_Change">Changer</string>
     <string name="menu_ChangePassphrase">Changer phrase secrète</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Texte (SMS/MMS)</string>
     <string name="menu_CreateNew">Créer nouveau</string>
     <string name="menu_delete">Supprimer</string>
     <string name="menu_deleteThread">Supprimer discussion %s</string>

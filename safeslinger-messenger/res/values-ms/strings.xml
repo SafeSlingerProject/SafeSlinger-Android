@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Pemain audio ralat penyahkodan.</string>
     <string name="error_AudioPlayerError">Tidak boleh memainkan rakaman.</string>
     <string name="error_AudioRecorderEncodeError">Audio ralat pengekodan perakam.</string>
-    <string name="error_AudioRecorderPermissionError">Kebenaran mikrofon diperlukan. Sila pergi ke iOS Tetapan untuk membolehkan kebenaran Mikrofon.</string>
     <string name="error_BackupNotFound">Tiada sandaran untuk memulihkan.</string>
     <string name="error_BackupNotSupportedDevice">Peranti tidak menyokong sandaran memulihkan.</string>
     <string name="error_BadCopyProtectUpgrade">Kerana pepijat dalam Android 4.1, anda perlu uninstall dan memasang semula SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Ralat SafeSlinger, sila mulakan semula.</string>
     <string name="error_VcardParseFailure">Data kenalan telah diformatkan dengan betul.</string>
 
-    <string name="help_find">Gunakan skrin ini untuk menetapkan nama anda untuk bertukar-tukar dengan orang lain. Ketik butang Selesai apabila selesai.</string>
     <string name="help_home">Untuk bertukar-tukar data identiti, memastikan semua pengguna adalah berhampiran atau di telefon. The Mulakan butang Exchange akan bertukar-tukar hanya data kenalan diperiksa.</string>
     <string name="help_identity_menu">Anda juga boleh menukar data peribadi tentang identiti anda pada skrin ini dengan mengetuk butang dengan nama anda. Ini akan memaparkan menu membolehkan anda ke Sunting kenalan anda, Buat Kenalan baru, atau Gunakan kenalan lagi.</string>
     <string name="help_Messages">Skrin ini memaparkan semua mesej yang lalu, dan lampiran yang masih boleh didapati untuk muat turun.</string>
-    <string name="help_passphrase">Gunakan skrin ini untuk login dengan permohonan itu dengan frasa laluan anda. Jika anda lupa frasa laluan anda, anda boleh menjana kunci baru dilindungi oleh frasa laluan baru melalui usaha Frasa laluan Lupa? butang. Ketik nama pengguna untuk bertukar antara berbilang kunci.</string>
     <string name="help_PickRecip">Kenalan dengan kekunci SafeSlinger dipamerkan di sini, pilih satu untuk menghantar mesej anda.</string>
     <string name="help_save">Apabila selesai, protokol akan mendedahkan senarai data identiti ditukar. Pilih kenalan yang anda ingin menyimpan dan tekan Import.</string>
     <string name="help_SecureIntroduction">Skrin ini membenarkan anda untuk memilih dua orang yang anda telah tersangkut kekunci dengan sebelum untuk selamat menghantar kunci mereka antara satu sama lain. Hanya tekan Memperkenalkan apabila bersedia.</string>
     <string name="help_Send">Skrin ini membenarkan anda untuk memilih beberapa data dan penerima untuk hantar ke. Hanya tekan Hantar apabila bersedia.</string>
 
-    <string name="iOS_contactError">Kebenaran Kenalan diperlukan. Sila pergi ke iOS Tetapan untuk membolehkan Kenalan kebenaran.</string>
     <string name="iOS_errorpushtoken">Pendaftaran menolak yang hilang.</string>
-    <string name="iOS_notificationError1">Pemberitahuan kebenaran diperlukan. Sila pergi ke iOS Tetapan untuk membolehkan Pemberitahuan kebenaran.</string>
-    <string name="iOS_notificationError2">Kebenaran %s diperlukan. Sila pergi ke iOS Tetapan untuk membolehkan Pemberitahuan kebenaran.</string>
     <string name="iOS_oldOSWarn">SafeSlinger tidak dioptimumkan untuk peranti 5.x iOS. SafeSlinger memerlukan iOS 6 atau lebih tinggi.</string>
 
     <string name="label_ago">%s lalu</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-Nyahsulit</string>
     <string name="menu_Change">Perubahan</string>
     <string name="menu_ChangePassphrase">Perubahan Frasa Laluan</string>
-    <string name="menu_ContactInviteEmail">E-mel</string>
-    <string name="menu_ContactInviteSms">Teks (SMS/MMS)</string>
     <string name="menu_CreateNew">Cipta Baru</string>
     <string name="menu_delete">Padam</string>
     <string name="menu_deleteThread">Padam Thread %s</string>

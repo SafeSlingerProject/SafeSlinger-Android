@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Error de decodificación de audio del reproductor.</string>
     <string name="error_AudioPlayerError">No se puede reproducir la grabación.</string>
     <string name="error_AudioRecorderEncodeError">Error de codificación de la audio grabadora.</string>
-    <string name="error_AudioRecorderPermissionError">Permiso de micrófono requerido. Por favor, vaya a Configuraciones de iOS para habilitar permisos de Micrófono.</string>
     <string name="error_BackupNotFound">Sin copia de seguridad para restaurar.</string>
     <string name="error_BackupNotSupportedDevice">El dispositivo no admite la copia de seguridad para restaurar.</string>
     <string name="error_BadCopyProtectUpgrade">Debido a un error en Android 4.1, tendrá que desinstalar y volver a instalar SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Error de SafeSlinger, por favor reinicie.</string>
     <string name="error_VcardParseFailure">Los datos de contacto fueron formateados incorrectamente.</string>
 
-    <string name="help_find">Utilice esta pantalla para configurar su nombre de intercambiar con los demás. Pulse el botón Hecho cuando haya terminado.</string>
     <string name="help_home">Para el intercambio de datos de identidad, asegúrese de que todos los usuarios estén cerca o en el teléfono. El botón Comenzar Cambio canjeará únicamente los datos de contacto chequeados.</string>
     <string name="help_identity_menu">También puede cambiar los datos personales sobre su identidad en esta pantalla pulsando sobre el botón con su nombre. Esto mostrará un menú que le permite Editar su contacto Crear nuevo contacto, o Utilizar Otro contacto.</string>
     <string name="help_Messages">Esta pantalla muestra todos los mensajes anteriores y los anexos que aún están disponibles para su descarga.</string>
-    <string name="help_passphrase">Utilice esta pantalla para iniciar sesión en la aplicación con su contraseña. Si ha olvidado su contraseña, puede generar una nueva clave protegida por una nueva frase de paso tocando el ¿Ha olvidado la frase de contraseña? botón. Toque en el nombre de usuario para cambiar entre varias claves.</string>
     <string name="help_PickRecip">Aquí se muestran los contactos con teclas SafeSlinger, seleccione uno para enviar su mensaje a.</string>
     <string name="help_save">Cuando haya terminado, el protocolo revelará una lista de los datos de identidad intercambiados. Seleccione los contactos que desea guardar y pulse Importar.</string>
     <string name="help_SecureIntroduction">Esta pantalla le permite seleccionar dos personas con quienes haya enviado claves antes para enviar las claves de ellos entre sí. Sólo tiene que pulsar Introducir cuando esté listo.</string>
     <string name="help_Send">Esta pantalla le permite seleccionar algunos datos y un destinatario para enviar. Sólo tiene que pulsar Enviar cuando esté listo.</string>
 
-    <string name="iOS_contactError">Permiso de contactos requerido. Por favor, vaya a Configuraciones de iOS para habilitar permisos de Contactos.</string>
     <string name="iOS_errorpushtoken">Falta el registro de pulso.</string>
-    <string name="iOS_notificationError1">Permiso de notificaciones requerido. Por favor, vaya a Configuraciones de iOS para habilitar permisos de Notificaciones.</string>
-    <string name="iOS_notificationError2">%s permiso requerido. Por favor, vaya a Configuraciones de iOS para habilitar permisos de Notificaciones.</string>
     <string name="iOS_oldOSWarn">SafeSlinger no está optimizado para dispositivos iOS 5.x. SafeSlinger requiere iOS 6 o superior.</string>
 
     <string name="label_ago">Hace %s</string>
@@ -263,11 +257,9 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Cambiar</string>
     <string name="menu_ChangePassphrase">Cambiar Contraseña</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Texto (SMS/MMS)</string>
     <string name="menu_CreateNew">Crear Nuevo</string>
-    <string name="menu_delete">Temas</string>
-    <string name="menu_deleteThread">Eliminar tema %s</string>
+    <string name="menu_delete">Borrar</string>
+    <string name="menu_deleteThread">Borrar Conversación %s</string>
     <string name="menu_Details">Ver Detalles</string>
     <string name="menu_DownloadDirectory">Descargar Directorio</string>
     <string name="menu_Edit">Editar</string>
@@ -388,7 +380,7 @@
     <string name="title_sharingfolder">Compartiendo Carpetas</string>
     <string name="title_soundrecoder">Grabadora de sonidos</string>
     <string name="title_TextInviteMsg">Invitación SafeSlinger</string>
-    <string name="title_Threads">Temas</string>
+    <string name="title_Threads">Conversaciones</string>
     <string name="title_Warn">Advertencia</string>
 
 </resources>

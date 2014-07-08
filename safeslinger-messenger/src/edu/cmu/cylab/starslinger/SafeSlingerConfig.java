@@ -49,6 +49,8 @@ public class SafeSlingerConfig {
     public static final String MIMETYPE_ADD_ATTACH = "*/*";
     public static final String MIMETYPE_OPEN_ATTACH_DEF = "image/*";
     public static final String LOG_TAG = "SafeSlinger-Messenger";
+    public static final String PRIVACY_URL = "http://www.cylab.cmu.edu/safeslinger/privacy.html";
+    public static final String EULA_URL = "http://www.cylab.cmu.edu/safeslinger/eula.html";
 
     @Deprecated
     public static final String APP_KEY_OLD1 = "StarSlingerKey";

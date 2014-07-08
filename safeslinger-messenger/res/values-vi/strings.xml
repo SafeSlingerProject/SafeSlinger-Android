@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Âm thanh máy nghe nhạc lỗi giải mã.</string>
     <string name="error_AudioPlayerError">Không thể chơi ghi âm.</string>
     <string name="error_AudioRecorderEncodeError">Âm thanh lỗi mã hóa ghi.</string>
-    <string name="error_AudioRecorderPermissionError">Cho phép micro yêu cầu. Xin vui lòng đến iOS Settings để kích hoạt tính năng cho phép Microphone.</string>
     <string name="error_BackupNotFound">Không có sao lưu để khôi phục lại.</string>
     <string name="error_BackupNotSupportedDevice">Thiết bị không hỗ trợ khôi phục sao lưu.</string>
     <string name="error_BadCopyProtectUpgrade">Do một lỗi trong Android 4.1, bạn sẽ phải gỡ bỏ cài đặt và cài đặt lại SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Lỗi SafeSlinger, hãy khởi động lại.</string>
     <string name="error_VcardParseFailure">Dữ liệu liên lạc đã được định dạng chính xác.</string>
 
-    <string name="help_find">Sử dụng màn hình này để thiết lập tên của bạn để trao đổi với người khác. Bấm vào nút Done khi hoàn tất.</string>
     <string name="help_home">Trao đổi dữ liệu nhận dạng, đảm bảo tất cả người dùng đang ở gần hoặc trên điện thoại. Nút Bắt đầu Exchange sẽ trao đổi chỉ có dữ liệu liên lạc kiểm tra.</string>
     <string name="help_identity_menu">Bạn cũng có thể thay đổi dữ liệu cá nhân về danh tính của bạn trên màn hình này bằng cách khai thác vào nút có tên của bạn. Điều này sẽ hiển thị một menu cho phép bạn chỉnh sửa liên lạc của bạn, Tạo liên lạc mới, hoặc sử dụng liên lạc khác.</string>
     <string name="help_Messages">Màn hình này hiển thị tất cả các thông điệp qua, và file đính kèm vẫn có sẵn để tải về.</string>
-    <string name="help_passphrase">Sử dụng màn hình này để đăng nhập vào ứng dụng với cụm từ mật khẩu của bạn. Nếu bạn quên mật khẩu, bạn có thể tạo một khóa mới được bảo vệ bởi một mật khẩu mới bằng cách khai thác các cụm mật khẩu Quên? nút. Bấm vào tên người dùng chuyển đổi giữa nhiều phím.</string>
     <string name="help_PickRecip">Liên hệ với các phím SafeSlinger được hiển thị ở đây, hãy chọn một để gửi thông điệp của bạn.</string>
     <string name="help_save">Khi hoàn tất, giao thức sẽ tiết lộ một danh sách các dữ liệu nhận dạng trao đổi. Chọn số liên lạc bạn muốn lưu và nhấn Import.</string>
     <string name="help_SecureIntroduction">Màn hình này cho phép bạn chọn hai người bạn đã đeo chìa khóa với trước khi gửi an toàn các khóa của họ với nhau. Chỉ cần nhấn Giới thiệu khi đã sẵn sàng.</string>
     <string name="help_Send">Màn hình này cho phép bạn chọn một số dữ liệu và một người nhận gửi đến. Chỉ cần nhấn Gửi khi đã sẵn sàng.</string>
 
-    <string name="iOS_contactError">Liên hệ phép yêu cầu. Xin vui lòng đến iOS Settings để cho phép Liên hệ quyền.</string>
     <string name="iOS_errorpushtoken">Đăng ký đẩy là mất tích.</string>
-    <string name="iOS_notificationError1">Thông báo cho phép yêu cầu. Xin vui lòng đến iOS Settings để kích hoạt tính năng thông báo cho phép.</string>
-    <string name="iOS_notificationError2">Cho phép %s yêu cầu. Xin vui lòng đến iOS Settings để kích hoạt tính năng thông báo cho phép.</string>
     <string name="iOS_oldOSWarn">SafeSlinger không được tối ưu hóa cho các thiết bị iOS 5.x. SafeSlinger đòi hỏi iOS 6 hoặc cao hơn.</string>
 
     <string name="label_ago">%s trước</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Tự động giải mã</string>
     <string name="menu_Change">Thay đổi</string>
     <string name="menu_ChangePassphrase">Thay đổi cụm mật khẩu</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Văn bản (SMS/MMS)</string>
     <string name="menu_CreateNew">Tạo mới</string>
     <string name="menu_delete">Xóa</string>
     <string name="menu_deleteThread">Xóa đề %s</string>

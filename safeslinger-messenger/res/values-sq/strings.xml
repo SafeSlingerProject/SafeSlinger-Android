@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio player deshifrim gabim.</string>
     <string name="error_AudioPlayerError">Nuk mund të luajë regjistrimin.</string>
     <string name="error_AudioRecorderEncodeError">Audio gabim regjistrues encoding.</string>
-    <string name="error_AudioRecorderPermissionError">Leje Mikrofoni nevojshme. Ju lutem shkoni në iOS Settings për të mundësuar leje mikrofon.</string>
     <string name="error_BackupNotFound">Asnjë rezervë për të rivendosur.</string>
     <string name="error_BackupNotSupportedDevice">Pajisje nuk mbeshtet backup rivendosur.</string>
     <string name="error_BadCopyProtectUpgrade">Për shkak të një bug në Android 4.1, ju do të keni për të uninstall dhe reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger gabim, ju lutem rinisni.</string>
     <string name="error_VcardParseFailure">Të dhënat e kontaktit u formatuar gabimisht.</string>
 
-    <string name="help_find">Përdoreni këtë ekran për të vendosur emrin tuaj për të shkëmbyer me të tjerët. Tap butonin Done kur mbaron.</string>
     <string name="help_home">Të shkëmbejnë të dhëna të identitetit, të sigurojë të gjithë përdoruesit janë të afërt ose në telefon. ButtonFilloni Exchange do të shkëmbejnë vetëm të dhëna të kontrolluar kontaktit.</string>
     <string name="help_identity_menu">Ju gjithashtu mund të ndryshojë të dhënat personale për identitetin tuaj në këtë ekran nga përgjimi mbi butonin me emrin tuaj. Kjo do të shfaq një menu të lejuar ju që të Edit kontaktoni tuaj, Krijo kontakt të ri, ose përdorin një tjetër kontakt.</string>
     <string name="help_Messages">Ky ekran tregon të gjitha mesazhet e kaluara dhe të bashkëngjitni skedarë që janë ende në dispozicion për shkarkim.</string>
-    <string name="help_passphrase">Përdoreni këtë ekran për të hyni brënda për aplikimin me fjalëkalim tuaj. Nëse keni harruar fjalëkalim tuaj, ju mund të gjenerojnë një çelës i ri i mbrojtur nga një fjalëkalim të ri nga përgjimi fjalëkalim fjalëkalimin? button. Trokitni lehtë mbi emrin e përdoruesit për të kaloni në mes të çelësat të shumta.</string>
     <string name="help_PickRecip">Kontaktet me çelësat SafeSlinger janë shfaqur këtu, zgjidhni një për të dërguar mesazhin tuaj për të.</string>
     <string name="help_save">Kur përfundoi, protokolli do të zbulojë një listë të të dhënave të identitetit të shkëmbyera. Zgjidhni kontaktet që dëshironi të ruani dhe të shtypni Import.</string>
     <string name="help_SecureIntroduction">Ky ekran ju lejon të zgjidhni dy njerëz që keni hodhi me hobenë çelësat me të para se të sigurt të dërguar çelësat e tyre për njëri-tjetrin. Thjesht shtypni Prezantoni kur gati.</string>
     <string name="help_Send">Ky ekran ju lejon të zgjidhni disa të dhëna dhe një marrës për të dërguar për të. Thjesht shtypni Dërgo kur gati.</string>
 
-    <string name="iOS_contactError">Leje Kontaktet e kërkuar. Ju lutem shkoni në iOS Settings për të mundësuar Kontakte leje.</string>
     <string name="iOS_errorpushtoken">Regjistrimi shtytje mungon.</string>
-    <string name="iOS_notificationError1">Leje Njoftimet e nevojshme. Ju lutem shkoni në iOS Settings për të mundësuar njoftime leje.</string>
-    <string name="iOS_notificationError2">Leje %s nevojshme. Ju lutem shkoni në iOS Settings për të mundësuar njoftime leje.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nuk është e optimizuar për pajisje iOS 5.x. SafeSlinger kërkon iOS 6 ose më të larta.</string>
 
     <string name="label_ago">%s më parë</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Ndryshim</string>
     <string name="menu_ChangePassphrase">Ndryshimi fjalëkalim</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Tekst (SMS/MMS)</string>
     <string name="menu_CreateNew">Krijo re</string>
     <string name="menu_delete">Fshij</string>
     <string name="menu_deleteThread">Fshij Thread %s</string>

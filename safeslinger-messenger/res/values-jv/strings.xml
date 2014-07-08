@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio pamuter dekoding kesalahan.</string>
     <string name="error_AudioPlayerError">Ora bisa muter ngrekam.</string>
     <string name="error_AudioRecorderEncodeError">Audio recorder enkoding kesalahan.</string>
-    <string name="error_AudioRecorderPermissionError">Ijin mikropon dibutuhake. Mangga menyang iOS Setelan ngaktifake ijin Mikropon.</string>
     <string name="error_BackupNotFound">Ora serep sing arep dipulihake.</string>
     <string name="error_BackupNotSupportedDevice">Piranti Panjenengan ora ndhukung serep dipulihake.</string>
     <string name="error_BadCopyProtectUpgrade">Amarga bug ing Android 4.1, sampeyan bakal kudu instal lan reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger kesalahan, mangga miwiti.</string>
     <string name="error_VcardParseFailure">Kontak data iki format salah.</string>
 
-    <string name="help_find">Gunakake layar iki kanggo nyetel jeneng ijolan karo liyane. Tunyuk tombol sing Rampung nalika rampung.</string>
     <string name="help_home">Ijolan identitas data, njamin kabeh kedhaftar ana toko utawa ing telpon. Tombol Begin Exchange ora ijolan namung data kontak dicenthang.</string>
     <string name="help_identity_menu">Sampeyan uga ngganti data pribadhi babagan ciri ing layar iki kanthi nutul tombol karo jeneng. Iki bakal nampilake menu ngijini sampeyan kanggo Sunting kontak, Gawe kontak Anyar, utawa Gunakake kontak liyane.</string>
     <string name="help_Messages">Layar iki nampilake pesen-pesen kabeh kepungkur, lan lampiran sing isih kasedhiya kanggo download.</string>
-    <string name="help_passphrase">Nggunakake layar iki kanggo mlebet aplikasi nganggo frasa sandhi. Yen sampeyan wis lali Panjenengan frasa sandhi, sampeyan bisa nguripake tombol anyar dilindhungi dening frasa sandhi anyar kanthi nunyuk frasa sandhi Lali? tombol. Tutul jeneng panganggo kanggo ngalih ing antarane sawetara tombol.</string>
     <string name="help_PickRecip">Kontak karo SafeSlinger tombol ditampilake kene, pilih salah siji kanggo ngirim pesen panjenengan kanggo.</string>
     <string name="help_save">Yen wis rampung, protokol bakal mbukak dhaptar data identitas diijolke. Milih kontak sing pengin irit banjur pencet Impor.</string>
     <string name="help_SecureIntroduction">Layar iki ngidini sampeyan pilih wong loro sing wis slung tombol karo sadurunge kanggo aman ngirim tombol kanggo saben liyane. Mung pencet introduce nalika siap.</string>
     <string name="help_Send">Layar iki ngidini sampeyan pilih sawetara data lan panampa kanggo ngirim. Mung pencet Kirimi nalika siap.</string>
 
-    <string name="iOS_contactError">Ijin kontak dibutuhake. Mangga menyang iOS Setelan ngaktifake ijin Kontak.</string>
     <string name="iOS_errorpushtoken">Push gratis wis ilang.</string>
-    <string name="iOS_notificationError1">Kabar ijin dibutuhake. Mangga menyang iOS Setelan ngaktifake ijin Kabar.</string>
-    <string name="iOS_notificationError2">Ijin %s dibutuhake. Mangga menyang iOS Setelan ngaktifake ijin Kabar.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ora optimized kanggo iOS 5.x piranti. SafeSlinger mbutuhake iOS 6 utawa luwih dhuwur.</string>
 
     <string name="label_ago">%s ago</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Otomatis decrypt</string>
     <string name="menu_Change">Ganti</string>
     <string name="menu_ChangePassphrase">Ganti frasa sandhi</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Gawe anyar</string>
     <string name="menu_delete">Busak</string>
     <string name="menu_deleteThread">Busak Utas %s</string>

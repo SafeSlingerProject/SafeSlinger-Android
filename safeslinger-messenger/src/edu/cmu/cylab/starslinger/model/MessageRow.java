@@ -90,7 +90,7 @@ public class MessageRow extends MessageData {
                 }
             }
         } else {
-            if (!TextUtils.isEmpty(mProgress)) {
+            if (mStatus == MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
                 action = MsgAction.MSG_PROGRESS;
             } else if (isEditable()) {
                 action = MsgAction.MSG_EDIT;
@@ -111,17 +111,24 @@ public class MessageRow extends MessageData {
     }
 
     public boolean isFileOpenable() {
-        if (!TextUtils.isEmpty(mFileDir)) {
-            File f = new File(mFileDir);
-            return f.exists() && f.length() > 0;
-        } else if (!TextUtils.isEmpty(mFileName)) {
-            if (!mInbox || (mInbox && mStatus == MessageDbAdapter.MESSAGE_STATUS_FILE_DECRYPTED)) {
-                File f = SSUtil.getOldDefaultDownloadPath(mFileType, mFileName);
-                if (SSUtil.isExternalStorageReadable()) {
-                    return f.exists() && f.length() > 0;
-                } else {
-                    // make actual access of missing volume to show its error
-                    return true;
+
+        if (!TextUtils.isEmpty(mFileType)
+                && !mFileType.startsWith(SafeSlingerConfig.MIMETYPE_CLASS + "/")) {
+
+            if (!TextUtils.isEmpty(mFileDir)) {
+                File f = new File(mFileDir);
+                return f.exists() && f.length() > 0;
+            } else if (!TextUtils.isEmpty(mFileName)) {
+                if (!mInbox
+                        || (mInbox && mStatus == MessageDbAdapter.MESSAGE_STATUS_FILE_DECRYPTED)) {
+                    File f = SSUtil.getOldDefaultDownloadPath(mFileType, mFileName);
+                    if (SSUtil.isExternalStorageReadable()) {
+                        return f.exists() && f.length() > 0;
+                    } else {
+                        // make actual access of missing volume to show its
+                        // error
+                        return true;
+                    }
                 }
             }
         }
@@ -129,7 +136,7 @@ public class MessageRow extends MessageData {
     }
 
     public boolean isEditable() {
-        return (mStatus == MessageDbAdapter.MESSAGE_STATUS_DRAFT || mStatus == MessageDbAdapter.MESSAGE_STATUS_QUEUED)
+        return (mStatus == MessageDbAdapter.MESSAGE_STATUS_DRAFT)
                 && (TextUtils.isEmpty(mFileType) || (!TextUtils.isEmpty(mFileType) && !mFileType
                         .startsWith(SafeSlingerConfig.MIMETYPE_CLASS)));
     }

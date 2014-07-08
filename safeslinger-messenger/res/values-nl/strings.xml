@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audiospeler decoderingsfout.</string>
     <string name="error_AudioPlayerError">Kunt de opnameduur niet afspelen.</string>
     <string name="error_AudioRecorderEncodeError">Audiorecorder codering fout.</string>
-    <string name="error_AudioRecorderPermissionError">Microfoon toestemming vereist. Ga dan naar iOS Instellingen om microfoonmachtigingen schakelen.</string>
     <string name="error_BackupNotFound">Geen back-up te herstellen.</string>
     <string name="error_BackupNotSupportedDevice">Apparaat ondersteunt geen back-up.</string>
     <string name="error_BadCopyProtectUpgrade">Door een bug in Android 4.1, moet u verwijderen en opnieuw installeren SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger fout, herstart.</string>
     <string name="error_VcardParseFailure">Contact gegevens onjuist geformatteerd.</string>
 
-    <string name="help_find">Gebruik dit scherm om uw naam in te stellen uit te wisselen met anderen. Tik op de knop Gereed als u klaar bent.</string>
     <string name="help_home">Om identiteit gegevens uit te wisselen, zodat alle gebruikers zijn in de buurt of aan de telefoon. Het Begin Exchange knop wordt alleen de gecontroleerde contactgegevens uitwisselen.</string>
     <string name="help_identity_menu">U kunt ook persoonlijke gegevens over uw identiteit op dit scherm wijzigen door te tikken op de knop met uw naam. Hierdoor wordt een menu waarmee u uw contactgegevens bewerken weer te geven, nieuwe contactpunten, of gebruik een andere contactpersoon.</string>
     <string name="help_Messages">Dit scherm toont alle vroegere berichten en bijlagen die nog beschikbaar zijn voor download.</string>
-    <string name="help_passphrase">Gebruik dit scherm om in te loggen op de applicatie met je wachtwoord. Als je je wachtwoord bent vergeten, kunt u een nieuwe sleutel beschermd door een nieuwe wachtzin door de Wachtwoord wachtzin tikken te genereren? knop. Tik op de gebruikersnaam om te schakelen tussen meerdere toetsen.</string>
     <string name="help_PickRecip">Contacten met SafeSlinger toetsen worden hier weergegeven, selecteert u een aan uw bericht wilt verzenden.</string>
     <string name="help_save">Wanneer u klaar bent, zal het protocol een lijst van de identiteit uitgewisselde gegevens te onthullen. Selecteer de contacten die u wilt opslaan en druk op Importeren.</string>
     <string name="help_SecureIntroduction">In dit scherm kunt u twee mensen die je sleutels hebt geslingerd met vroeger veilig sturen hun sleutels bij elkaar te selecteren. Drukt u gewoon op Introduceer wanneer je klaar bent.</string>
     <string name="help_Send">In dit scherm kunt u een aantal gegevens en een ontvanger te sturen om te selecteren. Drukt u gewoon op verzenden als u klaar bent.</string>
 
-    <string name="iOS_contactError">Contacten toestemming vereist. Ga dan naar iOS Instellingen om contacten worden geplaatst laten.</string>
     <string name="iOS_errorpushtoken">Push registratie ontbreekt.</string>
-    <string name="iOS_notificationError1">Kennisgevingen toestemming vereist. Ga dan naar iOS Instellingen om Notificaties machtigingen in te schakelen.</string>
-    <string name="iOS_notificationError2">%s toestemming vereist. Ga dan naar iOS Instellingen om Notificaties machtigingen in te schakelen.</string>
     <string name="iOS_oldOSWarn">SafeSlinger is niet geoptimaliseerd voor iOS 5.x apparaten. SafeSlinger vereist iOS 6 of hoger.</string>
 
     <string name="label_ago">%s geleden</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Automatisch decoderen</string>
     <string name="menu_Change">Verandering</string>
     <string name="menu_ChangePassphrase">Verandering Passphrase</string>
-    <string name="menu_ContactInviteEmail">E-mail</string>
-    <string name="menu_ContactInviteSms">Tekst (SMS/MMS)</string>
     <string name="menu_CreateNew">Create New</string>
     <string name="menu_delete">Verwijder</string>
     <string name="menu_deleteThread">Thread verwijderen %s</string>

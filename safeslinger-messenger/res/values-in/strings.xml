@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio player kesalahan decoding.</string>
     <string name="error_AudioPlayerError">Tidak dapat memutar rekaman.</string>
     <string name="error_AudioRecorderEncodeError">Audio recorder error encoding.</string>
-    <string name="error_AudioRecorderPermissionError">Izin mikrofon diperlukan. Silakan pergi ke iOS Pengaturan untuk mengaktifkan izin Microphone.</string>
     <string name="error_BackupNotFound">Tidak ada cadangan untuk mengembalikan.</string>
     <string name="error_BackupNotSupportedDevice">Perangkat tidak mendukung backup restore.</string>
     <string name="error_BadCopyProtectUpgrade">Karena bug di Android 4.1, Anda harus uninstall dan menginstal ulang SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Error SafeSlinger, silakan restart.</string>
     <string name="error_VcardParseFailure">Data kontak diformat salah.</string>
 
-    <string name="help_find">Gunakan layar ini untuk mengatur nama Anda untuk bertukar dengan orang lain. Tekan tombol Done ketika selesai.</string>
     <string name="help_home">Untuk bertukar data identitas, memastikan semua pengguna berada di dekatnya atau di telepon. Tombol Exchange Mulailah akan bertukar hanya data kontak diperiksa.</string>
     <string name="help_identity_menu">Anda juga dapat mengubah data pribadi tentang identitas Anda pada layar ini dengan menekan tombol dengan nama Anda. Ini akan menampilkan menu yang memungkinkan Anda untuk mengedit kontak Anda, Buat kontak baru, atau Gunakan kontak lain.</string>
     <string name="help_Messages">Layar ini menampilkan semua pesan masa lalu, dan lampiran yang masih tersedia untuk di-download.</string>
-    <string name="help_passphrase">Gunakan layar ini untuk login ke aplikasi dengan passphrase Anda. Jika Anda lupa frasa sandi Anda, Anda dapat membuat kunci baru yang dilindungi oleh passphrase baru dengan mengetuk Passphrase Lupa? tombol. Ketuk nama pengguna untuk beralih di antara beberapa tombol.</string>
     <string name="help_PickRecip">Kontak dengan kunci SafeSlinger ditampilkan di sini, pilih salah satu untuk mengirim pesan ke.</string>
     <string name="help_save">Setelah selesai, protokol akan mengungkapkan daftar data identitas dipertukarkan. Pilih kontak yang ingin Anda simpan dan tekan Import.</string>
     <string name="help_SecureIntroduction">Layar ini memungkinkan Anda untuk memilih dua orang yang telah tersandang kunci dengan sebelumnya untuk aman mengirim kunci mereka satu sama lain. Cukup tekan Mengenalkan ketika siap.</string>
     <string name="help_Send">Layar ini memungkinkan Anda untuk memilih beberapa data dan penerima untuk mengirim ke. Cukup tekan Kirim ketika siap.</string>
 
-    <string name="iOS_contactError">Kontak izin yang diperlukan. Silakan pergi ke iOS Pengaturan untuk mengaktifkan izin Kontak.</string>
     <string name="iOS_errorpushtoken">Dorong pendaftaran hilang.</string>
-    <string name="iOS_notificationError1">Pemberitahuan izin yang diperlukan. Silakan pergi ke iOS Pengaturan untuk mengaktifkan Pemberitahuan izin.</string>
-    <string name="iOS_notificationError2">Izin %s diperlukan. Silakan pergi ke iOS Pengaturan untuk mengaktifkan Pemberitahuan izin.</string>
     <string name="iOS_oldOSWarn">SafeSlinger tidak dioptimalkan untuk perangkat iOS 5.x. SafeSlinger membutuhkan iOS 6 atau lebih tinggi.</string>
 
     <string name="label_ago">%s lalu</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-dekripsi</string>
     <string name="menu_Change">Perubahan</string>
     <string name="menu_ChangePassphrase">Ubah Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Teks (SMS/MMS)</string>
     <string name="menu_CreateNew">Buat New</string>
     <string name="menu_delete">Hapus</string>
     <string name="menu_deleteThread">Hapus Thread %s</string>

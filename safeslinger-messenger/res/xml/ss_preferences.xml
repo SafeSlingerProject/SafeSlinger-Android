@@ -143,12 +143,16 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/title_About" >
         <Preference
-            android:key="showLicense"
-            android:title="@string/title_Eula" >
-        </Preference>
-        <Preference
             android:key="showAbout"
             android:title="@string/menu_About" >
+        </Preference>
+        <Preference
+            android:key="showLicense"
+            android:title="@string/menu_License" >
+        </Preference>
+        <Preference
+            android:key="showPrivacy"
+            android:title="@string/text_KeywordPrivacy" >
         </Preference>
     </PreferenceCategory>
 

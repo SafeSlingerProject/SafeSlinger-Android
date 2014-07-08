@@ -107,6 +107,7 @@ public class SafeSlingerPrefs {
         public static final String RESTORE_COMPLETE_DATE = "restoreCompleteDate";
         public static final String SHOW_ABOUT = "showAbout";
         public static final String SHOW_LICENSE = "showLicense";
+        public static final String SHOW_PRIVACY = "showPrivacy";
         public static final String SHOW_RECENT_RECIPONLY = "showRecentRecipOnly";
         public static final String SHOW_RECENT_RECIPONLY_EDITED = "showRecentRecipOnlyEdited";
         public static final String SHOW_SLING_KEYS_REMIND = "showSlingKeysReminder";

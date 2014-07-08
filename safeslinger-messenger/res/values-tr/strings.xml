@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Ses çalar çözme hatası.</string>
     <string name="error_AudioPlayerError">Kaydı çalamıyor.</string>
     <string name="error_AudioRecorderEncodeError">Ses kaydedici kodlama hatası.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofon izni gereklidir. Mikrofon izinleri etkinleştirmek için iOS Ayarlar gidin lütfen.</string>
     <string name="error_BackupNotFound">Geri yüklemek için herhangi bir yedek.</string>
     <string name="error_BackupNotSupportedDevice">Cihaz yedekleme geri desteklemiyor.</string>
     <string name="error_BadCopyProtectUpgrade">Nedeniyle Android 4.1 bir hata nedeniyle, SafeSlinger kaldırmak ve yeniden yüklemeniz gerekir.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger hata, yeniden başlatın lütfen.</string>
     <string name="error_VcardParseFailure">İletişim bilgileri hatalı biçimlendirilmiş.</string>
 
-    <string name="help_find">Başkaları ile alışverişi için adını ayarlamak için bu ekranı kullanın. BittiğindeBitti düğmesine dokunun.</string>
     <string name="help_home">Kimlik veri alışverişi için tüm kullanıcıların yakın yatelefonda sağlamak. Başlamadan Borsası düğmesi yalnızcaişaretli temas veri alışverişi olacaktır.</string>
     <string name="help_identity_menu">Ayrıca adı iledüğmeye dokunarak ekranda kimliğinizle ilgili kişisel veriler değişebilir. Bu, sizin Kişiyi düzenleyin sağlayan bir menü görüntülemek Yeni kartvizit oluşturma, ya da başka bir temas kullanın olacaktır.</string>
     <string name="help_Messages">Bu ekran tüm geçmiş iletileri ve hala yüklenebilir ekleri görüntüler.</string>
-    <string name="help_passphrase">Parolanıza ileuygulamaya giriş için bu ekranı kullanın. Parolanızı unutursanız, senunuttun Şifresini dokunarak yeni bir şifreyle korunan yeni bir anahtar oluşturmak olabilir? düğmesine basın. Birden tuşları arasında geçiş yapmak içinkullanıcı adını dokunun.</string>
     <string name="help_PickRecip">SafeSlinger tuşları ile İletişim için mesaj göndermek için birini seçin, burada görüntülenir.</string>
     <string name="help_save">Bittiğinde,protokol alışverişindekimlik verilerinin bir listesini ortaya koyacaktır. Al\'ı kaydetmek ve basın istediğinizkişileri seçin.</string>
     <string name="help_SecureIntroduction">Bu ekran size güvenli birbirlerine anahtarlarını göndermek için önce tuşlara asılmış olan iki kişiyi seçmenizi sağlar. Sadece ne zaman hazır tanıtılması basın.</string>
     <string name="help_Send">Bu ekran bazı verileri ve göndermek için bir alıcı seçmek için izin verir. Sadece hazır olduğunda gönder tuşuna basın.</string>
 
-    <string name="iOS_contactError">İletişim izni gereklidir. İletişim izinleri etkinleştirmek için iOS Ayarlar gidin lütfen.</string>
     <string name="iOS_errorpushtoken">Itme kaydı eksik.</string>
-    <string name="iOS_notificationError1">Bildirimler izni gereklidir. Bildirimler izinleri etkinleştirmek için iOS Ayarlar gidin lütfen.</string>
-    <string name="iOS_notificationError2">%s izni gereklidir. Bildirimler izinleri etkinleştirmek için iOS Ayarlar gidin lütfen.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x cihazlar için optimize edilmemiştir. SafeSlinger iOS 6 veya daha yüksek gerektirir.</string>
 
     <string name="label_ago">%s önce</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Otomatik şifresini</string>
     <string name="menu_Change">Değişim</string>
     <string name="menu_ChangePassphrase">Değişim Parolası</string>
-    <string name="menu_ContactInviteEmail">E-posta</string>
-    <string name="menu_ContactInviteSms">Metin (SMS/MMS)</string>
     <string name="menu_CreateNew">Yeni Oluştur</string>
     <string name="menu_delete">Silmek</string>
     <string name="menu_deleteThread">Konu %s Sil</string>

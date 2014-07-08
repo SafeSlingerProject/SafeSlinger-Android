@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">ઓડિયો પ્લેયર ડીકોડિંગ ભૂલ.</string>
     <string name="error_AudioPlayerError">રેકોર્ડિંગ રમવા શકાતું નથી.</string>
     <string name="error_AudioRecorderEncodeError">ઓડિયો રેકોર્ડર એન્કોડિંગ ભૂલ.</string>
-    <string name="error_AudioRecorderPermissionError">માઇક્રોફોન પરવાનગી જરૂરી છે. માઇક્રોફોન પરવાનગીઓ સક્રિય કરવા માટે iOS સેટિંગ્સ પર જાઓ કૃપા કરીને.</string>
     <string name="error_BackupNotFound">પુન: સંગ્રહ પર બેકઅપ.</string>
     <string name="error_BackupNotSupportedDevice">ઉપકરણ બેકઅપ પુનઃસ્થાપિત આધાર આપતું નથી.</string>
     <string name="error_BadCopyProtectUpgrade">કારણે, Android 4.1 માં ભૂલ માટે, તમે ને અનઇન્સ્ટોલ કરો અને પુન: સ્થાપિત SafeSlinger પડશે.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger ભૂલ, પુન: શરૂ કરો.</string>
     <string name="error_VcardParseFailure">સંપર્ક માહિતી ખોટી રીતે ફોર્મેટ કરવામાં આવી હતી.</string>
 
-    <string name="help_find">અન્ય લોકો સાથે અદલા તમારું નામ સુયોજિત કરવા માટે આ સ્ક્રીનને વાપરો. જ્યારે સમાપ્ત થાય ત્યારે આ પૂર્ણ બટન ટેપ કરો.</string>
     <string name="help_home">ઓળખ માહિતી વિનિમય માટે, બધા વપરાશકર્તાઓ નજીકના અથવા ફોન પર હોય છે તેની ખાતરી કરો. આ શરૂ એક્સચેન્જ બટન માત્ર ચકાસાયેલ સંપર્ક માહિતી લે કરશે.</string>
     <string name="help_identity_menu">તમે પણ તમારા નામ સાથે બટન પર ટેપ દ્વારા આ સ્ક્રીન પર તમારી ઓળખ વિશે વ્યક્તિગત માહિતી બદલી શકો છો. આ, તમે તમારી સંપર્ક સંપાદિત કરો માટે પરવાનગી આપે છે મેનુ પ્રદર્શિત નવો સંપર્ક બનાવો, અથવા અન્ય સંપર્ક ઉપયોગ કરશે.</string>
     <string name="help_Messages">આ સ્ક્રીન બધા છેલ્લા સંદેશાઓ, અને હજુ પણ ડાઉનલોડ માટે ઉપલબ્ધ છે કે જોડાણો દર્શાવે છે.</string>
-    <string name="help_passphrase">તમારો પાસફ્રેઝ ના કેટલાક એપ્લિકેશન માં પ્રવેશ કરવા માટે આ સ્ક્રીનને વાપરો. જો તમે તમારો પાસફ્રેઝ ભૂલી ગયા છો, તમે ભૂલી ગયા છો પાસફ્રેઝ ટેપ કરીને એક નવી પાસફ્રેઝ દ્વારા સુરક્ષિત નવી કી બનાવી શકો છો? બટન. ઘણી કીઓ વચ્ચે સ્વિચ કરવા માટે વપરાશકર્તા નામ ટેપ કરો.</string>
     <string name="help_PickRecip">SafeSlinger કીઓ સાથે સંપર્કો આપનો સંદેશ મોકલવા માટે એક પસંદ કરો, અહીં દર્શાવવામાં આવે છે.</string>
     <string name="help_save">જ્યારે સમાપ્ત થાય, પ્રોટોકોલ લે ઓળખ માહિતી યાદી જાહેર કરશે. તમે આયાત સાચવો અને દબાવો કરવા માંગો છો સંપર્કો પસંદ કરો.</string>
     <string name="help_SecureIntroduction">આ સ્ક્રીન એ તમને સુરક્ષિત એકબીજા સાથે તેમના કીઓ મોકલવા પહેલાં સાથે કીઓ slung છે બે લોકો પસંદ કરવા માટે પરવાનગી આપે છે. ફક્ત ત્યારે તૈયાર દાખલ દબાવો.</string>
     <string name="help_Send">આ સ્ક્રીન એ અમુક માહિતી અને મોકલવા ાિ તકતા પસંદ કરવા માટે પરવાનગી આપે છે. ફક્ત તૈયાર જ્યારે મોકલો દબાવો.</string>
 
-    <string name="iOS_contactError">સંપર્કો પરવાનગી જરૂરી છે. સંપર્કો પરવાનગીઓ સક્રિય કરવા માટે iOS સેટિંગ્સ પર જાઓ કૃપા કરીને.</string>
     <string name="iOS_errorpushtoken">દબાણ નોંધણી ખૂટે છે.</string>
-    <string name="iOS_notificationError1">સૂચનો પરવાનગી જરૂરી છે. સૂચનો પરવાનગીઓ સક્રિય કરવા માટે iOS સેટિંગ્સ પર જાઓ કૃપા કરીને.</string>
-    <string name="iOS_notificationError2">%s પરવાનગી જરૂરી છે. સૂચનો પરવાનગીઓ સક્રિય કરવા માટે iOS સેટિંગ્સ પર જાઓ કૃપા કરીને.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5 ઉપકરણો માટે શ્રેષ્ટ નથી. SafeSlinger 6 iOS અથવા ઊંચી જરૂરી છે.</string>
 
     <string name="label_ago">%s પહેલા</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">સ્વતઃ ડિક્રિપ્ટ કરો</string>
     <string name="menu_Change">બદલો</string>
     <string name="menu_ChangePassphrase">બદલો પાસફ્રેઝ</string>
-    <string name="menu_ContactInviteEmail">ઇમેઇલ</string>
-    <string name="menu_ContactInviteSms">લખાણ (એસએમએસ/એમએમએસ)</string>
     <string name="menu_CreateNew">ન્યૂ બનાવો</string>
     <string name="menu_delete">કાઢી નાખો</string>
     <string name="menu_deleteThread">થ્રેડ %s કાઢી નાખો</string>

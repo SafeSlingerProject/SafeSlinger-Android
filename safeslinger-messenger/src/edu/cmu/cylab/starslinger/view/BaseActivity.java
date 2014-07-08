@@ -51,6 +51,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
@@ -59,6 +60,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Handler.Callback;
+import android.os.Message;
+import android.os.Parcelable;
 import android.provider.BaseColumns;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Email;
@@ -83,7 +88,6 @@ import android.widget.CheckBox;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-import edu.cmu.cylab.starslinger.Eula;
 import edu.cmu.cylab.starslinger.GeneralException;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
@@ -113,20 +117,20 @@ public class BaseActivity extends ActionBarActivity {
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
     public static final int RESULT_NEW_PASSPHRASE = 12358971;
     protected static final int MENU_HELP = 400;
-    protected static final int MENU_FEEDBACK = 490;
+    protected static final int MENU_ABOUT = 410;
+    protected static final int MENU_EULA = 420;
+    protected static final int MENU_PRIVACY = 430;
     protected static final int MENU_LOGOUT = 440;
     protected static final int MENU_CONTACTINVITE = 450;
     protected static final int MENU_SETTINGS = 460;
     protected static final int MENU_REFERENCE = 470;
     protected static final int MENU_SENDINTRO = 480;
+    protected static final int MENU_FEEDBACK = 490;
     protected static final int DIALOG_HELP = 1;
     protected static final int DIALOG_ERREXIT = 2;
     protected static final int DIALOG_QUESTION = 3;
     protected static final int DIALOG_INTRO = 4;
     protected static final int DIALOG_ABOUT = 5;
-    protected static final int DIALOG_LICENSE = 6;
-    protected static final int DIALOG_TUTORIAL = 7;
-    protected static final int DIALOG_LICENSE_CONFIRM = 8;
     protected static final int DIALOG_PROGRESS = 9;
     protected static final int DIALOG_USEROPTIONS = 10;
     protected static final int DIALOG_FILEOPTIONS = 11;
@@ -135,12 +139,14 @@ public class BaseActivity extends ActionBarActivity {
     protected static final int DIALOG_REFERENCE = 14;
     protected static final int DIALOG_BACKUPQUERY = 15;
     protected static final int DIALOG_CONTACTINVITE = 16;
+    private static final int RESULT_SELECT_CONTACT_LINK = 15;
     private static final int RESULT_SEND_INVITE = 17;
     private static final int RESULT_SELECT_SMS = 18;
     private static final int RESULT_SELECT_EMAIL = 19;
     protected static final int DIALOG_MANAGE_PASS = 20;
     protected static final int DIALOG_CONTACTTYPE = 21;
     protected static String mInviteContactLookupKey;
+    protected static long mContactLinkRecipientRowId;
 
     protected static Bundle writeSingleExportExchangeArgs(ContactImpp out) {
 
@@ -1021,46 +1027,6 @@ public class BaseActivity extends ActionBarActivity {
         }
     }
 
-    protected void showLicense() {
-        if (!isFinishing()) {
-            removeDialog(DIALOG_LICENSE);
-            showDialog(DIALOG_LICENSE);
-        }
-    }
-
-    static AlertDialog.Builder xshowLicense(Activity act) {
-        AlertDialog.Builder ad = new AlertDialog.Builder(act);
-        View layout;
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
-            layout = View.inflate(new ContextThemeWrapper(act, R.style.Theme_AppCompat),
-                    R.layout.about, null);
-        } else {
-            LayoutInflater inflater = (LayoutInflater) act
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            layout = inflater.inflate(R.layout.about, null);
-        }
-        TextView textViewAbout = (TextView) layout.findViewById(R.id.TextViewAbout);
-        ad.setTitle(R.string.title_Eula);
-        textViewAbout.setText(Eula.readEula(act));
-        ad.setView(layout);
-        ad.setCancelable(true);
-        ad.setNeutralButton(R.string.btn_Close, new OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int id) {
-                dialog.dismiss();
-            }
-        });
-        ad.setOnCancelListener(new DialogInterface.OnCancelListener() {
-
-            @Override
-            public void onCancel(DialogInterface dialog) {
-                dialog.dismiss();
-            }
-        });
-        return ad;
-    }
-
     protected void showFileActionChooser(File downloadedFile, String fileType) {
         // always second-guess mimetype, since send/recv mimetype could be
         // innactuare
@@ -1092,6 +1058,52 @@ public class BaseActivity extends ActionBarActivity {
             SafeSlingerPrefs.setPassBackoffTimeout(passBackoffTimeout);
             SafeSlingerPrefs.setNextPassAttemptDate(new Date().getTime() + passBackoffTimeout);
         }
+    }
+
+    protected void runThreadBackgroundSyncUpdates() {
+
+        final Handler syncMsgHandler = new Handler(new Callback() {
+
+            @Override
+            public boolean handleMessage(Message msg) {
+                if (msg.arg1 != 0)
+                    showNote(msg.arg1);
+                return false;
+            }
+        });
+
+        Thread t = new Thread() {
+
+            @Override
+            public void run() {
+                SafeSlingerPrefs.setContactDBLastScan(System.currentTimeMillis());
+                Message msg = new Message();
+
+                // TODO look for updates in address book...
+                // try {
+                // doUpdateRecipientsFromContacts();
+                // } catch (SQLException e) {
+                // // ignore since we only attempt to update old data
+                // }
+
+                // make sure recipient list shows correct keys...
+                if (!doUpdateActiveKeyStatus()) {
+                    msg = new Message();
+                    msg.arg1 = R.string.error_UnableToUpdateRecipientInDB;
+                    syncMsgHandler.sendMessage(msg);
+                }
+
+                // remove deprecated key storage from contacts
+                String[] keyNames = new String[] { //
+                        SafeSlingerConfig.APP_KEY_OLD1, //
+                        SafeSlingerConfig.APP_KEY_OLD2, //
+                        SafeSlingerConfig.APP_KEY_PUBKEY, //
+                        SafeSlingerConfig.APP_KEY_PUSHTOKEN, //
+                };
+                doCleanupOldKeyData(keyNames);
+            }
+        };
+        t.start();
     }
 
     protected boolean doUpdateActiveKeyStatus() throws SQLException {
@@ -1182,8 +1194,12 @@ public class BaseActivity extends ActionBarActivity {
         // do some lookup for new photos
         for (int i = 0; i < contacts.size(); i++) {
             RecipientRow r = contacts.get(i);
+            String newname = getContactName(r.getContactlu());
+            if (!TextUtils.isEmpty(newname) && !newname.equals(r.getName())) {
+                dbRecipient.updateRecipientName(r.getRowId(), newname);
+            }
             byte[] newphoto = getContactPhoto(r.getContactlu());
-            if (newphoto != null && !Arrays.equals(newphoto, r.getPhoto())) {
+            if (!Arrays.equals(newphoto, r.getPhoto())) {
                 dbRecipient.updateRecipientPhoto(r.getRowId(), newphoto);
             }
         }
@@ -1591,13 +1607,6 @@ public class BaseActivity extends ActionBarActivity {
         return ad;
     }
 
-    protected void showWalkthrough() {
-        if (!isFinishing()) {
-            removeDialog(DIALOG_TUTORIAL);
-            showDialog(DIALOG_TUTORIAL);
-        }
-    }
-
     protected static AlertDialog.Builder xshowWalkthrough(final Activity act) {
         AlertDialog.Builder ad = new AlertDialog.Builder(act);
         View layout;
@@ -1704,6 +1713,7 @@ public class BaseActivity extends ActionBarActivity {
         final CharSequence[] items = new CharSequence[] { //
                 act.getText(R.string.menu_ContactInviteSms), //
                 act.getText(R.string.menu_ContactInviteEmail), //
+                act.getText(R.string.menu_UseAnother), //
         };
         AlertDialog.Builder ad = new AlertDialog.Builder(act);
         ad.setTitle(R.string.action_NewUserRequest);
@@ -1718,6 +1728,9 @@ public class BaseActivity extends ActionBarActivity {
                         break;
                     case 1: // email
                         showPickEmail();
+                        break;
+                    case 2: // generic
+                        showSendApplication();
                         break;
                     default:
                         break;
@@ -1750,6 +1763,12 @@ public class BaseActivity extends ActionBarActivity {
         } else {
             showCustomContactPicker(RESULT_SELECT_EMAIL);
         }
+    }
+
+    public void showPickContact(RecipientRow recip) {
+        mContactLinkRecipientRowId = recip.getRowId();
+        Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
+        startActivityForResult(intent, RESULT_SELECT_CONTACT_LINK);
     }
 
     public static Intent getPickPhoneIntent() {
@@ -1922,6 +1941,49 @@ public class BaseActivity extends ActionBarActivity {
             }
         });
         return ad;
+    }
+
+    protected void showSendApplication() {
+        // ask them to pick the sending method...
+        // query possible message methods first
+        CharSequence title = getString(R.string.action_NewUserRequest);
+        List<Intent> targetedShareIntents = new ArrayList<Intent>();
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        List<ResolveInfo> resInfo = getPackageManager().queryIntentActivities(shareIntent, 0);
+
+        if (!resInfo.isEmpty()) {
+            for (ResolveInfo resolveInfo : resInfo) {
+                String packageName = resolveInfo.activityInfo.packageName;
+
+                // exclude our own app...
+                if (!packageName.startsWith(getPackageName())) {
+                    Intent targetedShareIntent = new Intent(Intent.ACTION_SEND);
+                    targetedShareIntent.setType("text/plain");
+                    targetedShareIntent.putExtra(Intent.EXTRA_SUBJECT, String.format("%s %s",
+                            getString(R.string.title_TextInviteMsg),
+                            getString(R.string.menu_TagExchange)));
+                    targetedShareIntent.putExtra(Intent.EXTRA_TEXT, getInviteLongMessage());
+                    targetedShareIntent.setPackage(packageName);
+
+                    targetedShareIntents.add(targetedShareIntent);
+                }
+            }
+
+            Intent chooserIntent = null;
+            if (targetedShareIntents.size() > 0) {
+                chooserIntent = Intent.createChooser(targetedShareIntents.remove(0), title);
+            } else {
+                chooserIntent = Intent.createChooser(shareIntent, title);
+            }
+            chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS,
+                    targetedShareIntents.toArray(new Parcelable[] {}));
+            try {
+                startActivity(chooserIntent);
+            } catch (ActivityNotFoundException e) {
+                showNote(getUnsupportedFeatureString(Intent.ACTION_SEND));
+            }
+        }
     }
 
     protected void showBackupSettings() {
@@ -2101,11 +2163,50 @@ public class BaseActivity extends ActionBarActivity {
         return contact;
     }
 
+    protected void showWebPage(String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         switch (requestCode) {
+            case RESULT_SELECT_CONTACT_LINK:
+                String contactLookupKey = null;
+                String rawcontactid = null;
+                String contactid = null;
+                if (data != null) {
+                    Uri uri = data.getData();
+                    if (uri != null) {
+                        Cursor c = null;
+                        try {
+                            c = getContentResolver().query(uri, null, null, null, null);
+                            if (c != null && c.moveToFirst()) {
+                                contactLookupKey = c.getString(c
+                                        .getColumnIndexOrThrow(Data.LOOKUP_KEY));
+                            }
+                        } finally {
+                            if (c != null && !c.isClosed()) {
+                                c.close();
+                            }
+                        }
+                    }
+                }
+                if (!TextUtils.isEmpty(contactLookupKey)) {
+                    RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                            .openInstance(getApplicationContext());
+                    if (!dbRecipient.updateRecipientFromChosenLink(mContactLinkRecipientRowId,
+                            contactid, contactLookupKey, rawcontactid)) {
+                        showNote(R.string.error_UnableToUpdateRecipientInDB);
+                    } else {
+                        runThreadBackgroundSyncUpdates();
+                    }
+                    mContactLinkRecipientRowId = -1; // reset
+                }
+                break;
             case RESULT_SELECT_SMS:
                 if (data != null) {
                     Uri uri = data.getData();

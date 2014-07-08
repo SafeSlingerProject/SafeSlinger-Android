@@ -47,6 +47,9 @@
         android:id="@+id/item_delete_recipient"
         android:title="@string/menu_delete"/>
     <item
+        android:id="@+id/item_link_contact"
+        android:title="@string/menu_link_contact"/>
+    <item
         android:id="@+id/item_key_details"
         android:title="@string/menu_Details"/>
     <item

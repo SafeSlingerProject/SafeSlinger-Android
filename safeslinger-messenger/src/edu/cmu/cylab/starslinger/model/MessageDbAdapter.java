@@ -551,6 +551,18 @@ public class MessageDbAdapter {
         }
     }
 
+    public int getAllMessageCount() throws SQLException {
+        synchronized (SafeSlinger.sDataLock) {
+            Cursor c = query(DATABASE_TABLE, null, null, null, null, null, null);
+            if (c != null) {
+                int count = c.getCount();
+                c.close();
+                return count;
+            }
+            return -1;
+        }
+    }
+
     public int getActionRequiredMessageCountByThread(String keyId) throws SQLException {
         synchronized (SafeSlinger.sDataLock) {
             StringBuilder where = new StringBuilder();

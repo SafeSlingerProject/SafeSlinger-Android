@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">الصوت الخطأ فك لاعب.</string>
     <string name="error_AudioPlayerError">لا يمكن ان تلعب التسجيل.</string>
     <string name="error_AudioRecorderEncodeError">الصوت خطأ ترميز مسجل.</string>
-    <string name="error_AudioRecorderPermissionError">إذن الميكروفون المطلوبة. يرجى الدخول إلى إعدادات دائرة الرقابة الداخلية لتمكين أذونات ميكروفون.</string>
     <string name="error_BackupNotFound">لم النسخ الاحتياطي لاستعادة.</string>
     <string name="error_BackupNotSupportedDevice">الجهاز لا يدعم استعادة النسخ الاحتياطي.</string>
     <string name="error_BadCopyProtectUpgrade">بسبب وجود خطأ في الروبوت 4.1 ، سيكون لديك لإلغاء وإعادة SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">الخطأ SafeSlinger ، يرجى إعادة تشغيل.</string>
     <string name="error_VcardParseFailure">تم تنسيقها جهة الاتصال بشكل غير صحيح.</string>
 
-    <string name="help_find">استخدام هذه الشاشة لتحديد اسم ل تبادل مع الآخرين. اضغط على الزر تم عند الانتهاء.</string>
     <string name="help_home">لتبادل البيانات الهوية ، وضمان جميع المستخدمين في مكان قريب أو على الهاتف. سوف تبدأ صرف زر تبادل البيانات فقط الاتصال فحصها.</string>
     <string name="help_identity_menu">غير متوافر غير متوافر يمكنك أيضا تغيير البيانات الشخصية حول الهوية الخاصة بك على هذه الشاشة من خلال النقر على زر مع اسمك. وهذا عرض قائمة مما يسمح لك ل تحرير الاتصال الخاصة بك ، وخلق اسم جديد ، أو استخدام اتصال آخر.</string>
     <string name="help_Messages">يعرض هذه الشاشة كل الرسائل الماضية، و المرفقات التي لا تزال متاحة للتنزيل.</string>
-    <string name="help_passphrase">استخدام هذه الشاشة لتسجيل الدخول إلى التطبيق مع عبارة المرور. إذا كنت قد نسيت عبارة المرور الخاصة بك ، يمكنك إنشاء مفتاح جديد تحميها عبارة مرور جديدة من خلال الاستفادة من عبارة المرور نسيت ؟ الزر. اضغط على اسم مستخدم التبديل بين المفاتيح متعددة.</string>
     <string name="help_PickRecip">يتم عرض الاتصالات مع مفاتيح SafeSlinger هنا ، حدد واحد لإرسال رسالة ل.</string>
     <string name="help_save">عند الانتهاء ، سوف تكشف عن وجود بروتوكول قائمة بيانات الهوية تبادلها. حدد جهات الاتصال التي ترغب في حفظ واضغط استيراد.</string>
     <string name="help_SecureIntroduction">هذه الشاشة تسمح لك لاختيار شخصين لديك مفاتيح مع متدلي قبل أن ترسل بشكل آمن المفاتيح الخاصة بهم إلى بعضها البعض. ببساطة اضغط أعرض عندما تصبح جاهزة.</string>
     <string name="help_Send">هذه الشاشة تسمح لك لاختيار بعض البيانات و مستلم لإرسالها إلى. ببساطة اضغط إرسال عندما تصبح جاهزة.</string>
 
-    <string name="iOS_contactError">اتصالات الإذن المطلوب. يرجى الدخول إلى إعدادات دائرة الرقابة الداخلية لتمكين اتصالات الأذونات.</string>
     <string name="iOS_errorpushtoken">تسجيل دفع مفقود.</string>
-    <string name="iOS_notificationError1">إذن الإخطارات المطلوبة. يرجى الدخول إلى إعدادات دائرة الرقابة الداخلية لتمكين أذونات الإخطارات.</string>
-    <string name="iOS_notificationError2">إذن %s المطلوبة. يرجى الدخول إلى إعدادات دائرة الرقابة الداخلية لتمكين أذونات الإخطارات.</string>
     <string name="iOS_oldOSWarn">لم يتم تحسين SafeSlinger لأجهزة دائرة الرقابة الداخلية 5.X. يتطلب دائرة الرقابة الداخلية SafeSlinger 6 أو أعلى.</string>
 
     <string name="label_ago">منذ %s</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">لصناعة السيارات في فك تشفير</string>
     <string name="menu_Change">تغيير</string>
     <string name="menu_ChangePassphrase">تغيير عبارة المرور</string>
-    <string name="menu_ContactInviteEmail">البريد الإلكتروني</string>
-    <string name="menu_ContactInviteSms">النص (SMS/MMS)</string>
     <string name="menu_CreateNew">خلق جديد</string>
     <string name="menu_delete">حذف</string>
     <string name="menu_deleteThread">حذف %s الموضوع</string>

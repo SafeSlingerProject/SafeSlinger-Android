@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio spiller dekoding feil.</string>
     <string name="error_AudioPlayerError">Kan ikke spille av opptaket.</string>
     <string name="error_AudioRecorderEncodeError">Lydopptaker koding feil.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofon Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Mikrofon tillatelser.</string>
     <string name="error_BackupNotFound">Ingen backup til gjenoppretting.</string>
     <string name="error_BackupNotSupportedDevice">Enheten støtter ikke backup gjenoppretting.</string>
     <string name="error_BadCopyProtectUpgrade">På grunn av en bug i Android 4.1, må du avinstallere og installere SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger feil, må du starte.</string>
     <string name="error_VcardParseFailure">Kontaktdata ble formatert feil.</string>
 
-    <string name="help_find">Bruk denne skjermen til å legge inn navn for å utveksle med andre. Trykk på Ferdig-knappen når du er ferdig.</string>
     <string name="help_home">Å utveksle identitetsdata, sikre at alle brukere er i nærheten eller på telefonen. The Begin Exchange-knappen vil utveksle kun de sjekket kontaktdata.</string>
     <string name="help_identity_menu">Du kan også endre personopplysninger om din identitet på denne skjermen ved å trykke på knappen med navnet ditt. Dette vil vise en meny som lar deg redigere kontakten, Opprett ny kontakt, eller bruk en annen kontakt.</string>
     <string name="help_Messages">Denne skjermen viser alle tidligere meldinger og vedlegg som fortsatt er tilgjengelige for nedlasting.</string>
-    <string name="help_passphrase">Bruk dette skjermbildet til å logge inn på søknaden med passordet. Hvis du har glemt passordet ditt, kan du generere en ny nøkkel beskyttet av en ny-passordet ved å trykke på Glemt Passphrase? knappen. Trykk på brukernavnet for å bytte mellom flere nøkler.</string>
     <string name="help_PickRecip">Kontakter med SafeSlinger tastene vises her, velg en å sende meldingen til.</string>
     <string name="help_save">Når du er ferdig, vil protokollen avsløre en liste over identitetsdata utveksles. Velg kontaktene du ønsker å lagre og trykk på Importer.</string>
     <string name="help_SecureIntroduction">Dette skjermbildet kan du velge to personer du har slengt nøkler med før å sikkert sende sine nøkler til hverandre. Bare trykk Innføre når du er klar.</string>
     <string name="help_Send">Dette skjermbildet kan du velge noen data og en mottaker for å sende til. Bare trykk Send når du er klar.</string>
 
-    <string name="iOS_contactError">Kontakter Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Kontakter tillatelser.</string>
     <string name="iOS_errorpushtoken">Push registrering mangler.</string>
-    <string name="iOS_notificationError1">Påminnelser Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Varsler tillatelser.</string>
-    <string name="iOS_notificationError2">%s Tillatelse kreves. Vennligst gå til iOS-innstillinger for å aktivere Varsler tillatelser.</string>
     <string name="iOS_oldOSWarn">SafeSlinger er ikke optimalisert for iOS 5.x enheter. SafeSlinger krever iOS 6 eller høyere.</string>
 
     <string name="label_ago">%s siden</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-dekryptere</string>
     <string name="menu_Change">Endring</string>
     <string name="menu_ChangePassphrase">Endre Passphrase</string>
-    <string name="menu_ContactInviteEmail">E-post</string>
-    <string name="menu_ContactInviteSms">Tekst (SMS/MMS)</string>
     <string name="menu_CreateNew">Opprett ny</string>
     <string name="menu_delete">Slett</string>
     <string name="menu_deleteThread">Slett tråden %s</string>

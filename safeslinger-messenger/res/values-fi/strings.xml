@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Musiikkisoitin dekoodausvirhe.</string>
     <string name="error_AudioPlayerError">Ei voi pelatatallennuksen.</string>
     <string name="error_AudioRecorderEncodeError">Audio-tallennin koodausvirhe.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofoni vaadittua. Siirry iOS Asetukset jotta Mikrofoni käyttöoikeudet.</string>
     <string name="error_BackupNotFound">Ei varmuuskopio palauttaa.</string>
     <string name="error_BackupNotSupportedDevice">Laite ei tue varmuuskopio palauttaa.</string>
     <string name="error_BadCopyProtectUpgrade">Koskavian Android 4.1, sinun täytyy poistaa ja asentaa SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger virhe, käynnistä.</string>
     <string name="error_VcardParseFailure">Yhteystietoja on alustettu väärin.</string>
 
-    <string name="help_find">Tämän näytön avulla asettaa nimesi vaihtaa muiden kanssa. Paina painiketta Valmis, kun olet valmis.</string>
     <string name="help_home">Vaihtaa tunnistetietoja, jotta kaikki käyttäjät ovat lähellä tai puhelimessa. Aloita Exchange-painike vaihtavat vaintarkistanut yhteystietoja.</string>
     <string name="help_identity_menu">Voit myös vaihtaa henkilötietoja henkilöllisyytesi napauttamalla painiketta nimesi. Tämä näyttää valikon, jonka avulla voit muokata yhteystietoja, Luo uusi nimi, tai käytä toista yhteyttä.</string>
     <string name="help_Messages">Tämä näyttö näyttää kaikki menneisyyden viestit ja liitetiedostot, jotka ovat vielä ladattavissa.</string>
-    <string name="help_passphrase">Tämän näytön kirjautuasovelluksen tunnuslauseesi. Jos olet unohtanut tunnuslauseen, voit muodostaa uuden avaimen suojattuuusi tunnuslause napauttamallaUnohditko Tunnuslause? painiketta. Kosketakäyttäjätunnus vaihtaa useita avaimia.</string>
     <string name="help_PickRecip">Yhteyksiä SafeSlinger näppäimet näkyvät täällä, valitse yksi lähettää viestisi.</string>
     <string name="help_save">Kun olet valmis,protokolla paljastaaluettelonkäyttäjätiedoista vaihdetaan. Valitse yhteystiedot haluat tallentaa ja paina Tuo.</string>
     <string name="help_SecureIntroduction">Tässä näytössä voit valita kaksi ihmistä olet sinkosi avaimet ennen turvallisesti lähettää avaimet toisilleen. Paina Esittele kun olet valmis.</string>
     <string name="help_Send">Tässä näytössä voit valita joitakin tietoja javastaanottaja lähettää. Paina Lähetä, kun olet valmis.</string>
 
-    <string name="iOS_contactError">Yhteydet vaadittua. Siirry iOS Asetukset jotta Yhteystiedot käyttöoikeudet.</string>
     <string name="iOS_errorpushtoken">Push rekisteröinti puuttuu.</string>
-    <string name="iOS_notificationError1">Ilmoitukset vaadittua. Siirry iOS Asetukset jotta Ilmoitukset käyttöoikeudet.</string>
-    <string name="iOS_notificationError2">%s vaadittua. Siirry iOS Asetukset jotta Ilmoitukset käyttöoikeudet.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ei ole optimoitu iOS 5.x laitteita. SafeSlinger vaatii iOS 6 tai uudempi.</string>
 
     <string name="label_ago">%s sitten</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-salaus</string>
     <string name="menu_Change">Muutos</string>
     <string name="menu_ChangePassphrase">Vaihda Tunnuslause</string>
-    <string name="menu_ContactInviteEmail">Sähköposti</string>
-    <string name="menu_ContactInviteSms">Teksti (SMS/MMS)</string>
     <string name="menu_CreateNew">Luo uusi</string>
     <string name="menu_delete">Poistaa</string>
     <string name="menu_deleteThread">Poista Thread %s</string>

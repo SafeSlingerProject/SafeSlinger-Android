@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio lejátszó dekódolás hiba.</string>
     <string name="error_AudioPlayerError">Nem lehet lejátszani a felvételt.</string>
     <string name="error_AudioRecorderEncodeError">Audió felvevő kódolás hiba.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofon engedélye szükséges. Kérjük, látogasson el iOS beállítások engedélyezéséhez mikrofon jogosultságokat.</string>
     <string name="error_BackupNotFound">Nincs biztonsági mentés visszaállítása.</string>
     <string name="error_BackupNotSupportedDevice">A készülék nem támogatja a biztonsági mentés visszaállítása.</string>
     <string name="error_BadCopyProtectUpgrade">Mivel a hiba az Android 4.1, akkor kell eltávolítani és újratelepíteni SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger hiba, indítsa újra.</string>
     <string name="error_VcardParseFailure">Kapcsolat adatok formázása helytelen.</string>
 
-    <string name="help_find">Ezen a képernyőn állítsa be a nevet cserélni másokkal. Érintse meg a Kész gombot, ha végzett.</string>
     <string name="help_home">A csere azonosító adatok, hogy minden felhasználó a közelben, vagy a telefon. A Begin csere gomb csere csak az ellenőrzött elérhetőségeit.</string>
     <string name="help_identity_menu">Ön is megváltoztathatja személyes adatait az Ön személyazonosságát a képernyőn megérinti a gombot a neved. Ekkor megjelenik egy menü, amely lehetővé teszi, hogy módosítsa a kapcsolatot, új kapcsolatot, vagy használjon másik kapcsolatot.</string>
     <string name="help_Messages">Ez a képernyő összes eddigi üzeneteket és csatolmányokat, hogy továbbra is letölthető.</string>
-    <string name="help_passphrase">Ezen a képernyőn be, hogy a kérelmet a jelszót. Ha elfelejtette a jelszót, akkor létrehoz egy új kulcsot védi egy új jelszót, ha megérinti a Elfelejtetted Passphrase? gombot. Érintse meg a felhasználónevet közötti váltáshoz több kulcsot.</string>
     <string name="help_PickRecip">Névjegyek SafeSlinger gombok jelennek meg itt, válasszon egyet küldeni az üzenetet.</string>
     <string name="help_save">Amikor kész, a protokoll felfedi egy lista a személyazonosságát adatcsere. Válassza ki a névjegyeket menteni kívánt, majd nyomja Import.</string>
     <string name="help_SecureIntroduction">Ez a képernyő lehetővé teszi, hogy válassza ki a két ember már akasztott kulcsokat, mielőtt biztonságosan küldjék kulcsokat egymásnak. Egyszerűen nyomja meg a bevezetése, ha kész.</string>
     <string name="help_Send">Ez a képernyő lehetővé teszi, hogy válasszon ki néhány adatot, és a címzett küldeni. Egyszerűen nyomja meg a küldés, ha kész.</string>
 
-    <string name="iOS_contactError">Kapcsolatok engedélye szükséges. Kérjük, látogasson el iOS beállítások engedélyezéséhez Névjegyzék jogosultságokat.</string>
     <string name="iOS_errorpushtoken">Nyomja regisztráció hiányzik.</string>
-    <string name="iOS_notificationError1">Értesítések engedélye szükséges. Kérjük, látogasson el iOS beállítások engedélyezéséhez Értesítések jogosultságokat.</string>
-    <string name="iOS_notificationError2">%s engedélye szükséges. Kérjük, látogasson el iOS beállítások engedélyezéséhez Értesítések jogosultságokat.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nincs optimalizálva iOS 5.x eszközök. SafeSlinger igényel iOS 6-os vagy magasabb.</string>
 
     <string name="label_ago">%s ezelőtt</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-dekódolása</string>
     <string name="menu_Change">Változás</string>
     <string name="menu_ChangePassphrase">Változás Jelmondat</string>
-    <string name="menu_ContactInviteEmail">E-mail</string>
-    <string name="menu_ContactInviteSms">Szöveg (SMS/MMS)</string>
     <string name="menu_CreateNew">Új</string>
     <string name="menu_delete">Töröl</string>
     <string name="menu_deleteThread">Törlése Téma %s</string>

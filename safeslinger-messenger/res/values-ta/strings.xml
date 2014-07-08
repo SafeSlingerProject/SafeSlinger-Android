@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">ஆடியோ பிளேயர் நீக்கத்திற்கு பிழை.</string>
     <string name="error_AudioPlayerError">பதிவு விளையாட முடியாது.</string>
     <string name="error_AudioRecorderEncodeError">ஆடியோ ரெக்கார்டர் குறியீட்டு பிழை.</string>
-    <string name="error_AudioRecorderPermissionError">ஒலிவாங்கி அனுமதி தேவை. ஒலிவாங்கி அனுமதிகள் செயல்படுத்த iOS அமைப்புகள் செல்க.</string>
     <string name="error_BackupNotFound">மீட்க இல்லை காப்பு.</string>
     <string name="error_BackupNotSupportedDevice">சாதன காப்பு மீண்டும் ஆதரிக்கவில்லை.</string>
     <string name="error_BadCopyProtectUpgrade">காரணமாக அண்ட்ராய்டு 4.1 இல் ஒரு பிழை, நீங்கள் SafeSlinger நீக்க மற்றும் மீண்டும் நிறுவ வேண்டும்.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger பிழை, மறுதொடக்கம் செய்யவும்.</string>
     <string name="error_VcardParseFailure">தொடர்பு தரவு தவறாக வடிவமைக்கப்பட்டுள்ளது.</string>
 
-    <string name="help_find">மற்றவர்களுடன் பரிமாறி உங்கள் பெயர் அமைக்க இந்த திரையை பயன்படுத்தவும். முடித்த போது முடிந்தது பொத்தானை தட்டவும்.</string>
     <string name="help_home">அடையாள பரிமாற்றம் தரவு, அனைத்து பயனர்கள் அருகிலுள்ள அல்லது தொலைபேசியில் உறுதி. தொடங்கியிருக்கவேண்டும் செலாவணி பொத்தானை மட்டுமே சரிபார்க்கப்பட தொடர்பு தரவு மாற்றித்தரும்.</string>
     <string name="help_identity_menu">உங்கள் பெயர் பொத்தானை தட்டுவதன் மூலம் இந்த திரையில் உங்கள் அடையாளம் பற்றி தனிப்பட்ட தரவு மாற்றலாம். இந்த, உங்கள் தொடர்பு எடிட் செய்ய அனுமதிப்பது ஒரு மெனு காண்பிக்கும் புதிய தொடர்பை உருவாக்க, அல்லது மற்றொரு பயன்படுத்த தொடர்பு.</string>
     <string name="help_Messages">இந்த திரையில் அனைத்து கடந்த செய்திகள், மற்றும் இன்னும் பதிவிறக்க கிடைக்க உள்ளன என்று இணைப்புகளை காட்டுகிறது.</string>
-    <string name="help_passphrase">உங்கள் கடவுச்சொல்லை பயன்பாட்டு உள்நுழைய இந்த திரையை பயன்படுத்தவும். உங்கள் கடவுச்சொல்லை மறந்துவிட்டால், நீங்கள் மறந்து விட்டீர்களா கடவுச்சொல்லை தட்டுவதன் மூலம் ஒரு புதிய கடவுச்சொல்லை பாதுகாக்கப்பட்ட ஒரு புதிய விசையை உருவாக்க கூடும்? பொத்தானை அழுத்தவும். பல விசைகள் மாற பயனர் பெயர் தட்டவும்.</string>
     <string name="help_PickRecip">SafeSlinger விசைகளை தொடர்புகள் உங்கள் செய்தியை அனுப்ப தேர்ந்தெடுத்து, இங்கே காட்டப்படும்.</string>
     <string name="help_save">முடிந்ததும், நெறிமுறை பரிமாறி அடையாளத்தை தரவு பட்டியலில் வெளிப்படுத்த வேண்டும். நீங்கள் இறக்குமதி சேமிக்க மற்றும் அழுத்தவும் விரும்புகிறேன் தொடர்புகளை தேர்ந்தெடுக்கவும்.</string>
     <string name="help_SecureIntroduction">இந்த திரையில் நீங்கள் பாதுகாப்பாக ஒருவருக்கொருவர் தங்களது விசைகளை அனுப்ப முன் விசைகளை ஓடும் இரண்டு மக்கள் தேர்ந்தெடுக்க அனுமதிக்கிறது. வெறுமனே போது தயாராக அறிமுகம் அழுத்தவும்.</string>
     <string name="help_Send">இந்த திரை நீங்கள் சில தரவு மற்றும் அனுப்ப பெறுநர் தேர்ந்தெடுக்க அனுமதிக்கிறது. வெறுமனே தயாராக போது அனுப்பவும் அழுத்தவும்.</string>
 
-    <string name="iOS_contactError">தொடர்புகள் அனுமதி தேவை. தொடர்புகள் அனுமதிகள் செயல்படுத்த iOS அமைப்புகள் செல்க.</string>
     <string name="iOS_errorpushtoken">புஷ் பதிவு காணவில்லை.</string>
-    <string name="iOS_notificationError1">அறிவிப்புகளை அனுமதி தேவை. அறிவிப்புகள் அனுமதிகள் செயல்படுத்த iOS அமைப்புகள் செல்க.</string>
-    <string name="iOS_notificationError2">%s அனுமதி தேவை. அறிவிப்புகள் அனுமதிகள் செயல்படுத்த iOS அமைப்புகள் செல்க.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x சாதனங்கள் உகந்ததாக இல்லை. SafeSlinger iOS 6 அல்லது அதிக தேவைப்படுகிறது.</string>
 
     <string name="label_ago">%s முன்பு</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">ஆட்டோ குறிநீக்கு</string>
     <string name="menu_Change">மாறுதல்</string>
     <string name="menu_ChangePassphrase">மாற்றம் கடவுச்சொல்லை</string>
-    <string name="menu_ContactInviteEmail">மின்னஞ்சல்</string>
-    <string name="menu_ContactInviteSms">உரை (எஸ்எம்எஸ்/MMS)</string>
     <string name="menu_CreateNew">புதிய உருவாக்கவும்</string>
     <string name="menu_delete">நீக்கு</string>
     <string name="menu_deleteThread">என் %s நீக்கு</string>

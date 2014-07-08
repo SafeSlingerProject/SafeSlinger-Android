@@ -157,28 +157,13 @@
                 android:layout_height="fill_parent"
                 android:orientation="vertical" >
 
-                <LinearLayout
-                    android:id="@+id/addIconLayoutIntroduction"
+                <TextView
+                    android:id="@+id/textViewIntroduction"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/size_5dp" >
-
-                    <TextView
-                        android:id="@+id/textViewIntroduction"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/title_SecureIntroduction"
-                        android:textSize="@dimen/text_size_medium" />
-
-                    <ImageView
-                        android:id="@+id/imageViewIconIntroduction"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/size_5dp"
-                        android:background="@color/cmu_red"
-                        android:contentDescription="@string/title_SecureIntroduction"
-                        android:src="@drawable/ic_action_secintro" />
-                </LinearLayout>
+                    android:layout_margin="@dimen/size_5dp"
+                    android:text="@string/title_SecureIntroduction"
+                    android:textSize="@dimen/text_size_medium" />
 
                 <TextView
                     android:id="@+id/textViewWalkIntroduction"

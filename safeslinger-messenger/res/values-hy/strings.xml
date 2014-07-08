@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Երաժշտական ​​նվագարկիչ վերծանման սխալ.</string>
     <string name="error_AudioPlayerError">Հնարավոր չէ խաղալ ձայնագրությունը.</string>
     <string name="error_AudioRecorderEncodeError">Աուդիո Գրանցիչ կոդավորում սխալ.</string>
-    <string name="error_AudioRecorderPermissionError">Միկրոֆոն համար անհրաժեշտ թույալտվություն: Խնդրում ենք գնալ iOS պարամետրերը թույլ են տալիս խոսափողը թույլտվությունները.</string>
     <string name="error_BackupNotFound">Ոչ կրկնօրինակում վերականգնել.</string>
     <string name="error_BackupNotSupportedDevice">Սարքը չի աջակցում կրկնօրինակում վերականգնել.</string>
     <string name="error_BadCopyProtectUpgrade">Շնորհիվ ծրագրային է Android 4.1, դուք պետք է տեղահանել եւ reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger սխալ, խնդրում վերսկսել.</string>
     <string name="error_VcardParseFailure">Կապ տվյալները չափագրված սխալ.</string>
 
-    <string name="help_find">Օգտագործեք այս էկրանի ստեղծել Ձեր անունը փոխանակել ուրիշների հետ միասին. Ծորակ է արել կոճակը, երբ ավարտեցի.</string>
     <string name="help_home">Փոխանակման նույնականացման տվյալները, ապահովել բոլոր օգտագործողների մոտ են կամ հեռախոսով. The Սկիզբ Exchange կոճակը կփոխանակեն միայն նշված կոնտակտային տվյալները.</string>
     <string name="help_identity_menu">Դուք կարող եք նաեւ փոխել անձնական տվյալները ձեր ինքնությունը: Այս էկրանի կտկտոցը կոճակը ձեր անունով. Սա ցույց է ընտրացանկը թույլ է տալիս Ձեզ խմբագրել ձեր կապը, ստեղծել նոր կապեր, կամ օգտագործել այլ կոնտակտ.</string>
     <string name="help_Messages">Այս էկրանի ցուցադրում է անցյալի բոլոր հաղորդագրությունները, եւ հավելվածները, որոնք դեռեւս հասանելի է ներբեռնման համար.</string>
-    <string name="help_passphrase">Օգտագործեք այս էկրանի մուտք դիմումի ձեր passphrase. Եթե ​​դուք մոռացել եք Ձեր passphrase, դուք կարող եք առաջացնում է նոր բանալի պաշտպանված է նոր passphrase կտկտոցը Մոռացել եք passphrase. կոճակը: Ծորակ օգտագործողի անունը կայանների միջեւ բազմաթիվ բանալիներ.</string>
     <string name="help_PickRecip">Կապ հետ SafeSlinger բանալիներ են ցուցադրվում այստեղ, ընտրեք հետեւյալ ուղարկել Ձեր հաղորդագրությունը `</string>
     <string name="help_save">Երբ ավարտվեց, ապա արձանագրությունում կբացահայտի ցանկը ինքնության տվյալների փոխանակել. Ընտրեք շփումները ցանկանում եք պահել եւ սեղմեք ներմուծումը.</string>
     <string name="help_SecureIntroduction">Այս էկրանի թույլ է տալիս Ձեզ ընտրել է երկու մարդ, դուք slung բանալիները, ինչպես նաեւ ապահով ուղարկել իրենց բանալիներ միմյանց. Պարզապես սեղմեք Ներկայացնել այն ժամանակ, երբ պատրաստ է.</string>
     <string name="help_Send">Այս էկրանի թույլ է տալիս Ձեզ ընտրել որոշ տվյալներ եւ հասցեատեր է ուղարկել. Պարզապես սեղմեք Send երբ պատրաստ է.</string>
 
-    <string name="iOS_contactError">Կոնտակտներ համար անհրաժեշտ թույալտվություն: Խնդրում ենք գնալ iOS Կառավարում որպեսզի Կապ թույլտվությունները.</string>
     <string name="iOS_errorpushtoken">Հրել գրանցումը բացակայում է.</string>
-    <string name="iOS_notificationError1">Տեղեկացումներ համար անհրաժեշտ թույալտվություն: Խնդրում ենք գնալ iOS պարամետրերը Ընձեռել ծանուցումներ թույլտվությունները.</string>
-    <string name="iOS_notificationError2">%s համար անհրաժեշտ թույալտվություն: Խնդրում ենք գնալ iOS պարամետրերը Ընձեռել ծանուցումներ թույլտվությունները.</string>
     <string name="iOS_oldOSWarn">SafeSlinger չէ օպտիմիզացված համար iOS 5.x սարքեր. SafeSlinger պահանջում է iOS 6 կամ ավելի բարձր:</string>
 
     <string name="label_ago">%s առաջ</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-վերծանել</string>
     <string name="menu_Change">Փոփոխություն</string>
     <string name="menu_ChangePassphrase">Փոխել passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Ստեղծել նոր</string>
     <string name="menu_delete">Ջնջել</string>
     <string name="menu_deleteThread">Ջնջել Thread %s</string>

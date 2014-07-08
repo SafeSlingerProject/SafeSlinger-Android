@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio player decoding kuskure.</string>
     <string name="error_AudioPlayerError">Ba za a iya kunna rikodi.</string>
     <string name="error_AudioRecorderEncodeError">Audio rikodi na tsarinsa kuskure.</string>
-    <string name="error_AudioRecorderPermissionError">Makirufo izini da ake bukata. Don Allah ku tafi zuwa iOS Saituna saki Makirufo izini.</string>
     <string name="error_BackupNotFound">Babu madadin tada.</string>
     <string name="error_BackupNotSupportedDevice">Na\'ura ba ya goyon bayan madadin mayar.</string>
     <string name="error_BadCopyProtectUpgrade">Saboda taba yiwuwa ace kwaro a cikin Android 4.1, za ka yi uninstall da reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger kuskure ne, ka sake kunna.</string>
     <string name="error_VcardParseFailure">Contact bayanai da aka tsara ba daidai ba.</string>
 
-    <string name="help_find">Yi amfani da wannan allo domin saita Sunan ka yi musayar wasu. Tap da Anyi button lokacin da ya gama.</string>
     <string name="help_home">Don musanya ainihi bayanai, tabbatar da duk masu amfani ne a nan kusa ko a waya. A Begin Exchange button zai musanya kawai bari lamba bayanai.</string>
     <string name="help_identity_menu">Nan ƙila ka canza bayanan sirri game da ainihi a kan wannan allon da tapping a kan button da sunanka. Wannan zai nuna menu bar ka ka shirya lambar sadarwa, Create Sabuwar lamba, ko yi amfani da wata lambar sadarwa.</string>
     <string name="help_Messages">Wannan allon nuna duk saƙonnin da suka gabata, da haše-haše da cewa har yanzu don saukewa.</string>
-    <string name="help_passphrase">Yi amfani da wannan allo don shiga cikin aikace-aikacen da ka passphrase. Idan ka manta ka passphrase, za ka iya samar da wani sabon key kiyaye shi ta sabon passphrase by tapping da Forgot Passphrase? button. Tap da sunan mai amfani domin sauyawa tsakanin mahara makullin.</string>
     <string name="help_PickRecip">Lambobin sadarwa da SafeSlinger mažallan ne yake nuna su a nan, zaɓi daya kafin a aika da sako zuwa.</string>
     <string name="help_save">Lokacin da ya gama, da yarjejeniya za ta bayyana jerin ainihi data yi musayar. A zabi lambobi da kuke so ya cece ka kuma danna Import.</string>
     <string name="help_SecureIntroduction">Wannan allon ba ka damar zažar biyu mutane da ka slung mažallan tare da su tam aika da mažallan da juna. Kawai danna da gabatar da shirye a lõkacin da.</string>
     <string name="help_Send">Wannan allon ba ka damar zažar wasu bayanai da kuma mai karɓa don aika zuwa. Kawai danna Send lokacin da shirye.</string>
 
-    <string name="iOS_contactError">Lambobin sadarwa da iznin da ake bukata. Don Allah ku tafi zuwa iOS Saituna saki Lambobin sadarwa izini.</string>
     <string name="iOS_errorpushtoken">Samun rajista ya bace.</string>
-    <string name="iOS_notificationError1">Fadakarwa izini da ake bukata. Don Allah ku tafi zuwa iOS Saituna saki Fadakarwa izini.</string>
-    <string name="iOS_notificationError2">%s izini da ake bukata. Don Allah ku tafi zuwa iOS Saituna saki Fadakarwa izini.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ba a gyara domin iOS 5.x na\'urorin. SafeSlinger na bukatar iOS 6 ko mafi girma.</string>
 
     <string name="label_ago">%s ago</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Change</string>
     <string name="menu_ChangePassphrase">Change Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">New Create</string>
     <string name="menu_delete">Share</string>
     <string name="menu_deleteThread">Share Thread %s</string>

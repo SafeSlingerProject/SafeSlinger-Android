@@ -72,6 +72,8 @@
     <string name="btn_Introduce">Introduce</string>
     <!-- button (title case); the No button is paired with the Yes button, and is used to indicate a negative answer to a Yes/No question. -->
     <string name="btn_No">No</string>
+    <!-- button (title case); the Not Now button is used as a negative button to decline an offered service or permission. -->
+    <string name="btn_NotNow">Not Now</string>
     <!-- button (title case); the Forget button is paired with the Remind button and is used to indicate the user wishes to dismiss the current reminder of a potential error state, such as having backup or notification settings turned off, and not be reminded again. -->
     <string name="btn_NotRemind">Forget</string>
     <!-- button (title case); the OK button is affirmation button used to indicate the user accepts the data entered on the current screen. -->
@@ -142,8 +144,8 @@
     <string name="error_AudioPlayerError">Cannot play the recording.</string>
     <!-- error message (sentence case, period); used to warn when attempting to record an audio message fails to encode properly. iOS-only. -->
     <string name="error_AudioRecorderEncodeError">Audio recorder encoding error.</string>
-    <!-- error message (sentence case, period); used to warn when user disable microphone permission. iOS-only. -->
-    <string name="error_AudioRecorderPermissionError">Microphone permission required. Please go to iOS Settings to enable Microphone permissions.</string>
+    <!-- error message (sentence case, period); used as a Post-Request-Denied Notice for Microphone permission. iOS-only. -->
+    <string name="error_AudioRecorderPermissionError">Microphone permission is required to record a secure voice message. Tap the Help button for SafeSlinger Microphone permission details.</string>
     <!-- error message (sentence case, period); used to warn at application setup, when there is no pre-existing backup to restore and warn the user that any previous keys have not been restored. -->
     <string name="error_BackupNotFound">No backup to restore.</string>
     <!-- error message (sentence case, period); used to warn when the device hardware does not support restoration from backup. -->
@@ -250,7 +252,7 @@
     <string name="error_VcardParseFailure">Contact data was formatted incorrectly.</string>
 
     <!-- help message (sentence case, period); used via Help button on the Setup screen to describe in more detail what the Setup screen does. -->
-    <string name="help_find">Use this screen to set your name to exchange with others. Tap the Done button when finished.</string>
+    <string name="help_find">Use this screen to set your name to exchange with others, and a passphrase to protect your data. Tap the Done button when finished.</string>
     <!-- help message (sentence case, period); used via Help button on the Begin Exchange screen and also the key exchange walkthrough tutorial to describe in more detail what the Begin Exchange screen does. -->
     <string name="help_home">To exchange identity data, ensure all users are nearby or on the phone. The Begin Exchange button will exchange only the checked contact data.</string>
     <!-- help message (sentence case, period); Additional help text, which is appended to the Help button text on the Compose and Begin Exchange screens. -->
@@ -259,6 +261,8 @@
     <string name="help_Messages">This screen displays all past messages, and attachments that are still available for download.</string>
     <!-- help message (sentence case, period); used via Help button on the Passphrase screen to describe in more detail what the Passphrase screen does. -->
     <string name="help_passphrase">Use this screen to login to the application with your passphrase. If you have forgotten your passphrase, you may generate a new key protected by a new passphrase by tapping the Forgot Passphrase? button. Tap the user name to switch between multiple keys.</string>
+    <!-- help message (sentence case, period); used via Help button on the Change Passphrase screen to describe in more detail what the Change Passphrase screen does. -->
+    <string name="help_passphrase_change">Use this screen to change your passphrase by entering your last passphrase for confirmation and the new passphrase.</string>
     <!-- help message (sentence case, period); used via Help button on the Recipients list screen to describe in more detail what the Recipients list screen does. -->
     <string name="help_PickRecip">Contacts with SafeSlinger keys are displayed here, select one to send your message to.</string>
     <!-- help message (sentence case, period); used via Help button on the End Exchange screen and also the key exchange walkthrough tutorial to describe in more detail what the End Exchange screen does. -->
@@ -268,16 +272,20 @@
     <!-- help message (sentence case, period); used via Help button on the Compose Message screen to describe in more detail what the Compose Message screen does. -->
     <string name="help_Send">This screen allows you to select some data and a recipient to send to. Simply press Send when ready.</string>
 
-    <!-- error message (sentence case, period); used to warn that the user has disabled read/write access to the address book and instructions on how to correct it. iOS-only. -->
-    <string name="iOS_contactError">Contacts permission required. Please go to iOS Settings to enable Contacts permissions.</string>
+    <!-- error message (sentence case, period); used as a Post-Request-Denied Notice for Contacts permission. iOS-only. -->
+    <string name="iOS_contactError">Contacts permission is required for securely sharing contact cards. Tap the Help button for SafeSlinger Contacts permission details.</string>
     <!-- error message (sentence case, period); used to warn the user the push registration is missing. iOS-only. -->
     <string name="iOS_errorpushtoken">Push registration is missing.</string>
-    <!-- error message (sentence case, period); used to warn that push notifications have been turned off for the user and if so they will be unable to receive messages from other users, which is a crucial component of the application. iOS-only. -->
-    <string name="iOS_notificationError1">Notifications permission required. Please go to iOS Settings to enable Notifications permissions.</string>
-    <!-- error message (sentence case, period); see iOS_notificationError1. %s = appears to be only a substitution of 'notifications'. iOS-only. -->
-    <string name="iOS_notificationError2">%s permission required. Please go to iOS Settings to enable Notifications permissions.</string>
-    <!-- warning message (sentence case, period); message for dialog popups when a user still uses an old iOS device. iOS-only. -->
+    <!-- error message (sentence case, period); used as a Post-Request-Denied Notice for Notifications permission. iOS-only. -->
+    <string name="iOS_notificationError1">Notification permission for either alerts or banners, and badge numbers, are required for secure messaging. Tap the Help button for SafeSlinger Notification permission details.</string>
+    <!-- informational message (sentence case, period); message for dialog popups when a user still uses an old iOS device. iOS-only. -->
     <string name="iOS_oldOSWarn">SafeSlinger is not optimized for iOS 5.x devices. SafeSlinger requires iOS 6 or higher.</string>
+    <!-- informational message (sentence case, period); used as a Pre-Request Notice for Contacts permission. iOS-only. -->
+    <string name="iOS_RequestPermissionContacts">You can select your contact card to send your friends and SafeSlinger will encrypt it for you. To enable this feature, you must allow SafeSlinger access to your Contacts when asked.</string>
+    <!-- informational message (sentence case, period); used as a Pre-Request Notice for Microphone permission. iOS-only. -->
+    <string name="iOS_RequestPermissionMicrophone">You can record a voice message to send your friends and SafeSlinger will encrypt it for you. To enable this feature, you must allow SafeSlinger access to your Microphone when asked.</string>
+    <!-- informational message (sentence case, period); used as a  Pre-Request Notice for Notifications permission. iOS-only. -->
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger is an encrypted messaging application and cannot function without allowing incoming messages from Notifications. To enable incoming messages, you must allow SafeSlinger to send you Notifications when asked.</string>
 
     <!-- screen label (match English casing); used on the messages list screen and is used to describe how long ago a message was sent or received. %s = a time measurement, such as '5 minutes' or '2 hours'. -->
     <string name="label_ago">%s ago</string>
@@ -334,7 +342,7 @@
     <!-- screen label (match English casing); used on the Save File As dialog as a hint in the file name text box when changing the file name. -->
     <string name="label_FileNameHint">File Name</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Setup screen. -->
-    <string name="label_FindInstruct">Enter the name you wish others to see when communicating securely:</string>
+    <string name="label_FindInstruct">Enter the name you wish others to see when communicating securely, and a passphrase to protect your data:</string>
     <!-- screen label (match English casing); used above the editable field on the Settings and Setup screen to show the current first name to use. iOS-only. -->
     <string name="label_FirstName">First Name</string>
     <!-- screen label (match English casing); used to indicate file size on the Messages list and Compose Message screens. %.1f = the number of gigabytes in tenths. -->
@@ -529,9 +537,9 @@
     <!-- menu option (title case); used to confirm the current passphrase and create and new one via the Settings screen. -->
     <string name="menu_ChangePassphrase">Change Passphrase</string>
     <!-- menu option (title case); used when adding a contact invitaion via email. -->
-    <string name="menu_ContactInviteEmail">Email</string>
+    <string name="menu_ContactInviteEmail">Email from Contacts</string>
     <!-- menu option (title case); used when adding a contact invitaion via sms. -->
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
+    <string name="menu_ContactInviteSms">Text from Contacts</string>
     <!-- menu option (title case); used to show a new empty contact in the address book for editing as the users' current identity via the Personal Contact dialog. -->
     <string name="menu_CreateNew">Create New</string>
     <!-- menu option (title case); used to delete the current item from the list context menu. -->
@@ -558,8 +566,10 @@
     <string name="menu_HideInvalid" translatable="false">Hide Invalid</string>
     <!-- menu option (title case); used to show the secure introduction composition screen via the main home screen. -->
     <string name="menu_Introduction">Introduction</string>
-    <!-- menu option (title case); used to show a dialog of the EULA via the Settings screen. Android-only. -->
+    <!-- menu option (title case); used to show a dialog of the End User License Agreement. -->
     <string name="menu_License">License</string>
+    <!-- menu option (title case); used to select a contact from the address book to update from and link to. -->
+    <string name="menu_link_contact">Select Contact Badge</string>
     <!-- menu option (title case); used to remove the cached passphrase and force the user to login again. -->
     <string name="menu_Logout">Logout</string>
     <!-- menu option (title case); used on the settings screen to allow users to remove newer keys if created by users without orignial user authorization. -->

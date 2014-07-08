@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio player cim tau yuam kev.</string>
     <string name="error_AudioPlayerError">Tsis tau ua si rau cov ntaubntawv.</string>
     <string name="error_AudioRecorderEncodeError">Suab Recorder maub cov xov yuam kev.</string>
-    <string name="error_AudioRecorderPermissionError">Microphone kev tso cai yuav tsum tau. Thov mus rau iOS chaw kom microphone tso cai.</string>
     <string name="error_BackupNotFound">Tsis thaub qab tig los nrog.</string>
     <string name="error_BackupNotSupportedDevice">Ntaus tsis pab txhawb backup restore.</string>
     <string name="error_BadCopyProtectUpgrade">Vim ib tug kab laum nyob hauv Android 4.1, koj yuav tau uninstall thiab reinstall SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger yuam kev, thov kaspivtaw rau pib dua.</string>
     <string name="error_VcardParseFailure">Sib cuag cov ntaub ntawv twb formatted incorrectly.</string>
 
-    <string name="help_find">Siv no screen mus teem koj lub npe mus pauv nrog lwm tus. Khob kom lub Tas khawm thaum tiav lawm.</string>
     <string name="help_home">Mus pauv tus kheej cov ntaub ntawv, kom tag nrho cov neeg siv yog cov nyob ze los yog hauv xov tooj. Pib lub Exchange khawm yuav sib pauv xwb lub soj ntsuam cov ntaub ntawv sib tiv tauj.</string>
     <string name="help_identity_menu">Tej zaum koj kuj yuav hloov koj tus kheej cov ntaub ntawv txog koj tus kheej nyob rau hauv kev tshuaj ntsuam no los tapping rau lub khawm nrog koj lub npe. Qhov no yuav tso saib ib lub hom phiaj rau cov zaub mov koj mus Kho kom raug neeg koj tiv tauj, Tsim Tshiab hu xovtooj rau, los sis Siv Lwm sib cuag.</string>
     <string name="help_Messages">Qhov no qhia tag nrho cov kev tshuaj ntsuam yav dhau los lus, thiab txuas hais tias yog tseem muaj nyob rau download.</string>
-    <string name="help_passphrase">Siv no kev tshuaj ntsuam login mus rau hauv daim ntawv thov nrog koj passphrase. Yog hais tias koj tsis nco qab koj passphrase, tej zaum koj yuav tsim kom muaj ib tug tshiab tseem ceeb tiv thaiv los ntawm ib tug tshiab passphrase by tapping lub Passphrase Tsis nco qab? khawm. Khob kom tus neeg siv lub npe hloov ntawm ntau cov yuam sij.</string>
     <string name="help_PickRecip">Tiv tauj nrog SafeSlinger yuam sij yog displayed no, xaiv ib tug xa koj cov lus rau.</string>
     <string name="help_save">Thaum tiav lawm, tus raws tu qauv yuav tshwm sim ib daim ntawv teev qhia cov ntaub ntawv exchanged. Xaiv lub tiv tauj koj xav cawm thiab nias Import.</string>
     <string name="help_SecureIntroduction">Qhov no screen tso cai rau koj mus xaiv ob tug neeg koj muaj slung yuam sij ua ntej nrog rau securely xa lawv cov yuam sij rau txhua lwm yam. Cias nias Thaum thaum npaj txhij.</string>
     <string name="help_Send">Qhov no screen tso cai rau koj mus xaiv ib txhia cov ntaub ntawv thiab ib tus neeg tau xa mus. Cias nias Xa thaum npaj txhij.</string>
 
-    <string name="iOS_contactError">Tiv tauj yuav tsum tau kev tso cai. Thov mus rau iOS chaw kom neeg tso cai.</string>
     <string name="iOS_errorpushtoken">Laub sau npe yog ploj lawm.</string>
-    <string name="iOS_notificationError1">Cov ntawv qhia txog kev tso cai yuav tsum tau. Thov mus rau iOS chaw kom cov ntawv qhia txog tso cai.</string>
-    <string name="iOS_notificationError2">%s kev tso cai yuav tsum tau. Thov mus rau iOS chaw kom cov ntawv qhia txog tso cai.</string>
     <string name="iOS_oldOSWarn">SafeSlinger yog tsis qhov zoo rau iOS 5.x pab kiag li. SafeSlinger yuav tsum iOS 6 los yog siab dua.</string>
 
     <string name="label_ago">%s dhau los</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Hloov</string>
     <string name="menu_ChangePassphrase">Hloov Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Lus (SMS/MMS)</string>
     <string name="menu_CreateNew">Tsim Tshiab</string>
     <string name="menu_delete">Delete</string>
     <string name="menu_deleteThread">Delete Thread %s</string>

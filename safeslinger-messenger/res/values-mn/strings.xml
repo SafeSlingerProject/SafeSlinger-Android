@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Аудио тоглогч тайлан уншиж сурснаар алдаа.</string>
     <string name="error_AudioPlayerError">Бичлэг хийж тоглож чадахгүй байна.</string>
     <string name="error_AudioRecorderEncodeError">Аудио бичигч кодчилол алдаа.</string>
-    <string name="error_AudioRecorderPermissionError">Микрофон зөвшөөрөл шаардлагатай. Микрофон зөвшөөрөл идэвхжүүлэхийн тулд Тагийн Settings явах уу.</string>
     <string name="error_BackupNotFound">Нөхөн сэргээх ямар нэгэн нөөц.</string>
     <string name="error_BackupNotSupportedDevice">Төхөөрөмжийн нөөц нөхөн сэргээх дэмждэггүй.</string>
     <string name="error_BadCopyProtectUpgrade">Болоод Android 4.1-д алдаа, та SafeSlinger устгах бүтээж суулгаарай хэрэгтэй болно.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger алдаа дахин эхлүүлэх уу.</string>
     <string name="error_VcardParseFailure">Холбоо барих мэдээлэл буруу форматлагдсан байна.</string>
 
-    <string name="help_find">Бусадтай солилцох дүн таны хайсан нэрийг тогтоохын тулд энэ дэлгэцийн ашигла. Дуусахдаа Үүнийг товчлуур дээр дар.</string>
     <string name="help_home">Биеийн өгөгдөл солилцох тулд бүх хэрэглэгчид ойр, эсвэл утсаар эсэхийг шалгаарай. Эхлэх Валютын товчийг л шалгаж холбоо барих мэдээлэл солилцох болно.</string>
     <string name="help_identity_menu">Та мөн нэрээр товчийг илрүүлэх замаар дэлгэцэн дээр таны биеийн тухай хувийн мэдээллийг өөрчилж болно. Энэ нь та холбоо засварлах боломж олгох цэс харуулагддаг шинэ холбоо бий болгох, эсвэл өөр нэг холбоо ашиглах болно.</string>
     <string name="help_Messages">Энэхүү дэлгэц бүхий л өнгөрсөн зурвас, одоо ч гэсэн татаж авах боломжтой байгаа хавсралтуудыг харуулна.</string>
-    <string name="help_passphrase">Таны нэвтрэх нь програм руу нэвтрэх Хэрэв энэ дэлгэц ашиглах хэрэгтэй. Хэрэв та өөрийн нэвтрэх үгийг мартчихсан бол та үгээ мартсан нэвтрэх үгнүүдийг дахин дахин түншээд шинэ нэвтрэх үгээр хамгаалагдсан шинэ түлхүүрийг үүсгэж болох вэ? товчийг дар. Олон товчлууруудын хооронд шилжихийн тулд хэрэглэгчийн нэр дээр дар.</string>
     <string name="help_PickRecip">SafeSlinger товчлуур бүхий Холбоо барих таны зурвас илгээх нэгийг сонгож, энд ирнэ.</string>
     <string name="help_save">Дуусаад протокол солилцож биеийн өгөгдлийн жагсаалт илчлэх болно. Хэрэв та Анхааруулга хадгалж, дарж хүссэн харилцахыг сонго.</string>
     <string name="help_SecureIntroduction">Энэхүү дэлгэц та аюулгүйгээр бие биедээ өөрсдийн түлхүүрүүдийг илгээхийн тулд өмнө нь түлхүүрийг slung байсан хоёр хүн сонгох боломжийг олгодог. Ердөө л үед бэлэн нэвтрүүлэх дээр дарах хэрэгтэй.</string>
     <string name="help_Send">Энэхүү дэлгэц Хэрэв та зарим өгөгдлийг болон илгээхийн тулд хүлээн авагчийг сонгох боломжийг олгодог. Зүгээр л бэлэн болсон үед илгээх дар.</string>
 
-    <string name="iOS_contactError">Холбоо барих зөвшөөрөл шаардлагатай. Холбоо барих зөвшөөрөл идэвхжүүлэхийн тулд Тагийн Settings явах уу.</string>
     <string name="iOS_errorpushtoken">Түлхэх бүртгэл байхгүй байна.</string>
-    <string name="iOS_notificationError1">Мэдэгдэл зөвшөөрөл шаардлагатай. Мэдэгдэл зөвшөөрөл идэвхжүүлэхийн тулд Тагийн Settings явах уу.</string>
-    <string name="iOS_notificationError2">%s зөвшөөрөл шаардлагатай. Мэдэгдэл зөвшөөрөл идэвхжүүлэхийн тулд Тагийн Settings явах уу.</string>
     <string name="iOS_oldOSWarn">SafeSlinger Тагийн 5.x төхөөрөмжүүдийн хувьд оновчтой биш. SafeSlinger iOS 6 буюу түүнээс дээш байх шаардлагатай.</string>
 
     <string name="label_ago">%s өмнө</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Авто-буцааж шифрлэнэ</string>
     <string name="menu_Change">Өөрчлөлтийн</string>
     <string name="menu_ChangePassphrase">Өөрчлөлтийн нэвтрэх үгнүүдийг дахин дахин</string>
-    <string name="menu_ContactInviteEmail">И-мэйл хаяг</string>
-    <string name="menu_ContactInviteSms">Текст (SMS/MMS)</string>
     <string name="menu_CreateNew">Шинээр бий болгох</string>
     <string name="menu_delete">Устгах</string>
     <string name="menu_deleteThread">Thread %s устгах</string>

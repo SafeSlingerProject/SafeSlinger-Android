@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio atskaņotājs dekodēšanas kļūda.</string>
     <string name="error_AudioPlayerError">Nevar atskaņot ierakstu.</string>
     <string name="error_AudioRecorderEncodeError">Audio ieraksti kodēšanas kļūda.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofons nepieciešamās atļaujas. Lūdzu, dodieties uz iOS iestatījumus, lai ļautu Mikrofona atļaujas.</string>
     <string name="error_BackupNotFound">Nav rezerves, lai atjaunotu.</string>
     <string name="error_BackupNotSupportedDevice">Ierīce neatbalsta backup atjaunot.</string>
     <string name="error_BadCopyProtectUpgrade">Sakarā ar kļūdu Android 4.1, jums būs atinstalēt un pārinstalēt SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger kļūdu, lūdzu, restartējiet.</string>
     <string name="error_VcardParseFailure">Kontaktinformācija tika formatēts pareizi.</string>
 
-    <string name="help_find">Izmantojiet šo ekrānu, lai uzstādītu savu vārdu, lai apmainītos ar citiem. Pieskarieties Done pogu, kad pabeigta.</string>
     <string name="help_home">Lai apmainītos ar identitātes datiem, nodrošinātu, ka visi lietotāji ir tuvumā, vai pa tālruni. Sākt Exchange poga apmainīsies tikai pārbaudīt kontaktu datus.</string>
     <string name="help_identity_menu">Jūs varat mainīt arī personiskos datus par savu identitāti šajā ekrānā, pieskaroties uz pogas ar savu vārdu. Tas parādīs izvēlni, kas ļauj jums rediģēt kontaktu, Izveidot jaunu kontaktu, vai izmantojiet citu kontaktu.</string>
     <string name="help_Messages">Šis ekrāns parāda visas iepriekšējās ziņas un pielikumus, kas joprojām ir pieejams lejupielādei.</string>
-    <string name="help_passphrase">Izmantojiet šo ekrānu, lai pieteiktos uz pieteikumu ar savu ieejas frāzi. Ja esat aizmirsis savu ieejas frāzi, jūs varat radīt jaunu atslēgu aizsargāta ar jaunu ieejas frāzi, pieskaroties Aizmirsāt ieejas frāzi? pogu. Pieskarieties lietotāja vārdu, lai pārslēgtos starp vairākiem taustiņiem.</string>
     <string name="help_PickRecip">Kontakti ar SafeSlinger taustiņi ir parādīti šeit, izvēlieties vienu, lai nosūtītu savu ziņojumu.</string>
     <string name="help_save">Kad pabeigts,protokols atklās sarakstu datu apmaiņa identitātes. Izvēlētos kontaktus vēlaties saglabāt un nospiediet Importēt.</string>
     <string name="help_SecureIntroduction">Šis ekrāns ļauj jums izvēlēties divus cilvēkus esat siksnu atslēgas, pirms droši sūtīt savus taustiņus, lai viens otru. Vienkārši nospiediet Ieviest kad gatavs.</string>
     <string name="help_Send">Šis ekrāns ļauj jums izvēlēties dažus datus un saņēmējam nosūtīt. Vienkārši nospiediet Send kad gatavs.</string>
 
-    <string name="iOS_contactError">Kontakti nepieciešamās atļaujas. Lūdzu, dodieties uz iOS iestatījumus, lai ļautu Kontakti atļaujas.</string>
     <string name="iOS_errorpushtoken">Push reģistrācija ir pazudis.</string>
-    <string name="iOS_notificationError1">Paziņojumi nepieciešamās atļaujas. Lūdzu, dodieties uz iOS iestatījumus, lai ļautu Paziņojumi atļaujas.</string>
-    <string name="iOS_notificationError2">%s nepieciešamās atļaujas. Lūdzu, dodieties uz iOS iestatījumus, lai ļautu Paziņojumi atļaujas.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nav optimizēta iOS 5.x ierīcēm. SafeSlinger prasa iOS 6 vai augstāku.</string>
 
     <string name="label_ago">%s atpakaļ</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-atšifrēt</string>
     <string name="menu_Change">Maiņa</string>
     <string name="menu_ChangePassphrase">Izmaiņas parole</string>
-    <string name="menu_ContactInviteEmail">E-pasts</string>
-    <string name="menu_ContactInviteSms">Teksta (SMS/MMS)</string>
     <string name="menu_CreateNew">Izveidot jaunas</string>
     <string name="menu_delete">Izdzēst</string>
     <string name="menu_deleteThread">Dzēst Thread %s</string>

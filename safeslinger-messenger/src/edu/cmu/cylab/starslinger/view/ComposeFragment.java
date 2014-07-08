@@ -199,6 +199,12 @@ public class ComposeFragment extends Fragment {
             mText = extras.getString(extra.TEXT_MESSAGE);
             mThumb = extras.getByteArray(extra.THUMBNAIL);
             mRowIdRecipient = extras.getLong(extra.RECIPIENT_ROW_ID, -1);
+        } else {
+            mFilePath = null;
+            mFileSize = 0;
+            mText = null;
+            mThumb = null;
+            mRowIdRecipient = -1;
         }
 
         // make sure view is already inflated...

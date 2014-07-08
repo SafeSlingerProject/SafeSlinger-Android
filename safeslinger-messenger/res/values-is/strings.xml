@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Hljóð spilari umskráningu villa.</string>
     <string name="error_AudioPlayerError">Getur ekki spilað upptökuna.</string>
     <string name="error_AudioRecorderEncodeError">Audio Recorder kóðun villa.</string>
-    <string name="error_AudioRecorderPermissionError">Hljóðnema leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Hljóðnemi heimildir.</string>
     <string name="error_BackupNotFound">Engin afrit til að endurheimta.</string>
     <string name="error_BackupNotSupportedDevice">Tækið styður ekki afrit aftur.</string>
     <string name="error_BadCopyProtectUpgrade">Vegna galla í Android 4.1, þá verður þú að uninstall og setja aftur SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger villa, vinsamlegast endurræsa.</string>
     <string name="error_VcardParseFailure">Tengiliðagögn var sniðinn rangt.</string>
 
-    <string name="help_find">Notaðu þennan skjá til að setja nafn þitt til að skiptast á við aðra. Bankaðu á Lokið hnappinn þegar lokið.</string>
     <string name="help_home">Að skiptast á persónuskilríki gögn skal gæta allir notendur eru nálægt eða í símanum. Byrjaðu á húsum hnappinn munu skiptast users.cpp tengiliðagögn.</string>
     <string name="help_identity_menu">Þú getur líka breyst persónuleg gögn um persónuupplýsingar þínar á þessum skjá með því að slá á hnappinn með nafni þínu. Þetta birtir valmynd leyfir þér að breyta samband þitt, Búa til nýjan tengilið, eða nota annan tengilið.</string>
     <string name="help_Messages">Þessi skjár sýnir öll fyrri skilaboð og viðhengi sem eru enn í boði fyrir niðurhal.</string>
-    <string name="help_passphrase">Notaðu þennan skjá til tenging til the umsókn með lykilorð þitt. Ef þú hefur gleymt lykilorð þitt, getur þú búið til nýjan lykil verndað af nýjum lykilorð með því að pikka á Gleymt lykilorð? hnappinn. Tappa notandanafn til að skipta á milli margra lykla.</string>
     <string name="help_PickRecip">Tengiliði með SafeSlinger lykla sjást hér, velja einn til að senda skilaboð til.</string>
     <string name="help_save">Þegar þessu er lokið, siðareglur mun koma í ljós lista yfir sjálfsmynd gögn skiptanna. Veldu tengiliðina sem þú vilt vista og ýta á Flytja.</string>
     <string name="help_SecureIntroduction">Þessi skjár gerir þér kleift að velja tvo menn sem þú hefur slöngði takkana með áður að tryggilega senda takka þeirra við hvert annað. Einfaldlega ýta Kynntu þegar tilbúin.</string>
     <string name="help_Send">Þessi skjár gerir þér kleift að velja nokkur gögn og viðtakandinn að senda til. Einfaldlega stutt á Send þegar tilbúin.</string>
 
-    <string name="iOS_contactError">Tengiliði leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Tengiliðir heimildir.</string>
     <string name="iOS_errorpushtoken">Ýta skráning vantar.</string>
-    <string name="iOS_notificationError1">Tilkynningar leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Tilkynningar heimildir.</string>
-    <string name="iOS_notificationError2">%s leyfi þurfa. Vinsamlegast farðu til iOS Stillingar til að virkja Tilkynningar heimildir.</string>
     <string name="iOS_oldOSWarn">SafeSlinger er ekki bjartsýni fyrir iOS 5.x tæki. SafeSlinger krefst iOS 6 eða hærri.</string>
 
     <string name="label_ago">%s síðan</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-hallmæla</string>
     <string name="menu_Change">Breyting</string>
     <string name="menu_ChangePassphrase">Breyta lykilorð</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Texti (SMS/MMS)</string>
     <string name="menu_CreateNew">Búa til nýtt</string>
     <string name="menu_delete">Eyða</string>
     <string name="menu_deleteThread">Eyða Thread %s</string>

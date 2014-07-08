@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio chybě dekódování přehrávač.</string>
     <string name="error_AudioPlayerError">Nelze přehrávat záznam.</string>
     <string name="error_AudioRecorderEncodeError">Audio Chyba kódování rekordér.</string>
-    <string name="error_AudioRecorderPermissionError">Povolení mikrofonu nutné. Prosím, jděte na iOS nastavení povolit oprávnění mikrofon.</string>
     <string name="error_BackupNotFound">Žádná záloha obnovit.</string>
     <string name="error_BackupNotSupportedDevice">Zařízení nepodporuje obnovení zálohy.</string>
     <string name="error_BadCopyProtectUpgrade">Kvůli chybě v Android 4.1, budete muset odinstalovat a znovu nainstalovat SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger chyba, restartujte prosím.</string>
     <string name="error_VcardParseFailure">Kontaktní údaje formátování nesprávně.</string>
 
-    <string name="help_find">Na této obrazovce můžete nastavit své jméno vyměňovat s ostatními. Po dokončení klepněte na tlačítko Hotovo.</string>
     <string name="help_home">Pro výměnu dat identity, zajištění všichni uživatelé jsou v blízkosti nebo na telefonu. Tlačítko Začněte Exchange budou vyměňovat pouze zaškrtnuté kontaktní údaje.</string>
     <string name="help_identity_menu">Můžete také změnit osobní údaje týkající se vaší identity na této obrazovce klepnutím na tlačítko s vaším jménem. Tím se zobrazí menu, která vám umožní upravit svůj kontakt, Vytvořit nový kontakt, nebo použijte jiný kontakt.</string>
     <string name="help_Messages">Tato obrazovka zobrazuje všechny minulé zprávy a přílohy, které jsou stále k dispozici ke stažení.</string>
-    <string name="help_passphrase">Na této obrazovce pro přihlášení do aplikace se svým přístupovým heslem. Pokud jste zapomněli své přístupové heslo, můžete vygenerovat nový klíč chráněn nové fráze, tím poklepáním na Zapomněli jste přístupové heslo? tlačítko. Klepněte na uživatelské jméno přepínat mezi více klíčů.</string>
     <string name="help_PickRecip">Zde jsou zobrazeny kontakty s SafeSlinger klíčů, vyberte jednu odeslat zprávu.</string>
     <string name="help_save">Po dokončení, budeprotokol odhalí seznam údajů o totožnosti vyměněny. Vyberte kontakty, které chcete uložit, a stiskněte tlačítko Importovat.</string>
     <string name="help_SecureIntroduction">Tato obrazovka umožňuje vybrat dva lidi, které jste si přehodil klíče s dříve bezpečně posílat své klíče k sobě. Stačí stisknout Zavést až budete připraveni.</string>
     <string name="help_Send">Tato obrazovka umožňuje vybrat některé údaje a příjemce odeslat. Stačí stisknout Poslat li připraven.</string>
 
-    <string name="iOS_contactError">Kontakty povolení požadováno. Prosím, jděte na iOS nastavení povolit Kontakty oprávnění.</string>
     <string name="iOS_errorpushtoken">Registrace push chybí.</string>
-    <string name="iOS_notificationError1">Upozornění povolení požadováno. Prosím, jděte na iOS nastavení povolit Upozornění oprávnění.</string>
-    <string name="iOS_notificationError2">Povolení %s nutné. Prosím, jděte na iOS nastavení povolit Upozornění oprávnění.</string>
     <string name="iOS_oldOSWarn">SafeSlinger není optimalizován pro iOS 5.x zařízení. SafeSlinger vyžaduje iOS 6 nebo vyšší.</string>
 
     <string name="label_ago">%s před</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-dešifrování</string>
     <string name="menu_Change">Změna</string>
     <string name="menu_ChangePassphrase">Změna Přístupové heslo</string>
-    <string name="menu_ContactInviteEmail">E-mail</string>
-    <string name="menu_ContactInviteSms">Text (SMS/MMS)</string>
     <string name="menu_CreateNew">Vytvořit nový</string>
     <string name="menu_delete">Vymazat</string>
     <string name="menu_deleteThread">Smazat tématu %s</string>

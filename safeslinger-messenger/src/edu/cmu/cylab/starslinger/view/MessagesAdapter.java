@@ -41,6 +41,7 @@ import android.widget.TextView;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
+import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageRow;
 
 public class MessagesAdapter extends BaseAdapter {
@@ -144,8 +145,12 @@ public class MessagesAdapter extends BaseAdapter {
                     + DateUtils.getRelativeTimeSpanString(mCtx, date).toString();
         }
         long diff = System.currentTimeMillis() - Long.valueOf(date);
-        if (!TextUtils.isEmpty(msg.getProgress())) {
-            tvDate.setText(msg.getProgress());
+        if (msg.getStatus() == MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
+            if (!TextUtils.isEmpty(msg.getProgress())) {
+                tvDate.setText(msg.getProgress());
+            } else {
+                tvDate.setText(String.format(mCtx.getString(R.string.prog_SendingFile), ""));
+            }
         } else {
             tvDate.setText(dateTime);
         }
@@ -234,6 +239,7 @@ public class MessagesAdapter extends BaseAdapter {
             case MSG_PROGRESS:
                 tvFile.setText(fileInfo);
                 tvFile.setVisibility(View.VISIBLE);
+
                 break;
             default:
                 break;

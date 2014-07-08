@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Audio grotuvas dekodavimo klaida.</string>
     <string name="error_AudioPlayerError">Nepavyko paleisti įrašą.</string>
     <string name="error_AudioRecorderEncodeError">Garso įrašymo kodavimo klaida.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofonas leidimo nereikia. Prašome eiti į iOS Nustatymai kad Mikrofonai teises.</string>
     <string name="error_BackupNotFound">Atsarginės atkurti.</string>
     <string name="error_BackupNotSupportedDevice">Įrenginys nepalaiko atsarginės atkurti.</string>
     <string name="error_BadCopyProtectUpgrade">Dėl to, kad \'Android 4.1 klaidą, jums reikės pašalinti ir įdiegti SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger klaida, prašome iš naujo.</string>
     <string name="error_VcardParseFailure">Kontaktiniai duomenys buvo suformatuotas neteisingai.</string>
 
-    <string name="help_find">Naudokite šį ekraną nustatyti savo vardą keistis su kitais. Bakstelėkite mygtuką \'Atlikta\', kai baigsite.</string>
     <string name="help_home">Keistis tapatybės duomenis, užtikrinti, kad visi vartotojai yra netoliese arba telefonu. Pradžia Valiutų mygtuką keisis tik pažymėtus kontaktinius duomenis.</string>
     <string name="help_identity_menu">Jūs taip pat gali pakeisti asmens duomenis apie savo tapatybę šiame ekrane paliesdami mygtuką su jūsų vardu. Tai bus rodomas meniu leidžia jums redaguoti savo kontaktinę, Kurti naują adresatą arba naudoti kitą kontaktą.</string>
     <string name="help_Messages">Šis ekranas rodo visus ankstesnius pranešimus ir priedus, kurie yra vis dar prieinami atsisiųsti.</string>
-    <string name="help_passphrase">Naudokite šį ekraną prisijungti prie paraiškos su savo slaptafraze. Jei ją pamiršote, galite sukurti naują raktą, saugomą naują slaptafraze bakstelėję Pamiršai slaptafrazę? mygtuką. Bakstelėkite vartotojo vardą, jei norite perjungti kelis raktus.</string>
     <string name="help_PickRecip">Kontaktai su SafeSlinger raktus Čia rodoma, pasirinkite siųsti jūsų pranešimą.</string>
     <string name="help_save">Kai baigsite,protokolas bus atskleisti tapatybės duomenų, kuriais keičiamasi, sąrašą. Pasirinkite adresatus, kuriuos norite išsaugoti ir paspauskite Importuoti.</string>
     <string name="help_SecureIntroduction">Šis ekranas leidžia jums pasirinkti vieną iš dviejų žmonių, jūs neišmes raktus, kol saugiai siųsti savo raktus tarpusavyje. Tiesiog paspauskite Įvesti kada pasiruošę.</string>
     <string name="help_Send">Šis ekranas leidžia Jums pasirinkti tam tikrus duomenis ir gavėją siųsti. Tiesiog paspauskite Siųsti kada pasiruošę.</string>
 
-    <string name="iOS_contactError">Kontaktai leidimo nereikia. Prašome eiti į iOS Nustatymai kad Kontaktai leidimus.</string>
     <string name="iOS_errorpushtoken">Push registracijos nėra.</string>
-    <string name="iOS_notificationError1">Pranešimai leidimo nereikia. Prašome eiti į iOS Nustatymai kad informaciniai pranešimai leidimus.</string>
-    <string name="iOS_notificationError2">%s leidimo nereikia. Prašome eiti į iOS Nustatymai kad informaciniai pranešimai leidimus.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nėra optimizuota iOS 5.x prietaisus. SafeSlinger reikalauja iOS 6 arba naujesnė.</string>
 
     <string name="label_ago">%s atgal</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto iššifruoti</string>
     <string name="menu_Change">Pokytis</string>
     <string name="menu_ChangePassphrase">Pakeisti slapta frazė</string>
-    <string name="menu_ContactInviteEmail">Laišką</string>
-    <string name="menu_ContactInviteSms">Tekstas (SMS/MMS)</string>
     <string name="menu_CreateNew">Sukurti naują</string>
     <string name="menu_delete">Panaikinti</string>
     <string name="menu_deleteThread">Ištrinti Temos %s</string>

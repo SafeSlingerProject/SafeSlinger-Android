@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">音頻播放器解碼錯誤。</string>
     <string name="error_AudioPlayerError">無法播放錄音。</string>
     <string name="error_AudioRecorderEncodeError">音頻記錄編碼錯誤。</string>
-    <string name="error_AudioRecorderPermissionError">麥克風所需的權限。請至iOS的設置，使麥克風的權限。</string>
     <string name="error_BackupNotFound">無法找到備份。</string>
     <string name="error_BackupNotSupportedDevice">手機不支援備份還原。</string>
     <string name="error_BadCopyProtectUpgrade">由於在Android 4.1中的一個錯誤，你會卸載並重新安裝SafeSlinger。</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger系統錯誤，請重新啓動。</string>
     <string name="error_VcardParseFailure">聯繫數據格式不正確。</string>
 
-    <string name="help_find">使用此屏幕來設置你的名字和別人交流。完成後，點擊完成按鈕。</string>
     <string name="help_home">為了交換聯絡資訊，請確保所有成員都在附近，並按下開始交換按鈕，將開始與群體成員開始進行資料交換。</string>
     <string name="help_identity_menu">您可以更改個人資料透過點擊屏幕上顯示你名字的按鈕。它將顯示一個菜單，允許你編輯你的資料，或建立一個新的聯絡人，或使用另一個聯絡人。</string>
     <string name="help_Messages">該畫面顯示所有以前的訊息，以及可能被下載的檔案。</string>
-    <string name="help_passphrase">使用此屏幕可以登錄到應用程序與您的密碼。如果您忘記了您的密碼，您可以生成一個新的密碼保護，通過點擊忘記口令？ 一個新的密鑰按鈕。點擊用戶名多個鍵之間切換。</string>
     <string name="help_PickRecip">在此顯示擁有SafeSlinger金鑰的聯絡人，選擇一個去寄送你的訊息。</string>
     <string name="help_save">交換過程結束時，螢幕將顯示已交換的成員聯絡資訊。如果你想保存這些資料，請按加入的按鈕。</string>
     <string name="help_SecureIntroduction">這個螢幕允許你選擇兩個之前與你完成金鑰交換的收件者，發送安全介紹訊息以讓彼此交換金鑰。只需按下介紹便可。</string>
     <string name="help_Send">該畫面允許你選擇資料與收件人來寄送訊息。完成後按下傳送按鈕寄送。</string>
 
-    <string name="iOS_contactError">需要聯繫的權限。請至iOS的設置，使聯繫人的權限。</string>
     <string name="iOS_errorpushtoken">推註冊丟失。</string>
-    <string name="iOS_notificationError1">需要通知的權限。請至iOS的設置來啟用通知的權限。</string>
-    <string name="iOS_notificationError2">%s許可要求。請至iOS的設置來啟用通知的權限。</string>
     <string name="iOS_oldOSWarn">SafeSlinger不是為iOS 5.x的設備進行了優化。 SafeSlinger需要iOS6或更高版本。</string>
 
     <string name="label_ago">%s前</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">自動解密</string>
     <string name="menu_Change">更改</string>
     <string name="menu_ChangePassphrase">更改密碼</string>
-    <string name="menu_ContactInviteEmail">電子郵件</string>
-    <string name="menu_ContactInviteSms">短信（SMS/MMS）</string>
     <string name="menu_CreateNew">建立一個新的聯絡人</string>
     <string name="menu_delete">刪除</string>
     <string name="menu_deleteThread">刪除聯絡人%s的所有訊息</string>

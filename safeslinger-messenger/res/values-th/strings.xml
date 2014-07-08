@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">ข้อผิดพลาดใน การถอดรหัส เครื่องเล่นเสียง</string>
     <string name="error_AudioPlayerError">ไม่สามารถเล่น บันทึก</string>
     <string name="error_AudioRecorderEncodeError">ข้อผิดพลาดใน การเข้ารหัส บันทึกเสียง</string>
-    <string name="error_AudioRecorderPermissionError">ได้รับอนุญาตจาก ไมโครโฟน ที่ต้องการ กรุณาไป ที่การตั้งค่า iOS เพื่อให้ สิทธิ์ ไมโครโฟน</string>
     <string name="error_BackupNotFound">การสำรองข้อมูล ที่จะเรียกคืน ไม่</string>
     <string name="error_BackupNotSupportedDevice">อุปกรณ์ ไม่สนับสนุน การสำรองข้อมูล เรียกคืน</string>
     <string name="error_BadCopyProtectUpgrade">เนื่องจากการ ข้อผิดพลาดใน Android 4.1, คุณจะต้อง ถอนการติดตั้ง และติดตั้ง SafeSlinger</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">ข้อผิดพลาด SafeSlinger ทำการรีสตาร์ท</string>
     <string name="error_VcardParseFailure">ข้อมูล การติดต่อ ได้รับการ จัดรูปแบบ ไม่ถูกต้อง</string>
 
-    <string name="help_find">ใช้หน้าจอ นี้เพื่อตั้ง ชื่อของคุณไป แลกเปลี่ยนกับ คนอื่น ๆ แตะที่ปุ่ม เสร็จเมื่อเสร็จแล้ว</string>
     <string name="help_home">เพื่อแลกเปลี่ยนข้อมูล ตัวตน มั่นใจว่าผู้ใช้ ทั้งหมดที่อยู่ ใกล้เคียงหรือ ทางโทรศัพท์ ปุ่ม เริ่มต้นการ แลกเปลี่ยน จะแลกเปลี่ยน เฉพาะข้อมูล การตรวจสอบ รายชื่อผู้ติดต่อ</string>
     <string name="help_identity_menu">นอกจากนี้คุณยัง อาจมีการเปลี่ยนแปลง ข้อมูล ส่วนบุคคลเกี่ยวกับ ตัวตนของคุณ บนหน้าจอนี้ โดยแตะที่ ปุ่มที่มี ชื่อของคุณ นี้จะ แสดงเมนู ช่วยให้คุณสามารถ แก้ไข รายชื่อผู้ติดต่อ ของคุณสร้าง รายชื่อผู้ติดต่อ ใหม่ หรือ ใช้ ติดต่อ อีก</string>
     <string name="help_Messages">หน้าจอนี้จะ แสดงข้อความ ที่ผ่านมาทั้งหมด และสิ่งที่แนบ ที่ ยังคงมีอยู่ สำหรับการดาวน์โหลด</string>
-    <string name="help_passphrase">ใช้หน้าจอ นี้ เพื่อเข้าสู่ระบบ ไปยังโปรแกรมประยุกต์ ที่มี รหัสผ่าน ของคุณ ถ้าคุณลืม รหัสผ่าน ของคุณคุณ อาจสร้างคีย์ใหม่ การป้องกันโดยรหัสผ่าน ใหม่โดยการ แตะที่ ข้อความรหัสผ่าน ลืม? ปุ่ม แตะ ชื่อ ผู้ใช้สามารถ สลับไปมาระหว่าง หลายคีย์</string>
     <string name="help_PickRecip">ติดต่อ กับคีย์ SafeSlinger จะมีการแสดง ที่นี่ เลือก หนึ่งในการส่ง ข้อความของคุณไป</string>
     <string name="help_save">เมื่อเสร็จสิ้น โครงการจะเปิดเผย รายชื่อของ ข้อมูล ประจำตัวของการแลกเปลี่ยน เลือก รายชื่อที่คุณ ต้องการที่จะ บันทึกและ กดปุ่ม นำเข้า</string>
     <string name="help_SecureIntroduction">หน้าจอนี้จะ ช่วยให้คุณสามารถ เลือก คนสองคน ที่คุณได้ คล้อง กุญแจ ด้วย ก่อน ที่จะ ปลอดภัยส่ง คีย์ ของพวกเขากัน เพียงแค่กด แนะนำ เมื่อพร้อม</string>
     <string name="help_Send">หน้าจอนี้จะ ช่วยให้คุณสามารถ เลือก ข้อมูลบางอย่าง และผู้รับที่จะส่งไป เพียงแค่กด ส่ง เมื่อพร้อม</string>
 
-    <string name="iOS_contactError">ได้รับอนุญาตจาก ผู้ติดต่อ ที่ต้องการ กรุณาไป ที่การตั้งค่า iOS เพื่อให้ สิทธิ์ในการ ติดต่อ</string>
     <string name="iOS_errorpushtoken">การลงทะเบียน การผลักดัน ที่ขาดหายไป</string>
-    <string name="iOS_notificationError1">การแจ้งเตือน ต้อง ได้รับอนุญาต กรุณาไป ที่การตั้งค่า iOS เพื่อให้ สิทธิ์ การแจ้งเตือน</string>
-    <string name="iOS_notificationError2">อนุญาต %s ต้อง กรุณาไป ที่การตั้งค่า iOS เพื่อให้ สิทธิ์ การแจ้งเตือน</string>
     <string name="iOS_oldOSWarn">SafeSlinger ไม่เหมาะสำหรับ อุปกรณ์ iOS 5.x SafeSlinger ต้องใช้ iOS 6 หรือสูงกว่า</string>
 
     <string name="label_ago">%s ที่ผ่านมา</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-ถอดรหัส</string>
     <string name="menu_Change">เปลี่ยนแปลง</string>
     <string name="menu_ChangePassphrase">เปลี่ยน Passphrase</string>
-    <string name="menu_ContactInviteEmail">อีเมล์</string>
-    <string name="menu_ContactInviteSms">ข้อความ (SMS/MMS)</string>
     <string name="menu_CreateNew">สร้างใหม่</string>
     <string name="menu_delete">ลบ</string>
     <string name="menu_deleteThread">ลบ หัวข้อ %s</string>

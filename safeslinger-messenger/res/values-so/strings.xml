@@ -84,7 +84,6 @@
     <string name="error_AudioPlayerDecodeError">Kelmadaha qalad ciyaaryahanka Audio.</string>
     <string name="error_AudioPlayerError">Ma ciyaari karaa wax lagu qoro.</string>
     <string name="error_AudioRecorderEncodeError">Qaladka sida ey recorder Audio.</string>
-    <string name="error_AudioRecorderPermissionError">Ogolaansho Manbar loo baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Manbar.</string>
     <string name="error_BackupNotFound">No raad raac ah si loo soo celiyo.</string>
     <string name="error_BackupNotSupportedDevice">Device taageeraan uusan raad raac celiyo.</string>
     <string name="error_BadCopyProtectUpgrade">Maaddaama ay kutaan ah ee Android 4.1, waxaad yeelan doontaa in ay uninstall iyo dib SafeSlinger.</string>
@@ -138,20 +137,15 @@
     <string name="error_UncaughtExceptionOccured">Qalad SafeSlinger, fadlan la bilaabi.</string>
     <string name="error_VcardParseFailure">Xogta Contact ahaa Fedaral si qaldan.</string>
 
-    <string name="help_find">Isticmaal screen this to dhigay magacaaga si ay isu dhaafsadaan dadka kale. Qasabada badhanka qabtay markaad dhamaysid.</string>
     <string name="help_home">Si aad isu dhaafsadaan xogta aqoonsiga, si loo hubiyo dhamaan isticmaalayaasha u dhow ama telefoonka ku yihiin. The Ku bilow badhanka Exchange beddelan doonaa oo keliya xogta xiriir la hubiyaa.</string>
     <string name="help_identity_menu">Waxa kale oo aad beddeli kartaa macluumaadka shakhsiyeed oo ku saabsan aqoonsiga on screen this haray adigoo on badhanka leh magacaaga. Tani waxay muujiyaan doonaa menu a kuu oggolaadaan in aad Edit xidhiidhka aad, Create an xiriir New, ama isticmaal xiriir kale oo.</string>
     <string name="help_Messages">Shaashada Tan waxay ku tusaysaa oo dhan farriimaha la soo dhaafay, iyo lifaaqyada in weli waxaa laga heli karaa for download.</string>
-    <string name="help_passphrase">Isticmaal shaashada si login codsiga aad u passphrase. Haddii aad illowday passphrase, aad dhalin laga yaabaa in muhiimka ah oo cusub oo la ilaaliyo by passphrase cusub ku haray Passphrase ee Forgot? badhanka. Qasabada magaca user ay u kala bedesho furayaasha kala duwan.</string>
     <string name="help_PickRecip">La xiriirida furayaasha SafeSlinger halkan bandhigay, dooro mid u soo dirto fariin ay u.</string>
     <string name="help_save">Marka ay dhammaadaan, maamuuska u muujin doonaa liiska data aqoonsiga ku badelay. Dooro xiriirrada aad rabtid in aad ku badbaadin iyo taabo gelinta.</string>
     <string name="help_SecureIntroduction">Shaashada kuu ogolaanayaa inaad xulo laba qof oo aad wadhfiyey ayuu furayaasha leh ka hor si ammaan ah u diri furayaasha ay si midba midka kale. Simply riix Isbar marka uu diyaar.</string>
     <string name="help_Send">Shaashada kuu ogolaanayaa inaad dooro qaar ka mid ah macluumaadka iyo qaataha ah in ay u dirto. Simply riix soo dir marka uu diyaar.</string>
 
-    <string name="iOS_contactError">Contacts ogolaansho looga baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Contacts.</string>
     <string name="iOS_errorpushtoken">Diiwaangelinta riixdo maqan yahay.</string>
-    <string name="iOS_notificationError1">Ogolaansho Notifications loo baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Notifications.</string>
-    <string name="iOS_notificationError2">Ogolaansho %s loo baahan yahay. Fadlan tag Settings arrimo si ay awood ugu rukhsadda Notifications.</string>
     <string name="iOS_oldOSWarn">SafeSlinger aan la optimized for qalabka 5.x arrimo. SafeSlinger u baahan tahay arrimo 6 ama wax ka sareeya.</string>
 
     <string name="label_ago">%s ago</string>
@@ -263,8 +257,6 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Change</string>
     <string name="menu_ChangePassphrase">Change Passphrase</string>
-    <string name="menu_ContactInviteEmail">Email</string>
-    <string name="menu_ContactInviteSms">Texte (SMS/MMS)</string>
     <string name="menu_CreateNew">Create an New</string>
     <string name="menu_delete">Delete</string>
     <string name="menu_deleteThread">Delete %s Thread</string>
