@@ -49,6 +49,7 @@
     <string name="btn_Import">Import</string>
     <string name="btn_Introduce">Kehtestama</string>
     <string name="btn_No">Ei</string>
+    <string name="btn_NotNow">Mitte praegu</string>
     <string name="btn_NotRemind">Unustama</string>
     <string name="btn_OK">korras</string>
     <string name="btn_Refuse">Keelduma</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minutit</string>
     <string name="choice_8hours">8 tundi</string>
     <string name="choice_auto_storage">Vaikimisi Storage</string>
+    <string name="choice_default">Vaikimisi</string>
     <string name="choice_external_storage">External Storage</string>
     <string name="choice_font_large">Suur</string>
     <string name="choice_font_medium">Keskmine</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio mängija dekodeerimine viga.</string>
     <string name="error_AudioPlayerError">Ei saa mängida salvestus.</string>
     <string name="error_AudioRecorderEncodeError">Audio Recorder kodeerimine viga.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofon loata on kohustatud registreerima turvaline häälsõnumeid. Puuduta nuppu Help for SafeSlinger Mikrofon loa üksikasju.</string>
     <string name="error_BackupNotFound">Ei backup taastada.</string>
     <string name="error_BackupNotSupportedDevice">Seade ei toeta backup taastada.</string>
     <string name="error_BadCopyProtectUpgrade">Tänuviga Android 4.1, siis on uninstall ja uuesti SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger viga, palun taaskäivitage.</string>
     <string name="error_VcardParseFailure">Kontakt andmed vormindatud valesti.</string>
 
+    <string name="help_find">Kasutage seda ekraani, et määrata oma nime vahetada teistega, ja parooli, et kaitsta oma andmeid. Puuduta nuppu Valmis, kui olete lõpetanud.</string>
     <string name="help_home">Vahetada identiteedi andmed, et kõik kasutajad on lähedal või telefoni teel. Alustada Exchange nupp vahetavad ainultkontrollitud kontaktandmed.</string>
     <string name="help_identity_menu">Võite muuta isikuandmeid oma identiteeti selle ekraani puudutades nuppu oma nimi. See avab menüü, mis võimaldab teil muuta oma kontaktandmeid, luua uusi kontakte, või kasutage muud kontaktandmed.</string>
     <string name="help_Messages">See ekraan kuvab kõik viimase sõnumeid ja manuseid, mis on veel saadaval allalaadimiseks.</string>
+    <string name="help_passphrase">Kasutage seda ekraani login taotluse koos oma parool. Kui oled unustanud oma parooli, siis võib uus võti kaitstud uus parool puudutades Unustasid Parooli? nuppu. Puuduta kasutajanime vaheldumisi mitu võtmed.</string>
+    <string name="help_passphrase_change">Kasutage seda ekraani, et muuta oma parool sisestades oma last parool kinnitamiseks ja uue parooli.</string>
     <string name="help_PickRecip">Kontaktid SafeSlinger võtmed kuvatakse siin, valida üks, et saata sõnum.</string>
     <string name="help_save">Kui olete lõpetanud,protokoll paljastab nimekirjaidentiteedi andmeid vahetada. Valige kontaktid, mida soovite salvestada ja vajutage Import.</string>
     <string name="help_SecureIntroduction">See ekraan võimaldab valida kaks inimest olete tropitavad võtmeid enne turvaliselt saata oma võtmed üksteist. Lihtsalt vajutage Hakata kui oled valmis.</string>
     <string name="help_Send">See ekraan võimaldab teil valida mõned andmed jasaaja saatma. Lihtsalt vajutage Saada, kui oled valmis.</string>
+    <string name="help_settings">See ekraan võimaldab teil muuta vaikimisi seaded taotluse.</string>
 
+    <string name="iOS_contactError">Kontaktid luba on vaja kindlalt jagamine kontakt kaarte. Puuduta nuppu Help for SafeSlinger Kontaktid loa üksikasju.</string>
     <string name="iOS_errorpushtoken">Push registreerimiseks puudub.</string>
+    <string name="iOS_notificationError1">Teade luba kas teadete või plakatid ja rinnamärk numbreid on vaja turvaline sõnumside. Puuduta nuppu Help for SafeSlinger teatamine luba üksikasju.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ei ole optimeeritud iOS 5.x seadmeid. SafeSlinger eeldab iOS 6 või kõrgem.</string>
+    <string name="iOS_RequestPermissionContacts">Saad valida enda kontaktandmed saata oma sõpradele ja SafeSlinger krüptib seda sinu jaoks. Selle funktsiooni lubamiseks peate lubama SafeSlinger juurdepääsu oma kontaktid, kui küsitakse.</string>
+    <string name="iOS_RequestPermissionMicrophone">Saate salvestada häält sõnum saata oma sõpradele ja SafeSlinger krüptib seda sinu jaoks. Selle funktsiooni lubamiseks peate lubama SafeSlinger juurdepääsu oma mikrofon, kui küsitakse.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger on krüpteeritud sõnumite kohaldamise ja ei saa toimida ilma et sissetulevad kirjad teated. Võimaldamaks sõnumitele peate lubama SafeSlinger saata teile teateid, kui küsitakse.</string>
 
     <string name="label_ago">%s tagasi</string>
     <string name="label_backupCompleteDate">Viimati Backup Valmis</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">aegub %s</string>
     <string name="label_expiresIn">aegub</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Sisestage nimi, mida soovite teistele näha suheldes turvaliselt:</string>
+    <string name="label_FindInstruct">Sisesta oma nimi ja parool, et kaitsta oma andmed:</string>
     <string name="label_FirstName">Eesnimi</string>
     <string name="label_Home">Puuduta oma nimi lisada või eemaldada kontaktandmed kontrollige üksused, mida soovite jagada, ja koputage Alustada Exchange kui teised on valmis vahetama:</string>
     <string name="label_hometag">Kodu</string>
     <string name="label_hours">%d tundi</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud on lubatud. Puuduta nuppu Valmis, kui olete lõpetanud.</string>
     <string name="label_InstNoMessages">Ei sõnumeid. Võite saata sõnumKoosta sõnum Kodu nupu menüüst.</string>
-    <string name="label_InstNoMessagesAndroid">Ei sõnumeid. Võite saata sõnumKoosta tab.</string>
     <string name="label_InstNoRecipients">Adressaadi lisamiseks peate esmalt pilduma Keys koos ühe või mitme teiste kasutajate samal ajal. Võite saatapilduma Keys kontakt kutse menüüst.</string>
     <string name="label_InstNoSharedFile">No jagatud faili. Ühendage seade iTunesiga ja lohista failid jagatud kausta.</string>
     <string name="label_InstRecipients">Pickadressaadil saata sõnum:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Automaatselt alla laadida manuseid, kui sisse logitud</string>
     <string name="label_summary_auto_decrypt">Automaatselt dekrüpteerimiseks sõnumeid sisse logitud</string>
     <string name="label_summary_remind_backup_delay">Saada teateid, kui backup on offline.</string>
-    <string name="label_summary_show_tutorial">Näitajuhendaja enne attemping pilduma Keys.</string>
+    <string name="label_summary_show_tutorial">Näita juhendaja enne üritades pilduma Keys.</string>
     <string name="label_TapToDecryptFile">Puuduta dekrüpteerida fail</string>
     <string name="label_TapToDecryptMessage">Puuduta dekrüpteerida</string>
     <string name="label_TapToDownloadFile">Puuduta laadida faili</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Muutus</string>
     <string name="menu_ChangePassphrase">Muuda Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email Kontaktid</string>
+    <string name="menu_ContactInviteSms">Tekst Kontaktid</string>
     <string name="menu_CreateNew">Loo uus</string>
     <string name="menu_delete">Kustutama</string>
     <string name="menu_deleteThread">Kustuta teema %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Unustasid Parooli?</string>
     <string name="menu_Help">Aitama</string>
     <string name="menu_Introduction">Sissejuhatus</string>
-    <string name="menu_License">Litsents</string>
+    <string name="menu_language">Keel</string>
+    <string name="menu_link_contact_add">Lisa kontakt Link</string>
+    <string name="menu_link_contact_change">Vaheta Link</string>
     <string name="menu_Logout">Logi välja</string>
     <string name="menu_ManagePassphrases">Manage Paroolid</string>
     <string name="menu_message_font_size">Sõnum Font Size</string>

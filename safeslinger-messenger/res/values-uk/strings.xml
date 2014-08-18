@@ -49,6 +49,7 @@
     <string name="btn_Import">Імпорт</string>
     <string name="btn_Introduce">Вводити</string>
     <string name="btn_No">Ні</string>
+    <string name="btn_NotNow">Не зараз</string>
     <string name="btn_NotRemind">Забувати</string>
     <string name="btn_OK">добре</string>
     <string name="btn_Refuse">Відмовлятися</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 хвилин</string>
     <string name="choice_8hours">8 hours</string>
     <string name="choice_auto_storage">Сховище за замовчуванням</string>
+    <string name="choice_default">Дефолт</string>
     <string name="choice_external_storage">Зовнішні накопичувачі</string>
     <string name="choice_font_large">Великий</string>
     <string name="choice_font_medium">Середа</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Аудіо плеєр помилка декодування.</string>
     <string name="error_AudioPlayerError">Неможливо відтворити запис.</string>
     <string name="error_AudioRecorderEncodeError">Аудіо помилка кодування рекордер.</string>
+    <string name="error_AudioRecorderPermissionError">Дозвіл мікрофон потрібно для запису безпечне голосове повідомлення. Натисніть кнопку Довідка для SafeSlinger мікрофон деталей дозволів.</string>
     <string name="error_BackupNotFound">Ні резервного копіювання для відновлення.</string>
     <string name="error_BackupNotSupportedDevice">Пристрій не підтримує відновлення резервної копії.</string>
     <string name="error_BadCopyProtectUpgrade">Через помилку в Android 4.1, вам доведеться видалити і перевстановити SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger помилка, перезавантажте.</string>
     <string name="error_VcardParseFailure">Контактні дані відформатована неправильно.</string>
 
+    <string name="help_find">Використовуйте цей екран, щоб встановити своє ім\'я для обміну з іншими, і ключову фразу для захисту ваших даних. Натисніть кнопку Готово.</string>
     <string name="help_home">Для обміну даними посвідчень, гарантувати, що всі користувачі знаходяться неподалік або по телефону. Почніть кнопку валютний обміняються тільки перевірені контактні дані.</string>
     <string name="help_identity_menu">Ви також можете змінити особисті дані про вашої особистості на цьому екрані, натиснувши на кнопку з вашим ім\'ям. Це відобразить меню дозволяє редагувати ваші контакти, створити новий контакт, або використовуйте інший контакт.</string>
     <string name="help_Messages">На цьому екрані відображається всі минулі повідомлення та вкладення, які все ще доступні для скачування.</string>
+    <string name="help_passphrase">Використовуйте цей екран для входу в додаток з вашим пароль. Якщо ви забули свій фразу, ви можете створити новий ключ, захищений нової пральний фрази по натиснувши Забули парольний фразу? Кнопка. Натисніть на ім\'я користувача перемикатися між кількома ключами.</string>
+    <string name="help_passphrase_change">Використовуйте цей екран, щоб змінити свою фразу, ввівши свій останній фразу для підтвердження і нового пароля.</string>
     <string name="help_PickRecip">Контакти з SafeSlinger ключів відображаються тут, то виберіть його, щоб відправити повідомлення.</string>
     <string name="help_save">Коли закінчите, протокол покаже список ідентифікаційних даних обмінюваних. Виберіть контакти, які ви хочете зберегти і натисніть Імпорт.</string>
     <string name="help_SecureIntroduction">Цей екран дозволяє вибрати один з двох людей, яких ви перекинув ключі с до безпечно відправляти свої ключі один до одного. Просто натисніть Уявіть, коли будете готові.</string>
     <string name="help_Send">Цей екран дозволяє вибрати деякі дані і одержувача для відправки. Просто натисніть Надіслати коли будете готові.</string>
+    <string name="help_settings">Цей екран дозволяє змінити настройки за замовчуванням для програми.</string>
 
+    <string name="iOS_contactError">Контакти потрібен дозвіл для надійного обміну карток контактів. Натисніть кнопку Довідка для SafeSlinger деталей Контакти дозволів.</string>
     <string name="iOS_errorpushtoken">Реєстрація Натисніть відсутня.</string>
+    <string name="iOS_notificationError1">Дозвіл Повідомлення або попереджень або банери та номери жетонів, необхідні для безпечного обміну повідомленнями. Натисніть кнопку Довідка для SafeSlinger деталей дозволів Повідомлення.</string>
     <string name="iOS_oldOSWarn">SafeSlinger НЕ оптимізований для iOS 5.x пристроїв. SafeSlinger вимагається iOS 6 або вище.</string>
+    <string name="iOS_RequestPermissionContacts">Ви можете вибрати свій картку контакту, щоб відправити своїм друзям і SafeSlinger шифрує його для вас. Щоб увімкнути цю функцію, необхідно дозволити SafeSlinger доступ до ваших Контакти, коли його запитали.</string>
+    <string name="iOS_RequestPermissionMicrophone">Ви можете записати голосове повідомлення, щоб відправити своїм друзям і SafeSlinger буде зашифрувати його для вас. Щоб увімкнути цю функцію, необхідно дозволити SafeSlinger доступ до вашого мікрофон, коли його запитали.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger це додаток зашифрований повідомленнями і не може функціонувати, не дозволяючи вхідні повідомлення з повідомленням. Щоб включити вхідні повідомлення, необхідно дозволити SafeSlinger відправити вам Сповіщення коли його запитали.</string>
 
     <string name="label_ago">%s назад</string>
     <string name="label_backupCompleteDate">Останній Резервне копіювання завершено</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">закінчується %s</string>
     <string name="label_expiresIn">минає в</string>
     <string name="label_FileNameHint">Назва файлу</string>
-    <string name="label_FindInstruct">Введіть ім\'я ви хочете, щоб інші бачили при спілкуванні надійно:</string>
+    <string name="label_FindInstruct">Введіть своє ім\'я та пароль для захисту ваших даних:</string>
     <string name="label_FirstName">Ім\'я</string>
     <string name="label_Home">Натисніть на своє ім\'я, щоб додати або видалити контактні дані, перевірити елементи, які ви хотіли б поділитися, і натисніть Почати Обмін коли інші готові обміну:</string>
     <string name="label_hometag">Додому</string>
     <string name="label_hours">%d годин</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud включена. Натисніть кнопку Готово.</string>
     <string name="label_InstNoMessages">Немає повідомлень. Ви можете відправити повідомлення з кнопки створення повідомлень на меню.</string>
-    <string name="label_InstNoMessagesAndroid">Немає повідомлень. Ви можете відправити повідомлення на вкладці Compose.</string>
     <string name="label_InstNoRecipients">Щоб додати одержувачів, необхідно спочатку Слінг ключів з одним або декількома іншими користувачами одночасно. Ви також можете відправити Слінг Ключі контактну запрошення від меню.</string>
     <string name="label_InstNoSharedFile">Ні загальний файл. Підключіть пристрій з ITunes і перетягнути файли в загальну папку.</string>
     <string name="label_InstRecipients">Виберіть одержувача, щоб відправити повідомлення, щоб:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Автоматично завантажувати вкладення, коли зайшли</string>
     <string name="label_summary_auto_decrypt">Автоматично розшифровки повідомлень, коли зайшли</string>
     <string name="label_summary_remind_backup_delay">Отримання повідомлення, коли резервне копіювання в автономному режимі.</string>
-    <string name="label_summary_show_tutorial">Показати підручник перед attemping праща Кіш.</string>
+    <string name="label_summary_show_tutorial">Показати підручник, перш ніж намагатися Слінг-Кіш.</string>
     <string name="label_TapToDecryptFile">Натисніть, щоб розшифрувати файл</string>
     <string name="label_TapToDecryptMessage">Натисніть, щоб розшифрувати</string>
     <string name="label_TapToDownloadFile">Натисніть, щоб завантажити файл</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Авто-розшифровки</string>
     <string name="menu_Change">Зміна</string>
     <string name="menu_ChangePassphrase">Змінити Ключова фраза</string>
+    <string name="menu_ContactInviteEmail">E-mail зі списку контактів</string>
+    <string name="menu_ContactInviteSms">Текст з Контакти</string>
     <string name="menu_CreateNew">Створити новий</string>
     <string name="menu_delete">Видаляти</string>
     <string name="menu_deleteThread">Видалити %s теми</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Забули парольний фразу?</string>
     <string name="menu_Help">Допоможіть</string>
     <string name="menu_Introduction">Введення</string>
-    <string name="menu_License">Ліцензія</string>
+    <string name="menu_language">Мова</string>
+    <string name="menu_link_contact_add">Додати Зв\'язатися Посилання</string>
+    <string name="menu_link_contact_change">Зміна контактної посиланням</string>
     <string name="menu_Logout">Вихід</string>
     <string name="menu_ManagePassphrases">Управління ключових фраз</string>
     <string name="menu_message_font_size">Повідомлення Розмір шрифту</string>

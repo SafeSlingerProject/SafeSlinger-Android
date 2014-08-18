@@ -49,6 +49,7 @@
     <string name="btn_Import">Imports</string>
     <string name="btn_Introduce">Iepazīstināt</string>
     <string name="btn_No">Nē</string>
+    <string name="btn_NotNow">Ne tagad</string>
     <string name="btn_NotRemind">Aizmirst</string>
     <string name="btn_OK">labi</string>
     <string name="btn_Refuse">Atteikties</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minūtes</string>
     <string name="choice_8hours">8 stundas</string>
     <string name="choice_auto_storage">Noklusējuma Storage</string>
+    <string name="choice_default">Noklusējuma</string>
     <string name="choice_external_storage">Ārējās atmiņas ierīces</string>
     <string name="choice_font_large">Liels</string>
     <string name="choice_font_medium">Vidējs</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio atskaņotājs dekodēšanas kļūda.</string>
     <string name="error_AudioPlayerError">Nevar atskaņot ierakstu.</string>
     <string name="error_AudioRecorderEncodeError">Audio ieraksti kodēšanas kļūda.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofons ir vajadzīga atļauja, lai ierakstītu drošu balss ziņu. Pieskaries pogai palīdzībā SafeSlinger Mikrofona atļauju datus.</string>
     <string name="error_BackupNotFound">Nav rezerves, lai atjaunotu.</string>
     <string name="error_BackupNotSupportedDevice">Ierīce neatbalsta backup atjaunot.</string>
     <string name="error_BadCopyProtectUpgrade">Sakarā ar kļūdu Android 4.1, jums būs atinstalēt un pārinstalēt SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger kļūdu, lūdzu, restartējiet.</string>
     <string name="error_VcardParseFailure">Kontaktinformācija tika formatēts pareizi.</string>
 
+    <string name="help_find">Izmantojiet šo ekrānu, lai uzstādītu savu vārdu, lai apmainītos ar citiem, un ieejas frāzi, lai aizsargātu jūsu datus. Pieskarieties Done pogu, kad pabeigta.</string>
     <string name="help_home">Lai apmainītos ar identitātes datiem, nodrošinātu, ka visi lietotāji ir tuvumā, vai pa tālruni. Sākt Exchange poga apmainīsies tikai pārbaudīt kontaktu datus.</string>
     <string name="help_identity_menu">Jūs varat mainīt arī personiskos datus par savu identitāti šajā ekrānā, pieskaroties uz pogas ar savu vārdu. Tas parādīs izvēlni, kas ļauj jums rediģēt kontaktu, Izveidot jaunu kontaktu, vai izmantojiet citu kontaktu.</string>
     <string name="help_Messages">Šis ekrāns parāda visas iepriekšējās ziņas un pielikumus, kas joprojām ir pieejams lejupielādei.</string>
+    <string name="help_passphrase">Izmantojiet šo ekrānu, lai pieteiktos uz pieteikumu ar savu ieejas frāzi. Ja esat aizmirsis savu ieejas frāzi, jūs varat radīt jaunu atslēgu aizsargāta ar jaunu ieejas frāzi, pieskaroties Aizmirsāt ieejas frāzi? pogu. Pieskarieties lietotāja vārdu, lai pārslēgtos starp vairākiem taustiņiem.</string>
+    <string name="help_passphrase_change">Izmantojiet šo ekrānu, lai mainītu savu ieejas frāzi, ievadot savu pēdējo ieejas frāzi apstiprināšanai un jauno paroli.</string>
     <string name="help_PickRecip">Kontakti ar SafeSlinger taustiņi ir parādīti šeit, izvēlieties vienu, lai nosūtītu savu ziņojumu.</string>
     <string name="help_save">Kad pabeigts,protokols atklās sarakstu datu apmaiņa identitātes. Izvēlētos kontaktus vēlaties saglabāt un nospiediet Importēt.</string>
     <string name="help_SecureIntroduction">Šis ekrāns ļauj jums izvēlēties divus cilvēkus esat siksnu atslēgas, pirms droši sūtīt savus taustiņus, lai viens otru. Vienkārši nospiediet Ieviest kad gatavs.</string>
     <string name="help_Send">Šis ekrāns ļauj jums izvēlēties dažus datus un saņēmējam nosūtīt. Vienkārši nospiediet Send kad gatavs.</string>
+    <string name="help_settings">Šis ekrāns ļauj mainīt noklusētos iestatījumus, lai piemērotu.</string>
 
+    <string name="iOS_contactError">Kontakti atļauja ir vajadzīga, lai droši dalīties kontaktu kartītes. Pieskaries pogai palīdzībā SafeSlinger Kontakti atļauju datus.</string>
     <string name="iOS_errorpushtoken">Push reģistrācija ir pazudis.</string>
+    <string name="iOS_notificationError1">Paziņojumā atļauja vai nu brīdinājumu vai baneri, un žetons numurus, ir nepieciešami drošai ziņapmaiņu. Pieskaries pogai palīdzībā SafeSlinger Paziņošana atļauju datus.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nav optimizēta iOS 5.x ierīcēm. SafeSlinger prasa iOS 6 vai augstāku.</string>
+    <string name="iOS_RequestPermissionContacts">Jūs varat izvēlēties savu kontakta kartīti, lai nosūtītu draugiem un SafeSlinger šifrēt to you. Lai iespējotu šo funkciju, jums ir ļaut SafeSlinger piekļūt saviem kontaktiem, kad tiek jautāts.</string>
+    <string name="iOS_RequestPermissionMicrophone">Jūs varat ierakstīt balss ziņu, lai nosūtītu draugiem un SafeSlinger būs šifrēt to you. Lai iespējotu šo funkciju, jums ir ļaut SafeSlinger piekļūt jūsu mikrofonu, kad tiek jautāts.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ir šifrēta ziņojumapmaiņas lietojumprogramma, un nevar funkcionēt bez ļaujot ienākošos ziņojumus no paziņojumiem. Lai iespējotu ienākošos ziņojumus, jums ir ļaut SafeSlinger sūtīt jums paziņojumus, kad tiek jautāts.</string>
 
     <string name="label_ago">%s atpakaļ</string>
     <string name="label_backupCompleteDate">Pēdējā Backup Pabeigts</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">beidzas %s</string>
     <string name="label_expiresIn">beidzas</string>
     <string name="label_FileNameHint">Faila nosaukums</string>
-    <string name="label_FindInstruct">Ievadiet vārdu, ko vēlaties, lai citi redzētu, sazinoties droši:</string>
+    <string name="label_FindInstruct">Ievadiet savu vārdu un ieejas frāzi, lai aizsargātu jūsu datus:</string>
     <string name="label_FirstName">Vārds</string>
     <string name="label_Home">Pieskarieties savu vārdu, lai pievienotu vai noņemtu kontakta datus, pārbaudiet Vienumi, ko vēlaties koplietot, un pieskarieties Sākt Exchange, kad citi ir gatavi apmainīties ar:</string>
     <string name="label_hometag">Mājas</string>
     <string name="label_hours">%d stundas</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ir iespējots. Pieskarieties Done pogu, kad pabeigta.</string>
     <string name="label_InstNoMessages">Nekādas ziņas. Jūs varat nosūtīt ziņu no pogas izveidot ziņojumu par sākuma izvēlnē.</string>
-    <string name="label_InstNoMessagesAndroid">Nekādas ziņas. Jūs varat nosūtīt ziņu no cilnes Rakstīt.</string>
     <string name="label_InstNoRecipients">Lai pievienotu adresātus, vispirms Sling taustiņi ar vienu vai vairākiem citiem lietotājiem, tajā pašā laikā. Jūs varat arī nosūtīt Sling Keys kontaktu uzaicinājumu no izvēlnes.</string>
     <string name="label_InstNoSharedFile">Nav koplietojamo failu. Savienot ierīci ar iTunes un velciet failus uz koplietojamo mapi.</string>
     <string name="label_InstRecipients">Izvēlēties adresātu nosūtīt ziņojumu:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Automātiski lejupielādēt ziņu pielikumus, kad pieteicies collas</string>
     <string name="label_summary_auto_decrypt">Automātiski atšifrēt ziņojumus, kad pieteicies collas</string>
     <string name="label_summary_remind_backup_delay">Saņemt paziņojumu, kad rezerves ir bezsaistē.</string>
-    <string name="label_summary_show_tutorial">Parādīt apmācība pirms attemping cilpas Keys.</string>
+    <string name="label_summary_show_tutorial">Parādīt apmācība pirms mēģināt Sling Keys.</string>
     <string name="label_TapToDecryptFile">Pieskarieties, lai atšifrētu failu</string>
     <string name="label_TapToDecryptMessage">Pieskarieties, lai atšifrētu</string>
     <string name="label_TapToDownloadFile">Pieskarieties, lai lejupielādētu failu</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-atšifrēt</string>
     <string name="menu_Change">Maiņa</string>
     <string name="menu_ChangePassphrase">Izmaiņas parole</string>
+    <string name="menu_ContactInviteEmail">E-pastu no Kontakti</string>
+    <string name="menu_ContactInviteSms">Tekstu no Kontakti</string>
     <string name="menu_CreateNew">Izveidot jaunas</string>
     <string name="menu_delete">Izdzēst</string>
     <string name="menu_deleteThread">Dzēst Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Aizmirsāt ieejas frāzi?</string>
     <string name="menu_Help">Palīdzēt</string>
     <string name="menu_Introduction">Ievads</string>
-    <string name="menu_License">Licence</string>
+    <string name="menu_language">Valoda</string>
+    <string name="menu_link_contact_add">Pievienot kontaktu saiti</string>
+    <string name="menu_link_contact_change">Mainīt kontaktu saite</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Pārvaldīt Passphrases</string>
     <string name="menu_message_font_size">Ziņa Fonta lielums</string>

@@ -49,6 +49,7 @@
     <string name="btn_Import">Importas</string>
     <string name="btn_Introduce">Pristatyti</string>
     <string name="btn_No">Ne</string>
+    <string name="btn_NotNow">Ne dabar</string>
     <string name="btn_NotRemind">Pamiršti</string>
     <string name="btn_OK">gerai</string>
     <string name="btn_Refuse">Atsisakyti</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minutės</string>
     <string name="choice_8hours">8 valandos</string>
     <string name="choice_auto_storage">Įprasta saugojimas</string>
+    <string name="choice_default">Numatytasis</string>
     <string name="choice_external_storage">Išorinės saugyklos</string>
     <string name="choice_font_large">Didelis</string>
     <string name="choice_font_medium">Vidutinis</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio grotuvas dekodavimo klaida.</string>
     <string name="error_AudioPlayerError">Nepavyko paleisti įrašą.</string>
     <string name="error_AudioRecorderEncodeError">Garso įrašymo kodavimo klaida.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofonas yra reikalingas leidimas įrašyti saugų balso pranešimą. Bakstelėkite mygtuką \'Pagalba už SafeSlinger Mikrofonas suteiksi leidimą detales.</string>
     <string name="error_BackupNotFound">Atsarginės atkurti.</string>
     <string name="error_BackupNotSupportedDevice">Įrenginys nepalaiko atsarginės atkurti.</string>
     <string name="error_BadCopyProtectUpgrade">Dėl to, kad \'Android 4.1 klaidą, jums reikės pašalinti ir įdiegti SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger klaida, prašome iš naujo.</string>
     <string name="error_VcardParseFailure">Kontaktiniai duomenys buvo suformatuotas neteisingai.</string>
 
+    <string name="help_find">Naudokite šį ekraną nustatyti savo vardą keistis su kitais, ir slaptafrazės apsaugoti savo duomenis. Bakstelėkite mygtuką \'Atlikta\', kai baigsite.</string>
     <string name="help_home">Keistis tapatybės duomenis, užtikrinti, kad visi vartotojai yra netoliese arba telefonu. Pradžia Valiutų mygtuką keisis tik pažymėtus kontaktinius duomenis.</string>
     <string name="help_identity_menu">Jūs taip pat gali pakeisti asmens duomenis apie savo tapatybę šiame ekrane paliesdami mygtuką su jūsų vardu. Tai bus rodomas meniu leidžia jums redaguoti savo kontaktinę, Kurti naują adresatą arba naudoti kitą kontaktą.</string>
     <string name="help_Messages">Šis ekranas rodo visus ankstesnius pranešimus ir priedus, kurie yra vis dar prieinami atsisiųsti.</string>
+    <string name="help_passphrase">Naudokite šį ekraną prisijungti prie paraiškos su savo slaptafraze. Jei ją pamiršote, galite sukurti naują raktą, saugomą naują slaptafraze bakstelėję Pamiršai slaptafrazę? mygtuką. Bakstelėkite vartotojo vardą, jei norite perjungti kelis raktus.</string>
+    <string name="help_passphrase_change">Naudokite šį ekraną pakeisti savo frazę įvesdami savo paskutinę frazę patvirtinti ir naują slaptafraze.</string>
     <string name="help_PickRecip">Kontaktai su SafeSlinger raktus Čia rodoma, pasirinkite siųsti jūsų pranešimą.</string>
     <string name="help_save">Kai baigsite,protokolas bus atskleisti tapatybės duomenų, kuriais keičiamasi, sąrašą. Pasirinkite adresatus, kuriuos norite išsaugoti ir paspauskite Importuoti.</string>
     <string name="help_SecureIntroduction">Šis ekranas leidžia jums pasirinkti vieną iš dviejų žmonių, jūs neišmes raktus, kol saugiai siųsti savo raktus tarpusavyje. Tiesiog paspauskite Įvesti kada pasiruošę.</string>
     <string name="help_Send">Šis ekranas leidžia Jums pasirinkti tam tikrus duomenis ir gavėją siųsti. Tiesiog paspauskite Siųsti kada pasiruošę.</string>
+    <string name="help_settings">Šis ekranas leidžia pakeisti numatytuosius parametrus programa.</string>
 
+    <string name="iOS_contactError">Kontaktai yra reikalingas leidimas saugiai dalintis adresatų korteles. Bakstelėkite mygtuką \'Pagalba už SafeSlinger Kontaktai suteiksi leidimą detales.</string>
     <string name="iOS_errorpushtoken">Push registracijos nėra.</string>
+    <string name="iOS_notificationError1">Pranešimas leidimo naudoti arba perspėjimais ar antraščių, ir ženklelis numeriai, reikalingi saugaus keitimosi pranešimais. Bakstelėkite mygtuką \'Pagalba už SafeSlinger Pranešimas suteiksi leidimą detales.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nėra optimizuota iOS 5.x prietaisus. SafeSlinger reikalauja iOS 6 arba naujesnė.</string>
+    <string name="iOS_RequestPermissionContacts">Jūs galite pasirinkti savo adresato kortelę siųsti savo draugams ir SafeSlinger bus užšifruoti ją už jus. Norėdami įjungti šią funkciją, turite leisti SafeSlinger prieigą prie jūsų kontaktų, kai prašoma.</string>
+    <string name="iOS_RequestPermissionMicrophone">Galite įrašyti balso žinutę siųsti savo draugams ir SafeSlinger bus užšifruoti ją už jus. Norėdami įjungti šią funkciją, turite leisti SafeSlinger prieigą prie mikrofono, kai prašoma.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger yra saugiame pranešimų programą ir negali funkcionuoti be leidžia gaunamus pranešimus iš pranešimų. Norėdami įjungti gaunamus pranešimus, turite leisti SafeSlinger atsiųsti pranešimai, kai prašoma.</string>
 
     <string name="label_ago">%s atgal</string>
     <string name="label_backupCompleteDate">Paskutinis Atsarginė Baigtas</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">baigiasi %s</string>
     <string name="label_expiresIn">baigiasi</string>
     <string name="label_FileNameHint">Failo vardas</string>
-    <string name="label_FindInstruct">Įveskite vardą, kurį norite kitiems matyti, kai bendrauti saugiai:</string>
+    <string name="label_FindInstruct">Įveskite savo vardą bei frazę apsaugoti savo duomenis:</string>
     <string name="label_FirstName">Vardas</string>
     <string name="label_Home">Bakstelėkite savo vardą pridėti ar išimti kontaktinius duomenis, patikrinti elementus, kuriuos norite bendrinti, ir bakstelėkite Pradžia Exchange, kai kiti yra pasiruošę keistis:</string>
     <string name="label_hometag">Namai</string>
     <string name="label_hours">%d valandos</string>
     <string name="label_iCloudEnable">SafeSlinger icloud yra įjungtas. Bakstelėkite mygtuką \'Atlikta\', kai baigsite.</string>
     <string name="label_InstNoMessages">Nėra pranešimų. Galite siųsti pranešimą iš Parašyti pranešimas mygtuką pagrindiniame meniu.</string>
-    <string name="label_InstNoMessagesAndroid">Nėra pranešimų. Galite siųsti pranešimą iš komponuoti lape.</string>
     <string name="label_InstNoRecipients">Norėdami pridėti gavėjų, pirmiausia turite diržas raktai su vienu ar daugiau kitų vartotojų tuo pačiu metu. Jūs taip pat gali siųsti Sling Keys adresų kvietimą iš meniu.</string>
     <string name="label_InstNoSharedFile">Nėra bendro failas. Prijunkite savo prietaisą su iTunes ir vilkite failus į bendrai naudojamą aplanką.</string>
     <string name="label_InstRecipients">Pasirinkite gavėją siųsti žinutę:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Automatiškai atsisiųsti laiško priedų, kai prisijungęs</string>
     <string name="label_summary_auto_decrypt">Automatiškai iššifruoti pranešimus, kai prisijungęs</string>
     <string name="label_summary_remind_backup_delay">Gauti pranešimą, kai atsarginę neprisijungęs.</string>
-    <string name="label_summary_show_tutorial">Rodyti pamoka prieš Attemping diržas Keys.</string>
+    <string name="label_summary_show_tutorial">Rodyti pamoka prieš bandant Sling Keys.</string>
     <string name="label_TapToDecryptFile">Bakstelėkite iššifruoti failą</string>
     <string name="label_TapToDecryptMessage">Bakstelėkite iššifruoti</string>
     <string name="label_TapToDownloadFile">Bakstelėkite atsisiųsti failą</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto iššifruoti</string>
     <string name="menu_Change">Pokytis</string>
     <string name="menu_ChangePassphrase">Pakeisti slapta frazė</string>
+    <string name="menu_ContactInviteEmail">Laišką iš \'Adresų knygos</string>
+    <string name="menu_ContactInviteSms">Tekstas iš \'Adresų knygos</string>
     <string name="menu_CreateNew">Sukurti naują</string>
     <string name="menu_delete">Panaikinti</string>
     <string name="menu_deleteThread">Ištrinti Temos %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Pamiršote slaptafrazę?</string>
     <string name="menu_Help">Padėti</string>
     <string name="menu_Introduction">Įvadas</string>
-    <string name="menu_License">Licencija</string>
+    <string name="menu_language">Kalba</string>
+    <string name="menu_link_contact_add">Pridėti Kontaktinė Link</string>
+    <string name="menu_link_contact_change">Keisti adresatų Link</string>
     <string name="menu_Logout">Atsijungti</string>
     <string name="menu_ManagePassphrases">Valdymas Slaptažodžiai</string>
     <string name="menu_message_font_size">Pranešimas Šrifto dydis</string>

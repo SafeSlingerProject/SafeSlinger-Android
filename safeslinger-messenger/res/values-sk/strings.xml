@@ -49,6 +49,7 @@
     <string name="btn_Import">Dovoz</string>
     <string name="btn_Introduce">Zaviesť</string>
     <string name="btn_No">Nie</string>
+    <string name="btn_NotNow">Nie teraz</string>
     <string name="btn_NotRemind">Zabudnúť</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Odmietnuť</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minút</string>
     <string name="choice_8hours">8 hodín</string>
     <string name="choice_auto_storage">Default Storage</string>
+    <string name="choice_default">Štandardné</string>
     <string name="choice_external_storage">Externé úložisko</string>
     <string name="choice_font_large">Veľký</string>
     <string name="choice_font_medium">Stredná</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio chybe dekódovanie prehrávač.</string>
     <string name="error_AudioPlayerError">Nedajú prehrávať záznam.</string>
     <string name="error_AudioRecorderEncodeError">Audio Chyba kódovania rekordér.</string>
+    <string name="error_AudioRecorderPermissionError">Povolenie Mikrofón je nutné nahrať bezpečnú hlasovú správu. Kliknite na tlačidlo Pomocník pre SafeSlinger mikrofón podrobnosti oprávnenie.</string>
     <string name="error_BackupNotFound">Žiadna záloha obnoviť.</string>
     <string name="error_BackupNotSupportedDevice">Zariadenie nepodporuje obnovenie zálohy.</string>
     <string name="error_BadCopyProtectUpgrade">Kvôli chybe v Android 4.1, budete musieť odinštalovať a znovu nainštalovať SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger chyba, reštartujte prosím.</string>
     <string name="error_VcardParseFailure">Kontaktné údaje formátovanie nesprávne.</string>
 
+    <string name="help_find">Na tejto obrazovke môžete nastaviť svoje meno vymieňať s ostatnými, a prístupové heslo pre ochranu vašich dát. Po dokončení kliknite na tlačidlo Hotovo.</string>
     <string name="help_home">Pre výmenu dát identity, zabezpečenie všetci užívatelia sú v blízkosti alebo na telefóne. Tlačidlo Začnite Exchange budú vymieňať iba zaškrtnuté kontaktné údaje.</string>
     <string name="help_identity_menu">Môžete tiež zmeniť osobné údaje týkajúce sa vašej identity na tejto obrazovke kliknutím na tlačidlo s vaším menom. Tým sa zobrazí menu, ktorá vám umožní upraviť svoj ​​kontakt, Vytvoriť nový kontakt, alebo použite iný kontakt.</string>
     <string name="help_Messages">Táto obrazovka zobrazuje všetky minulé správy a prílohy, ktoré sú stále k dispozícii na stiahnutie.</string>
+    <string name="help_passphrase">Na tejto obrazovke pre prihlásenie do aplikácie so svojím prístupovým heslom. Ak ste zabudli svoje prístupové heslo, môžete vygenerovať nový kľúč chránený nové frázy, tým poklepaním na Zabudli ste prístupové heslo? tlačidlo. Kliknite na meno používateľa prepínať medzi viacerými kľúčov.</string>
+    <string name="help_passphrase_change">Pomocou tejto obrazovky zmeniť svoje prístupové heslo zadaním posledného prístupové heslo pre potvrdenie a nové prístupové heslo.</string>
     <string name="help_PickRecip">Tu sú zobrazené kontakty s SafeSlinger kľúčov, vyberte jednu odoslať správu.</string>
     <string name="help_save">Po dokončení, bude protokol odhalí zoznam údajov o totožnosti vymenené. Vyberte kontakty, ktoré chcete uložiť, a stlačte tlačidlo Importovať.</string>
     <string name="help_SecureIntroduction">Táto obrazovka umožňuje vybrať dvoch ľudí, ktoré ste si prehodil kľúče s predtým bezpečne posielať svoje kľúče k sebe. Stačí stlačiť Zaviesť až budete pripravení.</string>
     <string name="help_Send">Táto obrazovka umožňuje vybrať niektoré údaje a príjemcu odoslať. Stačí stlačiť Poslať li pripravený.</string>
+    <string name="help_settings">Táto obrazovka umožňuje zmeniť predvolené nastavenia pre aplikáciu.</string>
 
+    <string name="iOS_contactError">Kontakty sa vyžaduje povolenie pre bezpečné zdieľanie kontaktné karty. Kliknite na tlačidlo Pomocník pre SafeSlinger podrobnosti Kontakty oprávnenie.</string>
     <string name="iOS_errorpushtoken">Registrácia push chýba.</string>
+    <string name="iOS_notificationError1">Oznámenie povolenie buď pre upozornenie alebo bannery a čísla odznakov, sú nutné pre bezpečné spracovanie správ. Kliknite na tlačidlo Pomocník pre SafeSlinger podrobnosti oprávnenie oznámenia.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nie je optimalizovaný pre iOS 5.x zariadení. SafeSlinger vyžaduje iOS 6 alebo vyššej.</string>
+    <string name="iOS_RequestPermissionContacts">Môžete si vybrať svoje kontaktné karty poslať svojich priateľov a SafeSlinger zašifruje ho pre vás. Ak chcete povoliť túto funkciu, musíte povoliť SafeSlinger prístup ku kontaktom, keď spýtal sa.</string>
+    <string name="iOS_RequestPermissionMicrophone">Môžete nahrať hlasovú správu poslať svojich priateľov a SafeSlinger bude šifrovanie pre vás. Ak chcete povoliť túto funkciu, musíte povoliť SafeSlinger prístup k mikrofónu, keď spýtal sa.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger je aplikácia šifrované správy a nemôže fungovať bez toho, aby prichádzajúce správy z oznámenia. Ak chcete povoliť prichádzajúce správy, musíte povoliť SafeSlinger, aby vám poslal oznámenia, keď spýtal sa.</string>
 
     <string name="label_ago">%s pred</string>
     <string name="label_backupCompleteDate">Posledný Zálohovanie dokončené</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">vyprší %s</string>
     <string name="label_expiresIn">vyprší v</string>
     <string name="label_FileNameHint">Meno súboru</string>
-    <string name="label_FindInstruct">Zadajte meno, ktoré chcú ostatní vidieť pri komunikácii bezpečne:</string>
+    <string name="label_FindInstruct">Zadajte svoje meno a prístupové heslo pre ochranu vašich dát:</string>
     <string name="label_FirstName">Meno</string>
     <string name="label_Home">Kliknite na svoje meno pridať alebo odstrániť kontaktné údaje, skontrolujte položky, ktoré chcete zdieľať, a kliknite na tlačidlo Begin Exchange keď ostatné sú pripravené k výmene:</string>
     <string name="label_hometag">Domáce</string>
     <string name="label_hours">%d hodín</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud je povolené. Po dokončení kliknite na tlačidlo Hotovo.</string>
     <string name="label_InstNoMessages">Žiadne správy. Môžete poslať správu pomocou tlačidla Compose Message na hlavné menu.</string>
-    <string name="label_InstNoMessagesAndroid">Žiadne správy. Môžete poslať správu na karte Compose.</string>
     <string name="label_InstNoRecipients">Ak chcete pridať príjemcu, musíte najprv Sling kľúče s jedným alebo viacerými inými užívateľmi súčasne. Môžete tiež poslať Sling Keys kontaktné pozvanie z menu.</string>
     <string name="label_InstNoSharedFile">Žiadny zdieľaný súbor. Pripojte svoje zariadenie s iTunes a pretiahnuť súbory do zdieľaného priečinka.</string>
     <string name="label_InstRecipients">Vyberte príjemcu poslať správu:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Automaticky sťahovať prílohy správ, keď prihlásený</string>
     <string name="label_summary_auto_decrypt">Automaticky dešifrovať správy, ak prihlásený</string>
     <string name="label_summary_remind_backup_delay">Príjem oznámenia, keď záloha je offline.</string>
-    <string name="label_summary_show_tutorial">Zobraziť tutoriál pred attemping k Sling Keys.</string>
+    <string name="label_summary_show_tutorial">Zobraziť tutoriál pred pokusom o Sling Keys.</string>
     <string name="label_TapToDecryptFile">Kliknutím na tlačidlo dešifrovať súbor</string>
     <string name="label_TapToDecryptMessage">Kliknite pre dešifrovanie</string>
     <string name="label_TapToDownloadFile">Kliknutím na tlačidlo stiahnuť súbor</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-dešifrovanie</string>
     <string name="menu_Change">Zmena</string>
     <string name="menu_ChangePassphrase">Zmena Prístupové heslo</string>
+    <string name="menu_ContactInviteEmail">E-mail z kontaktov</string>
+    <string name="menu_ContactInviteSms">Text z Kontaktov</string>
     <string name="menu_CreateNew">Vytvoriť nový</string>
     <string name="menu_delete">Vymazať</string>
     <string name="menu_deleteThread">Zmazať téme %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Zabudli ste prístupové heslo?</string>
     <string name="menu_Help">Pomoc</string>
     <string name="menu_Introduction">Úvod</string>
-    <string name="menu_License">Licencie</string>
+    <string name="menu_language">Jazyk</string>
+    <string name="menu_link_contact_add">Pridať kontakt Link</string>
+    <string name="menu_link_contact_change">Zmeniť kontaktné Link</string>
     <string name="menu_Logout">Odhlásenia</string>
     <string name="menu_ManagePassphrases">Správa frázy</string>
     <string name="menu_message_font_size">Správa Veľkosť písma</string>

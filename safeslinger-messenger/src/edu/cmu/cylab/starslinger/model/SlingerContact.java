@@ -29,22 +29,16 @@ import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 public class SlingerContact {
     public int index;
     public String lookup = null;
-    public String rawid = null;
     public String name = null;
     public byte[] photoBytes = null;
     public int notify = SafeSlingerConfig.NOTIFY_NOPUSH;
     public String pushTok = null;
     public String pubKey = null;
 
-    @Deprecated
-    public String contactId = null;
-
-    public static SlingerContact createContact(String id, String lookup, String rawId, String name,
-            byte[] photo, SlingerIdentity si) {
+    public static SlingerContact createContact(String lookup, String name, byte[] photo,
+            SlingerIdentity si) {
         SlingerContact ct = new SlingerContact();
-        ct.contactId = id;
         ct.lookup = lookup;
-        ct.rawid = rawId;
         ct.name = name;
         ct.photoBytes = photo;
         if (si != null) {

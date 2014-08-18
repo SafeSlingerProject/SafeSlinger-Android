@@ -49,6 +49,7 @@
     <string name="btn_Import">იმპორტი</string>
     <string name="btn_Introduce">დანერგვა</string>
     <string name="btn_No">არარის</string>
+    <string name="btn_NotNow">არ არის</string>
     <string name="btn_NotRemind">დაივიწყეთ</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">უარი</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 წუთი</string>
     <string name="choice_8hours">8 საათი</string>
     <string name="choice_auto_storage">Default შენახვა</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">გარე შენახვის</string>
     <string name="choice_font_large">დიდი</string>
     <string name="choice_font_medium">საშუალო</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">აუდიო დეკოდირების შეცდომა.</string>
     <string name="error_AudioPlayerError">ვერ ითამაშებს ჩაწერა.</string>
     <string name="error_AudioRecorderEncodeError">აუდიო ჩამწერი კოდირების შეცდომა.</string>
+    <string name="error_AudioRecorderPermissionError">მიკროფონი ნებართვა საჭირო ჩაწერას უსაფრთხო ხმის გაგზავნა. Tap დახმარება ღილაკს SafeSlinger მიკროფონი ნებართვა დეტალები.</string>
     <string name="error_BackupNotFound">სარეზერვო აღდგენას.</string>
     <string name="error_BackupNotSupportedDevice">მოწყობილობა მხარს არ უჭერს სარეზერვო აღდგენა.</string>
     <string name="error_BadCopyProtectUpgrade">იმის გამო, რომ შეცდომა Android 4.1, თქვენ უნდა წაშალოთ და გადააყენეთ SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger შეცდომა, გთხოვთ გადატვირთოთ.</string>
     <string name="error_VcardParseFailure">საკონტაქტო მონაცემები ფორმატირებული არასწორად.</string>
 
+    <string name="help_find">გამოიყენეთ ეს ეკრანზე თქვენი სახელი გაცვლა სხვებთან ერთად, და passphrase დაიცვას თქვენი მონაცემები. ლიბერალიზაცია შესრულებულია ღილაკს, როდესაც დასრულდა.</string>
     <string name="help_home">გაცვლა პირადობის მონაცემებით, უზრუნველყონ ყველა მომხმარებლის მიმდებარე ან ტელეფონით. დასაწყისი Exchange ღილაკს გაცვლიან მხოლოდ გადამოწმებული საკონტაქტო მონაცემები.</string>
     <string name="help_identity_menu">თქვენ შესაძლებელია აგრეთვე შეცვალოს პერსონალური მონაცემების შესახებ თქვენი პიროვნება ამ ეკრანზე მიერ მოსმენების ღილაკს თქვენი სახელი. ეს არის მენიუ, რომელიც საშუალებას გაძლევთ რედაქტირება თქვენი საკონტაქტო, შექმნა ახალი კონტაქტის, ან გამოიყენეთ სხვა კონტაქტი.</string>
     <string name="help_Messages">ამ ეკრანზე აჩვენებს ყველა წარსულში შეტყობინებები და attachments, რომ ჯერ კიდევ ხელმისაწვდომია.</string>
+    <string name="help_passphrase">გამოიყენეთ ეს ეკრანზე შესვლაზე განაცხადის თქვენი passphrase. თუ თქვენ დაგავიწყდათ თქვენი passphrase, შეგიძლიათ გენერირება ახალი გასაღები დაცულია new passphrase მიერ მოსმენების პაროლი passphrase? ღილაკს. Tap მომხმარებლის სახელი გადაერთოთ სხვადასხვა ღილაკები.</string>
+    <string name="help_passphrase_change">გამოიყენეთ ეს ეკრანზე შეცვალოს თქვენი passphrase შესვლის შენი უკანასკნელი passphrase დადასტურებას და ახალი passphrase.</string>
     <string name="help_PickRecip">კონტაქტები SafeSlinger გასაღებები ნაჩვენები აქ, აირჩიეთ გამოაგზავნოთ თქვენი გზავნილი.</string>
     <string name="help_save">როდესაც დაასრულა, ოქმის გამოავლენს სია პირადობის მონაცემები გაცვალეს. აირჩიეთ კონტაქტები გსურთ შეინახოთ და დააჭირეთ იმპორტი.</string>
     <string name="help_SecureIntroduction">ეს ეკრანი საშუალებას გაძლევთ აირჩიოთ ორი ადამიანი თქვენ არ slung გასაღებები სანამ უსაფრთხოდ გააგზავნოთ მათი გასაღებები ერთმანეთს. უბრალოდ დააჭირეთ დანერგვა, როდესაც მზად.</string>
     <string name="help_Send">ეს ეკრანი საშუალებას გაძლევთ აირჩიოთ გარკვეული მონაცემები და მიმღები უგზავნიდნენ. უბრალოდ დააჭირეთ პირადი როდესაც მზად.</string>
+    <string name="help_settings">ეს ეკრანი საშუალებას გაძლევთ შეცვლის პარამეტრების გამოყენება.</string>
 
+    <string name="iOS_contactError">კონტაქტი ნებართვა საჭირო უსაფრთხოდ გაზიარება საკონტაქტო ბარათები. Tap დახმარება ღილაკს SafeSlinger კონტაქტი ნებართვა დეტალები.</string>
     <string name="iOS_errorpushtoken">Push რეგისტრაციის დაკარგული.</string>
+    <string name="iOS_notificationError1">Notification ნებართვა ან ელექტორინული ან ბანერები და სამკერდე ციფრები, აუცილებელია უსაფრთხო შეტყობინებები. Tap დახმარება ღილაკს SafeSlinger შეტყობინება ნებართვა დეტალები.</string>
     <string name="iOS_oldOSWarn">SafeSlinger არ არის ოპტიმიზირებულია iOS 5.x მოწყობილობების. SafeSlinger მოითხოვს iOS 6 ან უფრო მაღალი.</string>
+    <string name="iOS_RequestPermissionContacts">თქვენ შეგიძლიათ აირჩიოთ თქვენი საკონტაქტო ანკეტა გამოაგზავნოთ თქვენი მეგობრები და SafeSlinger გაშიფრავს იგი თქვენთვის. იმისათვის, რომ ჩავრთოთ ამ ფუნქციის, თქვენ უნდა დაუშვას SafeSlinger თქვენი კონტაქტები, როდესაც სთხოვეს.</string>
+    <string name="iOS_RequestPermissionMicrophone">თქვენ შეგიძლიათ ჩაწეროთ ხმა გაგზავნა გამოაგზავნოთ თქვენი მეგობრები და SafeSlinger გაშიფრავს იგი თქვენთვის. იმისათვის, რომ ჩავრთოთ ამ ფუნქციის, თქვენ უნდა დაუშვას SafeSlinger თქვენი მიკროფონის როდესაც სთხოვეს.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger არის დაშიფრული შეტყობინებები განცხადება და ვერ იფუნქციონირებს გარეშე საშუალებითაც შემომავალი შეტყობინებები შეტყობინებები. იმისათვის, რომ ჩავრთოთ შემომავალი შეტყობინებები, თქვენ უნდა დაუშვას SafeSlinger გამოგიგზავნოთ შეტყობინებები როდესაც სთხოვეს.</string>
 
     <string name="label_ago">%s წინ</string>
     <string name="label_backupCompleteDate">ბოლო Backup დასრულებულია</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">იწურება %s</string>
     <string name="label_expiresIn">იწურება</string>
     <string name="label_FileNameHint">ფაილის სახელი</string>
-    <string name="label_FindInstruct">შეიყვანეთ სახელი გსურთ სხვები, როდესაც ურთიერთობისას უსაფრთხოდ:</string>
+    <string name="label_FindInstruct">შეიყვანეთ თქვენი სახელი და passphrase დაიცვას თქვენი მონაცემები:</string>
     <string name="label_FirstName">სახელი</string>
     <string name="label_Home">Tap თქვენი სახელი დამატება ან წაშლა საკონტაქტო მონაცემები, გადაამოწმოთ ელემენტი გსურთ გაუზიაროს, და ლიბერალიზაცია დასაწყისი გაცვლა როცა სხვები მზად ვართ გაცვლა:</string>
     <string name="label_hometag">მთავარი</string>
     <string name="label_hours">%d საათი</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ჩართულია. ლიბერალიზაცია შესრულებულია ღილაკს, როდესაც დასრულდა.</string>
     <string name="label_InstNoMessages">შეტყობინებები. თქვენ შეგიძლიათ გააგზავნოთ გზავნილი შექმნის შეტყობინება ღილაკს საწყისი მენიუ.</string>
-    <string name="label_InstNoMessagesAndroid">შეტყობინებები. თქვენ შეგიძლიათ გააგზავნოთ გზავნილი შექმნის tab.</string>
     <string name="label_InstNoRecipients">მიმღებთა დასამატებლად, თქვენ უნდა პირველი Sling Keys ერთი ან მეტი სხვა მომხმარებლის ამავე დროს. თქვენ შეიძლება ასევეSling Keys საკონტაქტო მიწვევით მენიუდან.</string>
     <string name="label_InstNoSharedFile">არ გაიზიარა ფაილი. შეაერთეთ თქვენი მოწყობილობის iTunes და გადაათრიეთ ფაილი გაზიარებული საქაღალდე.</string>
     <string name="label_InstRecipients">აირჩიეთ მიმღები გაუგზავნოთ შეტყობინება:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">ავტომატურად ჩამოტვირთოთ გაგზავნა attachments როდესაც ხართ შემოსული</string>
     <string name="label_summary_auto_decrypt">ავტომატურად დაშიფვრა შეტყობინებები როდესაც ხართ შემოსული</string>
     <string name="label_summary_remind_backup_delay">მიიღებთ შეტყობინებას როდესაც სარეზერვო გასულია.</string>
-    <string name="label_summary_show_tutorial">ჩვენება სამეურვეო ადრე attemping to Sling Keys.</string>
+    <string name="label_summary_show_tutorial">ნახოთ tutorial ადრე ცდილობს Sling Keys.</string>
     <string name="label_TapToDecryptFile">Tap გაშიფვრა ფაილი</string>
     <string name="label_TapToDecryptMessage">Tap გაშიფვრა</string>
     <string name="label_TapToDownloadFile">Tap ჩამოტვირთოთ ფაილი</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-გაშიფვრა</string>
     <string name="menu_Change">ცვლილება</string>
     <string name="menu_ChangePassphrase">შეცვლა passphrase</string>
+    <string name="menu_ContactInviteEmail">ელ კონტაქტი</string>
+    <string name="menu_ContactInviteSms">ტექსტის კონტაქტი</string>
     <string name="menu_CreateNew">შექმნა ახალი</string>
     <string name="menu_delete">წაშალე</string>
     <string name="menu_deleteThread">წაშალე თემა %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">პაროლი passphrase?</string>
     <string name="menu_Help">დახმარება</string>
     <string name="menu_Introduction">შესავალი</string>
-    <string name="menu_License">ლიცენზია</string>
+    <string name="menu_language">ენა</string>
+    <string name="menu_link_contact_add">სანიშნეს Contact ლინკები</string>
+    <string name="menu_link_contact_change">შეცვალეთ Contact ლინკები</string>
     <string name="menu_Logout">გასვლა</string>
     <string name="menu_ManagePassphrases">მართვა Passphrases</string>
     <string name="menu_message_font_size">შეტყობინება ფონტის ზომა</string>

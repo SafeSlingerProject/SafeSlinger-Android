@@ -49,6 +49,7 @@
     <string name="btn_Import">استيراد</string>
     <string name="btn_Introduce">أعرض</string>
     <string name="btn_No">لا</string>
+    <string name="btn_NotNow">لا الآن</string>
     <string name="btn_NotRemind">ننسى</string>
     <string name="btn_OK">حسنا</string>
     <string name="btn_Refuse">رفض</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 دقائق</string>
     <string name="choice_8hours">8 ساعات</string>
     <string name="choice_auto_storage">التخزين الافتراضي</string>
+    <string name="choice_default">الافتراضي</string>
     <string name="choice_external_storage">التخزين الخارجية</string>
     <string name="choice_font_large">كبير</string>
     <string name="choice_font_medium">متوسط</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">الصوت الخطأ فك لاعب.</string>
     <string name="error_AudioPlayerError">لا يمكن ان تلعب التسجيل.</string>
     <string name="error_AudioRecorderEncodeError">الصوت خطأ ترميز مسجل.</string>
+    <string name="error_AudioRecorderPermissionError">مطلوب إذن ميكروفون لتسجيل رسالة صوتية آمنة. اضغط على زر مساعدة لSafeSlinger ميكروفون التفاصيل إذن.</string>
     <string name="error_BackupNotFound">لم النسخ الاحتياطي لاستعادة.</string>
     <string name="error_BackupNotSupportedDevice">الجهاز لا يدعم استعادة النسخ الاحتياطي.</string>
     <string name="error_BadCopyProtectUpgrade">بسبب وجود خطأ في الروبوت 4.1 ، سيكون لديك لإلغاء وإعادة SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">الخطأ SafeSlinger ، يرجى إعادة تشغيل.</string>
     <string name="error_VcardParseFailure">تم تنسيقها جهة الاتصال بشكل غير صحيح.</string>
 
+    <string name="help_find">استخدام هذه الشاشة لتحديد اسم لتبادل مع الآخرين، وعبارة مرور لحماية البيانات الخاصة بك. اضغط على الزر تم عند الانتهاء.</string>
     <string name="help_home">لتبادل البيانات الهوية ، وضمان جميع المستخدمين في مكان قريب أو على الهاتف. سوف تبدأ صرف زر تبادل البيانات فقط الاتصال فحصها.</string>
     <string name="help_identity_menu">غير متوافر غير متوافر يمكنك أيضا تغيير البيانات الشخصية حول الهوية الخاصة بك على هذه الشاشة من خلال النقر على زر مع اسمك. وهذا عرض قائمة مما يسمح لك ل تحرير الاتصال الخاصة بك ، وخلق اسم جديد ، أو استخدام اتصال آخر.</string>
     <string name="help_Messages">يعرض هذه الشاشة كل الرسائل الماضية، و المرفقات التي لا تزال متاحة للتنزيل.</string>
+    <string name="help_passphrase">استخدام هذه الشاشة لتسجيل الدخول إلى التطبيق مع عبارة المرور. إذا كنت قد نسيت عبارة المرور الخاصة بك، يمكنك إنشاء مفتاح جديد تحميها عبارة مرور جديدة من خلال الاستفادة من عبارة المرور نسيت؟ الزر. اضغط على اسم مستخدم التبديل بين المفاتيح متعددة.</string>
+    <string name="help_passphrase_change">استخدام هذه الشاشة لتغيير عبارة المرور الخاصة بك عن طريق إدخال عبارة المرور الخاصة بك الماضي لتأكيد ومرور جديدة.</string>
     <string name="help_PickRecip">يتم عرض الاتصالات مع مفاتيح SafeSlinger هنا ، حدد واحد لإرسال رسالة ل.</string>
     <string name="help_save">عند الانتهاء ، سوف تكشف عن وجود بروتوكول قائمة بيانات الهوية تبادلها. حدد جهات الاتصال التي ترغب في حفظ واضغط استيراد.</string>
     <string name="help_SecureIntroduction">هذه الشاشة تسمح لك لاختيار شخصين لديك مفاتيح مع متدلي قبل أن ترسل بشكل آمن المفاتيح الخاصة بهم إلى بعضها البعض. ببساطة اضغط أعرض عندما تصبح جاهزة.</string>
     <string name="help_Send">هذه الشاشة تسمح لك لاختيار بعض البيانات و مستلم لإرسالها إلى. ببساطة اضغط إرسال عندما تصبح جاهزة.</string>
+    <string name="help_settings">هذه الشاشة تسمح لك بتغيير الإعدادات الافتراضية للتطبيق.</string>
 
+    <string name="iOS_contactError">مطلوب إذن اتصالات لتبادل بطاقات اتصال آمن. اضغط على زر مساعدة لSafeSlinger التفاصيل اتصالات إذن.</string>
     <string name="iOS_errorpushtoken">تسجيل دفع مفقود.</string>
+    <string name="iOS_notificationError1">إذن الإخطار إما التنبيهات أو لافتات، وأرقام شارة، مطلوبة من أجل المراسلة الآمنة. اضغط على زر مساعدة لSafeSlinger التفاصيل إذن إعلام.</string>
     <string name="iOS_oldOSWarn">لم يتم تحسين SafeSlinger لأجهزة دائرة الرقابة الداخلية 5.X. يتطلب دائرة الرقابة الداخلية SafeSlinger 6 أو أعلى.</string>
+    <string name="iOS_RequestPermissionContacts">يمكنك اختيار بطاقة الاتصال الخاصة بك لإرسال أصدقائك وسوف SafeSlinger تشفيرها لك. لتمكين هذه الميزة، يجب السماح بالوصول SafeSlinger إلى جهات الاتصال الخاصة بك عندما سئل.</string>
+    <string name="iOS_RequestPermissionMicrophone">يمكنك تسجيل رسالة صوتية لإرسال أصدقائك وسوف SafeSlinger تشفيرها لك. لتمكين هذه الميزة، يجب السماح بالوصول إلى SafeSlinger الميكروفون الخاص بك عندما طلب منها ذلك.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger هو تطبيق الرسائل المشفرة ولا يمكن أن تعمل دون السماح الرسائل الواردة من الإخطارات. لتمكين الرسائل الواردة، يجب السماح SafeSlinger لنرسل لك الإخطارات عندما سئل.</string>
 
     <string name="label_ago">منذ %s</string>
     <string name="label_backupCompleteDate">النسخ الاحتياطي المكتملة مشاركة</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">تنتهي %s</string>
     <string name="label_expiresIn">تنتهي في</string>
     <string name="label_FileNameHint">اسم الملف</string>
-    <string name="label_FindInstruct">أدخل الاسم الذي ترغب أن ترى الآخرين عند الاتصال بشكل آمن:</string>
+    <string name="label_FindInstruct">أدخل اسمك وعبارة مرور لحماية البيانات الخاصة بك:</string>
     <string name="label_FirstName">الاسم الأول</string>
     <string name="label_Home">الاستفادة اسمك لإضافة أو إزالة بيانات الاتصال ، والتحقق من العناصر التي ترغب في المشاركة ، والاستفادة بيغن Exchange عند البعض الآخر على استعداد ل تبادل:</string>
     <string name="label_hometag">منزل</string>
     <string name="label_hours">%d ساعة</string>
     <string name="label_iCloudEnable">يتم تمكين SafeSlinger iCloud. اضغط على الزر تم عند الانتهاء.</string>
     <string name="label_InstNoMessages">لا توجد رسائل. قد قمت بإرسال رسالة من الزر يؤلف رسالة في القائمة الرئيسية.</string>
-    <string name="label_InstNoMessagesAndroid">لا توجد رسائل. يمكنك إرسال رسالة من علامة التبويب إنشاء.</string>
     <string name="label_InstNoRecipients">لإضافة مستلمين ، يجب عليك أولا الرافعة مفاتيح مع واحد أو أكثر من المستخدمين الآخرين في نفس الوقت. يمكنك أيضا إرسال دعوة الاتصال الرافعة مفاتيح من القائمة.</string>
     <string name="label_InstNoSharedFile">الملف لم المشتركة. توصيل الجهاز مع اي تيونز والملفات اسحب إلى مجلد مشترك.</string>
     <string name="label_InstRecipients">اختيار مستلم لإرسال رسالة إلى:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">تحميل مرفقات الرسائل تلقائيا عند تسجيل الدخول.</string>
     <string name="label_summary_auto_decrypt">فك تشفير الرسائل تلقائيا عند تسجيل الدخول.</string>
     <string name="label_summary_remind_backup_delay">تلقي إعلام عندما احتياطية غير متواجد حاليا.</string>
-    <string name="label_summary_show_tutorial">عرض تعليمي قبل attemping إلى الرافعة كيز.</string>
+    <string name="label_summary_show_tutorial">عرض تعليمي قبل محاولة الرافعة كيز.</string>
     <string name="label_TapToDecryptFile">اضغط على فك تشفير الملف</string>
     <string name="label_TapToDecryptMessage">اضغط على فك تشفير</string>
     <string name="label_TapToDownloadFile">اضغط لتحميل الملف</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">لصناعة السيارات في فك تشفير</string>
     <string name="menu_Change">تغيير</string>
     <string name="menu_ChangePassphrase">تغيير عبارة المرور</string>
+    <string name="menu_ContactInviteEmail">البريد الإلكتروني من اتصالات</string>
+    <string name="menu_ContactInviteSms">النص من اتصالات</string>
     <string name="menu_CreateNew">خلق جديد</string>
     <string name="menu_delete">حذف</string>
     <string name="menu_deleteThread">حذف %s الموضوع</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">نسيت عبارة المرور ؟</string>
     <string name="menu_Help">مساعدة</string>
     <string name="menu_Introduction">مقدمة</string>
-    <string name="menu_License">ترخيص</string>
+    <string name="menu_language">لغة</string>
+    <string name="menu_link_contact_add">إضافة رابط الاتصال</string>
+    <string name="menu_link_contact_change">تغيير رابط الاتصال</string>
     <string name="menu_Logout">تسجيل الخروج</string>
     <string name="menu_ManagePassphrases">إدارة عبارتا المرور</string>
     <string name="menu_message_font_size">رسالة حجم الخط</string>

@@ -49,6 +49,7 @@
     <string name="btn_Import">Impor</string>
     <string name="btn_Introduce">Introduce</string>
     <string name="btn_No">Ana</string>
+    <string name="btn_NotNow">Ora Saiki</string>
     <string name="btn_NotRemind">Lali</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Nolak</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 menit</string>
     <string name="choice_8hours">8 jam</string>
     <string name="choice_auto_storage">Default Panyimpenan</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">Jaba Panyimpenan</string>
     <string name="choice_font_large">Gedhe</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio pamuter dekoding kesalahan.</string>
     <string name="error_AudioPlayerError">Ora bisa muter ngrekam.</string>
     <string name="error_AudioRecorderEncodeError">Audio recorder enkoding kesalahan.</string>
+    <string name="error_AudioRecorderPermissionError">Ijin mikropon dibutuhake kanggo ngrekam aman pesen swara. Tunyuk tombol sing Bantuan kanggo SafeSlinger Mikropon ijin gamblang.</string>
     <string name="error_BackupNotFound">Ora serep sing arep dipulihake.</string>
     <string name="error_BackupNotSupportedDevice">Piranti Panjenengan ora ndhukung serep dipulihake.</string>
     <string name="error_BadCopyProtectUpgrade">Amarga bug ing Android 4.1, sampeyan bakal kudu instal lan reinstall SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger kesalahan, mangga miwiti.</string>
     <string name="error_VcardParseFailure">Kontak data iki format salah.</string>
 
+    <string name="help_find">Gunakake layar iki kanggo nyetel jeneng ijolan karo wong liya, lan frasa sandhi kanggo nglindhungi data. Tunyuk tombol sing Rampung nalika rampung.</string>
     <string name="help_home">Ijolan identitas data, njamin kabeh kedhaftar ana toko utawa ing telpon. Tombol Begin Exchange ora ijolan namung data kontak dicenthang.</string>
     <string name="help_identity_menu">Sampeyan uga ngganti data pribadhi babagan ciri ing layar iki kanthi nutul tombol karo jeneng. Iki bakal nampilake menu ngijini sampeyan kanggo Sunting kontak, Gawe kontak Anyar, utawa Gunakake kontak liyane.</string>
     <string name="help_Messages">Layar iki nampilake pesen-pesen kabeh kepungkur, lan lampiran sing isih kasedhiya kanggo download.</string>
+    <string name="help_passphrase">Nggunakake layar iki kanggo mlebet aplikasi nganggo frasa sandhi. Yen sampeyan wis lali Panjenengan frasa sandhi, sampeyan bisa nguripake tombol anyar dilindhungi dening frasa sandhi anyar kanthi nunyuk frasa sandhi Lali? tombol. Tutul jeneng panganggo kanggo ngalih ing antarane sawetara tombol.</string>
+    <string name="help_passphrase_change">Nggunakake layar iki kanggo ngganti frasa sandhi kanthi ngetik terakhir frasa sandhi kanggo konfirmasi lan frasa sandhi anyar.</string>
     <string name="help_PickRecip">Kontak karo SafeSlinger tombol ditampilake kene, pilih salah siji kanggo ngirim pesen panjenengan kanggo.</string>
     <string name="help_save">Yen wis rampung, protokol bakal mbukak dhaptar data identitas diijolke. Milih kontak sing pengin irit banjur pencet Impor.</string>
     <string name="help_SecureIntroduction">Layar iki ngidini sampeyan pilih wong loro sing wis slung tombol karo sadurunge kanggo aman ngirim tombol kanggo saben liyane. Mung pencet introduce nalika siap.</string>
     <string name="help_Send">Layar iki ngidini sampeyan pilih sawetara data lan panampa kanggo ngirim. Mung pencet Kirimi nalika siap.</string>
+    <string name="help_settings">Layar iki ngidini sampeyan kanggo ngganti setelan gawan kanggo aplikasi.</string>
 
+    <string name="iOS_contactError">Ijin kontak dibutuhake kanggo aman nuduhake SIM kontak. Tunyuk tombol sing Bantuan kanggo SafeSlinger ijin Kontak gamblang.</string>
     <string name="iOS_errorpushtoken">Push gratis wis ilang.</string>
+    <string name="iOS_notificationError1">Ijin kabar kanggo salah siji tandha utawa gendero, lan nomer emblem, sing dibutuhaké kanggo olahpesen aman. Tunyuk tombol sing Bantuan kanggo SafeSlinger ijin Notifikasi gamblang.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ora optimized kanggo iOS 5.x piranti. SafeSlinger mbutuhake iOS 6 utawa luwih dhuwur.</string>
+    <string name="iOS_RequestPermissionContacts">Sampeyan bisa milih kontak kertu kanggo ngirim kanca lan SafeSlinger bakal encrypt kanggo sampeyan. Ngaktifake fitur iki, sampeyan kudu ngidini SafeSlinger akses menyang Kontak nalika takon.</string>
+    <string name="iOS_RequestPermissionMicrophone">Sampeyan bisa ngrekam pesen swara kanggo ngirim kanca lan SafeSlinger bakal encrypt kanggo sampeyan. Ngaktifake fitur iki, sampeyan kudu ngidini SafeSlinger akses menyang Mikropon nalika takon.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger penerbitan ndhelik aplikasi olahpesen lan ora bisa dienggo tanpa saéngga pesen mlebu saka Kabar. Ngaktifake pesen mlebu, sampeyan kudu ngidini SafeSlinger kanggo ngirim Notifikasi nalika takon.</string>
 
     <string name="label_ago">%s ago</string>
     <string name="label_backupCompleteDate">Paling Gawe serep rampung</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">kadaluwarsa %s</string>
     <string name="label_expiresIn">kadaluwarsa ing</string>
     <string name="label_FileNameHint">Gambar Jeneng</string>
-    <string name="label_FindInstruct">Ketik jeneng sing pengin liyane kanggo ndeleng nalika sesambungan aman:</string>
+    <string name="label_FindInstruct">Ketik jeneng lan frasa sandhi kanggo nglindhungi data:</string>
     <string name="label_FirstName">Jeneng pisanan</string>
     <string name="label_Home">Tunyuk jeneng kanggo nambah utawa mbusak data kontak, priksa item sing pengin enggo bareng, banjur tutul Begin Exchange nalika wong sing siap ngganti:</string>
     <string name="label_hometag">Ngarep</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud wis aktif. Tunyuk tombol sing Rampung nalika rampung.</string>
     <string name="label_InstNoMessages">Ana pesen. Sampeyan bisa ngirim pesen saka tombol Tulis Pesen ing menu Ngarep.</string>
-    <string name="label_InstNoMessagesAndroid">Ana pesen. Sampeyan bisa ngirim pesen saka tab Tulis.</string>
     <string name="label_InstNoRecipients">Kanggo nambah panampa, sampeyan kudu pisanan Sling Keys karo siji utawa luwih kedhaftar liyane ing wektu sing padha. Sampeyan uga ngirim Sling Keys kontak undhangan saka menu.</string>
     <string name="label_InstNoSharedFile">Berkas ora dienggo bareng. Sambungake piranti karo iTunes banjur seret file menyang folder dienggo bareng.</string>
     <string name="label_InstRecipients">Category panampa kanggo ngirim pesen menyang:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Kanthi otomatis download lampiran pesen nalika mlebu dipanggoni</string>
     <string name="label_summary_auto_decrypt">Decrypt otomatis pesen nalika mlebu dipanggoni</string>
     <string name="label_summary_remind_backup_delay">Nampa kabar nalika serep offline.</string>
-    <string name="label_summary_show_tutorial">Nuduhake tutorial sadurunge attemping kanggo Sling Keys.</string>
+    <string name="label_summary_show_tutorial">Nuduhake tutorial sadurunge nyoba kanggo Sling Keys.</string>
     <string name="label_TapToDecryptFile">Tunyuk kanggo decrypt berkas</string>
     <string name="label_TapToDecryptMessage">Tunyuk kanggo decrypt</string>
     <string name="label_TapToDownloadFile">Tunyuk kanggo ngundhuh file</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Otomatis decrypt</string>
     <string name="menu_Change">Ganti</string>
     <string name="menu_ChangePassphrase">Ganti frasa sandhi</string>
+    <string name="menu_ContactInviteEmail">Email saka Kontak</string>
+    <string name="menu_ContactInviteSms">Teks saka Kontak</string>
     <string name="menu_CreateNew">Gawe anyar</string>
     <string name="menu_delete">Busak</string>
     <string name="menu_deleteThread">Busak Utas %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Lali frasa sandhi?</string>
     <string name="menu_Help">Bantuan</string>
     <string name="menu_Introduction">Pambuka</string>
-    <string name="menu_License">Lisènsi</string>
+    <string name="menu_language">Basa</string>
+    <string name="menu_link_contact_add">Tambah Kontak Link</string>
+    <string name="menu_link_contact_change">Ngganti Kontak Link</string>
     <string name="menu_Logout">Heinz</string>
     <string name="menu_ManagePassphrases">Ngatur Passphrases</string>
     <string name="menu_message_font_size">Pesen Font Ukuran</string>

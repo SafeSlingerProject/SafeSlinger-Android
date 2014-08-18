@@ -30,7 +30,6 @@ public class RecipientData {
     protected String mMyKeyId;
     protected long mExchDate;
     protected String mContactLu;
-    protected String mRawId;
     protected String mName;
     protected byte[] mPhoto;
     protected String mKeyId;
@@ -50,6 +49,8 @@ public class RecipientData {
 
     @Deprecated
     protected String mContactId;
+    @Deprecated
+    protected String mRawContactId;
 
     public RecipientData() {
         super();
@@ -78,8 +79,9 @@ public class RecipientData {
         return mContactLu;
     }
 
-    public String getRawid() {
-        return mRawId;
+    @Deprecated
+    public String getRawContactid() {
+        return mRawContactId;
     }
 
     public String getName() {
@@ -169,8 +171,9 @@ public class RecipientData {
         mContactLu = value;
     }
 
-    public void setRawid(String value) {
-        mRawId = value;
+    @Deprecated
+    public void setRawContactid(String value) {
+        mRawContactId = value;
     }
 
     public void setName(String value) {

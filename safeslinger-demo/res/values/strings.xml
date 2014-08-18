@@ -25,41 +25,45 @@
 
 <resources>
 
-    <!-- demo; Demo app name. -->
-    <string name="demo_app_name" translatable="false">SafeSlinger Exchange Demo</string>
-    <!-- demo; Button text to start exchange. -->
-    <string name="demo_button_begin_exchange" translatable="false">Begin Exchange</string>
-    <!-- demo; Button text to enable NFC. -->
-    <string name="demo_button_nfc_off" translatable="false">NFC OFF</string>
-    <!-- demo; Button text to disable NFC. -->
-    <string name="demo_button_nfc_on" translatable="false">NFC ON</string>
-    <!-- demo; Hint for hostname field. -->
-    <string name="demo_hostname_hint" translatable="false">i.e. myappengine.appspot.com</string>
-    <!-- demo; Title of hostname field. -->
-    <string name="demo_hostname_title" translatable="false">Server Host Name</string>
-    <!-- demo; Instructions for use. -->
-    <string name="demo_instruct" translatable="false">DEMO:\nYou may build and run your own server, OR use ours: slinger-demo.appspot.com. A host name and a secret are required.</string>
-    <!-- demo; Menu text to configure NFC settings. -->
-    <string name="demo_menu_nfc_settings" translatable="false">NFC Settings</string>
-    <!-- demo; Reminder text that this is a demo app-only. iOS-only. -->
-    <string name="demo_note" translatable="false">NOTE: This is a simple demo using the SafeSlinger Exchange library for software developers. If you want to experience a full implementation of the exchange, try the SafeSlinger Messenger app on https://itunes.apple.com/tw/app/safeslinger/id493529867?mt=8. Full source code is available on http://github.com/safeslingerproject.</string>
-    <!-- demo; Reminder text that this is a demo app-only. Android-only. -->
-    <string name="demo_note_Android" translatable="false">NOTE: This is a simple demo using the SafeSlinger Exchange library for software developers. If you want to experience a full implementation of the exchange, try the SafeSlinger Messenger app on <a href="market://details?id=edu.cmu.cylab.starslinger">Google Play</a>. Full source code is available on <a href="http://github.com/safeslingerproject">GitHub</a>.</string>
-    <!-- demo; Results failure text. -->
-    <string name="demo_result_canceled" translatable="false">Canceled</string>
-    <!-- demo; Results unknown text. -->
-    <string name="demo_result_indeterminate" translatable="false">Indeterminate</string>
-    <!-- demo; Results my secret data text. -->
-    <string name="demo_result_mine" translatable="false">secret %d (mine): %s</string>
-    <!-- demo; Results success text. -->
-    <string name="demo_result_success" translatable="false">Success</string>
-    <!-- demo; Results other members secret data text. -->
-    <string name="demo_result_theirs" translatable="false">secret %d (theirs): %s</string>
-    <!-- demo; Results title. -->
-    <string name="demo_results" translatable="false">Results</string>
-    <!-- demo; Hint for secret data field. -->
-    <string name="demo_secret_hint" translatable="false">i.e. key, password, anything</string>
-    <!-- demo; Title of secret data field. -->
-    <string name="demo_secret_title" translatable="false">My Secret</string>
+    <!-- dev; developer tool app name, long. -->
+    <string name="dev_app_name_long" translatable="false">SafeSlinger Exchange for Security Developers</string>
+    <!-- dev; developer tool app name, short. -->
+    <string name="dev_app_name_short" translatable="false">SafeSlinger for Developers</string>
+    <!-- dev; Button OK. -->
+    <string name="dev_btn_OK" translatable="false">OK</string>
+    <!-- dev; Button text to start exchange. -->
+    <string name="dev_button_begin_exchange" translatable="false">Begin Exchange</string>
+    <!-- dev; Button text to enable NFC. -->
+    <string name="dev_button_nfc_off" translatable="false">NFC OFF</string>
+    <!-- dev; Button text to disable NFC. -->
+    <string name="dev_button_nfc_on" translatable="false">NFC ON</string>
+    <!-- dev; Hint for hostname field. -->
+    <string name="dev_hostname_hint" translatable="false">i.e. myappengine.appspot.com</string>
+    <!-- dev; Title of hostname field. -->
+    <string name="dev_hostname_title" translatable="false">Server Host Name</string>
+    <!-- dev; Instructions for use. -->
+    <string name="dev_instruct" translatable="false">USAGE:\nYou may build and run your own server, OR use ours: slinger-demo.appspot.com. A host name and a secret are required.</string>
+    <!-- dev; Menu text to configure NFC settings. -->
+    <string name="dev_menu_nfc_settings" translatable="false">NFC Settings</string>
+    <!-- dev; Reminder text that this is a developer tool app-only. iOS-only. -->
+    <string name="dev_note" translatable="false">SafeSlinger Exchange for Security Developers allows you to use the SafeSlinger Exchange open-source library to easily exchange any secret data confidentially and authenticated. For end-to-end encryption using the library, use the SafeSlinger Messenger app on https://itunes.apple.com/tw/app/safeslinger/id493529867?mt=8. Full source code is available on http://github.com/safeslingerproject.</string>
+    <!-- dev; Reminder text that this is a developer tool app-only. Android-only. -->
+    <string name="dev_note_Android" translatable="false">SafeSlinger Exchange for Security Developers allows you to use the SafeSlinger Exchange open-source library to easily exchange any secret data confidentially and authenticated. For end-to-end encryption using the library, use the SafeSlinger Messenger app on <a href="market://details?id=edu.cmu.cylab.starslinger">Google Play</a>. Full source code is available on <a href="http://github.com/safeslingerproject">GitHub</a>.</string>
+    <!-- dev; Results failure text. -->
+    <string name="dev_result_canceled" translatable="false">Canceled</string>
+    <!-- dev; Results unknown text. -->
+    <string name="dev_result_indeterminate" translatable="false">Indeterminate</string>
+    <!-- dev; Results my secret data text. -->
+    <string name="dev_result_mine" translatable="false">secret %d (mine): %s</string>
+    <!-- dev; Results success text. -->
+    <string name="dev_result_success" translatable="false">Success</string>
+    <!-- dev; Results other members secret data text. -->
+    <string name="dev_result_theirs" translatable="false">secret %d (theirs): %s</string>
+    <!-- dev; Results title. -->
+    <string name="dev_results" translatable="false">Results</string>
+    <!-- dev; Hint for secret data field. -->
+    <string name="dev_secret_hint" translatable="false">i.e. key, password, anything</string>
+    <!-- dev; Title of secret data field. -->
+    <string name="dev_secret_title" translatable="false">My Secret</string>
 
 </resources>

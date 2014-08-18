@@ -49,6 +49,7 @@
     <string name="btn_Import">Ithalat</string>
     <string name="btn_Introduce">Tanıtmak</string>
     <string name="btn_No">Hayır</string>
+    <string name="btn_NotNow">Şimdi değil</string>
     <string name="btn_NotRemind">Unutmak</string>
     <string name="btn_OK">tamam</string>
     <string name="btn_Refuse">Çöp</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 dakika</string>
     <string name="choice_8hours">8 saat</string>
     <string name="choice_auto_storage">Default Storage</string>
+    <string name="choice_default">Standart</string>
     <string name="choice_external_storage">Harici Depolama</string>
     <string name="choice_font_large">Büyük</string>
     <string name="choice_font_medium">Orta</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Ses çalar çözme hatası.</string>
     <string name="error_AudioPlayerError">Kaydı çalamıyor.</string>
     <string name="error_AudioRecorderEncodeError">Ses kaydedici kodlama hatası.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofon izni güvenli bir sesli mesaj kaydetmek için gereklidir. SafeSlinger Mikrofon izni ayrıntılar için Yardım düğmesine dokunun.</string>
     <string name="error_BackupNotFound">Geri yüklemek için herhangi bir yedek.</string>
     <string name="error_BackupNotSupportedDevice">Cihaz yedekleme geri desteklemiyor.</string>
     <string name="error_BadCopyProtectUpgrade">Nedeniyle Android 4.1 bir hata nedeniyle, SafeSlinger kaldırmak ve yeniden yüklemeniz gerekir.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger hata, yeniden başlatın lütfen.</string>
     <string name="error_VcardParseFailure">İletişim bilgileri hatalı biçimlendirilmiş.</string>
 
+    <string name="help_find">Verilerinizi korumak için başkaları ve bir parola ile alışverişi için adını ayarlamak için bu ekranı kullanın. Bittiğinde Bitti düğmesine dokunun.</string>
     <string name="help_home">Kimlik veri alışverişi için tüm kullanıcıların yakın yatelefonda sağlamak. Başlamadan Borsası düğmesi yalnızcaişaretli temas veri alışverişi olacaktır.</string>
     <string name="help_identity_menu">Ayrıca adı iledüğmeye dokunarak ekranda kimliğinizle ilgili kişisel veriler değişebilir. Bu, sizin Kişiyi düzenleyin sağlayan bir menü görüntülemek Yeni kartvizit oluşturma, ya da başka bir temas kullanın olacaktır.</string>
     <string name="help_Messages">Bu ekran tüm geçmiş iletileri ve hala yüklenebilir ekleri görüntüler.</string>
+    <string name="help_passphrase">Parolanıza ile uygulamaya giriş için bu ekranı kullanın. Parolanızı unutursanız, sen unuttun Şifresini dokunarak yeni bir şifreyle korunan yeni bir anahtar oluşturmak olabilir? düğmesine basın. Birden tuşları arasında geçiş yapmak için kullanıcı adını dokunun.</string>
+    <string name="help_passphrase_change">Onay ve yeni şifreden için son parola girerek parola değiştirmek için bu ekranı kullanın.</string>
     <string name="help_PickRecip">SafeSlinger tuşları ile İletişim için mesaj göndermek için birini seçin, burada görüntülenir.</string>
     <string name="help_save">Bittiğinde,protokol alışverişindekimlik verilerinin bir listesini ortaya koyacaktır. Al\'ı kaydetmek ve basın istediğinizkişileri seçin.</string>
     <string name="help_SecureIntroduction">Bu ekran size güvenli birbirlerine anahtarlarını göndermek için önce tuşlara asılmış olan iki kişiyi seçmenizi sağlar. Sadece ne zaman hazır tanıtılması basın.</string>
     <string name="help_Send">Bu ekran bazı verileri ve göndermek için bir alıcı seçmek için izin verir. Sadece hazır olduğunda gönder tuşuna basın.</string>
+    <string name="help_settings">Bu ekran uygulama için varsayılan ayarları değiştirmenizi sağlar.</string>
 
+    <string name="iOS_contactError">İletişim izni güvenli iletişim kartı paylaşımı için gereklidir. SafeSlinger İletişim izni ayrıntılar için Yardım düğmesine dokunun.</string>
     <string name="iOS_errorpushtoken">Itme kaydı eksik.</string>
+    <string name="iOS_notificationError1">Uyarılar veya afiş, rozet ve numaralar ya da bildirim izni, güvenli mesajlaşma için gereklidir. SafeSlinger Bildirim izni ayrıntılar için Yardım düğmesine dokunun.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x cihazlar için optimize edilmemiştir. SafeSlinger iOS 6 veya daha yüksek gerektirir.</string>
+    <string name="iOS_RequestPermissionContacts">Siz arkadaşlarınıza göndermek için kartviziti seçin ve SafeSlinger sizin için şifrelemek olacaktır. Sorulduğunda, bu özelliği etkinleştirmek için, Kişiler SafeSlinger erişime izin vermelisiniz.</string>
+    <string name="iOS_RequestPermissionMicrophone">Siz arkadaşlarınıza göndermek için ve SafeSlinger sizin için şifrelemek bir sesli mesaj kaydedebilirsiniz. Sorulduğunda, bu özelliği etkinleştirmek için, Mikrofona SafeSlinger erişime izin vermelisiniz.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger şifreli mesajlaşma uygulaması ve Bildirimler gelen iletileri izin olmadan çalışamaz. Gelen mesajları etkinleştirmek için, sorulduğunda SafeSlinger size Bildirimleri göndermek için izin vermelidir.</string>
 
     <string name="label_ago">%s önce</string>
     <string name="label_backupCompleteDate">Tamamlanan Son Yedekleme</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">%s sona eriyor</string>
     <string name="label_expiresIn">sona eriyor</string>
     <string name="label_FileNameHint">Dosya Adı</string>
-    <string name="label_FindInstruct">Adını girin güvenli iletişim kurarken görmek için başkalarını diliyorum:</string>
+    <string name="label_FindInstruct">Verilerinizi korumak için adınızı ve parolanızı girin:</string>
     <string name="label_FirstName">Ad</string>
     <string name="label_Home">Eklemek veya kaldırmak veri iletişim, paylaşmak istediğiniz öğeleri kontrol, ve diğerleri değişim için hazır olduğunda, Exchange başlayın dokunun adınızı dokunun:</string>
     <string name="label_hometag">Ev</string>
     <string name="label_hours">%d saat</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud etkindir. BittiğindeBitti düğmesine dokunun.</string>
     <string name="label_InstNoMessages">Mesaj yok. SenHome menüsündeİleti Oluştur düğmesi bir mesaj gönderebilir.</string>
-    <string name="label_InstNoMessagesAndroid">Mesaj yok. SenOluştur sekmesinden bir mesaj gönderebilir.</string>
     <string name="label_InstNoRecipients">Alıcı eklemek için, önce, aynı anda bir veya daha fazla diğer kullanıcılar ile Sling Tuşlar gerekir. Ayrıcamenüden bir Sling Keys temas davetiye gönderebilir.</string>
     <string name="label_InstNoSharedFile">Hiçbir paylaşılan dosya. Paylaşılan klasöre iTunes ve sürükle dosyaları ile cihazınızı bağlayın.</string>
     <string name="label_InstRecipients">Bir mesaj göndermek için bir alıcıyı seçin:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Oturum açtığında otomatik olarak mesaj eklerini indirmek</string>
     <string name="label_summary_auto_decrypt">Oturum açtığında otomatik şifresini mesajları</string>
     <string name="label_summary_remind_backup_delay">Yedekleme çevrimdışı olduğunda bildirim alma.</string>
-    <string name="label_summary_show_tutorial">Sling Keys yapmaya çalışıyorsunuz önce bir öğretici göster.</string>
+    <string name="label_summary_show_tutorial">Sling Keys başlamadan önce bir öğretici göster.</string>
     <string name="label_TapToDecryptFile">Dosyanın şifresini çözmek için dokunun</string>
     <string name="label_TapToDecryptMessage">Şifresini çözmek için dokunun</string>
     <string name="label_TapToDownloadFile">Dosyayı indirmek için dokunun</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Otomatik şifresini</string>
     <string name="menu_Change">Değişim</string>
     <string name="menu_ChangePassphrase">Değişim Parolası</string>
+    <string name="menu_ContactInviteEmail">Kişiler Email</string>
+    <string name="menu_ContactInviteSms">Kişilerden Metin</string>
     <string name="menu_CreateNew">Yeni Oluştur</string>
     <string name="menu_delete">Silmek</string>
     <string name="menu_deleteThread">Konu %s Sil</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Şifresini Unuttum?</string>
     <string name="menu_Help">Yardım</string>
     <string name="menu_Introduction">Giriş</string>
-    <string name="menu_License">Lisans</string>
+    <string name="menu_language">Dil</string>
+    <string name="menu_link_contact_add">İletişim Link Ekle</string>
+    <string name="menu_link_contact_change">İletişim bağlantısını değiştirmek</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Şifreler yönet</string>
     <string name="menu_message_font_size">Mesaj Yazı Tipi Boyutu</string>

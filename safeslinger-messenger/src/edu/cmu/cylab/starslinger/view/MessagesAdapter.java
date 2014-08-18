@@ -107,10 +107,10 @@ public class MessagesAdapter extends BaseAdapter {
                 tvDirection.setTextSize(TypedValue.COMPLEX_UNIT_PX, dimension);
                 tvDate.setTextSize(TypedValue.COMPLEX_UNIT_PX, dimension);
                 break;
-            case 14:
-                dimension = mCtx.getResources().getDimension(R.dimen.text_size_small);
-                break;
             default:
+            case 16:
+                dimension = mCtx.getResources().getDimension(R.dimen.text_size_msg);
+                break;
             case 18:
                 dimension = mCtx.getResources().getDimension(R.dimen.text_size_medium);
                 break;

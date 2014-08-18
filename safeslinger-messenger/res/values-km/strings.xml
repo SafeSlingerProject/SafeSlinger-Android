@@ -49,6 +49,7 @@
     <string name="btn_Import">ការនាំចូល</string>
     <string name="btn_Introduce">ណែនាំ</string>
     <string name="btn_No">គ្មាន</string>
+    <string name="btn_NotNow">មិនឥឡូវនេះ</string>
     <string name="btn_NotRemind">ភ្លេច</string>
     <string name="btn_OK">យល់ព្រម</string>
     <string name="btn_Refuse">បដិសេធ</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 នាទី</string>
     <string name="choice_8hours">8 ម៉ោង</string>
     <string name="choice_auto_storage">ផ្ទុក លំនាំដើម</string>
+    <string name="choice_default">លំនាំដើម</string>
     <string name="choice_external_storage">ផ្ទុក ខាងក្រៅ</string>
     <string name="choice_font_large">ដែលមានទំហំធំ</string>
     <string name="choice_font_medium">មធ្យម</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">អូឌីយ៉ូ កំហុស ឌិកូដ អ្នកលេង ។</string>
     <string name="error_AudioPlayerError">មិន អាចលេង ការថត នេះ។</string>
     <string name="error_AudioRecorderEncodeError">កំហុស អ៊ិនកូដ អូឌីយ៉ូ ថត ។</string>
+    <string name="error_AudioRecorderPermissionError">ការអនុញ្ញាត្តិមីកែូហ្វូគឺត្រូវបានទាមទារដើម្បីថតសារដែលមានសុវត្ថិភាពសំលេង។ ប៉ះប៊ូតុងជំនួយសម្រាប់ព័ត៌មានលម្អិតការអនុញ្ញាត SafeSlinger មីក្រូហ្វូន។</string>
     <string name="error_BackupNotFound">មិនមាន បម្រុងទុក ដើម្បីស្តារ ។</string>
     <string name="error_BackupNotSupportedDevice">ឧបករណ៍ មិនគាំទ្រការ ស្តារ បម្រុងទុក ។</string>
     <string name="error_BadCopyProtectUpgrade">ដោយសារកំហុសនៅក្នុង ប្រព័ន្ធប្រតិបត្តិការ Android 4.1 អ្នក នឹងត្រូវ លុប និងការ ដំឡើង SafeSlinger ។</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">កំហុស SafeSlinger សូម ចាប់ផ្ដើមឡើងវិញ ។</string>
     <string name="error_VcardParseFailure">ទិន្នន័យ ទំនាក់ទំនងដែល ត្រូវបាន ធ្វើទ្រង់ទ្រាយ មិនត្រឹមត្រូវ។</string>
 
+    <string name="help_find">ប្រើអេក្រង់នេះដើម្បីកំណត់ឈ្មោះរបស់អ្នកដើម្បីផ្លាស់ប្តូរជាមួយអ្នកផ្សេងនិងឃ្លាសម្ងាត់មួយដើម្បីការពារទិន្នន័យរបស់អ្នក។ ប៉ះប៊ូតុងធ្វើពេលបញ្ចប់។</string>
     <string name="help_home">ដើម្បីផ្លាស់ប្តូរ ទិន្នន័យ អត្តសញ្ញាណ ធានាបាននូវ អ្នកប្រើប្រាស់ ទាំងអស់ គឺមាន នៅក្បែរ ឬនៅលើ ទូរស័ព្ទ។ ប៊ូតុង ផ្លាស់ប្តូរ ចាប់ផ្តើម នឹង ផ្លាស់ប្តូរ តែទិន្នន័យដែល ទំនាក់ទំនង បានធីក ។</string>
     <string name="help_identity_menu">អ្នកក៏អាច ផ្លាស់ប្តូរ ទិន្នន័យផ្ទាល់ខ្លួន អំពី អត្តសញ្ញាណ របស់អ្នកនៅលើ អេក្រង់នេះ ដោយគ្រាន់តែប៉ះ លើប៊ូតុង ដែលមានឈ្មោះ របស់អ្នក។ ការនេះនឹងបង្ហាញ ម៉ឺនុយ ដែលអនុញ្ញាតឱ្យអ្នក កែសម្រួល ទំនាក់ទំនង របស់អ្នក ជាមួយ បង្កើត ទំនាក់ទំនង ថ្មី ឬ ប្រើ ទំនាក់ទំនងមួយផ្សេងទៀត ។</string>
     <string name="help_Messages">អេក្រង់នេះ បង្ហាញ សារដែល កន្លងមក ទាំងអស់ហើយ ឯកសារភ្ជាប់ ដែល នៅតែ មានសម្រាប់ទាញយក ។</string>
+    <string name="help_passphrase">ប្រើអេក្រង់នេះដើម្បីចូលទៅកាន់កម្មវិធីដែលមានឃ្លាសម្ងាត់របស់អ្នក។ ប្រសិនបើអ្នកបានភ្លេចឃ្លាសម្ងាត់របស់អ្នកអ្នកអាចបង្កើតបានការពារដោយឃ្លាសម្ងាត់ថ្មីដោយគ្រាន់តែប៉ះឃ្លាសម្ងាត់ភ្លេចកូនសោថ្មីមួយ? ប៊ូតុង។ ប៉ះឈ្មោះអ្នកប្រើដើម្បីប្តូររវាងគ្រាប់ចុចច្រើន។</string>
+    <string name="help_passphrase_change">ប្រើអេក្រង់នេះដើម្បីផ្លាស់ប្តូរឃ្លាសម្ងាត់របស់អ្នកដោយបញ្ចូលឃ្លាសម្ងាត់សម្រាប់ការអះអាងចុងក្រោយរបស់អ្នកនិងឃ្លាសម្ងាត់ថ្មី។</string>
     <string name="help_PickRecip">ទំនាក់ទំនង ជាមួយ គ្រាប់ចុច SafeSlinger ត្រូវបានបង្ហាញ នៅទីនេះ ជ្រើសដើម្បី ផ្ញើ សាររបស់អ្នក ទៅ។</string>
     <string name="help_save">ពេល បានបញ្ចប់, ពិធីការ នឹងបង្ហាញ បញ្ជី នៃទិន្នន័យ អត្តសញ្ញាណ បានផ្លាស់ប្តូរ មួយ។ ជ្រើសទំនាក់ទំនង អ្នកចង់ រក្សាទុក និងចុច នាំចូល ។</string>
     <string name="help_SecureIntroduction">អេក្រង់នេះ អនុញ្ញាតឱ្យអ្នកជ្រើស មនុស្សពីរនាក់ ដែលអ្នកបាន ពាក់ គ្រាប់ចុច មួយនឹង មុនពេល ដល់សន្តិសុខ ផ្ញើ កូនសោ របស់ពួកគេទៅ គ្នាទៅវិញទៅមក។ គ្រាន់តែ ចុច ណែនាំ នៅពេលដែល បានត្រៀមខ្លួនរួចរាល់ហើយ ។</string>
     <string name="help_Send">អេក្រង់នេះ អនុញ្ញាតឱ្យអ្នកជ្រើស ទិន្នន័យមួយចំនួន និង អ្នកទទួល ផ្ញើទៅ មួយ។ គ្រាន់តែ ចុច ផ្ញើ នៅពេល ត្រៀមខ្លួនជាស្រេច ។</string>
+    <string name="help_settings">អេក្រង់នេះអនុញ្ញាតឱ្យអ្នកផ្លាស់ប្តូរការកំណត់លំនាំដើមសម្រាប់កម្មវិធី។</string>
 
+    <string name="iOS_contactError">ការអនុញ្ញាត្តិទំនាក់ទំនងត្រូវបានទាមទារសម្រាប់សុវត្ថិភាពការចែករំលែកសន្លឹកបៀក្នុងទំនាក់ទំនង។ ប៉ះប៊ូតុងជំនួយសម្រាប់ព័ត៌មានលម្អិត SafeSlinger ការអនុញ្ញាត្តិទំនាក់ទំនង។</string>
     <string name="iOS_errorpushtoken">ការចុះឈ្មោះ ការជំរុញ បាត់ ។</string>
+    <string name="iOS_notificationError1">ការអនុញ្ញាតការជូនដំណឹងសម្រាប់ការប្រាប់ឬបដានិងលេខផ្លាកសញ្ញាត្រូវបានទាមទារសម្រាប់ការផ្ញើសារសុវត្ថិភាព។ ប៉ះប៊ូតុងជំនួយសម្រាប់ព័ត៌មានលម្អិត SafeSlinger ការអនុញ្ញាត្តិជូនដំណឹង។</string>
     <string name="iOS_oldOSWarn">SafeSlinger មិនត្រូវ បានធ្វើឱ្យប្រសើរ សម្រាប់ឧបករណ៍ ដំណើរការដោយ iOS 5.x ។ SafeSlinger តម្រូវឱ្យ ដំណើរការដោយ iOS 6 ឬ ខ្ពស់ជាងនេះ។</string>
+    <string name="iOS_RequestPermissionContacts">អ្នកអាចជ្រើសកាតទំនាក់ទំនងរបស់អ្នកដើម្បីផ្ញើមិត្តភក្តិអ្នកនិង SafeSlinger នឹងអ៊ិនគ្រីបវាសម្រាប់អ្នក។ ដើម្បីបើកលក្ខណៈពិសេសនេះអ្នកត្រូវតែអនុញ្ញាតឱ្យចូលដំណើរការទៅកាន់ SafeSlinger ទំនាក់ទំនងរបស់អ្នកនៅពេលដែលបានសួរ។</string>
+    <string name="iOS_RequestPermissionMicrophone">អ្នកអាចកត់ត្រាសារសំឡេងមួយដើម្បីផ្ញើមិត្តភក្តិអ្នកនិង SafeSlinger នឹងអ៊ិនគ្រីបវាសម្រាប់អ្នក។ ដើម្បីបើកលក្ខណៈពិសេសនេះអ្នកត្រូវតែអនុញ្ញាតឱ្យចូលដំណើរការទៅកាន់មីក្រូហ្វូន SafeSlinger របស់អ្នកនៅពេលដែលបានសួរ។</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger គឺជាកម្មវិធីផ្ញើសារដែលបានអ៊ិនគ្រីបមួយនិងមិនអាចដំណើរការបានដោយគ្មានការអនុញ្ញាតឱ្យសារដែលចូលមកពីការជូនដំណឹង។ ដើម្បីបើកសារដែលចូលមកអ្នកត្រូវតែអនុញ្ញាតឱ្យ SafeSlinger ដើម្បីផ្ញើការជូនដំណឹងនៅពេលដែលអ្នកសួរ។</string>
 
     <string name="label_ago">%s កន្លងទៅ</string>
     <string name="label_backupCompleteDate">បម្រុងទុក ចុងក្រោយ បានបញ្ចប់</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">ផុតកំណត់ %s</string>
     <string name="label_expiresIn">ផុតកំណត់ក្នុង</string>
     <string name="label_FileNameHint">ឈ្មោះ ឯកសារ</string>
-    <string name="label_FindInstruct">បញ្ចូលឈ្មោះ ដែលអ្នកចង់ អ្នកដទៃទៀតឱ្យ មើលឃើញ នៅពេលដែល ការទំនាក់ទំនង មានសុវត្ថិភាព:</string>
+    <string name="label_FindInstruct">បញ្ចូលឈ្មោះនិងឃ្លាសម្ងាត់របស់អ្នកដើម្បីការពារទិន្នន័យរបស់អ្នក:</string>
     <string name="label_FirstName">ឈ្មោះ ដំបូង</string>
     <string name="label_Home">ប៉ះ ឈ្មោះរបស់អ្នក ដើម្បីបន្ថែម ឬយក ទិន្នន័យ ទំនាក់ទំនង ពិនិត្យ ធាតុ ដែលអ្នកចង់ ចែករំលែក និងការ ប៉ះ ចាប់ផ្តើម ផ្លាស់ប្តូរ នៅពេលដែល អ្នកដទៃទៀត គឺ ត្រៀមខ្លួនជាស្រេច ដើម្បី ការផ្លាស់ប្តូរ:</string>
     <string name="label_hometag">ទំព័រដើម</string>
     <string name="label_hours">%d ម៉ោង</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ត្រូវបានអនុញ្ញាត។ ប៉ះ ប៊ូតុង ធ្វើ ពេលបញ្ចប់។</string>
     <string name="label_InstNoMessages">សារ នោះទេ។ អ្នកអាច ផ្ញើ សារពី ប៊ូតុង កម្មវិធីតែង សារ នៅលើម៉ឺនុយ ទំព័រដើម នេះ។</string>
-    <string name="label_InstNoMessagesAndroid">សារ នោះទេ។ អ្នកអាច ផ្ញើ សារពី ផ្ទាំង កម្មវិធីតែង ។</string>
     <string name="label_InstNoRecipients">ដើម្បីបន្ថែម អ្នកទទួល អ្នក ដំបូង ត្រូវតែ Sling គ្រាប់ចុច មួយនឹង អ្នកប្រើ មួយឬច្រើន ផ្សេងទៀត នៅពេល ដូចគ្នានេះ។ អ្នកក៏ អាចផ្ញើ ការអញ្ជើញ ទំនាក់ទំនង Sling គ្រាប់ចុច ពីម៉ឺនុយ នេះ។</string>
     <string name="label_InstNoSharedFile">ចែករំលែក មិនមាន ឯកសារ។ ភជប់ឧបករណ៍ របស់អ្នកជាមួយ កម្មវិធី iTunes ហើយអូស ឯកសារទៅ ថតដែលបានចែករំលែក នេះ។</string>
     <string name="label_InstRecipients">ជ្រើសយក អ្នកទទួល ដើម្បីផ្ញើ សារទៅ មួយ:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">ទាញយក ឯកសារភ្ជាប់ សារ ដោយស្វ័យប្រវត្តិនៅពេល ចូលទេ</string>
     <string name="label_summary_auto_decrypt">ឌិគ្រីប សារ ដោយស្វ័យប្រវត្តិ នៅពេលដែល ចូលទេ</string>
     <string name="label_summary_remind_backup_delay">ទទួលបាន ការជូនដំណឹង នៅពេល បម្រុងទុក គឺ ក្រៅបណ្ដាញ ។</string>
-    <string name="label_summary_show_tutorial">បង្ហាញ ការបង្រៀន មុនពេល attemping ទៅ Sling គ្រាប់ចុច ។</string>
+    <string name="label_summary_show_tutorial">បង្ហាញការបង្រៀនមុនពេលប៉ុនប៉ង Sling គ្រាប់ចុច។</string>
     <string name="label_TapToDecryptFile">ប៉ះ ឌិគ្រីប ឯកសារ</string>
     <string name="label_TapToDecryptMessage">ប៉ះ ឌិគ្រីប</string>
     <string name="label_TapToDownloadFile">ទាញយក ទាញយក ឯកសារ</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-ឌិគ្រីប</string>
     <string name="menu_Change">ការផ្លាស់ប្តូរ</string>
     <string name="menu_ChangePassphrase">ការផ្លាស់ប្តូរ ឃ្លាសម្ងាត់</string>
+    <string name="menu_ContactInviteEmail">អ៊ីម៉ែលពីទំនាក់ទំនង</string>
+    <string name="menu_ContactInviteSms">អត្ថបទពីទំនាក់ទំនង</string>
     <string name="menu_CreateNew">បង្កើតថ្មី</string>
     <string name="menu_delete">លុប</string>
     <string name="menu_deleteThread">លុប ខ្សែស្រឡាយ %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">ភ្លេច ឃ្លាសម្ងាត់?</string>
     <string name="menu_Help">ជំនួយ</string>
     <string name="menu_Introduction">សេចក្តីផ្តើម</string>
-    <string name="menu_License">អាជ្ញាបណ្ណ</string>
+    <string name="menu_language">ភាសា</string>
+    <string name="menu_link_contact_add">បន្ថែមទំនាក់ទំនងភ្ជាប់</string>
+    <string name="menu_link_contact_change">ផ្លាស់ប្តូរទំនាក់ទំនងភ្ជាប់</string>
     <string name="menu_Logout">ចេញ</string>
     <string name="menu_ManagePassphrases">គ្រប់គ្រង ឃ្លាសម្ងាត់</string>
     <string name="menu_message_font_size">សារ ទំហំ ពុម្ពអក្សរ</string>

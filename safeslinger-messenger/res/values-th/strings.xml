@@ -49,6 +49,7 @@
     <string name="btn_Import">สินค้านำเข้า</string>
     <string name="btn_Introduce">แนะนำ</string>
     <string name="btn_No">ไม่</string>
+    <string name="btn_NotNow">ไม่ใช่ตอนนี้</string>
     <string name="btn_NotRemind">ลืม</string>
     <string name="btn_OK">ตกลง</string>
     <string name="btn_Refuse">ปฏิเสธ</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 นาที</string>
     <string name="choice_8hours">8 ชั่วโมง</string>
     <string name="choice_auto_storage">เก็บ ค่าเริ่มต้น</string>
+    <string name="choice_default">ผิดนัด</string>
     <string name="choice_external_storage">การจัดเก็บข้อมูล ภายนอก</string>
     <string name="choice_font_large">ใหญ่</string>
     <string name="choice_font_medium">กลาง</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">ข้อผิดพลาดใน การถอดรหัส เครื่องเล่นเสียง</string>
     <string name="error_AudioPlayerError">ไม่สามารถเล่น บันทึก</string>
     <string name="error_AudioRecorderEncodeError">ข้อผิดพลาดใน การเข้ารหัส บันทึกเสียง</string>
+    <string name="error_AudioRecorderPermissionError">ไมโครโฟนได้รับอนุญาตจะต้องบันทึกข้อความเสียงที่มีความปลอดภัย แตะที่ปุ่มช่วยเหลือสำหรับรายละเอียดการอนุญาต SafeSlinger ไมโครโฟน</string>
     <string name="error_BackupNotFound">การสำรองข้อมูล ที่จะเรียกคืน ไม่</string>
     <string name="error_BackupNotSupportedDevice">อุปกรณ์ ไม่สนับสนุน การสำรองข้อมูล เรียกคืน</string>
     <string name="error_BadCopyProtectUpgrade">เนื่องจากการ ข้อผิดพลาดใน Android 4.1, คุณจะต้อง ถอนการติดตั้ง และติดตั้ง SafeSlinger</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">ข้อผิดพลาด SafeSlinger ทำการรีสตาร์ท</string>
     <string name="error_VcardParseFailure">ข้อมูล การติดต่อ ได้รับการ จัดรูปแบบ ไม่ถูกต้อง</string>
 
+    <string name="help_find">ใช้หน้าจอนี้เพื่อตั้งชื่อของคุณที่จะแลกเปลี่ยนกับคนอื่นและรหัสผ่านในการปกป้องข้อมูลของคุณ แตะที่ปุ่มเสร็จเมื่อเสร็จแล้ว</string>
     <string name="help_home">เพื่อแลกเปลี่ยนข้อมูล ตัวตน มั่นใจว่าผู้ใช้ ทั้งหมดที่อยู่ ใกล้เคียงหรือ ทางโทรศัพท์ ปุ่ม เริ่มต้นการ แลกเปลี่ยน จะแลกเปลี่ยน เฉพาะข้อมูล การตรวจสอบ รายชื่อผู้ติดต่อ</string>
     <string name="help_identity_menu">นอกจากนี้คุณยัง อาจมีการเปลี่ยนแปลง ข้อมูล ส่วนบุคคลเกี่ยวกับ ตัวตนของคุณ บนหน้าจอนี้ โดยแตะที่ ปุ่มที่มี ชื่อของคุณ นี้จะ แสดงเมนู ช่วยให้คุณสามารถ แก้ไข รายชื่อผู้ติดต่อ ของคุณสร้าง รายชื่อผู้ติดต่อ ใหม่ หรือ ใช้ ติดต่อ อีก</string>
     <string name="help_Messages">หน้าจอนี้จะ แสดงข้อความ ที่ผ่านมาทั้งหมด และสิ่งที่แนบ ที่ ยังคงมีอยู่ สำหรับการดาวน์โหลด</string>
+    <string name="help_passphrase">ใช้หน้าจอนี้เพื่อเข้าสู่ระบบไปยังโปรแกรมประยุกต์ที่มีรหัสผ่านของคุณ ถ้าคุณลืมรหัสผ่านของคุณคุณอาจสร้างคีย์ใหม่การป้องกันโดยรหัสผ่านใหม่โดยการแตะที่ข้อความรหัสผ่านลืม? ปุ่ม แตะชื่อผู้ใช้สามารถสลับไปมาระหว่างหลายคีย์</string>
+    <string name="help_passphrase_change">ใช้หน้าจอนี้เพื่อเปลี่ยนรหัสผ่านของคุณโดยการป้อนรหัสผ่านครั้งล่าสุดของคุณสำหรับการยืนยันและรหัสผ่านใหม่</string>
     <string name="help_PickRecip">ติดต่อ กับคีย์ SafeSlinger จะมีการแสดง ที่นี่ เลือก หนึ่งในการส่ง ข้อความของคุณไป</string>
     <string name="help_save">เมื่อเสร็จสิ้น โครงการจะเปิดเผย รายชื่อของ ข้อมูล ประจำตัวของการแลกเปลี่ยน เลือก รายชื่อที่คุณ ต้องการที่จะ บันทึกและ กดปุ่ม นำเข้า</string>
     <string name="help_SecureIntroduction">หน้าจอนี้จะ ช่วยให้คุณสามารถ เลือก คนสองคน ที่คุณได้ คล้อง กุญแจ ด้วย ก่อน ที่จะ ปลอดภัยส่ง คีย์ ของพวกเขากัน เพียงแค่กด แนะนำ เมื่อพร้อม</string>
     <string name="help_Send">หน้าจอนี้จะ ช่วยให้คุณสามารถ เลือก ข้อมูลบางอย่าง และผู้รับที่จะส่งไป เพียงแค่กด ส่ง เมื่อพร้อม</string>
+    <string name="help_settings">หน้าจอนี้จะช่วยให้คุณสามารถเปลี่ยนการตั้งค่าเริ่มต้นสำหรับการใช้งาน</string>
 
+    <string name="iOS_contactError">ได้รับอนุญาตติดต่อเป็นสิ่งจำเป็นสำหรับใช้งานร่วมกันอย่างปลอดภัยบัตรรายชื่อ แตะที่ปุ่มช่วยเหลือสำหรับรายละเอียดการอนุญาต SafeSlinger ติดต่อ</string>
     <string name="iOS_errorpushtoken">การลงทะเบียน การผลักดัน ที่ขาดหายไป</string>
+    <string name="iOS_notificationError1">อนุญาตแจ้งเตือนสำหรับทั้งการแจ้งเตือนหรือป้ายและหมายเลขป้ายที่จำเป็นสำหรับการส่งข้อความที่มีความปลอดภัย แตะที่ปุ่มช่วยเหลือสำหรับรายละเอียดการอนุญาตประกาศ SafeSlinger</string>
     <string name="iOS_oldOSWarn">SafeSlinger ไม่เหมาะสำหรับ อุปกรณ์ iOS 5.x SafeSlinger ต้องใช้ iOS 6 หรือสูงกว่า</string>
+    <string name="iOS_RequestPermissionContacts">คุณสามารถเลือกบัตรที่ติดต่อของคุณเพื่อส่งเพื่อนของคุณและ SafeSlinger จะเข้ารหัสมันสำหรับคุณ ที่จะเปิดใช้งานคุณลักษณะนี้คุณต้องอนุญาตให้เข้าถึง SafeSlinger ติดต่อของคุณเมื่อถูกถาม</string>
+    <string name="iOS_RequestPermissionMicrophone">คุณสามารถบันทึกข้อความเสียงที่จะส่งเพื่อนของคุณและ SafeSlinger จะเข้ารหัสมันสำหรับคุณ ที่จะเปิดใช้งานคุณลักษณะนี้คุณต้องอนุญาตให้เข้าถึงการ SafeSlinger ไมโครโฟนของคุณเมื่อถูกถาม</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger เป็นโปรแกรมส่งข้อความที่เข้ารหัสและไม่สามารถทำงานได้โดยไม่อนุญาตให้ข้อความที่เข้ามาจากการแจ้งเตือน เพื่อให้ข้อความที่เข้ามาคุณต้องให้ SafeSlinger ส่งการแจ้งเตือนเมื่อถูกถาม</string>
 
     <string name="label_ago">%s ที่ผ่านมา</string>
     <string name="label_backupCompleteDate">การสำรองข้อมูล ครั้งล่าสุด เสร็จสมบูรณ์</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">หมดอายุ %s</string>
     <string name="label_expiresIn">จะหมดอายุใน</string>
     <string name="label_FileNameHint">ชื่อ ไฟล์</string>
-    <string name="label_FindInstruct">ใส่ชื่อ ที่คุณต้องการ ให้ผู้อื่นเห็น เมื่อสื่อสาร อย่างปลอดภัย:</string>
+    <string name="label_FindInstruct">ใส่ชื่อและรหัสผ่านของคุณเพื่อปกป้องข้อมูลของคุณ</string>
     <string name="label_FirstName">ชื่อ แรก</string>
     <string name="label_Home">แตะ ชื่อของคุณ เพื่อเพิ่มหรือลบ ข้อมูล รายชื่อผู้ติดต่อ ให้ตรวจสอบ รายการที่คุณ ต้องการแบ่งปัน และแตะที่ เริ่มต้นการ แลกเปลี่ยน เมื่อ คนอื่น ๆ ก็พร้อมที่จะ แลกเปลี่ยน</string>
     <string name="label_hometag">บ้าน</string>
     <string name="label_hours">%d ชั่วโมง</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud จะเปิดใช้งาน แตะที่ปุ่ม เสร็จเมื่อเสร็จแล้ว</string>
     <string name="label_InstNoMessages">ไม่มี ข้อความ คุณอาจจะ ส่งข้อความจากปุ่ม เขียน ข้อความ บนเมนู แรก</string>
-    <string name="label_InstNoMessagesAndroid">ไม่มี ข้อความ คุณอาจจะ ส่ง ข้อความจากการเขียน แท็บ</string>
     <string name="label_InstNoRecipients">เพื่อเพิ่ม ผู้รับ คุณต้อง แรก สลิง คีย์ หนึ่งคนหรือมากกว่า ผู้ใช้รายอื่น ในเวลาเดียวกัน นอกจากนี้คุณยัง สามารถส่งคำเชิญ ติดต่อ สลิง คีย์ จากเมนู</string>
     <string name="label_InstNoSharedFile">ไฟล์ ที่ใช้ร่วมกัน ไม่มี เชื่อมต่ออุปกรณ์ ของคุณด้วย iTunes และ ลากไฟล์ ไปยังโฟลเดอร์ ที่ใช้ร่วมกัน</string>
     <string name="label_InstRecipients">เลือก ผู้รับ ที่จะส่ง ข้อความไปยัง:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">ดาวน์โหลดไฟล์แนบ ข้อความ โดยอัตโนมัติเมื่อ เข้าสู่ระบบค่ะ</string>
     <string name="label_summary_auto_decrypt">ถอดรหัสข้อความ โดยอัตโนมัติเมื่อ เข้าสู่ระบบค่ะ</string>
     <string name="label_summary_remind_backup_delay">ได้รับ การแจ้งเตือนเมื่อ การสำรองข้อมูล เป็น แบบออฟไลน์</string>
-    <string name="label_summary_show_tutorial">แสดง การกวดวิชาก่อน ที่จะ attemping สลิง คีย์</string>
+    <string name="label_summary_show_tutorial">แสดงการกวดวิชาก่อนที่จะพยายามสลิงคีย์</string>
     <string name="label_TapToDecryptFile">แตะเพื่อ ถอดรหัสไฟล์</string>
     <string name="label_TapToDecryptMessage">แตะเพื่อ ถอดรหัส</string>
     <string name="label_TapToDownloadFile">แตะเพื่อ ดาวน์โหลดไฟล์</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-ถอดรหัส</string>
     <string name="menu_Change">เปลี่ยนแปลง</string>
     <string name="menu_ChangePassphrase">เปลี่ยน Passphrase</string>
+    <string name="menu_ContactInviteEmail">อีเมล์จากรายชื่อ</string>
+    <string name="menu_ContactInviteSms">ข้อความจากรายชื่อ</string>
     <string name="menu_CreateNew">สร้างใหม่</string>
     <string name="menu_delete">ลบ</string>
     <string name="menu_deleteThread">ลบ หัวข้อ %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">ลืม Passphrase?</string>
     <string name="menu_Help">ช่วย</string>
     <string name="menu_Introduction">การแนะนำ</string>
-    <string name="menu_License">อนุญาต</string>
+    <string name="menu_language">ภาษา</string>
+    <string name="menu_link_contact_add">เพิ่มการติดต่อเชื่อมโยง</string>
+    <string name="menu_link_contact_change">เปลี่ยนการติดต่อเชื่อมโยง</string>
     <string name="menu_Logout">ออกจากระบบ</string>
     <string name="menu_ManagePassphrases">จัดการ passphrases</string>
     <string name="menu_message_font_size">ข้อความ ขนาด ตัวอักษร</string>

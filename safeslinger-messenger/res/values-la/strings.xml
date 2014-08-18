@@ -49,6 +49,7 @@
     <string name="btn_Import">Import</string>
     <string name="btn_Introduce">Introducere</string>
     <string name="btn_No">No</string>
+    <string name="btn_NotNow">Non autem</string>
     <string name="btn_NotRemind">Lorem ipsum</string>
     <string name="btn_OK">CALLIDE</string>
     <string name="btn_Refuse">Nolite</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">V minutes</string>
     <string name="choice_8hours">VIII horas</string>
     <string name="choice_auto_storage">Nam porta sagittis</string>
+    <string name="choice_default">Lorem Ipsum</string>
     <string name="choice_external_storage">At quod exteriores</string>
     <string name="choice_font_large">Lorem ipsum</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Lorem ipsum dolor decoding error.</string>
     <string name="error_AudioPlayerError">Nec actum agere.</string>
     <string name="error_AudioRecorderEncodeError">Audio scriptor Encoding error.</string>
+    <string name="error_AudioRecorderPermissionError">Etiam tortor ligula, licentia requiritur scribere alta voce dicens. ICTUS a puga pyga Auxilium SafeSlinger scribit licentiam libero.</string>
     <string name="error_BackupNotFound">Tergum et non reddere.</string>
     <string name="error_BackupNotSupportedDevice">Fabrica non facit tergum restituunt.</string>
     <string name="error_BadCopyProtectUpgrade">Mendum in Android 4.1 Ex habebis ut amoveas SafeSlinger restituo.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger error, sileo velit.</string>
     <string name="error_VcardParseFailure">Est Lorem ipsum dolor cursu recte.</string>
 
+    <string name="help_find">Ad nomen sanctum tuum, commercio cum aliis ad istud et tueri passphrase elit. ICTUS a puga pyga fieri effectum.</string>
     <string name="help_home">Permutare identitatem notitia accumsan omnia prope vel phone users. Initium mutationis in ipsum mutare tantum coercuit contactus notitia.</string>
     <string name="help_identity_menu">Item alio notitia ad identitatemUt in elit ipsum, cum percussoque in nomine tuo. Is sino vos cito Duis lectus tuum contactum contactum Aliquam novo, aut alia necessitudo.</string>
     <string name="help_Messages">Haec verba proferat, sunt omnia, et quae sunt affectiones quae tractari possunt.</string>
+    <string name="help_passphrase">Praesent id velit ut login ut vestri application passphrase. Si tu oblitus es passphrase tuam, ut tutus a key novam passphrase percussoque Aliquam passphrase? ipsum. ICTUS, nomen usoris ut switch inter multiple claves.</string>
+    <string name="help_passphrase_change">Praesent id velit mutare passphrase ingressus tuos, et passphrase, ad confirmationem, est novum passphrase.</string>
     <string name="help_PickRecip">Aenean auctor wisi et SafeSlinger sunt quae hic monstratur, eligere ad mittere te.</string>
     <string name="help_save">Cum complevit elit idem commutaverunt protocollo elenchus indicabit. Suspendisse ac nisi uelis premas Import dolor.</string>
     <string name="help_SecureIntroduction">Quod sino vos ut lego duo, quas screen et funda iecit, ut cum inter se, ut prius, et habitans confidenter, claves suas. Iustus click in eos cum inferre parati.</string>
     <string name="help_Send">Mauris elit ac sino vos ut lego quod mitteret alicui. Cum iustus click in eos mittere paratus.</string>
+    <string name="help_settings">Hoc enim omnino elit dat default occasus mutare.</string>
 
+    <string name="iOS_contactError">Aenean auctor wisi et socius securus, licentia requiritur contactus arcu. ICTUS a puga pyga SafeSlinger Auxilium Contactus licentiam libero.</string>
     <string name="iOS_errorpushtoken">Push dolor deest.</string>
+    <string name="iOS_notificationError1">Notification vel licentiam vel summis montibus signa et notae numerorum requiruntur Nuntius tutus. ICTUS a puga pyga Auxilium SafeSlinger Notification licentiam libero.</string>
     <string name="iOS_oldOSWarn">Non ad ipsum iOS adinventionum SafeSlinger 5.x. VI SafeSlinger opus iOS aut superius.</string>
+    <string name="iOS_RequestPermissionContacts">Mittere ad amicos, vos can lego SafeSlinger encrypt contactum ipsum enim. Ut id, quod sino vos obvius ut vestri SafeSlinger Contactus, cum quaeritur.</string>
+    <string name="iOS_RequestPermissionMicrophone">Scribere potes unanimos SafeSlinger vox encrypt nuntium mittere ad vos. Ut id, quod sino vos obvius ut vestri SafeSlinger tortor ligula, facilisis quaeritur, cum.</string>
+    <string name="iOS_RequestPermissionNotifications">Nuntius SafeSlinger est encrypted nuntius de industria, non potest videre nec patitur novos Notifications. Ut verba recepta est, necesse est dicere, ut mittam te SafeSlinger Notifications cum quaeritur.</string>
 
     <string name="label_ago">ante %s</string>
     <string name="label_backupCompleteDate">Tergum quod ultimum Complevit</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">exspirat %s</string>
     <string name="label_expiresIn">transit in</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Da nomen tibi cum aliis communicare, ut secure:</string>
+    <string name="label_FindInstruct">Lorem ipsum dolor tueri passphrase et nomen:</string>
     <string name="label_FirstName">Lorem ipsum</string>
     <string name="label_Home">ICTUS nomen contactus notitia, addere, nec auferre, quis items vis ad participant, et se habent ad ICTUS incipe interdum cum alia vice</string>
     <string name="label_hometag">Lorem ipsum</string>
     <string name="label_hours">%d horas</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud possit. ICTUS a puga pyga fieri effectum.</string>
     <string name="label_InstNoMessages">Nullae epistulae. Nuntius Epistola mandata mittas Lorem ipsum in menu.</string>
-    <string name="label_InstNoMessagesAndroid">Nullae epistulae. Epistola mandata mittas tab.</string>
     <string name="label_InstNoRecipients">Ut at suscipit ut cum te primum Fundae users simul aut plura. Ut autem et funda Keys contact invitatus a menu.</string>
     <string name="label_InstNoSharedFile">Non commune est. Lorem nonnullius dignitatis locum, et vadens cum consilium tuum folder in communi.</string>
     <string name="label_InstRecipients">Aliquam mittite ad receptionem;</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Automatically download verbum cum apertum est adhibendus</string>
     <string name="label_summary_auto_decrypt">Automatically cum apertum quod minutum nuntiandi</string>
     <string name="label_summary_remind_backup_delay">Suscipe, cum notitia tergum sit amet.</string>
-    <string name="label_summary_show_tutorial">Ostende consequat ut, ante attemping Keys fundæ.</string>
+    <string name="label_summary_show_tutorial">Ostende consequat adnitatur Keys fundæ.</string>
     <string name="label_TapToDecryptFile">ICTUS minutum file</string>
     <string name="label_TapToDecryptMessage">ICTUS minutum</string>
     <string name="label_TapToDownloadFile">ICTUS trahendum fasciculi</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-minutum</string>
     <string name="menu_Change">Disputatio</string>
     <string name="menu_ChangePassphrase">Vestibulum passphrase</string>
+    <string name="menu_ContactInviteEmail">Praesent Vestibulum</string>
+    <string name="menu_ContactInviteSms">Aenean auctor wisi et de Text</string>
     <string name="menu_CreateNew">Lorem New</string>
     <string name="menu_delete">Delete</string>
     <string name="menu_deleteThread">Delete varius %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Aliquam passphrase?</string>
     <string name="menu_Help">Auxilium</string>
     <string name="menu_Introduction">Introduction</string>
-    <string name="menu_License">License</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_link_contact_add">Praesent aliquet pretium erat volutpat</string>
+    <string name="menu_link_contact_change">Praesent vitae sapien libero</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Proin Passphrases</string>
     <string name="menu_message_font_size">Lorem Nuntius</string>

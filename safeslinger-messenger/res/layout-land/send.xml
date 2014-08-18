@@ -248,7 +248,7 @@
             android:inputType="textCapSentences|textMultiLine|textLongMessage|textAutoCorrect"
             android:maxLength="2000"
             android:privateImeOptions="nm"
-            android:textSize="@dimen/text_size_medium" >
+            android:textSize="@dimen/text_size_msg" >
         </EditText>
 
         <RelativeLayout

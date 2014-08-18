@@ -49,6 +49,7 @@
     <string name="btn_Import">درآمد</string>
     <string name="btn_Introduce">متعارف کرانے</string>
     <string name="btn_No">کوئی</string>
+    <string name="btn_NotNow">اب نہیں</string>
     <string name="btn_NotRemind">بھول جاؤ</string>
     <string name="btn_OK">ٹھیک ہے</string>
     <string name="btn_Refuse">کوڑاکرٹ</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 منٹ</string>
     <string name="choice_8hours">8 گھنٹے</string>
     <string name="choice_auto_storage">پہلے سے طے شدہ ذخیرہ</string>
+    <string name="choice_default">پہلے سے طے شدہ</string>
     <string name="choice_external_storage">بیرونی سٹوریج</string>
     <string name="choice_font_large">بڑے پیمانے پر</string>
     <string name="choice_font_medium">میڈیم</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">آڈیو کھلاڑی ضابطہ کشائی غلطی.</string>
     <string name="error_AudioPlayerError">ریکارڈنگ ادا نہیں کر سکتے.</string>
     <string name="error_AudioRecorderEncodeError">آڈیو ریکارڈر انکوڈنگ غلطی.</string>
+    <string name="error_AudioRecorderPermissionError">مائیکروفون کی اجازت ایک محفوظ وائس پیغام ریکارڈ کرنے کی ضرورت ہے. SafeSlinger مائیکروفون اجازت تفصیلات کے لئے مدد کے بٹن ٹیپ.</string>
     <string name="error_BackupNotFound">بحال کرنے کے لئے کوئی بیک اپ.</string>
     <string name="error_BackupNotSupportedDevice">ڈیوائس بیک اپ بحال کی حمایت نہیں کرتا.</string>
     <string name="error_BadCopyProtectUpgrade">کی وجہ سے لوڈ، اتارنا Android 4.1 میں ایک بگ کے لئے، آپ SafeSlinger انسٹال کریں اور دوبارہ انسٹال کرنا پڑے گا.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger غلطی ، دوبارہ شروع کریں، براہ مہربانی.</string>
     <string name="error_VcardParseFailure">رابطے کی معلومات غلط طریقے سے فارمیٹ کیا گیا تھا.</string>
 
+    <string name="help_find">آپ کے ڈیٹا کی حفاظت کے لئے دوسروں کو، اور ایک پاس فریز کے ساتھ تبادلہ کرنے کے لئے آپ کے نام قائم کرنے کے لئے اس کی سکرین کا استعمال کریں. ختم کیا جب بٹن ٹیپ.</string>
     <string name="help_home">شناخت کے اعداد و شمار کا تبادلہ کرنا ، تمام صارفین کے قریبی یا فون پر ہیں کو یقینی بنانے. شروع ایکسچینج کے بٹن پر صرف کی جانچ پڑتال کی رابطے کی معلومات کا تبادلہ کریں گے.</string>
     <string name="help_identity_menu">آپ اپنے نام کے ساتھ بٹن پر ٹیپ کی طرف سے اس کی سکرین پر آپ کی شناخت کے بارے میں ذاتی ڈیٹا تبدیل کر سکتے ہیں. یہ آپ کو آپ کے رابطے میں ترمیم کرنے کی اجازت دی ایک مینو ظاہر نیا رابطہ بنائیں ، یا کسی دوسرے سے رابطہ کریں کا استعمال کریں گے.</string>
     <string name="help_Messages">یہ سکرین کے تمام گزشتہ پیغامات ، اور اب بھی ڈاؤن لوڈ کے لئے دستیاب ہیں اٹیچمنٹ دکھاتا ہے.</string>
+    <string name="help_passphrase">آپ پاس فریز کے ساتھ کی درخواست پر لاگ ان کرنے کی اس کی سکرین کا استعمال کریں. آپ کو آپ کے پاس فریز بھول گئے ہیں تو، آپ کو بھول گئے ہیں پاس فریز ٹیپ کی طرف سے ایک نیا پاس فریز کی طرف سے محفوظ ایک نئی چابی پیدا کر سکتے ہیں؟ بٹن. ایک سے زیادہ چابیاں کے درمیان سوئچ کرنے کے لئے رکن کا نام ٹیپ.</string>
+    <string name="help_passphrase_change">تصدیق اور نئے پاس فریز کے لئے آپ کی آخری پاس فریز داخل ہونے کی طرف سے آپ پاس فریز تبدیل کرنے کے لئے اس کی سکرین کا استعمال کریں.</string>
     <string name="help_PickRecip">SafeSlinger چابیاں کے ساتھ رابطے کے لئے آپ کے پیغام کو بھیجنے کے لئے ایک کو منتخب کریں ، یہاں دکھائے جاتے ہیں.</string>
     <string name="help_save">جب فارغ ، پروٹوکول تبادلہ شناخت کے اعداد و شمار کی ایک فہرست ظاہر کرے گا. آپ کو درآمد کو بچانے کے اور پریس کرنا چاہتے ہیں رابطے منتخب کریں.</string>
     <string name="help_SecureIntroduction">یہ سکرین آپ کو محفوظ طریقے سے ایک دوسرے کے لئے ان کی چابیاں بھیجنے کے لئے اس سے پہلے کے ساتھ چابیاں slung ہے دو لوگوں کو منتخب کرنے کے لئے کی اجازت دیتا ہے. بس جب تیار متعارف کرانے دبائیں.</string>
     <string name="help_Send">یہ سکرین آپ کو کچھ اعداد و شمار اور کو بھیجنے کے لئے ایک وصول کنندہ کو منتخب کرنے کی اجازت دیتا ہے. بس کے لئے تیار ہے جب ارسال دبائیں.</string>
+    <string name="help_settings">یہ سکرین آپ کی درخواست کے لئے پہلے سے طے شدہ ترتیبات کو تبدیل کرنے کی اجازت دیتا ہے.</string>
 
+    <string name="iOS_contactError">رابطے کی اجازت کے محفوظ طریقے سے رابطہ کارڈز اشتراک کرنے کے لئے کی ضرورت ہے. SafeSlinger رابطے کی اجازت تفصیلات کے لئے مدد کے بٹن ٹیپ.</string>
     <string name="iOS_errorpushtoken">پش رجسٹریشن لاپتہ ہے.</string>
+    <string name="iOS_notificationError1">الرٹس یا بینر، اور بیج کی تعداد یا تو کے لئے نوٹیفکیشن کی اجازت، محفوظ پیغام رسانی کے لئے ضروری ہیں. SafeSlinger نوٹیفکیشن کی اجازت تفصیلات کے لئے مدد کے بٹن ٹیپ.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS کے کی 5.x آلات کے لئے مرضی نہیں ہے. SafeSlinger iOS 6 یا اس سے زیادہ کی ضرورت ہوتی ہے.</string>
+    <string name="iOS_RequestPermissionContacts">آپ اپنے دوست کو بھیجنے کے لئے آپ سے رابطہ کارڈ کا انتخاب کر سکتے ہیں اور SafeSlinger یہ آپ کے لئے خفیہ گا. پوچھا جب اس خصوصیت کو فعال کرنے کے لئے، آپ کو آپ کے رابطے کے لئے SafeSlinger رسائی کی اجازت ضروری ہے.</string>
+    <string name="iOS_RequestPermissionMicrophone">آپ اپنے دوست کو بھیجنے کے لئے اور SafeSlinger یہ آپ کے لئے خفیہ ایک صوتی پیغام ریکارڈ کر سکتے ہیں. پوچھا جب اس خصوصیت کو فعال کرنے کے لئے، آپ کو آپ کے مائکروفون پر SafeSlinger رسائی کی اجازت ضروری ہے.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ایک مرموز پیغام رسانی کی درخواست ہے اور اطلاعات کی طرف سے آنے والے پیغامات کی اجازت دیتا ہے کے بغیر کام نہیں کر سکتے. آنے والے پیغامات چالو کرنے کے لئے، آپ سے پوچھا کہ جب SafeSlinger آپ کو اطلاعات بھیجنے کی اجازت ضروری ہے.</string>
 
     <string name="label_ago">%s پہلے</string>
     <string name="label_backupCompleteDate">مکمل گزشتہ بیک اپ</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">%s ختم ہو جاتی ھے</string>
     <string name="label_expiresIn">میں ختم ہو جاتی ھے</string>
     <string name="label_FileNameHint">فائل کا نام</string>
-    <string name="label_FindInstruct">نام درج کریں آپ کو محفوظ طریقے سے بات چیت جب دیکھنے کے لئے دوسروں کی خواہش:</string>
+    <string name="label_FindInstruct">آپ کے ڈیٹا کی حفاظت کے لئے اپنا نام اور پاس فریز داخل کریں:</string>
     <string name="label_FirstName">پہلا نام</string>
     <string name="label_Home">شامل کرنے یا ہٹانے کے رابطے کی معلومات ، آپ اشتراک کرنا چاہتے ہیں اشیاء کی جانچ پڑتال ، اور دوسروں کے تبادلے کے لئے تیار ہیں جب ایکسچینج شروع نل آپ کا نام ٹیپ:</string>
     <string name="label_hometag">ہوم</string>
     <string name="label_hours">%d گھنٹے</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud کے چالو حالت میں ہے. ختم کیا جب بٹن ٹیپ.</string>
     <string name="label_InstNoMessages">کوئی پیغام نہیں. آپ کے گھر کے مینو پر تحریر پیغام کے بٹن کی طرف سے ایک پیغام بھیج سکتے ہیں.</string>
-    <string name="label_InstNoMessagesAndroid">کوئی پیغام نہیں. آپ نے کمپوز ٹیب سے ایک پیغام بھیج سکتے ہیں.</string>
     <string name="label_InstNoRecipients">وصول کنندگان شامل کرنے کے لئے ، سب سے پہلے آپ ایک ہی وقت میں ایک یا ایک سے زیادہ دوسرے صارفین کے ساتھ پھینکیں چابیاں ضروری ہے. تم نے بھی مینو میں سے ایک گوفن چابیاں رابطہ دعوت بھیج سکتے ہیں.</string>
     <string name="label_InstNoSharedFile">کوئی مشترکہ فائل. مشترکہ فولڈر پر آئی ٹیونز اور ڈریگ فائلوں کے ساتھ آپ کے آلہ کی جڑیں.</string>
     <string name="label_InstRecipients">ایک پیغام بھیجنے کے لئے ایک وصول کنندہ اٹھاو:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">لاگ ان جب خود کار طریقے پیغام اٹیچمنٹ ڈاؤن لوڈ کریں</string>
     <string name="label_summary_auto_decrypt">لاگ ان جب خود کار طریقے پیغامات بےرمز</string>
     <string name="label_summary_remind_backup_delay">بیک اپ آن لائن ہے جب اطلاع موصول.</string>
-    <string name="label_summary_show_tutorial">پھینکیں چابیاں attemping سے پہلے ایک سبق دکھائیں.</string>
+    <string name="label_summary_show_tutorial">پھینکیں چابیاں کوشش کرنے سے پہلے ایک سبق دکھائیں.</string>
     <string name="label_TapToDecryptFile">فائل بےرمز کرنے کے لئے تھپتھپائیں</string>
     <string name="label_TapToDecryptMessage">بےرمز کرنے کے لئے تھپتھپائیں</string>
     <string name="label_TapToDownloadFile">فائل ڈاؤن لوڈ کرنے کے لئے تھپتھپائیں</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">آٹو بےرمز</string>
     <string name="menu_Change">تبدیل</string>
     <string name="menu_ChangePassphrase">تبدیل پاس فریز</string>
+    <string name="menu_ContactInviteEmail">رابطے کی طرف سے ای میل</string>
+    <string name="menu_ContactInviteSms">رابطے سے متن</string>
     <string name="menu_CreateNew">نیا بنائیں</string>
     <string name="menu_delete">حذف کریں</string>
     <string name="menu_deleteThread">موضوع، فورم کے %s حذف کریں</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">پاس فریز بھول گئے ہیں؟</string>
     <string name="menu_Help">مدد</string>
     <string name="menu_Introduction">تعارف</string>
-    <string name="menu_License">لائسنس</string>
+    <string name="menu_language">زبان</string>
+    <string name="menu_link_contact_add">رابطہ لنک شامل کریں</string>
+    <string name="menu_link_contact_change">رابطہ لنک تبدیل کریں</string>
     <string name="menu_Logout">لاگ آؤٹ کریں</string>
     <string name="menu_ManagePassphrases">Passphrases لڑکا</string>
     <string name="menu_message_font_size">پیغام فونٹ سائز</string>

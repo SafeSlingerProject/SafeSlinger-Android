@@ -49,6 +49,7 @@
     <string name="btn_Import">Tuonti</string>
     <string name="btn_Introduce">Esitellä</string>
     <string name="btn_No">Ei</string>
+    <string name="btn_NotNow">Not Now</string>
     <string name="btn_NotRemind">Unohtaa</string>
     <string name="btn_OK">kunnossa</string>
     <string name="btn_Refuse">Kieltäytyä</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minuuttia</string>
     <string name="choice_8hours">8 tuntia</string>
     <string name="choice_auto_storage">Default Storage</string>
+    <string name="choice_default">Oletusarvo</string>
     <string name="choice_external_storage">External Storage</string>
     <string name="choice_font_large">Suuri</string>
     <string name="choice_font_medium">Keskikokoinen</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Musiikkisoitin dekoodausvirhe.</string>
     <string name="error_AudioPlayerError">Ei voi pelatatallennuksen.</string>
     <string name="error_AudioRecorderEncodeError">Audio-tallennin koodausvirhe.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofoni lupa tarvitaan tallentamiseen turvallisen ääniviestin. Kosketa Ohje-painiketta SafeSlinger Mikrofoni lupaa yksityiskohtia.</string>
     <string name="error_BackupNotFound">Ei varmuuskopio palauttaa.</string>
     <string name="error_BackupNotSupportedDevice">Laite ei tue varmuuskopio palauttaa.</string>
     <string name="error_BadCopyProtectUpgrade">Koskavian Android 4.1, sinun täytyy poistaa ja asentaa SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger virhe, käynnistä.</string>
     <string name="error_VcardParseFailure">Yhteystietoja on alustettu väärin.</string>
 
+    <string name="help_find">Tämän näytön avulla asettaa nimesi vaihtaa muiden kanssa, ja tunnuslausetta suojaamaan tietoja. Paina painiketta Valmis, kun olet valmis.</string>
     <string name="help_home">Vaihtaa tunnistetietoja, jotta kaikki käyttäjät ovat lähellä tai puhelimessa. Aloita Exchange-painike vaihtavat vaintarkistanut yhteystietoja.</string>
     <string name="help_identity_menu">Voit myös vaihtaa henkilötietoja henkilöllisyytesi napauttamalla painiketta nimesi. Tämä näyttää valikon, jonka avulla voit muokata yhteystietoja, Luo uusi nimi, tai käytä toista yhteyttä.</string>
     <string name="help_Messages">Tämä näyttö näyttää kaikki menneisyyden viestit ja liitetiedostot, jotka ovat vielä ladattavissa.</string>
+    <string name="help_passphrase">Tämän näytön kirjautua sovelluksen tunnuslauseesi. Jos olet unohtanut tunnuslauseen, voit muodostaa uuden avaimen suojattu uusi tunnuslause napauttamalla Unohditko Tunnuslause? painiketta. Kosketa käyttäjätunnus vaihtaa useita avaimia.</string>
+    <string name="help_passphrase_change">Tämän näytön avulla muuttaa tunnuslauseesi kirjoittamalla viimeinen tunnuslause vahvistusta ja uusi salasana.</string>
     <string name="help_PickRecip">Yhteyksiä SafeSlinger näppäimet näkyvät täällä, valitse yksi lähettää viestisi.</string>
     <string name="help_save">Kun olet valmis,protokolla paljastaaluettelonkäyttäjätiedoista vaihdetaan. Valitse yhteystiedot haluat tallentaa ja paina Tuo.</string>
     <string name="help_SecureIntroduction">Tässä näytössä voit valita kaksi ihmistä olet sinkosi avaimet ennen turvallisesti lähettää avaimet toisilleen. Paina Esittele kun olet valmis.</string>
     <string name="help_Send">Tässä näytössä voit valita joitakin tietoja javastaanottaja lähettää. Paina Lähetä, kun olet valmis.</string>
+    <string name="help_settings">Tämän näytön avulla voit muuttaa oletusasetuksia sovelluksen.</string>
 
+    <string name="iOS_contactError">Yhteydet lupa tarvitaan turvallisesti jakaa yhteystietoja kortteja. Kosketa Ohje-painiketta SafeSlinger Yhteydet lupaa yksityiskohtia.</string>
     <string name="iOS_errorpushtoken">Push rekisteröinti puuttuu.</string>
+    <string name="iOS_notificationError1">Ilmoittaminen lupaa joko hälytyksiä tai julisteita, ja rintanappi numerot, joita tarvitaan turvallisen messaging. Kosketa Ohje-painiketta SafeSlinger Ilmoitus lupaa yksityiskohtia.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ei ole optimoitu iOS 5.x laitteita. SafeSlinger vaatii iOS 6 tai uudempi.</string>
+    <string name="iOS_RequestPermissionContacts">Voit valita osoitekortistasi lähettää ystävillesi ja SafeSlinger salaa sen sinulle. Voit ottaa tämän toiminnon, sinun on sallittava SafeSlinger pääsyn yhteystietoihin, kun kysytään.</string>
+    <string name="iOS_RequestPermissionMicrophone">Voit tallentaa ääniviestin lähettää ystävillesi ja SafeSlinger salaa sen sinulle. Voit ottaa tämän toiminnon, sinun on sallittava SafeSlinger käsiksi Mikrofoni kysyttäessä.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger on salattu messaging sovellus ja ei voi toimia ilman, että saapuvat viestit Ilmoitukset. Jotta viestejä, sinun on sallittava SafeSlinger lähettää ilmoituksia, kun kysytään.</string>
 
     <string name="label_ago">%s sitten</string>
     <string name="label_backupCompleteDate">Viimeksi Backup Valmistui</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">päättyy %s</string>
     <string name="label_expiresIn">päättyy vuonna</string>
     <string name="label_FileNameHint">Tiedoston nimi</string>
-    <string name="label_FindInstruct">Annanimi, jonka haluat muiden näkevän kommunikoida turvallisesti:</string>
+    <string name="label_FindInstruct">Anna nimesi ja tunnuslausetta tietojen suojaamiseksi:</string>
     <string name="label_FirstName">Etunimi</string>
     <string name="label_Home">Voit napauttaa nimeäsi lisätä tai poistaa yhteystietoja, tarkista kohteet, jotka haluat jakaa, ja napauta Aloita Exchange kun toiset ovat valmiita exchange:</string>
     <string name="label_hometag">Koti</string>
     <string name="label_hours">%d tuntia</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud on käytössä. Paina painiketta Valmis, kun olet valmis.</string>
     <string name="label_InstNoMessages">Ei viestejä. Voit lähettääviestinLuo sähköpostiviesti-painikettaHome-valikosta.</string>
-    <string name="label_InstNoMessagesAndroid">Ei viestejä. Voit lähettääviestinLuo-välilehti.</string>
     <string name="label_InstNoRecipients">Voit lisätä vastaanottajia, sinun on ensin Sling Keys yhden tai useamman käyttäjän samanaikaisesti. Voit myös lähettääSling Avaimet kontakti kutsuvalikosta.</string>
     <string name="label_InstNoSharedFile">Ei jaettu tiedosto. Liitä laite iTunes ja vedä tiedostotjaettuun kansioon.</string>
     <string name="label_InstRecipients">Valitsevastaanottaja lähettääviestin:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Hae automaattisesti viestin liitetiedostoja kirjautuneet</string>
     <string name="label_summary_auto_decrypt">Automaattisesti purkaa viestejä kirjautuneet</string>
     <string name="label_summary_remind_backup_delay">Saat ilmoituksen, kun varmuuskopiointi ei ole paikalla.</string>
-    <string name="label_summary_show_tutorial">Näytäopetusohjelma ennen attemping rintareppu Keys.</string>
+    <string name="label_summary_show_tutorial">Näytä opetusohjelma ennen kuin yrität Sling Keys.</string>
     <string name="label_TapToDecryptFile">Kosketa purkaa tiedoston</string>
     <string name="label_TapToDecryptMessage">Kosketa purkaa</string>
     <string name="label_TapToDownloadFile">Kosketa Lataa tiedosto</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-salaus</string>
     <string name="menu_Change">Muutos</string>
     <string name="menu_ChangePassphrase">Vaihda Tunnuslause</string>
+    <string name="menu_ContactInviteEmail">Sähköposti osoitekirjasta</string>
+    <string name="menu_ContactInviteSms">Teksti Yhteystiedot</string>
     <string name="menu_CreateNew">Luo uusi</string>
     <string name="menu_delete">Poistaa</string>
     <string name="menu_deleteThread">Poista Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Unohditko Tunnuslause?</string>
     <string name="menu_Help">Auttaa</string>
     <string name="menu_Introduction">Käyttöönotto</string>
-    <string name="menu_License">Lisenssi</string>
+    <string name="menu_language">Kieli</string>
+    <string name="menu_link_contact_add">Lisää yhteystieto Link</string>
+    <string name="menu_link_contact_change">Muuta yhteystiedot Link</string>
     <string name="menu_Logout">Kirjaudu ulos</string>
     <string name="menu_ManagePassphrases">Hallitse Salasanat</string>
     <string name="menu_message_font_size">Viesti Fontin koko</string>

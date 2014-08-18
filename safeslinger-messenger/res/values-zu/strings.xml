@@ -49,6 +49,7 @@
     <string name="btn_Import">Ukungenisa</string>
     <string name="btn_Introduce">Ukwethula</string>
     <string name="btn_No">No</string>
+    <string name="btn_NotNow">Hhayi manje</string>
     <string name="btn_NotRemind">Khohlwa</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Benqabe</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">amaminithi 5</string>
     <string name="choice_8hours">8 hours</string>
     <string name="choice_auto_storage">Okuzenzakalelayo Isitoreji</string>
+    <string name="choice_default">Okuzenzakalelayo</string>
     <string name="choice_external_storage">Isitoreji lwangaphandle</string>
     <string name="choice_font_large">Large</string>
     <string name="choice_font_medium">Osebenzelana</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio umdlali emagama Iphutha.</string>
     <string name="error_AudioPlayerError">Iyehluleka ukudlala ukuqopha.</string>
     <string name="error_AudioRecorderEncodeError">Audio rekhoda ukuqonda Iphutha.</string>
+    <string name="error_AudioRecorderPermissionError">Microphone imvume sidingeka ukuze uqophe umyalezo wezwi okuphephile. Thepha inkinobho Usizo SafeSlinger Microphone imininingwane imvume.</string>
     <string name="error_BackupNotFound">Ayikho isipele ukubuyisela.</string>
     <string name="error_BackupNotSupportedDevice">Idivayisi ayisekeli isipele buyisela.</string>
     <string name="error_BadCopyProtectUpgrade">Ngenxa ungenwe ku Android 4.1, kuzomele ukhiphe futhi faka SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger iphutha, sicela uqale kabusha.</string>
     <string name="error_VcardParseFailure">Idatha yothintana kwase ihlelwe ngokungesikho.</string>
 
+    <string name="help_find">Sebenzisa lesi sikrini ukuze usethe igama lakho ukushintshanisa nabanye, kanye igama lokungena ukuze uvikele idatha yakho. Thepha inkinobho Kwenziw uma usuqedile.</string>
     <string name="help_home">Ukushintshanisa ungubani idatha, ukuqinisekisa yonke abasebenzisi kukhona oseduze efonini. Inkinobho Qala Exchange izoba ukushintshanisa kuphela idatha yothintana kuhloliwe.</string>
     <string name="help_identity_menu">Ungase ushintshe idatha emayelana ubuwena kulolu esibukweni siqu evunyelwe kwi inkinobho negama lakho. Lokhu kuzokwenza babonisa yemenyu ukuvumela ukuba Hlela contact yakho, Yakha Oxhumene, noma Sebenzisa Enye contact.</string>
     <string name="help_Messages">Le screen ebonisa yonke imilayezo esidlule, nezinamathiselo ukuthi zisatholakala for thwebula.</string>
+    <string name="help_passphrase">Sebenzisa lesi sikrini ukuze ungene ku-isicelo igama lokungena sakho. Uma ukhohlwe igama lokungena lakho, ungase ukhiye omusha evikelwe ngumuntu igama lokungena omusha ngu ngokushaya igama lokungena Uyikhohliwe? Inkinobho. Thinta igama lomsebenzisi ukushintsha phakathi izinkinobho eziningi.</string>
+    <string name="help_passphrase_change">Sebenzisa lesi sikrini ukushintsha igama lokungena lakho ngokufaka igama lokungena lakho lokugcina isiqinisekiso kanye igama lokungena entsha.</string>
     <string name="help_PickRecip">Oxhumene nabo nge SafeSlinger okhiye ayaboniswa lapha, khetha eyodwa ukuthumela umlayezo wakho ku-.</string>
     <string name="help_save">Lapho eqeda, protocol kuyokwembula uhlu idatha omazisi umklomelo. Khetha oxhumana nabo ofisa ugcine bese ucindezela Import.</string>
     <string name="help_SecureIntroduction">Le screen ikuvumela ukuba ukhethe abantu ababili niye slung okhiye ne ngaphambi ukuze ngokuphepha athumele okhiye zabo komunye nomunye. Simply cindezela Yethula uma sikulungele.</string>
     <string name="help_Send">Le screen ikuvumela ukuba ukhethe ezinye idatha kanye umemukeli ukuthumela. Simply cindezela Thumela uma sikulungele.</string>
+    <string name="help_settings">Le screen ikuvumela ukuba ushintshe izilungiselelo yomngani isicelo.</string>
 
+    <string name="iOS_contactError">Imvume oxhumana nabo okudingekayo ukuze ngokuphepha ukwabelana contact amakhadi. Thepha inkinobho Usizo SafeSlinger imininingwane imvume Ifonibhuku.</string>
     <string name="iOS_errorpushtoken">Ukubhalisa push entulekayo.</string>
+    <string name="iOS_notificationError1">Isaziso imvume noma nezibonis noma amabhanela, futhi ibheji izinombolo, kudingeka for imiyalezo ephephile. Thepha inkinobho Usizo SafeSlinger imininingwane imvume Isaziso.</string>
     <string name="iOS_oldOSWarn">SafeSlinger is hhayi eliphezulu iOS 5.x amadivaysi. SafeSlinger idinga iOS 6 noma ngaphezulu.</string>
+    <string name="iOS_RequestPermissionContacts">Ungakhetha ikhadi lakho contact ukuthumela abangane bakho kanye SafeSlinger izoba ngemfihlo yona. Ukuze sikwazi lesi sici, kufanele uvumele SafeSlinger ukufinyelela othintana nabo bakho uma ebuzwa.</string>
+    <string name="iOS_RequestPermissionMicrophone">Ungakwazi Ukurekhoda umyalezo wezwi ukuthumela abangane bakho kanye SafeSlinger izoba ngemfihlo yona. Ukuze sikwazi lesi sici, kufanele uvumele SafeSlinger ukufinyelela Microphone wakho uma ebuzwa.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger iyi-imiyalezo application ngekhodi futhi azikwazi ukusebenza ngaphandle kokuvumela imiyalezo engenayo kusuka Yezaziso. Ukuze sikwazi imiyalezo engenayo, kufanele uvumele SafeSlinger ukuthumela kini izaziso uma ebuzwa.</string>
 
     <string name="label_ago">%s edlule</string>
     <string name="label_backupCompleteDate">Backup Last eqediwe</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">yisikhathi %s</string>
     <string name="label_expiresIn">yisikhathi ngo</string>
     <string name="label_FileNameHint">Igama ifayela</string>
-    <string name="label_FindInstruct">Faka igama ofisa abanye ukubona lapho ukuxhumana ngokuphepha:</string>
+    <string name="label_FindInstruct">Faka igama lakho kanye igama lokungena ukuze uvikele idatha yakho:</string>
     <string name="label_FirstName">Igama Lokuqala</string>
     <string name="label_Home">Thepha igama lakho ukuze wengeze noma ususe idatha yothintana, hlola izinto ufisa ukwabelana, bese uthepha Qala Exchange lapho nabanye bakulungele exchange:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">amahora %d</string>
     <string name="label_iCloudEnable">SafeSlinger ICLOUD inikwe amandla. Thepha inkinobho Kwenziw uma usuqedile.</string>
     <string name="label_InstNoMessages">Ayikho imiyalezo. Ungase athumele umyalezo ovela inkinobho Dala Message on imenyu Ekhaya.</string>
-    <string name="label_InstNoMessagesAndroid">Ayikho imiyalezo. Ungase athumele umyalezo ovela ithebhu Dala.</string>
     <string name="label_InstNoRecipients">Ukwengeza abemukeli, kumele uqale okokulengisa Izihluthulelo nabanye abasebenzisi elilodwa noma ngaphezulu ngesikhathi esisodwa. Ungakwazi futhi uthumele oxhumana isimemo okokulengisa Izihluthulelo kusuka kwimenyu.</string>
     <string name="label_InstNoSharedFile">Ifayela No okwabelwana. Xhuma idivayisi yakho ne iTunes kanye amafayela uhudule kuya ifolda ehlanganyelwe.</string>
     <string name="label_InstRecipients">Khetha umamukeli ukuthumela umyalezo:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Download umlayezo okunamathiselwe othomathikhi uma ngemvume ngemvume</string>
     <string name="label_summary_auto_decrypt">Ukususa ukubhala imiyalezo nge-othomathikhi uma ngemvume ngemvume</string>
     <string name="label_summary_remind_backup_delay">Thola isaziso uma isipele akaxhunyiwe.</string>
-    <string name="label_summary_show_tutorial">Bonisa isifundo ngaphambi attemping kuya okokulengisa Keys.</string>
+    <string name="label_summary_show_tutorial">Bonisa isifundo ngaphambi kokuzama okokulengisa Keys.</string>
     <string name="label_TapToDecryptFile">Thinta ukususa ukubhala ifayela</string>
     <string name="label_TapToDecryptMessage">Thepha ukuqaqa</string>
     <string name="label_TapToDownloadFile">Thinta ukulanda ifayela</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-guqulela</string>
     <string name="menu_Change">Shintsha</string>
     <string name="menu_ChangePassphrase">Shintsha igama lokungena</string>
+    <string name="menu_ContactInviteEmail">I-imeyili kusuka Ifonibhuku</string>
+    <string name="menu_ContactInviteSms">Umbhalo kusuka Ifonibhuku</string>
     <string name="menu_CreateNew">Yakha New</string>
     <string name="menu_delete">Susa</string>
     <string name="menu_deleteThread">Susa Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Ukhohlwe igama lokungena?</string>
     <string name="menu_Help">Siza</string>
     <string name="menu_Introduction">Isingeniso</string>
-    <string name="menu_License">License</string>
+    <string name="menu_language">Ulimi</string>
+    <string name="menu_link_contact_add">Engeza Imininingwane Link</string>
+    <string name="menu_link_contact_change">Shintsha Imininingwane Link</string>
     <string name="menu_Logout">Phuma</string>
     <string name="menu_ManagePassphrases">Lawula Passphrases</string>
     <string name="menu_message_font_size">Umlayezo wefonti Usayizi</string>

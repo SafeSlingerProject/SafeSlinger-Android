@@ -55,12 +55,18 @@
             android:title="@string/label_ContactName" />
 
         <ListPreference
-            android:defaultValue="18"
+            android:defaultValue="zz"
+            android:dialogTitle="@string/title_language"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            android:key="language"
+            android:title="@string/menu_language" />
+        <ListPreference
+            android:defaultValue="16"
             android:dialogTitle="@string/title_font_size"
             android:entries="@array/font_size_entries"
             android:entryValues="@array/font_size_values"
-            android:key="fontSize"
-            android:persistent="false"
+            android:key="fontSize172"
             android:title="@string/menu_message_font_size" />
         <ListPreference
             android:dialogTitle="@string/label_targetAccountLabel"
@@ -152,7 +158,7 @@
         </Preference>
         <Preference
             android:key="showPrivacy"
-            android:title="@string/text_KeywordPrivacy" >
+            android:title="@string/menu_PrivacyPolicy" >
         </Preference>
     </PreferenceCategory>
 

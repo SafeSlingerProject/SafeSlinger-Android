@@ -49,6 +49,7 @@
     <string name="btn_Import">Nhập khẩu</string>
     <string name="btn_Introduce">Giới thiệu</string>
     <string name="btn_No">Không</string>
+    <string name="btn_NotNow">Bây giờ không</string>
     <string name="btn_NotRemind">Quên</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Từ chối</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 phút</string>
     <string name="choice_8hours">8 giờ</string>
     <string name="choice_auto_storage">Mặc định lưu trữ</string>
+    <string name="choice_default">Mặc định</string>
     <string name="choice_external_storage">Lưu trữ gắn ngoài</string>
     <string name="choice_font_large">To</string>
     <string name="choice_font_medium">Trung bình</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Âm thanh máy nghe nhạc lỗi giải mã.</string>
     <string name="error_AudioPlayerError">Không thể chơi ghi âm.</string>
     <string name="error_AudioRecorderEncodeError">Âm thanh lỗi mã hóa ghi.</string>
+    <string name="error_AudioRecorderPermissionError">Cho phép micro được yêu cầu để ghi lại một tin nhắn thoại an toàn. Bấm vào nút Trợ giúp cho SafeSlinger Microphone chi tiết cho phép.</string>
     <string name="error_BackupNotFound">Không có sao lưu để khôi phục lại.</string>
     <string name="error_BackupNotSupportedDevice">Thiết bị không hỗ trợ khôi phục sao lưu.</string>
     <string name="error_BadCopyProtectUpgrade">Do một lỗi trong Android 4.1, bạn sẽ phải gỡ bỏ cài đặt và cài đặt lại SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">Lỗi SafeSlinger, hãy khởi động lại.</string>
     <string name="error_VcardParseFailure">Dữ liệu liên lạc đã được định dạng chính xác.</string>
 
+    <string name="help_find">Sử dụng màn hình này để thiết lập tên của bạn để trao đổi với người khác, và một cụm từ mật khẩu để bảo vệ dữ liệu của bạn. Bấm vào nút Done khi hoàn tất.</string>
     <string name="help_home">Trao đổi dữ liệu nhận dạng, đảm bảo tất cả người dùng đang ở gần hoặc trên điện thoại. Nút Bắt đầu Exchange sẽ trao đổi chỉ có dữ liệu liên lạc kiểm tra.</string>
     <string name="help_identity_menu">Bạn cũng có thể thay đổi dữ liệu cá nhân về danh tính của bạn trên màn hình này bằng cách khai thác vào nút có tên của bạn. Điều này sẽ hiển thị một menu cho phép bạn chỉnh sửa liên lạc của bạn, Tạo liên lạc mới, hoặc sử dụng liên lạc khác.</string>
     <string name="help_Messages">Màn hình này hiển thị tất cả các thông điệp qua, và file đính kèm vẫn có sẵn để tải về.</string>
+    <string name="help_passphrase">Sử dụng màn hình này để đăng nhập vào ứng dụng với cụm từ mật khẩu của bạn. Nếu bạn quên mật khẩu, bạn có thể tạo một khóa mới được bảo vệ bởi một mật khẩu mới bằng cách khai thác các cụm mật khẩu Quên? nút. Chạm vào tên người dùng để chuyển đổi giữa nhiều phím.</string>
+    <string name="help_passphrase_change">Sử dụng màn hình này để thay đổi mật khẩu của bạn bằng cách nhập mật khẩu mới của bạn để xác nhận và cụm từ mật khẩu mới.</string>
     <string name="help_PickRecip">Liên hệ với các phím SafeSlinger được hiển thị ở đây, hãy chọn một để gửi thông điệp của bạn.</string>
     <string name="help_save">Khi hoàn tất, giao thức sẽ tiết lộ một danh sách các dữ liệu nhận dạng trao đổi. Chọn số liên lạc bạn muốn lưu và nhấn Import.</string>
     <string name="help_SecureIntroduction">Màn hình này cho phép bạn chọn hai người bạn đã đeo chìa khóa với trước khi gửi an toàn các khóa của họ với nhau. Chỉ cần nhấn Giới thiệu khi đã sẵn sàng.</string>
     <string name="help_Send">Màn hình này cho phép bạn chọn một số dữ liệu và một người nhận gửi đến. Chỉ cần nhấn Gửi khi đã sẵn sàng.</string>
+    <string name="help_settings">Màn hình này cho phép bạn thay đổi các thiết lập mặc định cho ứng dụng.</string>
 
+    <string name="iOS_contactError">Liên hệ cho phép là cần thiết để chia sẻ an toàn thẻ liên lạc. Bấm vào nút Trợ giúp cho SafeSlinger chi tiết Liên hệ phép.</string>
     <string name="iOS_errorpushtoken">Đăng ký đẩy là mất tích.</string>
+    <string name="iOS_notificationError1">Cho phép thông báo cho một trong hai cảnh báo hoặc các biểu ngữ, và số huy hiệu, được yêu cầu để nhắn tin an toàn. Bấm vào nút Trợ giúp cho SafeSlinger chi tiết cho phép thông báo.</string>
     <string name="iOS_oldOSWarn">SafeSlinger không được tối ưu hóa cho các thiết bị iOS 5.x. SafeSlinger đòi hỏi iOS 6 hoặc cao hơn.</string>
+    <string name="iOS_RequestPermissionContacts">Bạn có thể chọn thẻ liên lạc của bạn để gửi cho bạn bè của bạn và SafeSlinger sẽ mã hóa nó cho bạn. Để kích hoạt tính năng này, bạn phải cho phép truy cập vào hệ SafeSlinger của bạn khi được hỏi.</string>
+    <string name="iOS_RequestPermissionMicrophone">Bạn có thể ghi lại một tin nhắn thoại để gửi cho bạn bè của bạn và SafeSlinger sẽ mã hóa nó cho bạn. Để kích hoạt tính năng này, bạn phải cho phép truy cập vào SafeSlinger Microphone của bạn khi được hỏi.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger là một ứng dụng mã hóa tin nhắn và không thể hoạt động mà không cho phép tin nhắn gửi đến từ thông báo. Để cho phép tin nhắn gửi đến, bạn phải cho phép SafeSlinger để gửi cho bạn thông báo khi được hỏi.</string>
 
     <string name="label_ago">%s trước</string>
     <string name="label_backupCompleteDate">Sao lưu cuối cùng đã hoàn thành</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">hết hạn %s</string>
     <string name="label_expiresIn">hết hạn trong</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Nhập tên bạn muốn người khác nhìn thấy khi giao tiếp an toàn:</string>
+    <string name="label_FindInstruct">Nhập tên của bạn và mật khẩu để bảo vệ dữ liệu của bạn:</string>
     <string name="label_FirstName">Tên đầu tiên</string>
     <string name="label_Home">Khai thác tên của bạn để thêm hoặc loại bỏ các dữ liệu liên lạc, kiểm tra các mặt hàng bạn muốn chia sẻ, và bấm Bắt đầu giao dịch khi những người khác đã sẵn sàng để trao đổi:</string>
     <string name="label_hometag">Quê hương</string>
     <string name="label_hours">%d giờ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud được kích hoạt. Bấm vào nút Done khi hoàn tất.</string>
     <string name="label_InstNoMessages">Không có tin nhắn. Bạn có thể gửi một tin nhắn từ nút Soạn tin nhắn trên menu Home.</string>
-    <string name="label_InstNoMessagesAndroid">Không có tin nhắn. Bạn có thể gửi một tin nhắn từ tab Soạn.</string>
     <string name="label_InstNoRecipients">Để thêm người nhận, trước tiên bạn phải Sling phím với một hoặc nhiều người sử dụng khác cùng một lúc. Bạn cũng có thể gửi một Sling phím xúc lời mời từ trình đơn.</string>
     <string name="label_InstNoSharedFile">Tập tin không được chia sẻ. Kết nối điện thoại với iTunes và kéo tập tin vào thư mục chia sẻ.</string>
     <string name="label_InstRecipients">Chọn một người nhận để gửi tin nhắn đến:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Tự động tải về file đính kèm tin nhắn khi đăng nhập</string>
     <string name="label_summary_auto_decrypt">Tự động giải mã tin nhắn khi đăng nhập</string>
     <string name="label_summary_remind_backup_delay">Nhận thông báo khi sao lưu ngoại tuyến.</string>
-    <string name="label_summary_show_tutorial">Cho thấy một hướng dẫn trước khi attemping để Sling Keys.</string>
+    <string name="label_summary_show_tutorial">Cho thấy một hướng dẫn trước khi thử Sling Keys.</string>
     <string name="label_TapToDecryptFile">Bấm để giải mã tập tin</string>
     <string name="label_TapToDecryptMessage">Bấm để giải mã</string>
     <string name="label_TapToDownloadFile">Bấm để tải về tập tin</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Tự động giải mã</string>
     <string name="menu_Change">Thay đổi</string>
     <string name="menu_ChangePassphrase">Thay đổi cụm mật khẩu</string>
+    <string name="menu_ContactInviteEmail">Email từ Liên hệ</string>
+    <string name="menu_ContactInviteSms">Văn bản từ Liên hệ</string>
     <string name="menu_CreateNew">Tạo mới</string>
     <string name="menu_delete">Xóa</string>
     <string name="menu_deleteThread">Xóa đề %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Quên cụm mật khẩu?</string>
     <string name="menu_Help">Giúp</string>
     <string name="menu_Introduction">Giới thiệu</string>
-    <string name="menu_License">Giấy phép</string>
+    <string name="menu_language">Ngôn ngư</string>
+    <string name="menu_link_contact_add">Thêm Liên hệ Liên kết</string>
+    <string name="menu_link_contact_change">Thay đổi Liên hệ Liên kết</string>
     <string name="menu_Logout">Đăng xuất</string>
     <string name="menu_ManagePassphrases">Quản lý Cụm mật khẩu</string>
     <string name="menu_message_font_size">Nhắn cỡ chữ</string>

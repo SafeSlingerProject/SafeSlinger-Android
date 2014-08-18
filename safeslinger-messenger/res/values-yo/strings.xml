@@ -49,6 +49,7 @@
     <string name="btn_Import">Ọkerẹ</string>
     <string name="btn_Introduce">Agbekale</string>
     <string name="btn_No">Ko si</string>
+    <string name="btn_NotNow">Ko Bayi</string>
     <string name="btn_NotRemind">Gbagbe</string>
     <string name="btn_OK">dARA</string>
     <string name="btn_Refuse">Kọ</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 iṣẹju</string>
     <string name="choice_8hours">8 wakati</string>
     <string name="choice_auto_storage">Ipamọ aiyipada</string>
+    <string name="choice_default">Aiyipada</string>
     <string name="choice_external_storage">Ita Ibi</string>
     <string name="choice_font_large">Tobi</string>
     <string name="choice_font_medium">Alabọde</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Iwe ohun orin ayipada ba kuna.</string>
     <string name="error_AudioPlayerError">Ko le mu awọn gbigbasilẹ.</string>
     <string name="error_AudioRecorderEncodeError">Iwe ohun silẹ aiyipada ni aṣiṣe.</string>
+    <string name="error_AudioRecorderPermissionError">Gbohungbohun fun aiye ti wa ni ti a beere lati gba kan to ni aabo ifiranṣẹ ohun. Tẹ awọn bọtini Iranlọwọ fun SafeSlinger Gbohungbohun fun aiye awọn alaye.</string>
     <string name="error_BackupNotFound">Ko si afẹyinti lati mu pada.</string>
     <string name="error_BackupNotSupportedDevice">Ẹrọ ko še atilẹyin fun afẹyinti mimu pada.</string>
     <string name="error_BadCopyProtectUpgrade">Nitori lati kan kokoro ni Android 4,1, o yoo ni lati aifi si po ki o si tun fi SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger ašiše, Jọwọ tun.</string>
     <string name="error_VcardParseFailure">Olubasọrọ data ti a pa ti ko tọ sii.</string>
 
+    <string name="help_find">Lo yi iboju lati ṣeto orukọ rẹ lati ṣe paṣipaarọ awọn miran pẹlu, ati lati dabobo kukuru kan rẹ data. Tẹ ni kia kia nigba ti pari.</string>
     <string name="help_home">Lati pa awọn idanimo data, rii daju gbogbo awọn olumulo ni o wa nitosi tabi lori foonu. Awọn Bẹrẹ Exchange bọtini yoo pa awọn nikan ni ẹnikeji olubasọrọ data.</string>
     <string name="help_identity_menu">O tun le yi data ara ẹni nipa rẹ idanimo loju iboju yi nipa fifọwọ lori bọtini pẹlu orukọ rẹ. Eleyi yoo han si akojọ ašayan kan gbigba o si ṣ\'àtúnṣe rẹ olubasọrọ, Ṣẹda Olubasọrọ titun, tabi Lo miran olubasọrọ.</string>
     <string name="help_Messages">Iboju yi han gbogbo awọn ti o ti kọja awọn ifiranṣẹ, ati awọn asomọ ti o ba wa ni ṣi wa fun gbigba.</string>
+    <string name="help_passphrase">Lo yi iboju lati buwolu wọle lati awọn ohun elo pẹlu rẹ kukuru. Ti o ba ti gbagbe rẹ kukuru, o le se ina titun kan bọtini ni idaabobo nipasẹ titun kan kukuru nipa fifọwọ ba Gbagbe kukuru? bọtini. Tẹ orukọ olumulo ti lati yipada laarin awọn bọtini ti won.</string>
+    <string name="help_passphrase_change">Lo yi iboju lati yi rẹ kukuru nipa titẹ rẹ kẹhin kukuru fun ìmúdájú ati awọn titun kukuru.</string>
     <string name="help_PickRecip">Awọn olubasọrọ pẹlu SafeSlinger awọn bọtini han nibi ti wa ni, yan ọkan lati fi ifiranṣẹ rẹ si.</string>
     <string name="help_save">Nigbati o ba pari, awọn bèèrè yoo fi han akojọ kan ti idanimo data paarọ. Yan awọn olubasọrọ ti o fẹ lati fi wole ati ki o te.</string>
     <string name="help_SecureIntroduction">Yi iboju faye gba o lati yan eniyan meji ti o ti slung awọn bọtini pẹlu ṣaaju ki o to lati fi labeabo won si awọn bọtini kọọkan miiran. Nìkan tẹ agbekale nigba ti ṣetan.</string>
     <string name="help_Send">Yi iboju faye gba o lati yan awọn data ati olugba kan lati firanṣẹ si. Nìkan tẹ Firanṣẹ nigba ti ṣetan.</string>
+    <string name="help_settings">Iboju yi o fun laaye lati yi awọn aiyipada awọn eto fun awọn ohun elo.</string>
 
+    <string name="iOS_contactError">Awọn olubasọrọ ti wa ni aiye ti beere fun labeabo pínpín olubasọrọ awọn kaadi. Tẹ awọn bọtini Iranlọwọ fun SafeSlinger olubasọrọ awọn alaye fun aiye.</string>
     <string name="iOS_errorpushtoken">Titari ìforúkọsílẹ ba ti sonu.</string>
+    <string name="iOS_notificationError1">Iwifunni igbanilaaye fun boya titaniji tabi awọn asia, ati baaji awọn nọmba, a ti beere fun ni aabo fifiranṣẹ. Tẹ awọn bọtini Iranlọwọ fun SafeSlinger iwifunni fun aiye awọn alaye.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ti ko ba iṣapeye fun iOS 5.x awọn ẹrọ. SafeSlinger nilo iOS 6 tabi ju bee.</string>
+    <string name="iOS_RequestPermissionContacts">O le yan olubasọrọ rẹ lati fi kaadi rẹ ati awọn ọrẹ SafeSlinger yoo encrypt o fun o. Lati jeki ẹya ara ẹrọ yi, o gbọdọ gba SafeSlinger wiwọle si olubasọrọ rẹ nigba ti o beere.</string>
+    <string name="iOS_RequestPermissionMicrophone">O le gba ifiranṣẹ ohun kan lati firanṣẹ ati awọn ọrẹ rẹ SafeSlinger yoo encrypt o fun o. Lati jeki ẹya ara ẹrọ yi, o gbọdọ gba SafeSlinger wiwọle si rẹ Gbohungbohun nigba ti o beere.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger jẹ ẹya ti paroko Fifiranṣẹ ohun elo ati ki o ko ba le iṣẹ gbigba lai ti nwọle ti awọn ifiranṣẹ lati iwifunni. Lati gba ifihan ti nwọle awọn ifiranṣẹ, o gbọdọ gba lati firanṣẹ ti o SafeSlinger iwifunni nigba ti o beere.</string>
 
     <string name="label_ago">%s seyin</string>
     <string name="label_backupCompleteDate">Kẹhin afẹyinti pari</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">dopin %s</string>
     <string name="label_expiresIn">dopin ni</string>
     <string name="label_FileNameHint">Faili Orukọ</string>
-    <string name="label_FindInstruct">Tẹ orukọ ti o fẹ lati ri awọn miran nigbati o ba soro labeabo:</string>
+    <string name="label_FindInstruct">Tẹ orukọ rẹ si ki o si kukuru kan lati dabobo rẹ data:</string>
     <string name="label_FirstName">Akọkọ Orukọ</string>
     <string name="label_Home">Tẹ orukọ rẹ lati fi awọn olubasọrọ tabi yọ data, ṣayẹwo awọn ohun ti o fẹ lati pin, ki o si tẹ Bẹrẹ Exchange nigba ti awọn miran ni o wa setan lati paṣipaarọ:</string>
     <string name="label_hometag">Ile</string>
     <string name="label_hours">%d wakati</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ti wa ni sise. Tẹ ni kia kia nigba ti pari.</string>
     <string name="label_InstNoMessages">Ko si awọn ifiranṣẹ. O le fi ifiranṣẹ kan ranṣẹ lati awọn Pese fun ifiranṣẹ bọtini lori ile akojọ.</string>
-    <string name="label_InstNoMessagesAndroid">Ko si awọn ifiranṣẹ. O le fi ifiranṣẹ kan ranṣẹ lati Pese taabu.</string>
     <string name="label_InstNoRecipients">Lati fi awọn olugba, o gbodo akọkọ Sling bötini pẹlu ọkan tabi diẹ ẹ sii awọn olumulo miiran ni akoko kanna. O tun le fi kan Sling bötini olubasọrọ pipe si lati akojọ.</string>
     <string name="label_InstNoSharedFile">Ko si mimo fun elomiran faili. Sopọ pẹlu ẹrọ rẹ iTunes ati ki o fa awọn faili si mimo fun elomiran folda.</string>
     <string name="label_InstRecipients">Mu olugba kan lati fi ifiranṣẹ kan ranṣẹ si:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Laifọwọyi gba awọn ifiranṣẹ asomọ nigbati ibuwolu wọle be o</string>
     <string name="label_summary_auto_decrypt">Laifọwọyi ibuwolu wọle nigbati awọn ifiranṣẹ gbo be o</string>
     <string name="label_summary_remind_backup_delay">Ba gba iwifunni nigbati afẹyinti ni aisinipo.</string>
-    <string name="label_summary_show_tutorial">Fi kan ibaṣepọ šaaju ki attemping si Sling bötini.</string>
+    <string name="label_summary_show_tutorial">Fi kan ibaṣepọ ṣaaju ki o to pinnu lati Sling bötini.</string>
     <string name="label_TapToDecryptFile">Tẹ ni kia kia lati gbo faili</string>
     <string name="label_TapToDecryptMessage">Tẹ ni kia kia lati gbo</string>
     <string name="label_TapToDownloadFile">Tẹ ni kia kia lati gba lati ayelujara faili</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Idojukọ-gbo</string>
     <string name="menu_Change">Change</string>
     <string name="menu_ChangePassphrase">Change kukuru</string>
+    <string name="menu_ContactInviteEmail">Imeeli kan lati awọn olubasọrọ</string>
+    <string name="menu_ContactInviteSms">Ọrọ lati awọn olubasọrọ</string>
     <string name="menu_CreateNew">Ṣẹda titun</string>
     <string name="menu_delete">Pa</string>
     <string name="menu_deleteThread">Pa Module %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Gbagbe kukuru?</string>
     <string name="menu_Help">Iranlọwọ</string>
     <string name="menu_Introduction">Ifihan</string>
-    <string name="menu_License">Iwe-ašẹ</string>
+    <string name="menu_language">Ede</string>
+    <string name="menu_link_contact_add">Fi Kan rnṣ</string>
+    <string name="menu_link_contact_change">Yi Kan rnṣ</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Ṣakoso awọn Passphrases</string>
     <string name="menu_message_font_size">Ifiranṣẹ fonti Iwon</string>

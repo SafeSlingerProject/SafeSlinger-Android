@@ -49,6 +49,7 @@
     <string name="btn_Import">Importieren</string>
     <string name="btn_Introduce">Vorstellen</string>
     <string name="btn_No">Nein</string>
+    <string name="btn_NotNow">Nicht jetzt</string>
     <string name="btn_NotRemind">Vergessen</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Verweigern</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 Minuten</string>
     <string name="choice_8hours">8 Stunden</string>
     <string name="choice_auto_storage">Standardspeicher</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">Externer Speicher</string>
     <string name="choice_font_large">Groß</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio-Player Decodierungsfehler.</string>
     <string name="error_AudioPlayerError">Die Aufnahme kann nicht abgespielt werden.</string>
     <string name="error_AudioRecorderEncodeError">Audio Recorder Codierungsfehler.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofon Erlaubnis ist erforderlich, um eine sichere Sprachnachricht aufzuzeichnen. Tippen Sie auf die Hilfe-Taste für Mikrofon SafeSlinger Berechtigungsdetails.</string>
     <string name="error_BackupNotFound">Keine Sicherung zur Wiederherstellung vorhanden.</string>
     <string name="error_BackupNotSupportedDevice">Dieses Gerät unterstützt keine Sicherungswiederherstellung.</string>
     <string name="error_BadCopyProtectUpgrade">Aufgrund eines Fehlers in Android 4.1 müssen Sie SafeSlinger deinstallieren und neu installieren.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger Fehler, bitte neu starten.</string>
     <string name="error_VcardParseFailure">Kontakt Daten wurden falsch formatiert.</string>
 
+    <string name="help_find">Verwenden Sie diesen Bildschirm, um Ihren Namen eingestellt, um mit anderen, und einer Passphrase auszutauschen, um Ihre Daten zu schützen. Tippen Sie auf die Schaltfläche Fertig, wenn Sie fertig sind.</string>
     <string name="help_home">Um Identitätsdaten auszutauschen, vergewissern Sie sich zuerst, dass alle Benutzer mit ihrem Handy bereit sind. Durch die Schaltfläche Austauschen werden nur die ausgewählten Kontaktdaten ausgetauscht.</string>
     <string name="help_identity_menu">Sie können auch Ihre personenbezogenen Identitätsdaten auf dieser Seite ändern, indem Sie auf die Schaltfläche mit Ihrem Namen tippen. es wird ein Menü angezeigt, auf dem Sie Ihren Kontakt editieren, einen neuen Kontakt anlegen oder einen anderen verwenden können.</string>
     <string name="help_Messages">Dieses Fenster zeigt alle bisherigen Nachrichten und Dateien, die noch zum Download zur Verfügung sind.</string>
+    <string name="help_passphrase">Verwenden Sie diesen Bildschirm, um die Anwendung mit Ihrem Passwort anmelden. Wenn Sie Ihr Passwort vergessen haben, können Sie einen neuen Schlüssel mit einem neuen Passwort, indem Sie die Passphrase Passwort geschützt zu generieren?-Taste. Tippen Sie den Benutzernamen, um zwischen mehreren Tasten wechseln.</string>
+    <string name="help_passphrase_change">Verwenden Sie diesen Bildschirm, um Ihr Passwort durch Eingabe Ihrer letzten Passphrase für die Bestätigung und die neue Passphrase zu ändern.</string>
     <string name="help_PickRecip">Kontakte mit SafeSlinger Schlüssel werden hier angezeigt; wählen Sie einen Empfänger für Ihre Nachricht.</string>
     <string name="help_save">Wenn Sie fertig sind, wird eine Liste der ausgetauschten Identitätsdaten angezeigt. Wählen Sie die Kontakte, die Sie speichern möchten, und drücken Sie Importieren.</string>
     <string name="help_SecureIntroduction">Dieses Fenster ermöglicht es Ihnen, zwei Teilnehmer mit denen Sie bereits Kontakte ausgetauscht haben, einander vorzustellen. Drücken Sie hierzu einfach auf Vorstellen.</string>
     <string name="help_Send">Dieser Bildschirm ermöglicht es Ihnen, Daten an einen Empfänger zu senden. Drücken Sie einfach auf Senden nachdem Sie eine Nachricht eingegeben haben oder eine Datei ausgewählt haben.</string>
+    <string name="help_settings">In diesem Fenster können Sie die Standardeinstellungen für die Anwendung zu ändern.</string>
 
+    <string name="iOS_contactError">Kontakte Genehmigung ist für die sichere gemeinsame Nutzung von Kontaktkarten erforderlich. Tippen Sie auf die Hilfe-Taste für SafeSlinger Kontakte Berechtigungsdetails.</string>
     <string name="iOS_errorpushtoken">Push-Registrierung fehlt.</string>
+    <string name="iOS_notificationError1">Benachrichtigung Erlaubnis entweder Warnungen oder Banner und Ausweisnummern sind für das Secure Messaging erforderlich. Tippen Sie auf die Hilfe-Taste für SafeSlinger Mitteilung Berechtigungsdetails.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ist nicht für iOS 5.x Geräte optimiert. SafeSlinger erfordert iOS 6 oder höher.</string>
+    <string name="iOS_RequestPermissionContacts">Sie können Ihre Kontaktkarte auswählen, um Ihre Freunde zu schicken und SafeSlinger wird es für Sie zu verschlüsseln. Um diese Funktion zu aktivieren, müssen Sie SafeSlinger Zugriff auf Ihre Kontakte zu ermöglichen, wenn gefragt.</string>
+    <string name="iOS_RequestPermissionMicrophone">Sie können eine Sprachnachricht zu senden Ihren Freunden und SafeSlinger wird es für Sie verschlüsseln aufzeichnen. Um diese Funktion zu aktivieren, müssen Sie SafeSlinger Zugriff auf Ihr Mikrofon zu ermöglichen, wenn gefragt.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ist eine verschlüsselte Messaging-Anwendung und kann nicht, ohne dass eingehende Nachrichten von Benachrichtigungen funktionieren. Um eingehende Nachrichten zu aktivieren, müssen Sie erlauben SafeSlinger zu Ihnen, wenn Sie gefragt Benachrichtigungen senden.</string>
 
     <string name="label_ago">vor %s</string>
     <string name="label_backupCompleteDate">Letzte Sicherung erstellt</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">Läuft %s ab</string>
     <string name="label_expiresIn">läuft ab in</string>
     <string name="label_FileNameHint">Dateiname</string>
-    <string name="label_FindInstruct">Geben Sie den Namen anderer bei der Kommunikation sicher sehen wollen:</string>
+    <string name="label_FindInstruct">Geben Sie Ihren Namen und ein Passwort, um Ihre Daten zu schützen:</string>
     <string name="label_FirstName">Vorname</string>
     <string name="label_Home">Tippen Sie auf Ihren Namen, um Kontaktdaten hinzuzufügen oder zu entfernen, überprüfen Sie Artikel, die Sie teilen möchten, und tippen Sie auf Start Wechsel, wenn andere bereit, Austausch, sind:</string>
     <string name="label_hometag">Zuhause</string>
     <string name="label_hours">%d Stunden</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ist aktiviert. Tippen Sie auf die Schaltfläche Fertig, wenn Sie fertig sind.</string>
     <string name="label_InstNoMessages">Keine Nachrichten. Sie können eine Nachricht senden mit der Nachricht verfassen Schaltfläche auf dem Start-Menü.</string>
-    <string name="label_InstNoMessagesAndroid">Keine Nachrichten. Sie können eine Nachricht senden mit Verfassen.</string>
     <string name="label_InstNoRecipients">Um Empfänger hinzuzufügen, müssen Sie zuerst Sling Keys mit einem oder mehreren anderen Usern gleichzeitig. Sie können auch senden Sling Keys Kontakt Einladung aus dem Menü.</string>
     <string name="label_InstNoSharedFile">Keine gemeinsame Datei. Verbinden Sie Ihr Gerät mit iTunes und bewegen Sie Dateien in den gemeinsamen Ordner.</string>
     <string name="label_InstRecipients">Wählen Sie den Empfänger der Nachricht:</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-Entschlüsselung</string>
     <string name="menu_Change">Ändern</string>
     <string name="menu_ChangePassphrase">Passwort ändern</string>
+    <string name="menu_ContactInviteEmail">E-Mail-Kontakte von</string>
+    <string name="menu_ContactInviteSms">Text aus Kontakte</string>
     <string name="menu_CreateNew">Neu erstellen</string>
     <string name="menu_delete">Löschen</string>
     <string name="menu_deleteThread">Lösche alle Nachrichten von %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Passphrase vergessen?</string>
     <string name="menu_Help">Hilfe</string>
     <string name="menu_Introduction">Vorstellen</string>
-    <string name="menu_License">Lizenz</string>
+    <string name="menu_language">Sprache</string>
+    <string name="menu_link_contact_add">Contact Link hinzufügen</string>
+    <string name="menu_link_contact_change">Ändern Contact Link</string>
     <string name="menu_Logout">Abmelden</string>
     <string name="menu_ManagePassphrases">Passwörter verwalten</string>
     <string name="menu_message_font_size">Nachricht Schriftgröße</string>

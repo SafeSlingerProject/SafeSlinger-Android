@@ -49,6 +49,7 @@
     <string name="btn_Import">దిగుమతి</string>
     <string name="btn_Introduce">పరిచయం</string>
     <string name="btn_No">సంఖ్య</string>
+    <string name="btn_NotNow">ఇప్పుడు కాదు</string>
     <string name="btn_NotRemind">మర్చిపో</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">తిరస్కరించు</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 నిమిషాల</string>
     <string name="choice_8hours">8 గంటల</string>
     <string name="choice_auto_storage">డిఫాల్ట్ నిల్వ</string>
+    <string name="choice_default">డిఫాల్ట్</string>
     <string name="choice_external_storage">బాహ్య నిల్వ</string>
     <string name="choice_font_large">పెద్ద</string>
     <string name="choice_font_medium">మధ్యరకం</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">ఆడియో ప్లేయర్ డీకోడింగ్ లోపం.</string>
     <string name="error_AudioPlayerError">రికార్డింగ్ ప్లే కాదు.</string>
     <string name="error_AudioRecorderEncodeError">ఆడియో రికార్డర్ ఎన్కోడింగ్ లోపం.</string>
+    <string name="error_AudioRecorderPermissionError">మైక్రోఫోన్ అనుమతి సురక్షిత వాయిస్ సందేశం రికార్డ్ చేయాలి. SafeSlinger మైక్రోఫోన్ అనుమతి వివరాలకు సహాయం బటన్ నొక్కండి.</string>
     <string name="error_BackupNotFound">పునరుద్ధరించడానికి బ్యాకప్.</string>
     <string name="error_BackupNotSupportedDevice">పరికర బ్యాకప్ పునరుద్ధరించడానికి మద్దతు లేదు.</string>
     <string name="error_BadCopyProtectUpgrade">కారణంగా Android 4.1 లో ఒక బగ్, మీరు SafeSlinger అన్ఇన్స్టాల్ చేసి, మళ్ళీ ఇన్స్టాల్ ఉంటుంది.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger లోపం, మళ్ళీ ప్రారంభించండి.</string>
     <string name="error_VcardParseFailure">సంప్రదించండి డేటా తప్పుగా ఫార్మాట్ చేశారు.</string>
 
+    <string name="help_find">మీ డేటాను రక్షించడానికి ఇతరులు, మరియు పాస్ఫ్రేజ్తో మార్పిడి మీ పేరు సెట్ తెరమీద ఉపయోగించండి. పూర్తవగానే డన్ బటన్ నొక్కండి.</string>
     <string name="help_home">గుర్తింపు డేటా మార్పిడి, యూజర్లు సమీపంలోని లేదా ఫోన్ ఉండేలా. ప్రారంభం SWF ఎక్స్చేంజ్ బటన్ తనిఖీ పరిచయం డేటా మార్పిడి చేస్తుంది.</string>
     <string name="help_identity_menu">మీరు కూడా మీ పేరుతో బటన్ నొక్కడం ద్వారా తెరమీద మీ ఐడెంటిటీ వ్యక్తిగత డేటా మార్చవచ్చు. ఈ మీరు మీ సంప్రదింపు సవరించు అనుమతించే మెనును ప్రదర్శిస్తుంది న్యూ పరిచయం సృష్టించు, లేదా మరొక పరిచయం ఉపయోగించండి ఉంటుంది.</string>
     <string name="help_Messages">ఈ తెర అన్ని గత సందేశాలను, మరియు ఇప్పటికీ డౌన్లోడ్ కోసం అందుబాటులో జోడింపులను ప్రదర్శిస్తుంది.</string>
+    <string name="help_passphrase">మీ పాస్ఫ్రేజ్తో అప్లికేషన్ మీరు లాగిన్ ఈ స్క్రీన్ ఉపయోగించండి. మీరు మీ పాస్ఫ్రేజ్ని మర్చిపోతే, మీరు మర్చిపోయారా సంకేతపదమును నొక్కడం ద్వారా కొత్త సంకేతపదమును రక్షణలో కొత్త కీని ఉండవచ్చు? బటన్. బహుళ కీలు మధ్య మారడానికి యూజర్ పేరు కుళాయి.</string>
+    <string name="help_passphrase_change">ధృవీకరణ మరియు కొత్త సంకేతపదమును కోసం మీ గత సంకేతపదమును ఎంటర్ చేసి మీ పాస్ఫ్రేజ్ని మార్చడానికి ఈ స్క్రీన్ ఉపయోగించండి.</string>
     <string name="help_PickRecip">SafeSlinger కీలను తో కాంటాక్ట్స్ మీ సందేశాన్ని పంపడానికి ఎనన్నుకొనండి, ఇక్కడ ప్రదర్శించబడతాయి.</string>
     <string name="help_save">పూర్తి చేసినప్పుడు, ప్రోటోకాల్ మార్పిడి గుర్తింపు డేటా జాబితా బహిర్గతం చేస్తుంది. మీరు దిగుమతి సేవ్ మరియు నొక్కండి అనుకుంటున్నారా పరిచయాలను ఎంచుకోండి.</string>
     <string name="help_SecureIntroduction">ఈ తెర మీరు సురక్షితంగా ప్రతి ఇతర వారి కీలు పంపడానికి ముందు కీలు slung చేశారు ఇద్దరు వ్యక్తులు ఎంచుకోండి అనుమతిస్తుంది. కేవలం ఉన్నప్పుడు సిద్ధంగా పరిచయం నొక్కండి.</string>
     <string name="help_Send">ఈ తెర మీరు కొన్ని డేటా మరియు పంపడానికి ఒక గ్రహీత ఎంచుకోండి అనుమతిస్తుంది. కేవలం సిద్ధంగా ఉన్నప్పుడు పంపండి నొక్కండి.</string>
+    <string name="help_settings">ఈ తెర మీరు అప్లికేషన్ కోసం డిఫాల్ట్ సెట్టింగులను మార్చడానికి అనుమతించే.</string>
 
+    <string name="iOS_contactError">కాంటాక్ట్స్ అనుమతి సురక్షితంగా కాంటాక్ట్ కార్డులు భాగస్వామ్యం అవసరం. SafeSlinger కాంటాక్ట్స్ అనుమతి వివరాలకు సహాయం బటన్ నొక్కండి.</string>
     <string name="iOS_errorpushtoken">పుష్ గ్రామస్తులకు చెప్పడం.</string>
+    <string name="iOS_notificationError1">హెచ్చరికలు లేదా బ్యానర్లు, మరియు బ్యాడ్జ్ సంఖ్యలు కోసం నోటిఫికేషన్ అనుమతి, సురక్షిత సందేశ అవసరం. SafeSlinger నోటిఫికేషన్ అనుమతి వివరాలకు సహాయం బటన్ నొక్కండి.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x పరికరాలు ఆప్టిమైజ్ లేదు. SafeSlinger iOS 6 లేదా ఎక్కువ అవసరం.</string>
+    <string name="iOS_RequestPermissionContacts">మీరు మీ స్నేహితులు పంపడానికి మీ పరిచయం కార్డు ఎంచుకోండి మరియు SafeSlinger మీరు కోసం ఇది గుప్తీకరిస్తుంది. అడిగినప్పుడు ఈ లక్షణాలను సాధ్యం చేయటానికి, మీరు మీ పరిచయాలకు SafeSlinger యాక్సెస్ అనుమతిస్తాయి.</string>
+    <string name="iOS_RequestPermissionMicrophone">మీరు మీ స్నేహితులు పంపడానికి మరియు SafeSlinger మీరు కోసం ఇది గుప్తీకరించును గాత్ర సందేశాన్ని రికార్డు చేయవచ్చు. అడిగినప్పుడు ఈ లక్షణాలను సాధ్యం చేయటానికి, మీరు మీ మైక్రోఫోన్ కు SafeSlinger యాక్సెస్ అనుమతిస్తాయి.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ఎన్క్రిప్టెడ్ మెసేజింగ్ అప్లికేషన్ మరియు ప్రకటనలు నుండి ఇన్కమింగ్ సందేశాలను అనుమతిస్తుంది లేకుండా పనిచేయలేదు. ఇన్కమింగ్ సందేశాలను పొందటానికి, మీరు అడిగినప్పుడు SafeSlinger మీరు ప్రకటనలు పంపడానికి అనుమతిస్తాయి.</string>
 
     <string name="label_ago">%s క్రితం</string>
     <string name="label_backupCompleteDate">పూర్తి చివరి బ్యాకప్</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">%s గడువు</string>
     <string name="label_expiresIn">లో ముగుస్తుంది</string>
     <string name="label_FileNameHint">దస్త్రం పేరు</string>
-    <string name="label_FindInstruct">పేరు నమోదు మీరు సురక్షితంగా తెలుసుకొనేందుకు చూడటానికి ఇతరులు అనుకుంటున్నారా:</string>
+    <string name="label_FindInstruct">మీ డేటాను రక్షించడానికి మీ పేరు మరియు సంకేతపదమును ప్రవేశపెట్టి:</string>
     <string name="label_FirstName">మొదటి పేరు</string>
     <string name="label_Home">జోడించడానికి లేదా తొలగించడానికి పరిచయం డేటా, మీరు భాగస్వామ్యం అనుకుంటున్నారా అంశాలను తనిఖీ, మరియు ఇతరులు మార్పిడి సిద్ధంగా ఉన్నప్పుడు ఎక్స్చేంజ్ ప్రారంభం SWF కార్చు మీ పేరు పంపు:</string>
     <string name="label_hometag">హోం</string>
     <string name="label_hours">%d గంటల</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ప్రారంభించబడింది. పూర్తవగానే డన్ బటన్ నొక్కండి.</string>
     <string name="label_InstNoMessages">లేవు. మీరు హోం మెనులో కూర్పు మెసేజ్ బటన్ నుండి ఒక సందేశం పంపవచ్చు.</string>
-    <string name="label_InstNoMessagesAndroid">లేవు. మీరు కూర్పు టాబ్ నుండి ఒక సందేశం పంపవచ్చు.</string>
     <string name="label_InstNoRecipients">గ్రహీతలు జోడించడానికి, మీరు మొదటి అదే సమయంలో ఒకటి లేదా ఎక్కువ ఇతర వినియోగదారులతో స్లింగ్ కీస్ తప్పక. మీరు మెను నుండి స్లింగ్ కీస్ పరిచయం ఆహ్వానం పంపుతాము.</string>
     <string name="label_InstNoSharedFile">లేవు భాగస్వామ్యం ఫైలు. షేర్డ్ ఫోల్డర్కు ఐట్యూన్స్ మరియు డ్రాగ్ ఫైళ్లను మీ పరికరాన్ని కనెక్ట్ చేయండి.</string>
     <string name="label_InstRecipients">ఒక సందేశాన్ని పంపడానికి ఒక గ్రహీత ఎంచుకోండి:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">లాగిన్ అయినప్పుడు స్వయంచాలకంగా సందేశాన్ని దించుకో</string>
     <string name="label_summary_auto_decrypt">లాగిన్ అయినప్పుడు స్వయంచాలకంగా సందేశాలను వ్యక్తీకరించడానికి</string>
     <string name="label_summary_remind_backup_delay">బ్యాకప్ ఆఫ్లైన్ ఉన్నప్పుడు నోటిఫికేషన్ పొందండి.</string>
-    <string name="label_summary_show_tutorial">స్లింగ్ కీస్ కు attemping ముందు ట్యుటోరియల్.</string>
+    <string name="label_summary_show_tutorial">స్లింగ్ కీస్ ప్రయత్నించే ముందు ఒక ట్యుటోరియల్.</string>
     <string name="label_TapToDecryptFile">ఫైల్ను వ్యక్తీకరించడానికి నొక్కండి</string>
     <string name="label_TapToDecryptMessage">వ్యక్తీకరించడానికి నొక్కండి</string>
     <string name="label_TapToDownloadFile">ఫైల్ డౌన్లోడ్ కుళాయి</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">స్వీయ వ్యక్తపరుచు</string>
     <string name="menu_Change">మార్పు</string>
     <string name="menu_ChangePassphrase">మార్చు సంకేతపదమును</string>
+    <string name="menu_ContactInviteEmail">కాంటాక్ట్స్ నుండి ఇమెయిల్</string>
+    <string name="menu_ContactInviteSms">కాంటాక్ట్స్ నుండి టెక్స్ట్</string>
     <string name="menu_CreateNew">న్యూ సృష్టించు</string>
     <string name="menu_delete">తొలగించు</string>
     <string name="menu_deleteThread">Thread %s తొలగించు</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">పాస్ఫ్రేజ్ మర్చిపోయారా?</string>
     <string name="menu_Help">సహాయం</string>
     <string name="menu_Introduction">పరిచయం</string>
-    <string name="menu_License">అనుజ్ఞాపత్రము</string>
+    <string name="menu_language">భాష</string>
+    <string name="menu_link_contact_add">సంప్రదించండి లింక్ జోడించండి</string>
+    <string name="menu_link_contact_change">సంప్రదించండి లింక్ మార్చు</string>
     <string name="menu_Logout">లాగ్ అవుట్</string>
     <string name="menu_ManagePassphrases">సంకేతపదములను నిర్వహించండి</string>
     <string name="menu_message_font_size">సందేశం ఫాంట్ సైజు</string>

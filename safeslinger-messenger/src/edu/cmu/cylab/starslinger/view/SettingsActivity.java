@@ -32,6 +32,7 @@ import java.util.Locale;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
+import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -40,6 +41,7 @@ import android.content.res.Resources.NotFoundException;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.EditTextPreference;
@@ -72,6 +74,7 @@ public class SettingsActivity extends PreferenceActivity {
     private static final int VIEW_FILEDIR_ID = 6;
     public static final int RESULT_LOGOUT = 7;
     public static final int RESULT_DELETE_KEYS = 8;
+    private static final int MENU_FEEDBACK = 9;
     private IntegerListPreference mPassPhraseCacheTtl;
     private CheckBoxPreference mRemindBackupDelay;
     private ListPreference mAccountNameType;
@@ -93,6 +96,7 @@ public class SettingsActivity extends PreferenceActivity {
     private CheckBoxPreference mNotificationVibrate;
     private RingtonePreference mNotificationRingtone;
     private ListPreference mFontSize;
+    private ListPreference mLanguage;
     private CheckBoxPreference mAutoDecrypt;
     private ArrayList<AccountData> mAccounts = new ArrayList<AccountData>();
     private static boolean sTtlChanged = false;
@@ -140,6 +144,7 @@ public class SettingsActivity extends PreferenceActivity {
         mNotificationVibrate = (CheckBoxPreference) findPreference(SafeSlingerPrefs.pref.NOTIFICATION_VIBRATE);
         mNotificationRingtone = (RingtonePreference) findPreference(SafeSlingerPrefs.pref.NOTIFICATION_RINGTONE);
         mFontSize = (ListPreference) findPreference(SafeSlingerPrefs.pref.FONT_SIZE);
+        mLanguage = (ListPreference) findPreference(SafeSlingerPrefs.pref.LANGUAGE);
         mAutoDecrypt = (CheckBoxPreference) findPreference(SafeSlingerPrefs.pref.AUTO_DECRYPT);
 
         setMessagePreferences();
@@ -171,6 +176,7 @@ public class SettingsActivity extends PreferenceActivity {
         setRingtone();
         setVibrate();
         setFontSize();
+        setLanguage();
         setAutoDecrypt();
         setManagePassphrase();
         setLogout();
@@ -548,6 +554,36 @@ public class SettingsActivity extends PreferenceActivity {
         });
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    protected void setLanguage() {
+        ArrayList<String> showCode = SafeSlinger.getApplication().getListLanguages(true);
+        ArrayList<String> showLang = SafeSlinger.getApplication().getListLanguages(false);
+        CharSequence[] entries = showLang.toArray(new CharSequence[showLang.size()]);
+        CharSequence[] entryValues = showCode.toArray(new CharSequence[showCode.size()]);
+        mLanguage.setEntries(entries);
+        mLanguage.setEntryValues(entryValues);
+        mLanguage.setValue(SafeSlingerPrefs.getLanguage());
+        mLanguage.setSummary(mLanguage.getEntry());
+        mLanguage.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                mLanguage.setValue(newValue.toString());
+                mLanguage.setSummary(mLanguage.getEntry());
+                SafeSlingerPrefs.setLanguage(newValue.toString());
+                SafeSlinger.getApplication().updateLanguage(newValue.toString());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                    recreate();
+                } else {
+                    startActivity(getIntent());
+                    finish();
+                }
+                return false;
+            }
+        });
+
+    }
+
     protected void setAutoDecrypt() {
         mAutoDecrypt.setChecked(SafeSlingerPrefs.getAutoDecrypt());
         mAutoDecrypt.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -639,7 +675,10 @@ public class SettingsActivity extends PreferenceActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         menu.clear();
-        menu.add(0, MENU_RESTORE_DEFAULTS, 0, R.string.menu_restore_default);
+        menu.add(0, MENU_RESTORE_DEFAULTS, 0, R.string.menu_restore_default).setIcon(
+                android.R.drawable.ic_menu_revert);
+        menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
+                android.R.drawable.ic_menu_send);
         return true;
     }
 
@@ -648,6 +687,9 @@ public class SettingsActivity extends PreferenceActivity {
         switch (item.getItemId()) {
             case MENU_RESTORE_DEFAULTS:
                 restoreDefaultPreferences();
+                return true;
+            case MENU_FEEDBACK:
+                SafeSlinger.getApplication().showFeedbackEmail(SettingsActivity.this);
                 return true;
             case android.R.id.home:
                 finish();

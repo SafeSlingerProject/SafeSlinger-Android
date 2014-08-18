@@ -49,6 +49,7 @@
     <string name="btn_Import">ಆಮದು</string>
     <string name="btn_Introduce">ಪರಿಚಯಿಸಲು</string>
     <string name="btn_No">ಇಲ್ಲ</string>
+    <string name="btn_NotNow">ಮಾಡಿರುವುದಿಲ್ಲ ಈಗ</string>
     <string name="btn_NotRemind">ಫರ್ಗೆಟ್</string>
     <string name="btn_OK">ಸರಿ</string>
     <string name="btn_Refuse">ನಿರಾಕರಿಸು</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 ನಿಮಿಷಗಳ</string>
     <string name="choice_8hours">8 ಗಂಟೆಗಳ</string>
     <string name="choice_auto_storage">ಡೀಫಾಲ್ಟ್ ಶೇಖರಣಾ</string>
+    <string name="choice_default">ಡೀಫಾಲ್ಟ್</string>
     <string name="choice_external_storage">ಬಾಹ್ಯ ಸಂಗ್ರಹಣೆ</string>
     <string name="choice_font_large">ದೊಡ್ಡ</string>
     <string name="choice_font_medium">ಮಧ್ಯಮ</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">ಆಡಿಯೋ ಪ್ಲೇಯರ್ ಡಿಕೋಡಿಂಗ್ ದೋಷ.</string>
     <string name="error_AudioPlayerError">ರೆಕಾರ್ಡಿಂಗ್ ಆಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="error_AudioRecorderEncodeError">ಆಡಿಯೋ ರೆಕಾರ್ಡರ್ ಎನ್ಕೋಡಿಂಗ್ ದೋಷ.</string>
+    <string name="error_AudioRecorderPermissionError">ಮೈಕ್ರೊಫೋನ್ ಅನುಮತಿ ಸುರಕ್ಷಿತ ಧ್ವನಿ ಸಂದೇಶವನ್ನು ಧ್ವನಿಮುದ್ರಿಸಲು ಅಗತ್ಯವಿದೆ. SafeSlinger ಮೈಕ್ರೊಫೋನ್ ಅನುಮತಿ ವಿವರಗಳಿಗಾಗಿ ಸಹಾಯ ಬಟನ್ ಟ್ಯಾಪ್.</string>
     <string name="error_BackupNotFound">ಪುನಃಸ್ಥಾಪಿಸಲು ಯಾವುದೇ ಬ್ಯಾಕ್ಅಪ್.</string>
     <string name="error_BackupNotSupportedDevice">ಸಾಧನ ಬ್ಯಾಕ್ಅಪ್ ಪುನಃಸ್ಥಾಪಿಸಲು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.</string>
     <string name="error_BadCopyProtectUpgrade">ಕಾರಣ ಆಂಡ್ರಾಯ್ಡ್ 4.1 ಒಂದು ದೋಷವನ್ನು, ನೀವು SafeSlinger ಅನ್ಇನ್ಸ್ಟಾಲ್ ಮತ್ತು ಮರುಸ್ಥಾಪಿಸುವ ಹೊಂದಿರುತ್ತದೆ.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger ದೋಷ, ದಯವಿಟ್ಟು ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ.</string>
     <string name="error_VcardParseFailure">ಸಂಪರ್ಕಿಸಿ ಡೇಟಾ ತಪ್ಪಾಗಿ ಸ್ವರೂಪಗೊಳಿಸಲಾಗಿದೆ ಮಾಡಲಾಯಿತು.</string>
 
+    <string name="help_find">ನಿಮ್ಮ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸಲು ಇತರರು, ಮತ್ತು ಪಾಸ್ಫ್ರೇಸ್ನೊಂದಿಗೆ ವಿನಿಮಯ ನಿಮ್ಮ ಹೆಸರು ಸೆಟ್ ಇದನ್ನು ಬಳಸಿ. ಮುಗಿದಮೇಲೆ ಡನ್ ಬಟನ್ ಟ್ಯಾಪ್.</string>
     <string name="help_home">ಗುರುತನ್ನು ದಶಮಾಂಶ ವಿನಿಮಯ, ಎಲ್ಲಾ ಬಳಕೆದಾರರು ಹತ್ತಿರದ ಅಥವಾ ಫೋನ್ನಲ್ಲಿ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು. ಆರಂಭಿಸಲು ಎಕ್ಸ್ಚೇಂಜ್ ಬಟನ್ ಮಾತ್ರ ಪರಿಶೀಲಿಸಿದ ಸಂಪರ್ಕ ದಶಮಾಂಶ ವಿನಿಮಯ.</string>
     <string name="help_identity_menu">ನಿಮ್ಮ ಹೆಸರಿನ ಗುಂಡಿಯನ್ನು ಟ್ಯಾಪಿಂಗ್ ಮೂಲಕ ಈ ತೆರೆಯಲ್ಲಿ ನಿಮ್ಮ ಗುರುತನ್ನು ಬಗ್ಗೆ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಬದಲಾಯಿಸಬಹುದು. ಈ, ನೀವು ನಿಮ್ಮ ಸಂಪರ್ಕ ಸಂಪಾದಿಸಲು ಅವಕಾಶ ಒಂದು ಮೆನುವನ್ನು ತೋರಿಸುತ್ತದೆ ಹೊಸ ಸಂಪರ್ಕ ರಚಿಸಿ, ಅಥವಾ ಇನ್ನೊಂದು ಸಂಪರ್ಕ ಬಳಸುತ್ತದೆ.</string>
     <string name="help_Messages">ಈ ಪರದೆಯ ಎಲ್ಲಾ ಕಳೆದ ಸಂದೇಶಗಳನ್ನು, ಮತ್ತು ಇನ್ನೂ ಡೌನ್ಲೋಡ್ ಲಭ್ಯವಿರುವ ಲಗತ್ತುಗಳನ್ನು ತೋರಿಸುತ್ತದೆ.</string>
+    <string name="help_passphrase">ನಿಮ್ಮ ಪಾಸ್ಫ್ರೇಸ್ನೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ ಲಾಗಿನ್ ಇದನ್ನು ಬಳಸಿ. ನಿಮ್ಮ ಪಾಸ್ಫ್ರೇಸ್ ಅನ್ನು ನೀವು ಮರೆತು ಹೋದಲ್ಲಿ, ನೀವು ಮರೆತಿರಾ ಪಾಸ್ಫ್ರೇಸ್ ಟ್ಯಾಪಿಂಗ್ ಮೂಲಕ ಒಂದು ಹೊಸ ಗುಪ್ತವಾಕ್ಯಾಂಶವನ್ನು ರಕ್ಷಿಸಲ್ಪಟ್ಟಿದೆ ಹೊಸ ಕೀಲಿಯನ್ನು ರಚಿಸಲು ಇರಬಹುದು? ಬಟನ್. ಅನೇಕ ಕೀಲಿಗಳನ್ನು ನಡುವೆ ಬದಲಾಯಿಸಲು ಬಳಕೆದಾರ ಹೆಸರು ಟ್ಯಾಪ್.</string>
+    <string name="help_passphrase_change">ದೃಢೀಕರಣ ಮತ್ತು ಹೊಸ ಗುಪ್ತವಾಕ್ಯಾಂಶವನ್ನು ನಿಮ್ಮ ಕಳೆದ ಪಾಸ್ಫ್ರೇಸ್ ನಮೂದಿಸುವ ಮೂಲಕ ನಿಮ್ಮ ಪಾಸ್ಫ್ರೇಸ್ ಬದಲಾಯಿಸಲು ಇದನ್ನು ಬಳಸಿ.</string>
     <string name="help_PickRecip">SafeSlinger ಕೀಲಿಗಳನ್ನು ಸಂಪರ್ಕಗಳು ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಒಂದು ಆಯ್ಕೆ, ಇಲ್ಲಿ ಪ್ರದರ್ಶಿಸುತ್ತದೆ.</string>
     <string name="help_save">ಕೊನೆಗೊಂಡಾಗ, ಪ್ರೋಟೋಕಾಲ್ ವಿನಿಮಯ ಗುರುತನ್ನು ಮಾಹಿತಿ ಪಟ್ಟಿ ತೋರಿಸುತ್ತವೆ. ನೀವು ಆಮದು ಉಳಿಸಲು ಮತ್ತು ಒತ್ತಿ ಬಯಸುವ ಸಂಪರ್ಕಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ.</string>
     <string name="help_SecureIntroduction">ಈ ಸ್ಕ್ರೀನ್ ನೀವು ಸುರಕ್ಷಿತವಾಗಿ ಪರಸ್ಪರ ತಮ್ಮ ಕೀಲಿಗಳನ್ನು ಕಳುಹಿಸಲು ಮೊದಲು ಕೀಲಿಗಳನ್ನು ನೇತುಹಾಕಿದ ಎರಡು ಜನರು ಆಯ್ಕೆ ಅನುಮತಿಸುತ್ತದೆ. ಸರಳವಾಗಿ ಸಿದ್ಧವಿರುವಾಗ ಪರಿಚಯಿಸಲು ಒತ್ತಿ.</string>
     <string name="help_Send">ಈ ಪರದೆಯ ನೀವು ಕೆಲವು ಡೇಟಾವನ್ನು ಮತ್ತು ಕಳುಹಿಸಲು ಒಂದು ಸ್ವೀಕರಿಸುವವರ ಆಯ್ಕೆ ಅನುಮತಿಸುತ್ತದೆ. ಸರಳವಾಗಿ ಸಿದ್ಧ ಮಾಡಿದಾಗ ಕಳುಹಿಸಿ ಒತ್ತಿರಿ.</string>
+    <string name="help_settings">ಈ ಪರದೆಯ ನೀವು ಅಪ್ಲಿಕೇಶನ್ ಡೀಫಾಲ್ಟ್ ಸೆಟ್ಟಿಂಗ್ಗಳನ್ನು ಬದಲಾಯಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
 
+    <string name="iOS_contactError">ಸಂಪರ್ಕಗಳು ಅನುಮತಿ ಸುರಕ್ಷಿತವಾಗಿ ಸಂಪರ್ಕ ಕಾರ್ಡ್ ಹಂಚಿಕೊಳ್ಳಲು ಅಗತ್ಯವಿದೆ. SafeSlinger ಸಂಪರ್ಕಗಳು ಅನುಮತಿ ವಿವರಗಳಿಗಾಗಿ ಸಹಾಯ ಬಟನ್ ಟ್ಯಾಪ್.</string>
     <string name="iOS_errorpushtoken">ಪುಷ್ ನೋಂದಣಿ ಕಾಣೆಯಾಗಿದೆ.</string>
+    <string name="iOS_notificationError1">ಎಚ್ಚರಿಕೆಗಳನ್ನು ಅಥವಾ ಬ್ಯಾನರ್, ಮತ್ತು ಬ್ಯಾಡ್ಜ್ ಸಂಖ್ಯೆಗಳನ್ನು ಎರಡೂ ಅಧಿಸೂಚನೆ ಅನುಮತಿ, ಸುರಕ್ಷಿತ ಸಂದೇಶ ಅಗತ್ಯವಿದೆ. SafeSlinger ಅಧಿಸೂಚನೆ ಅನುಮತಿ ವಿವರಗಳಿಗಾಗಿ ಸಹಾಯ ಬಟನ್ ಟ್ಯಾಪ್.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ಐಒಎಸ್ 5.x ಸಾಧನಗಳನ್ನು ಹೊಂದುವಂತೆ ಇದೆ. SafeSlinger ಐಒಎಸ್ 6 ಅಥವಾ ಹೆಚ್ಚಿನ ಅಗತ್ಯವಿದೆ.</string>
+    <string name="iOS_RequestPermissionContacts">ನಿಮ್ಮ ಸ್ನೇಹಿತರು ಕಳುಹಿಸಲು ನಿಮ್ಮ ಸಂಪರ್ಕ ಕಾರ್ಡ್ ಆಯ್ಕೆ ಮಾಡಬಹುದು ಮತ್ತು SafeSlinger ನೀವು ಅದನ್ನು ಎನ್ಕ್ರಿಪ್ಟ್ ಮಾಡುತ್ತದೆ. ಕೇಳಿದಾಗ ಈ ಲಕ್ಷಣವನ್ನು ಶಕ್ತಗೊಳಿಸಲು, ನೀವು ನಿಮ್ಮ ಸಂಪರ್ಕಗಳಿಗೆ SafeSlinger ಅನುಮತಿಸಬಹುದು ಮಾಡಬೇಕು.</string>
+    <string name="iOS_RequestPermissionMicrophone">ನಿಮ್ಮ ಸ್ನೇಹಿತರು ಕಳುಹಿಸಲು ಮತ್ತು SafeSlinger ನೀವು ಅದನ್ನು ಎನ್ಕ್ರಿಪ್ಟ್ ಮಾಡುತ್ತದೆ ಧ್ವನಿ ಸಂದೇಶವನ್ನು ರೆಕಾರ್ಡ್ ಮಾಡಬಹುದು. ಕೇಳಿದಾಗ ಈ ಲಕ್ಷಣವನ್ನು ಶಕ್ತಗೊಳಿಸಲು, ನೀವು ನಿಮ್ಮ ಮೈಕ್ರೋಫೋನ್ಗೆ SafeSlinger ಅನುಮತಿಸಬಹುದು ಮಾಡಬೇಕು.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ಒಂದು ಗೂಢಲಿಪೀಕರಣಗೊಂಡ ಸಮಾಚಾರದ ಅಪ್ಲಿಕೇಷನ್ ಮತ್ತು ಸೂಚನೆಗಳು ಒಳಬರುವ ಸಂದೇಶಗಳನ್ನು ಅವಕಾಶ ಇಲ್ಲದೆ ಕಾರ್ಯ ಸಾಧ್ಯವಿಲ್ಲ. ಒಳಬರುವ ಸಂದೇಶಗಳನ್ನು ಶಕ್ತಗೊಳಿಸಲು, ನೀವು ಕೇಳಿದಾಗ SafeSlinger ನಿಮಗೆ ಅಧಿಸೂಚನೆಗಳನ್ನು ಕಳುಹಿಸಲು ಅವಕಾಶ ಮಾಡಬೇಕು.</string>
 
     <string name="label_ago">%s ಹಿಂದೆ</string>
     <string name="label_backupCompleteDate">ಪೂರ್ಣಗೊಂಡಿದೆ ಕೊನೆಯ ಬ್ಯಾಕ್ಅಪ್</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">%s ಅವಧಿಯು</string>
     <string name="label_expiresIn">ರಲ್ಲಿ ಮುಕ್ತಾಯಗೊಳ್ಳುತ್ತದೆ</string>
     <string name="label_FileNameHint">ಫೈಲ್ ಹೆಸರು</string>
-    <string name="label_FindInstruct">ಹೆಸರನ್ನು ನಮೂದಿಸಿ ನೀವು ಸುರಕ್ಷಿತವಾಗಿ ಸಂವಹನ ಇತರರಿಗಾಗಿ ಬಯಸುವ:</string>
+    <string name="label_FindInstruct">ನಿಮ್ಮ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸಲು ನಿಮ್ಮ ಹೆಸರು ಮತ್ತು ಗುಪ್ತವಾಕ್ಯಾಂಶವನ್ನು ನಮೂದಿಸಿ:</string>
     <string name="label_FirstName">ಮೊದಲ ಹೆಸರು</string>
     <string name="label_Home">ಸೇರಿಸಲು ಅಥವ ತೆಗೆದು ಸಂಪರ್ಕ ದಶಮಾಂಶ, ನೀವು ಹಂಚಿಕೊಳ್ಳಲು ಬಯಸುವ ಐಟಂಗಳನ್ನು ಪರಿಶೀಲಿಸಲು, ಮತ್ತು ಇತರರು ವಿನಿಮಯ ತಯಾರಾದ ಎಕ್ಸ್ಚೇಂಜ್ ಆರಂಭಿಸಲು ಸ್ಪರ್ಶಿಸಿ ನಿಮ್ಮ ಹೆಸರು ಟ್ಯಾಪ್:</string>
     <string name="label_hometag">ಮುಖಪುಟ</string>
     <string name="label_hours">%d ಗಂಟೆಗಳ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಮುಗಿದಮೇಲೆ ಡನ್ ಬಟನ್ ಟ್ಯಾಪ್.</string>
     <string name="label_InstNoMessages">ಯಾವುದೇ ಸಂದೇಶಗಳನ್ನು. ನೀವು ಮುಖಪುಟ ಮೆನುವಿನಲ್ಲಿ ಕಂಪೋಸ್ ಸಂದೇಶ ಬಟನ್ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಬಹುದು.</string>
-    <string name="label_InstNoMessagesAndroid">ಯಾವುದೇ ಸಂದೇಶಗಳನ್ನು. ನೀವು ಕಂಪೋಸ್ ಟ್ಯಾಬ್ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಬಹುದು.</string>
     <string name="label_InstNoRecipients">ಪಡೆದವರು ಸೇರಿಸಿ, ನೀವು ಮೊದಲ ಅದೇ ಸಮಯದಲ್ಲಿ ಒಂದು ಅಥವಾ ಹೆಚ್ಚಿನ ಇತರ ಬಳಕೆದಾರರೊಂದಿಗೆ ಜೋಲಿ ಕೀಸ್ ಮಾಡಬೇಕು. ನೀವು ಮೆನುವಿನಿಂದ ಒಂದು ಜೋಲಿ ಕೀಸ್ ಸಂಪರ್ಕ ಆಮಂತ್ರಣವನ್ನು ಕಳುಹಿಸಬಹುದು.</string>
     <string name="label_InstNoSharedFile">ಯಾವುದೇ ಹಂಚಿಕೊಂಡ ಕಡತ. ಹಂಚಿದ ಫೋಲ್ಡರ್ ಐಟ್ಯೂನ್ಸ್ ಮತ್ತು ಡ್ರ್ಯಾಗ್ ಕಡತಗಳನ್ನು ನಿಮ್ಮ ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಲು.</string>
     <string name="label_InstRecipients">ಒಂದು ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಸ್ವೀಕರಿಸುವವರ ಆರಿಸಿ:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">ಲಾಗ್ ಇನ್ ಮಾಡಿದಾಗ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂದೇಶವನ್ನು ಲಗತ್ತುಗಳನ್ನು ಡೌನ್ಲೋಡ್</string>
     <string name="label_summary_auto_decrypt">ಲಾಗ್ ಇನ್ ತಾನಾಗಿಯೆ ಸಂದೇಶಗಳನ್ನು ಡೀಕ್ರಿಪ್ಟ್</string>
     <string name="label_summary_remind_backup_delay">ಬ್ಯಾಕ್ಅಪ್ ಆಫ್ಲೈನ್ ಇದ್ದಾಗಲೂ ಪ್ರಕಟಣೆಯನ್ನು ಸ್ವೀಕರಿಸಲು.</string>
-    <string name="label_summary_show_tutorial">ಜೋಲಿ ಕೀಸ್ ಗೆ attemping ಮೊದಲು ಟ್ಯುಟೋರಿಯಲ್ ತೋರಿಸಿ.</string>
+    <string name="label_summary_show_tutorial">ಜೋಲಿ ಕೀಸ್ ಪ್ರಯತ್ನಿಸುವ ಮೊದಲು ಒಂದು ಟ್ಯುಟೋರಿಯಲ್ ತೋರಿಸಿ.</string>
     <string name="label_TapToDecryptFile">ಕಡತ ಡೀಕ್ರಿಪ್ಟ್ ಟ್ಯಾಪ್</string>
     <string name="label_TapToDecryptMessage">ಡೀಕ್ರಿಪ್ಟ್ ಟ್ಯಾಪ್</string>
     <string name="label_TapToDownloadFile">ಫೈಲ್ ಡೌನ್ಲೋಡ್ ಟ್ಯಾಪ್</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">ಆಟೋ ಗೂಢಲಿಪೀಗ್ರಹಣಿಸು</string>
     <string name="menu_Change">ಚೇಂಜ್</string>
     <string name="menu_ChangePassphrase">ಚೇಂಜ್ ಪಾಸ್ಫ್ರೇಸ್</string>
+    <string name="menu_ContactInviteEmail">ಸಂಪರ್ಕಗಳು ಇಮೇಲ್</string>
+    <string name="menu_ContactInviteSms">ಸಂಪರ್ಕಗಳು ರಿಂದ ಪಠ್ಯ</string>
     <string name="menu_CreateNew">ಹೊಸ ರಚಿಸಿ</string>
     <string name="menu_delete">ಅಳಿಸಿ</string>
     <string name="menu_deleteThread">ಥ್ರೆಡ್ %s ಅಳಿಸಿ</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">ಪಾಸ್ಫ್ರೇಸ್ ಮರೆತಿರಾ?</string>
     <string name="menu_Help">ಸಹಾಯ</string>
     <string name="menu_Introduction">ಪರಿಚಯ</string>
-    <string name="menu_License">ಪರವಾನಗಿ</string>
+    <string name="menu_language">ಭಾಷೆ</string>
+    <string name="menu_link_contact_add">ಸಂಪರ್ಕಿಸಿ ಲಿಂಕ್ ಸೇರಿಸಿ</string>
+    <string name="menu_link_contact_change">ಸಂಪರ್ಕಿಸಿ ಲಿಂಕ್ ಬದಲಾವಣೆ</string>
     <string name="menu_Logout">ಲಾಗ್ಔಟ್</string>
     <string name="menu_ManagePassphrases">ಗುಪ್ತವಾಕ್ಯಾಂಶಗಳನ್ನು ನಿರ್ವಹಿಸಿ</string>
     <string name="menu_message_font_size">ಸಂದೇಶ ಅಕ್ಷರ ಗಾತ್ರ</string>

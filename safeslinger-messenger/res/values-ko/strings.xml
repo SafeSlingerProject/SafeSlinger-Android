@@ -25,34 +25,35 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">슬링 키 연락처 초대를 통해 추가…</string>
+    <string name="action_NewUserRequest">…를 통해 슬링 키 연락처 추가</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Yeon Yim</string>
 
-    <string name="ask_BackupDisabledRemindLater">백업이 비활성화됩니다. 당신은 백업 설정을 조정하고이 신호를 계속 하시겠습니까?</string>
-    <string name="ask_ConfirmUseOlderDeviceOrKey">%s는 더 최근의 장치 또는 키를 가지고, 당신은 하나이 이상을 사용 하시겠습니까?</string>
+    <string name="ask_BackupDisabledRemindLater">백업이 비활성화되어있습니다. 백업 설정 후 이 메시지를 계속 표시하시겠습니까?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s는 더 최근의 장치로 사용할 수 있습니다. 예전 것을 사용 하시겠습니까?</string>
     <string name="ask_FileExistsOverwrite">파일 이름 %s이(가) 이미 존재합니다. 덮어쓰시겠습니까?</string>
-    <string name="ask_GoogleAccountToReceiveMsgs">Google 계정없이 당신은 수신 메시지를 NOT 보낼 수있을 것입니다. 당신은 구글 계정을 추가 하시겠습니까?</string>
-    <string name="ask_SendErrorData">SafeSlinger를 개선할 수 있도록 도움을 받고싶습니다. 저희에게 오류사항을 보내주시겠습니까?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">구글 계정 없이는 메시지를 보낼 수만 있고, 받을 수는 없습니다. 구글 계정을 추가 하시겠습니까?</string>
+    <string name="ask_SendErrorData">SafeSlinger를 개선할 수 있도록 도움을 받고싶습니다. 저희에게 오류사항을 자동으로 보내주시겠습니까?</string>
 
     <string name="btn_Accept">동의</string>
     <string name="btn_BeginExchangeProximity">교환 시작</string>
     <string name="btn_Cancel">취소</string>
     <string name="btn_Close">닫기</string>
     <string name="btn_Continue">계속</string>
-    <string name="btn_CreateNewKey">새 키 를 만듭니다</string>
-    <string name="btn_DeleteKeys">키 에게 삭제</string>
+    <string name="btn_CreateNewKey">키 만들기</string>
+    <string name="btn_DeleteKeys">키 삭제</string>
     <string name="btn_discard">지우기</string>
     <string name="btn_Done">완료</string>
     <string name="btn_Exit">나가기</string>
     <string name="btn_Import">가져오기</string>
     <string name="btn_Introduce">소개하기</string>
     <string name="btn_No">아니오</string>
+    <string name="btn_NotNow">지금은</string>
     <string name="btn_NotRemind">알림끄기</string>
     <string name="btn_OK">예</string>
-    <string name="btn_Refuse">거절</string>
-    <string name="btn_Remind">알림</string>
+    <string name="btn_Refuse">거절하기</string>
+    <string name="btn_Remind">알림켜기</string>
     <string name="btn_Save">저장</string>
     <string name="btn_SelectFile">파일 선택</string>
     <string name="btn_SendFile">보내기</string>
@@ -69,28 +70,30 @@
     <string name="choice_5mins">5 분</string>
     <string name="choice_8hours">8시간</string>
     <string name="choice_auto_storage">기본 저장</string>
+    <string name="choice_default">디폴트 값</string>
     <string name="choice_external_storage">외부 저장</string>
-    <string name="choice_font_large">큰</string>
-    <string name="choice_font_medium">중</string>
-    <string name="choice_font_micro">아주 작은</string>
-    <string name="choice_font_small">작은</string>
+    <string name="choice_font_large">크게</string>
+    <string name="choice_font_medium">중간</string>
+    <string name="choice_font_micro">아주 작게</string>
+    <string name="choice_font_small">작게</string>
     <string name="choice_internal_storage">내부 저장</string>
     <string name="choice_nolimit">제한 없음</string>
     <string name="choice_SaveDirectory">저장 디렉토리</string>
     <string name="choice_SaveFile">파일 저장</string>
     <string name="choice_Up">위</string>
 
-    <string name="error_AllMembersMustUpgradeBadKeyFormat">회원 일부가 이전 형식의 키를 사용하고 있습니다. 모든 기기를 업그레이드해야합니다.</string>
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">회원 일부가 이전 형식의 키를 사용하고 있습니다. 업그레이드가 필요합니다.</string>
     <string name="error_AudioPlayerDecodeError">오디오 플레이어 암호해제 오류가 발생했습니다.</string>
     <string name="error_AudioPlayerError">녹음자료를 재생할 수 없습니다.</string>
     <string name="error_AudioRecorderEncodeError">오디오 레코더 암호화 오류가 발생했습니다.</string>
+    <string name="error_AudioRecorderPermissionError">마이크 권한 보안 음성 메시지를 기록하기 위해 요구된다. SafeSlinger 마이크 권한 자세한 내용은 도움말 버튼을 누릅니다.</string>
     <string name="error_BackupNotFound">복원할 백업정보가 없습니다.</string>
     <string name="error_BackupNotSupportedDevice">이 기기는 백업 복원을 지원하지 않습니다.</string>
-    <string name="error_BadCopyProtectUpgrade">안드로이드 4.1의 버그로 인해, 당신은 SafeSlinger를 제거하고 다시 설치해야합니다.</string>
-    <string name="error_C2DMRegAccountMissing">Google 계정이 필요합니다. 계정 관리자를 열고 Google 계정을 추가해 주십시오.</string>
-    <string name="error_C2DMRegAuthenticationFailed">인증되지 않은 등록, 나중에 수동으로 다시 시도하시기 바랍니다.</string>
-    <string name="error_C2DMRegInvalidSender">등록이 버전을 사용할 수 없습니다, 업데이트 버전을 확인하시기 바랍니다.</string>
-    <string name="error_C2DMRegPhoneRegistrationError">Google과의 기기 등록이 잘못되었습니다. 이 기기는 현재 푸시 메시지를 지원하지 않습니다.</string>
+    <string name="error_BadCopyProtectUpgrade">안드로이드 4.1의 오류로 인해, SafeSlinger를 삭제 후 다시 설치해야합니다.</string>
+    <string name="error_C2DMRegAccountMissing">구글 계정이 필요합니다. 계정 관리창에서 구글 계정을 추가해 주십시오.</string>
+    <string name="error_C2DMRegAuthenticationFailed">인증되지 않은 등록입니다. 나중에 수동으로 다시 시도하시기 바랍니다.</string>
+    <string name="error_C2DMRegInvalidSender">이 버전에서는 등록할 수 없습니다. 다음 버전을 확인하시기 바랍니다.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">구글의 기기 등록이 잘못되었습니다. 이 기기는 현재 메시지 보내기를 지원하지 않습니다.</string>
     <string name="error_C2DMRegServiceNotAvailable">푸시 등록 서비스를 사용할 수 없습니다. %d 초 후에 다시 시도합니다.</string>
     <string name="error_C2DMRegTooManyRegistrations">너무 많은 응용 프로그램이 푸시에 등록되었습니다. 다른 응용 프로그램을 제거한 후 다시 시도하십시오.</string>
     <string name="error_CannotSendEmptyFile">비어있는 파일을 보낼 수 없습니다.</string>
@@ -126,7 +129,7 @@
     <string name="error_PushMsgQuotaExceeded">이 기기의 메시지 한도를 초과했습니다. 나중에 다시 시도해주세요.</string>
     <string name="error_PushMsgServiceFail">알림 서비스가이 시간을 사용할 수 없습니다. 나중에 메시지를 보내려고 주시기 바랍니다.</string>
     <string name="error_RecoderError">녹음장치를 준비 할 수 없습니다.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">시작하려면, \'슬링 키 \'같은 시간에 다른 전화.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">시작하려면, 슬링 키 같은 시간에 다른 전화.</string>
     <string name="error_selectDataToSend">보낼 문자 메시지나 파일이 필요합니다.</string>
     <string name="error_ShareFileDelError">공유 파일을 제거할 수 없습니다.</string>
     <string name="error_UnableFindPubKey">암호화 공급자의 공용 키와 개인 키가 일치하지 않습니다.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger 오류가 발생했습니다. 다시 시작해주세요.</string>
     <string name="error_VcardParseFailure">연락처 데이터 의 형식이 잘못 되었습니다.</string>
 
-    <string name="help_home">신원정보를 교환하고자 하는 모든 사용자가 서로의 근처에 있어야 합니다. 교환하고자 하는 연락처 정보를 골라 선택한 후 \'교류 시작\' 버튼을 눌러주십시오.</string>
-    <string name="help_identity_menu">당신은 유용한 이름을 가진 버튼을 눌러이 화면에서 사용자의 신원에 대한 개인 데이터를 변경할 수 있습니다. 이 메뉴 있도록 당신의 손길을 \'수정\'을, 접촉 \'새로 만들기\'를, 또는 \'을 사용하는 또 다른의 연락처를 표시합니다.</string>
+    <string name="help_find">데이터를 보호하기 위해 다른 사람과 암호로 교환 할 당신의 이름을 설정할 수있는 화면입니다. 완료되면 완료 버튼을 누릅니다.</string>
+    <string name="help_home">신원정보를 교환하고자 하는 모든 사용자가 서로의 근처에 있어야 합니다. 교환하고자 하는 연락처 정보를 골라 선택한 후 교류 시작 버튼을 눌러주십시오.</string>
+    <string name="help_identity_menu">당신은 유용한 이름을 가진 버튼을 눌러이 화면에서 사용자의 신원에 대한 개인 데이터를 변경할 수 있습니다. 이 메뉴 있도록 당신의 손길을 수정을, 접촉 새로 만들기를, 또는 을 사용하는 또 다른의 연락처를 표시합니다.</string>
     <string name="help_Messages">이 화면에는 과거에 교환했던 다운로드 가능한 메시지와 파일들을 표시합니다.</string>
+    <string name="help_passphrase">당신의 암호를 사용하여 응용 프로그램에 로그인이 화면을 사용합니다. 당신은 당신의 암호를 잊어 버린 경우에는 분실 암호 구문을 눌러 새 암호에 의해 보호되는 새 키를 생성 할 수있다? 버튼을 누릅니다. 여러 개의 키 사이를 전환 할 사용자 이름을 누릅니다.</string>
+    <string name="help_passphrase_change">확인하고 새 암호에 대한 마지막 암호를 입력하여 암호를 변경하려면이 화면을 사용합니다.</string>
     <string name="help_PickRecip">SafeSlinger 키가 있는 연락처가 이곳에 표시됩니다. 메시지를 보내려면 하나를 선택해주십시오.</string>
-    <string name="help_save">작업이 완료되면, 교환했던 신원정보 목록이 생성됩니다. 저장하고자 하는 연락처를 선택하여 \'가져 오기\'를 눌러주세요.</string>
-    <string name="help_SecureIntroduction">이 화면에서는 예전에 이미 함께 교환했던 두명의 사람을 선택하여 그들이 서로의 키를 안전하게 교환하도록 수 있습니다. 준비가 되면 \'소개\'를 눌러주세요.</string>
-    <string name="help_Send">이 화면에서는 데이터와 수신자를 선택할 수 있습니다. 준비가 되면 \'보내기\'를 눌러주세요.</string>
+    <string name="help_save">작업이 완료되면, 교환했던 신원정보 목록이 생성됩니다. 저장하고자 하는 연락처를 선택하여 가져 오기를 눌러주세요.</string>
+    <string name="help_SecureIntroduction">이 화면에서는 예전에 이미 함께 교환했던 두명의 사람을 선택하여 그들이 서로의 키를 안전하게 교환하도록 수 있습니다. 준비가 되면 소개를 눌러주세요.</string>
+    <string name="help_Send">이 화면에서는 데이터와 수신자를 선택할 수 있습니다. 준비가 되면 보내기를 눌러주세요.</string>
+    <string name="help_settings">이 화면에서 응용 프로그램의 기본 설정을 변경할 수 있습니다.</string>
 
+    <string name="iOS_contactError">연락처 권한이 안전하게 접촉 카드를 공유하기 위해 필요합니다. SafeSlinger 연락처 권한 자세한 내용은 도움말 버튼을 누릅니다.</string>
     <string name="iOS_errorpushtoken">푸시 등록 이 없습니다.</string>
+    <string name="iOS_notificationError1">경고 또는 배너와 배지 번호 하나에 대한 통지의 권한, 보안 메시징이 필요합니다. SafeSlinger 알림 권한 자세한 내용은 도움말 버튼을 누릅니다.</string>
     <string name="iOS_oldOSWarn">SafeSlinger는 아이폰 OS 5.x를 디바이스에 최적화되어 있지 않습니다. SafeSlinger는 아이폰 OS 6 이상이 필요합니다.</string>
+    <string name="iOS_RequestPermissionContacts">당신은 당신의 친구를 보낼 연락처 카드를 선택하고 SafeSlinger는 당신을 위해 그것을 암호화합니다. 물었을 때이 기능을 사용하려면, 당신은 당신의 연락처에 SafeSlinger 액세스를 허용해야합니다.</string>
+    <string name="iOS_RequestPermissionMicrophone">당신은 당신의 친구를 보내고 SafeSlinger 당신을 위해 그것을 암호화하는 음성 메시지를 녹음 할 수 있습니다. 물었을 때이 기능을 사용하려면, 당신은 당신의 마이크에 SafeSlinger 액세스를 허용해야합니다.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger는 암호화 된 메시지 응용 프로그램입니다 및 알림에서 들어오는 메시지를 허용하지 않고 작동 할 수 없습니다. 수신 메시지를 사용하려면, 당신은 물었을 때 SafeSlinger 당신에게 알림을 보낼 수 있도록 허용해야합니다.</string>
 
     <string name="label_ago">%s전에</string>
     <string name="label_backupCompleteDate">마지막 백업 완료</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">%s 에게 만료</string>
     <string name="label_expiresIn">만료</string>
     <string name="label_FileNameHint">파일 이름</string>
-    <string name="label_FindInstruct">이름을 입력 안전하게 통신 할 때 다른 사람이 볼을 기원합니다:</string>
+    <string name="label_FindInstruct">데이터를 보호하기 위해 사용자의 이름과 암호를 입력합니다:</string>
     <string name="label_FirstName">이름</string>
-    <string name="label_Home">추가하거나 제거 할 연락처 정보를 공유하고자하는 항목을 확인하고 활용할 이름을 눌러 \'환율을 시작하기\'다른 사람이 교환 할 준비가되었을 때:</string>
+    <string name="label_Home">추가하거나 제거 할 연락처 정보를 공유하고자하는 항목을 확인하고 활용할 이름을 눌러 환율을 시작하기다른 사람이 교환 할 준비가되었을 때:</string>
     <string name="label_hometag">홈</string>
     <string name="label_hours">%d 시간</string>
-    <string name="label_iCloudEnable">SafeSlinger 아이 클라우드 를 사용할 수 있습니다. 완료되면 \'완료 \' 버튼을 누릅니다.</string>
-    <string name="label_InstNoMessages">메시지가 없습니다. 홈 메뉴의 \'메시지 작성\'버튼으로 메시지를 보낼 수 있습니다.</string>
-    <string name="label_InstNoMessagesAndroid">메시지가 없습니다. \'쓰기\'탭으로 메시지를 보낼 수 있습니다.</string>
+    <string name="label_iCloudEnable">SafeSlinger 아이 클라우드 를 사용할 수 있습니다. 완료되면 완료 버튼을 누릅니다.</string>
+    <string name="label_InstNoMessages">메시지가 없습니다. 홈 메뉴의 메시지 작성버튼으로 메시지를 보낼 수 있습니다.</string>
     <string name="label_InstNoRecipients">받는 사람을 추가하려면 먼저 동시에 하나 이상의 다른 사용자와 슬링 키 를 해야합니다. 또한 메뉴에서 슬링 키 연락처 초대를 보낼 수 있습니다.</string>
     <string name="label_InstNoSharedFile">공유 파일이 없습니다. 단말기를 iTunes로 연결하여 파일을 공유폴더로 옮겨주십시오.</string>
     <string name="label_InstRecipients">메시지를 보낼 수신자 선택:</string>
@@ -215,7 +226,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger 백업 지연</string>
     <string name="label_safeslingered">(안전하게 교환됨)</string>
     <string name="label_SaveAccount">계정 저장</string>
-    <string name="label_SaveInstruct">보안 연락처를 저장하려면 \'가져 오기\'를 누른 다음, 당신은 당신의 주소록에 업데이트 할 연락처를 확인합니다:</string>
+    <string name="label_SaveInstruct">보안 연락처를 저장하려면 가져 오기를 누른 다음, 당신은 당신의 주소록에 업데이트 할 연락처를 확인합니다:</string>
     <string name="label_seconds">%d 초</string>
     <string name="label_SelectRecip">받는 사람 선택</string>
     <string name="label_sendErrorData">오류 전송</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">로그인을 하면 자동으로 메시지 의 첨부 파일을 다운로드</string>
     <string name="label_summary_auto_decrypt">로그인을 하면 자동으로 메시지를 해독</string>
     <string name="label_summary_remind_backup_delay">백업이 오프라인 상태 일 때 알림을 받을 수 있습니다.</string>
-    <string name="label_summary_show_tutorial">슬링 키 에 시도하기 전에 튜토리얼 을 보여줍니다.</string>
+    <string name="label_summary_show_tutorial">슬링 키에 시도하기 전에 튜토리얼을 보여줍니다.</string>
     <string name="label_TapToDecryptFile">파일 암호 해제하기</string>
     <string name="label_TapToDecryptMessage">메시지 암호 해제하기</string>
     <string name="label_TapToDownloadFile">파일 다운로드</string>
@@ -240,7 +251,7 @@
     <string name="label_TapToSendCredentialUpdate">누르고 자격 증명 업데이트를 보내십시오.</string>
     <string name="label_TapToSlingKeys">슬링 키 를 누릅니다.</string>
     <string name="label_targetAccountLabel">연락처 계정</string>
-    <string name="label_TouchToConfigureBackupSettings">선택적으로 아이폰 OS 설정에서 SafeSlinger iCloud에 백업을 가능하게 할 수있다. 완료되면 \'완료 \' 버튼을 누릅니다.</string>
+    <string name="label_TouchToConfigureBackupSettings">선택적으로 아이폰 OS 설정에서 SafeSlinger iCloud에 백업을 가능하게 할 수있다. 완료되면 완료 버튼을 누릅니다.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">백업환경 설정하기</string>
     <string name="label_TouchToConfigureCacheTimeout">캐시 시간 제한 설정을 구성 할 누릅니다.</string>
     <string name="label_undefinedTypeLabel">알 수없는</string>
@@ -257,9 +268,11 @@
     <string name="menu_auto_decrypt">자동 해독</string>
     <string name="menu_Change">수정</string>
     <string name="menu_ChangePassphrase">암호 변경</string>
+    <string name="menu_ContactInviteEmail">연락처에서 이메일</string>
+    <string name="menu_ContactInviteSms">연락처에서 텍스트</string>
     <string name="menu_CreateNew">새로 만들기</string>
     <string name="menu_delete">삭제</string>
-    <string name="menu_deleteThread">\'%s\'을(를) 삭제</string>
+    <string name="menu_deleteThread">%s을(를) 삭제</string>
     <string name="menu_Details">자세히 보기</string>
     <string name="menu_DownloadDirectory">디렉터리를 다운로드</string>
     <string name="menu_Edit">수정</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">[암호 를 잊으셨습니까?</string>
     <string name="menu_Help">도움말</string>
     <string name="menu_Introduction">소개</string>
-    <string name="menu_License">라이센스</string>
+    <string name="menu_language">언어</string>
+    <string name="menu_link_contact_add">연락처 링크 추가</string>
+    <string name="menu_link_contact_change">연락처 링크에게 변경</string>
     <string name="menu_Logout">로그 아웃</string>
     <string name="menu_ManagePassphrases">암호 구 관리</string>
     <string name="menu_message_font_size">메시지 의 글자 크기</string>
@@ -287,9 +302,9 @@
     <string name="menu_TagExchange">열쇠 교환하기</string>
     <string name="menu_TagListMessages">메시지</string>
     <string name="menu_UseAnother">다른 것 사용하기</string>
-    <string name="menu_UseContactPerson">기업에게 연락 해주기 \'%s\'를 사용</string>
+    <string name="menu_UseContactPerson">기업에게 연락 해주기 %s를 사용</string>
     <string name="menu_UseNoContact">사용 이름 만</string>
-    <string name="menu_UseProfilePerson">프로필 \'%s\'를 사용</string>
+    <string name="menu_UseProfilePerson">프로필 %s를 사용</string>
     <string name="menu_vibrate">진동</string>
 
     <string name="prog_decrypting">암호 해독 중…</string>

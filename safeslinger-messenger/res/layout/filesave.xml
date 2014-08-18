@@ -36,7 +36,7 @@
         android:inputType="text"
         android:privateImeOptions="nm"
         android:singleLine="true"
-        android:textSize="@dimen/text_size_medium" >
+        android:textSize="@dimen/text_size_msg" >
     </EditText>
 
 </LinearLayout>

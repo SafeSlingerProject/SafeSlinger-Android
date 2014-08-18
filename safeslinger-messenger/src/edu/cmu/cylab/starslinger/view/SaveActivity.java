@@ -343,27 +343,33 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
                     mem = loadContactDataNoDuplicates(this, contactLookupKey, mem, true);
                 }
 
-                if (!TextUtils.isEmpty(rawContactId)) {
+                // for name-only contact don't add to address book, just
+                // return a null lookup key.
+                if (hasAddressBookData(mem)) {
 
-                    if (!mAccessor.updateOldContact(mem, SaveActivity.this, mSelectedAcctType,
-                            mSelectedAcctName, rawContactId)) {
-                        errors.append("\n  ").append(name.toString()).append(" ")
-                                .append(getString(R.string.error_ContactUpdateFailed));
-                        continue;
-                    }
-                } else {
-                    rawContactId = mAccessor.insertNewContact(mem, mSelectedAcctType,
-                            mSelectedAcctName, SaveActivity.this);
                     if (!TextUtils.isEmpty(rawContactId)) {
-                        contactLookupKey = getContactLookupKeyByContactId(rawContactId);
+                        // name match, so update...
+                        if (!mAccessor.updateOldContact(mem, SaveActivity.this, mSelectedAcctType,
+                                mSelectedAcctName, rawContactId)) {
+                            errors.append("\n  ").append(name.toString()).append(" ")
+                                    .append(getString(R.string.error_ContactUpdateFailed));
+                            continue;
+                        }
                     } else {
-                        errors.append("\n  ").append(name.toString()).append(" ")
-                                .append(getString(R.string.error_ContactInsertFailed));
-                        continue;
+                        // no name match, so insert...
+                        rawContactId = mAccessor.insertNewContact(mem, mSelectedAcctType,
+                                mSelectedAcctName, SaveActivity.this);
+                        if (!TextUtils.isEmpty(rawContactId)) {
+                            contactLookupKey = getContactLookupKeyByRawContactId(rawContactId);
+                        } else {
+                            errors.append("\n  ").append(name.toString()).append(" ")
+                                    .append(getString(R.string.error_ContactInsertFailed));
+                            continue;
+                        }
                     }
-                }
 
-                data.putExtra(extra.CONTACT_LOOKUP_KEY + selected, contactLookupKey);
+                    data.putExtra(extra.CONTACT_LOOKUP_KEY + selected, contactLookupKey);
+                }
             }
 
             selected++;
@@ -384,6 +390,38 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
             setResult(RESULT_SAVE, data);
         }
         finish();
+    }
+
+    public static boolean hasAddressBookData(ContactStruct mem) {
+        if (mem.photoBytes != null && mem.photoBytes.length > 0) {
+            // any photo should be saved
+            return true;
+        }
+        if (mem.addressList != null && mem.addressList.size() > 0) {
+            // any postal should be saved
+            return true;
+        }
+        if (mem.phoneList != null && mem.phoneList.size() > 0) {
+            // any phone should be saved
+            return true;
+        }
+        if (mem.contactmethodList != null) {
+            for (ContactMethod cm : mem.contactmethodList) {
+                if (cm.kind == Contacts.KIND_EMAIL) {
+                    // any email should be saved
+                    return true;
+                }
+                if (cm.kind == Contacts.KIND_URL) {
+                    // any web site should be saved
+                    return true;
+                }
+
+                // if we only find safeslinger id and key,
+                // its not worth saving from KIND_IM
+            }
+        }
+
+        return false;
     }
 
     private boolean isValidContact(ContactStruct mem) {

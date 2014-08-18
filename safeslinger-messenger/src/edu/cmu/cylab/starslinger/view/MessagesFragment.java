@@ -697,6 +697,21 @@ public class MessagesFragment extends Fragment {
                     ThreadsAdapter.getBestIdentityName(getActivity(),
                             mThreadList.get(info.position), recip));
             menu.add(Menu.NONE, R.id.item_delete_thread, Menu.NONE, delThreadStr);
+            if (recip != null && recip.getRowId() > -1
+                    && recip.getSource() != RecipientDbAdapter.RECIP_SOURCE_INVITED) {
+                if (!recip.isValidContactLink()) {
+                    menu.add(Menu.NONE, R.id.item_link_contact_add, Menu.NONE,
+                            R.string.menu_link_contact_add);
+                } else {
+                    menu.add(Menu.NONE, R.id.item_link_contact_change, Menu.NONE,
+                            R.string.menu_link_contact_change);
+                }
+
+                if (recip.isValidContactLink()) {
+                    menu.add(Menu.NONE, R.id.item_edit_contact, Menu.NONE,
+                            R.string.menu_EditContact);
+                }
+            }
             menu.add(Menu.NONE, R.id.item_thread_details, Menu.NONE, R.string.menu_Details);
         } else if (v.equals(mListViewMsgs)) {
             MenuInflater inflater = getActivity().getMenuInflater();
@@ -724,19 +739,10 @@ public class MessagesFragment extends Fragment {
             doDeleteMessage(mMessageList.get(info.position));
             updateMessageList(false);
             return true;
-        } else if (item.getItemId() == R.id.item_delete_thread) {
-            doDeleteThread(mThreadList.get(info.position).getKeyId());
-            updateMessageList(false);
-            return true;
-        } else if (item.getItemId() == R.id.item_thread_details) {
-            showHelp(getString(R.string.title_RecipientDetail),
-                    BaseActivity.formatThreadDetails(getActivity(), mThreadList.get(info.position)));
-            return true;
         } else if (item.getItemId() == R.id.item_message_details) {
-            showHelp(
-                    getString(R.string.title_MessageDetail),
-                    BaseActivity.formatMessageDetails(getActivity(),
-                            mMessageList.get(info.position)));
+            String detailStr = BaseActivity.formatMessageDetails(getActivity(),
+                    mMessageList.get(info.position));
+            showHelp(getString(R.string.title_MessageDetail), detailStr);
             return true;
         } else if (item.getItemId() == R.id.item_message_copytext) {
             SafeSlinger.getApplication().copyPlainTextToClipboard(
@@ -745,6 +751,23 @@ public class MessagesFragment extends Fragment {
             return true;
         } else if (item.getItemId() == R.id.item_message_forward) {
             doForward(mMessageList.get(info.position));
+            return true;
+        } else if (item.getItemId() == R.id.item_delete_thread) {
+            doDeleteThread(mThreadList.get(info.position).getKeyId());
+            updateMessageList(false);
+            return true;
+        } else if (item.getItemId() == R.id.item_thread_details) {
+            showHelp(getString(R.string.title_RecipientDetail),
+                    BaseActivity.formatThreadDetails(getActivity(), mThreadList.get(info.position)));
+            return true;
+        } else if (item.getItemId() == R.id.item_link_contact_add
+                || item.getItemId() == R.id.item_link_contact_change) {
+            ((BaseActivity) getActivity()).showUpdateContactLink(mThreadList.get(info.position)
+                    .getRecipient().getRowId());
+            return true;
+        } else if (item.getItemId() == R.id.item_edit_contact) {
+            ((BaseActivity) getActivity()).showEditContact(mThreadList.get(info.position)
+                    .getRecipient().getContactlu());
             return true;
         } else {
             return super.onContextItemSelected(item);

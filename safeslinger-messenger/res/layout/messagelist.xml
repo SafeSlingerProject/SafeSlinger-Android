@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/size_5dp"
         android:gravity="center"
-        android:text="@string/label_InstNoMessagesAndroid"
+        android:text="@string/label_InstNoMessages"
         android:textSize="@dimen/text_size_medium" />
 
     <ListView
@@ -72,7 +72,7 @@
             android:maxLines="3"
             android:nextFocusRight="@+id/SendFrameButtonSend"
             android:privateImeOptions="nm"
-            android:textSize="@dimen/text_size_medium" />
+            android:textSize="@dimen/text_size_msg" />
 
         <RelativeLayout
             android:id="@+id/SendFrameButtonSend"

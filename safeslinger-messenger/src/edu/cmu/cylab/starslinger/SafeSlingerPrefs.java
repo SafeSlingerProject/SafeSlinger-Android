@@ -53,6 +53,7 @@ public class SafeSlingerPrefs {
             .getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
     private static final boolean DEFAULT_AUTO_DECRYPT = true;
     private static final boolean DEFAULT_AUTO_RETRIEVAL = false;
+    public static final String DEFAULT_LANGUAGE = "zz";
 
     /***
      * internal long term storage...
@@ -86,7 +87,8 @@ public class SafeSlingerPrefs {
         public static final String EULA_ACCEPTED = "eula20140106.accepted";
         public static final String FILEMANAGER_ROOTDIR = "fileManagerRootDir";
         public static final String FIRST_EXCH_COMPLETE = "firstExchangeComplete";
-        public static final String FONT_SIZE = "fontSize";
+        public static final String FONT_SIZE = "fontSize172";
+        public static final String LANGUAGE = "language";
         public static final String HAS_SEEN_HELP = "seenHelp";
         public static final String KEYDATE = "KeyDate";
         public static final String KEYHARDNESS = "KeyHardness";
@@ -128,6 +130,7 @@ public class SafeSlingerPrefs {
         setDownloadDir(DEFAULT_DOWNLOAD_DIR);
         setFileManagerRootDir(DEFAULT_FILEMANAGER_ROOTDIR);
         setFontSize(DEFAULT_FONT_SIZE);
+        setLanguage(DEFAULT_LANGUAGE);
         setNotificationRingTone(DEFAULT_RINGTONE);
         setNotificationVibrate(DEFAULT_NOTIFICATION_VIBRATE);
         setAutoDecrypt(DEFAULT_AUTO_DECRYPT);
@@ -149,6 +152,7 @@ public class SafeSlingerPrefs {
         removePref(pref.CONTACT_LOOKUP_KEY + userNumber, true);
         removePref(pref.CONTACT_NAME + userNumber, true);
         removePref(pref.FONT_SIZE + userNumber, true);
+        removePref(pref.LANGUAGE + userNumber, true);
         removePref(pref.KEYDATE + userNumber, true);
         removePref(pref.KEYHARDNESS + userNumber, true);
         removePref(pref.KEYID_STRING + userNumber, true);
@@ -484,6 +488,14 @@ public class SafeSlingerPrefs {
 
     public static void setPendingGetMessageBackoff(long backoff) {
         setLong(pref.PENDING_GETMSG_BACKOFF_TIMEOUT, backoff, false);
+    }
+
+    public static String getLanguage() {
+        return getString(pref.LANGUAGE, DEFAULT_LANGUAGE, false);
+    }
+
+    public static void setLanguage(String language) {
+        setString(pref.LANGUAGE, language, false);
     }
 
     // Generic getters and setters....

@@ -25,6 +25,7 @@
 package edu.cmu.cylab.starslinger.model;
 
 import android.database.Cursor;
+import android.text.TextUtils;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
@@ -40,7 +41,7 @@ public class RecipientRow extends RecipientData {
         mExchDate = c.getLong(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_EXCHDATE));
         mContactId = c.getString(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_CONTACTID));
         mContactLu = c.getString(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_CONTACTLKUP));
-        mRawId = c.getString(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_RAWCONTACTID));
+        mRawContactId = c.getString(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_RAWCONTACTID));
         mName = c.getString(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_NAME));
         mPhoto = c.getBlob(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_PHOTO));
         mKeyId = c.getString(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_KEYID));
@@ -111,6 +112,11 @@ public class RecipientRow extends RecipientData {
 
     public boolean isInvited() {
         return (mSource == RecipientDbAdapter.RECIP_SOURCE_INVITED);
+    }
+
+    public boolean isValidContactLink() {
+        return (TextUtils.isEmpty(mContactId) && TextUtils.isEmpty(mRawContactId) && !TextUtils
+                .isEmpty(mContactLu));
     }
 
 }

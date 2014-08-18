@@ -318,7 +318,7 @@ public class PassPhraseActivity extends Activity {
         menu.add(0, MENU_ABOUT, 0, R.string.menu_About).setIcon(
                 android.R.drawable.ic_menu_info_details);
         menu.add(0, MENU_EULA, 0, R.string.menu_License).setIcon(android.R.drawable.ic_menu_edit);
-        menu.add(0, MENU_PRIVACY, 0, R.string.text_KeywordPrivacy).setIcon(
+        menu.add(0, MENU_PRIVACY, 0, R.string.menu_PrivacyPolicy).setIcon(
                 android.R.drawable.ic_menu_edit);
         menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);

@@ -49,6 +49,7 @@
     <string name="btn_Import">Увоз</string>
     <string name="btn_Introduce">Воведе</string>
     <string name="btn_No">Нема</string>
+    <string name="btn_NotNow">Не сега</string>
     <string name="btn_NotRemind">Заборавете</string>
     <string name="btn_OK">ред</string>
     <string name="btn_Refuse">Одбие</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 минути</string>
     <string name="choice_8hours">8 часа</string>
     <string name="choice_auto_storage">Стандардно чување</string>
+    <string name="choice_default">Стандардно</string>
     <string name="choice_external_storage">Вон чување</string>
     <string name="choice_font_large">Голем</string>
     <string name="choice_font_medium">Среден</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Аудио плеер декодирање грешка.</string>
     <string name="error_AudioPlayerError">Не може да игра на снимањето.</string>
     <string name="error_AudioRecorderEncodeError">Аудио рекордер кодирање грешка.</string>
+    <string name="error_AudioRecorderPermissionError">Микрофон дозвола е потребна за снимање на безбедна говорна порака. Допрете го копчето Помош за SafeSlinger микрофон дозвола детали.</string>
     <string name="error_BackupNotFound">Не се резервната да се врати.</string>
     <string name="error_BackupNotSupportedDevice">Уред не поддржува резерви се врати.</string>
     <string name="error_BadCopyProtectUpgrade">Поради бубачка во Андроид 4.1, ќе мора да деинсталирање и повторно инсталирајте SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger грешка, ве молиме рестартирајте го.</string>
     <string name="error_VcardParseFailure">Контакт податоци е форматирана погрешно.</string>
 
+    <string name="help_find">Го користите овој екран да го поставите вашето име за размена со други, и лозинка за да се заштити вашите податоци. Допрете Готово копчето кога ќе заврши.</string>
     <string name="help_home">Да се ​​разменуваат идентитет податоци, се обезбеди сите корисници се во близина или на телефон. Започнете Размена копчето ќе разменат само на проверени податоци за контакт.</string>
     <string name="help_identity_menu">Можете исто така може да се промени на личните податоци за вашиот идентитет на овој екран со прислушување на копчето со вашето име. Ова ќе прикаже менито што ќе ви овозможи да ги менувате вашите контакти, Креирај нов контакт, или да користите друг контакт.</string>
     <string name="help_Messages">Овој екран прикажува сите минати пораки, и додатоци кои се уште се достапни за преземање.</string>
+    <string name="help_passphrase">Го користите овој екранот, за да се најавите на апликација со вашите тајна фраза. Ако сте ја заборавиле Вашата лозинка, може да генерирате нов клуч заштитени со нова тајна фраза со допирање на Заборавена Лозинка? копче. Допрете на името на корисникот да се префрлате помеѓу повеќе клучеви.</string>
+    <string name="help_passphrase_change">Го користите овој екран да го смените Вашиот лозинка со внесување на вашата последна тајна фраза за потврда и нова тајна фраза.</string>
     <string name="help_PickRecip">Контакти со SafeSlinger копчињата се прикажани тука, изберете една да ја испратите вашата порака до.</string>
     <string name="help_save">Кога ќе завршите, протоколот ќе се открие список на идентитетот на податоци разменуваат. Одберете ги контактите што сакате да ги зачувате и притиснете увоз.</string>
     <string name="help_SecureIntroduction">Овој екран ви овозможува да изберете две лица ќе се прицврстена клучеви со пред да безбедно праќате и нивните клучеви до друг. Едноставно притиснете Воведување кога подготвени.</string>
     <string name="help_Send">Овој екран ви овозможува да изберете некои податоци и примателот да се испрати до. Едноставно притиснете испрати, кога подготвени.</string>
+    <string name="help_settings">Овој екран ви овозможува да го смените стандардните поставувања за апликација.</string>
 
+    <string name="iOS_contactError">Контакти дозвола е потребно за безбедно споделување на контактните картички. Допрете го копчето Помош за SafeSlinger Контакти дозвола детали.</string>
     <string name="iOS_errorpushtoken">Притисни регистрација недостасува.</string>
+    <string name="iOS_notificationError1">Дозвола известување за било сигнали или банери, и значка броеви, се потребни за безбедна размена на пораки. Допрете го копчето Помош за SafeSlinger дозвола Известување детали.</string>
     <string name="iOS_oldOSWarn">SafeSlinger не е оптимизиран за iOS 5.x уреди. SafeSlinger бара iOS 6 или повисока.</string>
+    <string name="iOS_RequestPermissionContacts">Можете да изберете контактната картичка да ја испратите вашата пријатели и SafeSlinger ќе го криптирате за вас. За да се овозможи оваа функција, мора да им овозможи SafeSlinger пристап до вашите контакти, кога прашав.</string>
+    <string name="iOS_RequestPermissionMicrophone">Можете да снимате глас порака до испратите вашите пријатели и SafeSlinger ќе го криптирате за вас. За да се овозможи оваа функција, мора да им овозможи SafeSlinger пристап до вашиот микрофон кога прашав.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger е шифрирана пораки примена и не може да функционира без да им овозможат дојдовни пораки од Известувања. За да се овозможи дојдовни пораки, мора да им овозможи SafeSlinger да ти пратам Известувања кога прашав.</string>
 
     <string name="label_ago">%s пред</string>
     <string name="label_backupCompleteDate">Последните резерви Завршено</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">истекува %s</string>
     <string name="label_expiresIn">истекува во</string>
     <string name="label_FileNameHint">Име на датотеката</string>
-    <string name="label_FindInstruct">Внесете го името што сакате другите да го видат при комуникација безбедно:</string>
+    <string name="label_FindInstruct">Внесете го вашето име и лозинка за да ги заштити вашите податоци:</string>
     <string name="label_FirstName">Име</string>
     <string name="label_Home">Допрете го вашето име да додадете или отстраните контакт податоци, проверете ставки сакате да ги споделите, и допрете Започнете Размена кога другите се подготвени за размена на:</string>
     <string name="label_hometag">Дома</string>
     <string name="label_hours">%d часа</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud е овозможено. Допрете Готово копчето кога ќе заврши.</string>
     <string name="label_InstNoMessages">Нема пораки. Може да се испрати порака од копчето Состави порака на менито Home.</string>
-    <string name="label_InstNoMessagesAndroid">Нема пораки. Може да се испрати порака од табот Состави.</string>
     <string name="label_InstNoRecipients">За да додадете приматели, мора прво Прашка Копчиња со една или повеќе други корисници во исто време. Вие исто така може да испрати Прашка Клучеви контакт покана од менито.</string>
     <string name="label_InstNoSharedFile">Нема заедничка датотека. Поврзете го Вашиот уред со iTunes и повлечете датотеки во споделена папка.</string>
     <string name="label_InstRecipients">Изберете примателот да испрати порака до:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Автоматски преземете порака прикачувања кога логирани</string>
     <string name="label_summary_auto_decrypt">Автоматски се дешифрираат пораките кога логирани</string>
     <string name="label_summary_remind_backup_delay">Добијат известување кога резервната е присутен.</string>
-    <string name="label_summary_show_tutorial">Покажуваат туториал пред attemping да прашка клучеви.</string>
+    <string name="label_summary_show_tutorial">Покажуваат туториал пред да се извршат за да се Прашка клучеви.</string>
     <string name="label_TapToDecryptFile">Допрете за да ја декриптираат датотека</string>
     <string name="label_TapToDecryptMessage">Допрете за да ја декриптираат</string>
     <string name="label_TapToDownloadFile">Допрете за да ја преземете датотека</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Авто-декриптирање</string>
     <string name="menu_Change">Промена</string>
     <string name="menu_ChangePassphrase">Промена Лозинка</string>
+    <string name="menu_ContactInviteEmail">Е-пошта од контакти</string>
+    <string name="menu_ContactInviteSms">Текст од Контакти</string>
     <string name="menu_CreateNew">Креирај нова</string>
     <string name="menu_delete">Избришете</string>
     <string name="menu_deleteThread">Избришете %s тема</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Заборавена Лозинка?</string>
     <string name="menu_Help">Помогне</string>
     <string name="menu_Introduction">Вовед</string>
-    <string name="menu_License">Лиценца</string>
+    <string name="menu_language">Јазик</string>
+    <string name="menu_link_contact_add">Додај Контакт Линк</string>
+    <string name="menu_link_contact_change">Промена Контакт Линк</string>
     <string name="menu_Logout">Одјава</string>
     <string name="menu_ManagePassphrases">Управување со фрази</string>
     <string name="menu_message_font_size">Порака Големина на фонт</string>

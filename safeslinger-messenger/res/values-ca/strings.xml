@@ -49,6 +49,7 @@
     <string name="btn_Import">Importació</string>
     <string name="btn_Introduce">Introduir</string>
     <string name="btn_No">No</string>
+    <string name="btn_NotNow">Ara no</string>
     <string name="btn_NotRemind">Oblidar</string>
     <string name="btn_OK">Bé</string>
     <string name="btn_Refuse">Rebutjar</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minuts</string>
     <string name="choice_8hours">8 hores</string>
     <string name="choice_auto_storage">Emmagatzematge per defecte</string>
+    <string name="choice_default">Defecte</string>
     <string name="choice_external_storage">Dipòsit extern</string>
     <string name="choice_font_large">Gran</string>
     <string name="choice_font_medium">Medi</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Error de descodificació d\'àudio del jugador.</string>
     <string name="error_AudioPlayerError">No es pot reproduir l\'enregistrament.</string>
     <string name="error_AudioRecorderEncodeError">Error de codificació d\'àudio gravadora.</string>
+    <string name="error_AudioRecorderPermissionError">Es requereix el permís de micròfon per gravar un missatge de veu segura. Toqueu el botó Ajuda per SafeSlinger Micròfon detalls de permisos.</string>
     <string name="error_BackupNotFound">Sense seguretat per restaurar.</string>
     <string name="error_BackupNotSupportedDevice">El dispositiu no admet la còpia de seguretat de restauració.</string>
     <string name="error_BadCopyProtectUpgrade">A causa d\'un error en Android 4.1, haurà de desinstal · lar i tornar a instal lar SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">Error SafeSlinger, si us plau reinicieu.</string>
     <string name="error_VcardParseFailure">Dades de contacte va ser un format incorrecte.</string>
 
+    <string name="help_find">Utilitzeu aquesta pantalla per configurar el seu nom d\'intercanviar amb els altres, i una contrasenya per protegir les seves dades. Toqueu en el botó Fet quan hagi acabat.</string>
     <string name="help_home">Per a l\'intercanvi de dades d\'identitat, assegureu-vos que tots els usuaris estan a prop o per telèfon. El botó Començar Exchange intercanviar només les dades de contacte controlades.</string>
     <string name="help_identity_menu">També pot canviar les dades personals sobre la seva identitat en aquesta pantalla prement sobre el botó amb el seu nom. Això mostrarà un menú que us permet editar el contacte, crear nou contacte, o utilitzar un altre contacte.</string>
     <string name="help_Messages">Aquesta pantalla mostra tots els missatges anteriors i annexos que encara estan disponibles per a baixar.</string>
+    <string name="help_passphrase">Utilitzeu aquesta pantalla per iniciar sessió en l\'aplicació amb la contrasenya. Si ha oblidat la seva contrasenya, pot generar una nova clau protegida per una nova frase de pas tocant la contrasenya Oblidat? botó. Toqueu en el nom d\'usuari per canviar entre diverses claus.</string>
+    <string name="help_passphrase_change">Utilitzeu aquesta pantalla per canviar la contrasenya mitjançant la introducció de la seva última contrasenya per a la confirmació i la nova contrasenya.</string>
     <string name="help_PickRecip">Es mostren els contactes amb tecles SafeSlinger aquí, escollir un per enviar el missatge.</string>
     <string name="help_save">En acabar, el protocol revelarà una llista de les dades d\'identitat intercanviats. Seleccioneu els contactes que voleu desar i premeu Importar.</string>
     <string name="help_SecureIntroduction">Aquesta pantalla us permet seleccionar dues persones que han penjades les claus amb abans d\'enviar amb seguretat les seves claus entre si. Simplement premeu Introduir quan estigui llest.</string>
     <string name="help_Send">Aquesta pantalla us permet seleccionar algunes dades i un destinatari per enviar a. Només cal prémer Enviar quan estigui llest.</string>
+    <string name="help_settings">Aquesta pantalla li permet canviar la configuració per defecte de l\'aplicació.</string>
 
+    <string name="iOS_contactError">Es requereix el permís de contactes per compartir de forma segura les targetes de contacte. Toqueu el botó Ajuda per obtenir detalls SafeSlinger permisos de contactes.</string>
     <string name="iOS_errorpushtoken">Registre d\'empenta no es troba.</string>
+    <string name="iOS_notificationError1">Permís de notificació, ja sigui per les alertes o banners, i números de placa, són necessaris per a la missatgeria segura. Toqueu el botó Ajuda per obtenir detalls SafeSlinger permisos Notificació.</string>
     <string name="iOS_oldOSWarn">SafeSlinger no està optimitzat per a dispositius iOS 5.x. SafeSlinger requereix iOS 6 o superior.</string>
+    <string name="iOS_RequestPermissionContacts">Vostè pot seleccionar la seva targeta de contacte per enviar als seus amics i SafeSlinger xifrarà per vostè. Per activar aquesta funció, ha de permetre l\'accés SafeSlinger als seus contactes quan se li va preguntar.</string>
+    <string name="iOS_RequestPermissionMicrophone">Pot gravar un missatge de veu per enviar als seus amics i SafeSlinger xifrarà per vostè. Per activar aquesta funció, ha de permetre l\'accés SafeSlinger al seu micròfon quan se li va preguntar.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger és una aplicació de missatgeria encriptada i no pot funcionar sense permetre els missatges entrants de notificacions. Per activar els missatges entrants, ha de permetre SafeSlinger per enviar avisos quan se li va preguntar.</string>
 
     <string name="label_ago">fa %s</string>
     <string name="label_backupCompleteDate">Última còpia de seguretat Completat</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">expira %s</string>
     <string name="label_expiresIn">expira el</string>
     <string name="label_FileNameHint">Nom del fitxer</string>
-    <string name="label_FindInstruct">Introduïu el nom que voleu que altres vegin quan es comunica de forma segura:</string>
+    <string name="label_FindInstruct">Escriu el teu nom i una contrasenya per protegir les seves dades:</string>
     <string name="label_FirstName">Nom</string>
     <string name="label_Home">Feu clic al nom per afegir o treure dades de contacte, comprovar els elements que desitja compartir i toc Comenceu Exchange quan altres estan a punt per a l\'intercanvi:</string>
     <string name="label_hometag">Casa</string>
     <string name="label_hours">%d hores</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud està habilitada. Toqueu en el botó Fet quan hagi acabat.</string>
     <string name="label_InstNoMessages">No hi ha missatges. Vostè pot enviar un missatge des del botó Redactar missatge al menú Inici.</string>
-    <string name="label_InstNoMessagesAndroid">No hi ha missatges. Vostè pot enviar un missatge des de la fitxa Redactar.</string>
     <string name="label_InstNoRecipients">Per afegir destinataris, primer ha Sling Tecles amb un o més usuaris al mateix temps. Vostè també pot enviar una invitació de contacte Sling Keys al menú.</string>
     <string name="label_InstNoSharedFile">No arxiu compartit. Connecteu el dispositiu amb iTunes i arrossegar els arxius a la carpeta compartida.</string>
     <string name="label_InstRecipients">Tria un destinatari per enviar un missatge a:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Descarregar automàticament fitxers adjunts de missatges quan connectat polz</string>
     <string name="label_summary_auto_decrypt">Desxifrar missatges automàticament quan connectat polz</string>
     <string name="label_summary_remind_backup_delay">Rebre una notificació quan la còpia de seguretat no està en línia.</string>
-    <string name="label_summary_show_tutorial">Mostra un tutorial abans attemping a Sling Keys.</string>
+    <string name="label_summary_show_tutorial">Mostra un tutorial abans d\'intentar Sling Keys.</string>
     <string name="label_TapToDecryptFile">Toc per desencriptar arxius</string>
     <string name="label_TapToDecryptMessage">Toc per desxifrar</string>
     <string name="label_TapToDownloadFile">Polse per a descarregar el fitxer</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Canvi</string>
     <string name="menu_ChangePassphrase">Canviar Contrasenya</string>
+    <string name="menu_ContactInviteEmail">Correu electrònic de contacte</string>
+    <string name="menu_ContactInviteSms">Text de Contactes</string>
     <string name="menu_CreateNew">Crear nou</string>
     <string name="menu_delete">Esborrar</string>
     <string name="menu_deleteThread">Eliminar %s Tema</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Heu oblidat la contrasenya?</string>
     <string name="menu_Help">Ajudar</string>
     <string name="menu_Introduction">Introducció</string>
-    <string name="menu_License">Llicència</string>
+    <string name="menu_language">Idioma</string>
+    <string name="menu_link_contact_add">Afegir Contacte Enllaç</string>
+    <string name="menu_link_contact_change">Canvieu Contacte Enllaç</string>
     <string name="menu_Logout">Sortir</string>
     <string name="menu_ManagePassphrases">Gestioni passphrases</string>
     <string name="menu_message_font_size">Missatge Mida de la lletra</string>

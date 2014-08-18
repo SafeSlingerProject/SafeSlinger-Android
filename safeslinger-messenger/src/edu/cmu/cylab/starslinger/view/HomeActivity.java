@@ -2072,6 +2072,16 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 break;
 
             case VIEW_SETTINGS_ID:
+                // handle potential language change
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                    recreate();
+                } else {
+                    // TODO: find better update for <= 2.3
+                    // startActivity(getIntent());
+                    // finish();
+                    restart();
+                }
+
                 switch (resultCode) {
                     case SettingsActivity.RESULT_NEW_PASSPHRASE:
                         // remove cached pass
@@ -3969,7 +3979,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    @Override
     protected void showWebPage(String url) {
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));

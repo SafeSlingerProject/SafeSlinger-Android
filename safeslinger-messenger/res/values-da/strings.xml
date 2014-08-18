@@ -49,6 +49,7 @@
     <string name="btn_Import">Import</string>
     <string name="btn_Introduce">Indføre</string>
     <string name="btn_No">Nej</string>
+    <string name="btn_NotNow">Ikke nu</string>
     <string name="btn_NotRemind">Glem</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Nægte</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minutter</string>
     <string name="choice_8hours">8 timer</string>
     <string name="choice_auto_storage">Standard Opbevaring</string>
+    <string name="choice_default">Standard</string>
     <string name="choice_external_storage">Ekstern storage</string>
     <string name="choice_font_large">Stor</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Lydafspiller dekodningsfejl.</string>
     <string name="error_AudioPlayerError">Kan ikke afspille optagelsen.</string>
     <string name="error_AudioRecorderEncodeError">Lydoptager kodning fejl.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofon kræves tilladelse til at optage en sikker besked. Tryk på knappen Hjælp for at SafeSlinger Mikrofon tilladelse detaljer.</string>
     <string name="error_BackupNotFound">Ingen backup at genskabe.</string>
     <string name="error_BackupNotSupportedDevice">Device understøtter ikke backup gendanne.</string>
     <string name="error_BadCopyProtectUpgrade">På grund af en fejl i Android 4.1, bliver du nødt til at afinstallere og geninstallere SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger fejl, skal du genstarte.</string>
     <string name="error_VcardParseFailure">Kontaktdata blev formateret forkert.</string>
 
+    <string name="help_find">Brug dette skærmbillede til at angive dit navn til at udveksle med andre, og en adgangskode til at beskytte dine data. Tryk på knappen Udført når du er færdig.</string>
     <string name="help_home">At udveksle identitetsdata, sikre, at alle brugere er i nærheden eller på telefonen. Knappen Begin Exchange vil udveksle kun de kontrollerede kontaktoplysninger.</string>
     <string name="help_identity_menu">Du kan også ændre personlige oplysninger om din identitet på denne skærm ved at trykke på knappen med dit navn. Dette vil vise en menu, så du kan redigere din kontaktperson, Opret ny kontakt, eller brug en anden kontakt.</string>
     <string name="help_Messages">Denne skærm viser alle tidligere beskeder og vedhæftede filer, der stadig er til rådighed for download.</string>
+    <string name="help_passphrase">Brug dette skærmbillede til at logge på programmet med din adgangskode. Hvis du har glemt din adgangskode, kan du generere en ny nøgle er beskyttet af en ny adgangskode ved at trykke på Glemt adgangskode? knappen. Tryk på brugernavnet for at skifte mellem flere nøgler.</string>
+    <string name="help_passphrase_change">Brug dette skærmbillede til at ændre dit løsen ved at indtaste dit sidste løsen for bekræftelse og den nye adgangskode.</string>
     <string name="help_PickRecip">Kontakter med SafeSlinger taster er vist her, skal du vælge en til at sende din besked til.</string>
     <string name="help_save">Når du er færdig, vil protokollen afsløre en liste over de identitetsdata udveksles. Vælg de kontaktpersoner, du ønsker at gemme, og tryk på Importer.</string>
     <string name="help_SecureIntroduction">Dette skærmbillede giver dig mulighed for at vælge to personer, du har slynget nøgler med før til sikkert at sende deres nøgler til hinanden. Du skal blot trykke Indføre når du er klar.</string>
     <string name="help_Send">Dette skærmbillede giver dig mulighed for at vælge nogle data og en modtager til at sende til. Du skal blot trykke på Send, når klar.</string>
+    <string name="help_settings">Dette skærmbillede giver dig mulighed for at ændre standardindstillingerne for anvendelsen.</string>
 
+    <string name="iOS_contactError">Tilladelse Kontakter er nødvendig for sikkert at dele kontaktkort. Tryk på knappen Hjælp for at SafeSlinger tilladelse Kontakter detaljer.</string>
     <string name="iOS_errorpushtoken">Push registrering mangler.</string>
+    <string name="iOS_notificationError1">Meddelelse tilladelse til enten alarmer eller bannere og badge numre er nødvendige for sikre meddelelser. Tryk på knappen Hjælp for at SafeSlinger Notification tilladelse detaljer.</string>
     <string name="iOS_oldOSWarn">SafeSlinger er ikke optimeret til iOS 5.x enheder. SafeSlinger kræver iOS 6 eller højere.</string>
+    <string name="iOS_RequestPermissionContacts">Du kan vælge dit kontaktkort til at sende dine venner og SafeSlinger vil kryptere det for dig. For at aktivere denne funktion, skal du tillade SafeSlinger adgang til dine kontakter, når du bliver spurgt.</string>
+    <string name="iOS_RequestPermissionMicrophone">Du kan optage en talebesked til at sende dine venner og SafeSlinger vil kryptere det for dig. For at aktivere denne funktion, skal du tillade SafeSlinger adgang til din mikrofon når du bliver spurgt.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger er en krypteret messaging-programmet og kan ikke fungere uden at tillade indkommende beskeder fra Meddelelser. For at aktivere indgående beskeder, skal du tillade SafeSlinger til at sende dig meddelelser, når spurgt.</string>
 
     <string name="label_ago">%s siden</string>
     <string name="label_backupCompleteDate">Sidste Backup Afsluttet</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">udløber %s</string>
     <string name="label_expiresIn">udløber i</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Indtast det navn, du ønsker, at andre skal se, når du kommunikerer sikkert:</string>
+    <string name="label_FindInstruct">Indtast dit navn og en adgangskode til at beskytte dine data:</string>
     <string name="label_FirstName">Fornavn</string>
     <string name="label_Home">Tryk på dit navn for at tilføje eller fjerne kontaktdata, kontrollere emner, du ønsker at dele, og tryk på Start Exchange når andre er klar til at bytte:</string>
     <string name="label_hometag">Hjem</string>
     <string name="label_hours">%d timer</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud er aktiveret. Tryk på knappen Udført når du er færdig.</string>
     <string name="label_InstNoMessages">Ingen meddelelser. Du kan sende en besked fra knap Compose Message på startmenuen.</string>
-    <string name="label_InstNoMessagesAndroid">Ingen meddelelser. Du kan sende en besked fra fanen Compose.</string>
     <string name="label_InstNoRecipients">Hvis du vil tilføje modtagere, skal du først Sling nøgler med en eller flere andre brugere på samme tid. Du kan også sende en slynge nøgler kontakt invitation fra menuen.</string>
     <string name="label_InstNoSharedFile">Ingen delte fil. Tilslut din enhed med iTunes og trække filer til den delte mappe.</string>
     <string name="label_InstRecipients">Pick en modtager til at sende en besked til:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Hent automatisk vedhæftede filer når du er logget ind</string>
     <string name="label_summary_auto_decrypt">Dekryptere automatisk meddelelser når du er logget ind</string>
     <string name="label_summary_remind_backup_delay">Modtag en meddelelse, når backup er offline.</string>
-    <string name="label_summary_show_tutorial">Vis en tutorial før attemping til Sling Keys.</string>
+    <string name="label_summary_show_tutorial">Vis en tutorial, inden du forsøger at slynge Keys.</string>
     <string name="label_TapToDecryptFile">Tryk for at dekryptere filen</string>
     <string name="label_TapToDecryptMessage">Tryk for at dekryptere</string>
     <string name="label_TapToDownloadFile">Tryk for at hente fil</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-dekryptere</string>
     <string name="menu_Change">Skift</string>
     <string name="menu_ChangePassphrase">Skift adgangskode</string>
+    <string name="menu_ContactInviteEmail">E-mail fra Kontakter</string>
+    <string name="menu_ContactInviteSms">Tekst fra Kontakter</string>
     <string name="menu_CreateNew">Opret ny</string>
     <string name="menu_delete">Slet</string>
     <string name="menu_deleteThread">Slet Tråd %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Glemt adgangskode?</string>
     <string name="menu_Help">Hjælp</string>
     <string name="menu_Introduction">Indledning</string>
-    <string name="menu_License">License</string>
+    <string name="menu_language">Sprog</string>
+    <string name="menu_link_contact_add">Tilføj Kontakt Link</string>
+    <string name="menu_link_contact_change">Skift Kontakt Link</string>
     <string name="menu_Logout">Log</string>
     <string name="menu_ManagePassphrases">Administrer Passphrases</string>
     <string name="menu_message_font_size">Besked Skriftstørrelse</string>

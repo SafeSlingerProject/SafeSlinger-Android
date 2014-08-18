@@ -49,6 +49,7 @@
     <string name="btn_Import">ਆਯਾਤ ਕਰੋ</string>
     <string name="btn_Introduce">ਪੇਸ਼ ਕਰਨਾ</string>
     <string name="btn_No">ਕੋਈ</string>
+    <string name="btn_NotNow">ਹਾਲੇ ਨਹੀਂ</string>
     <string name="btn_NotRemind">ਭੁੱਲ</string>
     <string name="btn_OK">ਠੀਕ ਹੈ</string>
     <string name="btn_Refuse">ਇਨਕਾਰ</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 ਮਿੰਟ</string>
     <string name="choice_8hours">8 ਘੰਟੇ</string>
     <string name="choice_auto_storage">ਮੂਲ ਸਟੋਰੇਜ਼</string>
+    <string name="choice_default">ਮੂਲ</string>
     <string name="choice_external_storage">ਬਾਹਰੀ ਸਟੋਰੇਜ਼</string>
     <string name="choice_font_large">ਵੱਡੇ</string>
     <string name="choice_font_medium">ਦਰਮਿਆਨੇ</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">ਆਡੀਓ ਪਲੇਅਰ ਡੀਕੋਡਿੰਗ ਗਲਤੀ.</string>
     <string name="error_AudioPlayerError">ਰਿਕਾਰਡਿੰਗ ਨੂੰ ਚਲਾ ਨਹੀ ਜਾ ਸਕਦਾ ਹੈ.</string>
     <string name="error_AudioRecorderEncodeError">ਆਡੀਓ ਰਿਕਾਰਡਰ ਇੰਕੋਡਿੰਗ ਗਲਤੀ.</string>
+    <string name="error_AudioRecorderPermissionError">ਮਾਈਕਰੋਫੋਨ ਦੀ ਆਗਿਆ ਇੱਕ ਸੁਰੱਖਿਅਤ ਆਵਾਜ਼ ਨੂੰ ਸੁਨੇਹੇ ਨੂੰ ਰਿਕਾਰਡ ਕਰਨ ਲਈ ਲੋੜੀਦਾ ਹੈ. SafeSlinger ਮਾਈਕਰੋਫੋਨ ਦੀ ਆਗਿਆ ਵੇਰਵੇ ਲਈ ਸਹਾਇਤਾ ਬਟਨ ਟੈਪ ਕਰੋ.</string>
     <string name="error_BackupNotFound">ਨੂੰ ਬਹਾਲ ਕਰਨ ਲਈ ਕੋਈ ਬੈਕਅੱਪ ਹੈ.</string>
     <string name="error_BackupNotSupportedDevice">ਜੰਤਰ ਬੈਕਅੱਪ ਨੂੰ ਮੁੜ ਨੂੰ ਸਹਿਯੋਗ ਨਹੀ ਹੈ.</string>
     <string name="error_BadCopyProtectUpgrade">ਕਰਕੇ, ਛੁਪਾਓ 4.1 ਵਿੱਚ ਇੱਕ ਬੱਗ ਨੂੰ, ਤੁਹਾਨੂੰ SafeSlinger ਅਨ ਅਤੇ ਮੁੜ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਹੋਵੇਗੀ.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger ਗਲਤੀ, ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰੋ.</string>
     <string name="error_VcardParseFailure">ਸੰਪਰਕ ਡਾਟਾ ਗਲਤ ਫਾਰਮੈਟ ਕੀਤੇ ਗਿਆ ਸੀ.</string>
 
+    <string name="help_find">ਤੁਹਾਡੇ ਡਾਟਾ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਹੋਰ ਹੈ, ਅਤੇ ਗੁਪਤਕੋਡ ਨਾਲ ਬਦਲੀ ਕਰਨ ਲਈ ਆਪਣੇ ਨਾਮ ਨੂੰ ਸੈੱਟ ਕਰਨ ਲਈ ਇਹ ਸਕਰੀਨ ਵਰਤੋ. ਨਿਬੇੜ ਕੇ ਸੰਪੰਨ ਬਟਨ ਨੂੰ ਟੈਪ ਕਰੋ.</string>
     <string name="help_home">ਪਛਾਣ ਦੀ ਡਾਟਾ ਬਦਲੀ ਕਰਨ ਲਈ, ਸਭ ਉਪਭੋਗੀ ਨੇੜਲੇ ਜ ਫੋਨ \'ਤੇ ਹਨ, ਇਹ ਯਕੀਨੀ ਬਣਾਉਣ. ਸ਼ੁਰੂ ਕਰੋ ਐਕਸਚੇਜ਼ ਬਟਨ ਸਿਰਫ਼ ਕੀਤੀ ਗਈ ਦੇ ਸੰਪਰਕ ਡਾਟਾ ਦਾ ਲੈਣ ਜਾਵੇਗਾ.</string>
     <string name="help_identity_menu">ਤੁਹਾਨੂੰ ਇਹ ਵੀ ਤੁਹਾਡਾ ਨਾਮ ਨਾਲ ਬਟਨ ਨੂੰ ਦਬਾ ਕੇ ਇਸ ਸਕਰੀਨ \'ਤੇ ਤੁਹਾਡੀ ਪਛਾਣ ਬਾਰੇ ਨਿੱਜੀ ਡਾਟਾ ਤਬਦੀਲ ਕਰ ਸਕਦੇ ਹੋ. ਇਸ ਲਈ, ਤੁਹਾਨੂੰ ਆਪਣੀ ਸੰਪਰਕ ਸੋਧ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ, ਇੱਕ ਮੇਨੂ ਨੂੰ ਵੇਖਾਉਣ ਨਵ ਸੰਪਰਕ ਬਣਾਓ, ਜ ਹੋਰ ਸੰਪਰਕ ਵਰਤੋ ਕਰੇਗਾ.</string>
     <string name="help_Messages">ਇਹ ਸਕਰੀਨ ਸਭ ਬੀਤੇ ਸੁਨੇਹੇ, ਅਤੇ ਹਾਲੇ ਵੀ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ ਉਪਲੱਬਧ ਹਨ, ਜੋ ਕਿ ਨੱਥੀ ਵਿਖਾਉਦਾ ਹੈ.</string>
+    <string name="help_passphrase">ਆਪਣੇ ਪ੍ਹੈਰਾ ਨਾਲ ਦੀ ਅਰਜ਼ੀ ਨੂੰ ਲਾਗਇਨ ਕਰਨ ਲਈ ਇਸ ਸਕਰੀਨ ਵਰਤੋ. ਤੁਹਾਨੂੰ ਆਪਣੇ ਪ੍ਹੈਰਾ ਭੁੱਲ ਗਿਆ ਹੈ, ਤੁਹਾਨੂੰ ਭੁੱਲ ਗਿਆ ਪ੍ਹੈਰਾ ਟੈਪ ਕਰ ਕੇ ਕੋਈ ਨਵ ਗੁਪਤਕੋਡ ਦੁਆਰਾ ਸੁਰੱਖਿਅਤ ਇੱਕ ਨਵ ਕੁੰਜੀ ਨੂੰ ਤਿਆਰ ਕਰ ਸਕਦੇ ਹੋ? ਬਟਨ ਨੂੰ. ਮਲਟੀਪਲ ਕੁੰਜੀ ਵਿੱਚ ਸਵਿੱਚ ਕਰਨ ਲਈ ਯੂਜ਼ਰ ਨੂੰ ਨਾਮ ਟੈਪ ਕਰੋ.</string>
+    <string name="help_passphrase_change">ਪੁਸ਼ਟੀ ਅਤੇ ਨਵ ਪ੍ਹੈਰਾ ਲਈ ਆਪਣੇ ਪਿਛਲੇ ਪ੍ਹੈਰਾ ਦਰਜ ਕਰਕੇ ਆਪਣੇ ਪ੍ਹੈਰਾ ਨੂੰ ਤਬਦੀਲ ਕਰਨ ਲਈ, ਇਸ ਸਕਰੀਨ ਨੂੰ ਵਰਤੋ.</string>
     <string name="help_PickRecip">SafeSlinger ਸਵਿੱਚ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਸੁਨੇਹਾ ਭੇਜਣ ਲਈ ਇੱਕ ਦੀ ਚੋਣ ਕਰੋ, ਇੱਥੇ ਵਿਖਾਈ ਹਨ.</string>
     <string name="help_save">ਮੁਕੰਮਲ ਹੋਣ ਤੇ, ਪਰੋਟੋਕਾਲ ਵਟਾਏ ਪਛਾਣ ਦੀ ਡਾਟਾ ਦੀ ਇੱਕ ਸੂਚੀ ਪ੍ਰਗਟ ਕਰੇਗਾ. ਤੁਹਾਨੂੰ ਆਯਾਤ ਕਰੋ ਸੰਭਾਲਣ ਅਤੇ ਦਬਾਓ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਦੀ ਚੋਣ ਕਰੋ ਸੰਪਰਕ.</string>
     <string name="help_SecureIntroduction">ਇਹ ਸਕਰੀਨ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਸੁਰੱਖਿਅਤ ਇੱਕ ਦੂਜੇ ਨੂੰ ਆਪਣੇ ਕੁੰਜੀ ਭੇਜਣ ਲਈ ਅੱਗੇ ਦੇ ਨਾਲ ਕੁੰਜੀ slung ਹੈ ਦੋ ਲੋਕ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ. ਬਸ ਜਦ ਤਿਆਰ ਪੇਸ਼ ਦਬਾਓ.</string>
     <string name="help_Send">ਇਹ ਸਕਰੀਨ ਤੁਹਾਨੂੰ ਕੁਝ ਡਾਟਾ ਅਤੇ ਨੂੰ ਭੇਜਣ ਲਈ ਇੱਕ ਪ੍ਰਾਪਤ ਕਰਤਾ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ. ਬਸ ਤਿਆਰ ਹੋਣ ਭੇਜੋ ਦਬਾਓ.</string>
+    <string name="help_settings">ਇਹ ਸਕਰੀਨ ਤੁਹਾਨੂੰ ਅਰਜ਼ੀ ਦੀ ਲਈ ਮੂਲ ਸੈਟਿੰਗ ਨੂੰ ਤਬਦੀਲ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ.</string>
 
+    <string name="iOS_contactError">ਸੰਪਰਕ ਦੀ ਇਜਾਜ਼ਤ ਸੁਰੱਖਿਅਤ ਸੰਪਰਕ ਨੂੰ ਕਾਰਡ ਵੰਡਣ ਲਈ ਲੋੜੀਦਾ ਹੈ. SafeSlinger ਸੰਪਰਕ ਦੀ ਇਜਾਜ਼ਤ ਵੇਰਵੇ ਲਈ ਸਹਾਇਤਾ ਬਟਨ ਟੈਪ ਕਰੋ.</string>
     <string name="iOS_errorpushtoken">ਧੱਕਾ ਰਜਿਸਟਰੇਸ਼ਨ ਗੁੰਮ ਹੈ.</string>
+    <string name="iOS_notificationError1">ਚੇਤਾਵਨੀ ਜ ਬੈਨਰ ਹੈ, ਅਤੇ ਬੈਜ ਨੰਬਰ ਕੋਈ ਲਈ ਸੂਚਨਾ ਦਾ ਅਧਿਕਾਰ, ਸੁਰੱਖਿਅਤ ਮੈਸੇਿਜੰਗ ਲਈ ਲੋੜ ਹੁੰਦੀ ਹੈ. SafeSlinger ਸੂਚਨਾ ਦਾ ਅਧਿਕਾਰ ਵੇਰਵੇ ਲਈ ਸਹਾਇਤਾ ਬਟਨ ਟੈਪ ਕਰੋ.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ਆਈਓਐਸ 5.x ਜੰਤਰ ਲਈ ਅਨੁਕੂਲ ਨਹੀ ਹੈ. SafeSlinger ਆਈਓਐਸ 6 ਜ ਵੱਧ ਲੋੜ ਹੈ.</string>
+    <string name="iOS_RequestPermissionContacts">ਤੁਹਾਨੂੰ ਆਪਣੇ ਦੋਸਤ ਭੇਜਣ ਲਈ ਆਪਣੇ ਸੰਪਰਕ ਕਾਰਡ ਦੀ ਚੋਣ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ SafeSlinger ਤੁਹਾਡੇ ਲਈ ਇਸ ਨੂੰ ਇਨਕਰਿਪਟ ਕਰੇਗਾ. ਨੂੰ ਪੁੱਛਿਆ, ਜਦ ਤੱਕ ਇਸ ਫੀਚਰ ਨੂੰ ਯੋਗ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਆਪਣੇ ਸੰਪਰਕ ਨੂੰ SafeSlinger ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਚਾਹੀਦਾ ਹੈ.</string>
+    <string name="iOS_RequestPermissionMicrophone">ਤੁਹਾਨੂੰ ਆਪਣੇ ਦੋਸਤ ਭੇਜਣ ਲਈ ਹੈ ਅਤੇ SafeSlinger ਤੁਹਾਡੇ ਲਈ ਇਸ ਨੂੰ ਇਨਕਰਿਪਟ ਜਾਵੇਗਾ ਤੇ ਇੱਕ ਅਵਾਜ਼ ਨੂੰ ਸੁਨੇਹੇ ਨੂੰ ਰਿਕਾਰਡ ਕਰ ਸਕਦੇ ਹਨ. ਨੂੰ ਪੁੱਛਿਆ, ਜਦ ਤੱਕ ਇਸ ਫੀਚਰ ਨੂੰ ਯੋਗ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਆਪਣੇ ਮਾਈਕਰੋਫੋਨ ਨੂੰ SafeSlinger ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਚਾਹੀਦਾ ਹੈ.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ਇੱਕ ਇਕ੍ਰਿਪਟਡ ਸੁਨੇਹੇਦਾਰ ਐਪਲੀਕੇਸ਼ਨ ਹੈ ਅਤੇ ਸੂਚਨਾ ਤੱਕ ਆਉਣ ਸੁਨੇਹੇ, ਜਿਸ ਨਾਲ ਬਿਨਾ ਕੰਮ ਨਹੀ ਕਰ ਸਕਦਾ. ਆਉਣ ਵਾਲੇ ਸੁਨੇਹੇ ਨੂੰ ਯੋਗ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਪੁੱਛਿਆ, ਜਦ SafeSlinger ਤੁਹਾਨੂੰ ਸੂਚਨਾ ਭੇਜਣ ਲਈ ਸਹਾਇਕ ਹੈ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
 
     <string name="label_ago">%s ago</string>
     <string name="label_backupCompleteDate">ਮੁਕੰਮਲ ਆਖਰੀ ਬੈਕਅੱਪ</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">%s ਦੀ ਮਿਆਦ</string>
     <string name="label_expiresIn">ਵਿੱਚ ਮਿਆਦ ​​ਖਤਮ</string>
     <string name="label_FileNameHint">ਫਾਇਲ ਦਾ ਨਾਮ</string>
-    <string name="label_FindInstruct">ਨਾਮ ਦਰਜ ਕਰੋ ਤੁਹਾਡੇ ਸੁਰੱਖਿਅਤ ਸੰਚਾਰ ਦੀ ਜਦ ਨੂੰ ਵੇਖਣ ਲਈ ਹੋਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ:</string>
+    <string name="label_FindInstruct">ਤੁਹਾਡੇ ਡਾਟਾ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਆਪਣਾ ਨਾਮ ਅਤੇ ਇੱਕ ਪ੍ਹੈਰਾ ਦਿਓ:</string>
     <string name="label_FirstName">ਪਿਹਲਾ ਨਾਮ</string>
     <string name="label_Home">ਸ਼ਾਮਿਲ ਜ ਹਟਾਉਣ ਲਈ, ਸੰਪਰਕ ਡਾਟਾ, ਤੁਹਾਨੂੰ ਹਿੱਸਾ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਆਈਟਮ ਚੈੱਕ, ਅਤੇ ਹੋਰ ਮੁਦਰਾ ਕਰਨ ਲਈ ਤਿਆਰ ਹਨ, ਜਦ ਐਕਸਚੇਜ਼ ਸ਼ੁਰੂ ਟੈਪ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਨਾਮ ਟੈਪ ਕਰੋ:</string>
     <string name="label_hometag">ਘਰ</string>
     <string name="label_hours">%d ਘੰਟੇ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ਯੋਗ ਕੀਤਾ ਗਿਆ ਹੈ. ਨਿਬੇੜ ਕੇ ਸੰਪੰਨ ਬਟਨ ਨੂੰ ਟੈਪ ਕਰੋ.</string>
     <string name="label_InstNoMessages">ਕੋਈ ਸੁਨੇਹਾ. ਤੁਹਾਨੂੰ ਘਰ ਨੂੰ ਮੇਨੂ \'ਤੇ ਸੰਰਚਨਾ ਸੁਨੇਹਾ ਬਟਨ ਨੂੰ ਤੱਕ ਇੱਕ ਸੁਨੇਹਾ ਭੇਜ ਸਕਦਾ ਹੈ.</string>
-    <string name="label_InstNoMessagesAndroid">ਕੋਈ ਸੁਨੇਹਾ. ਤੁਹਾਨੂੰ ਸੰਰਚਨਾ ਟੈਬ ਤੱਕ ਇੱਕ ਸੁਨੇਹਾ ਭੇਜ ਸਕਦਾ ਹੈ.</string>
     <string name="label_InstNoRecipients">ਪ੍ਰਾਪਤ ਕਰਤਾ ਸ਼ਾਮਿਲ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਪਹਿਲੀ ਇੱਕੋ ਸਮ \'ਤੇ ਇੱਕ ਹੋਰ ਜਿਆਦਾ ਉਪਭੋਗਤਾ, ਨਾਲ ਗੋਪੀਆ ਸਵਿੱਚ ਲਈ ਲਾਜ਼ਮੀ ਹੈ. ਤੁਹਾਨੂੰ ਇਹ ਵੀ ਮੇਨੂ ਇਕ ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਦੇ ਸੰਪਰਕ ਸੱਦਾ ਭੇਜ ਸਕਦਾ ਹੈ.</string>
     <string name="label_InstNoSharedFile">ਕੋਈ ਸ਼ੇਅਰ ਫਾਇਲ ਨੂੰ. ਸ਼ੇਅਰ ਫੋਲਡਰ ਵਿੱਚ iTunes ਦੇ ਅਤੇ ਖਿੱਚੋ ਫਾਇਲ ਨਾਲ ਤੁਹਾਡੇ ਜੰਤਰ ਨੂੰ ਜੁੜੋ.</string>
     <string name="label_InstRecipients">ਨੂੰ ਇੱਕ ਸੁਨੇਹਾ ਭੇਜਣ ਲਈ ਇੱਕ ਪ੍ਰਾਪਤ ਕਰਤਾ ਚੁਣੋ:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">ਲਾਗਿੰਨ ਜਦ ਆਟੋਮੈਟਿਕ ਹੀ ਸੁਨੇਹੇ ਨੂੰ ਨੱਥੀ ਡਾਊਨਲੋਡ ਕਰੋ</string>
     <string name="label_summary_auto_decrypt">ਲਾਗਿੰਨ ਜਦ ਆਟੋਮੈਟਿਕ ਹੀ ਸੁਨੇਹੇ ਡਿਸਕ੍ਰਿਪਟ</string>
     <string name="label_summary_remind_backup_delay">ਬੈਕਅੱਪ ਆਫਲਾਈਨ ਹੈ, ਜਦ ਨੋਟੀਫਿਕੇਸ਼ਨ ਪ੍ਰਾਪਤ ਕਰਨਾ.</string>
-    <string name="label_summary_show_tutorial">ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਕਰਨ ਲਈ attemping ਅੱਗੇ ਇੱਕ ਟਟੋਰੀਅਲ ਵੇਖੋ.</string>
+    <string name="label_summary_show_tutorial">ਗੋਪੀਆ ਸਵਿੱਚ ਨੂੰ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਅੱਗੇ ਇੱਕ ਟਟੋਰੀਅਲ ਵੇਖੋ.</string>
     <string name="label_TapToDecryptFile">ਫਾਇਲ ਨੂੰ ਡਿਸਕ੍ਰਿਪਟ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="label_TapToDecryptMessage">ਡਿਸਕ੍ਰਿਪਟ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="label_TapToDownloadFile">ਫਾਇਲ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ, ਇਸ ਟੈਪ ਕਰੋ</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">ਆਟੋ-ਕ੍ਰਿਪਸ਼ਨ</string>
     <string name="menu_Change">ਬਦਲੋ</string>
     <string name="menu_ChangePassphrase">ਬਦਲੋ ਪ੍ਹੈਰਾ</string>
+    <string name="menu_ContactInviteEmail">ਸੰਪਰਕ ਤੱਕ ਈ</string>
+    <string name="menu_ContactInviteSms">ਸੰਪਰਕ ਤੱਕ ਪਾਠ</string>
     <string name="menu_CreateNew">ਨਿਊ ਬਣਾਓ</string>
     <string name="menu_delete">ਹਟਾਓ</string>
     <string name="menu_deleteThread">ਥਰਿੱਡ %s ਹਟਾਓ</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">ਪ੍ਹੈਰਾ ਭੁੱਲ ਗਏ ਹੋ?</string>
     <string name="menu_Help">ਦੀ ਮਦਦ ਕਰੋ</string>
     <string name="menu_Introduction">ਜਾਣ ਪਛਾਣ</string>
-    <string name="menu_License">ਲਾਈਸਿੰਸ</string>
+    <string name="menu_language">ਭਾਸ਼ਾ</string>
+    <string name="menu_link_contact_add">ਸੰਪਰਕ ਲਿੰਕ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="menu_link_contact_change">ਸੰਪਰਕ ਲਿੰਕ ਤਬਦੀਲ ਕਰੋ</string>
     <string name="menu_Logout">ਲਾਗਆਉਟ</string>
     <string name="menu_ManagePassphrases">ਗੁਪਤਕੋਡ ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ</string>
     <string name="menu_message_font_size">ਸੁਨੇਹਾ ਫੋਟ ਅਕਾਰ</string>

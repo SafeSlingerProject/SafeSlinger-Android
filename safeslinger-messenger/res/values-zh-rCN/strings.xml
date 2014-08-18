@@ -49,6 +49,7 @@
     <string name="btn_Import">加入</string>
     <string name="btn_Introduce">介绍</string>
     <string name="btn_No">没有</string>
+    <string name="btn_NotNow">现在不要</string>
     <string name="btn_NotRemind">不提醒</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">拒绝</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5分钟</string>
     <string name="choice_8hours">8小时</string>
     <string name="choice_auto_storage">默认存储</string>
+    <string name="choice_default">默认</string>
     <string name="choice_external_storage">外部存储</string>
     <string name="choice_font_large">大</string>
     <string name="choice_font_medium">中</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">音频播放器解码错误。</string>
     <string name="error_AudioPlayerError">无法播放录音。</string>
     <string name="error_AudioRecorderEncodeError">音频记录编码错误。</string>
+    <string name="error_AudioRecorderPermissionError">麦克风许可须记录一个安全的语音留言。点击帮助按钮SafeSlinger麦克风权限的详细信息。</string>
     <string name="error_BackupNotFound">无法找到备份。</string>
     <string name="error_BackupNotSupportedDevice">手机不支援备份还原。</string>
     <string name="error_BadCopyProtectUpgrade">由于在Android 4.1中的一个错误，你会卸载并重新安装SafeSlinger。</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger系统错误，请重新啓动。</string>
     <string name="error_VcardParseFailure">联系数据格式不正确。</string>
 
+    <string name="help_find">使用此屏幕来设置你的名字与他人，并用密语来交流，以保护您的数据。完成后，点击完成按钮。</string>
     <string name="help_home">为了交换联络资讯，请确保所有成员都在附近，并按下开始交换按钮，将开始与群体成员开始进行资料交换。</string>
     <string name="help_identity_menu">您可以更改个人资料透过点击屏幕上显示你名字的按钮。它将显示一个菜单，允许你编辑你的资料，或建立一个新的联络人，或使用另一个联络人。</string>
     <string name="help_Messages">该画面显示所有以前的讯息，以及可能被下载的档案。</string>
+    <string name="help_passphrase">使用此屏幕可以登录到应用程序与您的密码。如果您忘记了您的密码，您可以生成一个新的密码通过点击忘记密码保护的新密钥？按钮。点击用户名多个键之间切换。</string>
+    <string name="help_passphrase_change">使用该屏幕输入您上次的密码进行确认和新的口令更改您的密码。</string>
     <string name="help_PickRecip">在此显示拥有SafeSlinger金钥的联络人，选择一个去寄送你的讯息。</string>
     <string name="help_save">交换过程结束时，萤幕将显示已交换的成员联络资讯。如果你想保存这些资料，请按加入的按钮。</string>
     <string name="help_SecureIntroduction">这个萤幕允许你选择两个之前与你完成金钥交换的收件者，发送安全介绍讯息以让彼此交换金钥。只需按下介绍便可。</string>
     <string name="help_Send">该画面允许你选择资料与收件人来寄送讯息。完成後按下传送按钮寄送。</string>
+    <string name="help_settings">这个屏幕允许你改变应用程序的默认设置。</string>
 
+    <string name="iOS_contactError">联系方式批准才可安全地共享联系人卡片。点击帮助按钮SafeSlinger联系人权限的详细信息。</string>
     <string name="iOS_errorpushtoken">推注册丢失。</string>
+    <string name="iOS_notificationError1">对于任何警报或横幅，并徽章号码通知允许，都需要安全的信息传递。点击帮助按钮SafeSlinger通知权限的详细信息。</string>
     <string name="iOS_oldOSWarn">SafeSlinger不是为iOS 5.x的设备进行了优化。 SafeSlinger需要iOS6或更高版本。</string>
+    <string name="iOS_RequestPermissionContacts">您可以选择您的联系卡送您的朋友和SafeSlinger将加密它。要启用此功能，您必须允许SafeSlinger访问您的联系人时询问。</string>
+    <string name="iOS_RequestPermissionMicrophone">您可以录制语音讯息发送您的朋友和SafeSlinger将加密它。要启用此功能，您必须允许SafeSlinger访问您的麦克风当记者问。</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger是一个加密的消息传递应用程序，并没有允许从通知传入消息无法正常工作。要启用传入的邮件，必须允许SafeSlinger当问您发送通知。</string>
 
     <string name="label_ago">%s前</string>
     <string name="label_backupCompleteDate">上一次备份完成日期</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">过期%s</string>
     <string name="label_expiresIn">在到期</string>
     <string name="label_FileNameHint">档案名称</string>
-    <string name="label_FindInstruct">输入名字你希望别人看到通信安全时：</string>
+    <string name="label_FindInstruct">输入您的姓名和密码来保护您的数据：</string>
     <string name="label_FirstName">名字</string>
     <string name="label_Home">点击你的名字，添加或删除联系人数据，请检查你想分享的项目，然后点击开始兑换当别人都准备好交换：</string>
     <string name="label_hometag">家用</string>
     <string name="label_hours">%d小时</string>
     <string name="label_iCloudEnable">SafeSlinger的iCloud启用。完成后，点击完成按钮。</string>
     <string name="label_InstNoMessages">没有讯息。您可以发送讯息，从主菜单上选择撰写邮件。</string>
-    <string name="label_InstNoMessagesAndroid">没有讯息。你或许可以按编写讯息来传送讯息。</string>
     <string name="label_InstNoRecipients">要添加收件人，您必须先吊带键与一个或多个其他用户在同一时间。您也可以发送从菜单中选择一个吊带钥匙接触的邀请。</string>
     <string name="label_InstNoSharedFile">没有共享的文件。连接您的设备并开启iTunes，拖曳文件到共享文件夹。</string>
     <string name="label_InstRecipients">挑选一个收件人来传递安全讯息：</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">自动解密</string>
     <string name="menu_Change">更改</string>
     <string name="menu_ChangePassphrase">更改密码</string>
+    <string name="menu_ContactInviteEmail">电子邮件从通讯录</string>
+    <string name="menu_ContactInviteSms">从通讯录中文字</string>
     <string name="menu_CreateNew">建立一个新的联络人</string>
     <string name="menu_delete">删除</string>
     <string name="menu_deleteThread">删除联络人%s的所有讯息</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">忘记了口令？</string>
     <string name="menu_Help">协助</string>
     <string name="menu_Introduction">安全介绍</string>
-    <string name="menu_License">许可证</string>
+    <string name="menu_language">语</string>
+    <string name="menu_link_contact_add">加入联系我们友情链接</string>
+    <string name="menu_link_contact_change">改变联系我们友情链接</string>
     <string name="menu_Logout">登出</string>
     <string name="menu_ManagePassphrases">管理密码短语</string>
     <string name="menu_message_font_size">消息字体大小</string>

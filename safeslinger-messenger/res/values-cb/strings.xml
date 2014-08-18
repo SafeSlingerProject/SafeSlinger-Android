@@ -49,6 +49,7 @@
     <string name="btn_Import">Import</string>
     <string name="btn_Introduce">Ipaila</string>
     <string name="btn_No">Dili</string>
+    <string name="btn_NotNow">Dili Karon</string>
     <string name="btn_NotRemind">Makalimot</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Sinalikway nga</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minutos</string>
     <string name="choice_8hours">8 ka oras</string>
     <string name="choice_auto_storage">Default Pagtipig</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">External Pagtipig</string>
     <string name="choice_font_large">Ang dagkong</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio player decoding sayop.</string>
     <string name="error_AudioPlayerError">Dili play sa recording.</string>
     <string name="error_AudioRecorderEncodeError">Audio kalihim pag-encode sayop.</string>
+    <string name="error_AudioRecorderPermissionError">Mikropono pagtugot gikinahanglan sa pagrekord sa usa ka luwas nga tingog nga mensahe. Pindota ang Help button alang sa SafeSlinger mikropono pagtugot detalye.</string>
     <string name="error_BackupNotFound">Walay laing sa pagpasig-uli.</string>
     <string name="error_BackupNotSupportedDevice">Device wala mosuporta sa tabang sa pagpasig-uli.</string>
     <string name="error_BadCopyProtectUpgrade">Tungod sa usa ka bug sa Android 4.1, nga kamo kinahanglan nga uninstall ug reinstall SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger sayop, palihug pagsugod.</string>
     <string name="error_VcardParseFailure">Contact data nga nakahan-ay sayop.</string>
 
+    <string name="help_find">Gamita kini nga screen nga sa imong ngalan sa pagbaylo sa uban sa uban, ug ang usa ka passphrase sa pagpanalipod sa inyong mga data. Pindota ang Done butones sa diha nga nahuman.</string>
     <string name="help_home">Sa pagbaylo sa pag-ila data, masiguro sa tanan nga mga tiggamit mao ang mga duol nga o sa telepono. Ang Sugdi Exchange button makigbinayloay lang sa mga gitan-aw contact data.</string>
     <string name="help_identity_menu">Mahimo usab-usab sa personal nga data mahitungod sa imong pagkatawo niini nga screen sa tapping sa button uban sa imong ngalan. Kini mopakita sa usa ka menu sa pagtugot kaninyo sa Usba ang imong contact, Create Bag-ong contact, o Gamita laing contact.</string>
     <string name="help_Messages">Kini nga screen pagpakita sa tanan nga sa miagi nga mga mensahe, ug mga sumpay, mga dugtong nga mga pa magamit alang sa download.</string>
+    <string name="help_passphrase">Gamita kini nga screen nga Congratulations sa application uban sa imong passphrase. Kon nakalimot sa imong passphrase, nga kamo mahimo nga makamugna og usa ka bag-o nga yawe gipanalipdan sa usa ka bag-o nga passphrase pinaagi sa tapping sa mga Forgot Passphrase? button. Pindota ang user ngalan sa switch sa taliwala sa daghang mga yawe.</string>
+    <string name="help_passphrase_change">Gamita kini nga screen sa pag-usab sa imong passphrase pinaagi sa pagsulod sa imong katapusan nga passphrase alang sa kumpirmasyon, ug sa bag-o nga passphrase.</string>
     <string name="help_PickRecip">Mga kontak uban sa SafeSlinger yawe nga gipakita dinhi, pagpili sa usa sa ipadala ang imong mensahe ngadto sa.</string>
     <string name="help_save">Sa diha nga nahuman na, ang mga protocol mopadayag sa usa ka listahan sa mga pagkatawo data giilisan. Pagpili sa mga kontak nga imong gusto aron sa pagluwas ug mopadayon sa Import.</string>
     <string name="help_SecureIntroduction">Kini nga screen nagtugot kaninyo sa pagpili sa duha ka mga tawo nga inyong gilabyog yawe sa atubangan sa sa sa kasigurohan sa ilang mga yawe sa usag usa. Lang mopadayon sa Ipaila sa diha nga ang andam na.</string>
     <string name="help_Send">Kini nga screen nagtugot kaninyo sa pagpili sa pipila ka mga data ug sa usa ka recipient nga ipadala ngadto sa. Lang mopadayon sa Send sa diha nga ang andam na.</string>
+    <string name="help_settings">Kini nga screen nagtugot kaninyo sa pag-usab sa mga default setting alang sa aplikasyon.</string>
 
+    <string name="iOS_contactError">Mga kontak ang pagtugot gikinahanglan alang sa kasigurohan sa pagpakigbahin contact cards. Pindota ang Help button alang sa SafeSlinger Contacts pagtugot detalye.</string>
     <string name="iOS_errorpushtoken">Nga madayon ang registration ang nawala.</string>
+    <string name="iOS_notificationError1">Pahibalo pagtugot alang sa bisan alert o mga bandila, ug badge mga numero, gikinahanglan alang sa luwas nga messaging. Pindota ang Help button alang sa SafeSlinger nga pahibalo sa pagtugot detalye.</string>
     <string name="iOS_oldOSWarn">SafeSlinger dili optimized alang sa iOS 5.x mga paagi. SafeSlinger nagkinahanglan iOS 6 o mas taas.</string>
+    <string name="iOS_RequestPermissionContacts">Mahimo pagpili sa sa imong contact card sa pagpadala sa inyong mga higala ug SafeSlinger ang encrypt kini alang kaninyo. Sa makahimo niini nga bahin, nga kamo kinahanglan gayud nga motugot sa SafeSlinger access sa imong Contacts sa diha nga nangutana.</string>
+    <string name="iOS_RequestPermissionMicrophone">Mahimo pagrekord sa usa ka tingog nga mensahe sa pagpadala sa inyong mga higala ug SafeSlinger ang encrypt kini alang kaninyo. Sa makahimo niini nga bahin, nga kamo kinahanglan gayud nga motugot sa SafeSlinger access sa imong mikropono sa diha nga nangutana.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger usa ka encrypted messaging application ug dili makalihok sa walay pagtugot sa umaabot nga mga mensahe gikan sa notifications. Aron makahimo sa umaabot nga mga mensahe, nga kamo kinahanglan gayud nga motugot sa SafeSlinger sa pagpadala kaninyo sa notifications sa diha nga ang nangutana.</string>
 
     <string name="label_ago">%s ago</string>
     <string name="label_backupCompleteDate">Last tabang Nahuman</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">matapos %s</string>
     <string name="label_expiresIn">matapos sa</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Pagsulod sa ngalan nga imong gusto sa uban sa pagtan-aw sa diha nga ang pagpakigsulti sa kasigurohan:</string>
+    <string name="label_FindInstruct">Pagsulod sa imong ngalan, ug usa ka passphrase sa pagpanalipod sa inyong mga data:</string>
     <string name="label_FirstName">First Name</string>
     <string name="label_Home">Sun.Star imong ngalan aron sa pagdugang o pagtangtang sa contact data, check mga butang nga imong gusto sa pagpakigbahin, ug sa Sun.Star Sugdi Exchange kon ang uban mao ang mga andam sa baylo:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d ka oras</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ang nakahimo. Pindota ang Done butones sa diha nga nahuman.</string>
     <string name="label_InstNoMessages">No mensahe. Ikaw mahimo nga ipadala ang usa ka mensahe gikan sa naglangkob sa Mensahe button sa ibabaw sa mga Home menu.</string>
-    <string name="label_InstNoMessagesAndroid">No mensahe. Ikaw mahimo nga ipadala ang usa ka mensahe gikan sa naglangkob sa tab.</string>
     <string name="label_InstNoRecipients">Aron sa pagdugang recipients, ikaw kinahanglan una nga saplong Yawe sa usa o labaw pa nga sa uban nga mga tiggamit sa mao nga panahon. Mahimo usab ipadala sa usa ka lamboyog Yawe contact nga pagdapit gikan sa menu.</string>
     <string name="label_InstNoSharedFile">Dili mipakigbahin sa file. Ikonektar ang inyong device uban sa iTunes ug drag files ngadto sa mipakigbahin sa folder.</string>
     <string name="label_InstRecipients">Pick sa usa ka recipient sa pagpadala sa usa ka mensahe sa:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Awtomatikong download mensahe sumpay, mga dugtong sa diha nga ang Logged in</string>
     <string name="label_summary_auto_decrypt">Awtomatikong decrypt mga mensahe sa diha nga ang Logged in</string>
     <string name="label_summary_remind_backup_delay">Dawata nga pahibalo sa diha nga ang tabang mao ang offline.</string>
-    <string name="label_summary_show_tutorial">Ipakita ang usa ka tutorial sa dili pa attemping sa lambuyog Keys.</string>
+    <string name="label_summary_show_tutorial">Ipakita ang usa ka tutorial sa dili pa sa pagsulay sa lambuyog Keys.</string>
     <string name="label_TapToDecryptFile">Sun.Star decrypt file</string>
     <string name="label_TapToDecryptMessage">Sun.Star decrypt</string>
     <string name="label_TapToDownloadFile">Sun.Star download file</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">-usab</string>
     <string name="menu_ChangePassphrase">-usab Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email gikan sa Contacts</string>
+    <string name="menu_ContactInviteSms">Text gikan sa Contacts</string>
     <string name="menu_CreateNew">Create New</string>
     <string name="menu_delete">Panas</string>
     <string name="menu_deleteThread">Panas Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Forgot Passphrase?</string>
     <string name="menu_Help">Tabangi</string>
     <string name="menu_Introduction">Pasiuna</string>
-    <string name="menu_License">License</string>
+    <string name="menu_language">Pinulongan</string>
+    <string name="menu_link_contact_add">Add Contact Link</string>
+    <string name="menu_link_contact_change">-Usab Contact Link</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Pagdumala Passphrases</string>
     <string name="menu_message_font_size">Mensahe Bunyaganan Size</string>

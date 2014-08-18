@@ -49,6 +49,7 @@
     <string name="btn_Import">Mewnforio</string>
     <string name="btn_Introduce">Cyflwyno</string>
     <string name="btn_No">Nac oes</string>
+    <string name="btn_NotNow">Nawr</string>
     <string name="btn_NotRemind">Anghofiwch</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Gwrthod</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 munud</string>
     <string name="choice_8hours">8 awr</string>
     <string name="choice_auto_storage">Storio ddiofyn</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">Storio allanol</string>
     <string name="choice_font_large">Mawr</string>
     <string name="choice_font_medium">Canolig</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Chwaraewr gwall datgodio sain.</string>
     <string name="error_AudioPlayerError">Does dim modd chwarae y recordiad.</string>
     <string name="error_AudioRecorderEncodeError">Gwall amgodio recordydd sain.</string>
+    <string name="error_AudioRecorderPermissionError">Mae angen caniatâd meicroffon i recordio neges llais diogel. Tap y botwm Cymorth am fanylion ganiatâd SafeSlinger Meicroffon.</string>
     <string name="error_BackupNotFound">Na backup i adfer.</string>
     <string name="error_BackupNotSupportedDevice">Nid yw dyfais yn cefnogi backup adfer.</string>
     <string name="error_BadCopyProtectUpgrade">O ganlyniad i nam yn Android 4.1, bydd rhaid i chi uninstall a ailosod SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">Gwall SafeSlinger, os gwelwch yn dda ailgychwyn.</string>
     <string name="error_VcardParseFailure">Data cyswllt ei fformatio anghywir.</string>
 
+    <string name="help_find">Defnyddiwch y sgrin hon i osod eich enw i gyfnewid gyda phobl eraill, a cyfrinair i ddiogelu eich data. Tap y botwm Done ar ôl gorffen.</string>
     <string name="help_home">I gyfnewid data hunaniaeth, sicrhau bod yr holl ddefnyddwyr yn gerllaw neu ar y ffôn. Bydd y botwm Dechrau Cyfnewid cyfnewid dim ond y data cyswllt gwirio.</string>
     <string name="help_identity_menu">Gallwch hefyd newid data personol am eich hunaniaeth ar y sgrin hon drwy fanteisio ar y botwm gyda\'ch enw. Bydd hyn yn dangos bwydlen sy\'n eich galluogi i Golygu eich cyswllt, Creu cysylltiad newydd, neu Defnyddio cyswllt arall.</string>
     <string name="help_Messages">Mae\'r sgrin hon yn dangos pob neges yn y gorffennol, ac atodiadau sydd yn dal ar gael i\'w llwytho i lawr.</string>
+    <string name="help_passphrase">Defnyddiwch y sgrin hon i fewngofnodi i\'r cais gyda\'ch cyfrin-ymadrodd. Os ydych wedi anghofio eich cyfrinair, efallai y byddwch yn creu allwedd newydd a ddiogelir gan cyfrinair newydd drwy fanteisio i\'r cyfrinair Forgot? botwm. Tap yr enw defnyddiwr i newid rhwng allweddi lluosog.</string>
+    <string name="help_passphrase_change">Defnyddiwch y sgrin hon i newid eich cyfrin-ymadrodd drwy roi eich cyfrin-ymadrodd olaf ar gyfer gadarnhad a\'r cyfrinair newydd.</string>
     <string name="help_PickRecip">Cysylltiadau gydag allweddi SafeSlinger yn cael eu harddangos yma, dewiswch un i anfon eich neges at.</string>
     <string name="help_save">Pan fyddwch wedi gorffen, bydd y protocol yn datgelu rhestr o\'r data hunaniaeth cyfnewid. Dewiswch y cysylltiadau yr hoffech i arbed a phwyswch Mewnforio.</string>
     <string name="help_SecureIntroduction">Mae\'r sgrin hon yn caniatáu i chi ddewis dau berson yr ydych wedi slung allweddi gyda blaen i anfon eu allweddi yn ddiogel i\'w gilydd. Yn syml, pwyswch Cyflwyno pan fydd yn barod.</string>
     <string name="help_Send">Mae\'r sgrin hon yn eich galluogi i ddewis rhywfaint o ddata a derbynnydd i\'w hanfon at. Yn syml, pwyswch Anfon pan fydd yn barod.</string>
+    <string name="help_settings">Mae\'r sgrin hon yn caniatáu i chi newid y gosodiadau diofyn ar gyfer y cais.</string>
 
+    <string name="iOS_contactError">Mae angen caniatâd Cysylltiadau ar gyfer rhannu cardiau cyswllt ddiogel. Tap y botwm Cymorth i SafeSlinger fanylion ganiatâd Cysylltiadau.</string>
     <string name="iOS_errorpushtoken">Cofrestru gwthio ar goll.</string>
+    <string name="iOS_notificationError1">Caniatâd hysbysu ar gyfer naill ai rhybuddion neu faneri, a rhifau bathodyn, yn ofynnol ar gyfer negeseuon diogel. Tap y botwm Cymorth i SafeSlinger fanylion ganiatâd Hysbysiad.</string>
     <string name="iOS_oldOSWarn">Nid SafeSlinger ei optimeiddio ar gyfer dyfeisiau iOS 5.x. SafeSlinger gwneud yn ofynnol i iOS 6 neu uwch.</string>
+    <string name="iOS_RequestPermissionContacts">Gallwch ddewis eich cerdyn cyswllt i anfon eich ffrindiau a bydd SafeSlinger amgryptio hynny ar eich rhan. Er mwyn galluogi nodwedd hon, mae\'n rhaid i chi ganiatáu mynediad SafeSlinger i\'ch Cysylltiadau pan ofynnir iddynt.</string>
+    <string name="iOS_RequestPermissionMicrophone">Gallwch recordio neges llais i anfon eich ffrindiau a bydd SafeSlinger amgryptio hynny ar eich rhan. Er mwyn galluogi nodwedd hon, mae\'n rhaid i chi ganiatáu mynediad SafeSlinger at eich Meicroffon pan ofynnir iddynt.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger yn gais negeseuon amgryptio ac ni all weithredu heb ganiatáu negeseuon sy\'n dod i mewn o Hysbysiadau. Er mwyn galluogi negeseuon sy\'n dod i mewn, rhaid i chi ganiatáu SafeSlinger i anfon Hysbysiadau chi pan ofynnir iddynt.</string>
 
     <string name="label_ago">%s yn ôl</string>
     <string name="label_backupCompleteDate">Backup diwethaf Cwblhawyd</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">yn dod i ben %s</string>
     <string name="label_expiresIn">dod i ben yn</string>
     <string name="label_FileNameHint">Enw Ffeil</string>
-    <string name="label_FindInstruct">Rhowch yr enw yr ydych yn dymuno i eraill ei weld wrth gyfathrebu yn ddiogel:</string>
+    <string name="label_FindInstruct">Rhowch eich enw a\'ch cyfrinair i ddiogelu eich data:</string>
     <string name="label_FirstName">Enw Cyntaf</string>
     <string name="label_Home">Tap eich enw i ychwanegu neu ddileu data cyswllt, gwirio eitemau yr hoffech eu rhannu, a tap Dechrau Cyfnewid pan fo eraill yn barod i gyfnewid:</string>
     <string name="label_hometag">Cartref</string>
     <string name="label_hours">%d awr</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud yn cael ei alluogi. Tap y botwm Done ar ôl gorffen.</string>
     <string name="label_InstNoMessages">Dim negeseuon. Efallai y byddwch yn anfon neges o\'r botwm Compose Neges ar y cartref menu.</string>
-    <string name="label_InstNoMessagesAndroid">Dim negeseuon. Efallai y byddwch yn anfon neges gan y tab Compose.</string>
     <string name="label_InstNoRecipients">I ychwanegu derbynwyr, rhaid i chi yn gyntaf Sling Keys gydag un neu fwy o ddefnyddwyr eraill ar yr un pryd. Efallai y byddwch hefyd yn anfon cyswllt gwahoddiad Keys Sling o\'r ddewislen.</string>
     <string name="label_InstNoSharedFile">Dim ffeil rhannu. Cysylltu eich dyfais gyda iTunes a ffeiliau llusgo i\'r ffolder a rennir.</string>
     <string name="label_InstRecipients">Dewiswch derbynnydd i anfon neges at:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Awtomatig lawrlwytho atodiadau neges pan chi wedi mewngofnodi</string>
     <string name="label_summary_auto_decrypt">Awtomatig dadgryptio negeseuon wrth chi wedi mewngofnodi</string>
     <string name="label_summary_remind_backup_delay">Derbyn hysbysiad pan fydd wrth gefn yn all-lein.</string>
-    <string name="label_summary_show_tutorial">Dangos tiwtorial cyn attemping i Keys Sling.</string>
+    <string name="label_summary_show_tutorial">Dangos tiwtorial cyn ceisio Keys Sling.</string>
     <string name="label_TapToDecryptFile">Tap i dadgryptio ffeil</string>
     <string name="label_TapToDecryptMessage">Tap i dadgryptio</string>
     <string name="label_TapToDownloadFile">Tap i lawrlwytho ffeil</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-dadgryptio</string>
     <string name="menu_Change">Newid</string>
     <string name="menu_ChangePassphrase">Newid cyfrin-ymadrodd</string>
+    <string name="menu_ContactInviteEmail">E-bost gan Cysylltiadau</string>
+    <string name="menu_ContactInviteSms">Testun gan Cysylltiadau</string>
     <string name="menu_CreateNew">Creu Newydd</string>
     <string name="menu_delete">Dileu</string>
     <string name="menu_deleteThread">Dileu %s Thread</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Anghofio cyfrinair?</string>
     <string name="menu_Help">Help</string>
     <string name="menu_Introduction">Cyflwyniad</string>
-    <string name="menu_License">Trwydded</string>
+    <string name="menu_language">Iaith</string>
+    <string name="menu_link_contact_add">Ychwanegu Cyswllt Cyswllt</string>
+    <string name="menu_link_contact_change">Newid Cyswllt Cyswllt</string>
     <string name="menu_Logout">Allgofnodi</string>
     <string name="menu_ManagePassphrases">Rheoli cyfrineiriau a</string>
     <string name="menu_message_font_size">Neges Maint Testun</string>

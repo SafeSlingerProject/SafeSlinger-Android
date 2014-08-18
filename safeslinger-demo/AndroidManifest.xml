@@ -25,8 +25,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.cmu.cylab.starslinger.demo"
-    android:versionCode="0x01070000"
-    android:versionName="1.7.0" >
+    android:versionCode="0x01070100"
+    android:versionName="1.7.1" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -46,11 +46,11 @@
     <application
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/demo_app_name"
+        android:label="@string/dev_app_name_long"
         android:theme="@style/AppTheme" >
         <activity
             android:name="edu.cmu.cylab.starslinger.demo.MainActivity"
-            android:label="@string/demo_app_name"
+            android:label="@string/dev_app_name_short"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -115,6 +115,8 @@
     <string name="choice_8hours">8 hours</string>
     <!-- choice (sentence case); used to set the attachment root path to the default source. Android-only. -->
     <string name="choice_auto_storage">Default Storage</string>
+    <!-- choice (sentence case); used in any menu to denote the default choice. -->
+    <string name="choice_default">Default</string>
     <!-- choice (sentence case); used to set the attachment root path to an external source. Android-only. -->
     <string name="choice_external_storage">External Storage</string>
     <!-- choice (sentence case); used in the settings to choose a large font size. -->
@@ -271,6 +273,8 @@
     <string name="help_SecureIntroduction">This screen allows you to select two people you have slung keys with before to securely send their keys to each other. Simply press Introduce when ready.</string>
     <!-- help message (sentence case, period); used via Help button on the Compose Message screen to describe in more detail what the Compose Message screen does. -->
     <string name="help_Send">This screen allows you to select some data and a recipient to send to. Simply press Send when ready.</string>
+    <!-- help message (sentence case, period); used via Help button on the Settings screen to describe in more detail what the Settings screen does. -->
+    <string name="help_settings">This screen allows you to change the default settings for the application.</string>
 
     <!-- error message (sentence case, period); used as a Post-Request-Denied Notice for Contacts permission. iOS-only. -->
     <string name="iOS_contactError">Contacts permission is required for securely sharing contact cards. Tap the Help button for SafeSlinger Contacts permission details.</string>
@@ -284,7 +288,7 @@
     <string name="iOS_RequestPermissionContacts">You can select your contact card to send your friends and SafeSlinger will encrypt it for you. To enable this feature, you must allow SafeSlinger access to your Contacts when asked.</string>
     <!-- informational message (sentence case, period); used as a Pre-Request Notice for Microphone permission. iOS-only. -->
     <string name="iOS_RequestPermissionMicrophone">You can record a voice message to send your friends and SafeSlinger will encrypt it for you. To enable this feature, you must allow SafeSlinger access to your Microphone when asked.</string>
-    <!-- informational message (sentence case, period); used as a  Pre-Request Notice for Notifications permission. iOS-only. -->
+    <!-- informational message (sentence case, period); used as a Pre-Request Notice for Notifications permission. iOS-only. -->
     <string name="iOS_RequestPermissionNotifications">SafeSlinger is an encrypted messaging application and cannot function without allowing incoming messages from Notifications. To enable incoming messages, you must allow SafeSlinger to send you Notifications when asked.</string>
 
     <!-- screen label (match English casing); used on the messages list screen and is used to describe how long ago a message was sent or received. %s = a time measurement, such as '5 minutes' or '2 hours'. -->
@@ -342,7 +346,7 @@
     <!-- screen label (match English casing); used on the Save File As dialog as a hint in the file name text box when changing the file name. -->
     <string name="label_FileNameHint">File Name</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Setup screen. -->
-    <string name="label_FindInstruct">Enter the name you wish others to see when communicating securely, and a passphrase to protect your data:</string>
+    <string name="label_FindInstruct">Enter your name and a passphrase to protect your data:</string>
     <!-- screen label (match English casing); used above the editable field on the Settings and Setup screen to show the current first name to use. iOS-only. -->
     <string name="label_FirstName">First Name</string>
     <!-- screen label (match English casing); used to indicate file size on the Messages list and Compose Message screens. %.1f = the number of gigabytes in tenths. -->
@@ -355,10 +359,8 @@
     <string name="label_hours">%d hours</string>
     <!-- screen label (match English casing); used to indicate the backup will occur while on the Setup screen. iOS-only. -->
     <string name="label_iCloudEnable">SafeSlinger iCloud is enabled. Tap the Done button when finished.</string>
-    <!-- screen label (match English casing); used to instruct the user how to proceed on the Message list screen in case of no recipients. iOS-only. -->
-    <string name="label_InstNoMessages">No messages. You may send a message from the Compose Message button on the Home menu.</string>
-    <!-- screen label (match English casing); used to instruct the user how to proceed on the Message list screen in case of no recipients. Android-only. -->
-    <string name="label_InstNoMessagesAndroid">No messages. You may send a message from the Compose tab.</string>
+    <!-- screen label (match English casing); used to instruct the user how to proceed on the Message list screen in case of no recipients. -->
+    <string name="label_InstNoMessages">No messages. You may send a message from the Compose tab.</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Recipient list screen is case of no recipients. -->
     <string name="label_InstNoRecipients">To add recipients, you must first Sling Keys with one or more other users at the same time. You may also send a Sling Keys contact invitation from the menu.</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Shared Files screen is case of no files to share. iOS-only. -->
@@ -480,7 +482,7 @@
     <!-- screen label (match English casing); used as the settings summary to describe what Backup Reminder will do. -->
     <string name="label_summary_remind_backup_delay">Receive notification when backup is offline.</string>
     <!-- screen label (match English casing); used as the settings summary to describe what Show Walkthrough will do. -->
-    <string name="label_summary_show_tutorial">Show a tutorial before attemping to Sling Keys.</string>
+    <string name="label_summary_show_tutorial">Show a tutorial before attempting to Sling Keys.</string>
     <!-- screen label (match English casing); used to indicate tapping this message in the list will attempt to decrypt the attachment (if needed). -->
     <string name="label_TapToDecryptFile">Tap to decrypt file</string>
     <!-- screen label (match English casing); used to indicate tapping this message in the list will attempt to decrypt it. -->
@@ -562,14 +564,16 @@
     <string name="menu_ForgotPassphrase">Forgot Passphrase?</string>
     <!-- menu option (title case); used to show a help dialog for the current screen. -->
     <string name="menu_Help">Help</string>
-    <!-- menu option (title case); used to hide invalid list items, debug-only. Android-only. -->
-    <string name="menu_HideInvalid" translatable="false">Hide Invalid</string>
     <!-- menu option (title case); used to show the secure introduction composition screen via the main home screen. -->
     <string name="menu_Introduction">Introduction</string>
+    <!-- menu (title case); used as the settings menu option to change language -->
+    <string name="menu_language">Language</string>
     <!-- menu option (title case); used to show a dialog of the End User License Agreement. -->
-    <string name="menu_License">License</string>
+    <string name="menu_License" translatable="false">License</string>
     <!-- menu option (title case); used to select a contact from the address book to update from and link to. -->
-    <string name="menu_link_contact">Select Contact Badge</string>
+    <string name="menu_link_contact_add">Add Contact Link</string>
+    <!-- menu option (title case); used to select a contact from the address book to update from and link to. -->
+    <string name="menu_link_contact_change">Change Contact Link</string>
     <!-- menu option (title case); used to remove the cached passphrase and force the user to login again. -->
     <string name="menu_Logout">Logout</string>
     <!-- menu option (title case); used on the settings screen to allow users to remove newer keys if created by users without orignial user authorization. -->
@@ -580,6 +584,8 @@
     <string name="menu_messageCopyText">Copy Text</string>
     <!-- menu option (title case); used to create a new message with the same text message/attachment via the message list context menu. -->
     <string name="menu_messageForward">Forward</string>
+    <!-- menu option (title case); used to show a dialog of the End User License Agreement. -->
+    <string name="menu_PrivacyPolicy" translatable="false">Privacy Policy</string>
     <!-- menu option (title case); used to remove the currently selected file attachment via the File Options dialog. -->
     <string name="menu_Remove">Remove</string>
     <!-- menu option (title case); used as Settings screen menu item for restoring all settings to default -->
@@ -594,8 +600,6 @@
     <string name="menu_SendUpdate">Send Update</string>
     <!-- menu option (title case); used to show the settings screen. -->
     <string name="menu_Settings">Settings</string>
-    <!-- menu option (title case); used to show invalid list items, debug-only. Android-only. -->
-    <string name="menu_ShowInvalid" translatable="false">Show Invalid</string>
     <!-- menu option (title case); used to toggle the key exchange walkthrough when exchanging keys via the Settings screen. -->
     <string name="menu_ShowTutorial">Show Tutorial</string>
     <!-- menu option (title case); used at the title of the message composition tab for the home tab view. -->
@@ -682,7 +686,7 @@
     <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm the message text has been copied to the device native clipboard. -->
     <string name="state_TextCopiedToClipboard">Text copied to clipboard.</string>
 
-    <!-- application description (sentence case); used at the beginning of the about box and app store listing to describe the application. -->
+    <!-- application description (sentence case); used at the beginning of the about box and app store listing to describe the application. Beginning of long form: 4000 character max. -->
     <string name="text_About">SafeSlinger is designed to easily share identity data, in person or over the phone, authenticated, private, and intact. Each person you share with creates a secure end-to-end channel to send messages.</string>
     <!-- application description (sentence case); used in the about box and app store listing to describe the application features. -->
     <string name="text_About1">Easily exchange contact information with others</string>
@@ -690,6 +694,8 @@
     <string name="text_About2">Securely sling texts, photos, anything!</string>
     <!-- application description (sentence case); used in the about box and app store listing to describe the application features. -->
     <string name="text_About3">Strong cryptography protects your information</string>
+    <!-- application description (sentence case); used in the about box and app store listing to describe the application features. Short form: 80 character max, should be exciting. -->
+    <string name="text_About_Short">SafeSlinger: Speak 3 words and forever chat in peace.</string>
     <!-- application description (sentence case); used in the app store listing, %s = SafeSlinger support email address. -->
     <string name="text_AboutEmail">email: %s</string>
     <!-- application description (sentence case); used in the about box and app store listing to describe the application features. -->
@@ -765,6 +771,8 @@
     <string name="title_home">Begin Exchange</string>
     <!-- title (title case); used at the top of the home screen on iOS. -->
     <string name="title_HomePanel">Home</string>
+    <!-- title (title case); used as the settings title when changing language -->
+    <string name="title_language" translatable="false">Select language. Help us translate by using Send Feedback.</string>
     <!-- title (title case); used at the top of the dialog when viewing message details. -->
     <string name="title_MessageDetail">Message</string>
     <!-- title (title case); used at the top of the message list screen. -->

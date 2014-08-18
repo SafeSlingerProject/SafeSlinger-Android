@@ -49,6 +49,7 @@
     <string name="btn_Import">Import</string>
     <string name="btn_Introduce">Kuanzisha</string>
     <string name="btn_No">No</string>
+    <string name="btn_NotNow">Si Sasa</string>
     <string name="btn_NotRemind">Kusahau</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Kukataa</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">dakika 5</string>
     <string name="choice_8hours">masaa 8</string>
     <string name="choice_auto_storage">Uhifadhi Default</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">Uhifadhi nje</string>
     <string name="choice_font_large">Kubwa</string>
     <string name="choice_font_medium">Kati</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio mchezaji decoding makosa.</string>
     <string name="error_AudioPlayerError">Hawezi kucheza kurekodi.</string>
     <string name="error_AudioRecorderEncodeError">Audio kinasa encoding makosa.</string>
+    <string name="error_AudioRecorderPermissionError">Kipaza sauti ruhusa anahitajika kurekodi ujumbe salama sauti. Bomba Msaada kifungo kwa SafeSlinger Microphone maelezo ruhusa.</string>
     <string name="error_BackupNotFound">No Backup kurejesha.</string>
     <string name="error_BackupNotSupportedDevice">Kifaa haina msaada Backup kurejesha.</string>
     <string name="error_BadCopyProtectUpgrade">Kutokana na mdudu katika Android 4.1, utakuwa na kufuta na reinstall SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger makosa, tafadhali upya.</string>
     <string name="error_VcardParseFailure">Kuwasiliana data ilikuwa mpangilio kimakosa.</string>
 
+    <string name="help_find">Kutumia screen hii kuweka jina lako ili kubadilishana na wengine, na passphrase kulinda data zako. Bomba kifungo Done wakati kumaliza.</string>
     <string name="help_home">Kubadilishana data utambulisho, kuhakikisha watumiaji wote ni jirani au kwa simu. Anza Exchange kifungo kubadilishana tu kuchunguzwa data mawasiliano.</string>
     <string name="help_identity_menu">Unaweza pia kubadilisha data binafsi kuhusu utambulisho wako wa juu ya screen hii na kugonga kifungo kwa jina lako. Hii kuonyesha orodha ya kuruhusu wewe Hariri kuwasiliana yako, Kujenga mawasiliano New, au kutumia mawasiliano mwingine.</string>
     <string name="help_Messages">Screen hii inaonyesha ujumbe wote siku za nyuma, na attachments kwamba bado ni inapatikana kwa shusha.</string>
+    <string name="help_passphrase">Kutumia screen hii ya kuingia kwa maombi na passphrase yako. Kama wamesahau passphrase yako, unaweza kuzalisha ufunguo mpya ulinzi na passphrase mpya na kugonga passphrase Umesahau? button. Bomba jina la mtumiaji kubadili kati ya funguo nyingi.</string>
+    <string name="help_passphrase_change">Kutumia screen hiki kubadili passphrase yako kwa kuingia passphrase yako ya mwisho kwa uthibitisho na passphrase mpya.</string>
     <string name="help_PickRecip">Mawasiliano na SafeSlinger funguo ni kuonyeshwa hapa, teua mmoja kwa kutuma ujumbe wako.</string>
     <string name="help_save">Baada ya kumaliza, itifaki itaonyesha orodha ya data utambulisho kubadilishana. Kuchagua mawasiliano unataka kuokoa na waandishi wa habari Import.</string>
     <string name="help_SecureIntroduction">Screen hii utapata kuchagua watu wawili una slung funguo na kabla ya salama kutuma funguo zao kwa kila mmoja. Vyombo vya habari tu kuanzisha wakati tayari.</string>
     <string name="help_Send">Screen hii utapata kuchagua baadhi data na mpokeaji kutuma. Vyombo vya habari tu kutuma wakati tayari.</string>
+    <string name="help_settings">Screen hii utapata mabadiliko ya mazingira ya default kwa ajili ya maombi.</string>
 
+    <string name="iOS_contactError">Mawasiliano ruhusa inahitajika kwa ajili ya usalama kugawana kadi ya mawasiliano. Bomba Msaada kifungo kwa SafeSlinger maelezo Mawasiliano ruhusa.</string>
     <string name="iOS_errorpushtoken">Push usajili ni kukosa.</string>
+    <string name="iOS_notificationError1">Taarifa ruhusa kwa ajili ya ama alerts au mabango, na idadi beji, zinahitajika kwa ajili ya ujumbe wa salama. Bomba Msaada kifungo kwa SafeSlinger maelezo Taarifa ruhusa.</string>
     <string name="iOS_oldOSWarn">SafeSlinger si optimized kwa iOS 5.x vifaa. SafeSlinger inahitaji iOS 6 au zaidi.</string>
+    <string name="iOS_RequestPermissionContacts">Unaweza kuchagua kadi yako kuwasiliana na kutuma rafiki yako na SafeSlinger itakuwa fumbo kwa ajili yenu. Ili kuwawezesha kipengele hiki, ni lazima kuruhusu SafeSlinger upatikanaji wa Mawasiliano yako alipoulizwa.</string>
+    <string name="iOS_RequestPermissionMicrophone">Unaweza kurekodi ujumbe wa sauti kutuma rafiki yako na SafeSlinger itakuwa fumbo kwa ajili yenu. Ili kuwawezesha kipengele hiki, ni lazima kuruhusu SafeSlinger upatikanaji wa Microphone yako alipoulizwa.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ni encrypted ujumbe maombi na hawezi kufanya kazi bila kuruhusu ujumbe zinazoingia kutoka Notifications. Ili kuwawezesha ujumbe zinazoingia, lazima kuruhusu SafeSlinger kukutumia Notifications alipoulizwa.</string>
 
     <string name="label_ago">%s iliyopita</string>
     <string name="label_backupCompleteDate">Mwisho Backup Kukamilika</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">muda wake %s</string>
     <string name="label_expiresIn">muda wake katika</string>
     <string name="label_FileNameHint">Jina faili</string>
-    <string name="label_FindInstruct">Kuingia jina unataka wengine kuona wakati kuwasiliana kwa usalama:</string>
+    <string name="label_FindInstruct">Kuingia jina lako na passphrase kulinda data yako:</string>
     <string name="label_FirstName">Jina la kwanza</string>
     <string name="label_Home">Bomba jina lako kuongeza au kuondoa data mawasiliano, kuangalia vitu unataka kushiriki, na bomba Kuanza Exchange wakati wengine ni tayari kubadilishana:</string>
     <string name="label_hometag">Nyumbani</string>
     <string name="label_hours">masaa %d</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ni kuwezeshwa. Bomba kifungo Done wakati kumaliza.</string>
     <string name="label_InstNoMessages">No ujumbe. Unaweza kutuma ujumbe kutoka kifungo Compose Ujumbe juu ya Home menu.</string>
-    <string name="label_InstNoMessagesAndroid">No ujumbe. Unaweza kutuma ujumbe kutoka tab Compose.</string>
     <string name="label_InstNoRecipients">Kuongeza wapokeaji, lazima kwanza Kombeo Keys na moja au zaidi watumiaji wengine kwa wakati mmoja. Unaweza pia kutuma Kombeo Keys kuwasiliana mwaliko kutoka kwa menu.</string>
     <string name="label_InstNoSharedFile">No pamoja file. Kuunganisha kifaa chako kwa iTunes na Drag files kwa folder pamoja.</string>
     <string name="label_InstRecipients">Pick mpokeaji kutuma ujumbe kwa:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Moja kwa moja kushusha attachments ujumbe wakati logged in</string>
     <string name="label_summary_auto_decrypt">Decrypt ujumbe moja kwa moja wakati logged in</string>
     <string name="label_summary_remind_backup_delay">Kupokea taarifa wakati Backup ni nje ya mkondo.</string>
-    <string name="label_summary_show_tutorial">Kuonyesha mafunzo kabla ya attemping kwa kombeo Keys.</string>
+    <string name="label_summary_show_tutorial">Kuonyesha mafunzo kabla ya kujaribu Kombeo Keys.</string>
     <string name="label_TapToDecryptFile">Bomba decrypt file</string>
     <string name="label_TapToDecryptMessage">Bomba decrypt</string>
     <string name="label_TapToDownloadFile">Bomba kupakua faili</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Mabadiliko ya</string>
     <string name="menu_ChangePassphrase">Mabadiliko ya passphrase</string>
+    <string name="menu_ContactInviteEmail">Barua pepe kutoka Mawasiliano</string>
+    <string name="menu_ContactInviteSms">Maandishi kutoka Mawasiliano</string>
     <string name="menu_CreateNew">Kujenga New</string>
     <string name="menu_delete">Kufuta</string>
     <string name="menu_deleteThread">Kufuta Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Alisahau passphrase?</string>
     <string name="menu_Help">Msaada</string>
     <string name="menu_Introduction">Kuanzishwa</string>
-    <string name="menu_License">Leseni</string>
+    <string name="menu_language">Lugha</string>
+    <string name="menu_link_contact_add">Ongeza Link</string>
+    <string name="menu_link_contact_change">Mabadiliko ya ya Mawasiliano Link</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Kusimamia nywilanahau</string>
     <string name="menu_message_font_size">Ujumbe Font Size</string>

@@ -49,6 +49,7 @@
     <string name="btn_Import">Innflutningur</string>
     <string name="btn_Introduce">Kynntu</string>
     <string name="btn_No">Nei</string>
+    <string name="btn_NotNow">Ekki núna</string>
     <string name="btn_NotRemind">Gleyma</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Neita</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 mínútur</string>
     <string name="choice_8hours">8 klukkustundir</string>
     <string name="choice_auto_storage">Sjálfgefið Bílskúr</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">Ytri Bílskúr</string>
     <string name="choice_font_large">Stór</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Hljóð spilari umskráningu villa.</string>
     <string name="error_AudioPlayerError">Getur ekki spilað upptökuna.</string>
     <string name="error_AudioRecorderEncodeError">Audio Recorder kóðun villa.</string>
+    <string name="error_AudioRecorderPermissionError">Hljóðnema Leyfi þarf til að taka örugga talskilaboð. Tappa á Hjálp takkann til SafeSlinger Hljóðnemi leyfi upplýsingar.</string>
     <string name="error_BackupNotFound">Engin afrit til að endurheimta.</string>
     <string name="error_BackupNotSupportedDevice">Tækið styður ekki afrit aftur.</string>
     <string name="error_BadCopyProtectUpgrade">Vegna galla í Android 4.1, þá verður þú að uninstall og setja aftur SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger villa, vinsamlegast endurræsa.</string>
     <string name="error_VcardParseFailure">Tengiliðagögn var sniðinn rangt.</string>
 
+    <string name="help_find">Notaðu þennan skjá til að setja nafn þitt til að skiptast á við aðra, og lykilorð til að vernda gögnin. Bankaðu á Lokið hnappinn þegar lokið.</string>
     <string name="help_home">Að skiptast á persónuskilríki gögn skal gæta allir notendur eru nálægt eða í símanum. Byrjaðu á húsum hnappinn munu skiptast users.cpp tengiliðagögn.</string>
     <string name="help_identity_menu">Þú getur líka breyst persónuleg gögn um persónuupplýsingar þínar á þessum skjá með því að slá á hnappinn með nafni þínu. Þetta birtir valmynd leyfir þér að breyta samband þitt, Búa til nýjan tengilið, eða nota annan tengilið.</string>
     <string name="help_Messages">Þessi skjár sýnir öll fyrri skilaboð og viðhengi sem eru enn í boði fyrir niðurhal.</string>
+    <string name="help_passphrase">Notaðu þennan skjá til tenging til the umsókn með lykilorð þitt. Ef þú hefur gleymt lykilorð þitt, getur þú búið til nýjan lykil verndað af nýjum lykilorð með því að pikka á Gleymt lykilorð? hnappinn. Tappa notandanafn til að skipta á milli margra lykla.</string>
+    <string name="help_passphrase_change">Notaðu þennan skjá til að breyta lykilorð þitt með því að slá síðustu lykilorð þitt til staðfestingar og nýja lykilorð.</string>
     <string name="help_PickRecip">Tengiliði með SafeSlinger lykla sjást hér, velja einn til að senda skilaboð til.</string>
     <string name="help_save">Þegar þessu er lokið, siðareglur mun koma í ljós lista yfir sjálfsmynd gögn skiptanna. Veldu tengiliðina sem þú vilt vista og ýta á Flytja.</string>
     <string name="help_SecureIntroduction">Þessi skjár gerir þér kleift að velja tvo menn sem þú hefur slöngði takkana með áður að tryggilega senda takka þeirra við hvert annað. Einfaldlega ýta Kynntu þegar tilbúin.</string>
     <string name="help_Send">Þessi skjár gerir þér kleift að velja nokkur gögn og viðtakandinn að senda til. Einfaldlega stutt á Send þegar tilbúin.</string>
+    <string name="help_settings">Þessi skjár gerir þér kleift að breyta stillingum fyrir umsókn.</string>
 
+    <string name="iOS_contactError">Tengiliði Leyfi þarf ekki til tryggilega deila tengiliðaspjöld. Tappa á Hjálp takkann til SafeSlinger Tengiliðir leyfi upplýsingar.</string>
     <string name="iOS_errorpushtoken">Ýta skráning vantar.</string>
+    <string name="iOS_notificationError1">Tilkynning leyfi fyrir annaðhvort áminningar eða borðar og skjöldur númer, eru nauðsynlegar fyrir örugga skilaboð. Tappa á Hjálp takkann til SafeSlinger Tilkynning leyfi upplýsingar.</string>
     <string name="iOS_oldOSWarn">SafeSlinger er ekki bjartsýni fyrir iOS 5.x tæki. SafeSlinger krefst iOS 6 eða hærri.</string>
+    <string name="iOS_RequestPermissionContacts">Hægt er að velja tengiliðaspjald að senda vinum þínum og SafeSlinger mun dulkóða það fyrir þig. Að virkja þennan kost, verður þú að leyfa SafeSlinger aðgang að Contacts þegar spurt.</string>
+    <string name="iOS_RequestPermissionMicrophone">Þú getur tekið upp rödd skilaboð til að senda vinum þínum og SafeSlinger mun dulkóða það fyrir þig. Að virkja þennan kost, verður þú að leyfa SafeSlinger aðgang að hljóðnemanum þegar spurt.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger er dulkóðuð skilaboð forrit og getur ekki virka án þess að leyfa skeyti frá tilkynningar. Til að gera komandi skilaboð, verður þú að leyfa SafeSlinger að senda þér tilkynningar þegar spurt.</string>
 
     <string name="label_ago">%s síðan</string>
     <string name="label_backupCompleteDate">Síðasta Backup Lokið</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">rennur %s</string>
     <string name="label_expiresIn">rennur út í</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Sláðu inn nafnið sem þú vilt að aðrir sjá í samskiptum tryggilega:</string>
+    <string name="label_FindInstruct">Sláðu inn nafnið þitt og lykilorð til að vernda gögnin þín:</string>
     <string name="label_FirstName">Fornafn</string>
     <string name="label_Home">Bankaðu á Nafn þitt til að bæta við eða fjarlægja mjúkar gögn, athuga hluti sem þú vilt deila, og tappa Byrja húsum þegar aðrir eru tilbúnir til að skiptast á:</string>
     <string name="label_hometag">Forsíða</string>
     <string name="label_hours">%d klst</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud er virkt. Bankaðu á Lokið hnappinn þegar lokið.</string>
     <string name="label_InstNoMessages">Engin skilaboð. Þú getur sent skilaboð úr saman skilaboð hnappinn á aðalvalmyndinni.</string>
-    <string name="label_InstNoMessagesAndroid">Engin skilaboð. Þú getur sent skilaboð úr Semja flipann.</string>
     <string name="label_InstNoRecipients">Til að bæta við viðtakendum, verður þú fyrst Sling takkana með einn eða fleiri notendur á sama tíma. Þú gætir líka sent Sling Keys snerting boð frá the matseðill.</string>
     <string name="label_InstNoSharedFile">Ekki hluti skrá. Tengja tækið við iTunes og draga skrár til the hluti mappa.</string>
     <string name="label_InstRecipients">Velja viðtakanda til að senda skilaboð til:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Sjálfkrafa sækja viðhengi þegar innskráður</string>
     <string name="label_summary_auto_decrypt">Sjálfkrafa afkóða skilaboð þegar skráður inn</string>
     <string name="label_summary_remind_backup_delay">Fá tilkynningu þegar öryggisafrit er offline.</string>
-    <string name="label_summary_show_tutorial">Sýna eitthvert áður attemping að Sling Keys.</string>
+    <string name="label_summary_show_tutorial">Sýna eitthvert áður en reynt að Sling Keys.</string>
     <string name="label_TapToDecryptFile">Pikkaðu til að hallmæla skrá</string>
     <string name="label_TapToDecryptMessage">Pikkaðu til að hallmæla</string>
     <string name="label_TapToDownloadFile">Pikkaðu til að sækja skrána</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-hallmæla</string>
     <string name="menu_Change">Breyting</string>
     <string name="menu_ChangePassphrase">Breyta lykilorð</string>
+    <string name="menu_ContactInviteEmail">Netfang úr Tengiliðir</string>
+    <string name="menu_ContactInviteSms">Texti úr Tengiliðir</string>
     <string name="menu_CreateNew">Búa til nýtt</string>
     <string name="menu_delete">Eyða</string>
     <string name="menu_deleteThread">Eyða Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Gleymt lykilorð?</string>
     <string name="menu_Help">Hjálp</string>
     <string name="menu_Introduction">Inngangur</string>
-    <string name="menu_License">Leyfi</string>
+    <string name="menu_language">Tungumál</string>
+    <string name="menu_link_contact_add">Bæta samband tengilinn</string>
+    <string name="menu_link_contact_change">Breyta samband tengilinn</string>
     <string name="menu_Logout">Útskrá</string>
     <string name="menu_ManagePassphrases">Stjórna passphrases</string>
     <string name="menu_message_font_size">Skilaboð Leturstærð</string>

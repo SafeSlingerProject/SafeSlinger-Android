@@ -49,6 +49,7 @@
     <string name="btn_Import">Invoer</string>
     <string name="btn_Introduce">Stel</string>
     <string name="btn_No">Geen</string>
+    <string name="btn_NotNow">Nie nou nie</string>
     <string name="btn_NotRemind">Vergeet</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Weier</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minute</string>
     <string name="choice_8hours">8 uur</string>
     <string name="choice_auto_storage">Standaard Storage</string>
+    <string name="choice_default">Verstek</string>
     <string name="choice_external_storage">Eksterne stoor</string>
     <string name="choice_font_large">Groot</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio speler dekodering fout.</string>
     <string name="error_AudioPlayerError">Kan nie die opname speel.</string>
     <string name="error_AudioRecorderEncodeError">Klank blokfluit encoding fout.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofoon toestemming vereis word om \'n veilige stem boodskap aan te teken. Tik die Help knoppie vir SafeSlinger mikrofoon toestemming besonderhede.</string>
     <string name="error_BackupNotFound">Geen Friends te herstel.</string>
     <string name="error_BackupNotSupportedDevice">Toestel nie ondersteun Friends herstel.</string>
     <string name="error_BadCopyProtectUpgrade">As gevolg van \'n fout in Android 4.1, sal jy het om te verwyder en weer SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger fout, weer asseblief.</string>
     <string name="error_VcardParseFailure">Kontak data is nie korrek geformateer.</string>
 
+    <string name="help_find">Gebruik hierdie skerm jou naam in te stel om te ruil met ander, en \'n wagwoordfrase jou data te beskerm. Tik die knoppie wanneer jy klaar gebraai.</string>
     <string name="help_home">Identiteit data te ruil, verseker dat alle gebruikers is naby of op die telefoon. Die Begin Exchange knoppie sal ruil net die nagegaan kontak data.</string>
     <string name="help_identity_menu">Jy kan ook verander persoonlike data oor jou identiteit op die skerm deur afluister op die knoppie met jou naam. Dit sal \'n spyskaart sodat jy jou kontakbesonderhede te wysig vertoon, nuwe kontak, of die gebruik van ander kontak.</string>
     <string name="help_Messages">Hierdie skerm vertoon al die afgelope boodskappe en aanhangsels wat nog beskikbaar is vir aflaai.</string>
+    <string name="help_passphrase">Gebruik die skerm aan te meld by die aansoek met jou wagwoordfrase. As jy jou wagwoordfrase vergeet het, kan jy \'n nuwe sleutel beskerm deur \'n nuwe wagwoordfrase deur die afluister van die vergete Passphrase genereer? knoppie. Tik die gebruiker naam te skakel tussen verskeie sleutels.</string>
+    <string name="help_passphrase_change">Gebruik hierdie skerm jou wagwoordfrase te verander deur jou laaste wagwoordfrase vir bevestiging en die nuwe wagwoordfrase.</string>
     <string name="help_PickRecip">Kontak met SafeSlinger sleutels word hier vertoon, kies een om jou boodskap te stuur na.</string>
     <string name="help_save">As jy klaar is, sal die protokol van \'n lys van die identiteit data uitgeruil openbaar. Kies die kontakte wat jy wil om te red en druk invoer.</string>
     <string name="help_SecureIntroduction">Hierdie skerm kan jy twee mense wat jy het gehang sleutels voordat veilig stuur hul sleutels aan mekaar te kies. Druk net op Stel wanneer dit gereed is.</string>
     <string name="help_Send">Hierdie skerm kan jy \'n paar data en \'n ontvanger te stuur om te kies. Druk net op Stuur wanneer dit gereed is.</string>
+    <string name="help_settings">Hierdie skerm kan jy die standaard instellings vir die aansoek te verander.</string>
 
+    <string name="iOS_contactError">Kontakte toestemming word vereis vir veilig te deel kontak kaarte. Tik die Help knoppie vir SafeSlinger kontakte toestemming besonderhede.</string>
     <string name="iOS_errorpushtoken">Druk registrasie ontbreek.</string>
+    <string name="iOS_notificationError1">Kennisgewing toestemming vir óf waarskuwings of baniere en badge getalle, word vereis vir \'n veilige messaging. Tik die Help knoppie vir SafeSlinger Kennisgewing toestemming besonderhede.</string>
     <string name="iOS_oldOSWarn">SafeSlinger is nie geskik vir iOS 5.x toestelle. SafeSlinger vereis iOS 6 of hoër.</string>
+    <string name="iOS_RequestPermissionContacts">Jy kan jou kontak kaart kies jou vriende te stuur en SafeSlinger sal dit enkripteer vir jou. Hierdie funksie te aktiveer, moet jy SafeSlinger toegang tot jou kontakte laat toe gevra.</string>
+    <string name="iOS_RequestPermissionMicrophone">Jy kan \'n stem boodskap jou vriende te stuur en SafeSlinger sal dit enkripteer vir jou teken. Hierdie funksie te aktiveer, moet jy SafeSlinger toegang tot jou mikrofoon laat toe gevra.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger is \'n geënkripteerde boodskap aansoek en kan nie funksioneer sonder dat die inkomende boodskappe van kennisgewings. Inkomende boodskappe in staat te stel, moet jy toelaat dat SafeSlinger om te stuur Kennisgewings toe hy gevra.</string>
 
     <string name="label_ago">%s gelede</string>
     <string name="label_backupCompleteDate">Laaste Friends voltooi</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">verstryk %s</string>
     <string name="label_expiresIn">verval in</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Gee die naam wat jy wil ander om te sien wanneer veilig te kommunikeer:</string>
+    <string name="label_FindInstruct">Tik jou naam en \'n wagwoordfrase jou data te beskerm:</string>
     <string name="label_FirstName">Eerste Naam</string>
     <string name="label_Home">Tik jou naam by te voeg of te verwyder kontak data, kyk items wat jy wil om te deel, en tap Begin Exchange wanneer ander is gereed om te ruil:</string>
     <string name="label_hometag">Huis</string>
     <string name="label_hours">%d uur</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud is aangeskakel. Tik die knoppie wanneer jy klaar gebraai.</string>
     <string name="label_InstNoMessages">Geen boodskappe. Jy kan \'n boodskap van die boodskap saamstel knoppie stuur op die home-menu.</string>
-    <string name="label_InstNoMessagesAndroid">Geen boodskappe. Jy kan \'n boodskap van die blad Stel stuur.</string>
     <string name="label_InstNoRecipients">Ontvangers by te voeg, moet jy eers slinger Keys met een of meer ander gebruikers op dieselfde tyd. Jy kan ook \'n slinger Keys Kontak uitnodiging van die spyskaart.</string>
     <string name="label_InstNoSharedFile">Geen gedeel lêer. Maak jou toestel met iTunes en sleep lêers na die gedeelde gids.</string>
     <string name="label_InstRecipients">Pick \'n ontvanger \'n boodskap te stuur na:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Boodskap aanhegsels outomaties af te laai wanneer geteken</string>
     <string name="label_summary_auto_decrypt">Boodskappe outomaties decrypt wanneer geteken</string>
     <string name="label_summary_remind_backup_delay">Kry kennis toe Friends is op die regte.</string>
-    <string name="label_summary_show_tutorial">Wys \'n handleiding voor attemping te slinger Keys.</string>
+    <string name="label_summary_show_tutorial">Wys \'n handleiding voordat te slinger Keys.</string>
     <string name="label_TapToDecryptFile">Tik lêer decrypt</string>
     <string name="label_TapToDecryptMessage">Tik te dekripteer</string>
     <string name="label_TapToDownloadFile">Tik lêer af te laai</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Verandering</string>
     <string name="menu_ChangePassphrase">Verandering Passphrase</string>
+    <string name="menu_ContactInviteEmail">E-pos van kontakte</string>
+    <string name="menu_ContactInviteSms">Teks van kontakte</string>
     <string name="menu_CreateNew">Skep nuwe</string>
     <string name="menu_delete">Verwyder</string>
     <string name="menu_deleteThread">Verwyder onderwerp %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Vergeet Passphrase?</string>
     <string name="menu_Help">Help</string>
     <string name="menu_Introduction">Inleiding</string>
-    <string name="menu_License">Lisensie</string>
+    <string name="menu_language">Taal</string>
+    <string name="menu_link_contact_add">Voeg Kontak Link</string>
+    <string name="menu_link_contact_change">Verander Kontak Link</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Bestuur wagwoorde</string>
     <string name="menu_message_font_size">Boodskap lettergrootte</string>

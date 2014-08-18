@@ -60,7 +60,6 @@ public class RecipientDbAdapter {
     public static final String KEY_MYKEYID = "mykeyid_str"; // my key id
     public static final String KEY_EXCHDATE = "exchdate"; // exchanged date
     public static final String KEY_CONTACTLKUP = "contactlu"; // contact lookup
-    public static final String KEY_RAWCONTACTID = "rawid"; // raw contact id
     public static final String KEY_NAME = "name"; // name
     public static final String KEY_PHOTO = "photo"; // photo
     public static final String KEY_KEYID = "keyid_str"; // key id
@@ -80,6 +79,8 @@ public class RecipientDbAdapter {
 
     @Deprecated
     public static final String KEY_CONTACTID = "contactid";
+    @Deprecated
+    public static final String KEY_RAWCONTACTID = "rawid";
     @Deprecated
     public static final String KEY_MYKEYIDLONG = "mykeyid";
     @Deprecated
@@ -201,8 +202,8 @@ public class RecipientDbAdapter {
     /***
      * Add invitation from add contact invite method.
      */
-    public long createInvitedRecipient(long exchdate, String contactid, String contactlu,
-            String rawid, String name, byte[] photo, long matchingInviteRowId) {
+    public long createInvitedRecipient(long exchdate, String contactlu, String name, byte[] photo,
+            long matchingInviteRowId) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(name)) {
                 return -1;
@@ -213,20 +214,12 @@ public class RecipientDbAdapter {
             values.put(KEY_EXCHDATE, exchdate);
 
             // make sure db constraint is satisfied
-            if (!TextUtils.isEmpty(contactid)) {
-                values.put(KEY_CONTACTID, contactid);
-            } else {
-                values.put(KEY_CONTACTID, "");
-            }
+            values.put(KEY_CONTACTID, "");
+            values.put(KEY_RAWCONTACTID, "");
             if (!TextUtils.isEmpty(contactlu)) {
                 values.put(KEY_CONTACTLKUP, contactlu);
             } else {
                 values.put(KEY_CONTACTLKUP, "");
-            }
-            if (!TextUtils.isEmpty(rawid)) {
-                values.put(KEY_RAWCONTACTID, rawid);
-            } else {
-                values.put(KEY_RAWCONTACTID, "");
             }
 
             if (!TextUtils.isEmpty(name))
@@ -288,10 +281,10 @@ public class RecipientDbAdapter {
     /***
      * Import or update keys from secure exchange
      */
-    public long createExchangedRecipient(String mykeyid, long exchdate, String contactid,
-            String contactlu, String rawid, String name, byte[] photo, String keyid, long keydate,
-            String keyuserid, String pushtoken, int notify, byte[] pubkey, String mypushtoken,
-            int mynotify, long matchingInviteRowId) {
+    public long createExchangedRecipient(String mykeyid, long exchdate, String contactlu,
+            String name, byte[] photo, String keyid, long keydate, String keyuserid,
+            String pushtoken, int notify, byte[] pubkey, String mypushtoken, int mynotify,
+            long matchingInviteRowId) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(name) || keydate == 0 || notify == -1 || pubkey == null
                     || TextUtils.isEmpty(mykeyid) || TextUtils.isEmpty(keyid)
@@ -308,20 +301,12 @@ public class RecipientDbAdapter {
             values.put(KEY_EXCHDATE, exchdate);
 
             // make sure db constraint is satisfied
-            if (!TextUtils.isEmpty(contactid)) {
-                values.put(KEY_CONTACTID, contactid);
-            } else {
-                values.put(KEY_CONTACTID, "");
-            }
+            values.put(KEY_CONTACTID, "");
+            values.put(KEY_RAWCONTACTID, "");
             if (!TextUtils.isEmpty(contactlu)) {
                 values.put(KEY_CONTACTLKUP, contactlu);
             } else {
                 values.put(KEY_CONTACTLKUP, "");
-            }
-            if (!TextUtils.isEmpty(rawid)) {
-                values.put(KEY_RAWCONTACTID, rawid);
-            } else {
-                values.put(KEY_RAWCONTACTID, "");
             }
 
             if (!TextUtils.isEmpty(name))
@@ -386,10 +371,10 @@ public class RecipientDbAdapter {
     /***
      * Import or update keys from secure exchange
      */
-    public long createIntroduceRecipient(String mykeyid, long exchdate, String contactid,
-            String contactlu, String rawid, String name, byte[] photo, String keyid, long keydate,
-            String keyuserid, String pushtoken, int notify, byte[] pubkey, String introkeyid,
-            String mypushtoken, int mynotify, long matchingInviteRowId) {
+    public long createIntroduceRecipient(String mykeyid, long exchdate, String contactlu,
+            String name, byte[] photo, String keyid, long keydate, String keyuserid,
+            String pushtoken, int notify, byte[] pubkey, String introkeyid, String mypushtoken,
+            int mynotify, long matchingInviteRowId) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(name) || keydate == 0 || notify == -1 || pubkey == null
                     || TextUtils.isEmpty(mykeyid) || TextUtils.isEmpty(keyid)
@@ -406,20 +391,12 @@ public class RecipientDbAdapter {
             values.put(KEY_EXCHDATE, exchdate);
 
             // make sure db constraint is satisfied
-            if (!TextUtils.isEmpty(contactid)) {
-                values.put(KEY_CONTACTID, contactid);
-            } else {
-                values.put(KEY_CONTACTID, "");
-            }
+            values.put(KEY_CONTACTID, "");
+            values.put(KEY_RAWCONTACTID, "");
             if (!TextUtils.isEmpty(contactlu)) {
                 values.put(KEY_CONTACTLKUP, contactlu);
             } else {
                 values.put(KEY_CONTACTLKUP, "");
-            }
-            if (!TextUtils.isEmpty(rawid)) {
-                values.put(KEY_RAWCONTACTID, rawid);
-            } else {
-                values.put(KEY_RAWCONTACTID, "");
             }
 
             if (!TextUtils.isEmpty(name))
@@ -546,8 +523,7 @@ public class RecipientDbAdapter {
         }
     }
 
-    public Cursor fetchAllRecipientsMessage(boolean hideInactive, String myKeyId,
-            String myPushToken, String contactName) {
+    public Cursor fetchAllRecipientsMessage(String myKeyId, String myPushToken, String contactName) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(contactName)) {
                 return null; // valid name required
@@ -555,9 +531,6 @@ public class RecipientDbAdapter {
 
             StringBuilder where = new StringBuilder();
             filterRecipientSelf(myKeyId, myPushToken, where);
-            if (hideInactive) {
-                where.append(" AND ").append(KEY_ACTIVE + "=" + RECIP_IS_ACTIVE);
-            }
 
             Cursor c = query(DATABASE_TABLE, new String[] {
                     KEY_ROWID, KEY_MYKEYIDLONG, KEY_EXCHDATE, KEY_CONTACTID, KEY_CONTACTLKUP,
@@ -573,8 +546,33 @@ public class RecipientDbAdapter {
         }
     }
 
-    public Cursor fetchAllRecipientsIntro(boolean hideInactive, String myKeyId, String myPushToken,
-            String contactName) {
+    public Cursor fetchAllRecipientsIntro(String myKeyId, String myPushToken, String contactName) {
+        synchronized (SafeSlinger.sDataLock) {
+            if (TextUtils.isEmpty(contactName)) {
+                return null; // valid name required
+            }
+
+            StringBuilder where = new StringBuilder();
+            filterRecipientSelf(myKeyId, myPushToken, where);
+            where.append(" AND ").append(KEY_SOURCE + "!=" + RECIP_SOURCE_INTRODUCTION);
+            where.append(" AND ").append(KEY_SOURCE + "!=" + RECIP_SOURCE_INVITED);
+
+            Cursor c = query(DATABASE_TABLE, new String[] {
+                    KEY_ROWID, KEY_MYKEYIDLONG, KEY_EXCHDATE, KEY_CONTACTID, KEY_CONTACTLKUP,
+                    KEY_RAWCONTACTID, KEY_NAME, KEY_PHOTO, KEY_KEYIDLONG, KEY_KEYDATE,
+                    KEY_KEYUSERID, KEY_PUSHTOKEN, KEY_NOTIFY, KEY_PUBKEY, KEY_SOURCE,
+                    KEY_APPVERSION, KEY_HISTDATE, KEY_ACTIVE, KEY_MYKEYID, KEY_KEYID,
+                    KEY_INTROKEYID, KEY_NOTREGDATE, KEY_MYNOTIFY, KEY_MYPUSHTOKEN
+            }, where.toString(), null, null, null, null);
+            if (c != null) {
+                return c;
+            }
+            return null;
+        }
+    }
+
+    public Cursor fetchAllRecipientsInvited(boolean hideInactive, String myKeyId,
+            String myPushToken, String contactName) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(contactName)) {
                 return null; // valid name required
@@ -585,8 +583,7 @@ public class RecipientDbAdapter {
             if (hideInactive) {
                 where.append(" AND ").append(KEY_ACTIVE + "=" + RECIP_IS_ACTIVE);
             }
-            where.append(" AND ").append(KEY_SOURCE + "!=" + RECIP_SOURCE_INTRODUCTION);
-            where.append(" AND ").append(KEY_SOURCE + "!=" + RECIP_SOURCE_INVITED);
+            where.append(" AND ").append(KEY_SOURCE + "=" + RECIP_SOURCE_INVITED);
 
             Cursor c = query(DATABASE_TABLE, new String[] {
                     KEY_ROWID, KEY_MYKEYIDLONG, KEY_EXCHDATE, KEY_CONTACTID, KEY_CONTACTLKUP,
@@ -742,26 +739,17 @@ public class RecipientDbAdapter {
         }
     }
 
-    public boolean updateRecipientFromChosenLink(long rowId, String contactid, String contactlu,
-            String rawid) {
+    public boolean updateRecipientFromChosenLink(long rowId, String contactlu) {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
 
             // make sure db constraint is satisfied
-            if (!TextUtils.isEmpty(contactid)) {
-                values.put(KEY_CONTACTID, contactid);
-            } else {
-                values.put(KEY_CONTACTID, "");
-            }
+            values.put(KEY_CONTACTID, "");
+            values.put(KEY_RAWCONTACTID, "");
             if (!TextUtils.isEmpty(contactlu)) {
                 values.put(KEY_CONTACTLKUP, contactlu);
             } else {
                 values.put(KEY_CONTACTLKUP, "");
-            }
-            if (!TextUtils.isEmpty(rawid)) {
-                values.put(KEY_RAWCONTACTID, rawid);
-            } else {
-                values.put(KEY_RAWCONTACTID, "");
             }
 
             return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;

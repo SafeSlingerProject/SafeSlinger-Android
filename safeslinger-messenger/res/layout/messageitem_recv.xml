@@ -52,7 +52,7 @@
             android:autoLink="all"
             android:gravity="left"
             android:textIsSelectable="false"
-            android:textSize="@dimen/text_size_medium" />
+            android:textSize="@dimen/text_size_msg" />
 
         <TextView
             android:id="@+id/tvDirection"
@@ -68,6 +68,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
+            android:textColor="@android:color/darker_gray"
             android:textIsSelectable="false"
             android:textSize="@dimen/text_size_micro" />
 
@@ -76,7 +77,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/gray"
             android:textIsSelectable="false"
             android:textSize="@dimen/text_size_small" />
     </LinearLayout>

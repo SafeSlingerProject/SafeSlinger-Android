@@ -38,6 +38,7 @@
     <dimen name="avatar_size_list">75dp</dimen>
     <dimen name="text_size_micro">18sp</dimen>
     <dimen name="text_size_small">21sp</dimen>
+    <dimen name="text_size_msg">24sp</dimen>
     <dimen name="text_size_medium">27sp</dimen>
     <dimen name="text_size_large">33sp</dimen>
     <dimen name="text_size_40">60sp</dimen>

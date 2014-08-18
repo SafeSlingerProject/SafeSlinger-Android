@@ -88,7 +88,7 @@
             android:imeOptions="actionNext"
             android:inputType="textPassword"
             android:privateImeOptions="nm"
-            android:textSize="@dimen/text_size_medium" />
+            android:textSize="@dimen/text_size_msg" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -105,7 +105,7 @@
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:privateImeOptions="nm"
-                android:textSize="@dimen/text_size_medium" />
+                android:textSize="@dimen/text_size_msg" />
 
             <RelativeLayout
                 android:id="@+id/PassFrameButtonPass"

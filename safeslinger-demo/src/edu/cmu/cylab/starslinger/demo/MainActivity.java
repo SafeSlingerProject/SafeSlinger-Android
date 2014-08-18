@@ -27,24 +27,27 @@ package edu.cmu.cylab.starslinger.demo;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.MenuCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -54,9 +57,12 @@ import edu.cmu.cylab.starslinger.exchange.ExchangeConfig;
 public class MainActivity extends ActionBarActivity {
 
     private static final int RESULT_EXCHANGE = 1;
-    private static final int MENU_NFC = 2;
+    private static final int MENU_MSG = 2;
+    private static final int MENU_NFC = 3;
     private static byte[] mMySecret;
 
+    private static final String EXTRA_TITLE = "TITLE";
+    private static final String EXTRA_MSG = "MSG";
     private static final String PREF_HOST = "HOST";
     private static final String PREF_SECRET = "SECRET";
     private static final String PREF_USENFC = "USENFC";
@@ -64,7 +70,6 @@ public class MainActivity extends ActionBarActivity {
     private static Button buttonBeginExchange;
     private static EditText editTextMySecret;
     private static EditText editTextServerHostName;
-    private static TextView textViewResults;
     private static TextView textViewWarning;
     private static ToggleButton toggleButtonUseNfc;
 
@@ -81,15 +86,24 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuItem iUse = menu.add(0, MENU_MSG, 0, "Usage").setIcon(
+                android.R.drawable.ic_menu_info_details);
+        MenuCompat.setShowAsAction(iUse, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+
         if (getNfcState(this) != null) {
-            menu.add(Menu.NONE, MENU_NFC, Menu.NONE, R.string.demo_menu_nfc_settings);
+            menu.add(Menu.NONE, MENU_NFC, Menu.NONE, R.string.dev_menu_nfc_settings);
         }
+
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case MENU_MSG:
+                showMessage(getString(R.string.dev_app_name_long), getString(R.string.dev_instruct));
+                return true;
             case MENU_NFC:
                 if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                     startActivity(new Intent(Settings.ACTION_NFC_SETTINGS));
@@ -154,7 +168,6 @@ public class MainActivity extends ActionBarActivity {
             buttonBeginExchange = (Button) rootView.findViewById(R.id.buttonBeginExchange);
             editTextMySecret = (EditText) rootView.findViewById(R.id.editTextMySecret);
             editTextServerHostName = (EditText) rootView.findViewById(R.id.editTextServerHostName);
-            textViewResults = (TextView) rootView.findViewById(R.id.textViewResults);
             textViewWarning = (TextView) rootView.findViewById(R.id.textViewWarning);
             toggleButtonUseNfc = (ToggleButton) rootView.findViewById(R.id.toggleButtonUseNfc);
             final SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
@@ -169,24 +182,23 @@ public class MainActivity extends ActionBarActivity {
             // NFC test
             updateNfcState(getActivity());
 
-            toggleButtonUseNfc.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            toggleButtonUseNfc
+                    .setOnCheckedChangeListener(new android.widget.CompoundButton.OnCheckedChangeListener() {
 
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        @Override
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                    // save simple prefs from this visit
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putBoolean(PREF_USENFC, isChecked);
-                    editor.commit();
-                }
-            });
+                            // save simple prefs from this visit
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putBoolean(PREF_USENFC, isChecked);
+                            editor.commit();
+                        }
+                    });
 
-            buttonBeginExchange.setOnClickListener(new OnClickListener() {
+            buttonBeginExchange.setOnClickListener(new android.view.View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
-                    textViewResults.setText("");
-
                     mMySecret = editTextMySecret.getText().toString().getBytes();
                     String server = editTextServerHostName.getText().toString();
                     boolean useNfc = toggleButtonUseNfc.isChecked();
@@ -217,7 +229,7 @@ public class MainActivity extends ActionBarActivity {
 
             switch (requestCode) {
                 case RESULT_EXCHANGE:
-                    StringBuilder results = new StringBuilder(getText(R.string.demo_results) + ": ");
+                    StringBuilder results = new StringBuilder();
                     switch (resultCode) {
                         case ExchangeActivity.RESULT_EXCHANGE_OK:
                             // use newly exchanged data from 'others'
@@ -225,26 +237,27 @@ public class MainActivity extends ActionBarActivity {
                             // ...
 
                             // display results
-                            results.append(getText(R.string.demo_result_success));
+                            results.append(getText(R.string.dev_result_success));
                             results.append(" \n"
-                                    + String.format(getString(R.string.demo_result_mine), 0,
+                                    + String.format(getString(R.string.dev_result_mine), 0,
                                             new String(mMySecret)));
                             for (int j = 0; j < theirSecrets.size(); j++) {
                                 results.append(" \n"
-                                        + String.format(getString(R.string.demo_result_theirs),
+                                        + String.format(getString(R.string.dev_result_theirs),
                                                 j + 1, new String(theirSecrets.get(j))));
                             }
                             break;
                         case ExchangeActivity.RESULT_EXCHANGE_CANCELED:
                             // handle canceled result
                             // ...
-                            results.append(getText(R.string.demo_result_canceled));
+                            results.append(getText(R.string.dev_result_canceled));
                             break;
                         default:
-                            results.append(getText(R.string.demo_result_indeterminate));
+                            results.append(getText(R.string.dev_result_indeterminate));
                             break;
                     }
-                    textViewResults.setText(results);
+                    ((MainActivity) getActivity()).showMessage(getString(R.string.dev_results),
+                            results.toString());
                     break;
                 default:
                     break;
@@ -274,7 +287,52 @@ public class MainActivity extends ActionBarActivity {
             updateNfcState(getActivity());
             super.onResume();
         }
+    }
 
+    protected void showMessage(String title, String msg) {
+        Bundle args = new Bundle();
+        args.putString(EXTRA_TITLE, title);
+        args.putString(EXTRA_MSG, msg);
+        if (!isFinishing()) {
+            removeDialog(MENU_MSG);
+            showDialog(MENU_MSG, args);
+        }
+    }
+
+    protected static AlertDialog.Builder xshowMessage(Activity act, Bundle args) {
+        String title = args.getString(EXTRA_TITLE);
+        String msg = args.getString(EXTRA_MSG);
+        AlertDialog.Builder ad = new AlertDialog.Builder(act);
+        ad.setTitle(title);
+        ad.setMessage(msg);
+        ad.setCancelable(true);
+        ad.setNeutralButton(R.string.dev_btn_OK,
+                new android.content.DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        ad.setOnCancelListener(new android.content.DialogInterface.OnCancelListener() {
+
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                dialog.dismiss();
+            }
+        });
+        return ad;
+    }
+
+    @Override
+    protected Dialog onCreateDialog(int id, Bundle args) {
+        switch (id) {
+            case MENU_MSG:
+                return xshowMessage(MainActivity.this, args).create();
+            default:
+                break;
+        }
+        return super.onCreateDialog(id);
     }
 
 }

@@ -49,6 +49,7 @@
     <string name="btn_Import">A shigo da</string>
     <string name="btn_Introduce">Da gabatar da</string>
     <string name="btn_No">Ba</string>
+    <string name="btn_NotNow">Ba yanzu</string>
     <string name="btn_NotRemind">Manta</string>
     <string name="btn_OK">Ok</string>
     <string name="btn_Refuse">Ƙi</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minutes</string>
     <string name="choice_8hours">8 hours</string>
     <string name="choice_auto_storage">Tsoffin Storage</string>
+    <string name="choice_default">Tsoffin</string>
     <string name="choice_external_storage">External Storage</string>
     <string name="choice_font_large">Large</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio player decoding kuskure.</string>
     <string name="error_AudioPlayerError">Ba za a iya kunna rikodi.</string>
     <string name="error_AudioRecorderEncodeError">Audio rikodi na tsarinsa kuskure.</string>
+    <string name="error_AudioRecorderPermissionError">Makirufo izni ake bukata domin rikodin saƙon murya amintattu. Tap taimakon button for SafeSlinger Makirufo izinin details.</string>
     <string name="error_BackupNotFound">Babu madadin tada.</string>
     <string name="error_BackupNotSupportedDevice">Na\'ura ba ya goyon bayan madadin mayar.</string>
     <string name="error_BadCopyProtectUpgrade">Saboda taba yiwuwa ace kwaro a cikin Android 4.1, za ka yi uninstall da reinstall SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger kuskure ne, ka sake kunna.</string>
     <string name="error_VcardParseFailure">Contact bayanai da aka tsara ba daidai ba.</string>
 
+    <string name="help_find">Yi amfani da wannan allo domin saita Sunan ka yi musayar wasu, da kuma passphrase don kare ka bayanai. Tap da Anyi button lokacin da ya gama.</string>
     <string name="help_home">Don musanya ainihi bayanai, tabbatar da duk masu amfani ne a nan kusa ko a waya. A Begin Exchange button zai musanya kawai bari lamba bayanai.</string>
     <string name="help_identity_menu">Nan ƙila ka canza bayanan sirri game da ainihi a kan wannan allon da tapping a kan button da sunanka. Wannan zai nuna menu bar ka ka shirya lambar sadarwa, Create Sabuwar lamba, ko yi amfani da wata lambar sadarwa.</string>
     <string name="help_Messages">Wannan allon nuna duk saƙonnin da suka gabata, da haše-haše da cewa har yanzu don saukewa.</string>
+    <string name="help_passphrase">Yi amfani da wannan allo don shiga cikin aikace-aikacen da ka passphrase. Idan ka manta ka passphrase, za ka iya samar da wani sabon key kiyaye shi ta sabon passphrase by tapping da Forgot Passphrase? button. Tap da sunan mai amfani domin sauyawa tsakanin mahara makullin.</string>
+    <string name="help_passphrase_change">Yi amfani da wannan allo don canza passphrase da su shiga karshe passphrase domin tabbatar da sabuwar passphrase.</string>
     <string name="help_PickRecip">Lambobin sadarwa da SafeSlinger mažallan ne yake nuna su a nan, zaɓi daya kafin a aika da sako zuwa.</string>
     <string name="help_save">Lokacin da ya gama, da yarjejeniya za ta bayyana jerin ainihi data yi musayar. A zabi lambobi da kuke so ya cece ka kuma danna Import.</string>
     <string name="help_SecureIntroduction">Wannan allon ba ka damar zažar biyu mutane da ka slung mažallan tare da su tam aika da mažallan da juna. Kawai danna da gabatar da shirye a lõkacin da.</string>
     <string name="help_Send">Wannan allon ba ka damar zažar wasu bayanai da kuma mai karɓa don aika zuwa. Kawai danna Send lokacin da shirye.</string>
+    <string name="help_settings">Wannan allon ba ka damar canja saituna tsoho na aikace-aikace.</string>
 
+    <string name="iOS_contactError">Lambobin sadarwa izni ake bukata domin tam raba katunan lambar sadarwa. Tap taimakon button for SafeSlinger Lambobin sadarwa izinin details.</string>
     <string name="iOS_errorpushtoken">Samun rajista ya bace.</string>
+    <string name="iOS_notificationError1">Sanarwar izni ga ko dai fadakarwa ko Banners, da kuma lambobin lamba, suna bukatar amintattu saƙon. Tap taimakon button for SafeSlinger Sanarwar izinin details.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ba a gyara domin iOS 5.x na\'urorin. SafeSlinger na bukatar iOS 6 ko mafi girma.</string>
+    <string name="iOS_RequestPermissionContacts">Za ka iya zaɓar lambar sadarwa naka don aika katin your friends and SafeSlinger za encrypt shi a gare ku. Don a kunna wannan alama, dole ne ka ƙyale SafeSlinger samun dama ga Lambobin sadarwa a lokacin da ya tambaye.</string>
+    <string name="iOS_RequestPermissionMicrophone">Zaka iya rikodin saƙon murya kafin a aika da abokai da SafeSlinger za encrypt shi a gare ku. Don a kunna wannan alama, dole ne ka ƙyale SafeSlinger samun dama ga Makirufo lokacin da ya tambaye.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ne wani ɓoyayyen saƙon aikace-aikace kuma ba zai iya aiki ba tare da barin mai shigowa saƙonni daga Fadakarwa. Don a kunna mai shigowa saƙonni, dole ne ka ƙyale SafeSlinger ga Aika sanarwarku a lokacin da ya tambaye.</string>
 
     <string name="label_ago">%s ago</string>
     <string name="label_backupCompleteDate">Last Ajiyayyen Completed</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">ya ƙare %s</string>
     <string name="label_expiresIn">ya ƙare a</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Shigar da sunan da kuke so wasu su gani, a lõkacin sadarwa tam:</string>
+    <string name="label_FindInstruct">Shigar da sunan kuma a passphrase don kare ka data:</string>
     <string name="label_FirstName">First Name</string>
     <string name="label_Home">Tap sunanka don ƙara ko cire lambar sadarwa bayanai, duba abubuwan da kuke so a raba, da kuma Tap Begin Exchange lokacin da wasu suna shirye su canza:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d hours</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud an kunna. Tap da Anyi button lokacin da ya gama.</string>
     <string name="label_InstNoMessages">Babu wani sakon. Za ka iya aika sako daga Compose Message button a kan Home menu.</string>
-    <string name="label_InstNoMessagesAndroid">Babu wani sakon. Za ka iya aika sako daga Compose shafin.</string>
     <string name="label_InstNoRecipients">Don ƙara masu karɓa, dole ne ka farko majayijawa Kunamu da daya ko fiye da sauran masu amfani a lokaci guda. Za ka iya aika majayijawa Kunamu lamba gayyata daga menu.</string>
     <string name="label_InstNoSharedFile">Babu raba fayil. Connect na\'urarka da iTunes da kuma ja fayiloli zuwa shared babban fayil.</string>
     <string name="label_InstRecipients">Pick mai karɓa don aika saƙo zuwa:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Ta atomatik download sakon da aka makala a lokacin da shigad da in.</string>
     <string name="label_summary_auto_decrypt">Ta atomatik decrypt saƙonni a lokacin da shigad da in.</string>
     <string name="label_summary_remind_backup_delay">Sami sanarwar lokacin da aka ajiye is offline.</string>
-    <string name="label_summary_show_tutorial">Nuna a koyawa kafin attemping zuwa majayijawa maɓalli ba.</string>
+    <string name="label_summary_show_tutorial">Nuna a koyawa kafin yunƙurin majayijawa maɓalli ba.</string>
     <string name="label_TapToDecryptFile">Famfo don decrypt fayil</string>
     <string name="label_TapToDecryptMessage">Famfo don decrypt</string>
     <string name="label_TapToDownloadFile">Tap fayil don saukewa</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Change</string>
     <string name="menu_ChangePassphrase">Change Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email daga Lambobi</string>
+    <string name="menu_ContactInviteSms">Text daga Lambobi</string>
     <string name="menu_CreateNew">New Create</string>
     <string name="menu_delete">Share</string>
     <string name="menu_deleteThread">Share Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Forgot Passphrase?</string>
     <string name="menu_Help">Help</string>
     <string name="menu_Introduction">Gabatarwa</string>
-    <string name="menu_License">License</string>
+    <string name="menu_language">Harshe</string>
+    <string name="menu_link_contact_add">Add Link Contact</string>
+    <string name="menu_link_contact_change">Change Contact Link</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Sarrafa Passphrases</string>
     <string name="menu_message_font_size">Message girman haruffa</string>

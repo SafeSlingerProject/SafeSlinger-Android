@@ -24,9 +24,12 @@
 
 package edu.cmu.cylab.starslinger.view;
 
+import java.util.ArrayList;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuCompat;
 import android.support.v4.view.MenuItemCompat;
@@ -41,8 +44,12 @@ import android.view.View.OnFocusChangeListener;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import edu.cmu.cylab.starslinger.R;
@@ -59,6 +66,7 @@ public final class FindContactActivity extends BaseActivity {
     private EditText mEditTextPassNext;
     private EditText mEditTextPassDone;
     private TextView mTextViewLicensePrivacy;
+    private Spinner mSpinnerLanguage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +74,10 @@ public final class FindContactActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         SafeSlinger.setPassphraseOpen(true);
 
+        generateView();
+    }
+
+    public void generateView() {
         setContentView(R.layout.contact_adder);
 
         final ActionBar bar = getSupportActionBar();
@@ -81,6 +93,19 @@ public final class FindContactActivity extends BaseActivity {
         mEditTextPassNext = (EditText) findViewById(R.id.EditTextPassphrase);
         mEditTextPassDone = (EditText) findViewById(R.id.EditTextPassphraseAgain);
         mTextViewLicensePrivacy = (TextView) findViewById(R.id.textViewLicensePrivacy);
+        mSpinnerLanguage = (Spinner) findViewById(R.id.spinnerLanguage);
+
+        final ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,
+                android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        final ArrayList<String> codes = SafeSlinger.getApplication().getListLanguages(true);
+        mSpinnerLanguage.setPrompt(getText(R.string.title_language));
+        mSpinnerLanguage.setAdapter(adapter);
+        ArrayList<String> all = SafeSlinger.getApplication().getListLanguages(false);
+        for (String l : all) {
+            adapter.add(l);
+        }
+        mSpinnerLanguage.setSelection(codes.indexOf(SafeSlingerPrefs.getLanguage()));
 
         // read defaults and set them
         mSelectedName = SafeSlingerPrefs.getContactName();
@@ -97,9 +122,31 @@ public final class FindContactActivity extends BaseActivity {
         // enable hyperlinks
         mTextViewLicensePrivacy.setText(Html.fromHtml("<a href=\"" + SafeSlingerConfig.EULA_URL
                 + "\">" + getText(R.string.menu_License) + "</a> / <a href=\""
-                + SafeSlingerConfig.PRIVACY_URL + "\">" + getText(R.string.text_KeywordPrivacy)
+                + SafeSlingerConfig.PRIVACY_URL + "\">" + getText(R.string.menu_PrivacyPolicy)
                 + "</a>"));
         mTextViewLicensePrivacy.setMovementMethod(LinkMovementMethod.getInstance());
+
+        mSpinnerLanguage.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long i) {
+
+                if (!codes.get(position).equals(SafeSlingerPrefs.getLanguage())) {
+                    SafeSlingerPrefs.setLanguage(codes.get(position));
+                    SafeSlinger.getApplication().updateLanguage(codes.get(position));
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                        recreate();
+                    } else {
+                        generateView();
+                    }
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // We don't need to worry about nothing being selected
+            }
+        });
 
         mEditTextName.setOnFocusChangeListener(new OnFocusChangeListener() {
 

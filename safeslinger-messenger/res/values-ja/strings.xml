@@ -49,6 +49,7 @@
     <string name="btn_Import">インポート</string>
     <string name="btn_Introduce">紹介</string>
     <string name="btn_No">いいえ</string>
+    <string name="btn_NotNow">今じゃない</string>
     <string name="btn_NotRemind">消去</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">拒否</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5分</string>
     <string name="choice_8hours">8時間</string>
     <string name="choice_auto_storage">デフォルトのストレージ</string>
+    <string name="choice_default">デフォルト</string>
     <string name="choice_external_storage">外部ストレージ</string>
     <string name="choice_font_large">大</string>
     <string name="choice_font_medium">メディア</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">再生デコードエラー</string>
     <string name="error_AudioPlayerError">音声を再生できません。</string>
     <string name="error_AudioRecorderEncodeError">録音エンコードエラー</string>
+    <string name="error_AudioRecorderPermissionError">マイクの許可がセキュリティで保護された音声メッセージを録音する必要があります。 SafeSlingerマイク権限の詳細については、[ヘルプ]ボタンをタップします。</string>
     <string name="error_BackupNotFound">復元のためのバックアップがありません。</string>
     <string name="error_BackupNotSupportedDevice">このデバイスはバックアップからの復元ををサポートしていません。</string>
     <string name="error_BadCopyProtectUpgrade">アンドロイド4.1のバグのためには、SafeSlingerをアンインストールして再インストールしているでしょう。</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlingerエラーです。再起動してください。</string>
     <string name="error_VcardParseFailure">連絡先データが誤ってフォーマットした。</string>
 
+    <string name="help_find">データを保護するために他の人、およびパスフレーズで交換するために自分の名前を設定するには、この画面を使用します。終了したら[完了]ボタンをタップします。</string>
     <string name="help_home">IDデータを交換するために、すべてのユーザーが近くいるか携帯電話をもっていなければなりません。 交換開始ボタンを押すとチェックされている連絡先データだけ交換します。</string>
     <string name="help_identity_menu">は便利自分の名前の付いたボタンをタップしてこの画面であなたの身元に関する個人データを変更することがあります。これは、メニューができ、あなたのタッチを編集に新規作成接触を表示したり、連絡先のもう一つを使用してます。</string>
     <string name="help_Messages">この画面では、過去のすべてのメッセージと、まだダウンロード可能なファイルが表示されます。</string>
+    <string name="help_passphrase">パスフレーズを使用してアプリケーションにログインするには、この画面を使用します。パスフレーズを忘れた場合は、忘れたパスフレーズをタップして、新しいパスフレーズで保護された新しいキーを生成することがあります？ボタンを押します。複数のキーを切り替えることがユーザー名をタップします。</string>
+    <string name="help_passphrase_change">確認して、新しいパスフレーズの最後のパスフレーズを入力することで、パスフレーズを変更するには、この画面を使用します。</string>
     <string name="help_PickRecip">SafeSlingerキーを使用している連絡先がここに表示されます。メッセージを送信したい相手を選択してください。</string>
     <string name="help_save">終了したら、プロトコルが識別データのリストを明らかにします。保存したい連絡先を選択して、 インポートを押してください。</string>
     <string name="help_SecureIntroduction">この画面では、以前に鍵を送信した2人を選択することができます。準備が完了したら、 紹介を押します。</string>
     <string name="help_Send">この画面では、いくつかのデータと送信す​​る受信者を選択できます。準備ができたら 送信を押します。</string>
+    <string name="help_settings">この画面では、アプリケーションのデフォルト設定を変更することができます。</string>
 
+    <string name="iOS_contactError">コンタクト許可が確実に接触カードを共有するために必要です。 SafeSlingerコンタクト許可の詳細については、[ヘルプ]ボタンをタップします。</string>
     <string name="iOS_errorpushtoken">プッシュの登録がありません。</string>
+    <string name="iOS_notificationError1">警告やバナー、バッジ番号のどちらかの通知許可は、セキュアなメッセージングのために必要とされる。 SafeSlinger通知許可の詳細については、[ヘルプ]ボタンをタップします。</string>
     <string name="iOS_oldOSWarn">SafeSlingerはのiOS5.xのデバイス用に最適化されていません。 SafeSlingerをiOS6以降が必要です。</string>
+    <string name="iOS_RequestPermissionContacts">あなたはあなたの友人を送信するためにあなたの連絡先カードを選択することができますし、SafeSlingerはあなたのためにそれを暗号化します。尋ねられたとき、この機能を有効にするには、連絡先にSafeSlingerアクセスを許可する必要があります。</string>
+    <string name="iOS_RequestPermissionMicrophone">あなたはあなたの友人を送信するとSafeSlingerはあなたのためにそれを暗号化します音声メッセージを録音することができます。尋ねられたとき、この機能を有効にするには、マイクにSafeSlingerアクセスを許可する必要があります。</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlingerは暗号化されたメッセージングアプリケーションであると通知からの着信メッセージを許可することなく機能することはできません。受信メッセージを有効にするには、尋ねられたときSafeSlingerはあなたに通知を送信できるようにする必要があります。</string>
 
     <string name="label_ago">%s前</string>
     <string name="label_backupCompleteDate">最後のバックアップが完了しました</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">%sの期限が切れる</string>
     <string name="label_expiresIn">に失効</string>
     <string name="label_FileNameHint">ファイル名</string>
-    <string name="label_FindInstruct">名前を入力してくださいあなたが安全に通信するときに見て他の人を望む。</string>
+    <string name="label_FindInstruct">データを保護するためにあなたの名前とパスフレーズを入力します。</string>
     <string name="label_FirstName">名前</string>
     <string name="label_Home">追加または削除する連絡先データを、共有したい項目をチェックして、タップし、あなたの名前をタップして「Exchangeを開始します」他の人が交換する準備ができたとき。</string>
     <string name="label_hometag">ホーム</string>
     <string name="label_hours">%d時間</string>
     <string name="label_iCloudEnable">SafeSlingerのiCloudが有効になっています。終了したら[完了]ボタンをタップします。</string>
     <string name="label_InstNoMessages">メッセージがありません。あなたは、ホームメニューの メッセージ作成ボタンからメッセージを送ることができる。</string>
-    <string name="label_InstNoMessagesAndroid">メッセージがありません。あなたは メール作成タブからメッセージを送ることができる。</string>
     <string name="label_InstNoRecipients">受信者を追加するには、まず、同時に1つ以上の他のユーザとスリングキーの必要があります。また、メニューからスリングキー接触の招待状を送ることができる。</string>
     <string name="label_InstNoSharedFile">共有ファイルはありません。デバイスをiTunesに接続して、ファイルを共有フォルダにドラッグしてください。</string>
     <string name="label_InstRecipients">メッセージを送信する受信者を選択：</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">自動復号</string>
     <string name="menu_Change">変更</string>
     <string name="menu_ChangePassphrase">パスフレーズを変更</string>
+    <string name="menu_ContactInviteEmail">連絡先から電子メール</string>
+    <string name="menu_ContactInviteSms">連絡先からテキスト</string>
     <string name="menu_CreateNew">新規作成</string>
     <string name="menu_delete">削除</string>
     <string name="menu_deleteThread">スレッド %sを削除</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">パスフレーズを忘れましたか？</string>
     <string name="menu_Help">ヘルプ</string>
     <string name="menu_Introduction">はじめに</string>
-    <string name="menu_License">ライセンス</string>
+    <string name="menu_language">言語</string>
+    <string name="menu_link_contact_add">連絡先リンクを追加</string>
+    <string name="menu_link_contact_change">連絡先リンクを変更する</string>
     <string name="menu_Logout">ログアウト</string>
     <string name="menu_ManagePassphrases">パスフレーズを管理</string>
     <string name="menu_message_font_size">メッセージフォントサイズ</string>

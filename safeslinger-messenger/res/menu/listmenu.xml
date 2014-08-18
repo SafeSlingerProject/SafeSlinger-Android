@@ -47,16 +47,16 @@
         android:id="@+id/item_delete_recipient"
         android:title="@string/menu_delete"/>
     <item
-        android:id="@+id/item_link_contact"
-        android:title="@string/menu_link_contact"/>
+        android:id="@+id/item_link_contact_add"
+        android:title="@string/menu_link_contact_add"/>
+    <item
+        android:id="@+id/item_link_contact_change"
+        android:title="@string/menu_link_contact_change"/>
+    <item
+        android:id="@+id/item_edit_contact"
+        android:title="@string/menu_EditContact"/>
     <item
         android:id="@+id/item_key_details"
         android:title="@string/menu_Details"/>
-    <item
-        android:id="@+id/item_showallinvalid"
-        android:title="@string/menu_ShowInvalid"/>
-    <item
-        android:id="@+id/item_hideallinvalid"
-        android:title="@string/menu_HideInvalid"/>
 
 </menu>

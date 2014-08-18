@@ -34,7 +34,7 @@
     <string name="ask_ConfirmUseOlderDeviceOrKey">%s האט אַ מער פריש מיטל אָדער שליסל, זענען איר זיכער איר ווילן צו נוצן דעם עלטער איינער?</string>
     <string name="ask_FileExistsOverwrite">טעקע נאָמען %s שוין יגזיסס. אָווועררייט?</string>
     <string name="ask_GoogleAccountToReceiveMsgs">אָן אַ Google אַקאַונט איר וועט בלויז קענען צו שיקן, נישט באַקומען אַרטיקלען. צי איר ווילן צו לייגן אַ Google חשבון?</string>
-    <string name="ask_SendErrorData">מיר \'ד ווי דיין הילף ימפּרוווינג SafeSlinger. וואָלט איר ווי צו אויטאָמאַטיש שיקן קיין ערראָרס צו אונדז?</string>
+    <string name="ask_SendErrorData">מירד ווי דיין הילף ימפּרוווינג SafeSlinger. וואָלט איר ווי צו אויטאָמאַטיש שיקן קיין ערראָרס צו אונדז?</string>
 
     <string name="btn_Accept">אָננעמען</string>
     <string name="btn_BeginExchangeProximity">נעמען עקסטשאַנגע</string>
@@ -49,6 +49,7 @@
     <string name="btn_Import">אַרייַנפיר</string>
     <string name="btn_Introduce">באַקענען</string>
     <string name="btn_No">קיין</string>
+    <string name="btn_NotNow">ניט איצט</string>
     <string name="btn_NotRemind">פאַרגעסן</string>
     <string name="btn_OK">גוט</string>
     <string name="btn_Refuse">אָפּזאָגן</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 מינוט</string>
     <string name="choice_8hours">8 שעה</string>
     <string name="choice_auto_storage">פעליקייַט סטאָרידזש</string>
+    <string name="choice_default">ניט ויסצאָלן</string>
     <string name="choice_external_storage">פונדרויסנדיק סטאָרידזש</string>
     <string name="choice_font_large">גרויס</string>
     <string name="choice_font_medium">מיטל</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">אַודיאָ שפּילער דיקאָודינג טעות.</string>
     <string name="error_AudioPlayerError">קענען ניט שפּילן די רעקאָרדינג.</string>
     <string name="error_AudioRecorderEncodeError">אַודיאָ רעקאָרדער קאָדירונג טעות.</string>
+    <string name="error_AudioRecorderPermissionError">מיקראָפאָן דערלויבעניש איז פארלאנגט צו רעקאָרדירן אַ זיכער קול אָנזאָג. צאַפּן די הילף קנעפּל פֿאַר סאַפעסלינגער מייקראַפאָון דערלויבעניש פרטים.</string>
     <string name="error_BackupNotFound">ניט קיין באַקקופּ צו ומקערן.</string>
     <string name="error_BackupNotSupportedDevice">מיטל טוט ניט שטיצן באַקקופּ ומקערן.</string>
     <string name="error_BadCopyProtectUpgrade">רעכט צו אַ זשוק אין אַנדרויד 4.1, איר וועט האָבן נעם אַוועק און ריינסטאַל SafeSlinger.</string>
@@ -126,7 +129,7 @@
     <string name="error_PushMsgQuotaExceeded">איר האָבן יקסידיד די אָנזאָג קוואָטע פֿאַר דעם מיטל. ביטע רעטרי שפּעטער.</string>
     <string name="error_PushMsgServiceFail">אָנזאָג דינסט איז ניט פאַראַנען דעם צייַט. ביטע פּרובירן צו שיקן דעם אָנזאָג שפּעטער.</string>
     <string name="error_RecoderError">קענען ניט צוגרייטן די אַודיאָ מאַגנעטאָפאָן.</string>
-    <string name="error_ReminderToSlingKeysToUseApp">צו אָנהייבן, \' וואַרפלקע קיז \' מיט אנדערן טעלעפאָנירן אין דער זעלביקער צייַט.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">צו אָנהייבן, וואַרפלקע קיז מיט אנדערן טעלעפאָנירן אין דער זעלביקער צייַט.</string>
     <string name="error_selectDataToSend">איר דאַרפֿן אַ אַטאַטשמאַנט אָדער אַ טעקסט אָנזאָג צו שיקן.</string>
     <string name="error_ShareFileDelError">קענען ניט צונעמען די שערד טעקע.</string>
     <string name="error_UnableFindPubKey">געקענט צו גלייַכן ציבור שליסל צו פּריוואַט שליסל אין קריפּטאָ שפּייַזער.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger טעות, ביטע ריסטאַרט.</string>
     <string name="error_VcardParseFailure">קאָנטאַקט דאַטן איז פאָרמאַטטעד ינקערעקטלי.</string>
 
-    <string name="help_home">צו וועקסל אידענטיטעט דאַטן, ענשור אַלע וסערס זענען נירביי אָדער אויף די טעלעפאָנירן. די \' אָנהייבן עקסטשאַנגע \' קנעפּל וועט וועקסל בלויז די אָפּגעשטעלט קאָנטאַקט דאַטן.</string>
-    <string name="help_identity_menu">נוולן נוולן איר קען אויך טוישן פּערזענלעך דאַטן וועגן אייער אידענטיטעט אויף דעם עקראַן דורך טאַפּינג אויף די קנעפּל מיט דיין נאָמען. דעם וועט אַרויסווייַזן אַ מעניו אַלאַוינג איר צו \' רעדאַגירן \' דיין קאָנטאַקט, \' שאַפֿן ניו \' ​​קאָנטאַקט, אָדער \' ניצן אן אנדער \' קאָנטאַקט.</string>
+    <string name="help_find">נוצן דעם עקראַן צו שטעלן אייער נאָמען צו וועקסל מיט אנדערע, און אַ פּאַסספראַסע צו באַשיצן אייער דאַטע. צאַפּן די דאַן קנעפּל ווען פאַרטיק.</string>
+    <string name="help_home">צו וועקסל אידענטיטעט דאַטן, ענשור אַלע וסערס זענען נירביי אָדער אויף די טעלעפאָנירן. די אָנהייבן עקסטשאַנגע קנעפּל וועט וועקסל בלויז די אָפּגעשטעלט קאָנטאַקט דאַטן.</string>
+    <string name="help_identity_menu">נוולן נוולן איר קען אויך טוישן פּערזענלעך דאַטן וועגן אייער אידענטיטעט אויף דעם עקראַן דורך טאַפּינג אויף די קנעפּל מיט דיין נאָמען. דעם וועט אַרויסווייַזן אַ מעניו אַלאַוינג איר צו רעדאַגירן דיין קאָנטאַקט, שאַפֿן ניו ​​קאָנטאַקט, אָדער ניצן אן אנדער קאָנטאַקט.</string>
     <string name="help_Messages">דעם פאַרשטעלן דיספּלייז אַלע פאַרגאַנגענהייַט אַרטיקלען, און אַטאַטשמאַנץ אַז זענען נאָך פאַראַנען פֿאַר אָפּלאָדירן.</string>
+    <string name="help_passphrase">נוצן דעם עקראַן צו לאָגין צו די אַפּלאַקיישאַן מיט אייער פּאַסספראַסע. אויב איר האָבן פארגעסן דיין פּאַסספראַסע, איר זאלט ​​דזשענערייט אַ נייַ שליסל פּראָטעקטעד דורך אַ נייַ פּאַסספראַסע דורך טאַפּינג די פֿאַרגעסן פּאַסספראַסע? קנעפּל. צאַפּן די באַניצער נאָמען צו באַשטימען צווישן קייפל שליסלען.</string>
+    <string name="help_passphrase_change">נוצן דעם עקראַן צו טוישן אייער פּאַסספראַסע דורך קומט דיין לעצט פּאַסספראַסע פֿאַר באַשטעטיקונג און די נייַ פּאַסספראַסע.</string>
     <string name="help_PickRecip">קאָנטאַקטן מיט SafeSlinger שליסלען זענען געוויזן דאָ, אויסקלייַבן איינער צו שיקן דיין אָנזאָג צו.</string>
-    <string name="help_save">ווען פאַרטיק, די פּראָטאָקאָל וועט אַנטדעקן אַ רשימה פון די אידענטיטעט דאַטן פארביטן. אויסקלייַבן די קאָנטאַקטן איר ווינטשן צו ראַטעווען און דרוק \' ימפּאָרט \'.</string>
-    <string name="help_SecureIntroduction">דעם פאַרשטעלן אַלאַוז איר צו אויסקלייַבן צוויי מענטשן איר האָבן סלאַנג שליסלען מיט איידער צו סיקיורלי שיקן זייער שליסלען צו יעדער אנדערער. פשוט דריקן \' ינטראָדוסע \' ווען גרייט.</string>
-    <string name="help_Send">דעם פאַרשטעלן אַלאַוז איר צו אויסקלייַבן עטלעכע דאַטע און אַ באַקומער צו שיקן צו. פשוט דריקן \' שיקן \' ווען גרייט.</string>
+    <string name="help_save">ווען פאַרטיק, די פּראָטאָקאָל וועט אַנטדעקן אַ רשימה פון די אידענטיטעט דאַטן פארביטן. אויסקלייַבן די קאָנטאַקטן איר ווינטשן צו ראַטעווען און דרוק ימפּאָרט.</string>
+    <string name="help_SecureIntroduction">דעם פאַרשטעלן אַלאַוז איר צו אויסקלייַבן צוויי מענטשן איר האָבן סלאַנג שליסלען מיט איידער צו סיקיורלי שיקן זייער שליסלען צו יעדער אנדערער. פשוט דריקן ינטראָדוסע ווען גרייט.</string>
+    <string name="help_Send">דעם פאַרשטעלן אַלאַוז איר צו אויסקלייַבן עטלעכע דאַטע און אַ באַקומער צו שיקן צו. פשוט דריקן שיקן ווען גרייט.</string>
+    <string name="help_settings">דעם פאַרשטעלן אַלאַוז איר צו טוישן די פעליקייַט סעטטינגס פֿאַר די אַפּלאַקיישאַן.</string>
 
+    <string name="iOS_contactError">קאָנטאַקטן דערלויבעניש איז פארלאנגט פֿאַר סיקיורלי ייַנטיילונג קאָנטאַקט קאַרדס. צאַפּן די הילף קנעפּל פֿאַר סאַפעסלינגער קאָנטאַקטן דערלויבעניש פרטים.</string>
     <string name="iOS_errorpushtoken">שטופּן רעגיסטראַציע איז פעלנדיק.</string>
+    <string name="iOS_notificationError1">אָנזאָג דערלויבעניש פֿאַר יעדער אַלערץ אָדער באַנערז, און אָפּצייכן נומערן, זענען פארלאנגט פֿאַר זיכער מעסידזשינג. צאַפּן די הילף קנעפּל פֿאַר סאַפעסלינגער אָנזאָג דערלויבעניש פרטים.</string>
     <string name="iOS_oldOSWarn">SafeSlinger איז ניט אָפּטימיזעד פֿאַר יאָס 5.קס דיווייסאַז. SafeSlinger ריקווייערז יאָס 6 אָדער העכער.</string>
+    <string name="iOS_RequestPermissionContacts">איר קענען אויסקלייַבן דיין קאָנטאַקט קאַרטל צו שיקן אייער פריינט און סאַפעסלינגער וועט ינקריפּט עס פֿאַר איר. צו געבן דעם שטריך, איר מוזן לאָזן סאַפעסלינגער צוטריט צו אייער קאָנטאַקטן ווען געפרעגט.</string>
+    <string name="iOS_RequestPermissionMicrophone">איר קענען רעקאָרדירן אַ קול אָנזאָג צו שיקן אייער פריינט און סאַפעסלינגער וועט ינקריפּט עס פֿאַר איר. צו געבן דעם שטריך, איר מוזן לאָזן סאַפעסלינגער צוטריט צו אייער מייקראַפאָון ווען געפרעגט.</string>
+    <string name="iOS_RequestPermissionNotifications">סאַפעסלינגער איז אַ ענקריפּטיד מעסידזשינג אַפּלאַקיישאַן און קענען ניט פונקציאָנירן אָן אַלאַוינג ינקאַמינג אַרטיקלען פון נאָטיפיקאַטיאָנס. צו געבן ינקאַמינג אַרטיקלען, איר מוזן לאָזן סאַפעסלינגער צו שיקן איר נאָטיפיקאַטיאָנס ווען געפרעגט.</string>
 
     <string name="label_ago">%s צוריק</string>
     <string name="label_backupCompleteDate">לעצטע באַקקופּ געענדיקט</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">יקספּייערז %s</string>
     <string name="label_expiresIn">יקספּייערז אין</string>
     <string name="label_FileNameHint">טעקע נאָמען</string>
-    <string name="label_FindInstruct">אַרייַן די נאָמען איר ווינטשן אנדערע צו זען ווען קאַמיונאַקייטינג סיקיורלי:</string>
+    <string name="label_FindInstruct">אַרייַן אייער נאָמען און אַ פּאַסספראַסע צו באַשיצן אייער דאַטע:</string>
     <string name="label_FirstName">ערשטער נאָמען</string>
-    <string name="label_Home">צאַפּן דיין נאָמען צו לייגן אָדער אַראָפּנעמען קאָנטאַקט דאַטן, טשעק זאכן איר ווינטשן צו טיילן, און צאַפּן \'אָנהייבן עקסטשאַנגע\' ווען אנדערע זענען גרייט צו בייַט:</string>
+    <string name="label_Home">צאַפּן דיין נאָמען צו לייגן אָדער אַראָפּנעמען קאָנטאַקט דאַטן, טשעק זאכן איר ווינטשן צו טיילן, און צאַפּןאָנהייבן עקסטשאַנגע ווען אנדערע זענען גרייט צו בייַט:</string>
     <string name="label_hometag">היים</string>
     <string name="label_hours">%d שעה</string>
-    <string name="label_iCloudEnable">סאַפעסלינגער יקלאָוד איז ענייבאַלד. צאַפּן די \' דאַן \' קנעפּל ווען פאַרטיק.</string>
-    <string name="label_InstNoMessages">ניט קיין אַרטיקלען. איר קען שיקן אַ אָנזאָג פון די \' קאַמפּאָוז מעסעדזש \' קנעפּל אויף די היים מעניו.</string>
-    <string name="label_InstNoMessagesAndroid">ניט קיין אַרטיקלען. איר קען שיקן אַ אָנזאָג פון די \' קאַמפּאָוז \' קוויטל.</string>
+    <string name="label_iCloudEnable">סאַפעסלינגער יקלאָוד איז ענייבאַלד. צאַפּן די דאַן קנעפּל ווען פאַרטיק.</string>
+    <string name="label_InstNoMessages">ניט קיין אַרטיקלען. איר קען שיקן אַ אָנזאָג פון די קאַמפּאָוז מעסעדזש קנעפּל אויף די היים מעניו.</string>
     <string name="label_InstNoRecipients">צו לייגן ריסיפּיאַנץ, איר מוזן ערשטער וואַרפלקע קיז מיט איין אָדער מער אנדערע וסערס אין דער זעלביקער צייַט. איר קען אויך שיקן אַ וואַרפלקע קיז קאָנטאַקט פאַרבעטונג פון די מעניו.</string>
     <string name="label_InstNoSharedFile">ניט קיין שערד טעקע. פאַרבינדן דיין מיטל מיט יטונעס און שלעפּן טעקעס צו די שערד טעקע.</string>
     <string name="label_InstRecipients">קלייַבן אַ באַקומער צו שיקן אַ אָנזאָג צו:</string>
@@ -215,7 +226,7 @@
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger באַקקופּ דילייד</string>
     <string name="label_safeslingered">(SafeSlinger דירעקט עקסטשאַנגע)</string>
     <string name="label_SaveAccount">היט אַקאַונט</string>
-    <string name="label_SaveInstruct">קוק קאָנטאַקטן איר ווילן צו דערהייַנטיקן אין אייער אַדרעס בוך, דעמאָלט צאַפּן \'ימפּאָרט\' צו ראַטעווען זיכער קאָנטאַקטן:</string>
+    <string name="label_SaveInstruct">קוק קאָנטאַקטן איר ווילן צו דערהייַנטיקן אין אייער אַדרעס בוך, דעמאָלט צאַפּןימפּאָרט צו ראַטעווען זיכער קאָנטאַקטן:</string>
     <string name="label_seconds">%d סעקונדעס</string>
     <string name="label_SelectRecip">אויסקלייַבן רעסיפּיענט</string>
     <string name="label_sendErrorData">שיקן טעות דאַטע</string>
@@ -240,7 +251,7 @@
     <string name="label_TapToSendCredentialUpdate">צאַפּן און האַלטן צו שיקן קראַדענשאַל דערהייַנטיקן.</string>
     <string name="label_TapToSlingKeys">צאַפּן צו וואַרפלקע קיז.</string>
     <string name="label_targetAccountLabel">קאָנטאַקטן אַקאַונט</string>
-    <string name="label_TouchToConfigureBackupSettings">איר קען אָפּטיאָנאַללי געבן סאַפעסלינגער יקלאָוד באַקקופּ אין יאָס סעטטינגס. צאַפּן די \' דאַן \' קנעפּל ווען פאַרטיק.</string>
+    <string name="label_TouchToConfigureBackupSettings">איר קען אָפּטיאָנאַללי געבן סאַפעסלינגער יקלאָוד באַקקופּ אין יאָס סעטטינגס. צאַפּן די דאַן קנעפּל ווען פאַרטיק.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">פאַרבינדן צו קאַנפיגיער באַקקופּ סעטטינגס.</string>
     <string name="label_TouchToConfigureCacheTimeout">פאַרבינדן צו קאַנפיגיער קאַש טיימאַוט סעטטינגס.</string>
     <string name="label_undefinedTypeLabel">ומבאַקאַנט</string>
@@ -257,9 +268,11 @@
     <string name="menu_auto_decrypt">אַוטאָ-דעקריפּט</string>
     <string name="menu_Change">טוישן</string>
     <string name="menu_ChangePassphrase">טוישן פּאַסספראַסע</string>
+    <string name="menu_ContactInviteEmail">Email פון קאָנטאַקטן</string>
+    <string name="menu_ContactInviteSms">טעקסט פון קאָנטאַקטן</string>
     <string name="menu_CreateNew">שאַפֿן ניו</string>
     <string name="menu_delete">ויסמעקן</string>
-    <string name="menu_deleteThread">דיליט פֿאָדעם \'%s\'</string>
+    <string name="menu_deleteThread">דיליט פֿאָדעם%s</string>
     <string name="menu_Details">מיינונג דעטאַל</string>
     <string name="menu_DownloadDirectory">אראפקאפיע דירעקטארי</string>
     <string name="menu_Edit">ויסרעדאַגירן</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">פארגעסן פּאַסספראַסע?</string>
     <string name="menu_Help">הילף</string>
     <string name="menu_Introduction">הקדמה</string>
-    <string name="menu_License">דערלויבעניש</string>
+    <string name="menu_language">שפּראַך</string>
+    <string name="menu_link_contact_add">לייג קאָנטאַקט לינק</string>
+    <string name="menu_link_contact_change">טוישן קאָנטאַקט לינק</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">פירן פּאַסספראַסעס</string>
     <string name="menu_message_font_size">אָנזאָג פאָנט גרייס</string>
@@ -287,9 +302,9 @@
     <string name="menu_TagExchange">וואַרפלקע קיז</string>
     <string name="menu_TagListMessages">אַרטיקלען</string>
     <string name="menu_UseAnother">נוצן אן אנדער</string>
-    <string name="menu_UseContactPerson">נוצן קאָנטאַקט \'%s\'</string>
+    <string name="menu_UseContactPerson">נוצן קאָנטאַקט%s</string>
     <string name="menu_UseNoContact">ניצן נאָמען בלויז</string>
-    <string name="menu_UseProfilePerson">נוצן פּראָופייל \'%s\'</string>
+    <string name="menu_UseProfilePerson">נוצן פּראָופייל%s</string>
     <string name="menu_vibrate">ציטערן</string>
 
     <string name="prog_decrypting">דעקריפּטינג…</string>

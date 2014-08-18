@@ -49,6 +49,7 @@
     <string name="btn_Import">આયાત</string>
     <string name="btn_Introduce">દાખલ</string>
     <string name="btn_No">કોઈ</string>
+    <string name="btn_NotNow">હમણાં નહીં</string>
     <string name="btn_NotRemind">ભૂલી જાઓ</string>
     <string name="btn_OK">બરાબર</string>
     <string name="btn_Refuse">ઇન્કાર</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 મિનિટ</string>
     <string name="choice_8hours">8 કલાક</string>
     <string name="choice_auto_storage">મૂળભૂત સંગ્રહ</string>
+    <string name="choice_default">મૂળભૂત</string>
     <string name="choice_external_storage">બાહ્ય સ્ટોરેજ</string>
     <string name="choice_font_large">મોટું</string>
     <string name="choice_font_medium">મધ્યમ</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">ઓડિયો પ્લેયર ડીકોડિંગ ભૂલ.</string>
     <string name="error_AudioPlayerError">રેકોર્ડિંગ રમવા શકાતું નથી.</string>
     <string name="error_AudioRecorderEncodeError">ઓડિયો રેકોર્ડર એન્કોડિંગ ભૂલ.</string>
+    <string name="error_AudioRecorderPermissionError">માઇક્રોફોન પરવાનગી સુરક્ષિત અવાજ સંદેશ રેકોર્ડ કરવા માટે જરૂરી છે. SafeSlinger માઇક્રોફોન પરવાનગી વિગતો માટે મદદ બટન ટેપ કરો.</string>
     <string name="error_BackupNotFound">પુન: સંગ્રહ પર બેકઅપ.</string>
     <string name="error_BackupNotSupportedDevice">ઉપકરણ બેકઅપ પુનઃસ્થાપિત આધાર આપતું નથી.</string>
     <string name="error_BadCopyProtectUpgrade">કારણે, Android 4.1 માં ભૂલ માટે, તમે ને અનઇન્સ્ટોલ કરો અને પુન: સ્થાપિત SafeSlinger પડશે.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger ભૂલ, પુન: શરૂ કરો.</string>
     <string name="error_VcardParseFailure">સંપર્ક માહિતી ખોટી રીતે ફોર્મેટ કરવામાં આવી હતી.</string>
 
+    <string name="help_find">તમારા ડેટાને સુરક્ષિત કરવા માટે અન્ય લોકો, અને પાસફ્રેઝ સાથે અદલા તમારું નામ સુયોજિત કરવા માટે આ સ્ક્રીનને વાપરો. જ્યારે સમાપ્ત થાય ત્યારે આ પૂર્ણ બટન ટેપ કરો.</string>
     <string name="help_home">ઓળખ માહિતી વિનિમય માટે, બધા વપરાશકર્તાઓ નજીકના અથવા ફોન પર હોય છે તેની ખાતરી કરો. આ શરૂ એક્સચેન્જ બટન માત્ર ચકાસાયેલ સંપર્ક માહિતી લે કરશે.</string>
     <string name="help_identity_menu">તમે પણ તમારા નામ સાથે બટન પર ટેપ દ્વારા આ સ્ક્રીન પર તમારી ઓળખ વિશે વ્યક્તિગત માહિતી બદલી શકો છો. આ, તમે તમારી સંપર્ક સંપાદિત કરો માટે પરવાનગી આપે છે મેનુ પ્રદર્શિત નવો સંપર્ક બનાવો, અથવા અન્ય સંપર્ક ઉપયોગ કરશે.</string>
     <string name="help_Messages">આ સ્ક્રીન બધા છેલ્લા સંદેશાઓ, અને હજુ પણ ડાઉનલોડ માટે ઉપલબ્ધ છે કે જોડાણો દર્શાવે છે.</string>
+    <string name="help_passphrase">તમારો પાસફ્રેઝ ના કેટલાક એપ્લિકેશન માં પ્રવેશ કરવા માટે આ સ્ક્રીનને વાપરો. જો તમે તમારો પાસફ્રેઝ ભૂલી ગયા છો, તમે ભૂલી ગયા છો પાસફ્રેઝ ટેપ કરીને એક નવી પાસફ્રેઝ દ્વારા સુરક્ષિત નવી કી બનાવી શકો છો? બટન. ઘણી કીઓ વચ્ચે સ્વિચ કરવા માટે વપરાશકર્તા નામ ટેપ કરો.</string>
+    <string name="help_passphrase_change">પુષ્ટિ અને નવા પાસફ્રેઝ માટે તમારા છેલ્લાં પાસફ્રેઝ દાખલ કરીને તમારો પાસફ્રેઝ બદલવા માટે આ સ્ક્રીન ઉપયોગ કરો.</string>
     <string name="help_PickRecip">SafeSlinger કીઓ સાથે સંપર્કો આપનો સંદેશ મોકલવા માટે એક પસંદ કરો, અહીં દર્શાવવામાં આવે છે.</string>
     <string name="help_save">જ્યારે સમાપ્ત થાય, પ્રોટોકોલ લે ઓળખ માહિતી યાદી જાહેર કરશે. તમે આયાત સાચવો અને દબાવો કરવા માંગો છો સંપર્કો પસંદ કરો.</string>
     <string name="help_SecureIntroduction">આ સ્ક્રીન એ તમને સુરક્ષિત એકબીજા સાથે તેમના કીઓ મોકલવા પહેલાં સાથે કીઓ slung છે બે લોકો પસંદ કરવા માટે પરવાનગી આપે છે. ફક્ત ત્યારે તૈયાર દાખલ દબાવો.</string>
     <string name="help_Send">આ સ્ક્રીન એ અમુક માહિતી અને મોકલવા ાિ તકતા પસંદ કરવા માટે પરવાનગી આપે છે. ફક્ત તૈયાર જ્યારે મોકલો દબાવો.</string>
+    <string name="help_settings">આ સ્ક્રીન તમને અરજી માટે મૂળભૂત સુયોજનો બદલવા માટે પરવાનગી આપે છે.</string>
 
+    <string name="iOS_contactError">સંપર્કો પરવાનગી સુરક્ષિત સંપર્ક કાર્ડ શેર કરવા માટે જરૂરી છે. SafeSlinger સંપર્કો પરવાનગી વિગતો માટે મદદ બટન ટેપ કરો.</string>
     <string name="iOS_errorpushtoken">દબાણ નોંધણી ખૂટે છે.</string>
+    <string name="iOS_notificationError1">ચેતવણીઓ અથવા બેનરો, અને બેજ નંબરો ક્યાં માટે સૂચન રચનાની સુરક્ષિત મેસેજિંગ માટે જરૂરી છે. SafeSlinger સૂચન પરવાનગી વિગતો માટે મદદ બટન ટેપ કરો.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5 ઉપકરણો માટે શ્રેષ્ટ નથી. SafeSlinger 6 iOS અથવા ઊંચી જરૂરી છે.</string>
+    <string name="iOS_RequestPermissionContacts">તમે તમારા મિત્રો મોકલવા માટે તમારી સંપર્ક કાર્ડ પસંદ કરી શકો છો અને SafeSlinger તમારા માટે એન્ક્રિપ્ટ કરશે. જ્યારે પૂછવામાં આ લક્ષણ સક્રિય કરવા માટે, તમારે તમારા સંપર્કોમાં SafeSlinger વપરાશ પરવાનગી આપવી જ જોઈએ.</string>
+    <string name="iOS_RequestPermissionMicrophone">તમે તમારા મિત્રો મોકલવા અને SafeSlinger તમારા માટે એન્ક્રિપ્ટ કરશે વૉઇસ સંદેશ રેકોર્ડ કરી શકે છે. જ્યારે પૂછવામાં આ લક્ષણ સક્રિય કરવા માટે, તમારે તમારા માઇક્રોફોન માટે SafeSlinger વપરાશ પરવાનગી આપવી જ જોઈએ.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger એનક્રિપ્ટ થયેલ મેસેજિંગ એપ્લિકેશન છે અને સૂચનો પ્રમાણે આવતા સંદેશાઓ માટે પરવાનગી આપે છે વિના કાર્ય કરી શકે છે. આવનારા સંદેશાઓ સક્રિય કરવા માટે, તમે જ્યારે પૂછવામાં SafeSlinger તમને સૂચનાઓ મોકલવા માટે પરવાનગી આપે છે જ જોઈએ.</string>
 
     <string name="label_ago">%s પહેલા</string>
     <string name="label_backupCompleteDate">પૂર્ણ છેલ્લું બેકઅપ</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">%s સમાપ્ત થાય છે</string>
     <string name="label_expiresIn">માં સમાપ્ત થાય છે</string>
     <string name="label_FileNameHint">ફાઇલ નામ</string>
-    <string name="label_FindInstruct">નામ દાખલ કરો જો તમે સુરક્ષિત રીતે વાતચીત જોવા માટે જ્યારે અન્ય ઇચ્છો છો:</string>
+    <string name="label_FindInstruct">તમારા ડેટાને સુરક્ષિત કરવા માટે તમારા નામ અને પાસફ્રેઝ દાખલ કરો:</string>
     <string name="label_FirstName">પ્રથમ નામ</string>
     <string name="label_Home">ઉમેરવા અથવા દૂર કરવા માટે સંપર્ક માહિતી, તમે શેર કરવા માંગો છો વસ્તુઓ તપાસ, અને અન્ય એક્સચેન્જ માટે તૈયાર છે ત્યારે એક્સચેન્જ શરૂ ટૅપ તમારું નામ ટેપ કરો:</string>
     <string name="label_hometag">ઘર</string>
     <string name="label_hours">%d કલાક</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud સક્રિય થયેલ છે. જ્યારે સમાપ્ત થાય ત્યારે આ પૂર્ણ બટન ટેપ કરો.</string>
     <string name="label_InstNoMessages">કોઇ સંદેશા. તમે ઘર મેનુ પર કંપોઝ સંદેશ બટન સંદેશ મોકલી શકે છે.</string>
-    <string name="label_InstNoMessagesAndroid">કોઇ સંદેશા. તમે કંપોઝ ટેબમાંથી સંદેશ મોકલી શકે છે.</string>
     <string name="label_InstNoRecipients">પ્રાપ્તિકર્તાઓ ઉમેરવા માટે, તમારે પ્રથમ તે જ સમયે એક અથવા વધુ અન્ય વપરાશકર્તાઓ સાથે Sling કી જ જોઈએ. પણ તમે મેનુમાંથી યોગ્ય Sling કી સંપર્ક આમંત્રણ મોકલી શકે છે.</string>
     <string name="label_InstNoSharedFile">કોઈ વહેંચાયેલ ફાઈલ. વહેંચાયેલ ફોલ્ડરમાં આઇટ્યુન્સ અને ખેંચો ફાઈલો સાથે તમારા ઉપકરણ જોડો.</string>
     <string name="label_InstRecipients">એક સંદેશ મોકલવા માટે એક પ્રાપ્તકર્તા ચૂંટો:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">લોગઇન ત્યારે આપમેળે સંદેશ જોડાણો ડાઉનલોડ</string>
     <string name="label_summary_auto_decrypt">લોગઇન ત્યારે આપમેળે સંદેશાઓ ડિક્રિપ્ટ</string>
     <string name="label_summary_remind_backup_delay">બેકઅપ ઑફલાઇન છે જ્યારે સૂચના પ્રાપ્ત કરો.</string>
-    <string name="label_summary_show_tutorial">Sling કી માટે attemping પહેલાં ટ્યુટોરીયલ બતાવો.</string>
+    <string name="label_summary_show_tutorial">Sling કી કરવા પહેલાં એક ટ્યુટોરીયલ બતાવો.</string>
     <string name="label_TapToDecryptFile">ફાઇલને ડિક્રિપ્ટ કરવામાં ટેપ કરો</string>
     <string name="label_TapToDecryptMessage">ડિક્રિપ્ટ ટેપ કરો</string>
     <string name="label_TapToDownloadFile">ફાઈલ ડાઉનલોડ કરવા માટે ટેપ કરો</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">સ્વતઃ ડિક્રિપ્ટ કરો</string>
     <string name="menu_Change">બદલો</string>
     <string name="menu_ChangePassphrase">બદલો પાસફ્રેઝ</string>
+    <string name="menu_ContactInviteEmail">સંપર્કોથી ઇમેઇલ</string>
+    <string name="menu_ContactInviteSms">સંપર્કોથી લખાણ</string>
     <string name="menu_CreateNew">ન્યૂ બનાવો</string>
     <string name="menu_delete">કાઢી નાખો</string>
     <string name="menu_deleteThread">થ્રેડ %s કાઢી નાખો</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">પાસફ્રેઝ ભૂલી ગયા છો?</string>
     <string name="menu_Help">મદદ</string>
     <string name="menu_Introduction">રજૂઆત</string>
-    <string name="menu_License">લાઈસન્સ</string>
+    <string name="menu_language">ભાષા</string>
+    <string name="menu_link_contact_add">સંપર્ક લિંક ઉમેરો</string>
+    <string name="menu_link_contact_change">સંપર્ક લિંક બદલો</string>
     <string name="menu_Logout">લૉગઆઉટ</string>
     <string name="menu_ManagePassphrases">પાસફ્રેઝો મેનેજ કરો</string>
     <string name="menu_message_font_size">સંદેશ ફોન્ટ કદ</string>

@@ -49,6 +49,7 @@
     <string name="btn_Import">Uvoz</string>
     <string name="btn_Introduce">Uvesti</string>
     <string name="btn_No">Ne</string>
+    <string name="btn_NotNow">Ne sada</string>
     <string name="btn_NotRemind">Zaboraviti</string>
     <string name="btn_OK">u redu</string>
     <string name="btn_Refuse">Odbiti</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minuta</string>
     <string name="choice_8hours">8 sati</string>
     <string name="choice_auto_storage">Uobičajeno Storage</string>
+    <string name="choice_default">Uobičajeno</string>
     <string name="choice_external_storage">Vanjski Storage</string>
     <string name="choice_font_large">Veliki</string>
     <string name="choice_font_medium">Srednji</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio igrač dekodiranje greške.</string>
     <string name="error_AudioPlayerError">Ne mogu igrati za snimanje.</string>
     <string name="error_AudioRecorderEncodeError">Audio snimač kodiranje pogreške.</string>
+    <string name="error_AudioRecorderPermissionError">Dopuštenje Mikrofon je potrebno za snimanje sigurnu glasovnu poruku. Dodirnite gumb Pomoć za SafeSlinger Mikrofon detalja dozvolu.</string>
     <string name="error_BackupNotFound">No kopiju za vraćanje.</string>
     <string name="error_BackupNotSupportedDevice">Uređaj ne podržava backup vraćanja.</string>
     <string name="error_BadCopyProtectUpgrade">Zbog bug u Android 4.1, te će morati deinstalirati i ponovo instalirati SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger greške, molim te ponovo pokrenuti.</string>
     <string name="error_VcardParseFailure">Podaci za kontakt je pogrešno formatiran.</string>
 
+    <string name="help_find">Koristite ovaj ekran postaviti svoje ime na razmjenu sa drugima, i lozinku za zaštitu vaših podataka. Dodirnite Gotovo tipku kada završite.</string>
     <string name="help_home">Za razmjenu podataka identiteta, osigurati svim korisnicima su u blizini ili na telefon. The Begin tipku Exchange će razmjenjivati ​​samo provjeriti kontakt podatke.</string>
     <string name="help_identity_menu">Također možete promijeniti osobne podatke o svom identitetu na ovom zaslonu dodirom na gumb sa svojim imenom. Tako će se prikazati izbornik omogućava vam da uredite svoj ​​kontakt, Create New kontakt, ili koristite drugi kontakt.</string>
     <string name="help_Messages">Ovaj ekran prikazuje sve prošlosti poruke, i priloge koji su još uvijek dostupna za download.</string>
+    <string name="help_passphrase">Koristite ovaj ekran za prijavu u aplikaciju sa svojim lozinku. Ako ste zaboravili svoju lozinku, možete generirati novi ključ zaštićen novu lozinku dodirivanjem Zaboravili Passphrase? tipku. Dodirnite korisničko ime za prebacivanje između više tipki.</string>
+    <string name="help_passphrase_change">Koristite ovaj ekran promijeniti lozinku unosom vaše zadnje lozinku za potvrdu i novi lozinku.</string>
     <string name="help_PickRecip">Kontakti sa SafeSlinger tipke su prikazani ovdje, odaberite jednu poslati poruku.</string>
     <string name="help_save">Kada završite, protokol će otkriti popis podataka o identitetu razmijenjeni. Odaberite kontakte koje želite da sačuvate i pritisnite Uvoz.</string>
     <string name="help_SecureIntroduction">Ovaj ekran vam omogućuje da odaberete dvoje ljudi koje ste prebacio ključeve sa ranije sigurno poslati svoje ključeve jedni druge. Jednostavno pritisnite Uvesti kad budete spremni.</string>
     <string name="help_Send">Ovaj ekran vam omogućuje da odaberete neke podatke i primaoca poslati. Jednostavno pritisnite Pošalji kada budete spremni.</string>
+    <string name="help_settings">Ovaj ekran vam omogućava da promijenite default postavke za aplikaciju.</string>
 
+    <string name="iOS_contactError">Kontakti se traži dozvola za sigurno dijeljenje kartica kontakata. Dodirnite gumb Pomoć za SafeSlinger Kontakti dozvolu.</string>
     <string name="iOS_errorpushtoken">Registracija Push nedostaje.</string>
+    <string name="iOS_notificationError1">Dozvolu za prijavu za bilo upozorenja ili transparente i brojevi značku, su potrebne za sigurnu poruka. Dodirnite gumb Pomoć za SafeSlinger detalja dozvolu za prijavu.</string>
     <string name="iOS_oldOSWarn">SafeSlinger nije optimiziran za iOS 5.x uređaja. SafeSlinger zahtijeva iOS 6 ili više.</string>
+    <string name="iOS_RequestPermissionContacts">Možete odabrati svoj ​​kontakt karticu poslati svojim prijateljima i SafeSlinger će šifriranje za vas. Da biste omogućili ovu funkciju, morate omogućiti SafeSlinger pristup Kontakti upitan.</string>
+    <string name="iOS_RequestPermissionMicrophone">Možete snimiti glasovne poruke poslati svojim prijateljima i SafeSlinger će šifriranje za vas. Da biste omogućili ovu funkciju, morate omogućiti SafeSlinger pristup mikrofon upitan.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger je aplikacija kodiranom poruka i ne može funkcionirati bez dopuštajući dolazne poruke iz Obavijesti. Da biste omogućili dolazne poruke, morate omogućiti SafeSlinger da vam pošalje Obavijesti upitan.</string>
 
     <string name="label_ago">%s prije</string>
     <string name="label_backupCompleteDate">Zadnja Backup Završene</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">ističe %s</string>
     <string name="label_expiresIn">ističe u</string>
     <string name="label_FileNameHint">Ime datoteke</string>
-    <string name="label_FindInstruct">Unesite ime želite da drugi vide u komunikaciji sigurno:</string>
+    <string name="label_FindInstruct">Unesite svoje ime i lozinku za zaštitu vaših podataka:</string>
     <string name="label_FirstName">Ime</string>
     <string name="label_Home">Dodirnite svoje ime da biste dodali ili uklonili kontakt podatke, provjerite stavke koje želite dijeliti, i dodirnite Početi Exchange kada drugi su spremni za razmjenu:</string>
     <string name="label_hometag">Kući</string>
     <string name="label_hours">%d sati</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud je omogućen. Dodirnite Gotovo tipku kada završite.</string>
     <string name="label_InstNoMessages">Nema poruka. Možete poslati poruku od gumb Sastavi poruke na početnom izborniku.</string>
-    <string name="label_InstNoMessagesAndroid">Nema poruka. Možete poslati poruku na kartici Sastavi.</string>
     <string name="label_InstNoRecipients">Da biste dodali primatelja, prvo morate Sling Keys sa jednim ili više drugih korisnika u isto vrijeme. Također možete poslati Sling Keys kontakt poziv od izbornika.</string>
     <string name="label_InstNoSharedFile">Ne dijeli datoteku. Povežite svoj ​​uređaj s iTunes i povucite datoteke u zajednički folder.</string>
     <string name="label_InstRecipients">Pick primaoca da pošalje poruku:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Automatski download priloge poruku kada prijavljeni in</string>
     <string name="label_summary_auto_decrypt">Automatski dešifriranje poruke kada prijavljeni in</string>
     <string name="label_summary_remind_backup_delay">Primite obavijest kada backup je odsutan.</string>
-    <string name="label_summary_show_tutorial">Pokaži tutorial prije attemping na Sling Keys.</string>
+    <string name="label_summary_show_tutorial">Pokaži tutorial prije pokušaja Sling Keys.</string>
     <string name="label_TapToDecryptFile">Dodirnite za dešifriranje datoteka</string>
     <string name="label_TapToDecryptMessage">Dodirnite za dešifriranje</string>
     <string name="label_TapToDownloadFile">Dodirnite za preuzimanje datoteka</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-dekriptiranje</string>
     <string name="menu_Change">Promjena</string>
     <string name="menu_ChangePassphrase">Promjene Passphrase</string>
+    <string name="menu_ContactInviteEmail">E-mail iz Kontakti</string>
+    <string name="menu_ContactInviteSms">Tekst iz Kontakti</string>
     <string name="menu_CreateNew">Create New</string>
     <string name="menu_delete">Izbrisati</string>
     <string name="menu_deleteThread">Brisanje tema %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Zaboravili Passphrase?</string>
     <string name="menu_Help">U pomoć</string>
     <string name="menu_Introduction">Uvod</string>
-    <string name="menu_License">Licenca</string>
+    <string name="menu_language">Jezik</string>
+    <string name="menu_link_contact_add">Dodaj Kontakt Link</string>
+    <string name="menu_link_contact_change">Promjena kontakt Link</string>
     <string name="menu_Logout">Odjava</string>
     <string name="menu_ManagePassphrases">Upravljanje Passphrases</string>
     <string name="menu_message_font_size">Poruka Font Size</string>

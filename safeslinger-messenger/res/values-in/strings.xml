@@ -49,6 +49,7 @@
     <string name="btn_Import">Impor</string>
     <string name="btn_Introduce">Memperkenalkan</string>
     <string name="btn_No">Tidak</string>
+    <string name="btn_NotNow">Tidak Sekarang</string>
     <string name="btn_NotRemind">Lupa</string>
     <string name="btn_OK">oke</string>
     <string name="btn_Refuse">Menolak</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 menit</string>
     <string name="choice_8hours">8 jam</string>
     <string name="choice_auto_storage">Memori default</string>
+    <string name="choice_default">Kegagalan</string>
     <string name="choice_external_storage">Penyimpanan Eksternal</string>
     <string name="choice_font_large">Besar</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio player kesalahan decoding.</string>
     <string name="error_AudioPlayerError">Tidak dapat memutar rekaman.</string>
     <string name="error_AudioRecorderEncodeError">Audio recorder error encoding.</string>
+    <string name="error_AudioRecorderPermissionError">Izin mikrofon diperlukan untuk merekam pesan suara aman. Tekan tombol Bantuan untuk SafeSlinger Microphone rincian izin.</string>
     <string name="error_BackupNotFound">Tidak ada cadangan untuk mengembalikan.</string>
     <string name="error_BackupNotSupportedDevice">Perangkat tidak mendukung backup restore.</string>
     <string name="error_BadCopyProtectUpgrade">Karena bug di Android 4.1, Anda harus uninstall dan menginstal ulang SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">Error SafeSlinger, silakan restart.</string>
     <string name="error_VcardParseFailure">Data kontak diformat salah.</string>
 
+    <string name="help_find">Gunakan layar ini untuk mengatur nama Anda untuk bertukar dengan orang lain, dan passphrase untuk melindungi data Anda. Tekan tombol Done ketika selesai.</string>
     <string name="help_home">Untuk bertukar data identitas, memastikan semua pengguna berada di dekatnya atau di telepon. Tombol Exchange Mulailah akan bertukar hanya data kontak diperiksa.</string>
     <string name="help_identity_menu">Anda juga dapat mengubah data pribadi tentang identitas Anda pada layar ini dengan menekan tombol dengan nama Anda. Ini akan menampilkan menu yang memungkinkan Anda untuk mengedit kontak Anda, Buat kontak baru, atau Gunakan kontak lain.</string>
     <string name="help_Messages">Layar ini menampilkan semua pesan masa lalu, dan lampiran yang masih tersedia untuk di-download.</string>
+    <string name="help_passphrase">Gunakan layar ini untuk login ke aplikasi dengan passphrase Anda. Jika Anda lupa frasa sandi Anda, Anda dapat membuat kunci baru yang dilindungi oleh passphrase baru dengan mengetuk Passphrase Lupa? tombol. Ketuk nama pengguna untuk beralih di antara beberapa tombol.</string>
+    <string name="help_passphrase_change">Gunakan layar ini untuk mengubah kata sandi Anda dengan memasukkan passphrase terakhir Anda untuk konfirmasi dan passphrase baru.</string>
     <string name="help_PickRecip">Kontak dengan kunci SafeSlinger ditampilkan di sini, pilih salah satu untuk mengirim pesan ke.</string>
     <string name="help_save">Setelah selesai, protokol akan mengungkapkan daftar data identitas dipertukarkan. Pilih kontak yang ingin Anda simpan dan tekan Import.</string>
     <string name="help_SecureIntroduction">Layar ini memungkinkan Anda untuk memilih dua orang yang telah tersandang kunci dengan sebelumnya untuk aman mengirim kunci mereka satu sama lain. Cukup tekan Mengenalkan ketika siap.</string>
     <string name="help_Send">Layar ini memungkinkan Anda untuk memilih beberapa data dan penerima untuk mengirim ke. Cukup tekan Kirim ketika siap.</string>
+    <string name="help_settings">Layar ini memungkinkan Anda untuk mengubah pengaturan default untuk aplikasi.</string>
 
+    <string name="iOS_contactError">Kontak izin yang diperlukan untuk aman berbagi kartu kontak. Tekan tombol Bantuan untuk SafeSlinger rincian izin Kontak.</string>
     <string name="iOS_errorpushtoken">Dorong pendaftaran hilang.</string>
+    <string name="iOS_notificationError1">Izin pemberitahuan baik untuk peringatan, atau spanduk, dan nomor lencana, diperlukan untuk pesan aman. Tekan tombol Bantuan untuk SafeSlinger rincian izin Pemberitahuan.</string>
     <string name="iOS_oldOSWarn">SafeSlinger tidak dioptimalkan untuk perangkat iOS 5.x. SafeSlinger membutuhkan iOS 6 atau lebih tinggi.</string>
+    <string name="iOS_RequestPermissionContacts">Anda dapat memilih kartu kontak Anda untuk mengirim teman-teman Anda dan SafeSlinger akan mengenkripsi untuk Anda. Untuk mengaktifkan fitur ini, Anda harus membiarkan SafeSlinger akses ke Kontak Anda ketika ditanya.</string>
+    <string name="iOS_RequestPermissionMicrophone">Anda dapat merekam pesan suara untuk mengirim teman-teman Anda dan SafeSlinger akan mengenkripsi untuk Anda. Untuk mengaktifkan fitur ini, Anda harus membiarkan SafeSlinger akses ke Microphone Anda ketika ditanya.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger adalah aplikasi pesan terenkripsi dan tidak bisa berfungsi tanpa membiarkan pesan masuk dari Notifications. Untuk mengaktifkan pesan masuk, Anda harus membiarkan SafeSlinger untuk mengirimkan Pemberitahuan ketika ditanya.</string>
 
     <string name="label_ago">%s lalu</string>
     <string name="label_backupCompleteDate">Backup terakhir Selesai</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">berakhir %s</string>
     <string name="label_expiresIn">berakhir pada</string>
     <string name="label_FileNameHint">Nama file</string>
-    <string name="label_FindInstruct">Masukkan nama yang ingin orang lain untuk melihat ketika berkomunikasi dengan aman:</string>
+    <string name="label_FindInstruct">Masukkan nama dan kata sandi untuk melindungi data Anda:</string>
     <string name="label_FirstName">Nama Depan</string>
     <string name="label_Home">Ketuk nama Anda untuk menambah atau menghapus data kontak, periksa item yang ingin berbagi, dan ketuk Mulai Exchange saat orang lain siap untuk pertukaran:</string>
     <string name="label_hometag">Rumah</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud diaktifkan. Tekan tombol Done ketika selesai.</string>
     <string name="label_InstNoMessages">Tidak ada pesan. Anda dapat mengirim pesan dari tombol Compose Message pada menu Home.</string>
-    <string name="label_InstNoMessagesAndroid">Tidak ada pesan. Anda dapat mengirim pesan dari tab Compose.</string>
     <string name="label_InstNoRecipients">Untuk menambah penerima, Anda harus terlebih dahulu Sling Keys dengan satu atau lebih pengguna lain pada waktu yang sama. Anda juga dapat mengirim kontak undangan Sling Keys dari menu.</string>
     <string name="label_InstNoSharedFile">File yang ada bersama. Hubungkan perangkat Anda dengan iTunes dan file drag untuk folder bersama.</string>
     <string name="label_InstRecipients">Pilih penerima untuk mengirim pesan ke:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Mengunduh lampiran pesan secara otomatis ketika login</string>
     <string name="label_summary_auto_decrypt">Secara otomatis mendekripsi pesan saat login</string>
     <string name="label_summary_remind_backup_delay">Menerima pemberitahuan bila backup offline.</string>
-    <string name="label_summary_show_tutorial">Tampilkan tutorial sebelum attemping ke Sling Keys.</string>
+    <string name="label_summary_show_tutorial">Tampilkan tutorial sebelum mencoba untuk Sling Keys.</string>
     <string name="label_TapToDecryptFile">Ketuk untuk mendekripsi berkas</string>
     <string name="label_TapToDecryptMessage">Ketuk untuk mendekripsi</string>
     <string name="label_TapToDownloadFile">Ketuk untuk men-download file</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-dekripsi</string>
     <string name="menu_Change">Perubahan</string>
     <string name="menu_ChangePassphrase">Ubah Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email dari Kontak</string>
+    <string name="menu_ContactInviteSms">Teks dari Kontak</string>
     <string name="menu_CreateNew">Buat New</string>
     <string name="menu_delete">Hapus</string>
     <string name="menu_deleteThread">Hapus Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Lupa Passphrase?</string>
     <string name="menu_Help">Membantu</string>
     <string name="menu_Introduction">Pengantar</string>
-    <string name="menu_License">Lisensi</string>
+    <string name="menu_language">Bahasa</string>
+    <string name="menu_link_contact_add">Tambah Kontak Tautan</string>
+    <string name="menu_link_contact_change">Mengubah Kontak Tautan</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Mengelola Passphrases</string>
     <string name="menu_message_font_size">Pesan Font Size</string>

@@ -28,12 +28,12 @@
     <string name="ask_QuitConfirmation">정말 종료하시겠습니까?</string>
 
     <string name="btn_Match">다음</string>
-    <string name="btn_NoMatch">일치하는 항목이 없습니다</string>
+    <string name="btn_NoMatch">일치하는 항목이 없습니다.</string>
 
     <string name="choice_NumUsers">%d명의 사용자</string>
 
     <string name="error_AllMembersMustUpgrade">회원 일부가 이전 버전을 사용하고 있습니다. 모든 회원은 적어도 %s을(를) 사용해야합니다.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">모든 구성원은 어떤 나이 푸시 등록 형식을 사용하고, 업그레이드해야합니다.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">회원 일부가 이전 형식의 푸시 등록을 사용하고 있습니다. 업그레이드가 필요합니다.</string>
     <string name="error_CorrectYourInternetConnection">인터넷에 접속할 수 없습니다. 설정을 확인해주세요.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">환율 의 제한 시간이 초과했습니다. 다시 교환을 시작합니다.</string>
     <string name="error_HttpCode">서버 HTTP 오류: %d</string>
@@ -46,15 +46,15 @@
     <string name="error_NoWordListSelected">계속하기 전에 문구 하나를 선택해야합니다.</string>
     <string name="error_OtherGroupCommitDiffer">누군가 는 문구 의 차이 를보고했다. 다시 교환을 시작합니다.</string>
     <string name="error_OutOfMemoryError">메모리는이 작업을 완료하는 데 너무 낮습니다.</string>
-    <string name="error_ServerAppMessage">서버 메시지: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">서버 메시지: \'%s\'</string>
+    <string name="error_ServerAppMessage">서버 메시지: %s</string>
+    <string name="error_ServerAppMessageCStr">서버 메시지: %s</string>
     <string name="error_ServerNotResponding">서버가 응답하지 않았습니다.</string>
     <string name="error_TimeoutWaitingForAllMembers">일부 그룹 회원의 데이터를 추가 할 시간이 초과하였습니다.</string>
     <string name="error_WebCancelledByUser">사용자가 서버 요청을 취소했습니다.</string>
 
-    <string name="help_size">데이터를 교환하고자 하는 그룹의 인원수를 입력한 후 \'확인\'버튼을 눌러주십시오.</string>
-    <string name="help_userid">화면 위의 숫자는 사용자 고유 그룹 생성에 사용됩니다. 서로의 화면을 비교하여 가장 낮은 숫자를 찾아 모든 사용자가 해당 숫자를 입력한 후 \'확인\' 버튼을 눌러주십시오.</string>
-    <string name="help_verify">자, 이제 모든 사용자의 3개의 단어가 일치해야합니다. 모든 사용자가 같은 문구를 선택한 후 \'다음\'을 눌러주십시오.</string>
+    <string name="help_size">데이터를 교환하고자 하는 그룹의 인원수를 입력한 후 확인버튼을 눌러주십시오.</string>
+    <string name="help_userid">화면 위의 숫자는 사용자 고유 그룹 생성에 사용됩니다. 서로의 화면을 비교하여 가장 낮은 숫자를 찾아 모든 사용자가 해당 숫자를 입력한 후 확인 버튼을 눌러주십시오.</string>
+    <string name="help_verify">자, 이제 모든 사용자의 3개의 단어가 일치해야합니다. 모든 사용자가 같은 문구를 선택한 후 다음을 눌러주십시오.</string>
 
     <string name="label_CompareScreensNDevices">%s 장치에 화면을 비교.</string>
     <string name="label_NumericModeHint">영어 이외의 언어</string>

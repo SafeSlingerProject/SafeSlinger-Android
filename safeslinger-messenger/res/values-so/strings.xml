@@ -49,6 +49,7 @@
     <string name="btn_Import">Soodejineed</string>
     <string name="btn_Introduce">Isbar</string>
     <string name="btn_No">No</string>
+    <string name="btn_NotNow">Aan Hadda</string>
     <string name="btn_NotRemind">Forget</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Diiddo</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 daqiiqo</string>
     <string name="choice_8hours">8 hours</string>
     <string name="choice_auto_storage">Kaydinta Default</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">Kaydinta External</string>
     <string name="choice_font_large">Large</string>
     <string name="choice_font_medium">Dhexdhexaad</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Kelmadaha qalad ciyaaryahanka Audio.</string>
     <string name="error_AudioPlayerError">Ma ciyaari karaa wax lagu qoro.</string>
     <string name="error_AudioRecorderEncodeError">Qaladka sida ey recorder Audio.</string>
+    <string name="error_AudioRecorderPermissionError">Ogolaansho Manbar waa loo baahan yahay si ay u qoraan fariin cod ammaan. Qasabada badhanka Help tafaasiil ah fasax SafeSlinger Manbar.</string>
     <string name="error_BackupNotFound">No raad raac ah si loo soo celiyo.</string>
     <string name="error_BackupNotSupportedDevice">Device taageeraan uusan raad raac celiyo.</string>
     <string name="error_BadCopyProtectUpgrade">Maaddaama ay kutaan ah ee Android 4.1, waxaad yeelan doontaa in ay uninstall iyo dib SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">Qalad SafeSlinger, fadlan la bilaabi.</string>
     <string name="error_VcardParseFailure">Xogta Contact ahaa Fedaral si qaldan.</string>
 
+    <string name="help_find">Isticmaal shaashada si loo dhigay magacaaga si ay isu dhaafsadaan kale la, iyo passphrase ah si loo ilaaliyo xogta aad. Qasabada badhanka qabtay markaad dhamaysid.</string>
     <string name="help_home">Si aad isu dhaafsadaan xogta aqoonsiga, si loo hubiyo dhamaan isticmaalayaasha u dhow ama telefoonka ku yihiin. The Ku bilow badhanka Exchange beddelan doonaa oo keliya xogta xiriir la hubiyaa.</string>
     <string name="help_identity_menu">Waxa kale oo aad beddeli kartaa macluumaadka shakhsiyeed oo ku saabsan aqoonsiga on screen this haray adigoo on badhanka leh magacaaga. Tani waxay muujiyaan doonaa menu a kuu oggolaadaan in aad Edit xidhiidhka aad, Create an xiriir New, ama isticmaal xiriir kale oo.</string>
     <string name="help_Messages">Shaashada Tan waxay ku tusaysaa oo dhan farriimaha la soo dhaafay, iyo lifaaqyada in weli waxaa laga heli karaa for download.</string>
+    <string name="help_passphrase">Isticmaal shaashada si login codsiga aad u passphrase. Haddii aad illowday passphrase, aad dhalin laga yaabaa in muhiimka ah oo cusub oo la ilaaliyo by passphrase cusub ku haray Passphrase ee Forgot? badhanka. Qasabada magaca user ay u kala bedesho furayaasha kala duwan.</string>
+    <string name="help_passphrase_change">Isticmaal screen this in aad bedesho passphrase by galaan passphrase ugu dambeeyey for xaqiijinta iyo passphrase cusub.</string>
     <string name="help_PickRecip">La xiriirida furayaasha SafeSlinger halkan bandhigay, dooro mid u soo dirto fariin ay u.</string>
     <string name="help_save">Marka ay dhammaadaan, maamuuska u muujin doonaa liiska data aqoonsiga ku badelay. Dooro xiriirrada aad rabtid in aad ku badbaadin iyo taabo gelinta.</string>
     <string name="help_SecureIntroduction">Shaashada kuu ogolaanayaa inaad xulo laba qof oo aad wadhfiyey ayuu furayaasha leh ka hor si ammaan ah u diri furayaasha ay si midba midka kale. Simply riix Isbar marka uu diyaar.</string>
     <string name="help_Send">Shaashada kuu ogolaanayaa inaad dooro qaar ka mid ah macluumaadka iyo qaataha ah in ay u dirto. Simply riix soo dir marka uu diyaar.</string>
+    <string name="help_settings">Shaashada kuu ogolaanayaa inaad beddesho Ambouli for codsiga ka.</string>
 
+    <string name="iOS_contactError">Contacts ogolaansho looga baahan yahay si ammaan ah la wadaago kaararka xiriir. Qasabada badhanka Help for SafeSlinger faahfaahin Contacts ogolaansho.</string>
     <string name="iOS_errorpushtoken">Diiwaangelinta riixdo maqan yahay.</string>
+    <string name="iOS_notificationError1">Ogolaansho Notification waayo Hel ama calammo, iyo lambarada calaamad, waxaa looga baahan yahay, waayo Fariin ammaan. Qasabada badhanka Help tafaasiil ah fasax Notification SafeSlinger.</string>
     <string name="iOS_oldOSWarn">SafeSlinger aan la optimized for qalabka 5.x arrimo. SafeSlinger u baahan tahay arrimo 6 ama wax ka sareeya.</string>
+    <string name="iOS_RequestPermissionContacts">Waxaad dooran kartaa kaarka xiriir si aad u soo diri saaxiibadaa iyo SafeSlinger waxa encrypt doonaa adiga. Si aad u awood habkaani, waa in aad u oggolaan SafeSlinger helitaanka aad Contacts marka la weydiiyo.</string>
+    <string name="iOS_RequestPermissionMicrophone">Waxaad ku qori karta fariin cod u soo dirto saaxiibada iyo SafeSlinger waxa encrypt doonaa inaad for a. Si aad u awood habkaani, waa in aad u oggolaan SafeSlinger helitaanka aad Manbar marka la weydiiyo.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger waa codsi Fariin laga fiirsado ka iyo hirgeli kartaa oo aan jidaynayey fariimaha ka imanaya dibadda ka yimid Notifications. Si aad u awood fariimaha ka imanaya dibadda, waa in aad u oggolaan SafeSlinger inay kuu soo diraan Notifications marka la weydiiyo.</string>
 
     <string name="label_ago">%s ago</string>
     <string name="label_backupCompleteDate">Kaabta Last Dhameystiray</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">dhicin %s</string>
     <string name="label_expiresIn">ku egyahay</string>
     <string name="label_FileNameHint">File Name</string>
-    <string name="label_FindInstruct">Geli magaca aad rabto inaad dadka kale si aad u aragto marka la xidhiidhka dadka si ammaan ah:</string>
+    <string name="label_FindInstruct">Enter your name iyo passphrase ah si loo ilaaliyo xogta aad:</string>
     <string name="label_FirstName">Magaca Hore</string>
     <string name="label_Home">Qasabada magacaaga ama ku darto ciribtiro xiriir, hubi alaabta aad rabto in aad la wadaagto, loo hormariyo Ku bilow Exchange dadka kale marka ay diyaar u yihiin is dhaafsiga:</string>
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d saacadood</string>
     <string name="label_iCloudEnable">SafeSlinger oodaa laguusoo. Qasabada badhanka qabtay markaad dhamaysid.</string>
     <string name="label_InstNoMessages">No fariimaha. Waxaa laga yaabaa inaad fariin ka badhanka koobanahay Message soo diri on menu Home.</string>
-    <string name="label_InstNoMessagesAndroid">No fariimaha. Waxaa laga yaabaa inaad fariin ka tab koobanahay u diri.</string>
     <string name="label_InstNoRecipients">Si aad ku dari qaata, waa in marka hore aad shakaalka Furayaasha leh hal ama in ka badan kuwa kale ee isticmaala waqti isku mid ah. Waxa kale oo aad soo diri kartaa xiriir martiqaad shakaalka Furayaasha ka soo menu.</string>
     <string name="label_InstNoSharedFile">File No la wadaago. Connect qalab aad ula Lugood iyo files jiidid si buugyaraha la wadaago.</string>
     <string name="label_InstRecipients">Soo qaado qaataha ah u soo dirto fariin to:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Si toos ah download attachments fariin marka meesha maadan</string>
     <string name="label_summary_auto_decrypt">Si toos ah decrypt fariimaha marka meesha maadan</string>
     <string name="label_summary_remind_backup_delay">Helitaanka wargelinta marka raad raac offline waa.</string>
-    <string name="label_summary_show_tutorial">Tus umeerin ay ka hor attemping si shakaalka Furayaasha.</string>
+    <string name="label_summary_show_tutorial">Tus umeerin ay ka hor isku dayaya in ay shakaalka Furayaasha.</string>
     <string name="label_TapToDecryptFile">Qasabada si decrypt file</string>
     <string name="label_TapToDecryptMessage">Qasabada si decrypt</string>
     <string name="label_TapToDownloadFile">Qasabada si file</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Change</string>
     <string name="menu_ChangePassphrase">Change Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email ka soo Contacts</string>
+    <string name="menu_ContactInviteSms">Texte ka soo Contacts</string>
     <string name="menu_CreateNew">Create an New</string>
     <string name="menu_delete">Delete</string>
     <string name="menu_deleteThread">Delete %s Thread</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Forgot Passphrase?</string>
     <string name="menu_Help">Ka caawi</string>
     <string name="menu_Introduction">Hordhac</string>
-    <string name="menu_License">License</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_link_contact_add">Add Contact Link</string>
+    <string name="menu_link_contact_change">Beddel Contact Link</string>
     <string name="menu_Logout">Logout</string>
     <string name="menu_ManagePassphrases">Maaray Passphrases</string>
     <string name="menu_message_font_size">Message Font Size</string>

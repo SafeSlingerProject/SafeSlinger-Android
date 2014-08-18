@@ -73,12 +73,9 @@ import android.provider.ContactsContract.CommonDataKinds.Photo;
 import android.provider.ContactsContract.CommonDataKinds.StructuredName;
 import android.provider.ContactsContract.Contacts;
 import android.provider.ContactsContract.Data;
-import android.provider.ContactsContract.RawContacts;
 import android.provider.Settings;
 import android.provider.Telephony;
 import android.support.v7.app.ActionBarActivity;
-import android.telephony.PhoneNumberUtils;
-import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
@@ -103,7 +100,6 @@ import edu.cmu.cylab.starslinger.model.ContactNameMethodComparator;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageRow;
 import edu.cmu.cylab.starslinger.model.PushTokenKeyDateComparator;
-import edu.cmu.cylab.starslinger.model.RawContactData;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.SlingerContact;
@@ -139,14 +135,15 @@ public class BaseActivity extends ActionBarActivity {
     protected static final int DIALOG_REFERENCE = 14;
     protected static final int DIALOG_BACKUPQUERY = 15;
     protected static final int DIALOG_CONTACTINVITE = 16;
-    private static final int RESULT_SELECT_CONTACT_LINK = 15;
     private static final int RESULT_SEND_INVITE = 17;
     private static final int RESULT_SELECT_SMS = 18;
     private static final int RESULT_SELECT_EMAIL = 19;
     protected static final int DIALOG_MANAGE_PASS = 20;
     protected static final int DIALOG_CONTACTTYPE = 21;
-    protected static String mInviteContactLookupKey;
-    protected static long mContactLinkRecipientRowId;
+    private static final int RESULT_SELECT_CONTACT_LINK = 22;
+    private static final int RESULT_EDIT_CONTACT_LINK = 23;
+    private static String mInviteContactLookupKey;
+    private static long mContactLinkRecipientRowId;
 
     protected static Bundle writeSingleExportExchangeArgs(ContactImpp out) {
 
@@ -189,35 +186,6 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     /**
-     * Retrieve a user's cell phone numbers.
-     */
-    protected ArrayList<String> getContactMobilePhones(String contactLookupKey) {
-        ArrayList<String> phones = new ArrayList<String>();
-        if (TextUtils.isEmpty(contactLookupKey)) {
-            return phones;
-        }
-
-        String where = Data.MIMETYPE + " = ? AND " + Phone.TYPE + " = ?";
-        String[] whereParameters = new String[] {
-                Phone.CONTENT_ITEM_TYPE, String.valueOf((Phone.TYPE_MOBILE))
-        };
-
-        Uri dataUri = getDataUri(contactLookupKey);
-        if (dataUri != null) {
-            Cursor c = getContentResolver().query(dataUri, null, where, whereParameters, null);
-            if (c != null) {
-                while (c.moveToNext()) {
-                    String phone = c.getString(c.getColumnIndexOrThrow(Phone.NUMBER));
-                    if (!phones.contains(phone))
-                        phones.add(phone);
-                }
-                c.close();
-            }
-        }
-        return phones;
-    }
-
-    /**
      * Retrieve a user's application key, based on the key name.
      */
     protected String getContactName(String contactLookupKey) {
@@ -248,78 +216,6 @@ public class BaseActivity extends ActionBarActivity {
             }
         }
         return TextUtils.isEmpty(name) ? null : name;
-    }
-
-    /**
-     * Retrieve a user's phone numbers.
-     * 
-     * @param defaultNumber
-     */
-    protected ArrayList<String> getContactPhones(String contactLookupKey, String defaultNumber) {
-        ArrayList<String> phones = new ArrayList<String>();
-        if (TextUtils.isEmpty(contactLookupKey)) {
-            return phones;
-        }
-
-        String where = Data.MIMETYPE + " = ?";
-        String[] whereParameters = new String[] {
-            Phone.CONTENT_ITEM_TYPE
-        };
-
-        if (defaultNumber != null)
-            phones.add(PhoneNumberUtils.stripSeparators(PhoneNumberUtils
-                    .formatNumber(defaultNumber)));
-
-        Uri dataUri = getDataUri(contactLookupKey);
-        if (dataUri != null) {
-            Cursor c = getContentResolver().query(dataUri, null, where, whereParameters, null);
-            if (c != null) {
-                while (c.moveToNext()) {
-                    String phone = c.getString(c.getColumnIndexOrThrow(Phone.NUMBER));
-                    boolean unique = true;
-                    for (String cmpPhone : phones) {
-                        if (PhoneNumberUtils.compare(cmpPhone, phone))
-                            unique = false;
-                    }
-                    if (unique)
-                        phones.add(PhoneNumberUtils.stripSeparators(PhoneNumberUtils
-                                .formatNumber(phone)));
-                }
-                c.close();
-            }
-        }
-        return phones;
-    }
-
-    protected ArrayList<String> getContactEmails(String contactLookupKey) {
-        ArrayList<String> emails = new ArrayList<String>();
-        if (TextUtils.isEmpty(contactLookupKey)) {
-            return emails;
-        }
-
-        String where = Data.MIMETYPE + " = ?";
-        String[] whereParameters = new String[] {
-            Email.CONTENT_ITEM_TYPE
-        };
-
-        Uri dataUri = getDataUri(contactLookupKey);
-        if (dataUri != null) {
-            Cursor c = getContentResolver().query(dataUri, null, where, whereParameters, null);
-            if (c != null) {
-                while (c.moveToNext()) {
-                    String email = c.getString(c.getColumnIndexOrThrow(Email.DATA));
-                    boolean unique = true;
-                    for (String cmpEmail : emails) {
-                        if (PhoneNumberUtils.compare(cmpEmail, email))
-                            unique = false;
-                    }
-                    if (unique)
-                        emails.add(email);
-                }
-                c.close();
-            }
-        }
-        return emails;
     }
 
     /**
@@ -398,7 +294,7 @@ public class BaseActivity extends ActionBarActivity {
         return u.size();
     }
 
-    protected long getRecipientRowIdMatchingInvite(String contactLookupKey) {
+    private long getRecipientRowIdMatchingInvite(String contactLookupKey) {
         long rowId = -1;
         if (TextUtils.isEmpty(contactLookupKey)) {
             return rowId;
@@ -414,14 +310,15 @@ public class BaseActivity extends ActionBarActivity {
             String mySecretKeyId = SafeSlingerPrefs.getKeyIdString();
             String myPushToken = SafeSlingerPrefs.getPushRegistrationId();
 
-            Cursor c = dbRecipient.fetchAllRecipientsMessage(true, mySecretKeyId, myPushToken,
-                    myName);
+            Cursor c = dbRecipient.fetchAllRecipientsMessage(mySecretKeyId, myPushToken, myName);
             if (c != null) {
                 while (c.moveToNext()) {
                     RecipientRow recip = new RecipientRow(c);
-                    String otherContactId = getContactIdByLookup(recip.getContactlu());
-                    if (contactId.equals(otherContactId)) {
-                        rowId = recip.getRowId();
+                    if (recip.isValidContactLink()) {
+                        String otherContactId = getContactIdByLookup(recip.getContactlu());
+                        if (contactId.equals(otherContactId)) {
+                            rowId = recip.getRowId();
+                        }
                     }
                 }
                 c.close();
@@ -431,7 +328,48 @@ public class BaseActivity extends ActionBarActivity {
         return rowId;
     }
 
-    protected String getContactIdByLookup(String contactLookupKey) {
+    private int deleteMatchingInvites(String contactLookupKey) {
+        int deleted = 0;
+        if (TextUtils.isEmpty(contactLookupKey)) {
+            return 0;
+        }
+
+        // find current aggregate contact id (must check in real time)
+        String contactId = getContactIdByLookup(contactLookupKey);
+
+        // find matching aggregate contact id (must check in real time)
+        if (!TextUtils.isEmpty(contactId)) {
+            RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
+            String myName = SafeSlingerPrefs.getContactName();
+            String mySecretKeyId = SafeSlingerPrefs.getKeyIdString();
+            String myPushToken = SafeSlingerPrefs.getPushRegistrationId();
+            ArrayList<Long> delRowIds = new ArrayList<Long>();
+
+            Cursor c = dbRecipient.fetchAllRecipientsInvited(true, mySecretKeyId, myPushToken,
+                    myName);
+            if (c != null) {
+                while (c.moveToNext()) {
+                    RecipientRow recip = new RecipientRow(c);
+                    if (recip.isValidContactLink()) {
+                        String otherContactId = getContactIdByLookup(recip.getContactlu());
+                        if (contactId.equals(otherContactId)) {
+                            delRowIds.add(recip.getRowId());
+                        }
+                    }
+                }
+                c.close();
+            }
+            for (Long rowId : delRowIds) {
+                if (dbRecipient.deleteRecipient(rowId)) {
+                    deleted++;
+                }
+            }
+        }
+
+        return deleted;
+    }
+
+    private String getContactIdByLookup(String contactLookupKey) {
         String contactId = null;
         if (TextUtils.isEmpty(contactLookupKey)) {
             return contactId;
@@ -455,7 +393,7 @@ public class BaseActivity extends ActionBarActivity {
         return contactId;
     }
 
-    protected SlingerContact getContactByLookup(String contactLookupKey) {
+    private SlingerContact getContactByLookup(String contactLookupKey) {
         SlingerContact sc = null;
         if (TextUtils.isEmpty(contactLookupKey)) {
             return sc;
@@ -472,51 +410,13 @@ public class BaseActivity extends ActionBarActivity {
                 while (c.moveToNext()) {
                     byte[] photo = getContactPhoto(contactLookupKey);
                     String name = getContactName(contactLookupKey);
-                    String contactId = c.getString(c.getColumnIndexOrThrow(BaseColumns._ID));
-                    String rawContactId = null;
-                    if (contactId != null) {
-                        ArrayList<RawContactData> v = getRawContactIds(contactId);
-                        if (v != null && v.size() > 0)
-                            rawContactId = v.get(0).getRawContactId();
-                    }
                     SlingerIdentity si = new SlingerIdentity();
-                    sc = SlingerContact.createContact(contactId, contactLookupKey, rawContactId,
-                            name, photo, si);
+                    sc = SlingerContact.createContact(contactLookupKey, name, photo, si);
                 }
                 c.close();
             }
         }
         return sc;
-    }
-
-    protected String getContactIdByName(String name) {
-        String contactId = null;
-        if (TextUtils.isEmpty(name)) {
-            return contactId;
-        }
-
-        // find aggregated contact
-        String[] whereParameters = new String[] {
-                StructuredName.DISPLAY_NAME, StructuredName.CONTACT_ID
-        };
-        String where = StructuredName.DISPLAY_NAME + " = "
-                + DatabaseUtils.sqlEscapeString("" + name);
-        Cursor c = getContentResolver().query(Data.CONTENT_URI, whereParameters, where, null, null);
-        if (c != null) {
-            while (c.moveToNext()) {
-                String tempId = c.getString(c.getColumnIndexOrThrow(StructuredName.CONTACT_ID));
-                String tempName = c.getString(c.getColumnIndexOrThrow(StructuredName.DISPLAY_NAME));
-                // String tempName = getContactName(tempId);
-                if (!TextUtils.isEmpty(tempName) && name.compareToIgnoreCase(tempName) == 0) {
-                    contactId = tempId;
-                    c.close();
-                    return contactId;
-                }
-            }
-            c.close();
-        }
-
-        return contactId;
     }
 
     protected String getContactLookupKeyByContactId(String contactId) {
@@ -541,7 +441,32 @@ public class BaseActivity extends ActionBarActivity {
         return null;
     }
 
+    protected String getContactLookupKeyByRawContactId(String rawContactId) {
+        if (TextUtils.isEmpty(rawContactId)) {
+            return null;
+        }
+
+        String where = Data.RAW_CONTACT_ID + " = ?";
+        String[] whereParameters = new String[] {
+            rawContactId
+        };
+
+        Cursor c = getContentResolver().query(Data.CONTENT_URI, null, where, whereParameters, null);
+        if (c != null) {
+            while (c.moveToNext()) {
+                String lookup = c.getString(c.getColumnIndexOrThrow(Data.LOOKUP_KEY));
+                c.close();
+                return lookup;
+            }
+            c.close();
+        }
+        return null;
+    }
+
     protected String getContactLookupKeyByName(String name) {
+
+        // TODO: is there is a better way to match names than literal match?
+
         String contactLookupKey = null;
         if (TextUtils.isEmpty(name)) {
             return contactLookupKey;
@@ -625,123 +550,6 @@ public class BaseActivity extends ActionBarActivity {
         return profile;
     }
 
-    protected String getContactLookupKeyByPhone(String phone) {
-        String contactLookupKey = null;
-        if (TextUtils.isEmpty(phone)) {
-            return contactLookupKey;
-        }
-
-        // find aggregated contact
-        String[] whereParameters = new String[] {
-                Phone.NUMBER, Phone.LOOKUP_KEY
-        };
-        String where = Phone.NUMBER + " LIKE \'%" + phone + "%\'";
-        Cursor c = getContentResolver().query(Data.CONTENT_URI, whereParameters, where, null, null);
-        if (c != null) {
-            while (c.moveToNext()) {
-                String tempLookup = c.getString(c.getColumnIndexOrThrow(Phone.LOOKUP_KEY));
-                String tempPhone = c.getString(c.getColumnIndexOrThrow(Phone.NUMBER));
-                if (!TextUtils.isEmpty(tempPhone) && PhoneNumberUtils.compare(phone, tempPhone)) {
-                    contactLookupKey = tempLookup;
-                    c.close();
-                    return contactLookupKey;
-                }
-            }
-            c.close();
-        }
-
-        return contactLookupKey;
-    }
-
-    protected String getContactLookupKeyByEmail(String email) {
-        String contactLookupKey = null;
-        if (TextUtils.isEmpty(email)) {
-            return contactLookupKey;
-        }
-
-        // find aggregated contact
-        String[] whereParameters = new String[] {
-                Email.DATA, Email.LOOKUP_KEY
-        };
-        String where = Email.DATA + " LIKE \'%" + email + "%\'";
-        Cursor c = getContentResolver().query(Data.CONTENT_URI, whereParameters, where, null, null);
-        if (c != null) {
-            while (c.moveToNext()) {
-                String tempLookup = c.getString(c.getColumnIndexOrThrow(Email.LOOKUP_KEY));
-                String tempEmail = c.getString(c.getColumnIndexOrThrow(Email.DATA));
-                if (!TextUtils.isEmpty(tempEmail) && email.compareToIgnoreCase(tempEmail) == 0) {
-                    contactLookupKey = tempLookup;
-                    c.close();
-                    return contactLookupKey;
-                }
-            }
-            c.close();
-        }
-
-        return contactLookupKey;
-    }
-
-    protected String getContactLookupKeyByPushToken(SlingerIdentity si) {
-        String contactLookupKey = null;
-        if (TextUtils.isEmpty(si.getToken())) {
-            return contactLookupKey;
-        }
-
-        String fmtToken = SlingerIdentity.sidPush2DBPush(si);
-
-        // find aggregated contact
-        String[] whereParameters = new String[] {
-                Im.DATA, Im.LOOKUP_KEY
-        };
-        String where = Im.DATA + " LIKE \'%" + fmtToken + "%\'";
-        Cursor c = getContentResolver().query(Data.CONTENT_URI, whereParameters, where, null, null);
-        if (c != null) {
-            while (c.moveToNext()) {
-                String tempLookup = c.getString(c.getColumnIndexOrThrow(Im.LOOKUP_KEY));
-                String tempPushToken = c.getString(c.getColumnIndexOrThrow(Im.DATA));
-                if (!TextUtils.isEmpty(tempPushToken)
-                        && fmtToken.compareToIgnoreCase(tempPushToken) == 0) {
-                    contactLookupKey = tempLookup;
-                    c.close();
-                    return contactLookupKey;
-                }
-            }
-            c.close();
-        }
-
-        return contactLookupKey;
-    }
-
-    protected ArrayList<RawContactData> getRawContactIds(String contactId) {
-        ArrayList<RawContactData> accts = new ArrayList<RawContactData>();
-        if (TextUtils.isEmpty(contactId)) {
-            return accts;
-        }
-
-        // find associated raw contact
-        String rawContactId;
-        String accountName;
-        String accountType;
-        String[] whereParameters = new String[] {
-                RawContacts.CONTACT_ID, BaseColumns._ID, RawContacts.ACCOUNT_TYPE,
-                RawContacts.ACCOUNT_NAME
-        };
-        String where = RawContacts.CONTACT_ID + " = "
-                + DatabaseUtils.sqlEscapeString("" + contactId);
-        Cursor c = getContentResolver().query(RawContacts.CONTENT_URI, whereParameters, where,
-                null, null);
-        if (c != null) {
-            while (c.moveToNext()) {
-                rawContactId = c.getString(c.getColumnIndexOrThrow(BaseColumns._ID));
-                accountName = c.getString(c.getColumnIndexOrThrow(RawContacts.ACCOUNT_NAME));
-                accountType = c.getString(c.getColumnIndexOrThrow(RawContacts.ACCOUNT_TYPE));
-                accts.add(new RawContactData(accountName, accountType, rawContactId));
-            }
-            c.close();
-        }
-        return accts;
-    }
-
     protected void showNote(int resId) {
         showNote(getString(resId));
     }
@@ -805,7 +613,7 @@ public class BaseActivity extends ActionBarActivity {
         return ad;
     }
 
-    protected boolean doCleanupOldKeyData(String[] keyNames) {
+    private boolean doCleanupOldKeyData(String[] keyNames) {
         if (keyNames == null || keyNames.length == 0)
             return false;
 
@@ -1079,12 +887,11 @@ public class BaseActivity extends ActionBarActivity {
                 SafeSlingerPrefs.setContactDBLastScan(System.currentTimeMillis());
                 Message msg = new Message();
 
-                // TODO look for updates in address book...
-                // try {
-                // doUpdateRecipientsFromContacts();
-                // } catch (SQLException e) {
-                // // ignore since we only attempt to update old data
-                // }
+                try {
+                    doUpdateRecipientsFromContacts();
+                } catch (SQLException e) {
+                    // ignore since we only attempt to update old data
+                }
 
                 // make sure recipient list shows correct keys...
                 if (!doUpdateActiveKeyStatus()) {
@@ -1106,7 +913,7 @@ public class BaseActivity extends ActionBarActivity {
         t.start();
     }
 
-    protected boolean doUpdateActiveKeyStatus() throws SQLException {
+    private boolean doUpdateActiveKeyStatus() throws SQLException {
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
         ArrayList<RecipientRow> contacts = new ArrayList<RecipientRow>();
 
@@ -1177,7 +984,7 @@ public class BaseActivity extends ActionBarActivity {
         return true;
     }
 
-    protected void doUpdateRecipientsFromContacts() throws SQLException {
+    private void doUpdateRecipientsFromContacts() throws SQLException {
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
         ArrayList<RecipientRow> contacts = new ArrayList<RecipientRow>();
 
@@ -1191,16 +998,33 @@ public class BaseActivity extends ActionBarActivity {
             c.close();
         }
 
-        // do some lookup for new photos
+        // do some lookup for new photos/names
         for (int i = 0; i < contacts.size(); i++) {
             RecipientRow r = contacts.get(i);
-            String newname = getContactName(r.getContactlu());
-            if (!TextUtils.isEmpty(newname) && !newname.equals(r.getName())) {
-                dbRecipient.updateRecipientName(r.getRowId(), newname);
+
+            // if not valid contact link, attempt to migrate it...
+            if (!r.isValidContactLink() && !TextUtils.isEmpty(r.getContactlu())) {
+                String abname = getContactName(r.getContactlu());
+                String rname = r.getName();
+                // byte[] abphoto = getContactPhoto(r.getContactlu());
+                // byte[] rphoto = r.getPhoto();
+                if (rname.equalsIgnoreCase(abname)) {
+                    dbRecipient.updateRecipientFromChosenLink(r.getRowId(), r.getContactlu());
+                }
             }
-            byte[] newphoto = getContactPhoto(r.getContactlu());
-            if (!Arrays.equals(newphoto, r.getPhoto())) {
-                dbRecipient.updateRecipientPhoto(r.getRowId(), newphoto);
+
+            // this should only update if the lookup key is the only lookup
+            // method since some past lookup keys referenced a raw id rather
+            // than the aggregate id
+            if (r.isValidContactLink()) {
+                String newname = getContactName(r.getContactlu());
+                if (!TextUtils.isEmpty(newname) && !newname.equals(r.getName())) {
+                    dbRecipient.updateRecipientName(r.getRowId(), newname);
+                }
+                byte[] newphoto = getContactPhoto(r.getContactlu());
+                if (!Arrays.equals(newphoto, r.getPhoto())) {
+                    dbRecipient.updateRecipientPhoto(r.getRowId(), newphoto);
+                }
             }
         }
 
@@ -1251,23 +1075,12 @@ public class BaseActivity extends ActionBarActivity {
                 }
                 byte[] photo = args.getByteArray(extra.PHOTO + i);
                 String contactLookupKey = args.getString(extra.CONTACT_LOOKUP_KEY + i);
-                if (TextUtils.isEmpty(contactLookupKey)) {
-                    contactLookupKey = getContactLookupKeyByName(name);
-                }
-                String contactId = getContactIdByName(name);
-                String rawContactId = null;
-                if (contactId != null) {
-                    ArrayList<RawContactData> v = getRawContactIds(contactId);
-                    if (v != null && v.size() > 0)
-                        rawContactId = v.get(0).getRawContactId();
-                }
 
                 // don't add unless there are all items we need...
                 if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(key) && !TextUtils.isEmpty(push)) {
                     SlingerIdentity si = null;
                     si = SlingerIdentity.dbAll2sidAll(push, key);
-                    cExch.add(SlingerContact.createContact(contactId, contactLookupKey,
-                            rawContactId, name, photo, si));
+                    cExch.add(SlingerContact.createContact(contactLookupKey, name, photo, si));
                 }
             }
             i++;
@@ -1294,14 +1107,14 @@ public class BaseActivity extends ActionBarActivity {
             long ret = -1;
             if (recipSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
                 ret = dbRecipient.createExchangedRecipient(currentKeyId, exchdate.getTime(),
-                        ce.contactId, ce.lookup, ce.rawid, ce.name, ce.photoBytes, exchKeyId,
-                        exchKeyDate, userid, ce.pushTok, ce.notify, ce.pubKey.getBytes(),
-                        currentToken, currentNotify, matchingInviteRowId);
+                        ce.lookup, ce.name, ce.photoBytes, exchKeyId, exchKeyDate, userid,
+                        ce.pushTok, ce.notify, ce.pubKey.getBytes(), currentToken, currentNotify,
+                        matchingInviteRowId);
             } else if (recipSource == RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION) {
                 ret = dbRecipient.createIntroduceRecipient(currentKeyId, exchdate.getTime(),
-                        ce.contactId, ce.lookup, ce.rawid, ce.name, ce.photoBytes, exchKeyId,
-                        exchKeyDate, userid, ce.pushTok, ce.notify, ce.pubKey.getBytes(),
-                        introkeyid, currentToken, currentNotify, matchingInviteRowId);
+                        ce.lookup, ce.name, ce.photoBytes, exchKeyId, exchKeyDate, userid,
+                        ce.pushTok, ce.notify, ce.pubKey.getBytes(), introkeyid, currentToken,
+                        currentNotify, matchingInviteRowId);
             }
 
             if (ret < 0) {
@@ -1314,17 +1127,6 @@ public class BaseActivity extends ActionBarActivity {
         }
 
         return importedKeys.size();
-    }
-
-    protected String getMyPhoneNumber() {
-        TelephonyManager mTelephonyMgr;
-        mTelephonyMgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        return mTelephonyMgr.getLine1Number();
-    }
-
-    protected String getMy10DigitPhoneNumber() {
-        String s = getMyPhoneNumber();
-        return s.substring(2);
     }
 
     public static String formatRecpientDetails(Activity act, RecipientRow r) {
@@ -1392,10 +1194,10 @@ public class BaseActivity extends ActionBarActivity {
                     act.getText(R.string.title_MyIdentity) + " "
                             + act.getText(R.string.label_PushTokenID), r.getMyPushtoken()));
             s.append(str("Contactid", r.getContactid()));
+            s.append(str("RawContactid", r.getRawContactid()));
             s.append(str("Contactlu", r.getContactlu()));
             s.append(dat("Histdate", r.getHistdate()));
             s.append(dat("NotRegDate", r.getNotRegDate()));
-            s.append(str("Rawid", r.getRawid()));
             s.append(str("RowId", r.getRowId()));
             s.append(str("Keyuserid", r.getKeyuserid()));
             s.append(str(act, "Photo", r.getPhoto()));
@@ -1765,10 +1567,24 @@ public class BaseActivity extends ActionBarActivity {
         }
     }
 
-    public void showPickContact(RecipientRow recip) {
-        mContactLinkRecipientRowId = recip.getRowId();
+    protected void showUpdateContactLink(long recipientRowId) {
+        mContactLinkRecipientRowId = recipientRowId;
         Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
         startActivityForResult(intent, RESULT_SELECT_CONTACT_LINK);
+    }
+
+    protected void showEditContact(String contactLookupKey) {
+        Uri personUri = getPersonUri(contactLookupKey);
+        if (personUri != null) {
+            Intent intent = new Intent(Intent.ACTION_EDIT, personUri);
+            try {
+                startActivityForResult(intent, RESULT_EDIT_CONTACT_LINK);
+            } catch (ActivityNotFoundException e) {
+                showNote(getUnsupportedFeatureString("Contacts"));
+            }
+        } else {
+            showNote(R.string.error_ContactUpdateFailed);
+        }
     }
 
     public static Intent getPickPhoneIntent() {
@@ -1844,7 +1660,7 @@ public class BaseActivity extends ActionBarActivity {
         }
     }
 
-    protected void showCustomContactPicker(int resultCode) {
+    private void showCustomContactPicker(int resultCode) {
         Bundle args = new Bundle();
         args.putInt(extra.RESULT_CODE, resultCode);
         if (!isFinishing()) {
@@ -1943,7 +1759,7 @@ public class BaseActivity extends ActionBarActivity {
         return ad;
     }
 
-    protected void showSendApplication() {
+    private void showSendApplication() {
         // ask them to pick the sending method...
         // query possible message methods first
         CharSequence title = getString(R.string.action_NewUserRequest);
@@ -1986,7 +1802,7 @@ public class BaseActivity extends ActionBarActivity {
         }
     }
 
-    protected void showBackupSettings() {
+    private void showBackupSettings() {
         try {
             startActivity(new Intent(Settings.ACTION_PRIVACY_SETTINGS));
         } catch (ActivityNotFoundException e) {
@@ -2163,12 +1979,6 @@ public class BaseActivity extends ActionBarActivity {
         return contact;
     }
 
-    protected void showWebPage(String url) {
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
-    }
-
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -2176,8 +1986,6 @@ public class BaseActivity extends ActionBarActivity {
         switch (requestCode) {
             case RESULT_SELECT_CONTACT_LINK:
                 String contactLookupKey = null;
-                String rawcontactid = null;
-                String contactid = null;
                 if (data != null) {
                     Uri uri = data.getData();
                     if (uri != null) {
@@ -2198,14 +2006,42 @@ public class BaseActivity extends ActionBarActivity {
                 if (!TextUtils.isEmpty(contactLookupKey)) {
                     RecipientDbAdapter dbRecipient = RecipientDbAdapter
                             .openInstance(getApplicationContext());
+
+                    // first, update selected recipient with lookup key
                     if (!dbRecipient.updateRecipientFromChosenLink(mContactLinkRecipientRowId,
-                            contactid, contactLookupKey, rawcontactid)) {
+                            contactLookupKey)) {
                         showNote(R.string.error_UnableToUpdateRecipientInDB);
-                    } else {
-                        runThreadBackgroundSyncUpdates();
+                        break;
                     }
+
+                    // next, lookup and remove any recipient invites that match
+                    int deleted = deleteMatchingInvites(contactLookupKey);
+                    MyLog.d(TAG, deleted + " invites deleted.");
+                    if (deleted > 0) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                            recreate();
+                        } else {
+                            // TODO: find better update for <= 2.3
+                            // startActivity(getIntent());
+                            // finish();
+                        }
+                    }
+                    // last, update names and photos from address book
+                    runThreadBackgroundSyncUpdates();
+
                     mContactLinkRecipientRowId = -1; // reset
                 }
+                break;
+            case RESULT_EDIT_CONTACT_LINK:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                    recreate();
+                } else {
+                    // TODO: find better update for <= 2.3
+                    // startActivity(getIntent());
+                    // finish();
+                }
+                // last, update names and photos from address book
+                runThreadBackgroundSyncUpdates();
                 break;
             case RESULT_SELECT_SMS:
                 if (data != null) {
@@ -2260,12 +2096,14 @@ public class BaseActivity extends ActionBarActivity {
                     if (sc != null) {
                         long matchingInviteRowId = getRecipientRowIdMatchingInvite(sc.lookup);
                         long ret = dbRecipient.createInvitedRecipient(System.currentTimeMillis(),
-                                sc.contactId, sc.lookup, sc.rawid, sc.name, sc.photoBytes,
-                                matchingInviteRowId);
+                                sc.lookup, sc.name, sc.photoBytes, matchingInviteRowId);
                         if (ret > -1) {
-                            // TODO: update view for android 2.x
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
                                 recreate();
+                            } else {
+                                // TODO: find better update for <= 2.3
+                                // startActivity(getIntent());
+                                // finish();
                             }
                             showNote(R.string.state_InvitationAdded);
                         } else {

@@ -49,6 +49,7 @@
     <string name="btn_Import">Importi</string>
     <string name="btn_Introduce">Enkonduki</string>
     <string name="btn_No">Neniu</string>
+    <string name="btn_NotNow">Ne Nun</string>
     <string name="btn_NotRemind">Forgesu</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Rifuzi</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minutoj</string>
     <string name="choice_8hours">8 horoj</string>
     <string name="choice_auto_storage">Defaŭlta Storage</string>
+    <string name="choice_default">Defaŭlta</string>
     <string name="choice_external_storage">Eksteraj Storage</string>
     <string name="choice_font_large">Grandaj</string>
     <string name="choice_font_medium">Meza</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Aŭdio ludanto malkodigo eraro.</string>
     <string name="error_AudioPlayerError">Ne eblas ludi la registrado.</string>
     <string name="error_AudioRecorderEncodeError">Aŭdio kronikisto kodado eraro.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofono permeso estas bezonata por gravuri sekura voĉo mesaĝo. Frapeti la Help butono por SafeSlinger Mikrofono permeson detaloj.</string>
     <string name="error_BackupNotFound">Neniu sekurkopioj redoni.</string>
     <string name="error_BackupNotSupportedDevice">Aparato ne apogas sekurkopioj redonos.</string>
     <string name="error_BadCopyProtectUpgrade">Pro cimo en Android 4.1, vi havos malinstali kaj reinstali SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger eraro, bonvolu rekomenci.</string>
     <string name="error_VcardParseFailure">Kontakto datumoj estis formatita malĝuste.</string>
 
+    <string name="help_find">Uzu tiun ekranon por agordi vian nomon por interŝanĝi kun aliaj, kaj pasfrazon por protekti vian datumon. Frapeti la Farita butonon kiam finis.</string>
     <string name="help_home">Interŝanĝi identecon datumoj, certigi al ĉiuj uzantoj estas proksimaj aŭ telefone. La Begin Interŝanĝo butono interŝanĝi nur la kontrolita kontakto datumojn.</string>
     <string name="help_identity_menu">Vi povas ankaŭ ŝanĝi personajn datumojn pri via identeco sur ĉi ekrano per frapeton sur la butono kun via nomo. Tio montros menuo kiu permesas vin Redaktu via kontakto, Create New kontakto, aŭ uzu alian kontakton.</string>
     <string name="help_Messages">Ĉi ekrano montras ĉiujn pasinteco mesaĝoj, kaj ligiteco, kiuj estas ankoraŭ disponebla por elŝuti.</string>
+    <string name="help_passphrase">Uzu tiun ekranon por ensaluti en la apliko kun via pasfrazon. Se vi forgesis vian pasfrazon, vi povas generi novan ŝlosilon protektitaj per nova pasfrazon per tapping la Forgot pasfrazon? butono. Frapeti la nomon de uzanto por ŝanĝi inter diversaj ŝlosiloj.</string>
+    <string name="help_passphrase_change">Uzu tiun ekranon por ŝanĝi vian pasfrazon enmetante vian lastan pasfrazon por konfirmo kaj la novan pasfrazon.</string>
     <string name="help_PickRecip">Kontaktoj kun SafeSlinger klavoj estas montrata tie, elektu unu por sendi vian mesaĝon al.</string>
     <string name="help_save">Kiam finis, la protokolo malkaŝos listo de la identeco datumoj interŝanĝis. Elektu la kontaktoj vi deziras savi kaj premi importo.</string>
     <string name="help_SecureIntroduction">Ĉi ekrano permesas al vi elekti du personoj vi colgada klavoj kun antaŭe por sekure sendi iliajn sxlosilojn al ĉiu alia. Simple premu Enkondukas kiam preta.</string>
     <string name="help_Send">Ĉi ekrano permesas al vi elekti iujn datumojn kaj ricevinto ordoni. Simple premu Sendu kiam preta.</string>
+    <string name="help_settings">Ĉi ekrano permesas ŝanĝi la defaŭltan agordon por la apliko.</string>
 
+    <string name="iOS_contactError">Kontaktoj permeso estas bezonata por sekure dividante kontakto kartoj. Frapeti la Help butono por SafeSlinger Kontaktoj permeson detaloj.</string>
     <string name="iOS_errorpushtoken">Puŝo enskribo mankas.</string>
+    <string name="iOS_notificationError1">Sciigo permeson por ĉu atentigoj aŭ standardoj, kaj insigno nombroj, estas postulataj por sekura mesaĝado. Frapeti la Help butono por SafeSlinger avizanta permeson detaloj.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ne optimumigita por iOS 5.x aparatoj. SafeSlinger postulas iOS 6 aŭ pli alta.</string>
+    <string name="iOS_RequestPermissionContacts">Vi povas elekti vian kontakton karton por sendi viajn amikojn kaj SafeSlinger estos ĉifri ĝin por vi. Por ebligi tiun funkcion, oni devas permesi SafeSlinger aliro al viaj kontaktoj kiam oni demandis.</string>
+    <string name="iOS_RequestPermissionMicrophone">Vi povas registri voĉo mesaĝo al sendi viajn amikojn kaj SafeSlinger estos ĉifri ĝin por vi. Por ebligi tiun funkcion, oni devas permesi SafeSlinger aliro al via mikrofono kiam oni demandis.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger estas ĉifrita mesaĝilon apliko kaj ne povas funkcii sen permesi envenantajn mesaĝojn de sciigoj. Por ebligi envenantajn mesaĝojn, vi devas permesi SafeSlinger sendi al vi Sciigoj kiam oni demandis.</string>
 
     <string name="label_ago">%s antaŭe</string>
     <string name="label_backupCompleteDate">Lasta Rezerva Kompletigita</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">eksvalidiĝi %s</string>
     <string name="label_expiresIn">elspiras en</string>
     <string name="label_FileNameHint">Dosiero Nomo</string>
-    <string name="label_FindInstruct">Entajpu la nomon vi deziras ke aliaj vidas kiam komuniki kun firmaj:</string>
+    <string name="label_FindInstruct">Entajpu vian nomon kaj pasfrazon por protekti vian datumoj:</string>
     <string name="label_FirstName">Persona nomo</string>
     <string name="label_Home">Frapeti vian nomon por aldoni aŭ forigi kontakto datumoj, kontrolu erojn vi deziras kunhavigi kaj frapeti Begin Interŝanĝo kiam aliaj estas preta interŝanĝo:</string>
     <string name="label_hometag">Hejmo</string>
     <string name="label_hours">%d horoj</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud estas ebligita. Frapeti la Farita butonon kiam finis.</string>
     <string name="label_InstNoMessages">Neniu mesaĝo. Vi povas sendi mesaĝon de la Compose Mesaĝo butonon sur la Hejmo menuo.</string>
-    <string name="label_InstNoMessagesAndroid">Neniu mesaĝo. Vi povas sendi mesaĝon de la Compose langeton.</string>
     <string name="label_InstNoRecipients">Por aldoni ricevantoj, vi devas unue Profunda Klavoj kun unu aŭ pli aliaj uzantoj samtempe. Vi povas ankaŭ sendi al jxetilo Keys kontakto invito de la menuo.</string>
     <string name="label_InstNoSharedFile">Neniu komuna dosiero. Konekti vian aparaton per iTunes kaj trenu dosierojn al la dividitaj dosierujo.</string>
     <string name="label_InstRecipients">Pick ricevanto por sendi mesaĝon al:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Aŭtomate elŝuti mesaĝo ligiteco kiam ensalutinta</string>
     <string name="label_summary_auto_decrypt">Aŭtomate malĉifri mesaĝojn kiam ensalutinta</string>
     <string name="label_summary_remind_backup_delay">Ricevi sciigon kiam sekurkopioj estas senkonekta.</string>
-    <string name="label_summary_show_tutorial">Montru tutorial antaux attemping al Profunda Keys.</string>
+    <string name="label_summary_show_tutorial">Montru tutorial antaŭ provi Profunda Keys.</string>
     <string name="label_TapToDecryptFile">Frapeto por deĉifri dosieron</string>
     <string name="label_TapToDecryptMessage">Frapeto por deĉifri</string>
     <string name="label_TapToDownloadFile">Frapeto elŝuti dosieron</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Aŭto-malĉifri</string>
     <string name="menu_Change">Ŝanĝo</string>
     <string name="menu_ChangePassphrase">Ŝanĝo pasfrazon</string>
+    <string name="menu_ContactInviteEmail">Retpoŝto de Kontaktoj</string>
+    <string name="menu_ContactInviteSms">Teksto el Kontaktoj</string>
     <string name="menu_CreateNew">Krei Novaj</string>
     <string name="menu_delete">Forigi</string>
     <string name="menu_deleteThread">Forigi Fadeno %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Ĉu vi forgesis pasfrazon?</string>
     <string name="menu_Help">Helpu</string>
     <string name="menu_Introduction">Enkonduko</string>
-    <string name="menu_License">Permesilo</string>
+    <string name="menu_language">Lingvo</string>
+    <string name="menu_link_contact_add">Aldoni Kontakto Ligilo</string>
+    <string name="menu_link_contact_change">Ŝanĝi Kontakto Ligilo</string>
     <string name="menu_Logout">Elsaluti</string>
     <string name="menu_ManagePassphrases">Administru Passphrases</string>
     <string name="menu_message_font_size">Mesaĝo Tiparo Grando</string>

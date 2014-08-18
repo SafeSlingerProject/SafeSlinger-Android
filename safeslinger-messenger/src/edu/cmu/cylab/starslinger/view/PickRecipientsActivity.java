@@ -74,7 +74,6 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     private boolean mallowIntro = false;
     private List<RecipientRow> mcontacts = new ArrayList<RecipientRow>();
     private ListView listViewRecipients;
-    private boolean hideInactive = true;
     private TextView tvInstruct;
     private String mySecretKeyId;
     private String myPushToken;
@@ -201,11 +200,9 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
         Cursor c = null;
         if (mallowExch && mallowIntro) {
-            c = dbRecipient.fetchAllRecipientsMessage(hideInactive, mySecretKeyId, myPushToken,
-                    myName);
+            c = dbRecipient.fetchAllRecipientsMessage(mySecretKeyId, myPushToken, myName);
         } else if (mallowExch) {
-            c = dbRecipient.fetchAllRecipientsIntro(hideInactive, mySecretKeyId, myPushToken,
-                    myName);
+            c = dbRecipient.fetchAllRecipientsIntro(mySecretKeyId, myPushToken, myName);
         }
         if (c != null) {
             if (c.getCount() <= 0) {
@@ -309,15 +306,20 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.layout.recipcontext, menu);
 
+        AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
         menu.add(Menu.NONE, R.id.item_key_details, Menu.NONE, R.string.menu_Details);
         menu.add(Menu.NONE, R.id.item_delete_recipient, Menu.NONE, R.string.menu_delete);
-        menu.add(Menu.NONE, R.id.item_link_contact, Menu.NONE, R.string.menu_link_contact);
-
-        if (SafeSlingerConfig.isDebug()) {
-            if (hideInactive) {
-                menu.add(Menu.NONE, R.id.item_showallinvalid, Menu.NONE, R.string.menu_ShowInvalid);
+        if (mcontacts.get(info.position).getSource() != RecipientDbAdapter.RECIP_SOURCE_INVITED) {
+            if (!mcontacts.get(info.position).isValidContactLink()) {
+                menu.add(Menu.NONE, R.id.item_link_contact_add, Menu.NONE,
+                        R.string.menu_link_contact_add);
             } else {
-                menu.add(Menu.NONE, R.id.item_hideallinvalid, Menu.NONE, R.string.menu_HideInvalid);
+                menu.add(Menu.NONE, R.id.item_link_contact_change, Menu.NONE,
+                        R.string.menu_link_contact_change);
+            }
+
+            if (mcontacts.get(info.position).isValidContactLink()) {
+                menu.add(Menu.NONE, R.id.item_edit_contact, Menu.NONE, R.string.menu_EditContact);
             }
         }
     }
@@ -335,16 +337,12 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
             doDeleteRecipient(recip);
             updateValues(null);
             return true;
-        } else if (item.getItemId() == R.id.item_link_contact) {
-            showPickContact(recip);
+        } else if (item.getItemId() == R.id.item_link_contact_add
+                || item.getItemId() == R.id.item_link_contact_change) {
+            showUpdateContactLink(recip.getRowId());
             return true;
-        } else if (item.getItemId() == R.id.item_showallinvalid) {
-            hideInactive = false;
-            updateValues(null);
-            return true;
-        } else if (item.getItemId() == R.id.item_hideallinvalid) {
-            hideInactive = true;
-            updateValues(null);
+        } else if (item.getItemId() == R.id.item_edit_contact) {
+            showEditContact(recip.getContactlu());
             return true;
         } else {
             return super.onContextItemSelected(item);

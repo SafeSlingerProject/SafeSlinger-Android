@@ -25,8 +25,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.cmu.cylab.starslinger"
-    android:versionCode="0x01070100"
-    android:versionName="1.7.1" >
+    android:versionCode="0x01070200"
+    android:versionName="1.7.2" >
 
     <!-- API 9 is the minimum required for password-based encryption PBKDF2WithHmacSHA1. -->
     <!-- API 8 is the minimum required to receive push messages. -->
@@ -59,7 +59,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="SafeSlinger"
+        android:name=".SafeSlinger"
         android:allowBackup="true"
         android:allowClearUserData="false"
         android:backupAgent="KeyBackupAgent"
@@ -67,10 +67,10 @@
         android:icon="@drawable/ic_launcher"
         android:killAfterRestore="true"
         android:label="@string/app_name"
-        android:restoreAnyVersion="true"
-        android:supportsRtl="true" >
+        android:restoreAnyVersion="true" >
         <activity
             android:name=".view.HomeActivity"
+            android:configChanges="locale"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
             <intent-filter>
@@ -102,28 +102,34 @@
         </activity>
         <activity
             android:name=".view.PickRecipientsActivity"
+            android:configChanges="locale"
             android:exported="false"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
         <activity
             android:name=".view.SettingsActivity"
+            android:configChanges="locale"
             android:exported="false" >
         </activity>
         <activity
             android:name=".view.PassPhraseActivity"
+            android:configChanges="locale"
             android:exported="false"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
         <activity
             android:name=".view.FilePickerActivity"
+            android:configChanges="locale"
             android:exported="false" >
         </activity>
         <activity
             android:name=".view.FileSaveActivity"
+            android:configChanges="locale"
             android:exported="false" >
         </activity>
         <activity
             android:name=".view.FindContactActivity"
+            android:configChanges="locale"
             android:exported="false"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
@@ -167,6 +173,7 @@
 
         <activity
             android:name=".view.SaveActivity"
+            android:configChanges="locale"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
@@ -175,16 +182,19 @@
         <!-- we must include all activities declared by library manifests as well: -->
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.ExchangeActivity"
+            android:configChanges="locale"
             android:label="@string/lib_name"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.VerifyActivity"
+            android:configChanges="locale"
             android:label="@string/lib_name"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.GroupingActivity"
+            android:configChanges="locale"
             android:label="@string/lib_name"
             android:screenOrientation="portrait" >
         </activity>

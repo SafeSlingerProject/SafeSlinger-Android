@@ -46,15 +46,15 @@
     <string name="error_NoWordListSelected">איר מוזן אויסקלייַבן איינער פון די פראַסעס איידער פּראַסידינג.</string>
     <string name="error_OtherGroupCommitDiffer">עמעצער געמאלדן אַ חילוק אין פראַסעס. נעמען די וועקסל ווידער.</string>
     <string name="error_OutOfMemoryError">זיקאָרן איז אויך נידעריק צו פאַרענדיקן דעם אָפּעראַציע.</string>
-    <string name="error_ServerAppMessage">סערווירער אָנזאָג: \'%s\'</string>
-    <string name="error_ServerAppMessageCStr">סערווירער אָנזאָג: \'%s\'</string>
+    <string name="error_ServerAppMessage">סערווירער אָנזאָג:%s</string>
+    <string name="error_ServerAppMessageCStr">סערווירער אָנזאָג:%s</string>
     <string name="error_ServerNotResponding">ניט קיין ענטפער פון סערווירער.</string>
     <string name="error_TimeoutWaitingForAllMembers">טיימאַוט ווארטן פֿאַר עטלעכע גרופּע מיטגלידער צו לייגן דאַטן.</string>
     <string name="error_WebCancelledByUser">באַניצער קאַנסאַלד סערווירער בעטן.</string>
 
-    <string name="help_size">אויסקלייַבן די נומער פון מענטשן וואס זענען אַטעמפּטינג צו וועקסל דאַטן צוזאַמען און דריקן \' גוט \'.</string>
-    <string name="help_userid">דעם נומער אויף דעם פאַרשטעלן איז געניצט צו שאַפֿן אַ יינציק גרופּע פון ​​ניצערס. איבערבליק די נומערן אויף אַלע ניצערס \' סקרינז, דעמאָלט אַלע ניצערס זאָל אַרייַן די זעלבע לאָואַסט נומער און דרוקן \' גוט \'.</string>
-    <string name="help_verify">איצט, איר מוזן גלייַכן איינער פון די 3-וואָרט פראַסעס מיט אַלע ניצערס. יעדער באַניצער מוזן אויסקלייַבן דער זעלביקער פּראָסט פראַזע, און דריקן \' ווייַטער \'.</string>
+    <string name="help_size">אויסקלייַבן די נומער פון מענטשן וואס זענען אַטעמפּטינג צו וועקסל דאַטן צוזאַמען און דריקן גוט.</string>
+    <string name="help_userid">דעם נומער אויף דעם פאַרשטעלן איז געניצט צו שאַפֿן אַ יינציק גרופּע פון ​​ניצערס. איבערבליק די נומערן אויף אַלע ניצערס סקרינז, דעמאָלט אַלע ניצערס זאָל אַרייַן די זעלבע לאָואַסט נומער און דרוקן גוט.</string>
+    <string name="help_verify">איצט, איר מוזן גלייַכן איינער פון די 3-וואָרט פראַסעס מיט אַלע ניצערס. יעדער באַניצער מוזן אויסקלייַבן דער זעלביקער פּראָסט פראַזע, און דריקן ווייַטער.</string>
 
     <string name="label_CompareScreensNDevices">פאַרגלייַכן סקרינז אויף %s דיווייסאַז.</string>
     <string name="label_NumericModeHint">ניט-ענגליש</string>

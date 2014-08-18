@@ -49,6 +49,7 @@
     <string name="btn_Import">Pag-angkat</string>
     <string name="btn_Introduce">Magpakilala</string>
     <string name="btn_No">Hindi</string>
+    <string name="btn_NotNow">Hindi Ngayon</string>
     <string name="btn_NotRemind">Kalimutan</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Tumanggi</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minuto</string>
     <string name="choice_8hours">8 oras</string>
     <string name="choice_auto_storage">Default Storage</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">Panlabas na Storage</string>
     <string name="choice_font_large">Malaki</string>
     <string name="choice_font_medium">Medium</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Error sa Audio player na decoding.</string>
     <string name="error_AudioPlayerError">Hindi ma-play ang nai-record.</string>
     <string name="error_AudioRecorderEncodeError">Error sa Audio recorder encoding.</string>
+    <string name="error_AudioRecorderPermissionError">Pahintulot mikropono ay kinakailangan upang magtala ng isang secure na voice message. Tapikin ang pindutan ng Tulong para sa SafeSlinger Mikropono mga detalye ng pahintulot.</string>
     <string name="error_BackupNotFound">Walang backup upang ibalik.</string>
     <string name="error_BackupNotSupportedDevice">Device ay hindi sumusuporta sa backup na ibalik.</string>
     <string name="error_BadCopyProtectUpgrade">Dahil sa isang bug sa Android 4.1, kailangan mong i-uninstall at muling i-install SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger error, mangyaring i-restart.</string>
     <string name="error_VcardParseFailure">Makipag-ugnay sa data ay hindi tama ang pagka-format.</string>
 
+    <string name="help_find">Gamitin ang screen na ito upang itakda ang iyong pangalan upang magpalitan sa iba, at isang passphrase upang maprotektahan ang iyong data. I-tap ang pindutang Tapos na kapag tapos na.</string>
     <string name="help_home">Upang makipagpalitan ng data pagkakakilanlan, siguraduhin ang lahat ng mga gumagamit ay nasa malapit o sa telepono. Ang Simulan ang pindutan ng Exchange ay makipagpalitan lamang ang naka-check ang data ng contact.</string>
     <string name="help_identity_menu">Maaari mo ring baguhin ang personal na data tungkol sa iyong pagkakakilanlan sa screen na ito sa pamamagitan ng pagtapik sa pindutan gamit ang iyong pangalan. Magpapakita ito ng menu na nagbibigay-daan sa iyo upang I-edit ang iyong mga contact, ang Lumikha ng Bagong contact, o Gamitin ang isa pang contact.</string>
     <string name="help_Messages">Ipinapakita ng screen na ito ng lahat ng nakalipas mga mensahe, at mga kalakip na magagamit para sa pag-download pa rin.</string>
+    <string name="help_passphrase">Gamitin ang screen na ito upang mag-login ang application gamit ang iyong passphrase. Kung nakalimutan mo ang iyong passphrase, maaari kang bumuo ng protektado ng isang bagong passphrase sa pamamagitan ng pag-tap sa Nakalimutan ang passphrase ng bagong key? na pindutan. I-tap ang user name upang lumipat sa pagitan ng maramihang mga susi.</string>
+    <string name="help_passphrase_change">Gamitin ang screen na ito upang baguhin ang iyong passphrase sa pamamagitan ng pagpasok ng iyong huling passphrase para sa pagkumpirma at ang bagong passphrase.</string>
     <string name="help_PickRecip">Contacts na may SafeSlinger key ay ipinapakita dito, pumili ng isa upang ipadala ang iyong mensahe sa.</string>
     <string name="help_save">Kapag tapos na, ang protocol ay magbubunyag ng isang listahan ng mga data pagkakakilanlan ipinagpapalit. Piliin ang mga contact na nais mong i-save at pindutin ang I-import.</string>
     <string name="help_SecureIntroduction">Pinapayagan ka ng screen na ito ay sa iyo upang pumili ng dalawang tao mo pa slung susi sa bago upang secure na magpadala ng kanilang mga susi sa isa\'t isa. Pindutin lamang Ipakilala kapag handa na.</string>
     <string name="help_Send">Pinapayagan ka ng screen na ito ay sa iyo upang pumili ng ilang mga data at isang tatanggap upang ipadala sa. Pindutin lamang Magpadala kapag handa na.</string>
+    <string name="help_settings">Pinapayagan ka ng screen na ito ay sa iyo upang baguhin ang mga setting ng default para sa application.</string>
 
+    <string name="iOS_contactError">Pahintulot Contact ay kinakailangan para sa ligtas na pagbabahagi ng contact card. Tapikin ang pindutan ng Tulong para sa mga detalye SafeSlinger pahintulot Contact.</string>
     <string name="iOS_errorpushtoken">Itulak pagpaparehistro ay nawawala.</string>
+    <string name="iOS_notificationError1">Pahintulot ng Notification para sa alinman sa mga alerto o banners, at mga numero ng badge, ay kinakailangan para sa mga secure messaging. Tapikin ang pindutan ng Tulong para sa mga detalye SafeSlinger pahintulot Notification.</string>
     <string name="iOS_oldOSWarn">SafeSlinger hindi naka-optimize para sa mga aparatong iOS 5.x. SafeSlinger nangangailangan ng iOS 6 o mas mataas.</string>
+    <string name="iOS_RequestPermissionContacts">Maaari kang pumili ng iyong contact card upang ipadala ang iyong mga kaibigan at SafeSlinger ay i-encrypt ito para sa iyo. Upang paganahin ang tampok na ito, dapat mong payagan ang SafeSlinger access sa iyong Mga Contact kapag nagtanong.</string>
+    <string name="iOS_RequestPermissionMicrophone">Maaari kang mag-record ng voice message upang ipadala ang iyong mga kaibigan at SafeSlinger ay i-encrypt ito para sa iyo. Upang paganahin ang tampok na ito, dapat mong payagan ang SafeSlinger access sa iyong Mikropono kapag nagtanong.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ay isang naka-encrypt na application sa pagpapadala ng mensahe at hindi maaaring gumana nang hindi pagpayag sa mga papasok na mensahe mula sa Abiso. Upang paganahin ang mga papasok na mensahe, kailangan mong payagan ang SafeSlinger na padalhan ka ng mga Abiso kapag nagtanong.</string>
 
     <string name="label_ago">%s ang nakalipas</string>
     <string name="label_backupCompleteDate">Huling Backup Nakumpleto</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">mag-expire ang %s</string>
     <string name="label_expiresIn">mamamatay sa</string>
     <string name="label_FileNameHint">Pangalan ng File</string>
-    <string name="label_FindInstruct">Ipasok ang pangalan na nais mong makita ng iba ang kapag pakikipag-secure:</string>
+    <string name="label_FindInstruct">Ipasok ang iyong pangalan at isang passphrase upang protektahan ang iyong data:</string>
     <string name="label_FirstName">Pangalan</string>
     <string name="label_Home">Tapikin ang iyong pangalan upang magdagdag o mag-alis ng data ng contact, i-check ang mga item na nais mong ibahagi, at i-tap Simulan Exchange kapag ang iba ay handa nang i exchange:</string>
     <string name="label_hometag">Tahanan</string>
     <string name="label_hours">%d oras</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ay pinagana. I-tap ang pindutang Tapos na kapag tapos na.</string>
     <string name="label_InstNoMessages">Walang mga mensahe. Maaari kang magpadala ng mensahe mula sa pindutan ng Bumuo ng Mensahe sa menu Home.</string>
-    <string name="label_InstNoMessagesAndroid">Walang mga mensahe. Maaari kang magpadala ng mensahe mula sa tab Gumawa.</string>
     <string name="label_InstNoRecipients">Upang magdagdag ng mga tatanggap, dapat mo munang saklay Keys na may isa o higit pang ibang mga gumagamit nang sabay-sabay. Maaari ka ring magpadala ng imbitasyon sa tirador Keys contact mula sa menu.</string>
     <string name="label_InstNoSharedFile">Walang mga ibinahaging file. Ikonekta ang iyong aparato sa iTunes at i-drag ang mga file sa nakabahaging folder.</string>
     <string name="label_InstRecipients">Pumili ng tatanggap upang magpadala ng mensahe sa:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Awtomatikong i-download ang mga attachment ng mensaheng ito kapag naka-log in</string>
     <string name="label_summary_auto_decrypt">Awtomatikong i-decrypt ang mga mensahe kapag naka-log in</string>
     <string name="label_summary_remind_backup_delay">Tumanggap ng mga abiso kapag backup ay offline.</string>
-    <string name="label_summary_show_tutorial">Magpakita ng tutorial bago Sinusubukan mong tirador Keys.</string>
+    <string name="label_summary_show_tutorial">Magpakita ng tutorial bago tangkaing mag-saklay Keys.</string>
     <string name="label_TapToDecryptFile">Tapikin upang i-decrypt ang file</string>
     <string name="label_TapToDecryptMessage">I-tap upang i-decrypt</string>
     <string name="label_TapToDownloadFile">Tapikin upang i-download ang file</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-decrypt</string>
     <string name="menu_Change">Pagbabago</string>
     <string name="menu_ChangePassphrase">Baguhin ang passphrase</string>
+    <string name="menu_ContactInviteEmail">Email mula sa Mga Contact</string>
+    <string name="menu_ContactInviteSms">Teksto mula sa mga Contact</string>
     <string name="menu_CreateNew">Lumikha ng Bagong</string>
     <string name="menu_delete">Alisin</string>
     <string name="menu_deleteThread">Tanggalin ang Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Nakalimutan ang passphrase?</string>
     <string name="menu_Help">Tulong</string>
     <string name="menu_Introduction">Panimula</string>
-    <string name="menu_License">Lisensya</string>
+    <string name="menu_language">Wika</string>
+    <string name="menu_link_contact_add">Magdagdag ng Contact Link</string>
+    <string name="menu_link_contact_change">Baguhin Makipag-ugnay sa Link</string>
     <string name="menu_Logout">Mag-logout</string>
     <string name="menu_ManagePassphrases">Pamahalaan ang Passphrases</string>
     <string name="menu_message_font_size">Laki ng Font ng Mensahe</string>

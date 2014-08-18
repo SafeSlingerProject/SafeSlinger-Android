@@ -49,6 +49,7 @@
     <string name="btn_Import">Import</string>
     <string name="btn_Introduce">Memperkenalkan</string>
     <string name="btn_No">Tiada</string>
+    <string name="btn_NotNow">Bukan Sekarang</string>
     <string name="btn_NotRemind">Lupakan</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Enggan</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 minit</string>
     <string name="choice_8hours">8 jam</string>
     <string name="choice_auto_storage">Penyimpanan Default</string>
+    <string name="choice_default">Default</string>
     <string name="choice_external_storage">Penyimpanan luar</string>
     <string name="choice_font_large">Besar</string>
     <string name="choice_font_medium">Sederhana</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Pemain audio ralat penyahkodan.</string>
     <string name="error_AudioPlayerError">Tidak boleh memainkan rakaman.</string>
     <string name="error_AudioRecorderEncodeError">Audio ralat pengekodan perakam.</string>
+    <string name="error_AudioRecorderPermissionError">Kebenaran mikrofon diperlukan untuk merekodkan mesej suara yang selamat. Ketuk butang Bantuan untuk maklumat kebenaran SafeSlinger Mikrofon.</string>
     <string name="error_BackupNotFound">Tiada sandaran untuk memulihkan.</string>
     <string name="error_BackupNotSupportedDevice">Peranti tidak menyokong sandaran memulihkan.</string>
     <string name="error_BadCopyProtectUpgrade">Kerana pepijat dalam Android 4.1, anda perlu uninstall dan memasang semula SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">Ralat SafeSlinger, sila mulakan semula.</string>
     <string name="error_VcardParseFailure">Data kenalan telah diformatkan dengan betul.</string>
 
+    <string name="help_find">Gunakan skrin ini untuk menetapkan nama anda untuk bertukar-tukar dengan orang lain, dan frasa laluan untuk melindungi data anda. Ketik butang Selesai apabila selesai.</string>
     <string name="help_home">Untuk bertukar-tukar data identiti, memastikan semua pengguna adalah berhampiran atau di telefon. The Mulakan butang Exchange akan bertukar-tukar hanya data kenalan diperiksa.</string>
     <string name="help_identity_menu">Anda juga boleh menukar data peribadi tentang identiti anda pada skrin ini dengan mengetuk butang dengan nama anda. Ini akan memaparkan menu membolehkan anda ke Sunting kenalan anda, Buat Kenalan baru, atau Gunakan kenalan lagi.</string>
     <string name="help_Messages">Skrin ini memaparkan semua mesej yang lalu, dan lampiran yang masih boleh didapati untuk muat turun.</string>
+    <string name="help_passphrase">Gunakan skrin ini untuk login dengan permohonan itu dengan frasa laluan anda. Jika anda lupa frasa laluan anda, anda boleh menjana kunci baru dilindungi oleh frasa laluan baru melalui usaha Frasa laluan Lupa? butang. Ketik nama pengguna untuk bertukar antara berbilang kunci.</string>
+    <string name="help_passphrase_change">Gunakan skrin ini untuk menukar frasa laluan anda dengan memasukkan frasa laluan terakhir anda untuk pengesahan dan frasa laluan baru.</string>
     <string name="help_PickRecip">Kenalan dengan kekunci SafeSlinger dipamerkan di sini, pilih satu untuk menghantar mesej anda.</string>
     <string name="help_save">Apabila selesai, protokol akan mendedahkan senarai data identiti ditukar. Pilih kenalan yang anda ingin menyimpan dan tekan Import.</string>
     <string name="help_SecureIntroduction">Skrin ini membenarkan anda untuk memilih dua orang yang anda telah tersangkut kekunci dengan sebelum untuk selamat menghantar kunci mereka antara satu sama lain. Hanya tekan Memperkenalkan apabila bersedia.</string>
     <string name="help_Send">Skrin ini membenarkan anda untuk memilih beberapa data dan penerima untuk hantar ke. Hanya tekan Hantar apabila bersedia.</string>
+    <string name="help_settings">Skrin ini membolehkan anda untuk menukar tetapan lalai untuk aplikasi.</string>
 
+    <string name="iOS_contactError">Kebenaran Kenalan diperlukan untuk selamat berkongsi kad kenalan. Ketuk butang Bantuan untuk SafeSlinger butiran kebenaran Kenalan.</string>
     <string name="iOS_errorpushtoken">Pendaftaran menolak yang hilang.</string>
+    <string name="iOS_notificationError1">Kebenaran pemberitahuan untuk sama ada amaran atau banner, dan nombor lencana, diperlukan untuk pesanan selamat. Ketuk butang Bantuan untuk SafeSlinger butiran kebenaran Pemberitahuan.</string>
     <string name="iOS_oldOSWarn">SafeSlinger tidak dioptimumkan untuk peranti 5.x iOS. SafeSlinger memerlukan iOS 6 atau lebih tinggi.</string>
+    <string name="iOS_RequestPermissionContacts">Anda boleh memilih kad kenalan anda untuk menghantar rakan dan SafeSlinger akan menyulitkan untuk anda. Untuk mendayakan ciri ini, anda perlu membenarkan akses SafeSlinger Kenalan anda bila diminta.</string>
+    <string name="iOS_RequestPermissionMicrophone">Anda boleh merakam mesej suara untuk menghantar rakan-rakan anda dan SafeSlinger akan menyulitkan untuk anda. Untuk mendayakan ciri ini, anda perlu membenarkan akses SafeSlinger untuk Mikrofon anda apabila diminta.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger adalah satu aplikasi mesej disulitkan dan tidak dapat berfungsi tanpa membenarkan mesej masuk dari Pemberitahuan. Bagi membolehkan mesej masuk, anda mesti membenarkan SafeSlinger untuk menghantar Pemberitahuan ketika ditanya.</string>
 
     <string name="label_ago">%s lalu</string>
     <string name="label_backupCompleteDate">Backup lepas lengkap</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">tamat %s</string>
     <string name="label_expiresIn">tamat pada</string>
     <string name="label_FileNameHint">Nama Fail</string>
-    <string name="label_FindInstruct">Masukkan nama yang anda ingin orang lain untuk melihat apabila berkomunikasi dengan selamat:</string>
+    <string name="label_FindInstruct">Masukkan nama anda dan frasa laluan untuk melindungi data anda:</string>
     <string name="label_FirstName">Nama Pertama</string>
     <string name="label_Home">Ketik nama anda untuk menambah atau mengeluarkan data kenalan, lihat item yang ingin berkongsi, dan ketuk Mulakan Exchange ketika orang lain sudah bersedia untuk pertukaran:</string>
     <string name="label_hometag">Laman Utama</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud dibolehkan. Ketik butang Selesai apabila selesai.</string>
     <string name="label_InstNoMessages">Tidak ada mesej. Anda boleh menghantar mesej daripada butang Compose Mesej pada menu Utama.</string>
-    <string name="label_InstNoMessagesAndroid">Tidak ada mesej. Anda boleh menghantar mesej daripada tab Karang.</string>
     <string name="label_InstNoRecipients">Untuk menambah penerima, anda mesti pertama Sling Kekunci dengan satu atau lebih pengguna lain pada masa yang sama. Anda juga boleh menghantar Sling Kekunci jemputan kenalan dari menu.</string>
     <string name="label_InstNoSharedFile">Fail tidak dikongsi. Sambungkan peranti anda dengan iTunes dan fail seret ke folder yang dikongsi bersama.</string>
     <string name="label_InstRecipients">Memilih penerima untuk menghantar mesej kepada:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">Dimuat turun secara automatik lampiran mesej apabila log masuk</string>
     <string name="label_summary_auto_decrypt">Menyahsulit mesej secara automatik apabila log masuk</string>
     <string name="label_summary_remind_backup_delay">Terima pemberitahuan apabila sandaran di luar talian.</string>
-    <string name="label_summary_show_tutorial">Tunjukkan tutorial sebelum attemping untuk Sling Kekunci.</string>
+    <string name="label_summary_show_tutorial">Tunjukkan tutorial sebelum cuba Sling Kekunci.</string>
     <string name="label_TapToDecryptFile">Ketik untuk menyahsulit fail</string>
     <string name="label_TapToDecryptMessage">Ketik untuk menyahsulit</string>
     <string name="label_TapToDownloadFile">Ketik untuk memuat turun fail</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-Nyahsulit</string>
     <string name="menu_Change">Perubahan</string>
     <string name="menu_ChangePassphrase">Perubahan Frasa Laluan</string>
+    <string name="menu_ContactInviteEmail">E-mel dari Kenalan</string>
+    <string name="menu_ContactInviteSms">Teks dari Kenalan</string>
     <string name="menu_CreateNew">Cipta Baru</string>
     <string name="menu_delete">Padam</string>
     <string name="menu_deleteThread">Padam Thread %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Lupa Frasa laluan?</string>
     <string name="menu_Help">Bantuan</string>
     <string name="menu_Introduction">Pengenalan</string>
-    <string name="menu_License">Lesen</string>
+    <string name="menu_language">Bahasa</string>
+    <string name="menu_link_contact_add">Tambah Kenalan Link</string>
+    <string name="menu_link_contact_change">Tukar Link Hubungi</string>
     <string name="menu_Logout">Log Keluar</string>
     <string name="menu_ManagePassphrases">Mengurus Passphrases</string>
     <string name="menu_message_font_size">Mesej Font Size</string>

@@ -47,8 +47,7 @@
                 android:id="@+id/AddTextViewInstruct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/size_5dp"
-                android:layout_marginRight="@dimen/size_50dp"
+                android:layout_margin="@dimen/size_10dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/label_FindInstruct"
@@ -72,10 +71,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/label_ContactName"
-                    android:imeOptions="actionDone"
+                    android:imeOptions="actionNext"
                     android:inputType="textCapWords|textPersonName"
                     android:privateImeOptions="nm"
-                    android:textSize="@dimen/text_size_medium" />
+                    android:textSize="@dimen/text_size_msg" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -95,7 +94,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="textPassword"
                     android:privateImeOptions="nm"
-                    android:textSize="@dimen/text_size_medium" >
+                    android:textSize="@dimen/text_size_msg" >
 
                     <requestFocus />
                 </EditText>
@@ -110,6 +109,21 @@
                     android:imeOptions="actionDone"
                     android:inputType="textPassword"
                     android:privateImeOptions="nm"
+                    android:textSize="@dimen/text_size_msg" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_language"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <Spinner
+                    android:id="@+id/spinnerLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:prompt="@string/title_language"
                     android:textSize="@dimen/text_size_medium" />
 
                 <TextView

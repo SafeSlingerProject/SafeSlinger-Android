@@ -29,6 +29,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
@@ -47,6 +48,7 @@ import android.app.backup.BackupManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.net.ConnectivityManager;
@@ -85,6 +87,19 @@ public class SafeSlinger extends Application {
     private static boolean sPassEntryOpen = false;
     private static boolean sAppVisible;
     private static Handler sHandler;
+    private Locale locale = null;
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (locale != null) {
+            Locale.setDefault(locale);
+            Configuration config = new Configuration(newConfig);
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config,
+                    getBaseContext().getResources().getDisplayMetrics());
+        }
+    }
 
     @Override
     public void onCreate() {
@@ -98,6 +113,8 @@ public class SafeSlinger extends Application {
         // feedback mechanism, that already takes pains to protect user privacy
         // we prefer now to use the default method and let users decide when
         // to submit anonymous error data that way.
+
+        updateLanguage(SafeSlingerPrefs.getLanguage());
 
         // when legacy crypto has been deprecated, apply PRNG fixes from
         // http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html
@@ -593,4 +610,63 @@ public class SafeSlinger extends Application {
         t.start();
     }
 
+    public void updateLanguage(String language) {
+        Configuration config = getBaseContext().getResources().getConfiguration();
+
+        // TODO: this could be handling region changes better
+        if (!TextUtils.isEmpty(language) && !config.locale.getLanguage().equals(language)
+                && !language.equals(SafeSlingerPrefs.DEFAULT_LANGUAGE)) {
+            // set local app config to alternate language
+            SafeSlingerPrefs.setLanguage(language);
+
+            String[] loc = language.split("_");
+            if (loc.length > 1) {
+                locale = new Locale(loc[0], loc[1]);
+            } else {
+                locale = new Locale(language);
+            }
+
+            Locale.setDefault(locale);
+            Configuration conf = new Configuration(config);
+            conf.locale = locale;
+            getBaseContext().getResources().updateConfiguration(conf,
+                    getBaseContext().getResources().getDisplayMetrics());
+        } else {
+            // set local app config to use default system language
+            SafeSlingerPrefs.setLanguage(SafeSlingerPrefs.DEFAULT_LANGUAGE);
+
+            Locale.setDefault(config.locale);
+            getBaseContext().getResources().updateConfiguration(config,
+                    getBaseContext().getResources().getDisplayMetrics());
+
+        }
+    }
+
+    public ArrayList<String> getListLanguages(boolean returnEntries) {
+        // filter available languages in case this version of android does not
+        // render them well or at all
+        Locale[] instLoc = Locale.getAvailableLocales();
+        String[] appCode = getResources().getStringArray(R.array.language_values);
+        String[] appLang = getResources().getStringArray(R.array.language_entries);
+        ArrayList<String> showCode = new ArrayList<String>();
+        ArrayList<String> showLang = new ArrayList<String>();
+
+        // TODO: filter on rendering capability to show more languages
+        showCode.add(SafeSlingerPrefs.DEFAULT_LANGUAGE);
+        showLang.add(getString(R.string.choice_default));
+        for (int i = 0; i < appCode.length; i++) {
+            for (Locale inst : instLoc) {
+                if (appCode[i].startsWith(inst.getLanguage())) {
+                    showCode.add(appCode[i]);
+                    showLang.add(appLang[i]);
+                    break;
+                }
+            }
+        }
+        if (returnEntries) {
+            return showCode;
+        } else {
+            return showLang;
+        }
+    }
 }

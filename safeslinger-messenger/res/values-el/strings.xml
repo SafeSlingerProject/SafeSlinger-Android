@@ -49,6 +49,7 @@
     <string name="btn_Import">Εισαγωγή</string>
     <string name="btn_Introduce">Γνωριμία</string>
     <string name="btn_No">Όχι</string>
+    <string name="btn_NotNow">Όχι τώρα</string>
     <string name="btn_NotRemind">Ακύρωση</string>
     <string name="btn_OK">ΟΚ</string>
     <string name="btn_Refuse">Απόρριψη</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 λεπτά</string>
     <string name="choice_8hours">8 ώρες</string>
     <string name="choice_auto_storage">Προεπιλογή αποθήκευσης</string>
+    <string name="choice_default">Αθέτηση</string>
     <string name="choice_external_storage">Εξωτερικά μέσα αποθήκευσης</string>
     <string name="choice_font_large">Μεγάλο</string>
     <string name="choice_font_medium">Μέσον</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">Audio player σφάλμα αποκωδικοποίησης.</string>
     <string name="error_AudioPlayerError">Δεν είναι δυνατή η αναπαραγωγή της ηχογράφησης.</string>
     <string name="error_AudioRecorderEncodeError">Σφάλμα κωδικοποίησης της εγγραφής ήχου.</string>
+    <string name="error_AudioRecorderPermissionError">Άδεια μικρόφωνο είναι υποχρεωμένος να καταγράφει ένα ασφαλές φωνητικό μήνυμα. Πατήστε το κουμπί Βοήθεια για SafeSlinger μικρόφωνο λεπτομέρειες άδεια.</string>
     <string name="error_BackupNotFound">Δεν βρέθηκε αντίγραφο ασφαλείας για επαναφορά.</string>
     <string name="error_BackupNotSupportedDevice">Η συσκευή δεν υποστηρίζει επαναφορά αντιγράφων ασφαλείας.</string>
     <string name="error_BadCopyProtectUpgrade">Λόγω ενός bug στο Android 4.1, θα έχετε απεγκατάσταση και επανεγκατάσταση SafeSlinger.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger σφάλμα, παρακαλώ κάντε επανεκκίνηση.</string>
     <string name="error_VcardParseFailure">Στοιχεία επαφής μορφοποιηθεί σωστά.</string>
 
+    <string name="help_find">Χρησιμοποιήστε αυτήν την οθόνη για να ρυθμίσετε το όνομά σας για να ανταλλάξουν με άλλους, και ένα συνθηματικό για την προστασία των δεδομένων σας. Πατήστε το κουμπί Τέλος όταν τελειώσετε.</string>
     <string name="help_home">Για την ανταλλαγή δεδομένων ταυτότητας, βεβαιωθείτε ότι όλοι οι χρήστες είναι κοντά ή στο τηλέφωνο. Το πλήκτρο Αρχίστε Ανταλλαγή θα ανταλλάξει μόνο τα επιλεγμένα στοιχεία επικοινωνίας.</string>
     <string name="help_identity_menu">Μπορείτε να αλλάξετε χρήσιμα δεδομένα προσωπικού χαρακτήρα σχετικά με την ταυτότητά σας σε αυτή την οθόνη πατώντας το κουμπί με το όνομά σας. Αυτό θα εμφανίσει ένα μενού που σας επιτρέπει να Επεξεργασία σας πινελιά, Δημιουργία νέου επαφής, ή Χρήση άλλο επαφής.</string>
     <string name="help_Messages">Αυτή η οθόνη εμφανίζει όλα τα προηγούμενα μηνύματα, και τα αρχεία που είναι ακόμα διαθέσιμα για λήψη.</string>
+    <string name="help_passphrase">Χρησιμοποιήστε αυτή την οθόνη για να συνδεθείτε στην εφαρμογή με τη φράση πρόσβασής σας. Αν έχετε ξεχάσει το συνθηματικό σας, μπορείτε να δημιουργήσετε ένα νέο κλειδί που προστατεύεται από ένα νέο συνθηματική φράση πατώντας το κουμπί Ξεχάσατε Φράση πρόσβασης; κουμπί. Πατήστε το όνομα χρήστη για να κάνετε εναλλαγή μεταξύ πολλών πλήκτρων.</string>
+    <string name="help_passphrase_change">Χρησιμοποιήστε αυτή την οθόνη για να αλλάξετε τη φράση σας εισάγοντας τελευταία φράση κλειδί σας για την επιβεβαίωση και την νέα φράση κλειδί.</string>
     <string name="help_PickRecip">Οι επαφές με SafeSlinger εμφανίζονται εδώ, επιλέξτε κάποια για να στείλετε το μήνυμά σας.</string>
     <string name="help_save">Όταν τελειώσετε, το πρωτόκολλο θα αποκαλύψει μια λίστα με τα δεδομένα ταυτότητας που ανταλλάχθηκαν. Επιλέξτε τις επαφές που θέλετε να αποθηκεύσετε και πατήστε το πλήκτρο Εισαγωγή.</string>
     <string name="help_SecureIntroduction">Αυτή η οθόνη σας επιτρέπει να επιλέξετε δύο ανθρώπους με τους οποίους έχετε ήδη ανταλλάξει κλειδιά για να στείλετε τα κλειδιά του ενός στον άλλο. Απλά πατήστε το πλήκτρο Γνωριμία, όταν είστε έτοιμος.</string>
     <string name="help_Send">Αυτή η οθόνη σας επιτρέπει να επιλέξετε κάποια δεδομένα και έναν παραλήπτη για να τα στείλετε. Απλά πατήστε το πλήκτρο Αποστολή όταν είστε έτοιμος.</string>
+    <string name="help_settings">Αυτή η οθόνη σας επιτρέπει να αλλάξετε τις προεπιλεγμένες ρυθμίσεις για την εφαρμογή.</string>
 
+    <string name="iOS_contactError">Επαφές απαιτείται άδεια για την ασφαλή κοινή χρήση καρτών επαφών. Πατήστε το κουμπί Βοήθεια για SafeSlinger λεπτομέρειες Επαφές άδεια.</string>
     <string name="iOS_errorpushtoken">Εγγραφή Push λείπει.</string>
+    <string name="iOS_notificationError1">Ειδοποίηση άδεια είτε για προειδοποιήσεις ή banners, και οι αριθμοί σήμα, που απαιτούνται για την ασφαλή αποστολή μηνύματος. Πατήστε το κουμπί Βοήθεια για SafeSlinger λεπτομέρειες άδεια κοινοποίησης.</string>
     <string name="iOS_oldOSWarn">SafeSlinger δεν είναι βελτιστοποιημένη για συσκευές iOS 5.x. SafeSlinger απαιτεί iOS 6 ή νεότερη έκδοση.</string>
+    <string name="iOS_RequestPermissionContacts">Μπορείτε να επιλέξετε την κάρτα επαφής σας για να στείλετε τους φίλους σας και SafeSlinger θα κρυπτογραφήσει για σας. Για να ενεργοποιήσετε αυτήν τη δυνατότητα, θα πρέπει να επιτρέπουν την πρόσβαση σε SafeSlinger Επαφές σας όταν σας ζητηθεί.</string>
+    <string name="iOS_RequestPermissionMicrophone">Μπορείτε να ηχογραφήσετε ένα φωνητικό μήνυμα για να στείλετε στους φίλους σας και SafeSlinger θα κρυπτογραφήσει για σας. Για να ενεργοποιήσετε αυτήν τη δυνατότητα, θα πρέπει να επιτρέπουν την πρόσβαση σε SafeSlinger μικρόφωνο σας όταν σας ζητηθεί.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger είναι μια κρυπτογραφημένη εφαρμογή μηνυμάτων και δεν μπορεί να λειτουργήσει χωρίς να επιτρέπει εισερχόμενα μηνύματα από Ειδοποιήσεις. Για να ενεργοποιήσετε τα εισερχόμενα μηνύματα, θα πρέπει να επιτρέψει SafeSlinger να σας στείλουμε Ειδοποιήσεις όταν σας ζητηθεί.</string>
 
     <string name="label_ago">%s πριν</string>
     <string name="label_backupCompleteDate">Τελευταία αντιγραφή δεδομένων ασφαλείας ολοκληρώθηκε</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">λήγει %s</string>
     <string name="label_expiresIn">λήγει σε</string>
     <string name="label_FileNameHint">Όνομα αρχείου</string>
-    <string name="label_FindInstruct">Πληκτρολογήστε το όνομα που θέλετε να βλέπουν οι άλλοι όταν επικοινωνούν με ασφάλεια:</string>
+    <string name="label_FindInstruct">Πληκτρολογήστε το όνομά σας και μια φράση κλειδί για την προστασία των δεδομένων σας:</string>
     <string name="label_FirstName">Όνομα</string>
     <string name="label_Home">Πατήστε το όνομά σας για να προσθέσετε ή να αφαιρέσετε στοιχεία επικοινωνίας, ελέγξτε τα στοιχεία που θέλετε να μοιραστείτε, και επιλέξτε «Ξεκινήστε Ανταλλαγής» όταν οι άλλοι είναι έτοιμοι να ανταλλάσσουν:</string>
     <string name="label_hometag">Σπίτι</string>
     <string name="label_hours">%d ώρες</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud είναι ενεργοποιημένη. Πατήστε το κουμπί Τέλος όταν τελειώσετε.</string>
     <string name="label_InstNoMessages">Δεν υπάρχουν μηνύματα. Μπορείτε να στείλετε ένα μήνυμα πατώντας το κουμπί Σύνθεση μηνύματος από το μενού Σπίτι.</string>
-    <string name="label_InstNoMessagesAndroid">Δεν υπάρχουν μηνύματα. Μπορείτε να στείλετε ένα μήνυμα από την καρτέλα Σύνθεση.</string>
     <string name="label_InstNoRecipients">Για να προσθέσετε παραλήπτες, πρέπει πρώτα να Sling Keys με έναν ή περισσότερους άλλους χρήστες ταυτόχρονα. Μπορείτε επίσης να στείλετε ένα Sling Κλειδιά επαφή πρόσκληση από το μενού.</string>
     <string name="label_InstNoSharedFile">Δεν υπάρχει κοινόχρηστο αρχείο. Συνδέστε τη συσκευή σας με το iTunes και εισάγετε αρχεία στον κοινόχρηστο φάκελο.</string>
     <string name="label_InstRecipients">Επιλέξτε έναν παραλήπτη για να στείλετε ένα μήνυμα:</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">Auto-αποκρυπτογράφηση</string>
     <string name="menu_Change">Αλλαγή</string>
     <string name="menu_ChangePassphrase">Αλλαγή Κωδικού</string>
+    <string name="menu_ContactInviteEmail">E-mail από τις Επαφές</string>
+    <string name="menu_ContactInviteSms">Κείμενο από τις Επαφές</string>
     <string name="menu_CreateNew">Δημιουργία νέου</string>
     <string name="menu_delete">Διαγραφή</string>
     <string name="menu_deleteThread">Διαγραφή θέμα %s</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">Ξεχάσατε Φράση πρόσβασης;</string>
     <string name="menu_Help">Βοήθεια</string>
     <string name="menu_Introduction">Εισαγωγή</string>
-    <string name="menu_License">Άδεια</string>
+    <string name="menu_language">Γλώσσα</string>
+    <string name="menu_link_contact_add">Προσθήκη επαφής Σύνδεσμος</string>
+    <string name="menu_link_contact_change">Αλλαγή Επικοινωνία Σύνδεσμος</string>
     <string name="menu_Logout">Αποσύνδεση</string>
     <string name="menu_ManagePassphrases">Διαχειριστείτε συνθηματικών</string>
     <string name="menu_message_font_size">Μήνυμα Μέγεθος γραμματοσειράς</string>

@@ -49,6 +49,7 @@
     <string name="btn_Import">परदेशातून आयात करणे</string>
     <string name="btn_Introduce">घुसडणे</string>
     <string name="btn_No">नाही</string>
+    <string name="btn_NotNow">नाही आता</string>
     <string name="btn_NotRemind">विसरणे</string>
     <string name="btn_OK">ओके</string>
     <string name="btn_Refuse">नाकारणे</string>
@@ -69,6 +70,7 @@
     <string name="choice_5mins">5 मिनिटे</string>
     <string name="choice_8hours">8 तास</string>
     <string name="choice_auto_storage">डीफॉल्ट स्टोरेज</string>
+    <string name="choice_default">डीफॉल्ट</string>
     <string name="choice_external_storage">बाह्य संचय</string>
     <string name="choice_font_large">मोठा</string>
     <string name="choice_font_medium">माध्यम</string>
@@ -84,6 +86,7 @@
     <string name="error_AudioPlayerDecodeError">ऑडिओ प्लेयर डिकोड त्रुटी.</string>
     <string name="error_AudioPlayerError">रेकॉर्डिंग प्ले करू शकत नाही.</string>
     <string name="error_AudioRecorderEncodeError">ऑडिओ रेकॉर्डरचा एन्कोडिंग त्रुटी.</string>
+    <string name="error_AudioRecorderPermissionError">मायक्रोफोन परवानगी सुरक्षित आवाज संदेश रेकॉर्ड आवश्यक आहे. SafeSlinger मायक्रोफोन परवानगी तपशील मदत बटण टॅप करा.</string>
     <string name="error_BackupNotFound">पुनर्संचयित करण्यासाठी नाही बॅकअप.</string>
     <string name="error_BackupNotSupportedDevice">डिव्हाइस बॅकअप पुनर्संचयित समर्थन देत नाही.</string>
     <string name="error_BadCopyProtectUpgrade">संपुष्टात Android 4.1 त्रुटीमुळे, आपण SafeSlinger विस्थापित करा आणि पुन्हा स्थापित लागेल.</string>
@@ -137,16 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger त्रुटी, पुन्हा सुरू करा.</string>
     <string name="error_VcardParseFailure">संपर्क डेटा चुकीचा स्वरुपित आली.</string>
 
+    <string name="help_find">आपला डेटा संरक्षित करण्यासाठी इतरांना, आणि सांकेतिक वाक्यांशासह देवाणघेवाण करण्यासाठी आपले नाव निश्चित करण्यासाठी ही स्क्रीन वापरा. पूर्ण झाल्यावर पूर्ण झाले बटण टॅप करा.</string>
     <string name="help_home">ओळख डेटा अदलाबदल करण्यासाठी, सर्व वापरकर्त्यांसाठी जवळपास किंवा फोनवर असल्याची खात्री करा. सुरू एक्सचेंज बटण फक्त चेक संपर्क माहिती देवाणघेवाण होईल.</string>
     <string name="help_identity_menu">आपण आपल्या नावासह बटणावर टॅप करून या पडद्यावर आपली ओळख बद्दल वैयक्तिक डेटा बदलू शकता. यामुळे आपण आपल्या संपर्क संपादित करण्यास परवानगी देते मेनू प्रदर्शित नवीन संपर्क तयार करा, किंवा इतर संपर्क वापरेल.</string>
     <string name="help_Messages">हा पडदा सर्व गेल्या संदेश, आणि तरीही डाउनलोड उपलब्ध आहेत संलग्नक दाखवतो.</string>
+    <string name="help_passphrase">आपला सांकेतिक वाक्यांश ऍप्लिकेशनचा लॉगिन करण्यासाठी ही स्क्रीन वापरा. आपण आपला सांकेतिक वाक्यांश विसरल्यास, आपण विसरलात सांकेतिक वाक्यांश टॅप करून नवीन सांकेतिक संरक्षित एक नवीन की व्युत्पन्न करू शकता? बटण. एकाधिक कळा स्विच करण्यासाठी वापरकर्ता नाव टॅप करा.</string>
+    <string name="help_passphrase_change">पुष्टीकरण आणि नवीन पासफ्रेज आपल्या शेवटच्या वाक्यांश प्रविष्ट करून आपला सांकेतिक वाक्यांश बदलण्यासाठी हा स्क्रीन वापरा.</string>
     <string name="help_PickRecip">SafeSlinger कळा वापरून संपर्क आपला संदेश पाठवण्यासाठी एक निवडा, येथे दाखवले जाते.</string>
     <string name="help_save">पूर्ण झाल्यावर, प्रोटोकॉल exchanged ओळख डेटा यादी प्रकट होईल. आपण आयात जतन आणि दाबा इच्छित संपर्क निवडा.</string>
     <string name="help_SecureIntroduction">हा पडदा तुम्हाला सुरक्षितपणे एकमेकांना त्यांच्या कळा पाठविण्यासाठी आधी सह कळा स्लिंग् चे भू.का. रुप आहेत दोन लोक नीवडण्यासाठी परवानगी देतो. फक्त जेव्हा तयार परिचय दाबा.</string>
     <string name="help_Send">हा पडदा तुम्हाला काही डेटा आणि पाठविणे एक प्राप्तकर्ता नीवडण्यासाठी परवानगी देतो. फक्त तयार करताना पाठवा दाबा.</string>
+    <string name="help_settings">हा पडदा तुम्हाला अनुप्रयोग करीता मुलभूत सेटिंग्ज बदलण्यासाठी परवानगी देते.</string>
 
+    <string name="iOS_contactError">संपर्क परवानगी सुरक्षितपणे संपर्क कार्ड सामायिक आवश्यक आहे. SafeSlinger संपर्क परवानगी तपशील मदत बटण टॅप करा.</string>
     <string name="iOS_errorpushtoken">पुश नोंदणी गहाळ आहे.</string>
+    <string name="iOS_notificationError1">अॅलर्ट किंवा बॅनर, आणि बॅज क्रमांक एकतर सूचना परवानगी, सुरक्षित मेसेजिंग आवश्यक आहेत. SafeSlinger सूचना परवानगी तपशील मदत बटण टॅप करा.</string>
     <string name="iOS_oldOSWarn">SafeSlinger iOS 5.x साधनांकरीता अनुकूलित नाही. SafeSlinger iOS 6 किंवा उच्चतम आवश्यक आहे.</string>
+    <string name="iOS_RequestPermissionContacts">आपण आपल्या मित्रांना पाठवण्यासाठी आपल्या संपर्क कार्ड निवडू शकता आणि SafeSlinger तो आपल्याला कूटबद्ध करेल. विचारले तेव्हा हे वैशिष्ट्य कार्यान्वित करण्यासाठी, आपण आपल्या संपर्क SafeSlinger प्रवेश परवानगी आवश्यक आहे.</string>
+    <string name="iOS_RequestPermissionMicrophone">आपण आपल्या मित्रांना पाठवण्यासाठी आणि SafeSlinger तो आपल्याला कूटबद्ध करेल व्हॉइस संदेश रेकॉर्ड करू शकता. विचारले तेव्हा हे वैशिष्ट्य कार्यान्वित करण्यासाठी, आपण आपल्या मायक्रोफोन करण्यासाठी SafeSlinger प्रवेश परवानगी आवश्यक आहे.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger एन्क्रिप्टेड मेसेजिंग अनुप्रयोग आहे आणि सूचना येणार्या संदेश परवानगी देत ​​न कार्य करू शकत नाही. येणारे संदेश सक्षम करण्यासाठी, आपण विचारले तेव्हा SafeSlinger आपल्याला सूचना पाठविण्याची परवानगी देणे आवश्यक आहे.</string>
 
     <string name="label_ago">%s पूर्वी</string>
     <string name="label_backupCompleteDate">पूर्ण अंतिम बॅकअप</string>
@@ -167,14 +179,13 @@
     <string name="label_expires">%s कालबाह्य</string>
     <string name="label_expiresIn">मध्ये कालबाह्य</string>
     <string name="label_FileNameHint">फाइल नाव</string>
-    <string name="label_FindInstruct">नाव प्रविष्ट करा आपण सुरक्षितपणे संप्रेषण करताना पाहण्यासाठी इतरांना इच्छा:</string>
+    <string name="label_FindInstruct">आपला डेटा संरक्षित करण्यासाठी आपले नाव आणि एक सांकेतिक वाक्यांश प्रविष्ट करा:</string>
     <string name="label_FirstName">प्रथम नाव</string>
     <string name="label_Home">जोडण्यास किंवा काढण्यास संपर्क डेटा, आपल्याला शेअर इच्छित आयटम तपासा, आणि इतरांना विनिमय करण्यासाठी सज्ज असताना एक्सचेंज सुरू टॅप आपले नाव टॅप:</string>
     <string name="label_hometag">घर</string>
     <string name="label_hours">%d तास</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud सक्षम आहे. पूर्ण झाल्यावर पूर्ण झाले बटण टॅप करा.</string>
     <string name="label_InstNoMessages">संदेश नाहीत. आपण होम मेनूवर तयार संदेश बटण संदेश पाठवू शकतो.</string>
-    <string name="label_InstNoMessagesAndroid">संदेश नाहीत. आपण तयार टॅब वरून एक संदेश पाठवू शकतो.</string>
     <string name="label_InstNoRecipients">प्राप्तकर्ते जोडण्यासाठी, आपण प्रथम एकाच वेळी एक किंवा अधिक इतर वापरकर्त्यांसह गोफण की आवश्यक आहे. आपण देखील मेनूमधून गोफण की संपर्क आमंत्रण पाठवू शकता.</string>
     <string name="label_InstNoSharedFile">नाही सामायिक फाइल. सामायिक फोल्डरमध्ये iTunes आणि फायली ड्रॅग करा आपला डिव्हाइस कनेक्ट व्हा.</string>
     <string name="label_InstRecipients">संदेश पाठविण्यासाठी एक प्राप्तकर्ता निवडा:</string>
@@ -230,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">लॉग इन करताना आपोआप संदेश संलग्नक डाउनलोड</string>
     <string name="label_summary_auto_decrypt">लॉग इन करता तेव्हा स्वयंचलितपणे संदेश उकल</string>
     <string name="label_summary_remind_backup_delay">बॅकअप ऑफलाइन असताना सूचना प्राप्त करा.</string>
-    <string name="label_summary_show_tutorial">गोफण की attemping करण्यापूर्वी चाचणी दाखवा.</string>
+    <string name="label_summary_show_tutorial">गोफण की करण्याचा प्रयत्न करण्यापूर्वी चाचणी दाखवा.</string>
     <string name="label_TapToDecryptFile">फाइल उकल करण्यासाठी टॅप</string>
     <string name="label_TapToDecryptMessage">उकल करण्यासाठी टॅप</string>
     <string name="label_TapToDownloadFile">फाइल डाउनलोड करण्यासाठी टॅप</string>
@@ -257,6 +268,8 @@
     <string name="menu_auto_decrypt">ऑटो उकल</string>
     <string name="menu_Change">बदल</string>
     <string name="menu_ChangePassphrase">बदला वाक्यांश</string>
+    <string name="menu_ContactInviteEmail">संपर्क ईमेल</string>
+    <string name="menu_ContactInviteSms">संपर्क मजकूर</string>
     <string name="menu_CreateNew">नवीन तयार करा</string>
     <string name="menu_delete">हटवा</string>
     <string name="menu_deleteThread">थ्रेड %s हटवा</string>
@@ -269,7 +282,9 @@
     <string name="menu_ForgotPassphrase">वाक्यांश विसरला?</string>
     <string name="menu_Help">मदत करणे</string>
     <string name="menu_Introduction">प्रस्तावना</string>
-    <string name="menu_License">परवाना</string>
+    <string name="menu_language">भाषा</string>
+    <string name="menu_link_contact_add">संपर्क दुवा जोडा</string>
+    <string name="menu_link_contact_change">संपर्क लिंक बदला</string>
     <string name="menu_Logout">लॉगआउट</string>
     <string name="menu_ManagePassphrases">पासफ्रेजेस् व्यवस्थापित</string>
     <string name="menu_message_font_size">संदेश फॉन्ट आकार</string>
