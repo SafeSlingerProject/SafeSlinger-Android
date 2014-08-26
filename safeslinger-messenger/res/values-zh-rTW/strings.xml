@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">發送交換金鑰邀請至通訊錄…</string>
+    <string name="action_NewUserRequest">發送交換金鑰邀請至聯絡資訊…</string>
 
     <string name="app_name">SafeSlinger</string>
     <string name="app_TranslatorName">Yue-Hsun Lin</string>
@@ -70,7 +70,7 @@
     <string name="choice_5mins">5分鐘</string>
     <string name="choice_8hours">8小時</string>
     <string name="choice_auto_storage">自動存儲</string>
-    <string name="choice_default">默認</string>
+    <string name="choice_default">預設</string>
     <string name="choice_external_storage">外部存儲</string>
     <string name="choice_font_large">大</string>
     <string name="choice_font_medium">中</string>
@@ -86,20 +86,20 @@
     <string name="error_AudioPlayerDecodeError">解碼錯誤，無法播放錄音。</string>
     <string name="error_AudioPlayerError">無法播放錄音。</string>
     <string name="error_AudioRecorderEncodeError">錄音編碼錯誤。</string>
-    <string name="error_AudioRecorderPermissionError">麥克風許可須記錄一個安全的語音留言。點擊幫助按鈕SafeSlinger麥克風權限的詳細信息。</string>
+    <string name="error_AudioRecorderPermissionError">需要麥克風權限來啟動安全語音留言功能。點選幫助按鈕以取得如何啟用SafeSlinger麥克風權限。</string>
     <string name="error_BackupNotFound">無法找到備份。</string>
     <string name="error_BackupNotSupportedDevice">手機不支援備份還原。</string>
     <string name="error_BadCopyProtectUpgrade">由於Android 4.1的中程序錯誤，你必須移除並重新安裝SafeSlinger。</string>
     <string name="error_C2DMRegAccountMissing">需要Google帳戶。請打開帳戶管理功能並新增一個Google帳戶。</string>
-    <string name="error_C2DMRegAuthenticationFailed">推播註冊未通過身份驗證，請稍後手動重試。</string>
-    <string name="error_C2DMRegInvalidSender">此版本無法進行推播註冊，請檢查新的版本並安裝。</string>
-    <string name="error_C2DMRegPhoneRegistrationError">該設備在Google服務註冊失敗。目前此設備不支持推播功能。</string>
-    <string name="error_C2DMRegServiceNotAvailable">目前推播服務的註冊功能無法使用，請在%d秒後嘗試註冊。</string>
-    <string name="error_C2DMRegTooManyRegistrations">太多的應用程序註冊推播功能。請移除其他的應用程序，然後重試。</string>
+    <string name="error_C2DMRegAuthenticationFailed">訊息通知註冊未通過身份驗證，請稍後手動重試。</string>
+    <string name="error_C2DMRegInvalidSender">此版本無法進行訊息通知註冊，請檢查新的版本並安裝。</string>
+    <string name="error_C2DMRegPhoneRegistrationError">該設備在Google服務註冊失敗。目前此設備不支持訊息通知服務。</string>
+    <string name="error_C2DMRegServiceNotAvailable">目前訊息通知服務的註冊功能無法使用，請在%d秒後嘗試註冊。</string>
+    <string name="error_C2DMRegTooManyRegistrations">太多的應用程序註冊訊息通知服務。請移除其他的應用程序，然後重試。</string>
     <string name="error_CannotSendEmptyFile">無法傳送空檔案。</string>
     <string name="error_CannotSendFilesOver">檔案太大無法傳送(上限: %d 位元)。</string>
     <string name="error_CannotSendNullFile">無法傳送空的檔案。</string>
-    <string name="error_contactCreationFailure">聯繫方式建立失敗。</string>
+    <string name="error_contactCreationFailure">聯絡資訊建立失敗。</string>
     <string name="error_ContactInsertFailed">聯絡人加入失敗。</string>
     <string name="error_ContactNameMissing">該聯絡資訊缺少姓名，請編輯。</string>
     <string name="error_ContactNameMissing2">該聯絡資訊缺少姓名，請重新選擇。</string>
@@ -121,13 +121,13 @@
     <string name="error_noPassPhrase">沒有輸入密碼。</string>
     <string name="error_passPhrasesDoNotMatch">密碼錯誤。</string>
     <string name="error_PushMsgDeviceQuotaExceeded">您已超過該收件人的訊息配額。請稍後重試。</string>
-    <string name="error_PushMsgInvalidRegistration">該收件人推播辨識碼為無效或不存在。你應該停止發送訊息給該收件人。</string>
+    <string name="error_PushMsgInvalidRegistration">該收件人訊息通知辨識碼為無效或不存在。你應該停止發送訊息給該收件人。</string>
     <string name="error_PushMsgMessageNotFound">過期的訊息。</string>
     <string name="error_PushMsgMessageTooBig">該訊息太大了。請減少的訊息的大小。</string>
-    <string name="error_PushMsgNotRegistered">該收件人的推播辨識碼已失效。收件人可能已經移除SafeSlinger或關閉推播通知。你應該停止發送訊息給收件人。</string>
-    <string name="error_PushMsgNotSucceed">推播通知服務產生錯誤。</string>
+    <string name="error_PushMsgNotRegistered">該收件人的訊息通知辨識碼已失效。收件人可能已經移除SafeSlinger或關閉訊息通知功能。你應該停止發送訊息給收件人。</string>
+    <string name="error_PushMsgNotSucceed">訊息通知服務產生錯誤。</string>
     <string name="error_PushMsgQuotaExceeded">您已寄送超過此設備的訊息配額。請稍後重試。</string>
-    <string name="error_PushMsgServiceFail">推播服務目前無法運作。請稍後再嘗試發送訊息。</string>
+    <string name="error_PushMsgServiceFail">訊息通知服務目前無法運作。請稍後再嘗試發送訊息。</string>
     <string name="error_RecoderError">無法準備錄音器。</string>
     <string name="error_ReminderToSlingKeysToUseApp">要啟動程式，請在同一時間和其他使用者的手機裝置進行金鑰交換。</string>
     <string name="error_selectDataToSend">你需要選擇檔案或輸入文字以便傳送訊息。</string>
@@ -140,25 +140,25 @@
     <string name="error_UncaughtExceptionOccured">SafeSlinger系統錯誤，請重新啓動。</string>
     <string name="error_VcardParseFailure">電子名片格式不正確。</string>
 
-    <string name="help_find">使用此螢幕來設置你的名字和別人交換金鑰。完成後，點擊完成按鈕。</string>
+    <string name="help_find">使用此畫面來設定你希望與其他人交換金鑰時所使用的名字。點選完成按鈕結束設定。</string>
     <string name="help_home">為了交換聯絡資訊，請確保所有成員都在附近，並按下開始交換按鈕，將開始與群體成員開始進行金鑰交換。</string>
     <string name="help_identity_menu">您可以更改個人資料透過點擊螢幕上顯示你名字的按鈕。它將顯示一個選單，允許你編輯你的資料，或建立一個新的聯絡資訊，或使用另一個聯絡資訊。</string>
     <string name="help_Messages">該畫面顯示所有以前的訊息，以及可能被下載完成的檔案。</string>
     <string name="help_passphrase">使用您的密碼登入系統。如果您忘記了您的密碼，您可以重新產生新的密鑰並用新的密碼來保護，透過點擊忘記密碼？按鈕。你也可以點擊帳戶名稱來切換其他帳戶與相關金鑰。</string>
-    <string name="help_passphrase_change">使用該屏幕輸入您上次的密碼進行確認和新的口令更改您的密碼。</string>
+    <string name="help_passphrase_change">使用該畫面來輸入您上次的密碼進行密碼修改確認並輸入新的密碼已進行更改。</string>
     <string name="help_PickRecip">在此顯示擁有SafeSlinger金鑰的聯絡人，選擇一個聯絡人去寄送你的訊息。</string>
     <string name="help_save">交換過程結束時，螢幕將顯示已交換的成員聯絡資訊。如果你想保存這些資料，請按加入的按鈕。</string>
-    <string name="help_SecureIntroduction">這個螢幕允許你選擇兩個之前與你完成金鑰交換的收件者，發送安全介紹訊息以讓彼此交換金鑰。僅需按下安全介紹便可。</string>
+    <string name="help_SecureIntroduction">這個畫面允許你選擇兩個之前與你完成金鑰交換的收件者，發送安全介紹訊息以讓彼此交換金鑰。僅需按下安全介紹便可。</string>
     <string name="help_Send">該畫面允許你選擇資料與收件人來寄送訊息。完成後按下傳送按鈕寄送。</string>
-    <string name="help_settings">這個屏幕允許你改變應用程序的默認設置。</string>
+    <string name="help_settings">這個畫面允許你改變應用程序的預設設置。</string>
 
-    <string name="iOS_contactError">聯繫方式批准才可安全地共享聯繫人卡片。點擊幫助按鈕SafeSlinger聯繫人權限的詳細信息。</string>
-    <string name="iOS_errorpushtoken">推播辨識碼失效。</string>
-    <string name="iOS_notificationError1">對於任何警報或橫幅，並徽章號碼通知允許，都需要安全的信息傳遞。點擊幫助按鈕SafeSlinger通知權限的詳細信息。</string>
+    <string name="iOS_contactError">安全地分享你的聯繫資訊需要啟用聯絡資訊隱私權限。點選幫助按鈕以取得如何啟用SafeSlinger聯絡資訊隱私權限。</string>
+    <string name="iOS_errorpushtoken">訊息通知辨識碼失效。</string>
+    <string name="iOS_notificationError1">安全訊息接受功能需要通知權至少限啟用提示或標記之一，並啟用標記圖像。點選幫助按鈕以取得如何修改SafeSlinger通知權限的詳細信息。</string>
     <string name="iOS_oldOSWarn">SafeSlinger並沒有為iOS 5.x的設備進行優化。SafeSlinger需要iOS6或更高系統版本。</string>
-    <string name="iOS_RequestPermissionContacts">您可以選擇您的聯繫卡送您的朋友和SafeSlinger將加密它。要啟用此功能，您必須允許SafeSlinger訪問您的聯繫人時詢問。</string>
-    <string name="iOS_RequestPermissionMicrophone">您可以錄製語音訊息發送您的朋友和SafeSlinger將加密它。要啟用此功能，您必須允許SafeSlinger訪問您的麥克風當記者問。</string>
-    <string name="iOS_RequestPermissionNotifications">SafeSlinger是一個加密的消息傳遞應用程序，並沒有允許從通知傳入消息無法正常工作。要啟用傳入的郵件，必須允許SafeSlinger當問您發送通知。</string>
+    <string name="iOS_RequestPermissionContacts">您可以從手機裝置中選擇您的聯繫資料並發送您的朋友，訊息將被SafeSlinger加密保護。要啟用此功能，您必須在應用程式詢問時允許SafeSlinger存取聯絡資訊隱私權限。</string>
+    <string name="iOS_RequestPermissionMicrophone">您可以錄製語音訊息並發送您的朋友，訊息將被SafeSlinger加密保護。要啟用此功能，您必須在應用程式詢問時允許SafeSlinger存取麥克風權限。</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger是一個加密訊息應用程式，如果沒有允許訊息通知功能，程式將無法正常接受加密訊息。要啟用接收加密訊息功能，您必須在應用程式詢問時允許SafeSlinger使用訊息通知權限。</string>
 
     <string name="label_ago">%s前</string>
     <string name="label_backupCompleteDate">上一次備份完成日期</string>
@@ -179,13 +179,13 @@
     <string name="label_expires">過期%s</string>
     <string name="label_expiresIn">過期於</string>
     <string name="label_FileNameHint">檔案名稱</string>
-    <string name="label_FindInstruct">輸入您的姓名和密碼來保護您的數據：</string>
+    <string name="label_FindInstruct">輸入您的姓名和密碼來保護您的個人資料：</string>
     <string name="label_FirstName">名字</string>
     <string name="label_Home">點兩下你的名字去添加或刪除個人聯繫資訊，檢查你想分享的項目，然後按下開始交換與其他用戶開始進行金鑰交換：</string>
     <string name="label_hometag">家用電話</string>
     <string name="label_hours">%d小時</string>
     <string name="label_iCloudEnable">SafeSlinger的iClou備份已啟用。</string>
-    <string name="label_InstNoMessages">沒有訊息。您可以發送訊息，從主選單上選擇編輯訊息。</string>
+    <string name="label_InstNoMessages">沒有訊息。您可以發送訊息，從主選單上選擇編輯新訊息。</string>
     <string name="label_InstNoRecipients">要添加收件人，您必須先與一個或多個用戶去交換金鑰。您也可以從選單中送出金鑰交換的邀請訊息。</string>
     <string name="label_InstNoSharedFile">沒有共享的文件。連接您的設備並開啟iTunes，拖曳文件到共享文件夾。</string>
     <string name="label_InstRecipients">挑選一個收件人來傳遞安全訊息：</string>
@@ -219,14 +219,14 @@
     <string name="label_phoneOnly">電話</string>
     <string name="label_Photo">照片</string>
     <string name="label_PublicKeyID">密鑰辨識碼</string>
-    <string name="label_PushTokenID">推播辨識碼</string>
+    <string name="label_PushTokenID">訊息通知辨識碼</string>
     <string name="label_RemindBackupDelay">備份提醒</string>
     <string name="label_ReportedInactive">%s無效。</string>
     <string name="label_restoreCompleteDate">最後備份回復日期</string>
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger備份延遲</string>
     <string name="label_safeslingered">（SafeSlinger直接交換）</string>
     <string name="label_SaveAccount">保存帳戶</string>
-    <string name="label_SaveInstruct">勾選您希望更新或新增的聯繫人訊息，然後按加入聯繫人到聯絡簿：</string>
+    <string name="label_SaveInstruct">勾選您希望更新或新增的聯繫人訊息，然後按加入聯繫人到聯絡資訊：</string>
     <string name="label_seconds">%d秒</string>
     <string name="label_SelectRecip">選擇收件人</string>
     <string name="label_sendErrorData">傳送錯誤資料</string>
@@ -241,7 +241,7 @@
     <string name="label_summary_auto_attach_retrieval">當登入自動下載郵件附件</string>
     <string name="label_summary_auto_decrypt">當登入自動解密消息</string>
     <string name="label_summary_remind_backup_delay">當備份離線時收到通知。</string>
-    <string name="label_summary_show_tutorial">顯示金鑰交換教程。</string>
+    <string name="label_summary_show_tutorial">在交換金鑰前顯示教程。</string>
     <string name="label_TapToDecryptFile">按一下解密檔案</string>
     <string name="label_TapToDecryptMessage">按一下解密訊息</string>
     <string name="label_TapToDownloadFile">按一下下載檔案</string>
@@ -268,8 +268,8 @@
     <string name="menu_auto_decrypt">自動解密</string>
     <string name="menu_Change">更改</string>
     <string name="menu_ChangePassphrase">更改密碼</string>
-    <string name="menu_ContactInviteEmail">電子郵件從通訊錄</string>
-    <string name="menu_ContactInviteSms">從通訊錄中文字</string>
+    <string name="menu_ContactInviteEmail">利用電子郵件送出邀請</string>
+    <string name="menu_ContactInviteSms">利用短信送出邀請</string>
     <string name="menu_CreateNew">建立新的聯絡資訊</string>
     <string name="menu_delete">刪除</string>
     <string name="menu_deleteThread">刪除聯絡人%s的所有訊息</string>
@@ -282,9 +282,9 @@
     <string name="menu_ForgotPassphrase">忘記密碼？</string>
     <string name="menu_Help">協助</string>
     <string name="menu_Introduction">安全介紹</string>
-    <string name="menu_language">語</string>
-    <string name="menu_link_contact_add">加入聯繫我們友情鏈接</string>
-    <string name="menu_link_contact_change">改變聯繫我們友情鏈接</string>
+    <string name="menu_language">語言</string>
+    <string name="menu_link_contact_add">加入收件人聯絡資訊</string>
+    <string name="menu_link_contact_change">改變收件人聯絡資訊</string>
     <string name="menu_Logout">登出</string>
     <string name="menu_ManagePassphrases">密碼管理</string>
     <string name="menu_message_font_size">訊息字體大小</string>
@@ -293,7 +293,7 @@
     <string name="menu_Remove">移除</string>
     <string name="menu_restore_default">恢復預設設定</string>
     <string name="menu_ringtone">鈴聲</string>
-    <string name="menu_SelectShareApp">分享程式給通訊錄中其他人</string>
+    <string name="menu_SelectShareApp">分享程式給聯絡資訊中其他人</string>
     <string name="menu_sendFeedback">發送回饋</string>
     <string name="menu_SendUpdate">發送更新</string>
     <string name="menu_Settings">設定</string>
@@ -302,7 +302,7 @@
     <string name="menu_TagExchange">交換金鑰</string>
     <string name="menu_TagListMessages">訊息清單</string>
     <string name="menu_UseAnother">使用另一個聯絡人</string>
-    <string name="menu_UseContactPerson">使用%s的通訊錄資訊</string>
+    <string name="menu_UseContactPerson">使用%s的聯絡資訊</string>
     <string name="menu_UseNoContact">僅使用名稱</string>
     <string name="menu_UseProfilePerson">使用基本資訊%s</string>
     <string name="menu_vibrate">震動模式</string>
@@ -317,8 +317,8 @@
     <string name="prog_ReceivingFile">接收加密檔案…</string>
     <string name="prog_RequestingFile">要求加密檔案…</string>
     <string name="prog_RequestingMessage">要求加密訊息…</string>
-    <string name="prog_RequestingPushReg">要求推播(push)註冊…</string>
-    <string name="prog_SavingContactsToAddressBook">更新通訊錄…</string>
+    <string name="prog_RequestingPushReg">要求訊息通知服務(push)註冊…</string>
+    <string name="prog_SavingContactsToAddressBook">更新聯絡資訊…</string>
     <string name="prog_SavingContactsToKeyDatabase">更新金鑰數據庫…</string>
     <string name="prog_SearchingForBackup">尋找備份…</string>
     <string name="prog_SendingFile">傳送加密的 %s…</string>
