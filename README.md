@@ -7,7 +7,7 @@ Library Features:
 - Open source makes security audits easy.
 - The only secure simultaneous key exchange for up to 10 people.
 - Easy to implement and use.
-- Cross-platform Android and iOS ([iOS library](http://github.com/SafeSlingerProject/SafeSlinger-iOS) coming Spring 2014).
+- Cross-platform Android and iOS.
 - Protection from Man-In-The-Middle attacks during key exchanges.
 - Exchange keys either in person or remote.
 
@@ -17,22 +17,22 @@ Repository Android Projects
 =======
 
 - **/safeslinger-exchange** contains the library project you can add to your own Android applications. Both the safeslinger-demo and safeslinger-messenger application projects utilize this library to execute the exchange.
-- **/safeslinger-demo** contains the simple [SafeSlinger Exchange Demo](http://play.google.com/store/apps/details?id=edu.cmu.cylab.starslinger.demo) application project which shows the minimum requirements to run a safeslinger secure exchange.
+- **/safeslinger-demo** contains the simple [SafeSlinger Exchange Developer's App](http://play.google.com/store/apps/details?id=edu.cmu.cylab.starslinger.demo) application project which shows the minimum requirements to run a safeslinger secure exchange.
 - **/safeslinger-messenger** contains the full application project source for the [SafeSlinger Messenger](http://play.google.com/store/apps/details?id=edu.cmu.cylab.starslinger) application. This project is a very rich implementation of a safeslinger secure exchange if you want an example of how to use the exchange to verify public keys in your own applications.
 - **/sha3** contains only the Keccak portions of the [sphlib 3.0](http://www.saphir2.com/sphlib) library.
 - **/android-vcard** is a modified version of the [android-vcard](http://code.google.com/p/android-vcard) library.
 - **/android-support-v7-appcompat** is the backward-compatible [Android AppCompat](http://developer.android.com/reference/android/support/v7/app/package-summary.html) library to manage Action Bar features.
 
-Running the Demo
+Running the Developer's App
 ========
-Demo Requirements:
+Developer's App Requirements:
 
 1. Must be installed on a minimum of 2 devices.
 2. An Internet connection must be active.
-3. 'Server Host Name' can be your own server, OR use ours: `slinger-demo.appspot.com`
-4. 'My Secret' can be any information since it is just a demo.
+3. 'Server Host Name' can be your own server, OR use ours: `slinger-dev.appspot.com`
+4. 'My Secret' can be any information.
 
-![Demo Main Screen](http://www.cylab.cmu.edu/safeslinger/images/android-StartDemo.png?raw=true)
+![Developer's App Main Screen](http://www.cylab.cmu.edu/safeslinger/images/android-StartDemo.png?raw=true)
 
 Add Secure Exchange to your Android App
 ========
