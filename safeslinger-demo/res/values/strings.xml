@@ -42,7 +42,7 @@
     <!-- dev; Title of hostname field. -->
     <string name="dev_hostname_title" translatable="false">Server Host Name</string>
     <!-- dev; Instructions for use. -->
-    <string name="dev_instruct" translatable="false">USAGE:\nYou may build and run your own server, OR use ours: slinger-demo.appspot.com. A host name and a secret are required.</string>
+    <string name="dev_instruct" translatable="false">USAGE:\nYou may build and run your own server, OR use ours: slinger-dev.appspot.com. A host name and a secret are required.</string>
     <!-- dev; Menu text to configure NFC settings. -->
     <string name="dev_menu_nfc_settings" translatable="false">NFC Settings</string>
     <!-- dev; Reminder text that this is a developer tool app-only. iOS-only. -->

@@ -44,11 +44,13 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 import edu.cmu.cylab.starslinger.exchange.ExchangeConfig.extra;
 
@@ -58,22 +60,28 @@ import edu.cmu.cylab.starslinger.exchange.ExchangeConfig.extra;
  */
 public class ExchangeActivity extends BaseActivity {
 
-    private static final String TAG = ExchangeConfig.LOG_TAG;
-
     private Intent mCurrIntent = null;
     private int mCurrView = 0;
-    private ExchangeController mProt;
+    private static ExchangeController mProt;
     private byte[][] mExcgMemData;
     private static boolean mLaunched = false;
     private Handler mHandler;
-    private ProgressDialog mDlgProg;
-    private String mProgressMsg = null;
+    private static ProgressDialog mDlgProg;
+    private static String mProgressMsg = null;
+    private byte[] mUserData;
+    private String mHostName;
 
     private static final int VIEW_PROMPT_ID = 76;
     private static final int VIEW_VERIFY_ID = 4;
+    private static final int RECOVERY_ASSIGNUSERID = 20;
+    private static final int RECOVERY_SYNCCOMMITSDATA = 21;
+    private static final int RECOVERY_SYNCMATCHSIGS = 22;
+    private static final int RECOVERY_SYNCWRONGSIGS = 23;
+    private static final int RECOVERY_SYNCNODESNONCES = 24;
     private static final int RESULT_ERROR_EXIT = 6;
     private static final int RESULT_CONFIRM_EXIT_PROMPT = 12;
     private static final int RESULT_CONFIRM_EXIT_VERIFY = 13;
+    private static final int RESULT_CONFIRM_EXIT_PROGRESS = 14;
 
     public static final int RESULT_EXCHANGE_OK = 300;
     public static final int RESULT_EXCHANGE_CANCELED = 301;
@@ -115,7 +123,7 @@ public class ExchangeActivity extends BaseActivity {
                 msg = mProgressMsg;
             }
 
-            showProgressUpdate(numUsers, msg);
+            showProgressUpdate(msg);
             mHandler.postDelayed(this, MS_POLL_INTERVAL);
         }
     };
@@ -144,58 +152,65 @@ public class ExchangeActivity extends BaseActivity {
             return;
         }
 
-        // method
-        mProt = new ExchangeController(this);
-
-        byte[] userData = null;
-        String hostName = null;
-        boolean pairwiseLocal = false; // TODO: future BT/NFC option
-        Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
+        Bundle extras = savedInstanceState != null ? savedInstanceState : getIntent().getExtras();
         if (extras != null) {
-            userData = extras.getByteArray(extra.USER_DATA);
-            hostName = extras.getString(extra.HOST_NAME);
+            mUserData = extras.getByteArray(extra.USER_DATA);
+            mHostName = extras.getString(extra.HOST_NAME);
+        }
 
-            // confirm data exists
-            if (userData == null || userData.length == 0) {
+        // only initialize on new requests, this activity has very little ui
+        if (savedInstanceState == null) {
+
+            // new call from 3rd party, proceed
+            mProt = new ExchangeController(this);
+
+            boolean pairwiseLocal = false; // TODO: future BT/NFC option
+
+            // check for required Bundle values
+            if (mUserData == null || mUserData.length == 0) {
                 showError(getString(R.string.error_NoDataToExchange));
                 return;
             }
-            mProt.setData(userData);
+            if (TextUtils.isEmpty(mHostName)) {
+                showError("Hostname " + mHostName + " is not well formed.");
+                return;
+            }
+
+            try {
+                URI uri = new URI("http", mHostName, "", "");
+                URL url = uri.toURL();
+            } catch (URISyntaxException e) {
+                showError("Hostname " + mHostName + " is not well formed.");
+                return;
+            } catch (MalformedURLException e) {
+                showError("Hostname " + mHostName + " is not well formed.");
+                return;
+            }
+
+            mProt.setData(mUserData);
 
             if (pairwiseLocal) {
                 // TODO: future ensure proper BT/NFC permissions
                 mProt.setHostName(null);
             } else {
-                // confirm server
-                try {
-                    URI uri = new URI("http", hostName, "", "");
-                    URL url = uri.toURL();
-                } catch (URISyntaxException e) {
-                    showError("Hostname " + hostName + " is not well formed.");
-                    return;
-                } catch (MalformedURLException e) {
-                    showError("Hostname " + hostName + " is not well formed.");
-                    return;
-                }
-                mProt.setHostName(hostName);
+                mProt.setHostName(mHostName);
             }
-        }
 
-        // initialize exchange
-        if (handled(mProt.doInitialize())) {
-            if (handled(mProt.doGenerateCommitment())) {
-                if (pairwiseLocal) {
-                    // when pairwise and local we are always 2 users
-                    // in a local exchange, in the same group
-                    mProt.setNumUsers(2);
-                    mProt.setUserIdLink(1);
-                    runThreadGetCommitmentsGetData();
-                } else {
-                    // Server supports multiple users in remote,
-                    // arbitrary configurations so request group
-                    // size as well as unique group id
-                    showGroupSizePicker();
+            // initialize exchange
+            if (handled(mProt.doInitialize())) {
+                if (handled(mProt.doGenerateCommitment())) {
+                    if (pairwiseLocal) {
+                        // when pairwise and local we are always 2 users
+                        // in a local exchange, in the same group
+                        mProt.setNumUsers(2);
+                        mProt.setUserIdLink(1);
+                        runThreadGetCommitmentsGetData();
+                    } else {
+                        // Server supports multiple users in remote,
+                        // arbitrary configurations so request group
+                        // size as well as unique group id
+                        showGroupSizePicker();
+                    }
                 }
             }
         }
@@ -257,6 +272,20 @@ public class ExchangeActivity extends BaseActivity {
                     case RESULT_CANCELED:
                         // return to current activity
                         startActivityForResult(mCurrIntent, mCurrView);
+                        break;
+                    default:
+                        break;
+                }
+                break;
+
+            case RESULT_CONFIRM_EXIT_PROGRESS:
+                switch (resultCode) {
+                    case RESULT_OK:
+                        mProt.cancelProtocol();
+                        showExit(RESULT_CANCELED);
+                        break;
+                    case RESULT_CANCELED:
+                        showProgress(mProgressMsg);
                         break;
                     default:
                         break;
@@ -345,132 +374,87 @@ public class ExchangeActivity extends BaseActivity {
     }
 
     private void runThreadGetUserId() {
-        showProgress(getString(R.string.prog_RequestingUserId), true);
-        mDlgProg.setOnDismissListener(new DialogInterface.OnDismissListener() {
-
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                if (handled(!mProt.isError()) && !mProt.isCanceled())
-                    showLowestUserIdPrompt(mProt.getUserId());
-            }
-        });
-        setProgressCancelHandler();
-
+        showProgress(getString(R.string.prog_RequestingUserId));
         Thread t = new Thread() {
 
             @Override
             public void run() {
                 mProt.doRequestUserId();
-                hideProgress();
+                endProgress(RECOVERY_ASSIGNUSERID);
             }
         };
         t.start();
     }
 
     private void runThreadGetCommitmentsGetData() {
-        showProgress(getString(R.string.prog_CollectingOthersItems), true);
-        mDlgProg.setOnDismissListener(new DialogInterface.OnDismissListener() {
-
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                if (handled(!mProt.isError()) && !mProt.isCanceled())
-                    showVerify(mProt.getHash(), mProt.getDecoyHash(1), mProt.getDecoyHash(2),
-                            mProt.getRandomPos(3));
-            }
-        });
-        setProgressCancelHandler();
-
+        showProgress(getString(R.string.prog_CollectingOthersItems));
         Thread t = new Thread() {
 
             @Override
             public void run() {
                 mProt.doGetCommitmentsGetData();
-                hideProgress();
+                endProgress(RECOVERY_SYNCCOMMITSDATA);
             }
         };
         t.start();
     }
 
     private void runThreadSendValidSignatureGetSignatures() {
-        showProgress(getString(R.string.prog_CollectingOthersCommitVerify), true);
-        mDlgProg.setOnDismissListener(new DialogInterface.OnDismissListener() {
-
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                if (handled(!mProt.isError()) && !mProt.isCanceled())
-                    runThreadCreateSharedSecretGetNodesAndMatchNonces();
-            }
-        });
-        setProgressCancelHandler();
-
+        showProgress(getString(R.string.prog_CollectingOthersCommitVerify));
         Thread t = new Thread() {
 
             @Override
             public void run() {
                 mProt.doSendValidSignatureGetSignatures();
-                hideProgress();
+                endProgress(RECOVERY_SYNCMATCHSIGS);
             }
         };
         t.start();
     }
 
     private void runThreadCreateSharedSecretGetNodesAndMatchNonces() {
-        showProgress(getString(R.string.prog_ConstructingGroupKey), true);
-        mDlgProg.setOnDismissListener(new DialogInterface.OnDismissListener() {
-
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                if (handled(!mProt.isError()) && !mProt.isCanceled())
-                    doVerifyFinalMatchDone();
-            }
-        });
-        setProgressCancelHandler();
-
+        showProgress(getString(R.string.prog_ConstructingGroupKey));
         Thread t = new Thread() {
 
             @Override
             public void run() {
                 mProt.doCreateSharedSecretGetNodesAndMatchNonces();
-                hideProgress();
+                endProgress(RECOVERY_SYNCNODESNONCES);
             }
         };
         t.start();
     }
 
     private void runThreadSendInvalidSignature() {
-        showProgress(getString(R.string.prog_CollectingOthersCommitVerify), true);
-        mDlgProg.setOnDismissListener(new DialogInterface.OnDismissListener() {
-
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                if (!mProt.isCanceled()) {
-                    showError(mProt.getErrorMsg());
-                }
-            }
-        });
-        setProgressCancelHandler();
-
+        showProgress(getString(R.string.prog_CollectingOthersCommitVerify));
         Thread t = new Thread() {
 
             @Override
             public void run() {
                 mProt.doSendInvalidSignature();
-                hideProgress();
+                endProgress(RECOVERY_SYNCWRONGSIGS);
             }
         };
         t.start();
     }
 
     private void setProgressCancelHandler() {
-        mDlgProg.setCanceledOnTouchOutside(false);
-        mDlgProg.setOnCancelListener(new DialogInterface.OnCancelListener() {
+        if (mDlgProg != null) {
+            mDlgProg.setCanceledOnTouchOutside(false);
+            mDlgProg.setOnCancelListener(new DialogInterface.OnCancelListener() {
 
-            @Override
-            public void onCancel(DialogInterface dialog) {
-                mProt.cancelProtocol();
-                showExit(RESULT_CANCELED);
-            }
-        });
+                @Override
+                public void onCancel(DialogInterface dialog) {
+                    // if we've already grouped, check for confirm, else cancel
+                    if (mProt.getUserIdLink() > 0) {
+                        showExitConfirm(RESULT_CONFIRM_EXIT_PROGRESS);
+                    } else {
+                        mProt.cancelProtocol();
+                        showExit(RESULT_CANCELED);
+                    }
+                }
+            });
+        }
         mHandler = new Handler();
         mHandler.removeCallbacks(mUpdateReceivedProg);
         mHandler.postDelayed(mUpdateReceivedProg, MS_POLL_INTERVAL);
@@ -664,33 +648,82 @@ public class ExchangeActivity extends BaseActivity {
         return ad;
     }
 
-    private void showProgress(String msg, boolean indeterminate) {
+    private void showProgress(String msg) {
+        Bundle args = new Bundle();
+        args.putString(extra.RESID_MSG, msg);
+        if (!isFinishing()) {
+            removeDialog(DIALOG_PROGRESS);
+            showDialog(DIALOG_PROGRESS, args);
+        }
+    }
+
+    private Dialog xshowProgress(Activity act, Bundle args) {
+        String msg = args.getString(extra.RESID_MSG);
         Log.i(TAG, msg);
-        mDlgProg = new ProgressDialog(this);
-        mDlgProg.setTitle(mProt.getStatusBanner(ExchangeActivity.this));
-        mDlgProg.setProgressStyle(indeterminate ? ProgressDialog.STYLE_SPINNER
-                : ProgressDialog.STYLE_HORIZONTAL);
+
+        if (mDlgProg != null) {
+            mDlgProg = null;
+            mProgressMsg = null;
+        }
+        mDlgProg = new ProgressDialog(act);
+        mDlgProg.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         mDlgProg.setMessage(msg);
         mProgressMsg = msg;
         mDlgProg.setCancelable(true);
-        mDlgProg.setIndeterminate(indeterminate);
-        mDlgProg.setProgress(0);
-        mDlgProg.show();
+        setProgressCancelHandler();
+
+        return mDlgProg;
     }
 
-    private void showProgressUpdate(int value, String msg) {
+    private void showProgressUpdate(String msg) {
         if (mDlgProg != null) {
             mDlgProg.setTitle(mProt.getStatusBanner(ExchangeActivity.this));
-            mDlgProg.setProgress(value);
             if (msg != null) {
                 mDlgProg.setMessage(msg);
             }
         }
     }
 
-    private void hideProgress() {
+    private void endProgress(final int recover) {
         if (mDlgProg != null) {
+            mDlgProg.setOnDismissListener(new OnDismissListener() {
+
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    switch (recover) {
+                        case RECOVERY_ASSIGNUSERID:
+                            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
+                                showLowestUserIdPrompt(mProt.getUserId());
+                            }
+                            break;
+                        case RECOVERY_SYNCCOMMITSDATA:
+                            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
+                                showVerify(mProt.getHash(), mProt.getDecoyHash(1),
+                                        mProt.getDecoyHash(2), mProt.getRandomPos(3));
+                            }
+                            break;
+                        case RECOVERY_SYNCMATCHSIGS:
+                            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
+                                runThreadCreateSharedSecretGetNodesAndMatchNonces();
+                            }
+                            break;
+                        case RECOVERY_SYNCWRONGSIGS:
+                            if (!mProt.isCanceled()) {
+                                showError(mProt.getErrorMsg());
+                            }
+                            break;
+                        case RECOVERY_SYNCNODESNONCES:
+                            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
+                                doVerifyFinalMatchDone();
+                            }
+                            break;
+                        default:
+                            throw new AssertionError("default case reached");
+                    }
+                }
+            });
             mDlgProg.dismiss();
+            mDlgProg = null;
         }
     }
 
@@ -703,10 +736,22 @@ public class ExchangeActivity extends BaseActivity {
                 return xshowQuestion(ExchangeActivity.this, args).create();
             case DIALOG_GRP_SIZE:
                 return xshowGroupSizePicker(ExchangeActivity.this).create();
+            case DIALOG_PROGRESS:
+                return xshowProgress(ExchangeActivity.this, args);
             default:
                 break;
         }
         return super.onCreateDialog(id);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        if (mUserData != null) {
+            outState.putByteArray(extra.USER_DATA, mUserData);
+        }
+        if (mHostName != null) {
+            outState.putString(extra.HOST_NAME, mHostName);
+        }
+        super.onSaveInstanceState(outState);
+    }
 }

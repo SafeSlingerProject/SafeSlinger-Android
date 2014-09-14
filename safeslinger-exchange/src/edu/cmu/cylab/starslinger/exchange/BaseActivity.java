@@ -39,11 +39,12 @@ import edu.cmu.cylab.starslinger.exchange.ExchangeConfig.extra;
 
 public class BaseActivity extends Activity {
 
-    private static final String TAG = ExchangeConfig.LOG_TAG;
-    public static final int DIALOG_HELP = 1;
-    public static final int DIALOG_ERROR = 2;
-    public static final int DIALOG_QUESTION = 3;
-    public static final int DIALOG_GRP_SIZE = 4;
+    protected static final String TAG = ExchangeConfig.LOG_TAG;
+    protected static final int DIALOG_HELP = 1;
+    protected static final int DIALOG_ERROR = 2;
+    protected static final int DIALOG_QUESTION = 3;
+    protected static final int DIALOG_GRP_SIZE = 4;
+    protected static final int DIALOG_PROGRESS = 5;
 
     protected void showHelp(String title, String msg) {
         Bundle args = new Bundle();
@@ -124,4 +125,9 @@ public class BaseActivity extends Activity {
         }
     }
 
+    protected void finishInvalidBundle(String logError) {
+        Log.e(TAG, logError);
+        setResultForParent(RESULT_CANCELED);
+        finish();
+    }
 }

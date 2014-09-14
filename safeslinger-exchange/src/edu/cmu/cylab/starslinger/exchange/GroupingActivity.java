@@ -51,6 +51,8 @@ public class GroupingActivity extends BaseActivity {
     private TextView mTextViewUserId;
     private EditText mEditTextPrompt;
     private TextView mTextViewCompareNDevices;
+    private int mNumUsers;
+    private int mUserId;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -100,19 +102,26 @@ public class GroupingActivity extends BaseActivity {
         mTextViewUserId = (TextView) findViewById(R.id.PromptTextViewUserId);
         mEditTextPrompt = (EditText) findViewById(R.id.PromptEditText);
 
-        int numUsers = 2;
-        int usrid = 0;
-        Bundle extras = getIntent().getExtras();
+        Bundle extras = savedInstanceState != null ? savedInstanceState : getIntent().getExtras();
         if (extras != null) {
-            usrid = extras.getInt(extra.USER_ID, usrid);
-            numUsers = extras.getInt(extra.NUM_USERS);
-        }
-        if (usrid > 0) {
-            mTextViewUserId.setText(String.valueOf(usrid));
+            mUserId = extras.getInt(extra.USER_ID, mUserId);
+            mNumUsers = extras.getInt(extra.NUM_USERS);
         }
 
+        // check for required Bundle values
+        if (mUserId <= 0) {
+            finishInvalidBundle("VerifyActivity mUserId=" + mUserId);
+            return;
+        }
+        if (mNumUsers < 2) {
+            finishInvalidBundle("VerifyActivity mNumUsers=" + mNumUsers);
+            return;
+        }
+
+        mTextViewUserId.setText(String.valueOf(mUserId));
+
         mTextViewCompareNDevices.setText(String.format(
-                getString(R.string.label_CompareScreensNDevices), numUsers));
+                getString(R.string.label_CompareScreensNDevices), mNumUsers));
         mTextViewInstruct.setText(R.string.label_PromptInstruct);
         mEditTextPrompt.setText("");
 
@@ -165,5 +174,16 @@ public class GroupingActivity extends BaseActivity {
                 break;
         }
         return super.onCreateDialog(id);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        if (mUserId > 0) {
+            outState.putInt(extra.USER_ID, mUserId);
+        }
+        if (mNumUsers >= 2) {
+            outState.putInt(extra.NUM_USERS, mNumUsers);
+        }
+        super.onSaveInstanceState(outState);
     }
 }

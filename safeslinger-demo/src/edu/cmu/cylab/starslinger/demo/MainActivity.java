@@ -33,6 +33,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -50,16 +52,19 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 import edu.cmu.cylab.starslinger.exchange.ExchangeActivity;
 import edu.cmu.cylab.starslinger.exchange.ExchangeConfig;
 
 public class MainActivity extends ActionBarActivity {
 
+    private static final String DEFAULT_HOST_NAME = "slinger-dev.appspot.com";
     private static final int RESULT_EXCHANGE = 1;
     private static final int MENU_MSG = 2;
     private static final int MENU_NFC = 3;
     private static byte[] mMySecret;
+    private ConnectivityManager mConnectivityManager;
 
     private static final String EXTRA_TITLE = "TITLE";
     private static final String EXTRA_MSG = "MSG";
@@ -174,7 +179,7 @@ public class MainActivity extends ActionBarActivity {
 
             // load simple prefs from last visit
             editTextMySecret.setText(sharedPref.getString(PREF_SECRET, null));
-            editTextServerHostName.setText(sharedPref.getString(PREF_HOST, null));
+            editTextServerHostName.setText(sharedPref.getString(PREF_HOST, DEFAULT_HOST_NAME));
 
             // enable hyperlinks
             textViewWarning.setMovementMethod(LinkMovementMethod.getInstance());
@@ -209,8 +214,14 @@ public class MainActivity extends ActionBarActivity {
                     editor.putString(PREF_HOST, server);
                     editor.commit();
 
-                    // begin the exchange
-                    beginExchange(server, mMySecret);
+                    // check online state
+                    if (((MainActivity) getActivity()).isOnline()) {
+                        // begin the exchange
+                        beginExchange(server, mMySecret);
+                    } else {
+                        Toast.makeText(getActivity(), R.string.error_CorrectYourInternetConnection,
+                                Toast.LENGTH_LONG).show();
+                    }
                 }
             });
 
@@ -335,4 +346,14 @@ public class MainActivity extends ActionBarActivity {
         return super.onCreateDialog(id);
     }
 
+    public boolean isOnline() {
+        boolean connected = false;
+        if (mConnectivityManager == null) {
+            mConnectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        }
+
+        NetworkInfo networkInfo = mConnectivityManager.getActiveNetworkInfo();
+        connected = networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected();
+        return connected;
+    }
 }

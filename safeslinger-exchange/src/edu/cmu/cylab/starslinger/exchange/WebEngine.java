@@ -41,9 +41,6 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.params.HttpProtocolParams;
 
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Log;
@@ -62,36 +59,12 @@ public class WebEngine extends ConnectionEngine {
     private String mUrlSuffix = ExchangeConfig.HTTPURL_SUFFIX;
     private HttpClient mHttpClient;
 
-    private ConnectivityManager mConnectivityManager;
-
     public void setHost(String host) {
         mHost = host;
     }
 
-    public boolean isOnline() {
-        if (mCtx != null) {
-            boolean connected = false;
-            if (mConnectivityManager == null) {
-                mConnectivityManager = (ConnectivityManager) mCtx
-                        .getSystemService(Context.CONNECTIVITY_SERVICE);
-            }
-
-            NetworkInfo networkInfo = mConnectivityManager.getActiveNetworkInfo();
-            connected = networkInfo != null && networkInfo.isAvailable()
-                    && networkInfo.isConnected();
-            return connected;
-        } else {
-            return true;
-        }
-    }
-
     private byte[] doPost(String uri, byte[] requestBody) throws ExchangeException {
         mCancelable = false;
-
-        if (!isOnline()) {
-            throw new ExchangeException(
-                    mCtx.getString(R.string.error_CorrectYourInternetConnection));
-        }
 
         // sets up parameters
         HttpParams params = new BasicHttpParams();
@@ -123,6 +96,7 @@ public class WebEngine extends ConnectionEngine {
         } catch (HttpResponseException e) {
             // this subclass of java.io.IOException contains useful data for
             // users, do not swallow, handle properly
+            e.printStackTrace();
             statCode = e.getStatusCode();
             statMsg = e.getLocalizedMessage();
             error = (String.format(mCtx.getString(R.string.error_HttpCode), statCode) + ", \'"
@@ -130,6 +104,7 @@ public class WebEngine extends ConnectionEngine {
         } catch (java.io.IOException e) {
             // just show a simple Internet connection error, so as not to
             // confuse users
+            e.printStackTrace();
             error = mCtx.getString(R.string.error_CorrectYourInternetConnection);
         } catch (RuntimeException e) {
             error = e.getLocalizedMessage() + " (" + e.getClass().getSimpleName() + ")";

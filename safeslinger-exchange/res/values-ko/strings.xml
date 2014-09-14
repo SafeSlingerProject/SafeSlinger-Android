@@ -34,8 +34,8 @@
 
     <string name="error_AllMembersMustUpgrade">회원 일부가 이전 버전을 사용하고 있습니다. 모든 회원은 적어도 %s을(를) 사용해야합니다.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">회원 일부가 이전 형식의 푸시 등록을 사용하고 있습니다. 업그레이드가 필요합니다.</string>
-    <string name="error_CorrectYourInternetConnection">인터넷에 접속할 수 없습니다. 설정을 확인해주세요.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">환율 의 제한 시간이 초과했습니다. 다시 교환을 시작합니다.</string>
+    <string name="error_CorrectYourInternetConnection">인터넷에 접속할 수 없습니다. 설정을 확인해 주십시오.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">제한 시간을 초과했습니다. 교환을 다시 시작해 주십시오.</string>
     <string name="error_HttpCode">서버 HTTP 오류: %d</string>
     <string name="error_InvalidCommitVerify">교환 에있는 잘못된 데이터. 다시 교환을 시작합니다.</string>
     <string name="error_InvalidCommonUserId">양의 정수를 입력하십시오.</string>

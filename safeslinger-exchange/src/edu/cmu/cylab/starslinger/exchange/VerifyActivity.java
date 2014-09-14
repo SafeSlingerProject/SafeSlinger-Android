@@ -58,6 +58,10 @@ public class VerifyActivity extends BaseActivity {
     private TextView mTextViewSecondary2;
     private TextView mTextViewSecondary3;
     private TextView mTextViewCompareNDevices;
+    private byte[] mDataHash;
+    private byte[] mDecoyHash1;
+    private byte[] mDecoyHash2;
+    private int mNumUsers;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -102,21 +106,36 @@ public class VerifyActivity extends BaseActivity {
         setContentView(R.layout.sse__verifywords);
 
         int bytesOfHash = 3;
-        mCorrectButton = 0;
+        Bundle extras = savedInstanceState != null ? savedInstanceState : getIntent().getExtras();
 
-        // load from controller
-        byte[] flagHash = null;
-        byte[] decoyHash1 = null;
-        byte[] decoyHash2 = null;
-
-        int numUsers = 2;
-        Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            flagHash = extras.getByteArray(extra.FLAG_HASH);
-            decoyHash1 = extras.getByteArray(extra.DECOY1_HASH);
-            decoyHash2 = extras.getByteArray(extra.DECOY2_HASH);
+            mDataHash = extras.getByteArray(extra.FLAG_HASH);
+            mDecoyHash1 = extras.getByteArray(extra.DECOY1_HASH);
+            mDecoyHash2 = extras.getByteArray(extra.DECOY2_HASH);
             mCorrectButton = extras.getInt(extra.RANDOM_POS);
-            numUsers = extras.getInt(extra.NUM_USERS);
+            mNumUsers = extras.getInt(extra.NUM_USERS);
+        }
+
+        // check for required Bundle values
+        if (mDataHash == null || mDataHash.length < bytesOfHash) {
+            finishInvalidBundle("VerifyActivity mDataHash=" + mDataHash);
+            return;
+        }
+        if (mDecoyHash1 == null || mDecoyHash1.length < bytesOfHash) {
+            finishInvalidBundle("VerifyActivity mDecoyHash1=" + mDecoyHash1);
+            return;
+        }
+        if (mDecoyHash2 == null || mDecoyHash2.length < bytesOfHash) {
+            finishInvalidBundle("VerifyActivity mDecoyHash2=" + mDecoyHash2);
+            return;
+        }
+        if (mCorrectButton > 2) {
+            finishInvalidBundle("VerifyActivity mCorrectButton=" + mCorrectButton);
+            return;
+        }
+        if (mNumUsers < 2) {
+            finishInvalidBundle("VerifyActivity mNumUsers=" + mNumUsers);
+            return;
         }
 
         mTextViewCompareNDevices = (TextView) findViewById(R.id.TextViewCompareNDevices);
@@ -142,7 +161,7 @@ public class VerifyActivity extends BaseActivity {
         }
 
         mTextViewCompareNDevices.setText(String.format(
-                getString(R.string.label_CompareScreensNDevices), numUsers));
+                getString(R.string.label_CompareScreensNDevices), mNumUsers));
 
         // set visual hash
         byte[][] hashes = new byte[3][];
@@ -154,16 +173,16 @@ public class VerifyActivity extends BaseActivity {
             // drop all hashes into one of three places
             if (i == mCorrectButton) {
                 // correct list (random)
-                hashes[i] = flagHash;
+                hashes[i] = mDataHash;
             } else {
                 if (first) {
                     // decoy list 1
                     mDecoy1Button = i;
-                    hashes[i] = topDecoy ? decoyHash1 : decoyHash2;
+                    hashes[i] = topDecoy ? mDecoyHash1 : mDecoyHash2;
                 } else {
                     // decoy list 2
                     mDecoy2Button = i;
-                    hashes[i] = topDecoy ? decoyHash2 : decoyHash1;
+                    hashes[i] = topDecoy ? mDecoyHash2 : mDecoyHash1;
                     first = true;
                 }
             }
@@ -234,5 +253,25 @@ public class VerifyActivity extends BaseActivity {
                 break;
         }
         return super.onCreateDialog(id);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        if (mDataHash != null) {
+            outState.putByteArray(extra.FLAG_HASH, mDataHash);
+        }
+        if (mDecoyHash1 != null) {
+            outState.putByteArray(extra.DECOY1_HASH, mDecoyHash1);
+        }
+        if (mDecoyHash2 != null) {
+            outState.putByteArray(extra.DECOY2_HASH, mDecoyHash2);
+        }
+        if (mCorrectButton <= 2) {
+            outState.putInt(extra.RANDOM_POS, mCorrectButton);
+        }
+        if (mNumUsers >= 2) {
+            outState.putInt(extra.NUM_USERS, mNumUsers);
+        }
+        super.onSaveInstanceState(outState);
     }
 }
