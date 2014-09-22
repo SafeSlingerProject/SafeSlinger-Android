@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d users</string>
 
-    <string name="error_AllMembersMustUpgrade">Quidam sunt qui per litteram veteris; omnes sodales saltem %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Qui mundus est upgrade, uti maior pars eu blandit urna.</string>
     <string name="error_CorrectYourInternetConnection">Varius non, reprehendo vestri occasus.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout excederet. Incipit etiam in commutatione eius.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Differt nuntiatum phrases. Incipit etiam in commutatione eius.</string>
     <string name="error_OutOfMemoryError">Memoria est humilis perficere opus.</string>
     <string name="error_ServerAppMessage">Nuntius Sanctus: %s</string>
-    <string name="error_ServerAppMessageCStr">Nuntius Sanctus: %s</string>
     <string name="error_ServerNotResponding">Saeculo non est responsum.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout expectantes coetus membra augere notitia.</string>
     <string name="error_WebCancelledByUser">Aliquam ornare tempus remittuntur tibi petitionem.</string>

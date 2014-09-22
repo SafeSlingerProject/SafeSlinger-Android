@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d itilizatè</string>
 
-    <string name="error_AllMembersMustUpgrade">Kèk manm yo lè l sèvi avèk yon vèsyon plis; Tout manm yo dwe omwen sèvi ak %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tout manm yo dwe ajou, gen kèk ki lè l sèvi avèk pi gran fòma enskripsyon pouse.</string>
     <string name="error_CorrectYourInternetConnection">Entènèt pa disponib, tcheke anviwònman ou yo.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Echanj poz depase. Kòmanse echanj la ankò.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Yon moun total yon diferans nan fraz. Kòmanse echanj la ankò.</string>
     <string name="error_OutOfMemoryError">Memwa a twò ba yo fini operasyon sa a.</string>
     <string name="error_ServerAppMessage">Sèvè Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Sèvè Message: %s</string>
     <string name="error_ServerNotResponding">Pa gen repons nan men sèvè.</string>
     <string name="error_TimeoutWaitingForAllMembers">La resevwa yon pinisyon ap tann pou kèk manm gwoup yo ajoute done.</string>
     <string name="error_WebCancelledByUser">Itilizatè anile sèvè mande sa.</string>

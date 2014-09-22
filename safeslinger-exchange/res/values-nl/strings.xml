@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d gebruikers</string>
 
-    <string name="error_AllMembersMustUpgrade">Sommige leden zijn met behulp van een oudere versie; alle leden moeten minstens gebruiken %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Alle leden moeten upgraden, wat gebruik maakt van oudere push registratie formaten.</string>
     <string name="error_CorrectYourInternetConnection">Internet niet beschikbaar is, controleert u de instellingen.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout overschreden. Begin de uitwisseling weer.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Iemand rapporteerde een verschil in zinnen. Begin de uitwisseling weer.</string>
     <string name="error_OutOfMemoryError">Geheugen te laag om deze verrichting.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Geen reactie van server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout wachten voor sommige groepsleden om gegevens toe te voegen.</string>
     <string name="error_WebCancelledByUser">Gebruiker geannuleerd server aanvraag.</string>

@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d Benutzer</string>
 
-    <string name="error_AllMembersMustUpgrade">Einige Teilnehmer verwenden eine ältere Version, alle Mitglieder müssen mindestens %s verwenden.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Alle Teilnehmer müssen die Software aktualisieren, manche verwenden ältere Formate zur Push Registrierung.</string>
     <string name="error_CorrectYourInternetConnection">Internet nicht verfügbar, überprüfen Sie Ihre Einstellungen.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Zeitüberschreitung beim Austausch. Beginnen Sie den Austausch noch einmal.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Jemand hat keine passenden Sätze gemeldet. Beginnen Sie den Austausch noch einmal.</string>
     <string name="error_OutOfMemoryError">Der Speicher ist zu gering, um diesen Vorgang abzuschließen.</string>
     <string name="error_ServerAppMessage">Server Nachricht: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Nachricht: %s</string>
     <string name="error_ServerNotResponding">Server meldet sich nicht.</string>
     <string name="error_TimeoutWaitingForAllMembers">Zeitüberschreitung beim Warten auf alle Teilnehmer.</string>
     <string name="error_WebCancelledByUser">Benutzer brach Serveranfrage ab.</string>

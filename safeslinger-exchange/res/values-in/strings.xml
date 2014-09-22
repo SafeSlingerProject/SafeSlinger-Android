@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">pengguna %d</string>
 
-    <string name="error_AllMembersMustUpgrade">Beberapa anggota yang menggunakan versi lama; semua anggota harus setidaknya menggunakan %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Semua anggota harus meng-upgrade, beberapa menggunakan lebih tua format pendaftaran push.</string>
     <string name="error_CorrectYourInternetConnection">Internet tidak tersedia, periksa pengaturan Anda.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Bursa batas waktu terlampaui. Mulailah pertukaran lagi.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Seseorang melaporkan perbedaan dalam frase. Mulailah pertukaran lagi.</string>
     <string name="error_OutOfMemoryError">Memory terlalu rendah untuk menyelesaikan operasi ini.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Tidak ada respon dari server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout menunggu beberapa anggota kelompok untuk menambah data.</string>
     <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan server.</string>

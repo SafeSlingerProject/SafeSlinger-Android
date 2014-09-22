@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d명의 사용자</string>
 
-    <string name="error_AllMembersMustUpgrade">회원 일부가 이전 버전을 사용하고 있습니다. 모든 회원은 적어도 %s을(를) 사용해야합니다.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">회원 일부가 이전 형식의 푸시 등록을 사용하고 있습니다. 업그레이드가 필요합니다.</string>
     <string name="error_CorrectYourInternetConnection">인터넷에 접속할 수 없습니다. 설정을 확인해 주십시오.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">제한 시간을 초과했습니다. 교환을 다시 시작해 주십시오.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">누군가 는 문구 의 차이 를보고했다. 다시 교환을 시작합니다.</string>
     <string name="error_OutOfMemoryError">메모리는이 작업을 완료하는 데 너무 낮습니다.</string>
     <string name="error_ServerAppMessage">서버 메시지: %s</string>
-    <string name="error_ServerAppMessageCStr">서버 메시지: %s</string>
     <string name="error_ServerNotResponding">서버가 응답하지 않았습니다.</string>
     <string name="error_TimeoutWaitingForAllMembers">일부 그룹 회원의 데이터를 추가 할 시간이 초과하였습니다.</string>
     <string name="error_WebCancelledByUser">사용자가 서버 요청을 취소했습니다.</string>

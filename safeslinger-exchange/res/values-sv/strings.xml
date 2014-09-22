@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d användare</string>
 
-    <string name="error_AllMembersMustUpgrade">Några medlemmar använder en äldre version; alla medlemmar måste åtminstoneanvända %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Alla medlemmar måste uppgradera, en del använder äldre tryckregistreringsformat.</string>
     <string name="error_CorrectYourInternetConnection">Internet inte är tillgänglig, kontrollera dina inställningar.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout överskrids. Begin utbyte igen.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Någon rapporterade en skillnad i fraser. Begin utbyte igen.</string>
     <string name="error_OutOfMemoryError">Minnet är för låg för att slutföra den här åtgärden.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Inget svar från servern.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout väntar på vissa gruppmedlemmar för att lägga till data.</string>
     <string name="error_WebCancelledByUser">Användaren avbröt förfrågan server.</string>

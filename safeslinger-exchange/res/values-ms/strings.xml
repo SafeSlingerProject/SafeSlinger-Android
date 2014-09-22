@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">pengguna %d</string>
 
-    <string name="error_AllMembersMustUpgrade">Beberapa ahli menggunakan versi yang lebih tua; semua ahli sekurang-kurangnya mesti menggunakan %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Semua ahli mesti menaik taraf, ada yang menggunakan format pendaftaran menolak lebih tua.</string>
     <string name="error_CorrectYourInternetConnection">Internet tidak boleh didapati, semak tetapan anda.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Tamat Exchange melebihi. Mulakan pertukaran lagi.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Seseorang dilaporkan perbezaan dalam frasa. Mulakan pertukaran lagi.</string>
     <string name="error_OutOfMemoryError">Memori adalah terlalu rendah untuk menyelesaikan operasi.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Tidak ada jawapan dari pelayan.</string>
     <string name="error_TimeoutWaitingForAllMembers">Had masa menunggu beberapa ahli-ahli kumpulan untuk menambah data.</string>
     <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan pelayan.</string>

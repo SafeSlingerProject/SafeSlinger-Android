@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d utenti</string>
 
-    <string name="error_AllMembersMustUpgrade">Uħud mill-membri qed tuża verżjoni anzjani; membri kollha jridu għal inqas użu %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Il-membri kollha għandhom jaġġornaw, xi wħud huma jużaw formats anzjani reġistrazzjoni push.</string>
     <string name="error_CorrectYourInternetConnection">Internet ma tkunx disponibbli, iċċekkja settings tiegħek.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Skambju timeout jinqabeż. Tibda l-iskambju mill-ġdid.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Xi ħadd rrappurtat differenza fil frażijiet. Tibda l-iskambju mill-ġdid.</string>
     <string name="error_OutOfMemoryError">Memorja huwa baxx wisq biex jitlesta din l-operazzjoni.</string>
     <string name="error_ServerAppMessage">Messaġġ Server: %s</string>
-    <string name="error_ServerAppMessageCStr">Messaġġ Server: %s</string>
     <string name="error_ServerNotResponding">Ebda risposta mill server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout stennija għal xi membri tal-grupp biex iżidu data.</string>
     <string name="error_WebCancelledByUser">User kkanċellati talba server.</string>

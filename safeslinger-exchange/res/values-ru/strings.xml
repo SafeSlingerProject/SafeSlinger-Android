@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">Пользователей-%d</string>
 
-    <string name="error_AllMembersMustUpgrade">Некоторые члены используют старую версию, все должны как минимум использовать %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Все члены должны обновить, некоторые используют устаревшие форматы ID уведомлений.</string>
     <string name="error_CorrectYourInternetConnection">Интернет не доступен, проверьте настройки.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Время ожидания про обмене превышено, начать обмен заново.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Кто-то сообщил разницу в фразы. Начните обмен снова.</string>
     <string name="error_OutOfMemoryError">Слишком мало памяти для выполнения этой команды.</string>
     <string name="error_ServerAppMessage">Сообщение сервера: %s</string>
-    <string name="error_ServerAppMessageCStr">Сообщение сервера: %s</string>
     <string name="error_ServerNotResponding">Сервер не отвечает.</string>
     <string name="error_TimeoutWaitingForAllMembers">Истек срок ожидания того, что некоторые члены группы добавят данные.</string>
     <string name="error_WebCancelledByUser">Пользователь отменил запрос к серверу.</string>

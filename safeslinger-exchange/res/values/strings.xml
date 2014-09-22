@@ -36,8 +36,8 @@
     <!-- choice (sentence case); used to describe the number of users currently attempting to exchange keys. %d = number of users in the exchange. -->
     <string name="choice_NumUsers">%d users</string>
 
-    <!-- error message (sentence case, period); used to warn when some members of the key exchange protocol are using less than the minimum version. Used for backward-compatibility in some cases. %s = the minimum cross-platform version number of SafeSlinger, usually expressed as x.x. -->
-    <string name="error_AllMembersMustUpgrade">Some members are using an older version; all members must at least use %s.</string>
+    <!-- error message (sentence case, period); used to warn when some members of the key exchange protocol are using less than the minimum version. Used for backward-compatibility in some cases. -->
+    <string name="error_AllMembersMustUpgrade">Some members are using an older version; all members must upgrade to the newest version.</string>
     <!-- error message (sentence case, period); used to warn when the push registration format is incorrect or corrupted. -->
     <string name="error_AllMembersMustUpgradeBadPushToken">All members must upgrade, some are using older push registration formats.</string>
     <!-- error message (sentence case, period); used to warn when the user attempts to communicate with a server and the device cannot detect a path to the Internet. -->
@@ -64,10 +64,8 @@
     <string name="error_OtherGroupCommitDiffer">Someone reported a difference in phrases. Begin the exchange again.</string>
     <!-- error message (sentence case, period); used to warn when a request for memory is made that cannot be satisfied using the available platform resources. Such a request may be made by both the running application or by an internal function of the VM. -->
     <string name="error_OutOfMemoryError">Memory is too low to complete this operation.</string>
-    <!-- error message (sentence case, period); used to warn when the server has an error message to send back to the client. %s = an English (non-localized) error message sent by our App Engine server code. Android-only. -->
+    <!-- error message (sentence case, period); used to warn when the server has an error message to send back to the client. %s = an English (non-localized) error message sent by our App Engine server code. -->
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <!-- error message (sentence case, period); this is a duplicate message with alternate formatting for iOS, see error_ServerAppMessage. iOS-only. -->
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <!-- error message (sentence case, period); used to warn when the server timeout occurs, usually after 30 seconds and did not respond to the client. -->
     <string name="error_ServerNotResponding">No response from server.</string>
     <!-- error message (sentence case, period); used to warn during the key exchange protocol when at least one of the members of the group has not submitted their data to the server or client itself is not able to retrieve the data within the timeout window, currently 2 minutes. -->

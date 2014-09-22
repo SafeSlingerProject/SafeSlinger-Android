@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">abasebenzisi %d</string>
 
-    <string name="error_AllMembersMustUpgrade">Amanye amalungu basebenzisa inguqulo endala; wonke amalungu kumele okungenani isebenzise %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Wonke amalunga kufanele kuthuthukiswe, abanye besebenzisa omdala push lokubhalisa amafomethi.</string>
     <string name="error_CorrectYourInternetConnection">Internet ayitholakali, hlola izilungiselelo zakho.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange siphelelwe yisikhathi sidluliwe. Qala i-exchange futhi.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Othile kubike umehluko nemishwana. Qala i-exchange futhi.</string>
     <string name="error_OutOfMemoryError">Memory iphansi kakhulu ukuqedela lo msebenzi.</string>
     <string name="error_ServerAppMessage">Umlayezo Server: %s</string>
-    <string name="error_ServerAppMessageCStr">Umlayezo Server: %s</string>
     <string name="error_ServerNotResponding">Ayikho impendulo kusuka kwiseva.</string>
     <string name="error_TimeoutWaitingForAllMembers">Ukuphela kwesikhathi elinde amanye amalungu group ukwengeza idatha.</string>
     <string name="error_WebCancelledByUser">Umsebenzisi lukhanseliwe isicelo iseva.</string>

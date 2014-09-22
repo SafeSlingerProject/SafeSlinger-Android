@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d хэрэглэгч</string>
 
-    <string name="error_AllMembersMustUpgrade">Зарим гишүүд хуучин хувилбарыг ашиглаж байгаа; бүх гишүүд наад зах нь %s ашиглах ёстой.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Бүх гишүүд зарим хуучин түлхэх бүртгэлийн форматыг ашиглаж байгаа, шинэчлэх ёстой.</string>
     <string name="error_CorrectYourInternetConnection">Байхгүй байгаа интернэт, таны тохиргоонуудыг шалгах хэрэгтэй.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Валютын хугацаа хэтэрсэн байна. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Хэн нэгэн өгүүлбэрээс өөрчлөлт мэдээлсэн. Дахин солилцох эхлүүлэх хэрэгтэй.</string>
     <string name="error_OutOfMemoryError">Санах ой энэ үйлдлийг дуусгахын тулд хэтэрхий бага юм.</string>
     <string name="error_ServerAppMessage">Серверүүд зурвас: %s</string>
-    <string name="error_ServerAppMessageCStr">Серверүүд зурвас: %s</string>
     <string name="error_ServerNotResponding">Серверээс ямар ч хариу арга хэмжээ.</string>
     <string name="error_TimeoutWaitingForAllMembers">Зарим бүлгийн гишүүд өгөгдөл нэмэх хүлээж хугацаа.</string>
     <string name="error_WebCancelledByUser">Хэрэглэгчийн сервер хүсэлтээ цуцалсан.</string>

@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">ユーザ数%d人</string>
 
-    <string name="error_AllMembersMustUpgrade">一部のユーザが古いバージョンを使用しています。すべてのメンバーがバージョン%s以上を使用する必要があります。</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">すべてのメンバーは、いくつかの古いプッシュ登録フォーマットを使用している、アップグレードする必要があります。</string>
     <string name="error_CorrectYourInternetConnection">インターネットを利用できません。設定を確認してください。</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">交換のタイムアウトを超過しました。再び交換を開始します。</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">誰かがフレーズの違いを報告した。再び交換を開始します。</string>
     <string name="error_OutOfMemoryError">メモリは、この操作を完了するには低すぎる。</string>
     <string name="error_ServerAppMessage">サーバーメッセージ： %s</string>
-    <string name="error_ServerAppMessageCStr">サーバーメッセージ： %s</string>
     <string name="error_ServerNotResponding">サーバが応答しませんでした。</string>
     <string name="error_TimeoutWaitingForAllMembers">いくつかのグループのメンバーがデータを追加するのを待っていましたがタイムアウトになりました。</string>
     <string name="error_WebCancelledByUser">ユーザはサーバ要求をキャンセルしました。</string>

@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d பயனர்</string>
 
-    <string name="error_AllMembersMustUpgrade">சில உறுப்பினர்கள் ஒரு பழைய பதிப்பு பயன்படுத்தி; அனைத்து உறுப்பினர்கள் குறைந்தது %s பயன்படுத்த வேண்டும்.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">உறுப்பினர் சில பழைய மிகுதி பதிவு வடிவங்கள் பயன்படுத்தி, மேம்படுத்த வேண்டும்.</string>
     <string name="error_CorrectYourInternetConnection">இல்லை இண்டர்நெட், உங்கள் அமைப்புகளை சரிபார்க்கவும்.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">சந்தை நேரம் தாண்டியது. மீண்டும் பரிமாற்றம் தொடங்கும்.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">யாரோ சொற்றொடர்களை ஒரு வித்தியாசம் தகவல். மீண்டும் பரிமாற்றம் தொடங்கும்.</string>
     <string name="error_OutOfMemoryError">நினைவகம் இந்த அறுவை சிகிச்சை முடிக்க மிகவும் குறைவாக உள்ளது.</string>
     <string name="error_ServerAppMessage">சர்வர் செய்தி: %s</string>
-    <string name="error_ServerAppMessageCStr">சர்வர் செய்தி: %s</string>
     <string name="error_ServerNotResponding">சர்வர் இருந்து எந்த பதிலும்.</string>
     <string name="error_TimeoutWaitingForAllMembers">சில குழு உறுப்பினர்கள் தரவு சேர்க்க காத்திருக்கும் காலம் கடந்தது.</string>
     <string name="error_WebCancelledByUser">பயனர் சர்வர் இரத்து செய்தது.</string>

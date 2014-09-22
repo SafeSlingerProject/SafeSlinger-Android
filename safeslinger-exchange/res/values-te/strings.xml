@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d వినియోగదారులు</string>
 
-    <string name="error_AllMembersMustUpgrade">కొందరు సభ్యులు పాత వెర్షన్ను ఉపయోగిస్తున్నారు; అన్ని సభ్యులు కనీసం %s ఉపయోగించాలి.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">సభ్యులు కొన్ని పాత పుష్ నమోదు ఫార్మాట్లలో ఉపయోగిస్తున్నారు, నవీకరించాలి.</string>
     <string name="error_CorrectYourInternetConnection">అందుబాటులో లేదు ఇంటర్నెట్, మీ సెట్టింగ్లను తనిఖీ.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">మార్పిడి సమయం ముగిసింది మించిపోయింది. మళ్ళీ మార్పిడి ప్రారంభం SWF.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">ఎవరో పదబంధాలు లో తేడా నివేదించారు. మళ్ళీ మార్పిడి ప్రారంభం SWF.</string>
     <string name="error_OutOfMemoryError">మెమరీ ఈ ఆపరేషన్ పూర్తి చాలా తక్కువ.</string>
     <string name="error_ServerAppMessage">సర్వర్ సందేశం: %s</string>
-    <string name="error_ServerAppMessageCStr">సర్వర్ సందేశం: %s</string>
     <string name="error_ServerNotResponding">సర్వర్ నుండి ప్రతిస్పందన.</string>
     <string name="error_TimeoutWaitingForAllMembers">కొన్ని సమూహం సభ్యులు డేటా జోడించడానికి వేచి సమయం ముగిసింది.</string>
     <string name="error_WebCancelledByUser">వాడుకరి సర్వర్ అభ్యర్థనను రద్దు.</string>

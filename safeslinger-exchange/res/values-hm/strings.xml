@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d cov neeg siv</string>
 
-    <string name="error_AllMembersMustUpgrade">Ib txhia mej zeej uas siv ib tug laus version; tag nrho cov tswv cuab yuav tsum siv tsawg kawg yog %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tag nrho cov tswv cuab yuav tsum tau upgrade, ib txhia siv laus dua laub sau npe hom.</string>
     <string name="error_CorrectYourInternetConnection">Internet tsis muaj, kos koj lub chaw.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Txauv timeout tshaj. Pib lub pauv dua.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Ib tug neeg qhia ib tug sib txawv nyob rau hauv zaj lus. Pib lub pauv dua.</string>
     <string name="error_OutOfMemoryError">Nco yog heev tsawg ua kom tiav no hauj lwm.</string>
     <string name="error_ServerAppMessage">Rau zaub mov Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Rau zaub mov Message: %s</string>
     <string name="error_ServerNotResponding">Tsis muaj lus teb los ntawm cov neeg rau zaub mov.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout tos rau tej pab pawg neeg tswv cuab mus ntxiv cov ntaub ntawv.</string>
     <string name="error_WebCancelledByUser">Tus neeg siv yuav tso tseg rau zaub mov thov.</string>

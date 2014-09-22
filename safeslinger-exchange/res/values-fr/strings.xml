@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d utilisateurs</string>
 
-    <string name="error_AllMembersMustUpgrade">Certains membres utilisent une version ancienne, tous les membres doivent utiliser au minimum %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tous les membres doivent mettre à niveau, certains utilisent les formats d\'enregistrement des poussoirs âgées.</string>
     <string name="error_CorrectYourInternetConnection">Internet n\'est pas disponible, vérifiez vos paramètres.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Bourse délai dépassé. Recommencez l\'échange.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Quelqu\'un a signalé une différence dans les phrases. Recommencez l\'échange.</string>
     <string name="error_OutOfMemoryError">La mémoire est trop faible pour effectuer cette opération.</string>
     <string name="error_ServerAppMessage">Message serveur: %s</string>
-    <string name="error_ServerAppMessageCStr">Message serveur: %s</string>
     <string name="error_ServerNotResponding">Le serveur n\'a pas répondu.</string>
     <string name="error_TimeoutWaitingForAllMembers">Le délai d\'attente donné aux membres du groupe pour ajouter des données a expiré.</string>
     <string name="error_WebCancelledByUser">L\'utilisateur a annulé la demande du serveur.</string>

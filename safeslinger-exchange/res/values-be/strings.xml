@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d карыстальнікаў</string>
 
-    <string name="error_AllMembersMustUpgrade">Некаторыя члены карыстаецеся старую версію; усе члены павінны па крайняй меры выкарыстаць %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Усе члены павінны абнавіць, некаторыя выкарыстоўваюць старыя фарматы рэгістрацыі штуршок.</string>
     <string name="error_CorrectYourInternetConnection">Інтэрнэт не даступны, праверце налады.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Абмен таймаўт перавышаны. Пачніце абмен зноў.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Хтосьці паведаміў розніцу ў фразы. Пачніце абмен зноў.</string>
     <string name="error_OutOfMemoryError">Памяць з\'яўляецца занадта нізкім для завяршэння гэтай аперацыі.</string>
     <string name="error_ServerAppMessage">Паведамленне Сервер: %s</string>
-    <string name="error_ServerAppMessageCStr">Паведамленне Сервер: %s</string>
     <string name="error_ServerNotResponding">Няма адказу ад сервера.</string>
     <string name="error_TimeoutWaitingForAllMembers">Тайм-аўт у чаканні некаторыя члены групы, каб дадаць дадзеныя.</string>
     <string name="error_WebCancelledByUser">Карыстальнік адмяніў запыт сервера.</string>

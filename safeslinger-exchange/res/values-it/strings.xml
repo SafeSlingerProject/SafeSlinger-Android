@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d utenti</string>
 
-    <string name="error_AllMembersMustUpgrade">Alcuni membri utilizzano una versione precedente; tutti i membri devono utilizzare almeno %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tutti i membri devono aggiornare, alcuni utilizzano più vecchi formati di registrazione push.</string>
     <string name="error_CorrectYourInternetConnection">Internet non è disponibile, verificare le impostazioni.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Timeout di Exchange superato. Iniziare di nuovo lo scambio.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Qualcuno ha segnalato una differenza di frasi. Iniziare di nuovo lo scambio.</string>
     <string name="error_OutOfMemoryError">La memoria è insufficiente per completare questa operazione.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nessuna risposta dal server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout in attesa di alcuni membri del gruppo per aggiungere dati.</string>
     <string name="error_WebCancelledByUser">Utente cancellato richiesta del server.</string>

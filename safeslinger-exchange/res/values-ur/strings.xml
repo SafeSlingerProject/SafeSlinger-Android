@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d صارفین</string>
 
-    <string name="error_AllMembersMustUpgrade">بعض اراکین ایک پرانا ورژن استعمال کر رہے ہیں ؛ تمام ارکان میں کم از کم %s کا استعمال کرنا چاہئے.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">تمام اراکین کچھ بڑی عمر کے دھکا رجسٹریشن فارمیٹس استعمال کر رہے ہیں ، اپ گریڈ کرنا ضروری ہے.</string>
     <string name="error_CorrectYourInternetConnection">دستیاب نہیں انٹرنیٹ ، آپ کی ترتیبات کی جانچ پڑتال.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">ایکسچینج ٹائم آؤٹ سے تجاوز کر گئی. پھر تبادلہ شروع.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">کسی جملے میں ایک فرق کی رپورٹ. پھر تبادلہ شروع.</string>
     <string name="error_OutOfMemoryError">یاد داشت کی اس آپریشن کے مکمل کرنے کے لئے بہت کم ہے.</string>
     <string name="error_ServerAppMessage">سرور پیغام: %s</string>
-    <string name="error_ServerAppMessageCStr">سرور پیغام: %s</string>
     <string name="error_ServerNotResponding">سرور سے کوئی جواب نہیں.</string>
     <string name="error_TimeoutWaitingForAllMembers">کچھ گروپ کے ارکان کے اعداد و شمار شامل کرنے کے لئے انتظار کر رہے ہیں وقت ختم.</string>
     <string name="error_WebCancelledByUser">یوزر کے سرور کی درخواست منسوخ.</string>

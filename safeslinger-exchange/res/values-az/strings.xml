@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d users</string>
 
-    <string name="error_AllMembersMustUpgrade">Bəzi üzvləri eski bir versiyasını istifadə olunur; bütün üzvləri ən azı %s istifadə etməlidirlər.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Bütün üzvləri bəzi köhnə push qeydiyyat format istifadə olunur, yükseltmek lazımdır.</string>
     <string name="error_CorrectYourInternetConnection">Mövcud deyil Internet, ayarlarınızı kontrol.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange fasiləsi ötüb. Yenidən mübadiləsi başlayın.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Biri ifadələr bir fərq üzvlük. Yenidən mübadiləsi başlayın.</string>
     <string name="error_OutOfMemoryError">Yaddaş bu əməliyyatı başa çatdırmaq üçün çox aşağıdır.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Server heç bir cavab.</string>
     <string name="error_TimeoutWaitingForAllMembers">Bir qrup üzvləri məlumat əlavə etmək üçün gözləyir fasiləsi.</string>
     <string name="error_WebCancelledByUser">İstifadəçi server sorğu ləğv.</string>

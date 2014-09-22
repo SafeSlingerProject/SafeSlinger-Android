@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d ಬಳಕೆದಾರರು</string>
 
-    <string name="error_AllMembersMustUpgrade">ಕೆಲವು ಸದಸ್ಯರು ಒಂದು ಹಳೆಯ ಆವೃತ್ತಿಯನ್ನು ಬಳಸುತ್ತಿದ್ದರೆ; ಎಲ್ಲಾ ಸದಸ್ಯರು ಕನಿಷ್ಠ %s ಬಳಸಬೇಕಾಗುತ್ತದೆ.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">ಎಲ್ಲಾ ಸದಸ್ಯರು ಕೆಲವು ಹಳೆಯ ಪುಶ್ ನೋಂದಣಿ ಸ್ವರೂಪಗಳು ಬಳಸಿ, ನವೀಕರಿಸಬೇಕು.</string>
     <string name="error_CorrectYourInternetConnection">ಲಭ್ಯವಿಲ್ಲ ಇಂಟರ್ನೆಟ್, ನಿಮ್ಮ ಸಂಯೋಜನೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">ವಿನಿಮಯ ಕಾಲಾವಧಿ ಮೀರಿದೆ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">ಯಾರೋ ನುಡಿಗಟ್ಟುಗಳು ವ್ಯತ್ಯಾಸವನ್ನು ವರದಿ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
     <string name="error_OutOfMemoryError">ಮೆಮೊರಿ ಈ ಕಾರ್ಯವನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ತುಂಬಾ ಕಡಿಮೆ.</string>
     <string name="error_ServerAppMessage">ಸರ್ವರ್ ಸಂದೇಶ: %s</string>
-    <string name="error_ServerAppMessageCStr">ಸರ್ವರ್ ಸಂದೇಶ: %s</string>
     <string name="error_ServerNotResponding">ಸರ್ವರ್ ಯಾವುದೇ ಪ್ರತಿಕ್ರಿಯೆ.</string>
     <string name="error_TimeoutWaitingForAllMembers">ಕೆಲವು ಗುಂಪಿನ ಸದಸ್ಯರು ದಶಮಾಂಶ ಸೇರಿಸಲು ಕಾಯುತ್ತಿದೆ ಮುಗಿಯಿತು.</string>
     <string name="error_WebCancelledByUser">ಬಳಕೆದಾರ ಸರ್ವರ್ ಮನವಿಯನ್ನು ತಳ್ಳಿಹಾಕಿದರು.</string>

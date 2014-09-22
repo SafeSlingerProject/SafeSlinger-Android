@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d korisnika</string>
 
-    <string name="error_AllMembersMustUpgrade">Neki članovi koriste stariju verziju; svi članovi moraju da koriste najmanje %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Svi članovi moraju nadogradnju, neki koriste starije formate registracije push.</string>
     <string name="error_CorrectYourInternetConnection">Internet nije dostupan, proverite postavke.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Ekchange timeout premašio. Počnite razmenu ponovo.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Neko je prijavio razliku u frazama. Počnite razmenu ponovo.</string>
     <string name="error_OutOfMemoryError">Memorija je suviše nizak da završi ovu operaciju.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nema odgovora od servera.</string>
     <string name="error_TimeoutWaitingForAllMembers">Isteklo čeka neki članovi grupe da dodate podatke.</string>
     <string name="error_WebCancelledByUser">Korisnik je otkazao zahtev servera.</string>

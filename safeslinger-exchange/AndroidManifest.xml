@@ -24,8 +24,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.cmu.cylab.starslinger.exchange"
-    android:versionCode="0x01070000"
-    android:versionName="1.7" >
+    android:versionCode="0x01080000"
+    android:versionName="1.8" >
 
     <uses-sdk
         android:minSdkVersion="8"

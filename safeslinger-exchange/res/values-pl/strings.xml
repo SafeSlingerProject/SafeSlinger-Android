@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d użytkowników</string>
 
-    <string name="error_AllMembersMustUpgrade">Niektórzy członkowie używasz starszej wersji; wszyscy członkowie muszą przynajmniej użyć %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Wszyscy członkowie muszą uaktualnić, niektórzy używają starszych formatów rejestracji Push.</string>
     <string name="error_CorrectYourInternetConnection">Internet nie jest dostępny, sprawdź ustawienia.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Przekroczony limit czasu wymiany. Ponownie rozpocząć wymianę.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Ktoś donosił różnicy zwrotów. Ponownie rozpocząć wymianę.</string>
     <string name="error_OutOfMemoryError">Pamięć jest zbyt mała, aby zakończyć tę operację.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Brak odpowiedzi z serwera.</string>
     <string name="error_TimeoutWaitingForAllMembers">Limit czasu oczekiwania na niektóre członkowie grupy, aby dodać dane.</string>
     <string name="error_WebCancelledByUser">Użytkownik anulował żądanie serwera.</string>

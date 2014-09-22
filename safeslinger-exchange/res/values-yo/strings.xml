@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d awọn olumulo</string>
 
-    <string name="error_AllMembersMustUpgrade">Diẹ ninu awọn ọmọ ẹgbẹ ti wa ni lilo ẹya agbalagba ti ikede; gbogbo awọn ọmọ ẹgbẹ gbodo ni o kere lo %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Gbogbo awọn ọmọ ẹgbẹ gbọdọ igbesoke, diẹ ninu awọn ti wa ni lilo titari agbalagba ìforúkọsílẹ ọna kika.</string>
     <string name="error_CorrectYourInternetConnection">Ayelujara ko wa, ṣayẹwo awọn eto rẹ.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange akoko-to koja. Bẹrẹ paṣipaarọ lẹẹkansi.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Ẹnikan royin kan iyato ninu gbolohun. Bẹrẹ paṣipaarọ lẹẹkansi.</string>
     <string name="error_OutOfMemoryError">Iranti ba ti ju kekere yi lati pari ṣiṣe na.</string>
     <string name="error_ServerAppMessage">Olupin ifiranṣẹ: %s</string>
-    <string name="error_ServerAppMessageCStr">Olupin ifiranṣẹ: %s</string>
     <string name="error_ServerNotResponding">Ko si esi lati olupin.</string>
     <string name="error_TimeoutWaitingForAllMembers">Akoko-to nduro fun awọn ẹgbẹ omo egbe lati fi data.</string>
     <string name="error_WebCancelledByUser">Olumulo pawonre olupin ba beere fun.</string>

@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d потребители</string>
 
-    <string name="error_AllMembersMustUpgrade">Някои членове използват по-стара версия; всички членове трябва най-малко да използват %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Всички членове трябва да ъпгрейд, някои от тях се използват по-стари формати регистрационни лицеви.</string>
     <string name="error_CorrectYourInternetConnection">Интернет не е на разположение, проверете настройките си.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange таймаут надхвърлен. Започнете обмена отново.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Някой отчете разлика в фрази. Започнете обмена отново.</string>
     <string name="error_OutOfMemoryError">Паметта е твърде ниска, за да изпълните тази операция.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Няма отговор от сървъра.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout чака за някои членове на групата, за да добавите данни.</string>
     <string name="error_WebCancelledByUser">Потребителят отменен искане сървър.</string>

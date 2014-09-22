@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d उपयोगकर्ताओं</string>
 
-    <string name="error_AllMembersMustUpgrade">कुछ सदस्यों ने एक पुराने संस्करण का उपयोग कर रहे हैं; सभी सदस्यों को कम से कम %s का उपयोग करना चाहिए.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">सभी सदस्यों को कुछ पुराने धक्का पंजीकरण स्वरूपों का उपयोग कर रहे हैं, नवीनीकरण करना होगा.</string>
     <string name="error_CorrectYourInternetConnection">उपलब्ध नहीं इंटरनेट, अपनी सेटिंग्स की जाँच करें.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">विनिमय मध्यांतर से अधिक था. फिर विनिमय शुरू करो.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">किसी वाक्यांश में एक अंतर की सूचना दी. फिर विनिमय शुरू करो.</string>
     <string name="error_OutOfMemoryError">स्मृति इस कार्य को पूरा करने के लिए बहुत कम है.</string>
     <string name="error_ServerAppMessage">सर्वर संदेश: %s</string>
-    <string name="error_ServerAppMessageCStr">सर्वर संदेश: %s</string>
     <string name="error_ServerNotResponding">सर्वर से कोई जवाब नहीं.</string>
     <string name="error_TimeoutWaitingForAllMembers">कुछ समूह सदस्यों डेटा जोड़ने के लिए इंतज़ार कर समय समाप्ति.</string>
     <string name="error_WebCancelledByUser">उपयोगकर्ता सर्वर अनुरोध को रद्द कर दिया.</string>

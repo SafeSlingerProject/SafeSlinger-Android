@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d kullanıcıları</string>
 
-    <string name="error_AllMembersMustUpgrade">Bazı üyeler eski bir sürümünü kullanıyorsanız; tüm üyeler en az %s kullanmanız gerekir.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tüm üyeler bazı eski itme kayıt biçimleri kullanarak, yükseltmeniz gerekir.</string>
     <string name="error_CorrectYourInternetConnection">Mevcut değil internet, ayarlarınızı kontrol edin.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Döviz zaman aşımı aşıldı. Yinealışverişi başlar.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Birisi cümleleri bir fark bildirdi. Yinealışverişi başlar.</string>
     <string name="error_OutOfMemoryError">Bellek Bu işlemi tamamlamak için çok düşük.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Sunucudan yanıt yok.</string>
     <string name="error_TimeoutWaitingForAllMembers">Bazı grup üyeleri veri eklemek için bekleyen zaman aşımı.</string>
     <string name="error_WebCancelledByUser">Kullanıcı sunucu isteği iptal edildi.</string>

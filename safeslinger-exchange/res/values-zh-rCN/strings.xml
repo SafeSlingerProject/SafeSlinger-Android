@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d位成员</string>
 
-    <string name="error_AllMembersMustUpgrade">一些成员使用旧版本软体，所有成员必须使用软体版本至少%s</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">所有成员都必须升级，一些正在使用旧的讯息通知格式。</string>
     <string name="error_CorrectYourInternetConnection">网路不可使用，请检查您的网路设定。</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">金钥交换过程超时。重新开始交换金钥。</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">有人反应词组有差别。重新开始交换金钥。</string>
     <string name="error_OutOfMemoryError">记忆体太少不能够完成这个操作。</string>
     <string name="error_ServerAppMessage">伺服器讯息：%s。</string>
-    <string name="error_ServerAppMessageCStr">伺服器讯息：%s。</string>
     <string name="error_ServerNotResponding">伺服器没有回应。</string>
     <string name="error_TimeoutWaitingForAllMembers">等待收集成员资讯逾时。</string>
     <string name="error_WebCancelledByUser">使用者取消伺服器请求。</string>

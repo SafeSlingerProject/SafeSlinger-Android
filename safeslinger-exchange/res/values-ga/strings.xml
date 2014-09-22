@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d úsáideoir</string>
 
-    <string name="error_AllMembersMustUpgrade">Tá roinnt comhaltaí ag baint úsáide as leagan níos sine; ní mór do gach ball ar a laghad a úsáid %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Ní mór do gach ball uasghrádú, tá cuid acu ag baint úsáide as formáidí níos sine clárú bhrú.</string>
     <string name="error_CorrectYourInternetConnection">Idirlíon ar fáil, seiceáil do chuid socruithe.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Malartú Teorainn ama sáraithe. Tosaigh an malartú arís.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">D\'iarr duine éigin tuairiscíodh difríocht i frásaí. Tosaigh an malartú arís.</string>
     <string name="error_OutOfMemoryError">Is Cuimhne ró-íseal a chur i gcrích an oibríocht.</string>
     <string name="error_ServerAppMessage">Freastalaí Teachtaireacht: %s</string>
-    <string name="error_ServerAppMessageCStr">Freastalaí Teachtaireacht: %s</string>
     <string name="error_ServerNotResponding">Gan freagra ón bhfreastalaí.</string>
     <string name="error_TimeoutWaitingForAllMembers">Teorainn Ama ag fanacht le haghaidh roinnt baill an ghrúpa chun sonraí a chur leis.</string>
     <string name="error_WebCancelledByUser">Úsáideoir ceal iarraidh freastalaí.</string>

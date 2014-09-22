@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d користувачів</string>
 
-    <string name="error_AllMembersMustUpgrade">Деякі члени використовуєте стару версію; всі члени повинні принаймні використовувати %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Всі члени повинні оновити, деякі використовують старі формати реєстрації поштовх.</string>
     <string name="error_CorrectYourInternetConnection">Інтернет не доступний, перевірте налаштування.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Обмін таймаут перевищений. Почніть обмін знову.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Хтось повідомив різницю у фрази. Почніть обмін знову.</string>
     <string name="error_OutOfMemoryError">Пам\'ять є занадто низьким для завершення цієї операції.</string>
     <string name="error_ServerAppMessage">Повідомлення Сервер: %s</string>
-    <string name="error_ServerAppMessageCStr">Повідомлення Сервер: %s</string>
     <string name="error_ServerNotResponding">Немає відповіді від сервера.</string>
     <string name="error_TimeoutWaitingForAllMembers">Тайм-аут в очікуванні деякі члени групи, щоб додати дані.</string>
     <string name="error_WebCancelledByUser">Користувач скасував запит сервера.</string>

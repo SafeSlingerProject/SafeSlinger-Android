@@ -38,7 +38,7 @@ public abstract class ConnectionEngine {
     protected Date mExchStartTimer;
     protected static Context mCtx;
     private int mLatestServerVersion = 0;
-    private int mVersion = ExchangeConfig.getVersionCode();
+    private int mVersion = ExchangeConfig.getMinVersionCode();
 
     public static ConnectionEngine getServerInstance(Context ctx, String hostName) {
         mCtx = ctx;

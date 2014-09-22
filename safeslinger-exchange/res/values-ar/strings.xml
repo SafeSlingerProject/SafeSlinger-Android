@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d المستخدمين</string>
 
-    <string name="error_AllMembersMustUpgrade">بعض أعضاء تستخدم نسخة قديمة ؛ يجب على جميع أعضاء على الأقل استخدام %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">يجب على جميع أعضاء الترقية ، وبعض كبار السن تستخدم صيغ تسجيل دفعة.</string>
     <string name="error_CorrectYourInternetConnection">الإنترنت غير متوفرة ، والتحقق من الإعدادات الخاصة بك.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">تجاوز الصرف المهلة. يبدأ الصرف مرة أخرى.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">ذكرت شخص اختلاف في العبارات. يبدأ الصرف مرة أخرى.</string>
     <string name="error_OutOfMemoryError">الذاكرة منخفضة جدا لإكمال هذه العملية.</string>
     <string name="error_ServerAppMessage">الخادم رسالة: %s</string>
-    <string name="error_ServerAppMessageCStr">الخادم رسالة: %s</string>
     <string name="error_ServerNotResponding">أي رد من الخادم.</string>
     <string name="error_TimeoutWaitingForAllMembers">مهلة الانتظار لبعض أعضاء المجموعة لإضافة البيانات.</string>
     <string name="error_WebCancelledByUser">إلغاء طلب المعلن الخادم.</string>

@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d ຜູ້ຊົມໃຊ້</string>
 
-    <string name="error_AllMembersMustUpgrade">ສະມາຊິກ ບາງຄົນ ໄດ້ຖືກ ນໍາໃຊ້ ເປັນສະບັບ ຂຶ້ນໄປ; ສະມາຊິກ ທັງຫມົດ ຢ່າງຫນ້ອຍ ຕ້ອງການນໍາໃຊ້ %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">ສະມາຊິກ ທັງຫມົດຕ້ອງໄດ້ ຍົກລະດັບ, ບາງຄົນກໍ່ຖືກ ນໍາໃຊ້ ສູງອາຍຸ ຮູບແບບ ການຈົດທະບຽນ ການຊຸກຍູ້.</string>
     <string name="error_CorrectYourInternetConnection">ອິນເຕີເນັດ ບໍ່ ມີ, ໃຫ້ກວດເບິ່ງ ການປັບຄ່າ ຂອງທ່ານ.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Timeout ການແລກປ່ຽນ ເກີນ. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">ມີບາງຄົນ ໄດ້ລາຍງານ ຄວາມແຕກຕ່າງກັນ ໃນ ປະໂຫຍກ ໄດ້. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
     <string name="error_OutOfMemoryError">ຄວາມຈໍາ ເປັນ ຕ່ໍາ ເກີນໄປ ເພື່ອໃຫ້ສໍາເລັດ ການດໍາເນີນງານ ນີ້.</string>
     <string name="error_ServerAppMessage">ຂໍ້ຄວາມ Server: %s</string>
-    <string name="error_ServerAppMessageCStr">ຂໍ້ຄວາມ Server: %s</string>
     <string name="error_ServerNotResponding">ການຕອບສະຫນອງ ທີ່ບໍ່ມີຈາກ ເຄື່ອງແມ່ຂ່າຍຂອງ.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout ລໍຖ້າ ສໍາລັບ ສະມາຊິກກຸ່ມ ບາງຄົນ ຕື່ມ ຂໍ້ມູນ.</string>
     <string name="error_WebCancelledByUser">ຜູ້ໃຊ້ ຍົກເລີກ ຄໍາຮ້ອງຂໍ ຂອງເຄື່ອງແມ່ຂ່າຍ.</string>

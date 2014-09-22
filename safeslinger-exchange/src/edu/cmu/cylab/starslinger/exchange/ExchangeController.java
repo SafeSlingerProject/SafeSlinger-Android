@@ -86,7 +86,7 @@ public class ExchangeController {
         mErrMsg = "";
         mCtx = ctx;
 
-        mVersion = ExchangeConfig.getVersionCode();
+        mVersion = ExchangeConfig.getMinVersionCode();
         mLowestClientVersion = mVersion;
 
         mNonceMatch = new byte[ExchangeConfig.HASH_LEN];
@@ -409,10 +409,9 @@ public class ExchangeController {
         // .................................................................
         // commitment end
 
-        // ensure all are using new SHA-3
-        if (mLowestClientVersion < ExchangeConfig.VER_SHA3) {
-            return handleError(String.format(mCtx.getString(R.string.error_AllMembersMustUpgrade),
-                    "1.6"));
+        // ensure all are using minimum version for this code base
+        if (mLowestClientVersion < ExchangeConfig.getMinVersionCode()) {
+            return handleError(R.string.error_AllMembersMustUpgrade);
         }
 
         mGrpInfo = new GroupData(mNumUsers);

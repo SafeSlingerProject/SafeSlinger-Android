@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d მომხმარებლის</string>
 
-    <string name="error_AllMembersMustUpgrade">ზოგიერთი წევრი იყენებთ ძველ ვერსიას; ყველა წევრი მინიმუმ უნდა გამოიყენოთ %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">ყველა წევრი უნდა განაახლოს, ზოგიერთ გამოყენებით ძველი ბიძგი რეგისტრაციის ფორმატებში.</string>
     <string name="error_CorrectYourInternetConnection">ინტერნეტი არ არის ხელმისაწვდომი, გადაამოწმოთ პარამეტრები.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">გაცვლითი შეყოვნება გადააჭარბა. დასაწყისი გაცვლა ერთხელ.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">საყვარელი ცნობით განსხვავება ფრაზები. დასაწყისი გაცვლა ერთხელ.</string>
     <string name="error_OutOfMemoryError">Memory ძალიან დაბალია, შეავსოთ ეს ოპერაცია.</string>
     <string name="error_ServerAppMessage">Server შეტყობინება: %s</string>
-    <string name="error_ServerAppMessageCStr">Server შეტყობინება: %s</string>
     <string name="error_ServerNotResponding">პასუხი არ სერვერიდან.</string>
     <string name="error_TimeoutWaitingForAllMembers">დროის ელოდება რამდენიმე ჯგუფის წევრები დაამატოთ მონაცემები.</string>
     <string name="error_WebCancelledByUser">პროფაილი გაუქმდა სერვერზე მოთხოვნით.</string>

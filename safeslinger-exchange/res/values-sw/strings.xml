@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d watumiaji</string>
 
-    <string name="error_AllMembersMustUpgrade">Baadhi ya wanachama ni kutumia toleo la wazee; wanachama wote lazima angalau kutumia %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Wanachama wote lazima kuboresha, baadhi ni kutumia wakubwa miundo usajili kushinikiza.</string>
     <string name="error_CorrectYourInternetConnection">Internet haipatikani, kuangalia mazingira yako.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ulizidi. Kuanza kubadilishana tena.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Mtu taarifa tofauti katika maneno. Kuanza kubadilishana tena.</string>
     <string name="error_OutOfMemoryError">Kumbukumbu ni ya chini sana kwa kukamilisha kazi hii.</string>
     <string name="error_ServerAppMessage">Server Ujumbe: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Ujumbe: %s</string>
     <string name="error_ServerNotResponding">Hakuna jibu kutoka kwa seva.</string>
     <string name="error_TimeoutWaitingForAllMembers">Ngoja ukisubiri kwa baadhi ya wanakikundi kuongeza data.</string>
     <string name="error_WebCancelledByUser">Mtumiaji kufutwa ombi server.</string>

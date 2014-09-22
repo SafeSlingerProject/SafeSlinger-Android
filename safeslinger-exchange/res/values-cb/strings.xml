@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d tiggamit</string>
 
-    <string name="error_AllMembersMustUpgrade">Pipila sa mga miyembro sa paggamit sa usa ka mas magulang nga bersyon; sa tanan nga mga miyembro kinahanglan gayud nga sa labing paggamit sa %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Ang tanan nga mga miyembro kinahanglan gayud nga upgrade, ang pipila sa paggamit sa mas magulang nga pagduso registration format.</string>
     <string name="error_CorrectYourInternetConnection">Internet wala pa, check sa inyong mga engaste.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout milabaw. Sugdi ang pagbinayloay pag-usab.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Adunay usa ka tawo sa usa ka report sa kalainan sa hugpong sa mga pulong. Sugdi ang pagbinayloay pag-usab.</string>
     <string name="error_OutOfMemoryError">Sag-ulohon nga mao ang ubos sa paghuman niini nga operasyon.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Walay tubag gikan sa server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout nagpaabut sa pipila ka grupo sa mga miyembro sa aron sa pagdugang data.</string>
     <string name="error_WebCancelledByUser">User gikanselar server hangyo.</string>

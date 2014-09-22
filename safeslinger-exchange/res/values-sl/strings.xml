@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d uporabnikov</string>
 
-    <string name="error_AllMembersMustUpgrade">Nekateri člani uporabljate starejšo različico; Vsi člani morajo vsaj uporabiti %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Vsi člani morajo nadgraditi, nekateri uporabljate starejše formate registraciji naročena.</string>
     <string name="error_CorrectYourInternetConnection">Internet ni na voljo, preverite nastavitve.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Izmenjava timeout presežena. Spet začeli izmenjavo.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Nekdo poročali razliko v stavki. Spet začeli izmenjavo.</string>
     <string name="error_OutOfMemoryError">Pomnilnika je prenizka za dokončanje te operacije.</string>
     <string name="error_ServerAppMessage">Strežnik Sporočilo: %s</string>
-    <string name="error_ServerAppMessageCStr">Strežnik Sporočilo: %s</string>
     <string name="error_ServerNotResponding">Ni odziva od strežnika.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout čaka nekateri člani skupine za dodajanje podatkov.</string>
     <string name="error_WebCancelledByUser">Uporabnik prekliče zahtevo strežnika.</string>

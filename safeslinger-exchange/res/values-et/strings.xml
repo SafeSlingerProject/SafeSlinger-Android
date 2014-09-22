@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d kasutajad</string>
 
-    <string name="error_AllMembersMustUpgrade">Mõned liikmed kasutate vanemat versiooni; kõik liikmed peavad vähemalt kasutada %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Kõik liikmed peavad uuendama, mõned kasutavad vanemad lükke registreerimine formaate.</string>
     <string name="error_CorrectYourInternetConnection">Internet ei ole, kontrollige oma seadeid.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ületatud. Alustada vahetamist uuesti.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Keegi teataserinevus väljendeid. Alustada vahetamist uuesti.</string>
     <string name="error_OutOfMemoryError">Mälu on liiga madal, et seda toimingut lõpule viia.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">No vastust server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout ootab mõned grupi liikmed andmeid lisada.</string>
     <string name="error_WebCancelledByUser">Kasutaja tühistatud server taotluse.</string>

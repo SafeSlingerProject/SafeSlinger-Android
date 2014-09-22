@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d kaiwhakamahi</string>
 
-    <string name="error_AllMembersMustUpgrade">Te tahi mau melo e te whakamahi i te putanga tawhito; Me i iti whakamahi ngā mema katoa %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Me whakahōu te mau melo o te katoa, etahi kei te whakamahi i ngā pakeke rēhita pana.</string>
     <string name="error_CorrectYourInternetConnection">Internet e kore e wātea ana, tirohia ngā tautuhinga.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Nui atu Exchange wāhiki. Timata ano te utu.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Tetahi korerotia te rerekëtanga i roto i te rerenga kōrero. Timata ano te utu.</string>
     <string name="error_OutOfMemoryError">He iti rawa ki te whakaoti i tenei mahi Memory.</string>
     <string name="error_ServerAppMessage">Message Tūmau: %s</string>
-    <string name="error_ServerAppMessageCStr">Message Tūmau: %s</string>
     <string name="error_ServerNotResponding">No whakautu i te tūmau.</string>
     <string name="error_TimeoutWaitingForAllMembers">Wāhiki tatari hoki ki te tahi mau melo o te rōpū tāpiri raraunga.</string>
     <string name="error_WebCancelledByUser">Whakakorea Kaiwhakamahi tono tūmau.</string>

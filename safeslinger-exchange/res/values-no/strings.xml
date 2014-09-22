@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d brukere</string>
 
-    <string name="error_AllMembersMustUpgrade">Noen medlemmer bruker en eldre versjon; alle medlemmer må minst bruke %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Alle medlemmer må oppgradere, noen bruker eldre push-registreringsformater.</string>
     <string name="error_CorrectYourInternetConnection">Internett ikke er tilgjengelig, må du kontrollere innstillingene.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange-timeout skredet. Begynn børsen igjen.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Noen rapporterte en forskjell i setninger. Begynn børsen igjen.</string>
     <string name="error_OutOfMemoryError">Minne er for lav til å fullføre denne operasjonen.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Ingen respons fra serveren.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout venter på noen medlemmer av gruppen kan legge til data.</string>
     <string name="error_WebCancelledByUser">Bruker avbrutt server forespørsel.</string>

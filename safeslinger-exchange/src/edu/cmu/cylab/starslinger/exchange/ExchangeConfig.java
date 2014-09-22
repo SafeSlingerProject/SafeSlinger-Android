@@ -36,13 +36,12 @@ public class ExchangeConfig {
     public static final String HTTPURL_SUFFIX = "";
     public static final int HTTPPORT = 80;
     public static final int VER_SHA3 = 0x01060000;
-    public static final int VER_NOTIFY_BACKCOMPAT = 0x01070000;
+    public static final int VER_1536BIT_DH = 0x01080000;
     public static final int MIN_USERS = 2;
     public static final int MIN_USERS_AUTOCOUNT = 11;
     public static final int MAX_USERS = 63;
     public static final int AES_KEY_LEN = 256 / 8;
     public static final int AES_IV_LEN = 128 / 8;
-    public static final int HALFKEY_LEN = 512 / 8;
     public static final int HASH_LEN = 256 / 8;
     public static final long MSSVR_TIMEOUT = 1000 * 60 * 2; // 2m
     public static final long MSSVR_EXCH_PROT_MAX = 1000 * 60 * 10;// 10m
@@ -69,8 +68,8 @@ public class ExchangeConfig {
         public static final String NUM_USERS = "NumUsers";
     }
 
-    public static int getVersionCode() {
-        return VER_NOTIFY_BACKCOMPAT;
+    public static int getMinVersionCode() {
+        return VER_1536BIT_DH;
     }
 
 }

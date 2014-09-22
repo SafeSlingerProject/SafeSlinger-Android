@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d užívatelia</string>
 
-    <string name="error_AllMembersMustUpgrade">Niektorí členovia používate staršiu verziu; všetci členovia musia byť aspoň použiť %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Všetci členovia sa musia aktualizovať, niektoré sú s použitím starších formátov registračné Push.</string>
     <string name="error_CorrectYourInternetConnection">Internet nie je k dispozícii, skontrolujte nastavenie.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange limit prekročený. Začnite na výmenu znova.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Niekto hlásil rozdiel v fráz. Začnite na výmenu znova.</string>
     <string name="error_OutOfMemoryError">Pamäť je príliš nízka na dokončenie tejto operácie.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Žiadna odpoveď zo servera.</string>
     <string name="error_TimeoutWaitingForAllMembers">Časový limit čakania na niektorých členov skupiny pridať dáta.</string>
     <string name="error_WebCancelledByUser">Užívateľ zrušil požiadavku servera.</string>

@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d uzantoj</string>
 
-    <string name="error_AllMembersMustUpgrade">Kelkaj anoj abonas malnova versio; ĉiuj membroj devas almenaŭ uzi %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Ĉiuj membroj devas ĝisdatigi, iuj uzas pli malnovaj puŝo enskribo formatoj.</string>
     <string name="error_CorrectYourInternetConnection">Interreto ne estas havebla, kontrolu viajn agordojn.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Interŝanĝo timeout superis. Begin interŝanĝo denove.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Iu informis diferencon en frazoj. Begin interŝanĝo denove.</string>
     <string name="error_OutOfMemoryError">Memoro estas tro malalta por kompletigi tiun operacion.</string>
     <string name="error_ServerAppMessage">Servilo Mesaĝo: %s</string>
-    <string name="error_ServerAppMessageCStr">Servilo Mesaĝo: %s</string>
     <string name="error_ServerNotResponding">Neniu respondo de servilo.</string>
     <string name="error_TimeoutWaitingForAllMembers">Templimo atendante iun grupon membroj aldoni datumojn.</string>
     <string name="error_WebCancelledByUser">Uzanto nuligita servilo peton.</string>

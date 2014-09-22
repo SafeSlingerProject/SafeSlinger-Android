@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d ਯੂਜ਼ਰ ਨੂੰ</string>
 
-    <string name="error_AllMembersMustUpgrade">ਕੁਝ ਅੰਗ ਇੱਕ ਪੁਰਾਣਾ ਵਰਜਨ ਵਰਤ ਰਹੇ ਹੋ; ਸਾਰੇ ਅੰਗ \'ਤੇ ਘੱਟੋ ਘੱਟ %s ਵਰਤਣਾ ਚਾਹੀਦਾ ਹੈ.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">ਸਭ ਜੀਅ ਕੁਝ ਪੁਰਾਣੇ ਧੱਕਣ ਰਜਿਸਟਰੇਸ਼ਨ ਫਾਰਮੈਟ ਵਰਤ ਰਹੇ ਹੋ, ਨੂੰ ਅੱਪਗਰੇਡ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
     <string name="error_CorrectYourInternetConnection">ਉਪਲੱਬਧ ਨਾ ਇੰਟਰਨੈੱਟ \', ਆਪਣੀ ਸੈਟਿੰਗ ਨੂੰ ਵੇਖੋ.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">ਐਕਸ਼ਚੇਜ਼ ਅੰਤਰਾਲ ਵੱਧ ਗਏ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">ਕੋਈ ਿਵਅਕਤੀ ਪੈਰ੍ਹੇ ਵਿੱਚ ਇੱਕ ਫਰਕ ਦੀ ਰਿਪੋਰਟ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
     <string name="error_OutOfMemoryError">ਮੈਮੋਰੀ ਨੂੰ ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਬਹੁਤ ਘੱਟ ਹੈ.</string>
     <string name="error_ServerAppMessage">ਸਰਵਰ ਸੁਨੇਹਾ: %s</string>
-    <string name="error_ServerAppMessageCStr">ਸਰਵਰ ਸੁਨੇਹਾ: %s</string>
     <string name="error_ServerNotResponding">ਸਰਵਰ ਕੋਈ ਜਵਾਬ.</string>
     <string name="error_TimeoutWaitingForAllMembers">ਕੁਝ ਗਰੁੱਪ ਨੂੰ ਮਬਰ ਡਾਟਾ ਸ਼ਾਮਿਲ ਕਰਨ ਲਈ ਉਡੀਕ ਅੰਤਰਾਲ.</string>
     <string name="error_WebCancelledByUser">ਉਪਭੋਗੀ ਨੂੰ ਸਰਵਰ ਮੰਗ ਨੂੰ ਰੱਦ ਕਰ ਦਿੱਤਾ.</string>

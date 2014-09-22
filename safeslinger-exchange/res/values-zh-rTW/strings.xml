@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d位成員</string>
 
-    <string name="error_AllMembersMustUpgrade">一些成員使用舊版本軟體，所有成員必須使用軟體版本至少%s</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">所有成員都必須升級，一些正在使用舊的訊息通知格式。</string>
     <string name="error_CorrectYourInternetConnection">網路不可使用，請檢查您的網路設定。</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">金鑰交換過程超時。重新開始交換金鑰。</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">有人反應詞組有差別。重新開始交換金鑰。</string>
     <string name="error_OutOfMemoryError">記憶體太少不能夠完成這個操作。</string>
     <string name="error_ServerAppMessage">伺服器訊息：%s。</string>
-    <string name="error_ServerAppMessageCStr">伺服器訊息：%s。</string>
     <string name="error_ServerNotResponding">伺服器沒有回應。</string>
     <string name="error_TimeoutWaitingForAllMembers">等待收集成員資訊逾時。</string>
     <string name="error_WebCancelledByUser">使用者取消伺服器請求。</string>

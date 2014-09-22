@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d lietotāji</string>
 
-    <string name="error_AllMembersMustUpgrade">Daži dalībnieki izmanto vecāku versiju; visiem dalībniekiem ir vismaz izmantot %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Visiem dalībniekiem ir jauninājums, daži izmanto vecākas push reģistrācijas formātus.</string>
     <string name="error_CorrectYourInternetConnection">Internets nav pieejams, pārbaudiet iestatījumus.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Apmaiņas taimauts pārsniegts. Atkal sāk apmaiņu.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Kāds ziņoja atšķirība frāzes. Atkal sāk apmaiņu.</string>
     <string name="error_OutOfMemoryError">Atmiņa ir pārāk zema, lai pabeigtu šo darbību.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nav atbildes no servera.</string>
     <string name="error_TimeoutWaitingForAllMembers">Taimauts gaida daži grupas dalībnieki, lai pievienotu datus.</string>
     <string name="error_WebCancelledByUser">Lietotājs atcēla servera pieprasījumu.</string>

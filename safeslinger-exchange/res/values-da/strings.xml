@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d brugere</string>
 
-    <string name="error_AllMembersMustUpgrade">Nogle medlemmer bruger en ældre version; alle medlemmer skal mindst bruge %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Alle medlemmer skal opgradere, nogle bruger en ældre push-registrerings-formater.</string>
     <string name="error_CorrectYourInternetConnection">Internet ikke er tilgængelig, tjek dine indstillinger.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout overskredet. Begynd udvekslingen igen.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Nogen rapporteret en forskel i sætninger. Begynd udvekslingen igen.</string>
     <string name="error_OutOfMemoryError">Hukommelsen er for lav til at fuldføre denne operation.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Intet svar fra serveren.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout venter nogle gruppemedlemmer til at tilføje data.</string>
     <string name="error_WebCancelledByUser">Bruger aflyst server anmodning.</string>

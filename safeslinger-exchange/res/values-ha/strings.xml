@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d masu amfani</string>
 
-    <string name="error_AllMembersMustUpgrade">Wasu mambobin amfani da mazan version; duk members dole ne a kalla amfani da %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">All members dole ne hažaka, wasu na amfani da mazan tura rajista Formats.</string>
     <string name="error_CorrectYourInternetConnection">Babu yanar-gizo, a bincika saituna.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout wuce. Za a fara musayar sake.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Wani ya bayar da rahoton wani bambanci a cikin kalmomi. Za a fara musayar sake.</string>
     <string name="error_OutOfMemoryError">Memory ya yi yawa low don kammala wannan aiki.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Babu amsa daga uwar garken.</string>
     <string name="error_TimeoutWaitingForAllMembers">Fitar lokaci jiran wata kungiyar wakilan don ƙara bayanai.</string>
     <string name="error_WebCancelledByUser">User soke uwar garken request.</string>

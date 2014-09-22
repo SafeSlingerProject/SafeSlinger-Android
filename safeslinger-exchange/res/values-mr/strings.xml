@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d वापरकर्ते</string>
 
-    <string name="error_AllMembersMustUpgrade">काही सदस्य जुनी आवृत्ती वापरत आहात; सर्व सदस्यांना किमान %s वापर करणे आवश्यक आहे.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">सर्व सदस्यांना काही जुन्या पुश नोंदणी स्वरूप वापरत आहात, सुधारणा करणे आवश्यक आहे.</string>
     <string name="error_CorrectYourInternetConnection">उपलब्ध नाही इंटरनेट, आपली सेटिंग्ज तपासा.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">विनिमय कालबाह्य ओलांडली. पुन्हा विनिमय सुरू.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">कोणीतरी वाक्ये मध्ये एक फरक नोंदवले. पुन्हा विनिमय सुरू.</string>
     <string name="error_OutOfMemoryError">मेमरी हे ऑपरेशन पूर्ण करण्यासाठी खूप कमी आहे.</string>
     <string name="error_ServerAppMessage">सर्व्हर संदेश: %s</string>
-    <string name="error_ServerAppMessageCStr">सर्व्हर संदेश: %s</string>
     <string name="error_ServerNotResponding">सर्व्हरकडून कोणताही प्रतिसाद.</string>
     <string name="error_TimeoutWaitingForAllMembers">काही गट सदस्य डेटा जोडण्यासाठी प्रतीक्षेत कालबाह्य.</string>
     <string name="error_WebCancelledByUser">वापरकर्ता सर्व्हरशी विनंती रद्द केली.</string>

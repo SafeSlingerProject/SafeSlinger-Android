@@ -314,10 +314,10 @@ public class GroupData implements Comparable<GroupData> {
             for (int a = 0; a < mGrpSize; a++) {
                 if (orderedIDs[o] == mUsrIds[a]) {
                     byte[] clip = new byte[ExchangeConfig.HASH_LEN];
-                    byte[] dump = new byte[ExchangeConfig.HALFKEY_LEN];
+                    byte[] dump = new byte[CryptoAccess.HALFKEY_LEN];
                     buf = ByteBuffer.wrap(mGrpData[a]);
                     buf.get(clip, 0, ExchangeConfig.HASH_LEN);
-                    buf.get(dump, 0, ExchangeConfig.HALFKEY_LEN);
+                    buf.get(dump, 0, CryptoAccess.HALFKEY_LEN);
                     retVal[j] = dump;
                     j++;
                 }
@@ -337,10 +337,10 @@ public class GroupData implements Comparable<GroupData> {
             if (orderedIDs[o] != thisUserId) { // skip the calling user
                 for (int a = 0; a < mGrpSize; a++) {
                     if (orderedIDs[o] == mUsrIds[a]) {
-                        byte[] clip = new byte[ExchangeConfig.HASH_LEN + ExchangeConfig.HALFKEY_LEN];
+                        byte[] clip = new byte[ExchangeConfig.HASH_LEN + CryptoAccess.HALFKEY_LEN];
                         byte[] dump;
                         buf = ByteBuffer.wrap(mGrpData[a]);
-                        buf.get(clip, 0, ExchangeConfig.HASH_LEN + ExchangeConfig.HALFKEY_LEN);
+                        buf.get(clip, 0, ExchangeConfig.HASH_LEN + CryptoAccess.HALFKEY_LEN);
                         dump = new byte[buf.remaining()];
                         buf.get(dump);
                         retVal[j] = dump;

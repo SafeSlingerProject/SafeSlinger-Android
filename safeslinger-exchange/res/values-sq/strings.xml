@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d users</string>
 
-    <string name="error_AllMembersMustUpgrade">Disa anëtarë janë duke përdorur një version të vjetër; të gjithë anëtarët duhet të paktën të përdorni %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Të gjithë anëtarët duhet të përmirësuar, disa janë përdorur formatet më të vjetër të regjistrimit shtytje.</string>
     <string name="error_CorrectYourInternetConnection">Internet nuk është në dispozicion, kontrolloni parametrat tuaj.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Exchange tejkaluar. Filloni shkëmbimin përsëri.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Dikush njoftoi një ndryshim në frazat. Filloni shkëmbimin përsëri.</string>
     <string name="error_OutOfMemoryError">Memory është shumë i ulët për të përfunduar këtë operacion.</string>
     <string name="error_ServerAppMessage">Server Mesazh: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Mesazh: %s</string>
     <string name="error_ServerNotResponding">Nuk ka përgjigje nga serveri.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout duke pritur për disa anëtarë të grupit të shtoni të dhëna.</string>
     <string name="error_WebCancelledByUser">User anuluar kërkesën server.</string>

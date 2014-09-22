@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d käyttäjää</string>
 
-    <string name="error_AllMembersMustUpgrade">Jotkut jäsenet käyttävätvanhempaa versiota; kaikkien jäsenten on ainakin käyttää %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Kaikki jäsenet on päivitettävä, jotkut ovat vanhempia push rekisteröintiä formaatteja.</string>
     <string name="error_CorrectYourInternetConnection">Internet ei ole käytettävissä, tarkista asetukset.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ylitetty. Aloitavaihtoa uudelleen.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Joku ilmoittiero lauseita. Aloitavaihtoa uudelleen.</string>
     <string name="error_OutOfMemoryError">Muisti on liian pieni tehtävän loppuun suorittamiseksi.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Ei vastausta palvelimelta.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout odottamaan jotain ryhmän jäsenet voivat lisätä tietoja.</string>
     <string name="error_WebCancelledByUser">Käyttäjä perui palvelimen pyynnöstä.</string>

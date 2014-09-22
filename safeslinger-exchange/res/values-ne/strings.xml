@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d प्रयोगकर्ताहरू</string>
 
-    <string name="error_AllMembersMustUpgrade">केही सदस्यहरू एक ठूलो संस्करण प्रयोग गर्दै; सबै सदस्यहरु कम्तीमा %s उपयोग गर्नु पर्छ ।</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">सबै सदस्यहरु केही ठूलो धक्का दर्ता स्वरूप को उपयोग गर्दै छन्, उन्नयन पर्छ ।</string>
     <string name="error_CorrectYourInternetConnection">उपलब्ध छैन इन्टरनेट, आफ्नो सेटिङ जाँच ।</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">विनिमय समय समाप्त पार । फेरि विनिमय सुरु ।</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">कसैले वाक्यांश भिन्नता दी । फेरि विनिमय सुरु ।</string>
     <string name="error_OutOfMemoryError">स्मरण गर्नुपर्ने यो कार्य पूरा गर्न पनि कम छ ।</string>
     <string name="error_ServerAppMessage">सर्भर सन्देश: %s</string>
-    <string name="error_ServerAppMessageCStr">सर्भर सन्देश: %s</string>
     <string name="error_ServerNotResponding">सर्भरबाट कुनै प्रतिक्रिया ।</string>
     <string name="error_TimeoutWaitingForAllMembers">केही समूह सदस्यहरू डेटा थप्न लागि प्रतीक्षा समय समाप्त ।</string>
     <string name="error_WebCancelledByUser">प्रयोगकर्ता सर्भर अनुरोध रद्द ।</string>

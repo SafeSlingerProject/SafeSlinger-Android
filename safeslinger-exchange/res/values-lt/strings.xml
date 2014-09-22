@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d vartotojų</string>
 
-    <string name="error_AllMembersMustUpgrade">Kai kurie nariai naudojate senesnę versiją; visi nariai turi bent jau naudoti %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Visi nariai turi atnaujinti, kai naudojate senesnius push registracijos formatus.</string>
     <string name="error_CorrectYourInternetConnection">Interneto nėra, patikrinkite nustatymus.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Valiutų Viršytas. Vėl pradėti keistis.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Kažkas pranešė frazes skirtumą. Vėl pradėti keistis.</string>
     <string name="error_OutOfMemoryError">Atmintis yra per mažas baigti šią operaciją.</string>
     <string name="error_ServerAppMessage">Serverio pranešimas: %s</string>
-    <string name="error_ServerAppMessageCStr">Serverio pranešimas: %s</string>
     <string name="error_ServerNotResponding">Jokio atsakymo iš serverio.</string>
     <string name="error_TimeoutWaitingForAllMembers">Pertrauka laukia kai grupės nariai pridėti duomenis.</string>
     <string name="error_WebCancelledByUser">Vartotojas atšauktas serverio prašymą.</string>

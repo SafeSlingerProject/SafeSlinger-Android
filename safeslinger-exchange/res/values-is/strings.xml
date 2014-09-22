@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d notendur</string>
 
-    <string name="error_AllMembersMustUpgrade">Sumir meðlimir eru að nota eldri útgáfu; allir meðlimir verða að minnsta kosti að nota %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Allir meðlimir verða að uppfæra, sumir eru að nota eldri ýta skráning snið.</string>
     <string name="error_CorrectYourInternetConnection">Internet er ekki í boði, athuga stillingar þínar.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange tími yfir. Byrja skipti aftur.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Einhver greint mun á setningar. Byrja skipti aftur.</string>
     <string name="error_OutOfMemoryError">Minni er of lágt til að ljúka þessari aðgerð.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Ekkert svar frá miðlara.</string>
     <string name="error_TimeoutWaitingForAllMembers">Tími sem bíður fyrir sumir meðlimir hópsins að bæta við gögnum.</string>
     <string name="error_WebCancelledByUser">Notandi hætti beiðni miðlara.</string>

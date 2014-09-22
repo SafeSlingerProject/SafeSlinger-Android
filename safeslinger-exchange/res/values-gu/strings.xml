@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d વપરાશકર્તાઓ</string>
 
-    <string name="error_AllMembersMustUpgrade">કેટલાક સભ્યો જૂની આવૃત્તિ વાપરી રહ્યા હોય; બધા સભ્યો ઓછામાં ઓછા %s ઉપયોગ કરવો જોઈએ.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">બધા સભ્યો અમુક જૂની દબાણ નોંધણી બંધારણો ઉપયોગ કરી રહ્યા છો, અપગ્રેડ કરવું આવશ્યક છે.</string>
     <string name="error_CorrectYourInternetConnection">ઉપલબ્ધ નથી ઈન્ટરનેટ, તમારી સેટિંગ્સ તપાસો.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">એક્સચેન્જ સમયસમાપ્તિ ઓળંગાઈ ગઈ છે. ફરીથી એક્સચેન્જ શરૂ થાય છે.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">કોઇએ શબ્દસમૂહો માં તફાવત અહેવાલ. ફરીથી એક્સચેન્જ શરૂ થાય છે.</string>
     <string name="error_OutOfMemoryError">મેમરી આ ક્રિયા પૂર્ણ કરવા માટે ખૂબ ઓછા છે.</string>
     <string name="error_ServerAppMessage">સર્વર સંદેશો: %s</string>
-    <string name="error_ServerAppMessageCStr">સર્વર સંદેશો: %s</string>
     <string name="error_ServerNotResponding">સર્વર કોઈ પ્રતિભાવ.</string>
     <string name="error_TimeoutWaitingForAllMembers">કેટલાક જૂથ સભ્યો માહિતી ઉમેરવા માટે રાહ જોઈ રહ્યું સમયસમાપ્ત.</string>
     <string name="error_WebCancelledByUser">વપરાશકર્તા સર્વર વિનંતી રદ.</string>

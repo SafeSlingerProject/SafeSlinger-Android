@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d χρήστες</string>
 
-    <string name="error_AllMembersMustUpgrade">Ορισμένα μέλη χρησιμοποιούν παλαιότερη έκδοση, όλα τα μέλη πρέπει να χρησιμοποιήσουν τουλάχιστον %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Όλα τα μέλη πρέπει να αναβαθμίσουν, ορισμένοι χρησιμοποιούν μεγαλύτερα ώθηση μορφές εγγραφής.</string>
     <string name="error_CorrectYourInternetConnection">Internet δεν είναι διαθέσιμη, ελέγξτε τις ρυθμίσεις σας.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Χρονικού ορίου Exchange υπέρβαση. Ξεκινήστε πάλι την ανταλλαγή.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Κάποιος ανέφερε τη διαφορά στις φράσεις. Ξεκινήστε πάλι την ανταλλαγή.</string>
     <string name="error_OutOfMemoryError">Η μνήμη είναι πολύ χαμηλή για να ολοκληρωθεί αυτή η λειτουργία.</string>
     <string name="error_ServerAppMessage">Μήνυμα διακομιστή: %s</string>
-    <string name="error_ServerAppMessageCStr">Μήνυμα διακομιστή: %s</string>
     <string name="error_ServerNotResponding">Διακομιστή δεν απάντησε.</string>
     <string name="error_TimeoutWaitingForAllMembers">Χρονικό όριο αναμονής για κάποια μέλη της ομάδας για να προσθέσετε δεδομένα.</string>
     <string name="error_WebCancelledByUser">Ο χρήστης ακύρωσε αίτημα διακομιστή.</string>

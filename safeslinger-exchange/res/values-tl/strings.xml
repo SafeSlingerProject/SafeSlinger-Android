@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d mga gumagamit</string>
 
-    <string name="error_AllMembersMustUpgrade">Ang ilan sa mga miyembro ay gumagamit ng isang mas lumang bersyon; Dapat hindi bababa sa gamitin ang lahat ng mga miyembro %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Lahat ng mga miyembro ay dapat mag-upgrade, ang ilan ay gumagamit ng mas lumang format ng pagpaparehistro ng push.</string>
     <string name="error_CorrectYourInternetConnection">Hindi available ang Internet, suriin ang iyong mga setting.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Lumagpas timeout Exchange. Simulan muli ang exchange.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">May isang tao na iniulat ng isang pagkakaiba sa mga parirala. Simulan muli ang exchange.</string>
     <string name="error_OutOfMemoryError">Memory ay masyadong mababa upang makumpleto ang operasyong ito.</string>
     <string name="error_ServerAppMessage">Mensahe ng Server: %s</string>
-    <string name="error_ServerAppMessageCStr">Mensahe ng Server: %s</string>
     <string name="error_ServerNotResponding">Walang tugon mula sa server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout naghihintay para sa ilang mga kasapi ng pangkat upang magdagdag ng data.</string>
     <string name="error_WebCancelledByUser">Kinansela ang User kahilingan sa server.</string>

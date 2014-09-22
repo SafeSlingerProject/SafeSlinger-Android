@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d gebruikers</string>
 
-    <string name="error_AllMembersMustUpgrade">Sommige lede is met behulp van \'n ouer weergawe; Alle lede moet ten minste gebruik %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Alle lede moet opgradeer, sommige met ouer druk registrasie formaat.</string>
     <string name="error_CorrectYourInternetConnection">Internet nie beskikbaar is nie, maak seker jou instellings.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Ruil timeout oorskry. Begin die wisselkoers weer.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Iemand het \'n verskil in frases. Begin die wisselkoers weer.</string>
     <string name="error_OutOfMemoryError">Memory te laag is hierdie aksie te voltooi.</string>
     <string name="error_ServerAppMessage">Bediener boodskap: %s</string>
-    <string name="error_ServerAppMessageCStr">Bediener boodskap: %s</string>
     <string name="error_ServerNotResponding">Geen reaksie van die bediener.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout wag vir \'n paar lede van die groep data by te voeg.</string>
     <string name="error_WebCancelledByUser">Gebruiker gekanselleer bediener versoek.</string>

@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d корисници</string>
 
-    <string name="error_AllMembersMustUpgrade">Некои членови се користи постара верзија; сите членови мора барем да ги користат %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Сите членови мора да се надополни, некои се користат постара притисни формати регистрација.</string>
     <string name="error_CorrectYourInternetConnection">Интернет не е на располагање, проверете ги вашите поставувања.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Размена завршиле надмината. Започне размена повторно.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Некој пријавени разлика во фрази. Започне размена повторно.</string>
     <string name="error_OutOfMemoryError">Меморија е премногу ниска за да се заврши оваа операција.</string>
     <string name="error_ServerAppMessage">Сервер порака: %s</string>
-    <string name="error_ServerAppMessageCStr">Сервер порака: %s</string>
     <string name="error_ServerNotResponding">Нема одговор од серверот.</string>
     <string name="error_TimeoutWaitingForAllMembers">Истек на време на чекање за некои членови на групата за да додадете податоци.</string>
     <string name="error_WebCancelledByUser">Корисникот откажани серверот барање.</string>

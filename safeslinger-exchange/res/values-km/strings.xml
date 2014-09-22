@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">អ្នកប្រើប្រាស់ %d</string>
 
-    <string name="error_AllMembersMustUpgrade">សមាជិក មួយចំនួន កំពុងប្រើ កំណែចាស់ជាង; សមាជិកទាំងអស់ ត្រូវតែប្រើ យ៉ាងហោចណាស់ %s ។</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">សមាជិក ទាំងអស់ត្រូវតែ ធ្វើឱ្យប្រសើរឡើង មួយចំនួន កំពុងប្រើ ទ្រង់ទ្រាយ ការចុះឈ្មោះ ជំរុញ ចាស់។</string>
     <string name="error_CorrectYourInternetConnection">អ៊ិនធើណិ មិន អាចប្រើបាន ពិនិត្យមើល ការកំណត់ របស់អ្នក។</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">អស់ពេល ការផ្លាស់ប្តូរ លើស ។ ចាប់ផ្តើម ការផ្លាស់ប្តូរ ម្តងទៀត។</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">មាននរណាម្នាក់ បានរាយការណ៍ ខុសគ្នានៅក្នុង ឃ្លា មួយ។ ចាប់ផ្តើម ការផ្លាស់ប្តូរ ម្តងទៀត។</string>
     <string name="error_OutOfMemoryError">ការចងចាំ មានកម្រិតទាប ពេក ដើម្បីបំពេញ ប្រតិបត្ដិការ នេះ។</string>
     <string name="error_ServerAppMessage">សារ ម៉ាស៊ីនបម្រើ: %s</string>
-    <string name="error_ServerAppMessageCStr">សារ ម៉ាស៊ីនបម្រើ: %s</string>
     <string name="error_ServerNotResponding">មិនមាន ការឆ្លើយតប ពីម៉ាស៊ីនបម្រើ។</string>
     <string name="error_TimeoutWaitingForAllMembers">អស់ពេល រង់ចាំ សម្រាប់សមាជិក ក្រុម មួយចំនួន ដើម្បីបន្ថែម ទិន្នន័យ។</string>
     <string name="error_WebCancelledByUser">អ្នកប្រើ បានបោះបង់ សំណើ ម៉ាស៊ីនបម្រើ។</string>

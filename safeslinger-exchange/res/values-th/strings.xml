@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d ผู้</string>
 
-    <string name="error_AllMembersMustUpgrade">สมาชิกบางคน กำลังใช้รุ่นเก่า; สมาชิกทุกคน อย่างน้อย ต้องใช้ %s</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">สมาชิก ทุกคนจะต้อง ปรับ บางส่วน มีการใช้ รูปแบบ การลงทะเบียน มากกว่า การผลักดัน</string>
     <string name="error_CorrectYourInternetConnection">อินเทอร์เน็ต ไม่สามารถ ตรวจสอบ การตั้งค่า ของคุณ</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">แลกเปลี่ยน หมดเวลา เกิน เริ่มต้น การแลกเปลี่ยน อีกครั้ง</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">ใครบางคน รายงาน ความแตกต่างใน วลี เริ่มต้น การแลกเปลี่ยน อีกครั้ง</string>
     <string name="error_OutOfMemoryError">หน่วยความจำ ต่ำเกินไปที่จะ ดำเนินการนี้</string>
     <string name="error_ServerAppMessage">ข้อความ เซิร์ฟเวอร์: %s</string>
-    <string name="error_ServerAppMessageCStr">ข้อความ เซิร์ฟเวอร์: %s</string>
     <string name="error_ServerNotResponding">ไม่มีการ ตอบสนองจากเซิร์ฟเวอร์</string>
     <string name="error_TimeoutWaitingForAllMembers">หมดเวลา รอให้ สมาชิกในกลุ่ม ที่จะ เพิ่มข้อมูล</string>
     <string name="error_WebCancelledByUser">ผู้ใช้ ยกเลิก คำขอ เซิร์ฟเวอร์</string>

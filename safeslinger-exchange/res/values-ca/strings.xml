@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d usuaris</string>
 
-    <string name="error_AllMembersMustUpgrade">Alguns membres estan utilitzant una versió anterior; tots els membres han, almenys, utilitzar %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tots els membres han de actualitzar, alguns estan utilitzant els formats de registre d\'empenta grans.</string>
     <string name="error_CorrectYourInternetConnection">Internet no està disponible, comproveu la configuració.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Tipus excedit. Comença l\'intercanvi de nou.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Algú ha informat una diferència en frases. Comença l\'intercanvi de nou.</string>
     <string name="error_OutOfMemoryError">La memòria és massa baixa per completar aquesta operació.</string>
     <string name="error_ServerAppMessage">Missatges del servidor: %s</string>
-    <string name="error_ServerAppMessageCStr">Missatges del servidor: %s</string>
     <string name="error_ServerNotResponding">No hi ha resposta del servidor.</string>
     <string name="error_TimeoutWaitingForAllMembers">Temps d\'espera d\'espera d\'alguns membres del grup per afegir dades.</string>
     <string name="error_WebCancelledByUser">L\'usuari cancel · lar la sol · licitud del servidor.</string>

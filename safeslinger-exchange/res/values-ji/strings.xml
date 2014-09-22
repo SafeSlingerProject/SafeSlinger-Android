@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d וסערס</string>
 
-    <string name="error_AllMembersMustUpgrade">עטלעכע מיטגלידער זענען ניצן אַ עלטער ווערסיע, אַלע מיטגלידער מוזן בייַ מינדסטער נוצן %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">אַלע מיטגלידער מוזן אַפּגרייד, עטלעכע זענען ניצן עלטער שטופּן רעגיסטראַציע פֿאָרמאַטירונגען.</string>
     <string name="error_CorrectYourInternetConnection">אינטערנעט ניט פאַראַנען, טשעק דיין סעטטינגס.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">וועקסל טיימאַוט יקסידיד. אָנהייבן דער וועקסל ווידער.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">עמעצער געמאלדן אַ חילוק אין פראַסעס. נעמען די וועקסל ווידער.</string>
     <string name="error_OutOfMemoryError">זיקאָרן איז אויך נידעריק צו פאַרענדיקן דעם אָפּעראַציע.</string>
     <string name="error_ServerAppMessage">סערווירער אָנזאָג:%s</string>
-    <string name="error_ServerAppMessageCStr">סערווירער אָנזאָג:%s</string>
     <string name="error_ServerNotResponding">ניט קיין ענטפער פון סערווירער.</string>
     <string name="error_TimeoutWaitingForAllMembers">טיימאַוט ווארטן פֿאַר עטלעכע גרופּע מיטגלידער צו לייגן דאַטן.</string>
     <string name="error_WebCancelledByUser">באַניצער קאַנסאַלד סערווירער בעטן.</string>

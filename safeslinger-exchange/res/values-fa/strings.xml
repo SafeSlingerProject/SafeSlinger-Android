@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">کاربران %d</string>
 
-    <string name="error_AllMembersMustUpgrade">برخی از اعضای آن از نسخه قدیمی. همه اعضای حداقل باید استفاده %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">همه اعضا باید ارتقاء داده شده، برخی از آنها با استفاده از فرمت های قدیمی تر فشار ثبت نام.</string>
     <string name="error_CorrectYourInternetConnection">اینترنت در دسترس نیست ، تنظیمات خود را چک کنید.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">فاصله تبادل بیش از حد. دوباره آغاز ارز.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">کسی گزارش تفاوت در عبارات. دوباره آغاز ارز.</string>
     <string name="error_OutOfMemoryError">حافظه بسیار کم است برای تکمیل این عملیات است.</string>
     <string name="error_ServerAppMessage">سرور پیام: %s</string>
-    <string name="error_ServerAppMessageCStr">سرور پیام: %s</string>
     <string name="error_ServerNotResponding">هیچ پاسخی از سرور.</string>
     <string name="error_TimeoutWaitingForAllMembers">پایان زمان انتظار برای برخی از اعضای گروه به اضافه کردن اطلاعات.</string>
     <string name="error_WebCancelledByUser">کاربر لغو درخواست سرور.</string>

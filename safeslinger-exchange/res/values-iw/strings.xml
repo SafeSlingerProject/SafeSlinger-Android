@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d משתמשים</string>
 
-    <string name="error_AllMembersMustUpgrade">חלק מהחברים משתמשים בגרסה ישנה יותר; כל החברים לפחות חייבים להשתמש %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">כל החברים חייבים לשדרג, חלקם באמצעות פורמטי רישום דחיפה מעלה.</string>
     <string name="error_CorrectYourInternetConnection">אינטרנט אינו זמין, בדוק את ההגדרות שלך.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">פסק זמן שערי חריגה. בגיןמטבע שוב.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">מישהו דיווח על הבדל בביטויים. בגיןמטבע שוב.</string>
     <string name="error_OutOfMemoryError">הזיכרון הוא נמוך מדי כדי להשלים את הפעולה.</string>
     <string name="error_ServerAppMessage">הודעת שרת: %s</string>
-    <string name="error_ServerAppMessageCStr">הודעת שרת: %s</string>
     <string name="error_ServerNotResponding">אין תגובה מהשרת.</string>
     <string name="error_TimeoutWaitingForAllMembers">פסק זמן מחכה לחלק מחברי הקבוצה כדי להוסיף נתונים.</string>
     <string name="error_WebCancelledByUser">משתמש ביטל את בקשת שרת.</string>

@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d জন ব্যবহারকারী</string>
 
-    <string name="error_AllMembersMustUpgrade">কিছু সদস্যদের একটি পুরোনো সংস্করণ ব্যবহার করছেন; সকল সদস্যদের অন্তত %s ব্যবহার করা আবশ্যক.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">সকল সদস্য কয়েকটি পুরোনো ধাক্কা রেজিস্ট্রেশন বিন্যাসের ব্যবহার করছেন, আপগ্রেড করা আবশ্যক.</string>
     <string name="error_CorrectYourInternetConnection">পাওয়া যায় না ইন্টারনেট, আপনার সেটিংস চেক করুন.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">এক্সচেঞ্জ সময়সীমার ছাড়িয়ে গেছে. আবার বিনিময় শুরু করুন.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">কেউ বাক্যাংশ একটি পার্থক্য রিপোর্ট. আবার বিনিময় শুরু করুন.</string>
     <string name="error_OutOfMemoryError">স্মৃতি এই অপারেশন সম্পন্ন করতে খুব কম.</string>
     <string name="error_ServerAppMessage">সার্ভার বার্তা: %s</string>
-    <string name="error_ServerAppMessageCStr">সার্ভার বার্তা: %s</string>
     <string name="error_ServerNotResponding">সার্ভার থেকে কোনো প্রতিক্রিয়া.</string>
     <string name="error_TimeoutWaitingForAllMembers">কিছু দলের সদস্যদের তথ্য যোগ করার জন্য অপেক্ষা সময়সীমা সমাপ্ত.</string>
     <string name="error_WebCancelledByUser">ব্যবহারকারী সার্ভারটি অনুরোধটি বাতিল.</string>

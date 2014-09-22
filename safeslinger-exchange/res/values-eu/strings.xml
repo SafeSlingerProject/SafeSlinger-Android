@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d erabiltzaile</string>
 
-    <string name="error_AllMembersMustUpgrade">Kide batzuk bertsio zaharrago bat erabiltzen dute; kide guztiei, gutxienez, erabili beharko %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Kide guztiak berritzea behar, batzuk bultza erregistroa formatuak zaharragoak erabiliz.</string>
     <string name="error_CorrectYourInternetConnection">Internet ez dago, egiaztatu zure ezarpenak.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Truke denbora-muga gainditu da. Berriro hasiko da trukatzea.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Norbaitek esaldi diferentzia bat du. Berriro hasiko da trukatzea.</string>
     <string name="error_OutOfMemoryError">Txikiegia memoria eragiketa hau osatzeko.</string>
     <string name="error_ServerAppMessage">Zerbitzari Mezua: %s</string>
-    <string name="error_ServerAppMessageCStr">Zerbitzari Mezua: %s</string>
     <string name="error_ServerNotResponding">Ez dago erantzunik zerbitzaritik.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout talde kide batzuk datuak gehitzeko zain.</string>
     <string name="error_WebCancelledByUser">Erabiltzaileak bertan behera utzi zerbitzari eskaera.</string>

@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d usuários</string>
 
-    <string name="error_AllMembersMustUpgrade">Alguns membros estão usando uma versão mais antiga; todos os membros devem, pelo menos, usar %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Todos os membros devem atualizar, alguns estão usando os formatos de registro de pressão mais velhos.</string>
     <string name="error_CorrectYourInternetConnection">Internet não disponível, verifique as configurações.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Taxas de tempo limite excedido. Comece a troca novamente.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Alguém informou a diferença em frases. Comece a troca novamente.</string>
     <string name="error_OutOfMemoryError">A memória é muito baixa para concluir esta operação.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Sem resposta do servidor.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout esperando por alguns membros do grupo para adicionar dados.</string>
     <string name="error_WebCancelledByUser">Usuário cancelado pedido do servidor.</string>

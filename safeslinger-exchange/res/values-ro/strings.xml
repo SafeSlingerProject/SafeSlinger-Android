@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d de utilizatori</string>
 
-    <string name="error_AllMembersMustUpgrade">Unii membri sunt, folosind o versiune mai veche; toți membrii trebuie cel puțin să folosească %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Toți membrii trebuie să faceți upgrade, unele sunt folosind formate mai mari de înregistrare împinge.</string>
     <string name="error_CorrectYourInternetConnection">Internet nu este disponibil, verificați setările.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Schimb timeout depășit. Inceput din nouschimb.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Cineva a raportat o diferență în fraze. Inceput din nouschimb.</string>
     <string name="error_OutOfMemoryError">De memorie este prea mic pentru a finaliza această operație.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nici un răspuns de la serverul.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout de așteptare pentru unii membrii grupului pentru a adăuga date.</string>
     <string name="error_WebCancelledByUser">Utilizatorul a anulat cererea de server.</string>

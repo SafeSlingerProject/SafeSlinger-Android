@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">defnyddwyr %d</string>
 
-    <string name="error_AllMembersMustUpgrade">Mae rhai aelodau yn defnyddio fersiwn hŷn; Mae\'n rhaid i bob aelod o leiaf yn defnyddio %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Rhaid i bob aelod uwchraddio, mae rhai yn defnyddio fformatau cofrestru gwthio hŷn.</string>
     <string name="error_CorrectYourInternetConnection">Rhyngrwyd ar gael, gwiriwch eich gosodiadau.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Goramser Cyfnewid rhagori. Dechreuwch y cyfnewid eto.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Rhywun adroddwyd gwahaniaeth mewn ymadroddion. Dechreuwch y cyfnewid eto.</string>
     <string name="error_OutOfMemoryError">Cof yn rhy isel i gwblhau\'r gwaith hwn.</string>
     <string name="error_ServerAppMessage">Neges Gweinydd: %s</string>
-    <string name="error_ServerAppMessageCStr">Neges Gweinydd: %s</string>
     <string name="error_ServerNotResponding">Dim ymateb gan y gweinydd.</string>
     <string name="error_TimeoutWaitingForAllMembers">Aros ar gyfer rhai aelodau\'r grŵp i ychwanegu data Goramser.</string>
     <string name="error_WebCancelledByUser">Ganslo Defnyddiwr cais gweinydd.</string>

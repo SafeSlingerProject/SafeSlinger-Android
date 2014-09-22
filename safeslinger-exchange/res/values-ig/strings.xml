@@ -32,7 +32,6 @@
 
     <string name="choice_NumUsers">%d ọrụ</string>
 
-    <string name="error_AllMembersMustUpgrade">Ụfọdụ n\'ime ndị òtù na-eji otu okenye version; òtù nile ga-ọ dịkarịa ala na-eji %s.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Niile so ga kwalite, ụfọdụ ndị na-eji okenye push ndebanye formats.</string>
     <string name="error_CorrectYourInternetConnection">Internet adịghị, lelee mwube gị.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout emewokwa ihe karịrị. Na-amalite mgbanwe ọzọ.</string>
@@ -47,7 +46,6 @@
     <string name="error_OtherGroupCommitDiffer">Onye kọrọ a dị kwuo okwu. Na-amalite mgbanwe ọzọ.</string>
     <string name="error_OutOfMemoryError">Ebe nchekwa oke ala iji wuchaa a ime ihe.</string>
     <string name="error_ServerAppMessage">Server Ozi: %s</string>
-    <string name="error_ServerAppMessageCStr">Server Ozi: %s</string>
     <string name="error_ServerNotResponding">Ọ dịghị ibọrọ nkesa.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout eche ụfọdụ otu òtù ịgbakwunye data.</string>
     <string name="error_WebCancelledByUser">Onye ọrụ na onye kagbuo ihe nkesa na-arịọ arịrịọ.</string>
