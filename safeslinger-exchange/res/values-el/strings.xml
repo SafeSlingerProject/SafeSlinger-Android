@@ -32,31 +32,31 @@
 
     <string name="choice_NumUsers">%d χρήστες</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Όλα τα μέλη πρέπει να αναβαθμίσουν, ορισμένοι χρησιμοποιούν μεγαλύτερα ώθηση μορφές εγγραφής.</string>
-    <string name="error_CorrectYourInternetConnection">Internet δεν είναι διαθέσιμη, ελέγξτε τις ρυθμίσεις σας.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Χρονικού ορίου Exchange υπέρβαση. Ξεκινήστε πάλι την ανταλλαγή.</string>
-    <string name="error_HttpCode">Διακομιστή HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Εσφαλμένα δεδομένα που βρέθηκαν σε αντάλλαγμα. Ξεκινήστε πάλι την ανταλλαγή.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Όλα τα μέλη πρέπει να αναβαθμίσουν, ορισμένα χρησιμοποιούν παλαιότερη έκδοση push registration.</string>
+    <string name="error_CorrectYourInternetConnection">Το internet δεν είναι διαθέσιμo, ελέγξτε τις ρυθμίσεις σας.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Υπέρβαση χρονικού ορίου ανταλλαγής.Προσπαθήστε ξανά.</string>
+    <string name="error_HttpCode">Σφάλμα ΗΤΤP διακομιστή: %d</string>
+    <string name="error_InvalidCommitVerify">Εσφαλμένα δεδομένα βρέθηκαν στην ανταλλαγή. Προσπαθήστε ξανά.</string>
     <string name="error_InvalidCommonUserId">Παρακαλούμε εισάγετε ένα θετικό ακέραιο.</string>
-    <string name="error_LocalGroupCommitDiffer">Έχετε ανέφεραν διαφορά φράσεις. Ξεκινήστε πάλι την ανταλλαγή.</string>
-    <string name="error_MinUsersRequired">Ένα ελάχιστο από %d μέλη απαιτείται για την ανταλλαγή δεδομένων.</string>
-    <string name="error_MoreDataThanUsers">Απροσδόκητη στοιχεία που βρέθηκαν σε αντάλλαγμα. Ξεκινήστε πάλι την ανταλλαγή.</string>
-    <string name="error_NoDataToExchange">Η ανταλλαγή λείπει απαιτούμενα στοιχεία.</string>
-    <string name="error_NoWordListSelected">Μπορείτε να επιλέξετε μία από τις φράσεις πριν προχωρήσετε.</string>
-    <string name="error_OtherGroupCommitDiffer">Κάποιος ανέφερε τη διαφορά στις φράσεις. Ξεκινήστε πάλι την ανταλλαγή.</string>
+    <string name="error_LocalGroupCommitDiffer">Έχετε ανέφερει διαφορετικές φράσεις. Ξεκινήστε πάλι την ανταλλαγή.</string>
+    <string name="error_MinUsersRequired">Το λιγότερο %d μέλη απαιτείτούνται για την ανταλλαγή δεδομένων.</string>
+    <string name="error_MoreDataThanUsers">Απροσδόκητα δεδομένα βρέθηκαν στην ανταλλαγή. Προσπαθήστε ξανά.</string>
+    <string name="error_NoDataToExchange">Η ανταλλαγή δεν περιέχει απαιτούμενα στοιχεία.</string>
+    <string name="error_NoWordListSelected">Πρέπει να επιλέξετε μία από τις φράσεις πριν προχωρήσετε.</string>
+    <string name="error_OtherGroupCommitDiffer">Κάποιος ανέφερε διαφορά στις φράσεις. Ξεκινήστε πάλι την ανταλλαγή.</string>
     <string name="error_OutOfMemoryError">Η μνήμη είναι πολύ χαμηλή για να ολοκληρωθεί αυτή η λειτουργία.</string>
     <string name="error_ServerAppMessage">Μήνυμα διακομιστή: %s</string>
-    <string name="error_ServerNotResponding">Διακομιστή δεν απάντησε.</string>
+    <string name="error_ServerNotResponding">Ο διακομιστής δεν απάντησε.</string>
     <string name="error_TimeoutWaitingForAllMembers">Χρονικό όριο αναμονής για κάποια μέλη της ομάδας για να προσθέσετε δεδομένα.</string>
-    <string name="error_WebCancelledByUser">Ο χρήστης ακύρωσε αίτημα διακομιστή.</string>
+    <string name="error_WebCancelledByUser">Ο χρήστης ακύρωσε το αίτημα διακομιστή.</string>
 
     <string name="help_size">Επιλέξτε τον αριθμό των ανθρώπων που προσπαθούν να ανταλλάξουν δεδομένα μεταξύ τους και πιέστε το πλήκτρο OK.</string>
     <string name="help_userid">Ο αριθμός σε αυτή την οθόνη χρησιμοποιείται για να δημιουργήσει μια μοναδική ομάδα χρηστών. Όλοι οι χρήστες πρέπει να εξετάσουν τις οθόνες τους και να εισάγουν το μικρότερο αριθμό που είναι κοινός σε όλες τις οθόνες κα να πατήσουν το πλήκτρο OK.</string>
     <string name="help_verify">Τώρα πρέπει να βρείτε την κοινή ομάδα 3 λέξεων μεταξύ όλων των χρηστών. Κάθε χρήστης πρέπει να επιλέξει την ίδια κοινή φράση, και να πατήσει Επόμενο.</string>
 
-    <string name="label_CompareScreensNDevices">Συγκρίνετε τις οθόνες σε συσκευές %s.</string>
-    <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Αυτός ο αριθμός χρησιμοποιείται για να δημιουργήσει μια μοναδική ομάδα χρηστών. Συγκρίνετε τους αριθμούς και πληκτρολογήστε το μικρότερο αριθμό μεταξύ όλων των χρηστών.</string>
+    <string name="label_CompareScreensNDevices">Συγκρίνετε τις οθόνες σε %s συσκευές.</string>
+    <string name="label_NumericModeHint">Όχι λέξεις</string>
+    <string name="label_PromptInstruct">Αυτός ο αριθμός χρησιμοποιείται για να διακρίνει μια μοναδική ομάδα χρηστών. Συγκρίνετε τους αριθμούς και πληκτρολογήστε το μικρότερο αριθμό μεταξύ όλων των χρηστών.</string>
     <string name="label_ReceivedNItems">ελήφθησαν %d αντικείμενα</string>
     <string name="label_UserIdHint">Μικρότερος</string>
     <string name="label_VerifyInstruct">Όλα τα κινητά τηλέφωνα πρέπει να συφωνήσουν σε μια κοινη ομάδα 3 λέξεων. Συγκρίνετε και επιλέξτε την κοινή ομάδα.</string>

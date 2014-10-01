@@ -544,6 +544,8 @@
     <string name="menu_ContactInviteSms">Text from Contacts</string>
     <!-- menu option (title case); used to show a new empty contact in the address book for editing as the users' current identity via the Personal Contact dialog. -->
     <string name="menu_CreateNew">Create New</string>
+    <!-- menu option (title case); used to show a debug option for message delivery. -->
+    <string name="menu_debugTranscript" translatable="false">Debug Transcript</string>
     <!-- menu option (title case); used to delete the current item from the list context menu. -->
     <string name="menu_delete">Delete</string>
     <!-- menu option (title case); used to delete all messages from this person via the message list context menu. %s = the name of a person. -->
@@ -569,7 +571,7 @@
     <!-- menu (title case); used as the settings menu option to change language -->
     <string name="menu_language">Language</string>
     <!-- menu option (title case); used to show a dialog of the End User License Agreement. -->
-    <string name="menu_License" translatable="false">License</string>
+    <string name="menu_License">License</string>
     <!-- menu option (title case); used to select a contact from the address book to update from and link to. -->
     <string name="menu_link_contact_add">Add Contact Link</string>
     <!-- menu option (title case); used to select a contact from the address book to update from and link to. -->
@@ -584,8 +586,8 @@
     <string name="menu_messageCopyText">Copy Text</string>
     <!-- menu option (title case); used to create a new message with the same text message/attachment via the message list context menu. -->
     <string name="menu_messageForward">Forward</string>
-    <!-- menu option (title case); used to show a dialog of the End User License Agreement. -->
-    <string name="menu_PrivacyPolicy" translatable="false">Privacy Policy</string>
+    <!-- menu option (title case); used to show a dialog of the Privacy Policy. -->
+    <string name="menu_PrivacyPolicy">Privacy Policy</string>
     <!-- menu option (title case); used to remove the currently selected file attachment via the File Options dialog. -->
     <string name="menu_Remove">Remove</string>
     <!-- menu option (title case); used as Settings screen menu item for restoring all settings to default -->

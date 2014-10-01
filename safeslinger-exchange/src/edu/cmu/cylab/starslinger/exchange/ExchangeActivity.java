@@ -44,9 +44,9 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -73,11 +73,6 @@ public class ExchangeActivity extends BaseActivity {
 
     private static final int VIEW_PROMPT_ID = 76;
     private static final int VIEW_VERIFY_ID = 4;
-    private static final int RECOVERY_ASSIGNUSERID = 20;
-    private static final int RECOVERY_SYNCCOMMITSDATA = 21;
-    private static final int RECOVERY_SYNCMATCHSIGS = 22;
-    private static final int RECOVERY_SYNCWRONGSIGS = 23;
-    private static final int RECOVERY_SYNCNODESNONCES = 24;
     private static final int RESULT_ERROR_EXIT = 6;
     private static final int RESULT_CONFIRM_EXIT_PROMPT = 12;
     private static final int RESULT_CONFIRM_EXIT_VERIFY = 13;
@@ -204,7 +199,8 @@ public class ExchangeActivity extends BaseActivity {
                         // in a local exchange, in the same group
                         mProt.setNumUsers(2);
                         mProt.setUserIdLink(1);
-                        runThreadGetCommitmentsGetData();
+                        SyncCommitsDataTask syncCommitData = new SyncCommitsDataTask();
+                        syncCommitData.execute(new String[] {});
                     } else {
                         // Server supports multiple users in remote,
                         // arbitrary configurations so request group
@@ -267,7 +263,8 @@ public class ExchangeActivity extends BaseActivity {
                 switch (resultCode) {
                     case RESULT_OK:
                         // confirmed exit from verify, send invalid sig
-                        runThreadSendInvalidSignature();
+                        SyncBadSigTask syncBadSig = new SyncBadSigTask();
+                        syncBadSig.execute(new String[] {});
                         break;
                     case RESULT_CANCELED:
                         // return to current activity
@@ -305,15 +302,18 @@ public class ExchangeActivity extends BaseActivity {
         switch (resultCode) {
             case VerifyActivity.RESULT_CORRECTWORDLIST: // Verify button Match
                 mProt.setHashSelection(0);
-                runThreadSendValidSignatureGetSignatures();
+                SyncGoodSigsTask syncSigs = new SyncGoodSigsTask();
+                syncSigs.execute(new String[] {});
                 break;
             case VerifyActivity.RESULT_DECOYWORDLIST1: // send bad match
                 mProt.setHashSelection(1);
-                runThreadSendInvalidSignature();
+                SyncBadSigTask syncBadSig1 = new SyncBadSigTask();
+                syncBadSig1.execute(new String[] {});
                 break;
             case VerifyActivity.RESULT_DECOYWORDLIST2: // send bad match
                 mProt.setHashSelection(2);
-                runThreadSendInvalidSignature();
+                SyncBadSigTask syncBadSig2 = new SyncBadSigTask();
+                syncBadSig2.execute(new String[] {});
                 break;
             case RESULT_CANCELED: // Verify button No Match
                 showExitConfirm(RESULT_CONFIRM_EXIT_VERIFY);
@@ -337,7 +337,8 @@ public class ExchangeActivity extends BaseActivity {
                 }
 
                 mProt.setUserIdLink(result); // save
-                runThreadGetCommitmentsGetData();
+                SyncCommitsDataTask syncCommitData = new SyncCommitsDataTask();
+                syncCommitData.execute(new String[] {});
                 break;
             case RESULT_CANCELED:
                 showExitConfirm(RESULT_CONFIRM_EXIT_PROMPT);
@@ -373,69 +374,121 @@ public class ExchangeActivity extends BaseActivity {
         }
     }
 
-    private void runThreadGetUserId() {
-        showProgress(getString(R.string.prog_RequestingUserId));
-        Thread t = new Thread() {
+    private class AssignUserTask extends AsyncTask<String, String, String> {
 
-            @Override
-            public void run() {
-                mProt.doRequestUserId();
-                endProgress(RECOVERY_ASSIGNUSERID);
+        @Override
+        protected String doInBackground(String... arg0) {
+            publishProgress(getString(R.string.prog_RequestingUserId));
+            mProt.doRequestUserId();
+            endProgress();
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            showProgress(progress[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
+                showLowestUserIdPrompt(mProt.getUserId());
             }
-        };
-        t.start();
+        }
     }
 
-    private void runThreadGetCommitmentsGetData() {
-        showProgress(getString(R.string.prog_CollectingOthersItems));
-        Thread t = new Thread() {
+    private class SyncCommitsDataTask extends AsyncTask<String, String, String> {
 
-            @Override
-            public void run() {
-                mProt.doGetCommitmentsGetData();
-                endProgress(RECOVERY_SYNCCOMMITSDATA);
+        @Override
+        protected String doInBackground(String... arg0) {
+            publishProgress(getString(R.string.prog_CollectingOthersItems));
+            mProt.doGetCommitmentsGetData();
+            endProgress();
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            showProgress(progress[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
+                showVerify(mProt.getHash(), mProt.getDecoyHash(1), mProt.getDecoyHash(2),
+                        mProt.getRandomPos(3));
             }
-        };
-        t.start();
+        }
     }
 
-    private void runThreadSendValidSignatureGetSignatures() {
-        showProgress(getString(R.string.prog_CollectingOthersCommitVerify));
-        Thread t = new Thread() {
+    private class SyncGoodSigsTask extends AsyncTask<String, String, String> {
 
-            @Override
-            public void run() {
-                mProt.doSendValidSignatureGetSignatures();
-                endProgress(RECOVERY_SYNCMATCHSIGS);
+        @Override
+        protected String doInBackground(String... arg0) {
+            publishProgress(getString(R.string.prog_CollectingOthersCommitVerify));
+            mProt.doSendValidSignatureGetSignatures();
+            endProgress();
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            showProgress(progress[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
+                SyncNodesNoncesTask syncNodesNonces = new SyncNodesNoncesTask();
+                syncNodesNonces.execute(new String[] {});
             }
-        };
-        t.start();
+        }
     }
 
-    private void runThreadCreateSharedSecretGetNodesAndMatchNonces() {
-        showProgress(getString(R.string.prog_ConstructingGroupKey));
-        Thread t = new Thread() {
+    private class SyncNodesNoncesTask extends AsyncTask<String, String, String> {
 
-            @Override
-            public void run() {
-                mProt.doCreateSharedSecretGetNodesAndMatchNonces();
-                endProgress(RECOVERY_SYNCNODESNONCES);
+        @Override
+        protected String doInBackground(String... arg0) {
+            publishProgress(getString(R.string.prog_ConstructingGroupKey));
+            mProt.doCreateSharedSecretGetNodesAndMatchNonces();
+            endProgress();
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            showProgress(progress[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
+                doVerifyFinalMatchDone();
             }
-        };
-        t.start();
+        }
     }
 
-    private void runThreadSendInvalidSignature() {
-        showProgress(getString(R.string.prog_CollectingOthersCommitVerify));
-        Thread t = new Thread() {
+    private class SyncBadSigTask extends AsyncTask<String, String, String> {
 
-            @Override
-            public void run() {
-                mProt.doSendInvalidSignature();
-                endProgress(RECOVERY_SYNCWRONGSIGS);
+        @Override
+        protected String doInBackground(String... arg0) {
+            publishProgress(getString(R.string.prog_CollectingOthersCommitVerify));
+            mProt.doSendInvalidSignature();
+            endProgress();
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            showProgress(progress[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if (!mProt.isCanceled()) {
+                showError(mProt.getErrorMsg());
             }
-        };
-        t.start();
+        }
     }
 
     private void setProgressCancelHandler() {
@@ -550,7 +603,8 @@ public class ExchangeActivity extends BaseActivity {
             public void onClick(DialogInterface dialog, int id) {
                 if (mProt.getNumUsers() > 0) {
                     dialog.dismiss();
-                    runThreadGetUserId();
+                    AssignUserTask assignUser = new AssignUserTask();
+                    assignUser.execute(new String[] {});
                 } else {
                     // reset and error
                     mProt.setNumUsers(0);
@@ -684,44 +738,8 @@ public class ExchangeActivity extends BaseActivity {
         }
     }
 
-    private void endProgress(final int recover) {
+    private void endProgress() {
         if (mDlgProg != null) {
-            mDlgProg.setOnDismissListener(new OnDismissListener() {
-
-                @Override
-                public void onDismiss(DialogInterface dialog) {
-                    switch (recover) {
-                        case RECOVERY_ASSIGNUSERID:
-                            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
-                                showLowestUserIdPrompt(mProt.getUserId());
-                            }
-                            break;
-                        case RECOVERY_SYNCCOMMITSDATA:
-                            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
-                                showVerify(mProt.getHash(), mProt.getDecoyHash(1),
-                                        mProt.getDecoyHash(2), mProt.getRandomPos(3));
-                            }
-                            break;
-                        case RECOVERY_SYNCMATCHSIGS:
-                            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
-                                runThreadCreateSharedSecretGetNodesAndMatchNonces();
-                            }
-                            break;
-                        case RECOVERY_SYNCWRONGSIGS:
-                            if (!mProt.isCanceled()) {
-                                showError(mProt.getErrorMsg());
-                            }
-                            break;
-                        case RECOVERY_SYNCNODESNONCES:
-                            if (handled(!mProt.isError()) && !mProt.isCanceled()) {
-                                doVerifyFinalMatchDone();
-                            }
-                            break;
-                        default:
-                            throw new AssertionError("default case reached");
-                    }
-                }
-            });
             mDlgProg.dismiss();
             mDlgProg = null;
         }

@@ -54,14 +54,14 @@
     <string name="help_userid">화면 위의 숫자는 사용자 고유 그룹 생성에 사용됩니다. 서로의 화면을 비교하여 가장 낮은 숫자를 찾아 모든 사용자가 해당 숫자를 입력한 후 확인 버튼을 눌러주십시오.</string>
     <string name="help_verify">자, 이제 모든 사용자의 3개의 단어가 일치해야합니다. 모든 사용자가 같은 문구를 선택한 후 다음을 눌러주십시오.</string>
 
-    <string name="label_CompareScreensNDevices">%s 장치에 화면을 비교.</string>
+    <string name="label_CompareScreensNDevices">%s 장치와 화면 비교하기</string>
     <string name="label_NumericModeHint">영어 이외의 언어</string>
     <string name="label_PromptInstruct">이 번호는 사용자 고유 그룹 생성에 사용됩니다. 서로 비교하여 모든 사용자들 중 가장 낮은 번호를 입력해주세요.</string>
     <string name="label_ReceivedNItems">%d개의 항목을 받았습니다.</string>
     <string name="label_UserIdHint">맨아래</string>
     <string name="label_VerifyInstruct">모든 단말기는 3개의 단어가 일치해야 합니다. 서로 비교해보며 다음의 리스트 중 하나를 선택해주십시오.</string>
 
-    <string name="lib_name">SafeSlinger 환율</string>
+    <string name="lib_name">SafeSlinger 교환</string>
 
     <string name="prog_CollectingOthersCommitVerify">모든 회원의 확인을 기다리는 중…</string>
     <string name="prog_CollectingOthersItems">모든 사용자의 가입을 기다리는 중…</string>
