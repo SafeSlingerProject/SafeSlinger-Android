@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Вийти? Ви впевнені?</string>
+    <string name="ask_QuitConfirmation">Кинути? Ти впевнений?</string>
 
-    <string name="btn_Match">Наступний</string>
-    <string name="btn_NoMatch">Ні Матч</string>
+    <string name="btn_Match">Наступна</string>
+    <string name="btn_NoMatch">Немає відповідності</string>
 
     <string name="choice_NumUsers">%d користувачів</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Всі члени повинні оновити, деякі використовують старі формати реєстрації поштовх.</string>
-    <string name="error_CorrectYourInternetConnection">Інтернет не доступний, перевірте налаштування.</string>
+    <string name="error_AllMembersMustUpgrade">Деякі члени використовуєте стару версію; всі члени повинні оновити до останньої версії.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Всі члени повинні оновити, деякі використовують старі формати реєстраційні поштовху.</string>
+    <string name="error_CorrectYourInternetConnection">Інтернет не доступний, перевірте настройки.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Обмін таймаут перевищений. Почніть обмін знову.</string>
     <string name="error_HttpCode">Сервер Помилка HTTP: %d</string>
-    <string name="error_InvalidCommitVerify">Неправильні дані, знайдені в результаті обмінних операцій. Почніть обмін знову.</string>
+    <string name="error_InvalidCommitVerify">Неправильні дані знайдені в обмін. Почніть обмін знову.</string>
     <string name="error_InvalidCommonUserId">Будь ласка, введіть позитивне ціле число.</string>
-    <string name="error_LocalGroupCommitDiffer">Ви заявили різницю у фрази. Почніть обмін знову.</string>
+    <string name="error_LocalGroupCommitDiffer">Ви заявили різницю в фрази. Почніть обмін знову.</string>
     <string name="error_MinUsersRequired">Мінімум %d членів зобов\'язані обмінюватися даними.</string>
-    <string name="error_MoreDataThanUsers">Несподівані дані, знайдені в результаті обмінних операцій. Почніть обмін знову.</string>
-    <string name="error_NoDataToExchange">Обмін відсутні необхідні дані.</string>
+    <string name="error_MoreDataThanUsers">Несподівані дані знайдені в обмін. Почніть обмін знову.</string>
+    <string name="error_NoDataToExchange">Обмін відсутній необхідні дані.</string>
     <string name="error_NoWordListSelected">Ви повинні вибрати один з фраз, перш ніж приступити.</string>
-    <string name="error_OtherGroupCommitDiffer">Хтось повідомив різницю у фрази. Почніть обмін знову.</string>
+    <string name="error_OtherGroupCommitDiffer">Деякі кажуть, різницю в фрази. Почніть обмін знову.</string>
     <string name="error_OutOfMemoryError">Пам\'ять є занадто низьким для завершення цієї операції.</string>
-    <string name="error_ServerAppMessage">Повідомлення Сервер: %s</string>
+    <string name="error_ServerAppMessage">Повідомлення сервера: %s</string>
     <string name="error_ServerNotResponding">Немає відповіді від сервера.</string>
     <string name="error_TimeoutWaitingForAllMembers">Тайм-аут в очікуванні деякі члени групи, щоб додати дані.</string>
     <string name="error_WebCancelledByUser">Користувач скасував запит сервера.</string>
 
-    <string name="help_size">Виберіть кількість людей, які намагаються обмінюватися даними один з одним і натисніть ОК.</string>
-    <string name="help_userid">Це число на цьому екрані використовується, щоб створити унікальний групу користувачів. Перегляньте номера на екранах всіх користувачів, то всі користувачі повинні ввести той же найнижчий номер і натисніть ОК.</string>
-    <string name="help_verify">Тепер ви повинні відповідати одному з цих фраз 3-слів з ​​усіма користувачами. Кожен користувач повинен вибрати один і той же загальний фразу та натисніть Далі.</string>
+    <string name="help_size">Виберіть кількість людей, які намагаються обмінюватися даними разом і натисніть кнопку ОК.</string>
+    <string name="help_userid">Це число на цьому екрані використовується, щоб створити унікальний групу користувачів. Перегляньте номера на екранах усіх користувачів, то всі користувачі повинні ввести той же низький номер і натисніть ОК.</string>
+    <string name="help_verify">Тепер, ви повинні відповідати одному з цих 3-словосполучень з усіма користувачами. Кожен користувач повинен вибрати один і той же загальний фразу і натисніть Далі.</string>
 
-    <string name="label_CompareScreensNDevices">Порівняння екранів на %s пристроїв.</string>
-    <string name="label_NumericModeHint">Номери для Англійська</string>
-    <string name="label_PromptInstruct">Цей номер використовується для створення унікального групу користувачів. Порівняти, а потім введіть найменшу кількість серед всіх користувачів.</string>
+    <string name="label_CompareScreensNDevices">Порівняйте екрани на %s пристроїв.</string>
+    <string name="label_NumericModeHint">Номери-англійський</string>
+    <string name="label_PromptInstruct">Цей номер використовується для створення унікального групу користувачів. Порівняйте, а потім введіть найменший номер серед всіх користувачів.</string>
     <string name="label_ReceivedNItems">отримав %d пунктів</string>
     <string name="label_UserIdHint">Низька</string>
     <string name="label_VerifyInstruct">Всі телефони повинні відповідати одному з фраз 3-слів. Порівняйте, а потім вибрати відповідний фразу.</string>
 
-    <string name="lib_name">SafeSlinger біржа</string>
+    <string name="lib_name">SafeSlinger валюти</string>
 
     <string name="prog_CollectingOthersCommitVerify">чекає перевірки від усіх членів…</string>
     <string name="prog_CollectingOthersItems">чекає всі користувачі приєднатися…</string>
     <string name="prog_ConstructingGroupKey">побудови групової ключ…</string>
     <string name="prog_RequestingUserId">з проханням членство…</string>
 
-    <string name="title_size">Скільки користувачів в обміні?</string>
+    <string name="title_size">Скільки користувачів в обмін?</string>
     <string name="title_userid">Угруповання</string>
-    <string name="title_verify">Перевірити</string>
+    <string name="title_verify">Перевірте</string>
 
 </resources>

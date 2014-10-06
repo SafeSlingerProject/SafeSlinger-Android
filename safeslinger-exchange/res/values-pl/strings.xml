@@ -28,38 +28,39 @@
     <string name="ask_QuitConfirmation">Rzucić? Czy na pewno?</string>
 
     <string name="btn_Match">Następny</string>
-    <string name="btn_NoMatch">Brak spotkań</string>
+    <string name="btn_NoMatch">Nie meczu</string>
 
     <string name="choice_NumUsers">%d użytkowników</string>
 
+    <string name="error_AllMembersMustUpgrade">Niektórzy członkowie korzystasz ze starszej wersji; wszyscy członkowie muszą uaktualnić do najnowszej wersji.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Wszyscy członkowie muszą uaktualnić, niektórzy używają starszych formatów rejestracji Push.</string>
     <string name="error_CorrectYourInternetConnection">Internet nie jest dostępny, sprawdź ustawienia.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Przekroczony limit czasu wymiany. Ponownie rozpocząć wymianę.</string>
-    <string name="error_HttpCode">Serwer HTTP Error: %d</string>
+    <string name="error_HttpCode">Serwer HTTP Błąd: %d</string>
     <string name="error_InvalidCommitVerify">Nieprawidłowe dane znalezione w zamian. Ponownie rozpocząć wymianę.</string>
-    <string name="error_InvalidCommonUserId">Proszę wprowadzić dodatnią liczbę całkowitą.</string>
-    <string name="error_LocalGroupCommitDiffer">Zostały zgłoszone różnicę w fraz. Ponownie rozpocząć wymianę.</string>
+    <string name="error_InvalidCommonUserId">Proszę wpisać dodatnią liczbę całkowitą.</string>
+    <string name="error_LocalGroupCommitDiffer">Aś zmienić w zwroty. Ponownie rozpocząć wymianę.</string>
     <string name="error_MinUsersRequired">Minimum %d członków są wymagane w celu wymiany danych.</string>
-    <string name="error_MoreDataThanUsers">Nieoczekiwane dane znalezione w zamian. Ponownie rozpocząć wymianę.</string>
+    <string name="error_MoreDataThanUsers">Dane nieoczekiwane znaleźć w zamian. Ponownie rozpocząć wymianę.</string>
     <string name="error_NoDataToExchange">Wymiana brakuje wymaganych danych.</string>
     <string name="error_NoWordListSelected">Musisz wybrać jedną z fraz, przed przystąpieniem.</string>
-    <string name="error_OtherGroupCommitDiffer">Ktoś donosił różnicy zwrotów. Ponownie rozpocząć wymianę.</string>
+    <string name="error_OtherGroupCommitDiffer">Ktoś zgłosił różnicę zwrotów. Ponownie rozpocząć wymianę.</string>
     <string name="error_OutOfMemoryError">Pamięć jest zbyt mała, aby zakończyć tę operację.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Brak odpowiedzi z serwera.</string>
     <string name="error_TimeoutWaitingForAllMembers">Limit czasu oczekiwania na niektóre członkowie grupy, aby dodać dane.</string>
     <string name="error_WebCancelledByUser">Użytkownik anulował żądanie serwera.</string>
 
-    <string name="help_size">Wybierz liczbę osób, które próbują wymieniać dane razem i naciśnij przycisk OK.</string>
-    <string name="help_userid">Liczba ta na tym ekranie jest używany do tworzenia unikalnego grupę użytkowników. Przejrzeć numery na ekranach wszystkich użytkowników, a następnie wszyscy użytkownicy powinni wprowadzić ten sam najniższy numer i naciśnij OK.</string>
-    <string name="help_verify">Teraz należy dopasować jeden z tych zwrotów słownych z 3 wszystkich użytkowników. Każdy użytkownik musi wybrać sam wspólny frazę i naciśnij Dalej.</string>
+    <string name="help_size">Wybierz liczbę ludzi, którzy próbują wymieniać dane razem i naciśnij przycisk OK.</string>
+    <string name="help_userid">Liczba ta na tym ekranie jest używany do tworzenia niepowtarzalny grupę użytkowników. Przejrzeć numery na ekranach wszystkich użytkowników, a następnie wszyscy użytkownicy powinni wprowadzić taki sam najniższy numer i naciśnij OK.</string>
+    <string name="help_verify">Teraz należy dopasować jeden z tych zwrotów słownych z 3 wszystkich użytkowników. Każdy użytkownik musi wybrać tę samą wspólną frazę i naciśnij Dalej.</string>
 
-    <string name="label_CompareScreensNDevices">Porównanie ekranów w urządzeniach %s.</string>
+    <string name="label_CompareScreensNDevices">Porównaj ekrany urządzeń %s.</string>
     <string name="label_NumericModeHint">Non-angielski</string>
-    <string name="label_PromptInstruct">Numer ten jest używany do tworzenia unikalnego grupę użytkowników. Porównaj, a następnie wprowadzić najniższą liczbę wśród wszystkich użytkowników.</string>
+    <string name="label_PromptInstruct">Wartość ta jest stosowana do tworzenia unikalny grupy użytkowników. Porównaj, a następnie wprowadź najniższy numer wśród wszystkich użytkowników.</string>
     <string name="label_ReceivedNItems">otrzymała %d pozycji</string>
     <string name="label_UserIdHint">Najniższa</string>
-    <string name="label_VerifyInstruct">Wszystkie telefony musi odpowiadać jednej z fraz 3 słów. Porównać, a następnie wybrać pasującą frazę.</string>
+    <string name="label_VerifyInstruct">Wszystkie telefony muszą dopasować jedną z fraz 3 słów. Porównać, a następnie wybrać pasującą frazę.</string>
 
     <string name="lib_name">SafeSlinger Wymiana</string>
 
@@ -70,6 +71,6 @@
 
     <string name="title_size">Ilu użytkowników w zamian?</string>
     <string name="title_userid">Grupowanie</string>
-    <string name="title_verify">Zweryfikować</string>
+    <string name="title_verify">Upewnij się</string>
 
 </resources>

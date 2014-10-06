@@ -58,5 +58,8 @@
     <item
         android:id="@+id/item_key_details"
         android:title="@string/menu_Details"/>
+    <item
+        android:id="@+id/item_debug_transcript"
+        android:title="@string/menu_debugTranscript"/>
 
 </menu>

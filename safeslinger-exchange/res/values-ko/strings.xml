@@ -32,6 +32,7 @@
 
     <string name="choice_NumUsers">%d명의 사용자</string>
 
+    <string name="error_AllMembersMustUpgrade">일부 회원들은 이전 버전을 사용하는; 모든 구성원이 최신 버전으로 업그레이드해야합니다.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">회원 일부가 이전 형식의 푸시 등록을 사용하고 있습니다. 업그레이드가 필요합니다.</string>
     <string name="error_CorrectYourInternetConnection">인터넷에 접속할 수 없습니다. 설정을 확인해 주십시오.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">제한 시간을 초과했습니다. 교환을 다시 시작해 주십시오.</string>

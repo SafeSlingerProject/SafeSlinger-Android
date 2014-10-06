@@ -254,6 +254,18 @@ public class SafeSlinger extends Application {
         return delay;
     }
 
+    public void showDebugEmail(Activity act, String debugData) {
+        StringBuilder output = new StringBuilder();
+        SafeSlinger.getDebugData(act, output);
+
+        output.append(debugData);
+
+        String filePath = SSUtil.makeDebugLoggingDir(this) + File.separator
+                + SafeSlingerConfig.FEEDBACK_TXT;
+
+        sendEmail(output.toString(), filePath);
+    }
+
     public void showFeedbackEmail(Activity act) {
         StringBuilder output = new StringBuilder();
         SafeSlinger.getDebugData(act, output);

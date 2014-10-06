@@ -32,6 +32,7 @@
 
     <string name="choice_NumUsers">%d χρήστες</string>
 
+    <string name="error_AllMembersMustUpgrade">Μερικά μέλη χρησιμοποιώντας μια παλαιότερη έκδοση? όλα τα μέλη πρέπει να αναβαθμίσουν στην τελευταία έκδοση.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Όλα τα μέλη πρέπει να αναβαθμίσουν, ορισμένα χρησιμοποιούν παλαιότερη έκδοση push registration.</string>
     <string name="error_CorrectYourInternetConnection">Το internet δεν είναι διαθέσιμo, ελέγξτε τις ρυθμίσεις σας.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Υπέρβαση χρονικού ορίου ανταλλαγής.Προσπαθήστε ξανά.</string>

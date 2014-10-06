@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Lõpeta? Oled sa kindel?</string>
+    <string name="ask_QuitConfirmation">Lõpeta? Oled sa selles kindel?</string>
 
     <string name="btn_Match">Järgmine</string>
     <string name="btn_NoMatch">Ei sobi</string>
 
     <string name="choice_NumUsers">%d kasutajad</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Kõik liikmed peavad uuendama, mõned kasutavad vanemad lükke registreerimine formaate.</string>
+    <string name="error_AllMembersMustUpgrade">Mõned liikmesriigid kasutavad vanemat versiooni; kõik liikmed peavad uuendama uusima versiooni.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Kõik liikmed peavad uuendama, mõned kasutavad vanemad push registreerimine formaate.</string>
     <string name="error_CorrectYourInternetConnection">Internet ei ole, kontrollige oma seadeid.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ületatud. Alustada vahetamist uuesti.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ületatud. Alustada vahetust uuesti.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Valeandmeid leitud vahetada. Alustada vahetamist uuesti.</string>
+    <string name="error_InvalidCommitVerify">Vale leitud andmete vahetamiseks. Alustada vahetust uuesti.</string>
     <string name="error_InvalidCommonUserId">Palun sisesta positiivne täisarv.</string>
-    <string name="error_LocalGroupCommitDiffer">Sa teatasiderinevus väljendeid. Alustada vahetamist uuesti.</string>
+    <string name="error_LocalGroupCommitDiffer">Sul on teatanud erinevus väljendeid. Alustada vahetust uuesti.</string>
     <string name="error_MinUsersRequired">Vähemalt %d nõutakse, et vahetada andmeid.</string>
-    <string name="error_MoreDataThanUsers">Ootamatu leitud andmete vahetus. Alustada vahetamist uuesti.</string>
-    <string name="error_NoDataToExchange">Vahetus on puudu vajalikud andmed.</string>
-    <string name="error_NoWordListSelected">Sa pead valima ühelaused enne jätkamist.</string>
-    <string name="error_OtherGroupCommitDiffer">Keegi teataserinevus väljendeid. Alustada vahetamist uuesti.</string>
+    <string name="error_MoreDataThanUsers">Ootamatu leitud andmete vahetamiseks. Alustada vahetust uuesti.</string>
+    <string name="error_NoDataToExchange">Vahetamine on puudu nõutud andmed.</string>
+    <string name="error_NoWordListSelected">Sa pead valima ühe laused enne jätkamist.</string>
+    <string name="error_OtherGroupCommitDiffer">Keegi teatas erinevus väljendeid. Alustada vahetust uuesti.</string>
     <string name="error_OutOfMemoryError">Mälu on liiga madal, et seda toimingut lõpule viia.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerNotResponding">No vastust server.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout ootab mõned grupi liikmed andmeid lisada.</string>
-    <string name="error_WebCancelledByUser">Kasutaja tühistatud server taotluse.</string>
+    <string name="error_ServerNotResponding">Ei vastust server.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Aegumine ootavad mõned grupi liikmed, et lisada andmeid.</string>
+    <string name="error_WebCancelledByUser">Kasutaja katkestas server taotluse.</string>
 
-    <string name="help_size">Vali hulk inimesi, kes üritavad vahetada andmeid koos ja vajuta OK.</string>
-    <string name="help_userid">See number on see ekraan on kasutatud, et luua ainulaadne kasutajate rühm. Vaadake numbreid kõik kasutaja ekraanid, siis kõik kasutajad peaksid kandma sama väikseim number ja vajutage OK.</string>
-    <string name="help_verify">Nüüd peate sobitada üks neist 3-sõna laused logima. Iga kasutaja peab valima sama levinud fraas ja vajutage Next.</string>
+    <string name="help_size">Vali hulk inimesi, kes üritavad vahetada andmeid koos ja vajutage OK.</string>
+    <string name="help_userid">See number sellel ekraanil saab luua unikaalne kasutajate rühm. Vaadata numbrid kõik kasutajad \'ekraanid, siis kõik kasutajad peaksid kandma sama madalaim number ja vajutage OK.</string>
+    <string name="help_verify">Nüüd siis peab vastama üks neist 3-fraasid kõik kasutajad. Iga kasutaja peab valima sama levinud fraas ja vajutage Next.</string>
 
     <string name="label_CompareScreensNDevices">Võrdle ekraanid %s seadmeid.</string>
-    <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">See number on kasutatud, et luua ainulaadne kasutajate rühm. Võrdle ja sisestage väikseima arvu seas kõikidele kasutajatele.</string>
+    <string name="label_NumericModeHint">Non-inglise</string>
+    <string name="label_PromptInstruct">Seda numbrit kasutatakse, et luua unikaalne kasutajate rühm. Võrdle ja seejärel sisestage madalaim number seas kasutajatele.</string>
     <string name="label_ReceivedNItems">saanud %d esemeid</string>
     <string name="label_UserIdHint">Madalaim</string>
-    <string name="label_VerifyInstruct">Kõik telefonid peab vastama üks 3-fraasid. Võrdle ja seejärel valida sobitamine fraas.</string>
+    <string name="label_VerifyInstruct">Kõik telefonid peavad klappima ühega 3-fraase. Võrdle ja seejärel valida sobiva fraasi.</string>
 
-    <string name="lib_name">SafeSlinger Exchange</string>
+    <string name="lib_name">SafeSlinger vahetus</string>
 
-    <string name="prog_CollectingOthersCommitVerify">ootab kontrollimine kõigi liikmete…</string>
+    <string name="prog_CollectingOthersCommitVerify">ootab kontroll kõigi liikmete…</string>
     <string name="prog_CollectingOthersItems">ootab kõiki kasutajaid liituma…</string>
     <string name="prog_ConstructingGroupKey">ehitamise Grupivõtme…</string>
-    <string name="prog_RequestingUserId">esitanud liikmeks…</string>
+    <string name="prog_RequestingUserId">palunud luba…</string>
 
     <string name="title_size">Mitu kasutajat vahetada?</string>
-    <string name="title_userid">Rühmitamine</string>
-    <string name="title_verify">Kontrollima</string>
+    <string name="title_userid">Rühmitus</string>
+    <string name="title_verify">Kinnita</string>
 
 </resources>

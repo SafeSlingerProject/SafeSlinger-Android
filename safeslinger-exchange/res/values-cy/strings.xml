@@ -32,40 +32,41 @@
 
     <string name="choice_NumUsers">defnyddwyr %d</string>
 
+    <string name="error_AllMembersMustUpgrade">Mae rhai aelodau yn defnyddio fersiwn hŷn; Mae\'n rhaid i bob aelod uwchraddio i\'r fersiwn mwyaf newydd.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Rhaid i bob aelod uwchraddio, mae rhai yn defnyddio fformatau cofrestru gwthio hŷn.</string>
-    <string name="error_CorrectYourInternetConnection">Rhyngrwyd ar gael, gwiriwch eich gosodiadau.</string>
+    <string name="error_CorrectYourInternetConnection">Rhyngrwyd heb fod ar gael, gwiriwch eich gosodiadau.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Goramser Cyfnewid rhagori. Dechreuwch y cyfnewid eto.</string>
-    <string name="error_HttpCode">Gweinydd Gwall HTTP: %d</string>
+    <string name="error_HttpCode">Gwall gweinydd HTTP: %d</string>
     <string name="error_InvalidCommitVerify">Data anghywir a geir yn gyfnewid. Dechreuwch y cyfnewid eto.</string>
-    <string name="error_InvalidCommonUserId">Os gwelwch yn dda fynd i mewn i cyfanrif positif.</string>
-    <string name="error_LocalGroupCommitDiffer">Yr ydych wedi nodi gwahaniaeth mewn ymadroddion. Dechreuwch y cyfnewid eto.</string>
+    <string name="error_InvalidCommonUserId">Rhowch cyfanrif positif.</string>
+    <string name="error_LocalGroupCommitDiffer">Yr ydych wedi rhoi gwybod am wahaniaeth mewn ymadroddion. Dechreuwch y cyfnewid eto.</string>
     <string name="error_MinUsersRequired">Mae\'n ofynnol o leiaf %d o aelodau i gyfnewid data.</string>
     <string name="error_MoreDataThanUsers">Data annisgwyl a geir yn gyfnewid. Dechreuwch y cyfnewid eto.</string>
-    <string name="error_NoDataToExchange">Mae\'r cyfnewid ar goll data sydd ei angen.</string>
+    <string name="error_NoDataToExchange">Mae\'r cyfnewid ar goll data gofynnol.</string>
     <string name="error_NoWordListSelected">Rhaid i chi ddewis un o\'r ymadroddion cyn symud ymlaen.</string>
-    <string name="error_OtherGroupCommitDiffer">Rhywun adroddwyd gwahaniaeth mewn ymadroddion. Dechreuwch y cyfnewid eto.</string>
-    <string name="error_OutOfMemoryError">Cof yn rhy isel i gwblhau\'r gwaith hwn.</string>
-    <string name="error_ServerAppMessage">Neges Gweinydd: %s</string>
+    <string name="error_OtherGroupCommitDiffer">Rhywun adroddwyd gwahaniaeth yn ymadroddion. Dechreuwch y cyfnewid eto.</string>
+    <string name="error_OutOfMemoryError">Cof yn rhy isel i gwblhau\'r weithred hon.</string>
+    <string name="error_ServerAppMessage">Gweinydd Neges: %s</string>
     <string name="error_ServerNotResponding">Dim ymateb gan y gweinydd.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Aros ar gyfer rhai aelodau\'r grŵp i ychwanegu data Goramser.</string>
-    <string name="error_WebCancelledByUser">Ganslo Defnyddiwr cais gweinydd.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Goramser yn aros am rai aelodau\'r grŵp i ychwanegu data.</string>
+    <string name="error_WebCancelledByUser">Defnyddiwr ganslo cais gweinydd.</string>
 
-    <string name="help_size">Dewiswch y nifer o bobl sy\'n ceisio i gyfnewid data at ei gilydd ac yn iawn yn y wasg.</string>
-    <string name="help_userid">Mae\'r rhif hwn ar y sgrin yn cael ei ddefnyddio i greu grwp unigryw o ddefnyddwyr. Adolygu\'r rhifau ar sgriniau holl ddefnyddwyr \', yna dylai pob defnyddiwr fynd i mewn i\'r un nifer isaf a gwasgwch OK.</string>
-    <string name="help_verify">Nawr, mae\'n rhaid i chi gyd-fynd un o\'r ymadroddion 3-air â\'r holl ddefnyddwyr. Rhaid i bob defnyddiwr ddewis yr un ymadrodd cyffredin, a phwyswch Nesaf.</string>
+    <string name="help_size">Dewiswch y nifer o bobl sy\'n ceisio i gyfnewid data at ei gilydd ac OK wasg.</string>
+    <string name="help_userid">Mae\'r nifer ar y sgrin yn cael ei ddefnyddio i greu grŵp unigryw o ddefnyddwyr. Adolygu\'r rhifau ar sgriniau holl ddefnyddwyr \', yna dylai pob defnyddiwr fynd i mewn i\'r un isaf rif a\'r wasg OK.</string>
+    <string name="help_verify">Nawr, mae\'n rhaid i chi gyd-fynd un o\'r rhain ymadroddion 3-air gyda\'r holl ddefnyddwyr. Rhaid i bob defnyddiwr ddewis yr un ymadrodd cyffredin, a gwasgwch Next.</string>
 
     <string name="label_CompareScreensNDevices">Cymharu sgriniau ar ddyfeisiau %s.</string>
     <string name="label_NumericModeHint">Heb fod yn Saesneg</string>
-    <string name="label_PromptInstruct">Mae\'r rhif hwn yn cael ei ddefnyddio i greu grwp unigryw o ddefnyddwyr. Cymharu, ac yna rhowch y nifer isaf ymysg holl ddefnyddwyr.</string>
+    <string name="label_PromptInstruct">Mae\'r rhif yn cael ei ddefnyddio i greu grŵp unigryw o ddefnyddwyr. Cymharu, ac yna rhowch y nifer isaf o blith holl ddefnyddwyr.</string>
     <string name="label_ReceivedNItems">Derbyniodd eitemau %d</string>
     <string name="label_UserIdHint">Isaf</string>
-    <string name="label_VerifyInstruct">Rhaid i bob ffonau gyfateb un o\'r 3-gair ymadroddion. Cymharu, ac yna dewis y frawddeg syn cyfateb.</string>
+    <string name="label_VerifyInstruct">Rhaid i bob Ffonau gyfateb un o\'r 3-air ymadroddion. Cymharu, ac yna ddewis y frawddeg syn cyfateb.</string>
 
     <string name="lib_name">Cyfnewid SafeSlinger</string>
 
     <string name="prog_CollectingOthersCommitVerify">aros ar gyfer dilysu gan bob aelod…</string>
-    <string name="prog_CollectingOthersItems">aros ar gyfer pob defnyddwyr i ymuno…</string>
-    <string name="prog_ConstructingGroupKey">adeiladu allweddol y grŵp…</string>
+    <string name="prog_CollectingOthersItems">aros ar gyfer pob defnyddiwr i ymuno…</string>
+    <string name="prog_ConstructingGroupKey">adeiladu allwedd grŵp…</string>
     <string name="prog_RequestingUserId">gofyn am aelodaeth…</string>
 
     <string name="title_size">Faint o ddefnyddwyr yn y cyfnewid?</string>

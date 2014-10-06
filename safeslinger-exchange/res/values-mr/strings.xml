@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">मधून बाहेर? आपली खात्री आहे?</string>
+    <string name="ask_QuitConfirmation">मधून बाहेर या? आपली खात्री आहे?</string>
 
     <string name="btn_Match">पुढील</string>
-    <string name="btn_NoMatch">पासंगाला</string>
+    <string name="btn_NoMatch">एकही मॅच</string>
 
     <string name="choice_NumUsers">%d वापरकर्ते</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">सर्व सदस्यांना काही जुन्या पुश नोंदणी स्वरूप वापरत आहात, सुधारणा करणे आवश्यक आहे.</string>
-    <string name="error_CorrectYourInternetConnection">उपलब्ध नाही इंटरनेट, आपली सेटिंग्ज तपासा.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">विनिमय कालबाह्य ओलांडली. पुन्हा विनिमय सुरू.</string>
+    <string name="error_AllMembersMustUpgrade">काही सदस्य जुनी आवृत्ती वापरत आहात; सर्व सदस्य नवीनतम आवृत्तीवर श्रेणीसुधारित करणे आवश्यक आहे.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">सर्व सदस्य काही जुन्या पुश नोंदणी स्वरूप वापरत आहात, श्रेणीसुधारित करणे आवश्यक आहे.</string>
+    <string name="error_CorrectYourInternetConnection">इंटरनेट उपलब्ध नाही, आपली सेटिंग्ज तपासा.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">एक्सचेंज कालबाह्य ओलांडला. पुन्हा विनिमय सुरू.</string>
     <string name="error_HttpCode">सर्व्हर HTTP त्रुटी: %d</string>
-    <string name="error_InvalidCommitVerify">विनिमय आढळले चुकीचा डेटा. पुन्हा विनिमय सुरू.</string>
+    <string name="error_InvalidCommitVerify">अयोग्य डेटा एक्सचेंज मध्ये आढळले. पुन्हा विनिमय सुरू.</string>
     <string name="error_InvalidCommonUserId">धन पूर्णांक प्रविष्ट करा.</string>
-    <string name="error_LocalGroupCommitDiffer">आपण वाक्ये मध्ये एक फरक नोंदवली आहे. पुन्हा विनिमय सुरू.</string>
-    <string name="error_MinUsersRequired">%d सदस्यांची किमान डेटा अदलाबदल करणे आवश्यक असते.</string>
-    <string name="error_MoreDataThanUsers">विनिमय आढळले अनपेक्षित डेटा. पुन्हा विनिमय सुरू.</string>
+    <string name="error_LocalGroupCommitDiffer">आपण वाक्ये मध्ये एक फरक तक्रार नोंदवली आहे. पुन्हा विनिमय सुरू.</string>
+    <string name="error_MinUsersRequired">%d सदस्य किमान डेटा अदलाबदल करणे आवश्यक आहे.</string>
+    <string name="error_MoreDataThanUsers">अनपेक्षित डेटा एक्सचेंज मध्ये आढळले. पुन्हा विनिमय सुरू.</string>
     <string name="error_NoDataToExchange">विनिमय आवश्यक डेटा गहाळ आहे.</string>
     <string name="error_NoWordListSelected">आपण पुढे जाण्यापूर्वी वाक्ये एक निवडणे आवश्यक आहे.</string>
-    <string name="error_OtherGroupCommitDiffer">कोणीतरी वाक्ये मध्ये एक फरक नोंदवले. पुन्हा विनिमय सुरू.</string>
+    <string name="error_OtherGroupCommitDiffer">कोणीतरी वाक्ये मध्ये एक फरक नोंदवली. पुन्हा विनिमय सुरू.</string>
     <string name="error_OutOfMemoryError">मेमरी हे ऑपरेशन पूर्ण करण्यासाठी खूप कमी आहे.</string>
     <string name="error_ServerAppMessage">सर्व्हर संदेश: %s</string>
     <string name="error_ServerNotResponding">सर्व्हरकडून कोणताही प्रतिसाद.</string>
-    <string name="error_TimeoutWaitingForAllMembers">काही गट सदस्य डेटा जोडण्यासाठी प्रतीक्षेत कालबाह्य.</string>
-    <string name="error_WebCancelledByUser">वापरकर्ता सर्व्हरशी विनंती रद्द केली.</string>
+    <string name="error_TimeoutWaitingForAllMembers">काही गट सदस्य डेटा जोडण्यासाठी साठी कालबाह्य वाट पाहत होते.</string>
+    <string name="error_WebCancelledByUser">वापरकर्ता सर्व्हरशी विनंती रद्द.</string>
 
-    <string name="help_size">एकत्र आणि OK दाबा डेटा अदलाबदल करण्यासाठी प्रयत्न करणार्या लोकांची संख्या निवडा.</string>
-    <string name="help_userid">या पडद्यावरील ही संख्या वापरकर्त्यांची एक अद्वितीय गट तयार केला जातो. सर्व वापरकर्ते \' पडद्यावर क्रमांक पुनरावलोकन, नंतर सर्व वापरकर्त्यांना समान सर्वात कमी संख्या प्रविष्ट करा आणि ओके दाबले पाहिजे.</string>
-    <string name="help_verify">आता, आपण सर्व वापरकर्त्यांना या 3-शब्द वाक्ये एक जुळणे आवश्यक. प्रत्येक ह्याच सामान्य वाक्यांश निवडा, आणि पुढे दाबा आवश्यक आहे.</string>
+    <string name="help_size">एकत्र डेटा आणि OK दाबा देवाणघेवाण करण्याचा प्रयत्न करत आहात जो लोकांची संख्या निवडा.</string>
+    <string name="help_userid">या स्क्रीनवर ही संख्या वापरकर्ते एक अद्वितीय गट तयार करण्यासाठी वापरले जाते. नंतर सर्व वापरकर्त्यांना समान सर्वात कमी संख्या आणि OK दाबा प्रविष्ट पाहिजे, सर्व वापरकर्त्यांसाठी \'पडद्यावर क्रमांक पुनरावलोकन करा.</string>
+    <string name="help_verify">आता, तुम्ही सर्व वापरकर्त्यांना या 3-शब्द वाक्ये एक जुळणे आवश्यक आहे. प्रत्येक वापरकर्ता समान सामान्य वाक्यांश निवडा, आणि पुढे दाबा आवश्यक आहे.</string>
 
-    <string name="label_CompareScreensNDevices">%s डिव्हाइसवर पडदे तुलना करा.</string>
-    <string name="label_NumericModeHint">बिगर इंग्रजी</string>
-    <string name="label_PromptInstruct">ही संख्या वापरकर्ते एक अद्वितीय गट तयार केला जातो. तुलना, आणि नंतर सर्व वापरकर्त्यांसाठी आपापसांत सर्वात कमी संख्या प्रविष्ट करा.</string>
+    <string name="label_CompareScreensNDevices">%s डिव्हाइसेसवर पडदे तुलना करा.</string>
+    <string name="label_NumericModeHint">गैर-इंग्रजी</string>
+    <string name="label_PromptInstruct">ही संख्या वापरकर्ते एक अद्वितीय गट तयार करण्यासाठी वापरले जाते. तुलना करा, आणि नंतर सर्व वापरकर्त्यांसाठी आपापसांत सर्वात कमी संख्या प्रविष्ट करा.</string>
     <string name="label_ReceivedNItems">%d आयटम प्राप्त</string>
     <string name="label_UserIdHint">सर्वात कमी</string>
-    <string name="label_VerifyInstruct">सर्व फोन 3-शब्द वाक्ये एक जुळणे आवश्यक. तुलना, आणि नंतर जुळणारा वाक्यांश निवडा.</string>
+    <string name="label_VerifyInstruct">सर्व फोन 3-शब्द वाक्ये एक जुळणे आवश्यक आहे. तुलना करा, आणि नंतर जुळणारे वाक्यांश निवडा.</string>
 
     <string name="lib_name">SafeSlinger एक्सचेंज</string>
 
-    <string name="prog_CollectingOthersCommitVerify">सर्व सदस्यांकडून सत्यापन प्रतीक्षेत…</string>
-    <string name="prog_CollectingOthersItems">सर्व वापरकर्त्यांना सहभागी होण्यासाठी वाट…</string>
-    <string name="prog_ConstructingGroupKey">गट की रचना…</string>
+    <string name="prog_CollectingOthersCommitVerify">सर्व सदस्यांकडून पडताळणी प्रतीक्षेत…</string>
+    <string name="prog_CollectingOthersItems">सर्व वापरकर्त्यांना सहभागी होण्यासाठी वाट पाहत…</string>
+    <string name="prog_ConstructingGroupKey">गट की रचना तयार…</string>
     <string name="prog_RequestingUserId">सदस्यत्व विनंती…</string>
 
-    <string name="title_size">किती वापरकर्ते विनिमय मध्ये?</string>
-    <string name="title_userid">एकत्रीकरण</string>
-    <string name="title_verify">सत्यापित</string>
+    <string name="title_size">किती विनिमय वापरकर्त्यांना?</string>
+    <string name="title_userid">वर्गीकरण</string>
+    <string name="title_verify">सत्यापित करा</string>
 
 </resources>

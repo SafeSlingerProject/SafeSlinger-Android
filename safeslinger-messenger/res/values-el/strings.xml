@@ -25,10 +25,9 @@
 
 <resources>
 
-    <string name="action_NewUserRequest">Προσθέστε μια Sling Keys πρόσκληση  επαφής μέσω…</string>
+    <string name="action_NewUserRequest">Προσθέστε μια Sling Keys πρόσκληση επαφής μέσω…</string>
 
     <string name="app_name">SafeSlinger</string>
-    <string name="app_TranslatorName">Elli Fragkaki</string>
 
     <string name="ask_BackupDisabledRemindLater">Η δημιουργία αντιγράφων ασφαλείας είναι απενεργοποιημένη. Μήπως θέλετε να προσαρμόσετε τις ρυθμίσεις αντιγράφων ασφαλείας και να διατηρήσετε αυτήν την υπενθύμιση;</string>
     <string name="ask_ConfirmUseOlderDeviceOrKey">%s έχει μια πιο πρόσφατη έκδοση ή κλειδί, είστε βέβαιοι ότι θέλετε να χρησιμοποιήσετε την παλαιότερη έκδοση;</string>
@@ -86,7 +85,7 @@
     <string name="error_AudioPlayerDecodeError">Audio player σφάλμα αποκωδικοποίησης.</string>
     <string name="error_AudioPlayerError">Δεν είναι δυνατή η αναπαραγωγή της ηχογράφησης.</string>
     <string name="error_AudioRecorderEncodeError">Σφάλμα κωδικοποίησης της εγγραφής ήχου.</string>
-    <string name="error_AudioRecorderPermissionError">Άδεια μικρόφωνο είναι υποχρεωμένος να καταγράφει ένα ασφαλές φωνητικό μήνυμα. Πατήστε το κουμπί Βοήθεια για SafeSlinger μικρόφωνο λεπτομέρειες άδεια.</string>
+    <string name="error_AudioRecorderPermissionError">Άδεια μικροφώνου απαιτείται για να καταγράψει ένα ασφαλές φωνητικό μήνυμα. Πατήστε το κουμπί %s για SafeSlinger Μικρόφωνο λεπτομέρειες άδεια.</string>
     <string name="error_BackupNotFound">Δε βρέθηκε αντίγραφο ασφαλείας για επαναφορά.</string>
     <string name="error_BackupNotSupportedDevice">Η συσκευή δεν υποστηρίζει επαναφορά αντιγράφων ασφαλείας.</string>
     <string name="error_BadCopyProtectUpgrade">Λόγω ενός bug στο Android 4.1, χρειάζεται να απεγκαταστήσετε και επανεγκαταστήσετε το SafeSlinger.</string>
@@ -95,7 +94,7 @@
     <string name="error_C2DMRegInvalidSender">Η εγγραφή δεν είναι διαθέσιμη για αυτήν την έκδοση, παρακαλούμε να ελέγξετε για μια ενημερωμένη έκδοση.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Εσφαλμένη εγγραφή της συσκευής με τη Google. Αυτή η συσκευή δεν υποστηρίζει push messaging.</string>
     <string name="error_C2DMRegServiceNotAvailable">H υπηρεσία push registration δεν είναι διαθέσιμη, επανάληψη σε %d δευτερόλεπτα.</string>
-    <string name="error_C2DMRegTooManyRegistrations">Πάρα πολλές εφαρμογές  έχουν εγγραφεί για Push. Παρακαλούμε απεγκαταστήσετε μερικές άλλες εφαρμογές και δοκιμάστε ξανά.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Πάρα πολλές εφαρμογές έχουν εγγραφεί για Push. Παρακαλούμε απεγκαταστήσετε μερικές άλλες εφαρμογές και δοκιμάστε ξανά.</string>
     <string name="error_CannotSendEmptyFile">Δεν μπορείτε να στείλετε ένα άδειο αρχείο.</string>
     <string name="error_CannotSendFilesOver">Δεν μπορείτε να στείλετε τα αρχεία μεγαλύτερα από %d bytes σε μέγεθος.</string>
     <string name="error_CannotSendNullFile">Δεν μπορείτε να στείλετε ένα άδειο αρχείο.</string>
@@ -152,10 +151,12 @@
     <string name="help_Send">Αυτή η οθόνη σας επιτρέπει να επιλέξετε κάποια δεδομένα και έναν παραλήπτη για να τα στείλετε. Απλά πατήστε το πλήκτρο Αποστολή όταν είστε έτοιμος.</string>
     <string name="help_settings">Αυτή η οθόνη σας επιτρέπει να αλλάξετε τις προεπιλεγμένες ρυθμίσεις για την εφαρμογή.</string>
 
-    <string name="iOS_contactError">Επαφές απαιτείται άδεια για την ασφαλή κοινή χρήση καρτών επαφών. Πατήστε το κουμπί Βοήθεια για SafeSlinger λεπτομέρειες Επαφές άδεια.</string>
+    <string name="iOS_cameraError">Άδεια Κάμερα υποχρεούται να επισυνάψει στιγμιότυπα για να εξασφαλίσει τα μηνύματα. Πατήστε το κουμπί %s για SafeSlinger λεπτομέρειες άδεια κάμερα.</string>
+    <string name="iOS_contactError">Επαφές απαιτείται άδεια για την ασφαλή ανταλλαγή των καρτών επαφών. Πατήστε το κουμπί %s για SafeSlinger λεπτομέρειες Επαφές άδεια.</string>
     <string name="iOS_errorpushtoken">Λείπει το Push registration.</string>
-    <string name="iOS_notificationError1">Ειδοποίηση άδεια είτε για προειδοποιήσεις ή banners, και οι αριθμοί σήμα, που απαιτούνται για την ασφαλή αποστολή μηνύματος. Πατήστε το κουμπί Βοήθεια για SafeSlinger λεπτομέρειες άδεια κοινοποίησης.</string>
+    <string name="iOS_notificationError1">Άδεια Γνωστοποίηση είτε για ειδοποιήσεις ή banners, και οι αριθμοί σήμα, που απαιτούνται για την ασφαλή ανταλλαγή μηνυμάτων. Πατήστε το κουμπί %s για SafeSlinger λεπτομέρειες άδεια κοινοποίησης.</string>
     <string name="iOS_oldOSWarn">Η εφαρμογή SafeSlinger δεν είναι βελτιστοποιημένη για συσκευές iOS 5.x. Το SafeSlinger απαιτεί iOS 6 ή νεότερη έκδοση.</string>
+    <string name="iOS_photolibraryError">Άδεια Photo Library απαιτείται να επισυνάψετε εικόνες για να εξασφαλίσει τα μηνύματα. Πατήστε το κουμπί %s για SafeSlinger Photo Library λεπτομέρειες άδεια.</string>
     <string name="iOS_RequestPermissionContacts">Μπορείτε να επιλέξετε την κάρτα επαφής σας για να στείλετε τους φίλους σας και SafeSlinger θα κρυπτογραφήσει για σας. Για να ενεργοποιήσετε αυτήν τη δυνατότητα, θα πρέπει να επιτρέπουν την πρόσβαση σε SafeSlinger Επαφές σας όταν σας ζητηθεί.</string>
     <string name="iOS_RequestPermissionMicrophone">Μπορείτε να ηχογραφήσετε ένα φωνητικό μήνυμα για να στείλετε στους φίλους σας και SafeSlinger θα κρυπτογραφήσει για σας. Για να ενεργοποιήσετε αυτήν τη δυνατότητα, θα πρέπει να επιτρέπουν την πρόσβαση σε SafeSlinger μικρόφωνο σας όταν σας ζητηθεί.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger είναι μια κρυπτογραφημένη εφαρμογή μηνυμάτων και δεν μπορεί να λειτουργήσει χωρίς να επιτρέπει εισερχόμενα μηνύματα από Ειδοποιήσεις. Για να ενεργοποιήσετε τα εισερχόμενα μηνύματα, θα πρέπει να επιτρέψει SafeSlinger να σας στείλουμε Ειδοποιήσεις όταν σας ζητηθεί.</string>
@@ -283,6 +284,7 @@
     <string name="menu_Help">Βοήθεια</string>
     <string name="menu_Introduction">Εισαγωγή</string>
     <string name="menu_language">Γλώσσα</string>
+    <string name="menu_License">License</string>
     <string name="menu_link_contact_add">Προσθήκη επαφής Σύνδεσμος</string>
     <string name="menu_link_contact_change">Αλλαγή Επικοινωνία Σύνδεσμος</string>
     <string name="menu_Logout">Αποσύνδεση</string>
@@ -290,6 +292,7 @@
     <string name="menu_message_font_size">Μήνυμα Μέγεθος γραμματοσειράς</string>
     <string name="menu_messageCopyText">Αντιγραφή κειμένου</string>
     <string name="menu_messageForward">Προς τα εμπρός</string>
+    <string name="menu_PrivacyPolicy">Πολιτική Προστασίας Προσωπικών Δεδομένων</string>
     <string name="menu_Remove">Κατάργηση</string>
     <string name="menu_restore_default">Επαναφορά προεπιλεγμένων ρυθμίσεων</string>
     <string name="menu_ringtone">Ήχος</string>
@@ -346,6 +349,7 @@
     <string name="text_About1">Εύκολη ανταλλαγή πληροφοριών επικοινωνίας με άλλους</string>
     <string name="text_About2">Ασφαλής ανταλλαγή κείμεένων, φωτογραφίών, ο,τιδήποτε!</string>
     <string name="text_About3">Ισχυρή κρυπτογράφηση προστατεύει τις πληροφορίες σας</string>
+    <string name="text_About_Short">SafeSlinger: Μίλα 3 λέξεις και πάντα να συνομιλήσετε με ειρήνη.</string>
     <string name="text_AboutEmail">email: %s</string>
     <string name="text_AboutFeat">Χαρακτηριστικά:</string>
     <string name="text_AboutWeb">web: %s</string>

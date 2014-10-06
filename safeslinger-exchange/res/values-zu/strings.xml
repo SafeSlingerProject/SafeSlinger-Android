@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Ukuyeka? Ingabe uyaqiniseka?</string>
+    <string name="ask_QuitConfirmation">Ukuyeka? Uqinisekile?</string>
 
     <string name="btn_Match">Next</string>
-    <string name="btn_NoMatch">Ayikho Match</string>
+    <string name="btn_NoMatch">Akukho Match</string>
 
     <string name="choice_NumUsers">abasebenzisi %d</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Wonke amalunga kufanele kuthuthukiswe, abanye besebenzisa omdala push lokubhalisa amafomethi.</string>
+    <string name="error_AllMembersMustUpgrade">Amanye amalungu basebenzisa inguqulo endala; wonke amalungu kumele uthuthukise kuya version entsha.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Wonke amalungu kumele uthuthukise, abanye basebenzisa omdala push lokubhalisa amafomethi.</string>
     <string name="error_CorrectYourInternetConnection">Internet ayitholakali, hlola izilungiselelo zakho.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange siphelelwe yisikhathi sidluliwe. Qala i-exchange futhi.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange siphelelwe yisikhathi udluliwe. Uqale exchange futhi.</string>
     <string name="error_HttpCode">Iseva HTTP Iphutha: %d</string>
-    <string name="error_InvalidCommitVerify">Idatha engalungile okutholakala exchange. Qala i-exchange futhi.</string>
-    <string name="error_InvalidCommonUserId">Sicela ufake inamba oqondile.</string>
-    <string name="error_LocalGroupCommitDiffer">Niye abika umehluko nemishwana. Qala i-exchange futhi.</string>
-    <string name="error_MinUsersRequired">Linanincane amalungu %d kudingeka ukushintshanisa kwedatha.</string>
-    <string name="error_MoreDataThanUsers">Idatha ezingalindelekile okutholakala exchange. Qala i-exchange futhi.</string>
-    <string name="error_NoDataToExchange">I exchange alitholakali idatha edingekayo.</string>
-    <string name="error_NoWordListSelected">Kumele ukhethe enye yezinto nemishwana ngaphambi kokuqhubeka.</string>
-    <string name="error_OtherGroupCommitDiffer">Othile kubike umehluko nemishwana. Qala i-exchange futhi.</string>
-    <string name="error_OutOfMemoryError">Memory iphansi kakhulu ukuqedela lo msebenzi.</string>
-    <string name="error_ServerAppMessage">Umlayezo Server: %s</string>
-    <string name="error_ServerNotResponding">Ayikho impendulo kusuka kwiseva.</string>
+    <string name="error_InvalidCommitVerify">Idatha engalungile etholakala exchange. Uqale exchange futhi.</string>
+    <string name="error_InvalidCommonUserId">Sicela ufake inombolo omuhle.</string>
+    <string name="error_LocalGroupCommitDiffer">Niye ibike umehluko nemishwana. Uqale exchange futhi.</string>
+    <string name="error_MinUsersRequired">Linanincane amalungu %d kudingeka ukushintshanisa idatha.</string>
+    <string name="error_MoreDataThanUsers">Idatha ezingalindelekile etholakala exchange. Uqale exchange futhi.</string>
+    <string name="error_NoDataToExchange">Le exchange entulekayo idatha edingekayo.</string>
+    <string name="error_NoWordListSelected">Kufanele ukhethe elinye imishwana ngaphambi kokuqhubeka.</string>
+    <string name="error_OtherGroupCommitDiffer">Othile labika umehluko nemishwana. Uqale exchange futhi.</string>
+    <string name="error_OutOfMemoryError">Imemori iphansi kakhulu ukuqedela le operation.</string>
+    <string name="error_ServerAppMessage">Umyalezo Server: %s</string>
+    <string name="error_ServerNotResponding">Ayikho impendulo kusuka kuseva.</string>
     <string name="error_TimeoutWaitingForAllMembers">Ukuphela kwesikhathi elinde amanye amalungu group ukwengeza idatha.</string>
-    <string name="error_WebCancelledByUser">Umsebenzisi lukhanseliwe isicelo iseva.</string>
+    <string name="error_WebCancelledByUser">Umsebenzisi ikhanseliwe sicelo leseva.</string>
 
-    <string name="help_size">Khetha inamba zabantu zizama ukushintshanisa kwedatha ndawonye bese ucindezela OK.</string>
-    <string name="help_userid">Le nombolo kulesi sikrini kusetshenziswa ukwakha iqembu eliyingqayizivele abasebenzisi. Bukeza izinombolo on izikrini bonke abasebenzisi \' ke bonke abasebenzisi kumele faka inombolo efanayo ephansi bese ucindezela OK.</string>
-    <string name="help_verify">Manje, kufanele ifanelane enye yalezi imishwana 3-izwi bonke abasebenzisi. Wonke umsebenzisi kufanele ukhethe ibinzana efanayo ezivamile, bese ucindezela Okulandelayo.</string>
+    <string name="help_size">Khetha inani labantu abafuna zizama ukushintshanisa idatha ndawonye bese ucindezela OK.</string>
+    <string name="help_userid">Lenombolo kule sikrini isetshenziswa ukudala iqembu eliyingqayizivele abasebenzisi. Ubuyekeze izinombolo on izikrini bonke abasebenzisi \'ke bonke abasebenzisi kumele angene okufanayo aphansi inamba bese ucindezela OK.</string>
+    <string name="help_verify">Manje, kufanele ifanelane enye yalezi imishwana 3-zwi nabo bonke abasebenzisi. Wonke umsebenzisi kumele ukhethe ibinzana efanayo ezivamile, bese ucindezela Okulandelayo.</string>
 
     <string name="label_CompareScreensNDevices">Qhathanisa izikrini kumadivayisi %s.</string>
     <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Le nombolo isetshenziswa ukudala iqembu eliyingqayizivele abasebenzisi. Qhathanisa, bese ufaka inombolo ephansi phakathi bonke abasebenzisi.</string>
-    <string name="label_ReceivedNItems">wathola ayithemu %d</string>
-    <string name="label_UserIdHint">Ephansi</string>
-    <string name="label_VerifyInstruct">Zonke amafoni kufanele ifanelane omunye the imishwana 3-zwi. Qhathanisa, bese ukhethe ibinzana ofanayo.</string>
+    <string name="label_PromptInstruct">Le nombolo isetshenziswa ukudala iqembu eliyingqayizivele abasebenzisi. Uqhathanise, bese ufaka inamba aphansi phakathi bonke abasebenzisi.</string>
+    <string name="label_ReceivedNItems">wathola izinto %d</string>
+    <string name="label_UserIdHint">Aphansi</string>
+    <string name="label_VerifyInstruct">Zonke amafoni kufanele ifanelane omunye imishwana 3-zwi. Uqhathanise, bese sithathe le nkulumo okuqondene.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">elinde ukuqinisekisa kuzo zonke amalungu…</string>
-    <string name="prog_CollectingOthersItems">elinde sonke abasebenzisi ukujoyina…</string>
-    <string name="prog_ConstructingGroupKey">ukwakhiwa key iqembu…</string>
+    <string name="prog_CollectingOthersCommitVerify">elinde ukuqinisa okuvela wonke amalungu…</string>
+    <string name="prog_CollectingOthersItems">elinde bonke abasebenzisi ukujoyina…</string>
+    <string name="prog_ConstructingGroupKey">akha Ukhiye group…</string>
     <string name="prog_RequestingUserId">becela ubulungu…</string>
 
-    <string name="title_size">Bangaki abasebenzisi kule exchange?</string>
-    <string name="title_userid">Yokwenza iqembu</string>
+    <string name="title_size">Zingaki abasebenzisi kule exchange?</string>
+    <string name="title_userid">Amaqulu</string>
     <string name="title_verify">Qinisekisa</string>
 
 </resources>

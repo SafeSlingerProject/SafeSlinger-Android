@@ -28,7 +28,6 @@
     <string name="action_NewUserRequest">Voeg een Sling Keys uitnodiging via…</string>
 
     <string name="app_name">SafeSlinger</string>
-    <string name="app_TranslatorName">Google Translate</string>
 
     <string name="ask_BackupDisabledRemindLater">Backup is uitgeschakeld. Wilt u een back-up instellingen aan te passen en houd deze herinnering?</string>
     <string name="ask_ConfirmUseOlderDeviceOrKey">%s heeft een meer recente apparaat of sleutel, bent u zeker dat u deze oudere een te gebruiken?</string>
@@ -86,7 +85,7 @@
     <string name="error_AudioPlayerDecodeError">Audiospeler decoderingsfout.</string>
     <string name="error_AudioPlayerError">Kunt de opnameduur niet afspelen.</string>
     <string name="error_AudioRecorderEncodeError">Audiorecorder codering fout.</string>
-    <string name="error_AudioRecorderPermissionError">Microfoon toestemming is nodig om een veilige spraakbericht. Tik op de knop Help voor SafeSlinger Microfoon toestemming details.</string>
+    <string name="error_AudioRecorderPermissionError">Microfoon toestemming is nodig om een veilige spraakbericht opnemen. Tik op de knop voor %s SafeSlinger Microfoon toestemming details.</string>
     <string name="error_BackupNotFound">Geen back-up te herstellen.</string>
     <string name="error_BackupNotSupportedDevice">Apparaat ondersteunt geen back-up.</string>
     <string name="error_BadCopyProtectUpgrade">Door een bug in Android 4.1, moet u verwijderen en opnieuw installeren SafeSlinger.</string>
@@ -152,10 +151,12 @@
     <string name="help_Send">In dit scherm kunt u een aantal gegevens en een ontvanger te sturen om te selecteren. Drukt u gewoon op verzenden als u klaar bent.</string>
     <string name="help_settings">In dit scherm kunt u de standaardinstellingen voor de toepassing te wijzigen.</string>
 
-    <string name="iOS_contactError">Contacten toestemming is vereist voor het veilig delen van contact kaarten. Tik op de knop Help voor SafeSlinger Contacten toestemming details.</string>
+    <string name="iOS_cameraError">Camera toestemming is vereist om snapshots om berichten veilig te hechten. Tik op de knop voor %s SafeSlinger Camera toestemming details.</string>
+    <string name="iOS_contactError">Contacten toestemming is vereist voor het veilig delen van relatiekaarten. Tik op de knop voor %s SafeSlinger Contacten toestemming details.</string>
     <string name="iOS_errorpushtoken">Push registratie ontbreekt.</string>
-    <string name="iOS_notificationError1">Kennisgeving toestemming voor zowel waarschuwingen of banners, en kenteken nummers, zijn nodig voor een veilige messaging. Tik op de knop Help voor SafeSlinger Notification toestemming details.</string>
+    <string name="iOS_notificationError1">Kennisgeving toestemming voor zowel waarschuwingen of banners, en badge nummers, zijn nodig voor een veilige messaging. Tik op de knop voor %s SafeSlinger Notification toestemming details.</string>
     <string name="iOS_oldOSWarn">SafeSlinger is niet geoptimaliseerd voor iOS 5.x apparaten. SafeSlinger vereist iOS 6 of hoger.</string>
+    <string name="iOS_photolibraryError">Photo Library toestemming nodig om foto\'s te berichten te beveiligen hechten. Tik op de knop voor %s SafeSlinger fotobibliotheek toestemming details.</string>
     <string name="iOS_RequestPermissionContacts">U kunt uw visitekaartje selecteren om je vrienden te sturen en SafeSlinger zal het te versleutelen voor u. Om deze functie te activeren, moet u SafeSlinger toegang tot uw Contactpersonen staan ​​wanneer gevraagd.</string>
     <string name="iOS_RequestPermissionMicrophone">U kunt een gesproken bericht naar je vrienden te sturen en SafeSlinger zal het coderen voor u opneemt. Om deze functie te activeren, moet u SafeSlinger toegang tot uw microfoon staan ​​wanneer gevraagd.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger is een versleutelde messaging applicatie en kan niet functioneren zonder dat inkomende berichten van meldingen. Inkomende berichten in te schakelen, moet u toestaan ​​dat SafeSlinger u meldingen sturen wanneer gevraagd.</string>
@@ -283,6 +284,7 @@
     <string name="menu_Help">Help</string>
     <string name="menu_Introduction">Introductie</string>
     <string name="menu_language">Taal</string>
+    <string name="menu_License">Licentie</string>
     <string name="menu_link_contact_add">Contactpersoon toevoegen Link</string>
     <string name="menu_link_contact_change">Verander Contact link</string>
     <string name="menu_Logout">Afmelden</string>
@@ -290,6 +292,7 @@
     <string name="menu_message_font_size">Bericht Font Size</string>
     <string name="menu_messageCopyText">Tekst kopiëren</string>
     <string name="menu_messageForward">Vooruit</string>
+    <string name="menu_PrivacyPolicy">Privacybeleid</string>
     <string name="menu_Remove">Verwijderen</string>
     <string name="menu_restore_default">Restore Default Settings</string>
     <string name="menu_ringtone">Klinken</string>
@@ -346,6 +349,7 @@
     <string name="text_About1">Contact informatie gemakkelijk uit te wisselen met anderen</string>
     <string name="text_About2">Veilig sling teksten, foto\'s, om het even wat!</string>
     <string name="text_About3">Sterke cryptografie beschermt uw informatie</string>
+    <string name="text_About_Short">SafeSlinger: Spreek 3 woorden en voor altijd een praatje in vrede.</string>
     <string name="text_AboutEmail">e-mail: %s</string>
     <string name="text_AboutFeat">Kenmerken:</string>
     <string name="text_AboutWeb">web: %s</string>

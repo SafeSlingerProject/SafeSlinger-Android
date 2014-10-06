@@ -25,41 +25,42 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Kuacha? Una uhakika?</string>
+    <string name="ask_QuitConfirmation">Kuacha? Je, una uhakika?</string>
 
-    <string name="btn_Match">Ijayo</string>
-    <string name="btn_NoMatch">No mechi</string>
+    <string name="btn_Match">Next</string>
+    <string name="btn_NoMatch">Hakuna mechi</string>
 
     <string name="choice_NumUsers">%d watumiaji</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Wanachama wote lazima kuboresha, baadhi ni kutumia wakubwa miundo usajili kushinikiza.</string>
-    <string name="error_CorrectYourInternetConnection">Internet haipatikani, kuangalia mazingira yako.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ulizidi. Kuanza kubadilishana tena.</string>
-    <string name="error_HttpCode">Server Error HTTP: %d</string>
-    <string name="error_InvalidCommitVerify">Data sahihi kupatikana katika kubadilishana. Kuanza kubadilishana tena.</string>
-    <string name="error_InvalidCommonUserId">Tafadhali kuingia sifuri.</string>
-    <string name="error_LocalGroupCommitDiffer">Una taarifa tofauti katika maneno. Kuanza kubadilishana tena.</string>
-    <string name="error_MinUsersRequired">Chini ya %d wanachama wanatakiwa kubadilishana data.</string>
-    <string name="error_MoreDataThanUsers">Data isiyotarajiwa kupatikana katika kubadilishana. Kuanza kubadilishana tena.</string>
-    <string name="error_NoDataToExchange">Kubadilishana ni kukosa data required.</string>
+    <string name="error_AllMembersMustUpgrade">Baadhi ya wanachama ni kutumia toleo la wazee; wanachama wote lazima kuboresha na toleo newest.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Wanachama wote lazima kuboresha, baadhi ni kutumia wakubwa format usajili kushinikiza.</string>
+    <string name="error_CorrectYourInternetConnection">Internet si inapatikana, angalia mipangilio yako.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ilizidi. Kuanza kubadilishana tena.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Data sio sahihi kupatikana katika kubadilishana. Kuanza kubadilishana tena.</string>
+    <string name="error_InvalidCommonUserId">Tafadhali kuingia integer chanya.</string>
+    <string name="error_LocalGroupCommitDiffer">Una taarifa tofauti katika misemo. Kuanza kubadilishana tena.</string>
+    <string name="error_MinUsersRequired">Kiwango cha chini ya %d wanachama wanatakiwa kubadilishana data.</string>
+    <string name="error_MoreDataThanUsers">Data Unexpected kupatikana katika kubadilishana. Kuanza kubadilishana tena.</string>
+    <string name="error_NoDataToExchange">Kubadilishana data ni kukosa required.</string>
     <string name="error_NoWordListSelected">Lazima kuchagua moja ya maneno kabla ya kuendelea.</string>
-    <string name="error_OtherGroupCommitDiffer">Mtu taarifa tofauti katika maneno. Kuanza kubadilishana tena.</string>
-    <string name="error_OutOfMemoryError">Kumbukumbu ni ya chini sana kwa kukamilisha kazi hii.</string>
+    <string name="error_OtherGroupCommitDiffer">Mtu taarifa tofauti katika misemo. Kuanza kubadilishana tena.</string>
+    <string name="error_OutOfMemoryError">Kumbukumbu ni ya chini sana kukamilisha kazi hii.</string>
     <string name="error_ServerAppMessage">Server Ujumbe: %s</string>
-    <string name="error_ServerNotResponding">Hakuna jibu kutoka kwa seva.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Ngoja ukisubiri kwa baadhi ya wanakikundi kuongeza data.</string>
-    <string name="error_WebCancelledByUser">Mtumiaji kufutwa ombi server.</string>
+    <string name="error_ServerNotResponding">Hakuna majibu kutoka server.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout kusubiri kwa baadhi ya wanakikundi kuongeza data.</string>
+    <string name="error_WebCancelledByUser">User imesitisha ombi server.</string>
 
     <string name="help_size">Kuchagua idadi ya watu ambao ni kujaribu kubadilishana data pamoja na vyombo vya habari OK.</string>
-    <string name="help_userid">Idadi hii juu ya screen hii ni kutumika kwa kuunda kundi kipekee ya watumiaji. Kupitia idadi ya skrini ya watumiaji \', basi watumiaji wote wanapaswa kuingia sawa idadi ya chini kabisa na vyombo vya habari OK.</string>
-    <string name="help_verify">Sasa, lazima mechi moja ya hizi 3-neno maneno na watumiaji wote. Kila user lazima kuchagua moja ya kawaida maneno, na vyombo vya habari Next.</string>
+    <string name="help_userid">Idadi hii juu ya screen hii ni kutumika kujenga kundi la kipekee ya watumiaji. Mapitio ya idadi ya skrini watumiaji \'wote, basi watumiaji wote wanapaswa kuingia sawa na idadi ya chini na vyombo vya habari OK.</string>
+    <string name="help_verify">Sasa, lazima mechi ya mmoja wa haya 3-neno maneno na watumiaji wote. Kila mtumiaji lazima kuchagua moja ya kawaida ya maneno, na waandishi wa habari Next.</string>
 
     <string name="label_CompareScreensNDevices">Kulinganisha skrini juu ya vifaa %s.</string>
-    <string name="label_NumericModeHint">Mashirika yasiyo ya Kiingereza</string>
-    <string name="label_PromptInstruct">Idadi hii ni kutumika kujenga kundi kipekee ya watumiaji. Kulinganisha, na kisha kuingia idadi ya chini kabisa kati ya watumiaji wote.</string>
+    <string name="label_NumericModeHint">Non-Kiingereza</string>
+    <string name="label_PromptInstruct">Idadi hii ni kutumika kujenga kundi la kipekee ya watumiaji. Kulinganisha, na kisha kuingia idadi ya chini kabisa miongoni mwa watumiaji wote.</string>
     <string name="label_ReceivedNItems">kupokea vitu %d</string>
     <string name="label_UserIdHint">Chini</string>
-    <string name="label_VerifyInstruct">Zote za lazima mechi moja ya 3-neno maneno. Kulinganisha, na kisha kuchukua vinavyolingana maneno.</string>
+    <string name="label_VerifyInstruct">Zote za lazima mechi moja ya 3-neno misemo. Kulinganisha, na kisha kuchukua vinavyolingana maneno.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
@@ -68,7 +69,7 @@
     <string name="prog_ConstructingGroupKey">ujenzi wa kundi muhimu…</string>
     <string name="prog_RequestingUserId">kuomba uanachama…</string>
 
-    <string name="title_size">Jinsi watumiaji wengi katika kubadilishana?</string>
+    <string name="title_size">Jinsi watumiaji katika kubadilishana wengi?</string>
     <string name="title_userid">Kambi</string>
     <string name="title_verify">Kuhakiki</string>
 

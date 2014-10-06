@@ -32,44 +32,45 @@
 
     <string name="choice_NumUsers">%d uzantoj</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Ĉiuj membroj devas ĝisdatigi, iuj uzas pli malnovaj puŝo enskribo formatoj.</string>
-    <string name="error_CorrectYourInternetConnection">Interreto ne estas havebla, kontrolu viajn agordojn.</string>
+    <string name="error_AllMembersMustUpgrade">Kelkaj membroj uzas pli malnovan version; ĉiuj membroj devas ĝisdatigi al la plej nova versio.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Ĉiuj membroj devas ĝisdatigi, iuj uzas malnovaj puŝo enskribo formatoj.</string>
+    <string name="error_CorrectYourInternetConnection">Interreto ne disponeblas, kontrolu viajn agordojn.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Interŝanĝo timeout superis. Begin interŝanĝo denove.</string>
     <string name="error_HttpCode">Servilo HTTP Eraro: %d</string>
-    <string name="error_InvalidCommitVerify">Malĝusta datumoj trovita en interŝanĝo. Begin interŝanĝo denove.</string>
+    <string name="error_InvalidCommitVerify">Malĝusta datumoj troviĝas en interŝanĝo. Begin interŝanĝo denove.</string>
     <string name="error_InvalidCommonUserId">Bonvolu entajpi pozitiva entjero.</string>
     <string name="error_LocalGroupCommitDiffer">Vi raportis diferencon en frazoj. Begin interŝanĝo denove.</string>
-    <string name="error_MinUsersRequired">Minimuma de %d membroj estas bezonata por interŝanĝi datumojn.</string>
-    <string name="error_MoreDataThanUsers">Neatendita datumoj trovita en interŝanĝo. Begin interŝanĝo denove.</string>
-    <string name="error_NoDataToExchange">La interŝanĝo mankas bezonata datumojn.</string>
+    <string name="error_MinUsersRequired">Minimuma de %d membroj deviĝas interŝanĝi datumojn.</string>
+    <string name="error_MoreDataThanUsers">Neatendita datumoj troviĝas en interŝanĝo. Begin interŝanĝo denove.</string>
+    <string name="error_NoDataToExchange">La interŝanĝo mankas required datumoj.</string>
     <string name="error_NoWordListSelected">Vi devas elekti unu el la frazoj antaŭ ol vi antaŭeniru.</string>
     <string name="error_OtherGroupCommitDiffer">Iu informis diferencon en frazoj. Begin interŝanĝo denove.</string>
     <string name="error_OutOfMemoryError">Memoro estas tro malalta por kompletigi tiun operacion.</string>
-    <string name="error_ServerAppMessage">Servilo Mesaĝo: %s</string>
-    <string name="error_ServerNotResponding">Neniu respondo de servilo.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Templimo atendante iun grupon membroj aldoni datumojn.</string>
+    <string name="error_ServerAppMessage">Servilo Message: %s</string>
+    <string name="error_ServerNotResponding">Neniu respondo el servilo.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Templimo atendante iu grupo membroj aldoni datumoj.</string>
     <string name="error_WebCancelledByUser">Uzanto nuligita servilo peton.</string>
 
-    <string name="help_size">Elektu la nombron da homoj kiuj provas interŝanĝi datumojn kune kaj alklaku OK.</string>
-    <string name="help_userid">Tiu nombro sur tiu ekrano estas uzata por krei unikan grupo de uzantoj. Revizii la nombroj en ĉiuj uzantoj ekranoj, tiam ĉiuj uzantoj devus eniri la saman malaltan nombron kaj premu OK.</string>
-    <string name="help_verify">Nun, vi devas parigi unu el tiuj 3-vortaj frazoj kun ĉiuj uzantoj. Ĉiu uzanto devas elekti la saman komunan frazo, kaj premu Sekva.</string>
+    <string name="help_size">Elektu la nombron de homoj kiuj provas interŝanĝi datumojn kune kaj alklaku OK.</string>
+    <string name="help_userid">Tiu nombro sur tiu ekrano estas uzata por krei solan grupon de uzantoj. Revizii la nombroj sur ĉiuj uzantoj ekranoj, tiam ĉiuj uzantoj devus eniri la saman malaltan nombron kaj premu OK.</string>
+    <string name="help_verify">Nun vi devas parigi unu el tiuj 3-vorto frazoj kun ĉiuj uzantoj. Ĉiu uzanto devas selekti la saman komunan frazon, kaj premi Next.</string>
 
-    <string name="label_CompareScreensNDevices">Komparu ekranoj sur %s aparatoj.</string>
-    <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Tiu nombro estas uzata por krei unikan grupo de uzantoj. Komparu, kaj poste eniris la plej malalta nombro inter ĉiuj uzantoj.</string>
-    <string name="label_ReceivedNItems">ricevis %d erojn</string>
+    <string name="label_CompareScreensNDevices">Komparu ekranoj sur %s mekanismoj.</string>
+    <string name="label_NumericModeHint">Ne-anglaj</string>
+    <string name="label_PromptInstruct">Ĉi tiu nombro estas uzita por krei solan grupon de uzantoj. Komparu, kaj tiam eniri la malalta nombro inter ĉiuj uzantoj.</string>
+    <string name="label_ReceivedNItems">Ricevis %d eroj</string>
     <string name="label_UserIdHint">Malalta</string>
-    <string name="label_VerifyInstruct">Ĉiuj telefonoj devas parigi unu el la 3-vortaj frazoj. Komparu, kaj tiam elektu la trafa frazo.</string>
+    <string name="label_VerifyInstruct">Ĉiuj telefonoj devas parigi de la 3-vorto frazoj. Komparu, kaj tiam elektu la trafa frazo.</string>
 
-    <string name="lib_name">SafeSlinger interŝanĝo</string>
+    <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">atendante konfirmo de ĉiuj membroj…</string>
-    <string name="prog_CollectingOthersItems">atendante por ĉiuj uzantoj aliĝi…</string>
-    <string name="prog_ConstructingGroupKey">konstruanta grupo klavo…</string>
-    <string name="prog_RequestingUserId">peti membrecon…</string>
+    <string name="prog_CollectingOthersCommitVerify">atendante verificación de ĉiuj membroj…</string>
+    <string name="prog_CollectingOthersItems">atendante ĉiuj uzantoj aliĝi…</string>
+    <string name="prog_ConstructingGroupKey">konstruanta grupo ŝlosilon…</string>
+    <string name="prog_RequestingUserId">petante membraro…</string>
 
     <string name="title_size">Kiom da uzantoj en la interŝanĝon?</string>
-    <string name="title_userid">Grupigo</string>
-    <string name="title_verify">Retajpu</string>
+    <string name="title_userid">Agrupación</string>
+    <string name="title_verify">Kontroli</string>
 
 </resources>

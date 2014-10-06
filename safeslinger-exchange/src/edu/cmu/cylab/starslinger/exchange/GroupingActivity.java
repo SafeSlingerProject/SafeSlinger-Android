@@ -53,6 +53,7 @@ public class GroupingActivity extends BaseActivity {
     private TextView mTextViewCompareNDevices;
     private int mNumUsers;
     private int mUserId;
+    private InputMethodManager mInputMgr;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -131,6 +132,9 @@ public class GroupingActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent data = new Intent().putExtra(extra.GROUP_ID, mEditTextPrompt.getText()
                         .toString());
+                if (mInputMgr != null) {
+                    mInputMgr.hideSoftInputFromWindow(mEditTextPrompt.getWindowToken(), 0);
+                }
                 setResultForParent(RESULT_OK, data);
                 finish();
             }
@@ -143,26 +147,21 @@ public class GroupingActivity extends BaseActivity {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     Intent data = new Intent().putExtra(extra.GROUP_ID, mEditTextPrompt.getText()
                             .toString());
+                    if (mInputMgr != null) {
+                        mInputMgr.hideSoftInputFromWindow(mEditTextPrompt.getWindowToken(), 0);
+                    }
                     setResultForParent(RESULT_OK, data);
                     finish();
                     return true;
                 }
                 return false;
             }
+
         });
 
-        InputMethodManager imm = (InputMethodManager) this
-                .getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
-    }
-
-    @Override
-    public void onDestroy() {
-        InputMethodManager imm = (InputMethodManager) this
-                .getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(0, 0);
-
-        super.onDestroy();
+        mInputMgr = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        mInputMgr.toggleSoftInput(InputMethodManager.SHOW_FORCED,
+                InputMethodManager.HIDE_IMPLICIT_ONLY);
     }
 
     @Override
@@ -185,5 +184,13 @@ public class GroupingActivity extends BaseActivity {
             outState.putInt(extra.NUM_USERS, mNumUsers);
         }
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mInputMgr != null) {
+            mInputMgr.hideSoftInputFromWindow(mEditTextPrompt.getWindowToken(), 0);
+        }
+        super.onBackPressed();
     }
 }

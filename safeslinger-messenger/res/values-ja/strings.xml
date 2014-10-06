@@ -28,7 +28,6 @@
     <string name="action_NewUserRequest">スリングキー接触招待を経由して追加…</string>
 
     <string name="app_name">SafeSlinger</string>
-    <string name="app_TranslatorName">Akira Yamada</string>
 
     <string name="ask_BackupDisabledRemindLater">バックアップが無効になっています。 バックアップ設定を調整し、この通知を保存しますか？</string>
     <string name="ask_ConfirmUseOlderDeviceOrKey">%sは、より最近のデバイスまたは鍵を持って、あなたがこれひとつ年上のを使用してもよろしいですか？</string>
@@ -74,9 +73,9 @@
     <string name="choice_external_storage">外部ストレージ</string>
     <string name="choice_font_large">大</string>
     <string name="choice_font_medium">メディア</string>
-    <string name="choice_font_micro">非常に小さい</string>
+    <string name="choice_font_micro">極小</string>
     <string name="choice_font_small">小</string>
-    <string name="choice_internal_storage">内部記憶装置</string>
+    <string name="choice_internal_storage">内部ストレージ</string>
     <string name="choice_nolimit">制限なし</string>
     <string name="choice_SaveDirectory">保存ディレクトリ</string>
     <string name="choice_SaveFile">ファイルの保存</string>
@@ -86,7 +85,7 @@
     <string name="error_AudioPlayerDecodeError">再生デコードエラー</string>
     <string name="error_AudioPlayerError">音声を再生できません。</string>
     <string name="error_AudioRecorderEncodeError">録音エンコードエラー</string>
-    <string name="error_AudioRecorderPermissionError">マイクの許可がセキュリティで保護された音声メッセージを録音する必要があります。 SafeSlingerマイク権限の詳細については、[ヘルプ]ボタンをタップします。</string>
+    <string name="error_AudioRecorderPermissionError">マイク許可がセキュアな音声メッセージを録音するために必要とされている。 SafeSlingerマイク権限の詳細については%sボタンをタップします。</string>
     <string name="error_BackupNotFound">復元のためのバックアップがありません。</string>
     <string name="error_BackupNotSupportedDevice">このデバイスはバックアップからの復元ををサポートしていません。</string>
     <string name="error_BadCopyProtectUpgrade">アンドロイド4.1のバグのためには、SafeSlingerをアンインストールして再インストールしているでしょう。</string>
@@ -152,10 +151,12 @@
     <string name="help_Send">この画面では、いくつかのデータと送信す​​る受信者を選択できます。準備ができたら 送信を押します。</string>
     <string name="help_settings">この画面では、アプリケーションのデフォルト設定を変更することができます。</string>
 
-    <string name="iOS_contactError">コンタクト許可が確実に接触カードを共有するために必要です。 SafeSlingerコンタクト許可の詳細については、[ヘルプ]ボタンをタップします。</string>
+    <string name="iOS_cameraError">カメラの許可がメッセージを保護するためにスナップショットを添付することが要求される。 SafeSlingerカメラ権限の詳細については%sボタンをタップします。</string>
+    <string name="iOS_contactError">コンタクト許可が確実に連絡カードを共有するために必要です。 SafeSlingerコンタクト許可の詳細については%sボタンをタップします。</string>
     <string name="iOS_errorpushtoken">プッシュの登録がありません。</string>
-    <string name="iOS_notificationError1">警告やバナー、バッジ番号のどちらかの通知許可は、セキュアなメッセージングのために必要とされる。 SafeSlinger通知許可の詳細については、[ヘルプ]ボタンをタップします。</string>
+    <string name="iOS_notificationError1">アラートやバナー、バッジ番号のいずれかの通知許可は、セキュアなメッセージングのために必要とされる。 SafeSlinger通知許可の詳細については%sボタンをタップします。</string>
     <string name="iOS_oldOSWarn">SafeSlingerはのiOS5.xのデバイス用に最適化されていません。 SafeSlingerをiOS6以降が必要です。</string>
+    <string name="iOS_photolibraryError">フォトライブラリ許可がメッセージを保護するために写真を添付する必要があります。 SafeSlingerフォトライブラリ権限の詳細については%sボタンをタップします。</string>
     <string name="iOS_RequestPermissionContacts">あなたはあなたの友人を送信するためにあなたの連絡先カードを選択することができますし、SafeSlingerはあなたのためにそれを暗号化します。尋ねられたとき、この機能を有効にするには、連絡先にSafeSlingerアクセスを許可する必要があります。</string>
     <string name="iOS_RequestPermissionMicrophone">あなたはあなたの友人を送信するとSafeSlingerはあなたのためにそれを暗号化します音声メッセージを録音することができます。尋ねられたとき、この機能を有効にするには、マイクにSafeSlingerアクセスを許可する必要があります。</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlingerは暗号化されたメッセージングアプリケーションであると通知からの着信メッセージを許可することなく機能することはできません。受信メッセージを有効にするには、尋ねられたときSafeSlingerはあなたに通知を送信できるようにする必要があります。</string>
@@ -283,16 +284,18 @@
     <string name="menu_Help">ヘルプ</string>
     <string name="menu_Introduction">はじめに</string>
     <string name="menu_language">言語</string>
+    <string name="menu_License">ライセンス</string>
     <string name="menu_link_contact_add">連絡先リンクを追加</string>
     <string name="menu_link_contact_change">連絡先リンクを変更する</string>
     <string name="menu_Logout">ログアウト</string>
     <string name="menu_ManagePassphrases">パスフレーズを管理</string>
-    <string name="menu_message_font_size">メッセージフォントサイズ</string>
-    <string name="menu_messageCopyText">テキストのコピー</string>
+    <string name="menu_message_font_size">フォントサイズ</string>
+    <string name="menu_messageCopyText">コピー</string>
     <string name="menu_messageForward">フォワード</string>
+    <string name="menu_PrivacyPolicy">プライバシー・ポリシー</string>
     <string name="menu_Remove">削除する</string>
     <string name="menu_restore_default">デフォルト設定を復元する</string>
-    <string name="menu_ringtone">聞こえる</string>
+    <string name="menu_ringtone">着信メロディ</string>
     <string name="menu_SelectShareApp">お問い合わせへの招待を追加</string>
     <string name="menu_sendFeedback">フィードバックを送信</string>
     <string name="menu_SendUpdate">アップデートを送信</string>
@@ -305,7 +308,7 @@
     <string name="menu_UseContactPerson">企業との接触 %sを使用</string>
     <string name="menu_UseNoContact">使用する名前のみ</string>
     <string name="menu_UseProfilePerson">プロファイル%sを使用</string>
-    <string name="menu_vibrate">振動する</string>
+    <string name="menu_vibrate">振動</string>
 
     <string name="prog_decrypting">復号化中…</string>
     <string name="prog_encrypting">暗号化中…</string>
@@ -346,6 +349,7 @@
     <string name="text_About1">連絡先を簡単に交換できる</string>
     <string name="text_About2">テキスト、写真などの安全な共有</string>
     <string name="text_About3">強力な暗号による情報の保護</string>
+    <string name="text_About_Short">SafeSlinger: 言葉三つの紹介で、内緒にチャット。</string>
     <string name="text_AboutEmail">email: %s</string>
     <string name="text_AboutFeat">特徴：</string>
     <string name="text_AboutWeb">web: %s</string>
@@ -372,12 +376,12 @@
     <string name="title_ExchangeWalkthrough">スリングキーによるアシスタント</string>
     <string name="title_FileOptions">ファイルオプション</string>
     <string name="title_find">セットアップ</string>
-    <string name="title_font_size">フォントサイズを選択する</string>
+    <string name="title_font_size">フォントサイズ</string>
     <string name="title_home">Exchangeを開始</string>
     <string name="title_HomePanel">ホーム</string>
     <string name="title_MessageDetail">メッセージ</string>
     <string name="title_Messages">メッセージ</string>
-    <string name="title_MyIdentity">個人的な接触</string>
+    <string name="title_MyIdentity">コンタクト</string>
     <string name="title_NotifyFileAvailable">SafeSlingerによるメッセージ利用可能</string>
     <string name="title_NotifyMulFileAvailable">利用可能な%d SafeSlingerメッセージ</string>
     <string name="title_passphrase">パスフレーズ</string>
@@ -390,7 +394,7 @@
     <string name="title_SaveFileAs">ファイルの名前を付けて保存</string>
     <string name="title_SecureIntroduction">安全な自己紹介</string>
     <string name="title_SecureIntroductionInvite">安全な自己紹介への招待</string>
-    <string name="title_SelectSource">オプションの送信：</string>
+    <string name="title_SelectSource">送信オプション</string>
     <string name="title_SendFile">送信</string>
     <string name="title_sharingfolder">共有フォルダ</string>
     <string name="title_soundrecoder">サウンドレコーダー</string>

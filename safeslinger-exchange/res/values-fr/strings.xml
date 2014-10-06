@@ -32,6 +32,7 @@
 
     <string name="choice_NumUsers">%d utilisateurs</string>
 
+    <string name="error_AllMembersMustUpgrade">Certains membres utilisent une version antérieure; tous les membres doivent mettre à niveau vers la dernière version.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tous les membres doivent mettre à niveau, certains utilisent les formats d\'enregistrement des poussoirs âgées.</string>
     <string name="error_CorrectYourInternetConnection">Internet n\'est pas disponible, vérifiez vos paramètres.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Bourse délai dépassé. Recommencez l\'échange.</string>

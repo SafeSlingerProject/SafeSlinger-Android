@@ -25,50 +25,51 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">నిష్క్రమించు? మీరు ఖచ్చితంగా ఉన్నారా?</string>
+    <string name="ask_QuitConfirmation">క్విట్? మీరు భావిస్తున్నారా?</string>
 
-    <string name="btn_Match">తర్వాత</string>
-    <string name="btn_NoMatch">ఏ మ్యాన్</string>
+    <string name="btn_Match">తదుపరి</string>
+    <string name="btn_NoMatch">సంఖ్య మ్యాన్</string>
 
     <string name="choice_NumUsers">%d వినియోగదారులు</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">సభ్యులు కొన్ని పాత పుష్ నమోదు ఫార్మాట్లలో ఉపయోగిస్తున్నారు, నవీకరించాలి.</string>
-    <string name="error_CorrectYourInternetConnection">అందుబాటులో లేదు ఇంటర్నెట్, మీ సెట్టింగ్లను తనిఖీ.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">మార్పిడి సమయం ముగిసింది మించిపోయింది. మళ్ళీ మార్పిడి ప్రారంభం SWF.</string>
+    <string name="error_AllMembersMustUpgrade">కొందరు సభ్యులు పాత వెర్షన్ వాడుతుంటే; అన్ని సభ్యులు సరికొత్త వెర్షన్ అప్గ్రేడ్ చెయ్యాలి.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">అన్ని సభ్యులు కొన్ని పాత పుష్ రిజిస్ట్రేషన్ ఫార్మాట్లలో ఉపయోగిస్తున్నారు, అప్గ్రేడ్ చేయాలి.</string>
+    <string name="error_CorrectYourInternetConnection">ఇంటర్నెట్ అందుబాటులో లేదు, మీ సెట్టింగ్లను తనిఖీ.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">ఎక్స్చేంజ్ సమయం ముగిసింది మించిపోయింది. మళ్ళీ మార్పిడి ప్రారంభం.</string>
     <string name="error_HttpCode">సర్వర్ HTTP లోపం: %d</string>
-    <string name="error_InvalidCommitVerify">ఎక్స్చేంజ్ తప్పు డేటా. మళ్ళీ మార్పిడి ప్రారంభం SWF.</string>
+    <string name="error_InvalidCommitVerify">సరికాని డేటా మార్పిడి లో కనుగొన్నారు. మళ్ళీ మార్పిడి ప్రారంభం.</string>
     <string name="error_InvalidCommonUserId">ఒక సానుకూల పూర్ణాంక నమోదు చేయండి.</string>
-    <string name="error_LocalGroupCommitDiffer">మీరు పదబంధాలు లో తేడా నివేదించారు. మళ్ళీ మార్పిడి ప్రారంభం SWF.</string>
+    <string name="error_LocalGroupCommitDiffer">మీరు పదబంధాలు ఒక తేడా నివేదించారు. మళ్ళీ మార్పిడి ప్రారంభం.</string>
     <string name="error_MinUsersRequired">%d సభ్యులు కనీసం డేటా మార్పిడి అవసరం.</string>
-    <string name="error_MoreDataThanUsers">ఎక్స్చేంజ్ ఊహించని డేటా. మళ్ళీ మార్పిడి ప్రారంభం SWF.</string>
-    <string name="error_NoDataToExchange">మార్పిడి అవసరం డేటా లేదు.</string>
-    <string name="error_NoWordListSelected">కొనసాగే ముందు పదబంధాలు ఒకటి ఎంచుకోవాలి.</string>
-    <string name="error_OtherGroupCommitDiffer">ఎవరో పదబంధాలు లో తేడా నివేదించారు. మళ్ళీ మార్పిడి ప్రారంభం SWF.</string>
+    <string name="error_MoreDataThanUsers">ఊహించని డేటా మార్పిడి లో కనుగొన్నారు. మళ్ళీ మార్పిడి ప్రారంభం.</string>
+    <string name="error_NoDataToExchange">మార్పిడి అవసరమైన డేటా లేదు.</string>
+    <string name="error_NoWordListSelected">మీరు సాగుతున్నాయి ముందు పదబంధాలు ఒకటి ఎంచుకోవాలి.</string>
+    <string name="error_OtherGroupCommitDiffer">ఎవరో పదబంధాలు ఒక తేడా నివేదించారు. మళ్ళీ మార్పిడి ప్రారంభం.</string>
     <string name="error_OutOfMemoryError">మెమరీ ఈ ఆపరేషన్ పూర్తి చాలా తక్కువ.</string>
     <string name="error_ServerAppMessage">సర్వర్ సందేశం: %s</string>
     <string name="error_ServerNotResponding">సర్వర్ నుండి ప్రతిస్పందన.</string>
-    <string name="error_TimeoutWaitingForAllMembers">కొన్ని సమూహం సభ్యులు డేటా జోడించడానికి వేచి సమయం ముగిసింది.</string>
+    <string name="error_TimeoutWaitingForAllMembers">కొన్ని గుంపు సభ్యుల డేటా జోడించడానికి సమయం మించిపోయింది వేచి.</string>
     <string name="error_WebCancelledByUser">వాడుకరి సర్వర్ అభ్యర్థనను రద్దు.</string>
 
-    <string name="help_size">కలిసి మరియు OK నొక్కండి డేటా మార్పిడి ప్రయత్నిస్తున్నాయి వ్యక్తుల సంఖ్య ఎంచుకోండి.</string>
-    <string name="help_userid">తెరమీద ఈ సంఖ్య వినియోగదారులు ఒక ఏకైక సమూహం సృష్టించడానికి ఉపయోగిస్తారు. అన్ని వినియోగదారుల తెర సంఖ్యలు సమీక్షించండి, అప్పుడు యూజర్లు అదే అతి తక్కువ ఎంటర్ మరియు OK నొక్కాలి.</string>
-    <string name="help_verify">ఇప్పుడు, మీరు అన్ని వినియోగదారులు ఈ 3-పదం పదబంధాలు ఒకటి సరిపోవాలి. ప్రతి యూజర్ అదే సాధారణ పదబంధం ఎంచుకోండి, మరియు తదుపరి నొక్కండి ఉండాలి.</string>
+    <string name="help_size">కలిసి డేటా మరియు OK నొక్కండి మార్పిడి ప్రయత్నం చేస్తున్నారు ప్రజల సంఖ్య ఎంచుకోండి.</string>
+    <string name="help_userid">ఈ తెరపై ఈ సంఖ్య వినియోగదారులు ఒక ఏకైక సమూహం సృష్టించడానికి ఉపయోగిస్తారు. అప్పుడు అన్ని వినియోగదారులు అదే అత్యల్ప సంఖ్య మరియు OK నొక్కండి నమోదు చేయాలి, అన్ని వినియోగదారుల తెర సంఖ్యలు సమీక్షించండి.</string>
+    <string name="help_verify">ఇప్పుడు, మీరు అన్ని వినియోగదారులు ఈ 3 పదం పదబంధాలు ఒకటి సరిపోవాలి. ప్రతి యూజర్ అదే సాధారణ పదబంధం ఎంచుకోండి, మరియు తదుపరి నొక్కండి ఉండాలి.</string>
 
     <string name="label_CompareScreensNDevices">%s పరికరాల్లో తెరలు సరిపోల్చండి.</string>
     <string name="label_NumericModeHint">ఆంగ్లేతర</string>
-    <string name="label_PromptInstruct">ఈ సంఖ్య వినియోగదారులు ఒక ఏకైక సమూహం సృష్టించడానికి ఉపయోగిస్తారు. పోల్చి మరియు అన్ని వినియోగదారుల మధ్య అతి తక్కువ ఎంటర్.</string>
-    <string name="label_ReceivedNItems">%d అంశాలను పొందింది</string>
+    <string name="label_PromptInstruct">ఈ సంఖ్య వినియోగదారులు ఒక ఏకైక సమూహం సృష్టించడానికి ఉపయోగిస్తారు. పోల్చి, మరియు అప్పుడు అన్ని వినియోగదారుల మధ్య అత్యల్ప సంఖ్యలో ఎంటర్.</string>
+    <string name="label_ReceivedNItems">%d అంశాలను అందుకుంది</string>
     <string name="label_UserIdHint">అత్యల్ప</string>
-    <string name="label_VerifyInstruct">అన్ని ఫోన్లు 3 పదం పదబంధాలు ఒకటి సరిపోవాలి. పోల్చి మరియు సరిపోలే పదబంధం ఎంచుకొని.</string>
+    <string name="label_VerifyInstruct">అన్ని ఫోన్లు 3 పదం పదబంధాలు ఒకటి సరిపోవాలి. పోల్చి, మరియు అప్పుడు సరిపోలే పదబంధం ఎంచుకొని.</string>
 
     <string name="lib_name">SafeSlinger ఎక్స్చేంజ్</string>
 
-    <string name="prog_CollectingOthersCommitVerify">అన్ని సభ్యులు నుండి ధ్రువీకరణ కోసం వేచి…</string>
-    <string name="prog_CollectingOthersItems">యూజర్లు చేరడానికి కోసం వేచి…</string>
-    <string name="prog_ConstructingGroupKey">సమూహం కీ నిర్మించడానికి…</string>
+    <string name="prog_CollectingOthersCommitVerify">మొత్తం సభ్యుల నుండి ధృవీకరణ కోసం వేచి…</string>
+    <string name="prog_CollectingOthersItems">అన్ని వినియోగదారులు చేరడానికి కోసం వేచి…</string>
+    <string name="prog_ConstructingGroupKey">సమూహం కీ నిర్మిస్తోంది…</string>
     <string name="prog_RequestingUserId">సభ్యత్వం అభ్యర్థిస్తోంది…</string>
 
-    <string name="title_size">ఎంతమంది మార్పిడిలో?</string>
+    <string name="title_size">ఎన్ని మార్పిడి యూజర్లకు?</string>
     <string name="title_userid">గ్రూపింగ్</string>
     <string name="title_verify">ధృవీకరించండి</string>
 

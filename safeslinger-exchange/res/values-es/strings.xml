@@ -32,6 +32,7 @@
 
     <string name="choice_NumUsers">%d usuarios</string>
 
+    <string name="error_AllMembersMustUpgrade">Algunos miembros están utilizando una versión anterior; todos los miembros deben actualizar a la versión más nueva.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Todos los miembros deben actualizar, algunos están utilizando los formatos antiguos de registro de pulso.</string>
     <string name="error_CorrectYourInternetConnection">El Internet no está disponible, compruebe sus configuraciones.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Tiempo de espera de intercambio excedido. Comience el intercambio de nuevo.</string>

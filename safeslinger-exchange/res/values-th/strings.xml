@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">เลิก? คุณ แน่ใจหรือไม่</string>
+    <string name="ask_QuitConfirmation">เลิก? คุณแน่ใจหรือไม่?</string>
 
-    <string name="btn_Match">ต่อไป</string>
-    <string name="btn_NoMatch">ไม่มี การแข่งขัน</string>
+    <string name="btn_Match">ถัดไป</string>
+    <string name="btn_NoMatch">ไม่มีการแข่งขัน</string>
 
-    <string name="choice_NumUsers">%d ผู้</string>
+    <string name="choice_NumUsers">%d ผู้ใช้</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">สมาชิก ทุกคนจะต้อง ปรับ บางส่วน มีการใช้ รูปแบบ การลงทะเบียน มากกว่า การผลักดัน</string>
-    <string name="error_CorrectYourInternetConnection">อินเทอร์เน็ต ไม่สามารถ ตรวจสอบ การตั้งค่า ของคุณ</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">แลกเปลี่ยน หมดเวลา เกิน เริ่มต้น การแลกเปลี่ยน อีกครั้ง</string>
-    <string name="error_HttpCode">HTTP ข้อผิดพลาด ของเซิร์ฟเวอร์: %d</string>
-    <string name="error_InvalidCommitVerify">พบว่า ข้อมูลไม่ถูกต้อง ในการแลกเปลี่ยน เริ่มต้น การแลกเปลี่ยน อีกครั้ง</string>
-    <string name="error_InvalidCommonUserId">โปรดป้อน จำนวนเต็มบวก</string>
-    <string name="error_LocalGroupCommitDiffer">คุณ ได้มีการรายงาน ความแตกต่างใน วลี เริ่มต้น การแลกเปลี่ยน อีกครั้ง</string>
-    <string name="error_MinUsersRequired">ขั้นต่ำ %d สมาชิกจะต้อง แลกเปลี่ยนข้อมูล</string>
-    <string name="error_MoreDataThanUsers">ข้อมูล ที่ไม่คาดคิด ที่พบใน การแลกเปลี่ยน เริ่มต้น การแลกเปลี่ยน อีกครั้ง</string>
-    <string name="error_NoDataToExchange">แลกเปลี่ยนที่ขาดหายไป ข้อมูลที่ต้องการ</string>
-    <string name="error_NoWordListSelected">คุณต้องเลือก อย่างใดอย่างหนึ่ง ของวลีก่อนที่จะดำเนิน</string>
-    <string name="error_OtherGroupCommitDiffer">ใครบางคน รายงาน ความแตกต่างใน วลี เริ่มต้น การแลกเปลี่ยน อีกครั้ง</string>
-    <string name="error_OutOfMemoryError">หน่วยความจำ ต่ำเกินไปที่จะ ดำเนินการนี้</string>
-    <string name="error_ServerAppMessage">ข้อความ เซิร์ฟเวอร์: %s</string>
-    <string name="error_ServerNotResponding">ไม่มีการ ตอบสนองจากเซิร์ฟเวอร์</string>
-    <string name="error_TimeoutWaitingForAllMembers">หมดเวลา รอให้ สมาชิกในกลุ่ม ที่จะ เพิ่มข้อมูล</string>
-    <string name="error_WebCancelledByUser">ผู้ใช้ ยกเลิก คำขอ เซิร์ฟเวอร์</string>
+    <string name="error_AllMembersMustUpgrade">สมาชิกบางคนกำลังใช้รุ่นเก่า; สมาชิกทุกคนจะต้องอัพเกรดเป็นเวอร์ชั่นใหม่ล่าสุด</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">สมาชิกทุกคนจะต้องปรับบางส่วนมีการใช้รูปแบบการลงทะเบียนแก่การผลักดัน</string>
+    <string name="error_CorrectYourInternetConnection">อินเทอร์เน็ตไม่สามารถตรวจสอบการตั้งค่าของคุณ</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">แลกเปลี่ยนหมดเวลาเกิน เริ่มต้นการแลกเปลี่ยนอีกครั้ง</string>
+    <string name="error_HttpCode">ข้อผิดพลาด HTTP เซิร์ฟเวอร์: %d</string>
+    <string name="error_InvalidCommitVerify">ข้อมูลที่ไม่ถูกต้องที่พบในการแลกเปลี่ยน เริ่มต้นการแลกเปลี่ยนอีกครั้ง</string>
+    <string name="error_InvalidCommonUserId">กรุณาใส่จำนวนเต็มบวก</string>
+    <string name="error_LocalGroupCommitDiffer">คุณมีการรายงานความแตกต่างในวลี เริ่มต้นการแลกเปลี่ยนอีกครั้ง</string>
+    <string name="error_MinUsersRequired">ขั้นต่ำ %d สมาชิกต้องมีการแลกเปลี่ยนข้อมูล</string>
+    <string name="error_MoreDataThanUsers">ข้อมูลที่ไม่คาดคิดที่พบในการแลกเปลี่ยน เริ่มต้นการแลกเปลี่ยนอีกครั้ง</string>
+    <string name="error_NoDataToExchange">การแลกเปลี่ยนจะหายไปข้อมูลที่ต้องการ</string>
+    <string name="error_NoWordListSelected">คุณต้องเลือกอย่างใดอย่างหนึ่งของวลีก่อนที่จะดำเนิน</string>
+    <string name="error_OtherGroupCommitDiffer">คนรายงานความแตกต่างในวลี เริ่มต้นการแลกเปลี่ยนอีกครั้ง</string>
+    <string name="error_OutOfMemoryError">หน่วยความจำอยู่ในระดับต่ำเกินไปที่จะทำการดำเนินการนี้</string>
+    <string name="error_ServerAppMessage">เซิร์ฟเวอร์ข้อความ: %s</string>
+    <string name="error_ServerNotResponding">ไม่มีการตอบสนองจากเซิร์ฟเวอร์</string>
+    <string name="error_TimeoutWaitingForAllMembers">หมดเวลารอให้สมาชิกในกลุ่มที่จะเพิ่มข้อมูล</string>
+    <string name="error_WebCancelledByUser">ผู้ใช้ร้องขอเซิร์ฟเวอร์ยกเลิก</string>
 
-    <string name="help_size">เลือก จำนวนของ คนที่มีความ พยายามที่จะ แลกเปลี่ยนข้อมูล ร่วมกัน และกด OK</string>
-    <string name="help_userid">หมายเลข บนหน้าจอ นี้ จะใช้ในการ สร้างกลุ่ม ที่ไม่ซ้ำกัน ของ ผู้ใช้ ตรวจสอบ ตัวเลขที่อยู่บน หน้าจอ ของผู้ใช้ทั้งหมด แล้ว ผู้ใช้ทุกคน ควรจะใส่ จำนวนต่ำสุด และกด OK เดียวกัน</string>
-    <string name="help_verify">ตอนนี้คุณ จะต้องตรงกับ หนึ่งของเหล่านี้ วลีที่ 3 คำที่มี ผู้ใช้ทั้งหมด ผู้ใช้ทุกคน ต้องเลือกวลี ที่พบบ่อย เดียวกันและ กด ถัดไป</string>
+    <string name="help_size">เลือกหมายเลขของผู้คนที่กำลังพยายามที่จะแลกเปลี่ยนข้อมูลร่วมกันและกด OK</string>
+    <string name="help_userid">หมายเลขบนหน้าจอนี้จะใช้ในการสร้างกลุ่มเฉพาะของผู้ใช้ ตรวจสอบตัวเลขที่อยู่บนหน้าจอของผู้ใช้ทั้งหมดแล้วผู้ใช้ทุกคนควรจะใส่หมายเลขและกดต่ำสุดที่เดียวกันตกลง</string>
+    <string name="help_verify">ตอนนี้คุณจะต้องตรงกับหนึ่งของเหล่านี้วลี 3 คำที่มีผู้ใช้ทั้งหมด ผู้ใช้ทุกคนจะต้องเลือกวลีที่พบบ่อยเหมือนกันและกดถัดไป</string>
 
-    <string name="label_CompareScreensNDevices">เปรียบเทียบ หน้าจอ บน อุปกรณ์ %s</string>
+    <string name="label_CompareScreensNDevices">เปรียบเทียบหน้าจอบนอุปกรณ์ %s</string>
     <string name="label_NumericModeHint">ที่ไม่ใช่ภาษาอังกฤษ</string>
-    <string name="label_PromptInstruct">หมายเลขนี้จะ ใช้ในการสร้างกลุ่ม ที่ไม่ซ้ำกัน ของ ผู้ใช้ เปรียบเทียบ แล้วใส่ จำนวน ที่ต่ำที่สุด ในหมู่ผู้ใช้ ทั้งหมด</string>
-    <string name="label_ReceivedNItems">%d รายการ ที่ได้รับ</string>
-    <string name="label_UserIdHint">ต่ำที่สุด</string>
-    <string name="label_VerifyInstruct">โทรศัพท์ทั้งหมด จะต้องตรงกับ อย่างใดอย่างหนึ่ง ของวลี 3 คำ เปรียบเทียบ แล้ว เลือก วลี ที่ตรงกัน</string>
+    <string name="label_PromptInstruct">หมายเลขนี้จะใช้ในการสร้างกลุ่มเฉพาะของผู้ใช้ เปรียบเทียบแล้วใส่ตัวเลขที่ต่ำที่สุดในหมู่ผู้ใช้ทั้งหมด</string>
+    <string name="label_ReceivedNItems">%d รายการที่ได้รับ</string>
+    <string name="label_UserIdHint">ต่ำสุด</string>
+    <string name="label_VerifyInstruct">โทรศัพท์ทั้งหมดจะต้องตรงกับหนึ่งในวลีที่ 3 คำว่า เปรียบเทียบแล้วเลือกวลีที่ตรงกัน</string>
 
     <string name="lib_name">SafeSlinger แลกเปลี่ยน</string>
 
-    <string name="prog_CollectingOthersCommitVerify">รอ การตรวจสอบ จาก สมาชิกทุกคน…</string>
-    <string name="prog_CollectingOthersItems">รอให้ ผู้ใช้ทุกคน ที่จะเข้าร่วม…</string>
-    <string name="prog_ConstructingGroupKey">การสร้าง กลุ่ม ที่สำคัญ…</string>
-    <string name="prog_RequestingUserId">ขอ เป็นสมาชิก…</string>
+    <string name="prog_CollectingOthersCommitVerify">รอการตรวจสอบจากสมาชิกทั้งหมด…</string>
+    <string name="prog_CollectingOthersItems">รอให้ผู้ใช้ทุกคนที่จะเข้าร่วม…</string>
+    <string name="prog_ConstructingGroupKey">การสร้างกลุ่มที่สำคัญ…</string>
+    <string name="prog_RequestingUserId">ขอเป็นสมาชิก…</string>
 
-    <string name="title_size">จำนวนผู้ใช้ ในการแลกเปลี่ยน หรือไม่</string>
-    <string name="title_userid">หมวดหมู่</string>
+    <string name="title_size">จำนวนผู้ใช้ในการแลกเปลี่ยนหรือไม่</string>
+    <string name="title_userid">การจัดกลุ่ม</string>
     <string name="title_verify">ตรวจสอบ</string>
 
 </resources>

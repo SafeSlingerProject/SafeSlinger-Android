@@ -717,127 +717,19 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     private static String getCredits(Activity act) {
-        Locale deflocale = Locale.getDefault();
 
         StringBuilder cred = new StringBuilder();
-        cred.append(act.getString(R.string.text_LanguagesProvidedBy)).append(" ");
-
-        ArrayList<String> lines = new ArrayList<String>();
-
-        lines.add(getTranslatorLine(act, new Locale("af"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("sq"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ar"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("hy"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("az"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("eu"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("be"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("bn"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("bs"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("bg"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ca"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("cb"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("zh", "CN"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("zh", "TW"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("hr"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("cs"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("da"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("nl"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("en"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("eo"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("et"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("tl"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("fi"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("fr"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("gl"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ka"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("de"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("el"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("gu"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ht"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ha"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("iw"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("hi"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("hm"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("hu"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("is"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ig"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("in"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ga"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("it"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ja"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("jv"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("kn"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("km"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ko"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("lo"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("la"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("lv"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("lt"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("mk"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ms"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("mt"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("mi"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("mr"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("mn"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ne"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("no"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("fa"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("pl"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("pt"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("pa"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ro"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ru"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("sr"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("sk"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("sl"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("so"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("es"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("sw"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("sv"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ta"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("te"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("th"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("tr"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("uk"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ur"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("vi"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("cy"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("ji"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("yo"), deflocale));
-        lines.add(getTranslatorLine(act, new Locale("zu"), deflocale));
-
-        Locale.setDefault(deflocale);
-        Collections.sort(lines);
-        for (String line : lines) {
-            cred.append(line);
-        }
-
-        Configuration config = new Configuration();
-        config.locale = deflocale;
-        act.getResources().updateConfiguration(config, act.getResources().getDisplayMetrics());
-
-        cred.append("\n  ").append(SafeSlingerConfig.GOOGLE_TRANSLATE);
+        cred.append(act.getString(R.string.text_LanguagesProvidedBy));
+        cred.append("\n");
+        cred.append(act.getString(R.string.app_TranslatorName));
+        cred.append("\n");
 
         return cred.toString();
     }
 
-    private static String getTranslatorLine(Activity act, Locale locale, Locale deflocale) {
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        act.getResources().updateConfiguration(config, act.getResources().getDisplayMetrics());
-        String transName = act.getString(R.string.app_TranslatorName);
-        if (transName.compareToIgnoreCase(SafeSlingerConfig.GOOGLE_TRANSLATE) != 0) {
-            return new StringBuilder().append("\n  ").append(locale.getDisplayName(deflocale))
-                    .append(": ").append(transName).toString();
-        } else {
-            return "";
-        }
-    }
-
     protected void showFileActionChooser(File downloadedFile, String fileType) {
         // always second-guess mimetype, since send/recv mimetype could be
-        // innactuare
+        // inaccurate
         String extension = SSUtil.getFileExtensionOnly(downloadedFile.getName());
         fileType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
         if (fileType == null) {
@@ -1241,36 +1133,7 @@ public class BaseActivity extends ActionBarActivity {
             s.append(str(act, "EncBody", m.getEncBody()));
             s.append(str(act, "FileHash", m.getFileHash()));
 
-            switch (m.getStatus()) {
-                case MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG:
-                    s.append(str("Status", "COMPLETE_MSG"));
-                    break;
-                case MessageDbAdapter.MESSAGE_STATUS_DRAFT:
-                    s.append(str("Status", "DRAFT"));
-                    break;
-                case MessageDbAdapter.MESSAGE_STATUS_EXPIRED:
-                    s.append(str("Status", "EXPIRED"));
-                    break;
-                case MessageDbAdapter.MESSAGE_STATUS_FAILED:
-                    s.append(str("Status", "FAILED"));
-                    break;
-                case MessageDbAdapter.MESSAGE_STATUS_FILE_DECRYPTED:
-                    s.append(str("Status", "FILE_DECRYPTED"));
-                    break;
-                case MessageDbAdapter.MESSAGE_STATUS_NONE:
-                    s.append(str("Status", "NONE"));
-                    break;
-                case MessageDbAdapter.MESSAGE_STATUS_GOTPUSH:
-                    s.append(str("Status", "GOTPUSH"));
-                    break;
-                case MessageDbAdapter.MESSAGE_STATUS_QUEUED:
-                    s.append(str("Status", "QUEUED"));
-                    break;
-                default:
-                    s.append(str("Status", m.getStatus()));
-                    break;
-            }
-
+            s.append(str("Status", MessageDbAdapter.getStatusCode(m.getStatus())));
         }
 
         return s.toString();

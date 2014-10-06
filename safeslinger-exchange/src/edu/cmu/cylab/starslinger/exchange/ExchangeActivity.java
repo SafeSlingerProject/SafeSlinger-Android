@@ -341,7 +341,7 @@ public class ExchangeActivity extends BaseActivity {
                 syncCommitData.execute(new String[] {});
                 break;
             case RESULT_CANCELED:
-                showExitConfirm(RESULT_CONFIRM_EXIT_PROMPT);
+                showExit(RESULT_CANCELED);
                 break;
             default:
                 break;

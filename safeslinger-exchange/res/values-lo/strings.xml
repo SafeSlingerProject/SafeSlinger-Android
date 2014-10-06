@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">ຢຸດສູບໄດ້? ທ່ານແນ່ໃຈວ່າ?</string>
+    <string name="ask_QuitConfirmation">ເຊົາ? ທ່ານມີຄວາມແນ່ໃຈວ່າ?</string>
 
-    <string name="btn_Match">ຕໍ່ໄປ</string>
-    <string name="btn_NoMatch">ຄໍາວ່າ ບໍ່ມີ</string>
+    <string name="btn_Match">Next</string>
+    <string name="btn_NoMatch">ຄໍາວ່າບໍ່ມີ</string>
 
     <string name="choice_NumUsers">%d ຜູ້ຊົມໃຊ້</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">ສະມາຊິກ ທັງຫມົດຕ້ອງໄດ້ ຍົກລະດັບ, ບາງຄົນກໍ່ຖືກ ນໍາໃຊ້ ສູງອາຍຸ ຮູບແບບ ການຈົດທະບຽນ ການຊຸກຍູ້.</string>
-    <string name="error_CorrectYourInternetConnection">ອິນເຕີເນັດ ບໍ່ ມີ, ໃຫ້ກວດເບິ່ງ ການປັບຄ່າ ຂອງທ່ານ.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout ການແລກປ່ຽນ ເກີນ. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
-    <string name="error_HttpCode">ຄວາມຜິດພາດ HTTP Server: %d</string>
-    <string name="error_InvalidCommitVerify">ຂໍ້ມູນ ທີ່ບໍ່ຖືກຕ້ອງ ທີ່ພົບເຫັນ ໃນການແລກປ່ຽນ. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
-    <string name="error_InvalidCommonUserId">ກະລຸນາໃສ່ ເລກ ໃນທາງບວກ.</string>
-    <string name="error_LocalGroupCommitDiffer">ທ່ານໄດ້ ລາຍງານ ຄວາມແຕກຕ່າງກັນ ໃນ ປະໂຫຍກ ໄດ້. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
-    <string name="error_MinUsersRequired">ຕໍາ່ສຸດທີ່ ຂອງການ %d ສະມາຊິກ ທີ່ ຕ້ອງການໃຫ້ ແລກປ່ຽນ ຂໍ້ມູນ.</string>
-    <string name="error_MoreDataThanUsers">ຂໍ້ມູນ ທີ່ຄາດຫວັງ ໄດ້ພົບເຫັນ ໃນການແລກປ່ຽນ. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
-    <string name="error_NoDataToExchange">ການແລກປ່ຽນ ທີ່ຂາດຫາຍ ຂໍ້ມູນ ທີ່ຕ້ອງການ.</string>
-    <string name="error_NoWordListSelected">ທ່ານຕ້ອງເລືອກເອົາ ຫນຶ່ງໃນ ປະໂຫຍກທີ່ ກ່ອນທີ່ຈະ ດໍາເນີນຄະດີ.</string>
-    <string name="error_OtherGroupCommitDiffer">ມີບາງຄົນ ໄດ້ລາຍງານ ຄວາມແຕກຕ່າງກັນ ໃນ ປະໂຫຍກ ໄດ້. ເລີ່ມຕົ້ນ ການແລກປ່ຽນ ອີກເທື່ອຫນຶ່ງ.</string>
-    <string name="error_OutOfMemoryError">ຄວາມຈໍາ ເປັນ ຕ່ໍາ ເກີນໄປ ເພື່ອໃຫ້ສໍາເລັດ ການດໍາເນີນງານ ນີ້.</string>
-    <string name="error_ServerAppMessage">ຂໍ້ຄວາມ Server: %s</string>
-    <string name="error_ServerNotResponding">ການຕອບສະຫນອງ ທີ່ບໍ່ມີຈາກ ເຄື່ອງແມ່ຂ່າຍຂອງ.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout ລໍຖ້າ ສໍາລັບ ສະມາຊິກກຸ່ມ ບາງຄົນ ຕື່ມ ຂໍ້ມູນ.</string>
-    <string name="error_WebCancelledByUser">ຜູ້ໃຊ້ ຍົກເລີກ ຄໍາຮ້ອງຂໍ ຂອງເຄື່ອງແມ່ຂ່າຍ.</string>
+    <string name="error_AllMembersMustUpgrade">ສະມາຊິກບາງຄົນໄດ້ຖືກນໍາໃຊ້ເປັນສະບັບປີຂຶ້ນໄປ; ສະມາຊິກທຸກຄົນຕ້ອງໄດ້ຍົກລະດັບເພື່ອສະບັບໃຫມ່ໄດ້.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">ສະມາຊິກທຸກຄົນຕ້ອງໄດ້ຍົກລະດັບ, ບາງຄົນສູງອາຍຸການນໍາໃຊ້ຮູບແບບການຈົດທະບຽນການຊຸກຍູ້.</string>
+    <string name="error_CorrectYourInternetConnection">ອິນເຕີເນັດບໍ່ມີ, ໃຫ້ກວດເບິ່ງການປັບຄ່າຂອງທ່ານ.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout ຊັບເກີນ. ເລີ່ມຕົ້ນການແລກປ່ຽນເງິນຕາອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_HttpCode">Error HTTP Server: %d</string>
+    <string name="error_InvalidCommitVerify">ຂໍ້ມູນທີ່ບໍ່ຖືກຕ້ອງທີ່ພົບເຫັນໃນການແລກປ່ຽນ. ເລີ່ມຕົ້ນການແລກປ່ຽນເງິນຕາອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_InvalidCommonUserId">ກະລຸນາໃສ່ເລກເຕັມໃນທາງບວກ.</string>
+    <string name="error_LocalGroupCommitDiffer">ທ່ານໄດ້ລາຍງານແຕກຕ່າງກັນໃນປະໂຫຍກໄດ້. ເລີ່ມຕົ້ນການແລກປ່ຽນເງິນຕາອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_MinUsersRequired">ຕໍາ່ສຸດທີ່ຂອງ %d ສະມາຊິກທີ່ຖືກຕ້ອງທີ່ຈະແລກປ່ຽນຂໍ້ມູນ.</string>
+    <string name="error_MoreDataThanUsers">ຂໍ້ມູນທີ່ບໍ່ໄດ້ຄາດຫວັງໄດ້ພົບເຫັນໃນການແລກປ່ຽນ. ເລີ່ມຕົ້ນການແລກປ່ຽນເງິນຕາອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_NoDataToExchange">ແລກປ່ຽນເງິນຕາທີ່ຂາດຫາຍໄປຂໍ້ມູນທີ່ກໍານົດໄວ້.</string>
+    <string name="error_NoWordListSelected">ທ່ານຕ້ອງໄດ້ເລືອກເອົາຫນຶ່ງໃນປະໂຫຍກທີ່ກ່ອນທີ່ຈະດໍາເນີນ.</string>
+    <string name="error_OtherGroupCommitDiffer">ມີບາງຄົນໄດ້ລາຍງານແຕກຕ່າງກັນໃນປະໂຫຍກໄດ້. ເລີ່ມຕົ້ນການແລກປ່ຽນເງິນຕາອີກເທື່ອຫນຶ່ງ.</string>
+    <string name="error_OutOfMemoryError">ຄວາມຊົງຈໍາແມ່ນຕ່ໍາເກີນໄປທີ່ຈະເຮັດສໍາເລັດການດໍາເນີນງານນີ້.</string>
+    <string name="error_ServerAppMessage">ສານຂອງເຄື່ອງແມ່ຂ່າຍ: %s</string>
+    <string name="error_ServerNotResponding">ຄໍາຕອບທີ່ບໍ່ມີຈາກເຄື່ອງແມ່ຂ່າຍ.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout ລໍຖ້າສໍາລັບສະມາຊິກກຸ່ມຈໍານວນຫນຶ່ງທີ່ຈະເພີ່ມຂໍ້ມູນ.</string>
+    <string name="error_WebCancelledByUser">ຜູ້ໃຊ້ຍົກເລີກຄໍາຮ້ອງຂໍຂອງເຄື່ອງແມ່ຂ່າຍ.</string>
 
-    <string name="help_size">ເລືອກເອົາຈໍານວນ ຂອງປະຊາຊົນ ຜູ້ທີ່ຖືກ ພະຍາຍາມ ທີ່ຈະແລກປ່ຽນ ຂໍ້ມູນ ຮ່ວມກັນແລະ ໃຫ້ກົດ OK.</string>
-    <string name="help_userid">ຈໍານວນ ໃນຫນ້າຈໍ ນີ້ ນີ້ຖືກນໍາໃຊ້ ເພື່ອສ້າງເປັນ ກຸ່ມ ເປັນເອກະລັກ ຂອງຜູ້ຊົມໃຊ້. ການທົບທວນຄືນ ຈໍານວນ ໃນຫນ້າຈໍ ຜູ້ໃຊ້ ທັງຫມົດ \', ຫຼັງຈາກນັ້ນ ຜູ້ຊົມໃຊ້ ທັງຫມົດ ຄວນເຂົ້າໄປ ຈໍານວນ ຕໍ່າສຸດ ຄືກັນ ແລະກົດ OK.</string>
-    <string name="help_verify">ໃນປັດຈຸບັນ, ທ່ານ ຈະຕ້ອງມີຄໍາ ຫນຶ່ງ ຂອງການເຫຼົ່ານີ້ ປະໂຫຍກ 3 ຄໍາ ທີ່ມີ ຜູ້ຊົມໃຊ້ ທັງຫມົດ. ຜູ້ໃຊ້ ທຸກ ຕ້ອງໄດ້ເລືອກເອົາ ປະໂຫຍກທີ່ ທົ່ວໄປ ຄືກັນ, ແລະ ຕໍ່ໄປໃຫ້ກົດ.</string>
+    <string name="help_size">ເລືອກຈໍານວນຂອງປະຊາຊົນຜູ້ທີ່ຖືກພະຍາຍາມທີ່ຈະແລກປ່ຽນຂໍ້ມູນຮ່ວມກັນແລະການກົດ OK.</string>
+    <string name="help_userid">ຈໍານວນໃນຫນ້າຈໍນີ້ນີ້ແມ່ນໄດ້ຖືກນໍາໃຊ້ເພື່ອສ້າງເປັນກຸ່ມເປັນເອກະລັກຂອງຜູ້ຊົມໃຊ້. ການທົບທວນຄືນຈໍານວນຂອງຫນ້າຈໍຜູ້ໃຊ້ທັງຫມົດ, ຫຼັງຈາກນັ້ນຜູ້ຊົມໃຊ້ທັງຫມົດຄວນເຂົ້າຈໍານວນແລະໃຫ້ກົດ OK ຕໍ່າສຸດດຽວກັນ.</string>
+    <string name="help_verify">ໃນປັດຈຸບັນ, ທ່ານຕ້ອງມີຄໍາວ່າຫນຶ່ງຂອງການເຫຼົ່ານີ້ປະໂຫຍກທີ່ 3 ຄໍາກັບຜູ້ຊົມໃຊ້ທັງຫມົດ. ສະມາຊິກທຸກຕ້ອງໄດ້ເລືອກເອົາປະໂຫຍກທີ່ທົ່ວໄປຄືກັນ, ແລະກົດຕໍ່ໄປ.</string>
 
-    <string name="label_CompareScreensNDevices">ສົມທຽບ ຫນ້າຈໍ ອຸປະກອນ %s.</string>
-    <string name="label_NumericModeHint">ບໍ່ແມ່ນ ພາສາອັງກິດ</string>
-    <string name="label_PromptInstruct">ຈໍານວນ ນີ້ແມ່ນໄດ້ຖືກ ນໍາໃຊ້ເພື່ອສ້າງ ເປັນ ກຸ່ມ ເປັນເອກະລັກ ຂອງຜູ້ຊົມໃຊ້. ສົມທຽບ, ແລະຫຼັງຈາກນັ້ນ ໃສ່ລະຫັດ ທີ່ຕໍ່າສຸດ ໃນບັນດາ ຜູ້ຊົມໃຊ້ ທັງຫມົດ.</string>
-    <string name="label_ReceivedNItems">ໄດ້ຮັບ %d ລາຍການລາຍການ</string>
+    <string name="label_CompareScreensNDevices">ສົມທຽບການຄັດເລືອກກ່ຽວກັບການອຸປະກອນ %s.</string>
+    <string name="label_NumericModeHint">ບໍ່ແມ່ນພາສາອັງກິດ</string>
+    <string name="label_PromptInstruct">ຈໍານວນນີ້ແມ່ນໄດ້ຖືກນໍາໃຊ້ເພື່ອສ້າງເປັນກຸ່ມເປັນເອກະລັກຂອງຜູ້ຊົມໃຊ້. ສົມທຽບໄດ້, ແລະຫຼັງຈາກນັ້ນເຂົ້າຈໍານວນທີ່ຕໍ່າສຸດໃນບັນດາຜູ້ຊົມໃຊ້ທັງຫມົດ.</string>
+    <string name="label_ReceivedNItems">ໄດ້ຮັບ %d ລາຍການ</string>
     <string name="label_UserIdHint">ຕໍ່າສຸດ</string>
-    <string name="label_VerifyInstruct">ໂທລະສັບ ທັງຫມົດທີ່ ຈະຕ້ອງມີຄໍາ ຫນຶ່ງໃນ ປະໂຫຍກທີ່ 3 ຄໍາ. ສົມທຽບ, ແລະຫຼັງຈາກນັ້ນ ເລືອກເອົາ ຄໍາ ປະໂຫຍກ ໄດ້.</string>
+    <string name="label_VerifyInstruct">ໂທລະສັບມືຖືທີ່ທຸກຄົນຕ້ອງມີຄໍາວ່າຫນຶ່ງໃນປະໂຫຍກທີ່ 3 ຄໍາ. ສົມທຽບໄດ້, ແລະຫຼັງຈາກນັ້ນເອົາຄໍາວ່າປະໂຫຍກໄດ້.</string>
 
     <string name="lib_name">SafeSlinger ຊັບ</string>
 
-    <string name="prog_CollectingOthersCommitVerify">ລໍຖ້າ ສໍາລັບ ການຢັ້ງຢືນ ຈາກ ສະມາຊິກ ທຸກຄົນ…</string>
-    <string name="prog_CollectingOthersItems">ລໍຖ້າ ສໍາລັບຜູ້ໃຊ້ ທັງຫມົດ ເພື່ອເຂົ້າຮ່ວມ…</string>
-    <string name="prog_ConstructingGroupKey">ການກໍ່ສ້າງ ທີ່ສໍາຄັນ ກຸ່ມ…</string>
-    <string name="prog_RequestingUserId">ການຮ້ອງຂໍ ເປັນສະມາຊິກ…</string>
+    <string name="prog_CollectingOthersCommitVerify">ລໍຖ້າສໍາລັບການຢັ້ງຢືນຈາກສະມາຊິກທຸກຄົນ…</string>
+    <string name="prog_CollectingOthersItems">ລໍຖ້າສໍາລັບຜູ້ໃຊ້ທັງຫມົດເພື່ອເຂົ້າຮ່ວມ…</string>
+    <string name="prog_ConstructingGroupKey">ການກໍ່ສ້າງທີ່ສໍາຄັນກຸ່ມ…</string>
+    <string name="prog_RequestingUserId">ຮ້ອງຂໍໃຫ້ສະມາຊິກ…</string>
 
-    <string name="title_size">ວິທີການ ຈໍານວນຫຼາຍ ຜູ້ຊົມໃຊ້ ໃນການແລກປ່ຽນ ແນວໃດ?</string>
+    <string name="title_size">ວິທີການຈໍານວນຫຼາຍຜູ້ຊົມໃຊ້ໃນການແລກປ່ຽນແນວໃດ?</string>
     <string name="title_userid">ກຸ່ມ</string>
-    <string name="title_verify">ຢັ້ງຢືນ</string>
+    <string name="title_verify">ຢືນຢັນ</string>
 
 </resources>

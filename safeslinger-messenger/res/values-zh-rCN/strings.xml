@@ -28,7 +28,6 @@
     <string name="action_NewUserRequest">发送交换金钥邀请至通讯录…</string>
 
     <string name="app_name">SafeSlinger</string>
-    <string name="app_TranslatorName">Yue-Hsun Lin</string>
 
     <string name="ask_BackupDisabledRemindLater">备份功能已停用。你想调整设定启用备份并保持备份提醒吗？</string>
     <string name="ask_ConfirmUseOlderDeviceOrKey">%s 有个更新的设备或是金钥，你确定想使用这份旧的资讯吗？</string>
@@ -86,7 +85,7 @@
     <string name="error_AudioPlayerDecodeError">解码错误，无法播放录音。</string>
     <string name="error_AudioPlayerError">无法播放录音。</string>
     <string name="error_AudioRecorderEncodeError">录音编码错误。</string>
-    <string name="error_AudioRecorderPermissionError">需要麦克风权限来启动安全语音留言功能。点选帮助按钮以取得如何启用SafeSlinger麦克风权限。</string>
+    <string name="error_AudioRecorderPermissionError">麦克风的权限，需要记录一个安全的语音留言。点击%s按钮SafeSlinger麦克风权限的详细信息。</string>
     <string name="error_BackupNotFound">无法找到备份。</string>
     <string name="error_BackupNotSupportedDevice">手机不支援备份还原。</string>
     <string name="error_BadCopyProtectUpgrade">由于Android 4.1的中程序错误，你必须移除并重新安装SafeSlinger。</string>
@@ -152,10 +151,12 @@
     <string name="help_Send">该画面允许你选择资料与收件人来寄送讯息。完成后按下传送按钮寄送。</string>
     <string name="help_settings">这个画面允许你改变应用程序的预设设置。</string>
 
-    <string name="iOS_contactError">安全地分享你的联系资讯需要启用通讯录隐私权限。点选帮助按钮以取得如何启用SafeSlinger通讯录隐私权限。</string>
+    <string name="iOS_cameraError">摄像机权限是必需的附加快照，以确保邮件。点击%s按钮SafeSlinger相机权限的详细信息。</string>
+    <string name="iOS_contactError">联系人许可，才能进行安全地共享联系人卡片。点击%s按钮SafeSlinger联系人权限的详细信息。</string>
     <string name="iOS_errorpushtoken">讯息通知辨识码失效。</string>
-    <string name="iOS_notificationError1">安全讯息接受功能需要通知权至少限启用提示或标记之一，并启用标记图像。点选帮助按钮以取得如何修改SafeSlinger通知权限的详细信息。</string>
+    <string name="iOS_notificationError1">对于任何警报或横幅，徽章号码通知的权限，都需要安全的信息传递。点击%s按钮SafeSlinger通知权限的详细信息。</string>
     <string name="iOS_oldOSWarn">SafeSlinger并没有为iOS 5.x的设备进行优化。 SafeSlinger需要iOS6或更高系统版本。</string>
+    <string name="iOS_photolibraryError">图片库的权限，需要附上图片，以确保邮件。点击%s按钮SafeSlinger图片库权限的详细信息。</string>
     <string name="iOS_RequestPermissionContacts">您可以从手机装置中选择您的联系资料并发送您的朋友，讯息将被SafeSlinger加密保护。要启用此功能，您必须在应用程式询问时允许SafeSlinger存取通讯录隐私权限。</string>
     <string name="iOS_RequestPermissionMicrophone">您可以录制语音讯息并发送您的朋友，讯息将被SafeSlinger加密保护。要启用此功能，您必须在应用程式询问时允许SafeSlinger存取麦克风权限。</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger是一个加密讯息应用程式，如果没有允许讯息通知功能，程式将无法正常接受加密讯息。要启用接收加密讯息功能，您必须在应用程式询问时允许SafeSlinger使用讯息通知权限。</string>
@@ -283,6 +284,7 @@
     <string name="menu_Help">协助</string>
     <string name="menu_Introduction">安全介绍</string>
     <string name="menu_language">语言</string>
+    <string name="menu_License">许可</string>
     <string name="menu_link_contact_add">加入收件人联系资讯</string>
     <string name="menu_link_contact_change">改变收件人联系资讯</string>
     <string name="menu_Logout">登出</string>
@@ -290,6 +292,7 @@
     <string name="menu_message_font_size">讯息字体大小</string>
     <string name="menu_messageCopyText">复制文字</string>
     <string name="menu_messageForward">转寄</string>
+    <string name="menu_PrivacyPolicy">隐私政策</string>
     <string name="menu_Remove">移除</string>
     <string name="menu_restore_default">恢复预设设定</string>
     <string name="menu_ringtone">铃声</string>
@@ -346,6 +349,7 @@
     <string name="text_About1">快速且方便地与其他人交换联系资讯</string>
     <string name="text_About2">安全地投递(sling)文字相片甚至任何形式的资料！</string>
     <string name="text_About3">透过强健密码系统保护你的个人资讯</string>
+    <string name="text_About_Short">SafeSlinger：说出3个字，并在和平永远聊天。</string>
     <string name="text_AboutEmail">电子邮件: %s</string>
     <string name="text_AboutFeat">特点:</string>
     <string name="text_AboutWeb">网页: %s</string>

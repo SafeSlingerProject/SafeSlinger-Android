@@ -27,49 +27,50 @@
 
     <string name="ask_QuitConfirmation">Irten? Ziur zaude?</string>
 
-    <string name="btn_Match">Hurrengo</string>
+    <string name="btn_Match">Hurrengoa</string>
     <string name="btn_NoMatch">No Match</string>
 
     <string name="choice_NumUsers">%d erabiltzaile</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Kide guztiak berritzea behar, batzuk bultza erregistroa formatuak zaharragoak erabiliz.</string>
-    <string name="error_CorrectYourInternetConnection">Internet ez dago, egiaztatu zure ezarpenak.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Truke denbora-muga gainditu da. Berriro hasiko da trukatzea.</string>
-    <string name="error_HttpCode">Zerbitzari HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Okerrak datuak truke aurkitu. Berriro hasiko da trukatzea.</string>
-    <string name="error_InvalidCommonUserId">Mesedez idatzi zenbaki oso bat.</string>
-    <string name="error_LocalGroupCommitDiffer">Esaldi diferentzia bat jakinarazi dute duzu. Berriro hasiko da trukatzea.</string>
-    <string name="error_MinUsersRequired">%d kidek, gutxienez, datuak trukatzeko beharrezkoak dira.</string>
-    <string name="error_MoreDataThanUsers">Ustekabeko datuak truke aurkitu. Berriro hasiko da trukatzea.</string>
-    <string name="error_NoDataToExchange">Trukatzea eskatzen datuak falta da.</string>
-    <string name="error_NoWordListSelected">Esaldi bat hautatu behar duzu jarraitu aurretik.</string>
-    <string name="error_OtherGroupCommitDiffer">Norbaitek esaldi diferentzia bat du. Berriro hasiko da trukatzea.</string>
-    <string name="error_OutOfMemoryError">Txikiegia memoria eragiketa hau osatzeko.</string>
-    <string name="error_ServerAppMessage">Zerbitzari Mezua: %s</string>
-    <string name="error_ServerNotResponding">Ez dago erantzunik zerbitzaritik.</string>
+    <string name="error_AllMembersMustUpgrade">Kide batzuk bertsio zaharrago bat erabiltzen ari; kide guztien bertsio berriena berritzea behar du.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Kide guztiek eguneratu, batzuk bultza erregistroa formatu zaharrak erabiltzen ari.</string>
+    <string name="error_CorrectYourInternetConnection">Internet ez dago erabilgarri, egiaztatu zure ezarpenak.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Truke denbora muga gainditu da. Berriro hasiko da trukatzea.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Trukean datu okerrak aurkitu. Berriro hasiko da trukatzea.</string>
+    <string name="error_InvalidCommonUserId">Mesedez, idatzi zenbaki oso bat.</string>
+    <string name="error_LocalGroupCommitDiffer">Esaldi aldea salatu duzu. Berriro hasiko da trukatzea.</string>
+    <string name="error_MinUsersRequired">%d kideek: gutxienez, datuak trukatzeko beharrezkoak dira.</string>
+    <string name="error_MoreDataThanUsers">Trukean Ustekabeko daturik aurkitu. Berriro hasiko da trukatzea.</string>
+    <string name="error_NoDataToExchange">Truke eskatutako datuak falta da.</string>
+    <string name="error_NoWordListSelected">Esaldi bat hautatu behar dituzu jarraitu aurretik.</string>
+    <string name="error_OtherGroupCommitDiffer">Norbaitek esaldi aldea du. Berriro hasiko da trukatzea.</string>
+    <string name="error_OutOfMemoryError">Memoria oso baxua da eragiketa hau burutzeko.</string>
+    <string name="error_ServerAppMessage">Server Mezua: %s</string>
+    <string name="error_ServerNotResponding">No erantzuna zerbitzaritik.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout talde kide batzuk datuak gehitzeko zain.</string>
-    <string name="error_WebCancelledByUser">Erabiltzaileak bertan behera utzi zerbitzari eskaera.</string>
+    <string name="error_WebCancelledByUser">Erabiltzaileak bertan behera utzi zerbitzariak eskaera.</string>
 
-    <string name="help_size">Hautatu direnek datuak bildu eta Ados sakatu trukatzen saiatzen ari diren pertsonen kopurua.</string>
-    <string name="help_userid">Pantaila honetan zenbaki hau erabiltzaileen talde berezia sortzeko erabiltzen da. Berrikusi erabiltzaile guztiak \' pantailetan zenbakiak, gero erabiltzaile guztiek zenbaki txikiena bera sartu behar du, eta sakatu Ados.</string>
-    <string name="help_verify">Orain, 3-hitza esaldi horiek bat etorri behar duzu erabiltzaile guztiekin. Erabiltzaile bakoitzak esaldi komun bera hautatu behar, eta sakatu Hurrengoa.</string>
+    <string name="help_size">Aukeratu direnek datuak elkarrekin eta Ados sakatu trukatzen saiatzen ari diren pertsonen kopurua.</string>
+    <string name="help_userid">Pantaila honetan zenbaki honek erabiltzaileen talde berezia sortzeko erabiltzen da. Berrikusi zenbakiak erabiltzaile guztiak \'pantailetan, erabiltzaileek guztiak txikiena zenbakia eta sakatu OK bera aukeratu behar dute.</string>
+    <string name="help_verify">Orain, erabiltzaile guztiekin 3-hitza esaldi horiek bat etorri behar duzu. Erabiltzaile bakoitzak, esaldi komun bera hautatu behar, eta sakatu Hurrengoa.</string>
 
-    <string name="label_CompareScreensNDevices">Konparatu pantailak %s gailuetan.</string>
-    <string name="label_NumericModeHint">Ez ingelesez</string>
-    <string name="label_PromptInstruct">Zenbaki hau erabiltzaileen talde berezia sortzeko erabiltzen da. Alderatu, eta gero idatzi erabiltzaile guztien artean kopuru txikiena.</string>
+    <string name="label_CompareScreensNDevices">Konparatu %s gailu pantailetan.</string>
+    <string name="label_NumericModeHint">Ez-English</string>
+    <string name="label_PromptInstruct">Zenbaki hau erabiltzaile-talde berezi bat sortzeko erabiltzen da. Konparatu, eta ondoren, idatzi erabiltzaile guztien artean kopuru txikiena.</string>
     <string name="label_ReceivedNItems">%d elementuak jaso</string>
-    <string name="label_UserIdHint">Txikiena</string>
-    <string name="label_VerifyInstruct">Telefono guztiek 3 hitzeko esaldi bat etorri behar dute. Alderatu, eta ondoren jaso bat datorren esaldia.</string>
+    <string name="label_UserIdHint">Baxuena</string>
+    <string name="label_VerifyInstruct">Telefono guztiek 3-hitza esaldi bat etorri behar dute. Konparatu, eta ondoren jaso Esaldi betetzen du.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">egiaztatze zain kideak guztietatik…</string>
-    <string name="prog_CollectingOthersItems">egiteko erabiltzaile guztiei batzeko zain…</string>
+    <string name="prog_CollectingOthersCommitVerify">kideak guztietatik egiaztatze zain…</string>
+    <string name="prog_CollectingOthersItems">erabiltzaile guztiei batzeko zain…</string>
     <string name="prog_ConstructingGroupKey">Taldeko kode eraikitzen…</string>
-    <string name="prog_RequestingUserId">partaidetza eskatzen…</string>
+    <string name="prog_RequestingUserId">berri eskatzeko…</string>
 
-    <string name="title_size">Zenbat erabiltzaile trukea?</string>
-    <string name="title_userid">Taldekatze</string>
-    <string name="title_verify">Egiaztatzeko</string>
+    <string name="title_size">Zenbat truke lankideei?</string>
+    <string name="title_userid">Elkartzea</string>
+    <string name="title_verify">Ziurtatu</string>
 
 </resources>

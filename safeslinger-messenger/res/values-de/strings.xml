@@ -28,7 +28,6 @@
     <string name="action_NewUserRequest">Fügen Sie einen Sling Keys Kontakt Einladung per…</string>
 
     <string name="app_name">SafeSlinger</string>
-    <string name="app_TranslatorName">Jens Höfflinger, Adrian Perrig, Michael Stroucken</string>
 
     <string name="ask_BackupDisabledRemindLater">Sicherungen sind deaktiviert. Wollen Sie Sicherungs-Einstellungen anpassen und weiterhin erinnert werden?</string>
     <string name="ask_ConfirmUseOlderDeviceOrKey">%s hat ein neueres Gerät oder Schlüssel, sind Sie sicher, dass Sie ältere Informationen benutzen wollen?</string>
@@ -86,7 +85,7 @@
     <string name="error_AudioPlayerDecodeError">Audio-Player Decodierungsfehler.</string>
     <string name="error_AudioPlayerError">Die Aufnahme kann nicht abgespielt werden.</string>
     <string name="error_AudioRecorderEncodeError">Audio Recorder Codierungsfehler.</string>
-    <string name="error_AudioRecorderPermissionError">Mikrofon Erlaubnis ist erforderlich, um eine sichere Sprachnachricht aufzuzeichnen. Tippen Sie auf die Hilfe-Taste für Mikrofon SafeSlinger Berechtigungsdetails.</string>
+    <string name="error_AudioRecorderPermissionError">Mikrofon Erlaubnis ist erforderlich, um eine sichere Sprachnachricht aufzuzeichnen. Tippen Sie auf die Taste für %s SafeSlinger Mikrofon Berechtigungsdetails.</string>
     <string name="error_BackupNotFound">Keine Sicherung zur Wiederherstellung vorhanden.</string>
     <string name="error_BackupNotSupportedDevice">Dieses Gerät unterstützt keine Sicherungswiederherstellung.</string>
     <string name="error_BadCopyProtectUpgrade">Aufgrund eines Fehlers in Android 4.1 müssen Sie SafeSlinger deinstallieren und neu installieren.</string>
@@ -152,10 +151,12 @@
     <string name="help_Send">Dieser Bildschirm ermöglicht es Ihnen, Daten an einen Empfänger zu senden. Drücken Sie einfach auf Senden nachdem Sie eine Nachricht eingegeben haben oder eine Datei ausgewählt haben.</string>
     <string name="help_settings">In diesem Fenster können Sie die Standardeinstellungen für die Anwendung zu ändern.</string>
 
-    <string name="iOS_contactError">Kontakte Genehmigung ist für die sichere gemeinsame Nutzung von Kontaktkarten erforderlich. Tippen Sie auf die Hilfe-Taste für SafeSlinger Kontakte Berechtigungsdetails.</string>
+    <string name="iOS_cameraError">Kamera Erlaubnis ist erforderlich, um Schnappschüsse, um Nachrichten zu sichern befestigen. Tippen Sie auf die Taste für %s SafeSlinger Kamera Berechtigungsdetails.</string>
+    <string name="iOS_contactError">Kontakte Genehmigung ist für die sichere gemeinsame Nutzung von Kontaktkarten erforderlich. Tippen Sie auf die Taste für %s SafeSlinger Kontakte Berechtigungsdetails.</string>
     <string name="iOS_errorpushtoken">Push-Registrierung fehlt.</string>
-    <string name="iOS_notificationError1">Benachrichtigung Erlaubnis entweder Warnungen oder Banner und Ausweisnummern sind für das Secure Messaging erforderlich. Tippen Sie auf die Hilfe-Taste für SafeSlinger Mitteilung Berechtigungsdetails.</string>
+    <string name="iOS_notificationError1">Benachrichtigung Erlaubnis entweder Warnungen oder Banner und Ausweisnummern, sind für Secure Messaging erforderlich. Tippen Sie auf die Taste für %s SafeSlinger Mitteilung Berechtigungsdetails.</string>
     <string name="iOS_oldOSWarn">SafeSlinger ist nicht für iOS 5.x Geräte optimiert. SafeSlinger erfordert iOS 6 oder höher.</string>
+    <string name="iOS_photolibraryError">Photo Library Erlaubnis ist erforderlich, um Bilder, um Nachrichten zu sichern befestigen. Tippen Sie auf die Taste für %s SafeSlinger Photo Library Berechtigungsdetails.</string>
     <string name="iOS_RequestPermissionContacts">Sie können Ihre Kontaktkarte auswählen, um Ihre Freunde zu schicken und SafeSlinger wird es für Sie zu verschlüsseln. Um diese Funktion zu aktivieren, müssen Sie SafeSlinger Zugriff auf Ihre Kontakte zu ermöglichen, wenn gefragt.</string>
     <string name="iOS_RequestPermissionMicrophone">Sie können eine Sprachnachricht zu senden Ihren Freunden und SafeSlinger wird es für Sie verschlüsseln aufzeichnen. Um diese Funktion zu aktivieren, müssen Sie SafeSlinger Zugriff auf Ihr Mikrofon zu ermöglichen, wenn gefragt.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger ist eine verschlüsselte Messaging-Anwendung und kann nicht, ohne dass eingehende Nachrichten von Benachrichtigungen funktionieren. Um eingehende Nachrichten zu aktivieren, müssen Sie erlauben SafeSlinger zu Ihnen, wenn Sie gefragt Benachrichtigungen senden.</string>
@@ -283,6 +284,7 @@
     <string name="menu_Help">Hilfe</string>
     <string name="menu_Introduction">Vorstellen</string>
     <string name="menu_language">Sprache</string>
+    <string name="menu_License">Lizenz</string>
     <string name="menu_link_contact_add">Contact Link hinzufügen</string>
     <string name="menu_link_contact_change">Ändern Contact Link</string>
     <string name="menu_Logout">Abmelden</string>
@@ -290,6 +292,7 @@
     <string name="menu_message_font_size">Nachricht Schriftgröße</string>
     <string name="menu_messageCopyText">Text kopieren</string>
     <string name="menu_messageForward">Weiterleiten</string>
+    <string name="menu_PrivacyPolicy">Datenschutz-Bestimmungen</string>
     <string name="menu_Remove">Entfernen</string>
     <string name="menu_restore_default">Standardeinstellungen wiederherstellen</string>
     <string name="menu_ringtone">Klingen</string>
@@ -346,6 +349,7 @@
     <string name="text_About1">Einfacher Austausch von Kontaktinformationen</string>
     <string name="text_About2">Sicheres Senden von Texten, Bildern, uvm.</string>
     <string name="text_About3">Starke Kryptographie schützt Ihre Informationen.</string>
+    <string name="text_About_Short">SafeSlinger: Sprechen 3 Worte und für immer in Frieden zu plaudern.</string>
     <string name="text_AboutEmail">email: %s</string>
     <string name="text_AboutFeat">Funktionen:</string>
     <string name="text_AboutWeb">web: %s</string>

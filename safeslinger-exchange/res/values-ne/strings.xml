@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">छोडो? तपाईं निश्चित हुनुहुन्छ?</string>
+    <string name="ask_QuitConfirmation">छोडो? के तपाईं पक्का हुनुहुन्छ?</string>
 
     <string name="btn_Match">अर्को</string>
     <string name="btn_NoMatch">कुनै मिलान</string>
 
-    <string name="choice_NumUsers">%d प्रयोगकर्ताहरू</string>
+    <string name="choice_NumUsers">%d प्रयोगकर्ता</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">सबै सदस्यहरु केही ठूलो धक्का दर्ता स्वरूप को उपयोग गर्दै छन्, उन्नयन पर्छ ।</string>
-    <string name="error_CorrectYourInternetConnection">उपलब्ध छैन इन्टरनेट, आफ्नो सेटिङ जाँच ।</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">विनिमय समय समाप्त पार । फेरि विनिमय सुरु ।</string>
+    <string name="error_AllMembersMustUpgrade">केही सदस्यहरू एक ठूलो संस्करण प्रयोग गर्दै; सबै सदस्यहरू नयाँ संस्करण स्तरवृद्धि पर्छ।</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">सबै सदस्यहरु केही ठूलो धक्का दर्ता ढाँचा प्रयोग गर्दै हुनुहुन्छ, उन्नयन पर्छ।</string>
+    <string name="error_CorrectYourInternetConnection">इन्टरनेट उपलब्ध छैन, आफ्नो सेटिङ जाँच।</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">विनिमय समय समाप्त पार। फेरि विनिमय सुरु।</string>
     <string name="error_HttpCode">सर्भर HTTP त्रुटि: %d</string>
-    <string name="error_InvalidCommitVerify">विनिमय पाइने गलत डेटा । फेरि विनिमय सुरु ।</string>
-    <string name="error_InvalidCommonUserId">एक सकारात्मक इन्टिजर प्रविष्ट गर्नुहोस् ।</string>
-    <string name="error_LocalGroupCommitDiffer">तपाईं वाक्यांश मा एक फरक सूचना दिएको छ । फेरि विनिमय सुरु ।</string>
-    <string name="error_MinUsersRequired">%d सदस्यले न्यूनतम डेटा आदान प्रदान गर्न आवश्यक छ ।</string>
-    <string name="error_MoreDataThanUsers">विनिमय पाइने अप्रत्याशित डेटा । फेरि विनिमय सुरु ।</string>
-    <string name="error_NoDataToExchange">विनिमय आवश्यक डाटा हराइरहेको छ ।</string>
-    <string name="error_NoWordListSelected">तपाईं अघि बढ्नु भन्दा पहिले वाक्यांश एउटा चयन गर्नुपर्छ ।</string>
-    <string name="error_OtherGroupCommitDiffer">कसैले वाक्यांश भिन्नता दी । फेरि विनिमय सुरु ।</string>
-    <string name="error_OutOfMemoryError">स्मरण गर्नुपर्ने यो कार्य पूरा गर्न पनि कम छ ।</string>
+    <string name="error_InvalidCommitVerify">गलत डेटा विनिमय पाइने। फेरि विनिमय सुरु।</string>
+    <string name="error_InvalidCommonUserId">एक सकारात्मक पूर्णांक प्रविष्ट गर्नुहोस्।</string>
+    <string name="error_LocalGroupCommitDiffer">तपाईं वाक्यांश फरक सूचना दिएको छ। फेरि विनिमय सुरु।</string>
+    <string name="error_MinUsersRequired">%d सदस्यहरू एक न्यूनतम डाटा आदान प्रदान गर्न आवश्यक छ।</string>
+    <string name="error_MoreDataThanUsers">अप्रत्याशित डेटा विनिमय पाइने। फेरि विनिमय सुरु।</string>
+    <string name="error_NoDataToExchange">विनिमय आवश्यक डाटा हराइरहेको छ।</string>
+    <string name="error_NoWordListSelected">तपाईं अघि बढ्नु भन्दा पहिले वाक्यांश एउटा चयन गर्नुपर्छ।</string>
+    <string name="error_OtherGroupCommitDiffer">कसैले वाक्यांश भिन्नता दी। फेरि विनिमय सुरु।</string>
+    <string name="error_OutOfMemoryError">स्मरण गर्नुपर्ने यो कार्य पूरा गर्न पनि कम छ।</string>
     <string name="error_ServerAppMessage">सर्भर सन्देश: %s</string>
-    <string name="error_ServerNotResponding">सर्भरबाट कुनै प्रतिक्रिया ।</string>
-    <string name="error_TimeoutWaitingForAllMembers">केही समूह सदस्यहरू डेटा थप्न लागि प्रतीक्षा समय समाप्त ।</string>
-    <string name="error_WebCancelledByUser">प्रयोगकर्ता सर्भर अनुरोध रद्द ।</string>
+    <string name="error_ServerNotResponding">सर्भर देखि कुनै प्रतिक्रिया।</string>
+    <string name="error_TimeoutWaitingForAllMembers">केही समूह सदस्यहरू डेटा थप्न समय सकियो पर्खिरहेका।</string>
+    <string name="error_WebCancelledByUser">प्रयोगकर्ता सर्भर अनुरोध रद्द गरियो।</string>
 
-    <string name="help_size">सँगै र प्रेस ठीक डेटा आदान प्रदान गर्न प्रयास गर्ने मान्छे को संख्या चयन गर्नुहोस्।</string>
-    <string name="help_userid">यस स्क्रीन मा यो संख्या प्रयोगकर्ताहरू एक अद्वितीय समूह सिर्जना गर्न प्रयोग गरिन्छ । सबै प्रयोगकर्ताहरू \' स्क्रीन मा संख्या समीक्षा, तब सबै प्रयोगकर्ताहरू नै सबै भन्दा कम नम्बर प्रविष्ट गर्नुहोस् र ठीक प्रेस पर्छ ।</string>
-    <string name="help_verify">अब, तपाईं सबै प्रयोगकर्ताहरु संग यिनी 3-शब्द वाक्यांश एक मिल्नु पर्छ । प्रत्येक प्रयोगकर्ता नै साधारण वाक्यांश चयन, र अर्को प्रेस पर्छ ।</string>
+    <string name="help_size">सँगै डेटा र प्रेस ठीक आदान प्रदान गर्न प्रयास गर्ने मान्छे को संख्या चयन गर्नुहोस्।</string>
+    <string name="help_userid">यस स्क्रीन मा यो संख्या प्रयोगकर्ता को एक अद्वितीय समूह सिर्जना गर्न प्रयोग गरिन्छ। त्यसपछि सबै प्रयोगकर्ताहरु लाई नै सबै भन्दा कम नम्बर र प्रेस ठीक प्रविष्ट गर्नुपर्छ, सबै प्रयोगकर्ता \'स्क्रीन मा संख्या पुनरावलोकन।</string>
+    <string name="help_verify">अब, तपाईं सबै प्रयोगकर्ताहरु संग यिनी 3 शब्द वाक्यांश एक म्याच पर्छ। हरेक प्रयोगकर्ता नै साधारण वाक्यांश चयन, र अर्को प्रेस पर्छ।</string>
 
-    <string name="label_CompareScreensNDevices">%s उपकरणहरूमा स्क्रीन तुलना ।</string>
+    <string name="label_CompareScreensNDevices">%s उपकरणहरूमा स्क्रीन तुलना गर्नुहोस्।</string>
     <string name="label_NumericModeHint">गैह्र अंग्रेजी</string>
-    <string name="label_PromptInstruct">यो संख्या प्रयोगकर्ताहरू एक अद्वितीय समूह सिर्जना गर्न प्रयोग गरिन्छ । तुलना, र त्यसपछि सबै प्रयोगकर्ताहरू बीच सबै भन्दा कम सङ्ख्या प्रविष्ट गर्नुहोस्।</string>
-    <string name="label_ReceivedNItems">%d आइटम प्राप्त</string>
-    <string name="label_UserIdHint">सबै भन्दा कम</string>
-    <string name="label_VerifyInstruct">सबै फोनहरुका 3-शब्द वाक्यांश एक मिल्नु पर्छ । तुलना, र त्यसपछि मिल्दो वाक्यांश लेने ।</string>
+    <string name="label_PromptInstruct">यो नम्बर प्रयोगकर्ता को एक अद्वितीय समूह सिर्जना गर्न प्रयोग गरिन्छ। तुलना गर्नुहोस्, र त्यसपछि सबै प्रयोगकर्ताहरु को बीच सबै भन्दा कम नम्बर प्रविष्ट गर्नुहोस्।</string>
+    <string name="label_ReceivedNItems">%d वस्तुहरू प्राप्त</string>
+    <string name="label_UserIdHint">न्यूनतम</string>
+    <string name="label_VerifyInstruct">सबै फोन-3 शब्द वाक्यांश एक म्याच पर्छ। तुलना गर्नुहोस्, र त्यसपछि मिल्दो वाक्यांश उठाउँछौं।</string>
 
     <string name="lib_name">SafeSlinger विनिमय</string>
 
-    <string name="prog_CollectingOthersCommitVerify">सबै सदस्यबाट प्रमाणिकरण लागि प्रतीक्षा…</string>
+    <string name="prog_CollectingOthersCommitVerify">सबै सदस्यबाट प्रमाणिकरण लागि पर्खिरहेका…</string>
     <string name="prog_CollectingOthersItems">सबै प्रयोगकर्ताहरू समावेस गर्न को लागि प्रतीक्षा…</string>
     <string name="prog_ConstructingGroupKey">समूह कुञ्जी निर्माण…</string>
     <string name="prog_RequestingUserId">सदस्यता अनुरोध…</string>
 
-    <string name="title_size">कसरी धेरै प्रयोगकर्ताहरु विनिमय मा?</string>
-    <string name="title_userid">समूहीकरण</string>
+    <string name="title_size">कति मुद्रा मा प्रयोगकर्ता?</string>
+    <string name="title_userid">समूह</string>
     <string name="title_verify">प्रमाणित गर्नुहोस्</string>
 
 </resources>

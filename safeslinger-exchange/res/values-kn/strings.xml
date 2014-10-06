@@ -28,48 +28,49 @@
     <string name="ask_QuitConfirmation">ಕ್ವಿಟ್? ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?</string>
 
     <string name="btn_Match">ಮುಂದೆ</string>
-    <string name="btn_NoMatch">ಯಾವುದೇ ಹೊಂದಿಕೆ</string>
+    <string name="btn_NoMatch">ಯಾವುದೇ ಪಂದ್ಯದ</string>
 
     <string name="choice_NumUsers">%d ಬಳಕೆದಾರರು</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">ಎಲ್ಲಾ ಸದಸ್ಯರು ಕೆಲವು ಹಳೆಯ ಪುಶ್ ನೋಂದಣಿ ಸ್ವರೂಪಗಳು ಬಳಸಿ, ನವೀಕರಿಸಬೇಕು.</string>
-    <string name="error_CorrectYourInternetConnection">ಲಭ್ಯವಿಲ್ಲ ಇಂಟರ್ನೆಟ್, ನಿಮ್ಮ ಸಂಯೋಜನೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="error_AllMembersMustUpgrade">ಕೆಲವು ಸದಸ್ಯರು ಹಳೆಯ ಆವೃತ್ತಿ ಬಳಸುತ್ತಿದ್ದರೆ; ಎಲ್ಲಾ ಸದಸ್ಯರು ಹೊಸ ಆವೃತ್ತಿಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಬೇಕು.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">ಎಲ್ಲಾ ಸದಸ್ಯರು ಕೆಲವು ಹಳೆಯ ಪುಶ್ ನೋಂದಣಿ ಸ್ವರೂಪಗಳು ಬಳಸುತ್ತಿದ್ದರೆ, ನವೀಕರಿಸಬೇಕು.</string>
+    <string name="error_CorrectYourInternetConnection">ಇಂಟರ್ನೆಟ್ ಲಭ್ಯವಿಲ್ಲ, ನಿಮ್ಮ ಸಂಯೋಜನೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">ವಿನಿಮಯ ಕಾಲಾವಧಿ ಮೀರಿದೆ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
     <string name="error_HttpCode">ಸರ್ವರ್ HTTP ದೋಷ: %d</string>
-    <string name="error_InvalidCommitVerify">ವಿನಿಮಯ ಕಂಡುಬರುವ ತಪ್ಪಾದ ದಶಮಾಂಶ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
+    <string name="error_InvalidCommitVerify">ತಪ್ಪು ಮಾಹಿತಿ ವಿನಿಮಯ ಕಂಡುಬರುವ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
     <string name="error_InvalidCommonUserId">ಒಂದು ಧನಾತ್ಮಕ ಪೂರ್ಣಸಂಖ್ಯೆ ನಮೂದಿಸಿ.</string>
     <string name="error_LocalGroupCommitDiffer">ನೀವು ನುಡಿಗಟ್ಟುಗಳು ವ್ಯತ್ಯಾಸವನ್ನು ವರದಿ ಮಾಡಿದ್ದಾರೆ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
-    <string name="error_MinUsersRequired">%d ಸದಸ್ಯರು ಕನಿಷ್ಠ ದಶಮಾಂಶ ವಿನಿಮಯ ಅಗತ್ಯವಿದೆ.</string>
-    <string name="error_MoreDataThanUsers">ವಿನಿಮಯ ಕಂಡುಬರುವ ಅನಿರೀಕ್ಷಿತ ದಶಮಾಂಶ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
-    <string name="error_NoDataToExchange">ವಿನಿಮಯ ಅಗತ್ಯವಿದೆ ಡೇಟಾ ಕಾಣೆಯಾಗಿದೆ.</string>
-    <string name="error_NoWordListSelected">ನೀವು ಮುಂದುವರೆಯುವುದಕ್ಕೆ ಮುಂಚಿತವಾಗಿ ನುಡಿಗಟ್ಟುಗಳು ಒಂದು ಆಯ್ಕೆ ಮಾಡಬೇಕು.</string>
+    <string name="error_MinUsersRequired">%d ಸದಸ್ಯರು ಕನಿಷ್ಠ ಡೇಟಾಗಳನ್ನು ವಿನಿಮಯ ಅಗತ್ಯವಿದೆ.</string>
+    <string name="error_MoreDataThanUsers">ಅನಿರೀಕ್ಷಿತ ಮಾಹಿತಿ ವಿನಿಮಯ ಕಂಡುಬರುವ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
+    <string name="error_NoDataToExchange">ವಿನಿಮಯ ಅಗತ್ಯ ಡೇಟಾ ಕಾಣೆಯಾಗಿದೆ.</string>
+    <string name="error_NoWordListSelected">ನೀವು ಮುಂದುವರೆಯುವುದಕ್ಕೆ ಮುಂಚಿತವಾಗಿ ಪದಗುಚ್ಛಗಳ ಒಂದು ಆಯ್ಕೆ ಮಾಡಬೇಕು.</string>
     <string name="error_OtherGroupCommitDiffer">ಯಾರೋ ನುಡಿಗಟ್ಟುಗಳು ವ್ಯತ್ಯಾಸವನ್ನು ವರದಿ. ಮತ್ತೆ ವಿನಿಮಯ ಆರಂಭಿಸಲು.</string>
     <string name="error_OutOfMemoryError">ಮೆಮೊರಿ ಈ ಕಾರ್ಯವನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ತುಂಬಾ ಕಡಿಮೆ.</string>
     <string name="error_ServerAppMessage">ಸರ್ವರ್ ಸಂದೇಶ: %s</string>
     <string name="error_ServerNotResponding">ಸರ್ವರ್ ಯಾವುದೇ ಪ್ರತಿಕ್ರಿಯೆ.</string>
-    <string name="error_TimeoutWaitingForAllMembers">ಕೆಲವು ಗುಂಪಿನ ಸದಸ್ಯರು ದಶಮಾಂಶ ಸೇರಿಸಲು ಕಾಯುತ್ತಿದೆ ಮುಗಿಯಿತು.</string>
-    <string name="error_WebCancelledByUser">ಬಳಕೆದಾರ ಸರ್ವರ್ ಮನವಿಯನ್ನು ತಳ್ಳಿಹಾಕಿದರು.</string>
+    <string name="error_TimeoutWaitingForAllMembers">ಕೆಲವು ಗುಂಪಿನ ಸದಸ್ಯರು ದಶಮಾಂಶ ಸೇರಿಸಲು ಕಾಲಾವಧಿ ಮುಗಿದು ಕಾಯುತ್ತಿದೆ.</string>
+    <string name="error_WebCancelledByUser">ಬಳಕೆದಾರ ಸರ್ವರ್ಗೆ ವಿನಂತಿಯನ್ನು ರದ್ದು.</string>
 
-    <string name="help_size">ಒಟ್ಟಿಗೆ ಮತ್ತು ಸರಿ ಒತ್ತಿರಿ ದಶಮಾಂಶ ವಿನಿಮಯ ಪ್ರಯತ್ನಿಸುತ್ತಿರುವ ಜನರ ಸಂಖ್ಯೆ ಮಾಡಿ.</string>
-    <string name="help_userid">ಈ ಪರದೆಯ ಮೇಲೆ ಈ ಸಂಖ್ಯೆ ಬಳಕೆದಾರರಿಗೆ ಒಂದು ಅನನ್ಯ ಗುಂಪು ರಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ \'ಪರದೆಯ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ, ನಂತರ ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಅದೇ ಕಡಿಮೆ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ ಮತ್ತು ಸರಿ ಒತ್ತಬೇಕು.</string>
-    <string name="help_verify">ಈಗ, ನೀವು ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಈ 3 ಪದ ನುಡಿಗಟ್ಟುಗಳು ಒಂದು ಹೊಂದಿಕೆಯಾಗಬೇಕು. ಪ್ರತಿ ಬಳಕೆದಾರ ಅದೇ ಸಾಮಾನ್ಯ ನುಡಿಗಟ್ಟು ಆಯ್ಕೆ, ಮತ್ತು ಮುಂದಿನ ಒತ್ತಿ ಮಾಡಬೇಕು.</string>
+    <string name="help_size">ಒಟ್ಟಿಗೆ ಮಾಹಿತಿ ಮತ್ತು ಪತ್ರಿಕಾ ಸರಿ ವಿನಿಮಯ ಪ್ರಯತ್ನಿಸುತ್ತಿರುವ ಜನರ ಸಂಖ್ಯೆ ಆಯ್ಕೆಮಾಡಿ.</string>
+    <string name="help_userid">ಈ ತೆರೆಯಲ್ಲಿ ಈ ಸಂಖ್ಯೆ ಬಳಕೆದಾರರ ಒಂದು ಅನನ್ಯ ಗುಂಪು ರಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ನಂತರ ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಅದೇ ಕಡಿಮೆ ಸಂಖ್ಯೆಯ ಮತ್ತು ಪತ್ರಿಕಾ ಸರಿ ನಮೂದಿಸಬೇಕು, ಎಲ್ಲಾ ಬಳಕೆದಾರರ ಪರದೆಯ ಮೇಲೆ ಸಂಖ್ಯೆಗಳು ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="help_verify">ಈಗ, ನೀವು ಎಲ್ಲಾ ಬಳಕೆದಾರರೊಂದಿಗೆ ಈ 3 ಪದ ಪದಗುಚ್ಛಗಳ ಒಂದು ಸರಿಹೊಂದಿಸುತ್ತದೆ. ಪ್ರತಿ ಬಳಕೆದಾರ ಅದೇ ಸಾಮಾನ್ಯ ನುಡಿಗಟ್ಟು ಆಯ್ಕೆ, ಮತ್ತು ಮುಂದೆ ಒತ್ತಬೇಕು.</string>
 
     <string name="label_CompareScreensNDevices">%s ಸಾಧನಗಳಲ್ಲಿ ಪರದೆಯ ಹೋಲಿಸಿ.</string>
-    <string name="label_NumericModeHint">ಅಲ್ಲದ ಇಂಗ್ಲೀಷ್</string>
-    <string name="label_PromptInstruct">ಈ ಸಂಖ್ಯೆ ಬಳಕೆದಾರರಿಗೆ ಒಂದು ಅನನ್ಯ ಗುಂಪು ರಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ಹೋಲಿಸಿ, ಮತ್ತು ನಂತರ ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಅತ್ಯಂತ ಕಡಿಮೆ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ.</string>
+    <string name="label_NumericModeHint">ಮಾಂಸಾಹಾರಿ-ಇಂಗ್ಲೀಷ್</string>
+    <string name="label_PromptInstruct">ಈ ಸಂಖ್ಯೆ ಬಳಕೆದಾರರ ಒಂದು ಅನನ್ಯ ಗುಂಪು ರಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ಹೋಲಿಸಿ, ಮತ್ತು ನಂತರ ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಅತ್ಯಂತ ಕಡಿಮೆ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ.</string>
     <string name="label_ReceivedNItems">%d ಐಟಂಗಳನ್ನು ಪಡೆದರು</string>
     <string name="label_UserIdHint">ಕಡಿಮೆ</string>
-    <string name="label_VerifyInstruct">ಎಲ್ಲಾ ದೂರವಾಣಿಗಳು 3 ಪದ ನುಡಿಗಟ್ಟುಗಳು ಒಂದು ಹೊಂದಿಕೆಯಾಗಬೇಕು. ಹೋಲಿಸಿ, ಮತ್ತು ನಂತರ ಹೊಂದಿಕೆ ನುಡಿಗಟ್ಟು ಆಯ್ಕೆ.</string>
+    <string name="label_VerifyInstruct">ಎಲ್ಲಾ ದೂರವಾಣಿಗಳು 3 ಪದ ಪದಗುಚ್ಛಗಳ ಒಂದು ಸರಿಹೊಂದಿಸುತ್ತದೆ. ಹೋಲಿಸಿ, ಮತ್ತು ನಂತರ ಹೊಂದಾಣಿಕೆಯ ನುಡಿಗಟ್ಟು ಆರಿಸಿ.</string>
 
-    <string name="lib_name">SafeSlinger ಎಕ್ಸ್ಚೇಂಜ್</string>
+    <string name="lib_name">SafeSlinger ವಿನಿಮಯ</string>
 
     <string name="prog_CollectingOthersCommitVerify">ಎಲ್ಲಾ ಸದಸ್ಯರು ಪರಿಶೀಲನೆ ಕಾಯುತ್ತಿದೆ…</string>
     <string name="prog_CollectingOthersItems">ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೆ ಸೇರಲು ಕಾಯುತ್ತಿದೆ…</string>
     <string name="prog_ConstructingGroupKey">ಗುಂಪು ಪ್ರಮುಖ ನಿರ್ಮಿಸುವ…</string>
     <string name="prog_RequestingUserId">ಸದಸ್ಯತ್ವ ಮನವಿ…</string>
 
-    <string name="title_size">ಎಷ್ಟು ಬಳಕೆದಾರರು ವಿನಿಮಯ?</string>
-    <string name="title_userid">ಗ್ರೂಪಿಂಗ್</string>
-    <string name="title_verify">ಪರಿಶೀಲನೆ</string>
+    <string name="title_size">ಎಷ್ಟು ವಿನಿಮಯ ಬಳಕೆದಾರರು?</string>
+    <string name="title_userid">ಗುಂಪು</string>
+    <string name="title_verify">ಪರಿಶೀಲಿಸಿ</string>
 
 </resources>

@@ -28,48 +28,49 @@
     <string name="ask_QuitConfirmation">Hætta? Ertu viss?</string>
 
     <string name="btn_Match">Næsta</string>
-    <string name="btn_NoMatch">Engin Match</string>
+    <string name="btn_NoMatch">Engin samsvörun</string>
 
     <string name="choice_NumUsers">%d notendur</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Allir meðlimir verða að uppfæra, sumir eru að nota eldri ýta skráning snið.</string>
+    <string name="error_AllMembersMustUpgrade">Sumir meðlimir eru að nota eldri útgáfu; allir meðlimir verða að uppfæra í nýjustu útgáfu.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Allir meðlimir skulu uppfæra, sumir eru að nota eldri ýta skráningu snið.</string>
     <string name="error_CorrectYourInternetConnection">Internet er ekki í boði, athuga stillingar þínar.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange tími yfir. Byrja skipti aftur.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Skipti tími umfram. Byrja að skiptast á ný.</string>
     <string name="error_HttpCode">Server HTTP Villa: %d</string>
-    <string name="error_InvalidCommitVerify">Röng gögn fundust í skiptum. Byrja skipti aftur.</string>
+    <string name="error_InvalidCommitVerify">Rangar upplýsingar fundust í skiptum. Byrja að skiptast á ný.</string>
     <string name="error_InvalidCommonUserId">Vinsamlegast sláðu inn jákvæða heiltölu.</string>
-    <string name="error_LocalGroupCommitDiffer">Þú hefur greint mun á setningar. Byrja skipti aftur.</string>
-    <string name="error_MinUsersRequired">Að minnsta kosti %d meðlimir þurfa að skiptast á upplýsingum.</string>
-    <string name="error_MoreDataThanUsers">Óvæntar gögn fundust í skiptum. Byrja skipti aftur.</string>
-    <string name="error_NoDataToExchange">Gengi vantar nauðsynleg gögn.</string>
-    <string name="error_NoWordListSelected">Þú verður að velja eitt af þeim orðasamböndum áður en farið er.</string>
-    <string name="error_OtherGroupCommitDiffer">Einhver greint mun á setningar. Byrja skipti aftur.</string>
+    <string name="error_LocalGroupCommitDiffer">Þú hefur greint mun á setningar. Byrja að skiptast á ný.</string>
+    <string name="error_MinUsersRequired">Lágmark %d meðlimir eru skyldugir til að skiptast á gögnum.</string>
+    <string name="error_MoreDataThanUsers">Óvænt gögn fundust í skiptum. Byrja að skiptast á ný.</string>
+    <string name="error_NoDataToExchange">Gengi vantar nauðsynlegar upplýsingar.</string>
+    <string name="error_NoWordListSelected">Þú verður að velja eitt af setningar áður en farið er.</string>
+    <string name="error_OtherGroupCommitDiffer">Einhver greint mun á setningar. Byrja að skiptast á ný.</string>
     <string name="error_OutOfMemoryError">Minni er of lágt til að ljúka þessari aðgerð.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerNotResponding">Ekkert svar frá miðlara.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Tími sem bíður fyrir sumir meðlimir hópsins að bæta við gögnum.</string>
+    <string name="error_ServerNotResponding">Ekkert svar frá þjóninum.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Tími bíða sumir meðlimir hópsins að bæta við gögnum.</string>
     <string name="error_WebCancelledByUser">Notandi hætti beiðni miðlara.</string>
 
     <string name="help_size">Veldu fjölda fólks sem eru að reyna að skiptast á upplýsingum saman og styddu á Í lagi.</string>
-    <string name="help_userid">Þessi tala á þessum skjá er notaður til að búa til einstaka hóp notenda. Endurskoða tölurnar á skjái allra notenda, þá allir notendur ættu að slá inn sömu lægsta númerið og ýtir á OK.</string>
-    <string name="help_verify">Nú verður þú að passa einn af þessum 3-orð orðasambönd með öllum notendum. Sérhver notandi verður að velja sama sameiginlega setningu og ýttu á Next.</string>
+    <string name="help_userid">Þessi tala á þessum skjá er notaður til að búa til einstaka hóps notenda. Endurskoða tölur á skjám allra notenda, þá allir notendur ættu að slá inn sömu lægsta númer og stutt á Í lagi.</string>
+    <string name="help_verify">Nú verður þú að passa einn af þessum 3-setningar orð með öllum notendum. Sérhver notandi verður að velja sama sameiginlega setningu og ýttu á Next.</string>
 
     <string name="label_CompareScreensNDevices">Bera saman skjái á %s tæki.</string>
-    <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Þetta númer er notað til að búa til einstaka hóp notenda. Bera saman, og síðan slá lægsta fjölda meðal allra notenda.</string>
+    <string name="label_NumericModeHint">Non-enska</string>
+    <string name="label_PromptInstruct">Þetta númer er notað til að búa til einstaka hóps notenda. Bera saman, og þá koma inn lægsta fjölda meðal allra notenda.</string>
     <string name="label_ReceivedNItems">fékk %d atriði</string>
     <string name="label_UserIdHint">Lægsta</string>
-    <string name="label_VerifyInstruct">Allir símar verða að passa eitt af 3-orð orðasambönd. Bera saman, og þá velja samsvarandi setningu.</string>
+    <string name="label_VerifyInstruct">Allir símar verða að passa einn af 3-setningar orð. Bera saman, og þá velja samsvarandi setningu.</string>
 
-    <string name="lib_name">SafeSlinger Exchange</string>
+    <string name="lib_name">SafeSlinger húsum</string>
 
     <string name="prog_CollectingOthersCommitVerify">bíða eftir staðfestingu frá öllum meðlimum…</string>
     <string name="prog_CollectingOthersItems">bíða eftir alla notendur til að taka þátt…</string>
-    <string name="prog_ConstructingGroupKey">byggja lyklahópinn…</string>
-    <string name="prog_RequestingUserId">óskar aðildar…</string>
+    <string name="prog_ConstructingGroupKey">smíða lyklahópinn…</string>
+    <string name="prog_RequestingUserId">biðja aðild…</string>
 
     <string name="title_size">Hversu margir notendur í skiptum?</string>
     <string name="title_userid">Flokkun</string>
-    <string name="title_verify">Staðfesta</string>
+    <string name="title_verify">Sannreyna</string>
 
 </resources>

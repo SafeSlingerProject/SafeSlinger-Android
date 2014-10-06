@@ -25,41 +25,42 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Mesti rūkyti? Ar tikrai?</string>
+    <string name="ask_QuitConfirmation">Baigti? Ar tikrai?</string>
 
     <string name="btn_Match">Kitas</string>
     <string name="btn_NoMatch">Nėra atitikmens</string>
 
-    <string name="choice_NumUsers">%d vartotojų</string>
+    <string name="choice_NumUsers">%d vartotojai</string>
 
+    <string name="error_AllMembersMustUpgrade">Kai kurie nariai naudojate senesnę versiją; visi nariai turi atnaujinti į naujausią versiją.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Visi nariai turi atnaujinti, kai naudojate senesnius push registracijos formatus.</string>
-    <string name="error_CorrectYourInternetConnection">Interneto nėra, patikrinkite nustatymus.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Valiutų Viršytas. Vėl pradėti keistis.</string>
-    <string name="error_HttpCode">Serveris HTTP klaida: %d</string>
-    <string name="error_InvalidCommitVerify">Neteisingi duomenys rasta mainais. Vėl pradėti keistis.</string>
+    <string name="error_CorrectYourInternetConnection">Internetas nėra, patikrinkite nustatymus.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Valiutų pauzės viršyta. Vėl pradėkite keistis.</string>
+    <string name="error_HttpCode">Serverio HTTP klaida: %d</string>
+    <string name="error_InvalidCommitVerify">Neteisingi duomenys nerasta mainais. Vėl pradėkite keistis.</string>
     <string name="error_InvalidCommonUserId">Prašome įvesti teigiamą sveikąjį skaičių.</string>
-    <string name="error_LocalGroupCommitDiffer">Jūs pranešė frazes skirtumą. Vėl pradėti keistis.</string>
-    <string name="error_MinUsersRequired">%d nariams reikia ne mažiau kaip keistis duomenimis.</string>
-    <string name="error_MoreDataThanUsers">Netikėti duomenys rasta mainais. Vėl pradėti keistis.</string>
-    <string name="error_NoDataToExchange">Keitimasis trūksta reikiamų duomenų.</string>
+    <string name="error_LocalGroupCommitDiffer">Jūs pranešė frazes skirtumą. Vėl pradėkite keistis.</string>
+    <string name="error_MinUsersRequired">%d narių minimalus privalo keistis duomenimis.</string>
+    <string name="error_MoreDataThanUsers">Netikėta duomenų nerasta mainais. Vėl pradėkite keistis.</string>
+    <string name="error_NoDataToExchange">Keitimasis nėra reikalingų duomenų.</string>
     <string name="error_NoWordListSelected">Jūs turite pasirinkti vieną iš frazių, prieš tęsiant.</string>
-    <string name="error_OtherGroupCommitDiffer">Kažkas pranešė frazes skirtumą. Vėl pradėti keistis.</string>
-    <string name="error_OutOfMemoryError">Atmintis yra per mažas baigti šią operaciją.</string>
+    <string name="error_OtherGroupCommitDiffer">Kažkas pranešė frazes skirtumą. Vėl pradėkite keistis.</string>
+    <string name="error_OutOfMemoryError">Atmintis yra pernelyg maža, kad būtų užbaigti šią operaciją.</string>
     <string name="error_ServerAppMessage">Serverio pranešimas: %s</string>
-    <string name="error_ServerNotResponding">Jokio atsakymo iš serverio.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Pertrauka laukia kai grupės nariai pridėti duomenis.</string>
+    <string name="error_ServerNotResponding">Nėra atsakymo iš serverio.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Minutės pertraukėlė laukia kai grupės nariai pridėti duomenis.</string>
     <string name="error_WebCancelledByUser">Vartotojas atšauktas serverio prašymą.</string>
 
-    <string name="help_size">Pasirinkite žmonių, kurie bando kartu ir paspauskite OK keistis duomenimis numerį.</string>
-    <string name="help_userid">Šis skaičius šiame ekrane yra naudojamas sukurti unikalų vartotojų grupę. Nuolat peržiūrėti visų vartotojų ekranuose numerius, tuomet visi vartotojai turi įvesti tą patį mažiausią numerį ir paspauskite Gerai.</string>
-    <string name="help_verify">Dabar jūs turi atitikti vieną iš šių 3-žodžių frazes su visiems vartotojams. Kiekvienas vartotojas turi pasirinkti tą patį bendrą frazę ir spauskite Next.</string>
+    <string name="help_size">Pasirinkite žmonių, kurie bando keistis duomenimis kartu ir paspauskite OK numerį.</string>
+    <string name="help_userid">Tai skaičius šiame ekrane yra naudojamas sukurti unikalų vartotojų grupę. Peržiūrėkite numerius visų vartotojų ekranuose, tada visi vartotojai turėtų įvesti tą pačią žemiausią numerį ir paspauskite OK.</string>
+    <string name="help_verify">Dabar jūs turite atitikti vieną iš šių 3-žodžių frazių visiems vartotojams. Kiekvienas vartotojas turi pasirinkti tokį patį bendrą frazę ir spauskite \'Next\'.</string>
 
-    <string name="label_CompareScreensNDevices">Palyginti ekranai %s prietaisus.</string>
+    <string name="label_CompareScreensNDevices">Palyginkite ekranus %s prietaisų.</string>
     <string name="label_NumericModeHint">Ne anglų kalba</string>
-    <string name="label_PromptInstruct">Šis skaičius yra naudojamas sukurti unikalų vartotojų grupę. Palyginti, o tada įveskite mažiausią skaičių tarp visų vartotojų.</string>
+    <string name="label_PromptInstruct">Šis numeris yra naudojamas sukurti unikalų vartotojų grupę. Palyginkite ir tada įveskite mažiausią skaičių tarp visų vartotojų.</string>
     <string name="label_ReceivedNItems">gavo %d daiktų</string>
-    <string name="label_UserIdHint">Mažiausia</string>
-    <string name="label_VerifyInstruct">Visi telefonai turi atitikti vieną iš 3 žodžių frazes. Palyginti, o tada pasirinkti atitikimo frazę.</string>
+    <string name="label_UserIdHint">Žemiausia</string>
+    <string name="label_VerifyInstruct">Visi telefonai turi atitikti vieną iš 3-žodžių frazes. Lyginti, tada pasirinkti atitikimo frazė.</string>
 
     <string name="lib_name">SafeSlinger birža</string>
 
@@ -68,8 +69,8 @@
     <string name="prog_ConstructingGroupKey">statant grupės raktą…</string>
     <string name="prog_RequestingUserId">Prašančioji narystę…</string>
 
-    <string name="title_size">Kiek vartotojų biržoje?</string>
+    <string name="title_size">Kiek vartotojų keistis?</string>
     <string name="title_userid">Grupavimas</string>
-    <string name="title_verify">Patikrinti</string>
+    <string name="title_verify">Patikrinkite</string>
 
 </resources>

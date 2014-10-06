@@ -28,47 +28,48 @@
     <string name="ask_QuitConfirmation">Slutte? Er du sikker?</string>
 
     <string name="btn_Match">Neste</string>
-    <string name="btn_NoMatch">No Match</string>
+    <string name="btn_NoMatch">Ingen Match</string>
 
     <string name="choice_NumUsers">%d brukere</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Alle medlemmer må oppgradere, noen bruker eldre push-registreringsformater.</string>
-    <string name="error_CorrectYourInternetConnection">Internett ikke er tilgjengelig, må du kontrollere innstillingene.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange-timeout skredet. Begynn børsen igjen.</string>
+    <string name="error_AllMembersMustUpgrade">Noen medlemmer bruker en eldre versjon; Alle medlemmer må oppgradere til den nyeste versjonen.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Alle medlemmer må oppgradere, noen bruker eldre push-registrerings formater.</string>
+    <string name="error_CorrectYourInternetConnection">Internett ikke er tilgjengelig, sjekk dine innstillinger.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Utveksling timeout skredet. Begynn utveksling igjen.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Uriktige opplysninger funnet i bytte. Begynn børsen igjen.</string>
-    <string name="error_InvalidCommonUserId">Vennligst skriv inn et positivt heltall.</string>
-    <string name="error_LocalGroupCommitDiffer">Du har rapportert en forskjell i setninger. Begynn børsen igjen.</string>
+    <string name="error_InvalidCommitVerify">Feil funnet i bytte. Begynn utveksling igjen.</string>
+    <string name="error_InvalidCommonUserId">Skriv inn et positivt heltall.</string>
+    <string name="error_LocalGroupCommitDiffer">Du har rapportert en forskjell i setninger. Begynn utveksling igjen.</string>
     <string name="error_MinUsersRequired">Et minimum av %d medlemmer er pålagt å utveksle data.</string>
-    <string name="error_MoreDataThanUsers">Uventede data funnet i bytte. Begynn børsen igjen.</string>
+    <string name="error_MoreDataThanUsers">Uventede data funnet i bytte. Begynn utveksling igjen.</string>
     <string name="error_NoDataToExchange">Utvekslingen mangler nødvendige data.</string>
-    <string name="error_NoWordListSelected">Du må velge en av de setningene før du fortsetter.</string>
-    <string name="error_OtherGroupCommitDiffer">Noen rapporterte en forskjell i setninger. Begynn børsen igjen.</string>
+    <string name="error_NoWordListSelected">Du må velge en av setningene før du fortsetter.</string>
+    <string name="error_OtherGroupCommitDiffer">Noen rapporterte en forskjell i setninger. Begynn utveksling igjen.</string>
     <string name="error_OutOfMemoryError">Minne er for lav til å fullføre denne operasjonen.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerNotResponding">Ingen respons fra serveren.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout venter på noen medlemmer av gruppen kan legge til data.</string>
+    <string name="error_ServerNotResponding">Ingen respons fra server.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout venter på noen gruppemedlemmer for å legge til data.</string>
     <string name="error_WebCancelledByUser">Bruker avbrutt server forespørsel.</string>
 
-    <string name="help_size">Velg antall personer som forsøker å utveksle data sammen, og trykk OK.</string>
+    <string name="help_size">Velg antall mennesker som forsøker å utveksle data sammen og trykk OK.</string>
     <string name="help_userid">Dette nummeret på denne skjermen brukes til å skape en unik gruppe av brukere. Gjennomgå tallene på alle brukernes skjermer, så alle brukere skal inn i samme laveste nummeret og trykk OK.</string>
     <string name="help_verify">Nå må du matche en av disse tre-ord setninger med alle brukere. Hver bruker må velge samme vanlig frase, og trykk Neste.</string>
 
     <string name="label_CompareScreensNDevices">Sammenligne skjermene på %s enheter.</string>
-    <string name="label_NumericModeHint">Non-engelsk</string>
+    <string name="label_NumericModeHint">Ikke-engelsk</string>
     <string name="label_PromptInstruct">Dette nummeret brukes til å skape en unik gruppe av brukere. Sammenligne, og skriv deretter inn det laveste tallet blant alle brukere.</string>
     <string name="label_ReceivedNItems">mottatt %d varer</string>
-    <string name="label_UserIdHint">Laveste</string>
-    <string name="label_VerifyInstruct">Alle telefoner må matche en av de tre-ord setninger. Sammenligne, og deretter plukke den matchende setning.</string>
+    <string name="label_UserIdHint">Lavest</string>
+    <string name="label_VerifyInstruct">Alle telefoner må samsvare med en av de tre-ord setninger. Sammenligne, og deretter plukke matching frasen.</string>
 
-    <string name="lib_name">SafeSlinger Utveksling</string>
+    <string name="lib_name">SafeSlinger Veksling</string>
 
     <string name="prog_CollectingOthersCommitVerify">venter på bekreftelse fra alle medlemmer…</string>
-    <string name="prog_CollectingOthersItems">venter for alle brukere til å delta…</string>
+    <string name="prog_CollectingOthersItems">venter for alle brukere til å bli med…</string>
     <string name="prog_ConstructingGroupKey">konstruere gruppetast…</string>
     <string name="prog_RequestingUserId">ber om medlemskap…</string>
 
-    <string name="title_size">Hvor mange brukere på utveksling?</string>
+    <string name="title_size">Hvor mange brukere i innbytte?</string>
     <string name="title_userid">Gruppering</string>
     <string name="title_verify">Bekreft</string>
 

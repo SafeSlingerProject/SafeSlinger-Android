@@ -32,6 +32,7 @@
 
     <string name="choice_NumUsers">Пользователей-%d</string>
 
+    <string name="error_AllMembersMustUpgrade">Некоторые члены используете старую версию; все члены должны обновить до последней версии.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Все члены должны обновить, некоторые используют устаревшие форматы ID уведомлений.</string>
     <string name="error_CorrectYourInternetConnection">Интернет не доступен, проверьте настройки.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Время ожидания про обмене превышено, начать обмен заново.</string>
