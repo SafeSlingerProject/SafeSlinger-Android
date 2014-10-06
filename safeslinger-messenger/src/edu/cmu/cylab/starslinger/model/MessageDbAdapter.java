@@ -658,4 +658,37 @@ public class MessageDbAdapter {
         }
     }
 
+    public static String getStatusCode(int stat) {
+        String status;
+        switch (stat) {
+            case MESSAGE_STATUS_COMPLETE_MSG:
+                status = ("DECTXT");
+                break;
+            case MESSAGE_STATUS_DRAFT:
+                status = ("DRAFT");
+                break;
+            case MESSAGE_STATUS_EXPIRED:
+                status = ("EXPIRED");
+                break;
+            case MESSAGE_STATUS_FAILED:
+                status = ("FAILED");
+                break;
+            case MESSAGE_STATUS_FILE_DECRYPTED:
+                status = ("DECFIL");
+                break;
+            case MESSAGE_STATUS_NONE:
+                status = ("NONE");
+                break;
+            case MESSAGE_STATUS_GOTPUSH:
+                status = ("GOTPUSH");
+                break;
+            case MESSAGE_STATUS_QUEUED:
+                status = ("QUEUED");
+                break;
+            default:
+                status = Integer.toString(stat);
+                break;
+        }
+        return status;
+    }
 }

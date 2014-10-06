@@ -25,50 +25,51 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Txiav Luam? Yog koj paub tseeb?</string>
+    <string name="ask_QuitConfirmation">Txiav luam yeeb? Yog koj paub tseeb?</string>
 
     <string name="btn_Match">Next</string>
     <string name="btn_NoMatch">Tsis Match</string>
 
     <string name="choice_NumUsers">%d cov neeg siv</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Tag nrho cov tswv cuab yuav tsum tau upgrade, ib txhia siv laus dua laub sau npe hom.</string>
-    <string name="error_CorrectYourInternetConnection">Internet tsis muaj, kos koj lub chaw.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Txauv timeout tshaj. Pib lub pauv dua.</string>
-    <string name="error_HttpCode">Rau zaub mov http Error: %d</string>
-    <string name="error_InvalidCommitVerify">Tsis yog cov ntaub ntawv pom nyob rau hauv pauv. Pib lub pauv dua.</string>
-    <string name="error_InvalidCommonUserId">Thov nkag mus rau ib tug zoo integer.</string>
-    <string name="error_LocalGroupCommitDiffer">Koj tau qhia ib tug txawv nyob rau hauv zaj lus. Pib lub pauv dua.</string>
-    <string name="error_MinUsersRequired">Ib yam tsawg kawg nkaus ntawm %d cov mej zeej yuav tsum tau mus sib pauv cov ntaub ntawv.</string>
-    <string name="error_MoreDataThanUsers">Npaj txhij txog cov ntaub ntawv pom nyob rau hauv pauv. Pib lub pauv dua.</string>
-    <string name="error_NoDataToExchange">Lub txauv yog ploj lawm yuav tsum tau cov ntaub ntawv.</string>
-    <string name="error_NoWordListSelected">Koj yuav tsum xaiv ib tug ntawm cov zaj lus ua ntej plaub ntug.</string>
-    <string name="error_OtherGroupCommitDiffer">Ib tug neeg qhia ib tug sib txawv nyob rau hauv zaj lus. Pib lub pauv dua.</string>
-    <string name="error_OutOfMemoryError">Nco yog heev tsawg ua kom tiav no hauj lwm.</string>
-    <string name="error_ServerAppMessage">Rau zaub mov Message: %s</string>
-    <string name="error_ServerNotResponding">Tsis muaj lus teb los ntawm cov neeg rau zaub mov.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout tos rau tej pab pawg neeg tswv cuab mus ntxiv cov ntaub ntawv.</string>
-    <string name="error_WebCancelledByUser">Tus neeg siv yuav tso tseg rau zaub mov thov.</string>
+    <string name="error_AllMembersMustUpgrade">Ib txhia mej zeej siv ib tug laus version; txhua tus mej zeej yuav tsum tau txawj tej yam ntxiv mus rau lub newest version.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Txhua tus mej zeej yuav tsum tau txawj tej yam ntxiv, ib txhia siv laus dua laub rau npe hom siv los qhia.</string>
+    <string name="error_CorrectYourInternetConnection">Internet tsis muaj, xyuas koj cov teeb tsa.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Txauv Timeout tshaj. Pib lub pauv dua.</string>
+    <string name="error_HttpCode">Neeg rau zaub mov http Error: %d</string>
+    <string name="error_InvalidCommitVerify">Tsis yog cov ntaub ntawv muaj nyob rau hauv pauv. Pib lub pauv dua.</string>
+    <string name="error_InvalidCommonUserId">Thov sau ib tug zoo integer.</string>
+    <string name="error_LocalGroupCommitDiffer">Koj tau qhia txog ib tug txawv nyob rau hauv cov nqe lus. Pib lub pauv dua.</string>
+    <string name="error_MinUsersRequired">Ib yam tsawg kawg nkaus ntawm %d cov mej zeej yuav tsum tau pauv cov ntaub ntawv.</string>
+    <string name="error_MoreDataThanUsers">Npaj txhij txog cov ntaub ntawv nyob rau hauv pauv. Pib lub pauv dua.</string>
+    <string name="error_NoDataToExchange">Txauv yog ploj lawm yuav tsum tau cov ntaub ntawv.</string>
+    <string name="error_NoWordListSelected">Koj yuav tsum xaiv ib tug ntawm cov nqe lus ua ntej txoj.</string>
+    <string name="error_OtherGroupCommitDiffer">Ib tug neeg qhia txog ib tug txawv nyob rau hauv cov nqe lus. Pib lub pauv dua.</string>
+    <string name="error_OutOfMemoryError">Nco yog qis dhau heev lawm ua kom tiav no ua hauj.</string>
+    <string name="error_ServerAppMessage">Neeg rau zaub mov Xov: %s</string>
+    <string name="error_ServerNotResponding">Tsis muaj lus teb los ntawm neeg rau zaub mov.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout tos rau ib co neeg pab pawg neeg los ntxiv cov ntaub ntawv.</string>
+    <string name="error_WebCancelledByUser">Tus neeg siv yuav tso tseg neeg rau zaub mov kev thov.</string>
 
-    <string name="help_size">Xaiv tus naj npawb ntawm cov neeg uas npaj mus pauv cov ntaub ntawv ua ke thiab nias OK.</string>
-    <string name="help_userid">Qhov no pes tsawg tus rau no screen yog siv los mus tsim ib tug tshwj xeeb pab pawg ntawm cov neeg siv. Ke tshab xyuas cov xov tooj nyob rau tag nrho cov neeg siv \' ntxaij, ces tag nrho cov neeg siv yuav tsum nkag mus rau hauv tib qis tshaj tus naj npawb thiab nias OK.</string>
-    <string name="help_verify">Tam sim no, koj yuav tsum tau ib qho ntawm cov phim 3-lus zaj lus nrog rau tag nrho cov neeg siv. Txhua tus neeg siv yuav tsum xaiv tib cov kab lus, thiab nias Next.</string>
+    <string name="help_size">Xaiv lub lub xov tooj ntawm cov neeg uas sim pauv cov ntaub ntawv ua ke thiab nias OK.</string>
+    <string name="help_userid">Qhov no muaj pes tsawg tus rau no screen yog siv los mus tsim ib tug tshwj xeeb cov pab pawg neeg ntawm cov neeg siv. Rov qab xyuas cov xov tooj nyob rau hauv tag nrho cov neeg siv cov \'ntxaij, ces tag nrho cov neeg siv yuav tsum nkag mus rau hauv tib lub qis tshaj tus naj npawb thiab nias OK.</string>
+    <string name="help_verify">Tam sim no, koj yuav tsum phim ib tug ntawm cov 3 lo lus sib txuas nrog rau tag nrho cov neeg siv. Txhua tus neeg siv yuav tsum xaiv tib ntau kab lus, thiab nias Next.</string>
 
-    <string name="label_CompareScreensNDevices">Piv ntxaij rau %s pab kiag li.</string>
-    <string name="label_NumericModeHint">Uas tsis yog lus Askiv</string>
-    <string name="label_PromptInstruct">Qhov no pes tsawg tus yog siv los mus tsim ib tug tshwj xeeb pab pawg ntawm cov neeg siv. Sib piv, thiab ces nkag qis tshaj tus naj npawb ntawm tag nrho cov neeg siv.</string>
+    <string name="label_CompareScreensNDevices">Piv ntxaij on %s kiag li lawm.</string>
+    <string name="label_NumericModeHint">Tsis yog-Askiv</string>
+    <string name="label_PromptInstruct">Qhov no muaj pes tsawg tus yog siv los mus tsim ib tug tshwj xeeb cov pab pawg neeg ntawm cov neeg siv. Sib piv, thiab ces nkag mus rau tus naj npawb qis tshaj ntawm tag nrho cov neeg siv.</string>
     <string name="label_ReceivedNItems">tau txais %d yam khoom</string>
     <string name="label_UserIdHint">Qis tshaj</string>
-    <string name="label_VerifyInstruct">Tag nrho cov xov tooj yuav tsum phim ib tug ntawm 3-lus zaj lus. Sib piv, thiab ces tuaj tos lub sib xws kab lus.</string>
+    <string name="label_VerifyInstruct">Tag nrho cov xov tooj yuav tsum phim ib tug ntawm cov 3 lo lus sib txuas. Sib piv, thiab ces khaws cov txuam kab lus.</string>
 
     <string name="lib_name">SafeSlinger txauv</string>
 
-    <string name="prog_CollectingOthersCommitVerify">tos pov thawj los ntawm tag nrho cov tswv cuab…</string>
-    <string name="prog_CollectingOthersItems">tos rau tag nrho cov neeg siv koom…</string>
-    <string name="prog_ConstructingGroupKey">constructing pab pawg neeg tseem ceeb…</string>
+    <string name="prog_CollectingOthersCommitVerify">tos pov thawj los ntawm txhua tus mej zeej…</string>
+    <string name="prog_CollectingOthersItems">tos rau tag nrho cov neeg siv kom tuaj koom nrog…</string>
+    <string name="prog_ConstructingGroupKey">txua cov pab pawg neeg tseem ceeb…</string>
     <string name="prog_RequestingUserId">thov ua tswv cuab…</string>
 
-    <string name="title_size">Yuav ua li cas ntau cov neeg siv nyob rau hauv lub pauv?</string>
+    <string name="title_size">Yuav ua li cas cov neeg siv ntau nyob rau hauv lub pauv?</string>
     <string name="title_userid">Grouping</string>
     <string name="title_verify">Soj ntsuam xyuas</string>
 

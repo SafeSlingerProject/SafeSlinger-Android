@@ -32,44 +32,45 @@
 
     <string name="choice_NumUsers">%d käyttäjää</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Kaikki jäsenet on päivitettävä, jotkut ovat vanhempia push rekisteröintiä formaatteja.</string>
+    <string name="error_AllMembersMustUpgrade">Jotkut jäsenet käyttävät vanhempaa versiota; kaikkien jäsenten tulee päivittää uusimpaan versioon.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Kaikki jäsenet on päivitettävä, jotkut käyttävät vanhempia push rekisteröintiä muodoissa.</string>
     <string name="error_CorrectYourInternetConnection">Internet ei ole käytettävissä, tarkista asetukset.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout ylitetty. Aloitavaihtoa uudelleen.</string>
-    <string name="error_HttpCode">Palvelin HTTP-virhe: %d</string>
-    <string name="error_InvalidCommitVerify">Virheellisiä tietoja löytyy vaihtoon. Aloitavaihtoa uudelleen.</string>
-    <string name="error_InvalidCommonUserId">Syötäpositiivinen kokonaisluku.</string>
-    <string name="error_LocalGroupCommitDiffer">Olet raportoituero lauseita. Aloitavaihtoa uudelleen.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Vaihto timeout ylitetty. Alkaa vaihtaa taas.</string>
+    <string name="error_HttpCode">Palvelimen HTTP-virhe: %d</string>
+    <string name="error_InvalidCommitVerify">Virheellisiä tietoja löytyy vaihtoon. Alkaa vaihtaa taas.</string>
+    <string name="error_InvalidCommonUserId">Syötä positiivinen kokonaisluku.</string>
+    <string name="error_LocalGroupCommitDiffer">Olet raportoitu eroa lauseita. Alkaa vaihtaa taas.</string>
     <string name="error_MinUsersRequired">Vähintään %d jäsentä, tulee vaihtaa tietoja.</string>
-    <string name="error_MoreDataThanUsers">Odottamaton Tietoja ei löytynyt vaihdossa. Aloitavaihtoa uudelleen.</string>
-    <string name="error_NoDataToExchange">Vaihto puuttuu tarvittavat tiedot.</string>
-    <string name="error_NoWordListSelected">Sinun on valittava yksilauseita ennen kuin jatkat.</string>
-    <string name="error_OtherGroupCommitDiffer">Joku ilmoittiero lauseita. Aloitavaihtoa uudelleen.</string>
+    <string name="error_MoreDataThanUsers">Odottamattomia tietoja löytyy vaihtoon. Alkaa vaihtaa taas.</string>
+    <string name="error_NoDataToExchange">Vaihto puuttuu vaadittuja tietoja.</string>
+    <string name="error_NoWordListSelected">Sinun tulee valita yksi lauseita ennen kuin jatkat.</string>
+    <string name="error_OtherGroupCommitDiffer">Joku raportoitu ero lauseita. Alkaa vaihtaa taas.</string>
     <string name="error_OutOfMemoryError">Muisti on liian pieni tehtävän loppuun suorittamiseksi.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Ei vastausta palvelimelta.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout odottamaan jotain ryhmän jäsenet voivat lisätä tietoja.</string>
-    <string name="error_WebCancelledByUser">Käyttäjä perui palvelimen pyynnöstä.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Aikalisä odottelin ryhmän jäsenet voivat lisätä tietoja.</string>
+    <string name="error_WebCancelledByUser">Käyttäjä peruutti palvelimen pyynnöstä.</string>
 
-    <string name="help_size">Valitsejoukko ihmisiä, jotka yrittävät vaihtaa tietoja keskenään ja paina OK.</string>
-    <string name="help_userid">Tämä numero tässä näytössä käytetään luomaanainutlaatuisen joukko käyttäjiä. Tarkistaanumerot kaikkien käyttäjien näyttöjä, niin kaikki käyttäjien tulee antaasama pienin numero ja paina OK.</string>
-    <string name="help_verify">Nyt sinun täytyy vastata yksi näistä 3-sanan lauseita kaikkien käyttäjien kanssa. Jokainen käyttäjä on valittavasama yhteinen lause, ja paina Seuraava.</string>
+    <string name="help_size">Valitse määrä ihmisiä, jotka yrittävät vaihtaa tietoja keskenään ja paina OK.</string>
+    <string name="help_userid">Tämä numero tässä näytössä käytetään luoda ainutlaatuinen joukko käyttäjiä. Tarkistaa numerot kaikkien käyttäjien näytöt, niin kaikki käyttäjien tulee antaa sama pienin numero ja paina OK.</string>
+    <string name="help_verify">Nyt sinun täytyy vastata johonkin näistä 3 sanan lauseita kaikille käyttäjille. Jokainen käyttäjä on valittava sama yhteinen lause, ja paina Seuraava.</string>
 
     <string name="label_CompareScreensNDevices">Vertaa näytöt %s laitteissa.</string>
     <string name="label_NumericModeHint">Ei-Englanti</string>
-    <string name="label_PromptInstruct">Tätä numeroa käytetään luoda ainutlaatuinen joukko käyttäjiä. Vertaa ja kirjoitavähiten kaikkien käyttäjien kesken.</string>
+    <string name="label_PromptInstruct">Tätä numeroa käytetään luoda ainutlaatuinen joukko käyttäjiä. Vertaa ja kirjoita vähiten kaikkien käyttäjien kesken.</string>
     <string name="label_ReceivedNItems">sai %d kohdetta</string>
     <string name="label_UserIdHint">Alin</string>
-    <string name="label_VerifyInstruct">Kaikki puhelimet on vastattava yksi3-sanan lauseita. Vertaa, ja sitten valitaMatching lause.</string>
+    <string name="label_VerifyInstruct">Kaikki puhelimet on vastattava yksi 3-sanan lauseita. Vertaa, ja sitten valita Matching lause.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">odottaa tarkastusta kaikilta jäseniltä…</string>
     <string name="prog_CollectingOthersItems">odottaa kaikkien käyttäjien liittyä…</string>
-    <string name="prog_ConstructingGroupKey">rakentaa ryhmän näppäintä…</string>
+    <string name="prog_ConstructingGroupKey">rakentamalla ryhmän näppäintä…</string>
     <string name="prog_RequestingUserId">jäseneksi hakevan…</string>
 
-    <string name="title_size">Kuinka monet käyttäjätvaihtoon?</string>
-    <string name="title_userid">Ryhmittymä</string>
+    <string name="title_size">Montako käyttäjien vaihtoon?</string>
+    <string name="title_userid">Ryhmittely</string>
     <string name="title_verify">Tarkistaa</string>
 
 </resources>

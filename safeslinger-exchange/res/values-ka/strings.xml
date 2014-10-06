@@ -30,46 +30,47 @@
     <string name="btn_Match">შემდეგი</string>
     <string name="btn_NoMatch">არარის Match</string>
 
-    <string name="choice_NumUsers">%d მომხმარებლის</string>
+    <string name="choice_NumUsers">%d მომხმარებლები</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">ყველა წევრი უნდა განაახლოს, ზოგიერთ გამოყენებით ძველი ბიძგი რეგისტრაციის ფორმატებში.</string>
-    <string name="error_CorrectYourInternetConnection">ინტერნეტი არ არის ხელმისაწვდომი, გადაამოწმოთ პარამეტრები.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">გაცვლითი შეყოვნება გადააჭარბა. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_HttpCode">სერვერი HTTP შეცდომა %d</string>
-    <string name="error_InvalidCommitVerify">მცდარი მონაცემები ვერ მოიძებნა სანაცვლოდ. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_InvalidCommonUserId">გთხოვთ მიუთითოთ დადებითი მთელი რიცხვი.</string>
+    <string name="error_AllMembersMustUpgrade">ზოგიერთი წევრი იყენებთ ძველ ვერსიას; ყველა წევრი უნდა გადახვიდეთ უახლესი ვერსია.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">ყველა წევრი უნდა განაახლოს, ზოგიერთ იყენებთ უფროსი ბიძგი რეგისტრაციის ფორმატებში.</string>
+    <string name="error_CorrectYourInternetConnection">ინტერნეტი არ არის, შესაძლებელია შეამოწმოთ თქვენი პარამეტრები.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">გაცვლა timeout გადააჭარბა. დასაწყისი გაცვლა ერთხელ.</string>
+    <string name="error_HttpCode">Server HTTP შეცდომა %d</string>
+    <string name="error_InvalidCommitVerify">არასწორი მონაცემები ვერ მოიძებნა სანაცვლოდ. დასაწყისი გაცვლა ერთხელ.</string>
+    <string name="error_InvalidCommonUserId">გთხოვთ შეიყვანოთ დადებითი მთელი რიცხვი.</string>
     <string name="error_LocalGroupCommitDiffer">თქვენ არ ინფორმაციით განსხვავება ფრაზები. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_MinUsersRequired">მინიმუმ %d წევრი საჭირო მონაცემების გაცვლა.</string>
+    <string name="error_MinUsersRequired">მინიმუმ %d წევრია საჭირო მონაცემების გაცვლა.</string>
     <string name="error_MoreDataThanUsers">მოულოდნელი მონაცემები ვერ მოიძებნა სანაცვლოდ. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_NoDataToExchange">გაცვლა აკლია საჭირო მონაცემები.</string>
-    <string name="error_NoWordListSelected">თქვენ უნდა აირჩიოთ ერთი ფრაზის გაგრძელებამდე.</string>
-    <string name="error_OtherGroupCommitDiffer">საყვარელი ცნობით განსხვავება ფრაზები. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_OutOfMemoryError">Memory ძალიან დაბალია, შეავსოთ ეს ოპერაცია.</string>
+    <string name="error_NoDataToExchange">გაცვლა არის დაკარგული მონაცემები.</string>
+    <string name="error_NoWordListSelected">თქვენ უნდა აირჩიოთ ერთი ფრაზები გაგრძელებამდე.</string>
+    <string name="error_OtherGroupCommitDiffer">ვინმე ცნობით განსხვავება ფრაზები. დასაწყისი გაცვლა ერთხელ.</string>
+    <string name="error_OutOfMemoryError">მეხსიერება ძალიან დაბალია, შეავსოთ ეს ოპერაცია.</string>
     <string name="error_ServerAppMessage">Server შეტყობინება: %s</string>
-    <string name="error_ServerNotResponding">პასუხი არ სერვერიდან.</string>
-    <string name="error_TimeoutWaitingForAllMembers">დროის ელოდება რამდენიმე ჯგუფის წევრები დაამატოთ მონაცემები.</string>
-    <string name="error_WebCancelledByUser">პროფაილი გაუქმდა სერვერზე მოთხოვნით.</string>
+    <string name="error_ServerNotResponding">პასუხი არ არის სერვერზე.</string>
+    <string name="error_TimeoutWaitingForAllMembers">დროის ელოდება რამდენიმე ჯგუფის წევრები დაემატოს მონაცემები.</string>
+    <string name="error_WebCancelledByUser">პროფაილი გაუქმდა სერვერზე მოთხოვნის.</string>
 
-    <string name="help_size">აირჩიეთ რაოდენობის ხალხი, რომელიც ცდილობს მონაცემების გაცვლა ერთად და OK.</string>
-    <string name="help_userid">ეს რიცხვი ამ ეკრანზე გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის მომხმარებლებს. მიმოხილვა ნომრები ყველა მომხმარებლების ეკრანები, მაშინ ყველა მომხმარებლის უნდა შევიდეს და იგივე ყველაზე დაბალი ნომერი და OK.</string>
-    <string name="help_verify">ახლა, თქვენ უნდა ემთხვეოდეს ერთი ამ 3 სიტყვის ფრაზის ყველა მომხმარებლებს. ყველა მომხმარებელი უნდა აირჩიოთ ერთი და იგივე საერთო ფრაზა და დააჭირეთ შემდეგი.</string>
+    <string name="help_size">აირჩიეთ რაოდენობის ადამიანები, რომლებიც ცდილობენ მონაცემთა გაცვლის ერთად და დააჭირეთ OK.</string>
+    <string name="help_userid">ეს რიცხვი ამ ეკრანზე გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის წევრებს. მიმოხილვა ნომრები ყველა მომხმარებლებს ეკრანები, მაშინ ყველა მომხმარებელი უნდა შევიდეს იგივე ყველაზე დაბალი და OK.</string>
+    <string name="help_verify">ახლა, თქვენ უნდა ემთხვეოდეს ერთი ასეთი 3 სიტყვიანი ფრაზები ყველა მომხმარებლისთვის. ყველა მომხმარებლის უნდა აირჩიოთ იგივე საღი ფრაზა და დააჭირეთ შემდეგი.</string>
 
-    <string name="label_CompareScreensNDevices">შეადარეთ ეკრანებზე %s მოწყობილობები.</string>
-    <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">ეს რიცხვი გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის მომხმარებლებს. შედარება, და მხოლოდ შემდეგ შეიყვანოთ ყველაზე დაბალი შორის მომხმარებლებს.</string>
+    <string name="label_CompareScreensNDevices">შეადარეთ ეკრანებზე %s მოწყობილობების.</string>
+    <string name="label_NumericModeHint">არასამთავრობო ინგლისური</string>
+    <string name="label_PromptInstruct">ეს რიცხვი გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის წევრებს. შედარება, და მხოლოდ შემდეგ შეიყვანოთ ყველაზე დაბალი შორის მომხმარებლებს.</string>
     <string name="label_ReceivedNItems">მიიღო %d ელემენტი</string>
-    <string name="label_UserIdHint">ყველაზე</string>
-    <string name="label_VerifyInstruct">ტელეფონები დამთხვევა ერთი 3 სიტყვით ფრაზები. შეადარეთ და შემდეგ აირჩიოთ შესაბამისი ფრაზა.</string>
+    <string name="label_UserIdHint">დაბალი</string>
+    <string name="label_VerifyInstruct">ტელეფონები დამთხვევა ერთი 3 სიტყვა ფრაზები. შეადარეთ და შემდეგ აირჩიოთ შესაბამისი ფრაზა.</string>
 
-    <string name="lib_name">SafeSlinger გაცვლა</string>
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">ელოდება გადამოწმება ყველა წევრი…</string>
-    <string name="prog_CollectingOthersItems">ელოდება ყველა მომხმარებლის შეუერთდეს…</string>
+    <string name="prog_CollectingOthersItems">ელოდება ყველა მომხმარებლებს შეუერთდეს…</string>
     <string name="prog_ConstructingGroupKey">მშენებლობის ჯგუფი გასაღები…</string>
     <string name="prog_RequestingUserId">მოთხოვნის წევრობის…</string>
 
-    <string name="title_size">რამდენი მომხმარებლის გაცვლა?</string>
+    <string name="title_size">რამდენი მომხმარებლებს გაცვლა?</string>
     <string name="title_userid">დაჯგუფება</string>
-    <string name="title_verify">შემოწმება</string>
+    <string name="title_verify">გადაამოწმონ</string>
 
 </resources>

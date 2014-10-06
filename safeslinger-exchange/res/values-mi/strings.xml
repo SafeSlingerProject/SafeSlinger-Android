@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Waiho? Kei te tino koe?</string>
+    <string name="ask_QuitConfirmation">Waiho? Kei te tino?</string>
 
     <string name="btn_Match">Next</string>
-    <string name="btn_NoMatch">No Match</string>
+    <string name="btn_NoMatch">No Whakaōrite</string>
 
     <string name="choice_NumUsers">%d kaiwhakamahi</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Me whakahōu te mau melo o te katoa, etahi kei te whakamahi i ngā pakeke rēhita pana.</string>
-    <string name="error_CorrectYourInternetConnection">Internet e kore e wātea ana, tirohia ngā tautuhinga.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Nui atu Exchange wāhiki. Timata ano te utu.</string>
-    <string name="error_HttpCode">Hapa Tūmau HTTP: %d</string>
-    <string name="error_InvalidCommitVerify">Kitea i roto i te utu raraunga hē. Timata ano te utu.</string>
-    <string name="error_InvalidCommonUserId">Tomo koa he tau tōpū pai.</string>
-    <string name="error_LocalGroupCommitDiffer">Kua korerotia e koe he rerekëtanga i roto i te rerenga kōrero. Timata ano te utu.</string>
-    <string name="error_MinUsersRequired">Kei te hiahiatia te iti o ngā mema ki te %d whakawhiti raraunga.</string>
-    <string name="error_MoreDataThanUsers">Kitea i roto i te utu raraunga ohorere. Timata ano te utu.</string>
-    <string name="error_NoDataToExchange">Kei te ngaro i te utu raraunga e hiahiatia ana.</string>
-    <string name="error_NoWordListSelected">Me tīpako e koe tetahi o te rerenga kōrero i mua i haere.</string>
-    <string name="error_OtherGroupCommitDiffer">Tetahi korerotia te rerekëtanga i roto i te rerenga kōrero. Timata ano te utu.</string>
-    <string name="error_OutOfMemoryError">He iti rawa ki te whakaoti i tenei mahi Memory.</string>
+    <string name="error_AllMembersMustUpgrade">Te tahi mau melo e te whakamahi i te momo putanga tawhito; Me whakahōu te i te mau melo katoa ki te putanga hōu.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Me whakahōu te mau melo o te katoa, etahi kei te whakamahi pakeke ngā whakatakotoranga rēhita pana.</string>
+    <string name="error_CorrectYourInternetConnection">Internet e kore e wātea ana, tirohia ō tautuhinga.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Nui Exchange wāhiki. A haamata ano te utu.</string>
+    <string name="error_HttpCode">Hapa HTTP Tūmau: %d</string>
+    <string name="error_InvalidCommitVerify">Kitea raraunga hē i roto i te utu. A haamata ano te utu.</string>
+    <string name="error_InvalidCommonUserId">Tomo koa he tōpū pai.</string>
+    <string name="error_LocalGroupCommitDiffer">Kua korerotia e koe he rerekētanga i roto i te kīanga. A haamata ano te utu.</string>
+    <string name="error_MinUsersRequired">E hiahiatia ana te iti o te mau melo %d ki te taui raraunga.</string>
+    <string name="error_MoreDataThanUsers">Kitea raraunga puta noa i roto i te utu. A haamata ano te utu.</string>
+    <string name="error_NoDataToExchange">Kei te ngaro te utu raraunga e hiahiatia ana.</string>
+    <string name="error_NoWordListSelected">Me tīpako e koe tetahi o nga kīanga i mua i puta.</string>
+    <string name="error_OtherGroupCommitDiffer">Tetahi korerotia te rerekētanga i roto i te kīanga. A haamata ano te utu.</string>
+    <string name="error_OutOfMemoryError">He iti rawa Memory ki te whakaoti i tēnei mahi.</string>
     <string name="error_ServerAppMessage">Message Tūmau: %s</string>
     <string name="error_ServerNotResponding">No whakautu i te tūmau.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Wāhiki tatari hoki ki te tahi mau melo o te rōpū tāpiri raraunga.</string>
-    <string name="error_WebCancelledByUser">Whakakorea Kaiwhakamahi tono tūmau.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Wāhiki e tatari ana ki te tahi mau melo o te rōpū tāpiri i raraunga.</string>
+    <string name="error_WebCancelledByUser">Whakakorea e te kaiwhakamahi tono tūmau.</string>
 
-    <string name="help_size">Tīpakohia te tokomaha o te iwi i te hunga e whakamātau ana ki te whakawhiti tahi me te pēhi i te OK raraunga.</string>
-    <string name="help_userid">Tenei tau i runga i tenei mata whakamahia ki te hanga i tētahi rōpū motuhake o ngā kaiwhakamahi. Te arotake i te tau i runga i ngā mata kaiwhakamahi katoa \', ka e tae ngā kaiwhakamahi katoa te maha i raro taua, me te pēhi OK.</string>
-    <string name="help_verify">Na, me taurite ki a koe tetahi o enei kupui lea 3-kupu ki ngā kaiwhakamahi katoa. Me tīpako i nga kaiwhakamahi i te kīanga noa taua, ka pēhi whai mai.</string>
+    <string name="help_size">Tīpakohia te tokomaha o te iwi nei e ngana ana ki te whakawhiti tahi raraunga, me te pēhi i te OK.</string>
+    <string name="help_userid">Tenei maha i runga i tenei mata whakamahia ki te hanga i te rōpū ahurei o ngā kaiwhakamahi. Faahou i te tau i runga i mata kaiwhakamahi katoa \', ko reira e tae ngā kaiwhakamahi katoa te taua i raro maha, me te pēhi i te OK.</string>
+    <string name="help_verify">Na, me ōrite koutou tetahi o enei kīanga 3-kupu ki te kaiwhakamahi katoa. Me tīpako nga kaiwhakamahi i te parau noa taua, ka pēhi i te Panuku.</string>
 
     <string name="label_CompareScreensNDevices">Whakatauritea ngā mata i runga i ngā pūrere %s.</string>
-    <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Whakamahia i tēnei tau ki te hanga i tētahi rōpū motuhake o ngā kaiwhakamahi. Whakatauritea ngā, a ka tomo i te tau i raro i roto i ngā kaiwhakamahi katoa.</string>
-    <string name="label_ReceivedNItems">riro te %d ngā tūemi</string>
-    <string name="label_UserIdHint">I raro</string>
-    <string name="label_VerifyInstruct">Me ōrite te waea katoa tetahi o 3-kupu kīanga i te. Whakatauritea ngā, a ka tangohia i te kīanga kupu.</string>
+    <string name="label_NumericModeHint">Kore-English</string>
+    <string name="label_PromptInstruct">Whakamahia ana tēnei te tau ki te hanga i te rōpū ahurei o ngā kaiwhakamahi. Whakatauritea, a ka tomo i te tokomaha i raro i roto i ngā kaiwhakamahi katoa.</string>
+    <string name="label_ReceivedNItems">riro %d ngā tūemi</string>
+    <string name="label_UserIdHint">Iti</string>
+    <string name="label_VerifyInstruct">Me ōrite waea katoa tetahi o 3-kupu kīanga i te. Whakatauritea, a ka tiki i te parau ōrite.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">tatari hei manatoko i te mau melo i te katoa…</string>
+    <string name="prog_CollectingOthersCommitVerify">tatari hei manatoko i roto i te mau melo katoa…</string>
     <string name="prog_CollectingOthersItems">e tatari ana ki te kaiwhakamahi katoa te whakauru mai…</string>
     <string name="prog_ConstructingGroupKey">hanga matua rōpū…</string>
-    <string name="prog_RequestingUserId">tono mema…</string>
+    <string name="prog_RequestingUserId">tono te mematanga…</string>
 
     <string name="title_size">E hia ngā kaiwhakamahi i roto i te utu?</string>
     <string name="title_userid">Whakarōpū</string>
-    <string name="title_verify">Manatoko</string>
+    <string name="title_verify">Manatokohia</string>
 
 </resources>

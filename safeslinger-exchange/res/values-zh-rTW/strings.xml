@@ -32,6 +32,7 @@
 
     <string name="choice_NumUsers">%d位成員</string>
 
+    <string name="error_AllMembersMustUpgrade">一些成員使用的是較舊的版本;所有成員都必須升級到最新版本。</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">所有成員都必須升級，一些正在使用舊的訊息通知格式。</string>
     <string name="error_CorrectYourInternetConnection">網路不可使用，請檢查您的網路設定。</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">金鑰交換過程超時。重新開始交換金鑰。</string>

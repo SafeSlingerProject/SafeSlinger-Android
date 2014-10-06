@@ -30,46 +30,47 @@
     <string name="btn_Match">Nākamais</string>
     <string name="btn_NoMatch">Nē Match</string>
 
-    <string name="choice_NumUsers">%d lietotāji</string>
+    <string name="choice_NumUsers">%d lietotājiem</string>
 
+    <string name="error_AllMembersMustUpgrade">Daži dalībnieki izmanto vecāku versiju; visi dalībnieki ir uzlabot ar jaunāko versiju.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Visiem dalībniekiem ir jauninājums, daži izmanto vecākas push reģistrācijas formātus.</string>
     <string name="error_CorrectYourInternetConnection">Internets nav pieejams, pārbaudiet iestatījumus.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Apmaiņas taimauts pārsniegts. Atkal sāk apmaiņu.</string>
-    <string name="error_HttpCode">Servera HTTP kļūda: %d</string>
-    <string name="error_InvalidCommitVerify">Nepareizi dati atrodami apmaiņā. Atkal sāk apmaiņu.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange taimauts pārsniegts. Atkal sākas apmaiņu.</string>
+    <string name="error_HttpCode">Servera HTTP Kļūda: %d</string>
+    <string name="error_InvalidCommitVerify">Nepareizie dati atrodami apmaiņā. Atkal sākas apmaiņu.</string>
     <string name="error_InvalidCommonUserId">Ievadiet pozitīvu skaitli.</string>
-    <string name="error_LocalGroupCommitDiffer">Jūs ziņoja atšķirību frāzes. Atkal sāk apmaiņu.</string>
+    <string name="error_LocalGroupCommitDiffer">Jūs ziņoja atšķirība frāzes. Atkal sākas apmaiņu.</string>
     <string name="error_MinUsersRequired">Vismaz %d biedriem ir pienākums apmainīties ar datiem.</string>
-    <string name="error_MoreDataThanUsers">Negaidītas dati atrodami apmaiņā. Atkal sāk apmaiņu.</string>
-    <string name="error_NoDataToExchange">Apmaiņa trūkst vajadzīgo datus.</string>
-    <string name="error_NoWordListSelected">Jums ir jāizvēlas viena no frāzēm pirms turpināt.</string>
-    <string name="error_OtherGroupCommitDiffer">Kāds ziņoja atšķirība frāzes. Atkal sāk apmaiņu.</string>
+    <string name="error_MoreDataThanUsers">Negaidītas datu atrasts apmaiņā. Atkal sākas apmaiņu.</string>
+    <string name="error_NoDataToExchange">Apmaiņa ir pazudis vajadzīgos datus.</string>
+    <string name="error_NoWordListSelected">Jums jāizvēlas viena no frāzēm, pirms turpināt.</string>
+    <string name="error_OtherGroupCommitDiffer">Kāds ziņoja atšķirība frāzes. Atkal sākas apmaiņu.</string>
     <string name="error_OutOfMemoryError">Atmiņa ir pārāk zema, lai pabeigtu šo darbību.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nav atbildes no servera.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Taimauts gaida daži grupas dalībnieki, lai pievienotu datus.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Taimauta gaida daži grupas dalībnieki, lai pievienotu datus.</string>
     <string name="error_WebCancelledByUser">Lietotājs atcēla servera pieprasījumu.</string>
 
-    <string name="help_size">Atlasiet to cilvēku skaitu, kuri mēģina datu apmaiņu kopā un nospiediet OK.</string>
-    <string name="help_userid">Šis numurs šajā ekrānā tiek izmantota, lai radītu unikālu lietotāju grupai. Pārskatīt skaitļus attiecībā uz visu lietotāju ekrāniem, tad visiem lietotājiem vajadzētu ievadīt pašu zemāko numuru un nospiediet OK.</string>
-    <string name="help_verify">Tagad jums ir jāatbilst vienam no šiem 3 vārdu frāzes ar visiem lietotājiem. Katram lietotājam ir jāizvēlas pašu kopējo frāzi, un nospiediet Next.</string>
+    <string name="help_size">Izvēlieties to cilvēku skaitu, kuri mēģina, lai apmainītos ar datiem kopā, un nospiediet pogu OK.</string>
+    <string name="help_userid">Šis numurs šajā ekrānā tiek izmantota, lai radītu unikālu lietotāju grupai. Pārskatiet numurus uz visu lietotāju ekrāniem, tad visi lietotāji būtu jāstājas to pašu zemāko numuru un nospiediet OK.</string>
+    <string name="help_verify">Tagad, jums ir jāatbilst vienam no šiem 3-vārdu frāzes ar visiem lietotājiem. Katram lietotājam ir izvēlēties pašu kopējo frāzi, un nospiediet Next.</string>
 
     <string name="label_CompareScreensNDevices">Salīdziniet ekrāni %s ierīcēm.</string>
     <string name="label_NumericModeHint">Non-angļu</string>
-    <string name="label_PromptInstruct">Šis numurs tiek izmantota, lai radītu unikālu lietotāju grupai. Salīdzināt, un pēc tam ievadiet mazāko skaitu starp visiem lietotājiem.</string>
+    <string name="label_PromptInstruct">Šis numurs tiek izmantota, lai radītu unikālu lietotāju grupai. Salīdzināt, un pēc tam ievadiet zemākais starp visiem lietotājiem.</string>
     <string name="label_ReceivedNItems">saņēma %d objektus</string>
     <string name="label_UserIdHint">Zemākais</string>
-    <string name="label_VerifyInstruct">Visi telefoni ir jāatbilst vienam no 3 vārdu frāzes. Salīdzināt, un pēc tam izvēlēties atbilstošu frāzi.</string>
+    <string name="label_VerifyInstruct">Visi telefoni ir jāatbilst vienam no 3-vārdu frāzes. Salīdzināt, un pēc tam izvēlēties saskaņošanas frāzi.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">gaida, lai pārbaudītu no visiem dalībniekiem…</string>
-    <string name="prog_CollectingOthersItems">gaida visiem lietotājiem, lai pievienotos…</string>
+    <string name="prog_CollectingOthersCommitVerify">gaida verifikācijai no visiem dalībniekiem…</string>
+    <string name="prog_CollectingOthersItems">gaida visi lietotāji pievienoties…</string>
     <string name="prog_ConstructingGroupKey">būvējot grupas atslēgu…</string>
     <string name="prog_RequestingUserId">pieprasot dalību…</string>
 
-    <string name="title_size">Cik daudz lietotāju apmaiņā?</string>
-    <string name="title_userid">Grupēšana</string>
+    <string name="title_size">Cik lietotāji apmaiņā?</string>
+    <string name="title_userid">Grupējums</string>
     <string name="title_verify">Pārbaudīt</string>
 
 </resources>

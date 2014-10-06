@@ -32,44 +32,45 @@
 
     <string name="choice_NumUsers">%d användare</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Alla medlemmar måste uppgradera, en del använder äldre tryckregistreringsformat.</string>
+    <string name="error_AllMembersMustUpgrade">Några medlemmar använder en äldre version; alla medlemmar måste uppgradera till den senaste versionen.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Alla medlemmar måste uppgradera, vissa använder äldre tryckregistreringsformat.</string>
     <string name="error_CorrectYourInternetConnection">Internet inte är tillgänglig, kontrollera dina inställningar.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout överskrids. Begin utbyte igen.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Utbyte timeout överskrids. Begin utbytet igen.</string>
     <string name="error_HttpCode">Server HTTP Fel: %d</string>
-    <string name="error_InvalidCommitVerify">Felaktiga uppgifter som finns i utbyte. Begin utbyte igen.</string>
+    <string name="error_InvalidCommitVerify">Felaktiga uppgifter funna i utbyte. Begin utbytet igen.</string>
     <string name="error_InvalidCommonUserId">Ange ett positivt heltal.</string>
-    <string name="error_LocalGroupCommitDiffer">Du har rapporterat en skillnad i fraser. Begin utbyte igen.</string>
+    <string name="error_LocalGroupCommitDiffer">Du har rapporterat en skillnad i fraser. Begin utbytet igen.</string>
     <string name="error_MinUsersRequired">Minst %d medlemmar är skyldiga att utbyta data.</string>
-    <string name="error_MoreDataThanUsers">Oväntade uppgifter som finns i utbyte. Begin utbyte igen.</string>
-    <string name="error_NoDataToExchange">Utbytet saknas nödvändiga data.</string>
+    <string name="error_MoreDataThanUsers">Oväntade data hittades i utbyte. Begin utbytet igen.</string>
+    <string name="error_NoDataToExchange">Utbytet saknas nödvändiga uppgifter.</string>
     <string name="error_NoWordListSelected">Du måste välja en av de fraser innan du fortsätter.</string>
-    <string name="error_OtherGroupCommitDiffer">Någon rapporterade en skillnad i fraser. Begin utbyte igen.</string>
+    <string name="error_OtherGroupCommitDiffer">Någon rapporterade en skillnad i fraser. Begin utbytet igen.</string>
     <string name="error_OutOfMemoryError">Minnet är för låg för att slutföra den här åtgärden.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Inget svar från servern.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout väntar på vissa gruppmedlemmar för att lägga till data.</string>
     <string name="error_WebCancelledByUser">Användaren avbröt förfrågan server.</string>
 
-    <string name="help_size">Välj antal personer som försöker utbyta data tillsammans och tryck på OK.</string>
-    <string name="help_userid">Detta antal på den här skärmen används för att skapa en unik grupp av användare. Granska siffrorna på samtliga användares skärmar, då alla användare ska ange samma lägsta antal och tryck på OK.</string>
+    <string name="help_size">Välj antal personer som försöker att utbyta data tillsammans och tryck på OK.</string>
+    <string name="help_userid">Detta antal på den här skärmen används för att skapa en unik grupp av användare. Granska siffrorna på alla användares skärmar, då alla användare ska ange samma lägsta numret och tryck OK.</string>
     <string name="help_verify">Nu måste du matcha en av dessa 3-ord fraser med alla användare. Varje användare måste välja samma vanlig fras, och tryck på Nästa.</string>
 
     <string name="label_CompareScreensNDevices">Jämför skärmar på %s enheter.</string>
     <string name="label_NumericModeHint">Icke-engelska</string>
     <string name="label_PromptInstruct">Detta nummer används för att skapa en unik grupp av användare. Jämför och ange det lägsta antalet bland alla användare.</string>
-    <string name="label_ReceivedNItems">erhöll %d poster</string>
+    <string name="label_ReceivedNItems">erhöll %d objekt</string>
     <string name="label_UserIdHint">Lägsta</string>
-    <string name="label_VerifyInstruct">Alla telefoner måste matcha en av de 3-ord fraser. Jämför, och sedan plocka matchande fras.</string>
+    <string name="label_VerifyInstruct">Alla telefoner måste matcha en av de 3-ord fraser. Jämför och sedan plocka matchande fras.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">väntar på verifiering från alla medlemmar…</string>
-    <string name="prog_CollectingOthersItems">väntar på att alla användare att gå med…</string>
+    <string name="prog_CollectingOthersItems">väntar för alla användare att gå med…</string>
     <string name="prog_ConstructingGroupKey">konstruera gruppknapp…</string>
     <string name="prog_RequestingUserId">begärande medlemskap…</string>
 
     <string name="title_size">Hur många användare i utbyte?</string>
     <string name="title_userid">Gruppering</string>
-    <string name="title_verify">Verify</string>
+    <string name="title_verify">Verifiera</string>
 
 </resources>

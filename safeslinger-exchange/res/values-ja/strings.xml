@@ -32,6 +32,7 @@
 
     <string name="choice_NumUsers">ユーザ数%d人</string>
 
+    <string name="error_AllMembersMustUpgrade">最新のバージョンを使用していないメンバーがいます。メンバー全員が最新のバージョンを使用する必要があります。</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">すべてのメンバーは、いくつかの古いプッシュ登録フォーマットを使用している、アップグレードする必要があります。</string>
     <string name="error_CorrectYourInternetConnection">インターネットを利用できません。設定を確認してください。</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">交換のタイムアウトを超過しました。再び交換を開始します。</string>

@@ -1019,8 +1019,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private void runThreadCreateKey() {
         sWebError = null;
         showProgress(getString(R.string.prog_GeneratingKey));
-        setProgressCancelHandler();
-
         Thread t = new Thread() {
 
             @Override
@@ -1655,7 +1653,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         switch (resultCode) {
             case SlingerFragment.RESULT_BEGINEXCHANGE:
-                showExchange(data.getString(ExchangeConfig.extra.USER_DATA).getBytes());
+                if (SafeSlinger.getApplication().isOnline()) {
+                    showExchange(data.getString(ExchangeConfig.extra.USER_DATA).getBytes());
+                } else {
+                    showNote(R.string.error_CorrectYourInternetConnection);
+                }
                 break;
             case SlingerFragment.RESULT_USEROPTIONS:
                 showChangeSenderOptions();
@@ -2581,8 +2583,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         });
 
         showProgress(getString(R.string.prog_SavingContactsToKeyDatabase));
-        setProgressCancelHandler();
-
         Thread t = new Thread() {
 
             @Override
@@ -3192,7 +3192,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
 
         showProgress(getString(R.string.prog_RequestingPushReg));
-        setProgressCancelHandler();
         Thread t = new Thread() {
 
             @Override
@@ -3879,6 +3878,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             sProgressMsg = msg;
         }
         sProg.setCancelable(true);
+        setProgressCancelHandler();
 
         return sProg;
     }

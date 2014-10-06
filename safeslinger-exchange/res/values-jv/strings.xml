@@ -25,50 +25,51 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Metu? Apa panjenengan yakin?</string>
+    <string name="ask_QuitConfirmation">Mandhekake? Apa sampeyan manawa?</string>
 
     <string name="btn_Match">Sabanjure</string>
     <string name="btn_NoMatch">Ora Cocokake</string>
 
     <string name="choice_NumUsers">%d kedhaftar</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Kabeh anggota kudu nganyarke, sawetara sing nggunakake lawas push format gratis.</string>
+    <string name="error_AllMembersMustUpgrade">Sawetara anggota sing nggunakake versi lawas; kabeh anggota kudu nganyarke kanggo versi Newest.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Kabeh anggota kudu upgrade, sawetara nggunakake lawas push format gratis.</string>
     <string name="error_CorrectYourInternetConnection">Internet ora kasedhiya, priksa setelan.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange wektu entek ngluwihi. Miwiti ngganti maneh.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange wektu entek ngluwihi. Mulai ijol-ijolan maneh.</string>
     <string name="error_HttpCode">Server HTTP kesalahan: %d</string>
-    <string name="error_InvalidCommitVerify">Data salah ditemokaké ing ngganti. Miwiti ngganti maneh.</string>
+    <string name="error_InvalidCommitVerify">Data salah ditemokaké ing ijol-ijolan. Mulai ijol-ijolan maneh.</string>
     <string name="error_InvalidCommonUserId">Mangga ngetik ongko positif.</string>
-    <string name="error_LocalGroupCommitDiffer">Sampeyan wis dilapurake prabédan ing frasa. Miwiti ngganti maneh.</string>
-    <string name="error_MinUsersRequired">A minimal %d anggota sing dibutuhaké ijolan data.</string>
-    <string name="error_MoreDataThanUsers">Data ora kaduga ditemokaké ing ngganti. Miwiti ngganti maneh.</string>
-    <string name="error_NoDataToExchange">Ing ngganti wis ilang data dibutuhake.</string>
-    <string name="error_NoWordListSelected">Sampeyan kudu milih salah siji saka phrases sadurungé dibanjuraké.</string>
-    <string name="error_OtherGroupCommitDiffer">Wong sing dilapurake prabédan ing frasa. Miwiti ngganti maneh.</string>
+    <string name="error_LocalGroupCommitDiffer">Sampeyan wis kacarita prabédan ing phrases. Mulai ijol-ijolan maneh.</string>
+    <string name="error_MinUsersRequired">A minimal %d anggota sing dibutuhaké kanggo ijolan data.</string>
+    <string name="error_MoreDataThanUsers">Data ora dikarepke ditemokaké ing ijol-ijolan. Mulai ijol-ijolan maneh.</string>
+    <string name="error_NoDataToExchange">Ijol-ijolan wis ilang data required.</string>
+    <string name="error_NoWordListSelected">Sampeyan kudu pilih salah siji saka phrases sadurungé dibanjuraké.</string>
+    <string name="error_OtherGroupCommitDiffer">Wong sing dilapurake prabédan ing phrases. Mulai ijol-ijolan maneh.</string>
     <string name="error_OutOfMemoryError">Memori banget kurang kanggo ngrampungake operasi iki.</string>
-    <string name="error_ServerAppMessage">Server Pesen: %s</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Ora ana respon saka server.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Wektu entek nunggu sawetara anggota grup kanggo nambah data.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Wektu entek nunggu sawetara anggota-anggota kelompok kanggo nambah data.</string>
     <string name="error_WebCancelledByUser">Anggota dibatalake server request.</string>
 
-    <string name="help_size">Pilih nomer wong sing nyoba kanggo ijolan data bebarengan banjur pencet OK.</string>
+    <string name="help_size">Pilih nomer wong sing nyoba kanggo ijol-ijolan data lan pencet OK.</string>
     <string name="help_userid">Iki nomer ing layar iki digunakake kanggo nggawe grup unik saka kedhaftar. Maneh nomer ing layar kabeh kedhaftar \', banjur kabeh kedhaftar ngirim ketik padha paling nomer banjur pencet OK.</string>
     <string name="help_verify">Saiki, sampeyan kudu cocog siji iki phrases 3-tembung karo kabeh kedhaftar. Saben panganggo kudu milih padha umum tembung, banjur pencet Sabanjure.</string>
 
-    <string name="label_CompareScreensNDevices">Bandingake layar ing %s piranti.</string>
-    <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Iki nomer digunakake kanggo nggawe grup unik saka kedhaftar. Bandingake, banjur ketik nomer paling antarane kabeh kedhaftar.</string>
+    <string name="label_CompareScreensNDevices">Mbandhingaké layar ing %s piranti.</string>
+    <string name="label_NumericModeHint">Non-Inggris</string>
+    <string name="label_PromptInstruct">Iki nomer digunakake kanggo nggawe grup unik saka kedhaftar. Mbandhingaké, lan banjur ketik nomer paling antarane kabeh kedhaftar.</string>
     <string name="label_ReceivedNItems">ditampa %d item</string>
     <string name="label_UserIdHint">Paling</string>
-    <string name="label_VerifyInstruct">Kabeh telpon kudu cocog salah siji saka phrases 3-tembung. Bandingake, banjur methik ukara cocog.</string>
+    <string name="label_VerifyInstruct">Kabeh telpon kudu cocog salah siji saka phrases 3-tembung. Mbandhingaké, banjur Pick tembung cocog.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">nunggu verifikasi saka kabeh anggota…</string>
     <string name="prog_CollectingOthersItems">nunggu kabeh kedhaftar kanggo nggabungake…</string>
     <string name="prog_ConstructingGroupKey">mbangun tombol grup…</string>
-    <string name="prog_RequestingUserId">kang njaluk anggota…</string>
+    <string name="prog_RequestingUserId">njaluk anggota…</string>
 
-    <string name="title_size">Carane akeh kedhaftar ing ngganti?</string>
+    <string name="title_size">Carane akeh kedhaftar ing ijol-ijolan?</string>
     <string name="title_userid">Kelompokan</string>
     <string name="title_verify">Verifikasi</string>
 

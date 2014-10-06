@@ -30,8 +30,8 @@
 
     <!-- application name (title case); used for home screen icons, at the top of many screens, and many other places in the application. -->
     <string name="app_name">SafeSlinger</string>
-    <!-- language editor (title case); the name of the individual who translated it and/or reviewed this localization. -->
-    <string name="app_TranslatorName">Michael W Farb</string>
+    <!-- application description (sentence case); the names of the individuals who translated and/or reviewed localizations. -->
+    <string name="app_TranslatorName" translatable="false">\nAdrian Perrig\nAkira Yamada\nAlbert Stroucken\nElli Fragkaki\nEmmanuel Owusu\nIrina Fudrow\nJens Höfflinger\nMichael Stroucken\nNicolas Christin\nSteve Matsumoto\nYeon Yim\nYue-Hsun Lin</string>
 
     <!-- question message (sentence case, question mark); used to warn when the backup is off to confirm we should keep reminding the user. Used with Forget and Remind buttons. -->
     <string name="ask_BackupDisabledRemindLater">Backup is disabled. Do you want to adjust backup settings and keep this reminder?</string>
@@ -147,7 +147,7 @@
     <!-- error message (sentence case, period); used to warn when attempting to record an audio message fails to encode properly. iOS-only. -->
     <string name="error_AudioRecorderEncodeError">Audio recorder encoding error.</string>
     <!-- error message (sentence case, period); used as a Post-Request-Denied Notice for Microphone permission. iOS-only. -->
-    <string name="error_AudioRecorderPermissionError">Microphone permission is required to record a secure voice message. Tap the Help button for SafeSlinger Microphone permission details.</string>
+    <string name="error_AudioRecorderPermissionError">Microphone permission is required to record a secure voice message. Tap the %s button for SafeSlinger Microphone permission details.</string>
     <!-- error message (sentence case, period); used to warn at application setup, when there is no pre-existing backup to restore and warn the user that any previous keys have not been restored. -->
     <string name="error_BackupNotFound">No backup to restore.</string>
     <!-- error message (sentence case, period); used to warn when the device hardware does not support restoration from backup. -->
@@ -276,14 +276,18 @@
     <!-- help message (sentence case, period); used via Help button on the Settings screen to describe in more detail what the Settings screen does. -->
     <string name="help_settings">This screen allows you to change the default settings for the application.</string>
 
+    <!-- error message (sentence case, period); used as a Post-Request-Denied Notice for Camera permission. iOS-only. -->
+    <string name="iOS_cameraError">Camera permission is required to attach snapshots to secure messages. Tap the %s button for SafeSlinger Camera permission details.</string>
     <!-- error message (sentence case, period); used as a Post-Request-Denied Notice for Contacts permission. iOS-only. -->
-    <string name="iOS_contactError">Contacts permission is required for securely sharing contact cards. Tap the Help button for SafeSlinger Contacts permission details.</string>
+    <string name="iOS_contactError">Contacts permission is required for securely sharing contact cards. Tap the %s button for SafeSlinger Contacts permission details.</string>
     <!-- error message (sentence case, period); used to warn the user the push registration is missing. iOS-only. -->
     <string name="iOS_errorpushtoken">Push registration is missing.</string>
     <!-- error message (sentence case, period); used as a Post-Request-Denied Notice for Notifications permission. iOS-only. -->
-    <string name="iOS_notificationError1">Notification permission for either alerts or banners, and badge numbers, are required for secure messaging. Tap the Help button for SafeSlinger Notification permission details.</string>
+    <string name="iOS_notificationError1">Notification permission for either alerts or banners, and badge numbers, are required for secure messaging. Tap the %s button for SafeSlinger Notification permission details.</string>
     <!-- informational message (sentence case, period); message for dialog popups when a user still uses an old iOS device. iOS-only. -->
     <string name="iOS_oldOSWarn">SafeSlinger is not optimized for iOS 5.x devices. SafeSlinger requires iOS 6 or higher.</string>
+    <!-- error message (sentence case, period); used as a Post-Request-Denied Notice for Photo Library permission. iOS-only. -->
+    <string name="iOS_photolibraryError">Photo Library permission is required to attach pictures to secure messages. Tap the %s button for SafeSlinger Photo Library permission details.</string>
     <!-- informational message (sentence case, period); used as a Pre-Request Notice for Contacts permission. iOS-only. -->
     <string name="iOS_RequestPermissionContacts">You can select your contact card to send your friends and SafeSlinger will encrypt it for you. To enable this feature, you must allow SafeSlinger access to your Contacts when asked.</string>
     <!-- informational message (sentence case, period); used as a Pre-Request Notice for Microphone permission. iOS-only. -->
@@ -544,6 +548,8 @@
     <string name="menu_ContactInviteSms">Text from Contacts</string>
     <!-- menu option (title case); used to show a new empty contact in the address book for editing as the users' current identity via the Personal Contact dialog. -->
     <string name="menu_CreateNew">Create New</string>
+    <!-- menu option (title case); used to show a debug option for message delivery. -->
+    <string name="menu_debugTranscript" translatable="false">Debug Transcript</string>
     <!-- menu option (title case); used to delete the current item from the list context menu. -->
     <string name="menu_delete">Delete</string>
     <!-- menu option (title case); used to delete all messages from this person via the message list context menu. %s = the name of a person. -->
@@ -569,7 +575,7 @@
     <!-- menu (title case); used as the settings menu option to change language -->
     <string name="menu_language">Language</string>
     <!-- menu option (title case); used to show a dialog of the End User License Agreement. -->
-    <string name="menu_License" translatable="false">License</string>
+    <string name="menu_License">License</string>
     <!-- menu option (title case); used to select a contact from the address book to update from and link to. -->
     <string name="menu_link_contact_add">Add Contact Link</string>
     <!-- menu option (title case); used to select a contact from the address book to update from and link to. -->
@@ -584,8 +590,8 @@
     <string name="menu_messageCopyText">Copy Text</string>
     <!-- menu option (title case); used to create a new message with the same text message/attachment via the message list context menu. -->
     <string name="menu_messageForward">Forward</string>
-    <!-- menu option (title case); used to show a dialog of the End User License Agreement. -->
-    <string name="menu_PrivacyPolicy" translatable="false">Privacy Policy</string>
+    <!-- menu option (title case); used to show a dialog of the Privacy Policy. -->
+    <string name="menu_PrivacyPolicy">Privacy Policy</string>
     <!-- menu option (title case); used to remove the currently selected file attachment via the File Options dialog. -->
     <string name="menu_Remove">Remove</string>
     <!-- menu option (title case); used as Settings screen menu item for restoring all settings to default -->

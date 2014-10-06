@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">الإقلاع عن التدخين ؟ هل أنت متأكد؟</string>
+    <string name="ask_QuitConfirmation">الإقلاع عن التدخين؟ هل أنت متأكد؟</string>
 
     <string name="btn_Match">التالي</string>
-    <string name="btn_NoMatch">لا المباراة</string>
+    <string name="btn_NoMatch">لا يوجد المباراة</string>
 
-    <string name="choice_NumUsers">%d المستخدمين</string>
+    <string name="choice_NumUsers">%d مستخدمين</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">يجب على جميع أعضاء الترقية ، وبعض كبار السن تستخدم صيغ تسجيل دفعة.</string>
-    <string name="error_CorrectYourInternetConnection">الإنترنت غير متوفرة ، والتحقق من الإعدادات الخاصة بك.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">تجاوز الصرف المهلة. يبدأ الصرف مرة أخرى.</string>
-    <string name="error_HttpCode">خطأ HTTP الملقم: %d</string>
-    <string name="error_InvalidCommitVerify">بيانات غير صحيحة وجدت في الصرف. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_AllMembersMustUpgrade">بعض أعضاء تستخدم نسخة قديمة. يجب على جميع أعضاء الترقية إلى أحدث إصدار.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">يجب على جميع أعضاء ترقية، تستخدم بعض الأشكال القديمة تسجيل دفعة.</string>
+    <string name="error_CorrectYourInternetConnection">الإنترنت غير متوفر، والتحقق من الإعدادات الخاصة بك.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">تجاوزت الصرف المهلة. بدء الصرف مرة أخرى.</string>
+    <string name="error_HttpCode">خطأ HTTP الخادم: %d</string>
+    <string name="error_InvalidCommitVerify">وجدت بيانات غير صحيحة في الصرف. بدء الصرف مرة أخرى.</string>
     <string name="error_InvalidCommonUserId">الرجاء إدخال عدد صحيح موجب.</string>
-    <string name="error_LocalGroupCommitDiffer">كنت قد ذكرت اختلاف في العبارات. يبدأ الصرف مرة أخرى.</string>
-    <string name="error_MinUsersRequired">وثمة حاجة إلى الحد الأدنى من %d أعضاء يتم فيها تبادل البيانات.</string>
-    <string name="error_MoreDataThanUsers">البيانات غير متوقعة وجدت في الصرف. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_LocalGroupCommitDiffer">كنت قد ذكرت اختلاف في العبارات. بدء الصرف مرة أخرى.</string>
+    <string name="error_MinUsersRequired">ويلزم ما لا يقل عن %d عضوا لتبادل البيانات.</string>
+    <string name="error_MoreDataThanUsers">وجدت بيانات غير متوقع في الصرف. بدء الصرف مرة أخرى.</string>
     <string name="error_NoDataToExchange">تبادل مفقود البيانات المطلوبة.</string>
     <string name="error_NoWordListSelected">يجب عليك اختيار واحدة من العبارات قبل المتابعة.</string>
-    <string name="error_OtherGroupCommitDiffer">ذكرت شخص اختلاف في العبارات. يبدأ الصرف مرة أخرى.</string>
+    <string name="error_OtherGroupCommitDiffer">وأفاد شخص اختلاف في العبارات. بدء الصرف مرة أخرى.</string>
     <string name="error_OutOfMemoryError">الذاكرة منخفضة جدا لإكمال هذه العملية.</string>
     <string name="error_ServerAppMessage">الخادم رسالة: %s</string>
     <string name="error_ServerNotResponding">أي رد من الخادم.</string>
     <string name="error_TimeoutWaitingForAllMembers">مهلة الانتظار لبعض أعضاء المجموعة لإضافة البيانات.</string>
     <string name="error_WebCancelledByUser">إلغاء طلب المعلن الخادم.</string>
 
-    <string name="help_size">حدد عدد من الناس الذين يحاولون تبادل البيانات معا، و اضغط على موافق.</string>
-    <string name="help_userid">ويستخدم هذا الرقم على هذه الشاشة لإنشاء مجموعة فريدة من نوعها للمستخدمين. مراجعة الأرقام على شاشات جميع المستخدمين ، ثم كل المستخدمين يجب إدخال نفس أقل عدد واضغط موافق.</string>
-    <string name="help_verify">الآن ، يجب أن تتطابق مع واحدة من هذه العبارات 3 الكلمة مع جميع المستخدمين. يجب على كل مستخدم اختيار نفس العبارة الشائعة ، ثم اضغط التالي.</string>
+    <string name="help_size">حدد عدد من الناس الذين يحاولون لتبادل البيانات معا واضغط موافق.</string>
+    <string name="help_userid">يتم استخدام هذا الرقم على هذه الشاشة لإنشاء مجموعة فريدة من المستخدمين. مراجعة الأرقام على شاشات جميع المستخدمين، ثم ينبغي لجميع المستخدمين أدخل نفس أقل عدد واضغط موافق.</string>
+    <string name="help_verify">الآن، يجب أن تتطابق مع واحدة من هذه العبارات 3 كلمة مع جميع المستخدمين. يجب على كل مستخدم اختيار نفس العبارة الشائعة، ثم اضغط التالي.</string>
 
     <string name="label_CompareScreensNDevices">مقارنة شاشات على أجهزة %s.</string>
     <string name="label_NumericModeHint">غير الإنجليزية</string>
-    <string name="label_PromptInstruct">ويستخدم هذا الرقم لإنشاء مجموعة فريدة من نوعها للمستخدمين. مقارنة، ثم أدخل أقل عدد بين جميع المستخدمين.</string>
+    <string name="label_PromptInstruct">ويستخدم هذا الرقم لإنشاء مجموعة فريدة من المستخدمين. مقارنة، ثم أدخل أقل عدد بين جميع المستخدمين.</string>
     <string name="label_ReceivedNItems">تلقى %d البنود</string>
     <string name="label_UserIdHint">أدنى</string>
-    <string name="label_VerifyInstruct">يجب على جميع الهواتف مباراة واحدة من العبارات 3 كلمة. مقارنة، ومن ثم اختيار عبارة مطابقة.</string>
+    <string name="label_VerifyInstruct">يجب على جميع الهواتف تطابق واحدة من العبارات كلمة 3. مقارنة، ومن ثم اختيار العبارة مطابقة.</string>
 
-    <string name="lib_name">SafeSlinger صرف</string>
+    <string name="lib_name">SafeSlinger تبادل</string>
 
-    <string name="prog_CollectingOthersCommitVerify">في انتظار التحقق من جميع أعضاء…</string>
-    <string name="prog_CollectingOthersItems">في انتظار لجميع المستخدمين للانضمام…</string>
-    <string name="prog_ConstructingGroupKey">بناء مجموعة المفتاح…</string>
+    <string name="prog_CollectingOthersCommitVerify">في انتظار التحقق من جميع الأعضاء…</string>
+    <string name="prog_CollectingOthersItems">انتظار لجميع المستخدمين للانضمام…</string>
+    <string name="prog_ConstructingGroupKey">مفتاح بناء فريق…</string>
     <string name="prog_RequestingUserId">طلب عضوية…</string>
 
-    <string name="title_size">كيفية العديد من المستخدمين في الصرف؟</string>
-    <string name="title_userid">تجمع</string>
-    <string name="title_verify">تحقق من</string>
+    <string name="title_size">كم عدد المستخدمين في الصرف؟</string>
+    <string name="title_userid">التجمع</string>
+    <string name="title_verify">تحقق</string>
 
 </resources>

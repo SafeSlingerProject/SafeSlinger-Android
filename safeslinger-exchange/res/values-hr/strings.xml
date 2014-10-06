@@ -25,50 +25,51 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Prestanite? Jeste li sigurni?</string>
+    <string name="ask_QuitConfirmation">Prestani? Jeste li sigurni?</string>
 
-    <string name="btn_Match">Sljedeći</string>
+    <string name="btn_Match">Sljedeća</string>
     <string name="btn_NoMatch">Bez odgovarajuće</string>
 
     <string name="choice_NumUsers">%d korisnik</string>
 
+    <string name="error_AllMembersMustUpgrade">Neki članovi koriste stariju verziju; Svi članovi moraju nadograditi na najnoviju verziju.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Svi članovi moraju nadograditi, neki koriste starije registracijskih formate gurati.</string>
-    <string name="error_CorrectYourInternetConnection">Internet nije dostupan, provjeriti svoje postavke.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Razmjena timeout premašen. Opet početi razmjenu.</string>
-    <string name="error_HttpCode">Server HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Pogrešni podaci nalaze u zamjenu. Opet početi razmjenu.</string>
+    <string name="error_CorrectYourInternetConnection">Internet nije dostupan, provjerite svoje postavke.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Razmjena timeout premašen. Ponovno započnite razmjenu.</string>
+    <string name="error_HttpCode">Server HTTP pogreška: %d</string>
+    <string name="error_InvalidCommitVerify">Netočni podaci nalaze u zamjenu. Ponovno započnite razmjenu.</string>
     <string name="error_InvalidCommonUserId">Unesite prirodan broj.</string>
-    <string name="error_LocalGroupCommitDiffer">Ti su izvijestili razliku u frazama. Opet početi razmjenu.</string>
-    <string name="error_MinUsersRequired">Najmanje %d članova moraju razmjenjivati ​​podatke.</string>
-    <string name="error_MoreDataThanUsers">Neočekivani podaci nalaze u zamjenu. Opet početi razmjenu.</string>
+    <string name="error_LocalGroupCommitDiffer">Prijavili ste razliku u frazama. Ponovno započnite razmjenu.</string>
+    <string name="error_MinUsersRequired">Najmanje %d članova su potrebni za razmjenu podataka.</string>
+    <string name="error_MoreDataThanUsers">Neočekivani podaci nalaze u zamjenu. Ponovno započnite razmjenu.</string>
     <string name="error_NoDataToExchange">Razmjena nedostaje potrebne podatke.</string>
-    <string name="error_NoWordListSelected">Morate odabrati jednu od fraza prije nego što nastavite.</string>
-    <string name="error_OtherGroupCommitDiffer">Netko je prijavio razliku u frazama. Opet početi razmjenu.</string>
+    <string name="error_NoWordListSelected">Morate odabrati jednu od fraza prije nastavka.</string>
+    <string name="error_OtherGroupCommitDiffer">Netko je izvijestio razliku u frazama. Ponovno započnite razmjenu.</string>
     <string name="error_OutOfMemoryError">Memorija je preniska završiti ovu operaciju.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nema odgovora od poslužitelja.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout čeka neki članovi grupe dodati podatke.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout čeka neki članovi grupe za dodavanje podataka.</string>
     <string name="error_WebCancelledByUser">Korisnik je otkazao zahtjev poslužitelja.</string>
 
-    <string name="help_size">Odaberite broj ljudi koji su pokušavali da razmjenjuju podatke zajedno i pritisnite tipku OK.</string>
-    <string name="help_userid">Taj broj na zaslonu se koristi za stvaranje jedinstvene skupinu korisnika. Pregledajte brojeve na ekranima svih korisnika, a zatim su svi korisnici bi trebali ući u istu najmanji broj i pritisnite OK.</string>
-    <string name="help_verify">Sada, morate odgovarati jedan od tih 3-riječ fraza sa svim korisnicima. Svaki korisnik mora odabrati isti zajednički izraz, i pritisnite Next.</string>
+    <string name="help_size">Odaberite broj ljudi koji su pokušavali razmijeniti podatke zajedno i pritisnite OK.</string>
+    <string name="help_userid">Taj broj se na ovom zaslonu se koristi za stvaranje jedinstvene skupinu korisnika. Pregledajte brojeve na ekranima svih korisnika, a zatim su svi korisnici bi trebali ući u istu najmanji broj i pritisnite OK.</string>
+    <string name="help_verify">Sada, morate odgovarati jedan od tih 3-riječi izraze sa svim korisnicima. Svaki korisnik mora odabrati onaj zajednički izraz, i pritisnite Next.</string>
 
-    <string name="label_CompareScreensNDevices">Usporedite ekrana na %s uređaja.</string>
+    <string name="label_CompareScreensNDevices">Usporedite zaslona na %s uređaja.</string>
     <string name="label_NumericModeHint">Non-Engleski</string>
     <string name="label_PromptInstruct">Taj broj se koristi za stvaranje jedinstvene skupinu korisnika. Usporedite, a zatim ući u najmanji broj među svim korisnicima.</string>
-    <string name="label_ReceivedNItems">dobila %d predmeta</string>
+    <string name="label_ReceivedNItems">primio %d predmeta</string>
     <string name="label_UserIdHint">Najniža</string>
-    <string name="label_VerifyInstruct">Svi telefoni moraju odgovarati jednom od 3-riječi izraze. Usporedite, a zatim odabrati odgovarajući izraz.</string>
+    <string name="label_VerifyInstruct">Svi telefoni moraju odgovarati jednom od 3 riječi izraze. Usporedite, a zatim odabrati odgovarajući izraz.</string>
 
-    <string name="lib_name">SafeSlinger Exchange</string>
+    <string name="lib_name">SafeSlinger Razmjena</string>
 
     <string name="prog_CollectingOthersCommitVerify">čeka verifikaciju od svih članova…</string>
-    <string name="prog_CollectingOthersItems">čeka svim korisnicima da se pridruže…</string>
+    <string name="prog_CollectingOthersItems">čeka sve korisnike da se pridruže…</string>
     <string name="prog_ConstructingGroupKey">izgradnju grupni ključ…</string>
     <string name="prog_RequestingUserId">traži članstvo…</string>
 
-    <string name="title_size">Koliko korisnika u zamjenu?</string>
+    <string name="title_size">Koliko korisnici u zamjenu?</string>
     <string name="title_userid">Grupiranje</string>
     <string name="title_verify">Provjeriti</string>
 

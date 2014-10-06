@@ -28,12 +28,13 @@
     <string name="ask_QuitConfirmation">Afslut? Er du sikker?</string>
 
     <string name="btn_Match">Næste</string>
-    <string name="btn_NoMatch">No Match</string>
+    <string name="btn_NoMatch">Ingen match</string>
 
     <string name="choice_NumUsers">%d brugere</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Alle medlemmer skal opgradere, nogle bruger en ældre push-registrerings-formater.</string>
-    <string name="error_CorrectYourInternetConnection">Internet ikke er tilgængelig, tjek dine indstillinger.</string>
+    <string name="error_AllMembersMustUpgrade">Nogle medlemmer bruger en ældre version; Alle medlemmer skal opgradere til den nyeste version.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Alle medlemmer skal opgradere, nogle bruger en ældre push-registreringsafgifter formater.</string>
+    <string name="error_CorrectYourInternetConnection">Internettet er ikke tilgængelig, tjek dine indstillinger.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout overskredet. Begynd udvekslingen igen.</string>
     <string name="error_HttpCode">Server HTTP-fejl: %d</string>
     <string name="error_InvalidCommitVerify">Forkerte data fundet i bytte. Begynd udvekslingen igen.</string>
@@ -43,7 +44,7 @@
     <string name="error_MoreDataThanUsers">Uventede data fundet i bytte. Begynd udvekslingen igen.</string>
     <string name="error_NoDataToExchange">Udvekslingen mangler nødvendige data.</string>
     <string name="error_NoWordListSelected">Du skal vælge en af ​​de sætninger, før du fortsætter.</string>
-    <string name="error_OtherGroupCommitDiffer">Nogen rapporteret en forskel i sætninger. Begynd udvekslingen igen.</string>
+    <string name="error_OtherGroupCommitDiffer">Nogen rapporterede en forskel i sætninger. Begynd udvekslingen igen.</string>
     <string name="error_OutOfMemoryError">Hukommelsen er for lav til at fuldføre denne operation.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Intet svar fra serveren.</string>
@@ -51,13 +52,13 @@
     <string name="error_WebCancelledByUser">Bruger aflyst server anmodning.</string>
 
     <string name="help_size">Vælg antallet af mennesker, der forsøger at udveksle data sammen og tryk på OK.</string>
-    <string name="help_userid">Dette nummer på denne skærm bruges til at skabe en unik gruppe af brugere. Gennemgå numrene på alle brugeres skærme, så alle brugere bør indtaste det samme laveste antal og trykke på OK.</string>
-    <string name="help_verify">Nu skal du matche en af ​​disse 3 ord, sætninger med alle brugere. Hver bruger skal vælge den samme fælles sætning, og tryk på Næste.</string>
+    <string name="help_userid">Dette nummer på denne skærm bruges til at skabe en unik gruppe af brugere. Gennemgå tallene på alle brugeres skærme, så alle brugere bør indtaste den samme laveste nummer, og tryk på OK.</string>
+    <string name="help_verify">Nu skal du matche en af ​​disse 3-ord, sætninger med alle brugere. Hver bruger skal vælge den samme fælles udtryk, og tryk på Næste.</string>
 
     <string name="label_CompareScreensNDevices">Sammenlign skærme på %s enheder.</string>
-    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_NumericModeHint">Ikke-engelsk</string>
     <string name="label_PromptInstruct">Dette nummer bruges til at skabe en unik gruppe af brugere. Sammenlign og derefter indtaste det laveste antal blandt alle brugere.</string>
-    <string name="label_ReceivedNItems">modtog %d varer</string>
+    <string name="label_ReceivedNItems">modtaget %d varer</string>
     <string name="label_UserIdHint">Laveste</string>
     <string name="label_VerifyInstruct">Alle telefoner skal matche en af ​​de 3-ord, sætninger. Sammenlign, og derefter vælge den matchende sætning.</string>
 
@@ -66,7 +67,7 @@
     <string name="prog_CollectingOthersCommitVerify">venter på verifikation fra alle medlemmer…</string>
     <string name="prog_CollectingOthersItems">venter for alle brugere til at deltage…</string>
     <string name="prog_ConstructingGroupKey">konstruere gruppe nøgle…</string>
-    <string name="prog_RequestingUserId">der anmoder om medlemskab…</string>
+    <string name="prog_RequestingUserId">anmoder om medlemskab…</string>
 
     <string name="title_size">Hvor mange brugere i udvekslingen?</string>
     <string name="title_userid">Gruppering</string>

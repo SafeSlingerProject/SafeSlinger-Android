@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Kuit? Da li ste sigurni?</string>
+    <string name="ask_QuitConfirmation">Отказ? Да ли сте сигурни?</string>
 
-    <string name="btn_Match">Sledeći</string>
-    <string name="btn_NoMatch">Nema Pobednik</string>
+    <string name="btn_Match">Следећа</string>
+    <string name="btn_NoMatch">Но матцх</string>
 
-    <string name="choice_NumUsers">%d korisnika</string>
+    <string name="choice_NumUsers">%d усерс</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Svi članovi moraju nadogradnju, neki koriste starije formate registracije push.</string>
-    <string name="error_CorrectYourInternetConnection">Internet nije dostupan, proverite postavke.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Ekchange timeout premašio. Počnite razmenu ponovo.</string>
-    <string name="error_HttpCode">Server HTTP greška: %d</string>
-    <string name="error_InvalidCommitVerify">Netačni podaci nalaze u razmeni. Počnite razmenu ponovo.</string>
-    <string name="error_InvalidCommonUserId">Unesite pozitivan ceo broj.</string>
-    <string name="error_LocalGroupCommitDiffer">Vi ste prijavili razlike u frazama. Počnite razmenu ponovo.</string>
-    <string name="error_MinUsersRequired">Najmanje %d članova moraju da razmenjuju podatke.</string>
-    <string name="error_MoreDataThanUsers">Neočekivani podaci nalaze u razmeni. Počnite razmenu ponovo.</string>
-    <string name="error_NoDataToExchange">Razmena nedostaje tražene podatke.</string>
-    <string name="error_NoWordListSelected">Morate da izaberete jednu od fraza pre nego što nastavite.</string>
-    <string name="error_OtherGroupCommitDiffer">Neko je prijavio razliku u frazama. Počnite razmenu ponovo.</string>
-    <string name="error_OutOfMemoryError">Memorija je suviše nizak da završi ovu operaciju.</string>
-    <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerNotResponding">Nema odgovora od servera.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Isteklo čeka neki članovi grupe da dodate podatke.</string>
-    <string name="error_WebCancelledByUser">Korisnik je otkazao zahtev servera.</string>
+    <string name="error_AllMembersMustUpgrade">Неки чланови користе старију верзију; Сви чланови морају да надоградите на најновију верзију.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Сви чланови морају надоградити, неки користе старијих формата регистрације пусх.</string>
+    <string name="error_CorrectYourInternetConnection">Интернет није доступан, проверите подешавања.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Размена Тимеоут премашен. Бегин размену поново.</string>
+    <string name="error_HttpCode">Сервер ХТТП Грешка: %d</string>
+    <string name="error_InvalidCommitVerify">Нетачне податке наћи у замену. Бегин размену поново.</string>
+    <string name="error_InvalidCommonUserId">Унесите позитиван цео број.</string>
+    <string name="error_LocalGroupCommitDiffer">Сте пријавили разлику у фразама. Бегин размену поново.</string>
+    <string name="error_MinUsersRequired">Најмање %d чланова су у обавези да размењују податке.</string>
+    <string name="error_MoreDataThanUsers">Неочекивани подаци налазе у размени. Бегин размену поново.</string>
+    <string name="error_NoDataToExchange">Екцханге недостаје тражене податке.</string>
+    <string name="error_NoWordListSelected">Морате да изаберете једну од израза пре него што наставите.</string>
+    <string name="error_OtherGroupCommitDiffer">Неко известио разлику у фразама. Бегин размену поново.</string>
+    <string name="error_OutOfMemoryError">Меморије је прениска да заврши ову операцију.</string>
+    <string name="error_ServerAppMessage">Сервер Мессаге: %s</string>
+    <string name="error_ServerNotResponding">Нема одговора од сервера.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Тимеоут чека неки чланови групе да бисте додали податке.</string>
+    <string name="error_WebCancelledByUser">Корисник је отказао захтев сервера.</string>
 
-    <string name="help_size">Izaberite broj ljudi koji pokušavaju da razmenjuju podatke zajedno i pritisnite OK.</string>
-    <string name="help_userid">Ovaj broj na ovom ekranu se koristi da stvori jedinstvenu grupu korisnika. Pregledajte brojeve na ekranima svih korisnika, onda svi korisnici treba da unesete isti najmanji broj i pritisnite OK.</string>
-    <string name="help_verify">Sada, vi mora da odgovara jedan od ovih 3-reči fraze sa svim korisnicima. Svaki korisnik mora izabrati istu zajedničku frazu, pa pritisnite Nekt.</string>
+    <string name="help_size">Изаберите број људи који покушавају да размењују податке заједно и притисните ОК.</string>
+    <string name="help_userid">Овај број на овом екрану се користи за креирање јединствену групу корисника. Прегледати бројеве на екранима сви корисници \', онда сви корисници треба да уђе у исти најмањи број и притисните ОК.</string>
+    <string name="help_verify">Сада, мора да одговара један од ових 3-речи фразе са свим корисницима. Сваки корисник мора изабрати исти заједнички фразу и притисните Нект.</string>
 
-    <string name="label_CompareScreensNDevices">Uporedite ekrane na %s uređajima.</string>
-    <string name="label_NumericModeHint">Ne-engleski</string>
-    <string name="label_PromptInstruct">Ovaj broj se koristi da stvori jedinstvenu grupu korisnika. Uporedi, a zatim unesite najmanji broj među svim korisnicima.</string>
-    <string name="label_ReceivedNItems">primio %d stavki</string>
-    <string name="label_UserIdHint">Najniži</string>
-    <string name="label_VerifyInstruct">Svi telefoni mora da odgovara jedan od 3-reči fraze. Uporedi, a zatim izabrati odgovarajući izraz.</string>
+    <string name="label_CompareScreensNDevices">Упоредите екране на %s уређајима.</string>
+    <string name="label_NumericModeHint">Нон-енглески</string>
+    <string name="label_PromptInstruct">Овај број се користи за креирање јединствену групу корисника. Упоредите, а затим унесите најмањи број међу свим корисницима.</string>
+    <string name="label_ReceivedNItems">примио %d ставки</string>
+    <string name="label_UserIdHint">Најнижа</string>
+    <string name="label_VerifyInstruct">Сви телефони морају да одговара један од 3 речи фразе. Упоредите, а затим одабрати појавување фраза.</string>
 
-    <string name="lib_name">SafeSlinger Ekchange</string>
+    <string name="lib_name">СафеСлингер Екцханге</string>
 
-    <string name="prog_CollectingOthersCommitVerify">čeka verifikaciju od svih članova…</string>
-    <string name="prog_CollectingOthersItems">čeka svim korisnicima da se pridruže…</string>
-    <string name="prog_ConstructingGroupKey">izgradnje ključ grupe…</string>
-    <string name="prog_RequestingUserId">traži članstvo…</string>
+    <string name="prog_CollectingOthersCommitVerify">чека верификацију од свих чланова…</string>
+    <string name="prog_CollectingOthersItems">чека свим корисницима да се придруже…</string>
+    <string name="prog_ConstructingGroupKey">изградњу кључ групу…</string>
+    <string name="prog_RequestingUserId">тражи чланство…</string>
 
-    <string name="title_size">Koliko korisnika u zamenu?</string>
-    <string name="title_userid">Grupisanje</string>
-    <string name="title_verify">Verifikovati</string>
+    <string name="title_size">Колико корисника у размени?</string>
+    <string name="title_userid">Груписање</string>
+    <string name="title_verify">Провери</string>
 
 </resources>

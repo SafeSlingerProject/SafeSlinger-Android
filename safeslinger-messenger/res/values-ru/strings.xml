@@ -28,7 +28,6 @@
     <string name="action_NewUserRequest">Добавить Слинг Ключи контактную приглашение через…</string>
 
     <string name="app_name">SafeSlinger</string>
-    <string name="app_TranslatorName">Irina Fudrow</string>
 
     <string name="ask_BackupDisabledRemindLater">Резервное копирование отключено. Вы хотите настроить параметры резервного копирования и продолжать получать напоминание?</string>
     <string name="ask_ConfirmUseOlderDeviceOrKey">%s имеет более позднее устройство или ключ. Подтвердите, что вы хотите использовать раннюю версию.</string>
@@ -86,7 +85,7 @@
     <string name="error_AudioPlayerDecodeError">Ошибка раскодирования проигрывания звука.</string>
     <string name="error_AudioPlayerError">Не удается воспроизвести запись.</string>
     <string name="error_AudioRecorderEncodeError">Ошибка кодирования звукозаписи.</string>
-    <string name="error_AudioRecorderPermissionError">Разрешение микрофон требуется для записи безопасное голосовое сообщение. Нажмите кнопку Справка для SafeSlinger микрофон деталей разрешений.</string>
+    <string name="error_AudioRecorderPermissionError">Разрешение микрофон требуется для записи безопасное голосовое сообщение. Нажмите кнопку %s для SafeSlinger микрофона деталей разрешений.</string>
     <string name="error_BackupNotFound">Нет резервной копии для восстановления.</string>
     <string name="error_BackupNotSupportedDevice">Устройство не поддерживает восстановление резервной копии.</string>
     <string name="error_BadCopyProtectUpgrade">В связи с ошибкой в ​​Android 4.1, вам придется удалить и переустановить SafeSlinger.</string>
@@ -152,10 +151,12 @@
     <string name="help_Send">Этот экран позволяет выбрать данные и их получателя. Нажмите на кнопку Отправить когда будете готовы.</string>
     <string name="help_settings">Этот экран позволяет изменить настройки по умолчанию для приложения.</string>
 
-    <string name="iOS_contactError">Контакты требуется разрешение для надежного обмена карточек контактов. Нажмите кнопку Справка для SafeSlinger деталей Контакты разрешений.</string>
+    <string name="iOS_cameraError">Разрешение камеры требуется приложить снимки для обеспечения сообщения. Нажмите кнопку %s для SafeSlinger деталей разрешения камеры.</string>
+    <string name="iOS_contactError">Контакты требуется разрешение для безопасного обмена карточек контактов. Нажмите кнопку %s для SafeSlinger деталей Контакты разрешений.</string>
     <string name="iOS_errorpushtoken">Отсутсвует ID уведомлений.</string>
-    <string name="iOS_notificationError1">Разрешение Извещение либо предупреждений или баннеры и номера жетонов, необходимы для безопасного обмена сообщениями. Нажмите кнопку Справка для SafeSlinger деталей разрешений Уведомление.</string>
+    <string name="iOS_notificationError1">Разрешение Извещение либо предупреждений или баннеры, и номера жетонов, необходимы для безопасного обмена сообщениями. Нажмите кнопку %s для SafeSlinger деталей разрешения Уведомление.</string>
     <string name="iOS_oldOSWarn">SafeSlinger не оптимизирован для iOS 5.x устройств. SafeSlinger требуется iOS 6 или выше.</string>
+    <string name="iOS_photolibraryError">Разрешение Photo Library требуется приложить фотографии для обеспечения сообщения. Нажмите кнопку %s для SafeSlinger фотография библиотечных деталей разрешений.</string>
     <string name="iOS_RequestPermissionContacts">Вы можете выбрать свой карточку контакта, чтобы отправить своим друзьям и SafeSlinger шифрует его для вас. Чтобы включить эту функцию, необходимо разрешить SafeSlinger доступ к вашим Контакты, когда его спросили.</string>
     <string name="iOS_RequestPermissionMicrophone">Вы можете записать голосовое сообщение, чтобы отправить своим друзьям и SafeSlinger будет зашифровать его для вас. Чтобы включить эту функцию, необходимо разрешить SafeSlinger доступ к вашему микрофон, когда его спросили.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger это приложение зашифрованный сообщениями и не может функционировать, не позволяя входящие сообщения с уведомлениями. Чтобы включить входящие сообщения, необходимо разрешить SafeSlinger отправить вам Уведомления когда его спросили.</string>
@@ -283,6 +284,7 @@
     <string name="menu_Help">Помощь</string>
     <string name="menu_Introduction">Представление</string>
     <string name="menu_language">Язык</string>
+    <string name="menu_License">Лицензия</string>
     <string name="menu_link_contact_add">Добавить Связаться Ссылка</string>
     <string name="menu_link_contact_change">Изменение контактной ссылкой</string>
     <string name="menu_Logout">Выйти</string>
@@ -290,6 +292,7 @@
     <string name="menu_message_font_size">Сообщение Размер шрифта</string>
     <string name="menu_messageCopyText">Копировать текст</string>
     <string name="menu_messageForward">Вперед</string>
+    <string name="menu_PrivacyPolicy">Политика конфиденциальности</string>
     <string name="menu_Remove">Удалить</string>
     <string name="menu_restore_default">Восстановить настройки по умолчанию</string>
     <string name="menu_ringtone">Звук</string>
@@ -346,6 +349,7 @@
     <string name="text_About1">Легкий обмен контактной информацией с другими</string>
     <string name="text_About2">Надежно слинг тексты, фото, ничего!</string>
     <string name="text_About3">Надежное шифрование защищает вашу информацию</string>
+    <string name="text_About_Short">SafeSlinger: Говорите 3 слова и навсегда прямо в мире.</string>
     <string name="text_AboutEmail">email: %s</string>
     <string name="text_AboutFeat">Особенности</string>
     <string name="text_AboutWeb">web: %s</string>

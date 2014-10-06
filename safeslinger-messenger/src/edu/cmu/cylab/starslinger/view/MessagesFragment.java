@@ -28,6 +28,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import android.app.Activity;
@@ -728,6 +729,11 @@ public class MessagesFragment extends Fragment {
                         R.string.menu_messageForward);
             }
             menu.add(Menu.NONE, R.id.item_message_details, Menu.NONE, R.string.menu_Details);
+
+            if (SafeSlingerConfig.isDebug()) {
+                menu.add(Menu.NONE, R.id.item_debug_transcript, Menu.NONE,
+                        R.string.menu_debugTranscript);
+            }
         }
     }
 
@@ -752,6 +758,9 @@ public class MessagesFragment extends Fragment {
         } else if (item.getItemId() == R.id.item_message_forward) {
             doForward(mMessageList.get(info.position));
             return true;
+        } else if (item.getItemId() == R.id.item_debug_transcript) {
+            doExportTranscript(mMessageList);
+            return true;
         } else if (item.getItemId() == R.id.item_delete_thread) {
             doDeleteThread(mThreadList.get(info.position).getKeyId());
             updateMessageList(false);
@@ -772,6 +781,23 @@ public class MessagesFragment extends Fragment {
         } else {
             return super.onContextItemSelected(item);
         }
+    }
+
+    private void doExportTranscript(List<MessageRow> msgs) {
+        // in debug only, export fields useful for debugging message delivery
+        StringBuilder debug = new StringBuilder();
+        for (MessageRow m : msgs) {
+            debug.append(String.format("%-3s %s %-7s %24s %s %s %s\n", //
+                    (m.isInbox() ? "<I " : " O>"), //
+                    (m.isRead() ? "R" : "-"), //
+                    MessageDbAdapter.getStatusCode(m.getStatus()), //
+                    new Date(m.getProbableDate()).toGMTString(), //
+                    (TextUtils.isEmpty(m.getText()) ? "---" : "TXT"), //
+                    (TextUtils.isEmpty(m.getFileName()) ? "---" : "FIL"), //
+                    (TextUtils.isEmpty(m.getMsgHash()) ? m.getMsgHash() : m.getMsgHash().trim()) //
+                    ));
+        }
+        SafeSlinger.getApplication().showDebugEmail(getActivity(), debug.toString());
     }
 
     private void doDecryptMessage(String pass, MessageRow inRow) {

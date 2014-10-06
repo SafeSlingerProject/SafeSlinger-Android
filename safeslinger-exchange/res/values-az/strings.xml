@@ -25,51 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Çıxın? Siz əminsinizmi?</string>
+    <string name="ask_QuitConfirmation">Çıxmaq? Siz əminsinizmi?</string>
 
-    <string name="btn_Match">Sonrakı</string>
+    <string name="btn_Match">Next</string>
     <string name="btn_NoMatch">No Match</string>
 
-    <string name="choice_NumUsers">%d users</string>
+    <string name="choice_NumUsers">%d istifadəçi</string>
 
-    <string name="error_AllMembersMustUpgradeBadPushToken">Bütün üzvləri bəzi köhnə push qeydiyyat format istifadə olunur, yükseltmek lazımdır.</string>
-    <string name="error_CorrectYourInternetConnection">Mövcud deyil Internet, ayarlarınızı kontrol.</string>
+    <string name="error_AllMembersMustUpgrade">Bəzi üzvləri eski bir versiyasını istifadə olunur; bütün üzvləri yeni versiyası yükseltmek lazımdır.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Bütün üzvləri bəzi köhnə push qeydiyyat format istifadə olunur, təkmilləşdirmək lazımdır.</string>
+    <string name="error_CorrectYourInternetConnection">Internet mövcud deyil, ayarlarınızı kontrol.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange fasiləsi ötüb. Yenidən mübadiləsi başlayın.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Mübadilə aşkar yanlış data. Yenidən mübadiləsi başlayın.</string>
+    <string name="error_InvalidCommitVerify">Yanlış məlumat mübadiləsi tapıldı. Yenidən mübadiləsi başlayın.</string>
     <string name="error_InvalidCommonUserId">Bir müsbət tam daxil edin.</string>
     <string name="error_LocalGroupCommitDiffer">Siz ifadələr bir fərq bildirilmiştir. Yenidən mübadiləsi başlayın.</string>
-    <string name="error_MinUsersRequired">%d üzvlərinin minimum məlumat mübadiləsi üçün tələb olunur.</string>
-    <string name="error_MoreDataThanUsers">Mübadilə aşkar gözlənilməz data. Yenidən mübadiləsi başlayın.</string>
-    <string name="error_NoDataToExchange">Mübadilə tələb olunan məlumatları yoxdur.</string>
+    <string name="error_MinUsersRequired">%d üzvlərinin minimum məlumat mübadiləsi tələb olunur.</string>
+    <string name="error_MoreDataThanUsers">Gözlənilməz məlumat mübadiləsi tapıldı. Yenidən mübadiləsi başlayın.</string>
+    <string name="error_NoDataToExchange">Mübadilə tələb data itkin.</string>
     <string name="error_NoWordListSelected">Siz davam əvvəl söz birini seçməlisiniz.</string>
     <string name="error_OtherGroupCommitDiffer">Biri ifadələr bir fərq üzvlük. Yenidən mübadiləsi başlayın.</string>
-    <string name="error_OutOfMemoryError">Yaddaş bu əməliyyatı başa çatdırmaq üçün çox aşağıdır.</string>
+    <string name="error_OutOfMemoryError">Yaddaş bu əməliyyatı başa çatdırmaq üçün çox aşağı.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Server heç bir cavab.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Bir qrup üzvləri məlumat əlavə etmək üçün gözləyir fasiləsi.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Bir qrup üzvləri məlumat əlavə etmək üçün fasiləsi gözləyir.</string>
     <string name="error_WebCancelledByUser">İstifadəçi server sorğu ləğv.</string>
 
-    <string name="help_size">Birlikdə və mətbuat OK məlumat mübadiləsi cəhd edən insanların sayı seçin.</string>
-    <string name="help_userid">Bu ekranda bu sayı istifadəçilərin unikal qrup yaratmaq üçün istifadə olunur. Bütün istifadəçilərin ekranlarında nömrələri gözdən keçirin, sonra bütün istifadəçilər eyni aşağı nömrəsini daxil edin və OK basın lazımdır.</string>
-    <string name="help_verify">İndi bütün istifadəçilər bu 3-söz ifadələr biri uyğun olmalıdır. Hər bir istifadəçi eyni ortaq söz seçin və Next düyməsini basın lazımdır.</string>
+    <string name="help_size">Birlikdə məlumat və OK basın mübadiləsi cəhd edən insanların sayı seçin.</string>
+    <string name="help_userid">Bu ekranda bu sayı istifadəçilər bir unikal qrup yaratmaq üçün istifadə olunur. Sonra bütün istifadəçilər eyni aşağı sayı və OK basın girməlidir, bütün istifadəçilərin ekranlarında nömrələri gözdən keçirin.</string>
+    <string name="help_verify">İndi bütün istifadəçilər bu 3-söz ifadələr biri uyğun olmalıdır. Hər bir istifadəçi eyni ümumi söz seçin və Next düyməsini basın lazımdır.</string>
 
     <string name="label_CompareScreensNDevices">%s cihazlar ekranlar müqayisə.</string>
     <string name="label_NumericModeHint">Qeyri-English</string>
-    <string name="label_PromptInstruct">Bu sayı istifadəçilər bir unikal qrup yaratmaq üçün istifadə olunur. Müqayisə və sonra bütün istifadəçilər arasında ən aşağı nömrəsini daxil edin.</string>
+    <string name="label_PromptInstruct">Bu sayı istifadəçilər unikal qrup yaratmaq üçün istifadə olunur. Müqayisə və sonra bütün istifadəçilər arasında ən aşağı nömrəsini daxil edin.</string>
     <string name="label_ReceivedNItems">%d maddələr qəbul</string>
-    <string name="label_UserIdHint">En Düşük</string>
-    <string name="label_VerifyInstruct">Bütün telefonlar Bütün telefonlar 3-söz ifadələr biri uyğun olmalıdır. Müqayisə, və sonra uyğun söz seçin.</string>
+    <string name="label_UserIdHint">Aşağı</string>
+    <string name="label_VerifyInstruct">Bütün telefonlar, 3-söz ifadələr biri uyğun olmalıdır. Müqayisə və sonra uyğun söz seçin.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">bütün üzvlərinin yoxlama gözləyir…</string>
-    <string name="prog_CollectingOthersItems">bütün istifadəçilər qoşulmaq üçün gözləyir…</string>
+    <string name="prog_CollectingOthersCommitVerify">bütün üzvləri yoxlama gözləyir…</string>
+    <string name="prog_CollectingOthersItems">bütün istifadəçilər qoşulmaq üçün gözləmə…</string>
     <string name="prog_ConstructingGroupKey">qrup düyməsini tikintisi…</string>
     <string name="prog_RequestingUserId">üzvlük tələb…</string>
 
-    <string name="title_size">Necə bir çox istifadəçilər mübadiləsi?</string>
-    <string name="title_userid">Qruplaşdırma</string>
-    <string name="title_verify">Yoxlamaq</string>
+    <string name="title_size">Neçə mübadiləsi istifadəçilər?</string>
+    <string name="title_userid">Qruplaşdırılması</string>
+    <string name="title_verify">Doğrulayın</string>
 
 </resources>

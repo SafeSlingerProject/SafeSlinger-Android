@@ -28,7 +28,6 @@
     <string name="action_NewUserRequest">…를 통해 슬링 키 연락처 추가</string>
 
     <string name="app_name">SafeSlinger</string>
-    <string name="app_TranslatorName">Yeon Yim</string>
 
     <string name="ask_BackupDisabledRemindLater">백업이 비활성화되어있습니다. 백업 설정 후 이 메시지를 계속 표시하시겠습니까?</string>
     <string name="ask_ConfirmUseOlderDeviceOrKey">%s는 더 최근의 장치로 사용할 수 있습니다. 예전 것을 사용 하시겠습니까?</string>
@@ -86,7 +85,7 @@
     <string name="error_AudioPlayerDecodeError">오디오 플레이어 암호해제 오류가 발생했습니다.</string>
     <string name="error_AudioPlayerError">녹음자료를 재생할 수 없습니다.</string>
     <string name="error_AudioRecorderEncodeError">오디오 레코더 암호화 오류가 발생했습니다.</string>
-    <string name="error_AudioRecorderPermissionError">마이크 권한 보안 음성 메시지를 기록하기 위해 요구된다. SafeSlinger 마이크 권한 자세한 내용은 도움말 버튼을 누릅니다.</string>
+    <string name="error_AudioRecorderPermissionError">마이크 권한 보안 음성 메시지를 기록하기 위해 요구된다. SafeSlinger 마이크 권한 자세한 내용은 %s 버튼을 누릅니다.</string>
     <string name="error_BackupNotFound">복원할 백업정보가 없습니다.</string>
     <string name="error_BackupNotSupportedDevice">이 기기는 백업 복원을 지원하지 않습니다.</string>
     <string name="error_BadCopyProtectUpgrade">안드로이드 4.1의 오류로 인해, SafeSlinger를 삭제 후 다시 설치해야합니다.</string>
@@ -96,16 +95,16 @@
     <string name="error_C2DMRegPhoneRegistrationError">구글의 기기 등록이 잘못되었습니다. 이 기기는 현재 메시지 보내기를 지원하지 않습니다.</string>
     <string name="error_C2DMRegServiceNotAvailable">푸시 등록 서비스를 사용할 수 없습니다. %d 초 후에 다시 시도합니다.</string>
     <string name="error_C2DMRegTooManyRegistrations">너무 많은 응용 프로그램이 푸시에 등록되었습니다. 다른 응용 프로그램을 제거한 후 다시 시도하십시오.</string>
-    <string name="error_CannotSendEmptyFile">비어있는 파일을 보낼 수 없습니다.</string>
-    <string name="error_CannotSendFilesOver">%d 바이트보다 큰 용량의 파일을 보낼 수 없습니다.</string>
-    <string name="error_CannotSendNullFile">공파일을 전송할 수 없습니다.</string>
+    <string name="error_CannotSendEmptyFile">비어있는 파일은 보낼 수 없습니다.</string>
+    <string name="error_CannotSendFilesOver">%d 바이트보다 큰 용량의 파일은 보낼 수 없습니다.</string>
+    <string name="error_CannotSendNullFile">공파일은 전송할 수 없습니다.</string>
     <string name="error_contactCreationFailure">연락처 생성에 실패했습니다.</string>
     <string name="error_ContactInsertFailed">연락처 삽입에 실패했습니다.</string>
-    <string name="error_ContactNameMissing">이 연락처에는 이름이 누락되어 있으니 수정해 주십시오.</string>
-    <string name="error_ContactNameMissing2">이 연락처에는 이름이 누락되어 있으니 다시 선택해주세요.</string>
+    <string name="error_ContactNameMissing">이 연락처는 이름이 누락되어 있으니 수정해 주십시오.</string>
+    <string name="error_ContactNameMissing2">이 연락처는 이름이 누락되어 있으니 다시 선택해 주십시오.</string>
     <string name="error_ContactUpdateFailed">연락처 업데이트에 실패했습니다.</string>
     <string name="error_couldNotExtractPrivateKey">개인 키를 추출할 수 없습니다.</string>
-    <string name="error_FeatureIsNotSupport">%1$s이 시간에 %2$s에서 지원되지 않습니다.</string>
+    <string name="error_FeatureIsNotSupport">지금은 %1$s에서 %2$s이 지원되지 않습니다.</string>
     <string name="error_FileSave">%s을(를) 저장할 수 없습니다.</string>
     <string name="error_FileStorageUnavailable">파일 스토리지를 사용할 수 없습니다.</string>
     <string name="error_InvalidContactName">유효한 연락처가 필요합니다.</string>
@@ -152,10 +151,12 @@
     <string name="help_Send">이 화면에서는 데이터와 수신자를 선택할 수 있습니다. 준비가 되면 보내기를 눌러주세요.</string>
     <string name="help_settings">이 화면에서 응용 프로그램의 기본 설정을 변경할 수 있습니다.</string>
 
-    <string name="iOS_contactError">연락처 권한이 안전하게 접촉 카드를 공유하기 위해 필요합니다. SafeSlinger 연락처 권한 자세한 내용은 도움말 버튼을 누릅니다.</string>
+    <string name="iOS_cameraError">카메라 권한이 메시지를 확보하기 위해 스냅 샷을 첨부해야합니다. SafeSlinger 카메라 권한 자세한 내용은 %s 버튼을 누릅니다.</string>
+    <string name="iOS_contactError">연락처 권한이 안전하게 연락처 카드를 공유하기 위해 필요합니다. SafeSlinger 연락처 권한 자세한 내용은 %s 버튼을 누릅니다.</string>
     <string name="iOS_errorpushtoken">푸시 등록 이 없습니다.</string>
-    <string name="iOS_notificationError1">경고 또는 배너와 배지 번호 하나에 대한 통지의 권한, 보안 메시징이 필요합니다. SafeSlinger 알림 권한 자세한 내용은 도움말 버튼을 누릅니다.</string>
+    <string name="iOS_notificationError1">경고 또는 배너 및 배지 번호 중 ​​하나에 대한 통지의 권한, 보안 메시징 필요합니다. SafeSlinger 알림 권한 자세한 내용은 %s 버튼을 누릅니다.</string>
     <string name="iOS_oldOSWarn">SafeSlinger는 아이폰 OS 5.x를 디바이스에 최적화되어 있지 않습니다. SafeSlinger는 아이폰 OS 6 이상이 필요합니다.</string>
+    <string name="iOS_photolibraryError">사진 라이브러리 권한이 메시지를 확보하기 위해 사진을 첨부해야합니다. SafeSlinger 사진 라이브러리 권한 자세한 내용은 %s 버튼을 누릅니다.</string>
     <string name="iOS_RequestPermissionContacts">당신은 당신의 친구를 보낼 연락처 카드를 선택하고 SafeSlinger는 당신을 위해 그것을 암호화합니다. 물었을 때이 기능을 사용하려면, 당신은 당신의 연락처에 SafeSlinger 액세스를 허용해야합니다.</string>
     <string name="iOS_RequestPermissionMicrophone">당신은 당신의 친구를 보내고 SafeSlinger 당신을 위해 그것을 암호화하는 음성 메시지를 녹음 할 수 있습니다. 물었을 때이 기능을 사용하려면, 당신은 당신의 마이크에 SafeSlinger 액세스를 허용해야합니다.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger는 암호화 된 메시지 응용 프로그램입니다 및 알림에서 들어오는 메시지를 허용하지 않고 작동 할 수 없습니다. 수신 메시지를 사용하려면, 당신은 물었을 때 SafeSlinger 당신에게 알림을 보낼 수 있도록 허용해야합니다.</string>
@@ -283,6 +284,7 @@
     <string name="menu_Help">도움말</string>
     <string name="menu_Introduction">소개</string>
     <string name="menu_language">언어</string>
+    <string name="menu_License">라이센스</string>
     <string name="menu_link_contact_add">연락처 링크 추가</string>
     <string name="menu_link_contact_change">연락처 링크에게 변경</string>
     <string name="menu_Logout">로그 아웃</string>
@@ -290,6 +292,7 @@
     <string name="menu_message_font_size">메시지 의 글자 크기</string>
     <string name="menu_messageCopyText">텍스트를 복사</string>
     <string name="menu_messageForward">앞으로</string>
+    <string name="menu_PrivacyPolicy">개인 정보 보호 정책</string>
     <string name="menu_Remove">삭제</string>
     <string name="menu_restore_default">기본 설정 을 복원</string>
     <string name="menu_ringtone">소리</string>
@@ -346,6 +349,7 @@
     <string name="text_About1">다른 사람들과 연락처 정보를 쉽게 교환할 수 있습니다.</string>
     <string name="text_About2">텍스트나 사진을 포함한 어떤 파일이든 안전하게 전송하세요!</string>
     <string name="text_About3">강력한 암호를 통해 귀하의 정보를 보호합니다.</string>
+    <string name="text_About_Short">SafeSlinger는: 세 단어를 말해 영원히 평화에서 채팅 할 수 있습니다.</string>
     <string name="text_AboutEmail">이메일: %s</string>
     <string name="text_AboutFeat">특징:</string>
     <string name="text_AboutWeb">웹사이트: %s</string>
