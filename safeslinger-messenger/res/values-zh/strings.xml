@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">发送交换金钥邀请至通讯录…</string>
+
+    <string name="app_name">SafeSlinger</string>
+
+    <string name="ask_BackupDisabledRemindLater">备份功能已停用。你想调整设定启用备份并保持备份提醒吗？</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s 有个更新的设备或是金钥，你确定想使用这份旧的资讯吗？</string>
+    <string name="ask_FileExistsOverwrite">档案 %s 已存在，确定覆写档案?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">没有设定预设Google帐户，你将只能发送，不能接收讯息。你想添加你的Google帐户资讯吗？</string>
+    <string name="ask_SendErrorData">我们需要你的协助已改进SafeSlinger。你愿意设定自动回报错误给我们吗?</string>
+
+    <string name="btn_Accept">接受</string>
+    <string name="btn_BeginExchangeProximity">开始交换</string>
+    <string name="btn_Cancel">取消</string>
+    <string name="btn_Close">关闭</string>
+    <string name="btn_Continue">继续</string>
+    <string name="btn_CreateNewKey">产生新密钥</string>
+    <string name="btn_DeleteKeys">删除密钥</string>
+    <string name="btn_discard">丢弃</string>
+    <string name="btn_Done">完成</string>
+    <string name="btn_Exit">离开</string>
+    <string name="btn_Import">加入</string>
+    <string name="btn_Introduce">介绍</string>
+    <string name="btn_No">没有</string>
+    <string name="btn_NotNow">现在不要</string>
+    <string name="btn_NotRemind">不提醒</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">拒绝</string>
+    <string name="btn_Remind">提醒</string>
+    <string name="btn_Save">储存</string>
+    <string name="btn_SelectFile">选择档案</string>
+    <string name="btn_SendFile">传送</string>
+    <string name="btn_Yes">是</string>
+
+    <string name="choice_10mins">10分钟</string>
+    <string name="choice_1hour">1小时</string>
+    <string name="choice_1min">1分钟</string>
+    <string name="choice_20mins">20分钟</string>
+    <string name="choice_2hours">2小时</string>
+    <string name="choice_3mins">3分钟</string>
+    <string name="choice_40mins">40分钟</string>
+    <string name="choice_4hours">4小时</string>
+    <string name="choice_5mins">5分钟</string>
+    <string name="choice_8hours">8小时</string>
+    <string name="choice_auto_storage">自动存储</string>
+    <string name="choice_default">预设</string>
+    <string name="choice_external_storage">外部存储</string>
+    <string name="choice_font_large">大</string>
+    <string name="choice_font_medium">中</string>
+    <string name="choice_font_micro">细小</string>
+    <string name="choice_font_small">小</string>
+    <string name="choice_internal_storage">内部存储</string>
+    <string name="choice_nolimit">没有限制</string>
+    <string name="choice_SaveDirectory">保存目录</string>
+    <string name="choice_SaveFile">储存档案</string>
+    <string name="choice_Up">上一层</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">所有成员都必须升级，某些成员使用旧软体版本的密钥格式。</string>
+    <string name="error_AudioPlayerDecodeError">解码错误，无法播放录音。</string>
+    <string name="error_AudioPlayerError">无法播放录音。</string>
+    <string name="error_AudioRecorderEncodeError">录音编码错误。</string>
+    <string name="error_AudioRecorderPermissionError">麦克风的权限，需要记录一个安全的语音留言。点击%s按钮SafeSlinger麦克风权限的详细信息。</string>
+    <string name="error_BackupNotFound">无法找到备份。</string>
+    <string name="error_BackupNotSupportedDevice">手机不支援备份还原。</string>
+    <string name="error_BadCopyProtectUpgrade">由于Android 4.1的中程序错误，你必须移除并重新安装SafeSlinger。</string>
+    <string name="error_C2DMRegAccountMissing">需要Google帐户。请打开帐户管理功能并新增一个Google帐户。</string>
+    <string name="error_C2DMRegAuthenticationFailed">讯息通知注册未通过身份验证，请稍后手动重试。</string>
+    <string name="error_C2DMRegInvalidSender">此版本无法进行讯息通知注册，请检查新的版本并安装。</string>
+    <string name="error_C2DMRegPhoneRegistrationError">该设备在Google服务注册失败。目前此设备不支持讯息通知服务。</string>
+    <string name="error_C2DMRegServiceNotAvailable">目前讯息通知服务的注册功能无法使用，请在%d秒后尝试注册。</string>
+    <string name="error_C2DMRegTooManyRegistrations">太多的应用程序注册讯息通知服务。请移除其他的应用程序，然后重试。</string>
+    <string name="error_CannotSendEmptyFile">无法传送空档案。</string>
+    <string name="error_CannotSendFilesOver">档案太大无法​​传送(上限: %d 位元)。</string>
+    <string name="error_CannotSendNullFile">无法传送空的档案。</string>
+    <string name="error_contactCreationFailure">联系资讯建立失败。</string>
+    <string name="error_ContactInsertFailed">联系人加入失败。</string>
+    <string name="error_ContactNameMissing">该联系资讯缺少姓名，请编辑。</string>
+    <string name="error_ContactNameMissing2">该联系资讯缺少姓名，请重新选择。</string>
+    <string name="error_ContactUpdateFailed">联系人更新失败。</string>
+    <string name="error_couldNotExtractPrivateKey">无法存取私密金钥。</string>
+    <string name="error_FeatureIsNotSupport">%1$s在%2$s平台上不支援。</string>
+    <string name="error_FileSave">无法储存 %s。</string>
+    <string name="error_FileStorageUnavailable">无法存储档案文件。</string>
+    <string name="error_InvalidContactName">需要有效的联系人姓名。</string>
+    <string name="error_InvalidIncomingMessage">接收讯息格式错误。</string>
+    <string name="error_InvalidMsg">错误讯息格式。</string>
+    <string name="error_InvalidRecipient">无效收件者。</string>
+    <string name="error_MessageInvalidPeerKeyFormat">该使用者的密钥格式是无效的。</string>
+    <string name="error_MessageSignatureVerificationFails">签章验证失败。</string>
+    <string name="error_minPassphraseRequire">密码需要至少%d个字元。</string>
+    <string name="error_MissingNdk">该装置没有支援NDK支援，这是SafeSlinger必需的。</string>
+    <string name="error_MultipleSendNotSupported">你尝试寄送一个讯息包含多个档案。目前SafeSlinger仅支援一个档案的讯息寄送。</string>
+    <string name="error_NoEmailAccount">没有设置电子邮件帐户！</string>
+    <string name="error_noPassPhrase">没有输入密码。</string>
+    <string name="error_passPhrasesDoNotMatch">密码错误。</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">您已超过该收件人的讯息配额。请稍后重试。</string>
+    <string name="error_PushMsgInvalidRegistration">该收件人讯息通知辨识码为无效或不存在。你应该停止发送讯息给该收件人。</string>
+    <string name="error_PushMsgMessageNotFound">过期的讯息。</string>
+    <string name="error_PushMsgMessageTooBig">该讯息太大了。请减少的讯息的大小。</string>
+    <string name="error_PushMsgNotRegistered">该收件人的讯息通知辨识码已失效。收件人可能已经移除SafeSlinger或关闭讯息通知功能。你应该停止发送讯息给收件人。</string>
+    <string name="error_PushMsgNotSucceed">讯息通知服务产生错误。</string>
+    <string name="error_PushMsgQuotaExceeded">您已寄送超过此设备的讯息配额。请稍后重试。</string>
+    <string name="error_PushMsgServiceFail">讯息通知服务目前无法运作。请稍后再尝试发送讯息。</string>
+    <string name="error_RecoderError">无法准备录音器。</string>
+    <string name="error_ReminderToSlingKeysToUseApp">要启动程式，请在同一时间和其他使用者的手机装置进行金钥交换。</string>
+    <string name="error_selectDataToSend">你需要选择档案或输入文字以便传送讯息。</string>
+    <string name="error_ShareFileDelError">无法删除共享文件。</string>
+    <string name="error_UnableFindPubKey">无法找到匹配的公开金钥与私密金钥。</string>
+    <string name="error_UnableToSaveMessageInDB">无法储存至讯息资料库。</string>
+    <string name="error_UnableToSaveRecipientInDB">无法储存至收件人资料库。</string>
+    <string name="error_UnableToUpdateMessageInDB">无法更新讯息资料库。</string>
+    <string name="error_UnableToUpdateRecipientInDB">无法更新收件人资料库。</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger系统错误​​，请重新启动。</string>
+    <string name="error_VcardParseFailure">电子名片格式不正确。</string>
+
+    <string name="help_find">使用此画面来设定你希望与其他人交换金钥时所使用的名字。点选完成按钮结束设定。</string>
+    <string name="help_home">为了交换联系资讯，请确保所有成员都在附近，并按下开始交换按钮，将开始与群体成员开始进行金钥交换。</string>
+    <string name="help_identity_menu">您可以更改个人资料透过点击萤幕上显示你名字的按钮。它将显示一个选单，允许你编辑你的资料，或建立一个新的联系资讯，或使用另一个联系资讯。</string>
+    <string name="help_Messages">该画面显示所有以前的讯息，以及可能被下载完成的档案。</string>
+    <string name="help_passphrase">使用您的密码登入系统。如果您忘记了您的密码，您可以重新产生新的密钥并用新的密码来保护，透过点击忘记密码？按钮。你也可以点击帐户名称来切换其他帐户与相关金钥。</string>
+    <string name="help_passphrase_change">使用该画面来输入您上次的密码进行密码修改确认并输入新的密码已进行更改。</string>
+    <string name="help_PickRecip">在此显示拥有SafeSlinger金钥的联系人，选择一个联系人去寄送你的讯息。</string>
+    <string name="help_save">交换过程结束时，萤幕将显示已交换的成员联系资讯。如果你想保存这些资料，请按加入的按钮。</string>
+    <string name="help_SecureIntroduction">这个画面允许你选择两个之前与你完成金钥交换的收件者，发送安全介绍讯息以让彼此交换金钥。仅需按下安全介绍便可。</string>
+    <string name="help_Send">该画面允许你选择资料与收件人来寄送讯息。完成后按下传送按钮寄送。</string>
+    <string name="help_settings">这个画面允许你改变应用程序的预设设置。</string>
+
+    <string name="iOS_cameraError">摄像机权限是必需的附加快照，以确保邮件。点击%s按钮SafeSlinger相机权限的详细信息。</string>
+    <string name="iOS_contactError">联系人许可，才能进行安全地共享联系人卡片。点击%s按钮SafeSlinger联系人权限的详细信息。</string>
+    <string name="iOS_errorpushtoken">讯息通知辨识码失效。</string>
+    <string name="iOS_notificationError1">对于任何警报或横幅，徽章号码通知的权限，都需要安全的信息传递。点击%s按钮SafeSlinger通知权限的详细信息。</string>
+    <string name="iOS_oldOSWarn">SafeSlinger并没有为iOS 5.x的设备进行优化。 SafeSlinger需要iOS6或更高系统版本。</string>
+    <string name="iOS_photolibraryError">图片库的权限，需要附上图片，以确保邮件。点击%s按钮SafeSlinger图片库权限的详细信息。</string>
+    <string name="iOS_RequestPermissionContacts">您可以从手机装置中选择您的联系资料并发送您的朋友，讯息将被SafeSlinger加密保护。要启用此功能，您必须在应用程式询问时允许SafeSlinger存取通讯录隐私权限。</string>
+    <string name="iOS_RequestPermissionMicrophone">您可以录制语音讯息并发送您的朋友，讯息将被SafeSlinger加密保护。要启用此功能，您必须在应用程式询问时允许SafeSlinger存取麦克风权限。</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger是一个加密讯息应用程式，如果没有允许讯息通知功能，程式将无法正常接受加密讯息。要启用接收加密讯息功能，您必须在应用程式询问时允许SafeSlinger使用讯息通知权限。</string>
+
+    <string name="label_ago">%s前</string>
+    <string name="label_backupCompleteDate">上一次备份完成日期</string>
+    <string name="label_backupRequestDate">上次备份请求日期</string>
+    <string name="label_backupURL">备份iCloud网址</string>
+    <string name="label_ClickForNMsgs">按这里检视你收到的 %d 讯息</string>
+    <string name="label_ComposeHint">建立讯息</string>
+    <string name="label_ContactName">你的大名</string>
+    <string name="label_days">%d天</string>
+    <string name="label_Device">装置：</string>
+    <string name="label_DeviceInSendOnlyMode">仅发送模式</string>
+    <string name="label_DisabledExchSourceKeyChange">你的金钥已经改变：请与其他人再次进行交换金钥。</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">开始安全讯息功能，两个用户都必须先安全交换金钥。</string>
+    <string name="label_Draft">草稿</string>
+    <string name="label_EnabledKeyFormatDeprecated">密钥格式已过时：请再次交换金钥.</string>
+    <string name="label_exchanged">交换日期</string>
+    <string name="label_expired">过期</string>
+    <string name="label_expires">过期%s</string>
+    <string name="label_expiresIn">过期于</string>
+    <string name="label_FileNameHint">档案名称</string>
+    <string name="label_FindInstruct">输入您的姓名和密码来保护您的个人资料：</string>
+    <string name="label_FirstName">名字</string>
+    <string name="label_Home">点两下你的名字去添加或删除个人联系资讯，检查你想分享的项目，然后按下开始交换与其他用户开始进行金钥交换：</string>
+    <string name="label_hometag">家用电话</string>
+    <string name="label_hours">%d小时</string>
+    <string name="label_iCloudEnable">SafeSlinger的iClou备份已启用。</string>
+    <string name="label_InstNoMessages">没有讯息。您可以发送讯息，从主选单上选择编辑新讯息。</string>
+    <string name="label_InstNoRecipients">要添加收件人，您必须先与一个或多个用户去交换金钥。您也可以从选单中送出金钥交换的邀请讯息。</string>
+    <string name="label_InstNoSharedFile">没有共享的文件。连接您的设备并开启iTunes，拖曳文件到共享文件夹。</string>
+    <string name="label_InstRecipients">挑选一个收件人来传递安全讯息：</string>
+    <string name="label_InstSendInvite">选择收件人进行安全介绍：</string>
+    <string name="label_InstSharedFile">选择要附加的档案：</string>
+    <string name="label_introduced">介绍日期</string>
+    <string name="label_inviteSent">邀请</string>
+    <string name="label_Key">金钥日期:</string>
+    <string name="label_LastName">姓</string>
+    <string name="label_Me">我</string>
+    <string name="label_messageIntroduceNameToYou">我想介绍%s给你。</string>
+    <string name="label_messageInviteInstall">SafeSlinger应用程序： %s</string>
+    <string name="label_messageInviteSetupInst">设置一个安全讯息管道，我们可以透过碰面或打电话给对方并进行一次金钥交换验证。</string>
+    <string name="label_messageInviteStartMsg">可以使用SafeSlinger iPhone或Android程式开始你的安全通讯？</string>
+    <string name="label_minutes">%d分钟</string>
+    <string name="label_mobiletag">行动电话</string>
+    <string name="label_MostRecentOnly">仅显示最新</string>
+    <string name="label_MsgSendUpdate">讯息更新凭证已完成。</string>
+    <string name="label_None">无</string>
+    <string name="label_numsharedfiles">%d个文件分享：</string>
+    <string name="label_OldThreads">旧的主题</string>
+    <string name="label_othertag">其他</string>
+    <string name="label_PassHintBackoff">重试</string>
+    <string name="label_PassHintChange">密码更新</string>
+    <string name="label_PassHintCreate">建立存取密码</string>
+    <string name="label_PassHintCurrent">目前的密码</string>
+    <string name="label_PassHintEnter">密码</string>
+    <string name="label_PassHintRepeat">再输入一次密码</string>
+    <string name="label_passPhraseCacheTtl">密码快取时间</string>
+    <string name="label_PassPhraseIsCached">密码已快取</string>
+    <string name="label_phoneOnly">电话</string>
+    <string name="label_Photo">照片</string>
+    <string name="label_PublicKeyID">密钥辨识码</string>
+    <string name="label_PushTokenID">讯息通知辨识码</string>
+    <string name="label_RemindBackupDelay">备份提醒</string>
+    <string name="label_ReportedInactive">%s无效。</string>
+    <string name="label_restoreCompleteDate">最后备份回复日期</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger备份延迟</string>
+    <string name="label_safeslingered">（SafeSlinger直接交换）</string>
+    <string name="label_SaveAccount">保存帐户</string>
+    <string name="label_SaveInstruct">勾选您希望更新或新增的联系人讯息，然后按加入联系人到通讯录：</string>
+    <string name="label_seconds">%d秒</string>
+    <string name="label_SelectRecip">选择收件人</string>
+    <string name="label_sendErrorData">传送错误资料</string>
+    <string name="label_SendFrom">寄件人：</string>
+    <string name="label_SendTo">收件人：</string>
+    <string name="label_ShowHintAtLaunch">下一次显示此提示</string>
+    <string name="label_step_1">第1步</string>
+    <string name="label_step_2">第2步</string>
+    <string name="label_step_3">第3步</string>
+    <string name="label_step_4">第4步</string>
+    <string name="label_step_5">第5步</string>
+    <string name="label_summary_auto_attach_retrieval">当登入自动下载邮件附件</string>
+    <string name="label_summary_auto_decrypt">当登入自动解密消息</string>
+    <string name="label_summary_remind_backup_delay">当备份离线时收到通知。</string>
+    <string name="label_summary_show_tutorial">在交换金钥前显示教程。</string>
+    <string name="label_TapToDecryptFile">按一下解密档案</string>
+    <string name="label_TapToDecryptMessage">按一下解密讯息</string>
+    <string name="label_TapToDownloadFile">按一下下载档案</string>
+    <string name="label_TapToDownloadMessage">按一下下载讯息</string>
+    <string name="label_TapToOpenFile">按一下打开档案</string>
+    <string name="label_TapToResumeDraft">点击恢复编辑草稿</string>
+    <string name="label_TapToSendCredentialUpdate">点选并按住发送凭证更新。</string>
+    <string name="label_TapToSlingKeys">点击以交换金钥。</string>
+    <string name="label_targetAccountLabel">你的帐号</string>
+    <string name="label_TouchToConfigureBackupSettings">您可以选择启用SafeSlinger的iCloud备份，请到iOS系统设定中启用。</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">点选进入备份设置选单。</string>
+    <string name="label_TouchToConfigureCacheTimeout">点选进入密码快取时效设置。</string>
+    <string name="label_undefinedTypeLabel">未知</string>
+    <string name="label_UnknownSender">加密的传送者</string>
+    <string name="label_UserName">使用者名称</string>
+    <string name="label_WarnForgotPassphrase">为了保护您的数据， SafeSlinger不会在任何地方存储你的密码。你仅能存取在相同密码下登录的收件人与讯息。然而，你可以会产生一组新的密钥和设定新的密码，然后重新与你的收件人交换金钥。</string>
+    <string name="label_WarnManagePassFollowsAreRecent">以下的密钥将被删除：</string>
+    <string name="label_WarnManagePassNoMoreRecent">没有其他的密钥可以删除（目前的密钥为最新）。</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">于%s以前产生的密钥可能会被删除。</string>
+    <string name="label_worktag">公司</string>
+
+    <string name="menu_About">关于</string>
+    <string name="menu_auto_attach_retrieval">自动下载附件</string>
+    <string name="menu_auto_decrypt">自动解密</string>
+    <string name="menu_Change">更改</string>
+    <string name="menu_ChangePassphrase">更改密码</string>
+    <string name="menu_ContactInviteEmail">利用电子邮件送出邀请</string>
+    <string name="menu_ContactInviteSms">利用短信送出邀请</string>
+    <string name="menu_CreateNew">建立新的联系资讯</string>
+    <string name="menu_delete">删除</string>
+    <string name="menu_deleteThread">删除联系人%s的所有讯息</string>
+    <string name="menu_Details">检视讯息内容</string>
+    <string name="menu_DownloadDirectory">下载目录</string>
+    <string name="menu_Edit">编辑</string>
+    <string name="menu_EditContact">编辑联系人</string>
+    <string name="menu_EditName">编辑名称</string>
+    <string name="menu_FileManager">档案管理</string>
+    <string name="menu_ForgotPassphrase">忘记密码？</string>
+    <string name="menu_Help">协助</string>
+    <string name="menu_Introduction">安全介绍</string>
+    <string name="menu_language">语言</string>
+    <string name="menu_License">许可</string>
+    <string name="menu_link_contact_add">加入收件人联系资讯</string>
+    <string name="menu_link_contact_change">改变收件人联系资讯</string>
+    <string name="menu_Logout">登出</string>
+    <string name="menu_ManagePassphrases">密码管理</string>
+    <string name="menu_message_font_size">讯息字体大小</string>
+    <string name="menu_messageCopyText">复制文字</string>
+    <string name="menu_messageForward">转寄</string>
+    <string name="menu_PrivacyPolicy">隐私政策</string>
+    <string name="menu_Remove">移除</string>
+    <string name="menu_restore_default">恢复预设设定</string>
+    <string name="menu_ringtone">铃声</string>
+    <string name="menu_SelectShareApp">分享程式给通讯录中其他人</string>
+    <string name="menu_sendFeedback">发送回馈</string>
+    <string name="menu_SendUpdate">发送更新</string>
+    <string name="menu_Settings">设定</string>
+    <string name="menu_ShowTutorial">显示教程</string>
+    <string name="menu_TagComposeMessage">编写讯息</string>
+    <string name="menu_TagExchange">交换金钥</string>
+    <string name="menu_TagListMessages">讯息清单</string>
+    <string name="menu_UseAnother">使用另一个联系人</string>
+    <string name="menu_UseContactPerson">使用%s的联系资讯</string>
+    <string name="menu_UseNoContact">仅使用名称</string>
+    <string name="menu_UseProfilePerson">使用基本资讯%s</string>
+    <string name="menu_vibrate">震动模式</string>
+
+    <string name="prog_decrypting">解密中…</string>
+    <string name="prog_encrypting">加密…</string>
+    <string name="prog_FileSent">讯息送出，等待回应…</string>
+    <string name="prog_findingKey">寻找密钥…</string>
+    <string name="prog_GeneratingKey">产生密钥，需要等待一段时间…</string>
+    <string name="prog_generatingSignature">产生签章…</string>
+    <string name="prog_loadingContent">内容加载…</string>
+    <string name="prog_ReceivingFile">接收加密档案…</string>
+    <string name="prog_RequestingFile">要求加密档案…</string>
+    <string name="prog_RequestingMessage">要求加密讯息…</string>
+    <string name="prog_RequestingPushReg">要求讯息通知服务(push)注册…</string>
+    <string name="prog_SavingContactsToAddressBook">更新通讯录…</string>
+    <string name="prog_SavingContactsToKeyDatabase">更新金钥数据库…</string>
+    <string name="prog_SearchingForBackup">寻找备份…</string>
+    <string name="prog_SendingFile">传送加密的 %s…</string>
+    <string name="prog_verifyingIntegrity">验证讯息完整性…</string>
+    <string name="prog_verifyingSignature">签章验证中…</string>
+
+    <string name="section_advanced">进阶管理</string>
+    <string name="section_backup">备份管理</string>
+    <string name="section_general">一般管理</string>
+    <string name="section_notification">通知管理</string>
+    <string name="section_storage">储存管理</string>
+
+    <string name="state_BackupRestored">备份恢复。</string>
+    <string name="state_FileDeleted">删除文件%s。</string>
+    <string name="state_FileSent">讯息已传送。</string>
+    <string name="state_InvitationAdded">加入邀请讯息。</string>
+    <string name="state_MessageSavedAsDraft">信息保存为草稿。</string>
+    <string name="state_MessagesDeleted">%d封讯息被删除。</string>
+    <string name="state_PassphraseUpdated">密码已更新。</string>
+    <string name="state_RecipientsDeleted">删除%d位收件人。</string>
+    <string name="state_SomeContactsImported">加入%s位收件人。</string>
+    <string name="state_TextCopiedToClipboard">复制到剪贴板。</string>
+
+    <string name="text_About">SafeSlinger是用来交换使用者资料，透过使用手机接触的方式，SafeSlinger可以确保交换资讯有经过认证并保护其私密性。每个人可与你交换分享资讯以便于透过安全通讯频道来交换讯息。</string>
+    <string name="text_About1">快速且方便地与其他人交换联系资讯</string>
+    <string name="text_About2">安全地投递(sling)文字相片甚至任何形式的资料！</string>
+    <string name="text_About3">透过强健密码系统保护你的个人资讯</string>
+    <string name="text_About_Short">SafeSlinger：说出3个字，并在和平永远聊天。</string>
+    <string name="text_AboutEmail">电子邮件: %s</string>
+    <string name="text_AboutFeat">特点:</string>
+    <string name="text_AboutWeb">网页: %s</string>
+    <string name="text_KeywordExchange">交换</string>
+    <string name="text_KeywordIdentity">特性</string>
+    <string name="text_KeywordKey">关键字</string>
+    <string name="text_KeywordMessaging">讯息</string>
+    <string name="text_KeywordPrivacy">隐私</string>
+    <string name="text_KeywordSecurity">安全</string>
+    <string name="text_LanguagesProvidedBy">翻译：</string>
+    <string name="text_RelatedSearchTerms">相关技术：</string>
+    <string name="text_Requirements">要求：</string>
+    <string name="text_Requirements1">至少安装两个设备以上。</string>
+    <string name="text_Requirements2">Internet必须处于连接状态。</string>
+    <string name="text_SourceCodeRepo">开放程式码：%s</string>
+    <string name="text_WhatsNew">稳定性修正。</string>
+
+    <string name="title_About">关于</string>
+    <string name="title_camera">相机</string>
+    <string name="title_ChooseDirectory">选择目录</string>
+    <string name="title_ChooseFileLoad">选择档案</string>
+    <string name="title_comments">评论/问题</string>
+    <string name="title_Error">错误</string>
+    <string name="title_ExchangeWalkthrough">Sling Keys协助</string>
+    <string name="title_FileOptions">档案选项</string>
+    <string name="title_find">设定</string>
+    <string name="title_font_size">选择字体大小</string>
+    <string name="title_home">开始交换</string>
+    <string name="title_HomePanel">首页</string>
+    <string name="title_MessageDetail">讯息内容</string>
+    <string name="title_Messages">讯息</string>
+    <string name="title_MyIdentity">个人资讯</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger讯息通知</string>
+    <string name="title_NotifyMulFileAvailable">收到%dSafeSlinger讯息</string>
+    <string name="title_passphrase">存取密码</string>
+    <string name="title_photoalbum">相册</string>
+    <string name="title_photolibary">图片库</string>
+    <string name="title_PickRecipient">收件人</string>
+    <string name="title_Question">问题</string>
+    <string name="title_RecipientDetail">收件人详细资讯</string>
+    <string name="title_save">交换结束</string>
+    <string name="title_SaveFileAs">把档案存成</string>
+    <string name="title_SecureIntroduction">安全简介</string>
+    <string name="title_SecureIntroductionInvite">安全简介邀请！</string>
+    <string name="title_SelectSource">发送选项：</string>
+    <string name="title_SendFile">送出</string>
+    <string name="title_sharingfolder">共享文件夹</string>
+    <string name="title_soundrecoder">录音机</string>
+    <string name="title_TextInviteMsg">SafeSlinger邀请讯息</string>
+    <string name="title_Threads">讯息主题</string>
+    <string name="title_Warn">警告</string>
+
+</resources>

@@ -144,7 +144,7 @@
         <item>Slovenščina</item>
         <item>Soomaaliga</item>
         <item>Shqip</item>
-        <item>Srpski</item>
+        <item>Српски</item>
         <item>Svenska</item>
         <item>Kiswahili</item>
         <item>தமிழ்</item>
@@ -156,6 +156,7 @@
         <item>اردو</item>
         <item>Việt</item>
         <item>Yorùbá</item>
+        <item>中文 (官话)</item>
         <item>中文 (中国)</item>
         <item>中文 (台灣)</item>
         <item>isiZulu</item>
@@ -240,6 +241,7 @@
         <item>ur</item>
         <item>vi</item>
         <item>yo</item>
+        <item>zh</item>
         <item>zh_CN</item>
         <item>zh_TW</item>
         <item>zu</item>

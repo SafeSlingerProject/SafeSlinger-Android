@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">退出？你确定吗？</string>
+
+    <string name="btn_Match">下一步</string>
+    <string name="btn_NoMatch">没有匹配</string>
+
+    <string name="choice_NumUsers">%d位成员</string>
+
+    <string name="error_AllMembersMustUpgrade">一些成员使用的是较旧的版本;所有成员都必须升级到最新版本。</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">所有成员都必须升级，一些正在使用旧的讯息通知格式。</string>
+    <string name="error_CorrectYourInternetConnection">网路不可使用，请检查您的网路设定。</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">金钥交换过程超时。重新开始交换金钥。</string>
+    <string name="error_HttpCode">伺服器HTTP错误：%d</string>
+    <string name="error_InvalidCommitVerify">在金钥交换中找到不合法的数据。重新开始交换金钥。</string>
+    <string name="error_InvalidCommonUserId">请输入一个正整数。</string>
+    <string name="error_LocalGroupCommitDiffer">您已回报的词语组的差异。重新开始交换金钥。</string>
+    <string name="error_MinUsersRequired">至少需要%d个成员进行交换金钥。</string>
+    <string name="error_MoreDataThanUsers">在交换中发生不预期的资料流。重新开始交换金钥。</string>
+    <string name="error_NoDataToExchange">缺少交换必需的资料数据。</string>
+    <string name="error_NoWordListSelected">你必须选择一个词组并继续进行。</string>
+    <string name="error_OtherGroupCommitDiffer">有人反应词组有差别。重新开始交换金钥。</string>
+    <string name="error_OutOfMemoryError">记忆体太少不能够完成这个操作。</string>
+    <string name="error_ServerAppMessage">伺服器讯息：%s。</string>
+    <string name="error_ServerNotResponding">伺服器没有回应。</string>
+    <string name="error_TimeoutWaitingForAllMembers">等待收集成员资讯逾时。</string>
+    <string name="error_WebCancelledByUser">使用者取消伺服器请求。</string>
+
+    <string name="help_size">选择试图与您交换资讯的成员数目，然后按确定。</string>
+    <string name="help_userid">萤幕上的号码是用来建立一个专有的群体，每位成员审视其他成员的号码后，所有成员必须输入相同的最低号码，接着按确定。</string>
+    <string name="help_verify">现在你必须从这三个词组中找出和所有成员相同(匹配)的词组，每位成员必须选择相同的词组，然后按下一步。</string>
+
+    <string name="label_CompareScreensNDevices">比较其他%s个装置萤幕。</string>
+    <string name="label_NumericModeHint">非英语</string>
+    <string name="label_PromptInstruct">该数字是用来创建一个专有的群体，请您比较该数字并输入所有成员之间最小的数字。</string>
+    <string name="label_ReceivedNItems">收到%d个项目</string>
+    <string name="label_UserIdHint">最低数字</string>
+    <string name="label_VerifyInstruct">所有的手机都必须显示一组全匹配3字词组。比较并选择该匹配的字词组。</string>
+
+    <string name="lib_name">SafeSlinger交易所</string>
+
+    <string name="prog_CollectingOthersCommitVerify">等待所有成员被验证…</string>
+    <string name="prog_CollectingOthersItems">等待所有成员加入…</string>
+    <string name="prog_ConstructingGroupKey">构建群组密钥…</string>
+    <string name="prog_RequestingUserId">要求成员认证码…</string>
+
+    <string name="title_size">和多少人交换资讯？</string>
+    <string name="title_userid">分组</string>
+    <string name="title_verify">确认</string>
+
+</resources>

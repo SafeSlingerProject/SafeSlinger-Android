@@ -82,6 +82,7 @@ trans.ur = res/values-ur/strings.xml
 trans.vi = res/values-vi/strings.xml
 trans.yi = res/values-ji/strings.xml
 trans.yo = res/values-yo/strings.xml
+trans.cmn = res/values-zh/strings.xml
 trans.zh_CN = res/values-zh-rCN/strings.xml
 trans.zh_TW = res/values-zh-rTW/strings.xml
 trans.zu = res/values-zu/strings.xml
