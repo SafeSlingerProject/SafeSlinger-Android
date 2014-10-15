@@ -72,6 +72,7 @@ import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class ComposeFragment extends Fragment {
+
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
     public static final int RESULT_FILESEL = 20;
     public static final int RESULT_RECIPSEL = 22;

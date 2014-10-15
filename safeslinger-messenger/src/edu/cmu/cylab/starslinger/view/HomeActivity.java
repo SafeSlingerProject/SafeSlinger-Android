@@ -153,6 +153,7 @@ import edu.cmu.cylab.starslinger.view.IntroductionFragment.OnIntroResultListener
 import edu.cmu.cylab.starslinger.view.MessagesFragment.OnMessagesResultListener;
 import edu.cmu.cylab.starslinger.view.SlingerFragment.OnSlingerResultListener;
 
+@SuppressLint("InflateParams")
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class HomeActivity extends BaseActivity implements OnComposeResultListener,
@@ -3607,8 +3608,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    @SuppressLint("InflateParams")
-    private AlertDialog.Builder xshowIntroductionInvite(final Activity act, Bundle args) {
+      private AlertDialog.Builder xshowIntroductionInvite(final Activity act, Bundle args) {
         String exchName = args.getString(extra.EXCH_NAME);
         String introName = args.getString(extra.INTRO_NAME);
         byte[] introPhoto = args.getByteArray(extra.PHOTO);
