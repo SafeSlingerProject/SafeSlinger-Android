@@ -97,7 +97,8 @@ public class SlingerFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        updateValues(savedInstanceState);
+        // if(savedInstanceState != null)
+        // updateValues(savedInstanceState);
     }
 
     @Override
@@ -109,7 +110,10 @@ public class SlingerFragment extends Fragment {
         mButtonStartExchange = (Button) vFrag.findViewById(R.id.HomeButtonStartExchangeProximity);
         mButtonSender = (Button) vFrag.findViewById(R.id.HomeButtonSender);
 
-        updateValues(savedInstanceState);
+        if (savedInstanceState != null)
+            updateValues(savedInstanceState);
+        else if (getArguments() != null)
+            updateValues(getArguments());
 
         mButtonSender.setOnClickListener(new OnClickListener() {
 

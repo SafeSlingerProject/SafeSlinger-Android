@@ -103,15 +103,12 @@ public class ComposeFragment extends Fragment {
     private long mRowIdRecipient = -1;
     private static OnComposeResultListener mResult;
 
-      
-
-    
-    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        updateValues(savedInstanceState);
+        if (savedInstanceState != null)
+            updateValues(savedInstanceState);
     }
 
     @Override
@@ -132,11 +129,11 @@ public class ComposeFragment extends Fragment {
         mButtonSender = (Button) vFrag.findViewById(R.id.SendButtonSender);
         mButtonRecip = (Button) vFrag.findViewById(R.id.SendButtonRecipient);
 
-        if(savedInstanceState != null)
-        	updateValues(savedInstanceState);
-        else if(getArguments() != null)
-        	updateValues(getArguments());
-        
+        if (savedInstanceState != null)
+            updateValues(savedInstanceState);
+        else if (getArguments() != null)
+            updateValues(getArguments());
+
         OnClickListener clickFile = new OnClickListener() {
 
             @Override
@@ -360,6 +357,7 @@ public class ComposeFragment extends Fragment {
         return ad;
     }
 
+    @SuppressWarnings("deprecation")
     private void drawFileImage() {
         String filenameArray[] = mFilePath.split("\\.");
         String extension = filenameArray[filenameArray.length - 1];
