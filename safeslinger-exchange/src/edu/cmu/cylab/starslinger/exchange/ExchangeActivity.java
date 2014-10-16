@@ -147,10 +147,12 @@ public class ExchangeActivity extends BaseActivity {
             return;
         }
 
+        int numUsersIn = 0;
         Bundle extras = savedInstanceState != null ? savedInstanceState : getIntent().getExtras();
         if (extras != null) {
             mUserData = extras.getByteArray(extra.USER_DATA);
             mHostName = extras.getString(extra.HOST_NAME);
+            numUsersIn = extras.getInt(extra.NUM_USERS, 0);
         }
 
         // only initialize on new requests, this activity has very little ui
@@ -158,8 +160,6 @@ public class ExchangeActivity extends BaseActivity {
 
             // new call from 3rd party, proceed
             mProt = new ExchangeController(this);
-
-            boolean pairwiseLocal = false; // TODO: future BT/NFC option
 
             // check for required Bundle values
             if (mUserData == null || mUserData.length == 0) {
@@ -183,28 +183,29 @@ public class ExchangeActivity extends BaseActivity {
             }
 
             mProt.setData(mUserData);
-
-            if (pairwiseLocal) {
-                // TODO: future ensure proper BT/NFC permissions
-                mProt.setHostName(null);
-            } else {
-                mProt.setHostName(mHostName);
-            }
+            mProt.setHostName(mHostName);
 
             // initialize exchange
             if (handled(mProt.doInitialize())) {
                 if (handled(mProt.doGenerateCommitment())) {
-                    if (pairwiseLocal) {
-                        // when pairwise and local we are always 2 users
-                        // in a local exchange, in the same group
-                        mProt.setNumUsers(2);
-                        mProt.setUserIdLink(1);
-                        SyncCommitsDataTask syncCommitData = new SyncCommitsDataTask();
-                        syncCommitData.execute(new String[] {});
+                    if (numUsersIn == 0) {
+                        // default mode, uninitialized number of users
+                        // so ask how many users?
+                        showGroupSizePicker();
+
+                    } else if (numUsersIn >= ExchangeConfig.MIN_USERS
+                            && numUsersIn <= ExchangeConfig.MAX_USERS) {
+                        // optional mode, 3rd party will pass in num users
+                        mProt.setNumUsers(numUsersIn);
+                        AssignUserTask assignUser = new AssignUserTask();
+                        assignUser.execute(new String());
+                        // TODO: option can be removed for combo-lock UI
+
                     } else {
-                        // Server supports multiple users in remote,
-                        // arbitrary configurations so request group
-                        // size as well as unique group id
+                        // reset and error, number out of range
+                        mProt.setNumUsers(0);
+                        showNote(String.format(getString(R.string.error_MinUsersRequired),
+                                ExchangeConfig.MIN_USERS));
                         showGroupSizePicker();
                     }
                 }
@@ -264,7 +265,7 @@ public class ExchangeActivity extends BaseActivity {
                     case RESULT_OK:
                         // confirmed exit from verify, send invalid sig
                         SyncBadSigTask syncBadSig = new SyncBadSigTask();
-                        syncBadSig.execute(new String[] {});
+                        syncBadSig.execute(new String());
                         break;
                     case RESULT_CANCELED:
                         // return to current activity
@@ -303,17 +304,17 @@ public class ExchangeActivity extends BaseActivity {
             case VerifyActivity.RESULT_CORRECTWORDLIST: // Verify button Match
                 mProt.setHashSelection(0);
                 SyncGoodSigsTask syncSigs = new SyncGoodSigsTask();
-                syncSigs.execute(new String[] {});
+                syncSigs.execute(new String());
                 break;
             case VerifyActivity.RESULT_DECOYWORDLIST1: // send bad match
                 mProt.setHashSelection(1);
                 SyncBadSigTask syncBadSig1 = new SyncBadSigTask();
-                syncBadSig1.execute(new String[] {});
+                syncBadSig1.execute(new String());
                 break;
             case VerifyActivity.RESULT_DECOYWORDLIST2: // send bad match
                 mProt.setHashSelection(2);
                 SyncBadSigTask syncBadSig2 = new SyncBadSigTask();
-                syncBadSig2.execute(new String[] {});
+                syncBadSig2.execute(new String());
                 break;
             case RESULT_CANCELED: // Verify button No Match
                 showExitConfirm(RESULT_CONFIRM_EXIT_VERIFY);
@@ -338,7 +339,7 @@ public class ExchangeActivity extends BaseActivity {
 
                 mProt.setUserIdLink(result); // save
                 SyncCommitsDataTask syncCommitData = new SyncCommitsDataTask();
-                syncCommitData.execute(new String[] {});
+                syncCommitData.execute(new String());
                 break;
             case RESULT_CANCELED:
                 showExit(RESULT_CANCELED);
@@ -440,7 +441,7 @@ public class ExchangeActivity extends BaseActivity {
         protected void onPostExecute(String result) {
             if (handled(!mProt.isError()) && !mProt.isCanceled()) {
                 SyncNodesNoncesTask syncNodesNonces = new SyncNodesNoncesTask();
-                syncNodesNonces.execute(new String[] {});
+                syncNodesNonces.execute(new String());
             }
         }
     }
@@ -581,7 +582,7 @@ public class ExchangeActivity extends BaseActivity {
         final CharSequence[] items;
         int i = 0;
 
-        items = new CharSequence[ExchangeConfig.MIN_USERS_AUTOCOUNT - 2];
+        items = new CharSequence[ExchangeConfig.MAX_USERS - 1];
 
         for (i = 0; i < items.length; i++) {
             items[i] = String.format(getString(R.string.choice_NumUsers), i
@@ -604,7 +605,7 @@ public class ExchangeActivity extends BaseActivity {
                 if (mProt.getNumUsers() > 0) {
                     dialog.dismiss();
                     AssignUserTask assignUser = new AssignUserTask();
-                    assignUser.execute(new String[] {});
+                    assignUser.execute(new String());
                 } else {
                     // reset and error
                     mProt.setNumUsers(0);

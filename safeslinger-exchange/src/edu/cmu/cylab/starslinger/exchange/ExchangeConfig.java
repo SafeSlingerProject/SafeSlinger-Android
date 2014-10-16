@@ -38,8 +38,8 @@ public class ExchangeConfig {
     public static final int VER_SHA3 = 0x01060000;
     public static final int VER_1536BIT_DH = 0x01080000;
     public static final int MIN_USERS = 2;
-    public static final int MIN_USERS_AUTOCOUNT = 11;
-    public static final int MAX_USERS = 63;
+    public static final int MAX_USERS = 10;
+    // public static final int MAX_USERS_CAPACITY = 63;
     public static final int AES_KEY_LEN = 256 / 8;
     public static final int AES_IV_LEN = 128 / 8;
     public static final int HASH_LEN = 256 / 8;

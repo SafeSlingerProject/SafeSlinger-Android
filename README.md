@@ -75,12 +75,22 @@ Modify your `Activity` that starts the exchange to import `Bundle` string extras
     	private static final int RESULT_EXCHANGE = 1;
 	...
 
-Call the `ExchangeActivity` with required parameters.
+Call the `ExchangeActivity` with required extras `USER_DATA` and `HOST_NAME`. The UX will ask for the number of users, grouping number, and 3-word phrase.
 
     private void beginExchange(String hostName, byte[] mySecret) {
         Intent intent = new Intent(getActivity(), ExchangeActivity.class);
         intent.putExtra(ExchangeConfig.extra.USER_DATA, mySecret);
         intent.putExtra(ExchangeConfig.extra.HOST_NAME, hostName);
+        startActivityForResult(intent, RESULT_EXCHANGE);
+    }
+    
+Optionally, you may pass in the number of users using the `NUM_USERS` extra. The UX will ask for the grouping number and 3-word phrase only. 
+
+    private void beginExchange(String hostName, byte[] mySecret, int numUsersIn) {
+        Intent intent = new Intent(getActivity(), ExchangeActivity.class);
+        intent.putExtra(ExchangeConfig.extra.USER_DATA, mySecret);
+        intent.putExtra(ExchangeConfig.extra.HOST_NAME, hostName);
+        intent.putExtra(ExchangeConfig.extra.NUM_USERS, numUsersIn);
         startActivityForResult(intent, RESULT_EXCHANGE);
     }
 
