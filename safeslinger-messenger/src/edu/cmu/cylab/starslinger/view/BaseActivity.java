@@ -56,12 +56,10 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.SQLException;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Handler.Callback;
-import android.os.Message;
 import android.os.Parcelable;
 import android.provider.BaseColumns;
 import android.provider.ContactsContract;
@@ -759,49 +757,37 @@ public class BaseActivity extends ActionBarActivity {
         }
     }
 
-    protected void runThreadBackgroundSyncUpdates() {
+    protected class BackgroundSyncUpdatesTask extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... arg0) {
+            SafeSlingerPrefs.setContactDBLastScan(System.currentTimeMillis());
 
-        final Handler syncMsgHandler = new Handler(new Callback() {
-
-            @Override
-            public boolean handleMessage(Message msg) {
-                if (msg.arg1 != 0)
-                    showNote(msg.arg1);
-                return false;
+            try {
+                doUpdateRecipientsFromContacts();
+            } catch (SQLException e) {
+                // ignore since we only attempt to update old data
             }
-        });
 
-        Thread t = new Thread() {
-
-            @Override
-            public void run() {
-                SafeSlingerPrefs.setContactDBLastScan(System.currentTimeMillis());
-                Message msg = new Message();
-
-                try {
-                    doUpdateRecipientsFromContacts();
-                } catch (SQLException e) {
-                    // ignore since we only attempt to update old data
-                }
-
-                // make sure recipient list shows correct keys...
-                if (!doUpdateActiveKeyStatus()) {
-                    msg = new Message();
-                    msg.arg1 = R.string.error_UnableToUpdateRecipientInDB;
-                    syncMsgHandler.sendMessage(msg);
-                }
-
-                // remove deprecated key storage from contacts
-                String[] keyNames = new String[] { //
-                        SafeSlingerConfig.APP_KEY_OLD1, //
-                        SafeSlingerConfig.APP_KEY_OLD2, //
-                        SafeSlingerConfig.APP_KEY_PUBKEY, //
-                        SafeSlingerConfig.APP_KEY_PUSHTOKEN, //
-                };
-                doCleanupOldKeyData(keyNames);
+            // make sure recipient list shows correct keys...
+            if (!doUpdateActiveKeyStatus()) {
+                publishProgress(getString(R.string.error_UnableToUpdateRecipientInDB));
             }
-        };
-        t.start();
+
+            // remove deprecated key storage from contacts
+            String[] keyNames = new String[] { //
+                    SafeSlingerConfig.APP_KEY_OLD1, //
+                    SafeSlingerConfig.APP_KEY_OLD2, //
+                    SafeSlingerConfig.APP_KEY_PUBKEY, //
+                    SafeSlingerConfig.APP_KEY_PUSHTOKEN, //
+            };
+            doCleanupOldKeyData(keyNames);
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            showNote(progress[0]);
+        }
     }
 
     private boolean doUpdateActiveKeyStatus() throws SQLException {
@@ -1889,7 +1875,8 @@ public class BaseActivity extends ActionBarActivity {
                         }
                     }
                     // last, update names and photos from address book
-                    runThreadBackgroundSyncUpdates();
+                    BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
+                    backgroundSyncUpdates.execute(new String());
 
                     mContactLinkRecipientRowId = -1; // reset
                 }
@@ -1903,7 +1890,8 @@ public class BaseActivity extends ActionBarActivity {
                     // finish();
                 }
                 // last, update names and photos from address book
-                runThreadBackgroundSyncUpdates();
+                BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
+                backgroundSyncUpdates.execute(new String());
                 break;
             case RESULT_SELECT_SMS:
                 if (data != null) {

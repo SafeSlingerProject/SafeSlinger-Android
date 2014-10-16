@@ -186,6 +186,8 @@ public class SafeSlingerConfig {
         public static final String THUMBNAIL = "Thumbnail";
         public static final String USER_TOTAL = "UserTotal";
         public static final String VERIFY_PASS_PHRASE = "VerifyPassPhrase";
+        public static final String RECIP_SOURCE = "RecipientSource";
+        public static final String INVITE_KEYID = "InviteKeyId";
     }
 
     public static boolean isNameValid(String name) {

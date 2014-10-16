@@ -107,7 +107,8 @@ public class ComposeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        updateValues(savedInstanceState);
+        if (savedInstanceState != null)
+            updateValues(savedInstanceState);
     }
 
     @Override
@@ -356,6 +357,7 @@ public class ComposeFragment extends Fragment {
         return ad;
     }
 
+    @SuppressWarnings("deprecation")
     private void drawFileImage() {
         String filenameArray[] = mFilePath.split("\\.");
         String extension = filenameArray[filenameArray.length - 1];

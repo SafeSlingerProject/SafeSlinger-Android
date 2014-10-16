@@ -48,6 +48,7 @@ import a_vcard.android.syncml.pim.vcard.ContactStruct.ContactMethod;
 import a_vcard.android.syncml.pim.vcard.Name;
 import a_vcard.android.syncml.pim.vcard.VCardException;
 import a_vcard.android.syncml.pim.vcard.VCardParser;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -61,7 +62,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.LabeledIntent;
@@ -76,7 +76,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Handler.Callback;
 import android.os.Message;
 import android.os.Parcelable;
 import android.provider.ContactsContract;
@@ -153,6 +152,7 @@ import edu.cmu.cylab.starslinger.view.IntroductionFragment.OnIntroResultListener
 import edu.cmu.cylab.starslinger.view.MessagesFragment.OnMessagesResultListener;
 import edu.cmu.cylab.starslinger.view.SlingerFragment.OnSlingerResultListener;
 
+@SuppressLint("InflateParams")
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class HomeActivity extends BaseActivity implements OnComposeResultListener,
@@ -176,10 +176,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private static final int VIEW_PASSPHRASE_VERIFY_ID = 250;
     private static final int VIEW_SETTINGS_ID = 260;
     private static final int VIEW_SAVE_ID = 280;
-    private static final int RECOVERY_PUSHREG = 310;
-    private static final int RECOVERY_CREATEKEY = 340;
-    private static final int RECOVERY_EXCHANGEIMPORT = 380;
-    private static final int RECOVERY_BACKUP_RESTORE = 390;
     public static final int NOTIFY_NEW_MSG_ID = 500;
     public static final int NOTIFY_BACKUP_DELAY_ID = 501;
     public static final int NOTIFY_PASS_CACHED_ID = 502;
@@ -195,7 +191,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private static RecipientRow sRecip;
     private static RecipientRow sRecip1;
     private static RecipientRow sRecip2;
-    private static String sWebError = null;
     private static String sProgressMsg = null;
     private static String sEditPassPhrase = null;
     private static boolean sBackupExists = false;
@@ -242,7 +237,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            endProgress(RECOVERY_PUSHREG);
+            endProgress();
 
             String error = intent.getStringExtra(extra.ERROR);
             if (error != null) {
@@ -314,7 +309,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             public void restoreFinished(int error) {
                 sBackupExists = (error == 0);
                 sRestoring = false;
-                endProgress(RECOVERY_BACKUP_RESTORE);
+                endProgress();
             }
         };
         try {
@@ -374,7 +369,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 if (mTabsAdapter != null && mTabsAdapter.getmTabs() != null
                         && !mTabsAdapter.getmTabs().isEmpty())
                     mTabsAdapter.getmTabs().get(Tabs.COMPOSE.ordinal()).args = getComposeArgs();
-                // restart();
             }
         } else {
             // if nothing else, make sure proper default tab is selected
@@ -386,18 +380,22 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 // Sling Keys should be the default when there are 0 keys
                 // exchanged.
 
-                // TODO resolve setup issue with loading tab data
-                // setTab(Tabs.SLINGKEYS);
-                setTab(Tabs.COMPOSE);
-                restart();
+                setTab(Tabs.SLINGKEYS);
+                if (mTabsAdapter != null && mTabsAdapter.getmTabs() != null
+                        && !mTabsAdapter.getmTabs().isEmpty())
+                    mTabsAdapter.getmTabs().get(Tabs.SLINGKEYS.ordinal()).args = getSlingerArgs();
+                if (SafeSlingerPrefs.getShowWalkthrough()) {
+                    BaseActivity.xshowWalkthrough(this).create().show();
+                }
 
             } else if (dbMessage.getAllMessageCount() == 0) {
                 // Compose should be the default when there are > 1 keys and 0
                 // messages.
 
-                // TODO resolve setup issue with loading tab data
                 setTab(Tabs.COMPOSE);
-                restart();
+                if (mTabsAdapter != null && mTabsAdapter.getmTabs() != null
+                        && !mTabsAdapter.getmTabs().isEmpty())
+                    mTabsAdapter.getmTabs().get(Tabs.COMPOSE.ordinal()).args = getComposeArgs();
             }
 
             // Messages should be the default when there are > 1 messages.
@@ -849,7 +847,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (!sAppOpened || dateChanged) {
             sAppOpened = true;
             SafeSlingerPrefs.setThisVersionOpened();
-            runThreadBackgroundSyncUpdates();
+            BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
+            backgroundSyncUpdates.execute(new String());
         }
 
         // init local struct...
@@ -867,7 +866,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (notify != SafeSlingerConfig.NOTIFY_NOPUSH) {
             if (TextUtils.isEmpty(token) && notify == SafeSlingerConfig.NOTIFY_ANDROIDC2DM) {
                 // ensure that user has registered with push service...
-                runThreadGetPushReg();
+                doGetPushRegistration();
                 return false;
             }
         }
@@ -975,75 +974,74 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         showPassPhrase(false, false);
     }
 
-    private void doGenerateNewKey() {
-        // key generation...
-        runThreadCreateKey();
-    }
-
-    private void doCreateKeyEnd() {
-        if (sWebError != null) {
-            showErrorExit(sWebError);
-            return;
-        }
-
-        try {
-            if (!sKeyData.isGenerated()) {
-                throw new CryptoMsgException(getString(R.string.error_couldNotExtractPrivateKey));
-            }
-
-            CryptoMsgPrivateData mine = new CryptoMsgPrivateData(sKeyData);
-
-            // save public portion
-            sSenderKey = mine.getSafeSlingerString();
-
-            SafeSlingerPrefs.setKeyIdString(mine.getKeyId());
-            SafeSlingerPrefs.setKeyDate(mine.getGenDate());
-
-            // save private portion in secret key storage...
-            CryptTools.putSecretKey(mine, sEditPassPhrase);
-
-            // update cache to avoid entering twice...
-            SafeSlinger.setCachedPassPhrase(sKeyData.GetSelfKeyid(), sEditPassPhrase);
-            updatePassCacheTimer();
-
-            // now that we have new key id, use it when updating contacts...
-            runThreadBackgroundSyncUpdates();
-
-            restart();
-        } catch (IOException e) {
-            showErrorExit(e);
-        } catch (CryptoMsgException e) {
-            showErrorExit(e);
-        } catch (CryptoMsgNonExistingKeyException e) {
-            showErrorExit(e);
-        }
-    }
-
-    private void runThreadCreateKey() {
-        sWebError = null;
-        showProgress(getString(R.string.prog_GeneratingKey));
-        Thread t = new Thread() {
-
-            @Override
-            public void run() {
-                try {
-                    sKeyData = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
-                    sKeyData.GenKeyPairs();
-                    if (!sKeyData.isGenerated()) {
-                        throw new CryptoMsgException(
-                                getString(R.string.error_couldNotExtractPrivateKey));
-                    }
-                } catch (OutOfMemoryError e) {
-                    sWebError = getString(R.string.error_OutOfMemoryError);
-                } catch (InvalidParameterException e) {
-                    sWebError = e.getLocalizedMessage();
-                } catch (CryptoMsgException e) {
-                    sWebError = e.getLocalizedMessage();
+    private class CreateKeyTask extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... arg0) {
+            publishProgress(getString(R.string.prog_GeneratingKey));
+            try {
+                sKeyData = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
+                sKeyData.GenKeyPairs();
+                if (!sKeyData.isGenerated()) {
+                    throw new CryptoMsgException(
+                            getString(R.string.error_couldNotExtractPrivateKey));
                 }
-                endProgress(RECOVERY_CREATEKEY);
+            } catch (OutOfMemoryError e) {
+                return getString(R.string.error_OutOfMemoryError);
+            } catch (InvalidParameterException e) {
+                return e.getLocalizedMessage();
+            } catch (CryptoMsgException e) {
+                return e.getLocalizedMessage();
             }
-        };
-        t.start();
+            endProgress();
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            showProgress(progress[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if (result != null) {
+                showErrorExit(result);
+                return;
+            }
+
+            try {
+                if (!sKeyData.isGenerated()) {
+                    throw new CryptoMsgException(
+                            getString(R.string.error_couldNotExtractPrivateKey));
+                }
+
+                CryptoMsgPrivateData mine = new CryptoMsgPrivateData(sKeyData);
+
+                // save public portion
+                sSenderKey = mine.getSafeSlingerString();
+
+                SafeSlingerPrefs.setKeyIdString(mine.getKeyId());
+                SafeSlingerPrefs.setKeyDate(mine.getGenDate());
+
+                // save private portion in secret key storage...
+                CryptTools.putSecretKey(mine, sEditPassPhrase);
+
+                // update cache to avoid entering twice...
+                SafeSlinger.setCachedPassPhrase(sKeyData.GetSelfKeyid(), sEditPassPhrase);
+                updatePassCacheTimer();
+
+                // now that we have new key id, use it when updating contacts...
+                BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
+                backgroundSyncUpdates.execute(new String());
+
+                restart();
+            } catch (IOException e) {
+                showErrorExit(e);
+            } catch (CryptoMsgException e) {
+                showErrorExit(e);
+            } catch (CryptoMsgNonExistingKeyException e) {
+                showErrorExit(e);
+            }
+        }
     }
 
     private void doSendFileStart(RecipientRow recip, MessageData sendMsg) {
@@ -1153,41 +1151,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    private void endProgress(final int recover) {
-
+    private void endProgress() {
         if (sProg != null) {
-            sProg.setOnDismissListener(new OnDismissListener() {
-
-                @Override
-                public void onDismiss(DialogInterface dialog) {
-                    switch (recover) {
-                        default:
-                            restart();
-                            // nothing to do...
-                            break;
-                        case RECOVERY_CREATEKEY:
-                            doCreateKeyEnd();
-                            break;
-                        case RECOVERY_PUSHREG:
-                            // we can only wait for an error, or success
-                            break;
-                        case RECOVERY_EXCHANGEIMPORT:
-                            // updated databases, restart to use...
-                            runThreadBackgroundSyncUpdates();
-                            restart();
-                            break;
-                        case RECOVERY_BACKUP_RESTORE:
-                            // backup complete, read data...
-                            restart();
-                            break;
-                    }
-                }
-            });
             sProg.dismiss();
             sProg = null;
             sProgressMsg = null;
         }
-
     }
 
     private boolean handleSendToAction() {
@@ -1911,7 +1880,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                         requestCode == VIEW_PASSPHRASE_CHANGE_ID);
                                 if (!preExistingKey) {
                                     sEditPassPhrase = pass;
-                                    doGenerateNewKey();
+                                    CreateKeyTask createKey = new CreateKeyTask();
+                                    createKey.execute(new String());
                                     break;
                                 }
 
@@ -1930,7 +1900,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 // if requested, and logged in, try to decrypt
                                 // messages
                                 if (SafeSlingerPrefs.getAutoDecrypt()) {
-                                    runThreadDecryptPending(pass);
+                                    DecryptPendingTask decryptPending = new DecryptPendingTask();
+                                    decryptPending.execute(pass);
                                 }
                             }
                         }
@@ -1959,7 +1930,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             case REQUEST_QRECEIVE_MGS:
                 switch (resultCode) {
                     case RESULT_OK:
-                        runThreadGetPushReg();
+                        doGetPushRegistration();
                         break;
                     case RESULT_CANCELED:
                         SafeSlingerPrefs
@@ -2148,8 +2119,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     case SaveActivity.RESULT_SAVE:
                         SafeSlingerPrefs.setFirstExchangeComplete(true);
                         // locally store trusted exchanged items
-                        runThreadImportFromExchange(data.getExtras(),
-                                RecipientDbAdapter.RECIP_SOURCE_EXCHANGE, null);
+                        Bundle args = data.getExtras();
+                        args.putInt(extra.RECIP_SOURCE, RecipientDbAdapter.RECIP_SOURCE_EXCHANGE);
+                        ImportFromExchangeTask importFromExchange = new ImportFromExchangeTask();
+                        importFromExchange.execute(args);
                         break;
                     case SaveActivity.RESULT_SELNONE:
                         SafeSlingerPrefs.setFirstExchangeComplete(true);
@@ -2297,77 +2270,75 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         return recentKeys;
     }
 
-    private void runThreadDecryptPending(final String pass) {
+    private class DecryptPendingTask extends AsyncTask<String, Message, String> {
 
-        final Handler decMsgHandler = new Handler(new Callback() {
-            @Override
-            public boolean handleMessage(Message msg) {
-                postProgressMsgList(msg.arg1 == 1, msg.arg2, getString(R.string.prog_decrypting));
-                return false;
-            }
-        });
+        private static final int PROG_DECRYPTING = 0;
+        private static final int PROG_DECRYPTING_DONE = 1;
 
-        final Handler doneMsgHandler = new Handler(new Callback() {
-            @Override
-            public boolean handleMessage(Message msg) {
-                postProgressMsgList(msg.arg1 == 1, msg.arg2, null);
-                return false;
-            }
-        });
+        @Override
+        protected String doInBackground(String... arg0) {
+            String pass = arg0[0];
+            MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+            InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(getApplicationContext());
+            Message msg = new Message();
 
-        Thread t = new Thread() {
+            Cursor c = dbInbox.fetchAllInboxDecryptPending();
+            if (c != null) {
+                while (c.moveToNext()) {
+                    try {
+                        MessageData inRow = new MessageRow(c, true);
+                        StringBuilder keyidout = new StringBuilder();
+                        msg = new Message();
+                        msg.what = PROG_DECRYPTING;
+                        msg.arg1 = inRow.isInboxTable() ? 1 : 0;
+                        msg.arg2 = (int) inRow.getRowId();
+                        publishProgress(msg);
 
-            @Override
-            public void run() {
-                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-                InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(getApplicationContext());
-                Message msg = new Message();
+                        byte[] plain = CryptTools
+                                .decryptMessage(inRow.getEncBody(), pass, keyidout);
+                        MessagePacket push = new MessagePacket(plain);
 
-                Cursor c = dbInbox.fetchAllInboxDecryptPending();
-                if (c != null) {
-                    while (c.moveToNext()) {
-                        try {
-                            MessageData inRow = new MessageRow(c, true);
-                            StringBuilder keyidout = new StringBuilder();
-                            msg = new Message();
-                            msg.arg1 = inRow.isInboxTable() ? 1 : 0;
-                            msg.arg2 = (int) inRow.getRowId();
-                            decMsgHandler.sendMessage(msg);
-
-                            byte[] plain = CryptTools.decryptMessage(inRow.getEncBody(), pass,
-                                    keyidout);
-                            MessagePacket push = new MessagePacket(plain);
-
-                            // move encrypted message to decrypted storage...
-                            // add decrypted
-                            long rowIdMsg = dbMessage.createMessageDecrypted(inRow, push,
-                                    keyidout.toString());
-                            if (rowIdMsg == -1) {
-                                return; // unable to save progress
-                            } else {
-                                // remove encrypted
-                                dbInbox.deleteInbox(inRow.getRowId());
-                            }
-                            msg = new Message();
-                            msg.arg1 = inRow.isInboxTable() ? 1 : 0;
-                            msg.arg2 = (int) inRow.getRowId();
-                            doneMsgHandler.sendMessage(msg);
-
-                        } catch (ClassNotFoundException e) {
-                            e.printStackTrace();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        } catch (CryptoMsgException e) {
-                            e.printStackTrace();
-                        } catch (GeneralException e) {
-                            e.printStackTrace();
+                        // move encrypted message to decrypted storage...
+                        // add decrypted
+                        long rowIdMsg = dbMessage.createMessageDecrypted(inRow, push,
+                                keyidout.toString());
+                        if (rowIdMsg == -1) {
+                            return null; // unable to save progress
+                        } else {
+                            // remove encrypted
+                            dbInbox.deleteInbox(inRow.getRowId());
                         }
+                        msg = new Message();
+                        msg.what = PROG_DECRYPTING_DONE;
+                        msg.arg1 = inRow.isInboxTable() ? 1 : 0;
+                        msg.arg2 = (int) inRow.getRowId();
+                        publishProgress(msg);
+
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (CryptoMsgException e) {
+                        e.printStackTrace();
+                    } catch (GeneralException e) {
+                        e.printStackTrace();
                     }
-                    c.close();
                 }
+                c.close();
             }
-        };
-        t.start();
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Message... progress) {
+            Message msg = progress[0];
+
+            if (msg.what == PROG_DECRYPTING) {
+                postProgressMsgList(msg.arg1 == 1, msg.arg2, getString(R.string.prog_decrypting));
+            } else if (msg.what == PROG_DECRYPTING_DONE) {
+                postProgressMsgList(msg.arg1 == 1, msg.arg2, null);
+            }
+        }
     }
 
     private void doLoadAttachment(String path) throws FileNotFoundException {
@@ -2557,61 +2528,60 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    private void runThreadImportFromExchange(final Bundle args, final int recipSource,
-            final String introkeyid) {
+    private class ImportFromExchangeTask extends AsyncTask<Bundle, String, String> {
+        Bundle args = null;
+        int recipSource = 0;
+        String introkeyid = null;
+        int imported = 0;
 
-        final Handler importMsgHandler = new Handler(new Callback() {
+        @Override
+        protected String doInBackground(Bundle... arg0) {
+            args = arg0[0];
+            recipSource = args.getInt(extra.RECIP_SOURCE);
+            introkeyid = args.getString(extra.INVITE_KEYID);
 
-            @Override
-            public boolean handleMessage(Message msg) {
-                Bundle args = msg.getData();
-                String error = args != null ? args.getString(extra.ERROR) : null;
-                if (TextUtils.isEmpty(error)) {
-                    int imported = msg.arg2;
-                    int exchanged = msg.getData().getInt(extra.EXCHANGED_TOTAL);
-                    if (imported < exchanged) {
-                        showNote(String.format(getString(R.string.state_SomeContactsImported),
-                                imported + "/" + exchanged));
-                    } else {
-                        showNote(String.format(getString(R.string.state_SomeContactsImported),
-                                imported));
-                    }
+            publishProgress(getString(R.string.prog_SavingContactsToKeyDatabase));
+            try {
+                imported = doImportFromExchange(args, recipSource, introkeyid);
+            } catch (OutOfMemoryError e) {
+                return getString(R.string.error_OutOfMemoryError);
+            } catch (SQLException e) {
+                return getString(R.string.error_UnableToSaveRecipientInDB);
+            } catch (GeneralException e) {
+                return e.getLocalizedMessage();
+            } catch (CryptoMsgPeerKeyFormatException e) {
+                return e.getLocalizedMessage();
+            }
+            endProgress();
+            return null;
+        }
 
-                    doSelectRecipientPostExchange(args, recipSource);
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            showProgress(progress[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if (TextUtils.isEmpty(result)) {
+                int exchanged = args.getInt(extra.EXCHANGED_TOTAL);
+                if (imported < exchanged) {
+                    showNote(String.format(getString(R.string.state_SomeContactsImported), imported
+                            + "/" + exchanged));
                 } else {
-                    showNote(error);
+                    showNote(String
+                            .format(getString(R.string.state_SomeContactsImported), imported));
                 }
-                return false;
+                doSelectRecipientPostExchange(args, recipSource);
+            } else {
+                showNote(result);
             }
-        });
 
-        showProgress(getString(R.string.prog_SavingContactsToKeyDatabase));
-        Thread t = new Thread() {
-
-            @Override
-            public void run() {
-                int imported = 0;
-                Message msg = new Message();
-                try {
-                    imported = doImportFromExchange(args, recipSource, introkeyid);
-                } catch (OutOfMemoryError e) {
-                    args.putString(extra.ERROR, getString(R.string.error_OutOfMemoryError));
-                } catch (SQLException e) {
-                    args.putString(extra.ERROR, getString(R.string.error_UnableToSaveRecipientInDB));
-                } catch (GeneralException e) {
-                    args.putString(extra.ERROR, e.getLocalizedMessage());
-                } catch (CryptoMsgPeerKeyFormatException e) {
-                    args.putString(extra.ERROR, e.getLocalizedMessage());
-                }
-
-                msg.arg2 = imported;
-                msg.setData(args);
-                importMsgHandler.sendMessage(msg);
-
-                endProgress(RECOVERY_EXCHANGEIMPORT);
-            }
-        };
-        t.start();
+            // updated databases, restart to use...
+            BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
+            backgroundSyncUpdates.execute(new String());
+            restart();
+        }
     }
 
     @Override
@@ -3184,8 +3154,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    private void runThreadGetPushReg() {
-        sWebError = null;
+    private void doGetPushRegistration() {
 
         // google account is required
         if (!SSUtil.isGoogleAccountPresent(getApplicationContext())) {
@@ -3201,15 +3170,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
 
         showProgress(getString(R.string.prog_RequestingPushReg));
-        Thread t = new Thread() {
-
-            @Override
-            public void run() {
-                C2DMessaging.register(getApplicationContext(),
-                        SafeSlingerConfig.PUSH_SENDERID_EMAIL);
-            }
-        };
-        t.start();
+        C2DMessaging.register(getApplicationContext(), SafeSlingerConfig.PUSH_SENDERID_EMAIL);
     }
 
     private boolean saveFileAtLocation(File downloadedFile, MessageData recvMsg) {
@@ -3327,7 +3288,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         sProg = null;
         sProgressMsg = null;
         sSendMsg = new MessageData();
-        sWebError = null;
         sEditPassPhrase = null;
         sBackupExists = false;
         sRestoreRequested = false;
@@ -3523,6 +3483,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
+    @SuppressLint("InflateParams")
     private AlertDialog.Builder xshowManagePassphrases(final Activity act, Bundle args) {
         String msg = args.getString(extra.RESID_MSG);
         boolean allowDelete = args.getBoolean(extra.ALLOW_DELETE);
@@ -3678,8 +3639,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
 
                 // import the new contacts
-                runThreadImportFromExchange(args, RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION,
-                        inviteMsg.getKeyId());
+                args.putInt(extra.RECIP_SOURCE, RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION);
+                args.putString(extra.INVITE_KEYID, inviteMsg.getKeyId());
+                ImportFromExchangeTask importFromExchange = new ImportFromExchangeTask();
+                importFromExchange.execute(args);
                 setTab(Tabs.MESSAGE);
                 restart();
             }
