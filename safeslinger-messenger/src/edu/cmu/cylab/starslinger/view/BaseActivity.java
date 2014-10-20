@@ -687,12 +687,17 @@ public class BaseActivity extends ActionBarActivity {
         String msgReq = act.getString(R.string.text_Requirements);
         String msgReq1 = act.getString(R.string.text_Requirements1);
         String msgReq2 = act.getString(R.string.text_Requirements2);
-        String msgLang = getCredits(act);
+        String msgDev = act.getString(R.string.text_DevelopedBy);
+        String msgProgs = act.getString(R.string.app_DeveloperName);
+        String msgLang = act.getString(R.string.text_LanguagesProvidedBy);
+        String msgTrans = act.getString(R.string.app_TranslatorName);
 
-        textViewAbout.setText(String.format(
-                "%s\n\n%s\n\n%s\n- %s\n- %s\n- %s\n\n%s\n1. %s\n2. %s\n\n%s\n%s\n%s\n\n%s",
-                msgHead, msgAbout, msgAbFeat, msgAb1, msgAb2, msgAb3, msgReq, msgReq1, msgReq2,
-                msgEmail, msgWeb, msgSrc, msgLang));
+        textViewAbout
+                .setText(String
+                        .format("%s\n\n%s\n\n%s\n- %s\n- %s\n- %s\n\n%s\n1. %s\n2. %s\n\n%s\n%s\n%s\n\n%s\n%s\n%s\n%s",
+                                msgHead, msgAbout, msgAbFeat, msgAb1, msgAb2, msgAb3, msgReq,
+                                msgReq1, msgReq2, msgEmail, msgWeb, msgSrc, msgDev, msgProgs,
+                                msgLang, msgTrans));
 
         ad.setView(layout);
         ad.setCancelable(true);
@@ -711,17 +716,6 @@ public class BaseActivity extends ActionBarActivity {
             }
         });
         return ad;
-    }
-
-    private static String getCredits(Activity act) {
-
-        StringBuilder cred = new StringBuilder();
-        cred.append(act.getString(R.string.text_LanguagesProvidedBy));
-        cred.append("\n");
-        cred.append(act.getString(R.string.app_TranslatorName));
-        cred.append("\n");
-
-        return cred.toString();
     }
 
     protected void showFileActionChooser(File downloadedFile, String fileType) {
