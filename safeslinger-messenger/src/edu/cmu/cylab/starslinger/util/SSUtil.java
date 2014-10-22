@@ -436,4 +436,30 @@ public class SSUtil {
             return false;
         }
     }
+
+    public static String writeByteArray(byte[] bytes) {
+        StringBuilder raw = new StringBuilder(String.format(Locale.US, "len %d: ", bytes.length));
+        for (int i = 0; i < bytes.length; i++)
+            raw.append(String.format(Locale.US, "%X ", bytes[i]));
+        return raw.toString();
+    }
+
+    public static int getTotalUsers() {
+        String userName;
+        long keyDate;
+        int userNumber = 0;
+        do {
+            userName = null;
+            keyDate = 0;
+            userName = SafeSlingerPrefs.getContactName(userNumber);
+            keyDate = SafeSlingerPrefs.getKeyDate(userNumber);
+            if (!TextUtils.isEmpty(userName)) {
+                userNumber++;
+            }
+        } while (keyDate > 0);
+
+        // always at least 1
+        return userNumber > 1 ? userNumber : 1;
+    }
+
 }

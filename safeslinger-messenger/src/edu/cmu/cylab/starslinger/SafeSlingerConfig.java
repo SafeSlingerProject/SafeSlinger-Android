@@ -51,6 +51,7 @@ public class SafeSlingerConfig {
     public static final String LOG_TAG = "SafeSlinger-Messenger";
     public static final String PRIVACY_URL = "http://www.cylab.cmu.edu/safeslinger/privacy.html";
     public static final String EULA_URL = "http://www.cylab.cmu.edu/safeslinger/eula.html";
+    public static final String LOCALIZE_URL = "transifex.com/projects/p/safeslinger";
 
     @Deprecated
     public static final String APP_KEY_OLD1 = "StarSlingerKey";
@@ -188,6 +189,7 @@ public class SafeSlingerConfig {
         public static final String VERIFY_PASS_PHRASE = "VerifyPassPhrase";
         public static final String RECIP_SOURCE = "RecipientSource";
         public static final String INVITE_KEYID = "InviteKeyId";
+        public static final String INTRO_PUBKEY = "IntroPubKey";
     }
 
     public static boolean isNameValid(String name) {

@@ -713,15 +713,9 @@
     <!-- application description (sentence case); used at the end of the about dialog to list the developers of SafeSlinger. -->
     <string name="text_DevelopedBy">Developed by:</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordAdHoc" translatable="false">ad hoc</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
     <string name="text_KeywordExchange">Exchange</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
     <string name="text_KeywordIdentity">Identity</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordIMessage" translatable="false">iMessage</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordKakaoTalk" translatable="false">KakaoTalk</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
     <string name="text_KeywordKey">Key</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
@@ -734,14 +728,10 @@
     <string name="text_KeywordSecurity">Security</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
     <string name="text_KeywordSlinger" translatable="false">Slinger</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordTextSecure" translatable="false">TextSecure</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordThreema" translatable="false">Threema</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordWhatsApp" translatable="false">WhatsApp</string>
     <!-- application description (sentence case); used at the end of the about dialog to list the translators of SafeSlinger. -->
     <string name="text_LanguagesProvidedBy">Languages provided by:</string>
+    <!-- application description (sentence case); used in the app store listing, %s = SafeSlinger project localization repo. -->
+    <string name="text_LocalizationRepo">translate: %s</string>
     <!-- application description (sentence case); used in the app store listing to list related search terms to help users looking for secure key exchange and messaging. -->
     <string name="text_RelatedSearchTerms">Related Terms:</string>
     <!-- application description (sentence case); used in the about box and app store listing to enumerate requirements. -->
@@ -782,7 +772,7 @@
     <!-- title (title case); used at the top of the home screen on iOS. -->
     <string name="title_HomePanel">Home</string>
     <!-- title (title case); used as the settings title when changing language -->
-    <string name="title_language" translatable="false">Select language. Help us translate by using Send Feedback.</string>
+    <string name="title_language" translatable="false">Select language. Help us on transifex.com.</string>
     <!-- title (title case); used at the top of the dialog when viewing message details. -->
     <string name="title_MessageDetail">Message</string>
     <!-- title (title case); used at the top of the message list screen. -->

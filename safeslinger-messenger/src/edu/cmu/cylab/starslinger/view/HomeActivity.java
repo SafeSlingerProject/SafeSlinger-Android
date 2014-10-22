@@ -192,14 +192,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private static RecipientRow sRecip1;
     private static RecipientRow sRecip2;
     private static String sProgressMsg = null;
-    private static String sEditPassPhrase = null;
     private static boolean sBackupExists = false;
     private static boolean sRestoring = false;
     private static boolean sRestoreRequested = false;
     private static boolean sRestoreReported = false;
-    private static CryptoMsgProvider sKeyData;
     private static boolean sAppOpened = false;
-    private static ContactStruct sSecureIntro = null;
     private static Uri sTempCameraFileUri;
 
     private ViewPager mViewPager;
@@ -307,9 +304,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             @Override
             public void restoreFinished(int error) {
+                endProgress();
                 sBackupExists = (error == 0);
                 sRestoring = false;
-                endProgress();
             }
         };
         try {
@@ -725,68 +722,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         startActivityForResult(intent, VIEW_SAVE_ID);
     }
 
-    public void doUpgradeDatabaseInPlace() throws IllegalArgumentException {
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
-        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-
-        // only do this once for version 5, if done again will break recip db
-        if (SafeSlingerPrefs.getCurrentRecipientDBVer() < 6) {
-            Cursor c = dbRecipient.fetchAllRecipientsUpgradeTo6();
-            if (c != null) {
-                while (c.moveToNext()) {
-                    long rowId = c.getLong(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_ROWID));
-                    long mykeyid_long = c.getLong(c
-                            .getColumnIndexOrThrow(RecipientDbAdapter.KEY_MYKEYIDLONG));
-                    long keyid_long = c.getLong(c
-                            .getColumnIndexOrThrow(RecipientDbAdapter.KEY_KEYIDLONG));
-                    dbRecipient.updateRecipientKeyIds2String(rowId, mykeyid_long, keyid_long);
-                }
-                c.close();
-                SafeSlingerPrefs.setCurrentRecipientDBVer(RecipientDatabaseHelper.DATABASE_VERSION);
-            }
-        }
-
-        if (SafeSlingerPrefs.getCurrentMessageDBVer() < 6) {
-            Cursor c = dbMessage.fetchAllMessagesUpgradeTo6();
-            if (c != null) {
-                while (c.moveToNext()) {
-                    long rowId = c.getLong(c.getColumnIndexOrThrow(MessageDbAdapter.KEY_ROWID));
-                    long keyid_long = c.getLong(c
-                            .getColumnIndexOrThrow(MessageDbAdapter.KEY_KEYIDLONG));
-                    dbMessage.updateMessageKeyId2String(rowId, keyid_long);
-                }
-                c.close();
-                SafeSlingerPrefs.setCurrentMessageDBVer(MessageDatabaseHelper.DATABASE_VERSION);
-            }
-        }
-
-        // look for old messages without key ids read out
-        if (dbMessage.getVersion() >= 6) {
-            Cursor cm = dbMessage.fetchAllMessagesByThread(null);
-            if (cm != null) {
-                while (cm.moveToNext()) {
-                    MessageRow messageRow = new MessageRow(cm, false);
-                    byte[] encMsg = messageRow.getEncBody();
-                    if (encMsg != null) {
-                        CryptoMsgProvider tool = CryptoMsgProvider.createInstance(SafeSlinger
-                                .isLoggable());
-                        String keyid = null;
-                        try {
-                            keyid = tool.ExtractKeyIDfromPacket(encMsg);
-                        } catch (CryptoMsgPacketSizeException e) {
-                            e.printStackTrace();
-                        }
-                        if (!TextUtils.isEmpty(keyid)) {
-                            dbMessage.updateMessageKeyId(messageRow.getRowId(), keyid);
-                        }
-                    }
-                }
-                cm.close();
-            }
-        }
-
-    }
-
     private void initOnAppLaunchOnly() {
 
         // notify user if there are connectivity issues...
@@ -827,7 +762,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
 
         // we passed backup restore, now we can load databases...
-        doUpgradeDatabaseInPlace();
+        SafeSlinger.getApplication().doUpgradeDatabaseInPlace();
 
         // contact
         String contactName = SafeSlingerPrefs.getContactName();
@@ -975,13 +910,17 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     private class CreateKeyTask extends AsyncTask<String, String, String> {
+        private CryptoMsgProvider mKeyData;
+        private String mEditPassPhrase;
+
         @Override
         protected String doInBackground(String... arg0) {
+            mEditPassPhrase = arg0[0];
             publishProgress(getString(R.string.prog_GeneratingKey));
             try {
-                sKeyData = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
-                sKeyData.GenKeyPairs();
-                if (!sKeyData.isGenerated()) {
+                mKeyData = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
+                mKeyData.GenKeyPairs();
+                if (!mKeyData.isGenerated()) {
                     throw new CryptoMsgException(
                             getString(R.string.error_couldNotExtractPrivateKey));
                 }
@@ -992,7 +931,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             } catch (CryptoMsgException e) {
                 return e.getLocalizedMessage();
             }
-            endProgress();
             return null;
         }
 
@@ -1003,18 +941,19 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         @Override
         protected void onPostExecute(String result) {
+            endProgress();
             if (result != null) {
                 showErrorExit(result);
                 return;
             }
 
             try {
-                if (!sKeyData.isGenerated()) {
+                if (!mKeyData.isGenerated()) {
                     throw new CryptoMsgException(
                             getString(R.string.error_couldNotExtractPrivateKey));
                 }
 
-                CryptoMsgPrivateData mine = new CryptoMsgPrivateData(sKeyData);
+                CryptoMsgPrivateData mine = new CryptoMsgPrivateData(mKeyData);
 
                 // save public portion
                 sSenderKey = mine.getSafeSlingerString();
@@ -1023,10 +962,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 SafeSlingerPrefs.setKeyDate(mine.getGenDate());
 
                 // save private portion in secret key storage...
-                CryptTools.putSecretKey(mine, sEditPassPhrase);
+                CryptTools.putSecretKey(mine, mEditPassPhrase);
 
                 // update cache to avoid entering twice...
-                SafeSlinger.setCachedPassPhrase(sKeyData.GetSelfKeyid(), sEditPassPhrase);
+                SafeSlinger.setCachedPassPhrase(mKeyData.GetSelfKeyid(), mEditPassPhrase);
                 updatePassCacheTimer();
 
                 // now that we have new key id, use it when updating contacts...
@@ -1879,9 +1818,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 boolean preExistingKey = doPassEntryCheck(pass, oldPass,
                                         requestCode == VIEW_PASSPHRASE_CHANGE_ID);
                                 if (!preExistingKey) {
-                                    sEditPassPhrase = pass;
                                     CreateKeyTask createKey = new CreateKeyTask();
-                                    createKey.execute(new String());
+                                    createKey.execute(pass);
                                     break;
                                 }
 
@@ -2259,7 +2197,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     private ArrayList<UserData> getMoreRecentKeys() {
         ArrayList<UserData> recentKeys = new ArrayList<UserData>();
-        int totalUsers = SafeSlinger.getTotalUsers();
+        int totalUsers = SSUtil.getTotalUsers();
         for (int i = 0; i < totalUsers; i++) {
             long date = SafeSlingerPrefs.getKeyDate(i);
             String name = SafeSlingerPrefs.getContactName(i);
@@ -2440,6 +2378,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     private void doProcessSafeSlingerMimeType(MessageData recvMsg) {
+        ContactStruct intro = null;
         String[] types = recvMsg.getFileType().split("/");
         if (types.length == 2) {
             if (types[1].compareToIgnoreCase(SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO) == 0) {
@@ -2486,7 +2425,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
 
                 // save for processing...
-                sSecureIntro = parsedContacts.get(0);
+                intro = parsedContacts.get(0);
 
                 RecipientRow exchRecip = null;
                 MessageRow inviteMsg = null;
@@ -2499,7 +2438,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
                 if (inviteMsg == null) {
                     showNote(R.string.error_InvalidIncomingMessage);
-                    sSecureIntro = null;
                     return;
                 }
 
@@ -2512,18 +2450,33 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
                 if (exchRecip == null) {
                     showNote(R.string.error_InvalidRecipient);
-                    sSecureIntro = null;
                     return;
                 }
 
                 String exchName = exchRecip.getName();
-                String introName = sSecureIntro.name.toString();
-                byte[] introPhoto = sSecureIntro.photoBytes;
-                showIntroductionInvite(exchName, introName, introPhoto, recvMsg.getRowId());
+                String introName = intro.name.toString();
+                byte[] introPhoto = intro.photoBytes;
+                byte[] introPush = null;
+                byte[] introPubKey = null;
+
+                List<ContactMethod> contactmethodList = intro.contactmethodList;
+                if (contactmethodList != null) {
+                    for (ContactMethod item : contactmethodList) {
+                        if (item.kind == android.provider.Contacts.KIND_IM) {
+                            if (item.label.compareTo(SafeSlingerConfig.APP_KEY_PUBKEY) == 0) {
+                                introPubKey = SSUtil.finalDecode(item.data.getBytes());
+                            } else if (item.label.compareTo(SafeSlingerConfig.APP_KEY_PUSHTOKEN) == 0) {
+                                introPush = SSUtil.finalDecode(item.data.getBytes());
+                            }
+                        }
+                    }
+                }
+
+                showIntroductionInvite(exchName, introName, introPhoto, introPush, introPubKey,
+                        recvMsg.getRowId());
             }
         } else {
             showNote(String.format(getString(R.string.error_FileSave), recvMsg.getFileName()));
-            sSecureIntro = null;
             return;
         }
     }
@@ -2552,7 +2505,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             } catch (CryptoMsgPeerKeyFormatException e) {
                 return e.getLocalizedMessage();
             }
-            endProgress();
             return null;
         }
 
@@ -2563,6 +2515,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         @Override
         protected void onPostExecute(String result) {
+            endProgress();
             if (TextUtils.isEmpty(result)) {
                 int exchanged = args.getInt(extra.EXCHANGED_TOTAL);
                 if (imported < exchanged) {
@@ -3288,29 +3241,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         sProg = null;
         sProgressMsg = null;
         sSendMsg = new MessageData();
-        sEditPassPhrase = null;
         sBackupExists = false;
         sRestoreRequested = false;
         sRestoreReported = false;
         sRestoring = false;
-        sSecureIntro = null;
-    }
-
-    public boolean hasImageCaptureBug() {
-
-        // list of known devices that have the bug
-        ArrayList<String> devices = new ArrayList<String>();
-        devices.add("android-devphone1/dream_devphone/dream");
-        devices.add("generic/sdk/generic");
-        devices.add("vodafone/vfpioneer/sapphire");
-        devices.add("tmobile/kila/dream");
-        devices.add("verizon/voles/sholes");
-        devices.add("google_ion/google_ion/sapphire");
-        devices.add("samsung/GT-I9000/GT-I9000");
-        devices.add("samsung/SGH-I777/SGH-I777");
-
-        return devices.contains(android.os.Build.BRAND + "/" + android.os.Build.PRODUCT + "/"
-                + android.os.Build.DEVICE);
     }
 
     private void showFileAttach() {
@@ -3412,7 +3346,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 sHandler.removeCallbacks(checkPassExpiration);
             }
             Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
-            intent.putExtra(extra.USER_TOTAL, SafeSlinger.getTotalUsers());
+            intent.putExtra(extra.USER_TOTAL, SSUtil.getTotalUsers());
             intent.putExtra(extra.CREATE_PASS_PHRASE, create);
             intent.putExtra(extra.CHANGE_PASS_PHRASE, change);
             intent.putExtra(extra.VERIFY_PASS_PHRASE, false);
@@ -3428,7 +3362,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 sHandler.removeCallbacks(checkPassExpiration);
             }
             Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
-            intent.putExtra(extra.USER_TOTAL, SafeSlinger.getTotalUsers());
+            intent.putExtra(extra.USER_TOTAL, SSUtil.getTotalUsers());
             intent.putExtra(extra.CREATE_PASS_PHRASE, false);
             intent.putExtra(extra.CHANGE_PASS_PHRASE, false);
             intent.putExtra(extra.VERIFY_PASS_PHRASE, true);
@@ -3532,7 +3466,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     protected static void doRemoveMoreRecentKeys() {
-        int totalUsers = SafeSlinger.getTotalUsers();
+        int totalUsers = SSUtil.getTotalUsers();
         for (int i = 0; i < totalUsers; i++) {
             if (i > SafeSlingerPrefs.getUser()) {
                 deleteUser(i);
@@ -3551,11 +3485,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     private void showIntroductionInvite(String exchName, String introName, byte[] introPhoto,
-            long msgRowId) {
+            byte[] introPush, byte[] introPubKey, long msgRowId) {
         Bundle args = new Bundle();
         args.putString(extra.EXCH_NAME, exchName);
         args.putString(extra.INTRO_NAME, introName);
         args.putByteArray(extra.PHOTO, introPhoto);
+        args.putByteArray(extra.PUSH_REGISTRATION_ID, introPush);
+        args.putByteArray(extra.INTRO_PUBKEY, introPubKey);
         args.putLong(extra.MESSAGE_ROW_ID, msgRowId);
         if (!isFinishing()) {
             removeDialog(DIALOG_INTRO);
@@ -3563,10 +3499,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    private AlertDialog.Builder xshowIntroductionInvite(final Activity act, Bundle args) {
+    private AlertDialog.Builder xshowIntroductionInvite(final Activity act, final Bundle args) {
         String exchName = args.getString(extra.EXCH_NAME);
-        String introName = args.getString(extra.INTRO_NAME);
-        byte[] introPhoto = args.getByteArray(extra.PHOTO);
+        final String introName = args.getString(extra.INTRO_NAME);
+        final byte[] introPhoto = args.getByteArray(extra.PHOTO);
+        final byte[] introPush = args.getByteArray(extra.PUSH_REGISTRATION_ID);
+        final byte[] introPubKey = args.getByteArray(extra.INTRO_PUBKEY);
         final long msgRowId = args.getLong(extra.MESSAGE_ROW_ID);
         AlertDialog.Builder ad = new AlertDialog.Builder(act);
         View layout;
@@ -3602,28 +3540,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 dialog.dismiss();
 
                 // accept secure introduction?
-                Bundle args = new Bundle();
                 int selected = 0;
-                String name = sSecureIntro.name.toString();
-                args.putString(extra.NAME + selected, name);
-                args.putByteArray(extra.PHOTO + selected, sSecureIntro.photoBytes);
-                List<ContactMethod> contactmethodList = sSecureIntro.contactmethodList;
-                if (contactmethodList != null) {
-                    for (ContactMethod item : contactmethodList) {
-                        if (item.kind == android.provider.Contacts.KIND_IM) {
-                            if (item.label.compareTo(SafeSlingerConfig.APP_KEY_PUBKEY) == 0
-                                    || item.label.compareTo(SafeSlingerConfig.APP_KEY_PUSHTOKEN) == 0) {
-                                args.putByteArray(item.label + selected,
-                                        SSUtil.finalDecode(item.data.getBytes()));
-                            }
-                        }
-                    }
-                }
+                args.putString(extra.NAME + selected, introName);
+                args.putByteArray(extra.PHOTO + selected, introPhoto);
+                args.putByteArray(SafeSlingerConfig.APP_KEY_PUBKEY + selected, introPubKey);
+                args.putByteArray(SafeSlingerConfig.APP_KEY_PUSHTOKEN + selected, introPush);
 
-                String contactLookupKey = getContactLookupKeyByName(sSecureIntro.name.toString());
+                String contactLookupKey = getContactLookupKeyByName(introName);
                 args.putString(extra.CONTACT_LOOKUP_KEY + selected, contactLookupKey);
-
-                sSecureIntro = null; // we're done with it now...
 
                 MessageRow inviteMsg = null;
                 MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
@@ -3652,7 +3576,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                sSecureIntro = null;
                 showNote(String.format(getString(R.string.state_SomeContactsImported), 0));
                 restart();
             }
@@ -3928,11 +3851,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private boolean loadCurrentPassPhrase() {
         String currentPassPhrase = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
                 .getKeyIdString());
-
-        if (sEditPassPhrase != null) {
-            currentPassPhrase = sEditPassPhrase;
-        }
-
         return !TextUtils.isEmpty(currentPassPhrase);
     }
 

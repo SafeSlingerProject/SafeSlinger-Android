@@ -45,6 +45,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SyncAdapterType;
 import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Data;
@@ -185,7 +186,8 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
 
             @Override
             public void onClick(View view) {
-                runThreadSaveSelectedContacts();
+                SaveSelectedContactsTask saveSelected = new SaveSelectedContactsTask();
+                saveSelected.execute(new String());
             }
         });
 
@@ -255,33 +257,31 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
         });
     }
 
-    private void runThreadSaveSelectedContacts() {
-        showProgress(getString(R.string.prog_SavingContactsToAddressBook), true);
-        mDlgProg.setCanceledOnTouchOutside(false);
-        mDlgProg.setOnDismissListener(new DialogInterface.OnDismissListener() {
+    private class SaveSelectedContactsTask extends AsyncTask<String, String, String> {
 
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                finish();
-            }
-        });
-        mDlgProg.setOnCancelListener(new DialogInterface.OnCancelListener() {
+        @Override
+        protected String doInBackground(String... arg0) {
+            showProgress(getString(R.string.prog_SavingContactsToAddressBook), true);
+            mDlgProg.setCanceledOnTouchOutside(false);
+            mDlgProg.setOnDismissListener(new DialogInterface.OnDismissListener() {
 
-            @Override
-            public void onCancel(DialogInterface dialog) {
-                finish();
-            }
-        });
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    finish();
+                }
+            });
+            mDlgProg.setOnCancelListener(new DialogInterface.OnCancelListener() {
 
-        Thread t = new Thread() {
+                @Override
+                public void onCancel(DialogInterface dialog) {
+                    finish();
+                }
+            });
 
-            @Override
-            public void run() {
-                saveSelectedContacts();
-                hideProgress();
-            }
-        };
-        t.start();
+            saveSelectedContacts();
+            hideProgress();
+            return null;
+        }
     }
 
     private void saveSelectedContacts() {

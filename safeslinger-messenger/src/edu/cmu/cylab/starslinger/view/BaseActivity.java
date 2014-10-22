@@ -684,6 +684,8 @@ public class BaseActivity extends ActionBarActivity {
                 SafeSlingerConfig.HELP_URL);
         String msgSrc = String.format(act.getString(R.string.text_SourceCodeRepo),
                 SafeSlingerConfig.SOURCE_URL);
+        String msgLoc = String.format(act.getString(R.string.text_LocalizationRepo),
+                SafeSlingerConfig.LOCALIZE_URL);
         String msgReq = act.getString(R.string.text_Requirements);
         String msgReq1 = act.getString(R.string.text_Requirements1);
         String msgReq2 = act.getString(R.string.text_Requirements2);
@@ -694,10 +696,10 @@ public class BaseActivity extends ActionBarActivity {
 
         textViewAbout
                 .setText(String
-                        .format("%s\n\n%s\n\n%s\n- %s\n- %s\n- %s\n\n%s\n1. %s\n2. %s\n\n%s\n%s\n%s\n\n%s\n%s\n%s\n%s",
+                        .format("%s\n\n%s\n\n%s\n- %s\n- %s\n- %s\n\n%s\n1. %s\n2. %s\n\n%s\n%s\n%s\n%s\n\n%s\n%s\n%s\n%s",
                                 msgHead, msgAbout, msgAbFeat, msgAb1, msgAb2, msgAb3, msgReq,
-                                msgReq1, msgReq2, msgEmail, msgWeb, msgSrc, msgDev, msgProgs,
-                                msgLang, msgTrans));
+                                msgReq1, msgReq2, msgEmail, msgWeb, msgSrc, msgLoc, msgDev,
+                                msgProgs, msgLang, msgTrans));
 
         ad.setView(layout);
         ad.setCancelable(true);
