@@ -45,6 +45,7 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;
 import android.app.Application;
 import android.app.backup.BackupManager;
+import android.app.backup.RestoreObserver;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -60,6 +61,7 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.widget.Toast;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
@@ -81,6 +83,7 @@ import edu.cmu.cylab.starslinger.transaction.WebEngine;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class SafeSlinger extends Application {
+    private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
     // Object for intrinsic lock
     public static final Object sDataLock = new Object();
@@ -90,8 +93,14 @@ public class SafeSlinger extends Application {
     private ConnectivityManager mConnectivityManager;
     private static boolean sPassEntryOpen = false;
     private static boolean sAppVisible;
+    private static boolean sBackupExists = false;
+    private static boolean sRestoring = false;
+    private static boolean sRestoreRequested = false;
+    private static boolean sRestoreReported = false;
     private static Handler sHandler;
     private Locale locale = null;
+    private static Uri sTempCameraFileUri;
+    private static String sSenderKey;
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -134,6 +143,46 @@ public class SafeSlinger extends Application {
         SafeSlingerPrefs.setPusgRegBackoff(SafeSlingerPrefs.DEFAULT_PUSHREG_BACKOFF);
 
         startCacheService(this);
+
+        // notify user if there are connectivity issues...
+        if (!isOnline()) {
+            showNote(R.string.error_CorrectYourInternetConnection);
+        }
+
+        if (isRestored()) {
+            // we passed backup restore, now we can load databases...
+            doUpgradeDatabaseInPlace();
+        }
+    }
+
+    private boolean isRestored() {
+        // check early for key and attempt restore if not found...
+        if (sRestoring) {
+            return false;
+        }
+        if (!sRestoreRequested
+                && !SSUtil.fileExists(getApplicationContext(), CryptTools.getCurrentKeyFile())) {
+            try {
+                sRestoreRequested = true;
+                sBackupExists = requestRestore(getApplicationContext());
+                if (sBackupExists) {
+                    return false;
+                }
+            } catch (SecurityException e) {
+                // some devices do not grant permission for restore operation...
+                sRestoreReported = true;
+                showNote(R.string.error_BackupNotSupportedDevice);
+            }
+        }
+        if (sRestoreRequested && !sRestoreReported) {
+            // even though backup has reported success, it may not have
+            // worked...
+            sRestoreReported = true;
+            if (SSUtil.fileExists(getApplicationContext(), CryptTools.getCurrentKeyFile())) {
+                showNote(R.string.state_BackupRestored);
+            }
+        }
+        return true;
     }
 
     private void checkForPendingMessages() throws SQLException {
@@ -401,6 +450,22 @@ public class SafeSlinger extends Application {
 
     synchronized public static void activityPaused() {
         sAppVisible = false;
+    }
+
+    public static Uri getTempCameraFileUri() {
+        return sTempCameraFileUri;
+    }
+
+    public static void setTempCameraFileUri(Uri tempCameraFileUri) {
+        SafeSlinger.sTempCameraFileUri = tempCameraFileUri;
+    }
+
+    public static String getSenderKey() {
+        return sSenderKey;
+    }
+
+    public static void setSenderKey(String senderKey) {
+        SafeSlinger.sSenderKey = senderKey;
     }
 
     /***
@@ -722,4 +787,46 @@ public class SafeSlinger extends Application {
 
     }
 
+    private boolean requestRestore(Context ctx) {
+        BackupManager bm = new BackupManager(ctx);
+        RestoreObserver restoreObserver = new RestoreObserver() {
+
+            @Override
+            public void restoreStarting(int numPackages) {
+                sRestoring = true;
+                showNote(R.string.prog_SearchingForBackup);
+            }
+
+            @Override
+            public void restoreFinished(int error) {
+                sBackupExists = (error == 0);
+                sRestoring = false;
+
+                // we passed backup restore, now we can load databases...
+                doUpgradeDatabaseInPlace();
+            }
+        };
+        try {
+            int res = bm.requestRestore(restoreObserver);
+            return res == 0 ? true : false;
+        } catch (NullPointerException e) {
+            // catch failure of RestoreSession object to manage itself in the
+            // following:
+            // android.app.backup.RestoreSession.endRestoreSession(RestoreSession.java:162)
+            // android.app.backup.BackupManager.requestRestore(BackupManager.java:154)
+            return false;
+        }
+    }
+
+    protected void showNote(String msg) {
+        MyLog.i(TAG, msg);
+        Toast toast = Toast.makeText(getApplicationContext(), msg.trim(), Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void showNote(int resId) {
+        MyLog.i(TAG, getString(resId));
+        Toast toast = Toast.makeText(getApplicationContext(), resId, Toast.LENGTH_LONG);
+        toast.show();
+    }
 }

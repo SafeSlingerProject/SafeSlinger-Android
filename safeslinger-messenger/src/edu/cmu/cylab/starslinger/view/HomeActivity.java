@@ -54,8 +54,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.app.backup.BackupManager;
-import android.app.backup.RestoreObserver;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -186,18 +184,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     // static data
     private static ProgressDialog sProg = null;
     private static Handler sHandler;
+    private static String sProgressMsg = null;
+
     private static MessageData sSendMsg = new MessageData();
-    private static String sSenderKey;
     private static RecipientRow sRecip;
     private static RecipientRow sRecip1;
     private static RecipientRow sRecip2;
-    private static String sProgressMsg = null;
-    private static boolean sBackupExists = false;
-    private static boolean sRestoring = false;
-    private static boolean sRestoreRequested = false;
-    private static boolean sRestoreReported = false;
-    private static boolean sAppOpened = false;
-    private static Uri sTempCameraFileUri;
 
     private ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
@@ -266,7 +258,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     return;
                 }
             }
-            restart();
+            isSetupCheckComplete();
         }
     };
 
@@ -292,35 +284,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     };
 
-    private boolean requestRestore(Context ctx) {
-        BackupManager bm = new BackupManager(ctx);
-        RestoreObserver restoreObserver = new RestoreObserver() {
-
-            @Override
-            public void restoreStarting(int numPackages) {
-                sRestoring = true;
-                showProgress(getString(R.string.prog_SearchingForBackup));
-            }
-
-            @Override
-            public void restoreFinished(int error) {
-                endProgress();
-                sBackupExists = (error == 0);
-                sRestoring = false;
-            }
-        };
-        try {
-            int res = bm.requestRestore(restoreObserver);
-            return res == 0 ? true : false;
-        } catch (NullPointerException e) {
-            // catch failure of RestoreSession object to manage itself in the
-            // following:
-            // android.app.backup.RestoreSession.endRestoreSession(RestoreSession.java:162)
-            // android.app.backup.BackupManager.requestRestore(BackupManager.java:154)
-            return false;
-        }
-    }
-
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -339,24 +302,24 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // collapse messages to threads when looking for new messages
             MessagesFragment.setRecip(null);
             setTab(Tabs.MESSAGE);
-            restart();
+            refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_BACKUPNOTIFY.equals(action)) {
             // clicked on backup reminder notifications window, show reminder
             // query
             showBackupQuery();
-            restart();
+            refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_SLINGKEYSNOTIFY.equals(action)) {
             // clicked on exchange reminder, show exchange tab
             setTab(Tabs.SLINGKEYS);
-            restart();
+            refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_CHANGESETTINGS.equals(action)) {
 
             // clicked on pass cache notification
             showSettings();
-            restart();
+            refreshView();
 
         } else if (Intent.ACTION_SEND.equals(action) || Intent.ACTION_SEND_MULTIPLE.equals(action)) {
             // clicked share externally, load file, show compose
@@ -457,10 +420,18 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         if (savedInstanceState == null) {
             // init app launch once all time
-            initOnAppLaunchOnly();
+
+            processIntent(getIntent());
+
+            boolean dateChanged = SSUtil.isDayChanged(SafeSlingerPrefs.getContactDBLastScan());
+            if (dateChanged) {
+                SafeSlingerPrefs.setThisVersionOpened();
+                BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
+                backgroundSyncUpdates.execute(new String());
+            }
 
             // init on reload once all time
-            if (!initOnReload()) {
+            if (!isSetupCheckComplete()) {
                 return;
             }
         }
@@ -690,7 +661,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         // valid key and push token is required
         SlingerIdentity si = new SlingerIdentity(SafeSlingerPrefs.getPushRegistrationId(),
-                SSUtil.getLocalNotification(SafeSlinger.getApplication()), sSenderKey);
+                SSUtil.getLocalNotification(SafeSlinger.getApplication()),
+                SafeSlinger.getSenderKey());
         final String token = SlingerIdentity.sidPush2DBPush(si);
         final String pubkey = SlingerIdentity.sidKey2DBKey(si);
         if (TextUtils.isEmpty(token)) {
@@ -722,47 +694,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         startActivityForResult(intent, VIEW_SAVE_ID);
     }
 
-    private void initOnAppLaunchOnly() {
-
-        // notify user if there are connectivity issues...
-        if (!SafeSlinger.getApplication().isOnline()) {
-            showNote(R.string.error_CorrectYourInternetConnection);
-        }
-
-        processIntent(getIntent());
-    }
-
-    private boolean initOnReload() {
-
-        // check early for key and attempt restore if not found...
-        if (sRestoring) {
-            return false;
-        }
-        if (!sRestoreRequested
-                && !SSUtil.fileExists(getApplicationContext(), CryptTools.getCurrentKeyFile())) {
-            try {
-                sRestoreRequested = true;
-                sBackupExists = requestRestore(getApplicationContext());
-                if (sBackupExists) {
-                    return false;
-                }
-            } catch (SecurityException e) {
-                // some devices do not grant permission for restore operation...
-                sRestoreReported = true;
-                showNote(R.string.error_BackupNotSupportedDevice);
-            }
-        }
-        if (sRestoreRequested && !sRestoreReported) {
-            // even though backup has reported success, it may not have
-            // worked...
-            sRestoreReported = true;
-            if (SSUtil.fileExists(getApplicationContext(), CryptTools.getCurrentKeyFile())) {
-                showNote(R.string.state_BackupRestored);
-            }
-        }
-
-        // we passed backup restore, now we can load databases...
-        SafeSlinger.getApplication().doUpgradeDatabaseInPlace();
+    private boolean isSetupCheckComplete() {
 
         // contact
         String contactName = SafeSlingerPrefs.getContactName();
@@ -776,14 +708,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             showNote(R.string.error_InvalidContactName);
             showFindContact();
             return false;
-        }
-
-        boolean dateChanged = SSUtil.isDayChanged(SafeSlingerPrefs.getContactDBLastScan());
-        if (!sAppOpened || dateChanged) {
-            sAppOpened = true;
-            SafeSlingerPrefs.setThisVersionOpened();
-            BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
-            backgroundSyncUpdates.execute(new String());
         }
 
         // init local struct...
@@ -812,17 +736,25 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // key not found, try loading older version for base user only
             hasSecretKey = CryptToolsLegacy.existsSecretKeyOld();
         }
+        if (!hasSecretKey) {
+            showFindContact(); // new
+        }
+
+        if (!isUserLoggedIn()) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean isUserLoggedIn() {
 
         // if no pass exists...
         // ...request pass entry... (restart)
         // now with contact, enter pass phrase and check
         if (!loadCurrentPassPhrase()) {
             if (!SafeSlinger.isPassphraseOpen()) {
-                if (!hasSecretKey) {
-                    showFindContact(); // new
-                } else {
-                    showPassPhrase(false, false); // normal
-                }
+                showPassPhrase(false, false); // normal
             }
             return false;
         }
@@ -835,8 +767,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         super.onSaveInstanceState(outState);
 
         // save
-        if (sTempCameraFileUri != null) {
-            outState.putString(extra.FILE_PATH, sTempCameraFileUri.getPath());
+        if (SafeSlinger.getTempCameraFileUri() != null) {
+            outState.putString(extra.FILE_PATH, SafeSlinger.getTempCameraFileUri().getPath());
         }
         final int position = getSupportActionBar().getSelectedNavigationIndex();
         outState.putInt(extra.RECOVERY_TAB, position);
@@ -956,7 +888,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 CryptoMsgPrivateData mine = new CryptoMsgPrivateData(mKeyData);
 
                 // save public portion
-                sSenderKey = mine.getSafeSlingerString();
+                SafeSlinger.setSenderKey(mine.getSafeSlingerString());
 
                 SafeSlingerPrefs.setKeyIdString(mine.getKeyId());
                 SafeSlingerPrefs.setKeyDate(mine.getGenDate());
@@ -972,7 +904,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
                 backgroundSyncUpdates.execute(new String());
 
-                restart();
+                isSetupCheckComplete();
             } catch (IOException e) {
                 showErrorExit(e);
             } catch (CryptoMsgException e) {
@@ -989,7 +921,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (TextUtils.isEmpty(sendMsg.getText()) && TextUtils.isEmpty(sendMsg.getFileName())) {
             showNote(R.string.error_selectDataToSend);
             setTab(Tabs.COMPOSE);
-            restart();
+            refreshView();
             return;
         }
 
@@ -998,7 +930,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         } else {
             if (sendMsg.getFileData() == null || sendMsg.getFileSize() == 0) {
                 showNote(R.string.error_InvalidMsg);
-                restart();
+                refreshView();
                 return;
             }
         }
@@ -1012,7 +944,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 sendMsg.setRowId(rowId);
                 if (rowId < 0) {
                     showNote(R.string.error_UnableToSaveMessageInDB);
-                    restart();
+                    refreshView();
                     return;
                 }
             }
@@ -1029,26 +961,26 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // update draft
             if (!dbMessage.updateDraftMessage(sendMsg.getRowId(), recip, sendMsg)) {
                 showNote(R.string.error_UnableToUpdateMessageInDB);
-                restart();
+                refreshView();
                 return;
             }
         }
 
         if (recip == null) {
             showNote(R.string.error_InvalidRecipient);
-            restart();
+            refreshView();
             return;
         }
         if (!SafeSlinger.getApplication().isOnline()) {
             showNote(R.string.error_CorrectYourInternetConnection);
-            restart();
+            refreshView();
             return;
         }
 
         // update status as queued for transmission
         if (!dbMessage.updateEnqueuedMessage(sendMsg.getRowId())) {
             showNote(R.string.error_UnableToUpdateMessageInDB);
-            restart();
+            refreshView();
             return;
         }
         // confirm msg is queued
@@ -1058,7 +990,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             c.close();
             if (queued.getStatus() != MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
                 showNote(R.string.error_UnableToUpdateMessageInDB);
-                restart();
+                refreshView();
                 return;
             }
         }
@@ -1071,7 +1003,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         // switch to message tab
         setTab(Tabs.MESSAGE);
-        restart();
+        refreshView();
 
         // start background task to send
         SendFileTask task = new SendFileTask();
@@ -1348,18 +1280,18 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 // user wants to post the file and notify recipient
                 if (sRecip == null) {
                     showNote(R.string.error_InvalidRecipient);
-                    restart();
+                    refreshView();
                     break;
                 }
                 if (sRecip.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
                     showNote(R.string.error_InvalidRecipient);
-                    restart();
+                    refreshView();
                     break;
                 }
                 doSendFileStart(sRecip, sendMsg);
                 break;
             case ComposeFragment.RESULT_RESTART:
-                restart();
+                refreshView();
                 break;
             case ComposeFragment.RESULT_USEROPTIONS:
                 showChangeSenderOptions();
@@ -1376,7 +1308,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 // user wants to remove file
                 sSendMsg.removeFile();
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
                 break;
         }
     }
@@ -1463,12 +1395,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 // user wants to post the file and notify recipient
                 if (recip == null) {
                     showNote(R.string.error_InvalidRecipient);
-                    restart();
+                    refreshView();
                     break;
                 }
                 if (recip.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
                     showNote(R.string.error_InvalidRecipient);
-                    restart();
+                    refreshView();
                     break;
                 }
                 doSendFileStart(recip, sendMsg);
@@ -1487,7 +1419,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         }
                     } catch (FileNotFoundException e) {
                         showNote(e);
-                        restart();
+                        refreshView();
                         break;
                     }
                 }
@@ -1500,7 +1432,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     sSendMsg.setRowId(rowId);
                 }
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
                 break;
             case MessagesFragment.RESULT_EDITMESSAGE:
                 sSendMsg = new MessageData();
@@ -1518,12 +1450,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         }
                     } catch (FileNotFoundException e) {
                         showNote(e);
-                        restart();
+                        refreshView();
                         break;
                     }
                 }
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
                 break;
             case MessagesFragment.RESULT_GETMESSAGE:
                 MessageData inbox = new MessageData();
@@ -1535,7 +1467,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     getMessageTask.execute(inbox);
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
-                    restart();
+                    refreshView();
                 }
                 break;
             case MessagesFragment.RESULT_GETFILE:
@@ -1552,7 +1484,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     getFileTask.execute(recvFile);
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
-                    restart();
+                    refreshView();
                 }
                 break;
         }
@@ -1592,7 +1524,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             case IntroductionFragment.RESULT_SLINGKEYS:
                 setTab(Tabs.SLINGKEYS);
-                restart();
+                refreshView();
                 break;
             case IntroductionFragment.RESULT_SEND:
                 if (data != null) {
@@ -1632,19 +1564,19 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // user wants to post the file and notify recipient
                     if (recip1 == null || recip2 == null) {
                         showNote(R.string.error_InvalidRecipient);
-                        restart();
+                        refreshView();
                         break;
                     }
                     if (recip1.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH
                             || recip2.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
                         showNote(R.string.error_InvalidRecipient);
-                        restart();
+                        refreshView();
                         break;
                     }
 
                     if (recip1.isDeprecated() || recip2.isDeprecated()) {
                         showNote(R.string.error_AllMembersMustUpgradeBadKeyFormat);
-                        restart();
+                        refreshView();
                         break;
                     }
 
@@ -1664,13 +1596,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         vCard2 = SSUtil.generateRecipientVCard(recip2);
                     } catch (VCardException e) {
                         showNote(e.getLocalizedMessage());
-                        restart();
+                        refreshView();
                         break;
                     }
 
                     if (TextUtils.isEmpty(vCard1) || TextUtils.isEmpty(vCard2)) {
                         showNote(R.string.error_VcardParseFailure);
-                        restart();
+                        refreshView();
                         break;
                     }
 
@@ -1690,7 +1622,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     }
                     if (errors.length() > 0) {
                         showNote(errors.toString());
-                        restart();
+                        refreshView();
                         break;
                     }
 
@@ -1716,7 +1648,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     sRecip1 = null;
                     sRecip2 = null;
                     setTab(Tabs.MESSAGE);
-                    restart();
+                    refreshView();
                 }
                 break;
             case Activity.RESULT_CANCELED:
@@ -1776,7 +1708,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 setPassphraseStatus(true);
                 if (mine != null) {
                     // save loaded pub key for slinging keys later
-                    sSenderKey = mine.getSafeSlingerString();
+                    SafeSlinger.setSenderKey(mine.getSafeSlingerString());
                 }
             } else {
                 setPassphraseStatus(false);
@@ -1787,7 +1719,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 updatePassCacheTimer();
                 setPassphraseStatus(true);
                 // save loaded pub key for slinging keys later
-                sSenderKey = mine.getSafeSlingerString();
+                SafeSlinger.setSenderKey(mine.getSafeSlingerString());
             } else {
                 setPassphraseStatus(false);
             }
@@ -1843,10 +1775,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 }
                             }
                         }
-                        restart();
+                        isSetupCheckComplete();
                         break;
                     case PassPhraseActivity.RESULT_CLOSEANDCONTINUE:
-                        restart();
+                        isSetupCheckComplete();
                         break;
                     case RESULT_CANCELED:
                         if (requestCode == VIEW_FINDCONTACT_ID) {
@@ -1873,7 +1805,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     case RESULT_CANCELED:
                         SafeSlingerPrefs
                                 .setPushRegistrationIdWriteOnlyC2dm(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA);
-                        restart();
+                        isSetupCheckComplete();
                         break;
                 }
                 break;
@@ -1882,7 +1814,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 switch (resultCode) {
                     case PickRecipientsActivity.RESULT_SLINGKEYS:
                         setTab(Tabs.SLINGKEYS);
-                        restart();
+                        refreshView();
                         break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         RecipientDbAdapter dbRecipient = RecipientDbAdapter
@@ -1897,11 +1829,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             task.execute(sRecip);
 
                             setTab(Tabs.COMPOSE);
-                            restart();
+                            refreshView();
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             setTab(Tabs.COMPOSE);
-                            restart();
+                            refreshView();
                             break;
                         }
 
@@ -1910,7 +1842,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         // clear the selection
                         sRecip = null;
                         setTab(Tabs.COMPOSE);
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -1919,7 +1851,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 switch (resultCode) {
                     case PickRecipientsActivity.RESULT_SLINGKEYS:
                         setTab(Tabs.SLINGKEYS);
-                        restart();
+                        refreshView();
                         break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient1 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
@@ -1935,7 +1867,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         if (c != null) {
                             sRecip1 = new RecipientRow(c);
                             c.close();
-                            restart();
+                            refreshView();
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             break;
@@ -1945,7 +1877,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         // clear the selection
                         sRecip1 = null;
                         setTab(Tabs.INTRO);
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -1954,7 +1886,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 switch (resultCode) {
                     case PickRecipientsActivity.RESULT_SLINGKEYS:
                         setTab(Tabs.SLINGKEYS);
-                        restart();
+                        refreshView();
                         break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient2 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
@@ -1970,7 +1902,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         if (c != null) {
                             sRecip2 = new RecipientRow(c);
                             c.close();
-                            restart();
+                            refreshView();
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             break;
@@ -1980,7 +1912,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         // clear the selection
                         sRecip2 = null;
                         setTab(Tabs.INTRO);
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -1993,7 +1925,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // TODO: find better update for <= 2.3
                     // startActivity(getIntent());
                     // finish();
-                    restart();
+                    refreshView();
                 }
 
                 switch (resultCode) {
@@ -2031,12 +1963,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             doSaveDownloadedFile(new File(chosenPath, chosenFile), recvMsg);
                         } catch (OutOfMemoryError e) {
                             showNote(R.string.error_OutOfMemoryError);
-                            restart();
+                            refreshView();
                             break;
                         }
                         break;
                     case RESULT_CANCELED:
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -2047,7 +1979,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         showSave(data.getExtras());
                         break;
                     case ExchangeActivity.RESULT_EXCHANGE_CANCELED:
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -2096,10 +2028,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             }
                             c.close();
                         }
-                        restart();
+                        refreshView();
                         break;
                     case RESULT_CANCELED:
-                        restart();
+                        refreshView();
                         break;
                     default:
                         break;
@@ -2115,7 +2047,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             if (data == null) {
                                 // capture camera data from 1st non-standard
                                 // return from hardware
-                                path = sTempCameraFileUri.getPath();
+                                path = SafeSlinger.getTempCameraFileUri().getPath();
                                 doLoadAttachment(path);
                             } else {
                                 String chosenFile = data.getStringExtra(extra.FNAME);
@@ -2132,37 +2064,37 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                     long filesize = getOutStreamSizeAndData(data.getData(), null);
                                     if (filesize <= 0) {
                                         showNote(R.string.error_CannotSendEmptyFile);
-                                        restart();
+                                        refreshView();
                                         break;
                                     }
                                 } else {
                                     // capture camera data from 2nd non-standard
                                     // return from hardware
-                                    path = sTempCameraFileUri.getPath();
+                                    path = SafeSlinger.getTempCameraFileUri().getPath();
                                     doLoadAttachment(path);
                                 }
                             }
                         } catch (OutOfMemoryError e) {
                             showNote(R.string.error_OutOfMemoryError);
-                            restart();
+                            refreshView();
                             break;
                         } catch (FileNotFoundException e) {
                             showNote(e);
-                            restart();
+                            refreshView();
                             break;
                         } catch (IOException e) {
                             showNote(e);
-                            restart();
+                            refreshView();
                             break;
                         }
 
                         setTab(Tabs.COMPOSE);
-                        restart();
+                        refreshView();
                         break;
                     case RESULT_CANCELED:
                         sSendMsg.removeFile();
                         setTab(Tabs.COMPOSE);
-                        restart();
+                        refreshView();
                         break;
                     default:
                         break;
@@ -2171,7 +2103,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             case RESULT_PICK_MSGAPP:
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
                 break;
 
             case RESULT_ERROR:
@@ -2294,7 +2226,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 is.close();
                 showNote(String.format(getString(R.string.error_CannotSendFilesOver),
                         SafeSlingerConfig.MAX_FILEBYTES));
-                restart();
+                refreshView();
                 return;
             }
 
@@ -2314,11 +2246,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         } catch (OutOfMemoryError e) {
             showNote(R.string.error_OutOfMemoryError);
-            restart();
+            refreshView();
             return;
         } catch (IOException e) {
             showNote(e);
-            restart();
+            refreshView();
             return;
         }
         sSendMsg.setFileName(vir.getName());
@@ -2330,10 +2262,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (saveFileAtLocation(file, recvMsg)) {
             // back to messages, to tap for open...
             setTab(Tabs.MESSAGE);
-            restart();
+            refreshView();
         } else {
             showNote(String.format(getString(R.string.error_FileSave), recvMsg.getFileName()));
-            restart();
+            refreshView();
         }
     }
 
@@ -2372,7 +2304,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             if (sRecip != null) {
                 sSendMsg = new MessageData();
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
             }
         }
     }
@@ -2533,7 +2465,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // updated databases, restart to use...
             BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
             backgroundSyncUpdates.execute(new String());
-            restart();
+            refreshView();
         }
     }
 
@@ -2611,18 +2543,17 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (savedInstanceState != null) {
             String filepath = savedInstanceState.getString(extra.FILE_PATH);
             if (!TextUtils.isEmpty(filepath)) {
-                sTempCameraFileUri = Uri.fromFile(new File(filepath));
+                SafeSlinger.setTempCameraFileUri(Uri.fromFile(new File(filepath)));
             }
 
             setTab(Tabs.values()[savedInstanceState.getInt(extra.RECOVERY_TAB)]);
         }
 
         // several private members may need to be reloaded...
-        restart();
+        refreshView();
     }
 
-    private void restart() {
-        initOnReload();
+    private void refreshView() {
         // pass is good, determine what view to see...
         if (sHandler == null) {
             sHandler = new Handler();
@@ -2758,10 +2689,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             postProgressMsgList(mInbox.isInboxTable(), mRowId, null);
             if (TextUtils.isEmpty(error)) {
                 setTab(Tabs.MESSAGE);
-                restart();
+                refreshView();
             } else {
                 showNote(error);
-                restart();
+                refreshView();
             }
         }
     }
@@ -2902,7 +2833,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
             } else {
                 showNote(error);
-                restart();
+                refreshView();
             }
         }
     }
@@ -3241,10 +3172,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         sProg = null;
         sProgressMsg = null;
         sSendMsg = new MessageData();
-        sBackupExists = false;
-        sRestoreRequested = false;
-        sRestoreReported = false;
-        sRestoring = false;
     }
 
     private void showFileAttach() {
@@ -3257,8 +3184,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         // camera
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        sTempCameraFileUri = SSUtil.makeCameraOutputUri();
-        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, sTempCameraFileUri);
+        SafeSlinger.setTempCameraFileUri(SSUtil.makeCameraOutputUri());
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, SafeSlinger.getTempCameraFileUri());
         allIntents.add(cameraIntent);
 
         // audio recorder
@@ -3444,7 +3371,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     dialog.dismiss();
                     // delete all more recent keys for now...
                     doRemoveMoreRecentKeys();
-                    restart();
+                    refreshView();
                 }
             });
         }
@@ -3568,7 +3495,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 ImportFromExchangeTask importFromExchange = new ImportFromExchangeTask();
                 importFromExchange.execute(args);
                 setTab(Tabs.MESSAGE);
-                restart();
+                refreshView();
             }
         });
         ad.setNegativeButton(getString(R.string.btn_Refuse), new DialogInterface.OnClickListener() {
@@ -3577,7 +3504,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 showNote(String.format(getString(R.string.state_SomeContactsImported), 0));
-                restart();
+                refreshView();
             }
         });
         return ad;
@@ -3691,13 +3618,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         // save these for lookup and display purposes
                         SafeSlingerPrefs.setContactName(pName);
                         SafeSlingerPrefs.setContactLookupKey(items.get(item).contactLookupKey);
-                        restart();
+                        refreshView();
                         break;
                     case CONTACT:
                         // user wants to use found contact as a personal contact
                         SafeSlingerPrefs.setContactName(getContactName(items.get(item).contactLookupKey));
                         SafeSlingerPrefs.setContactLookupKey(items.get(item).contactLookupKey);
-                        restart();
+                        refreshView();
                         break;
                     case ANOTHER:
                         // user wants to choose new contact for themselves
@@ -3706,7 +3633,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     case NONE:
                         // user wants to remove link to address book
                         SafeSlingerPrefs.setContactLookupKey(null);
-                        restart();
+                        refreshView();
                         break;
                     case NEW:
                         // user wants to create new contact
@@ -3719,7 +3646,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     case EDIT_NAME:
                         // user wants to edit name
                         showSettings();
-                        restart();
+                        refreshView();
                         break;
                 }
             }
@@ -3861,7 +3788,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (MessagesFragment.getRecip() != null && position == Tabs.MESSAGE.ordinal()) {
             // collapse messages to threads when in message view
             MessagesFragment.setRecip(null);
-            restart();
+            refreshView();
         } else {
             // exit when at top level of each tab
             super.onBackPressed();
