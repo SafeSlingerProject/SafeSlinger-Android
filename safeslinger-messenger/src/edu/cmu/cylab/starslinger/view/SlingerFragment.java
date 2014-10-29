@@ -64,6 +64,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
@@ -71,6 +72,7 @@ import edu.cmu.cylab.starslinger.exchange.ExchangeConfig;
 import edu.cmu.cylab.starslinger.model.ContactAccessor;
 import edu.cmu.cylab.starslinger.model.ContactField;
 import edu.cmu.cylab.starslinger.model.ImppValue;
+import edu.cmu.cylab.starslinger.model.SlingerIdentity;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class SlingerFragment extends Fragment {
@@ -108,10 +110,7 @@ public class SlingerFragment extends Fragment {
         mButtonStartExchange = (Button) vFrag.findViewById(R.id.HomeButtonStartExchangeProximity);
         mButtonSender = (Button) vFrag.findViewById(R.id.HomeButtonSender);
 
-        if (savedInstanceState != null)
-            updateValues(savedInstanceState);
-        else if (getArguments() != null)
-            updateValues(getArguments());
+        updateValues(savedInstanceState);
 
         mButtonSender.setOnClickListener(new OnClickListener() {
 
@@ -170,23 +169,24 @@ public class SlingerFragment extends Fragment {
         mTextViewUserName.setText("");
 
         String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
-        mImpps = new ArrayList<ImppValue>();
-        if (extras != null) {
 
-            String keyName = null;
-            byte[] keyData = null;
-
-            int i = 0;
-            do {
-                // import trusted items for exchange...
-                keyName = extras.getString(extra.CONTACT_KEYNAME_PREFIX + i);
-                keyData = extras.getByteArray(extra.CONTACT_VALUE_PREFIX + i);
-                if (keyData != null) {
-                    mImpps.add(new ImppValue(keyName, keyData));
-                }
-                i++;
-            } while (keyName != null);
+        // valid key and push token is required
+        SlingerIdentity si = new SlingerIdentity(SafeSlingerPrefs.getPushRegistrationId(),
+                SSUtil.getLocalNotification(SafeSlinger.getApplication()),
+                SafeSlinger.getSenderKey());
+        String token = SlingerIdentity.sidPush2DBPush(si);
+        String pubkey = SlingerIdentity.sidKey2DBKey(si);
+        if (TextUtils.isEmpty(token)) {
+            return;
+        } else if (TextUtils.isEmpty(pubkey)) {
+            return;
         }
+
+        mImpps = new ArrayList<ImppValue>();
+        mImpps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUSHTOKEN, SSUtil.finalEncode(token
+                .getBytes())));
+        mImpps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUBKEY, SSUtil.finalEncode(pubkey
+                .getBytes())));
 
         mPreferredName = SafeSlingerPrefs.getContactName();
 

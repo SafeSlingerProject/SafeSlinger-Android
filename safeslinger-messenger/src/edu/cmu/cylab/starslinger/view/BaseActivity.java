@@ -92,7 +92,6 @@ import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgPeerKeyFormatException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
 import edu.cmu.cylab.starslinger.model.ContactAccessor;
-import edu.cmu.cylab.starslinger.model.ContactImpp;
 import edu.cmu.cylab.starslinger.model.ContactNameMethodComparator;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageRow;
@@ -141,19 +140,6 @@ public class BaseActivity extends ActionBarActivity {
     private static final int RESULT_EDIT_CONTACT_LINK = 23;
     private static String mInviteContactLookupKey;
     private static long mContactLinkRecipientRowId;
-
-    protected static Bundle writeSingleExportExchangeArgs(ContactImpp out) {
-
-        Bundle args = new Bundle();
-        args.putString(extra.CONTACT_LOOKUP_KEY, out.lookup);
-
-        for (int i = 0; i < out.impps.size(); i++) {
-            args.putString(extra.CONTACT_KEYNAME_PREFIX + i, out.impps.get(i).k);
-            args.putByteArray(extra.CONTACT_VALUE_PREFIX + i, out.impps.get(i).v);
-        }
-
-        return args;
-    }
 
     public Uri getPersonUri(String contactLookupKey) {
         if (!TextUtils.isEmpty(contactLookupKey)) {

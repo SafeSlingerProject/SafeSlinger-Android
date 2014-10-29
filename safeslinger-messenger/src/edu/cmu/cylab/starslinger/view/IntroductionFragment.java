@@ -55,6 +55,7 @@ import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
+import edu.cmu.cylab.starslinger.model.DraftData;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 
@@ -148,26 +149,22 @@ public class IntroductionFragment extends Fragment {
     }
 
     public void updateValues(Bundle extras) {
-
         // general state
-        if (extras != null) {
-            long rowId1 = extras.getLong(extra.RECIPIENT_ROW_ID1);
-            long rowId2 = extras.getLong(extra.RECIPIENT_ROW_ID2);
-
-            RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getActivity());
-            Cursor c1 = dbRecipient.fetchRecipient(rowId1);
+        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getActivity());
+        DraftData d = DraftData.INSTANCE;
+        if (d.existsRecip1()) {
+            Cursor c1 = dbRecipient.fetchRecipient(d.getRecip1RowId());
             if (c1 != null) {
                 mRecip1 = new RecipientRow(c1);
                 c1.close();
             }
-            Cursor c2 = dbRecipient.fetchRecipient(rowId2);
+        }
+        if (d.existsRecip2()) {
+            Cursor c2 = dbRecipient.fetchRecipient(d.getRecip2RowId());
             if (c2 != null) {
                 mRecip2 = new RecipientRow(c2);
                 c2.close();
             }
-        } else {
-            mRecip1 = null;
-            mRecip2 = null;
         }
 
         // make sure view is already inflated...

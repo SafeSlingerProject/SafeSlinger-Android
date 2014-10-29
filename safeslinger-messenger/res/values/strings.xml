@@ -168,10 +168,14 @@
     <string name="error_C2DMRegServiceNotAvailable">Push registration service not available, scheduling retry in %d seconds.</string>
     <!-- error message (sentence case, period); used to warn during push registration: The user has too many applications registered. The application should tell the user to uninstall some other applications, let user retry manually. Fix on the device side. Android-only. -->
     <string name="error_C2DMRegTooManyRegistrations">Too many applications are registered for Push. Please uninstall some other applications and retry.</string>
+    <!-- error message (sentence case, period); used to warn when user wants to invite contact via email but device cannot send emails. -->
+    <string name="error_CannotSendEmail">This device cannot send emails.</string>
     <!-- error message (sentence case, period); used to warn when use attempts to attach an empty file to the message. -->
     <string name="error_CannotSendEmptyFile">Cannot send an empty attachment.</string>
     <!-- error message (sentence case, period); used to warn when the message and attachment (if any) exceed the current quota limits for the App Engine service we use. %d the maximum limit in bytes of the entire message plus attachments that the App Engine service will allow us to upload. -->
     <string name="error_CannotSendFilesOver">Cannot send attachments greater than %d bytes in size.</string>
+    <!-- error message (sentence case, period); used to warn when user wants to invite contact via text message but device cannot send text messages. -->
+    <string name="error_CannotSendMessage">This device cannot send text messages.</string>
     <!-- error message (sentence case, period); used to warn when use attempts to attach an empty file to the message. -->
     <string name="error_CannotSendNullFile">Cannot send a null attachment.</string>
     <!-- error message (sentence case, period); used to warn when failing to insert new contact data. -->
@@ -747,6 +751,8 @@
 
     <!-- title (title case); used as the -->
     <string name="title_About">About</string>
+    <!-- title (title case); used on Contact Select View when user wants to invite a new contact via email or SMS. -->
+    <string name="title_ActionNotAvailable">Action Not Available</string>
     <!-- menu option (title case); used in the Select File Option menu to take a picture with the camera on iOS. -->
     <string name="title_camera">Camera</string>
     <!-- title (title case); used at the top of the menu when choosing a directory to load or save a file attachment. -->
