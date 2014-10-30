@@ -120,6 +120,7 @@ public class SettingsActivity extends PreferenceActivity {
         // TODO: actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
+    @SuppressWarnings("deprecation")
     private void setPrefs() {
         addPreferencesFromResource(R.xml.ss_preferences);
 
@@ -150,6 +151,7 @@ public class SettingsActivity extends PreferenceActivity {
         setMessagePreferences();
     }
 
+    @SuppressWarnings("deprecation")
     private void restoreDefaultPreferences() {
         SafeSlingerPrefs.restoreUserDefaultSettings();
         setPreferenceScreen(null);
@@ -320,6 +322,7 @@ public class SettingsActivity extends PreferenceActivity {
         mShowAbout.setSummary(SafeSlingerConfig.getVersionName());
         mShowAbout.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 
+            @SuppressWarnings("deprecation")
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 if (!isFinishing()) {
@@ -522,6 +525,8 @@ public class SettingsActivity extends PreferenceActivity {
     private String getRingSummary(String soundValue) throws NotFoundException {
         Uri soundUri = TextUtils.isEmpty(soundValue) ? null : Uri.parse(soundValue);
         Ringtone tone = soundUri != null ? RingtoneManager.getRingtone(this, soundUri) : null;
+        if(tone == null)
+            SafeSlingerPrefs.setLastTimeStamp(0);
         return (tone != null ? tone.getTitle(this) : getResources().getString(
                 R.string.menu_ringtone));
     }
@@ -535,6 +540,7 @@ public class SettingsActivity extends PreferenceActivity {
                     public boolean onPreferenceChange(Preference preference, Object newValue) {
                         mNotificationVibrate.setChecked((Boolean) newValue);
                         SafeSlingerPrefs.setNotificationVibrate((Boolean) newValue);
+                        SafeSlingerPrefs.setLastTimeStamp(0);
                         return false;
                     }
                 });
@@ -608,6 +614,7 @@ public class SettingsActivity extends PreferenceActivity {
         return null;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
@@ -631,6 +638,7 @@ public class SettingsActivity extends PreferenceActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     protected Dialog onCreateDialog(int id) {
         switch (id) {

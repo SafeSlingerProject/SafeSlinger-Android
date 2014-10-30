@@ -77,9 +77,9 @@ import edu.cmu.cylab.starslinger.model.MessagePacket;
 import edu.cmu.cylab.starslinger.model.MessageRow;
 import edu.cmu.cylab.starslinger.model.RecipientDatabaseHelper;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
-import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
 import edu.cmu.cylab.starslinger.transaction.MessageNotFoundException;
 import edu.cmu.cylab.starslinger.transaction.WebEngine;
+import edu.cmu.cylab.starslinger.util.ActivityLifeCallbacks;
 import edu.cmu.cylab.starslinger.util.NotificationBroadcastReceiver;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
@@ -103,6 +103,8 @@ public class SafeSlinger extends Application {
     private static Uri sTempCameraFileUri;
     private static String sSenderKey;
 
+    private boolean isTabContainerActive = false;
+    
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -115,12 +117,15 @@ public class SafeSlinger extends Application {
         }
     }
 
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public void onCreate() {
         super.onCreate();
 
         sSafeSlinger = this;
 
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+            registerActivityLifecycleCallbacks(new ActivityLifeCallbacks());
         // Catching Unhandled Exceptions...
         // We used to use UncaughtExceptionHandler to catch exceptions here,
         // and send via email, however the android system has such a good
@@ -214,6 +219,7 @@ public class SafeSlinger extends Application {
         return connected;
     }
 
+    @SuppressWarnings("deprecation")
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void copyPlainTextToClipboard(String string) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
@@ -407,7 +413,7 @@ public class SafeSlinger extends Application {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             output.append("\n").append("RADIO: " + Build.getRadioVersion());
         } else {
-            output.append("\n").append("RADIO: " + Build.RADIO);
+            output.append("\n").append("RADIO: " + Build.getRadioVersion());
         }
         output.append("\n").append("TAGS: " + Build.TAGS);
         output.append("\n").append("TIME: " + new Date(Build.TIME));
@@ -726,6 +732,7 @@ public class SafeSlinger extends Application {
         }
     }
 
+    @SuppressWarnings("deprecation")
     public void doUpgradeDatabaseInPlace() throws IllegalArgumentException {
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
         MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
@@ -829,5 +836,13 @@ public class SafeSlinger extends Application {
         MyLog.i(TAG, getString(resId));
         Toast toast = Toast.makeText(getApplicationContext(), resId, Toast.LENGTH_LONG);
         toast.show();
+    }
+
+    public boolean isMessageFragActive() {
+        return isTabContainerActive;
+    }
+
+    public void setMessageFragActive(boolean isMessageFragActive) {
+        this.isTabContainerActive = isMessageFragActive;
     }
 }

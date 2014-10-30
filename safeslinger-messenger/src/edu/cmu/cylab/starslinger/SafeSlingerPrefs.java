@@ -55,7 +55,7 @@ public class SafeSlingerPrefs {
     private static final boolean DEFAULT_AUTO_RETRIEVAL = false;
     public static final String DEFAULT_LANGUAGE = "zz";
 
-    public static final int NOTIFICATION_SLEEP_PERIOD = 60 * 1000;
+    public static final int NOTIFICATION_SLEEP_PERIOD = 30 * 1000;
     
     /***
      * internal long term storage...
