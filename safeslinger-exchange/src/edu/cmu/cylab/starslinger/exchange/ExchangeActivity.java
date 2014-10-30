@@ -381,7 +381,6 @@ public class ExchangeActivity extends BaseActivity {
         protected String doInBackground(String... arg0) {
             publishProgress(getString(R.string.prog_RequestingUserId));
             mProt.doRequestUserId();
-            endProgress();
             return null;
         }
 
@@ -392,6 +391,7 @@ public class ExchangeActivity extends BaseActivity {
 
         @Override
         protected void onPostExecute(String result) {
+            endProgress();
             if (handled(!mProt.isError()) && !mProt.isCanceled()) {
                 showLowestUserIdPrompt(mProt.getUserId());
             }
@@ -404,7 +404,6 @@ public class ExchangeActivity extends BaseActivity {
         protected String doInBackground(String... arg0) {
             publishProgress(getString(R.string.prog_CollectingOthersItems));
             mProt.doGetCommitmentsGetData();
-            endProgress();
             return null;
         }
 
@@ -415,6 +414,7 @@ public class ExchangeActivity extends BaseActivity {
 
         @Override
         protected void onPostExecute(String result) {
+            endProgress();
             if (handled(!mProt.isError()) && !mProt.isCanceled()) {
                 showVerify(mProt.getHash(), mProt.getDecoyHash(1), mProt.getDecoyHash(2),
                         mProt.getRandomPos(3));
@@ -428,7 +428,6 @@ public class ExchangeActivity extends BaseActivity {
         protected String doInBackground(String... arg0) {
             publishProgress(getString(R.string.prog_CollectingOthersCommitVerify));
             mProt.doSendValidSignatureGetSignatures();
-            endProgress();
             return null;
         }
 
@@ -439,6 +438,7 @@ public class ExchangeActivity extends BaseActivity {
 
         @Override
         protected void onPostExecute(String result) {
+            endProgress();
             if (handled(!mProt.isError()) && !mProt.isCanceled()) {
                 SyncNodesNoncesTask syncNodesNonces = new SyncNodesNoncesTask();
                 syncNodesNonces.execute(new String());
@@ -452,7 +452,6 @@ public class ExchangeActivity extends BaseActivity {
         protected String doInBackground(String... arg0) {
             publishProgress(getString(R.string.prog_ConstructingGroupKey));
             mProt.doCreateSharedSecretGetNodesAndMatchNonces();
-            endProgress();
             return null;
         }
 
@@ -463,6 +462,7 @@ public class ExchangeActivity extends BaseActivity {
 
         @Override
         protected void onPostExecute(String result) {
+            endProgress();
             if (handled(!mProt.isError()) && !mProt.isCanceled()) {
                 doVerifyFinalMatchDone();
             }
@@ -475,7 +475,6 @@ public class ExchangeActivity extends BaseActivity {
         protected String doInBackground(String... arg0) {
             publishProgress(getString(R.string.prog_CollectingOthersCommitVerify));
             mProt.doSendInvalidSignature();
-            endProgress();
             return null;
         }
 
@@ -486,6 +485,7 @@ public class ExchangeActivity extends BaseActivity {
 
         @Override
         protected void onPostExecute(String result) {
+            endProgress();
             if (!mProt.isCanceled()) {
                 showError(mProt.getErrorMsg());
             }

@@ -45,6 +45,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SyncAdapterType;
 import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Data;
@@ -185,7 +186,8 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
 
             @Override
             public void onClick(View view) {
-                runThreadSaveSelectedContacts();
+                SaveSelectedContactsTask saveSelected = new SaveSelectedContactsTask();
+                saveSelected.execute(new String());
             }
         });
 
@@ -255,33 +257,20 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
         });
     }
 
-    private void runThreadSaveSelectedContacts() {
-        showProgress(getString(R.string.prog_SavingContactsToAddressBook), true);
-        mDlgProg.setCanceledOnTouchOutside(false);
-        mDlgProg.setOnDismissListener(new DialogInterface.OnDismissListener() {
+    private class SaveSelectedContactsTask extends AsyncTask<String, String, String> {
 
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                finish();
-            }
-        });
-        mDlgProg.setOnCancelListener(new DialogInterface.OnCancelListener() {
+        @Override
+        protected String doInBackground(String... arg0) {
+            publishProgress(getString(R.string.prog_SavingContactsToAddressBook));
+            saveSelectedContacts();
+            endProgress();
+            return null;
+        }
 
-            @Override
-            public void onCancel(DialogInterface dialog) {
-                finish();
-            }
-        });
-
-        Thread t = new Thread() {
-
-            @Override
-            public void run() {
-                saveSelectedContacts();
-                hideProgress();
-            }
-        };
-        t.start();
+        @Override
+        protected void onProgressUpdate(String... values) {
+            showProgress(values[0]);
+        }
     }
 
     private void saveSelectedContacts() {
@@ -437,6 +426,8 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
                 return xshowHelp(SaveActivity.this, args).create();
             case DIALOG_QUESTION:
                 return xshowQuestion(SaveActivity.this, args).create();
+            case DIALOG_PROGRESS:
+                return xshowProgress(SaveActivity.this, args);
             default:
                 break;
         }
@@ -579,31 +570,54 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
         return ad;
     }
 
-    private void showProgress(String msg, boolean indeterminate) {
+    private void showProgress(String msg) {
+        Bundle args = new Bundle();
+        args.putString(extra.RESID_MSG, msg);
+        if (!isFinishing()) {
+            removeDialog(DIALOG_PROGRESS);
+            showDialog(DIALOG_PROGRESS, args);
+        }
+    }
+
+    private Dialog xshowProgress(Activity act, Bundle args) {
+        String msg = args.getString(extra.RESID_MSG);
         MyLog.i(TAG, msg);
-        mDlgProg = new ProgressDialog(this);
-        mDlgProg.setProgressStyle(indeterminate ? ProgressDialog.STYLE_SPINNER
-                : ProgressDialog.STYLE_HORIZONTAL);
+
+        if (mDlgProg != null) {
+            mDlgProg = null;
+            mProgressMsg = null;
+        }
+        mDlgProg = new ProgressDialog(act);
+        mDlgProg.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         mDlgProg.setMessage(msg);
         mProgressMsg = msg;
         mDlgProg.setCancelable(true);
-        mDlgProg.setIndeterminate(indeterminate);
+        mDlgProg.setIndeterminate(true);
         mDlgProg.setProgress(0);
-        mDlgProg.show();
-    }
+        mDlgProg.setCanceledOnTouchOutside(false);
+        mDlgProg.setOnDismissListener(new DialogInterface.OnDismissListener() {
 
-    private void showProgressUpdate(int value, String msg) {
-        if (mDlgProg != null) {
-            mDlgProg.setProgress(value);
-            if (msg != null) {
-                mDlgProg.setMessage(msg);
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                finish();
             }
-        }
+        });
+        mDlgProg.setOnCancelListener(new DialogInterface.OnCancelListener() {
+
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                finish();
+            }
+        });
+
+        return mDlgProg;
     }
 
-    private void hideProgress() {
+    private void endProgress() {
         if (mDlgProg != null) {
             mDlgProg.dismiss();
+            mDlgProg = null;
         }
     }
+
 }

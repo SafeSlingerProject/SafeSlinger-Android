@@ -45,6 +45,7 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;
 import android.app.Application;
 import android.app.backup.BackupManager;
+import android.app.backup.RestoreObserver;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -54,11 +55,13 @@ import android.database.SQLException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.widget.Toast;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
@@ -68,15 +71,20 @@ import edu.cmu.cylab.starslinger.crypto.PRNGFixes;
 import edu.cmu.cylab.starslinger.model.CachedPassPhrase;
 import edu.cmu.cylab.starslinger.model.InboxDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageData;
+import edu.cmu.cylab.starslinger.model.MessageDatabaseHelper;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessagePacket;
 import edu.cmu.cylab.starslinger.model.MessageRow;
+import edu.cmu.cylab.starslinger.model.RecipientDatabaseHelper;
+import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
+import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
 import edu.cmu.cylab.starslinger.transaction.MessageNotFoundException;
 import edu.cmu.cylab.starslinger.transaction.WebEngine;
 import edu.cmu.cylab.starslinger.util.NotificationBroadcastReceiver;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class SafeSlinger extends Application {
+    private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
     // Object for intrinsic lock
     public static final Object sDataLock = new Object();
@@ -86,8 +94,14 @@ public class SafeSlinger extends Application {
     private ConnectivityManager mConnectivityManager;
     private static boolean sPassEntryOpen = false;
     private static boolean sAppVisible;
+    private static boolean sBackupExists = false;
+    private static boolean sRestoring = false;
+    private static boolean sRestoreRequested = false;
+    private static boolean sRestoreReported = false;
     private static Handler sHandler;
     private Locale locale = null;
+    private static Uri sTempCameraFileUri;
+    private static String sSenderKey;
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -130,6 +144,46 @@ public class SafeSlinger extends Application {
         SafeSlingerPrefs.setPusgRegBackoff(SafeSlingerPrefs.DEFAULT_PUSHREG_BACKOFF);
 
         startCacheService(this);
+
+        // notify user if there are connectivity issues...
+        if (!isOnline()) {
+            showNote(R.string.error_CorrectYourInternetConnection);
+        }
+
+        if (isRestored()) {
+            // we passed backup restore, now we can load databases...
+            doUpgradeDatabaseInPlace();
+        }
+    }
+
+    private boolean isRestored() {
+        // check early for key and attempt restore if not found...
+        if (sRestoring) {
+            return false;
+        }
+        if (!sRestoreRequested
+                && !SSUtil.fileExists(getApplicationContext(), CryptTools.getCurrentKeyFile())) {
+            try {
+                sRestoreRequested = true;
+                sBackupExists = requestRestore(getApplicationContext());
+                if (sBackupExists) {
+                    return false;
+                }
+            } catch (SecurityException e) {
+                // some devices do not grant permission for restore operation...
+                sRestoreReported = true;
+                showNote(R.string.error_BackupNotSupportedDevice);
+            }
+        }
+        if (sRestoreRequested && !sRestoreReported) {
+            // even though backup has reported success, it may not have
+            // worked...
+            sRestoreReported = true;
+            if (SSUtil.fileExists(getApplicationContext(), CryptTools.getCurrentKeyFile())) {
+                showNote(R.string.state_BackupRestored);
+            }
+        }
+        return true;
     }
 
     private void checkForPendingMessages() throws SQLException {
@@ -160,7 +214,6 @@ public class SafeSlinger extends Application {
         return connected;
     }
 
-    @SuppressWarnings("deprecation")
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void copyPlainTextToClipboard(String string) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
@@ -354,7 +407,7 @@ public class SafeSlinger extends Application {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             output.append("\n").append("RADIO: " + Build.getRadioVersion());
         } else {
-            output.append("\n").append("RADIO: " + Build.getRadioVersion());
+            output.append("\n").append("RADIO: " + Build.RADIO);
         }
         output.append("\n").append("TAGS: " + Build.TAGS);
         output.append("\n").append("TIME: " + new Date(Build.TIME));
@@ -400,6 +453,22 @@ public class SafeSlinger extends Application {
         sAppVisible = false;
     }
 
+    public static Uri getTempCameraFileUri() {
+        return sTempCameraFileUri;
+    }
+
+    public static void setTempCameraFileUri(Uri tempCameraFileUri) {
+        SafeSlinger.sTempCameraFileUri = tempCameraFileUri;
+    }
+
+    public static String getSenderKey() {
+        return sSenderKey;
+    }
+
+    public static void setSenderKey(String senderKey) {
+        SafeSlinger.sSenderKey = senderKey;
+    }
+
     /***
      * List all threads and recursively list all subgroup
      */
@@ -434,36 +503,11 @@ public class SafeSlinger extends Application {
         }
     }
 
-    public static String writeByteArray(byte[] bytes) {
-        StringBuilder raw = new StringBuilder(String.format(Locale.US, "len %d: ", bytes.length));
-        for (int i = 0; i < bytes.length; i++)
-            raw.append(String.format(Locale.US, "%X ", bytes[i]));
-        return raw.toString();
-    }
-
     public static void queueBackup() {
         Context ctx = SafeSlinger.getApplication();
         BackupManager bm = new BackupManager(ctx);
         bm.dataChanged();
         SafeSlingerPrefs.setBackupRequestDate(new Date().getTime());
-    }
-
-    public static int getTotalUsers() {
-        String userName;
-        long keyDate;
-        int userNumber = 0;
-        do {
-            userName = null;
-            keyDate = 0;
-            userName = SafeSlingerPrefs.getContactName(userNumber);
-            keyDate = SafeSlingerPrefs.getKeyDate(userNumber);
-            if (!TextUtils.isEmpty(userName)) {
-                userNumber++;
-            }
-        } while (keyDate > 0);
-
-        // always at least 1
-        return userNumber > 1 ? userNumber : 1;
     }
 
     public void checkForMissedMessages() {
@@ -481,146 +525,145 @@ public class SafeSlinger extends Application {
 
         @Override
         public void run() {
-            runThreadGetPendingMessages();
+            GetPendingMessagesTask getPendingMessages = new GetPendingMessagesTask();
+            getPendingMessages.execute(new String());
         }
     };
 
-    public void runThreadGetPendingMessages() {
-        Thread t = new Thread() {
+    private class GetPendingMessagesTask extends AsyncTask<String, String, String> {
 
-            @Override
-            public void run() {
-                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-                InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(getApplicationContext());
-                WebEngine web = new WebEngine(getApplication(),
-                        SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
-                int pendingDownloads = 0;
-                int successDownloads = 0;
+        @Override
+        protected String doInBackground(String... arg0) {
+            MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+            InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(getApplicationContext());
+            WebEngine web = new WebEngine(getApplication(),
+                    SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
+            int pendingDownloads = 0;
+            int successDownloads = 0;
 
-                Cursor c = dbInbox.fetchAllInboxGetMessagePending();
-                if (c != null) {
-                    pendingDownloads = c.getCount();
-                    while (c.moveToNext()) {
-                        try {
-                            MessageData inRow = new MessageRow(c, true);
+            Cursor c = dbInbox.fetchAllInboxGetMessagePending();
+            if (c != null) {
+                pendingDownloads = c.getCount();
+                while (c.moveToNext()) {
+                    try {
+                        MessageData inRow = new MessageRow(c, true);
 
-                            if (!SafeSlinger.getApplication().isOnline()) {
-                                break;
-                            }
-
-                            byte[] msgHashBytes;
-                            try {
-                                msgHashBytes = Base64.decode(inRow.getMsgHash().getBytes(),
-                                        Base64.NO_WRAP);
-                            } catch (IllegalArgumentException e) {
-                                e.printStackTrace();
-                                break;
-                            }
-
-                            byte[] resp = null;
-                            try {
-                                resp = web.getMessage(msgHashBytes);
-                            } catch (MessageNotFoundException e) {
-                                if (!dbInbox.updateInboxExpired(inRow.getRowId())) {
-                                    break;
-                                }
-                            }
-
-                            if (resp == null || resp.length == 0) {
-                                break;
-                            }
-
-                            byte[] encMsg = WebEngine.parseMessageResponse(resp);
-                            if (encMsg == null) {
-                                break;
-                            }
-
-                            if (Arrays.equals(msgHashBytes, CryptTools.computeSha3Hash(encMsg))) {
-                                CryptoMsgProvider tool = CryptoMsgProvider
-                                        .createInstance(SafeSlinger.isLoggable());
-                                String keyid = null;
-                                try {
-                                    keyid = tool.ExtractKeyIDfromPacket(encMsg);
-                                } catch (CryptoMsgPacketSizeException e) {
-                                    e.printStackTrace();
-                                }
-                                // save downloaded initial message
-                                if (!dbInbox.updateInboxDownloaded(inRow.getRowId(), encMsg,
-                                        MessageDbAdapter.MESSAGE_IS_SEEN, keyid)) {
-                                    break;
-                                }
-
-                                // got it! let the user know it's here...
-                                successDownloads++;
-                                NotificationBroadcastReceiver.doUnseenMessagesNotification(
-                                        SafeSlinger.getApplication(), successDownloads);
-
-                            } else {
-                                break;
-                            }
-
-                            String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
-                                    .getKeyIdString());
-
-                            // if requested, and logged in, try to decrypt
-                            // message
-                            if (!TextUtils.isEmpty(pass) && SafeSlingerPrefs.getAutoDecrypt()) {
-                                StringBuilder keyidout = new StringBuilder();
-                                byte[] plain = CryptTools.decryptMessage(inRow.getEncBody(), pass,
-                                        keyidout);
-                                MessagePacket push = new MessagePacket(plain);
-
-                                // move encrypted message to decrypted
-                                // storage...
-                                // add decrypted
-                                long rowIdMsg = dbMessage.createMessageDecrypted(inRow, push,
-                                        keyidout.toString());
-                                if (rowIdMsg == -1) {
-                                    return; // unable to save progress
-                                } else {
-                                    // remove encrypted
-                                    dbInbox.deleteInbox(inRow.getRowId());
-                                }
-                            }
-                        } catch (OutOfMemoryError e) {
-                            e.printStackTrace();
-                        } catch (ExchangeException e) {
-                            e.printStackTrace();
-                        } catch (ClassNotFoundException e) {
-                            e.printStackTrace();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        } catch (CryptoMsgException e) {
-                            e.printStackTrace();
-                        } catch (GeneralException e) {
-                            e.printStackTrace();
+                        if (!SafeSlinger.getApplication().isOnline()) {
+                            break;
                         }
-                    }
-                    c.close();
-                }
 
-                // if we missed any downloads, set to try again using
-                // exponential backoff later as long as message might be
-                // available
-                if (sHandler == null) {
-                    sHandler = new Handler();
+                        byte[] msgHashBytes;
+                        try {
+                            msgHashBytes = Base64.decode(inRow.getMsgHash().getBytes(),
+                                    Base64.NO_WRAP);
+                        } catch (IllegalArgumentException e) {
+                            e.printStackTrace();
+                            break;
+                        }
+
+                        byte[] resp = null;
+                        try {
+                            resp = web.getMessage(msgHashBytes);
+                        } catch (MessageNotFoundException e) {
+                            if (!dbInbox.updateInboxExpired(inRow.getRowId())) {
+                                break;
+                            }
+                        }
+
+                        if (resp == null || resp.length == 0) {
+                            break;
+                        }
+
+                        byte[] encMsg = WebEngine.parseMessageResponse(resp);
+                        if (encMsg == null) {
+                            break;
+                        }
+
+                        if (Arrays.equals(msgHashBytes, CryptTools.computeSha3Hash(encMsg))) {
+                            CryptoMsgProvider tool = CryptoMsgProvider.createInstance(SafeSlinger
+                                    .isLoggable());
+                            String keyid = null;
+                            try {
+                                keyid = tool.ExtractKeyIDfromPacket(encMsg);
+                            } catch (CryptoMsgPacketSizeException e) {
+                                e.printStackTrace();
+                            }
+                            // save downloaded initial message
+                            if (!dbInbox.updateInboxDownloaded(inRow.getRowId(), encMsg,
+                                    MessageDbAdapter.MESSAGE_IS_SEEN, keyid)) {
+                                break;
+                            }
+
+                            // got it! let the user know it's here...
+                            successDownloads++;
+                            NotificationBroadcastReceiver.doUnseenMessagesNotification(SafeSlinger.getApplication(),
+                                    successDownloads);
+
+                        } else {
+                            break;
+                        }
+
+                        String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
+                                .getKeyIdString());
+
+                        // if requested, and logged in, try to decrypt
+                        // message
+                        if (!TextUtils.isEmpty(pass) && SafeSlingerPrefs.getAutoDecrypt()) {
+                            StringBuilder keyidout = new StringBuilder();
+                            byte[] plain = CryptTools.decryptMessage(inRow.getEncBody(), pass,
+                                    keyidout);
+                            MessagePacket push = new MessagePacket(plain);
+
+                            // move encrypted message to decrypted
+                            // storage...
+                            // add decrypted
+                            long rowIdMsg = dbMessage.createMessageDecrypted(inRow, push,
+                                    keyidout.toString());
+                            if (rowIdMsg == -1) {
+                                return null; // unable to save progress
+                            } else {
+                                // remove encrypted
+                                dbInbox.deleteInbox(inRow.getRowId());
+                            }
+                        }
+                    } catch (OutOfMemoryError e) {
+                        e.printStackTrace();
+                    } catch (ExchangeException e) {
+                        e.printStackTrace();
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (CryptoMsgException e) {
+                        e.printStackTrace();
+                    } catch (GeneralException e) {
+                        e.printStackTrace();
+                    }
                 }
-                sHandler.removeCallbacks(getPendingMessageDownloads);
-                long backoff = SafeSlingerPrefs.getPendingGetMessageBackoff();
-                if (pendingDownloads > successDownloads
-                        && backoff < SafeSlingerConfig.MESSAGE_EXPIRATION_MS) {
-                    // check later
-                    long newBackoff = backoff * 2;
-                    SafeSlingerPrefs.setPendingGetMessageBackoff(newBackoff);
-                    sHandler.postDelayed(getPendingMessageDownloads, newBackoff);
-                } else {
-                    // remove checking
-                    SafeSlingerPrefs
-                            .setPendingGetMessageBackoff(SafeSlingerPrefs.DEFAULT_PENDING_GETMSG_BACKOFF);
-                }
+                c.close();
             }
-        };
-        t.start();
+
+            // if we missed any downloads, set to try again using
+            // exponential backoff later as long as message might be
+            // available
+            if (sHandler == null) {
+                sHandler = new Handler();
+            }
+            sHandler.removeCallbacks(getPendingMessageDownloads);
+            long backoff = SafeSlingerPrefs.getPendingGetMessageBackoff();
+            if (pendingDownloads > successDownloads
+                    && backoff < SafeSlingerConfig.MESSAGE_EXPIRATION_MS) {
+                // check later
+                long newBackoff = backoff * 2;
+                SafeSlingerPrefs.setPendingGetMessageBackoff(newBackoff);
+                sHandler.postDelayed(getPendingMessageDownloads, newBackoff);
+            } else {
+                // remove checking
+                SafeSlingerPrefs
+                        .setPendingGetMessageBackoff(SafeSlingerPrefs.DEFAULT_PENDING_GETMSG_BACKOFF);
+            }
+            return null;
+        }
     }
 
     public void updateLanguage(String language) {
@@ -681,5 +724,110 @@ public class SafeSlinger extends Application {
         } else {
             return showLang;
         }
+    }
+
+    public void doUpgradeDatabaseInPlace() throws IllegalArgumentException {
+        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
+        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+
+        // only do this once for version 5, if done again will break recip db
+        if (SafeSlingerPrefs.getCurrentRecipientDBVer() < 6) {
+            Cursor c = dbRecipient.fetchAllRecipientsUpgradeTo6();
+            if (c != null) {
+                while (c.moveToNext()) {
+                    long rowId = c.getLong(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_ROWID));
+                    long mykeyid_long = c.getLong(c
+                            .getColumnIndexOrThrow(RecipientDbAdapter.KEY_MYKEYIDLONG));
+                    long keyid_long = c.getLong(c
+                            .getColumnIndexOrThrow(RecipientDbAdapter.KEY_KEYIDLONG));
+                    dbRecipient.updateRecipientKeyIds2String(rowId, mykeyid_long, keyid_long);
+                }
+                c.close();
+                SafeSlingerPrefs.setCurrentRecipientDBVer(RecipientDatabaseHelper.DATABASE_VERSION);
+            }
+        }
+
+        if (SafeSlingerPrefs.getCurrentMessageDBVer() < 6) {
+            Cursor c = dbMessage.fetchAllMessagesUpgradeTo6();
+            if (c != null) {
+                while (c.moveToNext()) {
+                    long rowId = c.getLong(c.getColumnIndexOrThrow(MessageDbAdapter.KEY_ROWID));
+                    long keyid_long = c.getLong(c
+                            .getColumnIndexOrThrow(MessageDbAdapter.KEY_KEYIDLONG));
+                    dbMessage.updateMessageKeyId2String(rowId, keyid_long);
+                }
+                c.close();
+                SafeSlingerPrefs.setCurrentMessageDBVer(MessageDatabaseHelper.DATABASE_VERSION);
+            }
+        }
+
+        // look for old messages without key ids read out
+        if (dbMessage.getVersion() >= 6) {
+            Cursor cm = dbMessage.fetchAllMessagesByThread(null);
+            if (cm != null) {
+                while (cm.moveToNext()) {
+                    MessageRow messageRow = new MessageRow(cm, false);
+                    byte[] encMsg = messageRow.getEncBody();
+                    if (encMsg != null) {
+                        CryptoMsgProvider tool = CryptoMsgProvider.createInstance(SafeSlinger
+                                .isLoggable());
+                        String keyid = null;
+                        try {
+                            keyid = tool.ExtractKeyIDfromPacket(encMsg);
+                        } catch (CryptoMsgPacketSizeException e) {
+                            e.printStackTrace();
+                        }
+                        if (!TextUtils.isEmpty(keyid)) {
+                            dbMessage.updateMessageKeyId(messageRow.getRowId(), keyid);
+                        }
+                    }
+                }
+                cm.close();
+            }
+        }
+
+    }
+
+    private boolean requestRestore(Context ctx) {
+        BackupManager bm = new BackupManager(ctx);
+        RestoreObserver restoreObserver = new RestoreObserver() {
+
+            @Override
+            public void restoreStarting(int numPackages) {
+                sRestoring = true;
+                showNote(R.string.prog_SearchingForBackup);
+            }
+
+            @Override
+            public void restoreFinished(int error) {
+                sBackupExists = (error == 0);
+                sRestoring = false;
+
+                // we passed backup restore, now we can load databases...
+                doUpgradeDatabaseInPlace();
+            }
+        };
+        try {
+            int res = bm.requestRestore(restoreObserver);
+            return res == 0 ? true : false;
+        } catch (NullPointerException e) {
+            // catch failure of RestoreSession object to manage itself in the
+            // following:
+            // android.app.backup.RestoreSession.endRestoreSession(RestoreSession.java:162)
+            // android.app.backup.BackupManager.requestRestore(BackupManager.java:154)
+            return false;
+        }
+    }
+
+    protected void showNote(String msg) {
+        MyLog.i(TAG, msg);
+        Toast toast = Toast.makeText(getApplicationContext(), msg.trim(), Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void showNote(int resId) {
+        MyLog.i(TAG, getString(resId));
+        Toast toast = Toast.makeText(getApplicationContext(), resId, Toast.LENGTH_LONG);
+        toast.show();
     }
 }

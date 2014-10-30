@@ -33,7 +33,7 @@
     <!-- application name (title case); used for home screen icons, at the top of many screens, and many other places in the application. -->
     <string name="app_name">SafeSlinger</string>
     <!-- application description (sentence case); the names of the individuals who translated and/or reviewed localizations. -->
-    <string name="app_TranslatorName" translatable="false">Adrian Perrig\nAkira Yamada\nAlbert Stroucken\nElli Fragkaki\nEmmanuel Owusu\nIrina Fudrow\nJens Höfflinger\nMichael Stroucken\nNicolas Christin\nSteve Matsumoto\nYeon Yim\nYue-Hsun Lin\n</string>
+    <string name="app_TranslatorName" translatable="false">Adrian Perrig\nAkira Yamada\nAlbert Stroucken\nElli Fragkaki\nEmmanuel Owusu\nIrina Fudrow\nJens Höfflinger\nMatthias Beckerle\nMichael Stroucken\nNicolas Christin\nSteve Matsumoto\nYeon Yim\nYue-Hsun Lin\n</string>
 
     <!-- question message (sentence case, question mark); used to warn when the backup is off to confirm we should keep reminding the user. Used with Forget and Remind buttons. -->
     <string name="ask_BackupDisabledRemindLater">Backup is disabled. Do you want to adjust backup settings and keep this reminder?</string>
@@ -168,10 +168,14 @@
     <string name="error_C2DMRegServiceNotAvailable">Push registration service not available, scheduling retry in %d seconds.</string>
     <!-- error message (sentence case, period); used to warn during push registration: The user has too many applications registered. The application should tell the user to uninstall some other applications, let user retry manually. Fix on the device side. Android-only. -->
     <string name="error_C2DMRegTooManyRegistrations">Too many applications are registered for Push. Please uninstall some other applications and retry.</string>
+    <!-- error message (sentence case, period); used to warn when user wants to invite contact via email but device cannot send emails. -->
+    <string name="error_CannotSendEmail">This device cannot send emails.</string>
     <!-- error message (sentence case, period); used to warn when use attempts to attach an empty file to the message. -->
     <string name="error_CannotSendEmptyFile">Cannot send an empty attachment.</string>
     <!-- error message (sentence case, period); used to warn when the message and attachment (if any) exceed the current quota limits for the App Engine service we use. %d the maximum limit in bytes of the entire message plus attachments that the App Engine service will allow us to upload. -->
     <string name="error_CannotSendFilesOver">Cannot send attachments greater than %d bytes in size.</string>
+    <!-- error message (sentence case, period); used to warn when user wants to invite contact via text message but device cannot send text messages. -->
+    <string name="error_CannotSendMessage">This device cannot send text messages.</string>
     <!-- error message (sentence case, period); used to warn when use attempts to attach an empty file to the message. -->
     <string name="error_CannotSendNullFile">Cannot send a null attachment.</string>
     <!-- error message (sentence case, period); used to warn when failing to insert new contact data. -->
@@ -713,15 +717,9 @@
     <!-- application description (sentence case); used at the end of the about dialog to list the developers of SafeSlinger. -->
     <string name="text_DevelopedBy">Developed by:</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordAdHoc" translatable="false">ad hoc</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
     <string name="text_KeywordExchange">Exchange</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
     <string name="text_KeywordIdentity">Identity</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordIMessage" translatable="false">iMessage</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordKakaoTalk" translatable="false">KakaoTalk</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
     <string name="text_KeywordKey">Key</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
@@ -734,14 +732,10 @@
     <string name="text_KeywordSecurity">Security</string>
     <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
     <string name="text_KeywordSlinger" translatable="false">Slinger</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordTextSecure" translatable="false">TextSecure</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordThreema" translatable="false">Threema</string>
-    <!-- application description (sentence case); one of many keywords to use when searching related terms. -->
-    <string name="text_KeywordWhatsApp" translatable="false">WhatsApp</string>
     <!-- application description (sentence case); used at the end of the about dialog to list the translators of SafeSlinger. -->
     <string name="text_LanguagesProvidedBy">Languages provided by:</string>
+    <!-- application description (sentence case); used in the app store listing, %s = SafeSlinger project localization repo. -->
+    <string name="text_LocalizationRepo">translate: %s</string>
     <!-- application description (sentence case); used in the app store listing to list related search terms to help users looking for secure key exchange and messaging. -->
     <string name="text_RelatedSearchTerms">Related Terms:</string>
     <!-- application description (sentence case); used in the about box and app store listing to enumerate requirements. -->
@@ -757,6 +751,8 @@
 
     <!-- title (title case); used as the -->
     <string name="title_About">About</string>
+    <!-- title (title case); used on Contact Select View when user wants to invite a new contact via email or SMS. -->
+    <string name="title_ActionNotAvailable">Action Not Available</string>
     <!-- menu option (title case); used in the Select File Option menu to take a picture with the camera on iOS. -->
     <string name="title_camera">Camera</string>
     <!-- title (title case); used at the top of the menu when choosing a directory to load or save a file attachment. -->
@@ -782,7 +778,7 @@
     <!-- title (title case); used at the top of the home screen on iOS. -->
     <string name="title_HomePanel">Home</string>
     <!-- title (title case); used as the settings title when changing language -->
-    <string name="title_language" translatable="false">Select language. Help us translate by using Send Feedback.</string>
+    <string name="title_language" translatable="false">Select language. Help us on transifex.com.</string>
     <!-- title (title case); used at the top of the dialog when viewing message details. -->
     <string name="title_MessageDetail">Message</string>
     <!-- title (title case); used at the top of the message list screen. -->

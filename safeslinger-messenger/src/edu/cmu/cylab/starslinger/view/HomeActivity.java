@@ -54,8 +54,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.app.backup.BackupManager;
-import android.app.backup.RestoreObserver;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -123,9 +121,8 @@ import edu.cmu.cylab.starslinger.crypto.CryptoMsgPeerKeyFormatException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
 import edu.cmu.cylab.starslinger.exchange.ExchangeActivity;
 import edu.cmu.cylab.starslinger.exchange.ExchangeConfig;
-import edu.cmu.cylab.starslinger.model.ContactImpp;
 import edu.cmu.cylab.starslinger.model.CryptoMsgPrivateData;
-import edu.cmu.cylab.starslinger.model.ImppValue;
+import edu.cmu.cylab.starslinger.model.DraftData;
 import edu.cmu.cylab.starslinger.model.InboxDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageData;
 import edu.cmu.cylab.starslinger.model.MessageDatabaseHelper;
@@ -137,7 +134,6 @@ import edu.cmu.cylab.starslinger.model.MessageTransport;
 import edu.cmu.cylab.starslinger.model.RecipientDatabaseHelper;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
-import edu.cmu.cylab.starslinger.model.SlingerIdentity;
 import edu.cmu.cylab.starslinger.model.UseContactItem;
 import edu.cmu.cylab.starslinger.model.UseContactItem.UCType;
 import edu.cmu.cylab.starslinger.model.UserData;
@@ -186,21 +182,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     // static data
     private static ProgressDialog sProg = null;
     private static Handler sHandler;
-    private static MessageData sSendMsg = new MessageData();
-    private static String sSenderKey;
-    private static RecipientRow sRecip;
-    private static RecipientRow sRecip1;
-    private static RecipientRow sRecip2;
     private static String sProgressMsg = null;
-    private static String sEditPassPhrase = null;
-    private static boolean sBackupExists = false;
-    private static boolean sRestoring = false;
-    private static boolean sRestoreRequested = false;
-    private static boolean sRestoreReported = false;
-    private static CryptoMsgProvider sKeyData;
-    private static boolean sAppOpened = false;
-    private static ContactStruct sSecureIntro = null;
-    private static Uri sTempCameraFileUri;
 
     private ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
@@ -269,7 +251,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     return;
                 }
             }
-            restart();
+            isSetupCheckComplete();
         }
     };
 
@@ -295,35 +277,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     };
 
-    private boolean requestRestore(Context ctx) {
-        BackupManager bm = new BackupManager(ctx);
-        RestoreObserver restoreObserver = new RestoreObserver() {
-
-            @Override
-            public void restoreStarting(int numPackages) {
-                sRestoring = true;
-                showProgress(getString(R.string.prog_SearchingForBackup));
-            }
-
-            @Override
-            public void restoreFinished(int error) {
-                sBackupExists = (error == 0);
-                sRestoring = false;
-                endProgress();
-            }
-        };
-        try {
-            int res = bm.requestRestore(restoreObserver);
-            return res == 0 ? true : false;
-        } catch (NullPointerException e) {
-            // catch failure of RestoreSession object to manage itself in the
-            // following:
-            // android.app.backup.RestoreSession.endRestoreSession(RestoreSession.java:162)
-            // android.app.backup.BackupManager.requestRestore(BackupManager.java:154)
-            return false;
-        }
-    }
-
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -342,33 +295,29 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // collapse messages to threads when looking for new messages
             MessagesFragment.setRecip(null);
             setTab(Tabs.MESSAGE);
-            restart();
+            refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_BACKUPNOTIFY.equals(action)) {
             // clicked on backup reminder notifications window, show reminder
             // query
             showBackupQuery();
-            restart();
+            refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_SLINGKEYSNOTIFY.equals(action)) {
             // clicked on exchange reminder, show exchange tab
             setTab(Tabs.SLINGKEYS);
-            restart();
+            refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_CHANGESETTINGS.equals(action)) {
 
             // clicked on pass cache notification
             showSettings();
-            restart();
+            refreshView();
 
         } else if (Intent.ACTION_SEND.equals(action) || Intent.ACTION_SEND_MULTIPLE.equals(action)) {
             // clicked share externally, load file, show compose
             if (handleSendToAction()) {
-
                 setTab(Tabs.COMPOSE);
-                if (mTabsAdapter != null && mTabsAdapter.getmTabs() != null
-                        && !mTabsAdapter.getmTabs().isEmpty())
-                    mTabsAdapter.getmTabs().get(Tabs.COMPOSE.ordinal()).args = getComposeArgs();
             }
         } else {
             // if nothing else, make sure proper default tab is selected
@@ -381,9 +330,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 // exchanged.
 
                 setTab(Tabs.SLINGKEYS);
-                if (mTabsAdapter != null && mTabsAdapter.getmTabs() != null
-                        && !mTabsAdapter.getmTabs().isEmpty())
-                    mTabsAdapter.getmTabs().get(Tabs.SLINGKEYS.ordinal()).args = getSlingerArgs();
                 if (SafeSlingerPrefs.getShowWalkthrough()) {
                     BaseActivity.xshowWalkthrough(this).create().show();
                 }
@@ -391,11 +337,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             } else if (dbMessage.getAllMessageCount() == 0) {
                 // Compose should be the default when there are > 1 keys and 0
                 // messages.
-
                 setTab(Tabs.COMPOSE);
-                if (mTabsAdapter != null && mTabsAdapter.getmTabs() != null
-                        && !mTabsAdapter.getmTabs().isEmpty())
-                    mTabsAdapter.getmTabs().get(Tabs.COMPOSE.ordinal()).args = getComposeArgs();
             }
 
             // Messages should be the default when there are > 1 messages.
@@ -460,10 +402,18 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         if (savedInstanceState == null) {
             // init app launch once all time
-            initOnAppLaunchOnly();
+
+            processIntent(getIntent());
+
+            boolean dateChanged = SSUtil.isDayChanged(SafeSlingerPrefs.getContactDBLastScan());
+            if (dateChanged) {
+                SafeSlingerPrefs.setThisVersionOpened();
+                BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
+                backgroundSyncUpdates.execute(new String());
+            }
 
             // init on reload once all time
-            if (!initOnReload()) {
+            if (!isSetupCheckComplete()) {
                 return;
             }
         }
@@ -549,7 +499,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                     .ordinal());
                             if (cf != null) {
                                 cf.updateKeypad();
-                                cf.updateValues(getComposeArgs());
+                                cf.updateValues(null);
                             }
                             break;
                         case MESSAGE:
@@ -557,7 +507,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                     .ordinal());
                             if (mf != null) {
                                 mf.updateKeypad();
-                                mf.updateValues(getMessagesArgs());
+                                mf.updateValues(null);
                             }
                             break;
                         case SLINGKEYS:
@@ -565,7 +515,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                     .ordinal());
                             if (sf != null) {
                                 sf.updateKeypad();
-                                sf.updateValues(getSlingerArgs());
+                                sf.updateValues(null);
                                 if (SafeSlingerPrefs.getShowWalkthrough()) {
                                     BaseActivity.xshowWalkthrough(mActivity).create().show();
                                 }
@@ -576,7 +526,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                     .ordinal());
                             if (sif != null) {
                                 sif.updateKeypad();
-                                sif.updateValues(getIntroArgs());
+                                sif.updateValues(null);
                             }
                             break;
                         default:
@@ -599,7 +549,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             .ordinal());
                     if (cf != null) {
                         cf.updateKeypad();
-                        cf.updateValues(getComposeArgs());
+                        cf.updateValues(null);
                     }
                     break;
                 case MESSAGE:
@@ -607,7 +557,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             .ordinal());
                     if (mf != null) {
                         mf.updateKeypad();
-                        mf.updateValues(getMessagesArgs());
+                        mf.updateValues(null);
                     }
                     break;
                 case SLINGKEYS:
@@ -615,7 +565,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             .ordinal());
                     if (sf != null) {
                         sf.updateKeypad();
-                        sf.updateValues(getSlingerArgs());
+                        sf.updateValues(null);
                     }
                     break;
                 case INTRO:
@@ -623,7 +573,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             .ordinal());
                     if (sif != null) {
                         sif.updateKeypad();
-                        sif.updateValues(getIntroArgs());
+                        sif.updateValues(null);
                     }
                     break;
                 default:
@@ -638,78 +588,30 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    private static Bundle getComposeArgs() {
-        Bundle args = new Bundle();
-        if (sRecip != null) {
-            args.putLong(extra.RECIPIENT_ROW_ID, sRecip.getRowId());
-        } else {
-            args.remove(extra.RECIPIENT_ROW_ID);
-        }
-        args.putString(extra.FILE_PATH, sSendMsg.getFileName());
-        args.putInt(extra.PUSH_FILE_SIZE, sSendMsg.getFileSize());
-        args.putString(extra.TEXT_MESSAGE, sSendMsg.getText());
-        if (!TextUtils.isEmpty(sSendMsg.getFileType()) && sSendMsg.getFileType().contains("image")) {
-            args.putByteArray(extra.THUMBNAIL, SSUtil.makeThumbnail(SafeSlinger.getApplication()
-                    .getApplicationContext(), sSendMsg.getFileData()));
-        } else {
-            args.remove(extra.THUMBNAIL);
-        }
-        return args;
-    }
-
-    private static Bundle getMessagesArgs() {
-        return null;
-    }
-
     protected void restoreView() {
         // all tabs with data...
         if (mTabsAdapter != null) {
             ComposeFragment cf = (ComposeFragment) mTabsAdapter.findFragmentByPosition(Tabs.COMPOSE
                     .ordinal());
             if (cf != null) {
-                cf.updateValues(getComposeArgs());
+                cf.updateValues(null);
             }
             MessagesFragment mf = (MessagesFragment) mTabsAdapter
                     .findFragmentByPosition(Tabs.MESSAGE.ordinal());
             if (mf != null) {
-                mf.updateValues(getMessagesArgs());
+                mf.updateValues(null);
             }
             SlingerFragment sf = (SlingerFragment) mTabsAdapter
                     .findFragmentByPosition(Tabs.SLINGKEYS.ordinal());
             if (sf != null) {
-                sf.updateValues(getSlingerArgs());
+                sf.updateValues(null);
             }
             IntroductionFragment sif = (IntroductionFragment) mTabsAdapter
                     .findFragmentByPosition(Tabs.INTRO.ordinal());
             if (sif != null) {
-                sif.updateValues(getIntroArgs());
+                sif.updateValues(null);
             }
         }
-    }
-
-    private static Bundle getSlingerArgs() {
-        Bundle args = new Bundle();
-        String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
-
-        // valid key and push token is required
-        SlingerIdentity si = new SlingerIdentity(SafeSlingerPrefs.getPushRegistrationId(),
-                SSUtil.getLocalNotification(SafeSlinger.getApplication()), sSenderKey);
-        final String token = SlingerIdentity.sidPush2DBPush(si);
-        final String pubkey = SlingerIdentity.sidKey2DBKey(si);
-        if (TextUtils.isEmpty(token)) {
-            return args;
-        } else if (TextUtils.isEmpty(pubkey)) {
-            return args;
-        }
-
-        ArrayList<ImppValue> impps = new ArrayList<ImppValue>();
-        impps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUSHTOKEN, SSUtil.finalEncode(token
-                .getBytes())));
-        impps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUBKEY, SSUtil.finalEncode(pubkey
-                .getBytes())));
-        args.putAll(writeSingleExportExchangeArgs(new ContactImpp(contactLookupKey, impps)));
-
-        return args;
     }
 
     private void showExchange(byte[] userData) {
@@ -725,109 +627,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         startActivityForResult(intent, VIEW_SAVE_ID);
     }
 
-    public void doUpgradeDatabaseInPlace() throws IllegalArgumentException {
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
-        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-
-        // only do this once for version 5, if done again will break recip db
-        if (SafeSlingerPrefs.getCurrentRecipientDBVer() < 6) {
-            Cursor c = dbRecipient.fetchAllRecipientsUpgradeTo6();
-            if (c != null) {
-                while (c.moveToNext()) {
-                    long rowId = c.getLong(c.getColumnIndexOrThrow(RecipientDbAdapter.KEY_ROWID));
-                    long mykeyid_long = c.getLong(c
-                            .getColumnIndexOrThrow(RecipientDbAdapter.KEY_MYKEYIDLONG));
-                    long keyid_long = c.getLong(c
-                            .getColumnIndexOrThrow(RecipientDbAdapter.KEY_KEYIDLONG));
-                    dbRecipient.updateRecipientKeyIds2String(rowId, mykeyid_long, keyid_long);
-                }
-                c.close();
-                SafeSlingerPrefs.setCurrentRecipientDBVer(RecipientDatabaseHelper.DATABASE_VERSION);
-            }
-        }
-
-        if (SafeSlingerPrefs.getCurrentMessageDBVer() < 6) {
-            Cursor c = dbMessage.fetchAllMessagesUpgradeTo6();
-            if (c != null) {
-                while (c.moveToNext()) {
-                    long rowId = c.getLong(c.getColumnIndexOrThrow(MessageDbAdapter.KEY_ROWID));
-                    long keyid_long = c.getLong(c
-                            .getColumnIndexOrThrow(MessageDbAdapter.KEY_KEYIDLONG));
-                    dbMessage.updateMessageKeyId2String(rowId, keyid_long);
-                }
-                c.close();
-                SafeSlingerPrefs.setCurrentMessageDBVer(MessageDatabaseHelper.DATABASE_VERSION);
-            }
-        }
-
-        // look for old messages without key ids read out
-        if (dbMessage.getVersion() >= 6) {
-            Cursor cm = dbMessage.fetchAllMessagesByThread(null);
-            if (cm != null) {
-                while (cm.moveToNext()) {
-                    MessageRow messageRow = new MessageRow(cm, false);
-                    byte[] encMsg = messageRow.getEncBody();
-                    if (encMsg != null) {
-                        CryptoMsgProvider tool = CryptoMsgProvider.createInstance(SafeSlinger
-                                .isLoggable());
-                        String keyid = null;
-                        try {
-                            keyid = tool.ExtractKeyIDfromPacket(encMsg);
-                        } catch (CryptoMsgPacketSizeException e) {
-                            e.printStackTrace();
-                        }
-                        if (!TextUtils.isEmpty(keyid)) {
-                            dbMessage.updateMessageKeyId(messageRow.getRowId(), keyid);
-                        }
-                    }
-                }
-                cm.close();
-            }
-        }
-
-    }
-
-    private void initOnAppLaunchOnly() {
-
-        // notify user if there are connectivity issues...
-        if (!SafeSlinger.getApplication().isOnline()) {
-            showNote(R.string.error_CorrectYourInternetConnection);
-        }
-
-        processIntent(getIntent());
-    }
-
-    private boolean initOnReload() {
-
-        // check early for key and attempt restore if not found...
-        if (sRestoring) {
-            return false;
-        }
-        if (!sRestoreRequested
-                && !SSUtil.fileExists(getApplicationContext(), CryptTools.getCurrentKeyFile())) {
-            try {
-                sRestoreRequested = true;
-                sBackupExists = requestRestore(getApplicationContext());
-                if (sBackupExists) {
-                    return false;
-                }
-            } catch (SecurityException e) {
-                // some devices do not grant permission for restore operation...
-                sRestoreReported = true;
-                showNote(R.string.error_BackupNotSupportedDevice);
-            }
-        }
-        if (sRestoreRequested && !sRestoreReported) {
-            // even though backup has reported success, it may not have
-            // worked...
-            sRestoreReported = true;
-            if (SSUtil.fileExists(getApplicationContext(), CryptTools.getCurrentKeyFile())) {
-                showNote(R.string.state_BackupRestored);
-            }
-        }
-
-        // we passed backup restore, now we can load databases...
-        doUpgradeDatabaseInPlace();
+    private boolean isSetupCheckComplete() {
 
         // contact
         String contactName = SafeSlingerPrefs.getContactName();
@@ -841,14 +641,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             showNote(R.string.error_InvalidContactName);
             showFindContact();
             return false;
-        }
-
-        boolean dateChanged = SSUtil.isDayChanged(SafeSlingerPrefs.getContactDBLastScan());
-        if (!sAppOpened || dateChanged) {
-            sAppOpened = true;
-            SafeSlingerPrefs.setThisVersionOpened();
-            BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
-            backgroundSyncUpdates.execute(new String());
         }
 
         // init local struct...
@@ -877,17 +669,25 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // key not found, try loading older version for base user only
             hasSecretKey = CryptToolsLegacy.existsSecretKeyOld();
         }
+        if (!hasSecretKey) {
+            showFindContact(); // new
+        }
+
+        if (!isUserLoggedIn()) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean isUserLoggedIn() {
 
         // if no pass exists...
         // ...request pass entry... (restart)
         // now with contact, enter pass phrase and check
         if (!loadCurrentPassPhrase()) {
             if (!SafeSlinger.isPassphraseOpen()) {
-                if (!hasSecretKey) {
-                    showFindContact(); // new
-                } else {
-                    showPassPhrase(false, false); // normal
-                }
+                showPassPhrase(false, false); // normal
             }
             return false;
         }
@@ -900,13 +700,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         super.onSaveInstanceState(outState);
 
         // save
-        if (sTempCameraFileUri != null) {
-            outState.putString(extra.FILE_PATH, sTempCameraFileUri.getPath());
+        if (SafeSlinger.getTempCameraFileUri() != null) {
+            outState.putString(extra.FILE_PATH, SafeSlinger.getTempCameraFileUri().getPath());
         }
         final int position = getSupportActionBar().getSelectedNavigationIndex();
         outState.putInt(extra.RECOVERY_TAB, position);
-        outState.putAll(getComposeArgs());
-        outState.putAll(getSlingerArgs());
 
         if (sProg != null && sProg.isShowing()) {
             outState.putInt(extra.PCT, sProg.isIndeterminate() ? 0 : sProg.getProgress());
@@ -975,13 +773,17 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     private class CreateKeyTask extends AsyncTask<String, String, String> {
+        private CryptoMsgProvider mKeyData;
+        private String mEditPassPhrase;
+
         @Override
         protected String doInBackground(String... arg0) {
+            mEditPassPhrase = arg0[0];
             publishProgress(getString(R.string.prog_GeneratingKey));
             try {
-                sKeyData = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
-                sKeyData.GenKeyPairs();
-                if (!sKeyData.isGenerated()) {
+                mKeyData = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
+                mKeyData.GenKeyPairs();
+                if (!mKeyData.isGenerated()) {
                     throw new CryptoMsgException(
                             getString(R.string.error_couldNotExtractPrivateKey));
                 }
@@ -992,7 +794,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             } catch (CryptoMsgException e) {
                 return e.getLocalizedMessage();
             }
-            endProgress();
             return null;
         }
 
@@ -1003,37 +804,38 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         @Override
         protected void onPostExecute(String result) {
+            endProgress();
             if (result != null) {
                 showErrorExit(result);
                 return;
             }
 
             try {
-                if (!sKeyData.isGenerated()) {
+                if (!mKeyData.isGenerated()) {
                     throw new CryptoMsgException(
                             getString(R.string.error_couldNotExtractPrivateKey));
                 }
 
-                CryptoMsgPrivateData mine = new CryptoMsgPrivateData(sKeyData);
+                CryptoMsgPrivateData mine = new CryptoMsgPrivateData(mKeyData);
 
                 // save public portion
-                sSenderKey = mine.getSafeSlingerString();
+                SafeSlinger.setSenderKey(mine.getSafeSlingerString());
 
                 SafeSlingerPrefs.setKeyIdString(mine.getKeyId());
                 SafeSlingerPrefs.setKeyDate(mine.getGenDate());
 
                 // save private portion in secret key storage...
-                CryptTools.putSecretKey(mine, sEditPassPhrase);
+                CryptTools.putSecretKey(mine, mEditPassPhrase);
 
                 // update cache to avoid entering twice...
-                SafeSlinger.setCachedPassPhrase(sKeyData.GetSelfKeyid(), sEditPassPhrase);
+                SafeSlinger.setCachedPassPhrase(mKeyData.GetSelfKeyid(), mEditPassPhrase);
                 updatePassCacheTimer();
 
                 // now that we have new key id, use it when updating contacts...
                 BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
                 backgroundSyncUpdates.execute(new String());
 
-                restart();
+                isSetupCheckComplete();
             } catch (IOException e) {
                 showErrorExit(e);
             } catch (CryptoMsgException e) {
@@ -1050,7 +852,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (TextUtils.isEmpty(sendMsg.getText()) && TextUtils.isEmpty(sendMsg.getFileName())) {
             showNote(R.string.error_selectDataToSend);
             setTab(Tabs.COMPOSE);
-            restart();
+            refreshView();
             return;
         }
 
@@ -1059,7 +861,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         } else {
             if (sendMsg.getFileData() == null || sendMsg.getFileSize() == 0) {
                 showNote(R.string.error_InvalidMsg);
-                restart();
+                refreshView();
                 return;
             }
         }
@@ -1073,7 +875,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 sendMsg.setRowId(rowId);
                 if (rowId < 0) {
                     showNote(R.string.error_UnableToSaveMessageInDB);
-                    restart();
+                    refreshView();
                     return;
                 }
             }
@@ -1090,26 +892,26 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // update draft
             if (!dbMessage.updateDraftMessage(sendMsg.getRowId(), recip, sendMsg)) {
                 showNote(R.string.error_UnableToUpdateMessageInDB);
-                restart();
+                refreshView();
                 return;
             }
         }
 
         if (recip == null) {
             showNote(R.string.error_InvalidRecipient);
-            restart();
+            refreshView();
             return;
         }
         if (!SafeSlinger.getApplication().isOnline()) {
             showNote(R.string.error_CorrectYourInternetConnection);
-            restart();
+            refreshView();
             return;
         }
 
         // update status as queued for transmission
         if (!dbMessage.updateEnqueuedMessage(sendMsg.getRowId())) {
             showNote(R.string.error_UnableToUpdateMessageInDB);
-            restart();
+            refreshView();
             return;
         }
         // confirm msg is queued
@@ -1119,7 +921,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             c.close();
             if (queued.getStatus() != MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
                 showNote(R.string.error_UnableToUpdateMessageInDB);
-                restart();
+                refreshView();
                 return;
             }
         }
@@ -1132,7 +934,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         // switch to message tab
         setTab(Tabs.MESSAGE);
-        restart();
+        refreshView();
 
         // start background task to send
         SendFileTask task = new SendFileTask();
@@ -1171,8 +973,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 return false;
 
             } else if (action.equals(Intent.ACTION_SEND)) {
+                DraftData d = DraftData.INSTANCE;
 
-                sSendMsg.setMsgHash(null);
+                d.setMsgHash(null);
 
                 String type = intent.getType();
                 Uri stream = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
@@ -1187,17 +990,17 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         } else if (!TextUtils.isEmpty(extra_text)) {
                             filesize = extra_text.length();
                             if (filesize <= SafeSlingerConfig.MAX_TEXTMESSAGE) {
-                                sSendMsg.removeFile();
-                                sSendMsg.setText(extra_text.toString());
+                                d.removeFile();
+                                d.setText(extra_text.toString());
                             } else {
-                                sSendMsg.setFileType("text/plain");
+                                d.setFileType("text/plain");
                                 final byte[] textBytes = extra_text.toString().getBytes();
-                                sSendMsg.setFileData(textBytes);
-                                sSendMsg.setFileSize(textBytes.length);
+                                d.setFileData(textBytes);
+                                d.setFileSize(textBytes.length);
                                 SimpleDateFormat sdf = new SimpleDateFormat(
                                         SafeSlingerConfig.DATETIME_FILENAME, Locale.US);
-                                sSendMsg.setFileName(sdf.format(new Date()) + ".txt");
-                                sSendMsg.removeText();
+                                d.setFileName(sdf.format(new Date()) + ".txt");
+                                d.removeText();
                             }
                         }
                     }
@@ -1322,21 +1125,23 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         baos.flush();
 
         final byte[] fileBytes = baos.toByteArray();
-        sSendMsg.setFileData(fileBytes);
-        sSendMsg.setFileSize(fileBytes.length);
-        sSendMsg.setFileType(contentType);
-        sSendMsg.setFileName(name);
+        DraftData d = DraftData.INSTANCE;
+        d.setFileData(fileBytes);
+        d.setFileSize(fileBytes.length);
+        d.setFileType(contentType);
+        d.setFileName(name);
         if (f != null && f.exists()) {
-            sSendMsg.setFileDir(f.getAbsolutePath());
+            d.setFileDir(f.getAbsolutePath());
         } else if (!TextUtils.isEmpty(data)) {
-            sSendMsg.setFileDir(new File(data).getAbsolutePath());
+            d.setFileDir(new File(data).getAbsolutePath());
         }
-        return sSendMsg.getFileSize();
+        return d.getFileSize();
     }
 
     @Override
     public void onComposeResultListener(Bundle data) {
         int resultCode = data.getInt(extra.RESULT_CODE);
+        DraftData d = DraftData.INSTANCE;
         String text = null;
         if (data != null) {
             text = data.getString(extra.TEXT_MESSAGE);
@@ -1346,7 +1151,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         .openInstance(getApplicationContext());
                 Cursor c = dbRecipient.fetchRecipient(rowIdRecipient);
                 if (c != null) {
-                    sRecip = new RecipientRow(c);
+                    d.setRecip(new RecipientRow(c));
                     c.close();
                 } else {
                     showNote(R.string.error_InvalidRecipient);
@@ -1360,14 +1165,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             case ComposeFragment.RESULT_SAVE:
                 MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
 
-                sSendMsg.setText(text);
-                if (sSendMsg.getRowId() < 0) {
+                d.setText(text);
+                if (d.getSendMsgRowId() < 0) {
                     // create draft (need at least recipient(file) or text
                     // chosen...
-                    if (!TextUtils.isEmpty(sSendMsg.getText())
-                            || !TextUtils.isEmpty(sSendMsg.getFileName())) {
-                        long rowId = dbMessage.createDraftMessage(sRecip, sSendMsg);
-                        sSendMsg.setRowId(rowId);
+                    if (!TextUtils.isEmpty(d.getText()) || !TextUtils.isEmpty(d.getFileName())) {
+                        long rowId = dbMessage.createDraftMessage(d.getRecip(), d.getSendMsg());
+                        d.setSendMsgRowId(rowId);
                         if (rowId < 0) {
                             showNote(R.string.error_UnableToSaveMessageInDB);
                         } else {
@@ -1375,7 +1179,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         }
                     }
                 } else {
-                    Cursor c = dbMessage.fetchMessageSmall(sSendMsg.getRowId());
+                    Cursor c = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
                     if (c != null) {
                         MessageRow msg = new MessageRow(c, false);
                         c.close();
@@ -1384,43 +1188,43 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         }
                     }
 
-                    if (!TextUtils.isEmpty(sSendMsg.getText())
-                            || !TextUtils.isEmpty(sSendMsg.getFileName())) {
+                    if (!TextUtils.isEmpty(d.getText()) || !TextUtils.isEmpty(d.getFileName())) {
                         // update draft
-                        if (!dbMessage.updateDraftMessage(sSendMsg.getRowId(), sRecip, sSendMsg)) {
+                        if (!dbMessage.updateDraftMessage(d.getSendMsgRowId(), d.getRecip(),
+                                d.getSendMsg())) {
                             showNote(R.string.error_UnableToUpdateMessageInDB);
                         }
                     } else {
                         // message is empty, we should remove from database...
-                        if (!dbMessage.deleteMessage(sSendMsg.getRowId())) {
+                        if (!dbMessage.deleteMessage(d.getSendMsgRowId())) {
                             showNote(String.format(getString(R.string.state_MessagesDeleted), 0));
                         }
-                        sSendMsg = new MessageData();
+                        d.clearSendMsg();
                     }
                 }
 
                 break;
             case ComposeFragment.RESULT_SEND:
                 // create new
-                MessageData sendMsg = sSendMsg;
+                MessageData sendMsg = d.getSendMsg();
                 sendMsg.setText(text);
                 // remove draft
-                sSendMsg = new MessageData();
+                d.clearSendMsg();
                 // user wants to post the file and notify recipient
-                if (sRecip == null) {
+                if (!d.existsRecip()) {
                     showNote(R.string.error_InvalidRecipient);
-                    restart();
+                    refreshView();
                     break;
                 }
-                if (sRecip.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
+                if (d.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
                     showNote(R.string.error_InvalidRecipient);
-                    restart();
+                    refreshView();
                     break;
                 }
-                doSendFileStart(sRecip, sendMsg);
+                doSendFileStart(d.getRecip(), sendMsg);
                 break;
             case ComposeFragment.RESULT_RESTART:
-                restart();
+                refreshView();
                 break;
             case ComposeFragment.RESULT_USEROPTIONS:
                 showChangeSenderOptions();
@@ -1435,9 +1239,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 break;
             case ComposeFragment.RESULT_FILEREMOVE:
                 // user wants to remove file
-                sSendMsg.removeFile();
+                d.removeFile();
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
                 break;
         }
     }
@@ -1445,6 +1249,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     @Override
     public void onMessageResultListener(Bundle data) {
         int resultCode = data.getInt(extra.RESULT_CODE);
+        DraftData d = DraftData.INSTANCE;
         String text = null;
         RecipientRow recip = null;
         long rowIdMessage = -1;
@@ -1513,8 +1318,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     }
                 }
                 // update local as well
-                if (saveMsg.getRowId() > -1 && saveMsg.getRowId() == sSendMsg.getRowId()) {
-                    sSendMsg = saveMsg;
+                if (saveMsg.getRowId() > -1 && saveMsg.getRowId() == d.getSendMsgRowId()) {
+                    d.setSendMsg(saveMsg);
                 }
                 break;
             case MessagesFragment.RESULT_SEND:
@@ -1524,67 +1329,66 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 // user wants to post the file and notify recipient
                 if (recip == null) {
                     showNote(R.string.error_InvalidRecipient);
-                    restart();
+                    refreshView();
                     break;
                 }
                 if (recip.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
                     showNote(R.string.error_InvalidRecipient);
-                    restart();
+                    refreshView();
                     break;
                 }
                 doSendFileStart(recip, sendMsg);
                 break;
             case MessagesFragment.RESULT_FWDMESSAGE:
-                sSendMsg = new MessageData();
-                sSendMsg.setRowId(rowIdMessage);
-                Cursor cfm = dbMessage.fetchMessageSmall(sSendMsg.getRowId());
+                d.clearSendMsg();
+                d.setSendMsgRowId(rowIdMessage);
+                Cursor cfm = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
                 if (cfm != null) {
                     MessageRow edit = new MessageRow(cfm, false);
                     cfm.close();
-                    sSendMsg.setText(edit.getText());
+                    d.setText(edit.getText());
                     try {
                         if (!TextUtils.isEmpty(edit.getFileDir())) {
                             doLoadAttachment(edit.getFileDir());
                         }
                     } catch (FileNotFoundException e) {
                         showNote(e);
-                        restart();
+                        refreshView();
                         break;
                     }
                 }
-                sRecip = null;
+                d.clearRecip();
 
                 // create draft
-                if (!TextUtils.isEmpty(sSendMsg.getText())
-                        || !TextUtils.isEmpty(sSendMsg.getFileName())) {
-                    long rowId = dbMessage.createDraftMessage(sRecip, sSendMsg);
-                    sSendMsg.setRowId(rowId);
+                if (!TextUtils.isEmpty(d.getText()) || !TextUtils.isEmpty(d.getFileName())) {
+                    long rowId = dbMessage.createDraftMessage(d.getRecip(), d.getSendMsg());
+                    d.setSendMsgRowId(rowId);
                 }
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
                 break;
             case MessagesFragment.RESULT_EDITMESSAGE:
-                sSendMsg = new MessageData();
-                sSendMsg.setRowId(rowIdMessage);
-                Cursor cem = dbMessage.fetchMessageSmall(sSendMsg.getRowId());
+                d.clearSendMsg();
+                d.setSendMsgRowId(rowIdMessage);
+                Cursor cem = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
                 if (cem != null) {
                     MessageRow edit = new MessageRow(cem, false);
                     cem.close();
-                    sRecip = recip;
-                    sSendMsg.setText(edit.getText());
-                    sSendMsg.setKeyId(edit.getKeyId());
+                    d.setRecip(recip);
+                    d.setText(edit.getText());
+                    d.setKeyId(edit.getKeyId());
                     try {
                         if (!TextUtils.isEmpty(edit.getFileDir())) {
                             doLoadAttachment(edit.getFileDir());
                         }
                     } catch (FileNotFoundException e) {
                         showNote(e);
-                        restart();
+                        refreshView();
                         break;
                     }
                 }
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
                 break;
             case MessagesFragment.RESULT_GETMESSAGE:
                 MessageData inbox = new MessageData();
@@ -1596,7 +1400,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     getMessageTask.execute(inbox);
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
-                    restart();
+                    refreshView();
                 }
                 break;
             case MessagesFragment.RESULT_GETFILE:
@@ -1613,7 +1417,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     getFileTask.execute(recvFile);
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
-                    restart();
+                    refreshView();
                 }
                 break;
         }
@@ -1640,6 +1444,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     @Override
     public void onIntroResultListener(Bundle data) {
         int resultCode = data.getInt(extra.RESULT_CODE);
+        DraftData d = DraftData.INSTANCE;
 
         switch (resultCode) {
             case IntroductionFragment.RESULT_RECIPSEL1:
@@ -1653,7 +1458,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             case IntroductionFragment.RESULT_SLINGKEYS:
                 setTab(Tabs.SLINGKEYS);
-                restart();
+                refreshView();
                 break;
             case IntroductionFragment.RESULT_SEND:
                 if (data != null) {
@@ -1693,19 +1498,19 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // user wants to post the file and notify recipient
                     if (recip1 == null || recip2 == null) {
                         showNote(R.string.error_InvalidRecipient);
-                        restart();
+                        refreshView();
                         break;
                     }
                     if (recip1.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH
                             || recip2.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
                         showNote(R.string.error_InvalidRecipient);
-                        restart();
+                        refreshView();
                         break;
                     }
 
                     if (recip1.isDeprecated() || recip2.isDeprecated()) {
                         showNote(R.string.error_AllMembersMustUpgradeBadKeyFormat);
-                        restart();
+                        refreshView();
                         break;
                     }
 
@@ -1725,13 +1530,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         vCard2 = SSUtil.generateRecipientVCard(recip2);
                     } catch (VCardException e) {
                         showNote(e.getLocalizedMessage());
-                        restart();
+                        refreshView();
                         break;
                     }
 
                     if (TextUtils.isEmpty(vCard1) || TextUtils.isEmpty(vCard2)) {
                         showNote(R.string.error_VcardParseFailure);
-                        restart();
+                        refreshView();
                         break;
                     }
 
@@ -1751,7 +1556,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     }
                     if (errors.length() > 0) {
                         showNote(errors.toString());
-                        restart();
+                        refreshView();
                         break;
                     }
 
@@ -1774,10 +1579,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     doSendFileStart(recip2, sendMsg2);
 
                     // reset after complete, little slow, better than nothing
-                    sRecip1 = null;
-                    sRecip2 = null;
+                    d.clearRecip1();
+                    d.clearRecip2();
                     setTab(Tabs.MESSAGE);
-                    restart();
+                    refreshView();
                 }
                 break;
             case Activity.RESULT_CANCELED:
@@ -1837,7 +1642,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 setPassphraseStatus(true);
                 if (mine != null) {
                     // save loaded pub key for slinging keys later
-                    sSenderKey = mine.getSafeSlingerString();
+                    SafeSlinger.setSenderKey(mine.getSafeSlingerString());
                 }
             } else {
                 setPassphraseStatus(false);
@@ -1848,7 +1653,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 updatePassCacheTimer();
                 setPassphraseStatus(true);
                 // save loaded pub key for slinging keys later
-                sSenderKey = mine.getSafeSlingerString();
+                SafeSlinger.setSenderKey(mine.getSafeSlingerString());
             } else {
                 setPassphraseStatus(false);
             }
@@ -1858,6 +1663,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        DraftData d = DraftData.INSTANCE;
 
         switch (requestCode) {
 
@@ -1879,9 +1685,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 boolean preExistingKey = doPassEntryCheck(pass, oldPass,
                                         requestCode == VIEW_PASSPHRASE_CHANGE_ID);
                                 if (!preExistingKey) {
-                                    sEditPassPhrase = pass;
                                     CreateKeyTask createKey = new CreateKeyTask();
-                                    createKey.execute(new String());
+                                    createKey.execute(pass);
                                     break;
                                 }
 
@@ -1905,10 +1710,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 }
                             }
                         }
-                        restart();
+                        isSetupCheckComplete();
                         break;
                     case PassPhraseActivity.RESULT_CLOSEANDCONTINUE:
-                        restart();
+                        isSetupCheckComplete();
                         break;
                     case RESULT_CANCELED:
                         if (requestCode == VIEW_FINDCONTACT_ID) {
@@ -1935,7 +1740,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     case RESULT_CANCELED:
                         SafeSlingerPrefs
                                 .setPushRegistrationIdWriteOnlyC2dm(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA);
-                        restart();
+                        isSetupCheckComplete();
                         break;
                 }
                 break;
@@ -1944,7 +1749,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 switch (resultCode) {
                     case PickRecipientsActivity.RESULT_SLINGKEYS:
                         setTab(Tabs.SLINGKEYS);
-                        restart();
+                        refreshView();
                         break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         RecipientDbAdapter dbRecipient = RecipientDbAdapter
@@ -1952,27 +1757,27 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         long rowIdRecipient = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient);
                         if (c != null) {
-                            sRecip = new RecipientRow(c);
+                            d.setRecip(new RecipientRow(c));
                             c.close();
 
                             CheckRegistrationStateTask task = new CheckRegistrationStateTask();
-                            task.execute(sRecip);
+                            task.execute(d.getRecip());
 
                             setTab(Tabs.COMPOSE);
-                            restart();
+                            refreshView();
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             setTab(Tabs.COMPOSE);
-                            restart();
+                            refreshView();
                             break;
                         }
 
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
-                        sRecip = null;
+                        d.clearRecip();
                         setTab(Tabs.COMPOSE);
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -1981,12 +1786,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 switch (resultCode) {
                     case PickRecipientsActivity.RESULT_SLINGKEYS:
                         setTab(Tabs.SLINGKEYS);
-                        restart();
+                        refreshView();
                         break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient1 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
 
-                        if (sRecip2 != null && rowIdRecipient1 == sRecip2.getRowId()) {
+                        if (d.existsRecip2() && rowIdRecipient1 == d.getRecip2RowId()) {
                             showNote(R.string.error_InvalidRecipient);
                             break;
                         }
@@ -1995,9 +1800,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 .openInstance(getApplicationContext());
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient1);
                         if (c != null) {
-                            sRecip1 = new RecipientRow(c);
+                            d.setRecip1(new RecipientRow(c));
                             c.close();
-                            restart();
+                            refreshView();
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             break;
@@ -2005,9 +1810,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
-                        sRecip1 = null;
+                        d.clearRecip1();
                         setTab(Tabs.INTRO);
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -2016,12 +1821,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 switch (resultCode) {
                     case PickRecipientsActivity.RESULT_SLINGKEYS:
                         setTab(Tabs.SLINGKEYS);
-                        restart();
+                        refreshView();
                         break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient2 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
 
-                        if (sRecip1 != null && rowIdRecipient2 == sRecip1.getRowId()) {
+                        if (d.existsRecip1() && rowIdRecipient2 == d.getRecip1RowId()) {
                             showNote(R.string.error_InvalidRecipient);
                             break;
                         }
@@ -2030,9 +1835,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 .openInstance(getApplicationContext());
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient2);
                         if (c != null) {
-                            sRecip2 = new RecipientRow(c);
+                            d.setRecip2(new RecipientRow(c));
                             c.close();
-                            restart();
+                            refreshView();
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             break;
@@ -2040,9 +1845,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
-                        sRecip2 = null;
+                        d.clearRecip2();
                         setTab(Tabs.INTRO);
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -2055,7 +1860,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // TODO: find better update for <= 2.3
                     // startActivity(getIntent());
                     // finish();
-                    restart();
+                    refreshView();
                 }
 
                 switch (resultCode) {
@@ -2093,12 +1898,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             doSaveDownloadedFile(new File(chosenPath, chosenFile), recvMsg);
                         } catch (OutOfMemoryError e) {
                             showNote(R.string.error_OutOfMemoryError);
-                            restart();
+                            refreshView();
                             break;
                         }
                         break;
                     case RESULT_CANCELED:
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -2109,7 +1914,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         showSave(data.getExtras());
                         break;
                     case ExchangeActivity.RESULT_EXCHANGE_CANCELED:
-                        restart();
+                        refreshView();
                         break;
                 }
                 break;
@@ -2158,10 +1963,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             }
                             c.close();
                         }
-                        restart();
+                        refreshView();
                         break;
                     case RESULT_CANCELED:
-                        restart();
+                        refreshView();
                         break;
                     default:
                         break;
@@ -2177,7 +1982,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             if (data == null) {
                                 // capture camera data from 1st non-standard
                                 // return from hardware
-                                path = sTempCameraFileUri.getPath();
+                                path = SafeSlinger.getTempCameraFileUri().getPath();
                                 doLoadAttachment(path);
                             } else {
                                 String chosenFile = data.getStringExtra(extra.FNAME);
@@ -2194,37 +1999,37 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                     long filesize = getOutStreamSizeAndData(data.getData(), null);
                                     if (filesize <= 0) {
                                         showNote(R.string.error_CannotSendEmptyFile);
-                                        restart();
+                                        refreshView();
                                         break;
                                     }
                                 } else {
                                     // capture camera data from 2nd non-standard
                                     // return from hardware
-                                    path = sTempCameraFileUri.getPath();
+                                    path = SafeSlinger.getTempCameraFileUri().getPath();
                                     doLoadAttachment(path);
                                 }
                             }
                         } catch (OutOfMemoryError e) {
                             showNote(R.string.error_OutOfMemoryError);
-                            restart();
+                            refreshView();
                             break;
                         } catch (FileNotFoundException e) {
                             showNote(e);
-                            restart();
+                            refreshView();
                             break;
                         } catch (IOException e) {
                             showNote(e);
-                            restart();
+                            refreshView();
                             break;
                         }
 
                         setTab(Tabs.COMPOSE);
-                        restart();
+                        refreshView();
                         break;
                     case RESULT_CANCELED:
-                        sSendMsg.removeFile();
+                        d.removeFile();
                         setTab(Tabs.COMPOSE);
-                        restart();
+                        refreshView();
                         break;
                     default:
                         break;
@@ -2233,7 +2038,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             case RESULT_PICK_MSGAPP:
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
                 break;
 
             case RESULT_ERROR:
@@ -2259,7 +2064,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     private ArrayList<UserData> getMoreRecentKeys() {
         ArrayList<UserData> recentKeys = new ArrayList<UserData>();
-        int totalUsers = SafeSlinger.getTotalUsers();
+        int totalUsers = SSUtil.getTotalUsers();
         for (int i = 0; i < totalUsers; i++) {
             long date = SafeSlingerPrefs.getKeyDate(i);
             String name = SafeSlingerPrefs.getContactName(i);
@@ -2345,63 +2150,65 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         File phy = new File(path); // physical
         File vir = new File(path); // virtual, change if needed
         FileInputStream is = new FileInputStream(phy.getAbsolutePath());
+        DraftData d = DraftData.INSTANCE;
 
         try {
             byte[] outFileData = new byte[is.available()];
             is.read(outFileData);
-            sSendMsg.setFileData(outFileData);
-            sSendMsg.setFileSize(outFileData.length);
+            d.setFileData(outFileData);
+            d.setFileSize(outFileData.length);
 
-            if (sSendMsg.getFileSize() > SafeSlingerConfig.MAX_FILEBYTES) {
+            if (d.getFileSize() > SafeSlingerConfig.MAX_FILEBYTES) {
                 is.close();
                 showNote(String.format(getString(R.string.error_CannotSendFilesOver),
                         SafeSlingerConfig.MAX_FILEBYTES));
-                restart();
+                refreshView();
                 return;
             }
 
             String type = URLConnection.guessContentTypeFromStream(is);
             if (type != null)
-                sSendMsg.setFileType(type);
+                d.setFileType(type);
             else {
                 String extension = SSUtil.getFileExtensionOnly(vir.getName());
                 type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
                 if (type != null) {
-                    sSendMsg.setFileType(type);
+                    d.setFileType(type);
                 } else {
-                    sSendMsg.setFileType(SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF);
+                    d.setFileType(SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF);
                 }
             }
             is.close();
 
         } catch (OutOfMemoryError e) {
             showNote(R.string.error_OutOfMemoryError);
-            restart();
+            refreshView();
             return;
         } catch (IOException e) {
             showNote(e);
-            restart();
+            refreshView();
             return;
         }
-        sSendMsg.setFileName(vir.getName());
-        sSendMsg.setFileDir(phy.getPath());
-        sSendMsg.setMsgHash(null);
+        d.setFileName(vir.getName());
+        d.setFileDir(phy.getPath());
+        d.setMsgHash(null);
     }
 
     private void doSaveDownloadedFile(File file, MessageData recvMsg) {
         if (saveFileAtLocation(file, recvMsg)) {
             // back to messages, to tap for open...
             setTab(Tabs.MESSAGE);
-            restart();
+            refreshView();
         } else {
             showNote(String.format(getString(R.string.error_FileSave), recvMsg.getFileName()));
-            restart();
+            refreshView();
         }
     }
 
     private void doSelectRecipientPostExchange(Bundle args, int recipSource) {
         // check for presence of one key only to pre-select recipient
         CryptoMsgProvider p = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
+        DraftData d = DraftData.INSTANCE;
         byte[] keyBytes = null;
         String keyStr = null;
         String keyId = null;
@@ -2428,18 +2235,19 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     .openInstance(getApplicationContext());
             Cursor cr = dbRecipient.fetchRecipientByKeyId(keyId);
             if (cr != null) {
-                sRecip = new RecipientRow(cr);
+                d.setRecip(new RecipientRow(cr));
                 cr.close();
             }
-            if (sRecip != null) {
-                sSendMsg = new MessageData();
+            if (d.existsRecip()) {
+                d.clearSendMsg();
                 setTab(Tabs.COMPOSE);
-                restart();
+                refreshView();
             }
         }
     }
 
     private void doProcessSafeSlingerMimeType(MessageData recvMsg) {
+        ContactStruct intro = null;
         String[] types = recvMsg.getFileType().split("/");
         if (types.length == 2) {
             if (types[1].compareToIgnoreCase(SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO) == 0) {
@@ -2486,7 +2294,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
 
                 // save for processing...
-                sSecureIntro = parsedContacts.get(0);
+                intro = parsedContacts.get(0);
 
                 RecipientRow exchRecip = null;
                 MessageRow inviteMsg = null;
@@ -2499,7 +2307,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
                 if (inviteMsg == null) {
                     showNote(R.string.error_InvalidIncomingMessage);
-                    sSecureIntro = null;
                     return;
                 }
 
@@ -2512,18 +2319,33 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
                 if (exchRecip == null) {
                     showNote(R.string.error_InvalidRecipient);
-                    sSecureIntro = null;
                     return;
                 }
 
                 String exchName = exchRecip.getName();
-                String introName = sSecureIntro.name.toString();
-                byte[] introPhoto = sSecureIntro.photoBytes;
-                showIntroductionInvite(exchName, introName, introPhoto, recvMsg.getRowId());
+                String introName = intro.name.toString();
+                byte[] introPhoto = intro.photoBytes;
+                byte[] introPush = null;
+                byte[] introPubKey = null;
+
+                List<ContactMethod> contactmethodList = intro.contactmethodList;
+                if (contactmethodList != null) {
+                    for (ContactMethod item : contactmethodList) {
+                        if (item.kind == android.provider.Contacts.KIND_IM) {
+                            if (item.label.compareTo(SafeSlingerConfig.APP_KEY_PUBKEY) == 0) {
+                                introPubKey = SSUtil.finalDecode(item.data.getBytes());
+                            } else if (item.label.compareTo(SafeSlingerConfig.APP_KEY_PUSHTOKEN) == 0) {
+                                introPush = SSUtil.finalDecode(item.data.getBytes());
+                            }
+                        }
+                    }
+                }
+
+                showIntroductionInvite(exchName, introName, introPhoto, introPush, introPubKey,
+                        recvMsg.getRowId());
             }
         } else {
             showNote(String.format(getString(R.string.error_FileSave), recvMsg.getFileName()));
-            sSecureIntro = null;
             return;
         }
     }
@@ -2552,7 +2374,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             } catch (CryptoMsgPeerKeyFormatException e) {
                 return e.getLocalizedMessage();
             }
-            endProgress();
             return null;
         }
 
@@ -2563,6 +2384,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         @Override
         protected void onPostExecute(String result) {
+            endProgress();
             if (TextUtils.isEmpty(result)) {
                 int exchanged = args.getInt(extra.EXCHANGED_TOTAL);
                 if (imported < exchanged) {
@@ -2580,7 +2402,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // updated databases, restart to use...
             BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
             backgroundSyncUpdates.execute(new String());
-            restart();
+            refreshView();
         }
     }
 
@@ -2658,18 +2480,17 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (savedInstanceState != null) {
             String filepath = savedInstanceState.getString(extra.FILE_PATH);
             if (!TextUtils.isEmpty(filepath)) {
-                sTempCameraFileUri = Uri.fromFile(new File(filepath));
+                SafeSlinger.setTempCameraFileUri(Uri.fromFile(new File(filepath)));
             }
 
             setTab(Tabs.values()[savedInstanceState.getInt(extra.RECOVERY_TAB)]);
         }
 
         // several private members may need to be reloaded...
-        restart();
+        refreshView();
     }
 
-    private void restart() {
-        initOnReload();
+    private void refreshView() {
         // pass is good, determine what view to see...
         if (sHandler == null) {
             sHandler = new Handler();
@@ -2805,10 +2626,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             postProgressMsgList(mInbox.isInboxTable(), mRowId, null);
             if (TextUtils.isEmpty(error)) {
                 setTab(Tabs.MESSAGE);
-                restart();
+                refreshView();
             } else {
                 showNote(error);
-                restart();
+                refreshView();
             }
         }
     }
@@ -2949,7 +2770,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
             } else {
                 showNote(error);
-                restart();
+                refreshView();
             }
         }
     }
@@ -2962,6 +2783,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
         private Handler mHandler = new Handler();
         private int mTxTotalSize = 0;
+        private DraftData mDraft = DraftData.INSTANCE;
         private Runnable mUpdateTxProgress = new Runnable() {
 
             @Override
@@ -3082,7 +2904,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             postProgressMsgList(mSendMsg.isInboxTable(), mRowId, null);
             if (TextUtils.isEmpty(error)) {
                 // send complete, remove secret sent
-                sSendMsg = new MessageData();
+                DraftData.INSTANCE.clearSendMsg();
 
                 showNote(R.string.state_FileSent);
             } else {
@@ -3091,7 +2913,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 if (notreg) {
                     RecipientDbAdapter dbRecipient = RecipientDbAdapter
                             .openInstance(getApplicationContext());
-                    if (!dbRecipient.updateRecipientRegistrationState(sRecip.getRowId(), notreg)) {
+                    if (!dbRecipient.updateRecipientRegistrationState(mDraft.getRecipRowId(),
+                            notreg)) {
                         // failure to update database error, not as critical as
                         // the registration loss...
                     }
@@ -3287,30 +3110,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         SafeSlingerPrefs.setPusgRegBackoff(SafeSlingerPrefs.DEFAULT_PUSHREG_BACKOFF);
         sProg = null;
         sProgressMsg = null;
-        sSendMsg = new MessageData();
-        sEditPassPhrase = null;
-        sBackupExists = false;
-        sRestoreRequested = false;
-        sRestoreReported = false;
-        sRestoring = false;
-        sSecureIntro = null;
-    }
-
-    public boolean hasImageCaptureBug() {
-
-        // list of known devices that have the bug
-        ArrayList<String> devices = new ArrayList<String>();
-        devices.add("android-devphone1/dream_devphone/dream");
-        devices.add("generic/sdk/generic");
-        devices.add("vodafone/vfpioneer/sapphire");
-        devices.add("tmobile/kila/dream");
-        devices.add("verizon/voles/sholes");
-        devices.add("google_ion/google_ion/sapphire");
-        devices.add("samsung/GT-I9000/GT-I9000");
-        devices.add("samsung/SGH-I777/SGH-I777");
-
-        return devices.contains(android.os.Build.BRAND + "/" + android.os.Build.PRODUCT + "/"
-                + android.os.Build.DEVICE);
+        DraftData.INSTANCE.clearSendMsg();
     }
 
     private void showFileAttach() {
@@ -3323,8 +3123,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         // camera
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        sTempCameraFileUri = SSUtil.makeCameraOutputUri();
-        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, sTempCameraFileUri);
+        SafeSlinger.setTempCameraFileUri(SSUtil.makeCameraOutputUri());
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, SafeSlinger.getTempCameraFileUri());
         allIntents.add(cameraIntent);
 
         // audio recorder
@@ -3412,7 +3212,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 sHandler.removeCallbacks(checkPassExpiration);
             }
             Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
-            intent.putExtra(extra.USER_TOTAL, SafeSlinger.getTotalUsers());
+            intent.putExtra(extra.USER_TOTAL, SSUtil.getTotalUsers());
             intent.putExtra(extra.CREATE_PASS_PHRASE, create);
             intent.putExtra(extra.CHANGE_PASS_PHRASE, change);
             intent.putExtra(extra.VERIFY_PASS_PHRASE, false);
@@ -3428,29 +3228,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 sHandler.removeCallbacks(checkPassExpiration);
             }
             Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
-            intent.putExtra(extra.USER_TOTAL, SafeSlinger.getTotalUsers());
+            intent.putExtra(extra.USER_TOTAL, SSUtil.getTotalUsers());
             intent.putExtra(extra.CREATE_PASS_PHRASE, false);
             intent.putExtra(extra.CHANGE_PASS_PHRASE, false);
             intent.putExtra(extra.VERIFY_PASS_PHRASE, true);
             startActivityForResult(intent, VIEW_PASSPHRASE_VERIFY_ID);
             SafeSlinger.setPassphraseOpen(true);
         }
-    }
-
-    private static Bundle getIntroArgs() {
-        Bundle args = new Bundle();
-
-        if (sRecip1 != null)
-            args.putLong(extra.RECIPIENT_ROW_ID1, sRecip1.getRowId());
-        else
-            args.putLong(extra.RECIPIENT_ROW_ID1, -1);
-
-        if (sRecip2 != null)
-            args.putLong(extra.RECIPIENT_ROW_ID2, sRecip2.getRowId());
-        else
-            args.putLong(extra.RECIPIENT_ROW_ID2, -1);
-
-        return args;
     }
 
     private void showManagePassphrases(ArrayList<UserData> recentKeys) {
@@ -3510,7 +3294,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     dialog.dismiss();
                     // delete all more recent keys for now...
                     doRemoveMoreRecentKeys();
-                    restart();
+                    refreshView();
                 }
             });
         }
@@ -3532,7 +3316,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     protected static void doRemoveMoreRecentKeys() {
-        int totalUsers = SafeSlinger.getTotalUsers();
+        int totalUsers = SSUtil.getTotalUsers();
         for (int i = 0; i < totalUsers; i++) {
             if (i > SafeSlingerPrefs.getUser()) {
                 deleteUser(i);
@@ -3551,11 +3335,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     private void showIntroductionInvite(String exchName, String introName, byte[] introPhoto,
-            long msgRowId) {
+            byte[] introPush, byte[] introPubKey, long msgRowId) {
         Bundle args = new Bundle();
         args.putString(extra.EXCH_NAME, exchName);
         args.putString(extra.INTRO_NAME, introName);
         args.putByteArray(extra.PHOTO, introPhoto);
+        args.putByteArray(extra.PUSH_REGISTRATION_ID, introPush);
+        args.putByteArray(extra.INTRO_PUBKEY, introPubKey);
         args.putLong(extra.MESSAGE_ROW_ID, msgRowId);
         if (!isFinishing()) {
             removeDialog(DIALOG_INTRO);
@@ -3563,10 +3349,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    private AlertDialog.Builder xshowIntroductionInvite(final Activity act, Bundle args) {
+    private AlertDialog.Builder xshowIntroductionInvite(final Activity act, final Bundle args) {
         String exchName = args.getString(extra.EXCH_NAME);
-        String introName = args.getString(extra.INTRO_NAME);
-        byte[] introPhoto = args.getByteArray(extra.PHOTO);
+        final String introName = args.getString(extra.INTRO_NAME);
+        final byte[] introPhoto = args.getByteArray(extra.PHOTO);
+        final byte[] introPush = args.getByteArray(extra.PUSH_REGISTRATION_ID);
+        final byte[] introPubKey = args.getByteArray(extra.INTRO_PUBKEY);
         final long msgRowId = args.getLong(extra.MESSAGE_ROW_ID);
         AlertDialog.Builder ad = new AlertDialog.Builder(act);
         View layout;
@@ -3602,28 +3390,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 dialog.dismiss();
 
                 // accept secure introduction?
-                Bundle args = new Bundle();
                 int selected = 0;
-                String name = sSecureIntro.name.toString();
-                args.putString(extra.NAME + selected, name);
-                args.putByteArray(extra.PHOTO + selected, sSecureIntro.photoBytes);
-                List<ContactMethod> contactmethodList = sSecureIntro.contactmethodList;
-                if (contactmethodList != null) {
-                    for (ContactMethod item : contactmethodList) {
-                        if (item.kind == android.provider.Contacts.KIND_IM) {
-                            if (item.label.compareTo(SafeSlingerConfig.APP_KEY_PUBKEY) == 0
-                                    || item.label.compareTo(SafeSlingerConfig.APP_KEY_PUSHTOKEN) == 0) {
-                                args.putByteArray(item.label + selected,
-                                        SSUtil.finalDecode(item.data.getBytes()));
-                            }
-                        }
-                    }
-                }
+                args.putString(extra.NAME + selected, introName);
+                args.putByteArray(extra.PHOTO + selected, introPhoto);
+                args.putByteArray(SafeSlingerConfig.APP_KEY_PUBKEY + selected, introPubKey);
+                args.putByteArray(SafeSlingerConfig.APP_KEY_PUSHTOKEN + selected, introPush);
 
-                String contactLookupKey = getContactLookupKeyByName(sSecureIntro.name.toString());
+                String contactLookupKey = getContactLookupKeyByName(introName);
                 args.putString(extra.CONTACT_LOOKUP_KEY + selected, contactLookupKey);
-
-                sSecureIntro = null; // we're done with it now...
 
                 MessageRow inviteMsg = null;
                 MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
@@ -3644,7 +3418,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 ImportFromExchangeTask importFromExchange = new ImportFromExchangeTask();
                 importFromExchange.execute(args);
                 setTab(Tabs.MESSAGE);
-                restart();
+                refreshView();
             }
         });
         ad.setNegativeButton(getString(R.string.btn_Refuse), new DialogInterface.OnClickListener() {
@@ -3652,9 +3426,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                sSecureIntro = null;
                 showNote(String.format(getString(R.string.state_SomeContactsImported), 0));
-                restart();
+                refreshView();
             }
         });
         return ad;
@@ -3768,13 +3541,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         // save these for lookup and display purposes
                         SafeSlingerPrefs.setContactName(pName);
                         SafeSlingerPrefs.setContactLookupKey(items.get(item).contactLookupKey);
-                        restart();
+                        refreshView();
                         break;
                     case CONTACT:
                         // user wants to use found contact as a personal contact
                         SafeSlingerPrefs.setContactName(getContactName(items.get(item).contactLookupKey));
                         SafeSlingerPrefs.setContactLookupKey(items.get(item).contactLookupKey);
-                        restart();
+                        refreshView();
                         break;
                     case ANOTHER:
                         // user wants to choose new contact for themselves
@@ -3783,7 +3556,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     case NONE:
                         // user wants to remove link to address book
                         SafeSlingerPrefs.setContactLookupKey(null);
-                        restart();
+                        refreshView();
                         break;
                     case NEW:
                         // user wants to create new contact
@@ -3796,7 +3569,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     case EDIT_NAME:
                         // user wants to edit name
                         showSettings();
-                        restart();
+                        refreshView();
                         break;
                 }
             }
@@ -3928,11 +3701,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private boolean loadCurrentPassPhrase() {
         String currentPassPhrase = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
                 .getKeyIdString());
-
-        if (sEditPassPhrase != null) {
-            currentPassPhrase = sEditPassPhrase;
-        }
-
         return !TextUtils.isEmpty(currentPassPhrase);
     }
 
@@ -3943,7 +3711,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (MessagesFragment.getRecip() != null && position == Tabs.MESSAGE.ordinal()) {
             // collapse messages to threads when in message view
             MessagesFragment.setRecip(null);
-            restart();
+            refreshView();
         } else {
             // exit when at top level of each tab
             super.onBackPressed();

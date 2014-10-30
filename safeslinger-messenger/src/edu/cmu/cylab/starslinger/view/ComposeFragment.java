@@ -63,10 +63,12 @@ import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
+import edu.cmu.cylab.starslinger.model.DraftData;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.util.SSUtil;
@@ -107,8 +109,7 @@ public class ComposeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (savedInstanceState != null)
-            updateValues(savedInstanceState);
+        updateValues(savedInstanceState);
     }
 
     @Override
@@ -129,10 +130,7 @@ public class ComposeFragment extends Fragment {
         mButtonSender = (Button) vFrag.findViewById(R.id.SendButtonSender);
         mButtonRecip = (Button) vFrag.findViewById(R.id.SendButtonRecipient);
 
-        if (savedInstanceState != null)
-            updateValues(savedInstanceState);
-        else if (getArguments() != null)
-            updateValues(getArguments());
+        updateValues(savedInstanceState);
 
         OnClickListener clickFile = new OnClickListener() {
 
@@ -197,18 +195,21 @@ public class ComposeFragment extends Fragment {
 
     public void updateValues(Bundle extras) {
         String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
-        if (extras != null) {
-            mFilePath = extras.getString(extra.FILE_PATH);
-            mFileSize = extras.getInt(extra.PUSH_FILE_SIZE);
-            mText = extras.getString(extra.TEXT_MESSAGE);
-            mThumb = extras.getByteArray(extra.THUMBNAIL);
-            mRowIdRecipient = extras.getLong(extra.RECIPIENT_ROW_ID, -1);
+        DraftData d = DraftData.INSTANCE;
+
+        if (d.existsRecip()) {
+            mRowIdRecipient = d.getRecipRowId();
         } else {
-            mFilePath = null;
-            mFileSize = 0;
-            mText = null;
-            mThumb = null;
             mRowIdRecipient = -1;
+        }
+        mFilePath = d.getFileName();
+        mFileSize = d.getFileSize();
+        mText = d.getText();
+        if (!TextUtils.isEmpty(d.getFileType()) && d.getFileType().contains("image")) {
+            mThumb = SSUtil.makeThumbnail(SafeSlinger.getApplication().getApplicationContext(),
+                    d.getFileData());
+        } else {
+            mThumb = null;
         }
 
         // make sure view is already inflated...

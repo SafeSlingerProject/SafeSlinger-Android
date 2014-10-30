@@ -92,7 +92,6 @@ import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgPeerKeyFormatException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
 import edu.cmu.cylab.starslinger.model.ContactAccessor;
-import edu.cmu.cylab.starslinger.model.ContactImpp;
 import edu.cmu.cylab.starslinger.model.ContactNameMethodComparator;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageRow;
@@ -141,19 +140,6 @@ public class BaseActivity extends ActionBarActivity {
     private static final int RESULT_EDIT_CONTACT_LINK = 23;
     private static String mInviteContactLookupKey;
     private static long mContactLinkRecipientRowId;
-
-    protected static Bundle writeSingleExportExchangeArgs(ContactImpp out) {
-
-        Bundle args = new Bundle();
-        args.putString(extra.CONTACT_LOOKUP_KEY, out.lookup);
-
-        for (int i = 0; i < out.impps.size(); i++) {
-            args.putString(extra.CONTACT_KEYNAME_PREFIX + i, out.impps.get(i).k);
-            args.putByteArray(extra.CONTACT_VALUE_PREFIX + i, out.impps.get(i).v);
-        }
-
-        return args;
-    }
 
     public Uri getPersonUri(String contactLookupKey) {
         if (!TextUtils.isEmpty(contactLookupKey)) {
@@ -684,6 +670,8 @@ public class BaseActivity extends ActionBarActivity {
                 SafeSlingerConfig.HELP_URL);
         String msgSrc = String.format(act.getString(R.string.text_SourceCodeRepo),
                 SafeSlingerConfig.SOURCE_URL);
+        String msgLoc = String.format(act.getString(R.string.text_LocalizationRepo),
+                SafeSlingerConfig.LOCALIZE_URL);
         String msgReq = act.getString(R.string.text_Requirements);
         String msgReq1 = act.getString(R.string.text_Requirements1);
         String msgReq2 = act.getString(R.string.text_Requirements2);
@@ -694,10 +682,10 @@ public class BaseActivity extends ActionBarActivity {
 
         textViewAbout
                 .setText(String
-                        .format("%s\n\n%s\n\n%s\n- %s\n- %s\n- %s\n\n%s\n1. %s\n2. %s\n\n%s\n%s\n%s\n\n%s\n%s\n%s\n%s",
+                        .format("%s\n\n%s\n\n%s\n- %s\n- %s\n- %s\n\n%s\n1. %s\n2. %s\n\n%s\n%s\n%s\n%s\n\n%s\n%s\n%s\n%s",
                                 msgHead, msgAbout, msgAbFeat, msgAb1, msgAb2, msgAb3, msgReq,
-                                msgReq1, msgReq2, msgEmail, msgWeb, msgSrc, msgDev, msgProgs,
-                                msgLang, msgTrans));
+                                msgReq1, msgReq2, msgEmail, msgWeb, msgSrc, msgLoc, msgDev,
+                                msgProgs, msgLang, msgTrans));
 
         ad.setView(layout);
         ad.setCancelable(true);
