@@ -71,9 +71,9 @@ import edu.cmu.cylab.starslinger.model.MessageData;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessagePacket;
 import edu.cmu.cylab.starslinger.model.MessageRow;
-import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
 import edu.cmu.cylab.starslinger.transaction.MessageNotFoundException;
 import edu.cmu.cylab.starslinger.transaction.WebEngine;
+import edu.cmu.cylab.starslinger.util.NotificationBroadcastReceiver;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class SafeSlinger extends Application {
@@ -137,7 +137,7 @@ public class SafeSlinger extends Application {
         InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this);
         int inCount = dbInbox.getUnseenInboxCount();
         if (inCount > 0) {
-            C2DMReceiver.doUnseenMessagesNotification(this, inCount);
+            NotificationBroadcastReceiver.doUnseenMessagesNotification(this, inCount);
         }
 
         // attempt to retry pending message downloads
@@ -160,6 +160,7 @@ public class SafeSlinger extends Application {
         return connected;
     }
 
+    @SuppressWarnings("deprecation")
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void copyPlainTextToClipboard(String string) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
@@ -353,7 +354,7 @@ public class SafeSlinger extends Application {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             output.append("\n").append("RADIO: " + Build.getRadioVersion());
         } else {
-            output.append("\n").append("RADIO: " + Build.RADIO);
+            output.append("\n").append("RADIO: " + Build.getRadioVersion());
         }
         output.append("\n").append("TAGS: " + Build.TAGS);
         output.append("\n").append("TIME: " + new Date(Build.TIME));
@@ -551,7 +552,7 @@ public class SafeSlinger extends Application {
 
                                 // got it! let the user know it's here...
                                 successDownloads++;
-                                C2DMReceiver.doUnseenMessagesNotification(
+                                NotificationBroadcastReceiver.doUnseenMessagesNotification(
                                         SafeSlinger.getApplication(), successDownloads);
 
                             } else {

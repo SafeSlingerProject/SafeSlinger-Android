@@ -55,6 +55,8 @@ public class SafeSlingerPrefs {
     private static final boolean DEFAULT_AUTO_RETRIEVAL = false;
     public static final String DEFAULT_LANGUAGE = "zz";
 
+    public static final int NOTIFICATION_SLEEP_PERIOD = 60 * 1000;
+    
     /***
      * internal long term storage...
      */
@@ -116,6 +118,8 @@ public class SafeSlingerPrefs {
         public static final String SHOW_WALKTHROUGH = "ShowWalkthrough";
         public static final String TEMPKEY_SYNCACCOUNT_LIST = "keyTempListContactSyncAccount";
         public static final String PENDING_GETMSG_BACKOFF_TIMEOUT = "PendingGetMessageBackoff";
+
+        public static final String PREF_LAST_MSG_STAMP = "lastMessageStamp";
     }
 
     public static final String PREFS_RECOVER_YES = "MyPrefsFile";
@@ -135,6 +139,7 @@ public class SafeSlingerPrefs {
         setNotificationVibrate(DEFAULT_NOTIFICATION_VIBRATE);
         setAutoDecrypt(DEFAULT_AUTO_DECRYPT);
         setAutoRetrieval(DEFAULT_AUTO_RETRIEVAL);
+        setLastTimeStamp(0);
     }
 
     public static void removePrefDeprecated() {
@@ -159,6 +164,7 @@ public class SafeSlingerPrefs {
         removePref(pref.KEYSALT + userNumber, true);
         removePref(pref.PASSPHRASE_CACHE_TTL + userNumber, true);
         removePref(pref.SHOW_RECENT_RECIPONLY + userNumber, true);
+        removePref(pref.PREF_LAST_MSG_STAMP, false);
     }
 
     // persist to backup account...
@@ -287,6 +293,13 @@ public class SafeSlingerPrefs {
         return getBoolean(getUserKeyName(pref.AUTO_RETRIEVAL), DEFAULT_AUTO_RETRIEVAL, true);
     }
 
+    public static long getLastTimeStamp() {
+        return getLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), 0, false);
+    }
+    
+    public static void setLastTimeStamp(long timeStamp) {
+        setLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), timeStamp, false);
+    }
     public static void setAutoRetrieval(boolean autoRetrieval) {
         setBoolean(getUserKeyName(pref.AUTO_RETRIEVAL), autoRetrieval, true);
     }

@@ -48,6 +48,7 @@ public class MessageDbAdapter {
     private static MessageDbAdapter sInstance = null;
     private static int sUserNumber = 0;
 
+    @SuppressWarnings("unused")
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
     public static final String DATABASE_TABLE = "message";
@@ -166,6 +167,14 @@ public class MessageDbAdapter {
         int delete = mDatabase.delete(table, whereClause, whereArgs);
         // no backup needed for messages...
         return delete;
+    }
+
+    private Cursor query(String table, String[] columns, String selection, String[] selectionArgs,
+            String groupBy, String having, String orderBy, String limit) {
+        Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
+                orderBy, limit);
+
+        return query;
     }
 
     private Cursor query(String table, String[] columns, String selection, String[] selectionArgs,
@@ -485,6 +494,29 @@ public class MessageDbAdapter {
             }
             return null;
         }
+    }
+
+    public long fetchLastRecentMessageTime() {
+        synchronized (SafeSlinger.sDataLock) {
+
+            /*
+             * SELECT MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
+             * FROM table ORDER BY MessageDbAdapter.KEY_ROWID DESC LIMIT 1;
+             */
+            Cursor cursor = query(DATABASE_TABLE, new String[] {
+                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
+            }, null, null, null, null, MessageDbAdapter.KEY_ROWID + " DESC", "1");
+
+            if (cursor != null && cursor.getCount() > 0) {
+                cursor.moveToFirst();
+
+                long time = cursor.getLong(cursor.getColumnIndex(MessageDbAdapter.KEY_DATE_RECV));
+
+                return time;
+            }
+        }
+
+        return -1;
     }
 
     public Cursor fetchMessageRecent(String keyId) {
