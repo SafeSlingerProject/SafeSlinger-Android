@@ -261,10 +261,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         public void onReceive(Context context, Intent intent) {
 
             boolean abort = abortNextBroadcast(intent);
-            if(abort)
-            {
+            if (abort) {
                 abortBroadcast();
-                SafeSlingerPrefs.setLastTimeStamp(0); // Reset the last timestamp when aborting broadcast ..get notified immediately in other states
+                SafeSlingerPrefs.setLastTimeStamp(0); // Reset the last
+                                                      // timestamp when aborting
+                                                      // broadcast ..get
+                                                      // notified immediately in
+                                                      // other states
             }
             // if message window in view, update messages immediately...
             setTab(Tabs.MESSAGE);
@@ -283,20 +286,19 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     };
 
-    private boolean abortNextBroadcast(Intent intent)
-    {
+    private boolean abortNextBroadcast(Intent intent) {
         boolean abortBroadcast = false;
-        if(intent.getExtras() != null)
-        {
+        if (intent.getExtras() != null) {
             int allCount = intent.getExtras().getInt(extra.NOTIFY_COUNT);
-            if(allCount != 0 && (getSupportActionBar().getSelectedNavigationIndex() == Tabs.MESSAGE.ordinal()
-                    && SafeSlinger.getApplication().isMessageFragActive()))
+            if (allCount != 0
+                    && (getSupportActionBar().getSelectedNavigationIndex() == Tabs.MESSAGE
+                            .ordinal() && SafeSlinger.getApplication().isMessageFragActive()))
                 abortBroadcast = true;
         }
-        
+
         return abortBroadcast;
     }
-    
+
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -2441,7 +2443,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     protected void onResume() {
         super.onResume();
 
-        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH)
             SafeSlinger.getApplication().setMessageFragActive(true);
         // if (sHandler == null) {
         // sHandler = new Handler();
@@ -2469,7 +2471,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     @Override
     protected void onPause() {
         super.onPause();
-        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH)
             SafeSlinger.getApplication().setMessageFragActive(false);
         // restoreView();
     }

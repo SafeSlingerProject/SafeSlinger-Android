@@ -111,6 +111,5 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
         getFileIntent.setAction(SafeSlingerConfig.Intent.ACTION_MESSAGENOTIFY);
         return getFileIntent;
     }
-    
-    
+
 }

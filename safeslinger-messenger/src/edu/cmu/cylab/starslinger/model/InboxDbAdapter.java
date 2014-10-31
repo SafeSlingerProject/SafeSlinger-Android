@@ -1,18 +1,18 @@
 /*
  * The MIT License (MIT)
- * 
+ *
  * Copyright (c) 2010-2014 Carnegie Mellon University
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -44,11 +44,8 @@ import edu.cmu.cylab.starslinger.SafeSlingerConfig;
  */
 public class InboxDbAdapter {
     private static InboxDbAdapter sInstance = null;
-
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
-
     public static final String DATABASE_TABLE = "inbox";
-
     private Context mContext;
     private SQLiteDatabase mDatabase;
     private InboxDatabaseHelper mDbHelper;
@@ -126,7 +123,6 @@ public class InboxDbAdapter {
             String groupBy, String having, String orderBy, String limit) {
         Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
                 orderBy, limit);
-
         return query;
     }
 
@@ -157,7 +153,6 @@ public class InboxDbAdapter {
                 }
                 c.close();
             }
-
             ContentValues values = new ContentValues();
             values.put(MessageDbAdapter.KEY_DATE_RECV, System.currentTimeMillis()); // Received
             // UTC
@@ -167,12 +162,10 @@ public class InboxDbAdapter {
             values.put(MessageDbAdapter.KEY_SEEN, seen); // seen in list
             if (msgHash != null)
                 values.put(MessageDbAdapter.KEY_MSGHASH, msgHash); // file
-                                                                   // retrieval
-                                                                   // id
-
+            // retrieval
+            // id
             // backward compatibility for upgraded databases....
             values.put(MessageDbAdapter.KEY_KEYIDLONG, 0);
-
             return insert(DATABASE_TABLE, null, values);
         }
     }
@@ -181,7 +174,6 @@ public class InboxDbAdapter {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
             values.put(MessageDbAdapter.KEY_STATUS, MessageDbAdapter.MESSAGE_STATUS_EXPIRED); // complete/failed
-
             return update(DATABASE_TABLE, values, MessageDbAdapter.KEY_ROWID + "=" + rowId, null) > 0;
         }
     }
@@ -192,12 +184,11 @@ public class InboxDbAdapter {
             values.put(MessageDbAdapter.KEY_SEEN, seen); // seen in list
             if (encbody != null)
                 values.put(MessageDbAdapter.KEY_ENCBODY, encbody); // encoded
-                                                                   // body
+            // body
             values.put(MessageDbAdapter.KEY_STATUS, MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG); // complete/failed
             if (!TextUtils.isEmpty(keyid))
                 values.put(MessageDbAdapter.KEY_KEYID, keyid); // key id of the
-                                                               // sig...
-
+            // sig...
             return update(DATABASE_TABLE, values, MessageDbAdapter.KEY_ROWID + "=" + rowId, null) > 0;
         }
     }
@@ -270,7 +261,6 @@ public class InboxDbAdapter {
                         + DatabaseUtils.sqlEscapeString("" + keyId));
                 where.append(")");
             }
-
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();
@@ -290,7 +280,6 @@ public class InboxDbAdapter {
             where.append(MessageDbAdapter.KEY_STATUS + "="
                     + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
             where.append(")");
-
             Cursor c = query(true, DATABASE_TABLE, new String[] {
                     MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
                     MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
@@ -322,7 +311,6 @@ public class InboxDbAdapter {
             where.append(" AND ");
             where.append(MessageDbAdapter.KEY_READ + "=" + MessageDbAdapter.MESSAGE_IS_NOT_READ);
             where.append(")");
-
             Cursor c = query(true, DATABASE_TABLE, new String[] {
                     MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
                     MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
@@ -358,7 +346,6 @@ public class InboxDbAdapter {
                         + DatabaseUtils.sqlEscapeString("" + keyId));
                 where.append(")");
             }
-
             Cursor c = query(true, DATABASE_TABLE, new String[] {
                     MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
                     MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
@@ -381,7 +368,6 @@ public class InboxDbAdapter {
 
     public long fetchLastRecentMessageTime() {
         synchronized (SafeSlinger.sDataLock) {
-
             /*
              * SELECT MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
              * FROM table ORDER BY MessageDbAdapter.KEY_ROWID DESC LIMIT 1;
@@ -389,16 +375,12 @@ public class InboxDbAdapter {
             Cursor cursor = query(DATABASE_TABLE, new String[] {
                     MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
             }, null, null, null, null, MessageDbAdapter.KEY_ROWID + " DESC", "1");
-
             if (cursor != null && cursor.getCount() > 0) {
                 cursor.moveToFirst();
-                
-                long time  = cursor.getLong(cursor.getColumnIndex(MessageDbAdapter.KEY_DATE_RECV));
-                
+                long time = cursor.getLong(cursor.getColumnIndex(MessageDbAdapter.KEY_DATE_RECV));
                 return time;
             }
         }
-        
         return -1;
     }
 
@@ -417,7 +399,6 @@ public class InboxDbAdapter {
                         + DatabaseUtils.sqlEscapeString("" + keyId));
                 where.append(")");
             }
-
             String groupBy = MessageDbAdapter.KEY_KEYID;
             Cursor c = query(DATABASE_TABLE, new String[] {
                     MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
@@ -471,7 +452,6 @@ public class InboxDbAdapter {
             where.append(MessageDbAdapter.KEY_STATUS + "!="
                     + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
             where.append(")");
-
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();
@@ -500,14 +480,12 @@ public class InboxDbAdapter {
             where.append(" AND ");
             where.append(MessageDbAdapter.KEY_TYPE + "=" + MessageDbAdapter.MESSAGE_TYPE_INBOX);
             where.append(" AND ");
-
             where.append("(");
             where.append(MessageDbAdapter.KEY_SEEN + "=" + MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
             where.append(" OR ");
             where.append(MessageDbAdapter.KEY_STATUS + "="
                     + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
             where.append(")");
-
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
                 int count = c.getCount();
@@ -552,5 +530,4 @@ public class InboxDbAdapter {
             }
         }
     }
-
 }

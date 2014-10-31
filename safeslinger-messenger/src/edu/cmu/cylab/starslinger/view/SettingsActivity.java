@@ -525,7 +525,7 @@ public class SettingsActivity extends PreferenceActivity {
     private String getRingSummary(String soundValue) throws NotFoundException {
         Uri soundUri = TextUtils.isEmpty(soundValue) ? null : Uri.parse(soundValue);
         Ringtone tone = soundUri != null ? RingtoneManager.getRingtone(this, soundUri) : null;
-        if(tone == null)
+        if (tone == null)
             SafeSlingerPrefs.setLastTimeStamp(0);
         return (tone != null ? tone.getTitle(this) : getResources().getString(
                 R.string.menu_ringtone));

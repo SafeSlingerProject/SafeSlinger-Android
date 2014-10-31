@@ -56,7 +56,7 @@ public class SafeSlingerPrefs {
     public static final String DEFAULT_LANGUAGE = "zz";
 
     public static final int NOTIFICATION_SLEEP_PERIOD = 30 * 1000;
-    
+
     /***
      * internal long term storage...
      */
@@ -296,10 +296,11 @@ public class SafeSlingerPrefs {
     public static long getLastTimeStamp() {
         return getLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), 0, false);
     }
-    
+
     public static void setLastTimeStamp(long timeStamp) {
         setLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), timeStamp, false);
     }
+
     public static void setAutoRetrieval(boolean autoRetrieval) {
         setBoolean(getUserKeyName(pref.AUTO_RETRIEVAL), autoRetrieval, true);
     }

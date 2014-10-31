@@ -190,7 +190,7 @@ public class SafeSlingerConfig {
         public static final String RECIP_SOURCE = "RecipientSource";
         public static final String INVITE_KEYID = "InviteKeyId";
         public static final String INTRO_PUBKEY = "IntroPubKey";
-        
+
         public static final String NOTIFY_COUNT = "notify_count";
         public static final String NOTIFY_STATUS = "notify_status";
     }

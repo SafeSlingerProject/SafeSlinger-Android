@@ -104,7 +104,7 @@ public class SafeSlinger extends Application {
     private static String sSenderKey;
 
     private boolean isTabContainerActive = false;
-    
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -124,7 +124,7 @@ public class SafeSlinger extends Application {
 
         sSafeSlinger = this;
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH)
             registerActivityLifecycleCallbacks(new ActivityLifeCallbacks());
         // Catching Unhandled Exceptions...
         // We used to use UncaughtExceptionHandler to catch exceptions here,
@@ -602,8 +602,8 @@ public class SafeSlinger extends Application {
 
                             // got it! let the user know it's here...
                             successDownloads++;
-                            NotificationBroadcastReceiver.doUnseenMessagesNotification(SafeSlinger.getApplication(),
-                                    successDownloads);
+                            NotificationBroadcastReceiver.doUnseenMessagesNotification(
+                                    SafeSlinger.getApplication(), successDownloads);
 
                         } else {
                             break;

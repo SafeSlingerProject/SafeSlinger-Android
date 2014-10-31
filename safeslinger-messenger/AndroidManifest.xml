@@ -20,7 +20,7 @@
     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-    THE SOFTWARE.
+    THE SOFTWARE.
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -58,7 +58,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -142,7 +141,7 @@
 
         <!--
              Only C2DM servers can send messages for the app. If permission is 
-			not set - any other app can generate it
+			not set - any other app can generate it
         -->
         <receiver
             android:name=".transaction.C2DMBroadcastReceiver"
@@ -169,11 +168,10 @@
                 <category android:name="edu.cmu.cylab.starslinger" />
             </intent-filter>
         </receiver>
-
-        <receiver android:name=".util.NotificationBroadcastReceiver" 
-            android:exported="false">
-            <intent-filter
-                android:priority="1">
+        <receiver
+            android:name=".util.NotificationBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter android:priority="1" >
                 <action android:name="edu.cmu.cylab.starslinger.action.MESSAGESUPDATE" />
 
                 <category android:name="edu.cmu.cylab.starslinger" />
