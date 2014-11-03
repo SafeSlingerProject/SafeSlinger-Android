@@ -127,8 +127,8 @@ public class SafeSlingerConfig {
     public static final int NOTIFY_AMAZONADM = 7;
 
     public static class Intent {
-        public static final String ACTION_MESSAGENOTIFY = "edu.cmu.cylab.starslinger.action.MESSAGES";
-        public static final String ACTION_MESSAGEUPDATE = "edu.cmu.cylab.starslinger.action.MESSAGESUPDATE";
+        public static final String ACTION_MESSAGEOUTGOING = "edu.cmu.cylab.starslinger.action.MESSAGEOUTGOING";
+        public static final String ACTION_MESSAGEINCOMING = "edu.cmu.cylab.starslinger.action.MESSAGEINCOMING";
         public static final String ACTION_BACKUPNOTIFY = "edu.cmu.cylab.starslinger.action.BACKUPREMINDER";
         public static final String ACTION_SLINGKEYSNOTIFY = "edu.cmu.cylab.starslinger.action.SLINGKEYSNOTIFY";
         public static final String ACTION_CHANGESETTINGS = "edu.cmu.cylab.starslinger.action.CHANGESETTINGS";

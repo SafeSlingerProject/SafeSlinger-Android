@@ -69,6 +69,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.AudioManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -142,6 +143,7 @@ import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
 import edu.cmu.cylab.starslinger.transaction.C2DMessaging;
 import edu.cmu.cylab.starslinger.transaction.MessageNotFoundException;
 import edu.cmu.cylab.starslinger.transaction.WebEngine;
+import edu.cmu.cylab.starslinger.util.NotificationPlayer;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 import edu.cmu.cylab.starslinger.view.ComposeFragment.OnComposeResultListener;
 import edu.cmu.cylab.starslinger.view.IntroductionFragment.OnIntroResultListener;
@@ -255,7 +257,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     };
 
-    private BroadcastReceiver mMsgUpdateReceiver = new BroadcastReceiver() {
+    /***
+     * Only for arriving incoming messages. Sent via OrderedBroadcast when a
+     * push message arrives. It is used to update the messages tab only when the
+     * messages tab is currently visible.
+     */
+    private BroadcastReceiver mMsgIncomingReceiver = new BroadcastReceiver() {
 
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -263,12 +270,39 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             boolean abort = abortNextBroadcast(intent);
             if (abort) {
                 abortBroadcast();
-                SafeSlingerPrefs.setLastTimeStamp(0); // Reset the last
-                                                      // timestamp when aborting
-                                                      // broadcast ..get
-                                                      // notified immediately in
-                                                      // other states
+                // Reset the last timestamp when aborting broadcast ..get
+                // notified immediately in other states
+                SafeSlingerPrefs.setLastTimeStamp(0);
+
+                if (!TextUtils.isEmpty(SafeSlingerPrefs.getNotificationRingTone())) {
+                    // need some audible notification...
+                    playInConversationNotificationSound(getApplicationContext());
+                }
             }
+
+            // update current message list if in view...
+            final int position = getSupportActionBar().getSelectedNavigationIndex();
+            if (position == Tabs.MESSAGE.ordinal()) {
+                if (mTabsAdapter != null) {
+                    MessagesFragment mf = (MessagesFragment) mTabsAdapter
+                            .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+                    if (mf != null) {
+                        mf.updateValues(intent.getExtras());
+                    }
+                }
+            }
+        }
+    };
+
+    /***
+     * Only for after sending outgoing messages. Sent via normal Intent and is
+     * meant to always switch the messages tab into view for sent messages.
+     */
+    private BroadcastReceiver mMsgOutgoingReceiver = new BroadcastReceiver() {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
             // if message window in view, update messages immediately...
             setTab(Tabs.MESSAGE);
 
@@ -285,6 +319,30 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             }
         }
     };
+
+    /**
+     * Play the in-conversation notification sound (it's the regular
+     * notification sound, but played at half-volume
+     */
+    private static void playInConversationNotificationSound(Context context) {
+        String ringtoneStr = SafeSlingerPrefs.getNotificationRingTone();
+        if (TextUtils.isEmpty(ringtoneStr)) {
+            // Nothing to play
+            return;
+        }
+        Uri ringtoneUri = Uri.parse(ringtoneStr);
+        final NotificationPlayer player = new NotificationPlayer(TAG);
+        player.play(context, ringtoneUri, false, AudioManager.STREAM_NOTIFICATION,
+                SafeSlingerPrefs.IN_CONVERSATION_NOTIFICATION_VOLUME);
+
+        // Stop the sound after five seconds to handle continuous ringtones
+        sHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                player.stop();
+            }
+        }, 5000);
+    }
 
     private boolean abortNextBroadcast(Intent intent) {
         boolean abortBroadcast = false;
@@ -312,7 +370,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     public void processIntent(Intent intent) {
         String action = intent.getAction();
 
-        if (SafeSlingerConfig.Intent.ACTION_MESSAGENOTIFY.equals(action)) {
+        if (SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING.equals(action)) {
             // clicked on new message notifications window, show messages
             // collapse messages to threads when looking for new messages
             MessagesFragment.setRecip(null);
@@ -419,9 +477,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         // prepare for push registration...
         registerReceiver(mPushRegReceiver, new IntentFilter(C2DMReceiver.PUSH_REGISTERED));
-        IntentFilter intentFilter = new IntentFilter(SafeSlingerConfig.Intent.ACTION_MESSAGEUPDATE);
+        IntentFilter intentFilter = new IntentFilter(
+                SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING);
         intentFilter.setPriority(2);
-        registerReceiver(mMsgUpdateReceiver, intentFilter);
+        registerReceiver(mMsgIncomingReceiver, intentFilter);
+        registerReceiver(mMsgOutgoingReceiver, new IntentFilter(
+                SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING));
 
         if (savedInstanceState == null) {
             // init app launch once all time
@@ -950,7 +1011,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
 
         // attempt to update messages if in view...
-        Intent sendIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEUPDATE);
+        Intent sendIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING);
         sendIntent.putExtra(extra.MESSAGE_ROW_ID, sendMsg.getRowId());
         sendIntent.putExtra(extra.RECIPIENT_ROW_ID, recip.getRowId());
         getApplicationContext().sendBroadcast(sendIntent);
@@ -2489,7 +2550,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             e.printStackTrace();
         }
         try {
-            unregisterReceiver(mMsgUpdateReceiver);
+            unregisterReceiver(mMsgIncomingReceiver);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+        try {
+            unregisterReceiver(mMsgOutgoingReceiver);
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }

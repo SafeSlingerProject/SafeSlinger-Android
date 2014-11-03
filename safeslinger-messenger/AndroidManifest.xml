@@ -92,7 +92,7 @@
                 <data android:mimeType="text/*" />
             </intent-filter>
             <intent-filter>
-                <action android:name="edu.cmu.cylab.starslinger.action.MESSAGES" />
+                <action android:name="edu.cmu.cylab.starslinger.action.MESSAGEINCOMING" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -172,7 +172,7 @@
             android:name=".util.NotificationBroadcastReceiver"
             android:exported="false" >
             <intent-filter android:priority="1" >
-                <action android:name="edu.cmu.cylab.starslinger.action.MESSAGESUPDATE" />
+                <action android:name="edu.cmu.cylab.starslinger.action.MESSAGEINCOMING" />
 
                 <category android:name="edu.cmu.cylab.starslinger" />
             </intent-filter>

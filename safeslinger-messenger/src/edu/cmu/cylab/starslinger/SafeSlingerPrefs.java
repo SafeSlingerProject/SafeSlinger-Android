@@ -55,7 +55,12 @@ public class SafeSlingerPrefs {
     private static final boolean DEFAULT_AUTO_RETRIEVAL = false;
     public static final String DEFAULT_LANGUAGE = "zz";
 
-    public static final int NOTIFICATION_SLEEP_PERIOD = 30 * 1000;
+    public static final int NOTIFICATION_SLEEP_PERIOD = 5 * 1000;
+    /**
+     * This is the volume at which to play the in-conversation notification
+     * sound, expressed as a fraction of the system notification volume.
+     */
+    public static final float IN_CONVERSATION_NOTIFICATION_VOLUME = 0.25f;
 
     /***
      * internal long term storage...

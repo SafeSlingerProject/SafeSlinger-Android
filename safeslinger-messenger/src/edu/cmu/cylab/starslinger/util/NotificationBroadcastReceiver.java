@@ -29,9 +29,7 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
                     true);
 
             doUnseenMessagesNotification(context, allCount, giveNotificationFeedback);
-
         }
-
     }
 
     public static void doUnseenMessagesNotification(Context ctx, int msgCount)
@@ -108,7 +106,7 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
 
     public static Intent makeMessagesNotificationIntent(Context ctx) {
         Intent getFileIntent = new Intent(ctx, HomeActivity.class);
-        getFileIntent.setAction(SafeSlingerConfig.Intent.ACTION_MESSAGENOTIFY);
+        getFileIntent.setAction(SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING);
         return getFileIntent;
     }
 

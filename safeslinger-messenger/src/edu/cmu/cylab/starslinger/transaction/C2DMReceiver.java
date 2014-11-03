@@ -265,16 +265,12 @@ public class C2DMReceiver extends C2DMBaseReceiver {
             int msgCount = dbMessage.getUnseenMessageCount();
             int allCount = inCount + msgCount;
             if (allCount > 0) {
-                // doUnseenMessagesNotification(this, allCount,
-                // giveNotificationFeedback);
-
-                // attempt to update messages if in view...
-                Intent updateIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEUPDATE);
+                // attempt to notify if appropriate...
+                Intent updateIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING);
                 updateIntent.putExtra(extra.MESSAGE_ROW_ID, rowIdMsg);
                 updateIntent.putExtra(extra.NOTIFY_COUNT, allCount);
                 updateIntent.putExtra(extra.NOTIFY_STATUS, giveNotificationFeedback);
                 sendOrderedBroadcast(updateIntent, null);
-                // sendBroadcast(updateIntent);
             }
         }
     }
