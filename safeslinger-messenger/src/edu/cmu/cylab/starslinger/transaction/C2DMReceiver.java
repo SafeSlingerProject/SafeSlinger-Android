@@ -79,6 +79,7 @@ public class C2DMReceiver extends C2DMBaseReceiver {
         long rowIdInbox = 0;
         long rowIdMsg = 0;
         boolean giveNotificationFeedback = true;
+        StringBuilder keyidout = new StringBuilder();
 
         boolean reattempt = true;
         while (reattempt) {
@@ -179,7 +180,6 @@ public class C2DMReceiver extends C2DMBaseReceiver {
             // if requested, and logged in, try to decrypt message
             if (!TextUtils.isEmpty(pass) && SafeSlingerPrefs.getAutoDecrypt()) {
                 try {
-                    StringBuilder keyidout = new StringBuilder();
                     byte[] plain = CryptTools.decryptMessage(encMsg, pass, keyidout);
                     MessagePacket push = new MessagePacket(plain);
 
@@ -268,6 +268,7 @@ public class C2DMReceiver extends C2DMBaseReceiver {
                 // attempt to notify if appropriate...
                 Intent updateIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING);
                 updateIntent.putExtra(extra.MESSAGE_ROW_ID, rowIdMsg);
+                updateIntent.putExtra(extra.KEYID, keyidout.toString());
                 updateIntent.putExtra(extra.NOTIFY_COUNT, allCount);
                 updateIntent.putExtra(extra.NOTIFY_STATUS, giveNotificationFeedback);
                 sendOrderedBroadcast(updateIntent, null);

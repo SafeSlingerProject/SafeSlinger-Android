@@ -188,7 +188,7 @@ public class SafeSlingerConfig {
         public static final String USER_TOTAL = "UserTotal";
         public static final String VERIFY_PASS_PHRASE = "VerifyPassPhrase";
         public static final String RECIP_SOURCE = "RecipientSource";
-        public static final String INVITE_KEYID = "InviteKeyId";
+        public static final String KEYID = "KeyId";
         public static final String INTRO_PUBKEY = "IntroPubKey";
 
         public static final String NOTIFY_COUNT = "notify_count";

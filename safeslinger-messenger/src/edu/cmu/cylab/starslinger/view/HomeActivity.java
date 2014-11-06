@@ -268,6 +268,29 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         public void onReceive(Context context, Intent intent) {
 
             boolean abort = abortNextBroadcast(intent);
+
+            // update current message list if in view...
+            final int position = getSupportActionBar().getSelectedNavigationIndex();
+            if (position == Tabs.MESSAGE.ordinal()) {
+                if (mTabsAdapter != null) {
+                    MessagesFragment mf = (MessagesFragment) mTabsAdapter
+                            .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+                    if (mf != null) {
+                        mf.updateValues(intent.getExtras());
+
+                        // if not current recipient in thread, user must get
+                        // written notice so do not abort
+                        RecipientRow r = MessagesFragment.getRecip();
+                        String inkey = intent.getExtras().getString(extra.KEYID);
+                        if (abort && r != null && inkey != null) {
+                            if (!inkey.equals(r.getKeyid())) {
+                                abort = false;
+                            }
+                        }
+                    }
+                }
+            }
+
             if (abort) {
                 abortBroadcast();
                 // Reset the last timestamp when aborting broadcast ..get
@@ -280,17 +303,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
             }
 
-            // update current message list if in view...
-            final int position = getSupportActionBar().getSelectedNavigationIndex();
-            if (position == Tabs.MESSAGE.ordinal()) {
-                if (mTabsAdapter != null) {
-                    MessagesFragment mf = (MessagesFragment) mTabsAdapter
-                            .findFragmentByPosition(Tabs.MESSAGE.ordinal());
-                    if (mf != null) {
-                        mf.updateValues(intent.getExtras());
-                    }
-                }
-            }
         }
     };
 
@@ -345,13 +357,18 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     private boolean abortNextBroadcast(Intent intent) {
+        // conditions to abort, all must be true:
+        // - message tab is in view
+        // - key id matches current thread, or all threads in view
         boolean abortBroadcast = false;
         if (intent.getExtras() != null) {
+
             int allCount = intent.getExtras().getInt(extra.NOTIFY_COUNT);
             if (allCount != 0
                     && (getSupportActionBar().getSelectedNavigationIndex() == Tabs.MESSAGE
-                            .ordinal() && SafeSlinger.getApplication().isMessageFragActive()))
+                            .ordinal() && SafeSlinger.getApplication().isMessageFragActive())) {
                 abortBroadcast = true;
+            }
         }
 
         return abortBroadcast;
@@ -2444,7 +2461,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         protected String doInBackground(Bundle... arg0) {
             args = arg0[0];
             recipSource = args.getInt(extra.RECIP_SOURCE);
-            introkeyid = args.getString(extra.INVITE_KEYID);
+            introkeyid = args.getString(extra.KEYID);
 
             publishProgress(getString(R.string.prog_SavingContactsToKeyDatabase));
             try {
@@ -3507,7 +3524,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
                 // import the new contacts
                 args.putInt(extra.RECIP_SOURCE, RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION);
-                args.putString(extra.INVITE_KEYID, inviteMsg.getKeyId());
+                args.putString(extra.KEYID, inviteMsg.getKeyId());
                 ImportFromExchangeTask importFromExchange = new ImportFromExchangeTask();
                 importFromExchange.execute(args);
                 setTab(Tabs.MESSAGE);

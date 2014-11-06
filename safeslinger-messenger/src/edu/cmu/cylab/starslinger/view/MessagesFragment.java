@@ -231,9 +231,7 @@ public class MessagesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // requested send from send button...
-                if (!TextUtils.isEmpty(mEditTextMessage.getText())) {
-                    doSend(mEditTextMessage.getText().toString(), mRecip != null);
-                }
+                doSend(mEditTextMessage.getText().toString(), mRecip != null);
             }
         });
 
@@ -243,9 +241,7 @@ public class MessagesFragment extends Fragment {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEND) {
                     // requested send from keyboard...
-                    if (!TextUtils.isEmpty(mEditTextMessage.getText())) {
-                        doSend(mEditTextMessage.getText().toString(), mRecip != null);
-                    }
+                    doSend(mEditTextMessage.getText().toString(), mRecip != null);
                     return true;
                 }
                 return false;
@@ -260,7 +256,7 @@ public class MessagesFragment extends Fragment {
     private void doSave(String text, boolean save) {
         Intent intent = new Intent();
         if (save) {
-            intent.putExtra(extra.TEXT_MESSAGE, text);
+            intent.putExtra(extra.TEXT_MESSAGE, text.trim());
             if (mDraft != null) {
                 intent.putExtra(extra.MESSAGE_ROW_ID, mDraft.getRowId());
             }
@@ -268,7 +264,7 @@ public class MessagesFragment extends Fragment {
                 intent.putExtra(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
             }
             // always keep local version, unless we need to delete
-            if (mDraft != null && TextUtils.isEmpty(text)) {
+            if (mDraft != null && !isSendableText()) {
                 mDraft = null;
                 mEditTextMessage.setTextKeepState("");
             }
@@ -278,12 +274,12 @@ public class MessagesFragment extends Fragment {
 
     private void doSend(String text, boolean send) {
         Intent intent = new Intent();
-        if (send) {
+        if (send && isSendableText()) {
             // recipient required to send anything
             if (mDraft != null) {
                 intent.putExtra(extra.MESSAGE_ROW_ID, mDraft.getRowId());
             }
-            intent.putExtra(extra.TEXT_MESSAGE, text);
+            intent.putExtra(extra.TEXT_MESSAGE, text.trim());
             if (mRecip != null) {
                 intent.putExtra(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
             }
@@ -1049,5 +1045,9 @@ public class MessagesFragment extends Fragment {
                 mEditTextMessage.requestFocus();
             }
         }
+    }
+
+    private boolean isSendableText() {
+        return TextUtils.getTrimmedLength(mEditTextMessage.getText()) != 0;
     }
 }

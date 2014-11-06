@@ -168,7 +168,7 @@ public class ComposeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if (!TextUtils.isEmpty(mEditTextMessage.getText()) || !TextUtils.isEmpty(mFilePath)) {
+                if (isSendableText() || !TextUtils.isEmpty(mFilePath)) {
                     doSend(mEditTextMessage.getText().toString());
                 }
             }
@@ -180,8 +180,7 @@ public class ComposeFragment extends Fragment {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEND) {
-                    if (!TextUtils.isEmpty(mEditTextMessage.getText())
-                            || !TextUtils.isEmpty(mFilePath)) {
+                    if (isSendableText() || !TextUtils.isEmpty(mFilePath)) {
                         doSend(mEditTextMessage.getText().toString());
                     }
                     return true;
@@ -280,7 +279,7 @@ public class ComposeFragment extends Fragment {
 
     private void doSave(String text) {
         Intent intent = new Intent();
-        intent.putExtra(extra.TEXT_MESSAGE, text);
+        intent.putExtra(extra.TEXT_MESSAGE, text.trim());
         if (mRecip != null) {
             intent.putExtra(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
         }
@@ -289,7 +288,7 @@ public class ComposeFragment extends Fragment {
 
     private void doSend(String text) {
         Intent intent = new Intent();
-        intent.putExtra(extra.TEXT_MESSAGE, text);
+        intent.putExtra(extra.TEXT_MESSAGE, text.trim());
         if (mRecip != null) {
             intent.putExtra(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
         }
@@ -551,5 +550,9 @@ public class ComposeFragment extends Fragment {
         if (focus != null) {
             imm.hideSoftInputFromWindow(focus.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
+    }
+
+    private boolean isSendableText() {
+        return TextUtils.getTrimmedLength(mEditTextMessage.getText()) != 0;
     }
 }
