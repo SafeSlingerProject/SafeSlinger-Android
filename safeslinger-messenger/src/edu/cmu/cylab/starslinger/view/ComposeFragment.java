@@ -229,7 +229,7 @@ public class ComposeFragment extends Fragment {
         long myKeyDate = SafeSlingerPrefs.getKeyDate();
 
         // sender
-        mImageViewSenderPhoto.setBackgroundResource(0);
+        mImageViewSenderPhoto.setImageResource(0);
         String name = SafeSlingerPrefs.getContactName();
         if (!TextUtils.isEmpty(name)) {
             byte[] photo = ((BaseActivity) this.getActivity()).getContactPhoto(contactLookupKey);
@@ -239,11 +239,11 @@ public class ComposeFragment extends Fragment {
             mTextViewRecipName.setTextColor(Color.GRAY);
             mTextViewSenderName.setText(R.string.label_UserName);
             mTextViewSenderKey.setText("");
-            mImageViewSenderPhoto.setBackgroundResource(R.drawable.ic_silhouette);
+            mImageViewSenderPhoto.setImageResource(R.drawable.ic_silhouette);
         }
 
         // recipient
-        mImageViewRecipPhoto.setBackgroundResource(0);
+        mImageViewRecipPhoto.setImageResource(0);
         if (mRecip != null) {
             drawUserData(R.string.label_SendTo, mRecip.getName(), mRecip.getPhoto(),
                     mTextViewRecipName, mTextViewRecipKey, mImageViewRecipPhoto, mRecip.getKeyid(),
@@ -253,7 +253,7 @@ public class ComposeFragment extends Fragment {
             mTextViewRecipName.setTextColor(Color.GRAY);
             mTextViewRecipName.setText(R.string.label_SelectRecip);
             mTextViewRecipKey.setText("");
-            mImageViewRecipPhoto.setBackgroundResource(R.drawable.ic_silhouette_select);
+            mImageViewRecipPhoto.setImageResource(R.drawable.ic_silhouette_select);
         }
 
         // file
@@ -264,7 +264,7 @@ public class ComposeFragment extends Fragment {
         } else {
             mTextViewFile.setTextColor(Color.GRAY);
             mTextViewFile.setText(R.string.btn_SelectFile);
-            mImageViewFile.setBackgroundResource(R.drawable.ic_attachment_select);
+            mImageViewFile.setImageResource(R.drawable.ic_attachment_select);
             mTextViewFileSize.setText("");
         }
 
@@ -366,7 +366,7 @@ public class ComposeFragment extends Fragment {
         if (mThumb != null && mThumb.length > 0) {
             ByteArrayInputStream in = new ByteArrayInputStream(mThumb);
             BitmapDrawable tn = new BitmapDrawable(in);
-            mImageViewFile.setBackgroundDrawable(tn);
+            mImageViewFile.setImageDrawable(tn);
         } else {
             Intent viewIntent = new Intent(Intent.ACTION_VIEW);
             viewIntent.setType(mime);
@@ -380,10 +380,10 @@ public class ComposeFragment extends Fragment {
                 if (!resolved) {
                     try {
                         Drawable icon = pm.getApplicationIcon(ri.activityInfo.packageName);
-                        mImageViewFile.setBackgroundDrawable(icon);
+                        mImageViewFile.setImageDrawable(icon);
                         resolved = true;
                     } catch (NameNotFoundException e) {
-                        mImageViewFile.setBackgroundDrawable(getResources().getDrawable(
+                        mImageViewFile.setImageDrawable(getResources().getDrawable(
                                 R.drawable.ic_menu_file));
                     }
                 }

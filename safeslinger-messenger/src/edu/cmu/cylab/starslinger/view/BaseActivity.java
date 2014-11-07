@@ -44,7 +44,6 @@ import a_vcard.android.syncml.pim.vcard.VCardParser;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -720,10 +719,11 @@ public class BaseActivity extends ActionBarActivity {
         intent.setAction(Intent.ACTION_VIEW);
         intent.setDataAndType(uri, fileType);
 
-        try {
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
             startActivity(intent);
-        } catch (ActivityNotFoundException e) {
-            showNote(getUnsupportedFeatureString(Intent.ACTION_VIEW));
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Viewing " + fileType));
         }
     }
 
@@ -1400,17 +1400,23 @@ public class BaseActivity extends ActionBarActivity {
     protected void showUpdateContactLink(long recipientRowId) {
         mContactLinkRecipientRowId = recipientRowId;
         Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
-        startActivityForResult(intent, RESULT_SELECT_CONTACT_LINK);
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
+            startActivityForResult(intent, RESULT_SELECT_CONTACT_LINK);
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Pick Contact"));
+        }
     }
 
     protected void showEditContact(String contactLookupKey) {
         Uri personUri = getPersonUri(contactLookupKey);
         if (personUri != null) {
             Intent intent = new Intent(Intent.ACTION_EDIT, personUri);
-            try {
+            boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+            if (actionAvailable) {
                 startActivityForResult(intent, RESULT_EDIT_CONTACT_LINK);
-            } catch (ActivityNotFoundException e) {
-                showNote(getUnsupportedFeatureString("Contacts"));
+            } else {
+                showNote(SafeSlinger.getUnsupportedFeatureString("Edit Contact"));
             }
         } else {
             showNote(R.string.error_ContactUpdateFailed);
@@ -1456,11 +1462,11 @@ public class BaseActivity extends ActionBarActivity {
                 getString(R.string.title_TextInviteMsg), getString(R.string.menu_TagExchange)));
         intent.putExtra(Intent.EXTRA_TEXT, getInviteLongMessage());
 
-        try {
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
             startActivityForResult(intent, RESULT_SEND_INVITE);
-        } catch (ActivityNotFoundException e) {
-            // If there is nothing that can send a text/html MIME type
-            e.printStackTrace();
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Send Email"));
         }
     }
 
@@ -1482,11 +1488,11 @@ public class BaseActivity extends ActionBarActivity {
             intent.putExtra("address", phone);
             intent.putExtra("sms_body", getInviteShortMessage());
         }
-        try {
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
             startActivityForResult(intent, RESULT_SEND_INVITE);
-        } catch (ActivityNotFoundException e) {
-            // If there is nothing that can send a text/html MIME type
-            e.printStackTrace();
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Send SMS"));
         }
     }
 
@@ -1624,33 +1630,34 @@ public class BaseActivity extends ActionBarActivity {
             }
             chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS,
                     targetedShareIntents.toArray(new Parcelable[] {}));
-            try {
+
+            boolean actionAvailable = getPackageManager().resolveActivity(chooserIntent, 0) != null;
+            if (actionAvailable) {
                 startActivity(chooserIntent);
-            } catch (ActivityNotFoundException e) {
-                showNote(getUnsupportedFeatureString(Intent.ACTION_SEND));
+            } else {
+                showNote(SafeSlinger.getUnsupportedFeatureString("Choose Messenger"));
             }
         }
     }
 
     private void showBackupSettings() {
-        try {
-            startActivity(new Intent(Settings.ACTION_PRIVACY_SETTINGS));
-        } catch (ActivityNotFoundException e) {
-            showNote(getUnsupportedFeatureString(Settings.ACTION_PRIVACY_SETTINGS));
+        Intent intent = new Intent(Settings.ACTION_PRIVACY_SETTINGS);
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
+            startActivity(intent);
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Privacy Settings"));
         }
     }
 
     protected void showAccountsSettings() {
-        try {
-            startActivity(new Intent(Settings.ACTION_ADD_ACCOUNT));
-        } catch (ActivityNotFoundException e) {
-            showNote(getUnsupportedFeatureString(Settings.ACTION_ADD_ACCOUNT));
+        Intent intent = new Intent(Settings.ACTION_ADD_ACCOUNT);
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
+            startActivity(intent);
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Add Account Settings"));
         }
-    }
-
-    public String getUnsupportedFeatureString(String feature) {
-        return String.format(getString(R.string.error_FeatureIsNotSupport), feature, Build.BRAND
-                + " " + Build.MODEL);
     }
 
     public List<ContactStruct> parseVCards(byte[][] data) {

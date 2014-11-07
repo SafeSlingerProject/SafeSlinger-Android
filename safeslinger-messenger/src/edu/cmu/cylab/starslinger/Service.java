@@ -174,11 +174,21 @@ public class Service extends android.app.Service {
         long delayed = (request) + SafeSlingerConfig.BACKUP_DELAY_WARN_MS;
         long complete = SafeSlingerPrefs.getBackupCompleteDate();
         boolean reminder = SafeSlingerPrefs.getRemindBackupDelay();
+        boolean exchanged = false;
+
+        // We don't need to give the first backup delayed reminder before the
+        // first time a user has exchanged any keys
+        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
+        int trustRecips = dbRecipient.getTrustedRecipientCount();
+        if (trustRecips > 0) {
+            SafeSlingerPrefs.setFirstExchangeComplete(true);
+            exchanged = true;
+        }
 
         if (request <= 0) {
             // if never backed up, begin a request...
             SafeSlinger.queueBackup();
-        } else if (reminder && request > complete && now > delayed) {
+        } else if (reminder && exchanged && request > complete && now > delayed) {
             // if backup delayed, send user notification...
             String ns = Context.NOTIFICATION_SERVICE;
             NotificationManager nm = (NotificationManager) getSystemService(ns);

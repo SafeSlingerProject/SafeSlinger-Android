@@ -56,6 +56,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.Toast;
+import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
@@ -68,6 +69,7 @@ import edu.cmu.cylab.starslinger.util.StorageOptions;
 
 public class SettingsActivity extends PreferenceActivity {
 
+    private static final String TAG = SafeSlingerConfig.LOG_TAG;
     private static final int MENU_RESTORE_DEFAULTS = 1;
     public static final int RESULT_CHANGE_PASSTTL = 2;
     public static final int RESULT_NEW_PASSPHRASE = 5;
@@ -335,9 +337,14 @@ public class SettingsActivity extends PreferenceActivity {
     }
 
     protected void showWebPage(String url) {
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
+            startActivity(intent);
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("View Web Page"));
+        }
     }
 
     protected void setShowLicense() {
@@ -656,8 +663,16 @@ public class SettingsActivity extends PreferenceActivity {
         SafeSlinger.updateCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
     }
 
-    private void showNote(int resId) {
-        Toast.makeText(SettingsActivity.this, resId, Toast.LENGTH_LONG).show();
+    protected void showNote(String msg) {
+        MyLog.i(TAG, msg);
+        Toast toast = Toast.makeText(SettingsActivity.this, msg.trim(), Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void showNote(int resId) {
+        MyLog.i(TAG, getString(resId));
+        Toast toast = Toast.makeText(SettingsActivity.this, resId, Toast.LENGTH_LONG);
+        toast.show();
     }
 
     @Override

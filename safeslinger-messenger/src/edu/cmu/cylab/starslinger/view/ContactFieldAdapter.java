@@ -106,7 +106,7 @@ public class ContactFieldAdapter extends BaseAdapter {
             if (icon != 0) {
                 img.setImageResource(icon);
             } else {
-                img.setBackgroundResource(0);
+                img.setImageResource(0);
             }
         } catch (OutOfMemoryError e) {
             img.setImageBitmap(null);

@@ -54,7 +54,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -205,7 +204,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         @Override
         public void run() {
-
             // uniformly handle pass timeout from any activity...
             if (!showPassphraseWhenExpired()) {
                 long remain = SafeSlinger.getPassPhraseCacheTimeRemaining(SafeSlingerPrefs
@@ -381,7 +379,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         // handle caller send action once send only
         // show send screen once only
-        processIntent(intent);
+        if (loadCurrentPassPhrase()) {
+            processIntent(intent);
+        }
     }
 
     public void processIntent(Intent intent) {
@@ -504,7 +504,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (savedInstanceState == null) {
             // init app launch once all time
 
-            processIntent(getIntent());
+            if (loadCurrentPassPhrase()) {
+                processIntent(getIntent());
+            }
 
             boolean dateChanged = SSUtil.isDayChanged(SafeSlingerPrefs.getContactDBLastScan());
             if (dateChanged) {
@@ -845,7 +847,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         switch (item.getItemId()) {
             case MENU_LOGOUT:
                 // remove cached pass
-                doLogout();
+                doManualLogout();
                 return true;
             case MENU_CONTACTINVITE:
                 showAddContactInvite();
@@ -866,7 +868,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         return false;
     }
 
-    private void doLogout() {
+    private void doManualLogout() {
         reInitForExit();
         SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
         SafeSlinger.startCacheService(HomeActivity.this);
@@ -1803,6 +1805,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                     break;
                                 }
 
+                                if (loadCurrentPassPhrase()) {
+                                    processIntent(getIntent());
+                                }
+
                                 // if requested, and logged in, try to decrypt
                                 // messages
                                 if (SafeSlingerPrefs.getAutoDecrypt()) {
@@ -1972,7 +1978,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         showPassPhraseVerify();
                         break;
                     case SettingsActivity.RESULT_LOGOUT:
-                        doLogout();
+                        doManualLogout();
                         break;
                     case SettingsActivity.RESULT_DELETE_KEYS:
                         // allow deletion of newer keys only
@@ -2540,6 +2546,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 if (SafeSlinger.isAppVisible()) {
                     showPassPhrase(false, false);
                     return true;
+                } else {
+                    // in the background, auto logout should close the activity
+                    showExit(RESULT_OK);
                 }
             }
         }
@@ -3163,16 +3172,16 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     private void showAddContact(String name) {
-
         Intent intent = new Intent(Intent.ACTION_INSERT);
         intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
-
-        if (!TextUtils.isEmpty(name))
+        if (!TextUtils.isEmpty(name)) {
             intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
-        try {
+        }
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
             startActivityForResult(intent, RESULT_PICK_CONTACT_SENDER);
-        } catch (ActivityNotFoundException e) {
-            showNote(getUnsupportedFeatureString("Contacts"));
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Insert Contact"));
         }
     }
 
@@ -3292,10 +3301,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         Uri personUri = getPersonUri(contactLookupKey);
         if (personUri != null) {
             Intent intent = new Intent(Intent.ACTION_EDIT, personUri);
-            try {
+            boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+            if (actionAvailable) {
                 startActivityForResult(intent, requestCode);
-            } catch (ActivityNotFoundException e) {
-                showNote(getUnsupportedFeatureString("Contacts"));
+            } else {
+                showNote(SafeSlinger.getUnsupportedFeatureString("Edit Contact"));
             }
         } else {
             showNote(R.string.error_ContactUpdateFailed);
@@ -3304,10 +3314,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     private void showPickContact(int requestCode) {
         Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
-        try {
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
             startActivityForResult(intent, requestCode);
-        } catch (ActivityNotFoundException e) {
-            showNote(getUnsupportedFeatureString("Contacts"));
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Pick Contact"));
         }
     }
 
@@ -3830,9 +3841,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     protected void showWebPage(String url) {
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
+            startActivity(intent);
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("View Web Page"));
+        }
     }
 
     @Override

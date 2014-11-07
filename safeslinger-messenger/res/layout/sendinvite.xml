@@ -84,8 +84,8 @@
                         android:layout_width="@dimen/size_50dp"
                         android:layout_height="@dimen/size_50dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/ic_silhouette_select"
-                        android:contentDescription="@string/label_Photo" >
+                        android:contentDescription="@string/label_Photo"
+                        android:src="@drawable/ic_silhouette_select" >
                     </ImageView>
 
                     <LinearLayout
@@ -157,8 +157,8 @@
                         android:layout_width="@dimen/size_50dp"
                         android:layout_height="@dimen/size_50dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/ic_silhouette_select"
-                        android:contentDescription="@string/label_Photo" >
+                        android:contentDescription="@string/label_Photo"
+                        android:src="@drawable/ic_silhouette_select" >
                     </ImageView>
 
                     <LinearLayout
