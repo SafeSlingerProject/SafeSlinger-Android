@@ -51,7 +51,6 @@ public class RecipientDbAdapter {
     private static RecipientDbAdapter sInstance = null;
     private static int sUserNumber = 0;
 
-    private static final String TAG = SafeSlingerConfig.LOG_TAG;
     public static final String DATABASE_TABLE = "recipient";
 
     // Database fields

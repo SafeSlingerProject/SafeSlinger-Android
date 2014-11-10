@@ -92,11 +92,14 @@ public class ContactFieldAdapter extends BaseAdapter {
 
         final String compare = getFieldForCompare(n, v);
 
+        // migrate setting if needed
+        SafeSlingerPrefs.migrateContactField(compare);
+
         if (forceCheck) {
             cb.setChecked(true);
             cb.setEnabled(false);
         } else {
-            cb.setChecked(SafeSlingerPrefs.getContactField(compare));
+            cb.setChecked(SafeSlingerPrefs.getHashContactField(compare));
             cb.setEnabled(true);
         }
 
@@ -119,7 +122,7 @@ public class ContactFieldAdapter extends BaseAdapter {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                SafeSlingerPrefs.setContactField(compare, isChecked);
+                SafeSlingerPrefs.setHashContactField(compare, isChecked);
             }
         });
     }

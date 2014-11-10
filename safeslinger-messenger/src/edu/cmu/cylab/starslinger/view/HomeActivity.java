@@ -48,7 +48,6 @@ import a_vcard.android.syncml.pim.vcard.ContactStruct.ContactMethod;
 import a_vcard.android.syncml.pim.vcard.Name;
 import a_vcard.android.syncml.pim.vcard.VCardException;
 import a_vcard.android.syncml.pim.vcard.VCardParser;
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -149,7 +148,6 @@ import edu.cmu.cylab.starslinger.view.IntroductionFragment.OnIntroResultListener
 import edu.cmu.cylab.starslinger.view.MessagesFragment.OnMessagesResultListener;
 import edu.cmu.cylab.starslinger.view.SlingerFragment.OnSlingerResultListener;
 
-@SuppressLint("InflateParams")
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class HomeActivity extends BaseActivity implements OnComposeResultListener,
@@ -417,27 +415,32 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 setTab(Tabs.COMPOSE);
             }
         } else {
-            // if nothing else, make sure proper default tab is selected
-            RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                    .openInstance(getApplicationContext());
-            MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+            setProperDefaultTab();
+        }
+    }
 
-            if (dbRecipient.getTrustedRecipientCount() == 0) {
-                // Sling Keys should be the default when there are 0 keys
-                // exchanged.
+    public void setProperDefaultTab() throws SQLException {
+        // if nothing else, make sure proper default tab is selected
+        RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                .openInstance(getApplicationContext());
+        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
 
-                setTab(Tabs.SLINGKEYS);
-                if (SafeSlingerPrefs.getShowWalkthrough()) {
-                    BaseActivity.xshowWalkthrough(this).create().show();
-                }
+        if (dbRecipient.getTrustedRecipientCount() == 0) {
+            // Sling Keys should be the default when there are 0 keys
+            // exchanged.
 
-            } else if (dbMessage.getAllMessageCount() == 0) {
-                // Compose should be the default when there are > 1 keys and 0
-                // messages.
-                setTab(Tabs.COMPOSE);
+            setTab(Tabs.SLINGKEYS);
+            if (SafeSlingerPrefs.getShowWalkthrough()) {
+                BaseActivity.xshowWalkthrough(this).create().show();
             }
 
+        } else if (dbMessage.getAllMessageCount() == 0) {
+            // Compose should be the default when there are > 1 keys and 0
+            // messages.
+            setTab(Tabs.COMPOSE);
+        } else {
             // Messages should be the default when there are > 1 messages.
+            setTab(Tabs.MESSAGE);
         }
     }
 
@@ -3388,7 +3391,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    @SuppressLint("InflateParams")
     private AlertDialog.Builder xshowManagePassphrases(final Activity act, Bundle args) {
         String msg = args.getString(extra.RESID_MSG);
         boolean allowDelete = args.getBoolean(extra.ALLOW_DELETE);

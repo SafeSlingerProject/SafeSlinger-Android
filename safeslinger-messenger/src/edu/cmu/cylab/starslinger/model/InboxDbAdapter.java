@@ -33,7 +33,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.text.TextUtils;
 import edu.cmu.cylab.starslinger.SafeSlinger;
-import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 
 /***
  * This is adapter is meant to store the encrypted messages received from other
@@ -44,7 +43,6 @@ import edu.cmu.cylab.starslinger.SafeSlingerConfig;
  */
 public class InboxDbAdapter {
     private static InboxDbAdapter sInstance = null;
-    private static final String TAG = SafeSlingerConfig.LOG_TAG;
     public static final String DATABASE_TABLE = "inbox";
     private Context mContext;
     private SQLiteDatabase mDatabase;

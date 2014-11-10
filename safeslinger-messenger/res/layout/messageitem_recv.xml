@@ -42,6 +42,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/size_3dp"
+        android:descendantFocusability="blocksDescendants"
         android:minHeight="@dimen/avatar_size_list"
         android:orientation="vertical" >
 

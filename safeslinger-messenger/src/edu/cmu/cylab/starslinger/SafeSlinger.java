@@ -38,7 +38,6 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.Vector;
 
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -373,7 +372,7 @@ public class SafeSlinger extends Application {
         }
     }
 
-    @SuppressLint("NewApi")
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     public static void getDebugData(Context ctx, StringBuilder output) {
         String deviceId = Settings.Secure.getString(ctx.getContentResolver(),
                 Settings.Secure.ANDROID_ID);
@@ -412,7 +411,7 @@ public class SafeSlinger extends Application {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             output.append("\n").append("RADIO: " + Build.getRadioVersion());
         } else {
-            output.append("\n").append("RADIO: " + Build.getRadioVersion());
+            output.append("\n").append("RADIO: " + Build.RADIO);
         }
         output.append("\n").append("TAGS: " + Build.TAGS);
         output.append("\n").append("TIME: " + new Date(Build.TIME));

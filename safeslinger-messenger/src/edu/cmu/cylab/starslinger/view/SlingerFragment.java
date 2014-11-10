@@ -316,7 +316,7 @@ public class SlingerFragment extends Fragment {
         ContactField item = mContactFields.get(i);
         if (item != null) {
             boolean forceChecked = item.getForceChecked();
-            boolean checked = SafeSlingerPrefs.getContactField(ContactFieldAdapter
+            boolean checked = SafeSlingerPrefs.getHashContactField(ContactFieldAdapter
                     .getFieldForCompare(item.getName(), item.getValue()));
             if (checked || forceChecked) {
                 add = true;
