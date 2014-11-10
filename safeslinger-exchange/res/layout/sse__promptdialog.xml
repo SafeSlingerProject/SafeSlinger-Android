@@ -108,11 +108,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
             android:layout_weight="1"
-            android:digits="&apos;0123456789&apos;"
+            android:digits="0123456789"
             android:hint="@string/label_UserIdHint"
             android:imeOptions="actionDone"
             android:inputType="number"
-            android:numeric="integer"
             android:privateImeOptions="nm"
             android:scrollHorizontally="true"
             android:textSize="@dimen/sse__text_size_large" >

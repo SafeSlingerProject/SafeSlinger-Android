@@ -34,7 +34,6 @@ import android.database.sqlite.SQLiteException;
 import android.text.TextUtils;
 import edu.cmu.cylab.starslinger.GeneralException;
 import edu.cmu.cylab.starslinger.SafeSlinger;
-import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.util.SSUtil;
@@ -47,9 +46,6 @@ import edu.cmu.cylab.starslinger.util.SSUtil;
 public class MessageDbAdapter {
     private static MessageDbAdapter sInstance = null;
     private static int sUserNumber = 0;
-
-    @SuppressWarnings("unused")
-    private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
     public static final String DATABASE_TABLE = "message";
 

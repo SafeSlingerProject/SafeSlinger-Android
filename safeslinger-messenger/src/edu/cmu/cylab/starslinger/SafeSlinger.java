@@ -38,7 +38,6 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.Vector;
 
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -46,7 +45,6 @@ import android.app.ActivityManager.MemoryInfo;
 import android.app.Application;
 import android.app.backup.BackupManager;
 import android.app.backup.RestoreObserver;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -353,6 +351,7 @@ public class SafeSlinger extends Application {
         intent.putExtra(Intent.EXTRA_SUBJECT, String.format("%s (%s %s)",
                 getString(R.string.title_comments), getString(R.string.label_AndroidOS),
                 SafeSlingerConfig.getVersionName()));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         try {
             BufferedWriter bos = new BufferedWriter(new FileWriter(filePath));
@@ -365,16 +364,15 @@ public class SafeSlinger extends Application {
             e.printStackTrace();
         }
 
-        try {
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
             startActivity(intent);
-        } catch (ActivityNotFoundException e) {
-            // If there is nothing that can send a text/html MIME type
-            e.printStackTrace();
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Send Feedback Email"));
         }
     }
 
-    @SuppressLint("NewApi")
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     public static void getDebugData(Context ctx, StringBuilder output) {
         String deviceId = Settings.Secure.getString(ctx.getContentResolver(),
                 Settings.Secure.ANDROID_ID);
@@ -413,7 +411,7 @@ public class SafeSlinger extends Application {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             output.append("\n").append("RADIO: " + Build.getRadioVersion());
         } else {
-            output.append("\n").append("RADIO: " + Build.getRadioVersion());
+            output.append("\n").append("RADIO: " + Build.RADIO);
         }
         output.append("\n").append("TAGS: " + Build.TAGS);
         output.append("\n").append("TIME: " + new Date(Build.TIME));
@@ -824,6 +822,11 @@ public class SafeSlinger extends Application {
             // android.app.backup.BackupManager.requestRestore(BackupManager.java:154)
             return false;
         }
+    }
+
+    public static String getUnsupportedFeatureString(String feature) {
+        return String.format(sSafeSlinger.getString(R.string.error_FeatureIsNotSupport), feature,
+                Build.BRAND + " " + Build.MODEL);
     }
 
     protected void showNote(String msg) {

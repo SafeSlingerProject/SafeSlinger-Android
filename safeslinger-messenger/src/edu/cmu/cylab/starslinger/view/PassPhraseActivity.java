@@ -353,9 +353,14 @@ public class PassPhraseActivity extends Activity {
     }
 
     protected void showWebPage(String url) {
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
+            startActivity(intent);
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("View Web Page"));
+        }
     }
 
     @Override

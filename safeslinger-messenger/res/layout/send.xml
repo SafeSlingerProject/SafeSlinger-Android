@@ -76,8 +76,8 @@
                         android:layout_width="@dimen/size_50dp"
                         android:layout_height="@dimen/size_50dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/ic_silhouette"
-                        android:contentDescription="@string/label_Photo" >
+                        android:contentDescription="@string/label_Photo"
+                        android:src="@drawable/ic_silhouette" >
                     </ImageView>
 
                     <LinearLayout
@@ -137,8 +137,8 @@
                         android:layout_width="@dimen/size_50dp"
                         android:layout_height="@dimen/size_50dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/ic_silhouette_select"
-                        android:contentDescription="@string/label_Photo" >
+                        android:contentDescription="@string/label_Photo"
+                        android:src="@drawable/ic_silhouette_select" >
                     </ImageView>
 
                     <LinearLayout
@@ -198,8 +198,8 @@
                         android:layout_width="@dimen/size_50dp"
                         android:layout_height="@dimen/size_50dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/ic_menu_file"
-                        android:contentDescription="@string/label_Photo" />
+                        android:contentDescription="@string/label_Photo"
+                        android:src="@drawable/ic_attachment_select" />
 
                     <LinearLayout
                         android:layout_width="fill_parent"

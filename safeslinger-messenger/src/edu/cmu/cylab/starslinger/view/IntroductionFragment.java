@@ -173,7 +173,7 @@ public class IntroductionFragment extends Fragment {
         }
 
         // recipient 1
-        mImageViewRecipPhoto1.setBackgroundResource(0);
+        mImageViewRecipPhoto1.setImageResource(0);
         if (mRecip1 != null) {
             drawUserData(R.string.label_SendTo, mRecip1.getName(), mRecip1.getPhoto(),
                     mTextViewRecipName1, mTextViewRecipKey1, mImageViewRecipPhoto1,
@@ -183,11 +183,11 @@ public class IntroductionFragment extends Fragment {
             mTextViewRecipName1.setTextColor(Color.GRAY);
             mTextViewRecipName1.setText(R.string.label_SelectRecip);
             mTextViewRecipKey1.setText("");
-            mImageViewRecipPhoto1.setBackgroundResource(R.drawable.ic_silhouette_select);
+            mImageViewRecipPhoto1.setImageResource(R.drawable.ic_silhouette_select);
         }
 
         // recipient 2
-        mImageViewRecipPhoto2.setBackgroundResource(0);
+        mImageViewRecipPhoto2.setImageResource(0);
         if (mRecip2 != null) {
             drawUserData(R.string.label_SendTo, mRecip2.getName(), mRecip2.getPhoto(),
                     mTextViewRecipName2, mTextViewRecipKey2, mImageViewRecipPhoto2,
@@ -197,7 +197,7 @@ public class IntroductionFragment extends Fragment {
             mTextViewRecipName2.setTextColor(Color.GRAY);
             mTextViewRecipName2.setText(R.string.label_SelectRecip);
             mTextViewRecipKey2.setText("");
-            mImageViewRecipPhoto2.setBackgroundResource(R.drawable.ic_silhouette_select);
+            mImageViewRecipPhoto2.setImageResource(R.drawable.ic_silhouette_select);
         }
 
         // message

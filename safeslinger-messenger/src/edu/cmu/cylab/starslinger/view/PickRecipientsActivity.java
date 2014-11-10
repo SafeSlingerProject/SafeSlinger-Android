@@ -1,3 +1,4 @@
+
 /*
  * The MIT License (MIT)
  * 
@@ -90,7 +91,7 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     private static int mListTopOffset;
 
     private SearchView mSearchEdt;
-//    List<RecipientRow> mSearchData = new ArrayList<RecipientRow>();
+
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,9 +133,9 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         tvInstruct = (TextView) findViewById(R.id.tvInstruct);
 
         // always default to checked on view creation
-        SafeSlingerPrefs.setShowRecentRecipOnly(true);
+//        SafeSlingerPrefs.setShowRecentRecipOnly(true);
 
-        cbMostRecentOnly.setChecked(SafeSlingerPrefs.getShowRecentRecipOnly());
+        cbMostRecentOnly.setChecked(true);
 
         listViewRecipients.setOnScrollListener(new OnScrollListener() {
 
@@ -159,7 +160,7 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                SafeSlingerPrefs.setShowRecentRecipOnly(isChecked);
+//                SafeSlingerPrefs.setShowRecentRecipOnly(isChecked);
                 updateValues(null);
             }
         });
@@ -497,3 +498,4 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     }
 
 }
+

@@ -394,7 +394,7 @@ public class CryptTools {
     public static byte[] encryptBlobWithSaltPass(String pass, byte[] cleartext, byte[] salt,
             int iterations) throws NoSuchAlgorithmException, InvalidKeyException,
             NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException,
-            InvalidKeySpecException, UnsupportedEncodingException {
+            InvalidKeySpecException, UnsupportedEncodingException, CryptoMsgException {
 
         byte[] rawKey = generatePBKDF2Key(pass, salt, iterations);
         byte[] result = encryptWithRawKey(rawKey, cleartext);
@@ -404,7 +404,7 @@ public class CryptTools {
     public static byte[] decryptBlobWithSaltPass(String pass, byte[] encrypted, byte[] salt,
             int iterations) throws NoSuchAlgorithmException, InvalidKeyException,
             NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException,
-            InvalidKeySpecException, UnsupportedEncodingException {
+            InvalidKeySpecException, UnsupportedEncodingException, CryptoMsgException {
 
         byte[] rawKey = generatePBKDF2Key(pass, salt, iterations);
         byte[] result = decryptWithRawKey(rawKey, encrypted);
@@ -420,7 +420,8 @@ public class CryptTools {
     }
 
     public static byte[] generatePBKDF2Key(String pass, byte[] salt, int iterations)
-            throws NoSuchAlgorithmException, InvalidKeySpecException, UnsupportedEncodingException {
+            throws NoSuchAlgorithmException, InvalidKeySpecException, UnsupportedEncodingException,
+            CryptoMsgException {
         // Traditional key factory. Will use lower 8-bits of passphrase
         // chars on older Android versions (API level 18 and lower) and all
         // available bits on KitKat and newer (API level 19 and higher).
@@ -429,8 +430,13 @@ public class CryptTools {
         // To avoid read/write errors we manually convert the passphrase
         // to use all unicode characters before writing the format.
         char[] passWithAllUnicodeBytes = new String(pass.getBytes(), "UTF-8").toCharArray();
-
-        KeySpec keySpec = new PBEKeySpec(passWithAllUnicodeBytes, salt, iterations, REST_ENC_KEYLEN);
+        KeySpec keySpec;
+        try {
+            keySpec = new PBEKeySpec(passWithAllUnicodeBytes, salt, iterations, REST_ENC_KEYLEN);
+        } catch (NullPointerException e) {
+            // re-throw if the salt is null
+            throw new CryptoMsgException(e.getLocalizedMessage());
+        }
         SecretKey secretKey = factory.generateSecret(keySpec);
         return secretKey.getEncoded();
     }

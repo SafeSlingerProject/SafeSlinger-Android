@@ -48,13 +48,11 @@ import a_vcard.android.syncml.pim.vcard.ContactStruct.ContactMethod;
 import a_vcard.android.syncml.pim.vcard.Name;
 import a_vcard.android.syncml.pim.vcard.VCardException;
 import a_vcard.android.syncml.pim.vcard.VCardParser;
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -150,7 +148,6 @@ import edu.cmu.cylab.starslinger.view.IntroductionFragment.OnIntroResultListener
 import edu.cmu.cylab.starslinger.view.MessagesFragment.OnMessagesResultListener;
 import edu.cmu.cylab.starslinger.view.SlingerFragment.OnSlingerResultListener;
 
-@SuppressLint("InflateParams")
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class HomeActivity extends BaseActivity implements OnComposeResultListener,
@@ -205,7 +202,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         @Override
         public void run() {
-
             // uniformly handle pass timeout from any activity...
             if (!showPassphraseWhenExpired()) {
                 long remain = SafeSlinger.getPassPhraseCacheTimeRemaining(SafeSlingerPrefs
@@ -268,6 +264,29 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         public void onReceive(Context context, Intent intent) {
 
             boolean abort = abortNextBroadcast(intent);
+
+            // update current message list if in view...
+            final int position = getSupportActionBar().getSelectedNavigationIndex();
+            if (position == Tabs.MESSAGE.ordinal()) {
+                if (mTabsAdapter != null) {
+                    MessagesFragment mf = (MessagesFragment) mTabsAdapter
+                            .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+                    if (mf != null) {
+                        mf.updateValues(intent.getExtras());
+
+                        // if not current recipient in thread, user must get
+                        // written notice so do not abort
+                        RecipientRow r = MessagesFragment.getRecip();
+                        String inkey = intent.getExtras().getString(extra.KEYID);
+                        if (abort && r != null && inkey != null) {
+                            if (!inkey.equals(r.getKeyid())) {
+                                abort = false;
+                            }
+                        }
+                    }
+                }
+            }
+
             if (abort) {
                 abortBroadcast();
                 // Reset the last timestamp when aborting broadcast ..get
@@ -280,17 +299,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
             }
 
-            // update current message list if in view...
-            final int position = getSupportActionBar().getSelectedNavigationIndex();
-            if (position == Tabs.MESSAGE.ordinal()) {
-                if (mTabsAdapter != null) {
-                    MessagesFragment mf = (MessagesFragment) mTabsAdapter
-                            .findFragmentByPosition(Tabs.MESSAGE.ordinal());
-                    if (mf != null) {
-                        mf.updateValues(intent.getExtras());
-                    }
-                }
-            }
         }
     };
 
@@ -345,13 +353,18 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     private boolean abortNextBroadcast(Intent intent) {
+        // conditions to abort, all must be true:
+        // - message tab is in view
+        // - key id matches current thread, or all threads in view
         boolean abortBroadcast = false;
         if (intent.getExtras() != null) {
+
             int allCount = intent.getExtras().getInt(extra.NOTIFY_COUNT);
             if (allCount != 0
                     && (getSupportActionBar().getSelectedNavigationIndex() == Tabs.MESSAGE
-                            .ordinal() && SafeSlinger.getApplication().isMessageFragActive()))
+                            .ordinal() && SafeSlinger.getApplication().isMessageFragActive())) {
                 abortBroadcast = true;
+            }
         }
 
         return abortBroadcast;
@@ -364,7 +377,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
         // handle caller send action once send only
         // show send screen once only
-        processIntent(intent);
+        if (loadCurrentPassPhrase()) {
+            processIntent(intent);
+        }
     }
 
     public void processIntent(Intent intent) {
@@ -400,27 +415,32 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 setTab(Tabs.COMPOSE);
             }
         } else {
-            // if nothing else, make sure proper default tab is selected
-            RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                    .openInstance(getApplicationContext());
-            MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+            setProperDefaultTab();
+        }
+    }
 
-            if (dbRecipient.getTrustedRecipientCount() == 0) {
-                // Sling Keys should be the default when there are 0 keys
-                // exchanged.
+    public void setProperDefaultTab() throws SQLException {
+        // if nothing else, make sure proper default tab is selected
+        RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                .openInstance(getApplicationContext());
+        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
 
-                setTab(Tabs.SLINGKEYS);
-                if (SafeSlingerPrefs.getShowWalkthrough()) {
-                    BaseActivity.xshowWalkthrough(this).create().show();
-                }
+        if (dbRecipient.getTrustedRecipientCount() == 0) {
+            // Sling Keys should be the default when there are 0 keys
+            // exchanged.
 
-            } else if (dbMessage.getAllMessageCount() == 0) {
-                // Compose should be the default when there are > 1 keys and 0
-                // messages.
-                setTab(Tabs.COMPOSE);
+            setTab(Tabs.SLINGKEYS);
+            if (SafeSlingerPrefs.getShowWalkthrough()) {
+                BaseActivity.xshowWalkthrough(this).create().show();
             }
 
+        } else if (dbMessage.getAllMessageCount() == 0) {
+            // Compose should be the default when there are > 1 keys and 0
+            // messages.
+            setTab(Tabs.COMPOSE);
+        } else {
             // Messages should be the default when there are > 1 messages.
+            setTab(Tabs.MESSAGE);
         }
     }
 
@@ -487,7 +507,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         if (savedInstanceState == null) {
             // init app launch once all time
 
-            processIntent(getIntent());
+            if (loadCurrentPassPhrase()) {
+                processIntent(getIntent());
+            }
 
             boolean dateChanged = SSUtil.isDayChanged(SafeSlingerPrefs.getContactDBLastScan());
             if (dateChanged) {
@@ -828,7 +850,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         switch (item.getItemId()) {
             case MENU_LOGOUT:
                 // remove cached pass
-                doLogout();
+                doManualLogout();
                 return true;
             case MENU_CONTACTINVITE:
                 showAddContactInvite();
@@ -849,7 +871,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         return false;
     }
 
-    private void doLogout() {
+    private void doManualLogout() {
         reInitForExit();
         SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
         SafeSlinger.startCacheService(HomeActivity.this);
@@ -1786,6 +1808,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                     break;
                                 }
 
+                                if (loadCurrentPassPhrase()) {
+                                    processIntent(getIntent());
+                                }
+
                                 // if requested, and logged in, try to decrypt
                                 // messages
                                 if (SafeSlingerPrefs.getAutoDecrypt()) {
@@ -1955,7 +1981,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         showPassPhraseVerify();
                         break;
                     case SettingsActivity.RESULT_LOGOUT:
-                        doLogout();
+                        doManualLogout();
                         break;
                     case SettingsActivity.RESULT_DELETE_KEYS:
                         // allow deletion of newer keys only
@@ -2444,7 +2470,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         protected String doInBackground(Bundle... arg0) {
             args = arg0[0];
             recipSource = args.getInt(extra.RECIP_SOURCE);
-            introkeyid = args.getString(extra.INVITE_KEYID);
+            introkeyid = args.getString(extra.KEYID);
 
             publishProgress(getString(R.string.prog_SavingContactsToKeyDatabase));
             try {
@@ -2523,6 +2549,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 if (SafeSlinger.isAppVisible()) {
                     showPassPhrase(false, false);
                     return true;
+                } else {
+                    // in the background, auto logout should close the activity
+                    showExit(RESULT_OK);
                 }
             }
         }
@@ -3146,16 +3175,16 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     private void showAddContact(String name) {
-
         Intent intent = new Intent(Intent.ACTION_INSERT);
         intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
-
-        if (!TextUtils.isEmpty(name))
+        if (!TextUtils.isEmpty(name)) {
             intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
-        try {
+        }
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
             startActivityForResult(intent, RESULT_PICK_CONTACT_SENDER);
-        } catch (ActivityNotFoundException e) {
-            showNote(getUnsupportedFeatureString("Contacts"));
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Insert Contact"));
         }
     }
 
@@ -3275,10 +3304,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         Uri personUri = getPersonUri(contactLookupKey);
         if (personUri != null) {
             Intent intent = new Intent(Intent.ACTION_EDIT, personUri);
-            try {
+            boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+            if (actionAvailable) {
                 startActivityForResult(intent, requestCode);
-            } catch (ActivityNotFoundException e) {
-                showNote(getUnsupportedFeatureString("Contacts"));
+            } else {
+                showNote(SafeSlinger.getUnsupportedFeatureString("Edit Contact"));
             }
         } else {
             showNote(R.string.error_ContactUpdateFailed);
@@ -3287,10 +3317,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     private void showPickContact(int requestCode) {
         Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
-        try {
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
             startActivityForResult(intent, requestCode);
-        } catch (ActivityNotFoundException e) {
-            showNote(getUnsupportedFeatureString("Contacts"));
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("Pick Contact"));
         }
     }
 
@@ -3360,7 +3391,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    @SuppressLint("InflateParams")
     private AlertDialog.Builder xshowManagePassphrases(final Activity act, Bundle args) {
         String msg = args.getString(extra.RESID_MSG);
         boolean allowDelete = args.getBoolean(extra.ALLOW_DELETE);
@@ -3507,7 +3537,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
                 // import the new contacts
                 args.putInt(extra.RECIP_SOURCE, RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION);
-                args.putString(extra.INVITE_KEYID, inviteMsg.getKeyId());
+                args.putString(extra.KEYID, inviteMsg.getKeyId());
                 ImportFromExchangeTask importFromExchange = new ImportFromExchangeTask();
                 importFromExchange.execute(args);
                 setTab(Tabs.MESSAGE);
@@ -3813,9 +3843,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     protected void showWebPage(String url) {
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
+        if (actionAvailable) {
+            startActivity(intent);
+        } else {
+            showNote(SafeSlinger.getUnsupportedFeatureString("View Web Page"));
+        }
     }
 
     @Override

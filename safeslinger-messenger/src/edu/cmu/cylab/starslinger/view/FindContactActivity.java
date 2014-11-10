@@ -26,6 +26,7 @@ package edu.cmu.cylab.starslinger.view;
 
 import java.util.ArrayList;
 
+import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -128,6 +129,7 @@ public final class FindContactActivity extends BaseActivity {
 
         mSpinnerLanguage.setOnItemSelectedListener(new OnItemSelectedListener() {
 
+            @TargetApi(Build.VERSION_CODES.HONEYCOMB)
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long i) {
 

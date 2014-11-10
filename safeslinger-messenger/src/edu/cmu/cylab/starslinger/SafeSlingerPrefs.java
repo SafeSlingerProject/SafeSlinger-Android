@@ -40,8 +40,6 @@ public class SafeSlingerPrefs {
     private static final boolean DEFAULT_SHOW_WALKTHROUGH = true;
     private static final boolean DEFAULT_EULA_ACCEPTED = false;
     private static final boolean DEFAULT_REMINDBACKUPDELAY = true;
-    private static final boolean DEFAULT_SHOW_RECENT_RECIPONLY = true;
-    private static final boolean DEFAULT_SHOW_RECENT_RECIPONLY_EDITED = false;
     private static final boolean DEFAULT_FIRST_EXCH_COMPLETE = false;
     private static final boolean DEFAULT_SHOW_REMINDSLINGKEYS = true;
     private static final int DEFAULT_FONT_SIZE = 16;
@@ -117,8 +115,6 @@ public class SafeSlingerPrefs {
         public static final String SHOW_ABOUT = "showAbout";
         public static final String SHOW_LICENSE = "showLicense";
         public static final String SHOW_PRIVACY = "showPrivacy";
-        public static final String SHOW_RECENT_RECIPONLY = "showRecentRecipOnly";
-        public static final String SHOW_RECENT_RECIPONLY_EDITED = "showRecentRecipOnlyEdited";
         public static final String SHOW_SLING_KEYS_REMIND = "showSlingKeysReminder";
         public static final String SHOW_WALKTHROUGH = "ShowWalkthrough";
         public static final String TEMPKEY_SYNCACCOUNT_LIST = "keyTempListContactSyncAccount";
@@ -135,7 +131,6 @@ public class SafeSlingerPrefs {
         setShowWalkthrough(DEFAULT_SHOW_WALKTHROUGH);
         setPassPhraseCacheTtl(DEFAULT_PPCACHETTL);
         setRemindBackupDelay(DEFAULT_REMINDBACKUPDELAY);
-        setShowRecentRecipOnly(DEFAULT_SHOW_RECENT_RECIPONLY);
         setDownloadDir(DEFAULT_DOWNLOAD_DIR);
         setFileManagerRootDir(DEFAULT_FILEMANAGER_ROOTDIR);
         setFontSize(DEFAULT_FONT_SIZE);
@@ -168,18 +163,31 @@ public class SafeSlingerPrefs {
         removePref(pref.KEYID_STRING + userNumber, true);
         removePref(pref.KEYSALT + userNumber, true);
         removePref(pref.PASSPHRASE_CACHE_TTL + userNumber, true);
-        removePref(pref.SHOW_RECENT_RECIPONLY + userNumber, true);
         removePref(pref.PREF_LAST_MSG_STAMP, false);
     }
 
     // persist to backup account...
 
-    public static boolean getContactField(String field) {
-        return getBoolean(getUserKeyName(field), true, true);
+    public static boolean getHashContactField(String field) {
+        return getBoolean(new String(CryptTools.computeSha3Hash(getUserKeyName(field).getBytes())),
+                true, true);
     }
 
-    public static void setContactField(String field, boolean checked) {
-        setBoolean(getUserKeyName(field), checked, true);
+    public static void setHashContactField(String field, boolean checked) {
+        setBoolean(new String(CryptTools.computeSha3Hash(getUserKeyName(field).getBytes())),
+                checked, true);
+    }
+
+    public static void migrateContactField(String field) {
+        boolean recover = true;
+        Context ctx = SafeSlinger.getApplication();
+        SharedPreferences settings = ctx.getSharedPreferences(getPrefsFileName(recover),
+                Context.MODE_PRIVATE);
+        if (settings.contains(getUserKeyName(field))) {
+            boolean checked = getBoolean(getUserKeyName(field), true, recover);
+            removePref(getUserKeyName(field), recover); // old
+            setHashContactField(getUserKeyName(field), checked); // new
+        }
     }
 
     public static String getContactLookupKey() {
@@ -262,22 +270,6 @@ public class SafeSlingerPrefs {
         setInt(getUserKeyName(pref.PASSPHRASE_CACHE_TTL), pass_phrase_cache_ttl, true);
     }
 
-    public static boolean getShowRecentRecipOnly() {
-        if (!getShowRecentRecipOnlyEdited()) {
-            // now unedited, use default
-            setBoolean(getUserKeyName(pref.SHOW_RECENT_RECIPONLY), DEFAULT_SHOW_RECENT_RECIPONLY,
-                    true);
-        }
-        return getBoolean(getUserKeyName(pref.SHOW_RECENT_RECIPONLY),
-                DEFAULT_SHOW_RECENT_RECIPONLY, true);
-    }
-
-    public static void setShowRecentRecipOnly(boolean showRecentRecipOnly) {
-        // now edited
-        setBoolean(pref.SHOW_RECENT_RECIPONLY_EDITED, true, true);
-        setBoolean(getUserKeyName(pref.SHOW_RECENT_RECIPONLY), showRecentRecipOnly, true);
-    }
-
     public static int getFontSize() {
         return getInt(getUserKeyName(pref.FONT_SIZE), DEFAULT_FONT_SIZE, true);
     }
@@ -296,14 +288,6 @@ public class SafeSlingerPrefs {
 
     public static boolean getAutoRetrieval() {
         return getBoolean(getUserKeyName(pref.AUTO_RETRIEVAL), DEFAULT_AUTO_RETRIEVAL, true);
-    }
-
-    public static long getLastTimeStamp() {
-        return getLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), 0, false);
-    }
-
-    public static void setLastTimeStamp(long timeStamp) {
-        setLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), timeStamp, false);
     }
 
     public static void setAutoRetrieval(boolean autoRetrieval) {
@@ -352,15 +336,6 @@ public class SafeSlingerPrefs {
         setBoolean(pref.SHOW_WALKTHROUGH, showWalkthrough, true);
     }
 
-    public static boolean getShowRecentRecipOnlyEdited() {
-        return getBoolean(pref.SHOW_RECENT_RECIPONLY_EDITED, DEFAULT_SHOW_RECENT_RECIPONLY_EDITED,
-                true);
-    }
-
-    public static void setShowRecentRecipOnlyEdited(boolean showRecentRecipOnlyEdited) {
-        setBoolean(pref.SHOW_RECENT_RECIPONLY_EDITED, showRecentRecipOnlyEdited, true);
-    }
-
     public static boolean getNotificationVibrate() {
         return getBoolean(pref.NOTIFICATION_VIBRATE, DEFAULT_NOTIFICATION_VIBRATE, true);
     }
@@ -375,6 +350,14 @@ public class SafeSlingerPrefs {
 
     public static void setNotificationRingTone(String notificationRingTone) {
         setString(pref.NOTIFICATION_RINGTONE, notificationRingTone, true);
+    }
+
+    public static long getLastTimeStamp() {
+        return getLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), 0, false);
+    }
+
+    public static void setLastTimeStamp(long timeStamp) {
+        setLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), timeStamp, false);
     }
 
     // do NOT persist to backup account...
@@ -523,7 +506,7 @@ public class SafeSlingerPrefs {
         String encodedDefault = (def == null) ? null : new String(
                 Base64.encode(def, Base64.NO_WRAP));
         String encodedValue = getString(key, encodedDefault, recover);
-        return Base64.decode(encodedValue.getBytes(), Base64.NO_WRAP);
+        return encodedValue != null ? Base64.decode(encodedValue.getBytes(), Base64.NO_WRAP) : null;
     }
 
     private static void setByteArray(String key, byte[] value, boolean recover) {
@@ -643,12 +626,13 @@ public class SafeSlingerPrefs {
     }
 
     private static String getUserKeyName(String key) {
-        if (getUser() == 0) {
+        int user = getUser();
+        if (user == 0) {
             // use 0 for for default user
             return key;
         } else {
             // use 1+ for additional users
-            return (key + getUser());
+            return (key + user);
         }
     }
 
