@@ -823,5 +823,5 @@
     <string name="title_Threads">Threads</string>
     <!-- title (title case); used at the top of the warning dialog. -->
     <string name="title_Warn">Warning</string>
-
+	<string name="search_hint">Search contacts</string>
 </resources>

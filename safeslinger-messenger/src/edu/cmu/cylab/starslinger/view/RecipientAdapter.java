@@ -49,6 +49,20 @@ public class RecipientAdapter extends BaseAdapter {
     private Context mContext;
     private List<RecipientRow> mListRecipients;
 
+    /**
+     * @return the mListRecipients
+     */
+    public List<RecipientRow> getmListRecipients() {
+        return mListRecipients;
+    }
+
+    /**
+     * @param mListRecipients the mListRecipients to set
+     */
+    public void setmListRecipients(List<RecipientRow> mListRecipients) {
+        this.mListRecipients = mListRecipients;
+    }
+
     public RecipientAdapter(Context context, List<RecipientRow> mcontacts) {
         mContext = context;
         mListRecipients = mcontacts;
