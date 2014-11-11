@@ -421,8 +421,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     public void setProperDefaultTab() throws SQLException {
         // if nothing else, make sure proper default tab is selected
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                .openInstance(getApplicationContext());
+        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
         MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
 
         if (dbRecipient.getTrustedRecipientCount() == 0) {

@@ -463,6 +463,10 @@
     <string name="label_SaveAccount">Save Account</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the End Exchange screen. -->
     <string name="label_SaveInstruct">Check contacts you want to update in your address book, then tap Import to save secure contacts:</string>
+
+    <!-- screen label (match English casing); used on the Recipients screen to provide a hint to search for contacts. -->
+    <string name="Label_search_contacts_hint">Search contacts</string>
+
     <!-- screen label (match English casing); used as a relative time label to the current time on the message list. %.0f = the number of whole seconds. -->
     <string name="label_seconds">%d seconds</string>
     <!-- screen label (match English casing); used on the Compose Message screen recipient button before a recipient has been selected. -->
@@ -823,5 +827,5 @@
     <string name="title_Threads">Threads</string>
     <!-- title (title case); used at the top of the warning dialog. -->
     <string name="title_Warn">Warning</string>
-	<string name="search_hint">Search contacts</string>
+
 </resources>

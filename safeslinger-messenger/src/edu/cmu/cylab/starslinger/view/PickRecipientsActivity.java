@@ -1,4 +1,3 @@
-
 /*
  * The MIT License (MIT)
  * 
@@ -92,7 +91,6 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
     private SearchView mSearchEdt;
 
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_SafeSlinger);
@@ -109,8 +107,9 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         mSearchEdt = (SearchView) findViewById(R.id.fragment_address_search);
-        ((AutoCompleteTextView)mSearchEdt.findViewById(R.id.search_src_text)).setDropDownBackgroundResource(R.drawable.abc_search_dropdown_light);
-        
+        ((AutoCompleteTextView) mSearchEdt.findViewById(R.id.search_src_text))
+                .setDropDownBackgroundResource(R.drawable.abc_search_dropdown_light);
+
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         mSearchEdt.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         mSearchEdt.setOnQueryTextListener(new OnQueryTextListener() {
@@ -133,8 +132,6 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         tvInstruct = (TextView) findViewById(R.id.tvInstruct);
 
         // always default to checked on view creation
-//        SafeSlingerPrefs.setShowRecentRecipOnly(true);
-
         cbMostRecentOnly.setChecked(true);
 
         listViewRecipients.setOnScrollListener(new OnScrollListener() {
@@ -160,7 +157,6 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                SafeSlingerPrefs.setShowRecentRecipOnly(isChecked);
                 updateValues(null);
             }
         });
@@ -169,29 +165,30 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     }
 
     private void searchContacts(final String searchString) {
-        
+
         updateValues(null);
         new Thread(new Runnable() {
-            
+
             @Override
             public void run() {
-                
-                if(mContacts != null && !mContacts.isEmpty())
-                {
+
+                if (mContacts != null && !mContacts.isEmpty()) {
                     List<RecipientRow> unmatchedData = new ArrayList<RecipientRow>();
-                    for(RecipientRow row :  mContacts)
-                    {
-                        if(!row.getName().toLowerCase(Locale.getDefault()).startsWith(searchString.toLowerCase(Locale.getDefault())))
+                    for (RecipientRow row : mContacts) {
+                        if (!row.getName().toLowerCase(Locale.getDefault())
+                                .startsWith(searchString.toLowerCase(Locale.getDefault())))
                             unmatchedData.add(row);
                     }
                     mContacts.removeAll(unmatchedData);
-           
-                    runOnUiThread( new Runnable() {
-                        
+
+                    runOnUiThread(new Runnable() {
+
                         @Override
                         public void run() {
-                            ((RecipientAdapter)listViewRecipients.getAdapter()).setmListRecipients(mContacts);
-                            ((RecipientAdapter)listViewRecipients.getAdapter()).notifyDataSetChanged();
+                            ((RecipientAdapter) listViewRecipients.getAdapter())
+                                    .setmListRecipients(mContacts);
+                            ((RecipientAdapter) listViewRecipients.getAdapter())
+                                    .notifyDataSetChanged();
                             // restore list position
                             listViewRecipients.setSelectionFromTop(mListVisiblePos, mListTopOffset);
                         }
@@ -199,9 +196,9 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
                 }
             }
         }).start();
-        
+
     }
-    
+
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -213,7 +210,7 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
                     CustomSuggestionsProvider.AUTHORITY, CustomSuggestionsProvider.MODE);
             suggestions.saveRecentQuery(searchQuery, null);
             searchContacts(searchQuery);
-            
+
         }
     }
 
@@ -340,11 +337,11 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
         RecipientRow recip = null;
-//        if(TextUtils.isEmpty(mSearchEdt.getQuery()))
-                recip = mContacts.get(pos);
-//        else
-//                recip = mSearchData.get(pos);
-        
+        // if(TextUtils.isEmpty(mSearchEdt.getQuery()))
+        recip = mContacts.get(pos);
+        // else
+        // recip = mSearchData.get(pos);
+
         boolean doselection = true;
 
         if (recip.isInvited()) {
@@ -498,4 +495,3 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     }
 
 }
-
