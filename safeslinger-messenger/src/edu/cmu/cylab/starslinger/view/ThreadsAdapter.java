@@ -146,7 +146,11 @@ public class ThreadsAdapter extends BaseAdapter {
             tvDate.setVisibility(View.VISIBLE);
             String dateTime = DateUtils.getRelativeTimeSpanString(mCtx, thread.getLastDate())
                     .toString();
-            tvDate.setText(dateTime);
+            if (!TextUtils.isEmpty(thread.getProgress())) {
+                tvDate.setText(thread.getProgress());
+            } else {
+                tvDate.setText(dateTime);
+            }
         }
 
         if (thread.isDetail()) {

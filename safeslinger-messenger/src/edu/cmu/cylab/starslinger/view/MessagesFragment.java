@@ -626,7 +626,8 @@ public class MessagesFragment extends Fragment {
         int newMsgs = dbInbox.getActionRequiredInboxCountByThread(inboxRow.getKeyId());
         int draftMsgs = 0; // inbox does not store drafts
         thread = new ThreadData(inboxRow.getKeyId(), msgs, newMsgs, inboxRow.getProbableDate(),
-                draftMsgs > 0, person, mRecip != null, newerExists, recipientRow);
+                draftMsgs > 0, person, mRecip != null, newerExists, recipientRow,
+                inboxRow.getProgress(), inboxRow.getRowId());
         return thread;
     }
 
@@ -660,7 +661,8 @@ public class MessagesFragment extends Fragment {
         int newMsgs = dbMessage.getActionRequiredMessageCountByThread(messageRow.getKeyId());
         int draftMsgs = dbMessage.getDraftMessageCountByThread(messageRow.getKeyId());
         thread = new ThreadData(messageRow.getKeyId(), msgs, newMsgs, messageRow.getProbableDate(),
-                draftMsgs > 0, person, mRecip != null, newerExists, recipientRow);
+                draftMsgs > 0, person, mRecip != null, newerExists, recipientRow,
+                messageRow.getProgress(), messageRow.getRowId());
         return thread;
     }
 
@@ -996,24 +998,40 @@ public class MessagesFragment extends Fragment {
         }
     }
 
-    public void postProgressMsgList(boolean isInboxTable, long rowId, String msg) {
-        for (int i = 0; i < mMessageList.size(); i++) {
-            if (mMessageList.get(i).isInboxTable() == isInboxTable
-                    && mMessageList.get(i).getRowId() == rowId) {
-                MessageRow mr = mMessageList.get(i);
-                mr.setProgress(msg);
-                mMessageList.set(i, mr);
+    public void postProgressMsgList(boolean isInboxTable, long msgRowId, String msg) {
+        if (mRecip == null) {
+            for (int i = 0; i < mThreadList.size(); i++) {
+                if (mThreadList.get(i).getLastMsgRowId() == msgRowId) {
+                    ThreadData t = mThreadList.get(i);
+                    t.setProgress(msg);
+                    mThreadList.set(i, t);
 
-                // ensure last item remains fully in view
-                if (rowId == mMessageList.get(mMessageList.size() - 1).getRowId()) {
-                    mListMsgTopOffset = 0;
-                    mListMsgVisiblePos = mMessageList.size() - 1;
+                    mAdapterThread = new ThreadsAdapter(this.getActivity(), mThreadList);
+                    mListViewThreads.setAdapter(mAdapterThread);
+                    mListViewThreads.setSelectionFromTop(mListThreadVisiblePos,
+                            mListThreadTopOffset);
+                    break;
                 }
+            }
+        } else {
+            for (int i = 0; i < mMessageList.size(); i++) {
+                if (mMessageList.get(i).isInboxTable() == isInboxTable
+                        && mMessageList.get(i).getRowId() == msgRowId) {
+                    MessageRow mr = mMessageList.get(i);
+                    mr.setProgress(msg);
+                    mMessageList.set(i, mr);
 
-                mAdapterMsg = new MessagesAdapter(this.getActivity(), mMessageList);
-                mListViewMsgs.setAdapter(mAdapterMsg);
-                mListViewMsgs.setSelectionFromTop(mListMsgVisiblePos, mListMsgTopOffset);
-                break;
+                    // ensure last item remains fully in view
+                    if (msgRowId == mMessageList.get(mMessageList.size() - 1).getRowId()) {
+                        mListMsgTopOffset = 0;
+                        mListMsgVisiblePos = mMessageList.size() - 1;
+                    }
+
+                    mAdapterMsg = new MessagesAdapter(this.getActivity(), mMessageList);
+                    mListViewMsgs.setAdapter(mAdapterMsg);
+                    mListViewMsgs.setSelectionFromTop(mListMsgVisiblePos, mListMsgTopOffset);
+                    break;
+                }
             }
         }
         if (msg == null) {

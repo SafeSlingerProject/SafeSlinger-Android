@@ -35,12 +35,15 @@ public class ThreadData {
     private boolean mHasDraft;
     private String mLastPerson;
     private boolean mNewerExists;
+    private String mProgress;
+    private long mLastMsgRowId;
 
     /***
      * create raw thread
      */
     public ThreadData(String keyId, int msgs, int newMsgs, long lastDate, boolean hasDraft,
-            String lastPerson, boolean isDetail, boolean newerExists, RecipientRow recip) {
+            String lastPerson, boolean isDetail, boolean newerExists, RecipientRow recip,
+            String progress, long lastMsgRowId) {
         mKeyId = keyId;
         mMsgCount = msgs;
         mNewCount = newMsgs;
@@ -50,6 +53,8 @@ public class ThreadData {
         mHasDraft = hasDraft;
         mLastPerson = lastPerson;
         mNewerExists = newerExists;
+        mProgress = progress;
+        mLastMsgRowId = lastMsgRowId;
     }
 
     /***
@@ -65,6 +70,8 @@ public class ThreadData {
         mHasDraft = old.hasDraft() || up.hasDraft();
         mLastPerson = old.getLastPerson();
         mNewerExists = old.isNewerExists() || up.isNewerExists();
+        mProgress = old.getProgress();
+        mLastMsgRowId = old.getLastMsgRowId();
     }
 
     public String getKeyId() {
@@ -103,4 +110,15 @@ public class ThreadData {
         return mNewerExists;
     }
 
+    public String getProgress() {
+        return mProgress;
+    }
+
+    public void setProgress(String msg) {
+        mProgress = msg;
+    }
+
+    public long getLastMsgRowId() {
+        return mLastMsgRowId;
+    }
 }
