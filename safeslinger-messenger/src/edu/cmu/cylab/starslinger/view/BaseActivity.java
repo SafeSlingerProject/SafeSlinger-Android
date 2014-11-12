@@ -1000,13 +1000,13 @@ public class BaseActivity extends ActionBarActivity {
     public static String formatThreadDetails(Activity act, ThreadData t) {
         StringBuilder s = new StringBuilder();
 
-        s.append(dat(act, R.string.title_MessageDetail, t.getLastDate()));
+        s.append(dat(act, R.string.title_MessageDetail, t.getMsgRow().getProbableDate()));
 
         RecipientRow r = t.getRecipient();
         if (r != null) {
             writeRecipDetail(act, s, r);
         } else {
-            s.append(str(act, R.string.label_PublicKeyID, t.getKeyId()));
+            s.append(str(act, R.string.label_PublicKeyID, t.getMsgRow().getKeyId()));
         }
 
         return s.toString();

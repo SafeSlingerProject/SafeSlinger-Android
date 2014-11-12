@@ -342,24 +342,25 @@ public class MessagesFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
 
-                ThreadData thread = mThreadList.get(pos);
+                ThreadData t = mThreadList.get(pos);
                 if (mRecip == null) {
                     // requested messages list
                     // assign recipient
-                    if (TextUtils.isEmpty(thread.getKeyId())) {
+                    if (TextUtils.isEmpty(t.getMsgRow().getKeyId())) {
                         // able to view null key id messages
                         mRecip = RecipientRow.createEmptyRecipient();
                     } else {
                         RecipientDbAdapter dbRecipient = RecipientDbAdapter
                                 .openInstance(getActivity().getApplicationContext());
-                        Cursor c = dbRecipient.fetchRecipientByKeyId(thread.getKeyId());
+                        Cursor c = dbRecipient.fetchRecipientByKeyId(t.getMsgRow().getKeyId());
                         if (c != null) {
                             // messages with matching key ids in database
                             mRecip = new RecipientRow(c);
                             c.close();
                         } else {
                             // messages without matching key ids
-                            mRecip = RecipientRow.createKeyIdOnlyRecipient(thread.getKeyId());
+                            mRecip = RecipientRow
+                                    .createKeyIdOnlyRecipient(t.getMsgRow().getKeyId());
                         }
                     }
                 } else {
@@ -450,7 +451,7 @@ public class MessagesFragment extends Fragment {
 
         // draw threads list/title bar
         mThreadList.clear();
-        ThreadData thread = null;
+        ThreadData t = null;
         int totalThreads = 0;
         // inbox threads
         Cursor cmi = null;
@@ -463,8 +464,8 @@ public class MessagesFragment extends Fragment {
             totalThreads += cmi.getCount();
             while (cmi.moveToNext()) {
                 MessageRow inboxRow = new MessageRow(cmi, true);
-                thread = addInboxThread(inboxRow);
-                mergeInThreads(thread);
+                t = addInboxThread(inboxRow);
+                mergeInThreads(t);
             }
             cmi.close();
         }
@@ -479,8 +480,8 @@ public class MessagesFragment extends Fragment {
             totalThreads += cmt.getCount();
             while (cmt.moveToNext()) {
                 MessageRow messageRow = new MessageRow(cmt, false);
-                thread = addMessageThread(messageRow);
-                mergeInThreads(thread);
+                t = addMessageThread(messageRow);
+                mergeInThreads(t);
             }
             cmt.close();
         }
@@ -494,7 +495,7 @@ public class MessagesFragment extends Fragment {
         mMessageList.clear();
         if (mRecip != null) {
             // recipient data
-            if (mRecip != null && mRecip.isSendable() && thread != null && !thread.isNewerExists()) {
+            if (mRecip != null && mRecip.isSendable() && t != null && !t.isNewerExists()) {
                 showCompose = true;
             }
             // encrypted msgs
@@ -577,29 +578,29 @@ public class MessagesFragment extends Fragment {
         registerForContextMenu(mListViewThreads);
     }
 
-    private void mergeInThreads(ThreadData thread) {
+    private void mergeInThreads(ThreadData t1) {
         boolean exists = false;
         for (int i = 0; i < mThreadList.size(); i++) {
-            ThreadData t = mThreadList.get(i);
+            ThreadData t2 = mThreadList.get(i);
 
             // if matching key is more recent use it
-            String k1 = "" + t.getKeyId();
-            String k2 = "" + thread.getKeyId();
+            String k1 = "" + t2.getMsgRow().getKeyId();
+            String k2 = "" + t1.getMsgRow().getKeyId();
             if (k1.equals(k2)) {
                 exists = true;
-                t = new ThreadData(t, thread);
-                mThreadList.set(i, t);
+                t2 = new ThreadData(t2, t1);
+                mThreadList.set(i, t2);
             }
         }
         if (!exists) {
-            mThreadList.add(thread);
+            mThreadList.add(t1);
         }
     }
 
     private ThreadData addInboxThread(MessageRow inboxRow) throws SQLException {
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity());
         InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this.getActivity());
-        ThreadData thread;
+        ThreadData t;
         String person = null;
         boolean newerExists = false;
         RecipientRow recipientRow = null;
@@ -625,16 +626,15 @@ public class MessagesFragment extends Fragment {
 
         int newMsgs = dbInbox.getActionRequiredInboxCountByThread(inboxRow.getKeyId());
         int draftMsgs = 0; // inbox does not store drafts
-        thread = new ThreadData(inboxRow.getKeyId(), msgs, newMsgs, inboxRow.getProbableDate(),
-                draftMsgs > 0, person, mRecip != null, newerExists, recipientRow,
-                inboxRow.getProgress(), inboxRow.getRowId());
-        return thread;
+        t = new ThreadData(inboxRow, msgs, newMsgs, draftMsgs > 0, person, mRecip != null,
+                newerExists, recipientRow);
+        return t;
     }
 
     private ThreadData addMessageThread(MessageRow messageRow) throws SQLException {
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity());
         MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this.getActivity());
-        ThreadData thread;
+        ThreadData t;
         String person = null;
         boolean newerExists = false;
         RecipientRow recipientRow = null;
@@ -660,10 +660,9 @@ public class MessagesFragment extends Fragment {
 
         int newMsgs = dbMessage.getActionRequiredMessageCountByThread(messageRow.getKeyId());
         int draftMsgs = dbMessage.getDraftMessageCountByThread(messageRow.getKeyId());
-        thread = new ThreadData(messageRow.getKeyId(), msgs, newMsgs, messageRow.getProbableDate(),
-                draftMsgs > 0, person, mRecip != null, newerExists, recipientRow,
-                messageRow.getProgress(), messageRow.getRowId());
-        return thread;
+        t = new ThreadData(messageRow, msgs, newMsgs, draftMsgs > 0, person, mRecip != null,
+                newerExists, recipientRow);
+        return t;
     }
 
     private String findMissingPersonName(String keyId) {
@@ -760,7 +759,7 @@ public class MessagesFragment extends Fragment {
             doExportTranscript(mMessageList);
             return true;
         } else if (item.getItemId() == R.id.item_delete_thread) {
-            doDeleteThread(mThreadList.get(info.position).getKeyId());
+            doDeleteThread(mThreadList.get(info.position).getMsgRow().getKeyId());
             updateMessageList(false);
             return true;
         } else if (item.getItemId() == R.id.item_thread_details) {
@@ -1001,7 +1000,7 @@ public class MessagesFragment extends Fragment {
     public void postProgressMsgList(boolean isInboxTable, long msgRowId, String msg) {
         if (mRecip == null) {
             for (int i = 0; i < mThreadList.size(); i++) {
-                if (mThreadList.get(i).getLastMsgRowId() == msgRowId) {
+                if (mThreadList.get(i).getMsgRow().getRowId() == msgRowId) {
                     ThreadData t = mThreadList.get(i);
                     t.setProgress(msg);
                     mThreadList.set(i, t);

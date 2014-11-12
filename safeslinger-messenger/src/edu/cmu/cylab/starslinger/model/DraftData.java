@@ -176,4 +176,12 @@ public class DraftData {
         mSendMsg.setText(text);
     }
 
+    public RecipientRow getRecip1() {
+        return mRecip1;
+    }
+
+    public RecipientRow getRecip2() {
+        return mRecip2;
+    }
+
 }

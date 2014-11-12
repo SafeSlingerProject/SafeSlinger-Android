@@ -690,7 +690,7 @@ public class MessageDbAdapter {
         String status;
         switch (stat) {
             case MESSAGE_STATUS_COMPLETE_MSG:
-                status = ("DECTXT");
+                status = ("COMPLETE");
                 break;
             case MESSAGE_STATUS_DRAFT:
                 status = ("DRAFT");

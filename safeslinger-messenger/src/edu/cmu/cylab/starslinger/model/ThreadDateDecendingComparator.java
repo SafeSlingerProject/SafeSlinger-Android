@@ -30,8 +30,8 @@ public class ThreadDateDecendingComparator implements Comparator<ThreadData> {
 
     @Override
     public int compare(ThreadData t1, ThreadData t2) {
-        long date1 = t1.getLastDate();
-        long date2 = t2.getLastDate();
+        long date1 = t1.getMsgRow().getProbableDate();
+        long date2 = t2.getMsgRow().getProbableDate();
         long diff = date1 - date2;
         if (diff > 0)
             return -1;

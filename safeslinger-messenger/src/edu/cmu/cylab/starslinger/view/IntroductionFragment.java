@@ -28,7 +28,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -77,8 +76,6 @@ public class IntroductionFragment extends Fragment {
     private Button mButtonSend;
     private Button mButtonRecip1;
     private Button mButtonRecip2;
-    private RecipientRow mRecip1;
-    private RecipientRow mRecip2;
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
     private static OnIntroResultListener mResult;
 
@@ -152,20 +149,6 @@ public class IntroductionFragment extends Fragment {
         // general state
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getActivity());
         DraftData d = DraftData.INSTANCE;
-        if (d.existsRecip1()) {
-            Cursor c1 = dbRecipient.fetchRecipient(d.getRecip1RowId());
-            if (c1 != null) {
-                mRecip1 = new RecipientRow(c1);
-                c1.close();
-            }
-        }
-        if (d.existsRecip2()) {
-            Cursor c2 = dbRecipient.fetchRecipient(d.getRecip2RowId());
-            if (c2 != null) {
-                mRecip2 = new RecipientRow(c2);
-                c2.close();
-            }
-        }
 
         // make sure view is already inflated...
         if (mEditTextMessage1 == null) {
@@ -174,10 +157,10 @@ public class IntroductionFragment extends Fragment {
 
         // recipient 1
         mImageViewRecipPhoto1.setImageResource(0);
-        if (mRecip1 != null) {
-            drawUserData(R.string.label_SendTo, mRecip1.getName(), mRecip1.getPhoto(),
-                    mTextViewRecipName1, mTextViewRecipKey1, mImageViewRecipPhoto1,
-                    mRecip1.getKeyid(), mRecip1.getKeydate());
+        RecipientRow r1 = d.getRecip1();
+        if (d.existsRecip1()) {
+            drawUserData(R.string.label_SendTo, r1.getName(), r1.getPhoto(), mTextViewRecipName1,
+                    mTextViewRecipKey1, mImageViewRecipPhoto1, r1.getKeyid(), r1.getKeydate());
             mTextViewRecipName1.setTextColor(Color.BLACK);
         } else {
             mTextViewRecipName1.setTextColor(Color.GRAY);
@@ -188,10 +171,10 @@ public class IntroductionFragment extends Fragment {
 
         // recipient 2
         mImageViewRecipPhoto2.setImageResource(0);
-        if (mRecip2 != null) {
-            drawUserData(R.string.label_SendTo, mRecip2.getName(), mRecip2.getPhoto(),
-                    mTextViewRecipName2, mTextViewRecipKey2, mImageViewRecipPhoto2,
-                    mRecip2.getKeyid(), mRecip2.getKeydate());
+        RecipientRow r2 = d.getRecip2();
+        if (d.existsRecip2()) {
+            drawUserData(R.string.label_SendTo, r2.getName(), r2.getPhoto(), mTextViewRecipName2,
+                    mTextViewRecipKey2, mImageViewRecipPhoto2, r2.getKeyid(), r2.getKeydate());
             mTextViewRecipName2.setTextColor(Color.BLACK);
         } else {
             mTextViewRecipName2.setTextColor(Color.GRAY);
@@ -201,14 +184,14 @@ public class IntroductionFragment extends Fragment {
         }
 
         // message
-        if (mRecip1 != null && mRecip2 != null) {
+        if (d.existsRecip1() && d.existsRecip2()) {
             // if recip1 and recip2
             mEditTextMessage1.setVisibility(View.VISIBLE);
             mEditTextMessage2.setVisibility(View.VISIBLE);
             mEditTextMessage1.setText(String.format(
-                    getString(R.string.label_messageIntroduceNameToYou), mRecip2.getName()));
+                    getString(R.string.label_messageIntroduceNameToYou), r2.getName()));
             mEditTextMessage2.setText(String.format(
-                    getString(R.string.label_messageIntroduceNameToYou), mRecip1.getName()));
+                    getString(R.string.label_messageIntroduceNameToYou), r1.getName()));
         } else {
             // if empty.recip1, hide
             mEditTextMessage1.setVisibility(View.GONE);
@@ -226,13 +209,16 @@ public class IntroductionFragment extends Fragment {
     }
 
     private Intent resultIntent() {
+        DraftData d = DraftData.INSTANCE;
         Intent data = new Intent();
         data.putExtra(extra.TEXT_MESSAGE1, mEditTextMessage1.getText().toString());
         data.putExtra(extra.TEXT_MESSAGE2, mEditTextMessage2.getText().toString());
-        if (mRecip1 != null)
-            data.putExtra(extra.RECIPIENT_ROW_ID1, mRecip1.getRowId());
-        if (mRecip2 != null)
-            data.putExtra(extra.RECIPIENT_ROW_ID2, mRecip2.getRowId());
+        if (d.existsRecip1()) {
+            data.putExtra(extra.RECIPIENT_ROW_ID1, d.getRecip1RowId());
+        }
+        if (d.existsRecip2()) {
+            data.putExtra(extra.RECIPIENT_ROW_ID2, d.getRecip2RowId());
+        }
         return data;
     }
 

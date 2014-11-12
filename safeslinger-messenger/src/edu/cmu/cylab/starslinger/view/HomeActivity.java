@@ -1585,6 +1585,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             case IntroductionFragment.RESULT_SEND:
                 if (data != null) {
 
+                    // TODO: place in AsyncTask with progress for slower devices
+
                     MessageData sendMsg1 = new MessageData();
                     MessageData sendMsg2 = new MessageData();
                     RecipientRow recip1 = null;
@@ -2934,22 +2936,22 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             mTotalMsgs = mts.length;
             String error = null;
             for (int i = 0; i < mTotalMsgs; i++) {
-                final WebEngine mWeb = new WebEngine(HomeActivity.this,
+                final WebEngine web = new WebEngine(HomeActivity.this,
                         SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
-                RecipientRow mRecip = mts[i].getRecipient();
-                final MessageData mSendMsg = mts[i].getMessageData();
-                Runnable mUpdateTxProgress = new Runnable() {
+                RecipientRow recip = mts[i].getRecipient();
+                final MessageData sendMsg = mts[i].getMessageData();
+                Runnable updateTxProgress = new Runnable() {
 
                     @Override
                     public void run() {
-                        int txCurr = (int) mWeb.get_txCurrentBytes();
+                        int txCurr = (int) web.get_txCurrentBytes();
                         int pct = (int) ((txCurr / (float) mTxTotalSize) * 100);
                         String str = String.format(getString(R.string.prog_SendingFile), "");
                         if (pct > 0 && pct < 100) {
-                            postProgressMsgList(mSendMsg.isInboxTable(), mSendMsg.getRowId(),
+                            postProgressMsgList(sendMsg.isInboxTable(), sendMsg.getRowId(),
                                     String.format("%s %d%%", str, pct));
                         } else {
-                            postProgressMsgList(mSendMsg.isInboxTable(), mSendMsg.getRowId(),
+                            postProgressMsgList(sendMsg.isInboxTable(), sendMsg.getRowId(),
                                     String.format("%s", str));
                         }
                         mHandler.postDelayed(this, MS_POLL_INTERVAL);
@@ -2960,14 +2962,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     mTxTotalSize += 4; // version size
 
                     // encrypt file data...
-                    publish(mSendMsg, R.string.prog_encrypting);
+                    publish(sendMsg, R.string.prog_encrypting);
                     String pass = SafeSlinger
                             .getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
                     byte[] encFile = null;
                     byte[] encMsg = null;
-                    byte[] rawFile = mSendMsg.getFileData();
+                    byte[] rawFile = sendMsg.getFileData();
                     if (rawFile != null && rawFile.length > 0) {
-                        encFile = CryptTools.encryptMessage(rawFile, pass, mRecip.getPubkey());
+                        encFile = CryptTools.encryptMessage(rawFile, pass, recip.getPubkey());
                     } else {
                         encFile = new byte[0];
                     }
@@ -2976,13 +2978,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
                     // format message data, including hash of encrypted file
                     // data...
-                    publish(mSendMsg, R.string.prog_generatingSignature);
+                    publish(sendMsg, R.string.prog_generatingSignature);
                     byte[] msgData = new MessagePacket(SafeSlingerConfig.getVersionCode(),//
                             System.currentTimeMillis(), //
                             encFile.length,//
-                            mSendMsg.getFileName(), //
-                            mSendMsg.getFileType(),//
-                            mSendMsg.getText(),//
+                            sendMsg.getFileName(), //
+                            sendMsg.getFileType(),//
+                            sendMsg.getText(),//
                             SafeSlingerPrefs.getContactName(),//
                             CryptTools.computeSha3Hash(encFile)//
                     ).getBytes();
@@ -2991,37 +2993,37 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     }
 
                     // encrypt message data...
-                    publish(mSendMsg, R.string.prog_encrypting);
-                    encMsg = CryptTools.encryptMessage(msgData, pass, mRecip.getPubkey());
+                    publish(sendMsg, R.string.prog_encrypting);
+                    encMsg = CryptTools.encryptMessage(msgData, pass, recip.getPubkey());
                     mTxTotalSize += 4; // msg len size
                     mTxTotalSize += encMsg.length;
 
                     // message id = hash of encrypted message data...
-                    publish(mSendMsg, R.string.prog_generatingSignature);
+                    publish(sendMsg, R.string.prog_generatingSignature);
                     byte[] msgHashBytes = CryptTools.computeSha3Hash(encMsg);
-                    mSendMsg.setMsgHash(new String(Base64.encode(msgHashBytes, Base64.NO_WRAP)));
+                    sendMsg.setMsgHash(new String(Base64.encode(msgHashBytes, Base64.NO_WRAP)));
                     mTxTotalSize += 4; // hash len size
                     mTxTotalSize += msgHashBytes.length;
 
                     mTxTotalSize += 4; // token len size
-                    mTxTotalSize += mRecip.getPushtoken().length();
+                    mTxTotalSize += recip.getPushtoken().length();
 
                     // send...
-                    mHandler.postDelayed(mUpdateTxProgress, MS_POLL_INTERVAL);
-                    mWeb.postMessage(msgHashBytes, encMsg, encFile, mRecip.getPushtoken(),
-                            mRecip.getNotify());
-                    mHandler.removeCallbacks(mUpdateTxProgress);
+                    mHandler.postDelayed(updateTxProgress, MS_POLL_INTERVAL);
+                    web.postMessage(msgHashBytes, encMsg, encFile, recip.getPushtoken(),
+                            recip.getNotify());
+                    mHandler.removeCallbacks(updateTxProgress);
 
                     // file sent ok, recipient notified...
                     // update sent...
-                    publish(mSendMsg, R.string.prog_FileSent);
+                    publish(sendMsg, R.string.prog_FileSent);
 
                     MessageDbAdapter dbMessage = MessageDbAdapter
                             .openInstance(getApplicationContext());
-                    if (!dbMessage.updateMessageSent(mSendMsg.getRowId(), mts[i].getRecipient()
-                            .getName(), mRecip.getKeyid(), mts[i].getMessageData().getMsgHash(),
-                            mSendMsg.getFileName(), mSendMsg.getFileSize(), mSendMsg.getFileType(),
-                            mSendMsg.getFileDir(), mts[i].getMessageData().getText(),
+                    if (!dbMessage.updateMessageSent(sendMsg.getRowId(), mts[i].getRecipient()
+                            .getName(), recip.getKeyid(), mts[i].getMessageData().getMsgHash(),
+                            sendMsg.getFileName(), sendMsg.getFileSize(), sendMsg.getFileType(),
+                            sendMsg.getFileDir(), mts[i].getMessageData().getText(),
                             MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG)) {
                         error = getString(R.string.error_UnableToUpdateMessageInDB);
                     }
@@ -3041,13 +3043,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 } catch (MessageNotFoundException e) {
                     error = e.getLocalizedMessage();
                 } finally {
-                    mHandler.removeCallbacks(mUpdateTxProgress);
-                    publish(mSendMsg, 0);
+                    mHandler.removeCallbacks(updateTxProgress);
+                    publish(sendMsg, 0);
                 }
 
                 if (!TextUtils.isEmpty(error)) {
                     // update recipient if no longer registered
-                    boolean notreg = mWeb.isNotRegistered();
+                    boolean notreg = web.isNotRegistered();
                     if (notreg) {
                         RecipientDbAdapter dbRecipient = RecipientDbAdapter
                                 .openInstance(getApplicationContext());
@@ -3061,7 +3063,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // set message back to draft status
                     MessageDbAdapter dbMessage = MessageDbAdapter
                             .openInstance(getApplicationContext());
-                    if (!dbMessage.updateDraftMessage(mSendMsg.getRowId(), mRecip, mSendMsg)) {
+                    if (!dbMessage.updateDraftMessage(sendMsg.getRowId(), recip, sendMsg)) {
                         showNote(R.string.error_UnableToUpdateMessageInDB);
                     }
                 }
@@ -3219,6 +3221,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private void showAddContact(String name) {
         Intent intent = new Intent(Intent.ACTION_INSERT);
         intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
+            // TODO: determine if still works on 4.4.2 android devices
+            // Fix for 4.0.3
+            intent.putExtra("finishActivityOnSaveCompleted", true);
+        }
         if (!TextUtils.isEmpty(name)) {
             intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
         }

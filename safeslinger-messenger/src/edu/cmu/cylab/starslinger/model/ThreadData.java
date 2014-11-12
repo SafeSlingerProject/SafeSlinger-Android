@@ -26,64 +26,54 @@ package edu.cmu.cylab.starslinger.model;
 
 public class ThreadData {
 
-    private String mKeyId;
+    private MessageRow mMsgRow;
     private int mMsgCount;
     private int mNewCount;
-    private long mLastDate;
     private boolean mIsDetail;
     private RecipientRow mRecipient;
     private boolean mHasDraft;
     private String mLastPerson;
     private boolean mNewerExists;
     private String mProgress;
-    private long mLastMsgRowId;
 
     /***
      * create raw thread
      */
-    public ThreadData(String keyId, int msgs, int newMsgs, long lastDate, boolean hasDraft,
-            String lastPerson, boolean isDetail, boolean newerExists, RecipientRow recip,
-            String progress, long lastMsgRowId) {
-        mKeyId = keyId;
+    public ThreadData(MessageRow msgRow, int msgs, int newMsgs, boolean hasDraft,
+            String lastPerson, boolean isDetail, boolean newerExists, RecipientRow recip) {
+        mMsgRow = msgRow;
         mMsgCount = msgs;
         mNewCount = newMsgs;
-        mLastDate = lastDate;
         mIsDetail = isDetail;
         mRecipient = recip;
         mHasDraft = hasDraft;
         mLastPerson = lastPerson;
         mNewerExists = newerExists;
-        mProgress = progress;
-        mLastMsgRowId = lastMsgRowId;
+        mProgress = msgRow.getProgress();
     }
 
     /***
      * create merged thread
      */
     public ThreadData(ThreadData old, ThreadData up) {
-        mKeyId = old.getKeyId();
         mMsgCount = old.getMsgCount() + up.getMsgCount();
         mNewCount = old.getNewCount() + up.getNewCount();
-        mLastDate = old.getLastDate() > up.getLastDate() ? old.getLastDate() : up.getLastDate();
+        mMsgRow = old.getMsgRow().getProbableDate() > up.getMsgRow().getProbableDate() ? old
+                .getMsgRow() : up.getMsgRow();
         mIsDetail = old.isDetail();
         mRecipient = old.getRecipient();
         mHasDraft = old.hasDraft() || up.hasDraft();
         mLastPerson = old.getLastPerson();
         mNewerExists = old.isNewerExists() || up.isNewerExists();
-        mProgress = old.getProgress();
-        mLastMsgRowId = old.getLastMsgRowId();
+        mProgress = old.getProgress() != null ? old.getProgress() : up.getProgress();
     }
 
-    public String getKeyId() {
-        return mKeyId;
+    public MessageRow getMsgRow() {
+        return mMsgRow;
     }
 
     public int getMsgCount() {
         return mMsgCount;
-    }
-
-    public long getLastDate() {
-        return mLastDate;
     }
 
     public boolean isDetail() {
@@ -116,9 +106,5 @@ public class ThreadData {
 
     public void setProgress(String msg) {
         mProgress = msg;
-    }
-
-    public long getLastMsgRowId() {
-        return mLastMsgRowId;
     }
 }
