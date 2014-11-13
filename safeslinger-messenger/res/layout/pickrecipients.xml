@@ -29,7 +29,7 @@
     android:layout_height="fill_parent"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true"
-    android:orientation="vertical" >
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/edu.cmu.cylab.starslinger">
 
     <android.support.v7.widget.SearchView
         android:id="@+id/fragment_address_search"
@@ -39,7 +39,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/text_size_medium"
         myapp:iconifiedByDefault="false"
-        myapp:queryHint="@string/Label_search_contacts_hint" />
+        myapp:queryHint="@string/label_search_contacts_hint" />
 
     <TextView
         android:id="@+id/tvInstruct"

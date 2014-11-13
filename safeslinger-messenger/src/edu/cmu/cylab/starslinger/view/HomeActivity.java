@@ -464,7 +464,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Theme_SafeSlinger);
+        setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
 
         mViewPager = new ViewPager(this);
@@ -954,6 +954,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private void doSendMessageStart(MessageTransport... mts) {
         MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
 
+        // pre-test for network, saves time later
+        if (!SafeSlinger.getApplication().isOnline()) {
+            showNote(R.string.error_CorrectYourInternetConnection);
+            refreshView();
+            return;
+        }
+
         // update all message data before sending
         for (int i = 0; i < mts.length; i++) {
             RecipientRow recip = mts[i].getRecipient();
@@ -975,6 +982,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     refreshView();
                     return;
                 }
+            }
+
+            if (recip == null) {
+                showNote(R.string.error_InvalidRecipient);
+                refreshView();
+                return;
             }
 
             // manage this draft...
@@ -1008,17 +1021,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
             }
 
-            if (recip == null) {
-                showNote(R.string.error_InvalidRecipient);
-                refreshView();
-                return;
-            }
-            if (!SafeSlinger.getApplication().isOnline()) {
-                showNote(R.string.error_CorrectYourInternetConnection);
-                refreshView();
-                return;
-            }
-
             // update status as queued for transmission
             if (!dbMessage.updateEnqueuedMessage(sendMsg.getRowId())) {
                 showNote(R.string.error_UnableToUpdateMessageInDB);
@@ -1038,7 +1040,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             }
 
             // pass on any changes...
-            mts[i] = new MessageTransport(recip, sendMsg);
+            mts[i] = new MessageTransport(recip, sendMsg, mts[i].keepDraft());
         }
 
         // attempt to update messages if in view...
@@ -1343,7 +1345,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     refreshView();
                     break;
                 }
-                doSendMessageStart(new MessageTransport(d.getRecip(), sendMsg));
+                doSendMessageStart(new MessageTransport(d.getRecip(), sendMsg, true));
                 break;
             case ComposeFragment.RESULT_RESTART:
                 refreshView();
@@ -1459,7 +1461,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     refreshView();
                     break;
                 }
-                doSendMessageStart(new MessageTransport(recip, sendMsg));
+                doSendMessageStart(new MessageTransport(recip, sendMsg, true));
                 break;
             case MessagesFragment.RESULT_FWDMESSAGE:
                 d.clearSendMsg();
@@ -1700,8 +1702,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             + SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO);
 
                     doSendMessageStart(new MessageTransport[] {
-                            new MessageTransport(recip1, sendMsg1),
-                            new MessageTransport(recip2, sendMsg2)
+                            new MessageTransport(recip1, sendMsg1, false),
+                            new MessageTransport(recip2, sendMsg2, false)
                     });
 
                     // reset after complete, little slow, better than nothing
@@ -2934,12 +2936,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         @Override
         protected String doInBackground(MessageTransport... mts) {
             mTotalMsgs = mts.length;
-            String error = null;
+            String errorFinal = null;
             for (int i = 0; i < mTotalMsgs; i++) {
+                String error = null;
                 final WebEngine web = new WebEngine(HomeActivity.this,
                         SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
                 RecipientRow recip = mts[i].getRecipient();
                 final MessageData sendMsg = mts[i].getMessageData();
+                boolean keepDraft = mts[i].keepDraft();
                 Runnable updateTxProgress = new Runnable() {
 
                     @Override
@@ -2958,6 +2962,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     }
                 };
 
+                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+                RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                        .openInstance(getApplicationContext());
                 try {
                     mTxTotalSize += 4; // version size
 
@@ -3018,13 +3025,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // update sent...
                     publish(sendMsg, R.string.prog_FileSent);
 
-                    MessageDbAdapter dbMessage = MessageDbAdapter
-                            .openInstance(getApplicationContext());
-                    if (!dbMessage.updateMessageSent(sendMsg.getRowId(), mts[i].getRecipient()
-                            .getName(), recip.getKeyid(), mts[i].getMessageData().getMsgHash(),
-                            sendMsg.getFileName(), sendMsg.getFileSize(), sendMsg.getFileType(),
-                            sendMsg.getFileDir(), mts[i].getMessageData().getText(),
-                            MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG)) {
+                    if (!dbMessage.updateMessageSent(sendMsg.getRowId(), recip.getName(),
+                            recip.getKeyid(), sendMsg.getMsgHash(), sendMsg.getFileName(),
+                            sendMsg.getFileSize(), sendMsg.getFileType(), sendMsg.getFileDir(),
+                            sendMsg.getText(), MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG)) {
                         error = getString(R.string.error_UnableToUpdateMessageInDB);
                     }
 
@@ -3048,28 +3052,29 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
 
                 if (!TextUtils.isEmpty(error)) {
+                    errorFinal = error;
+
                     // update recipient if no longer registered
                     boolean notreg = web.isNotRegistered();
                     if (notreg) {
-                        RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                                .openInstance(getApplicationContext());
                         if (!dbRecipient.updateRecipientRegistrationState(mDraft.getRecipRowId(),
                                 notreg)) {
                             // failure to update database error, not as critical
                             // as the registration loss...
                         }
                     }
-
-                    // set message back to draft status
-                    MessageDbAdapter dbMessage = MessageDbAdapter
-                            .openInstance(getApplicationContext());
-                    if (!dbMessage.updateDraftMessage(sendMsg.getRowId(), recip, sendMsg)) {
-                        showNote(R.string.error_UnableToUpdateMessageInDB);
+                    if (keepDraft) {
+                        // set queued message back to draft status
+                        if (!dbMessage.updateDraftMessage(sendMsg.getRowId(), recip, sendMsg)) {
+                            showNote(R.string.error_UnableToUpdateMessageInDB);
+                        }
+                    } else {
+                        // queued draft should be removed
+                        dbMessage.deleteMessage(sendMsg.getRowId());
                     }
                 }
-
             } // end for
-            return error;
+            return errorFinal;
         }
 
         @Override

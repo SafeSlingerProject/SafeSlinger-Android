@@ -93,7 +93,7 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Theme_SafeSlinger);
+        setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
 
         // inject view

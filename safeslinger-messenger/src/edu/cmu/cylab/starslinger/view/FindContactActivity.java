@@ -71,7 +71,7 @@ public final class FindContactActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Theme_SafeSlinger);
+        setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
         SafeSlinger.setPassphraseOpen(true);
 

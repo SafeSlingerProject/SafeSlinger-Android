@@ -28,26 +28,23 @@ public class MessageTransport {
 
     private MessageData mMessageData;
     private RecipientRow mRecipient;
+    private boolean mKeepDraft;
 
-    public MessageTransport(RecipientRow recip, MessageData msg) {
+    public MessageTransport(RecipientRow recip, MessageData msg, boolean keepDraft) {
         mMessageData = msg;
         mRecipient = recip;
-    }
-
-    public void setmMessageData(MessageData msg) {
-        mMessageData = msg;
+        mKeepDraft = keepDraft;
     }
 
     public MessageData getMessageData() {
         return mMessageData;
     }
 
-    public void setmRecipient(RecipientRow recip) {
-        mRecipient = recip;
-    }
-
     public RecipientRow getRecipient() {
         return mRecipient;
     }
 
+    public boolean keepDraft() {
+        return mKeepDraft;
+    }
 }

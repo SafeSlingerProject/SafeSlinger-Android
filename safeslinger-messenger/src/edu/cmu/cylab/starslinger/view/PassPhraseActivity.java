@@ -92,7 +92,7 @@ public class PassPhraseActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Theme_SafeSlinger_PassPhrase);
+        setTheme(R.style.Theme_Safeslinger_PassPhrase);
         super.onCreate(savedInstanceState);
         SafeSlinger.setPassphraseOpen(true);
 

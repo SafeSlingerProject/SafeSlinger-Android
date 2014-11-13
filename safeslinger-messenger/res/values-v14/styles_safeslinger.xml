@@ -19,7 +19,7 @@
 
 <resources>
 
-    <style name="Theme.SafeSlinger" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.Safeslinger" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="android:actionBarItemBackground">@drawable/selectable_background_safeslinger</item>
         <item name="android:popupMenuStyle">@style/PopupMenu.Safeslinger</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Safeslinger</item>
@@ -31,7 +31,7 @@
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Safeslinger</item>
         
                 <!-- Light.DarkActionBar specific -->
-        <item name="android:actionBarWidgetTheme">@style/Theme.SafeSlinger.Widget</item>
+        <item name="android:actionBarWidgetTheme">@style/Theme.Safeslinger.Widget</item>
 
     </style>
 
@@ -48,7 +48,7 @@
     </style>
     
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->
-    <style name="Theme.SafeSlinger.Widget" parent="@style/Theme.AppCompat">
+    <style name="Theme.Safeslinger.Widget" parent="@style/Theme.AppCompat">
         <item name="android:popupMenuStyle">@style/PopupMenu.Safeslinger</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Safeslinger</item>
     </style>
