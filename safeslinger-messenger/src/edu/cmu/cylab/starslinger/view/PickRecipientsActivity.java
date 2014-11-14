@@ -39,8 +39,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.provider.SearchRecentSuggestions;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
@@ -75,7 +73,7 @@ import edu.cmu.cylab.starslinger.model.RecipientNameKeyDateComparator;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.util.CustomSuggestionsProvider;
 
-public class PickRecipientsActivity extends BaseActivity implements OnItemClickListener{
+public class PickRecipientsActivity extends BaseActivity implements OnItemClickListener {
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
     protected static final int RESULT_RECIPSEL = 4;
     protected static final int RESULT_SLINGKEYS = 5;
@@ -94,10 +92,9 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
     private SearchView mSearchEdt;
 
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Theme_SafeSlinger);
+        setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
 
         // inject view
@@ -136,8 +133,6 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         tvInstruct = (TextView) findViewById(R.id.tvInstruct);
 
         // always default to checked on view creation
-        // SafeSlingerPrefs.setShowRecentRecipOnly(true);
-
         cbMostRecentOnly.setChecked(true);
 
         listViewRecipients.setOnScrollListener(new OnScrollListener() {
@@ -163,7 +158,6 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                // SafeSlingerPrefs.setShowRecentRecipOnly(isChecked);
                 updateValues(null);
             }
         });
@@ -171,7 +165,6 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         updateValues(getIntent().getExtras());
     }
 
-    
     private void searchContacts(final String searchString) {
 
         updateValues(null);
@@ -180,48 +173,41 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
             @Override
             public void run() {
 
-
-                    if (mContacts != null && !mContacts.isEmpty()) {
-                        final List<RecipientRow> unmatchedData = new ArrayList<RecipientRow>();
-                        for (RecipientRow row : mContacts) {
-                            if (!row.getName().toLowerCase(Locale.getDefault())
-                                    .startsWith(searchString.toLowerCase(Locale.getDefault())))
-                                unmatchedData.add(row);
-                        }
-                        boolean isOldSdk = true;
-                        if(Build.VERSION.SDK_INT > Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
-                        {
-                            mContacts.removeAll(unmatchedData);
-                            isOldSdk = false;
-                        }
-                        
-                        updateList(isOldSdk, unmatchedData);    
-                                
+                if (mContacts != null && !mContacts.isEmpty()) {
+                    final List<RecipientRow> unmatchedData = new ArrayList<RecipientRow>();
+                    for (RecipientRow row : mContacts) {
+                        if (!row.getName().toLowerCase(Locale.getDefault())
+                                .startsWith(searchString.toLowerCase(Locale.getDefault())))
+                            unmatchedData.add(row);
                     }
-                  
+                    boolean isOldSdk = true;
+                    if (Build.VERSION.SDK_INT > Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
+                        mContacts.removeAll(unmatchedData);
+                        isOldSdk = false;
+                    }
 
-                
+                    updateList(isOldSdk, unmatchedData);
+
+                }
             }
         }).start();
 
     }
 
-    private void updateList(final boolean isOldSDK, final List<RecipientRow> unmatchedData)
-    {
+    private void updateList(final boolean isOldSDK, final List<RecipientRow> unmatchedData) {
         runOnUiThread(new Runnable() {
-            
+
             @Override
             public void run() {
-                
-                if(isOldSDK)
+
+                if (isOldSDK)
                     mContacts.removeAll(unmatchedData);
                 ((RecipientAdapter) listViewRecipients.getAdapter()).notifyDataSetChanged();
             }
         });
-        
-        
+
     }
-    
+
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);

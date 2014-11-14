@@ -421,8 +421,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     public void setProperDefaultTab() throws SQLException {
         // if nothing else, make sure proper default tab is selected
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                .openInstance(getApplicationContext());
+        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
         MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
 
         if (dbRecipient.getTrustedRecipientCount() == 0) {
@@ -465,7 +464,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Theme_SafeSlinger);
+        setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
 
         mViewPager = new ViewPager(this);
@@ -952,90 +951,109 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    private void doSendFileStart(RecipientRow recip, MessageData sendMsg) {
-
-        // must have either file or text to send
-        if (TextUtils.isEmpty(sendMsg.getText()) && TextUtils.isEmpty(sendMsg.getFileName())) {
-            showNote(R.string.error_selectDataToSend);
-            setTab(Tabs.COMPOSE);
-            refreshView();
-            return;
-        }
-
-        if (TextUtils.isEmpty(sendMsg.getFileName())) {
-            sendMsg.removeFile();
-        } else {
-            if (sendMsg.getFileData() == null || sendMsg.getFileSize() == 0) {
-                showNote(R.string.error_InvalidMsg);
-                refreshView();
-                return;
-            }
-        }
-
+    private void doSendMessageStart(MessageTransport... mts) {
         MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-        // manage this draft...
-        if (sendMsg.getRowId() < 0) {
-            // create draft (need at least recipient(file) or text chosen...
-            if (!TextUtils.isEmpty(sendMsg.getText()) || !TextUtils.isEmpty(sendMsg.getFileName())) {
-                long rowId = dbMessage.createDraftMessage(recip, sendMsg);
-                sendMsg.setRowId(rowId);
-                if (rowId < 0) {
-                    showNote(R.string.error_UnableToSaveMessageInDB);
-                    refreshView();
-                    return;
-                }
-            }
-        } else {
-            Cursor c = dbMessage.fetchMessageSmall(sendMsg.getRowId());
-            if (c != null) {
-                MessageRow msg = new MessageRow(c, false);
-                c.close();
-                if (msg.getMessageAction() != MsgAction.MSG_EDIT) {
-                    return;
-                }
-            }
 
-            // update draft
-            if (!dbMessage.updateDraftMessage(sendMsg.getRowId(), recip, sendMsg)) {
-                showNote(R.string.error_UnableToUpdateMessageInDB);
-                refreshView();
-                return;
-            }
-        }
-
-        if (recip == null) {
-            showNote(R.string.error_InvalidRecipient);
-            refreshView();
-            return;
-        }
+        // pre-test for network, saves time later
         if (!SafeSlinger.getApplication().isOnline()) {
             showNote(R.string.error_CorrectYourInternetConnection);
             refreshView();
             return;
         }
 
-        // update status as queued for transmission
-        if (!dbMessage.updateEnqueuedMessage(sendMsg.getRowId())) {
-            showNote(R.string.error_UnableToUpdateMessageInDB);
-            refreshView();
-            return;
-        }
-        // confirm msg is queued
-        Cursor c = dbMessage.fetchMessageSmall(sendMsg.getRowId());
-        if (c != null) {
-            MessageRow queued = new MessageRow(c, false);
-            c.close();
-            if (queued.getStatus() != MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
+        // update all message data before sending
+        for (int i = 0; i < mts.length; i++) {
+            RecipientRow recip = mts[i].getRecipient();
+            MessageData sendMsg = mts[i].getMessageData();
+
+            // must have either file or text to send
+            if (TextUtils.isEmpty(sendMsg.getText()) && TextUtils.isEmpty(sendMsg.getFileName())) {
+                showNote(R.string.error_selectDataToSend);
+                setTab(Tabs.COMPOSE);
+                refreshView();
+                return;
+            }
+
+            if (TextUtils.isEmpty(sendMsg.getFileName())) {
+                sendMsg.removeFile();
+            } else {
+                if (sendMsg.getFileData() == null || sendMsg.getFileSize() == 0) {
+                    showNote(R.string.error_InvalidMsg);
+                    refreshView();
+                    return;
+                }
+            }
+
+            if (recip == null) {
+                showNote(R.string.error_InvalidRecipient);
+                refreshView();
+                return;
+            }
+
+            // manage this draft...
+            if (sendMsg.getRowId() < 0) {
+                // create draft (need at least recipient(file) or text chosen...
+                if (!TextUtils.isEmpty(sendMsg.getText())
+                        || !TextUtils.isEmpty(sendMsg.getFileName())) {
+                    long rowId = dbMessage.createDraftMessage(recip, sendMsg);
+                    sendMsg.setRowId(rowId);
+                    if (rowId < 0) {
+                        showNote(R.string.error_UnableToSaveMessageInDB);
+                        refreshView();
+                        return;
+                    }
+                }
+            } else {
+                Cursor c = dbMessage.fetchMessageSmall(sendMsg.getRowId());
+                if (c != null) {
+                    MessageRow msg = new MessageRow(c, false);
+                    c.close();
+                    if (msg.getMessageAction() != MsgAction.MSG_EDIT) {
+                        return;
+                    }
+                }
+
+                // update draft
+                if (!dbMessage.updateDraftMessage(sendMsg.getRowId(), recip, sendMsg)) {
+                    showNote(R.string.error_UnableToUpdateMessageInDB);
+                    refreshView();
+                    return;
+                }
+            }
+
+            // update status as queued for transmission
+            if (!dbMessage.updateEnqueuedMessage(sendMsg.getRowId())) {
                 showNote(R.string.error_UnableToUpdateMessageInDB);
                 refreshView();
                 return;
             }
+            // confirm msg is queued
+            Cursor c = dbMessage.fetchMessageSmall(sendMsg.getRowId());
+            if (c != null) {
+                MessageRow queued = new MessageRow(c, false);
+                c.close();
+                if (queued.getStatus() != MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
+                    showNote(R.string.error_UnableToUpdateMessageInDB);
+                    refreshView();
+                    return;
+                }
+            }
+
+            // pass on any changes...
+            mts[i] = new MessageTransport(recip, sendMsg, mts[i].keepDraft());
         }
 
         // attempt to update messages if in view...
         Intent sendIntent = new Intent(SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING);
-        sendIntent.putExtra(extra.MESSAGE_ROW_ID, sendMsg.getRowId());
-        sendIntent.putExtra(extra.RECIPIENT_ROW_ID, recip.getRowId());
+        if (mts.length == 1) {
+            // single should show conversation detail
+            sendIntent.putExtra(extra.MESSAGE_ROW_ID, mts[0].getMessageData().getRowId());
+            sendIntent.putExtra(extra.RECIPIENT_ROW_ID, mts[0].getRecipient().getRowId());
+        } else {
+            // multiple should show all threads
+            sendIntent.putExtra(extra.MESSAGE_ROW_ID, -1);
+            sendIntent.putExtra(extra.RECIPIENT_ROW_ID, -1);
+        }
         getApplicationContext().sendBroadcast(sendIntent);
 
         // switch to message tab
@@ -1043,8 +1061,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         refreshView();
 
         // start background task to send
-        SendFileTask task = new SendFileTask();
-        task.execute(new MessageTransport(recip, sendMsg));
+        SendMessageTask task = new SendMessageTask();
+        task.execute(mts);
     }
 
     private void setTab(Tabs tab) {
@@ -1327,7 +1345,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     refreshView();
                     break;
                 }
-                doSendFileStart(d.getRecip(), sendMsg);
+                doSendMessageStart(new MessageTransport(d.getRecip(), sendMsg, true));
                 break;
             case ComposeFragment.RESULT_RESTART:
                 refreshView();
@@ -1443,7 +1461,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     refreshView();
                     break;
                 }
-                doSendFileStart(recip, sendMsg);
+                doSendMessageStart(new MessageTransport(recip, sendMsg, true));
                 break;
             case MessagesFragment.RESULT_FWDMESSAGE:
                 d.clearSendMsg();
@@ -1569,6 +1587,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             case IntroductionFragment.RESULT_SEND:
                 if (data != null) {
 
+                    // TODO: place in AsyncTask with progress for slower devices
+
                     MessageData sendMsg1 = new MessageData();
                     MessageData sendMsg2 = new MessageData();
                     RecipientRow recip1 = null;
@@ -1681,8 +1701,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     sendMsg2.setFileType(SafeSlingerConfig.MIMETYPE_CLASS + "/"
                             + SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO);
 
-                    doSendFileStart(recip1, sendMsg1);
-                    doSendFileStart(recip2, sendMsg2);
+                    doSendMessageStart(new MessageTransport[] {
+                            new MessageTransport(recip1, sendMsg1, false),
+                            new MessageTransport(recip2, sendMsg2, false)
+                    });
 
                     // reset after complete, little slow, better than nothing
                     d.clearRecip1();
@@ -2897,158 +2919,185 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    private class SendFileTask extends AsyncTask<MessageTransport, String, String> {
-        private RecipientRow mRecip;
-        private MessageData mSendMsg;
-        private long mRowId;
-        private WebEngine mWeb = new WebEngine(HomeActivity.this,
-                SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
+    private class SendMessageTask extends AsyncTask<MessageTransport, Message, String> {
         private Handler mHandler = new Handler();
-        private int mTxTotalSize = 0;
         private DraftData mDraft = DraftData.INSTANCE;
-        private Runnable mUpdateTxProgress = new Runnable() {
+        private int mTxTotalSize = 0;
+        private int mTotalMsgs = 0;
 
-            @Override
-            public void run() {
-                int txCurr = (int) mWeb.get_txCurrentBytes();
-                int pct = (int) ((txCurr / (float) mTxTotalSize) * 100);
-                String str = String.format(getString(R.string.prog_SendingFile), "");
-                if (pct > 0 && pct < 100) {
-                    postProgressMsgList(mSendMsg.isInboxTable(), mRowId,
-                            String.format("%s %d%%", str, pct));
-                } else {
-                    postProgressMsgList(mSendMsg.isInboxTable(), mRowId, String.format("%s", str));
-                }
-                mHandler.postDelayed(this, MS_POLL_INTERVAL);
-            }
-        };
-
-        @Override
-        protected String doInBackground(MessageTransport... mts) {
-            mRecip = mts[0].getRecipient();
-            mSendMsg = mts[0].getMessageData();
-            mRowId = mSendMsg.getRowId();
-            mTxTotalSize = 0;
-
-            try {
-                mTxTotalSize += 4; // version size
-
-                // encrypt file data...
-                publishProgress(getString(R.string.prog_encrypting));
-                String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
-                byte[] encFile = null;
-                byte[] encMsg = null;
-                byte[] rawFile = mSendMsg.getFileData();
-                if (rawFile != null && rawFile.length > 0) {
-                    encFile = CryptTools.encryptMessage(rawFile, pass, mRecip.getPubkey());
-                } else {
-                    encFile = new byte[0];
-                }
-                mTxTotalSize += 4; // file len size
-                mTxTotalSize += encFile.length;
-
-                // format message data, including hash of encrypted file
-                // data...
-                publishProgress(getString(R.string.prog_generatingSignature));
-                byte[] msgData = new MessagePacket(SafeSlingerConfig.getVersionCode(),//
-                        System.currentTimeMillis(), //
-                        encFile.length,//
-                        mSendMsg.getFileName(), //
-                        mSendMsg.getFileType(),//
-                        mSendMsg.getText(),//
-                        SafeSlingerPrefs.getContactName(),//
-                        CryptTools.computeSha3Hash(encFile)//
-                ).getBytes();
-                if (msgData == null) {
-                    throw new GeneralException(getString(R.string.error_InvalidMsg));
-                }
-
-                // encrypt message data...
-                publishProgress(getString(R.string.prog_encrypting));
-                encMsg = CryptTools.encryptMessage(msgData, pass, mRecip.getPubkey());
-                mTxTotalSize += 4; // msg len size
-                mTxTotalSize += encMsg.length;
-
-                // message id = hash of encrypted message data...
-                publishProgress(getString(R.string.prog_generatingSignature));
-                byte[] msgHashBytes = CryptTools.computeSha3Hash(encMsg);
-                mSendMsg.setMsgHash(new String(Base64.encode(msgHashBytes, Base64.NO_WRAP)));
-                mTxTotalSize += 4; // hash len size
-                mTxTotalSize += msgHashBytes.length;
-
-                mTxTotalSize += 4; // token len size
-                mTxTotalSize += mRecip.getPushtoken().length();
-
-                // send...
-                mHandler.postDelayed(mUpdateTxProgress, MS_POLL_INTERVAL);
-                mWeb.postMessage(msgHashBytes, encMsg, encFile, mRecip.getPushtoken(),
-                        mRecip.getNotify());
-                mHandler.removeCallbacks(mUpdateTxProgress);
-
-                // file sent ok, recipient notified...
-                // update sent...
-                publishProgress(getString(R.string.prog_FileSent));
-
-                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-                if (!dbMessage.updateMessageSent(mSendMsg.getRowId(), mRecip.getName(),
-                        mRecip.getKeyid(), mSendMsg.getMsgHash(), mSendMsg.getFileName(),
-                        mSendMsg.getFileSize(), mSendMsg.getFileType(), mSendMsg.getFileDir(),
-                        mSendMsg.getText(), MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG)) {
-                    return getString(R.string.error_UnableToUpdateMessageInDB);
-                }
-
-            } catch (OutOfMemoryError e) {
-                return getString(R.string.error_OutOfMemoryError);
-            } catch (ExchangeException e) {
-                return e.getLocalizedMessage();
-            } catch (IOException e) {
-                return e.getLocalizedMessage();
-            } catch (GeneralException e) {
-                return e.getLocalizedMessage();
-            } catch (ClassNotFoundException e) {
-                return e.getLocalizedMessage();
-            } catch (CryptoMsgException e) {
-                return e.getLocalizedMessage();
-            } catch (MessageNotFoundException e) {
-                return e.getLocalizedMessage();
-            }
-            return null;
+        private void publish(MessageData sendMsg, int resId) {
+            Message msg = new Message();
+            msg.what = resId;
+            msg.arg1 = sendMsg.isInboxTable() ? 1 : 0;
+            msg.arg2 = (int) sendMsg.getRowId();
+            publishProgress(msg);
         }
 
         @Override
-        protected void onProgressUpdate(String... progress) {
-            postProgressMsgList(mSendMsg.isInboxTable(), mRowId, progress[0]);
+        protected String doInBackground(MessageTransport... mts) {
+            mTotalMsgs = mts.length;
+            String errorFinal = null;
+            for (int i = 0; i < mTotalMsgs; i++) {
+                String error = null;
+                final WebEngine web = new WebEngine(HomeActivity.this,
+                        SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
+                RecipientRow recip = mts[i].getRecipient();
+                final MessageData sendMsg = mts[i].getMessageData();
+                boolean keepDraft = mts[i].keepDraft();
+                Runnable updateTxProgress = new Runnable() {
+
+                    @Override
+                    public void run() {
+                        int txCurr = (int) web.get_txCurrentBytes();
+                        int pct = (int) ((txCurr / (float) mTxTotalSize) * 100);
+                        String str = String.format(getString(R.string.prog_SendingFile), "");
+                        if (pct > 0 && pct < 100) {
+                            postProgressMsgList(sendMsg.isInboxTable(), sendMsg.getRowId(),
+                                    String.format("%s %d%%", str, pct));
+                        } else {
+                            postProgressMsgList(sendMsg.isInboxTable(), sendMsg.getRowId(),
+                                    String.format("%s", str));
+                        }
+                        mHandler.postDelayed(this, MS_POLL_INTERVAL);
+                    }
+                };
+
+                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+                RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                        .openInstance(getApplicationContext());
+                try {
+                    mTxTotalSize += 4; // version size
+
+                    // encrypt file data...
+                    publish(sendMsg, R.string.prog_encrypting);
+                    String pass = SafeSlinger
+                            .getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
+                    byte[] encFile = null;
+                    byte[] encMsg = null;
+                    byte[] rawFile = sendMsg.getFileData();
+                    if (rawFile != null && rawFile.length > 0) {
+                        encFile = CryptTools.encryptMessage(rawFile, pass, recip.getPubkey());
+                    } else {
+                        encFile = new byte[0];
+                    }
+                    mTxTotalSize += 4; // file len size
+                    mTxTotalSize += encFile.length;
+
+                    // format message data, including hash of encrypted file
+                    // data...
+                    publish(sendMsg, R.string.prog_generatingSignature);
+                    byte[] msgData = new MessagePacket(SafeSlingerConfig.getVersionCode(),//
+                            System.currentTimeMillis(), //
+                            encFile.length,//
+                            sendMsg.getFileName(), //
+                            sendMsg.getFileType(),//
+                            sendMsg.getText(),//
+                            SafeSlingerPrefs.getContactName(),//
+                            CryptTools.computeSha3Hash(encFile)//
+                    ).getBytes();
+                    if (msgData == null) {
+                        throw new GeneralException(getString(R.string.error_InvalidMsg));
+                    }
+
+                    // encrypt message data...
+                    publish(sendMsg, R.string.prog_encrypting);
+                    encMsg = CryptTools.encryptMessage(msgData, pass, recip.getPubkey());
+                    mTxTotalSize += 4; // msg len size
+                    mTxTotalSize += encMsg.length;
+
+                    // message id = hash of encrypted message data...
+                    publish(sendMsg, R.string.prog_generatingSignature);
+                    byte[] msgHashBytes = CryptTools.computeSha3Hash(encMsg);
+                    sendMsg.setMsgHash(new String(Base64.encode(msgHashBytes, Base64.NO_WRAP)));
+                    mTxTotalSize += 4; // hash len size
+                    mTxTotalSize += msgHashBytes.length;
+
+                    mTxTotalSize += 4; // token len size
+                    mTxTotalSize += recip.getPushtoken().length();
+
+                    // send...
+                    mHandler.postDelayed(updateTxProgress, MS_POLL_INTERVAL);
+                    web.postMessage(msgHashBytes, encMsg, encFile, recip.getPushtoken(),
+                            recip.getNotify());
+                    mHandler.removeCallbacks(updateTxProgress);
+
+                    // file sent ok, recipient notified...
+                    // update sent...
+                    publish(sendMsg, R.string.prog_FileSent);
+
+                    if (!dbMessage.updateMessageSent(sendMsg.getRowId(), recip.getName(),
+                            recip.getKeyid(), sendMsg.getMsgHash(), sendMsg.getFileName(),
+                            sendMsg.getFileSize(), sendMsg.getFileType(), sendMsg.getFileDir(),
+                            sendMsg.getText(), MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG)) {
+                        error = getString(R.string.error_UnableToUpdateMessageInDB);
+                    }
+
+                } catch (OutOfMemoryError e) {
+                    error = getString(R.string.error_OutOfMemoryError);
+                } catch (ExchangeException e) {
+                    error = e.getLocalizedMessage();
+                } catch (IOException e) {
+                    error = e.getLocalizedMessage();
+                } catch (GeneralException e) {
+                    error = e.getLocalizedMessage();
+                } catch (ClassNotFoundException e) {
+                    error = e.getLocalizedMessage();
+                } catch (CryptoMsgException e) {
+                    error = e.getLocalizedMessage();
+                } catch (MessageNotFoundException e) {
+                    error = e.getLocalizedMessage();
+                } finally {
+                    mHandler.removeCallbacks(updateTxProgress);
+                    publish(sendMsg, 0);
+                }
+
+                if (!TextUtils.isEmpty(error)) {
+                    errorFinal = error;
+
+                    // update recipient if no longer registered
+                    boolean notreg = web.isNotRegistered();
+                    if (notreg) {
+                        if (!dbRecipient.updateRecipientRegistrationState(mDraft.getRecipRowId(),
+                                notreg)) {
+                            // failure to update database error, not as critical
+                            // as the registration loss...
+                        }
+                    }
+                    if (keepDraft) {
+                        // set queued message back to draft status
+                        if (!dbMessage.updateDraftMessage(sendMsg.getRowId(), recip, sendMsg)) {
+                            showNote(R.string.error_UnableToUpdateMessageInDB);
+                        }
+                    } else {
+                        // queued draft should be removed
+                        dbMessage.deleteMessage(sendMsg.getRowId());
+                    }
+                }
+            } // end for
+            return errorFinal;
+        }
+
+        @Override
+        protected void onProgressUpdate(Message... progress) {
+            Message msg = progress[0];
+            postProgressMsgList(msg.arg1 == 1, msg.arg2, msg.what != 0 ? getString(msg.what) : null);
         }
 
         @Override
         protected void onPostExecute(String error) {
-            mHandler.removeCallbacks(mUpdateTxProgress);
-            postProgressMsgList(mSendMsg.isInboxTable(), mRowId, null);
             if (TextUtils.isEmpty(error)) {
-                // send complete, remove secret sent
-                DraftData.INSTANCE.clearSendMsg();
-
-                showNote(R.string.state_FileSent);
+                if (mTotalMsgs == 1) {
+                    // no confirmation message, message detail list is enough
+                    // send complete, remove secret sent
+                    DraftData.INSTANCE.clearSendMsg();
+                } else {
+                    // more than 1 msg, likely separate recipients, show message
+                    showNote(mTotalMsgs + " " + getString(R.string.state_FileSent));
+                }
             } else {
-                // update recipient if no longer registered
-                boolean notreg = mWeb.isNotRegistered();
-                if (notreg) {
-                    RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                            .openInstance(getApplicationContext());
-                    if (!dbRecipient.updateRecipientRegistrationState(mDraft.getRecipRowId(),
-                            notreg)) {
-                        // failure to update database error, not as critical as
-                        // the registration loss...
-                    }
-                }
                 showNote(error);
-
-                // set message back to draft status
-                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-                if (!dbMessage.updateDraftMessage(mSendMsg.getRowId(), mRecip, mSendMsg)) {
-                    showNote(R.string.error_UnableToUpdateMessageInDB);
-                }
             }
+            refreshView();
         }
     }
 
@@ -3177,6 +3226,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private void showAddContact(String name) {
         Intent intent = new Intent(Intent.ACTION_INSERT);
         intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
+            // TODO: determine if still works on 4.4.2 android devices
+            // Fix for 4.0.3
+            intent.putExtra("finishActivityOnSaveCompleted", true);
+        }
         if (!TextUtils.isEmpty(name)) {
             intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
         }

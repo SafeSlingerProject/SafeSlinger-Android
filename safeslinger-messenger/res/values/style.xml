@@ -27,9 +27,9 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by Theme_SafeSlinger_PassPhrase_Base from res/values-vXX/styles.xml on newer devices.
+        by Theme_Safeslinger_PassPhrase_Base from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="Theme_SafeSlinger_PassPhrase_Base" parent="android:Theme.Light.NoTitleBar">
+    <style name="Theme_Safeslinger_PassPhrase_Base" parent="android:Theme.Light.NoTitleBar">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -37,7 +37,7 @@
         -->
     </style>
 
-    <style name="Theme_SafeSlinger_PassPhrase" parent="Theme_SafeSlinger_PassPhrase_Base">
+    <style name="Theme_Safeslinger_PassPhrase" parent="Theme_Safeslinger_PassPhrase_Base">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 

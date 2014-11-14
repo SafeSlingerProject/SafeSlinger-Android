@@ -38,6 +38,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.ThreadData;
 import edu.cmu.cylab.starslinger.util.SSUtil;
@@ -69,7 +70,7 @@ public class ThreadsAdapter extends BaseAdapter {
     @Override
     public View getView(int pos, View convertView, ViewGroup parent) {
         // get selected entry
-        ThreadData thread = mListThreads.get(pos);
+        ThreadData t = mListThreads.get(pos);
 
         // always inflate the view, otherwise check box states will get recycled
         // on scrolling...
@@ -77,17 +78,17 @@ public class ThreadsAdapter extends BaseAdapter {
         convertView = inflater.inflate(R.layout.threaditem, null);
 
         // convertView.setTag(Long.valueOf(thread.getRowId()));
-        drawThreadItem(convertView, thread);
+        drawThreadItem(convertView, t);
 
         // Return the view for rendering
         return convertView;
     }
 
-    private void drawThreadItem(View convertView, ThreadData thread) {
-        RecipientRow recip = thread.getRecipient();
+    private void drawThreadItem(View convertView, ThreadData t) {
+        RecipientRow recip = t.getRecipient();
 
         ImageView ivAvatar = (ImageView) convertView.findViewById(R.id.imgAvatar);
-        if (thread.isDetail()) {
+        if (t.isDetail()) {
             ivAvatar.setVisibility(View.GONE);
         } else {
             ivAvatar.setVisibility(View.VISIBLE);
@@ -102,27 +103,27 @@ public class ThreadsAdapter extends BaseAdapter {
             } catch (OutOfMemoryError e) {
                 ivAvatar.setImageBitmap(null);
             }
-            if (recip == null || !recip.isSendable() || thread.isNewerExists()) {
+            if (recip == null || !recip.isSendable() || t.isNewerExists()) {
                 ivAvatar.setAlpha(75);
             }
         }
 
         TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
-        tvName.setText(getBestIdentityName(mCtx, thread, recip));
+        tvName.setText(getBestIdentityName(mCtx, t, recip));
 
         TextView tvCount = (TextView) convertView.findViewById(R.id.tvCount);
-        tvCount.setText(Integer.toString(thread.getMsgCount()));
+        tvCount.setText(Integer.toString(t.getMsgCount()));
 
         TextView tvNew = (TextView) convertView.findViewById(R.id.tvNew);
-        if (thread.getNewCount() > 0) {
+        if (t.getNewCount() > 0) {
             tvNew.setVisibility(View.VISIBLE);
-            tvNew.setText("(" + Integer.toString(thread.getNewCount()) + ")");
+            tvNew.setText("(" + Integer.toString(t.getNewCount()) + ")");
         } else {
             tvNew.setVisibility(View.GONE);
         }
 
         TextView tvStatus = (TextView) convertView.findViewById(R.id.tvStatus);
-        if (!thread.isDetail() && thread.hasDraft()) {
+        if (!t.isDetail() && t.hasDraft()) {
             tvStatus.setVisibility(View.VISIBLE);
             tvStatus.setText(R.string.label_Draft);
         } else {
@@ -130,7 +131,7 @@ public class ThreadsAdapter extends BaseAdapter {
         }
 
         TextView tvNotify = (TextView) convertView.findViewById(R.id.tvNotify);
-        if (thread.isDetail()) {
+        if (t.isDetail()) {
             tvNotify.setVisibility(View.VISIBLE);
             if (recip != null) {
                 tvNotify.setText(SSUtil.getSimpleDeviceDisplayName(mCtx, recip.getNotify()));
@@ -140,16 +141,24 @@ public class ThreadsAdapter extends BaseAdapter {
         }
 
         TextView tvDate = (TextView) convertView.findViewById(R.id.tvDate);
-        if (thread.isDetail()) {
+        if (t.isDetail()) {
             tvDate.setVisibility(View.GONE);
         } else {
             tvDate.setVisibility(View.VISIBLE);
-            String dateTime = DateUtils.getRelativeTimeSpanString(mCtx, thread.getLastDate())
-                    .toString();
-            tvDate.setText(dateTime);
+            String dateTime = DateUtils.getRelativeTimeSpanString(mCtx,
+                    t.getMsgRow().getProbableDate()).toString();
+            if (t.getMsgRow().getStatus() == MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
+                if (!TextUtils.isEmpty(t.getProgress())) {
+                    tvDate.setText(t.getProgress());
+                } else {
+                    tvDate.setText(String.format(mCtx.getString(R.string.prog_SendingFile), ""));
+                }
+            } else {
+                tvDate.setText(dateTime);
+            }
         }
 
-        if (thread.isDetail()) {
+        if (t.isDetail()) {
             convertView.setBackgroundColor(mCtx.getResources().getColor(R.color.cmu_darkgray));
             tvName.setTextColor(mCtx.getResources().getColor(android.R.color.white));
             tvNew.setTextColor(mCtx.getResources().getColor(android.R.color.white));
@@ -157,16 +166,16 @@ public class ThreadsAdapter extends BaseAdapter {
         }
     }
 
-    public static String getBestIdentityName(Context ctx, ThreadData thread, RecipientRow recip) {
+    public static String getBestIdentityName(Context ctx, ThreadData t, RecipientRow recip) {
         String person = null;
-        if (TextUtils.isEmpty(thread.getKeyId())) {
+        if (TextUtils.isEmpty(t.getMsgRow().getKeyId())) {
             person = ctx.getString(R.string.label_undefinedTypeLabel);
         } else {
             if (recip == null) {
-                if (TextUtils.isEmpty(thread.getLastPerson())) {
-                    person = thread.getKeyId();
+                if (TextUtils.isEmpty(t.getLastPerson())) {
+                    person = t.getMsgRow().getKeyId();
                 } else {
-                    person = thread.getLastPerson();
+                    person = t.getLastPerson();
                 }
             } else {
                 person = recip.getName();

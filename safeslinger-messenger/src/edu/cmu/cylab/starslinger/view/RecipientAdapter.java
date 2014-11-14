@@ -85,7 +85,6 @@ public class RecipientAdapter extends BaseAdapter {
 
     @Override
     public View getView(int pos, View convertView, ViewGroup parent) {
-
         // get selected entry
         RecipientRow recip = mListRecipients.get(pos);
 

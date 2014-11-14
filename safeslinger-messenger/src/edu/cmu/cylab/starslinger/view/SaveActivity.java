@@ -135,7 +135,7 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Theme_SafeSlinger);
+        setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {
