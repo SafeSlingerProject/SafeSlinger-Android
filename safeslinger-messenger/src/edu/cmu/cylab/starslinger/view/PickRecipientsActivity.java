@@ -1,4 +1,3 @@
-
 /*
  * The MIT License (MIT)
  * 
@@ -38,7 +37,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.SearchRecentSuggestions;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
@@ -73,7 +75,7 @@ import edu.cmu.cylab.starslinger.model.RecipientNameKeyDateComparator;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.util.CustomSuggestionsProvider;
 
-public class PickRecipientsActivity extends BaseActivity implements OnItemClickListener {
+public class PickRecipientsActivity extends BaseActivity implements OnItemClickListener{
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
     protected static final int RESULT_RECIPSEL = 4;
     protected static final int RESULT_SLINGKEYS = 5;
@@ -109,8 +111,9 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         mSearchEdt = (SearchView) findViewById(R.id.fragment_address_search);
-        ((AutoCompleteTextView)mSearchEdt.findViewById(R.id.search_src_text)).setDropDownBackgroundResource(R.drawable.abc_search_dropdown_light);
-        
+        ((AutoCompleteTextView) mSearchEdt.findViewById(R.id.search_src_text))
+                .setDropDownBackgroundResource(R.drawable.abc_search_dropdown_light);
+
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         mSearchEdt.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         mSearchEdt.setOnQueryTextListener(new OnQueryTextListener() {
@@ -133,7 +136,7 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         tvInstruct = (TextView) findViewById(R.id.tvInstruct);
 
         // always default to checked on view creation
-//        SafeSlingerPrefs.setShowRecentRecipOnly(true);
+        // SafeSlingerPrefs.setShowRecentRecipOnly(true);
 
         cbMostRecentOnly.setChecked(true);
 
@@ -160,7 +163,7 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                SafeSlingerPrefs.setShowRecentRecipOnly(isChecked);
+                // SafeSlingerPrefs.setShowRecentRecipOnly(isChecked);
                 updateValues(null);
             }
         });
@@ -168,37 +171,54 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         updateValues(getIntent().getExtras());
     }
 
+    
     private void searchContacts(final String searchString) {
-        
+
         updateValues(null);
         new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+
+
+                    if (mContacts != null && !mContacts.isEmpty()) {
+                        final List<RecipientRow> unmatchedData = new ArrayList<RecipientRow>();
+                        for (RecipientRow row : mContacts) {
+                            if (!row.getName().toLowerCase(Locale.getDefault())
+                                    .startsWith(searchString.toLowerCase(Locale.getDefault())))
+                                unmatchedData.add(row);
+                        }
+                        boolean isOldSdk = true;
+                        if(Build.VERSION.SDK_INT > Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
+                        {
+                            mContacts.removeAll(unmatchedData);
+                            isOldSdk = false;
+                        }
+                        
+                        updateList(isOldSdk, unmatchedData);    
+                                
+                    }
+                  
+
+                
+            }
+        }).start();
+
+    }
+
+    private void updateList(final boolean isOldSDK, final List<RecipientRow> unmatchedData)
+    {
+        runOnUiThread(new Runnable() {
             
             @Override
             public void run() {
                 
-                if(mContacts != null && !mContacts.isEmpty())
-                {
-                    List<RecipientRow> unmatchedData = new ArrayList<RecipientRow>();
-                    for(RecipientRow row :  mContacts)
-                    {
-                        if(!row.getName().toLowerCase(Locale.getDefault()).startsWith(searchString.toLowerCase(Locale.getDefault())))
-                            unmatchedData.add(row);
-                    }
+                if(isOldSDK)
                     mContacts.removeAll(unmatchedData);
-           
-                    runOnUiThread( new Runnable() {
-                        
-                        @Override
-                        public void run() {
-                            ((RecipientAdapter)listViewRecipients.getAdapter()).setmListRecipients(mContacts);
-                            ((RecipientAdapter)listViewRecipients.getAdapter()).notifyDataSetChanged();
-                            // restore list position
-                            listViewRecipients.setSelectionFromTop(mListVisiblePos, mListTopOffset);
-                        }
-                    });
-                }
+                ((RecipientAdapter) listViewRecipients.getAdapter()).notifyDataSetChanged();
             }
-        }).start();
+        });
+        
         
     }
     
@@ -213,7 +233,7 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
                     CustomSuggestionsProvider.AUTHORITY, CustomSuggestionsProvider.MODE);
             suggestions.saveRecentQuery(searchQuery, null);
             searchContacts(searchQuery);
-            
+
         }
     }
 
@@ -340,11 +360,11 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
         RecipientRow recip = null;
-//        if(TextUtils.isEmpty(mSearchEdt.getQuery()))
-                recip = mContacts.get(pos);
-//        else
-//                recip = mSearchData.get(pos);
-        
+        // if(TextUtils.isEmpty(mSearchEdt.getQuery()))
+        recip = mContacts.get(pos);
+        // else
+        // recip = mSearchData.get(pos);
+
         boolean doselection = true;
 
         if (recip.isInvited()) {
@@ -498,4 +518,3 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     }
 
 }
-
