@@ -149,7 +149,7 @@ public class MessagesAdapter extends BaseAdapter {
             if (!TextUtils.isEmpty(msg.getProgress())) {
                 tvDate.setText(msg.getProgress());
             } else {
-                tvDate.setText(String.format(mCtx.getString(R.string.prog_SendingFile), ""));
+                tvDate.setText(mCtx.getString(R.string.prog_pending));
             }
         } else {
             tvDate.setText(dateTime);

@@ -184,4 +184,8 @@ public class DraftData {
         return mRecip2;
     }
 
+    public void setDateSent(long dateSent) {
+        mSendMsg.setDateSent(dateSent);
+    }
+
 }

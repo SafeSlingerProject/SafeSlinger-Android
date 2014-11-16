@@ -66,6 +66,8 @@
     <string name="btn_discard">Discard</string>
     <!-- button (title case); the Done button is used to allow the user to complete a current multi-step process. -->
     <string name="btn_Done">Done</string>
+    <!-- button (title case); the Edit button is used to show a screen where the user can edit a contact. -->
+    <string name="btn_Edit">Edit</string>
     <!-- button (title case); the Exit button is used to close the application. For non-Android use only, since Android uses the Back hardware button instead. -->
     <string name="btn_Exit">Exit</string>
     <!-- button (title case); the Import button is used to import a set of contacts on after an unsuccessful exchange protocol has finished. -->
@@ -373,6 +375,8 @@
     <string name="label_InstNoMessages">No messages. You may send a message from the Compose tab.</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Recipient list screen is case of no recipients. -->
     <string name="label_InstNoRecipients">To add recipients, you must first Sling Keys with one or more other users at the same time. You may also send a Sling Keys contact invitation from the menu.</string>
+    <!-- screen label (match English casing); used to inform the user that no recipients match the search query. -->
+    <string name="label_InstNoRecipientsMatchQuery">None of your current recipients match your search query. Please try a different query or invite a new contact.</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Shared Files screen is case of no files to share. iOS-only. -->
     <string name="label_InstNoSharedFile">No shared file. Connect your device with iTunes and drag files to the shared folder.</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Pick Recipients list screen. -->
@@ -477,6 +481,8 @@
     <string name="label_SendTo">To:</string>
     <!-- screen label (match English casing); used in the key exchange walkthrough dialog to toggle the display of the walkthrough at the next attempted key exchange. -->
     <string name="label_ShowHintAtLaunch">Show this hint next time.</string>
+    <!-- screen label (match English casing); used to alert the user about possible information leak on the use of speech recognition when the user tries to use this feature -->
+    <string name="label_SpeechRecognitionAlert">Using speech recognition is disabled because it might cause information leak</string>
     <!-- screen label (match English casing); used in the key exchange walkthrough dialog. -->
     <string name="label_step_1">Step 1</string>
     <!-- screen label (match English casing); used in the key exchange walkthrough dialog. -->
@@ -647,6 +653,8 @@
     <string name="prog_generatingSignature">generating signature…</string>
     <!-- progress message (lower case, ellipsis); used to show progress during file preview loading. -->
     <string name="prog_loadingContent">loading content…</string>
+    <!-- progress message (lower case, ellipsis); used to show progress during queued message while waiting to act -->
+    <string name="prog_pending">pending…</string>
     <!-- progress message (lower case, ellipsis); used to show progress while receiving the requested file. -->
     <string name="prog_ReceivingFile">receiving encrypted file…</string>
     <!-- progress message (lower case, ellipsis); used to show progress while waiting for the server to return the requested file. -->

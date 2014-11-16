@@ -995,7 +995,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 // create draft (need at least recipient(file) or text chosen...
                 if (!TextUtils.isEmpty(sendMsg.getText())
                         || !TextUtils.isEmpty(sendMsg.getFileName())) {
-                    long rowId = dbMessage.createDraftMessage(recip, sendMsg);
+                    long rowId = dbMessage
+                            .createDraftMessage(recip, sendMsg, sendMsg.getDateSent());
                     sendMsg.setRowId(rowId);
                     if (rowId < 0) {
                         showNote(R.string.error_UnableToSaveMessageInDB);
@@ -1288,13 +1289,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         switch (resultCode) {
             case ComposeFragment.RESULT_SAVE:
                 MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-
                 d.setText(text);
                 if (d.getSendMsgRowId() < 0) {
                     // create draft (need at least recipient(file) or text
                     // chosen...
                     if (!TextUtils.isEmpty(d.getText()) || !TextUtils.isEmpty(d.getFileName())) {
-                        long rowId = dbMessage.createDraftMessage(d.getRecip(), d.getSendMsg());
+                        long rowId = dbMessage.createDraftMessage(d.getRecip(), d.getSendMsg(),
+                                System.currentTimeMillis());
                         d.setSendMsgRowId(rowId);
                         if (rowId < 0) {
                             showNote(R.string.error_UnableToSaveMessageInDB);
@@ -1331,6 +1332,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             case ComposeFragment.RESULT_SEND:
                 // create new
                 MessageData sendMsg = d.getSendMsg();
+                // set sent time closest to UI command
+                sendMsg.setDateSent(System.currentTimeMillis());
                 sendMsg.setText(text);
                 // remove draft
                 d.clearSendMsg();
@@ -1409,7 +1412,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // chosen...
                     if (!TextUtils.isEmpty(saveMsg.getText())
                             || !TextUtils.isEmpty(saveMsg.getFileName())) {
-                        long rowId = dbMessage.createDraftMessage(recip, saveMsg);
+                        long rowId = dbMessage.createDraftMessage(recip, saveMsg,
+                                System.currentTimeMillis());
                         saveMsg.setRowId(rowId);
                         if (rowId < 0) {
                             showNote(R.string.error_UnableToSaveMessageInDB);
@@ -1448,6 +1452,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 break;
             case MessagesFragment.RESULT_SEND:
                 MessageData sendMsg = new MessageData();
+                // set sent time closest to UI command
+                sendMsg.setDateSent(System.currentTimeMillis());
                 sendMsg.setRowId(rowIdMessage);
                 sendMsg.setText(text);
                 // user wants to post the file and notify recipient
@@ -1485,7 +1491,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
                 // create draft
                 if (!TextUtils.isEmpty(d.getText()) || !TextUtils.isEmpty(d.getFileName())) {
-                    long rowId = dbMessage.createDraftMessage(d.getRecip(), d.getSendMsg());
+                    long rowId = dbMessage.createDraftMessage(d.getRecip(), d.getSendMsg(),
+                            System.currentTimeMillis());
                     d.setSendMsgRowId(rowId);
                 }
                 setTab(Tabs.COMPOSE);
@@ -1591,6 +1598,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
                     MessageData sendMsg1 = new MessageData();
                     MessageData sendMsg2 = new MessageData();
+                    // set sent time closest to UI command
+                    sendMsg1.setDateSent(System.currentTimeMillis());
+                    sendMsg2.setDateSent(System.currentTimeMillis());
+
                     RecipientRow recip1 = null;
                     RecipientRow recip2 = null;
 

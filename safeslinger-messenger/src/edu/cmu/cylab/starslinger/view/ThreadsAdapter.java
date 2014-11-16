@@ -151,7 +151,7 @@ public class ThreadsAdapter extends BaseAdapter {
                 if (!TextUtils.isEmpty(t.getProgress())) {
                     tvDate.setText(t.getProgress());
                 } else {
-                    tvDate.setText(String.format(mCtx.getString(R.string.prog_SendingFile), ""));
+                    tvDate.setText(mCtx.getString(R.string.prog_pending));
                 }
             } else {
                 tvDate.setText(dateTime);

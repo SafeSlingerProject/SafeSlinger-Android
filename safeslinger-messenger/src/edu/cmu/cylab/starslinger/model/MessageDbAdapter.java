@@ -197,12 +197,11 @@ public class MessageDbAdapter {
         return query;
     }
 
-    public long createDraftMessage(RecipientRow recip, MessageData msg) {
+    public long createDraftMessage(RecipientRow recip, MessageData msg, long submitTime) {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
 
-            values.put(KEY_DATE_SENT, System.currentTimeMillis()); // Received
-                                                                   // UTC
+            values.put(KEY_DATE_SENT, submitTime); // Sent UTC
             values.put(KEY_READ, MESSAGE_IS_READ); // decoded
             values.put(KEY_STATUS, MESSAGE_STATUS_DRAFT); // complete/failed
             values.put(KEY_TYPE, MESSAGE_TYPE_SENT); // inbox/sent
@@ -237,8 +236,10 @@ public class MessageDbAdapter {
     public boolean updateDraftMessage(long rowId, RecipientRow recip, MessageData msg) {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
-            values.put(KEY_DATE_SENT, System.currentTimeMillis()); // Received
-                                                                   // UTC
+
+            // sent time should be updated, as user has edited draft
+            values.put(KEY_DATE_SENT, System.currentTimeMillis()); // Sent UTC
+
             values.put(KEY_STATUS, MESSAGE_STATUS_DRAFT); // complete/failed
             if (recip != null) {
                 if (recip.getName() != null)
@@ -285,8 +286,10 @@ public class MessageDbAdapter {
                 throw new GeneralException("bad sent message: message hash id required");
 
             ContentValues values = new ContentValues();
-            values.put(KEY_DATE_SENT, System.currentTimeMillis()); // Received
-                                                                   // UTC
+
+            // sent time: do not set here, we want to preserve last user
+            // time the user has edited...
+
             values.put(KEY_READ, MESSAGE_IS_READ); // decoded
             values.put(KEY_STATUS, status); // complete/failed
             values.put(KEY_TYPE, MESSAGE_TYPE_SENT); // inbox/sent
