@@ -834,4 +834,5 @@
     <!-- title (title case); used at the top of the warning dialog. -->
     <string name="title_Warn">Warning</string>
 
+    <string name="verification_msg">$KEY_NAME$, you are verified.</string>
 </resources>

@@ -2348,45 +2348,71 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    private void doSelectRecipientPostExchange(Bundle args, int recipSource) {
-        // check for presence of one key only to pre-select recipient
+    public void sendAutomaticMessage(Bundle args, int recipSource) {
         CryptoMsgProvider p = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
-        DraftData d = DraftData.INSTANCE;
         byte[] keyBytes = null;
-        String keyStr = null;
+        List<String> keyStr = new ArrayList<String>();
         String keyId = null;
+        RecipientRow recip = null;
         int exchanged = 0;
         do {
             keyBytes = args.getByteArray(SafeSlingerConfig.APP_KEY_PUBKEY + exchanged);
             if (keyBytes != null) {
-                keyStr = new String(keyBytes);
+                keyStr.add( new String(keyBytes));
                 exchanged++;
             }
         } while (keyBytes != null);
 
-        if (!TextUtils.isEmpty(keyStr)) {
-            try {
-                keyId = p.ExtractKeyIDfromSafeSlingerString(keyStr);
-            } catch (CryptoMsgPeerKeyFormatException e) {
-                e.printStackTrace();
+        MessageTransport transportObjArr[]  = new MessageTransport[keyStr.size()];
+        
+        for(int i = 0; i<keyStr.size(); i++)
+        {
+            String keyString = keyStr.get(i);
+            if (!TextUtils.isEmpty(keyString)) {
+                try {
+                    keyId = p.ExtractKeyIDfromSafeSlingerString(keyString);
+                } catch (CryptoMsgPeerKeyFormatException e) {
+                    e.printStackTrace();
+                }
             }
-        }
+            
+            if (!TextUtils.isEmpty(keyId)
+                    && recipSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
+                RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                        .openInstance(getApplicationContext());
+                Cursor cr = dbRecipient.fetchRecipientByKeyId(keyId);
+                if (cr != null) {
+                    recip = new RecipientRow(cr);
+                    cr.close();
+                }
+            }
 
-        if (exchanged == 1 && !TextUtils.isEmpty(keyId)
-                && recipSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
-            RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                    .openInstance(getApplicationContext());
-            Cursor cr = dbRecipient.fetchRecipientByKeyId(keyId);
-            if (cr != null) {
-                d.setRecip(new RecipientRow(cr));
-                cr.close();
-            }
-            if (d.existsRecip()) {
-                d.clearSendMsg();
-                setTab(Tabs.COMPOSE);
+            if (recip == null) {
+                showNote(R.string.error_InvalidRecipient);
                 refreshView();
+                return;
             }
+            
+            MessageData sendMsg = new MessageData();
+            // set sent time closest to UI command
+            sendMsg.setDateSent(System.currentTimeMillis());
+            // sendMsg.setRowId(rowIdMessage);
+            String message = getString(R.string.verification_msg);
+            message = message.replaceAll("\\$KEY_NAME\\$", recip.getName());
+            sendMsg.setText(message);
+            // user wants to post the file and notify recipient
+            if (recip.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
+                showNote(R.string.error_InvalidRecipient);
+                refreshView();
+                return;
+            }
+            transportObjArr[i] = new MessageTransport(recip, sendMsg, true);
         }
+        
+
+        
+        doSendMessageStart(transportObjArr);
+
     }
 
     private void doProcessSafeSlingerMimeType(MessageData recvMsg) {
@@ -2537,7 +2563,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     showNote(String
                             .format(getString(R.string.state_SomeContactsImported), imported));
                 }
-                doSelectRecipientPostExchange(args, recipSource);
+//                doSelectRecipientPostExchange(args, recipSource);
+                sendAutomaticMessage(args, recipSource);
             } else {
                 showNote(result);
             }
