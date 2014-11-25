@@ -1348,6 +1348,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     refreshView();
                     break;
                 }
+                // manual message, keep compose tab draft
                 doSendMessageStart(new MessageTransport(d.getRecip(), sendMsg, true));
                 break;
             case ComposeFragment.RESULT_RESTART:
@@ -1467,6 +1468,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     refreshView();
                     break;
                 }
+                // manual message, keep message tab draft
                 doSendMessageStart(new MessageTransport(recip, sendMsg, true));
                 break;
             case MessagesFragment.RESULT_FWDMESSAGE:
@@ -1593,14 +1595,15 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 break;
             case IntroductionFragment.RESULT_SEND:
                 if (data != null) {
+                    long groupSentTime = System.currentTimeMillis();
 
                     // TODO: place in AsyncTask with progress for slower devices
 
                     MessageData sendMsg1 = new MessageData();
                     MessageData sendMsg2 = new MessageData();
                     // set sent time closest to UI command
-                    sendMsg1.setDateSent(System.currentTimeMillis());
-                    sendMsg2.setDateSent(System.currentTimeMillis());
+                    sendMsg1.setDateSent(groupSentTime);
+                    sendMsg2.setDateSent(groupSentTime);
 
                     RecipientRow recip1 = null;
                     RecipientRow recip2 = null;
@@ -1712,6 +1715,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     sendMsg2.setFileType(SafeSlingerConfig.MIMETYPE_CLASS + "/"
                             + SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO);
 
+                    // automatic, do not keep introduction tab drafts
                     doSendMessageStart(new MessageTransport[] {
                             new MessageTransport(recip1, sendMsg1, false),
                             new MessageTransport(recip2, sendMsg2, false)
@@ -1720,8 +1724,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // reset after complete, little slow, better than nothing
                     d.clearRecip1();
                     d.clearRecip2();
-                    setTab(Tabs.MESSAGE);
-                    refreshView();
                 }
                 break;
             case Activity.RESULT_CANCELED:
@@ -2349,6 +2351,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     }
 
     public void sendAutomaticMessage(Bundle args, int recipSource) {
+        long groupSentTime = System.currentTimeMillis();
         CryptoMsgProvider p = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
         byte[] keyBytes = null;
         List<String> keyStr = new ArrayList<String>();
@@ -2358,15 +2361,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         do {
             keyBytes = args.getByteArray(SafeSlingerConfig.APP_KEY_PUBKEY + exchanged);
             if (keyBytes != null) {
-                keyStr.add( new String(keyBytes));
+                keyStr.add(new String(keyBytes));
                 exchanged++;
             }
         } while (keyBytes != null);
 
-        MessageTransport transportObjArr[]  = new MessageTransport[keyStr.size()];
-        
-        for(int i = 0; i<keyStr.size(); i++)
-        {
+        MessageTransport transportObjArr[] = new MessageTransport[keyStr.size()];
+
+        for (int i = 0; i < keyStr.size(); i++) {
             String keyString = keyStr.get(i);
             if (!TextUtils.isEmpty(keyString)) {
                 try {
@@ -2375,7 +2377,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     e.printStackTrace();
                 }
             }
-            
+
             if (!TextUtils.isEmpty(keyId)
                     && recipSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
                 RecipientDbAdapter dbRecipient = RecipientDbAdapter
@@ -2389,30 +2391,27 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             if (recip == null) {
                 showNote(R.string.error_InvalidRecipient);
-                refreshView();
-                return;
+                // attempt to send other messages and continue
+                continue;
             }
-            
+
             MessageData sendMsg = new MessageData();
             // set sent time closest to UI command
-            sendMsg.setDateSent(System.currentTimeMillis());
-            // sendMsg.setRowId(rowIdMessage);
-            String message = getString(R.string.verification_msg);
-            message = message.replaceAll("\\$KEY_NAME\\$", recip.getName());
+            sendMsg.setDateSent(groupSentTime);
+            String message = String.format(getString(R.string.label_messageYouAreVerified),
+                    recip.getName());
             sendMsg.setText(message);
             // user wants to post the file and notify recipient
             if (recip.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
                 showNote(R.string.error_InvalidRecipient);
-                refreshView();
-                return;
+                // attempt to send other messages and continue
+                continue;
             }
-            transportObjArr[i] = new MessageTransport(recip, sendMsg, true);
+            // automatic, do not keep sling keys tab drafts
+            transportObjArr[i] = new MessageTransport(recip, sendMsg, false);
         }
-        
 
-        
         doSendMessageStart(transportObjArr);
-
     }
 
     private void doProcessSafeSlingerMimeType(MessageData recvMsg) {
@@ -2563,7 +2562,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     showNote(String
                             .format(getString(R.string.state_SomeContactsImported), imported));
                 }
-//                doSelectRecipientPostExchange(args, recipSource);
+                // doSelectRecipientPostExchange(args, recipSource);
                 sendAutomaticMessage(args, recipSource);
             } else {
                 showNote(result);

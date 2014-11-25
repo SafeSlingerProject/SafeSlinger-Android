@@ -413,6 +413,8 @@
     <string name="label_messageInviteSetupInst">To setup a secure messaging connection, we can meet or phone each other at the same time, and then Sling Keys just once to verify the connection.</string>
     <!-- screen label (match English casing); used as message text to invite a contact to begin secure messaging. -->
     <string name="label_messageInviteStartMsg">Can we start secure messaging with the open source SafeSlinger iPhone or Android app?</string>
+    <!-- screen label (match English casing); used as the text message completing sling keys. %s = the name of a recipient. -->
+    <string name="label_messageYouAreVerified">%s, you are verified.</string>
     <!-- screen label (match English casing); used as a relative time label to the current time on the message list. %.0f = the number of whole minutes. -->
     <string name="label_minutes">%d minutes</string>
     <!-- screen label (match English casing); used to denote a 'mobile' type of email or phone contact type. iOS-only. -->
@@ -834,5 +836,4 @@
     <!-- title (title case); used at the top of the warning dialog. -->
     <string name="title_Warn">Warning</string>
 
-    <string name="verification_msg">$KEY_NAME$, you are verified.</string>
 </resources>
