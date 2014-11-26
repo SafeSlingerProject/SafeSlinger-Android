@@ -2366,7 +2366,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             }
         } while (keyBytes != null);
 
-        MessageTransport transportObjArr[] = new MessageTransport[keyStr.size()];
+        List<MessageTransport> verifyMsgs = new ArrayList<MessageTransport>();
 
         for (int i = 0; i < keyStr.size(); i++) {
             String keyString = keyStr.get(i);
@@ -2390,7 +2390,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             }
 
             if (recip == null) {
-                showNote(R.string.error_InvalidRecipient);
                 // attempt to send other messages and continue
                 continue;
             }
@@ -2403,15 +2402,15 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             sendMsg.setText(message);
             // user wants to post the file and notify recipient
             if (recip.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
-                showNote(R.string.error_InvalidRecipient);
                 // attempt to send other messages and continue
                 continue;
             }
+
             // automatic, do not keep sling keys tab drafts
-            transportObjArr[i] = new MessageTransport(recip, sendMsg, false);
+            verifyMsgs.add(new MessageTransport(recip, sendMsg, false));
         }
 
-        doSendMessageStart(transportObjArr);
+        doSendMessageStart(verifyMsgs.toArray(new MessageTransport[verifyMsgs.size()]));
     }
 
     private void doProcessSafeSlingerMimeType(MessageData recvMsg) {
