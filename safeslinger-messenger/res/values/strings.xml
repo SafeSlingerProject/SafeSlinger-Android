@@ -170,14 +170,10 @@
     <string name="error_C2DMRegServiceNotAvailable">Push registration service not available, scheduling retry in %d seconds.</string>
     <!-- error message (sentence case, period); used to warn during push registration: The user has too many applications registered. The application should tell the user to uninstall some other applications, let user retry manually. Fix on the device side. Android-only. -->
     <string name="error_C2DMRegTooManyRegistrations">Too many applications are registered for Push. Please uninstall some other applications and retry.</string>
-    <!-- error message (sentence case, period); used to warn when user wants to invite contact via email but device cannot send emails. -->
-    <string name="error_CannotSendEmail">This device cannot send emails.</string>
     <!-- error message (sentence case, period); used to warn when use attempts to attach an empty file to the message. -->
     <string name="error_CannotSendEmptyFile">Cannot send an empty attachment.</string>
     <!-- error message (sentence case, period); used to warn when the message and attachment (if any) exceed the current quota limits for the App Engine service we use. %d the maximum limit in bytes of the entire message plus attachments that the App Engine service will allow us to upload. -->
     <string name="error_CannotSendFilesOver">Cannot send attachments greater than %d bytes in size.</string>
-    <!-- error message (sentence case, period); used to warn when user wants to invite contact via text message but device cannot send text messages. -->
-    <string name="error_CannotSendMessage">This device cannot send text messages.</string>
     <!-- error message (sentence case, period); used to warn when use attempts to attach an empty file to the message. -->
     <string name="error_CannotSendNullFile">Cannot send a null attachment.</string>
     <!-- error message (sentence case, period); used to warn when failing to insert new contact data. -->
@@ -484,7 +480,7 @@
     <!-- screen label (match English casing); used in the key exchange walkthrough dialog to toggle the display of the walkthrough at the next attempted key exchange. -->
     <string name="label_ShowHintAtLaunch">Show this hint next time.</string>
     <!-- screen label (match English casing); used to alert the user about possible information leak on the use of speech recognition when the user tries to use this feature -->
-    <string name="label_SpeechRecognitionAlert">Using speech recognition is disabled because it might cause information leak</string>
+    <string name="label_SpeechRecognitionAlert">Using speech recognition is disabled because it might cause an information leak</string>
     <!-- screen label (match English casing); used in the key exchange walkthrough dialog. -->
     <string name="label_step_1">Step 1</string>
     <!-- screen label (match English casing); used in the key exchange walkthrough dialog. -->
@@ -693,7 +689,7 @@
     <string name="state_BackupRestored">Backup restored.</string>
     <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm that a file has been deleted. %s = the file name of the deleted file. -->
     <string name="state_FileDeleted">Deleted file %s.</string>
-    <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm that a message has been sent. -->
+    <!-- informational message (sentence case, period); TODO: This should be deprecated in favor 1 message push to messages tab (single thread) and >1 messages push to messages tab (all threads) with a toast of state_MessagesSent. -->
     <string name="state_FileSent">Message sent.</string>
     <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm the addition of a contact invitation. -->
     <string name="state_InvitationAdded">Invitation added.</string>
@@ -701,6 +697,8 @@
     <string name="state_MessageSavedAsDraft">Message saved as draft.</string>
     <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm the number of messages deleted. %d = the number of messages successfully deleted. -->
     <string name="state_MessagesDeleted">%d messages deleted.</string>
+    <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm that N messages has been sent used on all threads views. -->
+    <string name="state_MessagesSent">%d messages sent.</string>
     <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm the change of password. -->
     <string name="state_PassphraseUpdated">Passphrase updated.</string>
     <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm the number of recipients deleted. %d the number of recipient's keys successfully deleted. -->
@@ -763,8 +761,6 @@
 
     <!-- title (title case); used as the -->
     <string name="title_About">About</string>
-    <!-- title (title case); used on Contact Select View when user wants to invite a new contact via email or SMS. -->
-    <string name="title_ActionNotAvailable">Action Not Available</string>
     <!-- menu option (title case); used in the Select File Option menu to take a picture with the camera on iOS. -->
     <string name="title_camera">Camera</string>
     <!-- title (title case); used at the top of the menu when choosing a directory to load or save a file attachment. -->

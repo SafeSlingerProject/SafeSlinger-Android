@@ -3129,7 +3129,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     DraftData.INSTANCE.clearSendMsg();
                 } else {
                     // more than 1 msg, likely separate recipients, show message
-                    showNote(mTotalMsgs + " " + getString(R.string.state_FileSent));
+                    showNote(String.format(getString(R.string.state_MessagesSent), mTotalMsgs));
                 }
             } else {
                 showNote(error);
