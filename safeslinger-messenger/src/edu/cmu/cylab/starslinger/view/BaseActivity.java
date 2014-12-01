@@ -722,6 +722,8 @@ public class BaseActivity extends ActionBarActivity {
         boolean actionAvailable = getPackageManager().resolveActivity(intent, 0) != null;
         if (actionAvailable) {
             startActivity(intent);
+            // show toast, helpful for slow viewing apps
+            showNote(R.string.prog_loadingContent);
         } else {
             showNote(SafeSlinger.getUnsupportedFeatureString("Viewing " + fileType));
         }

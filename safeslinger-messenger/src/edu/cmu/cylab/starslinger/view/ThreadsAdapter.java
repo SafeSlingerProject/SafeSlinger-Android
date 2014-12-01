@@ -173,7 +173,9 @@ public class ThreadsAdapter extends BaseAdapter {
         } else {
             if (recip == null) {
                 if (TextUtils.isEmpty(t.getLastPerson())) {
-                    person = t.getMsgRow().getKeyId();
+                    // add unknown sender
+                    person = ctx.getString(R.string.label_UnknownSender) + " "
+                            + t.getMsgRow().getKeyId();
                 } else {
                     person = t.getLastPerson();
                 }
