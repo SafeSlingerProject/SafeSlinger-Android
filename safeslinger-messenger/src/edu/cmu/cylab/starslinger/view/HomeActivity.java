@@ -3729,13 +3729,15 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     if (item.icon != null) {
                         Bitmap bm = BitmapFactory.decodeByteArray(item.icon, 0, item.icon.length,
                                 null);
-                        d = new BitmapDrawable(act.getResources(), bm);
+                        d = new BitmapDrawable(getResources(), bm);
                     } else {
-                        d = act.getResources().getDrawable(R.drawable.ic_silhouette);
+                        d = getResources().getDrawable(R.drawable.ic_silhouette);
                     }
-                    // d.setBounds(0, 0, 25, 25);
-                    tv.setCompoundDrawablesWithIntrinsicBounds(null, null, d, null);
-                    tv.setCompoundDrawablePadding((int) act.getResources().getDimension(
+                    int avatar_size_list = (int) getResources().getDimension(
+                            R.dimen.avatar_size_list);
+                    d.setBounds(0, 0, avatar_size_list, avatar_size_list);
+                    tv.setCompoundDrawables(null, null, d, null);
+                    tv.setCompoundDrawablePadding((int) getResources().getDimension(
                             R.dimen.size_5dp));
                 } else {
                     tv.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);

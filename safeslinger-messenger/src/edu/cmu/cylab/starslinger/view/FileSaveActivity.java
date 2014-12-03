@@ -36,6 +36,7 @@ import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -136,13 +137,15 @@ public class FileSaveActivity extends BaseActivity {
                 TextView textView = (TextView) view.findViewById(android.R.id.text1);
 
                 // put the image on the text view
-                textView.setCompoundDrawablesWithIntrinsicBounds(mFileList.get(position).icon, 0,
-                        0, 0);
+                int avatar_size_list = (int) getResources().getDimension(R.dimen.avatar_size_list);
+                Drawable d = getResources().getDrawable(mFileList.get(position).icon);
+                d.setBounds(0, 0, avatar_size_list, avatar_size_list);
+                textView.setCompoundDrawables(d, null, null, null);
 
                 // add margin between image and text (support various screen
                 // densities)
-                int dp5 = (int) (5 * getResources().getDisplayMetrics().density + 0.5f);
-                textView.setCompoundDrawablePadding(dp5);
+                textView.setCompoundDrawablePadding((int) getResources().getDimension(
+                        R.dimen.size_5dp));
 
                 return view;
             }
