@@ -60,7 +60,6 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.widget.Toast;
-import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgPacketSizeException;
@@ -235,7 +234,6 @@ public class SafeSlinger extends Application {
 
     public static void startCacheService(Context ctx) {
         Intent intent = new Intent(ctx, Service.class);
-        intent.putExtra(extra.PASSPHRASE_CACHE_TTL, SafeSlingerPrefs.getPassPhraseCacheTtl());
         ctx.startService(intent);
     }
 
@@ -287,8 +285,8 @@ public class SafeSlinger extends Application {
         return mPassPhraseCache.size() == 0;
     }
 
-    public static long cleanUpCache(long mPassPhraseCacheTtl, long delay) {
-        long realTtl = mPassPhraseCacheTtl * 1000;
+    public static long cleanUpCache(long passPhraseCacheTtl, long delay) {
+        long realTtl = passPhraseCacheTtl * 1000;
         long now = new Date().getTime();
         Vector<String> oldKeys = new Vector<String>();
         for (Map.Entry<String, CachedPassPhrase> pair : mPassPhraseCache.entrySet()) {

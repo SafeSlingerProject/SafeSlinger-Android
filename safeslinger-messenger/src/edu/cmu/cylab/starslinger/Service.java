@@ -41,7 +41,6 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
-import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.view.HomeActivity;
 
@@ -77,6 +76,8 @@ public class Service extends android.app.Service {
 
         @Override
         public void run() {
+            mPassPhraseCacheTtl = SafeSlingerPrefs.getPassPhraseCacheTtl();
+
             long delay = mPassPhraseCacheTtl * 1000 / 2;
 
             // make sure the delay is not longer than one minute
@@ -90,18 +91,12 @@ public class Service extends android.app.Service {
                 delay = 5000;
             }
 
-            // ensure service runs when passphrase is present
+            // ensure service stops when passphrase is absent
             if (SafeSlinger.isCacheEmpty()) {
                 stopForeground(true);
-            } else {
-                startForeground(HomeActivity.NOTIFY_PASS_CACHED_ID, createCacheNotification());
             }
 
-            queryBackupStatus();
-            queryExchangeStatus();
-
             mCacheHandler.postDelayed(this, delay);
-
         }
     };
 
@@ -135,9 +130,8 @@ public class Service extends android.app.Service {
     public void onStart(Intent intent, int startId) {
         super.onStart(intent, startId);
 
-        if (intent != null) {
-            mPassPhraseCacheTtl = intent.getIntExtra(extra.PASSPHRASE_CACHE_TTL, 15);
-        }
+        mPassPhraseCacheTtl = SafeSlingerPrefs.getPassPhraseCacheTtl();
+
         if (mPassPhraseCacheTtl < 15) {
             mPassPhraseCacheTtl = 15;
         }
@@ -148,6 +142,12 @@ public class Service extends android.app.Service {
         } else {
             startForeground(HomeActivity.NOTIFY_PASS_CACHED_ID, createCacheNotification());
         }
+
+        // only query exchange status on startup
+        queryExchangeStatus();
+
+        // immediate backup delay not critical, it's an optional service
+        queryBackupStatus();
 
         mCacheHandler.removeCallbacks(mCacheTask);
         mCacheHandler.postDelayed(mCacheTask, 1000);

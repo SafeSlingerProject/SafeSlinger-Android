@@ -156,6 +156,7 @@ public class SettingsActivity extends PreferenceActivity {
     @SuppressWarnings("deprecation")
     private void restoreDefaultPreferences() {
         SafeSlingerPrefs.restoreUserDefaultSettings();
+        SafeSlinger.startCacheService(getApplication());
         setPreferenceScreen(null);
         setPrefs();
     }
@@ -464,7 +465,10 @@ public class SettingsActivity extends PreferenceActivity {
                         mPassPhraseCacheTtl.setValue(newValue.toString());
                         mPassPhraseCacheTtl.setSummary(mPassPhraseCacheTtl.getEntry());
                         SafeSlingerPrefs.setPassPhraseCacheTtl(Integer.parseInt(newValue.toString()));
+                        SafeSlinger.startCacheService(getApplication());
                         sTtlChanged = true;
+                        setResult(RESULT_CHANGE_PASSTTL);
+                        finish();
                         return false;
                     }
                 });

@@ -163,7 +163,6 @@ public class SafeSlingerConfig {
         public static final String INBOX_ROW_ID = "InboxRowId";
         public static final String NAME = "Name";
         public static final String PASS_PHRASE = "PassPhrase";
-        public static final String PASSPHRASE_CACHE_TTL = "passPhraseCacheTtl";
         public static final String PCT = "pct";
         public static final String PHOTO = "Photo";
         public static final String POSITION = "Position";
