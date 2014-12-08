@@ -93,7 +93,8 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
                 .setAutoCancel(true)//
                 .setContentTitle(contentTitle)//
                 .setContentText(contentText)//
-                .setNumber(visibleMsgCount); // API 11+
+                .setNumber(visibleMsgCount)
+                .setVisibility(NotificationCompat.VISIBILITY_SECRET);; // API 11+
 
         try {
             builder.setLargeIcon(BitmapFactory.decodeResource(ctx.getResources(),
@@ -113,7 +114,7 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
         defaults |= Notification.DEFAULT_LIGHTS;
         builder.setDefaults(defaults);
 
-        Notification n = builder.getNotification();
+        Notification n = builder.build();
 
         // total messages seen...
         n.number = visibleMsgCount; // API <11

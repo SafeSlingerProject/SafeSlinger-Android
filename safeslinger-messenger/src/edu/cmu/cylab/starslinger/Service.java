@@ -243,9 +243,10 @@ public class Service extends android.app.Service {
                 .setWhen(request)//
                 .setAutoCancel(true)//
                 .setContentTitle(contentTitle)//
-                .setContentText(contentText);
+                .setContentText(contentText)
+                .setVisibility(NotificationCompat.VISIBILITY_SECRET);;
 
-        return builder.getNotification();
+        return builder.build();
     }
 
     public Notification createCacheNotification() {
@@ -275,9 +276,10 @@ public class Service extends android.app.Service {
                 .setTicker(tickerText)//
                 .setContentTitle(contentTitle)//
                 .setContentText(contentText)//
-                .setWhen(0);
+                .setWhen(0)
+                .setVisibility(NotificationCompat.VISIBILITY_SECRET);
 
-        return builder.getNotification();
+        return builder.build();
     }
 
     public Notification createSlingKeysReminderNotification() {
@@ -298,9 +300,10 @@ public class Service extends android.app.Service {
                 .setTicker(tickerText)//
                 .setContentTitle(contentTitle)//
                 .setContentText(contentText)//
-                .setWhen(0);
+                .setWhen(0)
+                .setVisibility(NotificationCompat.VISIBILITY_SECRET);
 
-        return builder.getNotification();
+        return builder.build();
     }
 
 }
