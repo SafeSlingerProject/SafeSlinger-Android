@@ -28,39 +28,39 @@
     <string name="ask_QuitConfirmation">Baigti? Ar tikrai?</string>
 
     <string name="btn_Match">Kitas</string>
-    <string name="btn_NoMatch">Nėra atitikmens</string>
+    <string name="btn_NoMatch">Nėra rungtynės</string>
 
     <string name="choice_NumUsers">%d vartotojai</string>
 
     <string name="error_AllMembersMustUpgrade">Kai kurie nariai naudojate senesnę versiją; visi nariai turi atnaujinti į naujausią versiją.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Visi nariai turi atnaujinti, kai naudojate senesnius push registracijos formatus.</string>
-    <string name="error_CorrectYourInternetConnection">Internetas nėra, patikrinkite nustatymus.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Valiutų pauzės viršyta. Vėl pradėkite keistis.</string>
+    <string name="error_CorrectYourInternetConnection">Interneto nėra, patikrinkite nustatymus.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Valiutų timeout viršyta. Vėl pradėti keistis.</string>
     <string name="error_HttpCode">Serverio HTTP klaida: %d</string>
-    <string name="error_InvalidCommitVerify">Neteisingi duomenys nerasta mainais. Vėl pradėkite keistis.</string>
+    <string name="error_InvalidCommitVerify">Neteisingi duomenys rasta biržoje. Vėl pradėti keistis.</string>
     <string name="error_InvalidCommonUserId">Prašome įvesti teigiamą sveikąjį skaičių.</string>
-    <string name="error_LocalGroupCommitDiffer">Jūs pranešė frazes skirtumą. Vėl pradėkite keistis.</string>
-    <string name="error_MinUsersRequired">%d narių minimalus privalo keistis duomenimis.</string>
-    <string name="error_MoreDataThanUsers">Netikėta duomenų nerasta mainais. Vėl pradėkite keistis.</string>
-    <string name="error_NoDataToExchange">Keitimasis nėra reikalingų duomenų.</string>
-    <string name="error_NoWordListSelected">Jūs turite pasirinkti vieną iš frazių, prieš tęsiant.</string>
-    <string name="error_OtherGroupCommitDiffer">Kažkas pranešė frazes skirtumą. Vėl pradėkite keistis.</string>
-    <string name="error_OutOfMemoryError">Atmintis yra pernelyg maža, kad būtų užbaigti šią operaciją.</string>
+    <string name="error_LocalGroupCommitDiffer">Jūs praneša, frazių skirtumą. Vėl pradėti keistis.</string>
+    <string name="error_MinUsersRequired">%d nariai minimali reikalaujama keistis duomenimis.</string>
+    <string name="error_MoreDataThanUsers">Netikėta duomenų nerasta mainais. Vėl pradėti keistis.</string>
+    <string name="error_NoDataToExchange">Keitimasis nėra reikalingus duomenis.</string>
+    <string name="error_NoWordListSelected">Jūs turite pasirinkti vieną iš frazių prieš tęsiant.</string>
+    <string name="error_OtherGroupCommitDiffer">Kažkas pranešė frazes skirtumą. Vėl pradėti keistis.</string>
+    <string name="error_OutOfMemoryError">Atmintis yra per mažas, kad užbaigti šią operaciją.</string>
     <string name="error_ServerAppMessage">Serverio pranešimas: %s</string>
     <string name="error_ServerNotResponding">Nėra atsakymo iš serverio.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Minutės pertraukėlė laukia kai grupės nariai pridėti duomenis.</string>
-    <string name="error_WebCancelledByUser">Vartotojas atšauktas serverio prašymą.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Baigėsi laikas laukti kai grupės nariai pridėti duomenis.</string>
+    <string name="error_WebCancelledByUser">Vartotojas atšaukta serverio prašymą.</string>
 
-    <string name="help_size">Pasirinkite žmonių, kurie bando keistis duomenimis kartu ir paspauskite OK numerį.</string>
-    <string name="help_userid">Tai skaičius šiame ekrane yra naudojamas sukurti unikalų vartotojų grupę. Peržiūrėkite numerius visų vartotojų ekranuose, tada visi vartotojai turėtų įvesti tą pačią žemiausią numerį ir paspauskite OK.</string>
-    <string name="help_verify">Dabar jūs turite atitikti vieną iš šių 3-žodžių frazių visiems vartotojams. Kiekvienas vartotojas turi pasirinkti tokį patį bendrą frazę ir spauskite \'Next\'.</string>
+    <string name="help_size">Pasirinkite žmonių, kurie bando keistis duomenimis kartu ir paspauskite OK skaičių.</string>
+    <string name="help_userid">Šis skaičius šiame ekrane yra naudojamas sukurti unikalų vartotojų grupę. Peržiūrėkite numerius visų vartotojų ekranuose, tada visi vartotojai turėtų įvesti tą pačią žemiausią numerį ir paspauskite OK.</string>
+    <string name="help_verify">Dabar jūs turite atitikti vieną iš šių 3-žodis frazių, kurių visi vartotojai. Kiekvienas vartotojas turi pasirinkti tokį patį bendrą frazę ir spauskite \'Toliau\'.</string>
 
     <string name="label_CompareScreensNDevices">Palyginkite ekranus %s prietaisų.</string>
     <string name="label_NumericModeHint">Ne anglų kalba</string>
     <string name="label_PromptInstruct">Šis numeris yra naudojamas sukurti unikalų vartotojų grupę. Palyginkite ir tada įveskite mažiausią skaičių tarp visų vartotojų.</string>
     <string name="label_ReceivedNItems">gavo %d daiktų</string>
     <string name="label_UserIdHint">Žemiausia</string>
-    <string name="label_VerifyInstruct">Visi telefonai turi atitikti vieną iš 3-žodžių frazes. Lyginti, tada pasirinkti atitikimo frazė.</string>
+    <string name="label_VerifyInstruct">Visi telefonai turi atitikti vieną iš 3-žodis frazes. Palyginkite, o tada pasirinkti atitikimo frazė.</string>
 
     <string name="lib_name">SafeSlinger birža</string>
 
@@ -71,6 +71,6 @@
 
     <string name="title_size">Kiek vartotojų keistis?</string>
     <string name="title_userid">Grupavimas</string>
-    <string name="title_verify">Patikrinkite</string>
+    <string name="title_verify">Patikrinti</string>
 
 </resources>

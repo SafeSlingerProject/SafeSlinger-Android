@@ -32,35 +32,35 @@
 
     <string name="choice_NumUsers">pengguna %d</string>
 
-    <string name="error_AllMembersMustUpgrade">Beberapa anggota menggunakan versi lama; semua anggota harus meng-upgrade ke versi terbaru.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Semua anggota harus melakukan upgrade, ada pula yang menggunakan format lama pendaftaran push.</string>
+    <string name="error_AllMembersMustUpgrade">Beberapa anggota yang menggunakan versi lama; semua anggota harus meng-upgrade ke versi terbaru.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Semua anggota harus meng-upgrade, ada pula yang menggunakan format lama pendaftaran push.</string>
     <string name="error_CorrectYourInternetConnection">Internet tidak tersedia, periksa pengaturan Anda.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Bursa batas waktu terlampaui. Mulai pertukaran lagi.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Bursa batas waktu terlampaui. Mulailah pertukaran lagi.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Data yang tidak benar ditemukan dalam pertukaran. Mulai pertukaran lagi.</string>
+    <string name="error_InvalidCommitVerify">Data yang tidak benar ditemukan dalam pertukaran. Mulailah pertukaran lagi.</string>
     <string name="error_InvalidCommonUserId">Masukkan bilangan bulat positif.</string>
-    <string name="error_LocalGroupCommitDiffer">Anda telah melaporkan perbedaan dalam frase. Mulai pertukaran lagi.</string>
+    <string name="error_LocalGroupCommitDiffer">Anda telah melaporkan perbedaan frase. Mulailah pertukaran lagi.</string>
     <string name="error_MinUsersRequired">Minimal %d anggota diperlukan untuk pertukaran data.</string>
-    <string name="error_MoreDataThanUsers">Data tak terduga ditemukan dalam pertukaran. Mulai pertukaran lagi.</string>
+    <string name="error_MoreDataThanUsers">Data tak terduga ditemukan dalam pertukaran. Mulailah pertukaran lagi.</string>
     <string name="error_NoDataToExchange">Pertukaran hilang data yang dibutuhkan.</string>
     <string name="error_NoWordListSelected">Anda harus memilih salah satu frase sebelum melanjutkan.</string>
-    <string name="error_OtherGroupCommitDiffer">Seseorang melaporkan perbedaan dalam frase. Mulai pertukaran lagi.</string>
+    <string name="error_OtherGroupCommitDiffer">Seseorang melaporkan perbedaan dalam frase. Mulailah pertukaran lagi.</string>
     <string name="error_OutOfMemoryError">Memori terlalu rendah untuk menyelesaikan operasi ini.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Tidak ada respon dari server.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout menunggu beberapa anggota kelompok untuk menambah data.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout menunggu beberapa anggota kelompok untuk menambahkan data.</string>
     <string name="error_WebCancelledByUser">Pengguna membatalkan permintaan server.</string>
 
-    <string name="help_size">Pilih jumlah orang yang berusaha untuk pertukaran data bersama-sama dan tekan OK.</string>
-    <string name="help_userid">Angka ini di layar ini digunakan untuk membuat grup yang unik dari pengguna. Tinjau angka-angka pada layar semua pengguna \', maka semua pengguna harus memasukkan nomor yang sama terendah dan tekan OK.</string>
-    <string name="help_verify">Sekarang, Anda harus cocok dengan frase 3 kata ini dengan semua pengguna. Setiap pengguna harus memilih frase umum yang sama, dan tekan Next.</string>
+    <string name="help_size">Pilih jumlah orang yang berusaha untuk bertukar data bersama-sama dan tekan OK.</string>
+    <string name="help_userid">Angka ini di layar ini digunakan untuk membuat grup yang unik dari pengguna. Tinjau angka pada layar semua pengguna \', maka semua pengguna harus memasukkan nomor yang sama terendah dan tekan OK.</string>
+    <string name="help_verify">Sekarang, Anda harus cocok dengan frasa 3-kata ini dengan semua pengguna. Setiap pengguna harus memilih frase umum yang sama, dan tekan Next.</string>
 
     <string name="label_CompareScreensNDevices">Bandingkan layar pada perangkat %s.</string>
     <string name="label_NumericModeHint">Non-Inggris</string>
     <string name="label_PromptInstruct">Nomor ini digunakan untuk membuat grup yang unik dari pengguna. Bandingkan, dan kemudian masukkan nomor terendah di antara semua pengguna.</string>
     <string name="label_ReceivedNItems">menerima %d item</string>
     <string name="label_UserIdHint">Terendah</string>
-    <string name="label_VerifyInstruct">Semua telepon harus sesuai dengan salah satu frase 3 kata. Bandingkan, dan kemudian memilih frase yang cocok.</string>
+    <string name="label_VerifyInstruct">Semua telepon harus sesuai dengan salah satu frase 3-kata. Bandingkan, dan kemudian memilih frase yang cocok.</string>
 
     <string name="lib_name">SafeSlinger Bursa</string>
 
@@ -71,6 +71,6 @@
 
     <string name="title_size">Berapa banyak pengguna di bursa?</string>
     <string name="title_userid">Pengelompokan</string>
-    <string name="title_verify">Verifikasi</string>
+    <string name="title_verify">Memeriksa</string>
 
 </resources>

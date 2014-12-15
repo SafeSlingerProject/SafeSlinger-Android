@@ -25,18 +25,18 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">פאַרלאָזן? זענען איר זיכער?</string>
+    <string name="ask_QuitConfirmation">פאַרלאָזן? ביסט איר זיכער?</string>
 
     <string name="btn_Match">ווייַטער</string>
     <string name="btn_NoMatch">ניט קיין גלייַכן</string>
 
     <string name="choice_NumUsers">%d וסערס</string>
 
-    <string name="error_AllMembersMustUpgrade">עטלעכע מיטגלידער זענען ניצן אַן עלטערע ווערסיע, אַלע מיטגלידער מוזן אַפּגרייד צו די נואַסט ווערסיע.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">כל מיטגלידער מוזן אַפּגרייד, עטלעכע זענען ניצן עלטערע שטופּן רעגיסטראַציע פֿאָרמאַטירונגען.</string>
+    <string name="error_AllMembersMustUpgrade">עטלעכע מיטגלידער זענען ניצן אַ עלטערע ווערסיע, אַלע מיטגלידער מוזן אַפּגרייד צו די נואַסט ווערסיע.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">אַלע מיטגלידער מוזן אַפּגרייד, עטלעכע זענען ניצן עלטערע שטופּן רעגיסטראַציע פֿאָרמאַטירונגען.</string>
     <string name="error_CorrectYourInternetConnection">אינטערנעט ניט בנימצא, טשעק דיין סעטטינגס.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">וועקסל טיימאַוט יקסידיד. אָנהייבן דעם וועקסל ווידער.</string>
-    <string name="error_HttpCode">סערווירער הטטפּ פֿעלער: %d</string>
+    <string name="error_HttpCode">סערווירער הטטפּ טעות: %d</string>
     <string name="error_InvalidCommitVerify">פאַלש דאַטן געפונען אין וועקסל. אָנהייבן דעם וועקסל ווידער.</string>
     <string name="error_InvalidCommonUserId">ביטע אַרייַן אַ positive ינטאַדזשער.</string>
     <string name="error_LocalGroupCommitDiffer">איר האָבן געמאלדן אַ חילוק אין פראַסעס. אָנהייבן דעם וועקסל ווידער.</string>
@@ -49,15 +49,15 @@
     <string name="error_ServerAppMessage">סערווירער מעסעדזש: %s</string>
     <string name="error_ServerNotResponding">ניט קיין ענטפער פון סערווירער.</string>
     <string name="error_TimeoutWaitingForAllMembers">טיימאַוט ווארטן פֿאַר עטלעכע גרופּע מיטגלידער צו לייגן דאַטן.</string>
-    <string name="error_WebCancelledByUser">User קאַנסאַלד שליח בעטן.</string>
+    <string name="error_WebCancelledByUser">באַניצער קאַנסאַלד שליח בעטן.</string>
 
     <string name="help_size">אויסקלייַבן די נומער פון מענטשן וואס זענען אַטעמפּטינג צו וועקסל דאַטן צוזאַמען און דריקן גוט.</string>
-    <string name="help_userid">דעם נומער אויף דעם עקראַן איז געניצט צו שאַפֿן אַ יינציק גרופּע פון ניצערס. איבערבליק די נומערן אויף אַלע וסערס \'סקרינז, דעריבער אַלע וסערס זאָל אַרייַן די זעלבע לאָואַסט נומער און דריקן גוט.</string>
+    <string name="help_userid">דאס נומער אויף דעם עקראַן איז געניצט צו שאַפֿן אַ יינציק גרופּע פון ניצערס. איבערבליק די נומערן אויף אַלע וסערס \'סקרינז, דעמאָלט אַלע וסערס זאָל אַרייַן די זעלבע לאָואַסט נומער און דריקן גוט.</string>
     <string name="help_verify">איצט, איר מוזן גלייַכן איינער פון די 3-וואָרט פראַסעס מיט אַלע וסערס. יעדער באַניצער מוזן אויסקלייַבן די זעלבע פּראָסט פראַזע, און דריקן ווייַטער.</string>
 
-    <string name="label_CompareScreensNDevices">קאָמפּאַרע סקרינז אויף %s דעוויסעס.</string>
+    <string name="label_CompareScreensNDevices">פאַרגלייַכן סקרינז אויף %s דעוויסעס.</string>
     <string name="label_NumericModeHint">נאָן-ענגליש</string>
-    <string name="label_PromptInstruct">דעם נומער איז געניצט צו שאַפֿן אַ יינציק גרופּע פון ניצערס. גלייַכן, און דעמאָלט אַרייַן די לאָואַסט נומער צווישן אַלע וסערס.</string>
+    <string name="label_PromptInstruct">דעם נומער איז געניצט צו שאַפֿן אַ יינציק גרופּע פון ניצערס. גלייַכן, און דעמאָלט אַרייַן די לאָואַסט נומער צווישן אַלע ניצערס.</string>
     <string name="label_ReceivedNItems">באקומען %d זאכן</string>
     <string name="label_UserIdHint">לאָוועסט</string>
     <string name="label_VerifyInstruct">כל פאָנעס מוזן גלייַכן איינער פון די 3-וואָרט פראַסעס. גלייַכן, און דעמאָלט קלייַבן די ריכטן פראַזע.</string>
@@ -69,7 +69,7 @@
     <string name="prog_ConstructingGroupKey">קאַנסטראַקטינג גרופּע שליסל…</string>
     <string name="prog_RequestingUserId">ריקוועסטינג מיטגלידערשאַפֿט…</string>
 
-    <string name="title_size">ווי פילע וסערס אין דער וועקסל?</string>
+    <string name="title_size">ווי פילע ניצערס אין דעם וועקסל?</string>
     <string name="title_userid">גרופּינג</string>
     <string name="title_verify">באַשטעטיקן</string>
 

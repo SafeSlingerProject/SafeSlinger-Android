@@ -44,6 +44,7 @@
     <string name="btn_DeleteKeys">Eliminar claves</string>
     <string name="btn_discard">Descartar</string>
     <string name="btn_Done">Hecho</string>
+    <string name="btn_Edit">Editar</string>
     <string name="btn_Exit">Salida</string>
     <string name="btn_Import">Importar</string>
     <string name="btn_Introduce">Introducir</string>
@@ -188,6 +189,7 @@
     <string name="label_iCloudEnable">SafeSlinger iCloud está habilitado. Pulse el botón Hecho cuando haya terminado.</string>
     <string name="label_InstNoMessages">No hay mensajes. Usted puede enviar un mensaje desde el botón Redactar mensaje en el menú Inicio.</string>
     <string name="label_InstNoRecipients">Para agregar destinatarios, primero debe Sling Teclas con uno o más usuarios al mismo tiempo. Usted también puede enviar una invitación de contacto Sling Keys en el menú.</string>
+    <string name="label_InstNoRecipientsMatchQuery">Ninguno de los destinatarios actuales responden a sus criterios de búsqueda. Por favor, intente una consulta diferente o invitar a un nuevo contacto.</string>
     <string name="label_InstNoSharedFile">Ningún archivo compartido. Conecte su dispositivo con iTunes y arrastre los archivos a la carpeta compartida.</string>
     <string name="label_InstRecipients">Elija un destinatario para enviar un mensaje:</string>
     <string name="label_InstSendInvite">Elija los destinatarios para introducir de forma segura:</string>
@@ -201,6 +203,7 @@
     <string name="label_messageInviteInstall">SafeSlinger aplicación: %s</string>
     <string name="label_messageInviteSetupInst">Para configurar una conexión de mensajería segura, podemos hacer frente o por teléfono entre sí, al mismo tiempo, y después de la honda teclas sólo una vez para verificar la conexión.</string>
     <string name="label_messageInviteStartMsg">¿Podemos empezar de mensajería segura con el código abierto SafeSlinger iPhone o Android?</string>
+    <string name="label_messageYouAreVerified">%s, que se verifican.</string>
     <string name="label_minutes">%d minutos</string>
     <string name="label_mobiletag">Móvil</string>
     <string name="label_MostRecentOnly">Más reciente solamente</string>
@@ -228,12 +231,14 @@
     <string name="label_safeslingered">(Intercambio Directo de SafeSlinger)</string>
     <string name="label_SaveAccount">Cuenta de Ahorros</string>
     <string name="label_SaveInstruct">Verificar los contactos que desea actualizar en su libreta de direcciones, a continuación, toque Importar para guardar contactos seguros:</string>
+    <string name="label_search_contacts_hint">Buscar contactos</string>
     <string name="label_seconds">%d segundos</string>
     <string name="label_SelectRecip">Seleccione un Destinatario</string>
     <string name="label_sendErrorData">Enviar datos de Error</string>
     <string name="label_SendFrom">De:</string>
     <string name="label_SendTo">Para:</string>
     <string name="label_ShowHintAtLaunch">Mostrar esta pista la próxima vez.</string>
+    <string name="label_SpeechRecognitionAlert">El uso de reconocimiento de voz está desactivada, ya que podría causar una fuga de información</string>
     <string name="label_step_1">Paso 1</string>
     <string name="label_step_2">Paso 2</string>
     <string name="label_step_3">Paso 3</string>
@@ -317,6 +322,7 @@
     <string name="prog_GeneratingKey">generando clave, esto puede tomar algún tiempo…</string>
     <string name="prog_generatingSignature">generando firma…</string>
     <string name="prog_loadingContent">cargando contenidos…</string>
+    <string name="prog_pending">pendiente…</string>
     <string name="prog_ReceivingFile">recibiendo archivos encriptados…</string>
     <string name="prog_RequestingFile">solicitando archivos encriptados…</string>
     <string name="prog_RequestingMessage">solicitando mensaje encriptado…</string>
@@ -340,6 +346,7 @@
     <string name="state_InvitationAdded">Invitación agregó.</string>
     <string name="state_MessageSavedAsDraft">Mensaje guardado como borrador.</string>
     <string name="state_MessagesDeleted">%d mensajes borrados.</string>
+    <string name="state_MessagesSent">%d mensajes enviados.</string>
     <string name="state_PassphraseUpdated">Frase de contraseña actualizada.</string>
     <string name="state_RecipientsDeleted">%d destinatarios eliminados.</string>
     <string name="state_SomeContactsImported">%s contactos importados.</string>
@@ -353,6 +360,7 @@
     <string name="text_AboutEmail">correo electrónico: %s</string>
     <string name="text_AboutFeat">Características:</string>
     <string name="text_AboutWeb">web: %s</string>
+    <string name="text_DevelopedBy">Desarrollado por:</string>
     <string name="text_KeywordExchange">Intercambio</string>
     <string name="text_KeywordIdentity">Identidad</string>
     <string name="text_KeywordKey">Clave</string>
@@ -360,6 +368,7 @@
     <string name="text_KeywordPrivacy">Intimidad</string>
     <string name="text_KeywordSecurity">Seguridad</string>
     <string name="text_LanguagesProvidedBy">Idiomas proporcionados por:</string>
+    <string name="text_LocalizationRepo">traducir: %s</string>
     <string name="text_RelatedSearchTerms">Términos relacionados:</string>
     <string name="text_Requirements">Requisitos:</string>
     <string name="text_Requirements1">Debe instalarse en un mínimo de 2 dispositivos.</string>

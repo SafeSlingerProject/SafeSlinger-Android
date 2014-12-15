@@ -28,39 +28,39 @@
     <string name="ask_QuitConfirmation">Scoir? An bhfuil tú cinnte?</string>
 
     <string name="btn_Match">Ar Aghaidh</string>
-    <string name="btn_NoMatch">Uimh Match</string>
+    <string name="btn_NoMatch">Níl Match</string>
 
     <string name="choice_NumUsers">%d úsáideoirí</string>
 
-    <string name="error_AllMembersMustUpgrade">Tá roinnt comhaltaí ag baint úsáide as leagan níos sine; Ní mór do gach ball a uasghrádú go dtí an leagan is nua.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Ní mór do gach ball a uasghrádú, tá cuid acu ag baint úsáide as formáidí níos sine clárú bhrú.</string>
-    <string name="error_CorrectYourInternetConnection">Idirlín ar fáil, seiceáil do chuid socruithe.</string>
+    <string name="error_AllMembersMustUpgrade">Roinnt ball ag baint úsáide as leagan níos sine; ní mór do gach ball a uasghrádú go dtí an leagan is nua.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Ní mór do gach ball uasghrádú, tá cuid acu ag baint úsáide as formáidí níos sine chlárú bhrú.</string>
+    <string name="error_CorrectYourInternetConnection">Idirlíon ar fáil, seiceáil do chuid socruithe.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Malartú Teorainn ama sáraithe. Tosaigh an malartú arís.</string>
     <string name="error_HttpCode">Freastalaí Earráid HTTP: %d</string>
     <string name="error_InvalidCommitVerify">Sonraí mícheart le fáil mar mhalairt. Tosaigh an malartú arís.</string>
-    <string name="error_InvalidCommonUserId">Iontráil slánuimhir dheimhneach.</string>
+    <string name="error_InvalidCommonUserId">Iontráil slánuimhir dearfach.</string>
     <string name="error_LocalGroupCommitDiffer">Tá tú a tuairiscíodh difríocht i frásaí. Tosaigh an malartú arís.</string>
     <string name="error_MinUsersRequired">Ar a laghad %d ball ag teastáil chun sonraí a mhalartú.</string>
-    <string name="error_MoreDataThanUsers">Sonraí gan choinne le fáil mar mhalairt. Tosaigh an malartú arís.</string>
-    <string name="error_NoDataToExchange">Is é an malartú ar iarraidh sonraí a cheanglaítear.</string>
+    <string name="error_MoreDataThanUsers">Sonraí gan súil leis le fáil mar mhalairt. Tosaigh an malartú arís.</string>
+    <string name="error_NoDataToExchange">Is é an malartú ar iarraidh sonraí is gá.</string>
     <string name="error_NoWordListSelected">Ní mór duit a roghnú ar cheann de na frásaí roimh dul ar aghaidh.</string>
     <string name="error_OtherGroupCommitDiffer">D\'iarr duine éigin a tuairiscíodh difríocht i frásaí. Tosaigh an malartú arís.</string>
     <string name="error_OutOfMemoryError">Tá Cuimhne ró-íseal a chur i gcrích an oibríocht.</string>
     <string name="error_ServerAppMessage">Teachtaireacht Freastalaí: %s</string>
-    <string name="error_ServerNotResponding">Níl freagra ón fhreastalaí.</string>
+    <string name="error_ServerNotResponding">Aon fhreagra ón bhfreastalaí.</string>
     <string name="error_TimeoutWaitingForAllMembers">Teorainn Ama ag fanacht le roinnt baill an ghrúpa chun sonraí a chur leis.</string>
-    <string name="error_WebCancelledByUser">Úsáideoir ceal iarratas freastalaí.</string>
+    <string name="error_WebCancelledByUser">Úsáideoir ceal iarraidh freastalaí.</string>
 
-    <string name="help_size">Roghnaigh an líon daoine atá ag iarraidh chun sonraí le chéile agus brúigh OK a mhalartú.</string>
-    <string name="help_userid">Tá an uimhir ar an scáileán seo a úsáidtear a chruthú ar ghrúpa ar leith na n-úsáideoirí. Athbhreithniú a dhéanamh ar na huimhreacha ar scáileáin na húsáideoirí go léir \', ansin ba chóir gach úsáideoir dul isteach ar an gcéanna is ísle uimhir agus brúigh OK.</string>
-    <string name="help_verify">Anois, ní mór duit a mheaitseáil ceann amháin de na frásaí 3-focal le gach úsáideoir. Ní mór do gach úsáideoir a roghnú an frása coitianta céanna, agus brúigh Aghaidh.</string>
+    <string name="help_size">Roghnaigh líon na ndaoine atá ag iarraidh sonraí le chéile agus brúigh OK a mhalartú.</string>
+    <string name="help_userid">Tá an uimhir ar an scáileán a úsáidtear a chruthú ar ghrúpa ar leith na n-úsáideoirí. Athbhreithniú a dhéanamh ar líon na ndaoine ar scáileáin na húsáideoirí go léir \', ansin ba chóir gach úsáideoir dul isteach mar an gcéanna is ísle uimhir agus brúigh OK.</string>
+    <string name="help_verify">Anois, ní mór duit a mheaitseáil ar cheann de na frásaí 3-focal le gach úsáideoir. Ní mór do gach úsáideoir a roghnú an frása coitianta céanna, agus brúigh Ar Aghaidh.</string>
 
-    <string name="label_CompareScreensNDevices">Scáileáin maidir le feistí %s Déan comparáid idir.</string>
+    <string name="label_CompareScreensNDevices">Scáileáin maidir le feistí %s i gcomparáid.</string>
     <string name="label_NumericModeHint">Neamh-Béarla</string>
-    <string name="label_PromptInstruct">Tá an uimhir seo a úsáidtear a chruthú ar ghrúpa ar leith na n-úsáideoirí. Déan comparáid idir, agus ansin cuir isteach an líon is ísle i measc na n-úsáideoirí.</string>
-    <string name="label_ReceivedNItems">Fuair ​​%d míreanna</string>
+    <string name="label_PromptInstruct">Tá an uimhir seo in úsáid a chruthú ar ghrúpa ar leith na n-úsáideoirí. Déan comparáid idir, agus ansin cuir isteach an líon is lú i measc na n-úsáideoirí.</string>
+    <string name="label_ReceivedNItems">Fuair %d míreanna</string>
     <string name="label_UserIdHint">Is ísle</string>
-    <string name="label_VerifyInstruct">Ní mór do gach fóin mheaitseáil ar cheann de na frásaí 3-focal. Déan comparáid idir, agus ansin roghnaigh an frása meaitseáil.</string>
+    <string name="label_VerifyInstruct">Ní mór do gach fóin mheaitseáil cheann de na frásaí 3-focal. Déan comparáid idir, agus ansin roghnaigh an frása meaitseála.</string>
 
     <string name="lib_name">SafeSlinger Malartú</string>
 

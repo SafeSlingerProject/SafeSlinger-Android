@@ -30,46 +30,46 @@
     <string name="btn_Match">அடுத்த</string>
     <string name="btn_NoMatch">இல்லை போட்டி</string>
 
-    <string name="choice_NumUsers">%d பயனர்</string>
+    <string name="choice_NumUsers">%d பயனர்கள்</string>
 
-    <string name="error_AllMembersMustUpgrade">சில உறுப்பினர்கள் ஒரு பழைய பதிப்பு பயன்படுத்தி; அனைத்து உறுப்பினர்களும் புதிய பதிப்பு மேம்படுத்த வேண்டும்.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">அனைத்து உறுப்பினர்கள் சில பழைய மிகுதி பதிவு வடிவங்கள் பயன்படுத்தி, மேம்படுத்த வேண்டும்.</string>
-    <string name="error_CorrectYourInternetConnection">இணைய இல்லை, உங்கள் அமைப்புகளை சரிபார்க்கவும்.</string>
+    <string name="error_AllMembersMustUpgrade">சில உறுப்பினர்கள் ஒரு பழைய பதிப்பு பயன்படுத்தி; அனைத்து உறுப்பினர்களும் புதிய பதிப்பை மேம்படுத்த வேண்டும்.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">உறுப்பினர் சில பழைய மிகுதி பதிவு வடிவங்கள் பயன்படுத்தி, நீங்கள் மேம்படுத்த வேண்டும்.</string>
+    <string name="error_CorrectYourInternetConnection">இணைய கிடைக்கவில்லை, உங்கள் அமைப்புகளைச் சரிபார்க்கவும்.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">பரிமாற்றம் முடிதல் தாண்டியது. மீண்டும் பரிமாற்றம் தொடங்கும்.</string>
     <string name="error_HttpCode">சர்வர் HTTP பிழை: %d</string>
     <string name="error_InvalidCommitVerify">தவறான தரவு பரிமாற்றம் காணப்படும். மீண்டும் பரிமாற்றம் தொடங்கும்.</string>
     <string name="error_InvalidCommonUserId">ஒரு நேர்மறையான முழு உள்ளிடவும்.</string>
     <string name="error_LocalGroupCommitDiffer">நீங்கள் சொற்றொடர்களை ஒரு வித்தியாசம் அறிக்கை. மீண்டும் பரிமாற்றம் தொடங்கும்.</string>
-    <string name="error_MinUsersRequired">%d உறுப்பினர்கள் ஒரு குறைந்தபட்ச தரவு பரிமாற்றம் செய்ய வேண்டும்.</string>
+    <string name="error_MinUsersRequired">%d உறுப்பினர்கள் ஒரு குறைந்தபட்ச பரிமாற்றம் தரவு தேவைப்படுகிறது.</string>
     <string name="error_MoreDataThanUsers">எதிர்பாராத தரவு பரிமாற்றம் காணப்படும். மீண்டும் பரிமாற்றம் தொடங்கும்.</string>
-    <string name="error_NoDataToExchange">பரிமாற்றம் தேவையான தரவு காணவில்லை.</string>
+    <string name="error_NoDataToExchange">பரிமாற்றம் தேவையான தரவு இல்லை.</string>
     <string name="error_NoWordListSelected">தொடர்வதற்கு முன் சொற்றொடர்களை ஒன்றை தேர்ந்தெடுக்க வேண்டும்.</string>
     <string name="error_OtherGroupCommitDiffer">யாரோ சொற்றொடர்களை ஒரு வித்தியாசம் தகவல். மீண்டும் பரிமாற்றம் தொடங்கும்.</string>
-    <string name="error_OutOfMemoryError">மெமரி இந்த அறுவை சிகிச்சை முடிக்க மிகவும் குறைவாக உள்ளது.</string>
-    <string name="error_ServerAppMessage">சர்வர் செய்தி: %s</string>
-    <string name="error_ServerNotResponding">சர்வரில் இருந்து எந்த பதிலும்.</string>
-    <string name="error_TimeoutWaitingForAllMembers">சில குழு உறுப்பினர்கள் தரவு சேர்க்க காலம் கடந்தது காத்திருக்கிறது.</string>
-    <string name="error_WebCancelledByUser">பயனர் சர்வர் கோரிக்கையை ரத்து.</string>
+    <string name="error_OutOfMemoryError">நினைவகம் இந்த அறுவை சிகிச்சை முடிக்க மிகவும் குறைவாக உள்ளது.</string>
+    <string name="error_ServerAppMessage">சேவையக செய்தி: %s</string>
+    <string name="error_ServerNotResponding">சர்வர் இருந்து எந்த பதிலும்.</string>
+    <string name="error_TimeoutWaitingForAllMembers">சில குழு உறுப்பினர்கள் தரவு சேர்க்க வெளியேற்ற நேரம் காத்திருக்கும்.</string>
+    <string name="error_WebCancelledByUser">பயனர் சர்வர் இரத்து செய்தது.</string>
 
-    <string name="help_size">தரவு ஒன்றாக, OK பரிமாறி முயற்சி செய்யும் மக்களின் எண்ணிக்கை தேர்ந்தெடுக்கவும்.</string>
-    <string name="help_userid">இந்த திரையில் இந்த எண்ணிக்கை செய்த ஒரு தனிப்பட்ட குழு உருவாக்க பயன்படுத்தப்படுகிறது. பின்னர் அனைத்து செய்த அதே குறைந்த எண்ணிக்கையிலான, OK நுழைய வேண்டும், அனைத்து பயனர் \'திரைகளில் எண்கள் ஆய்வு.</string>
-    <string name="help_verify">இப்போது, நீங்கள் அனைத்து பயனர் இந்த 3 வார்த்தை சொற்றொடர்கள் ஒரு பொருந்த வேண்டும். ஒவ்வொரு பயனர் அதே பொதுவான சொற்றொடர் தேர்ந்தெடுக்க, மற்றும் அடுத்த அழுத்தவும் வேண்டும்.</string>
+    <string name="help_size">தரவு ஒன்றாக, OK பரிமாறி முயற்சியில் சிலர் எண்ணிக்கை தேர்ந்தெடுக்கவும்.</string>
+    <string name="help_userid">இந்த திரையில் இந்த எண்ணிக்கை பயனர்கள் ஒரு தனிப்பட்ட குழு உருவாக்க பயன்படுத்தப்படுகிறது. பின்னர் அனைத்து பயனர் அதே குறைந்த எண்ணிக்கையிலான, OK நுழைய வேண்டும், அனைத்து பயனர் \'திரைகளில் எண்கள் ஆய்வு.</string>
+    <string name="help_verify">இப்போது, நீங்கள் அனைத்து பயனர்கள் இந்த 3 வார்த்தை சொற்றொடர்கள் ஒரு பொருந்த வேண்டும். ஒவ்வொரு பயனர் அதே பொதுவான சொற்றொடர் தேர்ந்தெடுத்து, அடுத்த அழுத்தவும் வேண்டும்.</string>
 
-    <string name="label_CompareScreensNDevices">%s சாதனங்களில் திரைகள் ஒப்பிட்டு.</string>
+    <string name="label_CompareScreensNDevices">%s சாதனங்கள் திரைகளில் ஒப்பிடு.</string>
     <string name="label_NumericModeHint">ஆங்கிலம் அல்லாத</string>
-    <string name="label_PromptInstruct">இந்த எண் செய்த ஒரு தனிப்பட்ட குழு உருவாக்க பயன்படுத்தப்படுகிறது. ஒப்பிட்டு பின்னர் அனைத்து பயனர்கள் மத்தியில் மிக குறைந்த எண்ணிக்கையிலான உள்ளிடவும்.</string>
-    <string name="label_ReceivedNItems">%d பொருட்களை பெற்றார்</string>
+    <string name="label_PromptInstruct">இந்த எண்ணிக்கை பயனர்கள் ஒரு தனிப்பட்ட குழு உருவாக்க பயன்படுத்தப்படுகிறது. ஒப்பிட்டு பின்னர் அனைத்து பயனர்கள் மத்தியில் மிக குறைந்த எண்ணிக்கை உள்ளிடவும்.</string>
+    <string name="label_ReceivedNItems">%d உருப்படிகள் பெறப்பட்டன</string>
     <string name="label_UserIdHint">குறைந்த</string>
-    <string name="label_VerifyInstruct">அனைத்து போன்கள் 3 வார்த்தை சொற்றொடர்கள் ஒரு பொருந்த வேண்டும். ஒப்பிட்டு பின்னர் பொருத்தமான சொற்றொடர் எடுக்க.</string>
+    <string name="label_VerifyInstruct">அனைத்து போன்கள் 3-வார்த்தை சொற்றொடர்கள் ஒரு பொருந்த வேண்டும். ஒப்பிட்டு பின்னர் பொருத்தமான சொற்றொடர் எடுக்க.</string>
 
-    <string name="lib_name">SafeSlinger பரிவர்த்தனை</string>
+    <string name="lib_name">SafeSlinger செலாவணி</string>
 
-    <string name="prog_CollectingOthersCommitVerify">அனைத்து உறுப்பினர்கள் சரிபார்ப்பு காத்திருக்கிறது…</string>
-    <string name="prog_CollectingOthersItems">அனைத்து பயனர் சேர காத்திருக்கிறது…</string>
+    <string name="prog_CollectingOthersCommitVerify">அனைத்து உறுப்பினர்களும் சரிபார்ப்பு காத்திருக்கும்…</string>
+    <string name="prog_CollectingOthersItems">அனைத்து பயனர்கள் சேர காத்திருக்கும்…</string>
     <string name="prog_ConstructingGroupKey">குழு முக்கிய கட்டும்…</string>
     <string name="prog_RequestingUserId">உறுப்பினர் கோருகிறது…</string>
 
-    <string name="title_size">எத்தனை பரிமாற்றம் செய்த?</string>
+    <string name="title_size">எத்தனை ஈடாக பயனர்கள்?</string>
     <string name="title_userid">தொகுத்தல்</string>
     <string name="title_verify">சரிபார்க்கவும்</string>
 

@@ -30,47 +30,47 @@
     <string name="btn_Match">Sonraki</string>
     <string name="btn_NoMatch">Hayır Maç</string>
 
-    <string name="choice_NumUsers">%d kullanıcı</string>
+    <string name="choice_NumUsers">%d kullanıcıları</string>
 
     <string name="error_AllMembersMustUpgrade">Bazı üyeler eski bir sürümünü kullanıyor; tüm üyeler yeni sürüme yükseltmeniz gerekir.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Tüm üyeler bazı eski basma kaydı biçimlerini kullanarak, yükseltmeniz gerekir.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tüm üyeler bazı eski itme kayıt formatları kullanıyor, yükseltmeniz gerekir.</string>
     <string name="error_CorrectYourInternetConnection">İnternet mevcut değil, ayarlarınızı kontrol edin.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Değişim zaman aşımı aşıldı. Yine alışverişini başlayın.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Değişim zaman aşımı aşıldı. Tekrar değişimi başlayın.</string>
     <string name="error_HttpCode">Sunucu HTTP Hatası: %d</string>
-    <string name="error_InvalidCommitVerify">Yanlış veri alışverişi bulundu. Yine alışverişini başlayın.</string>
+    <string name="error_InvalidCommitVerify">Yanlış veri alışverişinde bulundu. Tekrar değişimi başlayın.</string>
     <string name="error_InvalidCommonUserId">Pozitif bir tamsayı girin.</string>
-    <string name="error_LocalGroupCommitDiffer">Sen cümleleri bir fark bildirmişlerdir. Yine alışverişini başlayın.</string>
+    <string name="error_LocalGroupCommitDiffer">Siz cümleleri bir fark bildirdi. Tekrar değişimi başlayın.</string>
     <string name="error_MinUsersRequired">%d üyeden az veri alışverişi için gereklidir.</string>
-    <string name="error_MoreDataThanUsers">Beklenmeyen veri alışverişi bulundu. Yine alışverişini başlayın.</string>
-    <string name="error_NoDataToExchange">Değişimi gerekli bilgileri eksik.</string>
-    <string name="error_NoWordListSelected">Ilerlemeden önce ifadelerinin birini seçmelisiniz.</string>
-    <string name="error_OtherGroupCommitDiffer">Birisi cümleleri bir fark rapor. Yine alışverişini başlayın.</string>
-    <string name="error_OutOfMemoryError">Bellek Bu işlemi tamamlamak için çok düşük.</string>
-    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_MoreDataThanUsers">Beklenmedik veri alışverişinde bulundu. Tekrar değişimi başlayın.</string>
+    <string name="error_NoDataToExchange">Döviz gerekli verileri eksik.</string>
+    <string name="error_NoWordListSelected">Devam etmeden önce cümleleri birini seçmelisiniz.</string>
+    <string name="error_OtherGroupCommitDiffer">Birisi cümleleri bir fark bildirdi. Tekrar değişimi başlayın.</string>
+    <string name="error_OutOfMemoryError">Hafıza Bu işlemi tamamlamak için çok düşük.</string>
+    <string name="error_ServerAppMessage">Sunucu ileti: %s</string>
     <string name="error_ServerNotResponding">Sunucudan yanıt yok.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Bazı grup üyeleri veri eklemek için Zaman Aşımı bekliyor.</string>
-    <string name="error_WebCancelledByUser">Kullanıcı sunucu isteği iptal edildi.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Bazı grup üyeleri veri eklemek için zaman aşımı bekliyor.</string>
+    <string name="error_WebCancelledByUser">Kullanıcı sunucusu isteği iptal edildi.</string>
 
     <string name="help_size">Birlikte veri ve OK tuşuna basın alışverişinde çalışıyorsunuz insanların sayısını seçin.</string>
-    <string name="help_userid">Bu ekranda bu sayı benzersiz bir kullanıcı grubu oluşturmak için kullanılır. Sonra tüm kullanıcıların aynı düşük sayı ve OK tuşuna basın girmeli, tüm kullanıcıların ekranlarında numaralarını inceleyin.</string>
-    <string name="help_verify">Şimdi, tüm kullanıcılar ile bu 3-sözcük öbekleri biri eşleşmelidir. Her kullanıcı aynı ortak ifade seçin ve İleri\'ye basın gerekir.</string>
+    <string name="help_userid">Bu ekranda bu sayı benzersiz bir kullanıcı grubu oluşturmak için kullanılır. Sonra tüm kullanıcılar aynı düşük sayı ve OK tuşuna basın girmelidir, tüm kullanıcıların ekranlarında numaralarını inceleyin.</string>
+    <string name="help_verify">Şimdi, tüm kullanıcılar ile bu 3 kelime öbekleri birini eşleşmelidir. Her kullanıcı aynı ortak ifade seçin ve İleri\'ye basın gerekir.</string>
 
     <string name="label_CompareScreensNDevices">%s cihazlarda ekranları karşılaştırın.</string>
     <string name="label_NumericModeHint">İngilizce olmayan</string>
-    <string name="label_PromptInstruct">Bu sayı benzersiz bir kullanıcı grubu oluşturmak için kullanılır. Karşılaştırın ve daha sonra tüm kullanıcılar arasında en düşük numarasını girin.</string>
-    <string name="label_ReceivedNItems">%d ürün aldı</string>
-    <string name="label_UserIdHint">Düşük</string>
-    <string name="label_VerifyInstruct">Tüm telefonlar 3-sözcük öbekleri biri eşleşmelidir. Karşılaştırmak ve ardından eşleşen ifade almak.</string>
+    <string name="label_PromptInstruct">Bu sayı benzersiz bir kullanıcı grubu oluşturmak için kullanılır. Karşılaştırın ve daha sonra tüm kullanıcılar arasında en numarasını girin.</string>
+    <string name="label_ReceivedNItems">%d ürün alınan</string>
+    <string name="label_UserIdHint">En düşük</string>
+    <string name="label_VerifyInstruct">Tüm telefonlar 3-sözcük öbekleri birini eşleşmelidir. Karşılaştırın ve ardından eşleşen ifade almak.</string>
 
     <string name="lib_name">SafeSlinger Borsası</string>
 
-    <string name="prog_CollectingOthersCommitVerify">tüm üyeler doğrulama için bekliyor…</string>
-    <string name="prog_CollectingOthersItems">tüm kullanıcılar katılmak için bekliyor…</string>
-    <string name="prog_ConstructingGroupKey">grup anahtarını oluşturmak…</string>
+    <string name="prog_CollectingOthersCommitVerify">Tüm üyelerin doğrulama için bekliyor…</string>
+    <string name="prog_CollectingOthersItems">Tüm kullanıcıların katılmak için bekliyor…</string>
+    <string name="prog_ConstructingGroupKey">grup anahtarını inşa…</string>
     <string name="prog_RequestingUserId">üyelik talebinde…</string>
 
-    <string name="title_size">Kaç karşılığında kullanıcılar?</string>
+    <string name="title_size">Kaç karşılığında kullanıcıları?</string>
     <string name="title_userid">Gruplama</string>
-    <string name="title_verify">Doğrulayın</string>
+    <string name="title_verify">Doğrulamak</string>
 
 </resources>

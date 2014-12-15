@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Quit? သေချာလား?</string>
+
+    <string name="btn_Match">နောက်တစ်ခု</string>
+    <string name="btn_NoMatch">အဘယ်သူမျှမ Match</string>
+
+    <string name="choice_NumUsers">%d သုံးစွဲသူများ</string>
+
+    <string name="error_AllMembersMustUpgrade">အဖွဲ့ဝင်အချို့ဟာအဟောင်းတွေဗားရှင်းကိုအသုံးပြုနေတယ်, အားလုံးအဖွဲ့ဝင်များကထုတ်တဲ့နောက်ဆုံး version မြှင့်တင်ရမယ်။</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">အားလုံးအဖွဲ့ဝင်များတချို့သက်ကြီးတွန်းအားပေးမှတ်ပုံတင်ခြင်း formats ကိုအသုံးပြုပြီးနေကြတယ်, အဆင့်မြှင့်တင်ရပါမည်။</string>
+    <string name="error_CorrectYourInternetConnection">အင်တာနက်ကိုမရရှိနိုင်, သင့်ရဲ့ settings ကိုစစ်ဆေးပါ။</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">လဲလှယ်ရေး timeout ကိုကျော်လွန်။ နောက်တဖန်လဲလှယ် Begin ။</string>
+    <string name="error_HttpCode">Server ကို HTTP သည်အမှား: %d</string>
+    <string name="error_InvalidCommitVerify">လဲလှယ်တွင်တွေ့မှားယွင်းနေတဲ့အချက်အလက်ကြမ်း။ နောက်တဖန်လဲလှယ် Begin ။</string>
+    <string name="error_InvalidCommonUserId">တစ်ဦးအပြုသဘော integer ဖြစ်တဲ့အတွက်ရိုက်သွင်းပါ။</string>
+    <string name="error_LocalGroupCommitDiffer">သင်သည်စာပိုဒ်တိုများအတွက်ထူးခြားမှုအစီရင်ခံတင်ပြကြပါပြီ။ နောက်တဖန်လဲလှယ် Begin ။</string>
+    <string name="error_MinUsersRequired">%d အဖွဲ့ဝင်တစ်ဦးကနိမ့်ဆုံးဒေတာတွေကိုဖလှယ်ရန်လိုအပ်သည်။</string>
+    <string name="error_MoreDataThanUsers">လဲလှယ်တွင်တွေ့မမျှော်လင့်သောဒေတာ။ နောက်တဖန်လဲလှယ် Begin ။</string>
+    <string name="error_NoDataToExchange">အဆိုပါလဲလှယ်လိုအပ်တဲ့အချက်အလက်ပျောက်ဆုံးနေပါတယ်။</string>
+    <string name="error_NoWordListSelected">သင်သည်အမှုတွဲရှေ့တော်၌ထိုစာပိုဒ်တိုများထဲကတစ်ခုရွေးချယ်ရမည်။</string>
+    <string name="error_OtherGroupCommitDiffer">တစ်စုံတစ်ဦးအတွက်တစ်ဦးတိုများခြားနားချက်ကဖော်ပြခဲ့သည်။ နောက်တဖန်လဲလှယ် Begin ။</string>
+    <string name="error_OutOfMemoryError">မှတ်ဉာဏ်ကိုဤစစ်ဆင်ရေးကိုဖြည့်ဖို့လည်းနိမ့်သည်။</string>
+    <string name="error_ServerAppMessage">Server ကိုအကြောင်းကြားစာ: %s</string>
+    <string name="error_ServerNotResponding">ဆာဗာကနေအဘယ်သူမျှမတုန့်ပြန်။</string>
+    <string name="error_TimeoutWaitingForAllMembers">အချို့သောအုပ်စုအဖွဲ့ဝင်များကဒေတာကိုထည့်သွင်းဖို့အတွက်အ timeout စောင့်ဆိုင်း။</string>
+    <string name="error_WebCancelledByUser">အသုံးပြုသူ server ကို request ကိုဖျက်သိမ်းခဲ့သည်။</string>
+
+    <string name="help_size">ထိုအတူတကွဒေတာတွေကိုဖလှယ်ဖို့ကြိုးစားနေကြသူလူဦးရေနှင့်စာနယ်ဇင်း OK ကို Select လုပ်ပါ။</string>
+    <string name="help_userid">ဒီမျက်နှာပြင်မှာဒီနံပါတ်အသုံးပြုသူများထူးခြားတဲ့အုပ်စုဖန်တီးရန်အသုံးပြုသည်။ အသုံးပြုသူအားလုံး ဖန်သားပြင်ပေါ်တွင်နံပါတ်များကိုဆန်းစစ်ပါ, အဲဒီနောက်အသုံးပြုသူအားလုံးအတူတူပင်နိမ့်ဆုံးအရေအတွက်နှင့်ရေးပြီး OK ကိုနှိပ်လိုက်ပါသင့်သည်။</string>
+    <string name="help_verify">အခုဆိုရင်သင်တို့ရှိသမျှကိုအသုံးပြုသူတွေနဲ့အဲဒီ 3-နှုတ်ကပတ်တရားတော်ကိုစာပိုဒ်တိုများထဲကတစ်ခုနှင့်ကိုက်ညီရမည်ဖြစ်သည်။ တိုင်း user ကတူညီတဲ့ဘုံထားသောစာပိုဒ်တိုများနှင့်စာနယ်ဇင်း Next ကိုရွေးချယ်ရမည်။</string>
+
+    <string name="label_CompareScreensNDevices">%s ထုတ်ကုန်များပေါ်မှာဖန်သားပြင်နှိုင်းယှဉ်ကြည့်ပါ။</string>
+    <string name="label_NumericModeHint">Non-အင်္ဂလိပ်</string>
+    <string name="label_PromptInstruct">ဒီနံပါတ်အသုံးပြုသူများထူးခြားတဲ့အုပ်စုဖန်တီးရန်အသုံးပြုသည်။ နှိုင်းယှဉ်ကြည့်ပါ, ပြီးတော့အသုံးပြုသူအားလုံးတို့တွင်အနိမ့်ဆုံးနံပါတ်ရိုက်ထည့်ပါ။</string>
+    <string name="label_ReceivedNItems">%d ပစ္စည်းများလက်ခံရရှိ</string>
+    <string name="label_UserIdHint">နိမ့်ဆုံး</string>
+    <string name="label_VerifyInstruct">အားလုံးဖုန်းများ 3-နှုတ်ကပတ်တရားတော်ကိုစာပိုဒ်တိုများထဲကတစ်ခုနှင့်ကိုက်ညီရမည်ဖြစ်သည်။ နှိုင်းယှဉ်ကြည့်ပါ, အဲဒီနောက်ကိုက်ညီတဲ့ထားသောစာပိုဒ်တိုများရွေးချယ်ပေးပါ။</string>
+
+    <string name="lib_name">SafeSlinger လဲလှယ်ရေး</string>
+
+    <string name="prog_CollectingOthersCommitVerify">အားလုံးအဖွဲ့ဝင်များမှစစ်ဆေးအတည်ပြုဖို့စောင့်နေ…</string>
+    <string name="prog_CollectingOthersItems">အသုံးပြုသူအားလုံးပူးပေါင်းဘို့စောင့်ဆိုင်းနေ…</string>
+    <string name="prog_ConstructingGroupKey">အုပ်စုအဓိကသော့ချက်တစ်ခုတည်ဆောက်နေ…</string>
+    <string name="prog_RequestingUserId">အဖွဲ့ဝင်တောင်းခံသော…</string>
+
+    <string name="title_size">ဘယ်နှစ်ယောက်အသုံးပြုသူများလဲလှယ်သနည်း</string>
+    <string name="title_userid">Grouping</string>
+    <string name="title_verify">Verify</string>
+
+</resources>

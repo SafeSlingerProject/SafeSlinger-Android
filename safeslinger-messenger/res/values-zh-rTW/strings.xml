@@ -44,6 +44,7 @@
     <string name="btn_DeleteKeys">刪除密鑰</string>
     <string name="btn_discard">丟棄</string>
     <string name="btn_Done">完成</string>
+    <string name="btn_Edit">編輯</string>
     <string name="btn_Exit">離開</string>
     <string name="btn_Import">加入</string>
     <string name="btn_Introduce">介紹</string>
@@ -188,6 +189,7 @@
     <string name="label_iCloudEnable">SafeSlinger的iClou備份已啟用。</string>
     <string name="label_InstNoMessages">沒有訊息。您可以發送訊息，從主選單上選擇編輯新訊息。</string>
     <string name="label_InstNoRecipients">要添加收件人，您必須先與一個或多個用戶去交換金鑰。您也可以從選單中送出金鑰交換的邀請訊息。</string>
+    <string name="label_InstNoRecipientsMatchQuery">無你目前的收件人符合您的搜索查詢。請嘗試不同的查詢或邀請新的聯繫人。</string>
     <string name="label_InstNoSharedFile">沒有共享的文件。連接您的設備並開啟iTunes，拖曳文件到共享文件夾。</string>
     <string name="label_InstRecipients">挑選一個收件人來傳遞安全訊息：</string>
     <string name="label_InstSendInvite">選擇收件人進行安全介紹：</string>
@@ -201,6 +203,7 @@
     <string name="label_messageInviteInstall">SafeSlinger應用程序： %s</string>
     <string name="label_messageInviteSetupInst">設置一個安全訊息管道，我們可以透過碰面或打電話給對方並進行一次金鑰交換驗證。</string>
     <string name="label_messageInviteStartMsg">可以使用SafeSlinger iPhone或Android程式開始你的安全通訊？</string>
+    <string name="label_messageYouAreVerified">%s，你驗證。</string>
     <string name="label_minutes">%d分鐘</string>
     <string name="label_mobiletag">行動電話</string>
     <string name="label_MostRecentOnly">僅顯示最新</string>
@@ -228,12 +231,14 @@
     <string name="label_safeslingered">（SafeSlinger直接交換）</string>
     <string name="label_SaveAccount">保存帳戶</string>
     <string name="label_SaveInstruct">勾選您希望更新或新增的聯繫人訊息，然後按加入聯繫人到聯絡資訊：</string>
+    <string name="label_search_contacts_hint">搜索聯繫人</string>
     <string name="label_seconds">%d秒</string>
     <string name="label_SelectRecip">選擇收件人</string>
     <string name="label_sendErrorData">傳送錯誤資料</string>
     <string name="label_SendFrom">寄件人：</string>
     <string name="label_SendTo">收件人：</string>
     <string name="label_ShowHintAtLaunch">下一次顯示此提示</string>
+    <string name="label_SpeechRecognitionAlert">使用語音識別被禁用，因為它可能導致信息洩露</string>
     <string name="label_step_1">第1步</string>
     <string name="label_step_2">第2步</string>
     <string name="label_step_3">第3步</string>
@@ -317,6 +322,7 @@
     <string name="prog_GeneratingKey">產生密鑰，需要等待一段時間…</string>
     <string name="prog_generatingSignature">產生簽章…</string>
     <string name="prog_loadingContent">內容加載…</string>
+    <string name="prog_pending">待定…</string>
     <string name="prog_ReceivingFile">接收加密檔案…</string>
     <string name="prog_RequestingFile">要求加密檔案…</string>
     <string name="prog_RequestingMessage">要求加密訊息…</string>
@@ -340,6 +346,7 @@
     <string name="state_InvitationAdded">加入邀請訊息。</string>
     <string name="state_MessageSavedAsDraft">信息保存為草稿。</string>
     <string name="state_MessagesDeleted">%d封訊息被刪除。</string>
+    <string name="state_MessagesSent">發送%d條信息。</string>
     <string name="state_PassphraseUpdated">密碼已更新。</string>
     <string name="state_RecipientsDeleted">刪除%d位收件人。</string>
     <string name="state_SomeContactsImported">加入%s位收件人。</string>
@@ -353,6 +360,7 @@
     <string name="text_AboutEmail">電子郵件: %s</string>
     <string name="text_AboutFeat">特點:</string>
     <string name="text_AboutWeb">網頁: %s</string>
+    <string name="text_DevelopedBy">開發者：</string>
     <string name="text_KeywordExchange">交換</string>
     <string name="text_KeywordIdentity">特性</string>
     <string name="text_KeywordKey">關鍵字</string>
@@ -360,6 +368,7 @@
     <string name="text_KeywordPrivacy">隱私</string>
     <string name="text_KeywordSecurity">安全</string>
     <string name="text_LanguagesProvidedBy">翻譯：</string>
+    <string name="text_LocalizationRepo">翻譯：%s</string>
     <string name="text_RelatedSearchTerms">相關技術：</string>
     <string name="text_Requirements">要求：</string>
     <string name="text_Requirements1">至少安裝兩個設備以上。</string>

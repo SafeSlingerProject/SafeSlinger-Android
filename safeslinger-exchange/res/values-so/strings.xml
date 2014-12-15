@@ -30,47 +30,47 @@
     <string name="btn_Match">Next</string>
     <string name="btn_NoMatch">Kulanka No</string>
 
-    <string name="choice_NumUsers">%d isticmaala</string>
+    <string name="choice_NumUsers">%d users</string>
 
-    <string name="error_AllMembersMustUpgrade">Xubnaha qaarkood ayaa istacmaalaya version waayeel ah; dhamaan xubnaha waa upgrade to version cusub.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Dhammaan xubnaha waa upgrade, qaar baa isticmaalaya qaabab diiwaangelinta riix weyn.</string>
-    <string name="error_CorrectYourInternetConnection">Internet ma heli karo, baaraan aad.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Exchange dhaafo. Ku bilow is-dhaafsiga mar kale.</string>
+    <string name="error_AllMembersMustUpgrade">Xubnaha qaarkood ayaa istacmaalaya version waayeel ah; dhammaan xubnaha waa in loo cusboonaysiiyo si version cusub.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Dhammaan xubnaha waa in loo cusboonaysiiyo, qaar baa isticmaalaya qaabab diiwaangelinta riix ka weyn.</string>
+    <string name="error_CorrectYourInternetConnection">Internet ma heli karo, hubi goobaha aad.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Exchange dhaafto. Ku bilow dhaafsiga mar kale.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Xogtu khaldan helay beddelkeeda. Ku bilow is-dhaafsiga mar kale.</string>
-    <string name="error_InvalidCommonUserId">Fadlan qor abyoonaha wanaagsan.</string>
-    <string name="error_LocalGroupCommitDiffer">Waxaad ayaa sheegay farqi jumlado. Ku bilow is-dhaafsiga mar kale.</string>
+    <string name="error_InvalidCommitVerify">Xogtu khaldan helay sarrifka. Ku bilow dhaafsiga mar kale.</string>
+    <string name="error_InvalidCommonUserId">Fadlan qor abyoonaha togan.</string>
+    <string name="error_LocalGroupCommitDiffer">Waxaad soo sheegtay farqi u weedho. Ku bilow dhaafsiga mar kale.</string>
     <string name="error_MinUsersRequired">Ugu yaraan %d xubnood waxaa looga baahan yahay in ay is dhaafsadaan macluumaadka.</string>
-    <string name="error_MoreDataThanUsers">Xog lama filaan ah helay beddelkeeda. Ku bilow is-dhaafsiga mar kale.</string>
-    <string name="error_NoDataToExchange">Sarrifka waxaa la waayay xogta loo baahan yahay.</string>
-    <string name="error_NoWordListSelected">Waa in aad ka dooro mid ka mid ah weedho ka hor u socdaa.</string>
-    <string name="error_OtherGroupCommitDiffer">Qof sheegay farqi jumlado. Ku bilow is-dhaafsiga mar kale.</string>
-    <string name="error_OutOfMemoryError">Memory uu yahay mid aad u yar yahay si uu u dhameystiro howlgalkan.</string>
-    <string name="error_ServerAppMessage">Message Server: %s</string>
+    <string name="error_MoreDataThanUsers">Data-filaan ah helay sarrifka. Ku bilow dhaafsiga mar kale.</string>
+    <string name="error_NoDataToExchange">Suuqa ayaa waxaa ka maqan xogta loo baahan yahay.</string>
+    <string name="error_NoWordListSelected">Waa in aad ka dooro mid ka mid ah weedho ka hor Socota.</string>
+    <string name="error_OtherGroupCommitDiffer">Qof sheegay farqi u weedho. Ku bilow dhaafsiga mar kale.</string>
+    <string name="error_OutOfMemoryError">Xasuusta waa mid aad u yar yahay si uu u dhameystiro howlgalkan.</string>
+    <string name="error_ServerAppMessage">Fariinta Server: %s</string>
     <string name="error_ServerNotResponding">No jawaab ka server.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout sugayaan xubnaha kooxda qaar ka mid ah ku darto xogta.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout sugayaan xubnaha kooxda qaar ka mid ah ku darto macluumaadka.</string>
     <string name="error_WebCancelledByUser">User joojisay server codsi.</string>
 
-    <string name="help_size">Xulo tirada dadka kuwaas oo isku dayaya in ay is dhaafsadaan xogta wada iyo OK-saxaafadeed.</string>
-    <string name="help_userid">Tani tirada shaashadda loo isticmaalo in lagu abuuro koox gaar ah ee isticmaala. Dib u eeg lambarada Shaashadaha dhammaan dadka isticmaala \', ka dibna dhammaan dadka isticmaala waa inay galaan tirada iyo jaraa\'id ugu hooseeya OK isku mid ah.</string>
-    <string name="help_verify">Haddaba, waa in aad la mid ah weedho 3-erayga leh dhammaan dadka isticmaala. User kasta waa in ay doortaan ereyo la mid caadi ah, iyo Next riix.</string>
+    <string name="help_size">Dooro tirada dadka waxa ay isku dayaysaa in ay is dhaafsadaan xogta wada iyo OK-saxaafadeed.</string>
+    <string name="help_userid">Tani tirada shaashadda loo isticmaalo in lagu abuuro koox gaar ah ee isticmaala. Dib u eeg lambarada on screens dhamaan isticmaalayaasha \', markaas dhammaan dadka isticmaala gelin tirada iyo saxaafadda ugu hooseeya OK isku mid ah.</string>
+    <string name="help_verify">Haddaba, waa in aad u dhigma mid ka mid ah erayadaani 3-hadalka la dhammaan dadka isticmaala. User kasta waa in ay doortaan ereyo la mid caadi ah, iyo Next miiran.</string>
 
-    <string name="label_CompareScreensNDevices">Barbardhig shaashado on qalabka %s.</string>
+    <string name="label_CompareScreensNDevices">Isbarbardhig screens on qalabka %s.</string>
     <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Tirada waxaa loo isticmaalaa in la abuuro koox gaar ah ee isticmaala. Barbardhig, ka dibna geli lambarka ugu hooseeya ka mid ah dhammaan dadka isticmaala.</string>
-    <string name="label_ReceivedNItems">helay %d alaabta</string>
-    <string name="label_UserIdHint">Ugu horeyay</string>
-    <string name="label_VerifyInstruct">Dhamaan telefoonada waa inuu mid ka mid ah weedho 3-erayga. Barbardhig, ka dibna qaado weedh ku habboon ee.</string>
+    <string name="label_PromptInstruct">Tiradan waxa loo adeegsaday in la abuuro koox gaar ah ee isticmaala. Isbarbardhig, ka dibna galaan tirada ugu yar ee ka mid ah dhammaan dadka isticmaala.</string>
+    <string name="label_ReceivedNItems">helay %d items</string>
+    <string name="label_UserIdHint">Horeyay</string>
+    <string name="label_VerifyInstruct">Dhamaan telefoonada waa inuu mid ka mid ah weedho 3-hadalka. Isbarbardhig, ka dibna soo qaado weedh ku habboon ka.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">sugeyso xaqiijinta ka dhammaan xubnaha…</string>
-    <string name="prog_CollectingOthersItems">sugayaan dhamaan dadka isticmaala inay ku soo biiraan…</string>
+    <string name="prog_CollectingOthersCommitVerify">sugayaan xaqiijinta dhammaan xubnaha…</string>
+    <string name="prog_CollectingOthersItems">sugayaan dhamaan isticmaalayaasha inuu ku biiro…</string>
     <string name="prog_ConstructingGroupKey">dhismaha muhiimka ah ee kooxda…</string>
-    <string name="prog_RequestingUserId">codsanaya xubin…</string>
+    <string name="prog_RequestingUserId">codsanaya xubin ka…</string>
 
-    <string name="title_size">Imisa dadka isticmaala ee isweydaarsiga?</string>
-    <string name="title_userid">Grouping</string>
+    <string name="title_size">Sidee badan oo isticmaala in isweydaarsiga?</string>
+    <string name="title_userid">Kooxeeyada</string>
     <string name="title_verify">Hubi</string>
 
 </resources>

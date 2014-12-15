@@ -44,6 +44,7 @@
     <string name="btn_DeleteKeys">Удалять ключи</string>
     <string name="btn_discard">Отменить</string>
     <string name="btn_Done">Закончено</string>
+    <string name="btn_Edit">Редактировать</string>
     <string name="btn_Exit">Выход</string>
     <string name="btn_Import">Импортировать</string>
     <string name="btn_Introduce">Представить</string>
@@ -188,6 +189,7 @@
     <string name="label_iCloudEnable">Резервное копирование iCloud включено. Нажмите кнопку Готово, когда закончите.</string>
     <string name="label_InstNoMessages">Нет сообщений. Вы можете отправить сообщение из ‘Составьте сообщение’ в главном меню.</string>
     <string name="label_InstNoRecipients">Чтобы добавить получателей, необходимо сначала Слинг ключей с одним или несколькими другими пользователями одновременно. Вы также можете отправить Слинг Ключи контактную приглашение от меню.</string>
+    <string name="label_InstNoRecipientsMatchQuery">Ни один из ваших нынешних получателей не соответствует вашему поисковому запросу. Пожалуйста, попробуйте другой запрос или пригласить новый контакт.</string>
     <string name="label_InstNoSharedFile">Нет общих файлов. Подключите устройство к iTunes и перетащите файлы в общую папку.</string>
     <string name="label_InstRecipients">Выберите получателя для отправки сообщения.</string>
     <string name="label_InstSendInvite">Выберите получателей для защищенного представления.</string>
@@ -201,6 +203,7 @@
     <string name="label_messageInviteInstall">SafeSlinger приложение: %s</string>
     <string name="label_messageInviteSetupInst">Для настройки соединения безопасное сообщениями, мы можем удовлетворить или телефон друга в то же время, а затем Слинг Ключи только один раз для проверки соединения.</string>
     <string name="label_messageInviteStartMsg">Можем ли мы начать безопасного обмена сообщениями с открытым исходным кодом SafeSlinger iPhone или Android приложение?</string>
+    <string name="label_messageYouAreVerified">%s, вы проверена.</string>
     <string name="label_minutes">%d минут</string>
     <string name="label_mobiletag">Мобильный</string>
     <string name="label_MostRecentOnly">Только самые недавние</string>
@@ -228,12 +231,14 @@
     <string name="label_safeslingered">(SafeSlinger прямой обмен)</string>
     <string name="label_SaveAccount">Сохранить аккаунт</string>
     <string name="label_SaveInstruct">Проверьте контакты, которые необходимо обновить в вашей адресной книге, затем нажмите Импорт, чтобы сохранить надежные контакты:</string>
+    <string name="label_search_contacts_hint">Поиск контактов</string>
     <string name="label_seconds">%d секунд</string>
     <string name="label_SelectRecip">Выберите получателя</string>
     <string name="label_sendErrorData">Отправлять данные об ошибках</string>
     <string name="label_SendFrom">От:</string>
     <string name="label_SendTo">Для:</string>
     <string name="label_ShowHintAtLaunch">В следующий раз показать подсказку.</string>
+    <string name="label_SpeechRecognitionAlert">Использование распознавания речи отключено, поскольку это может привести к утечке информации</string>
     <string name="label_step_1">Шаг 1</string>
     <string name="label_step_2">Шаг 2</string>
     <string name="label_step_3">Шаг 3</string>
@@ -317,6 +322,7 @@
     <string name="prog_GeneratingKey">ключ создается, это может занять некоторое время…</string>
     <string name="prog_generatingSignature">создается подпись…</string>
     <string name="prog_loadingContent">загрузка содержимого…</string>
+    <string name="prog_pending">до…</string>
     <string name="prog_ReceivingFile">получаем зашифрованный файл…</string>
     <string name="prog_RequestingFile">запрашивается зашифрованный файл…</string>
     <string name="prog_RequestingMessage">запрашивается зашифрованное сообщение…</string>
@@ -340,6 +346,7 @@
     <string name="state_InvitationAdded">Приглашение добавил.</string>
     <string name="state_MessageSavedAsDraft">Сообщение сохранено как черновик.</string>
     <string name="state_MessagesDeleted">Удалено %d сообщений.</string>
+    <string name="state_MessagesSent">%d отправленных сообщений.</string>
     <string name="state_PassphraseUpdated">Секретная фраза обновлена.</string>
     <string name="state_RecipientsDeleted">Удалено %d получателей.</string>
     <string name="state_SomeContactsImported">Импортировано %s контактов.</string>
@@ -353,6 +360,7 @@
     <string name="text_AboutEmail">email: %s</string>
     <string name="text_AboutFeat">Особенности</string>
     <string name="text_AboutWeb">web: %s</string>
+    <string name="text_DevelopedBy">Разработано:</string>
     <string name="text_KeywordExchange">Обмен</string>
     <string name="text_KeywordIdentity">Идентичность</string>
     <string name="text_KeywordKey">Ключ</string>
@@ -360,6 +368,7 @@
     <string name="text_KeywordPrivacy">Конфиденциальность</string>
     <string name="text_KeywordSecurity">Безопасность</string>
     <string name="text_LanguagesProvidedBy">Переводы предоставлены:</string>
+    <string name="text_LocalizationRepo">перевести: %s</string>
     <string name="text_RelatedSearchTerms">Связанные термины:</string>
     <string name="text_Requirements">Требования:</string>
     <string name="text_Requirements1">Должен быть установлен на минимум 2 устройства.</string>

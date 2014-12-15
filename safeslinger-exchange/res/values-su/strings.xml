@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Kaluar? Naha anjeun yakin?</string>
+
+    <string name="btn_Match">Teras</string>
+    <string name="btn_NoMatch">Taya nu mana</string>
+
+    <string name="choice_NumUsers">pamaké %d</string>
+
+    <string name="error_AllMembersMustUpgrade">Sababaraha anggota nganggo vérsi nu leuwih heubeul; sadaya anggota kudu ningkatkeun ka versi newest.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Sadaya anggota kudu ningkatkeun, sababaraha anggo kolot format ngadaptar push.</string>
+    <string name="error_CorrectYourInternetConnection">Internet teu sadia, pariksa setelan Anjeun.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange seep ngaleuwihan. Dimimitian tukeran deui.</string>
+    <string name="error_HttpCode">Server HTTP Ralat: %d</string>
+    <string name="error_InvalidCommitVerify">Data salah kapanggih di bursa. Dimimitian tukeran deui.</string>
+    <string name="error_InvalidCommonUserId">Mangga ngasupkeun integer positif.</string>
+    <string name="error_LocalGroupCommitDiffer">Anjeun geus ngalaporkeun béda dina frasa barang. Dimimitian tukeran deui.</string>
+    <string name="error_MinUsersRequired">A minimum tina %d anggota diwajibkeun pikeun nukerkeun data.</string>
+    <string name="error_MoreDataThanUsers">Data terduga kapanggih di bursa. Dimimitian tukeran deui.</string>
+    <string name="error_NoDataToExchange">Bursa ieu leungit data nu dipikabutuh.</string>
+    <string name="error_NoWordListSelected">Anjeun kudu milih salah sahiji frasa barang sa acan.</string>
+    <string name="error_OtherGroupCommitDiffer">Aya dilaporkeun béda dina frasa barang. Dimimitian tukeran deui.</string>
+    <string name="error_OutOfMemoryError">Mémori handap teuing pikeun ngarengsekeun operasi ieu.</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerNotResponding">Teu aya respon ti server.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Seep nungguan sababaraha kumpulan anggota pikeun nambahkeun data.</string>
+    <string name="error_WebCancelledByUser">Pamaké dibolaykeun server paménta.</string>
+
+    <string name="help_size">Pilih jumlah warga anu ngusahakeun pikeun nukerkeun data babarengan jeung pencét OK.</string>
+    <string name="help_userid">Nomer ieu dina layar ieu dipaké pikeun nyieun grup unik pamaké. Marios nomer dina layar kabéh pamaké \', teras sadaya pamaké kudu ngasupkeun sarua kaitung pangdeukeutna ti tungtung nomer jeung pencét OK.</string>
+    <string name="help_verify">Ayeuna, Anjeun kudu cocog salah sahiji frase 3-kecap ieu sareng sadaya pamaké. Unggal pamaké kudu pilih frase ilahar sarua, sarta pencét Next.</string>
+
+    <string name="label_CompareScreensNDevices">Bandingkeun layar dina alat %s.</string>
+    <string name="label_NumericModeHint">Non-Inggris</string>
+    <string name="label_PromptInstruct">Wilangan ieu dipaké pikeun nyieun grup unik pamaké. Bandingkeun, terus asupkeun nomer kaitung pangdeukeutna ti tungtung antara kabéh pamaké.</string>
+    <string name="label_ReceivedNItems">narima %d item</string>
+    <string name="label_UserIdHint">Kaitung pangdeukeutna ti tungtung</string>
+    <string name="label_VerifyInstruct">Sadaya telepon kudu cocog salah sahiji frase 3-kecap. Bandingkeun, terus nyokot frase cocog.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
+
+    <string name="prog_CollectingOthersCommitVerify">nungguan verifikasi ti sakumna anggota…</string>
+    <string name="prog_CollectingOthersItems">nungguan sakabéh pamaké pikeun ngiluan…</string>
+    <string name="prog_ConstructingGroupKey">diwangun konci grup…</string>
+    <string name="prog_RequestingUserId">requesting kaanggotaan…</string>
+
+    <string name="title_size">Sabaraha pamaké ukar teh?</string>
+    <string name="title_userid">Grouping</string>
+    <string name="title_verify">Pariksa</string>
+
+</resources>

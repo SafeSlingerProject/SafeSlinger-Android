@@ -25,52 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Quieti? Numquid et tu securus?</string>
+    <string name="ask_QuitConfirmation">Quit? Certus es?</string>
 
     <string name="btn_Match">Next</string>
-    <string name="btn_NoMatch">Quia non potest sustinere</string>
+    <string name="btn_NoMatch">No Match</string>
 
     <string name="choice_NumUsers">%d users</string>
 
-    <string name="error_AllMembersMustUpgrade">Et inventi sunt veteris usu habetur, novissima omnium upgrade sodales velit.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Sodales vero omnes debent upgrade, utuntur quibusdam vetustioribus dis adnotatione forma.</string>
-    <string name="error_CorrectYourInternetConnection">Lorem non leo, reprehendo vestri occasus.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout excederet. Emittet verbum suum, iterum commutando.</string>
-    <string name="error_HttpCode">HTTP Server Error: %d</string>
-    <string name="error_InvalidCommitVerify">Non recta data inveniri in commutatione eius. Emittet verbum suum, iterum commutando.</string>
-    <string name="error_InvalidCommonUserId">Quaeso a numerus integer positivus.</string>
-    <string name="error_LocalGroupCommitDiffer">Diversus retulisti phrases. Emittet verbum suum, iterum commutando.</string>
-    <string name="error_MinUsersRequired">A minimum de %d membris requiruntur ad commutare notitia.</string>
-    <string name="error_MoreDataThanUsers">Improviso in notitia commutationem. Emittet verbum suum, iterum commutando.</string>
-    <string name="error_NoDataToExchange">Commutatio inquisita notitia est absentis.</string>
-    <string name="error_NoWordListSelected">Prius oportet eligere unum de verbo.</string>
-    <string name="error_OtherGroupCommitDiffer">Diversus nuntiatum phrases. Emittet verbum suum, iterum commutando.</string>
-    <string name="error_OutOfMemoryError">Memoria est, ut hoc preme operatio.</string>
-    <string name="error_ServerAppMessage">Vestibulum volutpat %s</string>
-    <string name="error_ServerNotResponding">Nec alterum ab cultor est.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout opperiens leo addere notitia.</string>
-    <string name="error_WebCancelledByUser">User servo petentibus remissum.</string>
+    <string name="error_AllMembersMustUpgrade">Seniorem versionem aliqui utuntur; novissima omnium membrorum upgrade ut velit.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Sodales vero omnes debent upgrade, maior praeliabitur registration es usura aliqua forma.</string>
+    <string name="error_CorrectYourInternetConnection">Penitus haberi reprehendo tuum occasus.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout excederet. Incipe iterum commutando.</string>
+    <string name="error_HttpCode">Servo HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Non recta data invenitur in commutationibus. Incipe iterum commutando.</string>
+    <string name="error_InvalidCommonUserId">Please intrant integer affirmativus.</string>
+    <string name="error_LocalGroupCommitDiffer">Diversus sententias retulisti. Incipe iterum commutando.</string>
+    <string name="error_MinUsersRequired">A minimum de %d membrorum requiritur ad commutare notitia.</string>
+    <string name="error_MoreDataThanUsers">Inopinatus data invenitur in commutationibus. Incipe iterum commutando.</string>
+    <string name="error_NoDataToExchange">Mutua inquisita notitia est absentis.</string>
+    <string name="error_NoWordListSelected">Oportet autem eligere voces quam procedere.</string>
+    <string name="error_OtherGroupCommitDiffer">Diversus nuntiatum dui. Incipe iterum commutando.</string>
+    <string name="error_OutOfMemoryError">Memoria est humilis perficere opus.</string>
+    <string name="error_ServerAppMessage">Nuntius server: %s</string>
+    <string name="error_ServerNotResponding">Nullum est responsum ab cultor est.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Vicis expectans aliquis coetus membra addere data.</string>
+    <string name="error_WebCancelledByUser">User server petentibus remissum.</string>
 
-    <string name="help_size">Lorem ipsum numerum in unum conferantur et torcular OK conantis.</string>
-    <string name="help_userid">Ad hoc unicum est, numerus tincidunt eget elit. Vestibulum numeros omnes users, screens, et omnis multitudo et infimus, idem non debet poni in users torcular OK.</string>
-    <string name="help_verify">Sed necesse est, factum est verbum aequare III ex his omnibus verbis users. Hoc commune est omnibus oportet eligere velit, deinde premunt.</string>
+    <string name="help_size">Lego conantis numerum commutare notitia simul et torcular OK.</string>
+    <string name="help_userid">Hic est numerus elit creare unicum hoc coetus users. Review numeros in cunctis users \'screens, tum omnes colores, ut intres sub eodem numero infimum et torcular OK.</string>
+    <string name="help_verify">Autem verbum oportet inserere, III ex his verbis atque omnes colores. Quisque User communi locutione oportet eligere et mittam post.</string>
 
-    <string name="label_CompareScreensNDevices">Compare screens %s in cogitationes.</string>
-    <string name="label_NumericModeHint">Anglicas</string>
-    <string name="label_PromptInstruct">Vestibulum sit amet dolor a unique numerus ad creare. Compare, et ita intrare in infima inter omnes users.</string>
-    <string name="label_ReceivedNItems">accepit items %d</string>
+    <string name="label_CompareScreensNDevices">Compare screens %s in adinventionibus suis.</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Hic est numerus populi creare unicum users. Compara infima inter omnes colores, et ita intrare.</string>
+    <string name="label_ReceivedNItems">%d accepit items</string>
     <string name="label_UserIdHint">Lowest</string>
-    <string name="label_VerifyInstruct">Omnes phones est III-verbum aequare unus ex phrases. Compare, et edi phrase tunc colligunt.</string>
+    <string name="label_VerifyInstruct">III, luctus sit compositus ex omnibus verbis verbum. Compare et vicissitudinem verbis colligunt.</string>
 
     <string name="lib_name">Exchange SafeSlinger</string>
 
-    <string name="prog_CollectingOthersCommitVerify">expectabat enim verificationem de omnibus membris…</string>
-    <string name="prog_CollectingOthersItems">… cum omnia exspectant users</string>
-    <string name="prog_ConstructingGroupKey">construens… coetus key</string>
-    <string name="prog_RequestingUserId">petentes membra…</string>
+    <string name="prog_CollectingOthersCommitVerify">expectans a justo sodales…</string>
+    <string name="prog_CollectingOthersItems">expectans users ad omnes…</string>
+    <string name="prog_ConstructingGroupKey">… key exstruendis group</string>
+    <string name="prog_RequestingUserId">membership postulans…</string>
 
-    <string name="title_size">Quot Suspendisse commutatio?</string>
-    <string name="title_userid">Adjunctio</string>
+    <string name="title_size">Quam multi sint in commutationem?</string>
+    <string name="title_userid">Grouping</string>
     <string name="title_verify">Quin</string>
 
 </resources>

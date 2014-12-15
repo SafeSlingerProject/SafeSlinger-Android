@@ -25,52 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Отказ? Да ли сте сигурни?</string>
+    <string name="ask_QuitConfirmation">Куит? Да ли сте сигурни?</string>
 
-    <string name="btn_Match">Следећа</string>
+    <string name="btn_Match">Следећи</string>
     <string name="btn_NoMatch">Но матцх</string>
 
-    <string name="choice_NumUsers">%d усерс</string>
+    <string name="choice_NumUsers">%d корисника</string>
 
-    <string name="error_AllMembersMustUpgrade">Неки чланови користе старију верзију; Сви чланови морају да надоградите на најновију верзију.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Сви чланови морају надоградити, неки користе старијих формата регистрације пусх.</string>
+    <string name="error_AllMembersMustUpgrade">Неки чланови су користите старију верзију; сви чланови морају да надоградњу на најновију верзију.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Сви чланови морају надоградити, неки користе старије формате регистрацију пусх.</string>
     <string name="error_CorrectYourInternetConnection">Интернет није доступан, проверите подешавања.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Размена Тимеоут премашен. Бегин размену поново.</string>
-    <string name="error_HttpCode">Сервер ХТТП Грешка: %d</string>
-    <string name="error_InvalidCommitVerify">Нетачне податке наћи у замену. Бегин размену поново.</string>
-    <string name="error_InvalidCommonUserId">Унесите позитиван цео број.</string>
-    <string name="error_LocalGroupCommitDiffer">Сте пријавили разлику у фразама. Бегин размену поново.</string>
-    <string name="error_MinUsersRequired">Најмање %d чланова су у обавези да размењују податке.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Размена Тимеоут премашио. Бегин размену поново.</string>
+    <string name="error_HttpCode">Сервер ХТТП грешка: %d</string>
+    <string name="error_InvalidCommitVerify">Нетачни подаци налазе у размени. Бегин размену поново.</string>
+    <string name="error_InvalidCommonUserId">Молимо вас да унесете позитиван цео број.</string>
+    <string name="error_LocalGroupCommitDiffer">Ви сте пријавио разлику у фразама. Бегин размену поново.</string>
+    <string name="error_MinUsersRequired">Најмање %d припадника морају да размењују податке.</string>
     <string name="error_MoreDataThanUsers">Неочекивани подаци налазе у размени. Бегин размену поново.</string>
-    <string name="error_NoDataToExchange">Екцханге недостаје тражене податке.</string>
-    <string name="error_NoWordListSelected">Морате да изаберете једну од израза пре него што наставите.</string>
-    <string name="error_OtherGroupCommitDiffer">Неко известио разлику у фразама. Бегин размену поново.</string>
-    <string name="error_OutOfMemoryError">Меморије је прениска да заврши ову операцију.</string>
-    <string name="error_ServerAppMessage">Сервер Мессаге: %s</string>
+    <string name="error_NoDataToExchange">Размена недостаје тражене податке.</string>
+    <string name="error_NoWordListSelected">Морате да изаберете једну од реченица пре него што наставите.</string>
+    <string name="error_OtherGroupCommitDiffer">Неко пријавио разлику у фразама. Бегин размену поново.</string>
+    <string name="error_OutOfMemoryError">Меморија је прениска да заврши ову операцију.</string>
+    <string name="error_ServerAppMessage">Сервер Порука: %s</string>
     <string name="error_ServerNotResponding">Нема одговора од сервера.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Тимеоут чека неки чланови групе да бисте додали податке.</string>
-    <string name="error_WebCancelledByUser">Корисник је отказао захтев сервера.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Тимеоут чека неки чланови групе да додају податке.</string>
+    <string name="error_WebCancelledByUser">Корисник отказао захтев сервера.</string>
 
     <string name="help_size">Изаберите број људи који покушавају да размењују податке заједно и притисните ОК.</string>
-    <string name="help_userid">Овај број на овом екрану се користи за креирање јединствену групу корисника. Прегледати бројеве на екранима сви корисници \', онда сви корисници треба да уђе у исти најмањи број и притисните ОК.</string>
-    <string name="help_verify">Сада, мора да одговара један од ових 3-речи фразе са свим корисницима. Сваки корисник мора изабрати исти заједнички фразу и притисните Нект.</string>
+    <string name="help_userid">Овај број на овом екрану се користи за креирање јединствену групу корисника. Прегледати бројеве на екранима свих корисника, онда сви корисници треба да унесете исти најнижи број и притисните ОК.</string>
+    <string name="help_verify">Сада, ти мора да одговара неки од ових 3-ворд фраза са свим корисницима. Сваки корисник мора изабрати исти заједнички фразу, и притисните Нект.</string>
 
     <string name="label_CompareScreensNDevices">Упоредите екране на %s уређајима.</string>
-    <string name="label_NumericModeHint">Нон-енглески</string>
+    <string name="label_NumericModeHint">Не-енглески</string>
     <string name="label_PromptInstruct">Овај број се користи за креирање јединствену групу корисника. Упоредите, а затим унесите најмањи број међу свим корисницима.</string>
-    <string name="label_ReceivedNItems">примио %d ставки</string>
-    <string name="label_UserIdHint">Најнижа</string>
-    <string name="label_VerifyInstruct">Сви телефони морају да одговара један од 3 речи фразе. Упоредите, а затим одабрати појавување фраза.</string>
+    <string name="label_ReceivedNItems">примила %d артикала</string>
+    <string name="label_UserIdHint">Најнижи</string>
+    <string name="label_VerifyInstruct">Сви телефони мора да одговара један од 3-речи фраза. Упоредите, а затим одаберите одговарајући израз.</string>
 
     <string name="lib_name">СафеСлингер Екцханге</string>
 
     <string name="prog_CollectingOthersCommitVerify">чека верификацију од свих чланова…</string>
-    <string name="prog_CollectingOthersItems">чека свим корисницима да се придруже…</string>
-    <string name="prog_ConstructingGroupKey">изградњу кључ групу…</string>
+    <string name="prog_CollectingOthersItems">чекајући свим корисницима да се придруже…</string>
+    <string name="prog_ConstructingGroupKey">изградњу кључ група…</string>
     <string name="prog_RequestingUserId">тражи чланство…</string>
 
     <string name="title_size">Колико корисника у размени?</string>
     <string name="title_userid">Груписање</string>
-    <string name="title_verify">Провери</string>
+    <string name="title_verify">Верификовати</string>
 
 </resources>

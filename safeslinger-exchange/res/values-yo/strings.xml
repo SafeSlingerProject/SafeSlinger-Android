@@ -25,52 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Olodun? Ṣe o da ọ loju?</string>
+    <string name="ask_QuitConfirmation">Olodun-? Ṣe o da ọ loju?</string>
 
     <string name="btn_Match">Itele</string>
-    <string name="btn_NoMatch">Ko si baramu</string>
+    <string name="btn_NoMatch">Ko si ìwọn</string>
 
-    <string name="choice_NumUsers">%d awọn olumulo</string>
+    <string name="choice_NumUsers">%d users</string>
 
-    <string name="error_AllMembersMustUpgrade">Diẹ ninu awọn ọmọ ẹgbẹ ti wa ni lilo ohun agbalagba ti ikede; gbogbo awọn ẹya gbọdọ igbesoke si awọn Hunting ti ikede.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Gbogbo awọn ẹya gbọdọ igbesoke, diẹ ninu awọn ti wa ni lilo titari agbalagba ìforúkọsílẹ ọna kika.</string>
-    <string name="error_CorrectYourInternetConnection">Ayelujara ko wa, wo rẹ eto.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange akoko-to koja. Bẹrẹ awọn paṣipaarọ lẹẹkansi.</string>
+    <string name="error_AllMembersMustUpgrade">Diẹ ninu awọn ọmọ ẹgbẹ ti wa ni lilo ohun àgbà ti ikede; gbogbo awọn ọmọ ẹgbẹ gbọdọ igbesoke si Hunting ti ikede.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Gbogbo omo egbe gbọdọ igbesoke, diẹ ninu awọn ti wa ni lilo titari agbalagba ìforúkọsílẹ ọna kika.</string>
+    <string name="error_CorrectYourInternetConnection">Ayelujara ko wa, ṣayẹwo rẹ eto.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange akoko-to koja. Bẹrẹ ni paṣipaarọ lẹẹkansi.</string>
     <string name="error_HttpCode">Server HTTP aṣiṣe: %d</string>
-    <string name="error_InvalidCommitVerify">Ti ko tọ data ri ni paṣipaarọ. Bẹrẹ awọn paṣipaarọ lẹẹkansi.</string>
-    <string name="error_InvalidCommonUserId">Jowo kan tẹ rere odidi.</string>
-    <string name="error_LocalGroupCommitDiffer">Ti o ba ti royin kan iyato ninu gbolohun. Bẹrẹ awọn paṣipaarọ lẹẹkansi.</string>
-    <string name="error_MinUsersRequired">A kere ti %d omo egbe ti wa ni ti beere lati pa awọn data.</string>
-    <string name="error_MoreDataThanUsers">Airotẹlẹ data ri ni paṣipaarọ. Bẹrẹ awọn paṣipaarọ lẹẹkansi.</string>
+    <string name="error_InvalidCommitVerify">Ti ko tọ data ri ni paṣipaarọ. Bẹrẹ ni paṣipaarọ lẹẹkansi.</string>
+    <string name="error_InvalidCommonUserId">Jowo tẹ a rere odidi.</string>
+    <string name="error_LocalGroupCommitDiffer">Ti o ba ti royin kan iyato ninu gbolohun. Bẹrẹ ni paṣipaarọ lẹẹkansi.</string>
+    <string name="error_MinUsersRequired">A o kere ti %d omo egbe ti wa ni ti beere lati pa awọn data.</string>
+    <string name="error_MoreDataThanUsers">Airotẹlẹ data ri ni paṣipaarọ. Bẹrẹ ni paṣipaarọ lẹẹkansi.</string>
     <string name="error_NoDataToExchange">Awọn paṣipaarọ ti wa ni sonu ti nbere fun data.</string>
-    <string name="error_NoWordListSelected">O gbọdọ yan ọkan ninu awọn gbolohun ki o to proceeding.</string>
-    <string name="error_OtherGroupCommitDiffer">Ẹnikan royin kan iyato ninu gbolohun. Bẹrẹ awọn paṣipaarọ lẹẹkansi.</string>
-    <string name="error_OutOfMemoryError">Iranti jẹ ju kekere lati pari yi šiše.</string>
-    <string name="error_ServerAppMessage">Server ifiranṣẹ: %s</string>
+    <string name="error_NoWordListSelected">O gbọdọ yan ọkan ninu awọn gbolohun ṣaaju ki o to ye.</string>
+    <string name="error_OtherGroupCommitDiffer">Ẹnikan royin a iyato ninu gbolohun. Bẹrẹ ni paṣipaarọ lẹẹkansi.</string>
+    <string name="error_OutOfMemoryError">Memory jẹ ju kekere lati pari yi šiše ohun.</string>
+    <string name="error_ServerAppMessage">Server Ifiranṣẹ: %s</string>
     <string name="error_ServerNotResponding">Ko si esi lati olupin.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Akoko-to nduro fun awọn ẹgbẹ ọmọ ẹgbẹ lati fi data.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Akoko-to nduro fun diẹ ninu awọn ẹgbẹ ọmọ ẹgbẹ lati fi data.</string>
     <string name="error_WebCancelledByUser">Olumulo pawonre olupin ba beere fun.</string>
 
-    <string name="help_size">Yan awọn nọmba ti awọn eniyan ti o ti wa ni to pinnu lati pa awọn data papo ki o si tẹ O dara.</string>
-    <string name="help_userid">Nọmba yi loju iboju yi ti wa ni lo lati ṣẹda kan oto akojọpọ awọn olumulo. Ayẹwo awọn nọmba lori gbogbo awọn olumulo \'iboju, ki o si gbogbo awọn olumulo yẹ ki o tẹ awọn nọmba kanna asuwon ti ko si tẹ O dara.</string>
-    <string name="help_verify">Bayi, o gbọdọ baramu ọkan ninu awọn 3-ọrọ gbolohun pẹlu gbogbo awọn olumulo. Gbogbo olumulo gbọdọ yan awọn gbolohun kanna wọpọ, ki o si tẹ Next.</string>
+    <string name="help_size">Yan awọn nọmba ti awọn eniyan ti o ti wa ni gbiyanju lati pa awọn data papo ki o si tẹ O dara.</string>
+    <string name="help_userid">Yi nọmba lori yi iboju ba wa ni lo lati ṣẹda kan oto akojọpọ awọn olumulo. Ayẹwo awọn nọmba lori gbogbo awọn olumulo \'iboju, ki o si gbogbo awọn olumulo yẹ ki o tẹ kanna ni asuwon ti nọmba ki o si tẹ O dara.</string>
+    <string name="help_verify">Bayi, o gbọdọ baramu ọkan ninu awọn wọnyi 3-ọrọ gbolohun pẹlu gbogbo awọn olumulo. Gbogbo olumulo gbọdọ yan kanna wọpọ gbolohun, ki o si tẹ Next.</string>
 
     <string name="label_CompareScreensNDevices">Afiwe iboju lori %s awọn ẹrọ.</string>
-    <string name="label_NumericModeHint">Ti kii-English</string>
-    <string name="label_PromptInstruct">Yi nọmba ti o ti lo lati ṣẹda kan oto akojọpọ awọn olumulo. Afiwe, ati ki o si tẹ awọn nọmba asuwon ti laarin gbogbo awọn olumulo.</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Yi nọmba ti lo lati ṣẹda kan oto akojọpọ awọn olumulo. Afiwe, ati ki o si tẹ awọn ni asuwon ti nọmba laarin gbogbo awọn olumulo.</string>
     <string name="label_ReceivedNItems">gba awọn ohun kan %d</string>
     <string name="label_UserIdHint">Asuwon ti</string>
-    <string name="label_VerifyInstruct">Gbogbo awọn foonu gbọdọ baramu ọkan ninu awọn 3-ọrọ gbolohun. Afiwe, ati ki o si gbe awọn tuntun gbolohun.</string>
+    <string name="label_VerifyInstruct">Gbogbo awọn foonu gbọdọ baramu ọkan ninu awọn 3-ọrọ gbolohun. Afiwe, ati ki o si mu awọn tuntun tó gbolohun.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">nduro fun ayewo lati gbogbo awọn ọmọ ẹgbẹ…</string>
+    <string name="prog_CollectingOthersCommitVerify">nduro fun ijerisi lati gbogbo awọn ọmọ ẹgbẹ…</string>
     <string name="prog_CollectingOthersItems">nduro fun gbogbo awọn olumulo lati da…</string>
-    <string name="prog_ConstructingGroupKey">ko ẹgbẹ bọtini…</string>
-    <string name="prog_RequestingUserId">bere fun ẹgbẹ…</string>
+    <string name="prog_ConstructingGroupKey">ko Ẹgbẹ bọtini…</string>
+    <string name="prog_RequestingUserId">bere fun omo egbe…</string>
 
-    <string name="title_size">Bawo ni ọpọlọpọ awọn olumulo ninu awọn paṣipaarọ?</string>
+    <string name="title_size">Bawo ni ọpọlọpọ awọn olumulo ninu paṣipaarọ?</string>
     <string name="title_userid">Kikojọ</string>
-    <string name="title_verify">Mọ daju</string>
+    <string name="title_verify">Daju</string>
 
 </resources>

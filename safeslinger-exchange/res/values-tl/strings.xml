@@ -32,18 +32,18 @@
 
     <string name="choice_NumUsers">%d mga gumagamit</string>
 
-    <string name="error_AllMembersMustUpgrade">Ang ilang mga miyembro ay gumagamit ng isang mas lumang bersyon; lahat ng mga miyembro ay dapat mag-upgrade sa pinakabagong bersyon.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Lahat ng mga miyembro ay dapat mag-upgrade, ang ilang ay gumagamit ng mas lumang format ng pagpaparehistro ng push.</string>
+    <string name="error_AllMembersMustUpgrade">Ang ilang mga kasapi ay gumagamit ng isang mas lumang bersyon; lahat ng mga miyembro ay dapat mag-upgrade sa pinakabagong bersyon.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Lahat ng mga miyembro ay dapat mag-upgrade, ang ilan ay gumagamit ng mas lumang format ng pagpaparehistro push.</string>
     <string name="error_CorrectYourInternetConnection">Hindi available ang Internet, suriin ang iyong mga setting.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Lumagpas timeout Exchange. Simulan muli ang exchange.</string>
-    <string name="error_HttpCode">Server ng ​​HTTP Error: %d</string>
+    <string name="error_HttpCode">Server ng HTTP Error: %d</string>
     <string name="error_InvalidCommitVerify">Natagpuan Maling data sa exchange. Simulan muli ang exchange.</string>
-    <string name="error_InvalidCommonUserId">Mangyaring magpasok ng isang positibong integer.</string>
-    <string name="error_LocalGroupCommitDiffer">Iyong iniulat ang isang pagkakaiba sa bilang parirala. Simulan muli ang exchange.</string>
+    <string name="error_InvalidCommonUserId">Mangyaring maglagay ng positibong integer.</string>
+    <string name="error_LocalGroupCommitDiffer">Iyong iniulat ng isang pagkakaiba sa mga parirala. Simulan muli ang exchange.</string>
     <string name="error_MinUsersRequired">Ang isang minimum na %d mga miyembro ay kinakailangan upang makipagpalitan ng data.</string>
-    <string name="error_MoreDataThanUsers">Hindi inaasahang nahanap data sa exchange. Simulan muli ang exchange.</string>
-    <string name="error_NoDataToExchange">Exchange Ang Nawawala ang kinakailangang data.</string>
-    <string name="error_NoWordListSelected">Kailangan mong pumili ng isa sa mga parirala bago magpatuloy.</string>
+    <string name="error_MoreDataThanUsers">Hindi inaasahang nahanap na data sa exchange. Simulan muli ang exchange.</string>
+    <string name="error_NoDataToExchange">Ang exchange Kulang ng kinakailangang mga data.</string>
+    <string name="error_NoWordListSelected">Dapat kang pumili ng isa sa mga parirala bago magpatuloy.</string>
     <string name="error_OtherGroupCommitDiffer">May isang tao na iniulat ng isang pagkakaiba sa mga parirala. Simulan muli ang exchange.</string>
     <string name="error_OutOfMemoryError">Memory ay masyadong mababa upang makumpleto ang operasyong ito.</string>
     <string name="error_ServerAppMessage">Mensahe ng Server: %s</string>
@@ -53,24 +53,24 @@
 
     <string name="help_size">Piliin ang bilang ng mga tao na sinusubukang upang makipagpalitan ng data nang sama-sama at pindutin ang OK.</string>
     <string name="help_userid">Ang numerong ito sa screen na ito ay ginagamit upang lumikha ng isang natatanging pangkat ng mga user. Suriin ang mga numero sa mga screen ng \'lahat ng mga gumagamit, pagkatapos ay dapat ipasok ang lahat ng mga gumagamit sa parehong pinakamababang numero at pindutin ang OK.</string>
-    <string name="help_verify">Ngayon, kailangan mong tumugma sa isa sa mga 3-salita parirala sa lahat ng mga gumagamit. Ang bawat user ay dapat piliin ang parehong mga karaniwang parirala, at pindutin ang Susunod.</string>
+    <string name="help_verify">Ngayon, dapat mong tumugma sa isa sa mga 3-salitang mga parirala sa lahat ng mga gumagamit. Ang bawat user ay dapat piliin ang parehong mga karaniwang parirala, at pindutin ang Susunod.</string>
 
-    <string name="label_CompareScreensNDevices">Ihambing ang mga screen sa %s device.</string>
+    <string name="label_CompareScreensNDevices">Paghambingin ang mga screen sa %s device.</string>
     <string name="label_NumericModeHint">Hindi ingles</string>
-    <string name="label_PromptInstruct">Ang numerong ito ay ginagamit upang lumikha ng isang natatanging pangkat ng mga user. Ihambing, at pagkatapos ay ipasok ang pinakamababang bilang ng lahat ng mga gumagamit.</string>
-    <string name="label_ReceivedNItems">Nakatanggap %d mga item</string>
-    <string name="label_UserIdHint">Pinakamababang</string>
-    <string name="label_VerifyInstruct">Ang lahat ng mga telepono ay dapat na tumugma sa isa sa mga 3-salita parirala. Ihambing, at pagkatapos ay piliin ang pagtutugma ng parirala.</string>
+    <string name="label_PromptInstruct">Ang numerong ito ay ginagamit upang lumikha ng isang natatanging pangkat ng mga user. Ihambing, at pagkatapos ay ilagay ang pinakamababang bilang ng lahat ng mga gumagamit.</string>
+    <string name="label_ReceivedNItems">Natanggap %d mga item</string>
+    <string name="label_UserIdHint">Pinakamababa</string>
+    <string name="label_VerifyInstruct">Ang lahat ng mga telepono ay dapat na tumugma sa isa sa mga 3-salitang mga parirala. Ihambing, at pagkatapos ay piliin ang pagtutugma ng parirala.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">naghihintay ng pag-verify mula sa lahat ng mga kasapi…</string>
+    <string name="prog_CollectingOthersCommitVerify">naghihintay ng pag-verify mula sa lahat ng mga miyembro…</string>
     <string name="prog_CollectingOthersItems">naghihintay para sa lahat ng mga gumagamit na sumali sa…</string>
     <string name="prog_ConstructingGroupKey">pagtatayo pangkat key…</string>
     <string name="prog_RequestingUserId">humihiling ng pagiging miyembro…</string>
 
     <string name="title_size">Gaano karaming mga gumagamit sa exchange?</string>
-    <string name="title_userid">Pagpapangkat</string>
-    <string name="title_verify">I-verify</string>
+    <string name="title_userid">Pagpangkat</string>
+    <string name="title_verify">Patunayan</string>
 
 </resources>

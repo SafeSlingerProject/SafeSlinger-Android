@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Sluit? Is jy seker?</string>
+    <string name="ask_QuitConfirmation">Ophou? Is jy seker?</string>
 
     <string name="btn_Match">Volgende</string>
     <string name="btn_NoMatch">Geen wedstryd</string>
@@ -33,43 +33,43 @@
     <string name="choice_NumUsers">%d gebruikers</string>
 
     <string name="error_AllMembersMustUpgrade">Sommige lede is met behulp van \'n ouer weergawe; Alle lede moet opgradeer na die nuutste weergawe.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Alle lede moet opgradeer, sommige met ouer druk registrasie formaat.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Alle lede moet opgradeer, sommige met ouer druk registrasie formate.</string>
     <string name="error_CorrectYourInternetConnection">Internet nie beskikbaar is nie, maak seker jou instellings.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Ruil timeout oorskry. Begin die wisselkoers weer.</string>
     <string name="error_HttpCode">Bediener HTTP Fout: %d</string>
-    <string name="error_InvalidCommitVerify">Verkeerde inligting wat gevind is in ruil. Begin die wisselkoers weer.</string>
-    <string name="error_InvalidCommonUserId">Voer asseblief \'n positiewe heelgetal.</string>
+    <string name="error_InvalidCommitVerify">Verkeerde data wat gevind is in ruil. Begin die wisselkoers weer.</string>
+    <string name="error_InvalidCommonUserId">Tik \'n positiewe heelgetal.</string>
     <string name="error_LocalGroupCommitDiffer">Jy het berig \'n verskil in frases. Begin die wisselkoers weer.</string>
-    <string name="error_MinUsersRequired">\'N Minimum van %d lede vereis data uit te ruil.</string>
+    <string name="error_MinUsersRequired">\'N Minimum van %d lede is nodig data uit te ruil.</string>
     <string name="error_MoreDataThanUsers">Onverwagte data wat gevind is in ruil. Begin die wisselkoers weer.</string>
-    <string name="error_NoDataToExchange">Die wisselkoers ontbreek vereiste data.</string>
+    <string name="error_NoDataToExchange">Die uitruil ontbreek vereiste data.</string>
     <string name="error_NoWordListSelected">Jy moet een van die frases kies voordat jy voortgaan.</string>
     <string name="error_OtherGroupCommitDiffer">Iemand het \'n verskil in frases. Begin die wisselkoers weer.</string>
-    <string name="error_OutOfMemoryError">Geheue is te laag om hierdie aksie te voltooi.</string>
-    <string name="error_ServerAppMessage">Bediener boodskap: %s</string>
+    <string name="error_OutOfMemoryError">Geheue is te laag hierdie aksie te voltooi.</string>
+    <string name="error_ServerAppMessage">Bediener Boodskap: %s</string>
     <string name="error_ServerNotResponding">Geen reaksie van die bediener.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout wag vir \'n paar lede van die groep data by te voeg.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Tydverstreke wag vir \'n paar lede van die groep data by te voeg.</string>
     <string name="error_WebCancelledByUser">Gebruiker gekanselleer bediener versoek.</string>
 
     <string name="help_size">Kies die aantal mense wat probeer om data saam en druk OK om te ruil.</string>
-    <string name="help_userid">Hierdie nommer op die skerm word gebruik om \'n unieke groep gebruikers te skep. Hersiening van die nommers op al die gebruikers se skerms, dan is al die gebruikers moet voer dieselfde laagste getal en druk OK.</string>
+    <string name="help_userid">Hierdie nommer op die skerm word gebruik om \'n unieke groep gebruikers te skep. Hersien die nommers op al die gebruikers se skerms, dan sal al die gebruikers moet ingaan dieselfde laagste getal en druk OK.</string>
     <string name="help_verify">Nou moet jy ooreenstem een van hierdie 3-woord frases met alle gebruikers. Elke gebruiker moet dieselfde gemeenskaplike frase kies en druk Volgende.</string>
 
     <string name="label_CompareScreensNDevices">Vergelyk skerms op %s toestelle.</string>
-    <string name="label_NumericModeHint">Nie-Engelse</string>
-    <string name="label_PromptInstruct">Hierdie nommer word gebruik om \'n unieke groep gebruikers te skep. Vergelyk, en tik dan die laagste getal onder alle gebruikers.</string>
+    <string name="label_NumericModeHint">Nie-Engels</string>
+    <string name="label_PromptInstruct">Hierdie nommer word gebruik om \'n unieke groep gebruikers te skep. Vergelyk, en tree dan die laagste getal onder alle gebruikers.</string>
     <string name="label_ReceivedNItems">ontvang %d items</string>
     <string name="label_UserIdHint">Laagste</string>
-    <string name="label_VerifyInstruct">Alle selfone moet ooreenstem met een van die 3-woord frases. Vergelyk, en dan haal die ooreenstem met die frase.</string>
+    <string name="label_VerifyInstruct">Alle selfone moet ooreenstem een van die 3-woord frases. Vergelyk, en dan haal die ooreenstem met die frase.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">wag vir die verifikasie van alle lede…</string>
     <string name="prog_CollectingOthersItems">wag vir alle gebruikers aan te sluit…</string>
-    <string name="prog_ConstructingGroupKey">die bou van die groep sleutel…</string>
-    <string name="prog_RequestingUserId">versoek ledetal…</string>
+    <string name="prog_ConstructingGroupKey">bou groep sleutel…</string>
+    <string name="prog_RequestingUserId">versoek lidmaatskap…</string>
 
-    <string name="title_size">Hoeveel gebruikers in die wisselkoers?</string>
+    <string name="title_size">Hoeveel gebruikers in die uitruil?</string>
     <string name="title_userid">Groepering</string>
     <string name="title_verify">Verifieer</string>
 

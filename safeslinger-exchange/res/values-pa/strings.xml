@@ -25,51 +25,51 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">ਬਾਹਰ? ਤੁਹਾਨੂੰ ਪੂਰਾ ਵਿਸ਼ਵਾਸ ਹੈ?</string>
+    <string name="ask_QuitConfirmation">ਬੰਦ ਕਰੋ? ਤੁਹਾਨੂੰ ਪੂਰਾ ਵਿਸ਼ਵਾਸ ਹੈ?</string>
 
-    <string name="btn_Match">ਅੱਗੇ</string>
+    <string name="btn_Match">ਅਗਲਾ</string>
     <string name="btn_NoMatch">ਕੋਈ ਮੈਚ</string>
 
-    <string name="choice_NumUsers">%d ਉਪਭੋਗੀ</string>
+    <string name="choice_NumUsers">%d ਉਪਭੋਗੀ ਨੂੰ</string>
 
-    <string name="error_AllMembersMustUpgrade">ਕੁਝ ਅੰਗ ਪੁਰਾਣੇ ਵਰਜਨ ਵਰਤ ਰਹੇ ਹੋ; ਸਾਰੇ ਅੰਗ ਨਵੀਨਤਮ ਵਰਜਨ ਲਈ ਅੱਪਗਰੇਡ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">ਸਾਰੇ ਜੀਅ ਕੁਝ ਪੁਰਾਣੇ ਪੁਸ਼ ਰਜਿਸਟਰੇਸ਼ਨ ਫਾਰਮੈਟ ਵਰਤ ਰਹੇ ਹੋ, ਨੂੰ ਅੱਪਗਰੇਡ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
+    <string name="error_AllMembersMustUpgrade">ਕੁਝ ਅੰਗ ਇੱਕ ਪੁਰਾਣਾ ਵਰਜਨ ਵਰਤ ਰਹੇ ਹਨ; ਸਾਰੇ ਅੰਗ ਨਵੀਨਤਮ ਵਰਜਨ ਲਈ ਅੱਪਗਰੇਡ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">ਸਾਰੇ ਜੀਅ ਕੁਝ ਪੁਰਾਣੇ Push ਰਜਿਸਟਰੇਸ਼ਨ ਫਾਰਮੈਟ ਵਰਤ ਰਹੇ ਹੋ, ਨੂੰ ਅੱਪਗਰੇਡ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
     <string name="error_CorrectYourInternetConnection">ਇੰਟਰਨੈੱਟ \'ਤੇ ਉਪਲੱਬਧ ਨਾ, ਆਪਣੀ ਸੈਟਿੰਗ ਨੂੰ ਵੇਖੋ.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">ਐਕਸ਼ਚੇਜ਼ ਅੰਤਰਾਲ ਵੱਧ ਗਏ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
-    <string name="error_HttpCode">ਸਰਵਰ ਨੂੰ HTTP ਗਲਤੀ: %d</string>
-    <string name="error_InvalidCommitVerify">ਗਲਤ ਡਾਟੇ ਨੂੰ ਬਦਲੇ ਵਿਚ ਪਾਇਆ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
-    <string name="error_InvalidCommonUserId">ਇੱਕ ਸਕਾਰਾਤਮਕ ਪੂਰਨ ਅੰਕ ਭਰੋ ਜੀ.</string>
-    <string name="error_LocalGroupCommitDiffer">ਤੁਹਾਨੂੰ ਪੈਰ੍ਹੇ ਵਿੱਚ ਫਰਕ ਦੀ ਰਿਪੋਰਟ ਹੈ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
-    <string name="error_MinUsersRequired">%d ਦੇ ਇੱਕ ਘੱਟੋ ਘੱਟ ਡਾਟਾ ਨੂੰ ਬਦਲੀ ਕਰਨ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ.</string>
-    <string name="error_MoreDataThanUsers">ਅਚਾਨਕ ਡਾਟਾ ਬਦਲੇ ਵਿਚ ਪਾਇਆ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
-    <string name="error_NoDataToExchange">ਬਦਲੇ ਇਸ ਦੀ ਲੋੜ ਹੈ ਦਾ ਡਾਟਾ ਗੁੰਮ ਹੈ.</string>
-    <string name="error_NoWordListSelected">ਤੁਹਾਨੂੰ ਜਾਰੀ ਅੱਗੇ ਅਖਾਣ ਦਾ ਇੱਕ ਦੀ ਚੋਣ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ.</string>
-    <string name="error_OtherGroupCommitDiffer">ਕਿਸੇ ਨੇ ਪੈਰ੍ਹੇ ਵਿੱਚ ਫਰਕ ਦੀ ਰਿਪੋਰਟ. ਨੂੰ ਫਿਰ ਮੁਦਰਾ ਸ਼ੁਰੂ.</string>
-    <string name="error_OutOfMemoryError">ਮੈਮੋਰੀ ਨੂੰ ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਵੀ ਬਹੁਤ ਘੱਟ ਹੈ.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">ਐਕਸ਼ਚੇਜ਼ timeout ਵੱਧ ਗਏ. ਨੂੰ ਫਿਰ ਐਕਸ਼ਚੇਜ਼ ਸ਼ੁਰੂ.</string>
+    <string name="error_HttpCode">ਸਰਵਰ HTTP ਗਲਤੀ: %d</string>
+    <string name="error_InvalidCommitVerify">ਗਲਤ ਡਾਟਾ ਦੇ ਬਦਲੇ \'ਚ ਪਾਇਆ. ਨੂੰ ਫਿਰ ਐਕਸ਼ਚੇਜ਼ ਸ਼ੁਰੂ.</string>
+    <string name="error_InvalidCommonUserId">ਇੱਕ ਸਕਾਰਾਤਮਕ ਪੂਰਨ ਅੰਕ ਦਿਓ ਜੀ.</string>
+    <string name="error_LocalGroupCommitDiffer">ਤੁਹਾਨੂੰ ਪੈਰ੍ਹੇ ਵਿੱਚ ਇੱਕ ਫਰਕ ਦੀ ਰਿਪੋਰਟ ਹੈ. ਨੂੰ ਫਿਰ ਐਕਸ਼ਚੇਜ਼ ਸ਼ੁਰੂ.</string>
+    <string name="error_MinUsersRequired">%d ਦੇ ਇੱਕ ਘੱਟੋ-ਘੱਟ ਡਾਟਾ ਦਾ ਲੈਣ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ.</string>
+    <string name="error_MoreDataThanUsers">ਅਚਾਨਕ ਡਾਟਾ ਦੇ ਬਦਲੇ \'ਚ ਪਾਇਆ. ਨੂੰ ਫਿਰ ਐਕਸ਼ਚੇਜ਼ ਸ਼ੁਰੂ.</string>
+    <string name="error_NoDataToExchange">ਇਸ ਦੀ ਲੋੜ ਹੈ ਐਕਸ਼ਚੇਜ਼ ਡਾਟਾ ਗੁੰਮ ਹੈ.</string>
+    <string name="error_NoWordListSelected">ਤੁਹਾਨੂੰ ਅੱਗੇ ਵੱਧਣ ਦੇ ਅੱਗੇ ਪੈਰ੍ਹੇ ਦੇ ਇੱਕ ਦੀ ਚੋਣ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ.</string>
+    <string name="error_OtherGroupCommitDiffer">ਕਿਸੇ ਨੇ ਪੈਰ੍ਹੇ ਵਿੱਚ ਇੱਕ ਫਰਕ ਦੀ ਰਿਪੋਰਟ. ਨੂੰ ਫਿਰ ਐਕਸ਼ਚੇਜ਼ ਸ਼ੁਰੂ.</string>
+    <string name="error_OutOfMemoryError">ਮੈਮੋਰੀ ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਬਹੁਤ ਘੱਟ ਹੈ.</string>
     <string name="error_ServerAppMessage">ਸਰਵਰ ਸੁਨੇਹਾ: %s</string>
     <string name="error_ServerNotResponding">ਸਰਵਰ ਕੋਈ ਜਵਾਬ.</string>
-    <string name="error_TimeoutWaitingForAllMembers">ਦੇ ਕੁਝ ਗਰੁੱਪ ਦੇ ਮਬਰ ਡਾਟਾ ਨੂੰ ਸ਼ਾਮਿਲ ਕਰਨ ਲਈ ਲਈ ਟਾਈਮ ਉਡੀਕ.</string>
+    <string name="error_TimeoutWaitingForAllMembers">ਕੁਝ ਗਰੁੱਪ ਦੇ ਮਬਰ ਡਾਟਾ ਨੂੰ ਸ਼ਾਮਿਲ ਕਰਨ ਲਈ ਲਈ ਅੰਤਰਾਲ ਉਡੀਕ.</string>
     <string name="error_WebCancelledByUser">ਉਪਭੋਗੀ ਨੂੰ ਸਰਵਰ ਬੇਨਤੀ ਨੂੰ ਰੱਦ ਕਰ ਦਿੱਤਾ.</string>
 
-    <string name="help_size">ਮਿਲ ਕੇ ਡਾਟਾ ਅਤੇ ਪ੍ਰੈੱਸ ਠੀਕ ਹੈ ਬਦਲੀ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੇ ਹਨ, ਜੋ ਲੋਕ ਦੀ ਗਿਣਤੀ ਚੁਣੋ.</string>
-    <string name="help_userid">ਇਸ ਸਕਰੀਨ ਤੇ ਇਹ ਨੰਬਰ ਹੈ ਉਪਭੋਗੀ ਦੀ ਇੱਕ ਵਿਲੱਖਣ ਗਰੁੱਪ ਨੂੰ ਬਣਾਉਣ ਲਈ ਵਰਤਿਆ ਗਿਆ ਹੈ. ਫਿਰ ਸਭ ਉਪਭੋਗੀ ਇੱਕੋ ਹੀ ਘੱਟ ਗਿਣਤੀ ਅਤੇ ਪ੍ਰੈੱਸ ਠੀਕ ਹੈ ਦੇਣਾ ਚਾਹੀਦਾ ਹੈ, ਸਭ ਉਪਭੋਗੀ \'ਸਕਰੀਨ\' ਤੇ ਨੰਬਰ ਵੇਖੋ.</string>
-    <string name="help_verify">ਹੁਣ, ਤੁਹਾਨੂੰ ਸਭ ਉਪਭੋਗੀ ਨਾਲ ਇਹ 3-ਸ਼ਬਦ ਨੂੰ ਸ਼ਬਦ ਦੇ ਇੱਕ ਮੇਲ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ. ਹਰ ਉਪਭੋਗੀ ਨੂੰ ਉਸੇ ਹੀ ਆਮ ਸ਼ਬਦ ਦੀ ਚੋਣ ਕਰੋ, ਅਤੇ ਅੱਗੇ ਦਬਾਓ ਚਾਹੀਦਾ ਹੈ.</string>
+    <string name="help_size">ਮਿਲ ਕੇ ਡਾਟਾ ਅਤੇ ਦਬਾਓ ਠੀਕ ਹੈ ਬਦਲੀ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੇ ਹਨ, ਜੋ ਲੋਕ ਦੀ ਗਿਣਤੀ ਚੁਣੋ.</string>
+    <string name="help_userid">ਇਸ ਸਕਰੀਨ \'ਤੇ ਇਹ ਨੰਬਰ ਉਪਭੋਗੀ ਨੂੰ ਇੱਕ ਵੱਖਰਾ ਗਰੁੱਪ ਬਣਾਉਣ ਲਈ ਵਰਤਿਆ ਗਿਆ ਹੈ. ਫਿਰ ਸਾਰੇ ਇੱਕੋ ਹੀ ਘੱਟ ਗਿਣਤੀ ਨੂੰ ਅਤੇ ਦਬਾਓ ਠੀਕ ਹੈ ਦੇਣਾ ਚਾਹੀਦਾ ਹੈ, ਸਭ ਉਪਭੋਗੀ \'ਸਕਰੀਨ\' ਤੇ ਨੰਬਰ ਵੇਖੋ.</string>
+    <string name="help_verify">ਹੁਣ, ਤੁਹਾਨੂੰ ਸਭ ਉਪਭੋਗੀ ਨਾਲ ਇਹ 3-ਸ਼ਬਦ ਨੂੰ ਪੈਰ੍ਹੇ ਦੇ ਇਕ ਮੈਚ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ. ਹਰ ਉਪਭੋਗੀ ਨੂੰ ਉਸੇ ਹੀ ਆਮ ਸ਼ਬਦ ਦੀ ਚੋਣ ਕਰੋ, ਅਤੇ ਅੱਗੇ ਦਬਾਓ ਚਾਹੀਦਾ ਹੈ.</string>
 
     <string name="label_CompareScreensNDevices">%s ਜੰਤਰ ਤੇ ਸਕਰੀਨ ਦੀ ਤੁਲਨਾ ਕਰੋ.</string>
     <string name="label_NumericModeHint">ਗੈਰ-ਅੰਗਰੇਜ਼ੀ</string>
-    <string name="label_PromptInstruct">ਇਹ ਨੰਬਰ ਉਪਭੋਗੀ ਦੀ ਇੱਕ ਵਿਲੱਖਣ ਗਰੁੱਪ ਨੂੰ ਬਣਾਉਣ ਲਈ ਵਰਤਿਆ ਗਿਆ ਹੈ. ਤੁਲਨਾ, ਅਤੇ ਫਿਰ ਸਭ ਉਪਭੋਗੀ ਦਾ ਆਪਸ ਵਿੱਚ ਘੱਟ ਨੰਬਰ ਦਿਓ.</string>
+    <string name="label_PromptInstruct">ਇਹ ਨੰਬਰ ਉਪਭੋਗੀ ਦੇ ਇੱਕ ਵੱਖਰਾ ਗਰੁੱਪ ਬਣਾਉਣ ਲਈ ਵਰਤਿਆ ਗਿਆ ਹੈ. ਤੁਲਨਾ, ਅਤੇ ਫਿਰ ਸਭ ਉਪਭੋਗੀ ਦਾ ਆਪਸ ਵਿੱਚ ਘੱਟ ਨੰਬਰ ਦਿਓ.</string>
     <string name="label_ReceivedNItems">%d ਇਕਾਈ ਪ੍ਰਾਪਤ ਕੀਤੀ</string>
     <string name="label_UserIdHint">ਘੱਟ</string>
-    <string name="label_VerifyInstruct">ਸਾਰੇ ਫੋਨ 3-ਸ਼ਬਦ ਨੂੰ ਸ਼ਬਦ ਦੇ ਇੱਕ ਮੇਲ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ. ਤੁਲਨਾ, ਅਤੇ ਫਿਰ ਮੇਲ ਵਾਕੰਸ਼ ਨੂੰ ਚੁਣੋ.</string>
+    <string name="label_VerifyInstruct">ਸਾਰੇ ਫੋਨ 3-ਸ਼ਬਦ ਨੂੰ ਪੈਰ੍ਹੇ ਦੇ ਇਕ ਮੈਚ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ. ਤੁਲਨਾ, ਅਤੇ ਫਿਰ ਮੇਲ ਸ਼ਬਦ ਨੂੰ ਚੁਣੋ.</string>
 
-    <string name="lib_name">SafeSlinger ਐਕਸ਼ਚੇਜ਼</string>
+    <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">ਸਾਰੇ ਅੰਗ ਤੱਕ ਪੜਤਾਲ ਲਈ ਉਡੀਕ ਕਰ…</string>
-    <string name="prog_CollectingOthersItems">ਸਭ ਉਪਭੋਗੀ ਆਉਣ ਲਈ ਕਿਸੇ ਦੀ ਉਡੀਕ ਕਰ…</string>
-    <string name="prog_ConstructingGroupKey">ਗਰੁੱਪ ਨੂੰ ਕੁੰਜੀ ਨੂੰ ਬਣਾਉਣ…</string>
+    <string name="prog_CollectingOthersItems">ਸਭ ਉਪਭੋਗੀ ਸ਼ਾਮਲ ਹੋਣ ਲਈ ਲਈ ਉਡੀਕ…</string>
+    <string name="prog_ConstructingGroupKey">ਗਰੁੱਪ ਨੂੰ ਕੁੰਜੀ ਨਿਰਮਾਣ…</string>
     <string name="prog_RequestingUserId">ਸਦੱਸਤਾ ਦੀ ਬੇਨਤੀ…</string>
 
-    <string name="title_size">ਕਿੰਨੇ ਬਦਲੇ ਵਿੱਚ ਉਪਭੋਗੀ?</string>
+    <string name="title_size">ਕਿੰਨੇ ਦੇ ਬਦਲੇ ਵਿੱਚ ਉਪਭੋਗੀ ਨੂੰ?</string>
     <string name="title_userid">ਗਰੁੱਪਿੰਗ</string>
     <string name="title_verify">ਪੁਸ਼ਟੀ ਕਰੋ</string>
 

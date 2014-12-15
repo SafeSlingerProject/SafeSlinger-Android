@@ -44,6 +44,7 @@
     <string name="btn_DeleteKeys">キーを削除する</string>
     <string name="btn_discard">破棄</string>
     <string name="btn_Done">完了</string>
+    <string name="btn_Edit">編集</string>
     <string name="btn_Exit">終了</string>
     <string name="btn_Import">インポート</string>
     <string name="btn_Introduce">紹介</string>
@@ -188,6 +189,7 @@
     <string name="label_iCloudEnable">SafeSlingerのiCloudが有効になっています。終了したら[完了]ボタンをタップします。</string>
     <string name="label_InstNoMessages">メッセージがありません。あなたは、ホームメニューの メッセージ作成ボタンからメッセージを送ることができる。</string>
     <string name="label_InstNoRecipients">受信者を追加するには、まず、同時に1つ以上の他のユーザとスリングキーの必要があります。また、メニューからスリングキー接触の招待状を送ることができる。</string>
+    <string name="label_InstNoRecipientsMatchQuery">あなたの現在の受信者のいずれも、検索クエリに一致しない。別のクエリを試すか、新しい連絡先を招待して下さい。</string>
     <string name="label_InstNoSharedFile">共有ファイルはありません。デバイスをiTunesに接続して、ファイルを共有フォルダにドラッグしてください。</string>
     <string name="label_InstRecipients">メッセージを送信する受信者を選択：</string>
     <string name="label_InstSendInvite">安全に紹介するための受信者を選択：</string>
@@ -201,6 +203,7 @@
     <string name="label_messageInviteInstall">SafeSlingerアプリ： %s</string>
     <string name="label_messageInviteSetupInst">セットアップセキュアなメッセージング接続をするために、我々は会うか電話同士を同時にした後、スリングキーは一度だけ、接続を検証することができます。</string>
     <string name="label_messageInviteStartMsg">私たちは、オープンソースSafeSlinger iPhoneやAndroidアプリでセキュアなメッセージングを開始することはできますか？</string>
+    <string name="label_messageYouAreVerified">%s、あなたが検証されます。</string>
     <string name="label_minutes">%d分</string>
     <string name="label_mobiletag">携帯電話</string>
     <string name="label_MostRecentOnly">最新のみ</string>
@@ -228,12 +231,14 @@
     <string name="label_safeslingered">（安全な油切り直接交換）</string>
     <string name="label_SaveAccount">アカウントを保存</string>
     <string name="label_SaveInstruct">安全な連絡先を保存するには、[インポート]を「タップし、あなたのアドレス帳に更新したい連絡先を確認してください。</string>
+    <string name="label_search_contacts_hint">検索の連絡先</string>
     <string name="label_seconds">%d秒</string>
     <string name="label_SelectRecip">受信者を選択</string>
     <string name="label_sendErrorData">エラーデータを送信</string>
     <string name="label_SendFrom">From：</string>
     <string name="label_SendTo">To：</string>
     <string name="label_ShowHintAtLaunch">このヒントを次回も表示する。</string>
+    <string name="label_SpeechRecognitionAlert">それは情報漏洩の原因となる可能性があるため、音声認識を使用すると、無効になっている</string>
     <string name="label_step_1">ステップ1</string>
     <string name="label_step_2">ステップ2</string>
     <string name="label_step_3">ステップ3</string>
@@ -317,6 +322,7 @@
     <string name="prog_GeneratingKey">鍵生成中、この処理にはしばらく時間がかかることがあります…</string>
     <string name="prog_generatingSignature">署名を生成しています…</string>
     <string name="prog_loadingContent">コンテンツを読み込んでいます…</string>
+    <string name="prog_pending">保留中…</string>
     <string name="prog_ReceivingFile">暗号化されたファイルを受信中…</string>
     <string name="prog_RequestingFile">暗号化されたファイルを要求中…</string>
     <string name="prog_RequestingMessage">暗号化されたメッセージを要求中…</string>
@@ -340,6 +346,7 @@
     <string name="state_InvitationAdded">招待状が追加されました。</string>
     <string name="state_MessageSavedAsDraft">メッセージは下書きとして保存されます。</string>
     <string name="state_MessagesDeleted">%dメッセージが削除されました。</string>
+    <string name="state_MessagesSent">%dのメッセージが送られた。</string>
     <string name="state_PassphraseUpdated">更新されたパスフレーズを入力します。</string>
     <string name="state_RecipientsDeleted">%d受信者が削除しました。</string>
     <string name="state_SomeContactsImported">%sの連絡先をインポートしました。</string>
@@ -353,6 +360,7 @@
     <string name="text_AboutEmail">email: %s</string>
     <string name="text_AboutFeat">特徴：</string>
     <string name="text_AboutWeb">web: %s</string>
+    <string name="text_DevelopedBy">によって開発さ：</string>
     <string name="text_KeywordExchange">交換</string>
     <string name="text_KeywordIdentity">アイデンティティ</string>
     <string name="text_KeywordKey">キー</string>
@@ -360,6 +368,7 @@
     <string name="text_KeywordPrivacy">プライバシー</string>
     <string name="text_KeywordSecurity">セキュリティー</string>
     <string name="text_LanguagesProvidedBy">利用可能な言語:</string>
+    <string name="text_LocalizationRepo">翻訳する：%sを</string>
     <string name="text_RelatedSearchTerms">関連用語：</string>
     <string name="text_Requirements">要件：</string>
     <string name="text_Requirements1">2デバイスの最小にインストールする必要があります。</string>

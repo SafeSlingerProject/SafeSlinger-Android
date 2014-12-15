@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Quit? Ishonchingiz komilmi?</string>
+
+    <string name="btn_Match">Keyingisi</string>
+    <string name="btn_NoMatch">No Match</string>
+
+    <string name="choice_NumUsers">%d foydalanuvchilar</string>
+
+    <string name="error_AllMembersMustUpgrade">Ayrim a\'zolar eski versiyasini foydalanayotgan; barcha a\'zolari eng yangi versiyaga yangilashingiz kerak.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Barcha a\'zolar, ayrim katta surish ro\'yxatga formatlarini foydalanayotgan, yangilashingiz kerak.</string>
+    <string name="error_CorrectYourInternetConnection">Internet mavjud emas, siz sozlamalarini tekshiring.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout oshdi. Yana almashinuvi boshlanadi.</string>
+    <string name="error_HttpCode">Server HTTP Xato: %d</string>
+    <string name="error_InvalidCommitVerify">Noto\'g\'ri ma\'lumot almashish topilgan. Yana almashinuvi boshlanadi.</string>
+    <string name="error_InvalidCommonUserId">Ijobiy tamsayı kiriting.</string>
+    <string name="error_LocalGroupCommitDiffer">Siz iboralar bir farq xabar qildi. Yana almashinuvi boshlanadi.</string>
+    <string name="error_MinUsersRequired">%d a\'zolarining kamida ma\'lumotlarni almashish uchun talab qilinadi.</string>
+    <string name="error_MoreDataThanUsers">Kutilmagan ma\'lumotlar almashish topilgan. Yana almashinuvi boshlanadi.</string>
+    <string name="error_NoDataToExchange">Almashish zarur ma\'lumotlarni yo\'qolgan.</string>
+    <string name="error_NoWordListSelected">Siz davom ettirishdan oldin iboralar birini tanlashingiz lozim.</string>
+    <string name="error_OtherGroupCommitDiffer">Kimdir iboralar bilan farq ma\'lum qildi. Yana almashinuvi boshlanadi.</string>
+    <string name="error_OutOfMemoryError">Xotira bu operatsiyani bajarish uchun juda ham past bo\'ladi.</string>
+    <string name="error_ServerAppMessage">Server Xabar: %s</string>
+    <string name="error_ServerNotResponding">Serverdan No javob.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Ba\'zi guruh a\'zolari ma\'lumotlarni kiritish uchun taymaut kutib.</string>
+    <string name="error_WebCancelledByUser">Foydalanuvchining server so\'rov bekor.</string>
+
+    <string name="help_size">Birgalikda ma\'lumotlarni va OK tugmasini bosing almashish uchun harakat qilayotgan odamlar sonini tanlang.</string>
+    <string name="help_userid">Ushbu ekranda soni foydalanuvchilar noyob guruh yaratish uchun ishlatiladi. Keyin barcha foydalanuvchilar bir xil eng kam soni va OK tugmasini bosing kiritish kerak, hamma foydalanuvchilar ekranlarda raqamlarini ko\'rib chiqish.</string>
+    <string name="help_verify">Endi, siz hamma foydalanuvchilar bilan bu 3-so\'z yoshroq birini mos bo\'lishi kerak. Har bir foydalanuvchi bir xil umumiy iborani tanlang va Oldinga ni bosing kerak.</string>
+
+    <string name="label_CompareScreensNDevices">%s qurilmalari ekranlar solishtiring.</string>
+    <string name="label_NumericModeHint">Nodavlat English</string>
+    <string name="label_PromptInstruct">Bu raqam foydalanuvchilar noyob guruh yaratish uchun ishlatiladi. Solishtiring va keyin barcha foydalanuvchilar orasida eng past raqamini kiriting.</string>
+    <string name="label_ReceivedNItems">%d nomdagi</string>
+    <string name="label_UserIdHint">Eng kam</string>
+    <string name="label_VerifyInstruct">Barcha telefonlar 3-so\'z yoshroq birini mos bo\'lishi kerak. Solishtiring, keyin taalukli ifoda terimiga.</string>
+
+    <string name="lib_name">SafeSlinger Exchange</string>
+
+    <string name="prog_CollectingOthersCommitVerify">hamma a\'zolari tekshirish uchun kutib…</string>
+    <string name="prog_CollectingOthersItems">Barcha foydalanuvchilar qo\'shilishga kutib…</string>
+    <string name="prog_ConstructingGroupKey">guruh kaliti qurish…</string>
+    <string name="prog_RequestingUserId">a\'zolikni talab…</string>
+
+    <string name="title_size">Qancha evaziga foydalanuvchilar?</string>
+    <string name="title_userid">Guruhlarga</string>
+    <string name="title_verify">Tasdiqlang</string>
+
+</resources>

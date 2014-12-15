@@ -25,52 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Saír? Está seguro?</string>
+    <string name="ask_QuitConfirmation">Deixar de fumar? Está seguro?</string>
 
-    <string name="btn_Match">Seguinte</string>
+    <string name="btn_Match">Next</string>
     <string name="btn_NoMatch">No Match</string>
 
     <string name="choice_NumUsers">%d usuarios</string>
 
-    <string name="error_AllMembersMustUpgrade">Algúns membros están a usar unha versión máis antiga; todos os membros deben actualizar á última versión.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Todos os membros deben actualizar, algúns están a usar formatos de rexistro de presión máis vellos.</string>
+    <string name="error_AllMembersMustUpgrade">Algúns membros están usando unha versión máis antiga; todos os membros deben actualizar á última versión.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Todos os membros deben actualizar, algúns están utilizando formatos de rexistro de envío máis vellos.</string>
     <string name="error_CorrectYourInternetConnection">Internet non está dispoñible, comproba a configuración.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Tipo de tempo de espera excedido. Comeza o intercambio de novo.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Cambio de tempo de espera excedido. Comezar o intercambio de novo.</string>
     <string name="error_HttpCode">Erro de servidor HTTP: %d</string>
-    <string name="error_InvalidCommitVerify">Datos incorrectos atopar a cambio. Comeza o intercambio de novo.</string>
-    <string name="error_InvalidCommonUserId">Introduza un número enteiro positivo.</string>
-    <string name="error_LocalGroupCommitDiffer">Vostede informaron unha diferenza de frases. Comeza o intercambio de novo.</string>
+    <string name="error_InvalidCommitVerify">Datos incorrectos atopou a cambio. Comezar o intercambio de novo.</string>
+    <string name="error_InvalidCommonUserId">Por favor, introduza un enteiro positivo.</string>
+    <string name="error_LocalGroupCommitDiffer">Vostede informaron unha diferenza de frases. Comezar o intercambio de novo.</string>
     <string name="error_MinUsersRequired">Un mínimo de %d membros están obrigados a cambiar datos.</string>
-    <string name="error_MoreDataThanUsers">Datos inesperados atopados en cambio. Comeza o intercambio de novo.</string>
+    <string name="error_MoreDataThanUsers">Datos inesperados atopou a cambio. Comezar o intercambio de novo.</string>
     <string name="error_NoDataToExchange">O intercambio falta datos necesarios.</string>
     <string name="error_NoWordListSelected">Debe seleccionar unha das frases antes de continuar.</string>
-    <string name="error_OtherGroupCommitDiffer">Alguén informou unha diferenza de frases. Comeza o intercambio de novo.</string>
+    <string name="error_OtherGroupCommitDiffer">Alguén informou unha diferenza de frases. Comezar o intercambio de novo.</string>
     <string name="error_OutOfMemoryError">A memoria é moi baixa para completar esta operación.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Sen resposta do servidor.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Tempo límite de espera para algúns membros do grupo para engadir datos.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Tempo de espera de espera para algúns membros do grupo para engadir datos.</string>
     <string name="error_WebCancelledByUser">O usuario cancelou petición do servidor.</string>
 
-    <string name="help_size">Seleccione o número de persoas que están intentando cambiar datos xuntos e prema Aceptar.</string>
-    <string name="help_userid">Este número nesa pantalla é usada para crear un único grupo de usuarios. Revise os números en pantallas de todos os usuarios, todos os usuarios deben escribir o mesmo número máis baixo e prema Aceptar.</string>
+    <string name="help_size">Seleccione o número de persoas que están tentando cambiar datos xuntos e prema Aceptar.</string>
+    <string name="help_userid">Este número nesa pantalla é usada para crear un único grupo de usuarios. Revise os números en pantallas de todos os usuarios, a continuación, todos os usuarios deben escribir o mesmo número máis baixo e prema Aceptar.</string>
     <string name="help_verify">Agora, ten que corresponder a unha destas frases de 3 palabras con todos os usuarios. Cada usuario debe seleccionar a mesma frase común, e prema Next.</string>
 
     <string name="label_CompareScreensNDevices">Compare pantallas en dispositivos %s.</string>
     <string name="label_NumericModeHint">Non-Inglés</string>
-    <string name="label_PromptInstruct">Este número utilízase para crear un único grupo de usuarios. Compare-se, a continuación, introduza o número máis baixo entre todos os usuarios.</string>
+    <string name="label_PromptInstruct">Este número utilízase para crear un único grupo de usuarios. Compare-se, a continuación, escriba o número máis baixo entre todos os usuarios.</string>
     <string name="label_ReceivedNItems">recibiu %d elementos</string>
     <string name="label_UserIdHint">Menor</string>
-    <string name="label_VerifyInstruct">Todos os teléfonos deben corresponder a un dos tres-word frases. Compare-se, e logo escoller a frase correspondente.</string>
+    <string name="label_VerifyInstruct">Todos os teléfonos deben corresponder a un dos 3-word frases. Compare-se, e logo escoller a frase correspondente.</string>
 
-    <string name="lib_name">SafeSlinger cambio</string>
+    <string name="lib_name">SafeSlinger Cambio</string>
 
     <string name="prog_CollectingOthersCommitVerify">espera para a verificación de todos os membros…</string>
-    <string name="prog_CollectingOthersItems">á espera de todos os usuarios para participar…</string>
+    <string name="prog_CollectingOthersItems">á espera de todos os usuarios de unirse…</string>
     <string name="prog_ConstructingGroupKey">construción de clave de grupo…</string>
     <string name="prog_RequestingUserId">solicitando a adhesión…</string>
 
     <string name="title_size">Cantos usuarios no troco?</string>
     <string name="title_userid">Agrupación</string>
-    <string name="title_verify">Comprobe</string>
+    <string name="title_verify">Comprobar</string>
 
 </resources>

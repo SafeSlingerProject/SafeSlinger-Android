@@ -27,50 +27,50 @@
 
     <string name="ask_QuitConfirmation">ترک؟ آیا مطمئن هستید؟</string>
 
-    <string name="btn_Match">بعدی</string>
-    <string name="btn_NoMatch">بدون در نظر گرفتن</string>
+    <string name="btn_Match">بعد</string>
+    <string name="btn_NoMatch">هیچ بازی</string>
 
     <string name="choice_NumUsers">کاربران %d</string>
 
-    <string name="error_AllMembersMustUpgrade">برخی از اعضای آن از نسخه قدیمی. همه اعضا باید به جدیدترین نسخه ارتقا دهید.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">تمام اعضای باید ارتقاء داده شده، برخی از آنها با استفاده از فرمت های قدیمی تر فشار ثبت نام.</string>
-    <string name="error_CorrectYourInternetConnection">اینترنت در دسترس نیست، تنظیمات خود را چک کنید.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">فاصله تبادل بیش از حد. دوباره آغاز ارز.</string>
-    <string name="error_HttpCode">خطا در سرور HTTP: %d</string>
-    <string name="error_InvalidCommitVerify">اطلاعات نادرست در ارز یافت. دوباره آغاز ارز.</string>
+    <string name="error_AllMembersMustUpgrade">برخی از اعضای با استفاده از نسخه قدیمی. همه اعضای باید به جدیدترین نسخه ارتقا دهید.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">همه اعضا باید ارتقاء داده شده، برخی از آنها با استفاده از فرمت های قدیمی تر فشار ثبت نام.</string>
+    <string name="error_CorrectYourInternetConnection">اینترنت در دسترس نیست، تنظیمات خود را بررسی کنید.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">ایست بورس بیش از. دوباره شروع تبادل.</string>
+    <string name="error_HttpCode">سرور خطا HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">اطلاعات نادرست در ارز یافت. دوباره شروع تبادل.</string>
     <string name="error_InvalidCommonUserId">لطفا یک عدد صحیح مثبت را وارد کنید.</string>
-    <string name="error_LocalGroupCommitDiffer">شما تفاوت در عبارات را گزارش کرده اند. دوباره آغاز ارز.</string>
+    <string name="error_LocalGroupCommitDiffer">شما تفاوت در عبارات را گزارش کرده اند. دوباره شروع تبادل.</string>
     <string name="error_MinUsersRequired">حداقل %d عضو ملزم به تبادل اطلاعات.</string>
-    <string name="error_MoreDataThanUsers">اطلاعات غیرمنتظره در ارز یافت. دوباره آغاز ارز.</string>
+    <string name="error_MoreDataThanUsers">اطلاعات غیرمنتظره در ارز یافت. دوباره شروع تبادل.</string>
     <string name="error_NoDataToExchange">تبادل گم شده است داده های مورد نیاز است.</string>
     <string name="error_NoWordListSelected">شما باید یکی از عبارات قبل از اقدام انتخاب کنید.</string>
-    <string name="error_OtherGroupCommitDiffer">کسی گزارش تفاوت در عبارات. دوباره آغاز ارز.</string>
-    <string name="error_OutOfMemoryError">حافظه بسیار کم است برای تکمیل این عملیات.</string>
+    <string name="error_OtherGroupCommitDiffer">کسی گزارش تفاوت در عبارات. دوباره شروع تبادل.</string>
+    <string name="error_OutOfMemoryError">حافظه بیش از حد کم است برای تکمیل این عملیات.</string>
     <string name="error_ServerAppMessage">سرور پیام: %s</string>
     <string name="error_ServerNotResponding">بدون پاسخ از سرور.</string>
-    <string name="error_TimeoutWaitingForAllMembers">زمان انتظار برای برخی از اعضای گروه به اضافه کردن اطلاعات.</string>
+    <string name="error_TimeoutWaitingForAllMembers">زمان انتظار برای برخی از اعضای گروه برای اضافه کردن داده ها.</string>
     <string name="error_WebCancelledByUser">کاربر لغو درخواست سرور.</string>
 
-    <string name="help_size">تعداد زیادی از مردم که در حال تلاش برای تبادل اطلاعات با یکدیگر و OK را فشار دهید را انتخاب کنید.</string>
-    <string name="help_userid">این تعداد در این صفحه نمایش استفاده می شود برای ایجاد یک گروه منحصر به فرد از کاربران. بررسی اعداد در صفحه نمایش تمامی کاربران، سپس تمام کاربران باید همین کمترین تعداد و مطبوعات OK را وارد کنید.</string>
-    <string name="help_verify">در حال حاضر، شما باید یکی از این عبارات 3 کلمه با تمام کاربران مطابقت دارند. هر کاربر باید که عبارت معمول همان را انتخاب کنید و بعد فشار دهید.</string>
+    <string name="help_size">تعداد زیادی از مردم که در حال تلاش برای تبادل اطلاعات با یکدیگر و OK را فشار دهید انتخاب کنید.</string>
+    <string name="help_userid">این تعداد در این صفحه نمایش استفاده می شود برای ایجاد یک گروه منحصر به فرد از کاربران. بررسی اعداد بر روی صفحه نمایش تمام کاربران، سپس تمام کاربران باید همان کمترین تعداد و OK را فشار دهید را وارد کنید.</string>
+    <string name="help_verify">در حال حاضر، شما باید یکی از این عبارات 3 کلمه با تمام کاربران مطابقت. هر کاربر باید عبارت مشترک همان را انتخاب کنید، و بعد فشار دهید.</string>
 
     <string name="label_CompareScreensNDevices">مقایسه صفحه نمایش در دستگاه های %s.</string>
     <string name="label_NumericModeHint">غیر انگلیسی</string>
-    <string name="label_PromptInstruct">این عدد استفاده می شود برای ایجاد یک گروه منحصر به فرد از کاربران. مقایسه، و سپس وارد کمترین تعداد در میان همه کاربران.</string>
-    <string name="label_ReceivedNItems">%d آیتم دریافت</string>
+    <string name="label_PromptInstruct">این عدد استفاده می شود برای ایجاد یک گروه منحصر به فرد از کاربران. مقایسه، و سپس وارد کمترین تعداد را در میان تمام کاربران.</string>
+    <string name="label_ReceivedNItems">%d اقلام دریافت</string>
     <string name="label_UserIdHint">پایین ترین</string>
-    <string name="label_VerifyInstruct">تمامی مدل ها باید یکی از عبارات 3 کلمه. مقایسه، و سپس عبارت تطبیق انتخاب کنید.</string>
+    <string name="label_VerifyInstruct">همه تلفن های باید یکی از عبارات 3 کلمه مطابقت. مقایسه، و سپس عبارت تطبیق انتخاب کنید.</string>
 
-    <string name="lib_name">SafeSlinger اوراق بهادار</string>
+    <string name="lib_name">SafeSlinger تبادل</string>
 
     <string name="prog_CollectingOthersCommitVerify">انتظار برای تأیید از تمام اعضای…</string>
-    <string name="prog_CollectingOthersItems">انتظار برای همه کاربران برای پیوستن به…</string>
+    <string name="prog_CollectingOthersItems">انتظار برای تمام کاربران برای پیوستن به…</string>
     <string name="prog_ConstructingGroupKey">ساخت کلید گروه…</string>
     <string name="prog_RequestingUserId">درخواست عضویت در…</string>
 
     <string name="title_size">چگونه بسیاری از کاربران در ارز؟</string>
     <string name="title_userid">گروه بندی</string>
-    <string name="title_verify">تایید</string>
+    <string name="title_verify">بررسی</string>
 
 </resources>

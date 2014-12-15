@@ -32,45 +32,45 @@
 
     <string name="choice_NumUsers">%d хэрэглэгчид</string>
 
-    <string name="error_AllMembersMustUpgrade">Зарим гишүүд хуучин хувилбарыг ашиглаж байгаа; бүх гишүүд хамгийн сүүлийн үеийн хувилбар руу шинэчлэх ёстой.</string>
+    <string name="error_AllMembersMustUpgrade">Зарим гишүүд хуучин хувилбарыг ашиглаж байгаа; Бүх гишүүд хамгийн сүүлийн үеийн хувилбар руу шинэчлэх ёстой.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Бүх гишүүд нь зарим хуучин түлхэх бүртгэлийн форматыг ашиглаж байгаа, шинэчлэх ёстой.</string>
-    <string name="error_CorrectYourInternetConnection">Интернэт байхгүй байгаа нь таны тохиргоонуудыг шалгах хэрэгтэй.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Валютын хугацаа нь хэтэрсэн байна. Дахин солилцох эхэл.</string>
-    <string name="error_HttpCode">Сервер нь HTTP Алдаа: %d</string>
-    <string name="error_InvalidCommitVerify">Буруу мэдээлэл солилцох олдсон. Дахин солилцох эхэл.</string>
+    <string name="error_CorrectYourInternetConnection">Интернэт бэлэн биш, өөрийн тохиргоог шалгах хэрэгтэй.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Валютын хугацаа нь хэтэрсэн байна. Дахин солилцоог эхлүүлэх хэрэгтэй.</string>
+    <string name="error_HttpCode">Сервер HTTP Алдаа: %d</string>
+    <string name="error_InvalidCommitVerify">Буруу мэдээлэл солилцох олж. Дахин солилцоог эхлүүлэх хэрэгтэй.</string>
     <string name="error_InvalidCommonUserId">Нь эерэг бүхэл тоо оруулна уу.</string>
-    <string name="error_LocalGroupCommitDiffer">Та хэллэгийн ялгааг мэдээлсэн байна. Дахин солилцох эхэл.</string>
+    <string name="error_LocalGroupCommitDiffer">Та хэллэгийг өөрчлөлт мэдээлсэн байна. Дахин солилцоог эхлүүлэх хэрэгтэй.</string>
     <string name="error_MinUsersRequired">%d гишүүн доод тал нь мэдээлэл солилцох шаардлагатай байна.</string>
-    <string name="error_MoreDataThanUsers">Гэнэтийн мэдээлэл солилцох олдсон. Дахин солилцох эхэл.</string>
+    <string name="error_MoreDataThanUsers">Гэнэтийн мэдээлэл солилцох олж. Дахин солилцоог эхлүүлэх хэрэгтэй.</string>
     <string name="error_NoDataToExchange">Солилцох шаардлагатай мэдээлэл байхгүй байна.</string>
-    <string name="error_NoWordListSelected">Та өмнө өгүүлбэрийн нэгийг нь сонгох ёстой.</string>
-    <string name="error_OtherGroupCommitDiffer">Хэн нэгэн хэллэгийг өөрчлөлт мэдээлсэн. Дахин солилцох эхэл.</string>
-    <string name="error_OutOfMemoryError">Санах ой энэ үйлдлийг дуусгах хэтэрхий бага юм.</string>
+    <string name="error_NoWordListSelected">Та туршилтыг дахин хийхээсээ өмнө өгүүлбэрийн нэгийг нь сонгох ёстой.</string>
+    <string name="error_OtherGroupCommitDiffer">Хэн нэгэн хэллэгийг өөрчлөлт байна. Дахин солилцоог эхлүүлэх хэрэгтэй.</string>
+    <string name="error_OutOfMemoryError">Санах ойн энэ үйлдлийг дуусгах хэтэрхий бага юм.</string>
     <string name="error_ServerAppMessage">Сервер мэдээ: %s</string>
     <string name="error_ServerNotResponding">Серверээс ямар ч хариу арга хэмжээ.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Зарим бүлгийн гишүүд нь өгөгдөл нэмэх нь ажиллах хугацаа хүлээж байна.</string>
-    <string name="error_WebCancelledByUser">Хэрэглэгчийн сервер хүсэлт цуцалжээ.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Зарим бүлгийн гишүүд өгөгдөл нэмэх нь хугацаа нь хүлээж байна.</string>
+    <string name="error_WebCancelledByUser">Хэрэглэгчийн сервер хүсэлтийг хүчингүй.</string>
 
-    <string name="help_size">Хамтад нь өгөгдөл болон хэвлэлийн OK солилцох гэж байгаа хүмүүсийн тоог сонгоно.</string>
-    <string name="help_userid">Энэ нь дэлгэц дээр Энэ тоо нь хэрэглэгчдийн өвөрмөц бүлэг үүсгэхийн тулд ашиглаж байна. Дараа нь бүх хэрэглэгчдийг адил хамгийн бага тоо, хэвлэлийн OK оруулах ёстой, бүх хэрэглэгчийн дэлгэц дээр тоог нэгтгэн дүгнэ.</string>
-    <string name="help_verify">Одоо та нар, бүх хэрэглэгчдийн эдгээр 3-гэдэг үг нь өгүүлбэрийн нэгийг нь таарч байх ёстой. Хэрэглэгч бүрд адил нийтлэг хэллэг сонгож, Next дарж байх ёстой.</string>
+    <string name="help_size">Хамтран мэдээлэл, хэвлэлийн OK солилцох гэж байгаа хүмүүсийн тоог сонгоно уу.</string>
+    <string name="help_userid">Энэ дэлгэц дээрх Энэ тоо нь хэрэглэгчдийн өвөрмөц бүлэг үүсгэхийн тулд ашиглаж байна. Дараа нь бүх хэрэглэгчид нэг хамгийн бага тоо, хэвлэл мэдээллийн OK оруулах ёстой, бүх хэрэглэгчдийн дэлгэц дээр тоог нэгтгэн дүгнэ.</string>
+    <string name="help_verify">Одоо та нар бүх хэрэглэгчид эдгээр 3 гэдэг үгийг өгүүлбэрийн нэгийг нь таарч байх ёстой. Хэрэглэгч бүрд нэг нийтлэг хэллэг сонгож, Next дарж ёстой.</string>
 
-    <string name="label_CompareScreensNDevices">%s төхөөрөмж дээр дэлгэцүүд харьцуул.</string>
-    <string name="label_NumericModeHint">Non-Англи хэл</string>
-    <string name="label_PromptInstruct">Энэ тоо нь хэрэглэгчдийн өвөрмөц бүлэг үүсгэхийн тулд ашиглаж байна. Харьцуулж, дараа нь бүх хэрэглэгчдийн дунд хамгийн бага тоог оруулна.</string>
+    <string name="label_CompareScreensNDevices">%s төхөөрөмжүүд дээр дэлгэцтэй харьцуул.</string>
+    <string name="label_NumericModeHint">Англи биш</string>
+    <string name="label_PromptInstruct">Энэ тоо нь хэрэглэгчдийн өвөрмөц бүлэг үүсгэхийн тулд ашиглаж байна. Харьцуулж, дараа нь бүх хэрэглэгчдийн дунд хамгийн бага тоог оруулна уу.</string>
     <string name="label_ReceivedNItems">%d зүйлсийг хүлээн авсан</string>
     <string name="label_UserIdHint">Хамгийн бага</string>
-    <string name="label_VerifyInstruct">Бүх гар утас 3-гэдэг үг нь өгүүлбэрийн нэгийг нь таарч байх ёстой. Харьцуулж, дараа нь тохирсон хэллэгийг сонгоорой.</string>
+    <string name="label_VerifyInstruct">Бүх гар утас 3 гэдэг үгийг өгүүлбэрийн нэгийг нь таарч байх ёстой. Харьцуулж, дараа нь тохирсон өгүүлбэр сонгоорой.</string>
 
     <string name="lib_name">SafeSlinger бирж</string>
 
-    <string name="prog_CollectingOthersCommitVerify">бүх гишүүдийн нотолгоо хүлээж…</string>
-    <string name="prog_CollectingOthersItems">бүх хэрэглэгчид нэгдэж хүлээж…</string>
-    <string name="prog_ConstructingGroupKey">бүлгийн түлхүүр барих…</string>
-    <string name="prog_RequestingUserId">гишүүн хүсэлт…</string>
+    <string name="prog_CollectingOthersCommitVerify">Бүх гишүүд шалгалтын хүлээж…</string>
+    <string name="prog_CollectingOthersItems">бүх хэрэглэгчид нэгдэн орох хүлээж…</string>
+    <string name="prog_ConstructingGroupKey">бүлэг түлхүүр байгуулах…</string>
+    <string name="prog_RequestingUserId">гишүүнчлэлийг хүсэлт…</string>
 
-    <string name="title_size">Хэдэн солилцоо хэрэглэгчид?</string>
-    <string name="title_userid">Бүлэглэлт</string>
-    <string name="title_verify">Шалгах</string>
+    <string name="title_size">Хэдэн оронд нь хэрэглэгчид?</string>
+    <string name="title_userid">Булэглэж</string>
+    <string name="title_verify">Шалгана</string>
 
 </resources>

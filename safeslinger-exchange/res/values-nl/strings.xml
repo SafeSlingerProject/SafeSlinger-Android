@@ -25,51 +25,51 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Beëindigen? Ben je zeker?</string>
+    <string name="ask_QuitConfirmation">Stoppen? Weet je het zeker?</string>
 
     <string name="btn_Match">Volgende</string>
-    <string name="btn_NoMatch">Geen overeenstemming</string>
+    <string name="btn_NoMatch">Geen Wedstrijd</string>
 
     <string name="choice_NumUsers">%d gebruikers</string>
 
     <string name="error_AllMembersMustUpgrade">Sommige leden zijn met behulp van een oudere versie; Alle leden moeten upgraden naar de nieuwste versie.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Alle leden moeten upgraden, wat gebruik maakt van oudere push registratie formaten.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Alle leden moeten upgraden, sommige zijn met behulp van oudere push registratie formaten.</string>
     <string name="error_CorrectYourInternetConnection">Internet niet beschikbaar is, controleert u de instellingen.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout overschreden. Begin de uitwisseling weer.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout overschreden. Begin de uitwisseling opnieuw.</string>
     <string name="error_HttpCode">Server HTTP-fout: %d</string>
-    <string name="error_InvalidCommitVerify">Onjuiste gegevens gevonden in ruil. Begin de uitwisseling weer.</string>
-    <string name="error_InvalidCommonUserId">A.u.b.vul een positief geheel getal in.</string>
-    <string name="error_LocalGroupCommitDiffer">Je hebt een verschil in zinnen gemeld. Begin de uitwisseling weer.</string>
-    <string name="error_MinUsersRequired">Een minimum van %d leden dienen gegevens uitwisselen.</string>
-    <string name="error_MoreDataThanUsers">Onverwachte gegevens gevonden in ruil. Begin de uitwisseling weer.</string>
+    <string name="error_InvalidCommitVerify">Onjuiste gegevens gevonden in ruil. Begin de uitwisseling opnieuw.</string>
+    <string name="error_InvalidCommonUserId">Geef een positief geheel getal.</string>
+    <string name="error_LocalGroupCommitDiffer">Je hebt een verschil in zinnen gemeld. Begin de uitwisseling opnieuw.</string>
+    <string name="error_MinUsersRequired">Een minimum van %d leden zijn verplicht om gegevens uit te wisselen.</string>
+    <string name="error_MoreDataThanUsers">Onverwachte gegevens gevonden in ruil. Begin de uitwisseling opnieuw.</string>
     <string name="error_NoDataToExchange">De uitwisseling ontbreekt vereiste gegevens.</string>
-    <string name="error_NoWordListSelected">U moet een van de combinaties kiezen voordat U verder gaat.</string>
-    <string name="error_OtherGroupCommitDiffer">Iemand rapporteerde een verschil in zinnen. Begin de uitwisseling weer.</string>
-    <string name="error_OutOfMemoryError">Geheugen te laag om deze verrichting.</string>
-    <string name="error_ServerAppMessage">Server bericht: %s</string>
-    <string name="error_ServerNotResponding">Geen reactie van server.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Time-out wacht op sommige groep leden om gegevens toe te voegen.</string>
-    <string name="error_WebCancelledByUser">Bewerking geannuleerd door gebruiker.</string>
+    <string name="error_NoWordListSelected">U moet een van de zinnen te selecteren voordat u verder gaat.</string>
+    <string name="error_OtherGroupCommitDiffer">Iemand rapporteerde een verschil in zinnen. Begin de uitwisseling opnieuw.</string>
+    <string name="error_OutOfMemoryError">Geheugen is te laag om deze verrichting.</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerNotResponding">Geen reactie van de server.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Time-out te wachten voor sommige groepsleden om gegevens toe te voegen.</string>
+    <string name="error_WebCancelledByUser">Gebruiker geannuleerd server verzoek.</string>
 
     <string name="help_size">Selecteer het aantal mensen die proberen om gegevens samen en druk op OK te wisselen.</string>
-    <string name="help_userid">Dit nummer op deze scherm wordt gebruikt om een unieke gebruiker groep te maken.Vindt de laagste gemeenschappelijke nummer van de schermen van alle gebruikers, dan moeten alle gebruikers deze nummer ingeven en OK drukken.</string>
-    <string name="help_verify">Nu moet een van deze 3 woord combinaties met alle gebruikers overeenstemmen.Iedere gebruiker moet dezelfde gemeenschappelijke combinatie kiezen, en druk op.</string>
+    <string name="help_userid">Dit aantal op dit scherm wordt gebruikt om een unieke groep gebruikers. Geef je mening over de nummers op de schermen van alle gebruikers, dan zullen alle gebruikers moeten invoeren hetzelfde laagste aantal in en druk op OK.</string>
+    <string name="help_verify">Nu, je moet overeenkomen met één van deze 3-woord zinnen met alle gebruikers. Elke gebruiker moet dezelfde gemeenschappelijke uitdrukking te selecteren en druk op Volgende.</string>
 
-    <string name="label_CompareScreensNDevices">Vergelijk schermen %s apparaten.</string>
+    <string name="label_CompareScreensNDevices">Vergelijk schermen op %s apparaten.</string>
     <string name="label_NumericModeHint">Niet-Engels</string>
-    <string name="label_PromptInstruct">Dit nummer wordt gebruikt om een ​​unieke groep gebruikers te creëren. Vergelijken, en voer vervolgens het laagste aantal van alle gebruikers.</string>
-    <string name="label_ReceivedNItems">ontvangen %d artikelen</string>
+    <string name="label_PromptInstruct">Dit nummer wordt gebruikt om een unieke groep gebruikers. Vergelijk en voer vervolgens het laagste aantal van alle gebruikers.</string>
+    <string name="label_ReceivedNItems">ontving %d artikelen</string>
     <string name="label_UserIdHint">Laagste</string>
-    <string name="label_VerifyInstruct">Alle telefoons moeten overeenkomen met een van de 3 woord combinaties. Vergelijk, dan kies de passende combinatie.</string>
+    <string name="label_VerifyInstruct">Alle telefoons moet overeenkomen met één van de 3-woord zinnen. Vergelijk en pak dan de matching zin.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">Wachten op verificatie van de alle leden…</string>
-    <string name="prog_CollectingOthersItems">Wachten op alle leden zich aan te sluiten…</string>
-    <string name="prog_ConstructingGroupKey">construeren groeptoets…</string>
-    <string name="prog_RequestingUserId">Aanvragen van het lidmaatschap…</string>
+    <string name="prog_CollectingOthersCommitVerify">wachten op de verificatie van alle leden…</string>
+    <string name="prog_CollectingOthersItems">wachten voor alle gebruikers om deel te nemen…</string>
+    <string name="prog_ConstructingGroupKey">construeren groep key…</string>
+    <string name="prog_RequestingUserId">het aanvragen van het lidmaatschap…</string>
 
-    <string name="title_size">Hoeveel gebruikers in de ruil?</string>
+    <string name="title_size">Hoeveel gebruikers in de uitwisseling?</string>
     <string name="title_userid">Groepering</string>
     <string name="title_verify">Controleren</string>
 

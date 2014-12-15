@@ -25,52 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Quit? Համոզված եք</string>
+    <string name="ask_QuitConfirmation">Quit? Համոզված եք?</string>
 
     <string name="btn_Match">Հաջորդ</string>
     <string name="btn_NoMatch">Ոչ Match</string>
 
     <string name="choice_NumUsers">%d օգտվողները</string>
 
-    <string name="error_AllMembersMustUpgrade">Որոշ անդամներ օգտվում հին տարբերակը. բոլոր անդամները պետք է բարելավել է նորագույն տարբերակը.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Բոլոր անդամները պետք է բարձրացնել, ոմանք օգտագործում են հին հրում գրանցման ձեւաչափեր.</string>
-    <string name="error_CorrectYourInternetConnection">Ինտերնետ չէ, ստուգեք Ձեր կարգավորումները.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Տարադրամի timeout գերազանցել. Սկիզբ փոխանակում կրկին.</string>
+    <string name="error_AllMembersMustUpgrade">Որոշ անդամներ օգտվում հին տարբերակը. բոլոր անդամները պետք է բարելավել նորագույն տարբերակը.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Բոլոր անդամները պետք է բարձրացնել, ոմանք օգտվում են հին հրում գրանցման ձեւաչափերով:</string>
+    <string name="error_CorrectYourInternetConnection">Ինտերնետ հասանելի չէ, ապա ստուգեք ձեր կարգավորումները.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Փոխանակման timeout գերազանցել. Սկիզբ փոխանակումը կրկին.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Սխալ տվյալներ հայտնաբերվել դիմաց. Սկիզբ փոխանակում կրկին.</string>
-    <string name="error_InvalidCommonUserId">Խնդրում ենք մուտքագրել դրական ամբողջ թիվ.</string>
-    <string name="error_LocalGroupCommitDiffer">Դուք ՀՀ հաղորդում է փոխել արտահայտություններ. Սկիզբ փոխանակում կրկին.</string>
-    <string name="error_MinUsersRequired">Առնվազն %d անդամներից պահանջվում են փոխանակել տվյալները.</string>
-    <string name="error_MoreDataThanUsers">Անսպասելի տվյալներ հայտնաբերվել դիմաց. Սկիզբ փոխանակում կրկին.</string>
+    <string name="error_InvalidCommitVerify">Սխալ տվյալներ հայտնաբերվել դիմաց. Սկիզբ փոխանակումը կրկին.</string>
+    <string name="error_InvalidCommonUserId">Խնդրում ենք մուտքագրել մի դրական ամբողջ թիվ.</string>
+    <string name="error_LocalGroupCommitDiffer">Դուք հաղորդում է տարբերություն արտահայտություններ. Սկիզբ փոխանակումը կրկին.</string>
+    <string name="error_MinUsersRequired">Առնվազն %d անդամներից պահանջվում է փոխանակել տվյալները.</string>
+    <string name="error_MoreDataThanUsers">Անսպասելի տվյալների հայտնաբերվել դիմաց. Սկիզբ փոխանակումը կրկին.</string>
     <string name="error_NoDataToExchange">Փոխանակման բացակայում պահանջվող տվյալները.</string>
-    <string name="error_NoWordListSelected">Դուք պետք է ընտրել մեկը արտահայտություններ առաջ ընթանում.</string>
-    <string name="error_OtherGroupCommitDiffer">Ինչ-որ մեկը, հաղորդում է տարբերություն արտահայտություններ. Սկիզբ փոխանակում կրկին.</string>
-    <string name="error_OutOfMemoryError">Հիշողության շատ ցածր է լրացնել այդ գործողությունը:</string>
-    <string name="error_ServerAppMessage">Server Հաղորդագրություն: %s</string>
-    <string name="error_ServerNotResponding">Ոչ արձագանքը սերվերում.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout սպասում որոշ խմբի անդամները ավելացնել տվյալներ.</string>
-    <string name="error_WebCancelledByUser">Օգտվող չեղյալ սերվերի դիմումը.</string>
+    <string name="error_NoWordListSelected">Դուք պետք է ընտրեք մեկը, արտահայտություններ, նախքան անցնելը.</string>
+    <string name="error_OtherGroupCommitDiffer">Ինչ-որ մեկը ՀՀ հաղորդում է տարբերությունը արտահայտություններ. Սկիզբ փոխանակումը կրկին.</string>
+    <string name="error_OutOfMemoryError">Հիշողության շատ ցածր է լրացնել այս գործողությունը.</string>
+    <string name="error_ServerAppMessage">Server հաղորդագրություն: %s</string>
+    <string name="error_ServerNotResponding">Ոչ պատասխան սերվերի.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout սպասում որոշ խմբի անդամները պետք է ավելացնել տվյալները.</string>
+    <string name="error_WebCancelledByUser">Օգտվող չեղյալ է սերվերի խնդրանքը.</string>
 
-    <string name="help_size">Ընտրեք մի շարք մարդիկ, ովքեր փորձում են տվյալների փոխանակման միասին եւ սեղմեք OK:</string>
-    <string name="help_userid">Այս թիվը այս էկրանին, որն օգտագործվում է ստեղծել յուրահատուկ խումբ օգտագործողներ. Վերանայել թվերը բոլոր օգտվողների էկրաններին, ապա բոլոր օգտվողները պետք է մտնել նույն ամենացածր համարը եւ սեղմեք OK:</string>
-    <string name="help_verify">Այժմ դուք պետք է համընկնի մեկը այս 3 բառ արտահայտություններ հետ բոլոր օգտվողներին. Յուրաքանչյուր օգտվող պարտավոր է ընտրել նույն ընդհանուր արտահայտությունը եւ սեղմեք Հաջորդ.</string>
+    <string name="help_size">Ընտրեք թվով մարդիկ, ովքեր փորձում են փոխանակել տվյալներ միասին եւ սեղմեք OK:</string>
+    <string name="help_userid">Այս թիվը այս էկրանի վրա, որն օգտագործվում է ստեղծել յուրահատուկ խումբ օգտագործողներ. Վերանայել համարները բոլոր օգտվողների էկրաններին, ապա բոլոր օգտվողները պետք է մտնել նույն ամենացածր համարը եւ սեղմեք OK:</string>
+    <string name="help_verify">Այժմ, դուք պետք է համընկնի մեկը այս 3-բառի արտահայտություններով բոլոր օգտագործողների համար. Յուրաքանչյուր օգտվող պարտավոր է ընտրել նույն ընդհանուր արտահայտություն, եւ սեղմեք Հաջորդ.</string>
 
-    <string name="label_CompareScreensNDevices">Համեմատեք էկրանները %s սարքեր.</string>
-    <string name="label_NumericModeHint">Ոչ անգլերեն</string>
-    <string name="label_PromptInstruct">Այս թիվը, որն օգտագործվում է ստեղծել յուրահատուկ խումբ օգտագործողներ. Համեմատեք, ապա մուտքագրեք ամենացածր շարք են բոլոր օգտվողներին.</string>
+    <string name="label_CompareScreensNDevices">Համեմատեք էկրանների վրա %s սարքեր.</string>
+    <string name="label_NumericModeHint">Ոչ հայերեն</string>
+    <string name="label_PromptInstruct">Այս թիվը, որն օգտագործվում է ստեղծել յուրահատուկ խումբ օգտագործողներ. Համեմատեք, ապա մուտքագրեք ամենացածր շարք է բոլոր օգտագործողների համար.</string>
     <string name="label_ReceivedNItems">ստացել է %d իրեր</string>
     <string name="label_UserIdHint">Նվազագույն</string>
-    <string name="label_VerifyInstruct">Բոլոր հեռախոսները պետք է համընկնի մեկը 3 բառը արտահայտություններ. Համեմատեք, եւ ապա ընտրել համապատասխան արտահայտություն.</string>
+    <string name="label_VerifyInstruct">Բոլոր հեռախոսներ պետք է համընկնի մեկը 3-բառը արտահայտություններով: Համեմատեք, եւ ապա ընտրել համապատասխան արտահայտություն.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">սպասում է ստուգման բոլոր անդամները…</string>
-    <string name="prog_CollectingOthersItems">սպասում է բոլոր օգտվողներին միանալ…</string>
+    <string name="prog_CollectingOthersCommitVerify">սպասում է ստուգման բոլոր անդամների…</string>
+    <string name="prog_CollectingOthersItems">սպասում բոլոր օգտվողներին միանալ…</string>
     <string name="prog_ConstructingGroupKey">կառուցման խմբի բանալին…</string>
-    <string name="prog_RequestingUserId">հարցում անդամակցությունը…</string>
+    <string name="prog_RequestingUserId">խնդրելով անդամակցությունը…</string>
 
-    <string name="title_size">Քանի օգտվողները փոխանակման.</string>
-    <string name="title_userid">Խմբում</string>
+    <string name="title_size">Ինչպես շատերն օգտվողները փոխանակման.</string>
+    <string name="title_userid">Խմբավորման</string>
     <string name="title_verify">Ստուգել</string>
 
 </resources>

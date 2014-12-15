@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">හරහා Sling යතුරු සබඳතා ආරාධනය එක් කරන්න…</string>
+
+    <string name="app_name">SafeSlinger</string>
+
+    <string name="ask_BackupDisabledRemindLater">බැකප් අක්රීය කර ඇත. උපස්ථ සැකසුම් සකස් මෙම මතක් තබා ගැනීමට අවශ්ය ද?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s වඩාත් මෑත උපාංගයක් හෝ යතුරක්, ඔබට මෙම පැරණි එකක් භාවිතා කිරීමට අවශ්ය බව ඔබට විශ්වාසද?</string>
+    <string name="ask_FileExistsOverwrite">ගොනු නාමය %s දැනටමත් පවතී. මොකටද?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Google ගිණුමක් නොමැති නම් පණිවුඩ පමණක් ලැබෙන නොව යැවීමට හැකි වනු ඇත. ඔබ Google ගිණුම එකතු කිරීමට අවශ්යද?</string>
+    <string name="ask_SendErrorData">අපි SafeSlinger වැඩි දියුණු කිරීම ඔබගේ උදව් කැමතියි. ඔබ ඉබේම අපට කිසිදු දෝෂයක් යැවීමට කැමතිද?</string>
+
+    <string name="btn_Accept">භාර ගන්න</string>
+    <string name="btn_BeginExchangeProximity">විනිමය ආරම්භ කරන්න</string>
+    <string name="btn_Cancel">අවලංගු කරන්න</string>
+    <string name="btn_Close">වසන්න</string>
+    <string name="btn_Continue">දිගටම</string>
+    <string name="btn_CreateNewKey">නව යතුරක් නිර්මාණය</string>
+    <string name="btn_DeleteKeys">Delete යතුරු</string>
+    <string name="btn_discard">අතහරින්නද</string>
+    <string name="btn_Done">සිදු</string>
+    <string name="btn_Edit">සංස්කරණය කරන්න</string>
+    <string name="btn_Exit">පිටවීම</string>
+    <string name="btn_Import">ආනයන</string>
+    <string name="btn_Introduce">හදුන්වා දීම</string>
+    <string name="btn_No">මෙයට</string>
+    <string name="btn_NotNow">දැන් නොවේ</string>
+    <string name="btn_NotRemind">අමතක කරන්න</string>
+    <string name="btn_OK">හරි</string>
+    <string name="btn_Refuse">ප්රතික්ෂේප</string>
+    <string name="btn_Remind">මතක්</string>
+    <string name="btn_Save">සුරකින්න</string>
+    <string name="btn_SelectFile">ඇමුණුම් එකතු කරන්න</string>
+    <string name="btn_SendFile">ට පණිවුඞයක් යවන්න</string>
+    <string name="btn_Yes">ඔව්</string>
+
+    <string name="choice_10mins">විනාඩි 10</string>
+    <string name="choice_1hour">පැය 1</string>
+    <string name="choice_1min">විනාඩි 1</string>
+    <string name="choice_20mins">විනාඩි 20 ක්</string>
+    <string name="choice_2hours">පැය 2</string>
+    <string name="choice_3mins">මිනිත්තු 3</string>
+    <string name="choice_40mins">විනාඩි 40</string>
+    <string name="choice_4hours">පැය 4</string>
+    <string name="choice_5mins">මිනිත්තු 5</string>
+    <string name="choice_8hours">පැය 8</string>
+    <string name="choice_auto_storage">පෙරනිමි කාර්මික</string>
+    <string name="choice_default">පෙරනිමි</string>
+    <string name="choice_external_storage">විදේශ කාර්මික</string>
+    <string name="choice_font_large">විශාල</string>
+    <string name="choice_font_medium">මධ්ය</string>
+    <string name="choice_font_micro">ඉතා කුඩා</string>
+    <string name="choice_font_small">කුඩා</string>
+    <string name="choice_internal_storage">අභ්යන්තර කාර්මික</string>
+    <string name="choice_nolimit">නෝ ලිමිට්</string>
+    <string name="choice_SaveDirectory">නාමාවලිය සුරකින්න</string>
+    <string name="choice_SaveFile">ගොනුව සුරකින්න</string>
+    <string name="choice_Up">දක්වා</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">සියලුම සාමාජිකයින් සමහර පැරණි ප්රධාන ආකෘති භාවිතා, ප්රගමනය යුතුය.</string>
+    <string name="error_AudioPlayerDecodeError">දෝෂයක් ප්රහේලිකාව ලිහා audio player.</string>
+    <string name="error_AudioPlayerError">පටිගත ධාවනය කල නොහැක.</string>
+    <string name="error_AudioRecorderEncodeError">ශ්රව්ය උපකරණ පටිගත කේතනය දෝෂයක්.</string>
+    <string name="error_AudioRecorderPermissionError">මයික්රෆෝනය අවසර සුරක්ෂිත හඬ පණිවුඩයක් පටිගත කිරීම සඳහා අවශ්ය වේ. SafeSlinger යන්නෙත් හුරතලේට අවසර තොරතුරු සඳහා %s බොත්තම තට්ටු කරන්න.</string>
+    <string name="error_BackupNotFound">නැවත කිසිදු උපස්ථ.</string>
+    <string name="error_BackupNotSupportedDevice">උපාංගය බැකප් දත්ත යළි සඳහා පහසුකම් සපයන්නේ නැත.</string>
+    <string name="error_BadCopyProtectUpgrade">නිසා ඇන්ඩ්රොයිඩ් 4.1 දෝෂය කිරීම සඳහා, ඔබ SafeSlinger අස්ථාපනය සහ නැවත ස්ථාපනය කිරීම සඳහා වේ.</string>
+    <string name="error_C2DMRegAccountMissing">Google ගිණුමක් අවශ්ය වේ. ගිණුම් කළමනාකරු විවෘත සහ Google ගිණුම එක් කිරීමට කාරුණික වන්න.</string>
+    <string name="error_C2DMRegAuthenticationFailed">ලියාපදිංචි සත්යවත් කර නොමැත, පසුව අතින් නැවත උත්සහ කරන්න.</string>
+    <string name="error_C2DMRegInvalidSender">ලියාපදිංචි මෙම අනුවාදය සඳහා ගත නොහැකි ය, යාවත්කාලීන අනුවාදය සඳහා පරීක්ෂා කරන්න.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Google සමග වැරදි උපකරණයක් ලියාපදිංචි කිරීම. මෙම උපකරණය දැනට තල්ලුව පණිවුඩ සඳහා පහසුකම් සපයන්නේ නැත.</string>
+    <string name="error_C2DMRegServiceNotAvailable">ලබාගත නොහැකි තල්ලුව ලියාපදිංචි සේවය, %d තත්පර සටහන් උත්සාහ කර බලන්න.</string>
+    <string name="error_C2DMRegTooManyRegistrations">බොහෝ යෙදුම් Push සඳහා ලියාපදිංචි කරනු ලැබේ. සමහර වෙනත් යෙදුම් අස්ථාපනය හා නැවත උත්සහ කරන්න.</string>
+    <string name="error_CannotSendEmptyFile">හිස් ඇමුණුමක් යැවිය නොහැක.</string>
+    <string name="error_CannotSendFilesOver">ප්රමාණයෙන් ඇමුණුම් ට වඩා වැඩි %d බයිට් යැවිය නොහැක.</string>
+    <string name="error_CannotSendNullFile">තිබේනම්, ඇමුණුමක් යැවිය නොහැක.</string>
+    <string name="error_contactCreationFailure">අප අමතන්න නිර්මාණය අසාර්ථක විය.</string>
+    <string name="error_ContactInsertFailed">අප අමතන්න ඇතුළු කරන්න අසමත් විය.</string>
+    <string name="error_ContactNameMissing">මෙම සම්බන්ධක නමක් අතුරුදහන්, සංස්කරණය කරන්න.</string>
+    <string name="error_ContactNameMissing2">මෙම සම්බන්ධක නමක් අතුරුදහන්, reselect කරන්න.</string>
+    <string name="error_ContactUpdateFailed">අප අමතන්න යාවත්කාලීනය අසාර්ථකයි.</string>
+    <string name="error_couldNotExtractPrivateKey">පෞද්ගලික යතුර උපුටා නොහැකි විය.</string>
+    <string name="error_FeatureIsNotSupport">%1$s මේ අවස්ථාවේ %2$s මත පහසුකම් සපයන්නේ නැත.</string>
+    <string name="error_FileSave">%s බේරා ගැනීමට නොහැකි විය.</string>
+    <string name="error_FileStorageUnavailable">ගොනුව ගබඩා ගත නොහැකි ය.</string>
+    <string name="error_InvalidContactName">වලංගු සබඳතා නම අවශ්ය වේ.</string>
+    <string name="error_InvalidIncomingMessage">නරක ලැබෙන පණිවිඩය ආකෘතිය.</string>
+    <string name="error_InvalidMsg">නරක පණිවිඩය ආකෘතිය.</string>
+    <string name="error_InvalidRecipient">වලංගු නොවන ලබන්නා.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">මෙම සම ප්රධාන ආකෘතිය අනීතික ය.</string>
+    <string name="error_MessageSignatureVerificationFails">අත්සන තහවුරු කිරීමේදී අසාර්ථක විය.</string>
+    <string name="error_minPassphraseRequire">මුරවදන සතුව අවම වශයෙන් %d චරිත අවශ්ය වේ.</string>
+    <string name="error_MissingNdk">SafeSlinger අවශ්ය වන මෙම උපාංගයකට NDK සහයෝගය අනාවරණය කළේ නැත.</string>
+    <string name="error_MultipleSendNotSupported">ඔබ බහු අයිතම යැවීමට උත්සාහ දරමින් සිටිති. මෙම අවස්ථාවේදී, SafeSlinger වන්නේ එක් අවස්ථාවක එක් භාණ්ඩයක් යැවීම සඳහා සහය දක්වයි.</string>
+    <string name="error_NoEmailAccount">ඊ-තැපැල් ගිණුම පිහිටුවීම් නොවේ!</string>
+    <string name="error_noPassPhrase">මෙයට මුරවදනක් ඇතුළත්.</string>
+    <string name="error_passPhrasesDoNotMatch">මුරවදන සතුව නොගැලපේ.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">ඔයා ඒ හිමියා සඳහා පණිවුඩය කෝටා ඉක්මවා ඇත. පසුව නැවත උත්සාහ කරන්න.</string>
+    <string name="error_PushMsgInvalidRegistration">ඒ ලබන්නා අතුරුදහන් හෝ නරක තල්ලුව ලියාපදිංචි ඇත. ඔබ මෙම උපාංගයට පණිවිඩ යැවීම නතර කළ යුතුයි.</string>
+    <string name="error_PushMsgMessageNotFound">පණිවුඩය අභාවප්රාප්ත විය.</string>
+    <string name="error_PushMsgMessageTooBig">මෙම පණිවුඩය ඉතා විශාල වේ. එම පණිවිඩය විශාලත්වය අඩු කිරීම.</string>
+    <string name="error_PushMsgNotRegistered">ඒ ලබන්නා යොමුවන්නේ ලියාපදිංචි තවදුරටත් වලංගු වේ. ලබන්නා SafeSlinger අස්ථාපනය හෝ දැනුම්දීම් නිවා ඇති විය හැක. ඔබ මෙම උපාංගයට පණිවිඩ යැවීම නතර කළ යුතුයි.</string>
+    <string name="error_PushMsgNotSucceed">තල්ලුව නිවේදනය සේවාවක් සමඟ සන්නිවේදනය දෝශයක් ඇති විය.</string>
+    <string name="error_PushMsgQuotaExceeded">ඔබට මෙම උපාංගය සඳහා එම පණිවිඩය කෝටා ඉක්මවා ඇත. පසුව නැවත උත්සාහ කරන්න.</string>
+    <string name="error_PushMsgServiceFail">නිවේදනය සේවාව මෙම කාලය ගත නොහැකි ය. පසුව එම පණිවිඩය යැවීමට උත්සාහ කරන්න.</string>
+    <string name="error_RecoderError">ශ්රව්ය පටිගත සූදානම් නෑ.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">තවත් පරිශීලක සමඟ, Sling යතුරු එකම අවස්ථාවේදී ආරම්භ කිරීම.</string>
+    <string name="error_selectDataToSend">ඔබ යැවීමට ඇමුණුමක් හෝ පෙළ පණිවිඩයක් අවශ්යයි.</string>
+    <string name="error_ShareFileDelError">හවුල් ගොනු ඉවත් කළ නොහැක.</string>
+    <string name="error_UnableFindPubKey">ගුප්ත සපයන්නා දී පෞද්ගලික යතුරු පොදු යතුර ඇතුලත් ගැලපෙන නොහැක.</string>
+    <string name="error_UnableToSaveMessageInDB">එම පණිවිඩය දත්ත සමුදාය බේරා ගැනීමට නොහැකි විය.</string>
+    <string name="error_UnableToSaveRecipientInDB">ලබන්නා දත්ත සමුදාය බේරා ගැනීමට නොහැකි විය.</string>
+    <string name="error_UnableToUpdateMessageInDB">එම පණිවිඩය දත්ත පද්ධතිය යාවත්කාලීන කිරීම කළ නොහැක.</string>
+    <string name="error_UnableToUpdateRecipientInDB">ලබන්නා දත්ත පද්ධතිය යාවත්කාලීන කිරීම කළ නොහැක.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger දෝෂයක්, නැවත ආරම්භ කරන්න.</string>
+    <string name="error_VcardParseFailure">අප අමතන්න දත්ත, සාවද්ය ආකෘති විය.</string>
+
+    <string name="help_find">අන් අය සමඟ හුවමාරු කර ගැනීමට ඔබේ නම ඇති කිරීමට මෙම තිරය භාවිතා කරන්න, සහ ඔබේ දත්ත ආරක්ෂා කිරීමට යුත් මුරවදනක්. අවසන් වන විට සිදු කරන බොත්තම තට්ටු කරන්න.</string>
+    <string name="help_home">අනන්යතාව දත්ත හුවමාරු කර ගැනීමට, සියළු පරිශීලකයන් හට ළඟ පහත හෝ දුරකථනයෙන් අවස්ථා සහතික කළ යුතු ය. මෙම ආරම්භ කරන්න විනිමය බොත්තම පමණක් පරීක්ෂා සම්බන්ධතා පිළිබඳ දත්ත හුවමාරු කරනු ඇත.</string>
+    <string name="help_identity_menu">ඔබ ද ඔබේ නම බොත්තම මත කිරි කැපිම මෙම තිරය මත ඔබේ අනන්යතාවය ගැන පුද්ගලික දත්ත වෙනස් කළ හැක. මෙය, ඔබට සබඳතා සංස්කරණය කරන්න කිරීමට ඉඩ සළසන මෙනුවක් ප්රදර්ශනය නව සබඳතා නිර්මාණය කරන්න, හෝ තවත් සබඳතා භාවිතා කරනු ඇත.</string>
+    <string name="help_Messages">මෙම තිරය තවමත් බාගත හැකි බව සියලු පසුගිය පණිවුඩ, සහ ඇමුණුම් දක්වනු ඇත.</string>
+    <string name="help_passphrase">ඔබගේ මුර වදන සමග අයදුම්පත ප්රවේශ වීම සඳහා මෙම තිරය භාවිතා කරන්න. ඔබ ඔබේ මුර වදන අමතක වී නම්, ඔබ අමතකද මුර වදන කැණීමේ ආයතන මගින් නව මුර වදන මගින් ආරක්ෂා නව ප්රධාන ජනනය? බොත්තම ඔබන්න. බහු යතුරු අතර මාරු කිරීම සඳහා පරිශීලක නාමය තට්ටු කරන්න.</string>
+    <string name="help_passphrase_change">තහවුරු කිරීම සහ නව මුර වදන සඳහා ඔබගේ අවසාන මුරවදනක් ඇතුළත් ඔබේ මුර වදන වෙනස් කිරීමට මෙම තිරය භාවිතා කරන්න.</string>
+    <string name="help_PickRecip">SafeSlinger යතුරු සමඟ සබඳතා සඳහා ඔබේ පණිවුඩය යැවීමට එක් තෝරා, මෙහි දක්වනු ලැබේ.</string>
+    <string name="help_save">අවසන් වූ පසු, වාහකයක් දත්ත හුවමාරු අනන්යතාව ලැයිස්තුවක් හෙළි කරනු ඇත. ඔබ ඉතිරි කරන අතර ආනයන ඔබන්න කිරීමට බලාපොරොත්තු වන සබඳතා තෝරන්න.</string>
+    <string name="help_SecureIntroduction">මෙම තිරය ඔබ ආරක්ෂිතව එකිනෙකාට තම යතුරු යැවීමට පෙර සමඟ යතුරු දමාගැසුවේය ඇති පුද්ගලයන් දෙදෙනෙකු තෝරා ගැනීමට ඉඩ ලබාදේ. සරලව විට සූදානම් හදුන්වා දීම ඔබන්න.</string>
+    <string name="help_Send">මෙම තිරය ඔබ ඇතැම් දත්ත හා යැවීමට ලබන්නා තෝරා ගැනීමට ඉඩ ලබාදේ. සරලව විට සූදානම් යවන්න ඔබන්න.</string>
+    <string name="help_settings">මෙම තිරය ඔබ අයදුම්පත සඳහා පෙරනිමි සැකසීම් වෙනස් කිරීමට ඉඩ දෙයි.</string>
+
+    <string name="iOS_cameraError">කැමරා අවසර පණිවුඩ ලබා ගැනීමට snapshots අනුයුක්ත කිරීමට අවශ්ය වේ. SafeSlinger කැමරා අවසර තොරතුරු සඳහා %s බොත්තම තට්ටු කරන්න.</string>
+    <string name="iOS_contactError">අප අමතන්න අවසර ආරක්ෂිතව සබඳතා කාඩ්පත් බෙදා සඳහා අවශ්ය වේ. SafeSlinger සබඳතා අවසර තොරතුරු සඳහා %s බොත්තම තට්ටු කරන්න.</string>
+    <string name="iOS_errorpushtoken">තල්ලුව ලියාපදිංචි අතුරුදහන් කර ඇත.</string>
+    <string name="iOS_notificationError1">ඇලර්ට් හෝ ධජ, සහ බැජ් එක සංඛ්යා එක්කෝ සඳහා නිවේදනය අවසර, සුරක්ෂිත පණිවුඩ සඳහා අවශ්ය වේ. SafeSlinger නිවේදනය අවසර තොරතුරු සඳහා %s බොත්තම තට්ටු කරන්න.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger, iOS 5.x උපාංග සඳහා ප්රචලිත කෙරෙන නැත. SafeSlinger, iOS 6 හෝ ඊට වැඩි අවශ්ය වේ.</string>
+    <string name="iOS_photolibraryError">ඡායා පුස්තකාල අවසර පණිවුඩ ලබා ගැනීමට පින්තූර අනුයුක්ත කිරීමට අවශ්ය වේ. SafeSlinger ඡායා පුස්තකාල අවසර තොරතුරු සඳහා %s බොත්තම තට්ටු කරන්න.</string>
+    <string name="iOS_RequestPermissionContacts">ඔබ ඔබේ මිතුරන් හා SafeSlinger ඔබ වෙනුවෙන් එන එන්ක්රිප්ට් ඇත එවීම සඳහා ඔබේ සම්බන්ධතා පත තෝරා ගත හැකිය. ඉල්ලා සිටි විට මෙම අංගය සක්රීය කිරීම සඳහා, ඔබ ඔබේ සබඳතා සඳහා SafeSlinger ප්රවේශය විය යුතුය.</string>
+    <string name="iOS_RequestPermissionMicrophone">ඔබ ඔබේ මිතුරන් හා SafeSlinger ඔබ වෙනුවෙන් එන එන්ක්රිප්ට් ඇත යැවීමට පණිවුඩයක් හැක. ඉල්ලා සිටි විට මෙම අංගය සක්රීය කිරීම සඳහා, ඔබ ඔබේ මයික්රෆෝනය කිරීමට SafeSlinger ප්රවේශය විය යුතුය.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger හරවන පණිවිඩ යෙදුම් හා නිවේදන සිට ලැබෙන ලිපි ඉඩ තොරව, අනිකට ක්රියා කළ නොහේ. ලැබෙන ලිපි සක්රීය කිරීම සඳහා, ඔබ ඇසූ විට ඔබ SafeSlinger නිවේදන යැවීමට ඉඩ යුතුය.</string>
+
+    <string name="label_ago">%s පෙර</string>
+    <string name="label_backupCompleteDate">පසුගිය බැකප් සම්පූර්ණ</string>
+    <string name="label_backupRequestDate">පසුගිය බැකප් ඉල්ලීම්</string>
+    <string name="label_backupURL">බැකප් URL එක</string>
+    <string name="label_ClickForNMsgs">ඔබගේ.%d පණිවුඩ සමාලෝචනය කිරීමට ස්පර්ශ</string>
+    <string name="label_ComposeHint">ඇතුලතය</string>
+    <string name="label_ContactName">ඔයාගේ නම</string>
+    <string name="label_days">%d දින</string>
+    <string name="label_Device">උපකරණය:</string>
+    <string name="label_DeviceInSendOnlyMode">ට පණිවුඞයක් යවන්න පමණක් මාදිලිය</string>
+    <string name="label_DisabledExchSourceKeyChange">ඔබගේ යතුර වෙනස් වී ඇත: Sling යතුරු නැවත.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">එම අවස්ථාවේ දී පණිවුඩ, මෙම පරිශීලකයා සමග Sling යතුරු ආරම්භ කිරීම සඳහා.</string>
+    <string name="label_Draft">DRAFT</string>
+    <string name="label_EnabledKeyFormatDeprecated">ප්රධාන ආකෘතිය නොසලකා හරිනු ලැබ ඇති: Sling යතුරු නැවත.</string>
+    <string name="label_exchanged">හුවමාරු</string>
+    <string name="label_expired">කල් ඉකුත් වූ</string>
+    <string name="label_expires">%s කල් ඉකුත්</string>
+    <string name="label_expiresIn">දී කල් ඉකුත්</string>
+    <string name="label_FileNameHint">ගොනුවේ නම</string>
+    <string name="label_FindInstruct">ඔබේ දත්ත ආරක්ෂා කිරීම සඳහා ඔබගේ නම සහ මුර වදනක් ඇතුලත් කරන්න:</string>
+    <string name="label_FirstName">මුල් නම</string>
+    <string name="label_Home">එකතු කිරීම හෝ ඉවත් කිරීම සම්බන්ධතා පිළිබඳ දත්ත, ඔබ බෙදාහදා ගැනීමට කැමති අයිතම පරීක්ෂා කරන්න, අන් අය හුවමාරු කර ගැනීමට සූදානම් වූ විට විනිමය ආරම්භ කරන්න ටෙනිසි ඔබේ නම තට්ටු:</string>
+    <string name="label_hometag">මුල් පිටුව</string>
+    <string name="label_hours">%d පැය</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud සක්රිය කර ඇත. අවසන් වන විට සිදු කරන බොත්තම තට්ටු කරන්න.</string>
+    <string name="label_InstNoMessages">පණිවිඩ නැත. ඔබ සම්පාදන ටැබ් පණිවිඩයක් යැවිය හැක.</string>
+    <string name="label_InstNoRecipients">ලාභීන් එකතු කිරීම සඳහා, ඔබ විසින් ම එකක් හෝ ඊට වැඩි, වෙනත් භාවිතා කරන්නන් සමඟ පළමු Sling යතුරු විය යුතුය. එසේම ඔබට මෙනුව සිට Sling යතුරු සබඳතා ආරාධනය යැවිය හැක.</string>
+    <string name="label_InstNoRecipientsMatchQuery">ඔබේ වත්මන් ලබන්නන් කිසිවක් ඔබගේ සෙවුම් විමසුමක් ගලපන්න. වෙනස් විමසුම් උත්සාහ හෝ නව සබඳතා ආරාධනා කරන්න.</string>
+    <string name="label_InstNoSharedFile">හවුල් ගොනු නැත. අවපතනය කරගන්න අයිටියුන්ස් සමඟ ඔබේ උපාංගය සම්බන්ධ හා හවුල් ෆෝල්ඩරය ගොනු ඇදගෙන යන්න.</string>
+    <string name="label_InstRecipients">පණිවිඩයක් යැවීම සඳහා ලබන්නා තෝරා:</string>
+    <string name="label_InstSendInvite">ආරක්ෂිතව හඳුන්වාදීමට ලාභීන් තෝරා:</string>
+    <string name="label_InstSharedFile">ඇමිණුම සඳහා ගොනුව තෝරන්න:</string>
+    <string name="label_introduced">හඳුන්වා</string>
+    <string name="label_inviteSent">ආරාධනා</string>
+    <string name="label_Key">යතුර:</string>
+    <string name="label_LastName">අවසන් නම</string>
+    <string name="label_Me">මා</string>
+    <string name="label_messageIntroduceNameToYou">මම ඔබට %s හඳුන්වා ගැනීමට කැමතියි.</string>
+    <string name="label_messageInviteInstall">SafeSlinger යෙදුම: %s</string>
+    <string name="label_messageInviteSetupInst">සැකසුම සුරක්ෂිත පණිවුඩ සම්බන්ධයෙන් නම්, අප හමු හෝ දුරකතන එකිනෙකා එම අවස්ථාවේදීම, පසුව Sling යතුරු වරක් පමණක් ඇති සම්බන්ධය තහවුරු කිරීම සඳහා කළ හැකිය.</string>
+    <string name="label_messageInviteStartMsg">අපි විවෘත මූලාශ්ර SafeSlinger iPhone හෝ ඇන්ඩ්රොයිඩ් ඇප් එක රන් කිරීම සමග ආරක්ෂිත පණිවිඩ ආරම්භ කළ හැකිද?</string>
+    <string name="label_messageYouAreVerified">%s, ඔබට තහවුරු කර ගෙන ඇත.</string>
+    <string name="label_minutes">%d විනාඩි</string>
+    <string name="label_mobiletag">ජංගම</string>
+    <string name="label_MostRecentOnly">එකම වඩාත් ම මෑත</string>
+    <string name="label_MsgSendUpdate">මගේ යාවත්කාලීන SafeSlinger අක්තපත්ර අනුයුක්ත කර ඇත.</string>
+    <string name="label_None">කිසිවක් නැත</string>
+    <string name="label_numsharedfiles">%d ගොනු බෙදාගැනීමට:</string>
+    <string name="label_OldThreads">පරණ සම්බන්දතා</string>
+    <string name="label_othertag">වෙනත්</string>
+    <string name="label_PassHintBackoff">නැවත උත්සාහ කරන්න</string>
+    <string name="label_PassHintChange">යාවත්කාලීන කිරීම මුර වදන</string>
+    <string name="label_PassHintCreate">මුර වදන සාදන්න</string>
+    <string name="label_PassHintCurrent">වත්මන් මුර වදන</string>
+    <string name="label_PassHintEnter">මුර වදන</string>
+    <string name="label_PassHintRepeat">නැවත මුර වදන</string>
+    <string name="label_passPhraseCacheTtl">මුර වදන පසුම්බිය</string>
+    <string name="label_PassPhraseIsCached">මුර වදන කැච්</string>
+    <string name="label_phoneOnly">දුරකථන පමණක්</string>
+    <string name="label_Photo">ඡායා</string>
+    <string name="label_PublicKeyID">යතුරු අංකය</string>
+    <string name="label_PushTokenID">තල්ලුව ලියාපදිංචි හැඳුනුම්පත</string>
+    <string name="label_RemindBackupDelay">බැකප් සිහි කැඳවුම්</string>
+    <string name="label_ReportedInactive">අක්රිය %s වාර්තා කළේය.</string>
+    <string name="label_restoreCompleteDate">පසුගිය සම්පූර්ණ යථා තත්වයට පත්</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger උපස්ථ ප්රමාද</string>
+    <string name="label_safeslingered">(SafeSlinger සෘජු විනිමය)</string>
+    <string name="label_SaveAccount">ගිණුම් සුරකින්න</string>
+    <string name="label_SaveInstruct">ඔබ ඔබගේ ලිපින පොතෙහි යාවත්කාලීන කිරීමට අවශ්ය සබඳතා පරීක්ෂා කරන්න, එවිට ආරක්ෂිත සබඳතා බේරා ගැනීමට ආනයන tap:</string>
+    <string name="label_search_contacts_hint">සොයන්න සබඳතා</string>
+    <string name="label_seconds">%d තත්පර</string>
+    <string name="label_SelectRecip">පලමු වරට පිරිනැමු තෝරන්න</string>
+    <string name="label_sendErrorData">දෝෂ දත්ත යවන්න</string>
+    <string name="label_SendFrom">සිට:</string>
+    <string name="label_SendTo">කිරීම සඳහා:</string>
+    <string name="label_ShowHintAtLaunch">මෙම ඉඟියක් ඊළඟ වතාවේදී පෙන්වන්න.</string>
+    <string name="label_SpeechRecognitionAlert">එය තොරතුරු කාන්දුවක් ඇති විය හැකි බැවින් කතාව පිළිගැනීමක් භාවිතා කරමින් ආබාධිත වේ</string>
+    <string name="label_step_1">පියවර 1</string>
+    <string name="label_step_2">පියවර 2</string>
+    <string name="label_step_3">පියවර 3</string>
+    <string name="label_step_4">පියවර 4</string>
+    <string name="label_step_5">පියවර 5</string>
+    <string name="label_summary_auto_attach_retrieval">ලොගින් වී ස්වයංක්රීයව පණිවිඩය ඇමුණුම් බාගත කරගන්න.</string>
+    <string name="label_summary_auto_decrypt">ලොගින් වී ස්වයංක්රීයව පණිවුඩ විසංකේතනය.</string>
+    <string name="label_summary_remind_backup_delay">උපස්ථ නොබැඳි විට නිවේදනය ලැබේ.</string>
+    <string name="label_summary_show_tutorial">Sling යතුරු කිරීමට උත්සාහ කිරීමට පෙර ගුරු පෙන්වන්න.</string>
+    <string name="label_TapToDecryptFile">ගොනුව විසංකේතනය තට්ටු කරන්න</string>
+    <string name="label_TapToDecryptMessage">විසංකේතනය තට්ටු කරන්න</string>
+    <string name="label_TapToDownloadFile">ගොනුව බාගත කිරීමට තට්ටු කරන්න</string>
+    <string name="label_TapToDownloadMessage">පණිවිඩය බාගත තට්ටු කරන්න</string>
+    <string name="label_TapToOpenFile">ගොනුව විවෘත කිරීමට තට්ටු කරන්න</string>
+    <string name="label_TapToResumeDraft">පණිවිඩය කෙටුම්පත නැවත ආරම්භ කිරීමට තට්ටු කරන්න</string>
+    <string name="label_TapToSendCredentialUpdate">අක්තපත්ර යාවත්කාලීන කිරීමට තට්ටු කරන්න සහ පැවැත්වීම සහ.</string>
+    <string name="label_TapToSlingKeys">Sling යතුරු තට්ටු කරන්න.</string>
+    <string name="label_targetAccountLabel">අප අමතන්න ගිණුම</string>
+    <string name="label_TouchToConfigureBackupSettings">ඔබ විසින් විකල්පයක්, iOS සැකසුම් SafeSlinger iCloud රක්ෂිත කල හැක. අවසන් වන විට සිදු කරන බොත්තම තට්ටු කරන්න.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">උපස්ථ සැකසුම් වින්යාස කිරීමට ස්පර්ශ කරන්න.</string>
+    <string name="label_TouchToConfigureCacheTimeout">හැඹිලි කල් ඉකුත්වන සැකසුම් වින්යාස කිරීමට ස්පර්ශ කරන්න.</string>
+    <string name="label_undefinedTypeLabel">නොදන්නා</string>
+    <string name="label_UnknownSender">සංකේතාත්මක යවන්නාට</string>
+    <string name="label_UserName">පරිශීලක නම</string>
+    <string name="label_WarnForgotPassphrase">ඔබේ දත්ත ආරක්ෂා කිරීම සඳහා, SafeSlinger ප්රතිසාධනය සදහා ඕනෑම තැනක ඔබගේ මුර වදන ගබඩා නොවේ. ඔබ මුරවදන පිවිසුම් යටතේ නිර්මාණය ප්රතිලාභීන් සහ පණිවිඩ පමණක් ප්රවේශ විය හැක. කෙසේ වුවද, ඔබට පසුව ඔබේ ලබන්නන් සමග Sling යතුරු නැවත, නව ප්රධාන හා මුර වදන ජනනය විය හැක.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">පහත දැක්වෙන යතුරු මැකෙන:</string>
+    <string name="label_WarnManagePassNoMoreRecent">ඔබේ වඩා වඩාත් මෑත යතුරු ඇත.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">පමණක් යතුරු %s මත ජනනය වඩාත් මෑතක දී ඔබගේම වඩා ජනනය, ඉවත් කිරීම සිදුකල හැක.</string>
+    <string name="label_worktag">වැඩ</string>
+
+    <string name="menu_About">ගැන</string>
+    <string name="menu_auto_attach_retrieval">ඇමුණුම් වාහන-ලබාගැනීම</string>
+    <string name="menu_auto_decrypt">වාහන-විසංකේතනය</string>
+    <string name="menu_Change">වෙනස්</string>
+    <string name="menu_ChangePassphrase">වෙනස් මුර වදන</string>
+    <string name="menu_ContactInviteEmail">අප අමතන්න සිට විද්යුත්</string>
+    <string name="menu_ContactInviteSms">අප අමතන්න සිට පෙළ</string>
+    <string name="menu_CreateNew">නව නිර්මාණය</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_deleteThread">නූල් Delete %s</string>
+    <string name="menu_Details">දැක්ම විස්තර</string>
+    <string name="menu_DownloadDirectory">බාගත නාමාවලිය</string>
+    <string name="menu_Edit">සංස්කරණය කරන්න</string>
+    <string name="menu_EditContact">සංස්කරණය කරන්න අමතන්න</string>
+    <string name="menu_EditName">සංස්කරණය කරන්න නම</string>
+    <string name="menu_FileManager">ගොනුව කළමනාකරු</string>
+    <string name="menu_ForgotPassphrase">මුර වදන අමතකද?</string>
+    <string name="menu_Help">උදව්</string>
+    <string name="menu_Introduction">හැඳින්වීම</string>
+    <string name="menu_language">භාෂා</string>
+    <string name="menu_License">බලපත්ර</string>
+    <string name="menu_link_contact_add">අප අමතන්න ලින්ක් එකතු කරන්න</string>
+    <string name="menu_link_contact_change">වෙනස් ඇමතුම් ලින්ක්</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">මුරවදන සතුව කළමනාකරණය</string>
+    <string name="menu_message_font_size">පණිවුඩය අකුරු ප්රමාණය</string>
+    <string name="menu_messageCopyText">පිටපත් පෙළ</string>
+    <string name="menu_messageForward">ඉදිරි</string>
+    <string name="menu_PrivacyPolicy">රහස්යතා ප්රතිපත්තිය</string>
+    <string name="menu_Remove">ඉවත් කරන්න</string>
+    <string name="menu_restore_default">පෙරනිමි පිළිනැගුම</string>
+    <string name="menu_ringtone">ශබ්ද</string>
+    <string name="menu_SelectShareApp">අප අමතන්න ආරාධනයයි එකතු කරන්න</string>
+    <string name="menu_sendFeedback">ඔබෙන් ලැබෙන ප්රයෝජනාත්මක ප්රතිචාරය මේ ට පණිවුඞයක් යවන්න</string>
+    <string name="menu_SendUpdate">යාවත්කාලීන ට පණිවුඞයක් යවන්න</string>
+    <string name="menu_Settings">සැකසුම්</string>
+    <string name="menu_ShowTutorial">පෙන්වන්න නිබන්ධනය</string>
+    <string name="menu_TagComposeMessage">ලියන්න</string>
+    <string name="menu_TagExchange">ගල් පටිය යතුරු</string>
+    <string name="menu_TagListMessages">පණිවිඩ</string>
+    <string name="menu_UseAnother">තවත් භාවිතා කරන්න</string>
+    <string name="menu_UseContactPerson">අප අමතන්න %s භාවිතා කරන්න</string>
+    <string name="menu_UseNoContact">පමණක් භාවිතා කරන්න නම</string>
+    <string name="menu_UseProfilePerson">පැතිකඩ %s භාවිතා කරන්න</string>
+    <string name="menu_vibrate">කම්පනය</string>
+
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">ගුප්ත කේතනය…</string>
+    <string name="prog_FileSent">පණිවිඩය ප්රතිචාරය අපේක්ෂාවෙන්, යවා…</string>
+    <string name="prog_findingKey">ප්රධාන සොයා…</string>
+    <string name="prog_GeneratingKey">ප්රධාන උත්පාදනය, මේ ටික ගන්න පුළුවන්…</string>
+    <string name="prog_generatingSignature">අත්සන උත්පාදනය…</string>
+    <string name="prog_loadingContent">පැටවීම අන්තර්ගතයට…</string>
+    <string name="prog_pending">විභාග වෙමින්…</string>
+    <string name="prog_ReceivingFile">සංකේතාත්මක ගොනු ලබමින්…</string>
+    <string name="prog_RequestingFile">සංකේතාත්මක ගොනුව ඉල්ලා…</string>
+    <string name="prog_RequestingMessage">සංකේතාත්මක පණිවිඩය ඉල්ලා…</string>
+    <string name="prog_RequestingPushReg">තල්ලුව ලියාපදිංචි කිරීමට ඉල්ලීම්…</string>
+    <string name="prog_SavingContactsToAddressBook">ලිපින පොත යාවත්කාලීන කිරීම…</string>
+    <string name="prog_SavingContactsToKeyDatabase">ප්රධාන දත්ත පද්ධතිය යාවත්කාලීන කිරීම…</string>
+    <string name="prog_SearchingForBackup">උපස්ථ සොයමින්…</string>
+    <string name="prog_SendingFile">සංකේතාත්මක %s යැවීම…</string>
+    <string name="prog_verifyingIntegrity">අඛණ්ඩතාව තහවුරු කළ…</string>
+    <string name="prog_verifyingSignature">අත්සන ස්ථිර කර…</string>
+
+    <string name="section_advanced">උසස්</string>
+    <string name="section_backup">බැකප්</string>
+    <string name="section_general">ජනරාල්</string>
+    <string name="section_notification">නිවේදන</string>
+    <string name="section_storage">කාර්මික</string>
+
+    <string name="state_BackupRestored">බැකප් නැවත.</string>
+    <string name="state_FileDeleted">මකා ගොනු %s.</string>
+    <string name="state_FileSent">පණිවුඩය යැවූ හ.</string>
+    <string name="state_InvitationAdded">ආරාධනය කළේය.</string>
+    <string name="state_MessageSavedAsDraft">කෙටුම්පත ලෙස ගැලවීම පණිවුඩය.</string>
+    <string name="state_MessagesDeleted">%d පණිවිඩ මකා.</string>
+    <string name="state_MessagesSent">%d පණිවුඩ දෙකක් එවා තිබුනි.</string>
+    <string name="state_PassphraseUpdated">මුර වදන යාවත් කර ඇත.</string>
+    <string name="state_RecipientsDeleted">%d ලබන්නන් මකාදමා.</string>
+    <string name="state_SomeContactsImported">%s සබඳතා ආනයනය.</string>
+    <string name="state_TextCopiedToClipboard">පසුරු පුවරුවට පිටපත් පෙළ.</string>
+
+    <string name="text_About">SafeSlinger, පුද්ගලයෙකු තුළ හෝ දුරකතනය, ඉතා පහසුවෙන් අනන්යතාව දත්ත හුවමාරු කිරීමට නිර්මාණය සත්යවත්, පෞද්ගලික, හා නිරවද්යතාවය ඇත. ඔබ සමඟ බෙදා හදා එක් එක් පුද්ගලයාට පණිවිඩ යැවීමට ආරක්ෂිත කෙරවල් නාලිකාව නිර්මාණය කරයි.</string>
+    <string name="text_About1">පහසුවෙන් අන් අය සමඟ තොරතුරු හුවමාරු කර අමතන්න</string>
+    <string name="text_About2">ආරක්ෂිතව ගැසීම පෙළ නොමැතිවය, ඡායාරූප, ඕනෑම දෙයක්!</string>
+    <string name="text_About3">ශක්තිමත් ගුප්ත ෙල්ඛන කලාව ඔබේ තොරතුරු ආරක්ෂා</string>
+    <string name="text_About_Short">SafeSlinger: 3 වචන කථා කරන්න සහ සදහටම සාමය සස්රුත.</string>
+    <string name="text_AboutEmail">විද්යුත් තැපෑල: %s</string>
+    <string name="text_AboutFeat">විශේෂාංග:</string>
+    <string name="text_AboutWeb">වෙබ්: %s</string>
+    <string name="text_DevelopedBy">විසින් වැඩි දියුණු කරන:</string>
+    <string name="text_KeywordExchange">විනිමය</string>
+    <string name="text_KeywordIdentity">හැඳුනුම්පත්</string>
+    <string name="text_KeywordKey">ප්රධාන</string>
+    <string name="text_KeywordMessaging">පණිවුඩකරණය</string>
+    <string name="text_KeywordPrivacy">පුද්ගලිකත්වය</string>
+    <string name="text_KeywordSecurity">ආරක්ෂක</string>
+    <string name="text_LanguagesProvidedBy">විසින් සපයන භාෂා:</string>
+    <string name="text_LocalizationRepo">පරිවර්තනය: %s</string>
+    <string name="text_RelatedSearchTerms">සබැඳි කොන්දේසි:</string>
+    <string name="text_Requirements">අවශ්යතා:</string>
+    <string name="text_Requirements1">2 උපාංගයන් ක අවම ස්ථාපනය කළ යුතුය.</string>
+    <string name="text_Requirements2">අන්තර්ජාල සම්බන්ධතාවයක් ක්රියාකාරී විය යුතුය.</string>
+    <string name="text_SourceCodeRepo">විවෘත මූලාශ්ර: %s</string>
+    <string name="text_WhatsNew">ස්ථාවරත්ව කරනු ලැබේ.</string>
+
+    <string name="title_About">ගැන</string>
+    <string name="title_camera">කැමරා</string>
+    <string name="title_ChooseDirectory">නාමාවලිය තෝරන්න</string>
+    <string name="title_ChooseFileLoad">ඔබේ ඇමුණුම් තෝරන්න</string>
+    <string name="title_comments">අදහස්/ප්රශ්න</string>
+    <string name="title_Error">දෝෂ</string>
+    <string name="title_ExchangeWalkthrough">ගල් පටිය යතුරු සහකාර</string>
+    <string name="title_FileOptions">ඇමුණුම් විකල්ප</string>
+    <string name="title_find">පිහිටුවීම</string>
+    <string name="title_font_size">එය අකුරු විශාලත්වය තෝරන්න</string>
+    <string name="title_home">විනිමය ආරම්භ කරන්න</string>
+    <string name="title_HomePanel">මුල් පිටුව</string>
+    <string name="title_MessageDetail">පණිවුඩය</string>
+    <string name="title_Messages">පණිවිඩ</string>
+    <string name="title_MyIdentity">පුද්ගලික අමතන්න</string>
+    <string name="title_NotifyFileAvailable">දැනට පවතින SafeSlinger පණිවුඩය</string>
+    <string name="title_NotifyMulFileAvailable">දැනට පවතින %d SafeSlinger පණිවිඩ</string>
+    <string name="title_passphrase">මුර වදන</string>
+    <string name="title_photoalbum">ඡායාරූප ඇල්බමය</string>
+    <string name="title_photolibary">ඡායා පුස්තකාල</string>
+    <string name="title_PickRecipient">ලබන්නන්</string>
+    <string name="title_Question">ප්රශ්නය</string>
+    <string name="title_RecipientDetail">පලමු වරට පිරිනැමු විස්තර</string>
+    <string name="title_save">අවසානය විනිමය</string>
+    <string name="title_SaveFileAs">ගොනුව සුරකින්න ලෙස</string>
+    <string name="title_SecureIntroduction">ආරක්ෂිත හැඳින්වීම</string>
+    <string name="title_SecureIntroductionInvite">හැඳින්වීම ආරාධනයයි ආරක්ෂිත කරන්න!</string>
+    <string name="title_SelectSource">විකල්ප යැවීම:</string>
+    <string name="title_SendFile">ට පණිවුඞයක් යවන්න</string>
+    <string name="title_sharingfolder">ෆෝල්ඩර බෙදාගැනීම</string>
+    <string name="title_soundrecoder">ශබ්ද Recorder</string>
+    <string name="title_TextInviteMsg">SafeSlinger ආරාධනයයි</string>
+    <string name="title_Threads">නූල්</string>
+    <string name="title_Warn">අවවාදයයි</string>
+
+</resources>

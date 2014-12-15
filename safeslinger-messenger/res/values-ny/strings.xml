@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Add choponyera Chinsinsi kukhudzana pempho kudzera…</string>
+
+    <string name="app_name">SafeSlinger</string>
+
+    <string name="ask_BackupDisabledRemindLater">Zosunga zobwezeretsera ndi olumala. Kodi mukufuna kusintha zosunga zobwezeretsera zoikamo ndi kusunga chikumbutso?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s ali zaposachedwapa chipangizo kapena chinsinsi, kodi ndinu wotsimikiza mukufuna kugwiritsa ntchito wamkulu?</string>
+    <string name="ask_FileExistsOverwrite">Wapamwamba dzina %s kale aliko. Overwrite?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Popanda Google Nkhani inu yekha athe kutumiza, kulandira mauthenga. Kodi mukufuna kuwonjezera Google nkhaniyi?</string>
+    <string name="ask_SendErrorData">Ife ndikufuna thandizo lanu bwino SafeSlinger. Kodi mungakonde basi kutumiza zolakwa kwa ife?</string>
+
+    <string name="btn_Accept">Landirani</string>
+    <string name="btn_BeginExchangeProximity">Yambani Kusinthanitsa</string>
+    <string name="btn_Cancel">Titachita</string>
+    <string name="btn_Close">Close</string>
+    <string name="btn_Continue">Pitirizani</string>
+    <string name="btn_CreateNewKey">Pangani Chatsopano otsogolera</string>
+    <string name="btn_DeleteKeys">Chotsani Chinsinsi</string>
+    <string name="btn_discard">Achotse</string>
+    <string name="btn_Done">Chinachitidwa</string>
+    <string name="btn_Edit">Sinthani</string>
+    <string name="btn_Exit">Potulukira</string>
+    <string name="btn_Import">Tengani</string>
+    <string name="btn_Introduce">Yambani</string>
+    <string name="btn_No">No</string>
+    <string name="btn_NotNow">Osati Pano</string>
+    <string name="btn_NotRemind">Iwalani</string>
+    <string name="btn_OK">CHABWINO</string>
+    <string name="btn_Refuse">Kukana</string>
+    <string name="btn_Remind">Akumbutseni</string>
+    <string name="btn_Save">Save</string>
+    <string name="btn_SelectFile">Add CHOWONJEZERA</string>
+    <string name="btn_SendFile">Tumizani</string>
+    <string name="btn_Yes">Inde</string>
+
+    <string name="choice_10mins">Mphindi 10</string>
+    <string name="choice_1hour">1 ora</string>
+    <string name="choice_1min">1 miniti</string>
+    <string name="choice_20mins">Mphindi 20</string>
+    <string name="choice_2hours">maola 2</string>
+    <string name="choice_3mins">3 Mphindi</string>
+    <string name="choice_40mins">Mphindi 40</string>
+    <string name="choice_4hours">4 maola</string>
+    <string name="choice_5mins">5 Mphindi</string>
+    <string name="choice_8hours">8 maola</string>
+    <string name="choice_auto_storage">Kusakhulupirika yosungirako</string>
+    <string name="choice_default">Kusakhulupirika</string>
+    <string name="choice_external_storage">Kunja yosungirako</string>
+    <string name="choice_font_large">Large</string>
+    <string name="choice_font_medium">Sing\'anga</string>
+    <string name="choice_font_micro">Kwambiri Small</string>
+    <string name="choice_font_small">Small</string>
+    <string name="choice_internal_storage">Internal yosungirako</string>
+    <string name="choice_nolimit">No muzipewa</string>
+    <string name="choice_SaveDirectory">Save Directory</string>
+    <string name="choice_SaveFile">Sungani wapamwamba</string>
+    <string name="choice_Up">Up</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Aliyense ayenera Sinthani, ena achikulire ntchito mfundo akamagwiritsa.</string>
+    <string name="error_AudioPlayerDecodeError">Audio wosewera mpira decoding zolakwa.</string>
+    <string name="error_AudioPlayerError">Sitingathe kusewera chojambulira.</string>
+    <string name="error_AudioRecorderEncodeError">Audio wolemba kabisidwe zolakwa.</string>
+    <string name="error_AudioRecorderPermissionError">Maikolofoni chilolezo chofunika kulemba malo mawu uthenga. Dinani ndi %s batani kwa SafeSlinger maikolofoni chilolezo mwatsatanetsatane.</string>
+    <string name="error_BackupNotFound">No zosunga zobwezeretsera kubwezeretsa.</string>
+    <string name="error_BackupNotSupportedDevice">Chipangizo siligwirizana zosunga zobwezeretsera kubwezeretsa.</string>
+    <string name="error_BadCopyProtectUpgrade">Chifukwa mbozi mu Android 4.1, muyenera yochotsa ndi reinstall SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">A Google nkhani chofunika. Tsegulani nkhani bwana ndi kuonjezera Google nkhani.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Kulembetsa osati wotsimikiziridwa, chonde retry pamanja Patapita.</string>
+    <string name="error_C2DMRegInvalidSender">Kulembetsa palibe ichi Baibulo, chonde fufuzani kuti kusinthidwa Baibulo.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Pachithunzichi chipangizo kulembetsa ndi Google. Wotchi yotereyi sikuti panopa kuthandiza Kankhani mauthenga.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Kankhani kulembetsa utumiki palibe, ndandanda retry mu %d masekondi.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Ochuluka kwambiri ofunsira ali owerengedwa kwa Kankhani. Chonde yochotsa ena ofunsira ndi retry.</string>
+    <string name="error_CannotSendEmptyFile">Sangakhoze kutumiza chopanda kanthu ubwenzi.</string>
+    <string name="error_CannotSendFilesOver">Sangakhoze kutumiza ZOWONJEZERA kuposa %d mabayiti kukula.</string>
+    <string name="error_CannotSendNullFile">Sangakhoze kutumiza null ubwenzi.</string>
+    <string name="error_contactCreationFailure">Contact chilengedwe analephera.</string>
+    <string name="error_ContactInsertFailed">Contact Ikani analephera.</string>
+    <string name="error_ContactNameMissing">Izi kukhudzana akusowa dzina, chonde sinthani.</string>
+    <string name="error_ContactNameMissing2">Izi kukhudzana akusowa dzina, chonde reselect.</string>
+    <string name="error_ContactUpdateFailed">Contact pomwe analephera.</string>
+    <string name="error_couldNotExtractPrivateKey">Sakanakhoza kuchotsa payekha ofunika.</string>
+    <string name="error_FeatureIsNotSupport">%1$s si anathandiza pa %2$s pa nthawi ino.</string>
+    <string name="error_FileSave">Sangathe kudzipulumutsa %s.</string>
+    <string name="error_FileStorageUnavailable">Wapamwamba yosungirako palibe.</string>
+    <string name="error_InvalidContactName">A chomveka kukhudzana dzina chofunika.</string>
+    <string name="error_InvalidIncomingMessage">Zoipa ukubwera uthenga mtundu.</string>
+    <string name="error_InvalidMsg">Zoipa uthenga mtundu.</string>
+    <string name="error_InvalidRecipient">Opanda pake munthuyo.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">The zofuna mfundo mtundu ili udzakhala osazindikilika.</string>
+    <string name="error_MessageSignatureVerificationFails">Siginecha yachinsinsi analephera.</string>
+    <string name="error_minPassphraseRequire">Passphrases amafuna osachepera %d m\'nkhaniyi.</string>
+    <string name="error_MissingNdk">SafeSlinger sanali kudziwa NDK thandizo pachidachi, chimene chiri chofunika.</string>
+    <string name="error_MultipleSendNotSupported">Inu akuyesetsa kutumiza angapo zinthu. Panthawi imeneyi, SafeSlinger yekha amathandiza kutumiza katundu wina nthawi.</string>
+    <string name="error_NoEmailAccount">Email chifukwa si khwekhwe!</string>
+    <string name="error_noPassPhrase">No passphrase analowa.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases sizikugwirizana.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Inu kuposa uthenga quota kuti munthuyo. Chonde retry Patapita.</string>
+    <string name="error_PushMsgInvalidRegistration">Kuti wolandira ali atasowa kapena zoipa Kankhani kulembetsa. Muyenera kusiya kutumizirana mauthenga wotchi yotereyi.</string>
+    <string name="error_PushMsgMessageNotFound">Uthenga anatsirizika.</string>
+    <string name="error_PushMsgMessageTooBig">Uthenga lalikulu kwambiri. Kuchepetsa kukula kwa uthenga.</string>
+    <string name="error_PushMsgNotRegistered">Kuti wolandira wa Kankhani kulembetsa chitatha. Wolandira mwina uninstalled SafeSlinger kapena anangotsika zidziwitso. Muyenera kusiya kutumizirana mauthenga wotchi yotereyi.</string>
+    <string name="error_PushMsgNotSucceed">Panali vuto kulankhulana ndi Kankhani zidziwitso utumiki.</string>
+    <string name="error_PushMsgQuotaExceeded">Inu kuposa uthenga quota kwa wotchi yotereyi. Chonde retry Patapita.</string>
+    <string name="error_PushMsgServiceFail">Zidziwitso utumiki palibe nthawi ino. Chonde yesetsani kutumiza uthenga kenako.</string>
+    <string name="error_RecoderError">Sangathe kukonza audio wolemba zochitika.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Kuyamba, gulaye Chinsinsi wina tiziyendera pa nthawi yomweyo.</string>
+    <string name="error_selectDataToSend">Muyenera anaphatikana kapena meseji kutumiza.</string>
+    <string name="error_ShareFileDelError">Kodi kuchotsa nawo wapamwamba.</string>
+    <string name="error_UnableFindPubKey">Atalephera zikugwirizana anthu ofunika kwa ma kiyi crypto athandizi.</string>
+    <string name="error_UnableToSaveMessageInDB">Sangathe kudzipulumutsa uthenga Nawonso achichepere.</string>
+    <string name="error_UnableToSaveRecipientInDB">Sangathe kupulumutsa wolandira Nawonso achichepere.</string>
+    <string name="error_UnableToUpdateMessageInDB">Sangathe kusintha uthenga Nawonso achichepere.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Sangathe kusintha wolandira Nawonso achichepere.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger zolakwa, chonde Chisudzulo Chikuwononga.</string>
+    <string name="error_VcardParseFailure">Contact deta anali formatted molakwa.</string>
+
+    <string name="help_find">Gwiritsani ntchito nsalu kuika dzina kusinthitsa ndi ena, ndi passphrase kuteteza deta yanu. Dinani ndi yochita batani pamene anamaliza.</string>
+    <string name="help_home">Kusinthitsa ndani deta, kuonetsetsa onse ogwiritsa ali pafupi kapena pa foni. The Yambani Kusinthanitsa batani adzakhala kusinthana okha kufufuzidwa kukhudzana deta.</string>
+    <string name="help_identity_menu">Mukhozanso kusintha munthu deta anu abwino pa chophimba pogogoda pa batani ndi dzina lanu. Izi mtima menyu kulola kuti Sinthani wanu kukhudzana, Pangani Chatsopano kulankhula, kapena Ntchito ina kukhudzana.</string>
+    <string name="help_Messages">Zenerali amasonyeza zonse zakale mauthenga ndi ZOWONJEZERA omwe adakali zigwiritsidwe download.</string>
+    <string name="help_passphrase">Gwiritsani ntchito nsalu kuti malowedwe kugwiritsa ntchito yanu passphrase. Ngati mwaiwala wanu passphrase, mukhoza kupanga latsopano mfundo atetezedwe latsopano passphrase pogogoda Mwayiwala Passphrase? batani. Dinani ndi wosuta dzina kusinthana pakati angapo mafungulo.</string>
+    <string name="help_passphrase_change">Gwiritsani ntchito nsalu kusintha passphrase ndi kulowa kwanu kotsiriza passphrase kwa chitsimikiziro ndi latsopano passphrase.</string>
+    <string name="help_PickRecip">Contacts ndi SafeSlinger makiyi ali anasonyeza pano, sankhani munthu kutumiza uthenga wanu kuti.</string>
+    <string name="help_save">Pamene kulankhula, protocol ati awulule mndandanda wa ndani deta anasinthanitsa. Sankhani ojambula mukufuna kupulumutsa ndi akanikizire Tengani.</string>
+    <string name="help_SecureIntroduction">Zenerali amalola kusankha anthu inu slung mafungulo ndi pamaso kwa adzatsekeredwa kutumiza awo mafungulo kwa wina ndi mzake. Mwachidule akanikizire Yambani pamene okonzeka.</string>
+    <string name="help_Send">Zenerali amalola kusankha ena deta ndi wolandira kutumiza kuti. Mwachidule akanikizire Tumizani pamene okonzeka.</string>
+    <string name="help_settings">Zenerali limakupatsani kusintha kusakhulupirika zoikamo kwa ntchito.</string>
+
+    <string name="iOS_cameraError">Kamera chilolezo chofunika kuti angagwirizanitse zokha kupeza mauthenga. Dinani ndi %s batani kwa SafeSlinger Chojambulira chilolezo mwatsatanetsatane.</string>
+    <string name="iOS_contactError">Contacts chilolezo zimafunika kuti adzatsekeredwa nawo kukhudzana makadi. Dinani ndi %s batani kwa SafeSlinger Contacts chilolezo mwatsatanetsatane.</string>
+    <string name="iOS_errorpushtoken">Kankhani kulembetsa akusowa.</string>
+    <string name="iOS_notificationError1">Zidziwitso chilolezo kapena malangizo kapena mbendera, ndipo batchi manambala, ayenera kuti otetezeka mauthenga. Dinani ndi %s batani kwa SafeSlinger womwe umapangidwa wokha chilolezo mwatsatanetsatane.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger si wokometsedwa kwa iOS 5.x zipangizo. SafeSlinger amafuna iOS 6 kapena kuposerapo.</string>
+    <string name="iOS_photolibraryError">Photo Library chilolezo chofunika kuti angagwirizanitse zithunzi kupeza mauthenga. Dinani ndi %s batani kwa SafeSlinger Photo Library chilolezo mwatsatanetsatane.</string>
+    <string name="iOS_RequestPermissionContacts">Mukhoza kusankha wanu kukhudzana khadi kutumiza anzanu ndi SafeSlinger adzakhala encrypt kwa inu. Kuti athe Mbali imeneyi, muyenera kulola SafeSlinger mwayi wanu Contacts atafunsidwa.</string>
+    <string name="iOS_RequestPermissionMicrophone">Mungathe kulemba mawu uthenga kutumiza anzanu ndi SafeSlinger adzakhala encrypt kwa inu. Kuti athe Mbali imeneyi, muyenera kulola SafeSlinger mwayi wanu maikolofoni atafunsidwa.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ndi encrypted mauthenga ntchito ndipo sangathe ntchito popanda kulola ukubwera mauthenga ochokera Zidziwitso. Kuti athe ukubwera mauthenga, muyenera kulola SafeSlinger kukutumizirani Zidziwitso atafunsidwa.</string>
+
+    <string name="label_ago">%s zapitazo</string>
+    <string name="label_backupCompleteDate">Last zosunga zobwezeretsera Anamaliza</string>
+    <string name="label_backupRequestDate">Last zosunga zobwezeretsera Tapempha</string>
+    <string name="label_backupURL">Zosunga zobwezeretsera ulalo</string>
+    <string name="label_ClickForNMsgs">Kukhudza kubwerezanso wanu %d mauthenga</string>
+    <string name="label_ComposeHint">Kulemba Uthenga</string>
+    <string name="label_ContactName">Dzina Lanu</string>
+    <string name="label_days">%d masiku</string>
+    <string name="label_Device">Chipangizo:</string>
+    <string name="label_DeviceInSendOnlyMode">Kutumiza yekha mumalowedwe</string>
+    <string name="label_DisabledExchSourceKeyChange">Anu mfundo zasintha: gulaye Chinsinsi kachiwiri.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Choyamba mauthenga gulaye Chinsinsi ndi me pa nthawi yomweyo.</string>
+    <string name="label_Draft">Choyesera</string>
+    <string name="label_EnabledKeyFormatDeprecated">Mfundo mtundu deprecated: gulaye Chinsinsi kachiwiri.</string>
+    <string name="label_exchanged">anasinthanitsa</string>
+    <string name="label_expired">n\'kumwalira</string>
+    <string name="label_expires">chimagwira %s</string>
+    <string name="label_expiresIn">chimagwira mu</string>
+    <string name="label_FileNameHint">Dzina Lafayilo</string>
+    <string name="label_FindInstruct">Lowani dzina lanu ndi passphrase kuteteza deta yanu:</string>
+    <string name="label_FirstName">Dzina Loyamba</string>
+    <string name="label_Home">Dinani dzina lanu kuwonjezera kapena kuchotsa kukhudzana deta, fufuzani zinthu mukufuna kugawana, ndi wapampopi Yambani Kusinthanitsa pamene ena ndi okonzeka kuwombola:</string>
+    <string name="label_hometag">Home</string>
+    <string name="label_hours">%d maola</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud ndikoyambitsidwa. Dinani ndi yochita batani pamene anamaliza.</string>
+    <string name="label_InstNoMessages">No mauthenga. Mwina anatumiza uthenga kwa kulemba tabu.</string>
+    <string name="label_InstNoRecipients">Kuwonjezera olandira, choyamba tiyenera gulaye Chinsinsi ndi mmodzi kapena kuposa ena owerenga pa nthawi yomweyo. Mukhozanso kutumiza gulaye Chinsinsi kukhudzana kuitana kwa menyu.</string>
+    <string name="label_InstNoRecipientsMatchQuery">Palibe wanu woyamba olandira zikugwirizana Lusaka kwanu. Chonde ina yothetsera afunsa kapena kuitana latsopano kukhudzana.</string>
+    <string name="label_InstNoSharedFile">No nawo wapamwamba. Polumikiza wanu chipangizo ndi iTunes ndi kuukoka owona kwa nawo chikwatu.</string>
+    <string name="label_InstRecipients">Sankhani wolandira kutumiza uthenga kwa:</string>
+    <string name="label_InstSendInvite">Sankhani olandira ayambitse adzatsekeredwa:</string>
+    <string name="label_InstSharedFile">Sankhani wapamwamba kwa angagwirizanitse:</string>
+    <string name="label_introduced">anayambitsa</string>
+    <string name="label_inviteSent">Anaitanidwa</string>
+    <string name="label_Key">Mfundo:</string>
+    <string name="label_LastName">Dzina Lomaliza</string>
+    <string name="label_Me">Ine</string>
+    <string name="label_messageIntroduceNameToYou">Ndikufuna kuti atchule %s kwa inu.</string>
+    <string name="label_messageInviteInstall">SafeSlinger pulogalamu: %s</string>
+    <string name="label_messageInviteSetupInst">Kuti dongosolo malo mauthenga kugwirizana, tikhoza kukumana kapena foni mnzake pa nthawi yomweyo, ndipo legeni Chinsinsi kamodzi kutsimikizira kugwirizana.</string>
+    <string name="label_messageInviteStartMsg">Kodi tayamba otetezeka mauthenga ndi lotseguka gwero SafeSlinger iPhone kapena Android pulogalamu?</string>
+    <string name="label_messageYouAreVerified">%s, inu umboni.</string>
+    <string name="label_minutes">%d Mphindi</string>
+    <string name="label_mobiletag">Mobile</string>
+    <string name="label_MostRecentOnly">Ambiri posachedwapa okha</string>
+    <string name="label_MsgSendUpdate">Wanga kusinthidwa SafeSlinger nyota amagwira.</string>
+    <string name="label_None">Palibe</string>
+    <string name="label_numsharedfiles">%d owona Pokuuzani:</string>
+    <string name="label_OldThreads">Old ulusi</string>
+    <string name="label_othertag">Other</string>
+    <string name="label_PassHintBackoff">Retry</string>
+    <string name="label_PassHintChange">Kusinthidwa Passphrase</string>
+    <string name="label_PassHintCreate">Pangani Passphrase</string>
+    <string name="label_PassHintCurrent">Panopa Passphrase</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Bwerezani Passphrase</string>
+    <string name="label_passPhraseCacheTtl">Passphrase posungira</string>
+    <string name="label_PassPhraseIsCached">Passphrase Losungidwa</string>
+    <string name="label_phoneOnly">telefoni-okha</string>
+    <string name="label_Photo">Photo</string>
+    <string name="label_PublicKeyID">Mfundo ID</string>
+    <string name="label_PushTokenID">Kankhani Kulembetsa ID</string>
+    <string name="label_RemindBackupDelay">Zosunga zobwezeretsera Chikumbutso</string>
+    <string name="label_ReportedInactive">Lipoti kulalikira %s.</string>
+    <string name="label_restoreCompleteDate">Last kubwezeretsa Anamaliza</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger zosunga zobwezeretsera anachedwa</string>
+    <string name="label_safeslingered">(SafeSlinger Direct Kusinthanitsa)</string>
+    <string name="label_SaveAccount">Sungani Nkhani</string>
+    <string name="label_SaveInstruct">Chongani ojambula mukufuna kusintha mu adiresi yanu buku, ndikudina Tengani kupulumutsa otetezeka ojambula:</string>
+    <string name="label_search_contacts_hint">Search ojambula</string>
+    <string name="label_seconds">%d masekondi</string>
+    <string name="label_SelectRecip">Select Oyenera kupindula</string>
+    <string name="label_sendErrorData">Tumizani Mphulupulu Data</string>
+    <string name="label_SendFrom">Kuyambira:</string>
+    <string name="label_SendTo">Kuti:</string>
+    <string name="label_ShowHintAtLaunch">Onetsani lingaliro nthawi yotsatira.</string>
+    <string name="label_SpeechRecognitionAlert">Kugwiritsa ntchito mawu kuzindikira ndi olumala chifukwa izo zikhoza kuyambitsa zambiri kutayikira</string>
+    <string name="label_step_1">Gawo 1</string>
+    <string name="label_step_2">Gawo 2</string>
+    <string name="label_step_3">Gawo 3</string>
+    <string name="label_step_4">Gawo 4</string>
+    <string name="label_step_5">Gawo 5</string>
+    <string name="label_summary_auto_attach_retrieval">Basi kukopera uthenga ZOWONJEZERA pamene adakhala ndi mu.</string>
+    <string name="label_summary_auto_decrypt">Basi decrypt mauthenga pamene adakhala ndi mu.</string>
+    <string name="label_summary_remind_backup_delay">Landirani zidziwitso pamene zosunga zobwezeretsera ndi offline.</string>
+    <string name="label_summary_show_tutorial">Kusonyeza phunziro pamaso poyesa gulaye Chinsinsi.</string>
+    <string name="label_TapToDecryptFile">Dinani kuti decrypt wapamwamba</string>
+    <string name="label_TapToDecryptMessage">Dinani kuti decrypt</string>
+    <string name="label_TapToDownloadFile">Dinani download wapamwamba</string>
+    <string name="label_TapToDownloadMessage">Dinani download uthenga</string>
+    <string name="label_TapToOpenFile">Dinani kutsegula wapamwamba</string>
+    <string name="label_TapToResumeDraft">Dinani kuti ayambirenso uthenga kusodza</string>
+    <string name="label_TapToSendCredentialUpdate">Dinani ndi kugwira kutumiza nyota pomwe.</string>
+    <string name="label_TapToSlingKeys">Dinani kuti gulaye Chinsinsi.</string>
+    <string name="label_targetAccountLabel">Contacts Nkhani</string>
+    <string name="label_TouchToConfigureBackupSettings">Mwina optionally athe SafeSlinger iCloud zosunga zobwezeretsera mu iOS Zikhazikiko. Dinani ndi yochita batani pamene anamaliza.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Kukhudza kwa sintha zosunga zobwezeretsera zoikamo.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Kukhudza kwa sintha posungira timeout zoikamo.</string>
+    <string name="label_undefinedTypeLabel">Unknown</string>
+    <string name="label_UnknownSender">Encrypted Sender</string>
+    <string name="label_UserName">Wosuta Name</string>
+    <string name="label_WarnForgotPassphrase">Kuteteza deta yanu, SafeSlinger si kusunga wanu passphrase kulikonse kwa kuchira. Mungathe kulumikiza olandira mauthenga analenga nayenso passphrase malowedwe. Komabe, mukhoza kupanga latsopano mfundo ndi passphrase, kenako abwereza gulaye Chinsinsi ndi anthuwo.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Otsatirawa mafungulo zichotsedwa:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Palibenso posachedwapa mafungulo kuposa anuwo.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Only mafungulo kwaiye posachedwapa kuposa anuwo, kwaiye pa %s, mwina fufutidwa.</string>
+    <string name="label_worktag">Ntchito</string>
+
+    <string name="menu_About">About</string>
+    <string name="menu_auto_attach_retrieval">Magalimoto-akatenge ZOWONJEZERA</string>
+    <string name="menu_auto_decrypt">Magalimoto-decrypt</string>
+    <string name="menu_Change">Change</string>
+    <string name="menu_ChangePassphrase">Change Passphrase</string>
+    <string name="menu_ContactInviteEmail">Email ku Contacts</string>
+    <string name="menu_ContactInviteSms">Text ku Contacts</string>
+    <string name="menu_CreateNew">Pangani Latsopano</string>
+    <string name="menu_delete">Chotsani</string>
+    <string name="menu_deleteThread">Chotsani ulusi %s</string>
+    <string name="menu_Details">View Mbali</string>
+    <string name="menu_DownloadDirectory">Download Directory</string>
+    <string name="menu_Edit">Sinthani</string>
+    <string name="menu_EditContact">Sinthani Contact</string>
+    <string name="menu_EditName">Sinthani Name</string>
+    <string name="menu_FileManager">Wapamwamba ka</string>
+    <string name="menu_ForgotPassphrase">Anaiwala Passphrase?</string>
+    <string name="menu_Help">Thandizeni</string>
+    <string name="menu_Introduction">Kuyamba</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_License">License</string>
+    <string name="menu_link_contact_add">Add Contact Link</string>
+    <string name="menu_link_contact_change">Change Contact Link</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Sinthani Passphrases</string>
+    <string name="menu_message_font_size">Uthenga Zilembo Kukula</string>
+    <string name="menu_messageCopyText">Buku Text</string>
+    <string name="menu_messageForward">Forward</string>
+    <string name="menu_PrivacyPolicy">Mfundo Zazinsinsi</string>
+    <string name="menu_Remove">Chotsani</string>
+    <string name="menu_restore_default">Kubwezeretsa Pofikira Zikhazikiko</string>
+    <string name="menu_ringtone">Kumveka</string>
+    <string name="menu_SelectShareApp">Add Contact Kuitana</string>
+    <string name="menu_sendFeedback">Tumizani Ndemanga</string>
+    <string name="menu_SendUpdate">Tumizani Chosintha</string>
+    <string name="menu_Settings">Zikhazikiko</string>
+    <string name="menu_ShowTutorial">Show Chitsanzo</string>
+    <string name="menu_TagComposeMessage">Kulemba</string>
+    <string name="menu_TagExchange">Gulaye Chinsinsi</string>
+    <string name="menu_TagListMessages">Mauthenga</string>
+    <string name="menu_UseAnother">Gwiritsani china</string>
+    <string name="menu_UseContactPerson">Gwiritsani Contact %s</string>
+    <string name="menu_UseNoContact">Ntchito Dzina Only</string>
+    <string name="menu_UseProfilePerson">Gwiritsani Profile %s</string>
+    <string name="menu_vibrate">Kunjenjemera</string>
+
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">encrypting…</string>
+    <string name="prog_FileSent">uthenga anatumiza, kuyembekezera yankho…</string>
+    <string name="prog_findingKey">kupeza mfundo…</string>
+    <string name="prog_GeneratingKey">kupoletsa kiyi imeneyi akhoza kutenga kanthawi…</string>
+    <string name="prog_generatingSignature">kupoletsa siginecha…</string>
+    <string name="prog_loadingContent">Loading… okhutira</string>
+    <string name="prog_pending">podikira…</string>
+    <string name="prog_ReceivingFile">kulandira encrypted wapamwamba…</string>
+    <string name="prog_RequestingFile">kupempha encrypted wapamwamba…</string>
+    <string name="prog_RequestingMessage">kupempha encrypted uthenga…</string>
+    <string name="prog_RequestingPushReg">kupempha Kankhani kulembetsa…</string>
+    <string name="prog_SavingContactsToAddressBook">kasinthidwe adiresi Buku…</string>
+    <string name="prog_SavingContactsToKeyDatabase">kasinthidwe mfundo Nawonso achichepere…</string>
+    <string name="prog_SearchingForBackup">akufunafuna zosunga zobwezeretsera…</string>
+    <string name="prog_SendingFile">kutumiza encrypted %s…</string>
+    <string name="prog_verifyingIntegrity">chikuchitika okhulupirika…</string>
+    <string name="prog_verifyingSignature">chikuchitika siginecha…</string>
+
+    <string name="section_advanced">MwaukadauloZida</string>
+    <string name="section_backup">Zosunga zobwezeretsera</string>
+    <string name="section_general">General</string>
+    <string name="section_notification">Zidziwitso</string>
+    <string name="section_storage">Yosungirako</string>
+
+    <string name="state_BackupRestored">Zosunga zobwezeretsera anabwezeretsedwa.</string>
+    <string name="state_FileDeleted">Fufutidwa wapamwamba %s.</string>
+    <string name="state_FileSent">Uthenga wotumidwa.</string>
+    <string name="state_InvitationAdded">Pempho added.</string>
+    <string name="state_MessageSavedAsDraft">Uthenga adzapulumuka kusodza.</string>
+    <string name="state_MessagesDeleted">%d mauthenga fufutidwa.</string>
+    <string name="state_MessagesSent">%d mauthenga anatumiza.</string>
+    <string name="state_PassphraseUpdated">Passphrase kusinthidwa.</string>
+    <string name="state_RecipientsDeleted">%d olandira fufutidwa.</string>
+    <string name="state_SomeContactsImported">%s ojambula ankaitanitsa.</string>
+    <string name="state_TextCopiedToClipboard">Text anakopera kuti zomatula.</string>
+
+    <string name="text_About">SafeSlinger lakonzedwa kuti mosavuta nawo chizindikiro deta, mu munthu kapena pafoni, wotsimikiziridwa, payekha, ndi kuteteza. Munthu aliyense mumauza amalenga malo mapeto ndi mapeto njira kutumiza mauthenga.</string>
+    <string name="text_About1">Mosavuta kusinthana kukhudzana ndi zomwe ena</string>
+    <string name="text_About2">Adzatsekeredwa gulaye malemba, photos, chirichonse!</string>
+    <string name="text_About3">Wamphamvu cryptography amateteza mwapeza</string>
+    <string name="text_About_Short">SafeSlinger: Lankhulani 3 mawu ndi kwanthawizonse kucheza mu mtendere.</string>
+    <string name="text_AboutEmail">imelo: %s</string>
+    <string name="text_AboutFeat">Mawonekedwe:</string>
+    <string name="text_AboutWeb">ukonde: %s</string>
+    <string name="text_DevelopedBy">Kukhala ndi:</string>
+    <string name="text_KeywordExchange">Kusinthanitsa</string>
+    <string name="text_KeywordIdentity">Weniweni</string>
+    <string name="text_KeywordKey">Mfundo</string>
+    <string name="text_KeywordMessaging">Mauthenga</string>
+    <string name="text_KeywordPrivacy">Zambezi</string>
+    <string name="text_KeywordSecurity">Security</string>
+    <string name="text_LanguagesProvidedBy">Zinenero operekedwa ndi:</string>
+    <string name="text_LocalizationRepo">kumasulira: %s</string>
+    <string name="text_RelatedSearchTerms">Related Terms:</string>
+    <string name="text_Requirements">Zofunika:</string>
+    <string name="text_Requirements1">Ayenera kuikidwa pa osachepera 2 zipangizo.</string>
+    <string name="text_Requirements2">Intaneti ayenera kum\'tumikira.</string>
+    <string name="text_SourceCodeRepo">lotseguka gwero: %s</string>
+    <string name="text_WhatsNew">Bata kulewerana.</string>
+
+    <string name="title_About">About</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_ChooseDirectory">Sankhani Directory</string>
+    <string name="title_ChooseFileLoad">Muzisankha CHOWONJEZERA</string>
+    <string name="title_comments">Comments/Mafunso</string>
+    <string name="title_Error">Zolakwa</string>
+    <string name="title_ExchangeWalkthrough">Gulaye Chinsinsi Wothandizira</string>
+    <string name="title_FileOptions">CHOWONJEZERA Mungasankhe</string>
+    <string name="title_find">Khazikitsa</string>
+    <string name="title_font_size">Sankhani wosasintha kukula</string>
+    <string name="title_home">Yambani Kusinthanitsa</string>
+    <string name="title_HomePanel">Home</string>
+    <string name="title_MessageDetail">Uthenga</string>
+    <string name="title_Messages">Mauthenga</string>
+    <string name="title_MyIdentity">Patokha Contact</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Uthenga Lilipo</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Mauthenga Lilipo</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Olandira</string>
+    <string name="title_Question">Funso</string>
+    <string name="title_RecipientDetail">Oyenera kupindula Mbali</string>
+    <string name="title_save">Mapeto Kusinthanitsa</string>
+    <string name="title_SaveFileAs">Sungani Fayilo Monga</string>
+    <string name="title_SecureIntroduction">Otetezeka Kuyamba</string>
+    <string name="title_SecureIntroductionInvite">Moyo Wabwino Chiyambi Kuitana!</string>
+    <string name="title_SelectSource">Kutumiza Mungasankhe:</string>
+    <string name="title_SendFile">Tumizani</string>
+    <string name="title_sharingfolder">Kuuza chikwatu</string>
+    <string name="title_soundrecoder">Sound wolemba</string>
+    <string name="title_TextInviteMsg">SafeSlinger Kuitana</string>
+    <string name="title_Threads">Ulusi</string>
+    <string name="title_Warn">Chenjezo</string>
+
+</resources>

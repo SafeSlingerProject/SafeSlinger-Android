@@ -27,50 +27,50 @@
 
     <string name="ask_QuitConfirmation">Kwụsịkwanụ? O doro gị anya?</string>
 
-    <string name="btn_Match">Ọzọ</string>
-    <string name="btn_NoMatch">Ọ dịghị egwuregwu</string>
+    <string name="btn_Match">Osote</string>
+    <string name="btn_NoMatch">Ọ dịghị Kpokọọ</string>
 
     <string name="choice_NumUsers">%d ọrụ</string>
 
-    <string name="error_AllMembersMustUpgrade">Ụfọdụ ndị na-eji ihe okenye mbipute; òtù nile ga nweta nkwalite ka Kacha ọhụrụ mbipute.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Niile ndị ga-nweta nkwalite, ụfọdụ na-eji okenye push ndebanye formats.</string>
-    <string name="error_CorrectYourInternetConnection">Internet adịghị, chọpụta mwube gị.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout karịa. Na-amalite mgbanwe ọzọ.</string>
-    <string name="error_HttpCode">Server http njehie: %d</string>
-    <string name="error_InvalidCommitVerify">Ezughị oke data hụrụ na ego. Na-amalite mgbanwe ọzọ.</string>
-    <string name="error_InvalidCommonUserId">Biko tinye mma integer.</string>
-    <string name="error_LocalGroupCommitDiffer">I kọrọ a dị nkebi. Na-amalite mgbanwe ọzọ.</string>
-    <string name="error_MinUsersRequired">A opekempe nke %d òtù na-chọrọ agbanweta data.</string>
-    <string name="error_MoreDataThanUsers">Atụghị Anya data hụrụ na ego. Na-amalite mgbanwe ọzọ.</string>
-    <string name="error_NoDataToExchange">Mgbanwe na-efu chọrọ data.</string>
-    <string name="error_NoWordListSelected">Ị ga-họrọ otu n\'ime nkebi ahịrịokwu tupu ya.</string>
-    <string name="error_OtherGroupCommitDiffer">Onye kọrọ a dị nkebi. Na-amalite mgbanwe ọzọ.</string>
-    <string name="error_OutOfMemoryError">Ebe nchekwa dị ala iji mezuo nke a ọrụ.</string>
+    <string name="error_AllMembersMustUpgrade">Ụfọdụ ndị na-eji ihe ndị okenye version; òtù nile ga kwalite ka Kacha ọhụrụ version.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">All òtù ga kwalite, ụfọdụ na-eji okenye push ndebanye formats.</string>
+    <string name="error_CorrectYourInternetConnection">Internet adịghị, elele gị ntọala.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange Timeout karịrị.-Amalite na mgbanwe ọzọ.</string>
+    <string name="error_HttpCode">Server HTTP Error: %d</string>
+    <string name="error_InvalidCommitVerify">Ezughị oke data hụrụ n\'ọnọdụ.-Amalite na mgbanwe ọzọ.</string>
+    <string name="error_InvalidCommonUserId">Biko tinye a mma integer.</string>
+    <string name="error_LocalGroupCommitDiffer">Ị kọrọ a dị nkebi ahịrịokwu.-Amalite na mgbanwe ọzọ.</string>
+    <string name="error_MinUsersRequired">A kacha nta nke %d òtù na-achọrọ agbanweta data.</string>
+    <string name="error_MoreDataThanUsers">Atụghị Anya data hụrụ n\'ọnọdụ.-Amalite na mgbanwe ọzọ.</string>
+    <string name="error_NoDataToExchange">The mgbanwe na-efu achọrọ data.</string>
+    <string name="error_NoWordListSelected">Ị ga-họrọ otu n\'ime nkebi ahịrịokwu tupu ya etinyewe.</string>
+    <string name="error_OtherGroupCommitDiffer">Onye kọọrọ a dị nkebi ahịrịokwu.-Amalite na mgbanwe ọzọ.</string>
+    <string name="error_OutOfMemoryError">Ebe nchekwa dị oke obere iji wuchaa a ime ihe.</string>
     <string name="error_ServerAppMessage">Server Ozi: %s</string>
-    <string name="error_ServerNotResponding">Ọ dịghị omume na sava.</string>
+    <string name="error_ServerNotResponding">Ọ dịghị omume na nkesa.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout eche ụfọdụ otu òtù ịgbakwunye data.</string>
-    <string name="error_WebCancelledByUser">Ịnye ịkagbu ihe nkesa na-arịọ arịrịọ.</string>
+    <string name="error_WebCancelledByUser">Ịnye kagbuo nkesa arịrịọ.</string>
 
-    <string name="help_size">Họrọ ọnụ ọgụgụ ndị na-agbali agbanweta data ọnụ ma pịa OK.</string>
-    <string name="help_userid">Nke a na ọnụ ọgụgụ a na ákwà a na-eji ike a pụrụ iche otu ọrụ. Nyochaa nọmba na niile ọrụ \'ákwà, mgbe niile ọrụ kwesịrị itinye otu kasị ala nọmba ma pịa OK.</string>
-    <string name="help_verify">Ugbu a, ị ga-adakọrịrị otu n\'ime ndị a 3-okwu nkebi ahịrịokwu na niile ọrụ. Ọ bụla onye ọrụ ga-họrọ otu nkịtị okwu, na pịa ọzọ.</string>
+    <string name="help_size">Họrọ ọnụ ọgụgụ nke ndị na-agbali agbanweta data ọnụ ma pịa OK.</string>
+    <string name="help_userid">Nke a ọnụ ọgụgụ a na ihuenyo na-eji ike a pụrụ iche otu ọrụ. Nyochaa na ọnụ ọgụgụ na niile ọrụ \'meziri, mgbe niile ọrụ kwesịrị itinye otu kasị ala nọmba ma pịa OK.</string>
+    <string name="help_verify">Ugbu a, ị ga-dakọtara otu n\'ime ndị a 3-okwu kwuo okwu niile na ọrụ. Kwa ọrụ ga-họrọ otu nkịtị okwu, ma pịa Next.</string>
 
-    <string name="label_CompareScreensNDevices">Tụlee ákwà na %s ngwaọrụ.</string>
-    <string name="label_NumericModeHint">-Abụghị Bekee</string>
-    <string name="label_PromptInstruct">Nke a na ọnụ ọgụgụ a na-eji ike a pụrụ iche otu ọrụ. Tụlee, na ibà n\'ala ala ọtụtụ n\'etiti ndị niile ọrụ.</string>
+    <string name="label_CompareScreensNDevices">Tụlee meziri na %s ngwaọrụ.</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Nke a ọnụ ọgụgụ a na-eji ike a pụrụ iche otu ọrụ. Tụlee, na ibà na kasị ala ọnụ ọgụgụ n\'etiti ndị niile ọrụ.</string>
     <string name="label_ReceivedNItems">natara %d ihe</string>
     <string name="label_UserIdHint">Kasị ala</string>
-    <string name="label_VerifyInstruct">Niile ntị ga-adakọrịrị onye nke 3-okwu nkebi ahịrịokwu. Tụlee, wee bulie na kenha okwu.</string>
+    <string name="label_VerifyInstruct">All igwe ga-dakọtara otu n\'ime 3-okwu kwuo okwu. Tụlee, na mgbe ahụ bulie kenha nkebi ahịrịokwu ahụ.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">eche nkwenye niile so…</string>
+    <string name="prog_CollectingOthersCommitVerify">eche nkwenye niile òtù…</string>
     <string name="prog_CollectingOthersItems">eche niile ọrụ isonyere…</string>
-    <string name="prog_ConstructingGroupKey">ịrụ otu isi ihe…</string>
-    <string name="prog_RequestingUserId">arịọ otu…</string>
+    <string name="prog_ConstructingGroupKey">iwu otu isi…</string>
+    <string name="prog_RequestingUserId">na-arịọ otu…</string>
 
-    <string name="title_size">Olee otú ọtụtụ ndị ọrụ na ego?</string>
+    <string name="title_size">Olee otú ọtụtụ ndị ọrụ na mgbanwe?</string>
     <string name="title_userid">Grouping</string>
-    <string name="title_verify">Ịchọpụta</string>
+    <string name="title_verify">Nyochaa</string>
 
 </resources>

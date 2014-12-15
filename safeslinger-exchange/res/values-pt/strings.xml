@@ -25,23 +25,23 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Sair? Você tem certeza?</string>
+    <string name="ask_QuitConfirmation">Parar de fumar? Você tem certeza?</string>
 
-    <string name="btn_Match">Próxima</string>
+    <string name="btn_Match">Next</string>
     <string name="btn_NoMatch">No Match</string>
 
     <string name="choice_NumUsers">%d usuários</string>
 
     <string name="error_AllMembersMustUpgrade">Alguns membros estão usando uma versão mais antiga; todos os membros devem atualizar para a versão mais recente.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Todos os membros devem atualizar, alguns estão usando formatos de registro de pressão mais velhos.</string>
-    <string name="error_CorrectYourInternetConnection">Internet não disponível, verifique as configurações.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Taxas de tempo limite excedido. Comece a troca novamente.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Todos os membros devem atualizar, alguns estão usando formatos de registro de envio mais velhos.</string>
+    <string name="error_CorrectYourInternetConnection">Internet não está disponível, verifique as configurações.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Troca de tempo limite excedido. Comece a troca novamente.</string>
     <string name="error_HttpCode">Erro de servidor HTTP: %d</string>
     <string name="error_InvalidCommitVerify">Dados incorretos encontrado em troca. Comece a troca novamente.</string>
     <string name="error_InvalidCommonUserId">Por favor insira um número inteiro positivo.</string>
     <string name="error_LocalGroupCommitDiffer">Você relataram uma diferença de frases. Comece a troca novamente.</string>
     <string name="error_MinUsersRequired">Um mínimo de %d membros são obrigados a trocar dados.</string>
-    <string name="error_MoreDataThanUsers">Dados inesperados encontrados em troca. Comece a troca novamente.</string>
+    <string name="error_MoreDataThanUsers">Dados inesperados encontrado em troca. Comece a troca novamente.</string>
     <string name="error_NoDataToExchange">A troca está faltando dados necessários.</string>
     <string name="error_NoWordListSelected">Você deve selecionar uma das frases antes de prosseguir.</string>
     <string name="error_OtherGroupCommitDiffer">Alguém relatou uma diferença de frases. Comece a troca novamente.</string>
@@ -52,25 +52,25 @@
     <string name="error_WebCancelledByUser">O usuário cancelou pedido do servidor.</string>
 
     <string name="help_size">Selecione o número de pessoas que estão tentando trocar dados juntos e pressione OK.</string>
-    <string name="help_userid">Este número nessa tela é usado para criar um único grupo de usuários. Reveja os números em telas de todos os usuários, todos os usuários devem digitar o mesmo número mais baixo e pressione OK.</string>
+    <string name="help_userid">Este número nessa tela é usada para criar um único grupo de usuários. Reveja os números em telas de todos os usuários, em seguida, todos os usuários devem digitar o mesmo número mais baixo e pressione OK.</string>
     <string name="help_verify">Agora, você deve corresponder a uma destas frases de 3 palavras com todos os usuários. Cada usuário deve selecionar a mesma frase comum, e pressione Next.</string>
 
     <string name="label_CompareScreensNDevices">Compare telas em dispositivos %s.</string>
     <string name="label_NumericModeHint">Non-Inglês</string>
-    <string name="label_PromptInstruct">Este número é utilizado para criar um único grupo de utilizadores. Compare-se, em seguida, insira o número mais baixo entre todos os usuários.</string>
+    <string name="label_PromptInstruct">Este número é utilizado para criar um único grupo de utilizadores. Compare-se, em seguida, digite o número mais baixo entre todos os usuários.</string>
     <string name="label_ReceivedNItems">recebeu %d itens</string>
     <string name="label_UserIdHint">Menor</string>
-    <string name="label_VerifyInstruct">Todos os telefones devem corresponder a um dos três-word frases. Compare-se, e em seguida, escolher a frase correspondente.</string>
+    <string name="label_VerifyInstruct">Todos os telefones devem corresponder a um dos 3-word frases. Compare-se, e em seguida, escolher a frase correspondente.</string>
 
-    <string name="lib_name">SafeSlinger câmbio</string>
+    <string name="lib_name">SafeSlinger Troca</string>
 
     <string name="prog_CollectingOthersCommitVerify">espera para a verificação de todos os membros…</string>
-    <string name="prog_CollectingOthersItems">à espera de todos os usuários para participar…</string>
+    <string name="prog_CollectingOthersItems">à espera de todos os usuários para se juntar…</string>
     <string name="prog_ConstructingGroupKey">construção de chave de grupo…</string>
     <string name="prog_RequestingUserId">solicitando a adesão…</string>
 
     <string name="title_size">Quantos usuários na troca?</string>
     <string name="title_userid">Agrupamento</string>
-    <string name="title_verify">Verifique</string>
+    <string name="title_verify">Verificar</string>
 
 </resources>

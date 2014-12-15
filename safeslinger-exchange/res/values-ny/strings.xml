@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Siya? Mukutsimikiza?</string>
+
+    <string name="btn_Match">Ena</string>
+    <string name="btn_NoMatch">Sizingafanane</string>
+
+    <string name="choice_NumUsers">%d owerenga</string>
+
+    <string name="error_AllMembersMustUpgrade">Ena ntchito wachikulire Baibulo; aliyense ayenera Sinthani kuti zatsopano Baibulo.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Aliyense ayenera Sinthani, ena ntchito akulu Kankhani kulembetsa akamagwiritsa.</string>
+    <string name="error_CorrectYourInternetConnection">Internet palibe, yang\'anani makonda anu.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Kusinthanitsa timeout zinaposa. Yambani angalole kachiwiri.</string>
+    <string name="error_HttpCode">Seva HTTP Mphulupulu: %d</string>
+    <string name="error_InvalidCommitVerify">Pachithunzichi deta anapeza kuwombola. Yambani angalole kachiwiri.</string>
+    <string name="error_InvalidCommonUserId">Chonde lowetsani zabwino inteja.</string>
+    <string name="error_LocalGroupCommitDiffer">Mwasonyeza kusiyana pa mawu. Yambani angalole kachiwiri.</string>
+    <string name="error_MinUsersRequired">A osachepera %d mamembala ayenera kusinthitsa deta.</string>
+    <string name="error_MoreDataThanUsers">Pakagwa deta anapeza kuwombola. Yambani angalole kachiwiri.</string>
+    <string name="error_NoDataToExchange">Kusinthanitsa akusowa zinafunika deta.</string>
+    <string name="error_NoWordListSelected">Muyenera kusankha mmodzi mwa mawu akuyendera.</string>
+    <string name="error_OtherGroupCommitDiffer">Wina lipoti kusiyana mawu. Yambani angalole kachiwiri.</string>
+    <string name="error_OutOfMemoryError">Memory ndi zochepa kwambiri kumaliza opaleshoni.</string>
+    <string name="error_ServerAppMessage">Seva Message: %s</string>
+    <string name="error_ServerNotResponding">Palibe yankho kuchokera seva.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout kuyembekezera ena gulu kuwonjezera deta.</string>
+    <string name="error_WebCancelledByUser">Wosuta zimafika seva pempho.</string>
+
+    <string name="help_size">Sankhani kuchuluka kwa anthu amene akuyesetsa kuti azisinthanitsa deta pamodzi ndi atolankhani bwino.</string>
+    <string name="help_userid">Nambala imeneyi pa chophimba ntchito yolenga yapadera gulu la Intaneti. Unikani manambala onse ogwiritsa \'zowonetsera, ndiye onse ogwiritsa ayenera kulowa yemweyo otsika nambala osindikizira bwino.</string>
+    <string name="help_verify">Tsopano, inu muyenera kufanana mmodzi mwa 3-mawu mawu ndi Intaneti. Aliyense ayenera kusankha wosuta yemweyo wamba akuti, ndi kukanikizana Kenako.</string>
+
+    <string name="label_CompareScreensNDevices">Yerekezerani zowonetsera pa %s zipangizo.</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Chiwerengerochi ntchito yolenga yapadera gulu la Intaneti. Yerekezerani, ndiyeno kulowa lakuya nambala pakati onse owerenga.</string>
+    <string name="label_ReceivedNItems">analandira %d zinthu</string>
+    <string name="label_UserIdHint">Otsika</string>
+    <string name="label_VerifyInstruct">Onse m\'manja ayenera kufanana mmodzi wa 3 Mau mawu. Yerekezerani, ndiyeno akusankha yofananira akuti.</string>
+
+    <string name="lib_name">SafeSlinger Kusinthanitsa</string>
+
+    <string name="prog_CollectingOthersCommitVerify">kuyembekezera yachinsinsi kwa anthu onse…</string>
+    <string name="prog_CollectingOthersItems">kuyembekezera onse ogwiritsa kulowa…</string>
+    <string name="prog_ConstructingGroupKey">lomanga gulu mfundo…</string>
+    <string name="prog_RequestingUserId">kupempha umembala…</string>
+
+    <string name="title_size">Angati Intaneti mu kuwombola?</string>
+    <string name="title_userid">Grouping</string>
+    <string name="title_verify">Tsimikizani</string>
+
+</resources>

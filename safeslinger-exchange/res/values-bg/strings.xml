@@ -27,50 +27,50 @@
 
     <string name="ask_QuitConfirmation">Quit? Сигурни ли сте?</string>
 
-    <string name="btn_Match">Следваща</string>
+    <string name="btn_Match">До</string>
     <string name="btn_NoMatch">Не Match</string>
 
     <string name="choice_NumUsers">%d потребители</string>
 
     <string name="error_AllMembersMustUpgrade">Някои членове използват по-стара версия; всички членове трябва да ъпгрейд към новата версия.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Всички членове трябва да ъпгрейд, някои се използват по-стари формати регистрационни лицеви.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Всички членове трябва да ъпгрейд, някои се използват по-стари формати регистрация лицеви.</string>
     <string name="error_CorrectYourInternetConnection">Интернет не е на разположение, проверете настройките си.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange таймаут надхвърлен. Започнете обмена отново.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange таймаут надвишен. Започнете обмена отново.</string>
     <string name="error_HttpCode">Сървър HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Намерени Грешни данни в замяна. Започнете обмена отново.</string>
+    <string name="error_InvalidCommitVerify">Намерени неверни данни в замяна. Започнете обмена отново.</string>
     <string name="error_InvalidCommonUserId">Моля, въведете положително число.</string>
-    <string name="error_LocalGroupCommitDiffer">Можете да отчете разликата в фрази. Започнете обмена отново.</string>
+    <string name="error_LocalGroupCommitDiffer">Можете да отчете разлика в фрази. Започнете обмена отново.</string>
     <string name="error_MinUsersRequired">Минимум %d членове са задължени да обменят данни.</string>
     <string name="error_MoreDataThanUsers">Намерени Неочаквани данни в замяна. Започнете обмена отново.</string>
     <string name="error_NoDataToExchange">Обменът липсва необходимите данни.</string>
-    <string name="error_NoWordListSelected">Вие трябва да изберете една от фразите, преди да продължите.</string>
+    <string name="error_NoWordListSelected">Трябва да изберете една от фразите, преди да продължите.</string>
     <string name="error_OtherGroupCommitDiffer">Някой съобщава разлика в фрази. Започнете обмена отново.</string>
-    <string name="error_OutOfMemoryError">Паметта е твърде ниска, за да изпълните тази операция.</string>
+    <string name="error_OutOfMemoryError">Memory е твърде ниска, за да завършите тази операция.</string>
     <string name="error_ServerAppMessage">Сървър Съобщение: %s</string>
-    <string name="error_ServerNotResponding">Няма отговор от сървъра.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Изчакване на някои членове на групата, за да добавите данни.</string>
-    <string name="error_WebCancelledByUser">Потребителят отменен заявка на сървъра.</string>
+    <string name="error_ServerNotResponding">Липсата на отговор от сървъра.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout чака някои членове на групата, за да добавите данни.</string>
+    <string name="error_WebCancelledByUser">Потребителят анулиране искане сървър.</string>
 
-    <string name="help_size">Изберете броя на хората, които се опитват да обменят данни заедно и натиснете OK.</string>
-    <string name="help_userid">Този номер на този екран се използва за създаване на уникална група от потребители. Преглед на номерата на екраните на всички потребители, а след това всички потребители трябва да влязат в една и съща най-ниската номер и натиснете OK.</string>
-    <string name="help_verify">Сега, вие трябва да съвпада с едно от тези 3-фрази думата с всички потребители. Всеки потребител трябва да изберете една и съща обща фраза, и натиснете Next.</string>
+    <string name="help_size">Изберете броя на хората, които се опитват да се обменят данни заедно и натиснете OK.</string>
+    <string name="help_userid">Този номер на този екран се използва за създаване на уникална група от потребители. Прегледайте номерата на екрани на всички потребители, а след това всички потребители трябва да въведете една и съща най-ниската номер и натиснете ОК.</string>
+    <string name="help_verify">Сега, вие трябва да съответства на един от тези 3-фрази думата с всички участници. Всеки потребител трябва да изберете една и съща обща фраза, и натиснете Next.</string>
 
-    <string name="label_CompareScreensNDevices">Сравни екрани на %s устройства.</string>
+    <string name="label_CompareScreensNDevices">Сравнете паравани за %s устройства.</string>
     <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Този брой се използва за създаване на уникална група от потребители. Сравнете, и след това въведете най-малък брой сред всички потребители.</string>
-    <string name="label_ReceivedNItems">получи %d позиции</string>
+    <string name="label_PromptInstruct">Този номер се използва за създаване на уникална група от потребители. Сравнете, а след това въведете най-малък брой сред всички участници.</string>
+    <string name="label_ReceivedNItems">получил %d позиции</string>
     <string name="label_UserIdHint">Най-ниска</string>
-    <string name="label_VerifyInstruct">Всички телефони трябва да съответстват на един от 3-фрази думата. Сравнете, и след това изберете съвпадение на фраза.</string>
+    <string name="label_VerifyInstruct">Всички телефони трябва да съответстват на един от 3-фрази думата. Сравнете, и след това изберете съвпадение по фраза.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">чака за проверка от всички членове…</string>
-    <string name="prog_CollectingOthersItems">чака за всички потребители да се присъединят към…</string>
-    <string name="prog_ConstructingGroupKey">конструиране ключов група…</string>
+    <string name="prog_CollectingOthersCommitVerify">чака потвърждение от всички членове…</string>
+    <string name="prog_CollectingOthersItems">чака за всички потребители да се присъединят…</string>
+    <string name="prog_ConstructingGroupKey">конструиране ключова група…</string>
     <string name="prog_RequestingUserId">поиска да стане член…</string>
 
-    <string name="title_size">Колко потребители в обмена?</string>
-    <string name="title_userid">Групирането</string>
+    <string name="title_size">Колко потребители в размяната?</string>
+    <string name="title_userid">Групировка</string>
     <string name="title_verify">Уверете се</string>
 
 </resources>

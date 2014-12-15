@@ -27,50 +27,50 @@
 
     <string name="ask_QuitConfirmation">ចេញ? តើអ្នកប្រាកដ?</string>
 
-    <string name="btn_Match">បន្ទាប់ទៀត</string>
+    <string name="btn_Match">បន្ទាប់</string>
     <string name="btn_NoMatch">គ្មានការផ្គូផ្គង</string>
 
     <string name="choice_NumUsers">អ្នកប្រើប្រាស់ %d</string>
 
-    <string name="error_AllMembersMustUpgrade">សមាជិកខ្លះកំពុងប្រើកំណែចាស់ជាង; សមាជិកទាំងអស់ត្រូវតែធ្វើឱ្យប្រសើរឡើងទៅកំណែថ្មីបំផុត។</string>
+    <string name="error_AllMembersMustUpgrade">សមាជិកខ្លះកំពុងប្រើកំណែចាស់ជាង! សមាជិកទាំងអស់ត្រូវតែធ្វើឱ្យប្រសើរឡើងទៅកំណែថ្មីបំផុត។</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">សមាជិកទាំងអស់ត្រូវតែធ្វើឱ្យប្រសើរឡើងមួយចំនួនកំពុងប្រើទ្រង់ទ្រាយការចុះបញ្ជីការជំរុញចាស់។</string>
-    <string name="error_CorrectYourInternetConnection">អ៊ិនធឺណិមិនអាចប្រើបានពិនិត្យមើលការកំណត់របស់អ្នក។</string>
+    <string name="error_CorrectYourInternetConnection">អ៊ិនធឺណិមិនអាចរកបាន, ពិនិត្យមើលការកំណត់របស់អ្នក។</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">អស់ពេលការផ្លាស់ប្តូរលើស។ ចាប់ផ្តើមការផ្លាស់ប្តូរម្តងទៀត។</string>
-    <string name="error_HttpCode">កំហុសម៉ាស៊ីនបម្រើ HTTP: %d</string>
-    <string name="error_InvalidCommitVerify">ទិន្នន័យមិនត្រឹមត្រូវត្រូវបានរកឃើញនៅក្នុងការផ្លាស់ប្តូរ។ ចាប់ផ្តើមការផ្លាស់ប្តូរម្តងទៀត។</string>
+    <string name="error_HttpCode">កំហុសក្នុងការម៉ាស៊ីនបម្រើ HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">ទិន្នន័យមិនត្រឹមត្រូវរកឃើញនៅក្នុងការផ្លាស់ប្តូរ។ ចាប់ផ្តើមការផ្លាស់ប្តូរម្តងទៀត។</string>
     <string name="error_InvalidCommonUserId">សូមបញ្ចូលចំនួនគត់វិជ្ជមាន។</string>
-    <string name="error_LocalGroupCommitDiffer">អ្នកបានរាយការណ៍ថាមានភាពខុសគ្នានៅក្នុងឃ្លាមួយ។ ចាប់ផ្តើមការផ្លាស់ប្តូរម្តងទៀត។</string>
+    <string name="error_LocalGroupCommitDiffer">លោកអ្នកបានរាយការណ៍ថាមានភាពខុសគ្នានៅក្នុងឃ្លាមួយ។ ចាប់ផ្តើមការផ្លាស់ប្តូរម្តងទៀត។</string>
     <string name="error_MinUsersRequired">អប្បរមានៃសមាជិក %d ម្នាក់ត្រូវបានតម្រូវឱ្យផ្លាស់ប្តូរទិន្នន័យ។</string>
-    <string name="error_MoreDataThanUsers">ទិន្នន័យដែលមិនបានរំពឹងទុករកឃើញនៅក្នុងការផ្លាស់ប្តូរ។ ចាប់ផ្តើមការផ្លាស់ប្តូរម្តងទៀត។</string>
-    <string name="error_NoDataToExchange">ការផ្លាស់ប្តូរនេះត្រូវបានបាត់ទិន្នន័យដែលត្រូវការ។</string>
-    <string name="error_NoWordListSelected">អ្នកត្រូវតែជ្រើសមួយក្នុងចំណោមឃ្លាមុនពេលបន្ត។</string>
+    <string name="error_MoreDataThanUsers">ទិន្នន័យដែលមិនរំពឹងទុករកឃើញនៅក្នុងការផ្លាស់ប្តូរ។ ចាប់ផ្តើមការផ្លាស់ប្តូរម្តងទៀត។</string>
+    <string name="error_NoDataToExchange">ការផ្លាស់ប្តូរនេះត្រូវបានបាត់ខ្លួនទិន្នន័យដែលត្រូវការ។</string>
+    <string name="error_NoWordListSelected">អ្នកត្រូវតែជ្រើសឃ្លាមុនពេលបន្ត។</string>
     <string name="error_OtherGroupCommitDiffer">មានមនុស្សម្នាក់បានរាយការណ៍ថាមានភាពខុសគ្នានៅក្នុងឃ្លាមួយ។ ចាប់ផ្តើមការផ្លាស់ប្តូរម្តងទៀត។</string>
-    <string name="error_OutOfMemoryError">ការចងចាំមានកម្រិតទាបពេកដើម្បីបំពេញប្រតិបត្ដិការនេះ។</string>
+    <string name="error_OutOfMemoryError">អង្គចងចាំមានកម្រិតទាបពេកដើម្បីបំពេញប្រតិបត្ដិការនេះ។</string>
     <string name="error_ServerAppMessage">សារម៉ាស៊ីនបម្រើ: %s</string>
     <string name="error_ServerNotResponding">មិនមានការឆ្លើយតបពីម៉ាស៊ីនបម្រើ។</string>
     <string name="error_TimeoutWaitingForAllMembers">អស់ពេលរង់ចាំសម្រាប់សមាជិកក្រុមមួយចំនួនដើម្បីបន្ថែមទិន្នន័យ។</string>
-    <string name="error_WebCancelledByUser">អ្នកប្រើដែលបានលុបចោលសំណើសុំម៉ាស៊ីនបម្រើ។</string>
+    <string name="error_WebCancelledByUser">អ្នកប្រើដែលបានលុបចោលសំណើរបស់ម៉ាស៊ីនបម្រើ។</string>
 
-    <string name="help_size">ជ្រើសចំនួនមនុស្សដែលត្រូវបានគេព្យាយាមដើម្បីផ្លាស់ប្តូរទិន្នន័យរួមគ្នាហើយចុចយល់ព្រម។</string>
-    <string name="help_userid">ចំនួននៅលើអេក្រង់នេះត្រូវបានប្រើដើម្បីបង្កើតជាក្រុមតែមួយគត់របស់អ្នកប្រើប្រាស់។ ពិនិត្យឡើងវិញនូវតួលេខនៅលើអេក្រង់ប្រើទាំងអស់ \'បន្ទាប់មកអ្នកប្រើប្រាស់ទាំងអស់គួរតែបញ្ចូលចំនួនហើយចុចយល់ព្រមទាបបំផុតដូចគ្នា។</string>
-    <string name="help_verify">ឥឡូវនេះអ្នកត្រូវតែផ្គូផ្គងមួយនៃឃ្លាទី 3 ពាក្យទាំងនេះជាមួយនឹងអ្នកប្រើប្រាស់ទាំងអស់។ អ្នកប្រើជារៀងរាល់ត្រូវតែជ្រើសឃ្លាទូទៅដូចគ្នាហើយចុចបន្ទាប់។</string>
+    <string name="help_size">ជ្រើសចំនួនមនុស្សដែលកំពុងព្យាយាមផ្លាស់ប្តូរទិន្នន័យជាមួយគ្នាហើយចុចយល់ព្រម។</string>
+    <string name="help_userid">ចំនួននៅលើអេក្រង់នេះត្រូវបានប្រើដើម្បីបង្កើតជាក្រុមតែមួយគត់របស់អ្នកប្រើ។ ពិនិត្យឡើងវិញចំនួននេះនៅលើអេក្រង់ប្រើទាំងអស់ \'បន្ទាប់មកអ្នកប្រើប្រាស់ទាំងអស់គួរតែបញ្ចូលចំនួនហើយចុចយល់ព្រមទាបបំផុតដូចគ្នា។</string>
+    <string name="help_verify">ឥឡូវអ្នកត្រូវតែផ្គូផ្គងមួយនៃឃ្លាទី 3 ពាក្យទាំងនេះជាមួយនឹងអ្នកប្រើប្រាស់ទាំងអស់។ ជារៀងរាល់អ្នកប្រើត្រូវតែជ្រើសឃ្លាជារឿងធម្មតាដដែលនិងចុចបន្ទាប់។</string>
 
     <string name="label_CompareScreensNDevices">ប្រៀបធៀបអេក្រង់នៅលើឧបករណ៍ %s ។</string>
     <string name="label_NumericModeHint">ដែលមិនមែនជាភាសាអង់គ្លេស</string>
-    <string name="label_PromptInstruct">ចំនួននេះត្រូវបានប្រើដើម្បីបង្កើតជាក្រុមតែមួយគត់របស់អ្នកប្រើប្រាស់។ ប្រៀបធៀបនិងបន្ទាប់មកបញ្ចូលលេខទាបបំផុតក្នុងចំណោមអ្នកប្រើប្រាស់ទាំងអស់។</string>
+    <string name="label_PromptInstruct">ចំនួននេះត្រូវបានប្រើដើម្បីបង្កើតជាក្រុមតែមួយគត់របស់អ្នកប្រើ។ ប្រៀបធៀបនិងបន្ទាប់មកបញ្ចូលចំនួនទាបបំផុតក្នុងចំណោមអ្នកប្រើប្រាស់ទាំងអស់។</string>
     <string name="label_ReceivedNItems">ទទួលបានធាតុ %d</string>
     <string name="label_UserIdHint">ទាបបំផុត</string>
-    <string name="label_VerifyInstruct">ទូរស័ព្ទទាំងអស់ត្រូវតែផ្គូផ្គងមួយនៃ 3 ពាក្យឃ្លា។ ប្រៀបធៀបនិងបន្ទាប់មកជ្រើសរើសឃ្លាដែលផ្គូផ្គង។</string>
+    <string name="label_VerifyInstruct">ទូរស័ព្ទទាំងអស់ត្រូវតែផ្គូផ្គងមួយនៃ 3 ពាក្យឃ្លា។ ប្រៀបធៀប, ហើយបន្ទាប់មកយកឃ្លាដែលផ្គូផ្គង។</string>
 
     <string name="lib_name">SafeSlinger ប្តូរប្រាក់</string>
 
-    <string name="prog_CollectingOthersCommitVerify">រង់ចាំសម្រាប់ការផ្ទៀងផ្ទាត់ពីសមាជិកទាំងអស់…</string>
-    <string name="prog_CollectingOthersItems">រង់ចាំសម្រាប់អ្នកប្រើទាំងអស់ដើម្បីចូលរួម…</string>
-    <string name="prog_ConstructingGroupKey">សាងសង់គន្លឹះក្រុម…</string>
-    <string name="prog_RequestingUserId">ស្នើសុំសមាជិកភាព…</string>
+    <string name="prog_CollectingOthersCommitVerify">ការរង់ចាំសម្រាប់ការផ្ទៀងផ្ទាត់ពីសមាជិកទាំងអស់…</string>
+    <string name="prog_CollectingOthersItems">ការរង់ចាំសម្រាប់អ្នកប្រើទាំងអស់ដើម្បីចូលរួម…</string>
+    <string name="prog_ConstructingGroupKey">ការសាងសង់គន្លឹះក្រុម…</string>
+    <string name="prog_RequestingUserId">ស្នើសុំចូលជាសមាជិក…</string>
 
-    <string name="title_size">តើមានអ្នកប្រើប្រាស់នៅក្នុងការផ្លាស់ប្តូរបានដែរឬទេ?</string>
-    <string name="title_userid">ការដាក់ជាក្រុម</string>
+    <string name="title_size">តើមានមនុស្សប៉ុន្មានអ្នកប្រើក្នុងការផ្លាស់ប្តូរបានដែរឬទេ?</string>
+    <string name="title_userid">ដាក់ជាក្រុម</string>
     <string name="title_verify">ផ្ទៀងផ្ទាត់</string>
 
 </resources>

@@ -25,17 +25,17 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">¿Sortir? Estàs segur?</string>
+    <string name="ask_QuitConfirmation">Deixar? Estàs segur?</string>
 
-    <string name="btn_Match">Següent</string>
+    <string name="btn_Match">¡Següent</string>
     <string name="btn_NoMatch">No Match</string>
 
     <string name="choice_NumUsers">%d usuaris</string>
 
-    <string name="error_AllMembersMustUpgrade">Alguns membres estan utilitzant una versió anterior; tots els membres han d\'actualitzar a la versió més nova.</string>
+    <string name="error_AllMembersMustUpgrade">Alguns membres estan utilitzant una versió anterior; tots els membres han d\'actualitzar a la versió més recent.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Tots els membres han d\'actualitzar, alguns estan utilitzant els formats de registre d\'empenta grans.</string>
     <string name="error_CorrectYourInternetConnection">Internet no està disponible, comproveu la configuració.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Tipus superar. Comença l\'intercanvi de nou.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Temps d\'espera de Valors va superar. Comença l\'intercanvi de nou.</string>
     <string name="error_HttpCode">Servidor HTTP Error: %d</string>
     <string name="error_InvalidCommitVerify">Dades incorrectes que es troben a canvi. Comença l\'intercanvi de nou.</string>
     <string name="error_InvalidCommonUserId">Introduïu un enter positiu.</string>
@@ -49,28 +49,28 @@
     <string name="error_ServerAppMessage">Missatge del servidor: %s</string>
     <string name="error_ServerNotResponding">No hi ha resposta del servidor.</string>
     <string name="error_TimeoutWaitingForAllMembers">Temps d\'espera d\'espera d\'alguns membres del grup per afegir dades.</string>
-    <string name="error_WebCancelledByUser">L\'usuari cancel · lar la sol · licitud del servidor.</string>
+    <string name="error_WebCancelledByUser">L\'usuari cancel·lar sol·licitud del servidor.</string>
 
-    <string name="help_size">Seleccioneu el nombre de persones que estan tractant d\'intercanviar dades en conjunt i premeu D\'acord.</string>
-    <string name="help_userid">Aquest número en aquesta pantalla s\'utilitza per crear un grup únic d\'usuaris. Revisi els nombres en les pantalles de tots els usuaris, tots els usuaris han d\'introduir el mateix nombre més baix i premeu D\'acord.</string>
-    <string name="help_verify">Ara, ha de coincidir amb una d\'aquestes frases de 3 paraules amb tots els usuaris. Cada usuari ha de seleccionar la mateixa frase comuna, i feu clic Següent.</string>
+    <string name="help_size">Seleccioneu el nombre de persones que estan tractant d\'intercanviar dades junts i premeu OK.</string>
+    <string name="help_userid">Aquest número en aquesta pantalla s\'utilitza per crear un grup únic d\'usuaris. Reviseu els nombres en les pantalles de tots els usuaris, tots els usuaris han d\'introduir el mateix menor nombre i premeu D\'acord.</string>
+    <string name="help_verify">Ara, ha de coincidir amb una d\'aquestes frases de 3 paraules amb tots els usuaris. Cada usuari ha de seleccionar la mateixa frase comuna, i premeu Següent.</string>
 
-    <string name="label_CompareScreensNDevices">Comparar les pantalles dels dispositius %s.</string>
-    <string name="label_NumericModeHint">Non-Anglès</string>
-    <string name="label_PromptInstruct">Aquest número s\'utilitza per crear un grup únic d\'usuaris. Comparar, a continuació, introduïu el nombre més baix entre tots els usuaris.</string>
+    <string name="label_CompareScreensNDevices">Comparar pantalles en dispositius %s.</string>
+    <string name="label_NumericModeHint">No-Anglès</string>
+    <string name="label_PromptInstruct">Aquest número s\'utilitza per crear un grup únic d\'usuaris. Comparar i després introduïu el nombre més baix entre tots els usuaris.</string>
     <string name="label_ReceivedNItems">rebut %d articles</string>
     <string name="label_UserIdHint">Menor</string>
-    <string name="label_VerifyInstruct">Tots els telèfons han de coincidir amb una de les frases de 3 paraules. Compari, i després triar la concordança de frase.</string>
+    <string name="label_VerifyInstruct">Tots els telèfons han de coincidir amb una de les frases de 3 paraules. Compari, i després recollir la concordança de frase.</string>
 
-    <string name="lib_name">SafeSlinger Intercanvi</string>
+    <string name="lib_name">SafeSlinger Canvi</string>
 
     <string name="prog_CollectingOthersCommitVerify">l\'espera de la verificació de tots els membres…</string>
-    <string name="prog_CollectingOthersItems">esperant que tots els usuaris s\'uneixin…</string>
-    <string name="prog_ConstructingGroupKey">construcció de clau de grup…</string>
-    <string name="prog_RequestingUserId">que sol · liciti ser membre…</string>
+    <string name="prog_CollectingOthersItems">esperant tots els usuaris a unir-se…</string>
+    <string name="prog_ConstructingGroupKey">la construcció de clau de grup…</string>
+    <string name="prog_RequestingUserId">que sol·liciti ser membre…</string>
 
     <string name="title_size">Quants usuaris en l\'intercanvi?</string>
-    <string name="title_userid">Agrupació</string>
-    <string name="title_verify">Comprovi</string>
+    <string name="title_userid">Agrupament</string>
+    <string name="title_verify">Verificar</string>
 
 </resources>

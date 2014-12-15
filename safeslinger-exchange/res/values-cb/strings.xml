@@ -30,47 +30,47 @@
     <string name="btn_Match">Next</string>
     <string name="btn_NoMatch">Walay Match</string>
 
-    <string name="choice_NumUsers">%d users</string>
+    <string name="choice_NumUsers">%d tiggamit</string>
 
-    <string name="error_AllMembersMustUpgrade">Ang ubang mga paggamit sa mga miyembro sa usa ka tigulang nga bersyon; sa tanan nga mga miyembro kinahanglan gayud nga upgrade ngadto sa bag-o nga bersyon.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Ang tanan nga mga miyembro kinahanglan gayud nga upgrade, ang pipila sa paggamit sa mas magulang nga mga push registration format.</string>
-    <string name="error_CorrectYourInternetConnection">Internet nga dili anaa, check sa imong mga laray.</string>
+    <string name="error_AllMembersMustUpgrade">Pipila sa mga miyembro sa paggamit sa usa ka tigulang nga bersyon; tanan nga mga miyembro kinahanglan gayud nga upgrade sa mga bag-o nga bersyon.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Ang tanang mga miyembro kinahanglan gayud nga upgrade, ang pipila sa paggamit sa mas magulang nga mga push registration format.</string>
+    <string name="error_CorrectYourInternetConnection">Internet wala pa, check sa imong mga engaste.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout milabaw. Sugdi ang exchange pag-usab.</string>
-    <string name="error_HttpCode">Server http Error: %d</string>
+    <string name="error_HttpCode">Server http sayop: %d</string>
     <string name="error_InvalidCommitVerify">Sa sayop nga data nga makita diha sa baylo. Sugdi ang exchange pag-usab.</string>
-    <string name="error_InvalidCommonUserId">Palihug mosulod sa usa ka positibo nga integer.</string>
+    <string name="error_InvalidCommonUserId">Palihug pagsulod sa usa ka positibo nga integer.</string>
     <string name="error_LocalGroupCommitDiffer">Ikaw report sa usa ka kalainan sa hugpong sa mga pulong. Sugdi ang exchange pag-usab.</string>
-    <string name="error_MinUsersRequired">Usa ka minimum nga %d sa mga sakop sa gikinahanglan nga magbinayloay data.</string>
-    <string name="error_MoreDataThanUsers">Wala damha nga data nga makita diha sa baylo. Sugdi ang exchange pag-usab.</string>
-    <string name="error_NoDataToExchange">Ang exchange ang nawala gikinahanglan nga impormasyon.</string>
+    <string name="error_MinUsersRequired">Usa ka minimum nga sa %d nga mga miyembro kinahanglan nga magbinayloay data.</string>
+    <string name="error_MoreDataThanUsers">Ang wala damha nga data nga makita diha sa baylo. Sugdi ang exchange pag-usab.</string>
+    <string name="error_NoDataToExchange">Ang exchange ang nawala gikinahanglan data.</string>
     <string name="error_NoWordListSelected">Kamo kinahanglan gayud nga pagpili sa usa sa mga hugpong sa mga pulong sa dili pa mopadayon.</string>
     <string name="error_OtherGroupCommitDiffer">Adunay usa ka tawo report sa usa ka kalainan sa hugpong sa mga pulong. Sugdi ang exchange pag-usab.</string>
-    <string name="error_OutOfMemoryError">Memory mao ang kaayo sa ubos sa pagkompleto niini nga operasyon.</string>
+    <string name="error_OutOfMemoryError">Sag-ulohon nga mao ang kaayo sa ubos sa pagkompleto niini nga operasyon.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Walay tubag gikan server.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout nagpaabut sa pipila ka grupo sa mga miyembro aron sa pagdugang data.</string>
     <string name="error_WebCancelledByUser">User gikanselar server hangyo.</string>
 
-    <string name="help_size">Pagpili sa gidaghanon sa mga tawo nga misulay sa pagbaylo data sa tingub, ug press OK.</string>
-    <string name="help_userid">Kini nga gidaghanon sa niini nga screen gigamit sa paghimo sa usa ka talagsaon nga grupo sa mga users. Ribyuha ang mga numero sa ibabaw sa tanan nga mga tiggamit \'screens, unya ang tanan nga mga tiggamit kinahanglan nga mosulod sa sama nga labing ubos nga gidaghanon ug press OK.</string>
-    <string name="help_verify">Karon, kinahanglan nga pagpares sa usa niining 3-pulong nga hugpong sa mga pulong uban sa tanan nga mga tiggamit. Ang matag user kinahanglan gayud nga pagpili sa sama nga komon nga hugpong sa mga pulong, ug mopadayon sa Next.</string>
+    <string name="help_size">Pagpili sa gidaghanon sa mga tawo nga misulay sa pagbaylo sa data sa tingub, ug press OK.</string>
+    <string name="help_userid">Kini nga gidaghanon sa niini nga screen gigamit sa paghimo sa usa ka talagsaon nga grupo sa mga tiggamit. Ribyuha sa mga numero sa ibabaw sa tanang mga tiggamit \'screens, unya ang tanan nga mga tiggamit kinahanglan nga mosulod sa sama nga labing ubos nga gidaghanon ug press OK.</string>
+    <string name="help_verify">Karon, kamo kinahanglan gayud nga pagpares sa usa niining mga 3-pulong nga hugpong sa mga pulong uban sa tanan nga mga tiggamit. Ang matag user kinahanglan gayud nga pagpili sa sama nga hugpong sa mga pulong nga komon, ug mopadayon sa Next.</string>
 
-    <string name="label_CompareScreensNDevices">Itandi ang screens sa %s mga lalang.</string>
+    <string name="label_CompareScreensNDevices">Itandi ang screens sa %s lalang.</string>
     <string name="label_NumericModeHint">Non-Iningles</string>
-    <string name="label_PromptInstruct">Kini nga gidaghanon mao ang gigamit sa paghimo sa usa ka talagsaon nga grupo sa mga users. Itandi, ug unya mosulod sa labing ubos nga gidaghanon sa taliwala sa tanan nga mga tiggamit.</string>
-    <string name="label_ReceivedNItems">nakadawat %d items</string>
+    <string name="label_PromptInstruct">Kini nga gidaghanon mao ang gigamit sa paghimo sa usa ka talagsaon nga grupo sa mga tiggamit. Itandi, ug unya mosulod sa labing ubos nga gidaghanon sa taliwala sa tanan nga mga tiggamit.</string>
+    <string name="label_ReceivedNItems">nakadawat sa %d mga butang</string>
     <string name="label_UserIdHint">Labing ubos nga</string>
-    <string name="label_VerifyInstruct">Ang tanan nga mga phones kinahanglang tukma sa usa sa mga 3-pulong nga hugpong sa mga pulong. Itandi, ug unya pilia ang matching hugpong sa mga pulong.</string>
+    <string name="label_VerifyInstruct">Ang tanan nga mga phone kinahanglang tukma sa usa sa mga 3-pulong nga hugpong sa mga pulong. Itandi, ug unya pagpili sa mga matching hugpong sa mga pulong.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
-    <string name="prog_CollectingOthersCommitVerify">naghulat alang sa verification gikan sa tanang mga miyembro sa…</string>
+    <string name="prog_CollectingOthersCommitVerify">naghulat alang sa verification gikan sa tanan nga mga miyembro sa…</string>
     <string name="prog_CollectingOthersItems">naghulat alang sa tanan nga mga tiggamit sa pag-apil…</string>
-    <string name="prog_ConstructingGroupKey">sa pagtukod sa grupo yawe…</string>
+    <string name="prog_ConstructingGroupKey">pagtukod sa grupo yawe…</string>
     <string name="prog_RequestingUserId">naghangyo sa mga miyembro…</string>
 
-    <string name="title_size">Sa unsang paagi nga sa daghan nga mga users sa baylo?</string>
-    <string name="title_userid">Nga grupo</string>
-    <string name="title_verify">Tinoa</string>
+    <string name="title_size">Sa unsang paagi nga sa daghan nga mga tiggamit sa baylo?</string>
+    <string name="title_userid">Grupo</string>
+    <string name="title_verify">Susiha</string>
 
 </resources>

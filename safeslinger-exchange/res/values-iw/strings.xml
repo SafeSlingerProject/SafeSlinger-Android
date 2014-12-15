@@ -33,10 +33,10 @@
     <string name="choice_NumUsers">%d משתמשים</string>
 
     <string name="error_AllMembersMustUpgrade">חלק מהחברים משתמשים בגרסה ישנה יותר; כל החברים חייבים לשדרג לגרסה החדשה ביותר.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">כל החברים חייבים לשדרג, חלקם תוך שימוש בפורמטי רישום דחיפה מבוגרים.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">כל החברים חייבים לשדרג, חלקם באמצעות פורמטי רישום דחיפה מבוגרים.</string>
     <string name="error_CorrectYourInternetConnection">אינטרנט אינו זמין, לבדוק את ההגדרות שלך.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">פסק זמן לניירות ערך עלה. בגין התמורה שוב.</string>
-    <string name="error_HttpCode">שגיאת HTTP שרת: %d</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">פסק זמן Exchange עלה. בגין התמורה שוב.</string>
+    <string name="error_HttpCode">שגיאת HTTP Server: %d</string>
     <string name="error_InvalidCommitVerify">נתונים שגויים מצאו בתמורה. בגין התמורה שוב.</string>
     <string name="error_InvalidCommonUserId">נא להזין מספר חיובי.</string>
     <string name="error_LocalGroupCommitDiffer">דיווחת על הבדל בביטויים. בגין התמורה שוב.</string>
@@ -44,23 +44,23 @@
     <string name="error_MoreDataThanUsers">נתונים בלתי צפויים מצאו בתמורה. בגין התמורה שוב.</string>
     <string name="error_NoDataToExchange">חילופי חסרים נתונים נדרשים.</string>
     <string name="error_NoWordListSelected">עליך לבחור אחד מהביטויים לפני שתמשיך.</string>
-    <string name="error_OtherGroupCommitDiffer">מישהו דיווח על הבדל בביטויים. בגין התמורה שוב.</string>
+    <string name="error_OtherGroupCommitDiffer">מישהו דיווח הבדל בביטויים. בגין התמורה שוב.</string>
     <string name="error_OutOfMemoryError">זיכרון הוא נמוך מדי כדי להשלים את הפעולה.</string>
     <string name="error_ServerAppMessage">הודעת שרת: %s</string>
     <string name="error_ServerNotResponding">אין תגובה מהשרת.</string>
-    <string name="error_TimeoutWaitingForAllMembers">פסק זמן מחכה לחלק מחברי הקבוצה כדי להוסיף נתונים.</string>
+    <string name="error_TimeoutWaitingForAllMembers">פסק זמן המתנה לחלק מחברי הקבוצה כדי להוסיף נתונים.</string>
     <string name="error_WebCancelledByUser">משתמש ביטל את דרישת שרת.</string>
 
     <string name="help_size">בחר את מספר האנשים שמנסים להחליף נתונים ביחד ולחץ על OK.</string>
-    <string name="help_userid">מספר זה במסך זה משמש ליצירת קבוצה ייחודית של משתמשים. סקור את המספרים על המסכים של כל המשתמשים, אז כל המשתמשים צריכים להיכנס לאותו אישור המספר ולחץ על הנמוך ביותר.</string>
-    <string name="help_verify">עכשיו, אתה חייב להתאים אחד מהביטויים אלה 3 מילים עם כל המשתמשים. כל משתמש חייב לבחור את אותו ביטוי נפוץ, ולחץ על הבא.</string>
+    <string name="help_userid">מספר זה על מסך זה משמש ליצירת קבוצה ייחודית של משתמשים. סקור את המספרים על המסכים של כל המשתמשים, ואז כל המשתמשים להזין את אותה אישור מספר ולחץ הנמוך ביותר.</string>
+    <string name="help_verify">עכשיו, אתה חייב להתאים לאחד מביטויים אלה 3-מילה עם כל המשתמשים. כל משתמש חייב לבחור את אותו ביטוי נפוץ, ולחץ על הבא.</string>
 
-    <string name="label_CompareScreensNDevices">השווה בין מסכים במכשירי %s.</string>
+    <string name="label_CompareScreensNDevices">השוואת מסכים במכשירי %s.</string>
     <string name="label_NumericModeHint">שאינה באנגלית</string>
-    <string name="label_PromptInstruct">מספר זה משמש כדי ליצור קבוצה ייחודית של משתמשים. להשוות, ולאחר מכן להזין את המספר הנמוך ביותר בין כל המשתמשים.</string>
+    <string name="label_PromptInstruct">מספר זה משמש כדי ליצור קבוצה ייחודית של משתמשים. להשוות, ולאחר מכן הזן את המספר הנמוך ביותר בין כל המשתמשים.</string>
     <string name="label_ReceivedNItems">קיבל %d פריטים</string>
     <string name="label_UserIdHint">הנמוך ביותר</string>
-    <string name="label_VerifyInstruct">כל הטלפונים חייבים להתאים אחד של 3-מילת הביטויים. להשוות, ולאחר מכן לבחור את הביטוי המתאים.</string>
+    <string name="label_VerifyInstruct">כל הטלפונים חייבים להתאים אחד 3-מילת הביטויים. להשוות, ולאחר מכן לבחור את הביטוי המתאים.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
@@ -69,7 +69,7 @@
     <string name="prog_ConstructingGroupKey">בניית מפתח קבוצה…</string>
     <string name="prog_RequestingUserId">בקשת חברות…</string>
 
-    <string name="title_size">כמה משתמשים במטבע הזר?</string>
+    <string name="title_size">כמה משתמשים בתמורה?</string>
     <string name="title_userid">קיבוץ</string>
     <string name="title_verify">ודא</string>
 

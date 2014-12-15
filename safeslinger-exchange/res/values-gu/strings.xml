@@ -25,52 +25,52 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">છોડો? તમે છો?</string>
+    <string name="ask_QuitConfirmation">બહાર નીકળવા? તમને ખાતરી છે?</string>
 
-    <string name="btn_Match">આગળ</string>
+    <string name="btn_Match">આગામી</string>
     <string name="btn_NoMatch">કોઈ મેચ</string>
 
     <string name="choice_NumUsers">%d વપરાશકર્તાઓ</string>
 
-    <string name="error_AllMembersMustUpgrade">કેટલાક સભ્યો જૂની આવૃત્તિ વાપરી રહ્યા હોય; બધા સભ્યો નવા સંસ્કરણ પર અપગ્રેડ કરવું આવશ્યક છે.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">બધા સભ્યો અમુક જૂની દબાણ રજીસ્ટ્રેશન બંધારણો ઉપયોગ કરી રહ્યા છો, સુધારો જોઈએ.</string>
-    <string name="error_CorrectYourInternetConnection">ઇન્ટરનેટ ઉપલબ્ધ નથી, તમારી સેટિંગ્સ તપાસો.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">એક્સચેન્જ સમયસમાપ્તિ ઓળંગાઈ ગઈ છે. ફરીથી એક્સચેન્જ શરૂ થાય છે.</string>
+    <string name="error_AllMembersMustUpgrade">કેટલાક સભ્યો જૂની આવૃત્તિ વાપરી રહ્યા હોય; બધા સભ્યો નવીનતમ સંસ્કરણ પર અપગ્રેડ કરવું આવશ્યક છે.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">બધા સભ્યો અમુક જૂની પુશ રજીસ્ટ્રેશન બંધારણો ઉપયોગ કરી રહ્યા છો, સુધારો કરવો જ જોઇએ.</string>
+    <string name="error_CorrectYourInternetConnection">ઈન્ટરનેટ ઉપલબ્ધ નથી, તમારી સેટિંગ્સ તપાસો.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">એક્સચેન્જ સમયસમાપ્તિ ઓળંગાઈ ગઈ છે. ફરી એક્સચેન્જ શરૂ થાય છે.</string>
     <string name="error_HttpCode">સર્વર HTTP ભૂલ: %d</string>
-    <string name="error_InvalidCommitVerify">ખોટો માહિતી બદલામાં મળી. ફરીથી એક્સચેન્જ શરૂ થાય છે.</string>
+    <string name="error_InvalidCommitVerify">ખોટો ડેટા વિનિમય માં જોવા મળે છે. ફરી એક્સચેન્જ શરૂ થાય છે.</string>
     <string name="error_InvalidCommonUserId">હકારાત્મક પૂર્ણાંક દાખલ કરો.</string>
-    <string name="error_LocalGroupCommitDiffer">તમે શબ્દસમૂહો માં તફાવત અહેવાલ છે. ફરીથી એક્સચેન્જ શરૂ થાય છે.</string>
-    <string name="error_MinUsersRequired">%d સભ્યો ઓછામાં ઓછા માહિતી બદલી જરૂરી છે.</string>
-    <string name="error_MoreDataThanUsers">અનપેક્ષિત માહિતી બદલામાં મળી. ફરીથી એક્સચેન્જ શરૂ થાય છે.</string>
-    <string name="error_NoDataToExchange">વિનિમય જરૂરી માહિતી ખૂટે છે.</string>
-    <string name="error_NoWordListSelected">તમે પ્રક્રિયા કરવા પહેલાં આ શબ્દસમૂહો એક પસંદ કરવું જ જોઈએ.</string>
-    <string name="error_OtherGroupCommitDiffer">કોઇએ શબ્દસમૂહો માં તફાવત અહેવાલ. ફરીથી એક્સચેન્જ શરૂ થાય છે.</string>
+    <string name="error_LocalGroupCommitDiffer">તમને શબ્દસમૂહો માં તફાવત અહેવાલ છે. ફરી એક્સચેન્જ શરૂ થાય છે.</string>
+    <string name="error_MinUsersRequired">%d સભ્યોની ઓછામાં ઓછા માહિતી બદલી જરૂરી છે.</string>
+    <string name="error_MoreDataThanUsers">અણધારી માહિતી બદલામાં મળી. ફરી એક્સચેન્જ શરૂ થાય છે.</string>
+    <string name="error_NoDataToExchange">એક્સચેન્જ જરૂરી માહિતી ખૂટે છે.</string>
+    <string name="error_NoWordListSelected">તમને પ્રક્રિયા કરવા પહેલાં આ શબ્દસમૂહો એક પસંદ કરવું જ જોઈએ.</string>
+    <string name="error_OtherGroupCommitDiffer">કોઈને શબ્દસમૂહો માં તફાવત અહેવાલ. ફરી એક્સચેન્જ શરૂ થાય છે.</string>
     <string name="error_OutOfMemoryError">મેમરી આ ક્રિયા પૂર્ણ કરવા માટે ખૂબ ઓછી છે.</string>
     <string name="error_ServerAppMessage">સર્વર સંદેશ: %s</string>
     <string name="error_ServerNotResponding">સર્વર માંથી કોઈ પ્રતિભાવ.</string>
-    <string name="error_TimeoutWaitingForAllMembers">કેટલાક જૂથ સભ્યો માહિતી ઉમેરવા માટે સમયસમાપ્તિ રાહ જોઈ રહ્યું.</string>
-    <string name="error_WebCancelledByUser">વપરાશકર્તા સર્વર વિનંતી રદ.</string>
+    <string name="error_TimeoutWaitingForAllMembers">કેટલાક જૂથ સભ્યો ડેટા ઉમેરવા માટે સમયસમાપ્તિ રાહ જોઈ.</string>
+    <string name="error_WebCancelledByUser">વપરાશકર્તા સર્વર વિનંતીને રદ.</string>
 
-    <string name="help_size">એક સાથે માહિતી અને પ્રેસ બરાબર બદલી કરવાનો પ્રયાસ કરવામાં આવે છે જે લોકોની સંખ્યા પસંદ કરો.</string>
-    <string name="help_userid">આ સ્ક્રીન પર આ નંબર વપરાશકર્તાઓ એક અનન્ય જૂથ બનાવવા માટે વપરાય છે. પછી બધા વપરાશકર્તાઓ જ નીચો નંબર અને પ્રેસ બરાબર દાખલ કરીશું, બધા વપરાશકર્તાઓની સ્ક્રીનો પર નંબરો સમીક્ષા કરો.</string>
-    <string name="help_verify">હવે, તમે ની સાથે આ 3-શબ્દ શબ્દસમૂહો એક બંધબેસતું હોવું જ જોઈએ. દરેક વપરાશકર્તા જ સામાન્ય શબ્દસમૂહ પસંદ કરો, અને આગળ દબાવો જ જોઈએ.</string>
+    <string name="help_size">એકસાથે માહિતી અને અખબારી ઠીક બદલી કરવાનો પ્રયાસ કરવામાં આવે છે જે લોકોની સંખ્યા પસંદ કરો.</string>
+    <string name="help_userid">આ સ્ક્રીન પર આ નંબર વપરાશકર્તાઓની અનન્ય જૂથ બનાવવા માટે વપરાય છે. પછી બધા વપરાશકર્તાઓ જ નીચો નંબર અને પ્રેસ બરાબર દાખલ કરીશું, બધા વપરાશકર્તાઓની સ્ક્રીનો પર નંબરો સમીક્ષા કરો.</string>
+    <string name="help_verify">હવે, તમે બધા વપરાશકર્તાઓ સાથે આ 3-શબ્દ શબ્દસમૂહો પૈકી એક બંધબેસતું હોવું જ જોઈએ. દરેક વપરાશકર્તા માટે જ સામાન્ય શબ્દસમૂહ પસંદ કરો, અને આગળ દબાવો જ જોઈએ.</string>
 
     <string name="label_CompareScreensNDevices">%s ઉપકરણો પર સ્ક્રીનો સરખામણી કરો.</string>
-    <string name="label_NumericModeHint">નોન ઇંગલિશ</string>
-    <string name="label_PromptInstruct">આ નંબર વપરાશકર્તાઓ એક અનન્ય જૂથ બનાવવા માટે વપરાય છે. સરખામણી કરો, અને પછી બધા વપરાશકર્તાઓ વચ્ચે સૌથી નીચો નંબર દાખલ કરો.</string>
+    <string name="label_NumericModeHint">બિન ઇંગલિશ</string>
+    <string name="label_PromptInstruct">આ નંબર વપરાશકર્તાઓની અનન્ય જૂથ બનાવવા માટે વપરાય છે. સરખામણી કરો, અને પછી બધા વપરાશકર્તાઓ વચ્ચે સૌથી નીચા નંબર દાખલ કરો.</string>
     <string name="label_ReceivedNItems">%d વસ્તુઓ પ્રાપ્ત</string>
-    <string name="label_UserIdHint">ન્યૂનતમ</string>
-    <string name="label_VerifyInstruct">બધા ફોન 3-શબ્દ શબ્દસમૂહો એક બંધબેસતું હોવું જ જોઈએ. સરખામણી કરો, અને પછી બંધબેસતા વાક્ય બનાવ્યો.</string>
+    <string name="label_UserIdHint">સૌથી ઓછી</string>
+    <string name="label_VerifyInstruct">બધા ફોન 3-શબ્દ શબ્દસમૂહો પૈકી એક બંધબેસતું હોવું જ જોઈએ. સરખામણી કરો, અને પછી મેચિંગ શબ્દસમૂહ બનાવ્યો.</string>
 
     <string name="lib_name">SafeSlinger એક્સચેન્જ</string>
 
-    <string name="prog_CollectingOthersCommitVerify">બધા સભ્યો તરફથી ચકાસણી માટે રાહ જોઈ…</string>
+    <string name="prog_CollectingOthersCommitVerify">બધા સભ્યો પાસેથી ચકાસણી માટે રાહ જોઈ…</string>
     <string name="prog_CollectingOthersItems">બધા વપરાશકર્તાઓ જોડાવા માટે રાહ જોઈ…</string>
-    <string name="prog_ConstructingGroupKey">જૂથ કી નિર્માણ…</string>
+    <string name="prog_ConstructingGroupKey">ગ્રુપ કી બાંધવા…</string>
     <string name="prog_RequestingUserId">સભ્યપદ વિનંતી…</string>
 
     <string name="title_size">કેટલા એક્સચેન્જ વપરાશકર્તાઓ?</string>
-    <string name="title_userid">જૂથ બનાવવાનું</string>
+    <string name="title_userid">જૂથ</string>
     <string name="title_verify">ચકાસો</string>
 
 </resources>

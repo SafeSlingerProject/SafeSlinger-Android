@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">တဆင့်လောက်လွှဲနှင့်ပစ်သော့ချက်များအဆက်အသွယ်ဖိတ်ကြားချက်ကို Add…</string>
+
+    <string name="app_name">SafeSlinger</string>
+
+    <string name="ask_BackupDisabledRemindLater">Backup ကို disabled ဖြစ်သွားမှာဖြစ်ပါတယ်။ သင် backup လုပ်ချိန်ညှိနှင့်ဤသတိပေးချက်ကိုသိမ်းထားချင်ပါသလား?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s တစ်ဦးထက်ပိုသောမကြာသေးမီစက်ကိရိယာသို့မဟုတ် Key တစ်ခုရှိပြီး, သင်သည်ဤသက်ကြီးတဦးတည်းကိုအသုံးပြုချင်တယ်သေချာရှိပါသလဲ</string>
+    <string name="ask_FileExistsOverwrite">ဖိုင်နာမည် %s ပြီးသား။ Overwrite?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">ဂူးဂဲလ်အကောင့်မရှိဘဲသင့်သာမက်ဆေ့ခ်ျများကိုလက်မခံ, NOT ပို့နိုင်ခဲ့ပါလိမ့်မည်။ သင်က Google account ကို add လိုပါသလား?</string>
+    <string name="ask_SendErrorData">ကျနော်တို့ SafeSlinger ပိုမိုတိုးတက်ကောင်းမွန်သင့်အကူအညီတောင်းချင်ပါတယ်။ သင်အလိုအလျှောက်ကျွန်တော်တို့ကိုမဆိုအမှားများကိုပေးပို့ဖို့ကြိုက်ပါ့မလား</string>
+
+    <string name="btn_Accept">သဘောတူလက်ခံ</string>
+    <string name="btn_BeginExchangeProximity">လဲလှယ်ရေး Begin</string>
+    <string name="btn_Cancel">Cancel</string>
+    <string name="btn_Close">ပိတ်</string>
+    <string name="btn_Continue">Continue</string>
+    <string name="btn_CreateNewKey">New Key Create</string>
+    <string name="btn_DeleteKeys">သော့ချက်များအဖြစ်မှဖယ်ရှာသည်</string>
+    <string name="btn_discard">ဖယ်ရှား</string>
+    <string name="btn_Done">ပြီးပြီ</string>
+    <string name="btn_Edit">ပြင်ဆင်ရန်</string>
+    <string name="btn_Exit">ထွက်ပေါက်</string>
+    <string name="btn_Import">တင်သွင်း</string>
+    <string name="btn_Introduce">မိတ်ဆက်ပေး</string>
+    <string name="btn_No">အဘယ်သူမျှမ</string>
+    <string name="btn_NotNow">ယခုမဟုတ်ပါ</string>
+    <string name="btn_NotRemind">သတိမေ့</string>
+    <string name="btn_OK">အိုကေ</string>
+    <string name="btn_Refuse">ငြင်းဆန်</string>
+    <string name="btn_Remind">သတိပေး</string>
+    <string name="btn_Save">ကြော်ငြာကို Save လုပ်ရန်</string>
+    <string name="btn_SelectFile">နှောင်ကြိုးများကို Add</string>
+    <string name="btn_SendFile">ပေးပို့</string>
+    <string name="btn_Yes">ဟုတ်ကဲ့</string>
+
+    <string name="choice_10mins">10 မိနစ်</string>
+    <string name="choice_1hour">1 နာရီ</string>
+    <string name="choice_1min">1 မိနစ်</string>
+    <string name="choice_20mins">20 မိနစ်</string>
+    <string name="choice_2hours">2 နှစ်ရီ</string>
+    <string name="choice_3mins">3 မိနစ်</string>
+    <string name="choice_40mins">40 မိနစ်</string>
+    <string name="choice_4hours">4 နာရီ</string>
+    <string name="choice_5mins">5 မိနစ်</string>
+    <string name="choice_8hours">8 နာရီ</string>
+    <string name="choice_auto_storage">Default အနေနဲ့သိုလှောင်ခြင်း</string>
+    <string name="choice_default">ပျက်ကွက်</string>
+    <string name="choice_external_storage">External storage</string>
+    <string name="choice_font_large">အကြီးစား</string>
+    <string name="choice_font_medium">အလယ်အလတ်</string>
+    <string name="choice_font_micro">အလွန်သေးငယ်</string>
+    <string name="choice_font_small">သေးငယ်သော</string>
+    <string name="choice_internal_storage">Internal storage</string>
+    <string name="choice_nolimit">အဘယ်သူမျှမကန့်သတ်</string>
+    <string name="choice_SaveDirectory">Directory ကို Save</string>
+    <string name="choice_SaveFile">ဖိုင်ကို Save</string>
+    <string name="choice_Up">Up ကို</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">အားလုံးအဖွဲ့ဝင်များတချို့သက်ကြီးသော့ချက် formats ကိုအသုံးပြုပြီးနေကြတယ်, အဆင့်မြှင့်တင်ရပါမည်။</string>
+    <string name="error_AudioPlayerDecodeError">အမှား decoding audio player နဲ့။</string>
+    <string name="error_AudioPlayerError">မှတ်တမ်းတင်ခြင်းမကစားနိုင်ပါတယ်။</string>
+    <string name="error_AudioRecorderEncodeError">Audio အသံဖမ်း encoding ကအမှား။</string>
+    <string name="error_AudioRecorderPermissionError">မိုက်ခရိုဖုန်းကခွင့်ပြုချက်စတဲ့လုံခြုံတဲ့စကားသံကိုမက်ဆေ့ခ်ျကိုမှတ်တမ်းတင်ဖို့လိုအပ်ပါသည်။ SafeSlinger Microphone ခွင့်ပြုချက်အသေးစိတ် %s ခလုတ်ကိုထိပုတ်ပါ။</string>
+    <string name="error_BackupNotFound">Restore လုပ်ဖို့မ backup လုပ်။</string>
+    <string name="error_BackupNotSupportedDevice">Device ကို backup လုပ်ထား restore ကို support မပါဘူး။</string>
+    <string name="error_BadCopyProtectUpgrade">မှုကြောင့်ကို Android 4.1 တွင်တစ်ဦး bug ကိုကို, သင် SafeSlinger ကို uninstall ပြန်လည်တပ်ဆင်ကြလိမ့်မည်။</string>
+    <string name="error_C2DMRegAccountMissing">တစ်ဦးကို Google account တစ်ခုလိုအပ်သည်။ အကောင့်ကိုဖွင့်လှစ်မန်နေဂျာတစ်ဦးက Google account ကို add ပေးပါ။</string>
+    <string name="error_C2DMRegAuthenticationFailed">မှတ်ပုံတင်ခြင်း authenticated မဟုတ်ဘဲနောက်ပိုင်းတွင်ကို manually ပြန်ကြိုးစားကြည့်စေလိုပါသည်။</string>
+    <string name="error_C2DMRegInvalidSender">မှတ်ပုံတင်ခြင်းဒီဗားရှင်းများအတွက်မရရှိနိုင်ပေ, တစ်ဦး updated version ကိုစစ်ဆေးသည်ဖတ်ရှုပါ။</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Google နှင့်မှားယွင်းနေ device ကိုမှတ်ပုံတင်ပေးရန်။ ဤကိရိယာကိုလက်ရှိတွင်တွန်းအားပေးစာတိုပေးပို့ရေးကို support မပါဘူး။</string>
+    <string name="error_C2DMRegServiceNotAvailable">မရရှိနိုင် push မှတ်ပုံတင်ခြင်းန်ဆောင်မှု, %d စက္ကန့်အတွင်းစီစဉ် RETRY ။</string>
+    <string name="error_C2DMRegTooManyRegistrations">များလွန်း applications တွေကို Push အတွက်မှတ်ပုံတင်ထားကြသည်။ တချို့တခြား applications ကို uninstall နှင့်ပြန်ကြိုးစားကြည့်ပါ။</string>
+    <string name="error_CannotSendEmptyFile">တစ်ဦးအချည်းနှီး attachment ကိုမပို့နိုင်ပါ။</string>
+    <string name="error_CannotSendFilesOver">အရွယ်အစားအတွက်ပူးတွဲဖိုင်တွေကို သာ. ကြီးထက် %d bytes နဲ့မပို့နိုင်ပါ။</string>
+    <string name="error_CannotSendNullFile">တစ်ဦးအတည်ပြုရန်ပူးတွဲမှုမပို့နိုင်ပါ။</string>
+    <string name="error_contactCreationFailure">ဆက်သွယ်ရန်ဖန်တီးမှုမအောင်မြင်ခဲ့ပါဘူး။</string>
+    <string name="error_ContactInsertFailed">ဆက်သွယ်ရန် INSERT ပျက်ကွက်ခဲ့သည်။</string>
+    <string name="error_ContactNameMissing">ဒီအဆက်အသွယ်အမည်တစ်ခုပျောက်နေသည်, တည်းဖြတ်ဖတ်ရှုပါ။</string>
+    <string name="error_ContactNameMissing2">ဒီအဆက်အသွယ်အမည်တစ်ခုပျောက်နေသည်, reselect ဖတ်ရှုပါ။</string>
+    <string name="error_ContactUpdateFailed">ဆက်သွယ်ရန် update ကိုပျက်ကွက်ခဲ့သည်။</string>
+    <string name="error_couldNotExtractPrivateKey">Private key ကို extract မရနိုင်ပါ။</string>
+    <string name="error_FeatureIsNotSupport">%1$s ဤအချိန်တွင် %2$s အပေါ်မထောက်ပံ့ပါ။</string>
+    <string name="error_FileSave">%s ကိုကယ်တင်နိုင်ဘူး။</string>
+    <string name="error_FileStorageUnavailable">ဖိုင်သိုလှောင်မှုမရရှိနိုင်ပေ။</string>
+    <string name="error_InvalidContactName">တစ်ဦးကတရားဝင်အဆက်အသွယ်နာမည်လိုအပ်ပါသည်။</string>
+    <string name="error_InvalidIncomingMessage">မကောင်းတဲ့လတ္တံ့သောမက်ဆေ့ခ်ျကို format နဲ့။</string>
+    <string name="error_InvalidMsg">မကောင်းတဲ့သတင်းစကားကို format နဲ့။</string>
+    <string name="error_InvalidRecipient">မမှန်ကန်ပါလက်ခံရရှိမဲ့သူက။</string>
+    <string name="error_MessageInvalidPeerKeyFormat">အဆိုပါသက်တူရွယ်တူသော့ချက် format နဲ့ဟာမမှန်ကန်ဘူး။</string>
+    <string name="error_MessageSignatureVerificationFails">ထိုးမြဲလက်မှတ်အတည်ပြုခြင်းမအောင်မြင်ဘူး။</string>
+    <string name="error_minPassphraseRequire">Passphrases အနည်းဆုံး %d အက္ခရာများလိုအပ်သည်။</string>
+    <string name="error_MissingNdk">SafeSlinger လိုအပ်သည်သောဤကိရိယာအပေါ် NDK ထောက်ခံမှု detect မနေခဲ့ပါ။</string>
+    <string name="error_MultipleSendNotSupported">သင်သည်အမျိုးစုံပစ္စည်းများပေးပို့ဖို့ကြိုးစားနေကြပါသည်။ ဤအချိန်တွင်, SafeSlinger သာတစ်ကြိမ်မှာ item တခုကိုပေးပို့ခြင်းထောက်ခံပါသည်။</string>
+    <string name="error_NoEmailAccount">အီးမေးလ်အကောင့်ကို setup ကိုမဟုတ်!</string>
+    <string name="error_noPassPhrase">No passphrase ဝင်လေ၏။</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases မလိုက်ဖက်ပါ။</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">သင်တို့ကိုလက်ခံရရှိသူကမက်ဆေ့ခ်ျကိုခွဲတမ်းထက်ကျော်လွန်ပါပြီ။ နောက်ပိုင်းမှာပြန်ကြိုးစားကြည့်ပါ။</string>
+    <string name="error_PushMsgInvalidRegistration">အဲဒီစာကိုလက်ခံရရှိသူဟာတစ်ဦးပျောက်ဆုံးသို့မဟုတ်မကောင်းတဲ့တွန်းအားပေးမှတ်ပုံတင်ခြင်းရှိပါတယ်။ သင်သည်ဤကိရိယာကိုမက်ဆေ့ခ်ျပေးပို့ခြင်းကိုရပ်တန့်သင့်ပါသည်။</string>
+    <string name="error_PushMsgMessageNotFound">မက်ဆေ့ခ်ျကိုသက်တမ်းကုန်။</string>
+    <string name="error_PushMsgMessageTooBig">မက်ဆေ့ခ်ျကိုသိပ်ကြီးဖြစ်ပါတယ်။ မက်ဆေ့ခ်ျကို၏အရွယ်အစားကိုလျှော့ချပါ။</string>
+    <string name="error_PushMsgNotRegistered">အဲဒီစာကိုလက်ခံရရှိသူဟာရဲ့တွန်းအားပေးမှုမှတ်ပုံတင်ခြင်းကိုမရှိတော့တရားဝင်ဖြစ်ပါတယ်။ အဆိုပါစာကိုလက်ခံရရှိသူဟာ SafeSlinger uninstall လုပ်ပေးဖို့သို့မဟုတ်သတိပေးချက်များကိုပိတ်ထားနိုင်ပါသည်။ သင်သည်ဤကိရိယာကိုမက်ဆေ့ခ်ျပေးပို့ခြင်းကိုရပ်တန့်သင့်ပါသည်။</string>
+    <string name="error_PushMsgNotSucceed">ဖိအားပေးအကြောင်းကြားအသိပေးန်ဆောင်မှုများနှင့်ဆက်သွယ် error တခုရှိခဲ့သည်။</string>
+    <string name="error_PushMsgQuotaExceeded">သင်သည်ဤ device တွေအတွက်မက်ဆေ့ခ်ျကိုခွဲတမ်းထက်ကျော်လွန်ပါပြီ။ နောက်ပိုင်းမှာပြန်ကြိုးစားကြည့်ပါ။</string>
+    <string name="error_PushMsgServiceFail">Notification ဝန်ဆောင်မှုဤအချိန်မရရှိနိုင်ပေ။ နောက်ပိုင်းမှာအီးမေးလ်ကိုပေးပို့ဖို့ကြိုးစားပါ။</string>
+    <string name="error_RecoderError">အသံ Recorder တို့ကိုပြင်ဆင်နိုင်မည်မဟုတ်ပေ။</string>
+    <string name="error_ReminderToSlingKeysToUseApp">အခြားသုံးစွဲသူတဦးနဲ့အတူ, လောက်လွှဲနှင့်ပစ်သော့ချက်များတစ်ချိန်တည်းမှာစတင်နိုင်ရန်။</string>
+    <string name="error_selectDataToSend">သင်ပို့ပူးတွဲမှုတစ်ခုသို့မဟုတ်စာသားမက်ဆေ့ခ်ျကိုလိုအပ်ပါတယ်။</string>
+    <string name="error_ShareFileDelError">မျှဝေ file ကိုမဖယ်ရှားနိုင်ပါ။</string>
+    <string name="error_UnableFindPubKey">Crypto ပံ့ပိုးပေးသူအတွက် private key ကိုဖြစ်စေဖို့ public key ကိုက်ညီနိုင်ဘူး။</string>
+    <string name="error_UnableToSaveMessageInDB">မက်ဆေ့ခ်ျကိုဒေတာဘေ့စဖို့ကယ်ဖို့နိုင်ဘူး။</string>
+    <string name="error_UnableToSaveRecipientInDB">လက်ခံရရှိသူဒေတာဘေ့စဖို့ကယ်ဖို့နိုင်ဘူး။</string>
+    <string name="error_UnableToUpdateMessageInDB">မက်ဆေ့ခ်ျကိုဒေတာဘေ့စကို update လုပ်ဖို့နိုင်ဘူး။</string>
+    <string name="error_UnableToUpdateRecipientInDB">လက်ခံရရှိသူဒေတာဘေ့စကို update လုပ်ဖို့နိုင်ဘူး။</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger အမှား, restart လုပ်ပါလော့။</string>
+    <string name="error_VcardParseFailure">ဆက်သွယ်ရန်ဒေတာကိုမှားယွင်းစွာ format ချခဲ့သည်။</string>
+
+    <string name="help_find">အခြားသူများနှင့်ဖလှယ်ဖို့သင်တို့၏နာမကိုတင်ထားရန်ဒီမျက်နှာပြင်ကိုအသုံးပြုပါ, သင့်ရဲ့ဒေတာတွေကိုကာကွယ်နိုင်ဖို့ passphrase \'။ ပြီးသောအခါ Done ခလုတ်ကိုထိပုတ်ပါ။</string>
+    <string name="help_home">မည်ဝါဖြစ်ကြောင်းဒေတာတွေကိုဖလှယ်ဖို့, အသုံးပြုသူအားလုံးအနီးအနားရှိဒါမှမဟုတ်ဖုန်းပေါ်မှာဖြစ်ကြောင်းအာမခံပါသည်။ အဆိုပါ Begin လဲလှယ်ရေး button ကိုသာ check လုပ်ထားအဆက်အသွယ်ဒေတာတွေကိုဖလှယ်မည်။</string>
+    <string name="help_identity_menu">သင်သည်လည်းသင်၏နာမကိုအတူခလုတ်ကိုနှိပ်ပြီးဒီမျက်နှာပြင်မှာသင့်ရဲ့အထောက်အထားနဲ့ပတ်သက်ပြီး personal data တွေကိုပြောင်းလဲလာနိုင်ပါတယ်။ ဒါဟာသင့် contact တည်းဖြတ်နည်းခွင့်ပြုတဲ့ menu ပေါ်လာနယူးအဆက်အသွယ် Create, ဒါမှမဟုတ်နောက်ထပ်အဆက်အသွယ်ကိုသုံးပါလိမ့်မယ်။</string>
+    <string name="help_Messages">ဒီမျက်နှာပြင်နေဆဲ download, ရရှိနိုင်တယ်သောသူအပေါင်းတို့သည်အတိတ်မက်ဆေ့ခ်ျများနှင့်ပူးတွဲဖိုင်တွေကိုပြသထားတယ်။</string>
+    <string name="help_passphrase">အဲဒီ passphrase နှင့်အတူလျှောက်လွှာကို login ဝင်မှဒီမျက်နှာပြင်ကိုအသုံးပြုပါ။ သင်သည်အဲဒီ passphrase ကိုမေ့လျော့နေလျှင်သင်မေ့သွားပြီ Passphrase ပါရှိတဲ့လက်တို့ခြင်းဖြင့်တစ်ဦး passphrase အသစ်ကိုဖြင့်ကာကွယ်ထားအသစ်တစ်ခု key ကိုထုတ်လုပ်မည်နည်း ခလုတ်ကို။ မျိုးစုံ keys တွေအကြားကူးအပြောင်းလုပ်ဖို့ user name ကိုထိပုတ်ပါ။</string>
+    <string name="help_passphrase_change">အတည်ပြုချက်နှင့်အ passphrase အသစ်ကိုများအတွက်သင်နောက်ဆုံး passphrase \'ဝင်သဖြင့်သင့်ရဲ့ passphrase ကိုပြောင်းမှဒီမျက်နှာပြင်ကိုအသုံးပြုပါ။</string>
+    <string name="help_PickRecip">SafeSlinger keys တွေနဲ့အဆက်အသွယ်ဖို့သင့်ရဲ့မက်ဆေ့ခ်ျကိုပေးပို့ဖို့တကိုရွေးပါ, ဒီမှာပြထားတယ်။</string>
+    <string name="help_save">ကိုလက်စသတ်သောအခါ, protocol ကိုဒေတာဖလှယ်ဆွေးနွေးခဲ့ကြသည်အထောက်အထားတစ်ခုစာရင်းထုတ်ဖေါ်မည်။ သင်သွင်းကုန်နဲ့ save ကိုနှိပ်ဖို့ဆန္ဒရှိအဆက်အသွယ်ကိုရွေးချယ်ပါ။</string>
+    <string name="help_SecureIntroduction">ဒီမျက်နှာပြင်သင်လုံလုံခြုံခြုံအချင်းချင်းမိမိတို့ keys ကိုပေးပို့ဖို့မီနှင့်အတူ keys ကို slung ပါပြီလူနှစ်ဦးကိုရွေးချယ်နိုင်ပါသည်။ ရိုးရှင်းစွာအလာသောအခါအဆင်သင့်ဖေါ်ထုတ်ကိုနှိပ်ပါ။</string>
+    <string name="help_Send">ဒီမျက်နှာပြင်အချို့ကိုသင် data နဲ့မှပို့ပေးရန်လက်ခံရရှိသူကိုရွေးချယ်နိုင်ပါသည်။ ရိုးရှင်းစွာအလာသောအခါအဆင်သင့် Send ကိုနှိပ်လိုက်ပါ။</string>
+    <string name="help_settings">ဒီမျက်နှာပြင်ကိုသင် application များအတွက် default settings ကိုပြောင်းလဲပစ်ရန်ခွင့်ပြုထားသည်။</string>
+
+    <string name="iOS_cameraError">ကင်မရာကိုခွင့်ပြုချက်မက်ဆေ့ခ်ျများလုံခြုံစေရန်တစ်ခုအနေနဲ့ပေါ်လာတဲ့ attach လုပ်ဖို့လိုအပ်ပါသည်။ SafeSlinger ကင်မရာခွင့်ပြုချက်အသေးစိတ် %s ခလုတ်ကိုထိပုတ်ပါ။</string>
+    <string name="iOS_contactError">အဆက်အသွယ်ခွင့်ပြုချက်လုံလုံခြုံခြုံအဆက်အသွယ်ကဒ်များကိုဝေမျှလိုအပ်ပါသည်။ SafeSlinger အဆက်အသွယ်ခွင့်ပြုချက်အသေးစိတ် %s ခလုတ်ကိုထိပုတ်ပါ။</string>
+    <string name="iOS_errorpushtoken">Push ကိုမှတ်ပုံတင်ခြင်းပျောက်ဆုံးနေပါတယ်။</string>
+    <string name="iOS_notificationError1">သတိပေးချက်သို့မဟုတ်နဖူးစည်းစာတမ်းတွေ, နှင့်တံဆိပ်နံပါတ်များဖြစ်စေဘို့အမိန့်ကြော်ငြာစာခွင့်ပြုချက်, လုံခြုံတဲ့စာတိုပေးပို့ရေးဘို့လိုအပ်သည်။ SafeSlinger မိန့်ကြော်ငြာစာခွင့်ပြုချက်အသေးစိတ် %s ခလုတ်ကိုထိပုတ်ပါ။</string>
+    <string name="iOS_oldOSWarn">SafeSlinger က iOS ကို 5.x devices များအတွက်အဆင့်မြှင့်တင်ထားပါတယ်မဟုတ်။ SafeSlinger က iOS 6 သို့မဟုတ်မြင့်မားရန်လိုအပ်သည်။</string>
+    <string name="iOS_photolibraryError">ဓာတ်ပုံစာကြည့်တိုက်ခွင့်ပြုချက်မက်ဆေ့ခ်ျများလုံခြုံစေရန်ဓါတ်ပုံတွေကိုပူးတွဲလိုအပ်ပါသည်။ SafeSlinger ဓာတ်ပုံစာကြည့်တိုက်ခွင့်ပြုချက်အသေးစိတ် %s ခလုတ်ကိုထိပုတ်ပါ။</string>
+    <string name="iOS_RequestPermissionContacts">သင့်ရဲ့မိတ်ဆွေတွေနဲ့ SafeSlinger သင့်အဘို့အက encrypt လုပ်ပါလိမ့်မယ်ပေးပို့ဖို့သင့်ရဲ့လိပ်စာကဒ်ရွေးချယ်နိုင်ပါတယ်။ မေးမြန်းသည့်အခါဒီ feature ကို enable လုပ်ဖို့, သင်တို့၏အမည်စာရင်းအား SafeSlinger access ကို allow ရပါမည်။</string>
+    <string name="iOS_RequestPermissionMicrophone">သင့်ရဲ့မိတ်ဆွေတွေနဲ့ SafeSlinger သင့်အဘို့အက encrypt လုပ်ပါလိမ့်မယ်ပေးပို့ဖို့အသံတစ်သံမက်ဆေ့ခ်ျကိုရိုက်ကူးနိုင်ပါသည်။ မေးမြန်းသည့်အခါဒီ feature ကို enable လုပ်ဖို့, သင်တို့၏ Microphone မှ SafeSlinger access ကို allow ရပါမည်။</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger စာဝှက်ထားတဲ့စာတိုပေးပို့ရေး application ဖြစ်ပါတယ်နှင့်အသိပေးချက်များဘောက်ကနေလာလတ္တံ့သောမက်ဆေ့ခ်ျများခွင့်ပြုခြင်းမရှိဘဲအလုပ်လုပ်လို့မရဘူး။ လာလတ္တံ့သောမက်ဆေ့ခ်ျများကို enable လုပ်ဖို့, သင်တောင်းလျှောက်သောအခါ SafeSlinger သင်အသိပေးချက်များပေးပို့ဖို့ခွင့်ပြုရပါမည်။</string>
+
+    <string name="label_ago">%s လွန်ခဲ့တဲ့</string>
+    <string name="label_backupCompleteDate">နောက်ဆုံး Backup ကိုပြီးစီး</string>
+    <string name="label_backupRequestDate">နောက်ဆုံး Backup ကိုတောင်းဆိုခြင်း</string>
+    <string name="label_backupURL">Backup က URL ကို</string>
+    <string name="label_ClickForNMsgs">သင့်ရဲ့မက်ဆေ့ခ်ျများ %d ပြန်လည်သုံးသပ်ဖို့ Touch ကို</string>
+    <string name="label_ComposeHint">အီးမေးလ်တစောင်ရေးပြီး</string>
+    <string name="label_ContactName">သင့်နာမည်</string>
+    <string name="label_days">%d ရက်ပတ်လုံး</string>
+    <string name="label_Device">Device ကို:</string>
+    <string name="label_DeviceInSendOnlyMode">Send-သာ mode ကို</string>
+    <string name="label_DisabledExchSourceKeyChange">သင်၏သော့ကိုပြောင်းလဲသွားပြီ: လောက်လွှဲနှင့်ပစ်သော့ချက်များကိုပြန်။</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">တစ်ချိန်တည်းမှာစာတိုပေးပို့ရေး, ဤအသုံးပြုသူနှင့်အတူလောက်လွှဲနှင့်ပစ်သော့ချက်များစလုပ်ဖို့။</string>
+    <string name="label_Draft">မူကြမ်း</string>
+    <string name="label_EnabledKeyFormatDeprecated">Key ကို format ကိုကန့်ကွက်: လောက်လွှဲနှင့်ပစ်သော့ချက်များကိုပြန်။</string>
+    <string name="label_exchanged">ဖလှယ်ဆွေးနွေး</string>
+    <string name="label_expired">ရက်ကုန်ဆုံး</string>
+    <string name="label_expires">%s ကုန်ဆုံးပြီးနောက်</string>
+    <string name="label_expiresIn">တွင်ကုန်ဆုံး</string>
+    <string name="label_FileNameHint">ဖိုင်နာမည်</string>
+    <string name="label_FindInstruct">သင့်ရဲ့ဒေတာတွေကိုကာကွယ်နိုင်ဖို့သင့်အမည်နှင့် passphrase တခုကိုထည့်သွင်းပါ:</string>
+    <string name="label_FirstName">နာမည်</string>
+    <string name="label_Home">Add or remove အဆက်အသွယ်ဒေတာ, သင်မျှဝေရန်ဆန္ဒရှိပစ္စည်းများစစ်ဆေးရန်နှင့်အခြားသူများကိုလဲလှယ်ဖို့အဆင်သင့်ဖြစ်သည့်အခါလဲလှယ်ရေး Begin ကိုထိပုတ်ပါမှသင်တို့၏နာမကိုအသာပုတ်:</string>
+    <string name="label_hometag">နေအိမ်</string>
+    <string name="label_hours">%d နာရီ</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud ကို enable လုပ်ထားခြင်းဖြစ်သည်။ ပြီးသောအခါ Done ခလုတ်ကိုထိပုတ်ပါ။</string>
+    <string name="label_InstNoMessages">အဘယ်သူမျှမသတင်းစကားများ။ သင့်အနေဖြင့်ရေးတဲ့ tab ကနေ message ပို့နိုင်ပါသည်။</string>
+    <string name="label_InstNoRecipients">လက်ခံတဲ့သူကိုထည့်သွင်းဖို့, သင်တစ်ချိန်တည်းမှာတစ်ခုသို့မဟုတ်တစ်ခုထက်ပိုသောအခြားအသုံးပြုသူများနှင့်အတူပထမဦးဆုံးလောက်လွှဲနှင့်ပစ်သော့ချက်များရပါမည်။ သင်သည်အစက menu ကနေတစ်ဦးလောက်လွှဲနှင့်ပစ်သော့ချက်များအဆက်အသွယ်ဖိတ်ကြားချက်ကိုပို့ပေးပါလိမ့်မည်။</string>
+    <string name="label_InstNoRecipientsMatchQuery">သင့်ရဲ့လက်ရှိလက်ခံတဲ့သူ၏အဘယ်သူမျှမကသင့်ရဲ့ရှာဖွေရေး query ကို match ။ တစ်ဦးကွဲပြားခြားနား query ကိုကြိုးစားသို့မဟုတ်အဆက်အသွယ်အသစ်တစ်ခုဖိတ်ခေါ်ပေးပါဦး။</string>
+    <string name="label_InstNoSharedFile">Shared ဖိုင်မျှမရှိ။ iTunes နှင့်သင့်ဖုန်းကိုချိတ်ပါနဲ့ shared folder ဖိုင်တွေကိုဆွဲယူပါ။</string>
+    <string name="label_InstRecipients">တဦးဆီပေးပို့ဖို့လက်ခံရရှိမဲ့သူက Pick:</string>
+    <string name="label_InstSendInvite">လုံလုံခြုံခြုံမိတ်ဆက်ဖို့လက်ခံတဲ့သူ Pick:</string>
+    <string name="label_InstSharedFile">ပူးတွဲဖိုင်တစ်ခု Pick:</string>
+    <string name="label_introduced">စတင်မိတ်ဆက်</string>
+    <string name="label_inviteSent">ဖိတ်ကြားခဲ့သည်</string>
+    <string name="label_Key">Key ကို:</string>
+    <string name="label_LastName">မျိုးနွယ်အမည်</string>
+    <string name="label_Me">အကြှနျုပျ</string>
+    <string name="label_messageIntroduceNameToYou">ငါသည်သင်တို့ဆီသို့ %s မိတ်ဆက်ပေးချင်ပါတယ်။</string>
+    <string name="label_messageInviteInstall">SafeSlinger app ကို: %s</string>
+    <string name="label_messageInviteSetupInst">Setup ကိုဟာလုံခြုံတဲ့စာတိုပေးပို့ရေး connection ကမှကျနော်တို့ကိုခရီးဦးကြိုသို့မဟုတ်ဖုန်းအချင်းချင်းတစ်ချိန်တည်းမှာ, ပြီးတော့လောက်လွှဲနှင့်ပစ်သော့ချက်များ့တခါမှ connection ကို verify နိုင်ပါတယ်။</string>
+    <string name="label_messageInviteStartMsg">ကျနော်တို့က open source SafeSlinger iPhone နှင့် Android app ကိုနှင့်အတူလုံခြုံသောစာတိုပေးပို့ရေးစတင်နိုင်သလား?</string>
+    <string name="label_messageYouAreVerified">%s, သင်မှန်ကန်ကြောင်းအတည်ပြုကြသည်။</string>
+    <string name="label_minutes">%d မိနစ်</string>
+    <string name="label_mobiletag">Mobile က</string>
+    <string name="label_MostRecentOnly">သာအများစုမှာမကြာသေးမီ</string>
+    <string name="label_MsgSendUpdate">ငါ့ updated SafeSlinger ခန့်အပ်လွှာတွင်ပူးတွဲကြသည်။</string>
+    <string name="label_None">အဘယ်သူမျှမ</string>
+    <string name="label_numsharedfiles">%d ကို Files Share to:</string>
+    <string name="label_OldThreads">ဟောင်း Threads</string>
+    <string name="label_othertag">အခြား</string>
+    <string name="label_PassHintBackoff">Retry</string>
+    <string name="label_PassHintChange">Updated Passphrase ပါရှိတဲ့</string>
+    <string name="label_PassHintCreate">Passphrase ပါရှိတဲ့ Create</string>
+    <string name="label_PassHintCurrent">လက်ရှိ Passphrase ပါရှိတဲ့</string>
+    <string name="label_PassHintEnter">Passphrase ပါရှိတဲ့</string>
+    <string name="label_PassHintRepeat">Repeat Passphrase ပါရှိတဲ့</string>
+    <string name="label_passPhraseCacheTtl">Passphrase ပါရှိတဲ့ Cache</string>
+    <string name="label_PassPhraseIsCached">Passphrase ပါရှိတဲ့သိုလှောင်ထား</string>
+    <string name="label_phoneOnly">ဖုန်းသာ</string>
+    <string name="label_Photo">ဓာတ်ပုံ</string>
+    <string name="label_PublicKeyID">Key ID</string>
+    <string name="label_PushTokenID">Push ကိုမှတ်ပုံတင်ခြင်း ID ကို</string>
+    <string name="label_RemindBackupDelay">Backup ကိုသတိပြုရန်</string>
+    <string name="label_ReportedInactive">မလှုပ်မရှား %s ဖော်ပြခဲ့သည်။</string>
+    <string name="label_restoreCompleteDate">နောက်ဆုံးပြီးစီး Restore</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup လုပ်ထားနှောင့်နှေး</string>
+    <string name="label_safeslingered">(SafeSlinger တိုက်ရိုက် Exchange) ကို</string>
+    <string name="label_SaveAccount">Account ကို Save</string>
+    <string name="label_SaveInstruct">သင်သည်သင်၏လိပ်စာစာအုပ်ထဲတွင် update လုပ်ချင်တယ်အဆက်အသွယ် Check, လုံခြုံတဲ့အဆက်အသွယ်ကယ်ဖို့သွင်းကုန်ကိုထိပုတ်ပါ:</string>
+    <string name="label_search_contacts_hint">အဆက်အသွယ်များကိုရှာဖွေရန်</string>
+    <string name="label_seconds">%d စက္ကန့်</string>
+    <string name="label_SelectRecip">Recipient ကိုရွေးပါ</string>
+    <string name="label_sendErrorData">အမှား Data ကို Send</string>
+    <string name="label_SendFrom">From:</string>
+    <string name="label_SendTo">To:</string>
+    <string name="label_ShowHintAtLaunch">ဒီအရိပ်အယောင်မယ့်အချိန်ကိုပြပါ။</string>
+    <string name="label_SpeechRecognitionAlert">ဒါဟာသတင်းအချက်အလက်ယိုစိမ့်စေခြင်းငှါကြောင့်မိန့်ခွန်းအသိအမှတ်ပြုမှုကိုအသုံးပြုခြင်းကပိတ်ထားတယ်</string>
+    <string name="label_step_1">အဆင့် 1</string>
+    <string name="label_step_2">အဆင့် 2</string>
+    <string name="label_step_3">အဆင့် 3</string>
+    <string name="label_step_4">အဆင့် 4</string>
+    <string name="label_step_5">အဆင့် 5</string>
+    <string name="label_summary_auto_attach_retrieval">Logged in ဝင်သောသောအခါအလိုအလျောက်မက်ဆေ့ခ်ျကိုပူးတွဲဖိုင်တွေကို download လုပ်ပါ။</string>
+    <string name="label_summary_auto_decrypt">Logged in ဝင်သောသောအခါအလိုအလျောက်မက်ဆေ့ခ်ျများ, စာဝှက်ဖြည်။</string>
+    <string name="label_summary_remind_backup_delay">Backup လုပ်ထားအော့ဖ်လိုင်းအခါအသိပေးချက်ကိုလက်ခံရရှိသည်။</string>
+    <string name="label_summary_show_tutorial">လောက်လွှဲနှင့်ပစ်သော့ချက်များဖို့ကြိုးစားနေတဲ့သူရှေ့မှာသင်ခန်းစာမှာတော့ပြပါ။</string>
+    <string name="label_TapToDecryptFile">ဖိုင်ကိုစာဝှက်ဖေါ်ရန်ကိုအသာပုတ်</string>
+    <string name="label_TapToDecryptMessage">စာဝှက်ဖေါ်ရန်ကိုအသာပုတ်</string>
+    <string name="label_TapToDownloadFile">ဖိုင်ကိုဒေါင်းလုဒ်ရန်ထိပုတ်ပါ</string>
+    <string name="label_TapToDownloadMessage">မက်ဆေ့ခ်ျကိုဒေါင်းလုတ်ရန်ကိုအသာပုတ်</string>
+    <string name="label_TapToOpenFile">ဖိုင်ကိုဖွင့်ဖို့ကိုအသာပုတ်</string>
+    <string name="label_TapToResumeDraft">မက်ဆေ့ခ်ျကိုမူကြမ်းပြန်လည်စတင်ရန်ထိပုတ်ပါ</string>
+    <string name="label_TapToSendCredentialUpdate">လက်ခံ update ကိုပေးပို့ဖို့ကိုအသာပုတ်ထိန်းထားပါ။</string>
+    <string name="label_TapToSlingKeys">လောက်လွှဲနှင့်ပစ်သော့ချက်များသာပုတ်ပါ။</string>
+    <string name="label_targetAccountLabel">အဆက်အသွယ်အကောင့်ကို</string>
+    <string name="label_TouchToConfigureBackupSettings">သင်သည်လုပ်နိုင်သောက iOS ရဲ့ Settings အတွက် SafeSlinger iCloud backup လုပ်ထား enable ပေ။ ပြီးသောအခါ Done ခလုတ်ကိုထိပုတ်ပါ။</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Backup လုပ်ထား settings တွေကို configure လုပ်ဖို့တို့ထိပါ။</string>
+    <string name="label_TouchToConfigureCacheTimeout">Cache ကို timeout ကို settings တွေကို configure လုပ်ဖို့တို့ထိပါ။</string>
+    <string name="label_undefinedTypeLabel">အမည်မသိ</string>
+    <string name="label_UnknownSender">Encrypt လုပ်ထားတဲ့ပေးပို့သူ</string>
+    <string name="label_UserName">အသုံးပြုသူ၏အမည်</string>
+    <string name="label_WarnForgotPassphrase">သင့်ရဲ့ဒေတာတွေကိုကာကွယ်စောင့်ရှောက်ဖို့, SafeSlinger ပြန်လည်ဆယ်တင်နိုင်တဲ့ဘယ်နေရာမှာမဆိုအဲဒီ passphrase ကိုသိမ်းဆည်းထားပါဘူး။ အကယ်. တူညီသော passphrase \'ရဲ့ login အောက်မှာဖန်တီးသောလက်ခံသူများနှင့်မက်ဆေ့ခ်ျသာဝင်ရောက်နိုင်ပါတယ်။ ဒါပေမဲ့, ထို့နောက်သင့်လက်ခံတဲ့သူနှင့်အတူလောက်လွှဲနှင့်ပစ်သော့ချက်များကိုပြန်လုပ်ပါတဲ့ key အသစ်ကိုနှင့် \'passphrase ထုတ်လုပ်နိုင်ပါတယ်။</string>
+    <string name="label_WarnManagePassFollowsAreRecent">အောက်ပါ keys ကိုပယ်ဖျက်သွားလိမ့်မယ်:</string>
+    <string name="label_WarnManagePassNoMoreRecent">သင်တို့အဘို့ထက်မပိုမကြာသေးမီ keys တွေရှိပါတယ်။</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">သာ keys ကို %s အပေါ် generated ပိုမိုမကြာသေးမီကသင်၏ဥစ္စာထက်ထုတ်လုပ်ပြီး, ပယ်ဖျက်ခဲ့တဲ့နိုင်ပါသည်။</string>
+    <string name="label_worktag">အလုပ်</string>
+
+    <string name="menu_About">အကွောငျး</string>
+    <string name="menu_auto_attach_retrieval">Attachment တွဲ auto-retrieve</string>
+    <string name="menu_auto_decrypt">Auto-Decrypt</string>
+    <string name="menu_Change">ပွောငျးလဲ</string>
+    <string name="menu_ChangePassphrase">ပြောင်းလဲမှုနဲ့ Passphrase</string>
+    <string name="menu_ContactInviteEmail">အဆက်အသွယ်ကနေအီးမေးလ်</string>
+    <string name="menu_ContactInviteSms">အဆက်အသွယ်ကနေ text</string>
+    <string name="menu_CreateNew">နယူး Create</string>
+    <string name="menu_delete">အဖြစ်မှဖယ်ရှာသည်</string>
+    <string name="menu_deleteThread">ဆွေးနွေးချက်အဖြစ်မှဖယ်ရှာသည် %s</string>
+    <string name="menu_Details">View Detail</string>
+    <string name="menu_DownloadDirectory">ဒေါင်းလုပ် Directory ကို</string>
+    <string name="menu_Edit">ပြင်ဆင်ရန်</string>
+    <string name="menu_EditContact">Edit ကိုဆက်သွယ်ရန်</string>
+    <string name="menu_EditName">Edit ကိုအမည်</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_ForgotPassphrase">Passphrase ပါရှိတဲ့မေ့နေပါသလား?</string>
+    <string name="menu_Help">ကူညီကြပါ</string>
+    <string name="menu_Introduction">နိဒါန်း</string>
+    <string name="menu_language">ဘာသာစကား</string>
+    <string name="menu_License">License ကို</string>
+    <string name="menu_link_contact_add">ဆက်သွယ်ရန် Link ကို Add</string>
+    <string name="menu_link_contact_change">ပြောင်းလဲမှုဆက်သွယ်ရန် Link ကို</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Passphrase Manage</string>
+    <string name="menu_message_font_size">မက်ဆေ့ခ်ျကို Font Size ကို</string>
+    <string name="menu_messageCopyText">သျြှ</string>
+    <string name="menu_messageForward">ရှေ့သို့</string>
+    <string name="menu_PrivacyPolicy">ကိုယ်ရေးအချက်အလက်မူဝါဒ</string>
+    <string name="menu_Remove">Remove</string>
+    <string name="menu_restore_default">Default Settings များ Restore</string>
+    <string name="menu_ringtone">Sound</string>
+    <string name="menu_SelectShareApp">ဆက်သွယ်ရန်ဖိတ်ကြားခြင်း Add</string>
+    <string name="menu_sendFeedback">တုံ့ပြန်ချက်စေလွှတ်မည်</string>
+    <string name="menu_SendUpdate">Update ကို Send</string>
+    <string name="menu_Settings">Settings များ</string>
+    <string name="menu_ShowTutorial">Show ပုံများ</string>
+    <string name="menu_TagComposeMessage">ရေးပြီး</string>
+    <string name="menu_TagExchange">သည်လောက်လွှဲသော့ချက်များ</string>
+    <string name="menu_TagListMessages">မက်ဆေ့ခ်ျများ</string>
+    <string name="menu_UseAnother">နောက်ထပ်သုံးပါ</string>
+    <string name="menu_UseContactPerson">ဆက်သွယ်ရန် %s ကိုသုံးပါ</string>
+    <string name="menu_UseNoContact">ကသာ Name ကိုသုံးပါ</string>
+    <string name="menu_UseProfilePerson">Profile ကို %s ကိုသုံးပါ</string>
+    <string name="menu_vibrate">Vibrate</string>
+
+    <string name="prog_decrypting">စာဝှက်ဖြည်…</string>
+    <string name="prog_encrypting">encrypting လုပ်နိုင်တဲ့…</string>
+    <string name="prog_FileSent">မက်ဆေ့ခ်ျကိုတုန့်ပြန်စောင့်ဆိုင်းစေလွှတ်…</string>
+    <string name="prog_findingKey">အဓိကသော့ချက်ကိုရှာဖွေ…</string>
+    <string name="prog_GeneratingKey">key တခုထုတ်လုပ်ခြင်း, ဒီကနေယူနိုင်ပါတယ်…</string>
+    <string name="prog_generatingSignature">လက်မှတ်ထုတ်လုပ်ဖို့…</string>
+    <string name="prog_loadingContent">ကုန်တင်တဲ့အကြောင်းအရာတွေကို…</string>
+    <string name="prog_pending">ဆိုင်းငံ့ထား…</string>
+    <string name="prog_ReceivingFile">စာဝှက်ထားတဲ့ဖိုင်လက်ခံရရှိ…</string>
+    <string name="prog_RequestingFile">စာဝှက်ထားတဲ့ဖိုင်တောင်းခံသော…</string>
+    <string name="prog_RequestingMessage">စာဝှက်ထားတဲ့စာတောင်းခံသော…</string>
+    <string name="prog_RequestingPushReg">တွန်းအားပေးမှတ်ပုံတင်ခြင်းတောင်းခံသော…</string>
+    <string name="prog_SavingContactsToAddressBook">လိပ်စာစာအုပ်ကို update…</string>
+    <string name="prog_SavingContactsToKeyDatabase">အဓိကသော့ချက်ဒေတာဘေ့စကို update…</string>
+    <string name="prog_SearchingForBackup">backup လုပ်ထားရှာဖွေနေ…</string>
+    <string name="prog_SendingFile">စာဝှက်ထားတဲ့စာ %s ပေးပို့ခြင်း…</string>
+    <string name="prog_verifyingIntegrity">သစ္စာသမာဓိစစ်ဆေးအတည်ပြုခြင်း…</string>
+    <string name="prog_verifyingSignature">လက်မှတ်စစ်ဆေးအတည်ပြုခြင်း…</string>
+
+    <string name="section_advanced">အဆင့်မြင့်</string>
+    <string name="section_backup">Backup က</string>
+    <string name="section_general">ယေဘုယျ</string>
+    <string name="section_notification">အသိပေးချက်များဘောက်</string>
+    <string name="section_storage">သိုလှောင်ခြင်း</string>
+
+    <string name="state_BackupRestored">Backup ကိုပြန်၏။</string>
+    <string name="state_FileDeleted">ပယ်ဖျက်ခဲ့တဲ့ဖိုင် %s ။</string>
+    <string name="state_FileSent">မက်ဆေ့ခ်ျကိုစေလွှတ်ခဲ့သည်။</string>
+    <string name="state_InvitationAdded">ဖိတ်ကြားခြင်းဆက်ပြောသည်။</string>
+    <string name="state_MessageSavedAsDraft">မူကြမ်းအဖြစ်သိမ်းဆည်းသတင်းစကား။</string>
+    <string name="state_MessagesDeleted">%d မက်ဆေ့ခ်ျများဖျက်ပစ်နိုင်သည်။</string>
+    <string name="state_MessagesSent">%d မက်ဆေ့ခ်ျများစေလွှတ်ခဲ့သည်။</string>
+    <string name="state_PassphraseUpdated">Passphrase ပါရှိတဲ့ updated ။</string>
+    <string name="state_RecipientsDeleted">%d လက်ခံတဲ့သူဖျက်ပစ်နိုင်သည်။</string>
+    <string name="state_SomeContactsImported">%s အဆက်အသွယ်တင်သွင်းခဲ့သည်။</string>
+    <string name="state_TextCopiedToClipboard">ကို clipboard မှကူးယူ text ။</string>
+
+    <string name="text_About">SafeSlinger လူကိုယ်တိုင်ဖြစ်စေ, ဖုန်းကျော်, ကိုအလွယ်တကူမည်ဝါဖြစ်ကြောင်း data များမျှဝေဖို့ဒီဇိုင်းရေးဆွဲအတည်ပြုပြီး, ပုဂ္ဂလိကနှင့်နဂိုအတိုင်းဖြစ်ပါတယ်။ သင်တို့နှင့်အတူအမျှဝေထားတဲ့လူတစ်ဦးစီမက်ဆေ့ခ်ျများပေးပို့ဖို့စတဲ့လုံခြုံတဲ့အဆုံးမှအဆုံးသို့ရုပ်သံလိုင်းတွေဖန်တီးပေးပါတယ်။</string>
+    <string name="text_About1">ကိုအလွယ်တကူအခြားသူများနှင့်ဆက်သွယ်ရမည့်အချက်အလက်များကိုဖလှယ်</string>
+    <string name="text_About2">လုံလုံခြုံခြုံလက်လွှဲစာသားများ, ဓါတ်ပုံများဘာမှ!</string>
+    <string name="text_About3">အားကောင်းတဲ့များ cryptography သင့်ရဲ့သတင်းအချက်အလက်တွေကိုကာကွယ်ပေးတယ်</string>
+    <string name="text_About_Short">SafeSlinger: 3 စကားကိုပြောနှင့်အစဉ်အမြဲငြိမ်းချမ်းရေးအတွက်စကားပြောခန်း။</string>
+    <string name="text_AboutEmail">အီးမေးလ်: %s</string>
+    <string name="text_AboutFeat">အင်္ဂါရပ်များ:</string>
+    <string name="text_AboutWeb">ဝဘ်: %s</string>
+    <string name="text_DevelopedBy">အားဖြင့်ဖွံ့ဖြိုးပြီး:</string>
+    <string name="text_KeywordExchange">လဲလှယ်</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">သော့</string>
+    <string name="text_KeywordMessaging">စာတိုပေးပို့ရေး</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">လုံခြုံရေး</string>
+    <string name="text_LanguagesProvidedBy">ကထောက်ပံ့ဘာသာစကားများ:</string>
+    <string name="text_LocalizationRepo">translate: %s</string>
+    <string name="text_RelatedSearchTerms">ဆက်စပ်သောအစည်းမျဉ်း:</string>
+    <string name="text_Requirements">လိုအပ်ချက်များ:</string>
+    <string name="text_Requirements1">2 devices များနိမ့်ဆုံးပေါ်တွင်တပ်ဆင်ရမည်။</string>
+    <string name="text_Requirements2">အင်တာနက်လိုင်းတခု Active ဖြစ်ရပါမည်။</string>
+    <string name="text_SourceCodeRepo">ပွင့်လင်း source: %s</string>
+    <string name="text_WhatsNew">တည်ငြိမ်အေးချမ်းရေးပြင်ဆင်ခြင်း။</string>
+
+    <string name="title_About">အကွောငျး</string>
+    <string name="title_camera">ကင်မရာကို</string>
+    <string name="title_ChooseDirectory">Directory ကိုကိုရွေးချယ်ပါ</string>
+    <string name="title_ChooseFileLoad">သင်၏ပူးတွဲ Choose</string>
+    <string name="title_comments">မှတ်ချက်များ/မေးခွန်းများ</string>
+    <string name="title_Error">အမှား</string>
+    <string name="title_ExchangeWalkthrough">သည်လောက်လွှဲသော့ချက်များလက်ထောက်နိုင်ငံခြားရေး</string>
+    <string name="title_FileOptions">Attachment Options ကို</string>
+    <string name="title_find">တည်ဆောက်သည်</string>
+    <string name="title_font_size">Font size ကို select လုပ်ပါ</string>
+    <string name="title_home">လဲလှယ်ရေး Begin</string>
+    <string name="title_HomePanel">နေအိမ်</string>
+    <string name="title_MessageDetail">မက်ဆေ့ခ်ျကို</string>
+    <string name="title_Messages">မက်ဆေ့ခ်ျများ</string>
+    <string name="title_MyIdentity">ကိုယ်ရေးကိုယ်တာဆက်သွယ်ရန်</string>
+    <string name="title_NotifyFileAvailable">ရယူနိုင်ပြီ SafeSlinger Message အကြောင်း</string>
+    <string name="title_NotifyMulFileAvailable">ရယူနိုင်ပြီ %d SafeSlinger မက်ဆေ့ခ်ျများ</string>
+    <string name="title_passphrase">Passphrase ပါရှိတဲ့</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">ဓာတ်ပုံစာကြည့်တိုက်</string>
+    <string name="title_PickRecipient">လက်ခံတဲ့သူ</string>
+    <string name="title_Question">မေးခွန်း</string>
+    <string name="title_RecipientDetail">လက်ခံရရှိမဲ့သူက Detail</string>
+    <string name="title_save">End လဲလှယ်ရေး</string>
+    <string name="title_SaveFileAs">ဖိုင် Save As</string>
+    <string name="title_SecureIntroduction">လုံလုံခြုံခြုံနိဒါန်း</string>
+    <string name="title_SecureIntroductionInvite">နိဒါန်းဖိတ်ကြားခြင်း Secure!</string>
+    <string name="title_SelectSource">Options ကိုကိုပေးပို့ခြင်း:</string>
+    <string name="title_SendFile">ပေးပို့</string>
+    <string name="title_sharingfolder">Folder ကိုမျှဝေခြင်း</string>
+    <string name="title_soundrecoder">Sound Recorder ကို</string>
+    <string name="title_TextInviteMsg">SafeSlinger ဖိတ်ကြားခြင်း</string>
+    <string name="title_Threads">Threads</string>
+    <string name="title_Warn">သတိပေးချက်</string>
+
+</resources>

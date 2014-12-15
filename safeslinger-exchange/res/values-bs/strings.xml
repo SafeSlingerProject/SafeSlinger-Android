@@ -27,40 +27,40 @@
 
     <string name="ask_QuitConfirmation">Otkaz? Jeste li sigurni?</string>
 
-    <string name="btn_Match">Sljedeća</string>
-    <string name="btn_NoMatch">No utakmice</string>
+    <string name="btn_Match">Sljedeći</string>
+    <string name="btn_NoMatch">No Match</string>
 
     <string name="choice_NumUsers">%d korisnika</string>
 
     <string name="error_AllMembersMustUpgrade">Neki članovi koriste stariju verziju; svi članovi moraju nadograditi na najnoviju verziju.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Svi članovi moraju nadograditi, neki koriste stariji formati registraciju push.</string>
-    <string name="error_CorrectYourInternetConnection">Internet nije dostupan, provjerite svoje postavke.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Svi članovi moraju nadograditi, neki koriste stariji formati registracije push.</string>
+    <string name="error_CorrectYourInternetConnection">Internet nije dostupan, provjerite postavke.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout premašen. Početi opet razmjene.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Netačnih podataka nalaze u razmjeni. Početi opet razmjene.</string>
+    <string name="error_InvalidCommitVerify">Netačne podatke našao u zamjenu. Početi opet razmjene.</string>
     <string name="error_InvalidCommonUserId">Unesite pozitivni cijeli broj.</string>
-    <string name="error_LocalGroupCommitDiffer">Ti su prijavili razlika u frazama. Početi opet razmjene.</string>
-    <string name="error_MinUsersRequired">A najmanje %d članova se traži da razmjene podataka.</string>
-    <string name="error_MoreDataThanUsers">Neočekivani podaci nalaze u razmjeni. Početi opet razmjene.</string>
+    <string name="error_LocalGroupCommitDiffer">Vi ste prijavili razliku u fraza. Početi opet razmjene.</string>
+    <string name="error_MinUsersRequired">Najmanje %d članova su potrebne za razmjenu podataka.</string>
+    <string name="error_MoreDataThanUsers">Neočekivani podatke našao u zamjenu. Početi opet razmjene.</string>
     <string name="error_NoDataToExchange">Razmjena nedostaje tražene podatke.</string>
-    <string name="error_NoWordListSelected">Morate odabrati jedan od fraza pre nego što nastavite.</string>
-    <string name="error_OtherGroupCommitDiffer">Neko je prijavio razlika u frazama. Početi opet razmjene.</string>
-    <string name="error_OutOfMemoryError">Memorija je premala da bi završiti ovu operaciju.</string>
+    <string name="error_NoWordListSelected">Morate izabrati jednu od fraza pre nego što nastavite.</string>
+    <string name="error_OtherGroupCommitDiffer">Neko prijavili razlika u fraza. Početi opet razmjene.</string>
+    <string name="error_OutOfMemoryError">Memorija je premala da bi završili ovu operaciju.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerNotResponding">Nikakav odgovor od servera.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout čeka za neke članove grupe da biste dodali podatke.</string>
+    <string name="error_ServerNotResponding">Nikakav odgovor sa servera.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout čeka za neke članove grupe da dodate podatke.</string>
     <string name="error_WebCancelledByUser">Korisnik otkazao zahtjev serveru.</string>
 
-    <string name="help_size">Odaberite broj ljudi koji pokušavaju da razmjenjuju podatke zajedno i pritisnite OK.</string>
-    <string name="help_userid">Ovaj broj na ovom ekranu se koristi za stvaranje jedinstvenog grupi korisnika. Pregledajte brojeva na ekranima sve korisnike \', onda su svi korisnici trebaju ući u isti najmanji broj i pritisnite OK.</string>
-    <string name="help_verify">Sada, morate odgovarati jedan od ovih 3-riječ fraza sa svim korisnicima. Svaki korisnik mora odabrati isti zajednički izraz, i pritisnite Next.</string>
+    <string name="help_size">Odaberite broj ljudi koji pokušavaju za razmjenu podataka zajedno, a zatim pritisnite OK.</string>
+    <string name="help_userid">Ovaj broj na ovom ekranu se koristi za stvaranje jedinstvenog grupi korisnika. Pregledajte brojeva na ekranima sve korisnike \', onda su svi korisnici bi trebali ući u isti najniži broj i pritisnite OK.</string>
+    <string name="help_verify">Sada, morate odgovarati jedan od ovih 3-riječ fraza sa svim korisnicima. Svaki korisnik mora odabrati iste zajedničke fraze i pritisnite Next.</string>
 
-    <string name="label_CompareScreensNDevices">Usporedi ekrane na %s uređajima.</string>
+    <string name="label_CompareScreensNDevices">Usporedba ekrana na %s uređajima.</string>
     <string name="label_NumericModeHint">Non-English</string>
     <string name="label_PromptInstruct">Ovaj broj se koristi za stvaranje jedinstvenog grupi korisnika. Usporedi, a zatim unesite najmanji broj među svim korisnicima.</string>
-    <string name="label_ReceivedNItems">dobili %d predmeta</string>
+    <string name="label_ReceivedNItems">dobio %d stavki</string>
     <string name="label_UserIdHint">Najniže</string>
-    <string name="label_VerifyInstruct">Svi telefoni moraju odgovarati jedan od fraza 3-riječi. Usporedi, a zatim odabrati podudaranje izraz.</string>
+    <string name="label_VerifyInstruct">Svi telefoni mora odgovarati jednom od fraza 3-riječ. Usporedi, a zatim pokupiti podudaranje izraz.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
@@ -70,7 +70,7 @@
     <string name="prog_RequestingUserId">traži članstvo u…</string>
 
     <string name="title_size">Koliko korisnika u razmjeni?</string>
-    <string name="title_userid">Grupiranje</string>
-    <string name="title_verify">Provjerite</string>
+    <string name="title_userid">Grupisanje</string>
+    <string name="title_verify">Provjeriti</string>
 
 </resources>

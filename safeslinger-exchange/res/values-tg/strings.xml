@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="ask_QuitConfirmation">Баромадан? Шумо мутмаъин ҳастед?</string>
+
+    <string name="btn_Match">Баъдӣ</string>
+    <string name="btn_NoMatch">Не Match</string>
+
+    <string name="choice_NumUsers">истифодабарандагони %d</string>
+
+    <string name="error_AllMembersMustUpgrade">Баъзе аъзоёни истифода як нусхаи кӯҳнатар; ҳамаи аъзои бояд ба навтарин навсозӣ нусхаи.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Ҳамаи аъзоёни бояд навсозӣ, баъзе истифода формати калонсол кашидани бақайдгирии.</string>
+    <string name="error_CorrectYourInternetConnection">Интернет дастрас набошад, танзимоти худро санҷед.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Вақти асъор зиёд. Боз оғоз мубодилаи.</string>
+    <string name="error_HttpCode">Server Хато HTTP: %d</string>
+    <string name="error_InvalidCommitVerify">Маълумоти нодуруст дар ивази ёфт. Боз оғоз мубодилаи.</string>
+    <string name="error_InvalidCommonUserId">Лутфан бутуни мусбат ворид кунед.</string>
+    <string name="error_LocalGroupCommitDiffer">Шумо фарқияти дар ибораҳои гузориш кардаанд. Боз оғоз мубодилаи.</string>
+    <string name="error_MinUsersRequired">Беш аз %d аъзои талаб мубодилаи маълумот.</string>
+    <string name="error_MoreDataThanUsers">Маълумоти ғайричашмдошт дар ивази ёфт. Боз оғоз мубодилаи.</string>
+    <string name="error_NoDataToExchange">Мубодилаи аст, маълумот талаб карда мешавад.</string>
+    <string name="error_NoWordListSelected">Шумо бояд яке аз ибораҳои ки пеш аз кӯчонидани-ро интихоб кунед.</string>
+    <string name="error_OtherGroupCommitDiffer">Касе хабар дод, ки фарқи дар ибораҳои. Боз оғоз мубодилаи.</string>
+    <string name="error_OutOfMemoryError">Хотира низ паст аст, барои анҷоми ин амалиёт.</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerNotResponding">Ягон посух аз сервер.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Итмоми замон мунтазири баъзе аъзоёни гурӯҳи илова маълумот.</string>
+    <string name="error_WebCancelledByUser">User бекор дархости сервер.</string>
+
+    <string name="help_size">Шумораи одамоне, ки дар кӯшиши ба мубодилаи маълумот ҷамъ ва Хуб-ро пахш кунед.</string>
+    <string name="help_userid">Ин рақам дар ин равзана истифода бурда мешавад барои сохтани гурӯҳи нодири истифодабарандагони. Баррасї намудани рақамҳои оид ба экранҳои ҳамаи корбарон \', пас ҳамаи истифодабарандагон бояд ҳамон пасттарин шумораи ва пахш OK ворид кунед.</string>
+    <string name="help_verify">Акнун, ки шумо бояд ба яке аз ин ибораҳои 3-калима бо ҳамаи истифодабарандагони гайра. Ҳар як истифодабаранда бояд ибораи умумии ҳамон-ро интихоб кунед, ва оянда пахш кунед.</string>
+
+    <string name="label_CompareScreensNDevices">Нисбат ба экранҳои оид ба дастгоҳҳои %s.</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Ин рақам истифода бурда мешавад барои сохтани гурӯҳи нодири истифодабарандагони. Муқоиса кунед, ва баъд дохил пасттарин шумораи дар байни ҳамаи истифодабарандагони.</string>
+    <string name="label_ReceivedNItems">%d адад гирифтанд</string>
+    <string name="label_UserIdHint">Пасттарин</string>
+    <string name="label_VerifyInstruct">Ҳамаи телефонҳои бояд яке аз ибораҳои 3-калом ва гайра. Муқоиса кунед, ва он гоҳ ба ибораи муқоисаи кунад.</string>
+
+    <string name="lib_name">SafeSlinger асъор</string>
+
+    <string name="prog_CollectingOthersCommitVerify">Интизории барои санҷиш аз ҳамаи аъзои…</string>
+    <string name="prog_CollectingOthersItems">Интизории барои ҳамаи истифодабарандагон ба ҳамроҳ…</string>
+    <string name="prog_ConstructingGroupKey">сохтмони асосии гурӯҳи…</string>
+    <string name="prog_RequestingUserId">бо дархости узвият…</string>
+
+    <string name="title_size">Чӣ бисёр истифодабарандагон дар мубодилаи?</string>
+    <string name="title_userid">Гурўњбандї</string>
+    <string name="title_verify">Тафтиш намоед</string>
+
+</resources>

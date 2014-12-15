@@ -44,6 +44,7 @@
     <string name="btn_DeleteKeys">키 삭제</string>
     <string name="btn_discard">지우기</string>
     <string name="btn_Done">완료</string>
+    <string name="btn_Edit">편집</string>
     <string name="btn_Exit">나가기</string>
     <string name="btn_Import">가져오기</string>
     <string name="btn_Introduce">소개하기</string>
@@ -188,6 +189,7 @@
     <string name="label_iCloudEnable">SafeSlinger 아이 클라우드 를 사용할 수 있습니다. 완료되면 완료 버튼을 누릅니다.</string>
     <string name="label_InstNoMessages">메시지가 없습니다. 홈 메뉴의 메시지 작성버튼으로 메시지를 보낼 수 있습니다.</string>
     <string name="label_InstNoRecipients">받는 사람을 추가하려면 먼저 동시에 하나 이상의 다른 사용자와 슬링 키 를 해야합니다. 또한 메뉴에서 슬링 키 연락처 초대를 보낼 수 있습니다.</string>
+    <string name="label_InstNoRecipientsMatchQuery">현재받는 사람 중에 당신의 검색 쿼리와 일치하지 않습니다. 다른 쿼리를 시도하거나 새 연락처를 초대하십시오.</string>
     <string name="label_InstNoSharedFile">공유 파일이 없습니다. 단말기를 iTunes로 연결하여 파일을 공유폴더로 옮겨주십시오.</string>
     <string name="label_InstRecipients">메시지를 보낼 수신자 선택:</string>
     <string name="label_InstSendInvite">안전하게 소개할 수신자 선택:</string>
@@ -201,6 +203,7 @@
     <string name="label_messageInviteInstall">SafeSlinger 응용 프로그램: %s</string>
     <string name="label_messageInviteSetupInst">설정보안 메시징 연결을 위해, 우리 는 만나거나 전화를 서로 같은 시간에, 다음 슬링 키 는 한 번만 연결 을 확인 할 수 있습니다.</string>
     <string name="label_messageInviteStartMsg">우리는 오픈 소스 SafeSlinger 아이폰이나 안드로이드 앱 에 보안 메시징 을 시작할 수 있습니까?</string>
+    <string name="label_messageYouAreVerified">%s, 당신은 확인됩니다.</string>
     <string name="label_minutes">%d min</string>
     <string name="label_mobiletag">모바일</string>
     <string name="label_MostRecentOnly">가장 최근의 만</string>
@@ -228,12 +231,14 @@
     <string name="label_safeslingered">(안전하게 교환됨)</string>
     <string name="label_SaveAccount">계정 저장</string>
     <string name="label_SaveInstruct">보안 연락처를 저장하려면 가져 오기를 누른 다음, 당신은 당신의 주소록에 업데이트 할 연락처를 확인합니다:</string>
+    <string name="label_search_contacts_hint">연락처 검색</string>
     <string name="label_seconds">%d 초</string>
     <string name="label_SelectRecip">받는 사람 선택</string>
     <string name="label_sendErrorData">오류 전송</string>
     <string name="label_SendFrom">보낸 사람:</string>
     <string name="label_SendTo">받는 사람:</string>
     <string name="label_ShowHintAtLaunch">다음번에 이 힌트를 표시합니다.</string>
+    <string name="label_SpeechRecognitionAlert">이 정보 누수가 발생할 수 있기 때문에 음성 인식을 사용 불가능</string>
     <string name="label_step_1">1 단계</string>
     <string name="label_step_2">2 단계</string>
     <string name="label_step_3">3 단계</string>
@@ -317,6 +322,7 @@
     <string name="prog_GeneratingKey">키 생성이 오래 걸릴 수 있습니다.</string>
     <string name="prog_generatingSignature">서명 생성 중…</string>
     <string name="prog_loadingContent">내용을로드…</string>
+    <string name="prog_pending">보류…</string>
     <string name="prog_ReceivingFile">암호화된 파일을 받는 중…</string>
     <string name="prog_RequestingFile">암호화된 파일 요청 중…</string>
     <string name="prog_RequestingMessage">암호화된 메시지 요청 중…</string>
@@ -340,6 +346,7 @@
     <string name="state_InvitationAdded">초대 덧붙였다.</string>
     <string name="state_MessageSavedAsDraft">메시지가 저장되었습니다.</string>
     <string name="state_MessagesDeleted">%d개의 메시지가 삭제되었습니다.</string>
+    <string name="state_MessagesSent">%d 메시지를 보냈습니다.</string>
     <string name="state_PassphraseUpdated">암호가 업데이트 되었습니다.</string>
     <string name="state_RecipientsDeleted">%d 수신자가 삭제되었습니다.</string>
     <string name="state_SomeContactsImported">%s 연락처를 가져왔습니다.</string>
@@ -353,6 +360,7 @@
     <string name="text_AboutEmail">이메일: %s</string>
     <string name="text_AboutFeat">특징:</string>
     <string name="text_AboutWeb">웹사이트: %s</string>
+    <string name="text_DevelopedBy">에 의해 개발:</string>
     <string name="text_KeywordExchange">교환</string>
     <string name="text_KeywordIdentity">정체</string>
     <string name="text_KeywordKey">키</string>
@@ -360,6 +368,7 @@
     <string name="text_KeywordPrivacy">개인 정보 보호 정책</string>
     <string name="text_KeywordSecurity">보안</string>
     <string name="text_LanguagesProvidedBy">언어 제공:</string>
+    <string name="text_LocalizationRepo">번역: %s을</string>
     <string name="text_RelatedSearchTerms">관련 검색어:</string>
     <string name="text_Requirements">요구 사항:</string>
     <string name="text_Requirements1">2 장치의 최소에 설치되어 있어야합니다.</string>

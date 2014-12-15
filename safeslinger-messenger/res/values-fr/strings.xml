@@ -44,6 +44,7 @@
     <string name="btn_DeleteKeys">Supprimer des clés</string>
     <string name="btn_discard">Jeter</string>
     <string name="btn_Done">Terminé</string>
+    <string name="btn_Edit">Éditer</string>
     <string name="btn_Exit">Sortir</string>
     <string name="btn_Import">Importer</string>
     <string name="btn_Introduce">Présenter</string>
@@ -188,6 +189,7 @@
     <string name="label_iCloudEnable">SafeSlinger iCloud est activé. Appuyez sur le bouton «Terminé» lorsque vous avez terminé.</string>
     <string name="label_InstNoMessages">Pas de messages. Vous pouvez envoyer un message à partir du bouton \'Rédiger un message\' dans le menu d\'accueil.</string>
     <string name="label_InstNoRecipients">Pour ajouter des destinataires, vous devez d\'abord Sling clés avec un ou plusieurs autres utilisateurs en même temps. Vous pouvez également envoyer un contact invitation Sling clés dans le menu.</string>
+    <string name="label_InstNoRecipientsMatchQuery">Aucun de vos bénéficiaires actuels correspondent à votre requête de recherche. Se il vous plaît essayer une requête différente ou inviter un nouveau contact.</string>
     <string name="label_InstNoSharedFile">Aucun fichier partagé. Connectez votre appareil avec iTunes et faites glisser les fichiers dans le dossier partagé.</string>
     <string name="label_InstRecipients">Choisissez un destinataire à qui envoyer un message:</string>
     <string name="label_InstSendInvite">Choisissez les destinataires à présenter l\'un à l\'autre en toute sécurité:</string>
@@ -201,6 +203,7 @@
     <string name="label_messageInviteInstall">SafeSlinger application: %s</string>
     <string name="label_messageInviteSetupInst">Pour installer une connexion de messagerie sécurisée, nous pouvons répondre à ou par téléphone de l\'autre en même temps, puis Sling touches une seule fois pour vérifier la connexion.</string>
     <string name="label_messageInviteStartMsg">Pouvons-nous commencer la messagerie sécurisée à l\' open source SafeSlinger iPhone ou application Android?</string>
+    <string name="label_messageYouAreVerified">%s, vous vérifié.</string>
     <string name="label_minutes">%d minutes</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">La plus récente seulement</string>
@@ -228,12 +231,14 @@
     <string name="label_safeslingered">(SafeSlinger échange direct)</string>
     <string name="label_SaveAccount">Enregistrer le compte</string>
     <string name="label_SaveInstruct">Vérifier les contacts que vous souhaitez mettre à jour votre carnet d\'adresses, puis appuyez sur Importer pour enregistrer les contacts sécurisés:</string>
+    <string name="label_search_contacts_hint">Rechercher des contacts</string>
     <string name="label_seconds">%d secondes</string>
     <string name="label_SelectRecip">Sélectionnez le destinataire</string>
     <string name="label_sendErrorData">Envoyer les données d\'erreur</string>
     <string name="label_SendFrom">De:</string>
     <string name="label_SendTo">Pour:</string>
     <string name="label_ShowHintAtLaunch">Voir cette astuce la prochaine fois.</string>
+    <string name="label_SpeechRecognitionAlert">Utilisation de la reconnaissance vocale est désactivée parce que cela pourrait provoquer une fuite d\'informations</string>
     <string name="label_step_1">Étape 1</string>
     <string name="label_step_2">Étape 2</string>
     <string name="label_step_3">Étape 3</string>
@@ -317,6 +322,7 @@
     <string name="prog_GeneratingKey">généraotion de la clé, cela peut prendre un certain temps…</string>
     <string name="prog_generatingSignature">génération la signature…</string>
     <string name="prog_loadingContent">chargement de contenu…</string>
+    <string name="prog_pending">en attendant…</string>
     <string name="prog_ReceivingFile">réception du fichier crypté…</string>
     <string name="prog_RequestingFile">demande de fichier crypté…</string>
     <string name="prog_RequestingMessage">demande de message crypté…</string>
@@ -340,6 +346,7 @@
     <string name="state_InvitationAdded">Invitation ajouté.</string>
     <string name="state_MessageSavedAsDraft">Message enregistré comme brouillon.</string>
     <string name="state_MessagesDeleted">%d messages supprimés.</string>
+    <string name="state_MessagesSent">%d messages envoyés.</string>
     <string name="state_PassphraseUpdated">Phrase secrète mise à jour.</string>
     <string name="state_RecipientsDeleted">%d destinataires supprimés.</string>
     <string name="state_SomeContactsImported">%s contacts importés.</string>
@@ -353,6 +360,7 @@
     <string name="text_AboutEmail">email: %s</string>
     <string name="text_AboutFeat">Caractéristiques:</string>
     <string name="text_AboutWeb">web: %s</string>
+    <string name="text_DevelopedBy">Développé par:</string>
     <string name="text_KeywordExchange">Échange</string>
     <string name="text_KeywordIdentity">Identité</string>
     <string name="text_KeywordKey">Clé</string>
@@ -360,6 +368,7 @@
     <string name="text_KeywordPrivacy">Intimité</string>
     <string name="text_KeywordSecurity">Sécurité</string>
     <string name="text_LanguagesProvidedBy">Traductions fournies par:</string>
+    <string name="text_LocalizationRepo">traduire: %s</string>
     <string name="text_RelatedSearchTerms">Termes reliés:</string>
     <string name="text_Requirements">Exigences:</string>
     <string name="text_Requirements1">Doit être installé sur un minimum de 2 appareils.</string>

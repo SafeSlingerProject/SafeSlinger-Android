@@ -27,50 +27,50 @@
 
     <string name="ask_QuitConfirmation">Bỏ thuốc lá? Bạn có chắc chắn?</string>
 
-    <string name="btn_Match">Tiếp theo</string>
+    <string name="btn_Match">Kế tiếp</string>
     <string name="btn_NoMatch">Không có trận đấu</string>
 
     <string name="choice_NumUsers">%d người dùng</string>
 
     <string name="error_AllMembersMustUpgrade">Một số thành viên đang sử dụng một phiên bản cũ; tất cả các thành viên phải nâng cấp lên phiên bản mới nhất.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Tất cả thành viên phải nâng cấp, một số đang sử dụng định dạng đăng ký đẩy cũ.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tất cả các thành viên phải nâng cấp, một số đang sử dụng định dạng đăng ký push cũ.</string>
     <string name="error_CorrectYourInternetConnection">Internet không có sẵn, kiểm tra các thiết lập của bạn.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Trao đổi thời gian chờ vượt quá. Hãy bắt đầu việc trao đổi một lần nữa.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Trao đổi thời gian chờ vượt quá. Bắt đầu trao đổi một lần nữa.</string>
     <string name="error_HttpCode">Máy chủ HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Dữ liệu không chính xác được tìm thấy trong trao đổi. Hãy bắt đầu việc trao đổi một lần nữa.</string>
+    <string name="error_InvalidCommitVerify">Dữ liệu không chính xác được tìm thấy trong trao đổi. Bắt đầu trao đổi một lần nữa.</string>
     <string name="error_InvalidCommonUserId">Xin vui lòng nhập một số nguyên dương.</string>
-    <string name="error_LocalGroupCommitDiffer">Bạn đã báo cáo một sự khác biệt trong các cụm từ. Hãy bắt đầu việc trao đổi một lần nữa.</string>
-    <string name="error_MinUsersRequired">Có ít nhất %d thành viên được yêu cầu trao đổi dữ liệu.</string>
-    <string name="error_MoreDataThanUsers">Dữ liệu bất ngờ tìm thấy trong trao đổi. Hãy bắt đầu việc trao đổi một lần nữa.</string>
+    <string name="error_LocalGroupCommitDiffer">Bạn đã báo cáo một sự khác biệt trong các cụm từ. Bắt đầu trao đổi một lần nữa.</string>
+    <string name="error_MinUsersRequired">Có ít nhất %d thành viên được yêu cầu phải trao đổi dữ liệu.</string>
+    <string name="error_MoreDataThanUsers">Dữ liệu bất ngờ tìm thấy trong trao đổi. Bắt đầu trao đổi một lần nữa.</string>
     <string name="error_NoDataToExchange">Việc trao đổi là mất tích dữ liệu cần thiết.</string>
-    <string name="error_NoWordListSelected">Bạn phải chọn một trong những cụm từ trước khi tiếp tục.</string>
-    <string name="error_OtherGroupCommitDiffer">Có người báo cáo một sự khác biệt trong các cụm từ. Hãy bắt đầu việc trao đổi một lần nữa.</string>
+    <string name="error_NoWordListSelected">Bạn phải lựa chọn một trong các cụm từ trước khi tiếp tục.</string>
+    <string name="error_OtherGroupCommitDiffer">Có người báo cáo một sự khác biệt trong các cụm từ. Bắt đầu trao đổi một lần nữa.</string>
     <string name="error_OutOfMemoryError">Bộ nhớ là quá thấp để hoàn thành hoạt động này.</string>
     <string name="error_ServerAppMessage">Message Server: %s</string>
     <string name="error_ServerNotResponding">Không có phản hồi từ máy chủ.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Thời gian chờ đợi cho một số thành viên trong nhóm để thêm dữ liệu.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout chờ đợi cho một số thành viên trong nhóm để thêm dữ liệu.</string>
     <string name="error_WebCancelledByUser">Người dùng đã hủy yêu cầu máy chủ.</string>
 
-    <string name="help_size">Chọn số lượng người đang cố gắng để trao đổi dữ liệu với nhau và nhấn OK.</string>
+    <string name="help_size">Chọn số lượng những người đang cố gắng để trao đổi dữ liệu với nhau và nhấn OK.</string>
     <string name="help_userid">Con số này trên màn hình này được sử dụng để tạo ra một nhóm duy nhất của người sử dụng. Xem lại những con số trên màn hình tất cả người sử dụng, sau đó tất cả người dùng cần nhập cùng thấp nhất số lượng và bấm OK.</string>
-    <string name="help_verify">Bây giờ, bạn phải phù hợp với một trong những cụm từ 3 từ với tất cả người dùng. Mỗi người sử dụng phải chọn các cụm từ phổ biến giống nhau, và nhấn Next.</string>
+    <string name="help_verify">Bây giờ, bạn phải phù hợp với một trong những cụm từ 3 từ với tất cả người dùng. Mỗi người sử dụng phải chọn các cụm từ phổ biến tương tự, và nhấn Next.</string>
 
     <string name="label_CompareScreensNDevices">So sánh màn hình trên các thiết bị %s.</string>
-    <string name="label_NumericModeHint">Không phải tiếng Anh</string>
+    <string name="label_NumericModeHint">Non-English</string>
     <string name="label_PromptInstruct">Con số này được sử dụng để tạo ra một nhóm duy nhất của người sử dụng. So sánh, và sau đó nhập số thấp nhất trong số tất cả người dùng.</string>
     <string name="label_ReceivedNItems">nhận được %d mặt hàng</string>
     <string name="label_UserIdHint">Thấp nhất</string>
-    <string name="label_VerifyInstruct">Tất cả điện thoại phải phù hợp với một trong những cụm từ 3 từ. So sánh, và sau đó chọn các cụm từ phù hợp.</string>
+    <string name="label_VerifyInstruct">Tất cả điện thoại phải phù hợp với một trong các cụm từ 3 từ. So sánh, và sau đó chọn các cụm từ phù hợp.</string>
 
-    <string name="lib_name">SafeSlinger Trao đổi</string>
+    <string name="lib_name">SafeSlinger khoán</string>
 
-    <string name="prog_CollectingOthersCommitVerify">chờ xác minh từ tất cả các thành viên…</string>
+    <string name="prog_CollectingOthersCommitVerify">chờ kiểm định từ tất cả các thành viên…</string>
     <string name="prog_CollectingOthersItems">chờ đợi cho tất cả người dùng tham gia…</string>
     <string name="prog_ConstructingGroupKey">xây dựng chính nhóm…</string>
     <string name="prog_RequestingUserId">yêu cầu các thành viên…</string>
 
     <string name="title_size">Làm thế nào nhiều người sử dụng trong việc trao đổi?</string>
     <string name="title_userid">Phân nhóm</string>
-    <string name="title_verify">Xác minh</string>
+    <string name="title_verify">Xác nhận</string>
 
 </resources>

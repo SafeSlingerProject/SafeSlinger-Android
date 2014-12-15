@@ -25,42 +25,42 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">გასვლა? დარწმუნებული ხართ?</string>
+    <string name="ask_QuitConfirmation">დატოვა? დარწმუნებული ხართ?</string>
 
     <string name="btn_Match">შემდეგი</string>
-    <string name="btn_NoMatch">არარის Match</string>
+    <string name="btn_NoMatch">არ Match</string>
 
-    <string name="choice_NumUsers">%d მომხმარებლები</string>
+    <string name="choice_NumUsers">%d ასაკი</string>
 
-    <string name="error_AllMembersMustUpgrade">ზოგიერთი წევრი იყენებთ ძველ ვერსიას; ყველა წევრი უნდა გადახვიდეთ უახლესი ვერსია.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">ყველა წევრი უნდა განაახლოს, ზოგიერთ იყენებთ უფროსი ბიძგი რეგისტრაციის ფორმატებში.</string>
-    <string name="error_CorrectYourInternetConnection">ინტერნეტი არ არის, შესაძლებელია შეამოწმოთ თქვენი პარამეტრები.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">გაცვლა timeout გადააჭარბა. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_HttpCode">Server HTTP შეცდომა %d</string>
+    <string name="error_AllMembersMustUpgrade">ზოგიერთი წევრის იყენებთ ძველ ვერსიას; ყველა წევრი უნდა გადახვიდეთ უახლესი ვერსია.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">ყველა წევრი უნდა განაახლოს, ზოგი გამოყენებით ძველი ბიძგი რეგისტრაციის ფორმატებში.</string>
+    <string name="error_CorrectYourInternetConnection">ინტერნეტი არ არის ხელმისაწვდომი, შეამოწმოთ თქვენი პარამეტრები.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">გაცვლა შეყოვნება გადააჭარბა. დასაწყისი გაცვლა ერთხელ.</string>
+    <string name="error_HttpCode">სერვერზე HTTP შეცდომა %d</string>
     <string name="error_InvalidCommitVerify">არასწორი მონაცემები ვერ მოიძებნა სანაცვლოდ. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_InvalidCommonUserId">გთხოვთ შეიყვანოთ დადებითი მთელი რიცხვი.</string>
+    <string name="error_InvalidCommonUserId">გთხოვთ მიუთითოთ დადებითი რიცხვი.</string>
     <string name="error_LocalGroupCommitDiffer">თქვენ არ ინფორმაციით განსხვავება ფრაზები. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_MinUsersRequired">მინიმუმ %d წევრია საჭირო მონაცემების გაცვლა.</string>
+    <string name="error_MinUsersRequired">მინიმუმ %d წევრი საჭირო მონაცემების გაცვლა.</string>
     <string name="error_MoreDataThanUsers">მოულოდნელი მონაცემები ვერ მოიძებნა სანაცვლოდ. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_NoDataToExchange">გაცვლა არის დაკარგული მონაცემები.</string>
-    <string name="error_NoWordListSelected">თქვენ უნდა აირჩიოთ ერთი ფრაზები გაგრძელებამდე.</string>
+    <string name="error_NoDataToExchange">გაცვლა აკლია საჭირო მონაცემები.</string>
+    <string name="error_NoWordListSelected">თქვენ უნდა აირჩიოთ ერთ-ერთი ფრაზა გაგრძელებამდე.</string>
     <string name="error_OtherGroupCommitDiffer">ვინმე ცნობით განსხვავება ფრაზები. დასაწყისი გაცვლა ერთხელ.</string>
-    <string name="error_OutOfMemoryError">მეხსიერება ძალიან დაბალია, შეავსოთ ეს ოპერაცია.</string>
+    <string name="error_OutOfMemoryError">მეხსიერება არის ძალიან დაბალი, შეავსოთ ეს ოპერაცია.</string>
     <string name="error_ServerAppMessage">Server შეტყობინება: %s</string>
-    <string name="error_ServerNotResponding">პასუხი არ არის სერვერზე.</string>
-    <string name="error_TimeoutWaitingForAllMembers">დროის ელოდება რამდენიმე ჯგუფის წევრები დაემატოს მონაცემები.</string>
-    <string name="error_WebCancelledByUser">პროფაილი გაუქმდა სერვერზე მოთხოვნის.</string>
+    <string name="error_ServerNotResponding">პასუხი არ სერვერზე.</string>
+    <string name="error_TimeoutWaitingForAllMembers">შეყოვნება ელოდება გარკვეული ჯგუფის წევრები დაემატოს მონაცემები.</string>
+    <string name="error_WebCancelledByUser">პროფაილი გაუქმდა სერვერზე მოთხოვნით.</string>
 
-    <string name="help_size">აირჩიეთ რაოდენობის ადამიანები, რომლებიც ცდილობენ მონაცემთა გაცვლის ერთად და დააჭირეთ OK.</string>
-    <string name="help_userid">ეს რიცხვი ამ ეკრანზე გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის წევრებს. მიმოხილვა ნომრები ყველა მომხმარებლებს ეკრანები, მაშინ ყველა მომხმარებელი უნდა შევიდეს იგივე ყველაზე დაბალი და OK.</string>
-    <string name="help_verify">ახლა, თქვენ უნდა ემთხვეოდეს ერთი ასეთი 3 სიტყვიანი ფრაზები ყველა მომხმარებლისთვის. ყველა მომხმარებლის უნდა აირჩიოთ იგივე საღი ფრაზა და დააჭირეთ შემდეგი.</string>
+    <string name="help_size">აირჩიეთ რაოდენობის ადამიანები, რომლებიც მონაცემთა გაცვლის მცდელობის ერთად და დააჭირეთ OK.</string>
+    <string name="help_userid">ეს რიცხვი ამ ეკრანზე გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის წევრებს. განიხილავს ნომრები ყველა მომხმარებლების ეკრანები, მაშინ ყველა მომხმარებელმა უნდა შევიდეს იგივე დაბალი ნომერი და OK.</string>
+    <string name="help_verify">ახლა, თქვენ უნდა ემთხვეოდეს ერთი ასეთი 3-სიტყვით ფრაზები ყველა მომხმარებლებს. ყველა მომხმარებლის უნდა აირჩიოთ ერთი და იგივე საერთო ფრაზა, და დააჭირეთ შემდეგი.</string>
 
     <string name="label_CompareScreensNDevices">შეადარეთ ეკრანებზე %s მოწყობილობების.</string>
     <string name="label_NumericModeHint">არასამთავრობო ინგლისური</string>
-    <string name="label_PromptInstruct">ეს რიცხვი გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის წევრებს. შედარება, და მხოლოდ შემდეგ შეიყვანოთ ყველაზე დაბალი შორის მომხმარებლებს.</string>
+    <string name="label_PromptInstruct">ეს რიცხვი გამოიყენება, რათა შეიქმნას უნიკალური ჯგუფის წევრებს. შედარების და შემდეგ შეიყვანოთ ყველაზე დაბალი შორის მომხმარებლებს.</string>
     <string name="label_ReceivedNItems">მიიღო %d ელემენტი</string>
     <string name="label_UserIdHint">დაბალი</string>
-    <string name="label_VerifyInstruct">ტელეფონები დამთხვევა ერთი 3 სიტყვა ფრაზები. შეადარეთ და შემდეგ აირჩიოთ შესაბამისი ფრაზა.</string>
+    <string name="label_VerifyInstruct">ყველა ტელეფონები უნდა ემთხვეოდეს ერთი 3-word ფრაზები. შეადარეთ, და შემდეგ აირჩიოთ შესაბამისი ფრაზა.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 

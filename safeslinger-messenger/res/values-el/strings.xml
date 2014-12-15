@@ -44,6 +44,7 @@
     <string name="btn_DeleteKeys">Διαγραφή Κλειδιών</string>
     <string name="btn_discard">Απόρριψη</string>
     <string name="btn_Done">Τέλος</string>
+    <string name="btn_Edit">Επεξεργασία</string>
     <string name="btn_Exit">Έξοδος</string>
     <string name="btn_Import">Εισαγωγή</string>
     <string name="btn_Introduce">Γνωριμία</string>
@@ -188,6 +189,7 @@
     <string name="label_iCloudEnable">SafeSlinger iCloud είναι ενεργοποιημένο. Πατήστε το κουμπί Τέλος όταν τελειώσετε.</string>
     <string name="label_InstNoMessages">Δεν υπάρχουν μηνύματα. Μπορείτε να στείλετε ένα μήνυμα πατώντας το κουμπί Σύνθεση Μηνύματος.</string>
     <string name="label_InstNoRecipients">Για να προσθέσετε παραλήπτες, πρέπει πρώτα να ανταλλάξετε κλειδιά με έναν ή περισσότερους άλλους χρήστες ταυτόχρονα. Μπορείτε επίσης να στείλετε μια πρόσκληση ανταλλαγής κλειδιών από το μενού.</string>
+    <string name="label_InstNoRecipientsMatchQuery">Κανένας από τους σημερινούς δικαιούχους σας ταιριάζουν με το ερώτημα αναζήτησης. Παρακαλώ δοκιμάστε ένα διαφορετικό ερώτημα ή να καλέσει μια νέα επαφή.</string>
     <string name="label_InstNoSharedFile">Δεν υπάρχει κοινόχρηστο αρχείο. Συνδέστε τη συσκευή σας με το iTunes και εισάγετε αρχεία στον κοινόχρηστο φάκελο.</string>
     <string name="label_InstRecipients">Επιλέξτε έναν παραλήπτη για να στείλετε ένα μήνυμα:</string>
     <string name="label_InstSendInvite">Επιλέξτε παραλήπτες για να γνωρίσετε μεταξύ τους με ασφάλεια:</string>
@@ -201,6 +203,7 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Για να ρυθμίσουμε μια ασφαλή επικοινωνία μέσω μηνυμάτων, μπορούμε να ανταλλάξουμε κλειδιά από κοντά ή μέσω τηλεφώνου. Αυτό θα χρειαστεί μόνο μία φορά για να επικυρώσει την επικοινωνία.</string>
     <string name="label_messageInviteStartMsg">Μπορούμε να ξεκινήσουμε ασφαλή ανταλλαγή μηνυμάτων με την iPhone ή Android εφαρμογή SafeSlinger (ελεύθερο λογισμικό);</string>
+    <string name="label_messageYouAreVerified">%s, που επαληθεύονται.</string>
     <string name="label_minutes">%d λεπτά</string>
     <string name="label_mobiletag">Κινητό</string>
     <string name="label_MostRecentOnly">Μόνο πιο πρόσφατες</string>
@@ -228,12 +231,14 @@
     <string name="label_safeslingered">(SafeSlinger άμεση ανταλλαγή)</string>
     <string name="label_SaveAccount">Αποθήκευση λογαριασμού</string>
     <string name="label_SaveInstruct">Ελέγξτε τις επαφές που θέλετε να ενημερώσετε το βιβλίο διευθύνσεών σας, στη συνέχεια, πατήστε «Εισαγωγή» για να αποθηκεύσετε ασφαλείς επαφές:</string>
+    <string name="label_search_contacts_hint">Αναζήτηση επαφών</string>
     <string name="label_seconds">%d δευτερόλεπτα</string>
     <string name="label_SelectRecip">Επιλέξτε παραλήπτη</string>
     <string name="label_sendErrorData">Αποστολή σφαλμάτων</string>
     <string name="label_SendFrom">Από:</string>
     <string name="label_SendTo">Προς:</string>
     <string name="label_ShowHintAtLaunch">Εμφάνισε αυτή την υπόδειξη την επόμενη φορά.</string>
+    <string name="label_SpeechRecognitionAlert">Χρησιμοποιώντας την αναγνώριση ομιλίας είναι απενεργοποιημένη, διότι θα μπορούσε να προκαλέσει διαρροή πληροφοριών</string>
     <string name="label_step_1">Βήμα 1</string>
     <string name="label_step_2">Βήμσ 2</string>
     <string name="label_step_3">Βήμα 3</string>
@@ -317,6 +322,7 @@
     <string name="prog_GeneratingKey">δημιουργία κλειδιού, αυτό μπορεί να πάρει λίγο χρόνο…</string>
     <string name="prog_generatingSignature">δημιουργία υπογραφής…</string>
     <string name="prog_loadingContent">φόρτωση περιεχομένου…</string>
+    <string name="prog_pending">αναμονή…</string>
     <string name="prog_ReceivingFile">λήψη κρυπτογραφημένου αρχείου…</string>
     <string name="prog_RequestingFile">αίτηση κρυπτογραφημένου αρχείου…</string>
     <string name="prog_RequestingMessage">αίτηση κρυπτογραφημένου μηνύματος…</string>
@@ -340,6 +346,7 @@
     <string name="state_InvitationAdded">Πρόσκληση πρόσθεσε.</string>
     <string name="state_MessageSavedAsDraft">Το μήνυμα αποθηκεύτηκε ως πρόχειρο.</string>
     <string name="state_MessagesDeleted">%d μηνύματα διαγράφονται.</string>
+    <string name="state_MessagesSent">%d μηνύματα που αποστέλλονται.</string>
     <string name="state_PassphraseUpdated">Κωδικός ανανεώθηκε.</string>
     <string name="state_RecipientsDeleted">%d παραλήπτες διαγράφηκαν.</string>
     <string name="state_SomeContactsImported">%s επαφές εισήχθησαν.</string>
@@ -353,6 +360,7 @@
     <string name="text_AboutEmail">email: %s</string>
     <string name="text_AboutFeat">Χαρακτηριστικά:</string>
     <string name="text_AboutWeb">web: %s</string>
+    <string name="text_DevelopedBy">Αναπτύχθηκε από την:</string>
     <string name="text_KeywordExchange">Ανταλλαγή</string>
     <string name="text_KeywordIdentity">Ταυτότητα</string>
     <string name="text_KeywordKey">Πλήκτρο</string>
@@ -360,6 +368,7 @@
     <string name="text_KeywordPrivacy">Μυστικότητα</string>
     <string name="text_KeywordSecurity">Ασφάλεια</string>
     <string name="text_LanguagesProvidedBy">Οι γλώσσες παρέχονται από:</string>
+    <string name="text_LocalizationRepo">μετάφραση: %s</string>
     <string name="text_RelatedSearchTerms">Σχετικά Όροι:</string>
     <string name="text_Requirements">Απαιτήσεις:</string>
     <string name="text_Requirements1">Πρέπει να είναι εγκατεστημένο σε ένα ελάχιστο των 2 συσκευών.</string>

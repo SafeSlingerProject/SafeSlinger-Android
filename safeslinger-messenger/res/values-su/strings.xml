@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Tambah hiji kontak uleman aisan kenop via…</string>
+
+    <string name="app_name">SafeSlinger</string>
+
+    <string name="ask_BackupDisabledRemindLater">Nyadangkeun geus ditumpurkeun. Ulah nu Anjeun hoyong saluyukeun setélan cadangan jeung nyimpen panginget ieu?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s ngabogaan alat atawa konci leuwih anyar, anjeun yakin nu Anjeun hoyong pake ieu leuwih kolot hiji?</string>
+    <string name="ask_FileExistsOverwrite">Ngaran koropakna %s geus nyampak. Nimpa?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Tanpa Account Google Anjeun ngan moal bisa kirim, NOT nampa talatah. Ulah nu Anjeun hoyong tambah hiji akun Google?</string>
+    <string name="ask_SendErrorData">Urang remen pitulung Anjeun ningkatkeun SafeSlinger. Rék otomatis ngirim kasalahan nu mana wae nu ka urang?</string>
+
+    <string name="btn_Accept">Narima</string>
+    <string name="btn_BeginExchangeProximity">Dimimitian Exchange</string>
+    <string name="btn_Cancel">Ngabatalkeun</string>
+    <string name="btn_Close">Deukeut</string>
+    <string name="btn_Continue">Neruskeun</string>
+    <string name="btn_CreateNewKey">Jieun New Key</string>
+    <string name="btn_DeleteKeys">Pupus kenop</string>
+    <string name="btn_discard">Piceun</string>
+    <string name="btn_Done">Puguh</string>
+    <string name="btn_Edit">Édit</string>
+    <string name="btn_Exit">Kaluar</string>
+    <string name="btn_Import">Impor</string>
+    <string name="btn_Introduce">Ngenalkeun</string>
+    <string name="btn_No">Teu</string>
+    <string name="btn_NotNow">Henteu Ayeuna</string>
+    <string name="btn_NotRemind">Mopohokeun</string>
+    <string name="btn_OK">OKÉ</string>
+    <string name="btn_Refuse">Nolak</string>
+    <string name="btn_Remind">Ngelingkeun</string>
+    <string name="btn_Save">Simpen</string>
+    <string name="btn_SelectFile">Tambah Attachment</string>
+    <string name="btn_SendFile">Ngirim</string>
+    <string name="btn_Yes">Nuhun</string>
+
+    <string name="choice_10mins">10 menit</string>
+    <string name="choice_1hour">1 jam</string>
+    <string name="choice_1min">1 menit</string>
+    <string name="choice_20mins">20 menit</string>
+    <string name="choice_2hours">2 jam</string>
+    <string name="choice_3mins">3 menit</string>
+    <string name="choice_40mins">40 menit</string>
+    <string name="choice_4hours">4 jam</string>
+    <string name="choice_5mins">5 menit</string>
+    <string name="choice_8hours">8 jam</string>
+    <string name="choice_auto_storage">Standar Storage</string>
+    <string name="choice_default">Standar</string>
+    <string name="choice_external_storage">Panyimpenan kaluar</string>
+    <string name="choice_font_large">Gede</string>
+    <string name="choice_font_medium">Medium</string>
+    <string name="choice_font_micro">Pisan Leutik</string>
+    <string name="choice_font_small">Leutik</string>
+    <string name="choice_internal_storage">Panyimpenan internal</string>
+    <string name="choice_nolimit">Taya Wates</string>
+    <string name="choice_SaveDirectory">Simpen Diréktori</string>
+    <string name="choice_SaveFile">Nyalametkeun file</string>
+    <string name="choice_Up">Ka luhur</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Sadaya anggota kudu ningkatkeun, sababaraha maké format konci kolot.</string>
+    <string name="error_AudioPlayerDecodeError">Audio kasalahan pamuter decoding.</string>
+    <string name="error_AudioPlayerError">Teu bisa muter nu dirékam.</string>
+    <string name="error_AudioRecorderEncodeError">Audio kasalahan recorder encoding.</string>
+    <string name="error_AudioRecorderPermissionError">Idin mikropon moderator pikeun ngarekam hiji talatah sora nu aman. Ketok tombol %s pikeun SafeSlinger Mikropon wincikan idin.</string>
+    <string name="error_BackupNotFound">Teu aya cadangan mulangkeun.</string>
+    <string name="error_BackupNotSupportedDevice">Alat teu ngarojong cadangan malikan.</string>
+    <string name="error_BadCopyProtectUpgrade">Kusabab ayana kutu na parabot Android 4.1, Anjeun kudu uninstall jeung reinstall SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">A akun Google anu diperlukeun. Mangga muka Pangatur akun tur nambahkeun hiji akun Google.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Pendaftaran teu dioténtikasi, mangga Coba deui ku cara manual saterusna.</string>
+    <string name="error_C2DMRegInvalidSender">Pendaftaran ieu teu sadia pikeun vérsi ieu, mangga mariksa pérsi dimutahirkeun.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Pendaptaran alat salah jeung Google. Ieu alat teu ayeuna ngarojong push olahtalatah.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Service ngadaptar push teu sadia, scheduling Coba deui dina %d detik.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Loba teuing aplikasi nu kadaptar pikeun Dorong. Mangga uninstall sababaraha aplikasi nu sejen jeung Coba deui.</string>
+    <string name="error_CannotSendEmptyFile">Teu bisa ngirim attachment kosong.</string>
+    <string name="error_CannotSendFilesOver">Teu bisa ngirim Kantétan leuwih gede ti %d byte dina ukuran.</string>
+    <string name="error_CannotSendNullFile">Teu bisa ngirim gagantel null.</string>
+    <string name="error_contactCreationFailure">Nyiptakeun kontak gagal.</string>
+    <string name="error_ContactInsertFailed">Kontak sisipan gagal.</string>
+    <string name="error_ContactNameMissing">Kontak ieu leungit ngaran, mangga diedit ku anjeun.</string>
+    <string name="error_ContactNameMissing2">Kontak ieu leungit ngaran, mangga reselect.</string>
+    <string name="error_ContactUpdateFailed">Update kontak gagal.</string>
+    <string name="error_couldNotExtractPrivateKey">Teu bisa sari konci swasta.</string>
+    <string name="error_FeatureIsNotSupport">%1$s teu dirojong dina %2$s dina waktu ieu.</string>
+    <string name="error_FileSave">Teu bisa nyalametkeun %s.</string>
+    <string name="error_FileStorageUnavailable">Neundeun payil teu sadia.</string>
+    <string name="error_InvalidContactName">A ngaran kontak eta sah anu diperlukeun.</string>
+    <string name="error_InvalidIncomingMessage">Pormat talatah asup buruk.</string>
+    <string name="error_InvalidMsg">Pormat talatah buruk.</string>
+    <string name="error_InvalidRecipient">Panarima salah.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Pormat konci peer anu salah.</string>
+    <string name="error_MessageSignatureVerificationFails">SagedÃ verifikasi gagal.</string>
+    <string name="error_minPassphraseRequire">Passphrases merlukeun sahenteuna %d karakter.</string>
+    <string name="error_MissingNdk">SafeSlinger teu ngadeteksi pangrojong NDK dina alat ieu, nu dipikabutuh.</string>
+    <string name="error_MultipleSendNotSupported">Anjeun ngusahakeun pikeun ngirim leuwih ti hiji item. Dina waktu ieu, SafeSlinger ngan ngarojong ngirim hiji eusi dina hiji waktu.</string>
+    <string name="error_NoEmailAccount">Akun surélék teu setelan!</string>
+    <string name="error_noPassPhrase">Taya passphrase asup.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases teu cocog.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">Anjeun geus ngaleuwihan kuota talatah pikeun panarima éta. Mangga Coba deui engké.</string>
+    <string name="error_PushMsgInvalidRegistration">Panarima nu boga leungit atawa goréng ngadaptar push. Anjeun kudu eureun ngirim talatah ka alat ieu.</string>
+    <string name="error_PushMsgMessageNotFound">Talatah tamat.</string>
+    <string name="error_PushMsgMessageTooBig">Talatah geus badag teuing. Ngurangan ukuran talatah.</string>
+    <string name="error_PushMsgNotRegistered">Nu panarima ngadaptar push moal sah. Panarima mungkin geus uninstalled SafeSlinger atawa dipareuman bewara. Anjeun kudu eureun ngirim talatah ka alat ieu.</string>
+    <string name="error_PushMsgNotSucceed">Aya kasalahan berkomunikasi jeung ladenan push béwara.</string>
+    <string name="error_PushMsgQuotaExceeded">Anjeun geus ngaleuwihan kuota talatah kanggo alat ieu. Mangga Coba deui engké.</string>
+    <string name="error_PushMsgServiceFail">Service Béja teu sadia waktu ieu. Mangga cobian dipaké jang ngirim talatah saterusna.</string>
+    <string name="error_RecoderError">Teu bisa nyiapkeun recorder audio.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Pikeun ngamimitian, aisan kenop jeung pamaké séjén dina waktu nu sarua.</string>
+    <string name="error_selectDataToSend">Anjeun kudu gagantél atawa hiji talatah teks pikeun dikirim.</string>
+    <string name="error_ShareFileDelError">Teu bisa nyabut file dibagikeun.</string>
+    <string name="error_UnableFindPubKey">Teu bisa cocog konci umum ka konci swasta di panyadia crypto.</string>
+    <string name="error_UnableToSaveMessageInDB">Teu bisa nyalametkeun ka database talatah.</string>
+    <string name="error_UnableToSaveRecipientInDB">Teu bisa nyalametkeun ka database panarima.</string>
+    <string name="error_UnableToUpdateMessageInDB">Teu bisa ngamutahirkeun databés talatah.</string>
+    <string name="error_UnableToUpdateRecipientInDB">Teu bisa ngamutahirkeun databés panarima.</string>
+    <string name="error_UncaughtExceptionOccured">Kasalahan SafeSlinger, mangga dibalikan deui.</string>
+    <string name="error_VcardParseFailure">Data kontak ieu formatna bener salah.</string>
+
+    <string name="help_find">Pamakéan layar ieu pikeun nyetel ngaran anjeun pikeun nukerkeun jeung batur, jeung passphrase ka nangtayungan data Anjeun. Ketok tombol Réngsé lamun réngsé.</string>
+    <string name="help_home">Pikeun nukerkeun data identitas, mastikeun kabéh pamaké nu padeukeut atawa dina telepon. Tombol dimimitian Exchange bakal nukerkeun ngan data kontak nu dicentang.</string>
+    <string name="help_identity_menu">Anjeun ogé ngarobah data pribadi ngeunaan idéntitas anjeun dina layar ieu ku cara ngetok dina tombol nu ngaranna Anjeun. Hal ieu bakal mintonkeun hiji menu ngamungkinkeun Anjeun pikeun Édit kontak Anjeun, Damel kontak anyar, atawa Paké kontak séjénna.</string>
+    <string name="help_Messages">Layar ieu mintonkeun talatah nu sagala Baheula, jeung kantétan anu aya kénéh sadia pikeun diundeur.</string>
+    <string name="help_passphrase">Pamakéan layar ieu pikeun login ka aplikasi jeung passphrase Anjeun. Upami anjeun geus poho passphrase Anjeun meureun ngahasilkeun konci anyar ditangtayungan ku hiji passphrase anyar ku cara ngetok Poho Passphrase? tombol. Ketok ngaran pamaké pikeun pindah antara loba kenop eta.</string>
+    <string name="help_passphrase_change">Pamakéan layar ieu pikeun ngarobah passphrase Anjeun ku cara nuliskeun passphrase panungtungan Anjeun pikeun konfirmasi jeung passphrase anyar.</string>
+    <string name="help_PickRecip">Kontak sareng kenop SafeSlinger dipintonkeun di dieu, pilih hiji pikeun ngirim talatah Anjeun ka.</string>
+    <string name="help_save">Lamun rengse, protokol bakal nembongkeun daftar data identitas disilihtukeurkeun. Pilih kontak nu hayang nyalametkeun jeung pencét Ngimpor.</string>
+    <string name="help_SecureIntroduction">Layar ieu ngidinan Anjeun pikeun milih dua bangsa nu ku anjeun slung kenop jeung saméméh ka aman ngirim kenop maranéhna pikeun unggal séjénna. Kantun pencét ngawanohkeun lamun siap.</string>
+    <string name="help_Send">Layar ieu ngidinan Anjeun pikeun milih sababaraha data jeung hiji panarima pikeun ngirim ka. Kantun pencét Kirimkeun lamun siap.</string>
+    <string name="help_settings">Layar ieu ngidinan Anjeun pikeun ngarobah setelan standar kanggo aplikasi eta.</string>
+
+    <string name="iOS_cameraError">Idin kaméra moderator nu rék di selapkeun snapshots pikeun ngamankeun talatah. Ketok tombol %s pikeun SafeSlinger wincikan idin kaméra.</string>
+    <string name="iOS_contactError">Idin Kontak moderator pikeun aman babagi kartu kontak. Ketok tombol %s pikeun SafeSlinger wincikan idin Kontak.</string>
+    <string name="iOS_errorpushtoken">Dorong ngadaptar ieu leungit.</string>
+    <string name="iOS_notificationError1">Idin Béja pikeun boh ngabejaan atawa spanduk, jeung nomer badge, diwajibkeun pikeun olahtalatah aman. Ketok tombol %s pikeun SafeSlinger wincikan idin Bewara.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger teu dioptimalkeun alat 5.x ios. SafeSlinger merlukeun ios 6 atawa nu leuwih luhur.</string>
+    <string name="iOS_photolibraryError">Photo Library idin moderator nu rék di selapkeun gambar pikeun ngamankeun talatah. Ketok tombol %s pikeun SafeSlinger Photo Library wincikan idin.</string>
+    <string name="iOS_RequestPermissionContacts">Anjeun bisa milih kartu kontak Anjeun pikeun ngirim babaturan Anjeun tur SafeSlinger bakal encrypt eta pikeun anjeun. Pikeun ngaktipkeun fitur ieu, Anjeun kudu ngidinan SafeSlinger aksés ka Kontak Anjeun pas ditanya.</string>
+    <string name="iOS_RequestPermissionMicrophone">Anjeun bisa ngareeém talatah sora pikeun ngirim babaturan Anjeun tur SafeSlinger bakal encrypt eta pikeun anjeun. Pikeun ngaktipkeun fitur ieu, Anjeun kudu ngidinan SafeSlinger aksés ka Mikropon lamun ditanya.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger nyaéta hiji aplikasi olahtalatah énkripsi jeung teu bisa fungsi tanpa ngamungkinkeun talatah nu datang ti Hasil teangan. Pikeun ngaktifkeun talatah nu datang, anjeun kudu ngidinan SafeSlinger pikeun ngirim Anjeun Hasil teangan basa ditanya.</string>
+
+    <string name="label_ago">%s tukang</string>
+    <string name="label_backupCompleteDate">Nyadangkeun Tukang réngsé</string>
+    <string name="label_backupRequestDate">Tukang Nyadangkeun Request</string>
+    <string name="label_backupURL">Nyadangkeun URL</string>
+    <string name="label_ClickForNMsgs">Toél pikeun nempoan talatah %d Anjeun</string>
+    <string name="label_ComposeHint">Nyusun pesen</string>
+    <string name="label_ContactName">Nami Anjeun</string>
+    <string name="label_days">%d poé</string>
+    <string name="label_Device">Alat panampa:</string>
+    <string name="label_DeviceInSendOnlyMode">Kirimkeun wungkul mode</string>
+    <string name="label_DisabledExchSourceKeyChange">Key anjeun geus robah: aisan kenop deui.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Pikeun ngawitan olahtalatah, aisan kenop jeung pamaké ieu dina waktu nu sarua.</string>
+    <string name="label_Draft">Ngiringan</string>
+    <string name="label_EnabledKeyFormatDeprecated">Pormat Key deprecated: aisan kenop deui.</string>
+    <string name="label_exchanged">disilihtukeurkeun</string>
+    <string name="label_expired">kadaluarsa</string>
+    <string name="label_expires">wayahna %s</string>
+    <string name="label_expiresIn">wayahna di</string>
+    <string name="label_FileNameHint">Nami File</string>
+    <string name="label_FindInstruct">Tulis ngaran Anjeun tur hiji passphrase ngajagi data Anjeun:</string>
+    <string name="label_FirstName">Nami Payun</string>
+    <string name="label_Home">Ketok ngaran anjeun nambah atawa mupus data kontak, mariksa item nu hayang dibagi ku anjeun, terus ketok dimimitian Exchange lamun batur siap ukar:</string>
+    <string name="label_hometag">Imah</string>
+    <string name="label_hours">%d jam</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud diaktipkeun. Ketok tombol Réngsé lamun réngsé.</string>
+    <string name="label_InstNoMessages">Taya surat. Anjeun meureun ngirim talatah ti tab Tulis.</string>
+    <string name="label_InstNoRecipients">Pikeun nambah panarima, Anjeun aisan kenop jeung hiji atawa leuwih pamaké séjén dina waktu nu bareng kudu. Anjeun ogé ngirim hiji kontak uleman aisan kenop ti menu.</string>
+    <string name="label_InstNoRecipientsMatchQuery">Taya panarima anjeun ayeuna cocog query pilarian Anjeun. Mangga cobian pamundut beda atawa ngajak kontak anyar.</string>
+    <string name="label_InstNoSharedFile">Taya dibagi payil. Sambungkeun alat Anjeun sareng iTunes jeung payel sered ka polder dibagikeun.</string>
+    <string name="label_InstRecipients">Nyokot panarima pikeun ngirim hiji talatah ka:</string>
+    <string name="label_InstSendInvite">Nyokot panarima pikeun ngawanohkeun aman:</string>
+    <string name="label_InstSharedFile">Nyokot hiji payil nu rék di selapkeun:</string>
+    <string name="label_introduced">diwanohkeun</string>
+    <string name="label_inviteSent">Diajak</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Nami Pengker</string>
+    <string name="label_Me">Abdi</string>
+    <string name="label_messageIntroduceNameToYou">Abdi hoyong ngawanohkeun %s ka anjeun.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
+    <string name="label_messageInviteSetupInst">Pikeun setelan sambungan olahtalatah aman, urang bisa minuhan atawa telepon nu séjén dina waktu nu bareng, terus aisan kenop ngan sakali pikeun mariksa sambungan.</string>
+    <string name="label_messageInviteStartMsg">Bisa urang mimitian olahtalatah aman jeung open source SafeSlinger iPhone atawa Android app?</string>
+    <string name="label_messageYouAreVerified">%s, Anjeun diverifikasi.</string>
+    <string name="label_minutes">%d menit</string>
+    <string name="label_mobiletag">Mobile</string>
+    <string name="label_MostRecentOnly">Panganyarna ngan</string>
+    <string name="label_MsgSendUpdate">My diropéa Kapercayaan SafeSlinger meungkeut.</string>
+    <string name="label_None">Euweuh</string>
+    <string name="label_numsharedfiles">%d Payil ka Bagikeun:</string>
+    <string name="label_OldThreads">Threads Old</string>
+    <string name="label_othertag">Nu lain</string>
+    <string name="label_PassHintBackoff">Coba deui</string>
+    <string name="label_PassHintChange">Diropéa Passphrase</string>
+    <string name="label_PassHintCreate">Jieun Passphrase</string>
+    <string name="label_PassHintCurrent">Passphrase lumangsung</string>
+    <string name="label_PassHintEnter">Passphrase</string>
+    <string name="label_PassHintRepeat">Ulang Passphrase</string>
+    <string name="label_passPhraseCacheTtl">Passphrase Cache</string>
+    <string name="label_PassPhraseIsCached">Sindangan Passphrase</string>
+    <string name="label_phoneOnly">telepon wungkul</string>
+    <string name="label_Photo">Photo</string>
+    <string name="label_PublicKeyID">Key ID</string>
+    <string name="label_PushTokenID">Dorong Pendaftaran ID</string>
+    <string name="label_RemindBackupDelay">Nyadangkeun panginget</string>
+    <string name="label_ReportedInactive">Dilaporkeun %s teu aktif.</string>
+    <string name="label_restoreCompleteDate">Tukang mulangkeun réngsé</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger cadangan nyangsang</string>
+    <string name="label_safeslingered">(SafeSlinger langsung Exchange)</string>
+    <string name="label_SaveAccount">Nyalametkeun Account</string>
+    <string name="label_SaveInstruct">Pariksa kontak nu Anjeun hoyong ngamutahirkeun di buku alamat, terus ketok Ngimpor nyimpen kontak aman:</string>
+    <string name="label_search_contacts_hint">Pilarian kontak</string>
+    <string name="label_seconds">%d detik</string>
+    <string name="label_SelectRecip">Pilih panarima</string>
+    <string name="label_sendErrorData">Kirimkeun Data kasalahan</string>
+    <string name="label_SendFrom">Ti:</string>
+    <string name="label_SendTo">Pikeun:</string>
+    <string name="label_ShowHintAtLaunch">Témbongkeun hint ieu waktu nu sanes.</string>
+    <string name="label_SpeechRecognitionAlert">Maké pangakuan ucapan geus ditumpurkeun sabab bisa ngabalukarkeun hiji bocor informasi</string>
+    <string name="label_step_1">Lengkah 1</string>
+    <string name="label_step_2">Lengkah 2</string>
+    <string name="label_step_3">Lengkah 3</string>
+    <string name="label_step_4">Lengkah 4</string>
+    <string name="label_step_5">Lengkah 5</string>
+    <string name="label_summary_auto_attach_retrieval">Ngundeur otomatis Kantétan talatah lamun asup log.</string>
+    <string name="label_summary_auto_decrypt">Otomatis ngadekrip talatah lamun asup log.</string>
+    <string name="label_summary_remind_backup_delay">Narima béwara lamun cadangan nyaéta offline.</string>
+    <string name="label_summary_show_tutorial">Témbongkeun hiji tutorial saméméh ngusahakeun aisan kenop eta.</string>
+    <string name="label_TapToDecryptFile">Ketok pikeun ngadekrip file</string>
+    <string name="label_TapToDecryptMessage">Ketok pikeun ngadekrip</string>
+    <string name="label_TapToDownloadFile">Ketok pikeun ngundeur file</string>
+    <string name="label_TapToDownloadMessage">Ketok pikeun ngundeur talatah</string>
+    <string name="label_TapToOpenFile">Ketok pikeun muka file</string>
+    <string name="label_TapToResumeDraft">Ketok pikeun ngahanca draft talatah</string>
+    <string name="label_TapToSendCredentialUpdate">Ketok jeung tahan pikeun ngirim update credential.</string>
+    <string name="label_TapToSlingKeys">Ketok pikeun aisan kenop eta.</string>
+    <string name="label_targetAccountLabel">Account kontak</string>
+    <string name="label_TouchToConfigureBackupSettings">Anjeun optionally bisa ngaktifkeun SafeSlinger iCloud cadangan dina ios Setelan. Ketok tombol Réngsé lamun réngsé.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Toél pikeun ngonpigurasikeun setelan nu cadangan.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Toél pikeun ngonpigurasikeun setelan nu seep cache.</string>
+    <string name="label_undefinedTypeLabel">Teu dikenal</string>
+    <string name="label_UnknownSender">Énkripsi ngirim</string>
+    <string name="label_UserName">Ngaran pamaké</string>
+    <string name="label_WarnForgotPassphrase">Pikeun nangtayungan data Anjeun, SafeSlinger teu nyimpen passphrase Anjeun di mana waé pikeun recovery. Anjeun ngan bisa ngaksés panarima jeung talatah dijieun dina kaayaan passphrase login sarua. Tapina, Anjeun bisa ngahasilkeun konci anyar jeung passphrase, tuluy malikan aisan kenop jeung panarima Anjeun.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Kenop di handap ieu bakal dipupus:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Aya kenop taya leuwih anyar ti Hormat.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Ngan kenop dihasilkeun leuwih anyar ti Hormat, dihasilkeun dina %s, bisa dihapus.</string>
+    <string name="label_worktag">Pagawean</string>
+
+    <string name="menu_About">Kira-kira</string>
+    <string name="menu_auto_attach_retrieval">Otomatis-nyokotna Kantétan</string>
+    <string name="menu_auto_decrypt">Otomatis-ngadekrip</string>
+    <string name="menu_Change">Ngarobah</string>
+    <string name="menu_ChangePassphrase">Robah Passphrase</string>
+    <string name="menu_ContactInviteEmail">Surelek tina Kontak</string>
+    <string name="menu_ContactInviteSms">Téks tina Kontak</string>
+    <string name="menu_CreateNew">Jieun New</string>
+    <string name="menu_delete">Pupus</string>
+    <string name="menu_deleteThread">Pupus thread %s</string>
+    <string name="menu_Details">Témbongkeun jéntré</string>
+    <string name="menu_DownloadDirectory">Undeur Diréktori</string>
+    <string name="menu_Edit">Édit</string>
+    <string name="menu_EditContact">Édit kontak</string>
+    <string name="menu_EditName">Édit Ngaran</string>
+    <string name="menu_FileManager">Payil Pangatur</string>
+    <string name="menu_ForgotPassphrase">Poho Passphrase?</string>
+    <string name="menu_Help">Tulung</string>
+    <string name="menu_Introduction">Perkenalan</string>
+    <string name="menu_language">Basa</string>
+    <string name="menu_License">Lisensi</string>
+    <string name="menu_link_contact_add">Tambah kontak Link</string>
+    <string name="menu_link_contact_change">Robah kontak Link</string>
+    <string name="menu_Logout">Logout</string>
+    <string name="menu_ManagePassphrases">Atur Passphrases</string>
+    <string name="menu_message_font_size">Talatah Font Ukuran</string>
+    <string name="menu_messageCopyText">Tiron Téks</string>
+    <string name="menu_messageForward">Di payun</string>
+    <string name="menu_PrivacyPolicy">Kabijakan Privasi</string>
+    <string name="menu_Remove">Mindahkeun</string>
+    <string name="menu_restore_default">Mulangkeun Setélan standar</string>
+    <string name="menu_ringtone">Sora</string>
+    <string name="menu_SelectShareApp">Tambah kontak Uleman</string>
+    <string name="menu_sendFeedback">Kirimkeun Eupan Balik</string>
+    <string name="menu_SendUpdate">Kirimkeun Update</string>
+    <string name="menu_Settings">Setélan</string>
+    <string name="menu_ShowTutorial">Témbongkeun Tutorial</string>
+    <string name="menu_TagComposeMessage">Nyusun</string>
+    <string name="menu_TagExchange">Aisan kenop</string>
+    <string name="menu_TagListMessages">Talatah</string>
+    <string name="menu_UseAnother">Paké séjénna</string>
+    <string name="menu_UseContactPerson">Paké kontak %s</string>
+    <string name="menu_UseNoContact">Pamakéan Ngaran Ngan</string>
+    <string name="menu_UseProfilePerson">Paké Propil %s</string>
+    <string name="menu_vibrate">Ngageter</string>
+
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">encrypting…</string>
+    <string name="prog_FileSent">talatah nu dikirim, awaiting response…</string>
+    <string name="prog_findingKey">key nyungsi…</string>
+    <string name="prog_GeneratingKey">key generating, ieu bisa jadi butuh bari…</string>
+    <string name="prog_generatingSignature">generating signature…</string>
+    <string name="prog_loadingContent">loading eusi…</string>
+    <string name="prog_pending">ngadagoan status…</string>
+    <string name="prog_ReceivingFile">narima file énkripsi…</string>
+    <string name="prog_RequestingFile">requesting file énkripsi…</string>
+    <string name="prog_RequestingMessage">requesting talatah énkripsi…</string>
+    <string name="prog_RequestingPushReg">requesting push ngadaptar…</string>
+    <string name="prog_SavingContactsToAddressBook">ngamutahirkeun buku alamat…</string>
+    <string name="prog_SavingContactsToKeyDatabase">ngamutahirkeun database konci…</string>
+    <string name="prog_SearchingForBackup">néang cadangan…</string>
+    <string name="prog_SendingFile">ngirim énkripsi %s…</string>
+    <string name="prog_verifyingIntegrity">verifying integritas…</string>
+    <string name="prog_verifyingSignature">verifying signature…</string>
+
+    <string name="section_advanced">Maju</string>
+    <string name="section_backup">Nyadangkeun</string>
+    <string name="section_general">Umum</string>
+    <string name="section_notification">Bewara</string>
+    <string name="section_storage">Panyimpenan</string>
+
+    <string name="state_BackupRestored">Nyadangkeun dibalikeun.</string>
+    <string name="state_FileDeleted">Dihapus %s payil.</string>
+    <string name="state_FileSent">Talatah dikirim.</string>
+    <string name="state_InvitationAdded">Uleman ditambahkeun.</string>
+    <string name="state_MessageSavedAsDraft">Talatah nu disimpen jadi rancangan.</string>
+    <string name="state_MessagesDeleted">%d talatah dihapus.</string>
+    <string name="state_MessagesSent">%d talatah dikirim.</string>
+    <string name="state_PassphraseUpdated">Passphrase dimutahirkeun.</string>
+    <string name="state_RecipientsDeleted">%d panarima dihapus.</string>
+    <string name="state_SomeContactsImported">Kontak %s diimpor.</string>
+    <string name="state_TextCopiedToClipboard">Téks ditiron ka clipboard.</string>
+
+    <string name="text_About">SafeSlinger dirancang pikeun gampang babagi data identitas, di jalma atawa leuwih télépon, dioténtikasi, swasta, jeung gembleng. Unggal jelema nu babagi jeung nyieun hiji saluran nu aman ahir-ka-ahir pikeun ngirim talatah.</string>
+    <string name="text_About1">Gampang nukerkeun inpo kontak jeung batur</string>
+    <string name="text_About2">Aman aisan teks, poto, nanaon!</string>
+    <string name="text_About3">Kriptografi kuat ngajaga inpo Anjeun</string>
+    <string name="text_About_Short">SafeSlinger: degung 3 kecap jeung salawasna ngobrol di tentrem.</string>
+    <string name="text_AboutEmail">email: %s</string>
+    <string name="text_AboutFeat">Fitur:</string>
+    <string name="text_AboutWeb">web: %s</string>
+    <string name="text_DevelopedBy">Diwangun ku:</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Identity</string>
+    <string name="text_KeywordKey">Konci</string>
+    <string name="text_KeywordMessaging">Olahtalatah</string>
+    <string name="text_KeywordPrivacy">Kalaluasaan</string>
+    <string name="text_KeywordSecurity">Kaamanan</string>
+    <string name="text_LanguagesProvidedBy">Basa nu disadiakeun ku:</string>
+    <string name="text_LocalizationRepo">narjamahkeun: %s</string>
+    <string name="text_RelatedSearchTerms">Sarat Related:</string>
+    <string name="text_Requirements">Syarat:</string>
+    <string name="text_Requirements1">Kudu dipasang dina hiji minimum 2 alat.</string>
+    <string name="text_Requirements2">Hiji koneksi Internet kudu aktip.</string>
+    <string name="text_SourceCodeRepo">open source: %s</string>
+    <string name="text_WhatsNew">Fixes stabilitas.</string>
+
+    <string name="title_About">Kira-kira</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_ChooseDirectory">Pilih Diréktori</string>
+    <string name="title_ChooseFileLoad">Pilih Attachment anjeun</string>
+    <string name="title_comments">Komentar/Patarosan</string>
+    <string name="title_Error">Kasalahan</string>
+    <string name="title_ExchangeWalkthrough">Aisan kenop Asisten</string>
+    <string name="title_FileOptions">Attachment Pilihan</string>
+    <string name="title_find">Disetél</string>
+    <string name="title_font_size">Pilih hiji ukuran font</string>
+    <string name="title_home">Dimimitian Exchange</string>
+    <string name="title_HomePanel">Imah</string>
+    <string name="title_MessageDetail">Pesen</string>
+    <string name="title_Messages">Talatah</string>
+    <string name="title_MyIdentity">Kontak Personal</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger pesen sadia</string>
+    <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages sadia</string>
+    <string name="title_passphrase">Passphrase</string>
+    <string name="title_photoalbum">Photo Album</string>
+    <string name="title_photolibary">Photo Library</string>
+    <string name="title_PickRecipient">Panarima</string>
+    <string name="title_Question">Tatanya</string>
+    <string name="title_RecipientDetail">Panarima jéntré</string>
+    <string name="title_save">Ahir Exchange</string>
+    <string name="title_SaveFileAs">Nyalametkeun payil As</string>
+    <string name="title_SecureIntroduction">Pengantar aman</string>
+    <string name="title_SecureIntroductionInvite">Ngamankeun Pengantar Uleman!</string>
+    <string name="title_SelectSource">Ngirim Pilihan:</string>
+    <string name="title_SendFile">Ngirim</string>
+    <string name="title_sharingfolder">Ngabagikeun Polder</string>
+    <string name="title_soundrecoder">Recorder sora</string>
+    <string name="title_TextInviteMsg">SafeSlinger Uleman</string>
+    <string name="title_Threads">Threads</string>
+    <string name="title_Warn">Perhatosan</string>
+
+</resources>

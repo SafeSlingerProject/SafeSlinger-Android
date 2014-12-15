@@ -27,50 +27,50 @@
 
     <string name="ask_QuitConfirmation">Quit? A jeni i sigurt?</string>
 
-    <string name="btn_Match">Next</string>
+    <string name="btn_Match">Tjetër</string>
     <string name="btn_NoMatch">Nuk ka ndeshje</string>
 
     <string name="choice_NumUsers">%d përdoruesit</string>
 
     <string name="error_AllMembersMustUpgrade">Disa anëtarë janë duke përdorur një version të vjetër; të gjithë anëtarët duhet të përmirësuar në versionin e ri.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Të gjithë anëtarët duhet të përmirësuar, disa janë duke përdorur formate të vjetër regjistrimit shtytje.</string>
-    <string name="error_CorrectYourInternetConnection">Interneti nuk është në dispozicion, kontrolloni parametrat tuaj.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Të gjithë anëtarët duhet të përmirësuar, disa janë duke përdorur formate të vjetër të regjistrimit shtytje.</string>
+    <string name="error_CorrectYourInternetConnection">Internet jo në dispozicion, kontrolloni parametrat tuaj.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Exchange tejkaluar. Filloni shkëmbimin përsëri.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
     <string name="error_InvalidCommitVerify">Të dhëna të pasakta gjetur në këmbim. Filloni shkëmbimin përsëri.</string>
     <string name="error_InvalidCommonUserId">Ju lutem shkruani një numër i plotë pozitiv.</string>
     <string name="error_LocalGroupCommitDiffer">Ju kanë raportuar një ndryshim në frazat. Filloni shkëmbimin përsëri.</string>
     <string name="error_MinUsersRequired">Një minimum prej %d anëtarëve janë të nevojshme për të shkëmbyer të dhëna.</string>
-    <string name="error_MoreDataThanUsers">Të dhënat e papritura gjetur në këmbim. Filloni shkëmbimin përsëri.</string>
-    <string name="error_NoDataToExchange">Shkëmbimi mungon të dhënat e kërkuara.</string>
-    <string name="error_NoWordListSelected">Ju duhet të zgjidhni një nga frazat e para se të vazhdoni.</string>
+    <string name="error_MoreDataThanUsers">Të dhëna të papritura gjetur në këmbim. Filloni shkëmbimin përsëri.</string>
+    <string name="error_NoDataToExchange">Shkëmbimi mungon dhënat e kërkuara.</string>
+    <string name="error_NoWordListSelected">Ju duhet të zgjidhni një nga frazat para se të vazhdoni.</string>
     <string name="error_OtherGroupCommitDiffer">Dikush njoftoi një ndryshim në frazat. Filloni shkëmbimin përsëri.</string>
     <string name="error_OutOfMemoryError">Memory është shumë i ulët për të përfunduar këtë operacion.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nuk ka përgjigje nga serveri.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout duke pritur për disa anëtarë të grupit për të shtuar të dhënat.</string>
-    <string name="error_WebCancelledByUser">Të ruaj të anuluar kërkesën server.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout duke pritur për disa anëtarë të grupit të shtoni të dhëna.</string>
+    <string name="error_WebCancelledByUser">Të ruaj të anuluar kërkesën e serverit.</string>
 
     <string name="help_size">Zgjidhni numrin e njerëzve të cilët janë duke u përpjekur për të shkëmbejnë të dhëna së bashku dhe shtypni OK.</string>
     <string name="help_userid">Ky numër në këtë ekran është përdorur për të krijuar një grup të veçantë të përdoruesve. Rishikimi numrat në ekranet e të gjithë përdoruesit \', atëherë të gjithë përdoruesit duhet të hyjnë të njëjtin numër më të ulët dhe shtypni OK.</string>
-    <string name="help_verify">Tani, ju duhet të përputhen me një nga këto fraza 3-fjalë me të gjithë përdoruesit. Çdo përdorues duhet të zgjidhni të njëjtën frazë të përbashkët, dhe shtypni Next.</string>
+    <string name="help_verify">Tani, ju duhet të përputhen një nga këto fraza të 3-fjalë me të gjithë përdoruesit. Çdo përdorues duhet të zgjidhni të njëjtën frazë të përbashkët, dhe shtypni Next.</string>
 
-    <string name="label_CompareScreensNDevices">Krahaso ekranet në pajisje %s.</string>
+    <string name="label_CompareScreensNDevices">Krahaso ekranet në pajisje të %s.</string>
     <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Ky numër është përdorur për të krijuar një grup të veçantë të përdoruesve. Krahaso, dhe pastaj shkruani numrin më të ulët midis të gjithë përdoruesit.</string>
+    <string name="label_PromptInstruct">Ky numër është përdorur për të krijuar një grup të veçantë të përdoruesve. Krahasuar, dhe pastaj shkruani numrin më të ulët midis të gjithë përdoruesit.</string>
     <string name="label_ReceivedNItems">pranuar %d artikuj</string>
     <string name="label_UserIdHint">Më i ulët</string>
-    <string name="label_VerifyInstruct">Të gjithë telefonat duhet të përputhen një nga 3-fjala frazat. Krahaso, dhe pastaj të vini frazën përputhen.</string>
+    <string name="label_VerifyInstruct">Të gjithë telefonat duhet të përputhen një nga 3-fjalë frazat. Krahasuar, dhe pastaj të vini frazën përputhen.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">duke pritur për verifikim nga të gjithë anëtarët…</string>
-    <string name="prog_CollectingOthersItems">duke pritur për të gjithë përdoruesit për t\'u bashkuar me…</string>
-    <string name="prog_ConstructingGroupKey">ndërtimin kyç grup…</string>
-    <string name="prog_RequestingUserId">kërkuar anëtarësimin…</string>
+    <string name="prog_CollectingOthersItems">duke pritur për të gjithë përdoruesit të bashkohen…</string>
+    <string name="prog_ConstructingGroupKey">ndërtimin çelësin e grupit…</string>
+    <string name="prog_RequestingUserId">kërkuar anëtarësim të…</string>
 
     <string name="title_size">Sa përdorues në këmbim?</string>
-    <string name="title_userid">Grupimi</string>
-    <string name="title_verify">Verifikoni</string>
+    <string name="title_userid">Grupim</string>
+    <string name="title_verify">Verifikoj</string>
 
 </resources>

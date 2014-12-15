@@ -27,50 +27,50 @@
 
     <string name="ask_QuitConfirmation">Sallama? Ka tabbata?</string>
 
-    <string name="btn_Match">Next</string>
+    <string name="btn_Match">Gaba</string>
     <string name="btn_NoMatch">Babu Match</string>
 
-    <string name="choice_NumUsers">%d users</string>
+    <string name="choice_NumUsers">%d masu amfani</string>
 
-    <string name="error_AllMembersMustUpgrade">Wasu mambobin suna amfani da wani mazan version; duk members dole ne hažaka da sabuwar version.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">All members dole ne hažaka, wasu suna yin amfani da mazan tura rajista Formats.</string>
+    <string name="error_AllMembersMustUpgrade">Wasu \'yan aka ta amfani da mazan version. duk \'yan dole ne hažaka ga sabuwar version.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Duk \'yan dole ne hažaka, wasu suna amfani da mazan da tura rajista Formats.</string>
     <string name="error_CorrectYourInternetConnection">Internet babu, duba ka saituna.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout wuce. Za a fara da musayar sake.</string>
-    <string name="error_HttpCode">Server HTTP Kuskure: %d</string>
-    <string name="error_InvalidCommitVerify">Ba daidai ba data samu a exchange. Za a fara da musayar sake.</string>
-    <string name="error_InvalidCommonUserId">Don Allah shigar da kyau lamba.</string>
-    <string name="error_LocalGroupCommitDiffer">Ka bayar da rahoton wani bambanci a phrases. Za a fara da musayar sake.</string>
-    <string name="error_MinUsersRequired">A m na %d members ana buƙatar su musanya bayanai.</string>
-    <string name="error_MoreDataThanUsers">M data samu a exchange. Za a fara da musayar sake.</string>
-    <string name="error_NoDataToExchange">Exchange ya bace ake buƙata bayanai.</string>
-    <string name="error_NoWordListSelected">Dole ne ka zaži daya daga cikin phrases kafin a ci gaba.</string>
-    <string name="error_OtherGroupCommitDiffer">Wani ya ruwaito wani bambanci a phrases. Za a fara da musayar sake.</string>
-    <string name="error_OutOfMemoryError">Memory ya yi yawa low don kammala wannan aiki.</string>
-    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange ƙarewar lokaci wuce. Fara musayar sake.</string>
+    <string name="error_HttpCode">Uwar garken HTTP Kuskure: %d</string>
+    <string name="error_InvalidCommitVerify">Ba daidai ba data samu a musayar. Fara musayar sake.</string>
+    <string name="error_InvalidCommonUserId">A shigar da m lamba.</string>
+    <string name="error_LocalGroupCommitDiffer">Ka bayar da rahoton wani bambanci a phrases. Fara musayar sake.</string>
+    <string name="error_MinUsersRequired">A m %d membobin ana buƙatar musanya bayanai.</string>
+    <string name="error_MoreDataThanUsers">M data samu a musayar. Fara musayar sake.</string>
+    <string name="error_NoDataToExchange">Musayar ya bace ake buƙata bayanai.</string>
+    <string name="error_NoWordListSelected">Dole ne ka zaɓa Ya daya daga cikin kalmomi kafin a ci gaba.</string>
+    <string name="error_OtherGroupCommitDiffer">Wani ya ruwaito wani bambanci a phrases. Fara musayar sake.</string>
+    <string name="error_OutOfMemoryError">Ƙwaƙwalwar ya yi yawa low don kammala wannan aiki.</string>
+    <string name="error_ServerAppMessage">Uwar garken saƙo: %s</string>
     <string name="error_ServerNotResponding">Babu amsa daga uwar garken.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout jiran wasu gungun \'yan don ƙara bayanai.</string>
-    <string name="error_WebCancelledByUser">User soke uwar garken request.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Fitar lokaci jiran wasu gungun \'yan don ƙara bayanai.</string>
+    <string name="error_WebCancelledByUser">Mai amfani soke uwar garken request.</string>
 
-    <string name="help_size">Select yawan mutanen da suka suna kokarin musanya data tare kuma latsa Ok.</string>
-    <string name="help_userid">Wannan lambar a kan wannan allon da ake amfani ya halicci na musamman da rukuni na masu amfani. Bitar lambobi a kan duk masu amfani \'fuska, sannan duk masu amfani ya kamata shigar da wannan mafi ƙasƙanci lamba kuma latsa Ok.</string>
-    <string name="help_verify">Yanzu, dole ne ka dace da daya daga cikin wadannan 3-kalma phrases da dukan masu amfani. Kowane mai amfani dole ne ka zaɓa guda na kowa magana, ka kuma danna Next.</string>
+    <string name="help_size">Zaži yawan mutanen da suke kokarin musanya bayanai game kuma latsa Ok.</string>
+    <string name="help_userid">Wannan lambar a kan wannan allon da ake amfani ya halicci musamman rukuni na masu amfani. Duba lambobin a kan duk masu amfani \'fuska, to, duk masu amfani ya kamata shiga guda mafi ƙasƙanci lambar kuma latsa Ok.</string>
+    <string name="help_verify">Yanzu, dole ne ka dace ɗaya daga cikin waɗannan 3-kalmar kalmomi da duk masu amfani. Kowane mai amfani dole ne ka zaɓa guda na kowa magana, ka kuma danna Next.</string>
 
-    <string name="label_CompareScreensNDevices">Compare fuska a ranar %s na\'urorin.</string>
-    <string name="label_NumericModeHint">Non-English</string>
-    <string name="label_PromptInstruct">Wannan lambar da ake amfani ya halicci na musamman da rukuni na masu amfani. Compare, sa\'an nan kuma shigar da lambar mafi ƙasƙanci a tsakanin duk masu amfani.</string>
-    <string name="label_ReceivedNItems">%d samu abubuwa</string>
-    <string name="label_UserIdHint">Mafi ƙasƙanci</string>
-    <string name="label_VerifyInstruct">All phones dole dace daya daga cikin 3-kalma phrases. Compare, sa\'an nan kuma sama da daidai da magana.</string>
+    <string name="label_CompareScreensNDevices">Kwatanta fuska a kan %s na\'urorin.</string>
+    <string name="label_NumericModeHint">Wadanda ba Turanci</string>
+    <string name="label_PromptInstruct">Wannan lambar da ake amfani ya halicci musamman rukuni na masu amfani. Kwatanta, sa\'an nan kuma shigar da mafi ƙasƙanci da dama a tsakanin duk masu amfani.</string>
+    <string name="label_ReceivedNItems">samu %d abubuwa</string>
+    <string name="label_UserIdHint">Magangara mafi ƙasƙanci</string>
+    <string name="label_VerifyInstruct">Duk wayoyin dole ne daidaita daya daga cikin 3-kalmar phrases. Kwatanta, sa\'an nan kuma sama da daidai da magana.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">jiran tabbaci daga dukan \'yan…</string>
     <string name="prog_CollectingOthersItems">jiran duk masu amfani ya shiga…</string>
     <string name="prog_ConstructingGroupKey">gina kungiyar key…</string>
-    <string name="prog_RequestingUserId">neman kasancewa memba…</string>
+    <string name="prog_RequestingUserId">neman membobinsu…</string>
 
-    <string name="title_size">Ta yaya mutane da yawa masu amfani a kasashen waje?</string>
+    <string name="title_size">Da yawa masu amfani a cikin musayar?</string>
     <string name="title_userid">Grouping</string>
-    <string name="title_verify">Gaskanta</string>
+    <string name="title_verify">Tabbatar da</string>
 
 </resources>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The MIT License (MIT)
+    
+    Copyright (c) 2010-2014 Carnegie Mellon University
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+
+<resources>
+
+    <string name="action_NewUserRequest">Add a Sling Keys kopana memo ka tsela…</string>
+
+    <string name="app_name">SafeSlinger</string>
+
+    <string name="ask_BackupDisabledRemindLater">Bekapo ke nang le bokooa. Na u batla ho fetola bekapo di-setting le \'ne ena khopotso?</string>
+    <string name="ask_ConfirmUseOlderDeviceOrKey">%s o na le morao-rao le sesebediswa kapa key, e na u bonnete ba hore o batla ho sebelisa ena ba baholo mong?</string>
+    <string name="ask_FileExistsOverwrite">Leina la faele %s se a ntse a o teng. Overwrite?</string>
+    <string name="ask_GoogleAccountToReceiveMsgs">Ka ntle ho Google ea u tla feela ba khona ho romeletsa, SE KE UA fumana melaetsa. Na u batla ho eketsa Google tlalehong ee?</string>
+    <string name="ask_SendErrorData">Re rata thuso ea hao ho ntlafatsa SafeSlinger. Na u ka rata ho ikenyetsa romela leha e le efe liphoso tsa ho rona?</string>
+
+    <string name="btn_Accept">Amohela</string>
+    <string name="btn_BeginExchangeProximity">Qala Exchange</string>
+    <string name="btn_Cancel">Hlakola</string>
+    <string name="btn_Close">Haufi</string>
+    <string name="btn_Continue">Tsoela pele</string>
+    <string name="btn_CreateNewKey">Bōpa New Key</string>
+    <string name="btn_DeleteKeys">Hlakola Keys</string>
+    <string name="btn_discard">Lahle</string>
+    <string name="btn_Done">Etsoe</string>
+    <string name="btn_Edit">Edit</string>
+    <string name="btn_Exit">Etsoa</string>
+    <string name="btn_Import">Import</string>
+    <string name="btn_Introduce">Hlahisang</string>
+    <string name="btn_No">Ha ho</string>
+    <string name="btn_NotNow">E Seng Hona Joale</string>
+    <string name="btn_NotRemind">Lebala</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_Refuse">Hana</string>
+    <string name="btn_Remind">Hopotsa</string>
+    <string name="btn_Save">Boloka</string>
+    <string name="btn_SelectFile">Add kamano</string>
+    <string name="btn_SendFile">Romela</string>
+    <string name="btn_Yes">E</string>
+
+    <string name="choice_10mins">metsotso e 10</string>
+    <string name="choice_1hour">hora e 1 le</string>
+    <string name="choice_1min">1 منٹ</string>
+    <string name="choice_20mins">metsotso e 20</string>
+    <string name="choice_2hours">lihora tse 2</string>
+    <string name="choice_3mins">3 metsotso e</string>
+    <string name="choice_40mins">40 metsotso</string>
+    <string name="choice_4hours">diura di le 4</string>
+    <string name="choice_5mins">metsotso e 5</string>
+    <string name="choice_8hours">diura di le 8</string>
+    <string name="choice_auto_storage">Kamehla Storage</string>
+    <string name="choice_default">Kamehla</string>
+    <string name="choice_external_storage">External Storage</string>
+    <string name="choice_font_large">Khōlō</string>
+    <string name="choice_font_medium">Seaplane</string>
+    <string name="choice_font_micro">Haholo Small</string>
+    <string name="choice_font_small">Nyenyane</string>
+    <string name="choice_internal_storage">Ka hare Storage</string>
+    <string name="choice_nolimit">Ha ho Limit</string>
+    <string name="choice_SaveDirectory">Boloka Directory</string>
+    <string name="choice_SaveFile">Pholosa faele</string>
+    <string name="choice_Up">Up</string>
+
+    <string name="error_AllMembersMustUpgradeBadKeyFormat">Litho tsohle tsa lokela ho ntlafatsa, ba bang ba ba sebelisa ba baholo moodle e rulaganya.</string>
+    <string name="error_AudioPlayerDecodeError">Audio sebapali decoding phoso.</string>
+    <string name="error_AudioPlayerError">Ke ke bapala kgatiso.</string>
+    <string name="error_AudioRecorderEncodeError">Audio sehatisi khouto phoso.</string>
+    <string name="error_AudioRecorderPermissionError">Maekrofono tumello ho hlokahala hore a tlalehe e sireletsehileng molaetsa wa lentswe. Tlanya ea %s konopo bakeng sa SafeSlinger maekerofounu tumello dintlha tse feletseng.</string>
+    <string name="error_BackupNotFound">Ha ho bekapo ho tsosolosa.</string>
+    <string name="error_BackupNotSupportedDevice">Sesebediswa ha e tšehetse bekapo tsosolosa.</string>
+    <string name="error_BadCopyProtectUpgrade">Ka lebaka la le kokoanyana a Android 4.1, o tla lokela ho uninstall le reinstall SafeSlinger.</string>
+    <string name="error_C2DMRegAccountMissing">A Google lebaka ho hlokahala. Ka kōpo bula tlaleho e molaodi le eketsa Google akhaonto.</string>
+    <string name="error_C2DMRegAuthenticationFailed">Ngodiso ke ke authenticated, ka kopo retry ka bowena hamorao.</string>
+    <string name="error_C2DMRegInvalidSender">Ngodiso ha fumaneha bakeng sa ho phetolelo ena, ka kopo hlahloba bakeng sa ntjhafatswa tlhahiso.</string>
+    <string name="error_C2DMRegPhoneRegistrationError">Fosahetse sesebediswa ngolisoa ka Google. Fono ena ha ha jwale ke tšehetsa ya push melaetsa ya ditshwantsho.</string>
+    <string name="error_C2DMRegServiceNotAvailable">Ya push ngodiso tšebeletso ha e fumanehe, dinako retry a fihlela ho %d metsotswana.</string>
+    <string name="error_C2DMRegTooManyRegistrations">Tse ngata haholo dikopo ngodisitsweng bakeng sa Push. Ka kōpo uninstall ba bang ba ditshebediso le retry.</string>
+    <string name="error_CannotSendEmptyFile">Ke ke romela se nang letho le sephuthelwana.</string>
+    <string name="error_CannotSendFilesOver">Ke ke romela diphuthelwana moholo ho feta fihlela ho %d li-byte ka seemo.</string>
+    <string name="error_CannotSendNullFile">Ke ke romela null sephuthelwana.</string>
+    <string name="error_contactCreationFailure">Contact pōpo ile ba hlōleha.</string>
+    <string name="error_ContactInsertFailed">Contact kenya ile ba hlōleha.</string>
+    <string name="error_ContactNameMissing">Lebitsong lena e haellang le lebitso, e ka kōpo fetola.</string>
+    <string name="error_ContactNameMissing2">Lebitsong lena e haellang le lebitso, e ka kōpo reselect.</string>
+    <string name="error_ContactUpdateFailed">Contact update go ile ba hlōleha.</string>
+    <string name="error_couldNotExtractPrivateKey">Ne a ke ke extract poraefete konopong.</string>
+    <string name="error_FeatureIsNotSupport">%1$s e sa a tšehetsa ka %2$s ka nako e.</string>
+    <string name="error_FileSave">A sa khone ho pholosa %s.</string>
+    <string name="error_FileStorageUnavailable">File polokelo ke ha di fumanehe.</string>
+    <string name="error_InvalidContactName">A utloahalang lebitso la motho ho hlokahala.</string>
+    <string name="error_InvalidIncomingMessage">Bad molaetsa o kenang file format.</string>
+    <string name="error_InvalidMsg">Bad molaetsa file format.</string>
+    <string name="error_InvalidRecipient">Lefeela ka moamohedi.</string>
+    <string name="error_MessageInvalidPeerKeyFormat">Ea lithaka moodle sebopeho ke o sebetse.</string>
+    <string name="error_MessageSignatureVerificationFails">Tshaeno netefatso ile ba hlōleha.</string>
+    <string name="error_minPassphraseRequire">Passphrases hloka fihlela bonyane ho %d buuoang ka bona.</string>
+    <string name="error_MissingNdk">SafeSlinger ne ke sa khona ho utloa NDK tshehetso ka sesebediswa sena, e ho hlokeha.</string>
+    <string name="error_MultipleSendNotSupported">U leka ho romela multiple length ka dintho. Ka nako ena, SafeSlinger feela e tshehetsa romela e mong ntlha ya ka nako.</string>
+    <string name="error_NoEmailAccount">Akhaonto ya imeile ha seta!!!!</string>
+    <string name="error_noPassPhrase">Ha ho tselaitshupo kena.</string>
+    <string name="error_passPhrasesDoNotMatch">Passphrases u se ke ua tšoanang le.</string>
+    <string name="error_PushMsgDeviceQuotaExceeded">U feta molaetsa bua ka palo le hore le e moamohedi. Ka kōpo retry hamorao.</string>
+    <string name="error_PushMsgInvalidRegistration">Hore moamohedi o na le leng sieo kapa e mpe ya push ngodiso. U lokela ho ba khaotse ho romela melaetsa ho fono ena.</string>
+    <string name="error_PushMsgMessageNotFound">Molaetsa shoa.</string>
+    <string name="error_PushMsgMessageTooBig">Molaetsa ke seholo haholo. Fokotsa ka boholo ya molaetsa.</string>
+    <string name="error_PushMsgNotRegistered">Hore moamohedi ya push ngodiso ke e sa sebetse. Ya moamohedi ka \'na eaba uninstalled SafeSlinger kapa reteleha theoha ditsebiso. U lokela ho ba khaotse ho romela melaetsa ho fono ena.</string>
+    <string name="error_PushMsgNotSucceed">Ho na le bile le phoso ho buisana le ea ya push tsebiso tsebeletso.</string>
+    <string name="error_PushMsgQuotaExceeded">U feta molaetsa bua ka palo bakeng sa fono ena. Ka kōpo retry hamorao.</string>
+    <string name="error_PushMsgServiceFail">Tsebiso tšebeletso a le siyo nako e. Kopo, leka ho romela molaetsa ha morao.</string>
+    <string name="error_RecoderError">Ke ke lokisetsa ya audio e le sehatisi.</string>
+    <string name="error_ReminderToSlingKeysToUseApp">Ho qala ho, Sling Keys le le leng la user want-meet.ru ka nako e tsoanang nako eo.</string>
+    <string name="error_selectDataToSend">U lokela sephuthelwana kapa molaetsa wa mongolo ho romela.</string>
+    <string name="error_ShareFileDelError">Ke ke tlosa ba ile ba kopanela faele.</string>
+    <string name="error_UnableFindPubKey">A sa khone ho tšoanang le setjhaba konopo ho poraefete senotlolo mo crypto le opareitara.</string>
+    <string name="error_UnableToSaveMessageInDB">A sa khone ho pholosa le molaetsa o bobolokelo-tshedimosetsong.</string>
+    <string name="error_UnableToSaveRecipientInDB">A sa khone ho pholosa ho moamohedi bobolokelo-tshedimosetsong.</string>
+    <string name="error_UnableToUpdateMessageInDB">A sa khone ho ntjhafatsa molaetsa bobolokelo-tshedimosetsong.</string>
+    <string name="error_UnableToUpdateRecipientInDB">A sa khone ho ntjhafatsa ya moamohedi bobolokelo-tshedimosetsong.</string>
+    <string name="error_UncaughtExceptionOccured">SafeSlinger phoso, ka kōpo restart.</string>
+    <string name="error_VcardParseFailure">Data ya lebitso ne a formatted ka ho fosahala.</string>
+
+    <string name="help_find">Sebelisa skrine ho beha lebitso la hao ho fapanyetsana le batho ba bang, \'me ho tselaitshupo ho sireletsa tshedimosetso ya gago. Tlanya ea Etsoa konopo ha qetile.</string>
+    <string name="help_home">Ho fapanyetsana boitsebiso tshedimosetso, etsa bonnete basebedisi bohle ba ba haufi kapa ka fono. The Qala Exchange konopo tla fapanyetsana feela e a hlahloba data ya lebitso.</string>
+    <string name="help_identity_menu">U ka ba fetola ho data ya ka boitshupo jwa gago mo ena skrine ka ho tapping ka konopo le lebitso la hao. Ena tla bontša ya menu lumella hore o Asia hao lebitsong, e Create New lebitso, kapa Sebelisa e \'ngoe e lebitso.</string>
+    <string name="help_Messages">Ena skrine o bontša eohle e fetileng e melaetsa, le diphuthelwana tse e sa ntse e fumaneha bakeng sa ho download.</string>
+    <string name="help_passphrase">Sebelisa skrine ho Register ya kopo le hao tselaitshupo. Haeba u lebetse hao tselaitshupo, o ka \'na hlahisa e ncha moodle sirelelitsoe ke e ncha tselaitshupo ka tapping ea Forgot Passphrase? konopo. Tlanya lebitso la mosebedisi ho switjha pakeng tsa multiple length dikonopo.</string>
+    <string name="help_passphrase_change">Sebelisa skrine ho fetole tselaitshupo ka kena hao e fetileng tselaitshupo bakeng sa netefatso le ncha tselaitshupo.</string>
+    <string name="help_PickRecip">Mabitso a nang le SafeSlinger dikonopo tsa ba a bonahatsa mona, kgetha e nngwe ho romela molaetsa wa hao ho ya ho.</string>
+    <string name="help_save">Ha qeta, melaoana ea tla senola lethathamo tsa boitsebiso ya data fanana. Khetha mabitso a lakatsa ho pholosa le tobetsa Import.</string>
+    <string name="help_SecureIntroduction">Ena skrine lumella ho kgetha batho ba babeli ba u slung dikonopo tsa le pele ho sireletsehile romela ba bona ba dikonopo tsa ho mong le e mong mong. Feela tobetsa Tsebisa ha lokile.</string>
+    <string name="help_Send">Ena skrine lumella ho kgetha ba bang ba data le moamohedi ho romela ho ya ho. Feela tobetsa Enviar ha lokile.</string>
+    <string name="help_settings">Ena skrine lumella u ho fetola e le ya kamehla di-setting bakeng sa kopo.</string>
+
+    <string name="iOS_cameraError">Khamera tumello e hlokang ho hokela snapshots ho boloka ho melaetsa. Tlanya ea %s konopo bakeng sa SafeSlinger Camera tumello dintlha tse feletseng.</string>
+    <string name="iOS_contactError">Mabitso tumello e hlokehang bakeng sireletsehile ho kopanela kopana karete. Tlanya ea %s konopo bakeng sa SafeSlinger Contacts tumello dintlha tse feletseng.</string>
+    <string name="iOS_errorpushtoken">Ya push ngodiso e haellang.</string>
+    <string name="iOS_notificationError1">Tsebiso tumello bakeng sa e ka ba ditemoso kapa difolaga, go le beche dinomoro, ba hlokehang bakeng sireletsehile melaetsa ya ditshwantsho. Tlanya ea %s konopo bakeng sa SafeSlinger tsebiso tumello dintlha tse feletseng.</string>
+    <string name="iOS_oldOSWarn">SafeSlinger e sa optimized bakeng sa iOS 5.x disebediswa tse ding. SafeSlinger hloka hore iOS 6 kgotsa go feta.</string>
+    <string name="iOS_photolibraryError">Photo photo photo photo Library tumello e hlokang ho hokela ditshwantsho ho boloka melaetsa. Tlanya ea %s konopo bakeng sa SafeSlinger Photo Library tumello dintlha tse feletseng.</string>
+    <string name="iOS_RequestPermissionContacts">O ka khetha gago ya go ikgolaganya karete ya memori ho romela metsoalle ea hao le SafeSlinger tla encrypt e bakeng sa hao. Ho etsa hore tsobotsi ena, o lokela ho le lumella SafeSlinger akhaontho ya gago Contacts ha botsa.</string>
+    <string name="iOS_RequestPermissionMicrophone">O ka ngola le molaetsa wa lentswe ho romela metsoalle ea hao le SafeSlinger tla encrypt e bakeng sa hao. Ho etsa hore tsobotsi ena, o lokela ho le lumella SafeSlinger akhaontho ya gago maekerofounu ha botsa.</string>
+    <string name="iOS_RequestPermissionNotifications">SafeSlinger ke patilwe melaetsa kopo ya le ke ke sebetsa ntle le lumella tse kenang melaetsa e tsoang ho Notifications. Ho etsa hore tse kenang melaetsa, o lokela ho le lumella SafeSlinger ho romela u Notifications ha botsa.</string>
+
+    <string name="label_ago">%s months ago</string>
+    <string name="label_backupCompleteDate">Ho qetela Backup ho tlatswa</string>
+    <string name="label_backupRequestDate">Ho qetela Backup Request</string>
+    <string name="label_backupURL">Bekapo URL</string>
+    <string name="label_ClickForNMsgs">Ama ho hlahloba hao fihlela ho %d melaetsa</string>
+    <string name="label_ComposeHint">Compose Molaetsa</string>
+    <string name="label_ContactName">Lebitso La Hau</string>
+    <string name="label_days">fihlela ho %d matsatsi a</string>
+    <string name="label_Device">Sesebediswa:</string>
+    <string name="label_DeviceInSendOnlyMode">Romela feela-mokgwa wa</string>
+    <string name="label_DisabledExchSourceKeyChange">Hao moodle e fetohile: Sling Keys hape.</string>
+    <string name="label_DisabledNextSlingKeysWithThisPerson">Ho qala ho, melaetsa, Sling Keys le ena ya mosebedisi ka nako e tsoanang nako eo.</string>
+    <string name="label_Draft">moralo</string>
+    <string name="label_EnabledKeyFormatDeprecated">Key sebopeho deprecated: Sling Keys hape.</string>
+    <string name="label_exchanged">fanana</string>
+    <string name="label_expired">a shoa</string>
+    <string name="label_expires">fela %s</string>
+    <string name="label_expiresIn">fela a</string>
+    <string name="label_FileNameHint">Lebitso La Faele</string>
+    <string name="label_FindInstruct">Kena leina la gago le e tselaitshupo ho sireletsa ya hao ya data:</string>
+    <string name="label_FirstName">Lebitso La Pele</string>
+    <string name="label_Home">Tlanya lebitso la hao ho eketsa kapa tlosa data ya lebitso, sheba dilo tse o lakatsa ho kopanela, mme o tlanye Qala Exchange ha ba bang ba loketse ho fapanyetsana ka:</string>
+    <string name="label_hometag">Home</string>
+    <string name="label_hours">fihlela ho %d lihora tse</string>
+    <string name="label_iCloudEnable">SafeSlinger iCloud e thusa. Tlanya ea Etsoa konopo ha qetile.</string>
+    <string name="label_InstNoMessages">Ha ho melaetsa. U ka \'na romela molaetsa ho tswa ho Compose tab ya.</string>
+    <string name="label_InstNoRecipients">Ho eketsa baamohedi ba bang, u se pele Sling Keys le e mong kapa ho feta basebedisi ba bang ka ka nako e tsoanang nako eo. U ka ba romela Sling Keys kopana memo e tsoang ho ya menu.</string>
+    <string name="label_InstNoRecipientsMatchQuery">Le ea mong oa ya hao ya hajwale baamohedi ba bang tšoanang le gago ya go tsoma kopo ena. Kopo, leka e fapaneng khwiri kapa mema mabitso.</string>
+    <string name="label_InstNoSharedFile">Ha ho ba ile ba kopanela faele. Connect sesebediswa sa hao se le iTunes le hula ho ya difaele ho ea ba ile ba kopanela foldara.</string>
+    <string name="label_InstRecipients">A nke moamohedi ho romela molaetsa ho:</string>
+    <string name="label_InstSendInvite">A nke baamohedi ba bang ba hlahisang sireletsehile:</string>
+    <string name="label_InstSharedFile">A nke faele e hokela:</string>
+    <string name="label_introduced">hlahiswa</string>
+    <string name="label_inviteSent">Memeloa</string>
+    <string name="label_Key">Key:</string>
+    <string name="label_LastName">Fane</string>
+    <string name="label_Me">\'na</string>
+    <string name="label_messageIntroduceNameToYou">Ke tla rata ho hlahisang %s ho uena.</string>
+    <string name="label_messageInviteInstall">SafeSlinger app e: %s</string>
+    <string name="label_messageInviteSetupInst">Ho seta e sireletsehileng melaetsa mabapi, re ka kopana hao kapa ya fono mong le e mong tse ling tse ka nako e tsoanang, \'me joale Sling Keys feela hang e le ho netefatsa ea kgokelo.</string>
+    <string name="label_messageInviteStartMsg">Re ka qala sireletsehile melaetsa le le bulehileng mohloli SafeSlinger iPhone kapa Android app e?</string>
+    <string name="label_messageYouAreVerified">%s, o ba netefalitsoeng.</string>
+    <string name="label_minutes">fihlela ho %d metsotso e</string>
+    <string name="label_mobiletag">Mobile</string>
+    <string name="label_MostRecentOnly">Ka ho fetisisa morao tjena feela</string>
+    <string name="label_MsgSendUpdate">Ka ntjhafatswa SafeSlinger boitshupi jwa gago ba khomaretse.</string>
+    <string name="label_None">Ea mong</string>
+    <string name="label_numsharedfiles">Fihlela ho %d Files ho Share:</string>
+    <string name="label_OldThreads">Li Threads</string>
+    <string name="label_othertag">Tse ling tse</string>
+    <string name="label_PassHintBackoff">Retry</string>
+    <string name="label_PassHintChange">Ntjhafatswa Passphrase</string>
+    <string name="label_PassHintCreate">Bōpa Passphrase</string>
+    <string name="label_PassHintCurrent">Hona joale Passphrase</string>
+    <string name="label_PassHintEnter">Tselaitshupo</string>
+    <string name="label_PassHintRepeat">A pheta-pheta Passphrase</string>
+    <string name="label_passPhraseCacheTtl">Tselaitshupo Cache</string>
+    <string name="label_PassPhraseIsCached">Tselaitshupo e lotilwego</string>
+    <string name="label_phoneOnly">fono feela</string>
+    <string name="label_Photo">Photo photo photo photo</string>
+    <string name="label_PublicKeyID">Key ID</string>
+    <string name="label_PushTokenID">Ya push Registration ID</string>
+    <string name="label_RemindBackupDelay">Bekapo Khopotso</string>
+    <string name="label_ReportedInactive">Tlaleha sa direng %s.</string>
+    <string name="label_restoreCompleteDate">Ho qetela tsosa ho tlatswa</string>
+    <string name="label_SafeSlingerBackupDelayed">SafeSlinger bekapo lieha</string>
+    <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
+    <string name="label_SaveAccount">Pholosa Account</string>
+    <string name="label_SaveInstruct">Hlahloba mabitso a batla ho ntjhafatsa a aterese ya hao buka, ka nako eo Tlanya Import ho pholosa sireletsehile mabitso:</string>
+    <string name="label_search_contacts_hint">Search mabitso</string>
+    <string name="label_seconds">fihlela ho %d metsotsoana e</string>
+    <string name="label_SelectRecip">, kgetha moamohedi</string>
+    <string name="label_sendErrorData">Romela Error Data</string>
+    <string name="label_SendFrom">Ho tswa ho:</string>
+    <string name="label_SendTo">Ho:</string>
+    <string name="label_ShowHintAtLaunch">Bontša ena tlhase le e nyenyane le tlang.</string>
+    <string name="label_SpeechRecognitionAlert">Sebelisa puo ho amohela ke holofala ka lebaka ho ka \'na etsa hore ya tlhahisoleseding leakage</string>
+    <string name="label_step_1">Mohato 1</string>
+    <string name="label_step_2">Mohato 2</string>
+    <string name="label_step_3">Bohato ba 3</string>
+    <string name="label_step_4">Mohato 4</string>
+    <string name="label_step_5">Mohato 5</string>
+    <string name="label_summary_auto_attach_retrieval">Ka tsela e iketsang thowuni molaetsa diphuthelwana ha logged a.</string>
+    <string name="label_summary_auto_decrypt">Ka tsela e iketsang decrypt melaetsa ha logged a.</string>
+    <string name="label_summary_remind_backup_delay">Fumana tsebiso ha bekapo ke a hokelwa.</string>
+    <string name="label_summary_show_tutorial">Bontša le tutorial pele leka ho Sling Keys.</string>
+    <string name="label_TapToDecryptFile">Tlanya ho decrypt faele</string>
+    <string name="label_TapToDecryptMessage">Tlanya ho decrypt</string>
+    <string name="label_TapToDownloadFile">Tlanya download faele</string>
+    <string name="label_TapToDownloadMessage">Tlanya download molaetsa</string>
+    <string name="label_TapToOpenFile">Tlanya ho bula faele</string>
+    <string name="label_TapToResumeDraft">Tlanya ho qalella molaetsa moralo</string>
+    <string name="label_TapToSendCredentialUpdate">Tlanya le ho tshwara ho romela credential diapdeite.</string>
+    <string name="label_TapToSlingKeys">Tlanya ho Sling Keys.</string>
+    <string name="label_targetAccountLabel">Mabitso Account</string>
+    <string name="label_TouchToConfigureBackupSettings">U ka \'na optionally thusa hore SafeSlinger iCloud bekapo a iOS Settings. Tlanya ea Etsoa konopo ha qetile.</string>
+    <string name="label_TouchToConfigureBackupSettingsAndroid">Ama ho configure bekapo di-setting.</string>
+    <string name="label_TouchToConfigureCacheTimeout">Ama ho configure polokelo timeout di-setting.</string>
+    <string name="label_undefinedTypeLabel">Unknown</string>
+    <string name="label_UnknownSender">Encrypted Sender</string>
+    <string name="label_UserName">User want-meet.ru Name</string>
+    <string name="label_WarnForgotPassphrase">Ho sireletsa ya hao ya data, SafeSlinger ha e boloka hao tselaitshupo kae kapa kae bakeng sa le ho fola. U ka \'na feela fihlella baamohedi ba bang le melaetsa a bōpa tlas\'a tšoanang tselaitshupo ho kena. Leha ho le joalo, o ka \'na hlahisa e ncha moodle le tselaitshupo, joale pheta Sling Keys le hao baamohedi ba bang.</string>
+    <string name="label_WarnManagePassFollowsAreRecent">Latelang dikonopo tsa tla hlakolwa:</string>
+    <string name="label_WarnManagePassNoMoreRecent">Ha ho na morao-rao dikonopo tsa ho feta hao.</string>
+    <string name="label_WarnManagePassOnlyRecentDeleted">Feela dikonopo tsa generated morao tjena ho feta hao, generated ka %s, di ka hlakolwa.</string>
+    <string name="label_worktag">Mosebetsi oa</string>
+
+    <string name="menu_About">Ka</string>
+    <string name="menu_auto_attach_retrieval">Auto-lata diphuthelwana</string>
+    <string name="menu_auto_decrypt">Auto-boetsa sekeng</string>
+    <string name="menu_Change">Fetola</string>
+    <string name="menu_ChangePassphrase">Fetola Passphrase</string>
+    <string name="menu_ContactInviteEmail">Imeile ho tloha Contacts</string>
+    <string name="menu_ContactInviteSms">Sengolwa ho Contacts</string>
+    <string name="menu_CreateNew">Bōpa New</string>
+    <string name="menu_delete">Hlakola</string>
+    <string name="menu_deleteThread">Hlakola Thread %s</string>
+    <string name="menu_Details">View ntlha</string>
+    <string name="menu_DownloadDirectory">Download Directory</string>
+    <string name="menu_Edit">Edit</string>
+    <string name="menu_EditContact">Edit Contact</string>
+    <string name="menu_EditName">Edit Name</string>
+    <string name="menu_FileManager">File Manager</string>
+    <string name="menu_ForgotPassphrase">Lebala Passphrase?</string>
+    <string name="menu_Help">Thusa</string>
+    <string name="menu_Introduction">Introduction</string>
+    <string name="menu_language">Puo tn lefatshe</string>
+    <string name="menu_License">Laesense</string>
+    <string name="menu_link_contact_add">Add Contact Link</string>
+    <string name="menu_link_contact_change">Fetola Contact Link</string>
+    <string name="menu_Logout">Logo logout</string>
+    <string name="menu_ManagePassphrases">Ho laola Passphrases</string>
+    <string name="menu_message_font_size">Molaetsa Font Size</string>
+    <string name="menu_messageCopyText">Khopi Text</string>
+    <string name="menu_messageForward">Pele ka Bophelo</string>
+    <string name="menu_PrivacyPolicy">Leano La Lekunutu</string>
+    <string name="menu_Remove">Tlosa</string>
+    <string name="menu_restore_default">Tsosolosa Default Settings</string>
+    <string name="menu_ringtone">Utloahala e</string>
+    <string name="menu_SelectShareApp">Add Contact Memo</string>
+    <string name="menu_sendFeedback">Romela Feedback</string>
+    <string name="menu_SendUpdate">Romela Update</string>
+    <string name="menu_Settings">Di-setting</string>
+    <string name="menu_ShowTutorial">Show Tutorial</string>
+    <string name="menu_TagComposeMessage">Compose</string>
+    <string name="menu_TagExchange">Letjeketjane Keys</string>
+    <string name="menu_TagListMessages">Melaetsa</string>
+    <string name="menu_UseAnother">Sebelisa e \'ngoe e</string>
+    <string name="menu_UseContactPerson">Sebelisa Contact %s</string>
+    <string name="menu_UseNoContact">Sebelisa Name Ke feela</string>
+    <string name="menu_UseProfilePerson">Sebelisa Profile %s</string>
+    <string name="menu_vibrate">Vibrate</string>
+
+    <string name="prog_decrypting">decrypting…</string>
+    <string name="prog_encrypting">encrypting…</string>
+    <string name="prog_FileSent">molaetsa romela, letetse a arabela…</string>
+    <string name="prog_findingKey">ho fumana moodle…</string>
+    <string name="prog_GeneratingKey">generating key, e sena se ka nka ha a ntse a…</string>
+    <string name="prog_generatingSignature">generating tshaeno…</string>
+    <string name="prog_loadingContent">play loading dikahare…</string>
+    <string name="prog_pending">ntseng…</string>
+    <string name="prog_ReceivingFile">amohela encrypted faele…</string>
+    <string name="prog_RequestingFile">kōpa encrypted faele…</string>
+    <string name="prog_RequestingMessage">kōpa encrypted molaetsa…</string>
+    <string name="prog_RequestingPushReg">kōpa ya push ngodiso…</string>
+    <string name="prog_SavingContactsToAddressBook">updating buka ya diaterese…</string>
+    <string name="prog_SavingContactsToKeyDatabase">updating moodle K…</string>
+    <string name="prog_SearchingForBackup">batla bekapo…</string>
+    <string name="prog_SendingFile">romela encrypted %s…</string>
+    <string name="prog_verifyingIntegrity">verifying botsepehi…</string>
+    <string name="prog_verifyingSignature">verifying tshaeno…</string>
+
+    <string name="section_advanced">E tsoetseng pele</string>
+    <string name="section_backup">Bekapo</string>
+    <string name="section_general">Kakaretso</string>
+    <string name="section_notification">Notifications</string>
+    <string name="section_storage">Storage</string>
+
+    <string name="state_BackupRestored">Bekapo tsosolosoa.</string>
+    <string name="state_FileDeleted">Hlakolwa faele %s.</string>
+    <string name="state_FileSent">Molaetsa o ile a romela.</string>
+    <string name="state_InvitationAdded">Memo a phaella ka.</string>
+    <string name="state_MessageSavedAsDraft">Molaetsa pholosoa moralo.</string>
+    <string name="state_MessagesDeleted">Fihlela ho %d melaetsa hlakolwa.</string>
+    <string name="state_MessagesSent">Fihlela ho %d melaetsa o ile a romela.</string>
+    <string name="state_PassphraseUpdated">Tselaitshupo ntjhafatswa.</string>
+    <string name="state_RecipientsDeleted">Fihlela ho %d baamohedi ba bang hlakolwa.</string>
+    <string name="state_SomeContactsImported">%s mabitso imported.</string>
+    <string name="state_TextCopiedToClipboard">Mongolo kopitsa ho peelodimamaretswa.</string>
+
+    <string name="text_About">SafeSlinger e reretsoe ho habonolo kopanela boitsebiso ya data, ka motho kapa ka fono, e authenticated, malapeng a, \'me tse peli. Mong le e mong motho eo o kopanela le baka e sireletsehileng bofelo-le-bofelo kanale romela melaetsa.</string>
+    <string name="text_About1">Habonolo fapanyetsana tlhahisoleseding ya lebitso le batho ba bang</string>
+    <string name="text_About2">Sireletsehile Sling litemana tse, difoto, letho!</string>
+    <string name="text_About3">Matla cryptography sireletsa tshedimosetso ya gago</string>
+    <string name="text_About_Short">SafeSlinger: Bua 3 mantsoe \'me le ka ho sa feleng buisana ka khotso.</string>
+    <string name="text_AboutEmail">imeile: %s</string>
+    <string name="text_AboutFeat">Likaroloana:</string>
+    <string name="text_AboutWeb">ho web: %s</string>
+    <string name="text_DevelopedBy">Ntshetswa pele ke:</string>
+    <string name="text_KeywordExchange">Exchange</string>
+    <string name="text_KeywordIdentity">Boitsebiso</string>
+    <string name="text_KeywordKey">Key</string>
+    <string name="text_KeywordMessaging">Melaetsa</string>
+    <string name="text_KeywordPrivacy">Privacy</string>
+    <string name="text_KeywordSecurity">Tshireletso</string>
+    <string name="text_LanguagesProvidedBy">Ka lipuo a fana ke:</string>
+    <string name="text_LocalizationRepo">fetolela: %s</string>
+    <string name="text_RelatedSearchTerms">Amanang le Terms:</string>
+    <string name="text_Requirements">Ditlhoko:</string>
+    <string name="text_Requirements1">Lokela ho hlomamisa ka bonyane ba 2 disebediswa tse ding.</string>
+    <string name="text_Requirements2">E Internet mabapi e lokela ho ba le mafolofolo.</string>
+    <string name="text_SourceCodeRepo">bulehileng source: %s</string>
+    <string name="text_WhatsNew">Botsitso fixes.</string>
+
+    <string name="title_About">Ka</string>
+    <string name="title_camera">Khamera</string>
+    <string name="title_ChooseDirectory">Khetha Directory</string>
+    <string name="title_ChooseFileLoad">Khetha Your kamano</string>
+    <string name="title_comments">Comments/Lipotso</string>
+    <string name="title_Error">Phoso</string>
+    <string name="title_ExchangeWalkthrough">Letjeketjane Keys mothusi</string>
+    <string name="title_FileOptions">Sephuthelwana Options</string>
+    <string name="title_find">Tlhophiso</string>
+    <string name="title_font_size">Khetha saese ya fonto e</string>
+    <string name="title_home">Qala Exchange</string>
+    <string name="title_HomePanel">Home</string>
+    <string name="title_MessageDetail">Molaetsa</string>
+    <string name="title_Messages">Melaetsa</string>
+    <string name="title_MyIdentity">Ea botho Contact</string>
+    <string name="title_NotifyFileAvailable">SafeSlinger Molaetsa Available</string>
+    <string name="title_NotifyMulFileAvailable">Fihlela ho %d SafeSlinger Melaetsa Available</string>
+    <string name="title_passphrase">Tselaitshupo</string>
+    <string name="title_photoalbum">Photo photo photo photo Album</string>
+    <string name="title_photolibary">Photo photo photo photo Library</string>
+    <string name="title_PickRecipient">Baamohedi ba bang</string>
+    <string name="title_Question">Potso</string>
+    <string name="title_RecipientDetail">Moamohedi ntlha</string>
+    <string name="title_save">Bofelo Exchange</string>
+    <string name="title_SaveFileAs">Pholosa File Ha e</string>
+    <string name="title_SecureIntroduction">Sireletsehile Introduction</string>
+    <string name="title_SecureIntroductionInvite">Boloka Introduction Memo!!!!</string>
+    <string name="title_SelectSource">Romela Options:</string>
+    <string name="title_SendFile">Romela</string>
+    <string name="title_sharingfolder">Ho kopanela Folder</string>
+    <string name="title_soundrecoder">Molumo rekotara</string>
+    <string name="title_TextInviteMsg">SafeSlinger Memo</string>
+    <string name="title_Threads">Threads</string>
+    <string name="title_Warn">Temoso</string>
+
+</resources>

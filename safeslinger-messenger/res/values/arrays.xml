@@ -119,6 +119,7 @@
         <item>ייִדיש</item>
         <item>Jawa</item>
         <item>ქართული</item>
+        <item>қазақ</item>
         <item>ខ្មែរ</item>
         <item>ಕನ್ನಡ</item>
         <item>한국어</item>
@@ -126,39 +127,48 @@
         <item>ພາສາລາວ</item>
         <item>Lietuvių</item>
         <item>Latviešu</item>
+        <item>Malagasy</item>
         <item>te reo Māori</item>
         <item>Македонски</item>
+        <item>മലയാളം</item>
         <item>Монгол</item>
         <item>मराठी</item>
         <item>Melayu</item>
         <item>Malti</item>
+        <item>ဗမာစာ</item>
         <item>नेपाली</item>
         <item>Nederlands</item>
         <item>Norsk</item>
+        <item>Chinyanja</item>
         <item>ਪੰਜਾਬੀ</item>
         <item>Polski</item>
         <item>Português</item>
         <item>Română</item>
         <item>Русский</item>
+        <item>සිංහල</item>
         <item>Slovenčina</item>
         <item>Slovenščina</item>
         <item>Soomaaliga</item>
         <item>Shqip</item>
         <item>Српски</item>
+        <item>Sesotho</item>
+        <item>Basa Sunda</item>
         <item>Svenska</item>
         <item>Kiswahili</item>
         <item>தமிழ்</item>
         <item>తెలుగు</item>
+        <item>тоҷикӣ</item>
         <item>ภาษาไทย</item>
         <item>Tagalog</item>
         <item>Türkçe</item>
         <item>Українська</item>
         <item>اردو</item>
+        <item>O‘zbek</item>
         <item>Việt</item>
         <item>Yorùbá</item>
-        <item>中文 (官话)</item>
         <item>中文 (中国)</item>
         <item>中文 (台灣)</item>
+        <item>中文 (官话)</item>
         <item>isiZulu</item>
     </string-array>
     <string-array name="language_values" translatable="false">
@@ -204,6 +214,7 @@
         <item>ji</item>
         <item>jv</item>
         <item>ka</item>
+        <item>kk</item>
         <item>km</item>
         <item>kn</item>
         <item>ko</item>
@@ -211,39 +222,48 @@
         <item>lo</item>
         <item>lt</item>
         <item>lv</item>
+        <item>mg</item>
         <item>mi</item>
         <item>mk</item>
+        <item>ml</item>
         <item>mn</item>
         <item>mr</item>
         <item>ms</item>
         <item>mt</item>
+        <item>my</item>
         <item>ne</item>
         <item>nl</item>
         <item>no</item>
+        <item>ny</item>
         <item>pa</item>
         <item>pl</item>
         <item>pt</item>
         <item>ro</item>
         <item>ru</item>
+        <item>si</item>
         <item>sk</item>
         <item>sl</item>
         <item>so</item>
         <item>sq</item>
         <item>sr</item>
+        <item>st</item>
+        <item>su</item>
         <item>sv</item>
         <item>sw</item>
         <item>ta</item>
         <item>te</item>
+        <item>tg</item>
         <item>th</item>
         <item>tl</item>
         <item>tr</item>
         <item>uk</item>
         <item>ur</item>
+        <item>uz</item>
         <item>vi</item>
         <item>yo</item>
-        <item>zh</item>
         <item>zh_CN</item>
         <item>zh_TW</item>
+        <item>zh</item>
         <item>zu</item>
     </string-array>
 
