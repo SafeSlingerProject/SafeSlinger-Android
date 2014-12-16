@@ -33,51 +33,10 @@
     android:weightSum="2" >
 
     <LinearLayout
-        android:id="@+id/TopFrame"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/size_5dp"
-        android:layout_weight="0.75"
-        android:orientation="horizontal"
-        android:weightSum="2" >
-
-        <ImageView
-            android:id="@+id/PassImageViewCylab"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.00"
-            android:contentDescription="@string/label_Photo"
-            android:scaleType="fitStart"
-            android:src="@drawable/logo_cylab_large" >
-        </ImageView>
-
-        <ImageView
-            android:id="@+id/PassImageViewIcon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.95"
-            android:contentDescription="@string/label_Photo"
-            android:src="@drawable/logo_safeslinger_large" >
-        </ImageView>
-
-        <ImageButton
-            android:id="@+id/PassButtonHelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|right"
-            android:layout_weight="0.05"
-            android:background="@color/white"
-            android:contentDescription="@string/menu_Help"
-            android:src="@drawable/ic_information" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/BottomFrame"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/size_5dp"
-        android:layout_weight="1.25"
         android:orientation="horizontal"
         android:weightSum="2" >
 
@@ -89,23 +48,56 @@
             android:layout_weight="1"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/PassTextViewAppName"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal|bottom"
-                android:text="@string/app_name"
-                android:textSize="@dimen/text_size_40" >
-            </TextView>
+            <ImageView
+                android:id="@+id/PassImageViewCylab"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_weight="3"
+                android:contentDescription="@string/label_Photo"
+                android:scaleType="fitStart"
+                android:src="@drawable/logo_cylab_large" />
 
-            <TextView
-                android:id="@+id/PassTextViewVersion"
+            <LinearLayout
+                android:id="@+id/TitleFrame"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal|top"
-                android:textIsSelectable="false"
-                android:textSize="@dimen/text_size_small" >
-            </TextView>
+                android:layout_margin="@dimen/size_5dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/PassTextViewAppName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|bottom"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/text_size_40" />
+
+                <TextView
+                    android:id="@+id/PassTextViewVersion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/text_size_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/PassImageViewIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.90"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_safeslinger_large" >
+                </ImageView>
+            </LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/MenuFrame"
@@ -116,8 +108,11 @@
                     android:id="@+id/PassFrameButtonForgot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true" >
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_5dp" >
 
                     <Button
                         android:id="@+id/PassButtonForgot"
@@ -133,6 +128,16 @@
                         android:textIsSelectable="false"
                         android:textSize="@dimen/text_size_small" />
                 </RelativeLayout>
+
+                <ImageButton
+                    android:id="@+id/PassButtonHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:contentDescription="@string/menu_Help"
+                    android:src="@drawable/ic_information" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -151,6 +156,16 @@
                 android:gravity="center_vertical"
                 android:textSize="@dimen/text_size_small" >
             </Spinner>
+
+            <EditText
+                android:id="@+id/EditTextPassphraseConfirm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_PassHintCurrent"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:privateImeOptions="nm"
+                android:textSize="@dimen/text_size_msg" />
 
             <EditText
                 android:id="@+id/EditTextPassphrase"

@@ -249,7 +249,8 @@ public final class FindContactActivity extends BaseActivity {
             return;
         }
 
-        Intent data = new Intent().putExtra(extra.PASS_PHRASE, passPhrase2);
+        Intent data = new Intent();
+        data.putExtra(extra.PASS_PHRASE_NEW, passPhrase2);
         setResult(RESULT_OK, data);
         finish();
     }

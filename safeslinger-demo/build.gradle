@@ -1,0 +1,24 @@
+
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.1'
+
+    defaultConfig {
+        minSdkVersion 4
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    dependencies {
+        compile project(':safeslinger-exchange')
+    }
+}

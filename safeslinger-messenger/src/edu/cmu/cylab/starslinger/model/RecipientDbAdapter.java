@@ -176,8 +176,13 @@ public class RecipientDbAdapter {
 
     private Cursor query(String table, String[] columns, String selection, String[] selectionArgs,
             String groupBy, String having, String orderBy) {
+
+        // TODO: Caused by: java.lang.IllegalStateException: attempt to re-open
+        // an already-closed object: SQLiteDatabase:
+        // /data/data/edu.cmu.cylab.starslinger/databases/safeslinger.recipient
         Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
                 orderBy);
+
         // if (query != null) {
         // MyLog.d(TAG, query.getCount() + " " + table + " " + selection + " " +
         // selectionArgs

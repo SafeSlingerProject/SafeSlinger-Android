@@ -162,7 +162,8 @@ public class SafeSlingerConfig {
         public static final String MESSAGE_ROW_ID = "MessageRowId";
         public static final String INBOX_ROW_ID = "InboxRowId";
         public static final String NAME = "Name";
-        public static final String PASS_PHRASE = "PassPhrase";
+        public static final String PASS_PHRASE_NEW = "PassPhraseNew";
+        public static final String PASS_PHRASE_OLD = "PassPhraseOld";
         public static final String PCT = "pct";
         public static final String PHOTO = "Photo";
         public static final String POSITION = "Position";
@@ -185,7 +186,6 @@ public class SafeSlingerConfig {
         public static final String TEXT_MESSAGE2 = "TextMessage2";
         public static final String THUMBNAIL = "Thumbnail";
         public static final String USER_TOTAL = "UserTotal";
-        public static final String VERIFY_PASS_PHRASE = "VerifyPassPhrase";
         public static final String RECIP_SOURCE = "RecipientSource";
         public static final String KEYID = "KeyId";
         public static final String INTRO_PUBKEY = "IntroPubKey";

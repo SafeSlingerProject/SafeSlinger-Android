@@ -93,8 +93,8 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
                 .setAutoCancel(true)//
                 .setContentTitle(contentTitle)//
                 .setContentText(contentText)//
-                .setNumber(visibleMsgCount)
-                .setVisibility(NotificationCompat.VISIBILITY_SECRET);; // API 11+
+                .setNumber(visibleMsgCount)//
+                .setVisibility(NotificationCompat.VISIBILITY_SECRET);
 
         try {
             builder.setLargeIcon(BitmapFactory.decodeResource(ctx.getResources(),

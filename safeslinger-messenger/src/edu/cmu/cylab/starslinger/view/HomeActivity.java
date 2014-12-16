@@ -168,7 +168,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private static final int VIEW_FINDCONTACT_ID = 190;
     private static final int VIEW_PASSPHRASE_ID = 220;
     private static final int VIEW_PASSPHRASE_CHANGE_ID = 230;
-    private static final int VIEW_PASSPHRASE_VERIFY_ID = 250;
     private static final int VIEW_SETTINGS_ID = 260;
     private static final int VIEW_SAVE_ID = 280;
     public static final int NOTIFY_NEW_MSG_ID = 500;
@@ -1809,50 +1808,40 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         switch (requestCode) {
 
             case VIEW_FINDCONTACT_ID:
-            case VIEW_PASSPHRASE_ID:
-            case VIEW_PASSPHRASE_VERIFY_ID:
             case VIEW_PASSPHRASE_CHANGE_ID:
+            case VIEW_PASSPHRASE_ID:
                 SafeSlinger.setPassphraseOpen(false);
                 switch (resultCode) {
                     case RESULT_OK:
-                        String pass = null;
                         if (data != null) {
-                            pass = data.getStringExtra(extra.PASS_PHRASE);
-                            if (pass != null) {
-                                String oldPass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
-                                        .getKeyIdString());
-
-                                // load key...or gen one
-                                boolean preExistingKey = doPassEntryCheck(pass, oldPass,
-                                        requestCode == VIEW_PASSPHRASE_CHANGE_ID);
+                            if (requestCode == VIEW_FINDCONTACT_ID) {
+                                String passNew = data.getStringExtra(extra.PASS_PHRASE_NEW);
+                                boolean preExistingKey = doPassEntryCheck(passNew, null, false);
                                 if (!preExistingKey) {
                                     CreateKeyTask createKey = new CreateKeyTask();
-                                    createKey.execute(pass);
+                                    createKey.execute(passNew);
                                     break;
                                 }
+                            } else if (requestCode == VIEW_PASSPHRASE_CHANGE_ID) {
+                                String passOld = data.getStringExtra(extra.PASS_PHRASE_OLD);
+                                String passNew = data.getStringExtra(extra.PASS_PHRASE_NEW);
+                                doPassEntryCheck(passNew, passOld, true);
+                            } else { // login
+                                String passOld = data.getStringExtra(extra.PASS_PHRASE_OLD);
+                                doPassEntryCheck(passOld, null, false);
+                            }
 
-                                // now enter changed one...
-                                if (requestCode == VIEW_PASSPHRASE_VERIFY_ID) {
-                                    String p = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
-                                            .getKeyIdString());
-                                    if (!TextUtils.isEmpty(p)) {
-                                        showPassPhrase(false, true);
-                                    } else {
-                                        showPassPhraseVerify();
-                                    }
-                                    break;
-                                }
+                            if (loadCurrentPassPhrase()) {
+                                processIntent(getIntent());
+                            }
 
-                                if (loadCurrentPassPhrase()) {
-                                    processIntent(getIntent());
-                                }
-
-                                // if requested, and logged in, try to decrypt
-                                // messages
-                                if (SafeSlingerPrefs.getAutoDecrypt()) {
-                                    DecryptPendingTask decryptPending = new DecryptPendingTask();
-                                    decryptPending.execute(pass);
-                                }
+                            // if requested, and logged in, try to decrypt
+                            // messages
+                            String passCached = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
+                                    .getKeyIdString());
+                            if (SafeSlingerPrefs.getAutoDecrypt() && !TextUtils.isEmpty(passCached)) {
+                                DecryptPendingTask decryptPending = new DecryptPendingTask();
+                                decryptPending.execute(passCached);
                             }
                         }
                         isSetupCheckComplete();
@@ -2013,7 +2002,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         // remove cached pass
                         SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
                         SafeSlinger.startCacheService(HomeActivity.this);
-                        showPassPhraseVerify();
+                        showPassPhrase(false, true);
                         break;
                     case SettingsActivity.RESULT_LOGOUT:
                         doManualLogout();
@@ -3429,24 +3418,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             intent.putExtra(extra.USER_TOTAL, SSUtil.getTotalUsers());
             intent.putExtra(extra.CREATE_PASS_PHRASE, create);
             intent.putExtra(extra.CHANGE_PASS_PHRASE, change);
-            intent.putExtra(extra.VERIFY_PASS_PHRASE, false);
-            int view = change ? VIEW_PASSPHRASE_CHANGE_ID : VIEW_PASSPHRASE_ID;
-            startActivityForResult(intent, view);
-            SafeSlinger.setPassphraseOpen(true);
-        }
-    }
-
-    private void showPassPhraseVerify() {
-        if (!SafeSlinger.isPassphraseOpen()) {
-            if (sHandler != null) {
-                sHandler.removeCallbacks(checkPassExpiration);
-            }
-            Intent intent = new Intent(HomeActivity.this, PassPhraseActivity.class);
-            intent.putExtra(extra.USER_TOTAL, SSUtil.getTotalUsers());
-            intent.putExtra(extra.CREATE_PASS_PHRASE, false);
-            intent.putExtra(extra.CHANGE_PASS_PHRASE, false);
-            intent.putExtra(extra.VERIFY_PASS_PHRASE, true);
-            startActivityForResult(intent, VIEW_PASSPHRASE_VERIFY_ID);
+            startActivityForResult(intent, change ? VIEW_PASSPHRASE_CHANGE_ID : VIEW_PASSPHRASE_ID);
             SafeSlinger.setPassphraseOpen(true);
         }
     }

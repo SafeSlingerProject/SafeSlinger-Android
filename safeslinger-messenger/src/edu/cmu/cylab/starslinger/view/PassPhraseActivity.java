@@ -77,11 +77,11 @@ public class PassPhraseActivity extends Activity {
     private Button mButtonForgot;
     private ImageButton mButtonHelp;
     private TextView mTextViewVersion;
-    private EditText mEditTextPassNext;
+    private EditText mEditTextPassOld;
+    private EditText mEditTextPassNew;
     private EditText mEditTextPassDone;
     private boolean mChangePassPhrase = false;
     private boolean mCreatePassPhrase = false;
-    private boolean mVerifyPassPhrase = false;
     private int mUserNumber = 0;
     private Handler mHandler;
     private final static int mMsPollInterval = 1000;
@@ -105,7 +105,8 @@ public class PassPhraseActivity extends Activity {
         mButtonHelp = (ImageButton) findViewById(R.id.PassButtonHelp);
         mSpinnerUser = (Spinner) findViewById(R.id.PassSpinnerUserName);
         mTextViewVersion = (TextView) findViewById(R.id.PassTextViewVersion);
-        mEditTextPassNext = (EditText) findViewById(R.id.EditTextPassphrase);
+        mEditTextPassOld = (EditText) findViewById(R.id.EditTextPassphraseConfirm);
+        mEditTextPassNew = (EditText) findViewById(R.id.EditTextPassphrase);
         mEditTextPassDone = (EditText) findViewById(R.id.EditTextPassphraseAgain);
 
         Intent intent = getIntent();
@@ -115,7 +116,6 @@ public class PassPhraseActivity extends Activity {
             userTotal = extras.getInt(extra.USER_TOTAL);
             mCreatePassPhrase = extras.getBoolean(extra.CREATE_PASS_PHRASE);
             mChangePassPhrase = extras.getBoolean(extra.CHANGE_PASS_PHRASE);
-            mVerifyPassPhrase = extras.getBoolean(extra.VERIFY_PASS_PHRASE);
         }
 
         mTextViewVersion.setText(SafeSlingerConfig.getVersionName());
@@ -129,23 +129,40 @@ public class PassPhraseActivity extends Activity {
         }
 
         if (mCreatePassPhrase) {
-            mEditTextPassNext.setVisibility(View.VISIBLE);
-            mEditTextPassNext.setHint(R.string.label_PassHintCreate);
+            mEditTextPassOld.setVisibility(View.GONE);
+
+            mEditTextPassNew.setVisibility(View.VISIBLE);
+            mEditTextPassNew.setHint(R.string.label_PassHintCreate);
+
+            mEditTextPassDone.setVisibility(View.VISIBLE);
             mEditTextPassDone.setHint(R.string.label_PassHintRepeat);
+
             mButtonForgot.setVisibility(View.INVISIBLE);
         } else if (mChangePassPhrase) {
-            mEditTextPassNext.setVisibility(View.VISIBLE);
-            mEditTextPassNext.setHint(R.string.label_PassHintChange);
+            mEditTextPassOld.setVisibility(View.VISIBLE);
+            mEditTextPassOld.setHint(R.string.label_PassHintCurrent);
+
+            mEditTextPassNew.setVisibility(View.VISIBLE);
+            mEditTextPassNew.setHint(R.string.label_PassHintChange);
+
+            mEditTextPassDone.setVisibility(View.VISIBLE);
             mEditTextPassDone.setHint(R.string.label_PassHintRepeat);
+
             mButtonForgot.setVisibility(View.INVISIBLE);
-        } else {
-            mEditTextPassNext.setVisibility(View.GONE);
-            if (mVerifyPassPhrase) {
-                mEditTextPassDone.setHint(R.string.label_PassHintCurrent);
-            } else {
-                mEditTextPassDone.setHint(R.string.label_PassHintEnter);
-            }
+
+            mHandler = new Handler();
+            mHandler.removeCallbacks(checkBackoffRelease);
+            mHandler.post(checkBackoffRelease);
+        } else { // login
+            mEditTextPassOld.setVisibility(View.GONE);
+
+            mEditTextPassNew.setVisibility(View.GONE);
+
+            mEditTextPassDone.setVisibility(View.VISIBLE);
+            mEditTextPassDone.setHint(R.string.label_PassHintEnter);
+
             mButtonForgot.setVisibility(View.VISIBLE);
+
             mHandler = new Handler();
             mHandler.removeCallbacks(checkBackoffRelease);
             mHandler.post(checkBackoffRelease);
@@ -256,9 +273,10 @@ public class PassPhraseActivity extends Activity {
     }
 
     private void doValidatePassphrase() {
+        String passPhrase3 = "" + mEditTextPassOld.getText();
         String passPhrase2 = "" + mEditTextPassDone.getText();
         if (mChangePassPhrase || mCreatePassPhrase) {
-            String passPhrase1 = "" + mEditTextPassNext.getText();
+            String passPhrase1 = "" + mEditTextPassNew.getText();
             if (!passPhrase1.equals(passPhrase2)) {
                 showNote(R.string.error_passPhrasesDoNotMatch);
                 return;
@@ -271,7 +289,16 @@ public class PassPhraseActivity extends Activity {
                 return;
             }
         }
-        Intent data = new Intent().putExtra(extra.PASS_PHRASE, passPhrase2);
+        Intent data = new Intent();
+        if (mCreatePassPhrase) {
+            data.putExtra(extra.PASS_PHRASE_NEW, passPhrase2);
+        } else if (mChangePassPhrase) {
+            data.putExtra(extra.PASS_PHRASE_OLD, passPhrase3);
+            data.putExtra(extra.PASS_PHRASE_NEW, passPhrase2);
+        } else { // login
+            data.putExtra(extra.PASS_PHRASE_OLD, passPhrase2);
+        }
+
         setResult(RESULT_OK, data);
         finish();
     }
@@ -296,15 +323,12 @@ public class PassPhraseActivity extends Activity {
                 if (mCreatePassPhrase) {
                     mEditTextPassDone.setHint(R.string.label_PassHintRepeat);
                 } else if (mChangePassPhrase) {
-                    mEditTextPassNext.setVisibility(View.VISIBLE);
                     mEditTextPassDone.setHint(R.string.label_PassHintRepeat);
-                } else if (mVerifyPassPhrase) {
-                    mEditTextPassDone.setHint(R.string.label_PassHintCurrent);
-                } else {
+                } else { // login
                     mEditTextPassDone.setHint(R.string.label_PassHintEnter);
                 }
             }
-            mEditTextPassNext.setEnabled(enabled);
+            mEditTextPassNew.setEnabled(enabled);
             mEditTextPassDone.setEnabled(enabled);
             mButtonOk.setEnabled(enabled);
 
