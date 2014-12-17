@@ -111,10 +111,18 @@ public class MessageRow extends MessageData {
     }
 
     public boolean isFileOpenable() {
+        if (!TextUtils.isEmpty(mFileType)) {
 
-        if (!TextUtils.isEmpty(mFileType)
-                && !mFileType.startsWith(SafeSlingerConfig.MIMETYPE_CLASS + "/")) {
+            // incoming safeslinger files may be in database encoded
+            if (mFileType.startsWith(SafeSlingerConfig.MIMETYPE_CLASS + "/")) {
+                if (mInbox && mStatus == MessageDbAdapter.MESSAGE_STATUS_FILE_DECRYPTED) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
 
+            // real files on storage media
             if (!TextUtils.isEmpty(mFileDir)) {
                 File f = new File(mFileDir);
                 return f.exists() && f.length() > 0;

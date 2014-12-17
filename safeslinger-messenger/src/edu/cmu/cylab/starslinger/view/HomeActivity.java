@@ -1051,8 +1051,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             sendIntent.putExtra(extra.RECIPIENT_ROW_ID, mts[0].getRecipient().getRowId());
         } else {
             // multiple should show all threads
-            sendIntent.putExtra(extra.MESSAGE_ROW_ID, -1);
-            sendIntent.putExtra(extra.RECIPIENT_ROW_ID, -1);
+            sendIntent.putExtra(extra.MESSAGE_ROW_ID, -1L);
+            sendIntent.putExtra(extra.RECIPIENT_ROW_ID, -1L);
         }
         getApplicationContext().sendBroadcast(sendIntent);
 
@@ -1269,7 +1269,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         String text = null;
         if (data != null) {
             text = data.getString(extra.TEXT_MESSAGE);
-            long rowIdRecipient = data.getLong(extra.RECIPIENT_ROW_ID, -1);
+            long rowIdRecipient = data.getLong(extra.RECIPIENT_ROW_ID, -1L);
             if (rowIdRecipient > -1) {
                 RecipientDbAdapter dbRecipient = RecipientDbAdapter
                         .openInstance(getApplicationContext());
@@ -1383,9 +1383,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         long rowIdInbox = -1;
         if (data != null) {
             text = data.getString(extra.TEXT_MESSAGE);
-            rowIdMessage = data.getLong(extra.MESSAGE_ROW_ID, -1);
-            rowIdInbox = data.getLong(extra.INBOX_ROW_ID, -1);
-            long rowIdRecipient = data.getLong(extra.RECIPIENT_ROW_ID, -1);
+            rowIdMessage = data.getLong(extra.MESSAGE_ROW_ID, -1L);
+            rowIdInbox = data.getLong(extra.INBOX_ROW_ID, -1L);
+            long rowIdRecipient = data.getLong(extra.RECIPIENT_ROW_ID, -1L);
             if (rowIdRecipient > -1) {
                 RecipientDbAdapter dbRecipient = RecipientDbAdapter
                         .openInstance(getApplicationContext());
@@ -1550,6 +1550,32 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
                     refreshView();
+                }
+                break;
+            case MessagesFragment.RESULT_PROCESS_SSMIME:
+                MessageData ssFile = new MessageData();
+                ssFile.setRowId(rowIdMessage);
+                ssFile.setMsgHash(data.getString(extra.PUSH_MSG_HASH));
+                ssFile.setFileName(data.getString(extra.PUSH_FILE_NAME));
+                ssFile.setFileType(data.getString(extra.PUSH_FILE_TYPE));
+                ssFile.setFileSize(data.getInt(extra.PUSH_FILE_SIZE, 0));
+
+                byte[] rawFile = dbMessage.getRawFile(rowIdMessage);
+                if (rawFile != null) {
+                    // new ss-mime way: do separate file load
+                    ssFile.setFileData(rawFile);
+                    doProcessSafeSlingerMimeType(ssFile);
+                } else {
+                    // old ss-mime way: complete re-download
+                    ssFile.setFileData(null);
+
+                    if (ssFile.getMsgHash() != null && ssFile.getFileName() != null) {
+                        GetFileTask getFileTask = new GetFileTask();
+                        getFileTask.execute(ssFile);
+                    } else {
+                        showNote(R.string.error_InvalidIncomingMessage);
+                        refreshView();
+                    }
                 }
                 break;
         }
@@ -1888,7 +1914,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         RecipientDbAdapter dbRecipient = RecipientDbAdapter
                                 .openInstance(getApplicationContext());
-                        long rowIdRecipient = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
+                        long rowIdRecipient = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1L);
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient);
                         if (c != null) {
                             d.setRecip(new RecipientRow(c));
@@ -1994,7 +2020,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // TODO: find better update for <= 2.3
                     // startActivity(getIntent());
                     // finish();
-                    refreshView();
                 }
 
                 switch (resultCode) {
@@ -2407,6 +2432,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         String[] types = recvMsg.getFileType().split("/");
         if (types.length == 2) {
             if (types[1].compareToIgnoreCase(SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO) == 0) {
+                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
 
                 byte[] vcard = recvMsg.getFileData();
 
@@ -2455,7 +2481,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 RecipientRow exchRecip = null;
                 MessageRow inviteMsg = null;
 
-                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
                 Cursor c = dbMessage.fetchMessageSmall(recvMsg.getRowId());
                 if (c != null) {
                     inviteMsg = new MessageRow(c, false);
@@ -2550,8 +2575,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     showNote(String
                             .format(getString(R.string.state_SomeContactsImported), imported));
                 }
-                // doSelectRecipientPostExchange(args, recipSource);
-                sendAutomaticMessage(args, recipSource);
+
+                // auto verify message only for direct slings, not introductions
+                if (recipSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE) {
+                    sendAutomaticMessage(args, recipSource);
+                }
             } else {
                 showNote(result);
             }
@@ -2888,6 +2916,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         return getString(R.string.error_UnableToUpdateMessageInDB);
                     }
 
+                    // special attachments can be saved in db since they
+                    // are occasional and small, not like large attachments
+                    if (mRecvMsg.getFileType().startsWith(SafeSlingerConfig.MIMETYPE_CLASS + "/")) {
+                        if (!dbMessage.updateRawSafeSlingerFile(mRowId, rawFile)) {
+                            return getString(R.string.error_UnableToUpdateMessageInDB);
+                        }
+                    }
                 }
 
             } catch (OutOfMemoryError e) {

@@ -96,6 +96,7 @@ public class MessagesFragment extends Fragment {
     public static final int RESULT_FWDMESSAGE = 7127;
     public static final int RESULT_SEND = 7128;
     public static final int RESULT_SAVE = 7129;
+    public static final int RESULT_PROCESS_SSMIME = 7130;
 
     private List<ThreadData> mThreadList = new ArrayList<ThreadData>();
     private List<MessageRow> mMessageList = new ArrayList<MessageRow>();
@@ -145,8 +146,8 @@ public class MessagesFragment extends Fragment {
         long recipRowId = 1;
 
         if (extras != null) {
-            msgRowId = extras.getLong(extra.MESSAGE_ROW_ID, -1);
-            recipRowId = extras.getLong(extra.RECIPIENT_ROW_ID, -1);
+            msgRowId = extras.getLong(extra.MESSAGE_ROW_ID, -1L);
+            recipRowId = extras.getLong(extra.RECIPIENT_ROW_ID, -1L);
 
             // set position to top when incoming message in
             // background...
@@ -831,7 +832,16 @@ public class MessagesFragment extends Fragment {
     }
 
     public void doOpenFile(MessageRow msg) {
-        if (SSUtil.isExternalStorageReadable()) {
+
+        if (msg.getFileType().startsWith(SafeSlingerConfig.MIMETYPE_CLASS + "/")) {
+            Intent intent = new Intent();
+            intent.putExtra(extra.PUSH_MSG_HASH, msg.getMsgHash());
+            intent.putExtra(extra.PUSH_FILE_NAME, msg.getFileName());
+            intent.putExtra(extra.PUSH_FILE_TYPE, msg.getFileType());
+            intent.putExtra(extra.PUSH_FILE_SIZE, msg.getFileSize());
+            intent.putExtra(extra.MESSAGE_ROW_ID, msg.getRowId());
+            sendResultToHost(RESULT_PROCESS_SSMIME, intent.getExtras());
+        } else if (SSUtil.isExternalStorageReadable()) {
             File f;
             if (!TextUtils.isEmpty(msg.getFileDir())) {
                 f = new File(msg.getFileDir());

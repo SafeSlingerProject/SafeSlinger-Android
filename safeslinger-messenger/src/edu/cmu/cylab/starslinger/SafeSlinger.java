@@ -138,6 +138,10 @@ public class SafeSlinger extends Application {
             PRNGFixes.apply();
         }
 
+        // failed message cleanup
+        CleanupFailedMessagesTask cleanFailedMsgs = new CleanupFailedMessagesTask();
+        cleanFailedMsgs.execute(new String());
+
         // alert for pending messages
         checkForPendingMessages();
 
@@ -316,10 +320,13 @@ public class SafeSlinger extends Application {
 
         output.append(debugData);
 
-        String filePath = SSUtil.makeDebugLoggingDir(this) + File.separator
-                + SafeSlingerConfig.FEEDBACK_TXT;
-
-        sendEmail(output.toString(), filePath);
+        if (SSUtil.isExternalStorageWritable()) {
+            String filePath = SSUtil.makeDebugLoggingDir(this) + File.separator
+                    + SafeSlingerConfig.FEEDBACK_TXT;
+            sendEmail(output.toString(), filePath);
+        } else {
+            sendEmail(output.toString(), null);
+        }
     }
 
     public void showFeedbackEmail(Activity act) {
@@ -334,10 +341,13 @@ public class SafeSlinger extends Application {
         }
         SafeSlinger.listThreads(rootGroup, "", output);
 
-        String filePath = SSUtil.makeDebugLoggingDir(this) + File.separator
-                + SafeSlingerConfig.FEEDBACK_TXT;
-
-        sendEmail(output.toString(), filePath);
+        if (SSUtil.isExternalStorageWritable()) {
+            String filePath = SSUtil.makeDebugLoggingDir(this) + File.separator
+                    + SafeSlingerConfig.FEEDBACK_TXT;
+            sendEmail(output.toString(), filePath);
+        } else {
+            sendEmail(output.toString(), null);
+        }
     }
 
     public void sendEmail(String feedback, String filePath) {
@@ -352,12 +362,16 @@ public class SafeSlinger extends Application {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         try {
-            BufferedWriter bos = new BufferedWriter(new FileWriter(filePath));
-            bos.write(feedback);
-            bos.flush();
-            bos.close();
-            Uri uri = Uri.fromFile(new File(filePath));
-            intent.putExtra(Intent.EXTRA_STREAM, uri);
+            if (!TextUtils.isEmpty(filePath)) {
+                BufferedWriter bos = new BufferedWriter(new FileWriter(filePath));
+                bos.write(feedback);
+                bos.flush();
+                bos.close();
+                Uri uri = Uri.fromFile(new File(filePath));
+                intent.putExtra(Intent.EXTRA_STREAM, uri);
+            } else {
+                intent.putExtra(Intent.EXTRA_TEXT, feedback);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -663,6 +677,38 @@ public class SafeSlinger extends Application {
                 // remove checking
                 SafeSlingerPrefs
                         .setPendingGetMessageBackoff(SafeSlingerPrefs.DEFAULT_PENDING_GETMSG_BACKOFF);
+            }
+            return null;
+        }
+    }
+
+    private class CleanupFailedMessagesTask extends AsyncTask<String, String, String> {
+
+        @Override
+        protected String doInBackground(String... arg0) {
+            MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
+            Cursor c = dbMessage.fetchAllMessagesQueued();
+            if (c != null) {
+                while (c.moveToNext()) {
+                    try {
+                        MessageData sendMsg = new MessageRow(c, true);
+
+                        // we can remove failed introductions, it is better if
+                        // the user starts over
+                        String[] types = sendMsg.getFileType().split("/");
+                        if (types.length == 2) {
+                            if (types[1]
+                                    .compareToIgnoreCase(SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO) == 0) {
+
+                                // queued draft should be removed
+                                dbMessage.deleteMessage(sendMsg.getRowId());
+                            }
+                        }
+                    } catch (OutOfMemoryError e) {
+                        e.printStackTrace();
+                    }
+                }
+                c.close();
             }
             return null;
         }

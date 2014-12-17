@@ -65,13 +65,12 @@ public class MessageDbAdapter {
     public static final String KEY_FILETYPE = "filetype"; // file mime type
     public static final String KEY_FILEDIR = "filedir"; // location file saved
     public static final String KEY_TEXT = "text"; // text message
+    public static final String KEY_RAWFILE = "file"; // special files (was enc)
     public static final String KEY_MSGHASH = "fileid_str"; // file retrieval id
     public static final String KEY_RETNOTIFY = "ret_notify"; // return notify
     public static final String KEY_RETPUSHTOKEN = "ret_pushtoken"; // ret. token
     public static final String KEY_RETRECEIPT = "ret_receipt"; // ret. receipt
 
-    @Deprecated
-    public static final String KEY_ENCFILE = "file";
     @Deprecated
     public static final String KEY_KEYIDLONG = "keyid";
     @Deprecated
@@ -355,6 +354,15 @@ public class MessageDbAdapter {
         }
     }
 
+    public boolean updateRawSafeSlingerFile(long rowId, byte[] rawFile) {
+        synchronized (SafeSlinger.sDataLock) {
+            ContentValues values = new ContentValues();
+            values.put(KEY_RAWFILE, rawFile);
+
+            return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;
+        }
+    }
+
     public boolean updateMessageFileLocation(long rowId, String filename, String filedir) {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
@@ -419,6 +427,24 @@ public class MessageDbAdapter {
             }, null, null, null, null, null);
             if (c != null) {
                 return c;
+            }
+            return null;
+        }
+    }
+
+    public Cursor fetchAllMessagesQueued() {
+        synchronized (SafeSlinger.sDataLock) {
+            String where = KEY_STATUS + "=" + MESSAGE_STATUS_QUEUED;
+            Cursor c = query(true, DATABASE_TABLE, new String[] {
+                    KEY_ROWID, KEY_DATE_RECV, KEY_DATE_SENT, KEY_ENCBODY, KEY_FILEDIR,
+                    KEY_MSGHASH_BLOB, KEY_FILELEN, KEY_FILENAME, KEY_FILETYPE, KEY_KEYIDLONG,
+                    KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
+                    KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
+            }, where, null, null, null, null, null);
+            if (c != null) {
+                if (c.moveToFirst()) {
+                    return c;
+                }
             }
             return null;
         }
@@ -594,6 +620,23 @@ public class MessageDbAdapter {
         }
     }
 
+    public byte[] getRawFile(long rowId) {
+        synchronized (SafeSlinger.sDataLock) {
+            byte[] rawFile = null;
+            String where = KEY_ROWID + "=" + rowId;
+            Cursor c = query(true, DATABASE_TABLE, new String[] {
+                    KEY_ROWID, KEY_RAWFILE
+            }, where, null, null, null, null, null);
+            if (c != null) {
+                if (c.moveToFirst()) {
+                    rawFile = c.getBlob(c.getColumnIndexOrThrow(KEY_RAWFILE));
+                }
+                c.close();
+            }
+            return rawFile;
+        }
+    }
+
     public int getActionRequiredMessageCountByThread(String keyId) throws SQLException {
         synchronized (SafeSlinger.sDataLock) {
             StringBuilder where = new StringBuilder();
@@ -722,4 +765,5 @@ public class MessageDbAdapter {
         }
         return status;
     }
+
 }

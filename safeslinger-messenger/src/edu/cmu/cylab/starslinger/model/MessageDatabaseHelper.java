@@ -63,7 +63,7 @@ public class MessageDatabaseHelper extends SQLiteOpenHelper {
             + MessageDbAdapter.KEY_FILETYPE + " text, " //
             + MessageDbAdapter.KEY_FILEDIR + " text, " //
             + MessageDbAdapter.KEY_TEXT + " text, " //
-            + MessageDbAdapter.KEY_ENCFILE + " blob, " //
+            + MessageDbAdapter.KEY_RAWFILE + " blob, " //
             + MessageDbAdapter.KEY_KEYID + " text, " //
             + MessageDbAdapter.KEY_MSGHASH + " text, " //
             + MessageDbAdapter.KEY_RETNOTIFY + " integer, " //

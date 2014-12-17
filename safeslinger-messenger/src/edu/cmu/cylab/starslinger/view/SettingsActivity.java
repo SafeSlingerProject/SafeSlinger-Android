@@ -592,8 +592,9 @@ public class SettingsActivity extends PreferenceActivity {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
                     recreate();
                 } else {
-                    startActivity(getIntent());
-                    finish();
+                    // TODO: find better update for <= 2.3
+                    // startActivity(getIntent());
+                    // finish();
                 }
                 return false;
             }
