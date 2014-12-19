@@ -317,10 +317,16 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
                     Cursor c = getContentResolver().query(Data.CONTENT_URI, null, where,
                             whereParameters, null);
                     if (c != null) {
-                        while (c.moveToNext()) {
-                            rawContactId = c.getString(c.getColumnIndex(Data.RAW_CONTACT_ID));
+                        try {
+                            if (c.moveToFirst()) {
+                                do {
+                                    rawContactId = c.getString(c
+                                            .getColumnIndex(Data.RAW_CONTACT_ID));
+                                } while (c.moveToNext());
+                            }
+                        } finally {
+                            c.close();
                         }
-                        c.close();
                     }
 
                     // for an update we have to be careful to prevent import

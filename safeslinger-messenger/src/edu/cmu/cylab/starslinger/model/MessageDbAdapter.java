@@ -176,11 +176,6 @@ public class MessageDbAdapter {
             String groupBy, String having, String orderBy) {
         Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
                 orderBy);
-        // if (query != null) {
-        // MyLog.d(TAG, query.getCount() + " " + table + " " + selection + " " +
-        // selectionArgs
-        // + " " + groupBy + " " + having + " " + orderBy);
-        // }
         return query;
     }
 
@@ -188,11 +183,6 @@ public class MessageDbAdapter {
             String[] selectionArgs, String groupBy, String having, String orderBy, String limit) {
         Cursor query = mDatabase.query(distinct, table, columns, selection, selectionArgs, groupBy,
                 having, orderBy, limit);
-        // if (query != null) {
-        // MyLog.d(TAG, query.getCount() + " " + table + " " + selection + " " +
-        // selectionArgs
-        // + " " + groupBy + " " + having + " " + orderBy + " " + limit);
-        // }
         return query;
     }
 
@@ -425,10 +415,7 @@ public class MessageDbAdapter {
             Cursor c = query(DATABASE_TABLE, new String[] {
                     KEY_ROWID, KEY_KEYIDLONG
             }, null, null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -445,12 +432,7 @@ public class MessageDbAdapter {
                     KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
                     KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
             }, where.toString(), null, null, null, null, null);
-            if (c != null) {
-                if (c.moveToFirst()) {
-                    return c;
-                }
-            }
-            return null;
+            return c;
         }
     }
 
@@ -463,12 +445,7 @@ public class MessageDbAdapter {
                     KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
                     KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
             }, where, null, null, null, null, null);
-            if (c != null) {
-                if (c.moveToFirst()) {
-                    return c;
-                }
-            }
-            return null;
+            return c;
         }
     }
 
@@ -489,9 +466,12 @@ public class MessageDbAdapter {
 
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }
@@ -518,34 +498,31 @@ public class MessageDbAdapter {
                     KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
                     KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
             }, where.toString(), null, null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
     public long fetchLastRecentMessageTime() {
         synchronized (SafeSlinger.sDataLock) {
-
             /*
              * SELECT MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
              * FROM table ORDER BY MessageDbAdapter.KEY_ROWID DESC LIMIT 1;
              */
-            Cursor cursor = query(DATABASE_TABLE, new String[] {
+            Cursor c = query(DATABASE_TABLE, new String[] {
                     MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
             }, null, null, null, null, MessageDbAdapter.KEY_ROWID + " DESC", "1");
-
-            if (cursor != null && cursor.getCount() > 0) {
-                cursor.moveToFirst();
-
-                long time = cursor.getLong(cursor.getColumnIndex(MessageDbAdapter.KEY_DATE_RECV));
-
-                return time;
+            if (c != null) {
+                try {
+                    if (c.moveToFirst()) {
+                        long time = c.getLong(c.getColumnIndex(MessageDbAdapter.KEY_DATE_RECV));
+                        return time;
+                    }
+                } finally {
+                    c.close();
+                }
             }
+            return -1;
         }
-
-        return -1;
     }
 
     public Cursor fetchMessageRecent(String keyId) {
@@ -570,10 +547,7 @@ public class MessageDbAdapter {
                     KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
                     KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
             }, where.toString(), null, groupBy, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -586,10 +560,7 @@ public class MessageDbAdapter {
                     KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
                     KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
             }, null, null, groupBy, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -604,9 +575,12 @@ public class MessageDbAdapter {
 
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }
@@ -616,9 +590,12 @@ public class MessageDbAdapter {
         synchronized (SafeSlinger.sDataLock) {
             Cursor c = query(DATABASE_TABLE, null, null, null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }
@@ -632,10 +609,13 @@ public class MessageDbAdapter {
                     KEY_ROWID, KEY_RAWFILE
             }, where, null, null, null, null, null);
             if (c != null) {
-                if (c.moveToFirst()) {
-                    rawFile = c.getBlob(c.getColumnIndexOrThrow(KEY_RAWFILE));
+                try {
+                    if (c.moveToFirst()) {
+                        rawFile = c.getBlob(c.getColumnIndexOrThrow(KEY_RAWFILE));
+                    }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
             return rawFile;
         }
@@ -667,9 +647,12 @@ public class MessageDbAdapter {
 
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }
@@ -695,9 +678,12 @@ public class MessageDbAdapter {
             where.append(")");
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }
@@ -725,13 +711,18 @@ public class MessageDbAdapter {
                     KEY_ROWID, KEY_SEEN, KEY_KEYID
             }, where.toString(), null, null, null, null);
             if (c != null) {
-                ContentValues values = new ContentValues();
-                values.put(KEY_SEEN, MESSAGE_IS_SEEN); // seen
-                while (c.moveToNext()) {
-                    long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
-                    update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null);
+                try {
+                    if (c.moveToFirst()) {
+                        ContentValues values = new ContentValues();
+                        values.put(KEY_SEEN, MESSAGE_IS_SEEN); // seen
+                        do {
+                            long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
+                            update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null);
+                        } while (c.moveToNext());
+                    }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         }
     }

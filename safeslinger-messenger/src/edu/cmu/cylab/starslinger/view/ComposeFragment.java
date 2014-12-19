@@ -220,8 +220,13 @@ public class ComposeFragment extends Fragment {
         mRecip = null;
         Cursor c = dbRecipient.fetchRecipient(mRowIdRecipient);
         if (c != null) {
-            mRecip = new RecipientRow(c);
-            c.close();
+            try {
+                if (c.moveToFirst()) {
+                    mRecip = new RecipientRow(c);
+                }
+            } finally {
+                c.close();
+            }
         }
 
         // load key here!

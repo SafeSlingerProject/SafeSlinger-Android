@@ -291,33 +291,39 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
             c = dbRecipient.fetchAllRecipientsIntro(mySecretKeyId, myPushToken, myName);
         }
         if (c != null) {
-            if (c.getCount() <= 0) {
-                // turn reminder on so they will know how to find recipients
-                SafeSlingerPrefs.setShowSlingKeysReminder(true);
+            try {
+                if (c.getCount() <= 0) {
+                    // turn reminder on so they will know how to find
+                    // recipients
+                    SafeSlingerPrefs.setShowSlingKeysReminder(true);
 
-                tvInstruct.setText(R.string.label_InstNoRecipients);
-                cbMostRecentOnly.setVisibility(View.GONE);
-            } else {
-                cbMostRecentOnly.setVisibility(View.VISIBLE);
-            }
-            while (c.moveToNext()) {
-                RecipientRow recipientRow = new RecipientRow(c);
-
-                boolean foundNewer = false;
-                // ignore if needed...
-                if (cbMostRecentOnly.isChecked() && !recipientRow.isInvited()) {
-                    int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
-                    if (newerRecips > 0) {
-                        // there are some newer keys, this should not be
-                        foundNewer = true;
-                    }
+                    tvInstruct.setText(R.string.label_InstNoRecipients);
+                    cbMostRecentOnly.setVisibility(View.GONE);
+                } else {
+                    cbMostRecentOnly.setVisibility(View.VISIBLE);
                 }
+                if (c.moveToFirst()) {
+                    do {
+                        RecipientRow recipientRow = new RecipientRow(c);
 
-                if (!foundNewer) {
-                    mContacts.add(recipientRow);
+                        boolean foundNewer = false;
+                        // ignore if needed...
+                        if (cbMostRecentOnly.isChecked() && !recipientRow.isInvited()) {
+                            int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
+                            if (newerRecips > 0) {
+                                // there are some newer keys, this should not be
+                                foundNewer = true;
+                            }
+                        }
+
+                        if (!foundNewer) {
+                            mContacts.add(recipientRow);
+                        }
+                    } while (c.moveToNext());
                 }
+            } finally {
+                c.close();
             }
-            c.close();
         }
 
         // display relative number of secured contacts...

@@ -754,16 +754,18 @@ public class ContactAccessorApi5 extends ContactAccessor {
     public boolean updateDataRow(Context ctx, String[] proj, String where, String[] args,
             ContentValues values) {
         Cursor c = ctx.getContentResolver().query(Data.CONTENT_URI, proj, where, args, null);
-
-        if (c.moveToFirst()) {
-            // remove old, including dupes
-            if (ctx.getContentResolver().delete(Data.CONTENT_URI, where, args) == 0) {
+        if (c != null) {
+            try {
+                if (c.moveToFirst()) {
+                    // remove old, including dupes
+                    if (ctx.getContentResolver().delete(Data.CONTENT_URI, where, args) == 0) {
+                        return false; // error
+                    }
+                }
+            } finally {
                 c.close();
-                return false; // error
             }
         }
-        c.close();
-
         if (ctx.getContentResolver().insert(Data.CONTENT_URI, values) != null)
             return true; // inserted a new entry or updated entry
         return false; // error

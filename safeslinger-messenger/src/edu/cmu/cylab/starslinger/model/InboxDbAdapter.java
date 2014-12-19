@@ -109,11 +109,6 @@ public class InboxDbAdapter {
             String groupBy, String having, String orderBy) {
         Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
                 orderBy);
-        // if (query != null) {
-        // MyLog.d(TAG, query.getCount() + " " + table + " " + selection + " " +
-        // selectionArgs
-        // + " " + groupBy + " " + having + " " + orderBy);
-        // }
         return query;
     }
 
@@ -128,11 +123,6 @@ public class InboxDbAdapter {
             String[] selectionArgs, String groupBy, String having, String orderBy, String limit) {
         Cursor query = mDatabase.query(distinct, table, columns, selection, selectionArgs, groupBy,
                 having, orderBy, limit);
-        // if (query != null) {
-        // MyLog.d(TAG, query.getCount() + " " + table + " " + selection + " " +
-        // selectionArgs
-        // + " " + groupBy + " " + having + " " + orderBy + " " + limit);
-        // }
         return query;
     }
 
@@ -145,11 +135,13 @@ public class InboxDbAdapter {
                 MessageDbAdapter.KEY_MSGHASH
             }, where, null, null, null, null, null);
             if (c != null) {
-                if (c.getCount() > 0) {
+                try {
+                    if (c.getCount() > 0) {
+                        return -1;
+                    }
+                } finally {
                     c.close();
-                    return -1;
                 }
-                c.close();
             }
             ContentValues values = new ContentValues();
             values.put(MessageDbAdapter.KEY_DATE_RECV, System.currentTimeMillis()); // Received
@@ -235,12 +227,7 @@ public class InboxDbAdapter {
                     MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
                     MessageDbAdapter.KEY_RETRECEIPT
             }, where, null, null, null, null, null);
-            if (c != null) {
-                if (c.moveToFirst()) {
-                    return c;
-                }
-            }
-            return null;
+            return c;
         }
     }
 
@@ -261,9 +248,12 @@ public class InboxDbAdapter {
             }
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }
@@ -291,10 +281,7 @@ public class InboxDbAdapter {
                     MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
                     MessageDbAdapter.KEY_RETRECEIPT
             }, where.toString(), null, null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -322,10 +309,7 @@ public class InboxDbAdapter {
                     MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
                     MessageDbAdapter.KEY_RETRECEIPT
             }, where.toString(), null, null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -357,10 +341,7 @@ public class InboxDbAdapter {
                     MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
                     MessageDbAdapter.KEY_RETRECEIPT
             }, where.toString(), null, null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -370,16 +351,21 @@ public class InboxDbAdapter {
              * SELECT MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
              * FROM table ORDER BY MessageDbAdapter.KEY_ROWID DESC LIMIT 1;
              */
-            Cursor cursor = query(DATABASE_TABLE, new String[] {
+            Cursor c = query(DATABASE_TABLE, new String[] {
                     MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
             }, null, null, null, null, MessageDbAdapter.KEY_ROWID + " DESC", "1");
-            if (cursor != null && cursor.getCount() > 0) {
-                cursor.moveToFirst();
-                long time = cursor.getLong(cursor.getColumnIndex(MessageDbAdapter.KEY_DATE_RECV));
-                return time;
+            if (c != null) {
+                try {
+                    if (c.moveToFirst()) {
+                        long time = c.getLong(c.getColumnIndex(MessageDbAdapter.KEY_DATE_RECV));
+                        return time;
+                    }
+                } finally {
+                    c.close();
+                }
             }
+            return -1;
         }
-        return -1;
     }
 
     public Cursor fetchInboxRecent(String keyId) {
@@ -411,10 +397,7 @@ public class InboxDbAdapter {
                     MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
                     MessageDbAdapter.KEY_RETRECEIPT
             }, where.toString(), null, groupBy, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -434,10 +417,7 @@ public class InboxDbAdapter {
                     MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
                     MessageDbAdapter.KEY_RETRECEIPT
             }, null, null, groupBy, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -452,9 +432,12 @@ public class InboxDbAdapter {
             where.append(")");
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }
@@ -486,9 +469,12 @@ public class InboxDbAdapter {
             where.append(")");
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }
@@ -518,13 +504,20 @@ public class InboxDbAdapter {
                     MessageDbAdapter.KEY_KEYID
             }, where.toString(), null, null, null, null);
             if (c != null) {
-                ContentValues values = new ContentValues();
-                values.put(MessageDbAdapter.KEY_SEEN, MessageDbAdapter.MESSAGE_IS_SEEN); // seen
-                while (c.moveToNext()) {
-                    long rowId = c.getLong(c.getColumnIndexOrThrow(MessageDbAdapter.KEY_ROWID));
-                    update(DATABASE_TABLE, values, MessageDbAdapter.KEY_ROWID + "=" + rowId, null);
+                try {
+                    if (c.moveToFirst()) {
+                        ContentValues values = new ContentValues();
+                        values.put(MessageDbAdapter.KEY_SEEN, MessageDbAdapter.MESSAGE_IS_SEEN); // seen
+                        do {
+                            long rowId = c.getLong(c
+                                    .getColumnIndexOrThrow(MessageDbAdapter.KEY_ROWID));
+                            update(DATABASE_TABLE, values,
+                                    MessageDbAdapter.KEY_ROWID + "=" + rowId, null);
+                        } while (c.moveToNext());
+                    }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         }
     }

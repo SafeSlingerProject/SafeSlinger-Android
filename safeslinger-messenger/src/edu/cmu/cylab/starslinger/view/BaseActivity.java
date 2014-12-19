@@ -185,16 +185,21 @@ public class BaseActivity extends ActionBarActivity {
         if (dataUri != null) {
             Cursor c = getContentResolver().query(dataUri, null, where, whereParameters, null);
             if (c != null) {
-                while (c.moveToNext()) {
-                    String newname = c.getString(c
-                            .getColumnIndexOrThrow(StructuredName.DISPLAY_NAME));
-                    boolean super_primary = (c.getInt(c
-                            .getColumnIndexOrThrow(StructuredName.IS_SUPER_PRIMARY)) != 0);
-                    if ((TextUtils.isEmpty(name) || super_primary)) {
-                        name = newname;
+                try {
+                    if (c.moveToFirst()) {
+                        do {
+                            String newname = c.getString(c
+                                    .getColumnIndexOrThrow(StructuredName.DISPLAY_NAME));
+                            boolean super_primary = (c.getInt(c
+                                    .getColumnIndexOrThrow(StructuredName.IS_SUPER_PRIMARY)) != 0);
+                            if ((TextUtils.isEmpty(name) || super_primary)) {
+                                name = newname;
+                            }
+                        } while (c.moveToNext());
                     }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         }
         return TextUtils.isEmpty(name) ? null : name;
@@ -218,15 +223,20 @@ public class BaseActivity extends ActionBarActivity {
         if (dataUri != null) {
             Cursor c = getContentResolver().query(dataUri, null, where, whereParameters, null);
             if (c != null) {
-                while (c.moveToNext()) {
-                    byte[] newphoto = c.getBlob(c.getColumnIndexOrThrow(Photo.PHOTO));
-                    boolean super_primary = (c.getInt(c
-                            .getColumnIndexOrThrow(Photo.IS_SUPER_PRIMARY)) != 0);
-                    if (newphoto != null && (photo == null || super_primary)) {
-                        photo = newphoto;
+                try {
+                    if (c.moveToFirst()) {
+                        do {
+                            byte[] newphoto = c.getBlob(c.getColumnIndexOrThrow(Photo.PHOTO));
+                            boolean super_primary = (c.getInt(c
+                                    .getColumnIndexOrThrow(Photo.IS_SUPER_PRIMARY)) != 0);
+                            if (newphoto != null && (photo == null || super_primary)) {
+                                photo = newphoto;
+                            }
+                        } while (c.moveToNext());
                     }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         }
         return photo;
@@ -245,8 +255,13 @@ public class BaseActivity extends ActionBarActivity {
                 .getApplication());
         Cursor c = dbRecipient.fetchRecipientByKeyId(publicKeyId);
         if (c != null) {
-            recip = new RecipientRow(c);
-            c.close();
+            try {
+                if (c.moveToFirst()) {
+                    recip = new RecipientRow(c);
+                }
+            } finally {
+                c.close();
+            }
         }
 
         if (recip != null) {
@@ -260,8 +275,11 @@ public class BaseActivity extends ActionBarActivity {
         Cursor c = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, null, null,
                 null, null);
         if (c != null) {
-            count = c.getCount();
-            c.close();
+            try {
+                count = c.getCount();
+            } finally {
+                c.close();
+            }
         }
         return count;
     }
@@ -294,16 +312,21 @@ public class BaseActivity extends ActionBarActivity {
 
             Cursor c = dbRecipient.fetchAllRecipientsMessage(mySecretKeyId, myPushToken, myName);
             if (c != null) {
-                while (c.moveToNext()) {
-                    RecipientRow recip = new RecipientRow(c);
-                    if (recip.isValidContactLink()) {
-                        String otherContactId = getContactIdByLookup(recip.getContactlu());
-                        if (contactId.equals(otherContactId)) {
-                            rowId = recip.getRowId();
-                        }
+                try {
+                    if (c.moveToFirst()) {
+                        do {
+                            RecipientRow recip = new RecipientRow(c);
+                            if (recip.isValidContactLink()) {
+                                String otherContactId = getContactIdByLookup(recip.getContactlu());
+                                if (contactId.equals(otherContactId)) {
+                                    rowId = recip.getRowId();
+                                }
+                            }
+                        } while (c.moveToNext());
                     }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         }
 
@@ -330,16 +353,21 @@ public class BaseActivity extends ActionBarActivity {
             Cursor c = dbRecipient.fetchAllRecipientsInvited(true, mySecretKeyId, myPushToken,
                     myName);
             if (c != null) {
-                while (c.moveToNext()) {
-                    RecipientRow recip = new RecipientRow(c);
-                    if (recip.isValidContactLink()) {
-                        String otherContactId = getContactIdByLookup(recip.getContactlu());
-                        if (contactId.equals(otherContactId)) {
-                            delRowIds.add(recip.getRowId());
-                        }
+                try {
+                    if (c.moveToFirst()) {
+                        do {
+                            RecipientRow recip = new RecipientRow(c);
+                            if (recip.isValidContactLink()) {
+                                String otherContactId = getContactIdByLookup(recip.getContactlu());
+                                if (contactId.equals(otherContactId)) {
+                                    delRowIds.add(recip.getRowId());
+                                }
+                            }
+                        } while (c.moveToNext());
                     }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
             for (Long rowId : delRowIds) {
                 if (dbRecipient.deleteRecipient(rowId)) {
@@ -365,10 +393,15 @@ public class BaseActivity extends ActionBarActivity {
         if (personUri != null) {
             Cursor c = getContentResolver().query(personUri, projection, null, null, null);
             if (c != null) {
-                while (c.moveToNext()) {
-                    contactId = c.getString(c.getColumnIndexOrThrow(BaseColumns._ID));
+                try {
+                    if (c.moveToFirst()) {
+                        do {
+                            contactId = c.getString(c.getColumnIndexOrThrow(BaseColumns._ID));
+                        } while (c.moveToNext());
+                    }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         }
 
@@ -389,13 +422,18 @@ public class BaseActivity extends ActionBarActivity {
         if (personUri != null) {
             Cursor c = getContentResolver().query(personUri, projection, null, null, null);
             if (c != null) {
-                while (c.moveToNext()) {
-                    byte[] photo = getContactPhoto(contactLookupKey);
-                    String name = getContactName(contactLookupKey);
-                    SlingerIdentity si = new SlingerIdentity();
-                    sc = SlingerContact.createContact(contactLookupKey, name, photo, si);
+                try {
+                    if (c.moveToFirst()) {
+                        do {
+                            byte[] photo = getContactPhoto(contactLookupKey);
+                            String name = getContactName(contactLookupKey);
+                            SlingerIdentity si = new SlingerIdentity();
+                            sc = SlingerContact.createContact(contactLookupKey, name, photo, si);
+                        } while (c.moveToNext());
+                    }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         }
         return sc;
@@ -413,12 +451,14 @@ public class BaseActivity extends ActionBarActivity {
 
         Cursor c = getContentResolver().query(Data.CONTENT_URI, null, where, whereParameters, null);
         if (c != null) {
-            while (c.moveToNext()) {
-                String lookup = c.getString(c.getColumnIndexOrThrow(Data.LOOKUP_KEY));
+            try {
+                if (c.moveToFirst()) {
+                    String lookup = c.getString(c.getColumnIndexOrThrow(Data.LOOKUP_KEY));
+                    return lookup;
+                }
+            } finally {
                 c.close();
-                return lookup;
             }
-            c.close();
         }
         return null;
     }
@@ -435,12 +475,14 @@ public class BaseActivity extends ActionBarActivity {
 
         Cursor c = getContentResolver().query(Data.CONTENT_URI, null, where, whereParameters, null);
         if (c != null) {
-            while (c.moveToNext()) {
-                String lookup = c.getString(c.getColumnIndexOrThrow(Data.LOOKUP_KEY));
+            try {
+                if (c.moveToFirst()) {
+                    String lookup = c.getString(c.getColumnIndexOrThrow(Data.LOOKUP_KEY));
+                    return lookup;
+                }
+            } finally {
                 c.close();
-                return lookup;
             }
-            c.close();
         }
         return null;
     }
@@ -462,17 +504,23 @@ public class BaseActivity extends ActionBarActivity {
                 + DatabaseUtils.sqlEscapeString("" + name);
         Cursor c = getContentResolver().query(Data.CONTENT_URI, whereParameters, where, null, null);
         if (c != null) {
-            while (c.moveToNext()) {
-                String tempLookup = c.getString(c.getColumnIndexOrThrow(StructuredName.LOOKUP_KEY));
-                String tempName = c.getString(c.getColumnIndexOrThrow(StructuredName.DISPLAY_NAME));
-                // String tempName = getContactName(tempId);
-                if (!TextUtils.isEmpty(tempName) && name.compareToIgnoreCase(tempName) == 0) {
-                    contactLookupKey = tempLookup;
-                    c.close();
-                    return contactLookupKey;
+            try {
+                if (c.moveToFirst()) {
+                    do {
+                        String tempLookup = c.getString(c
+                                .getColumnIndexOrThrow(StructuredName.LOOKUP_KEY));
+                        String tempName = c.getString(c
+                                .getColumnIndexOrThrow(StructuredName.DISPLAY_NAME));
+                        // String tempName = getContactName(tempId);
+                        if (!TextUtils.isEmpty(tempName) && name.compareToIgnoreCase(tempName) == 0) {
+                            contactLookupKey = tempLookup;
+                            return contactLookupKey;
+                        }
+                    } while (c.moveToNext());
                 }
+            } finally {
+                c.close();
             }
-            c.close();
         }
 
         return contactLookupKey;
@@ -492,15 +540,23 @@ public class BaseActivity extends ActionBarActivity {
                 + DatabaseUtils.sqlEscapeString("" + name);
         Cursor c = getContentResolver().query(Data.CONTENT_URI, whereParameters, where, null, null);
         if (c != null) {
-            while (c.moveToNext()) {
-                String tempLookup = c.getString(c.getColumnIndexOrThrow(StructuredName.LOOKUP_KEY));
-                String tempName = c.getString(c.getColumnIndexOrThrow(StructuredName.DISPLAY_NAME));
-                byte[] tempPhoto = getContactPhoto(tempLookup);
-                if (!TextUtils.isEmpty(tempLookup)) {
-                    contacts.add(new UseContactItem(tempName, tempPhoto, tempLookup, UCType.CONTACT));
+            try {
+                if (c.moveToFirst()) {
+                    do {
+                        String tempLookup = c.getString(c
+                                .getColumnIndexOrThrow(StructuredName.LOOKUP_KEY));
+                        String tempName = c.getString(c
+                                .getColumnIndexOrThrow(StructuredName.DISPLAY_NAME));
+                        byte[] tempPhoto = getContactPhoto(tempLookup);
+                        if (!TextUtils.isEmpty(tempLookup)) {
+                            contacts.add(new UseContactItem(tempName, tempPhoto, tempLookup,
+                                    UCType.CONTACT));
+                        }
+                    } while (c.moveToNext());
                 }
+            } finally {
+                c.close();
             }
-            c.close();
         }
 
         return contacts;
@@ -514,18 +570,21 @@ public class BaseActivity extends ActionBarActivity {
             Cursor c = getContentResolver().query(ContactsContract.Profile.CONTENT_URI, null, null,
                     null, null);
             if (c != null) {
-                if (c.moveToFirst()) {
-                    String tempLookup = c.getString(c
-                            .getColumnIndexOrThrow(ContactsContract.Profile.LOOKUP_KEY));
-                    String tempName = c.getString(c
-                            .getColumnIndexOrThrow(ContactsContract.Profile.DISPLAY_NAME));
-                    byte[] tempPhoto = getContactPhoto(tempLookup);
-                    if (!TextUtils.isEmpty(tempLookup)) {
-                        profile = new UseContactItem(tempName, tempPhoto, tempLookup,
-                                UCType.PROFILE);
+                try {
+                    if (c.moveToFirst()) {
+                        String tempLookup = c.getString(c
+                                .getColumnIndexOrThrow(ContactsContract.Profile.LOOKUP_KEY));
+                        String tempName = c.getString(c
+                                .getColumnIndexOrThrow(ContactsContract.Profile.DISPLAY_NAME));
+                        byte[] tempPhoto = getContactPhoto(tempLookup);
+                        if (!TextUtils.isEmpty(tempLookup)) {
+                            profile = new UseContactItem(tempName, tempPhoto, tempLookup,
+                                    UCType.PROFILE);
+                        }
                     }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         }
 
@@ -625,13 +684,16 @@ public class BaseActivity extends ActionBarActivity {
 
         Cursor c = getContentResolver().query(Data.CONTENT_URI, null, query, args, null);
         if (c != null) {
-            int rowsOutdated = c.getCount();
-            if (rowsOutdated > 0) {
-                MyLog.d(TAG, String.format("%d deprecated IM rows found", rowsOutdated));
-                int deletedRows = getContentResolver().delete(Data.CONTENT_URI, query, args);
-                MyLog.d(TAG, String.format("%d deprecated IM rows removed", deletedRows));
+            try {
+                int rowsOutdated = c.getCount();
+                if (rowsOutdated > 0) {
+                    MyLog.d(TAG, String.format("%d deprecated IM rows found", rowsOutdated));
+                    int deletedRows = getContentResolver().delete(Data.CONTENT_URI, query, args);
+                    MyLog.d(TAG, String.format("%d deprecated IM rows removed", deletedRows));
+                }
+            } finally {
+                c.close();
             }
-            c.close();
         }
         return true;
     }
@@ -781,11 +843,16 @@ public class BaseActivity extends ActionBarActivity {
         // seek multiple active keys under same name...
         Cursor c = dbRecipient.fetchAllPublicKeys();
         if (c != null) {
-            while (c.moveToNext()) {
-                RecipientRow recipientRow = new RecipientRow(c);
-                contacts.add(recipientRow);
+            try {
+                if (c.moveToFirst()) {
+                    do {
+                        RecipientRow recipientRow = new RecipientRow(c);
+                        contacts.add(recipientRow);
+                    } while (c.moveToNext());
+                }
+            } finally {
+                c.close();
             }
-            c.close();
         }
 
         // correct invalid notification types...
@@ -852,11 +919,16 @@ public class BaseActivity extends ActionBarActivity {
         // seek multiple active keys under same name...
         Cursor c = dbRecipient.fetchAllPublicKeys();
         if (c != null) {
-            while (c.moveToNext()) {
-                RecipientRow recipientRow = new RecipientRow(c);
-                contacts.add(recipientRow);
+            try {
+                if (c.moveToFirst()) {
+                    do {
+                        RecipientRow recipientRow = new RecipientRow(c);
+                        contacts.add(recipientRow);
+                    } while (c.moveToNext());
+                }
+            } finally {
+                c.close();
             }
-            c.close();
         }
 
         // do some lookup for new photos/names
@@ -1100,9 +1172,8 @@ public class BaseActivity extends ActionBarActivity {
             s.append(str("Read", m.isRead()));
             s.append(str("Seen", m.isSeen()));
             s.append(str(act, "EncBody", m.getEncBody()));
-            s.append(str(act, "FileHash", m.getFileHash()));
-
             s.append(str("Status", MessageDbAdapter.getStatusCode(m.getStatus())));
+            s.append(str(act, "FileHash", m.getFileHash()));
         }
 
         return s.toString();
@@ -1533,32 +1604,46 @@ public class BaseActivity extends ActionBarActivity {
         final ArrayList<HashMap<String, String>> contacts = new ArrayList<HashMap<String, String>>();
         ContentResolver cr = getContentResolver();
         Cursor c = cr.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
-        while (c.moveToNext()) {
-            String contactId = c.getString(c.getColumnIndex(BaseColumns._ID));
-            String contactLookupKey = c.getString(c
-                    .getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY));
-            String contactName = c.getString(c
-                    .getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+        if (c != null) {
+            try {
+                if (c.moveToFirst()) {
+                    do {
+                        String contactId = c.getString(c.getColumnIndex(BaseColumns._ID));
+                        String contactLookupKey = c.getString(c
+                                .getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY));
+                        String contactName = c.getString(c
+                                .getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
-            // Pull out every address for this particular contact
-            Cursor cm = cr.query(contentUri, null, contactId2 + " = " + contactId, null, null);
-            while (cm.moveToNext()) {
-                // Add address to our array
-                String data = cm.getString(cm.getColumnIndex(data2));
+                        // Pull out every address for this particular contact
+                        Cursor cm = cr.query(contentUri, null, contactId2 + " = " + contactId,
+                                null, null);
+                        if (cm != null) {
+                            try {
+                                if (cm.moveToFirst()) {
+                                    do {
+                                        // Add address to our array
+                                        String data = cm.getString(cm.getColumnIndex(data2));
 
-                HashMap<String, String> contact = new HashMap<String, String>();
-                contact.put(extra.CONTACT_LOOKUP_KEY, contactLookupKey);
-                contact.put(extra.NAME, contactName);
-                contact.put(extra.DATA, data);
+                                        HashMap<String, String> contact = new HashMap<String, String>();
+                                        contact.put(extra.CONTACT_LOOKUP_KEY, contactLookupKey);
+                                        contact.put(extra.NAME, contactName);
+                                        contact.put(extra.DATA, data);
 
-                if (!contacts.contains(contact)) {
-                    contacts.add(contact);
+                                        if (!contacts.contains(contact)) {
+                                            contacts.add(contact);
+                                        }
+                                    } while (cm.moveToNext());
+                                }
+                            } finally {
+                                cm.close();
+                            }
+                        }
+                    } while (c.moveToNext());
                 }
+            } finally {
+                c.close();
             }
-            cm.close();
         }
-        c.close();
-
         Collections.sort(contacts, new ContactNameMethodComparator());
 
         // Make an adapter to display the list
@@ -1729,10 +1814,15 @@ public class BaseActivity extends ActionBarActivity {
                 Cursor names = ctx.getContentResolver().query(uriName, accessor.getProjName(),
                         accessor.getQueryName(), null, null);
                 if (names != null) {
-                    while (names.moveToNext()) {
-                        accessor.addName(contact, names);
+                    try {
+                        if (names.moveToFirst()) {
+                            do {
+                                accessor.addName(contact, names);
+                            } while (names.moveToNext());
+                        }
+                    } finally {
+                        names.close();
                     }
-                    names.close();
                 }
             }
         }
@@ -1743,10 +1833,15 @@ public class BaseActivity extends ActionBarActivity {
             Cursor photos = ctx.getContentResolver().query(uriPhoto, accessor.getProjPhoto(),
                     accessor.getQueryPhoto(), null, null);
             if (photos != null) {
-                while (photos.moveToNext()) {
-                    accessor.addPhoto(contact, photos);
+                try {
+                    if (photos.moveToFirst()) {
+                        do {
+                            accessor.addPhoto(contact, photos);
+                        } while (photos.moveToNext());
+                    }
+                } finally {
+                    photos.close();
                 }
-                photos.close();
             }
         }
 
@@ -1756,10 +1851,15 @@ public class BaseActivity extends ActionBarActivity {
             Cursor phones = ctx.getContentResolver().query(uriPhone, accessor.getProjPhone(),
                     accessor.getQueryPhone(), null, null);
             if (phones != null) {
-                while (phones.moveToNext()) {
-                    accessor.addPhone(ctx, contact, phones, removeMatches);
+                try {
+                    if (phones.moveToFirst()) {
+                        do {
+                            accessor.addPhone(ctx, contact, phones, removeMatches);
+                        } while (phones.moveToNext());
+                    }
+                } finally {
+                    phones.close();
                 }
-                phones.close();
             }
         }
 
@@ -1769,10 +1869,15 @@ public class BaseActivity extends ActionBarActivity {
             Cursor ims = ctx.getContentResolver().query(uriIm, accessor.getProjIM(),
                     accessor.getQueryIM(), null, null);
             if (ims != null) {
-                while (ims.moveToNext()) {
-                    accessor.addIM(contact, ims, ctx, removeMatches);
+                try {
+                    if (ims.moveToFirst()) {
+                        do {
+                            accessor.addIM(contact, ims, ctx, removeMatches);
+                        } while (ims.moveToNext());
+                    }
+                } finally {
+                    ims.close();
                 }
-                ims.close();
             }
         }
 
@@ -1782,10 +1887,15 @@ public class BaseActivity extends ActionBarActivity {
             Cursor emails = ctx.getContentResolver().query(uriEmail, accessor.getProjEmail(),
                     accessor.getQueryEmail(), null, null);
             if (emails != null) {
-                while (emails.moveToNext()) {
-                    accessor.addEmail(contact, emails, removeMatches);
+                try {
+                    if (emails.moveToFirst()) {
+                        do {
+                            accessor.addEmail(contact, emails, removeMatches);
+                        } while (emails.moveToNext());
+                    }
+                } finally {
+                    emails.close();
                 }
-                emails.close();
             }
         }
 
@@ -1795,10 +1905,15 @@ public class BaseActivity extends ActionBarActivity {
             Cursor urls = ctx.getContentResolver().query(uriUrl, accessor.getProjUrl(),
                     accessor.getQueryUrl(), null, null);
             if (urls != null) {
-                while (urls.moveToNext()) {
-                    accessor.addUrl(contact, urls, ctx, removeMatches);
+                try {
+                    if (urls.moveToFirst()) {
+                        do {
+                            accessor.addUrl(contact, urls, ctx, removeMatches);
+                        } while (urls.moveToNext());
+                    }
+                } finally {
+                    urls.close();
                 }
-                urls.close();
             }
         }
 
@@ -1808,10 +1923,15 @@ public class BaseActivity extends ActionBarActivity {
             Cursor postals = ctx.getContentResolver().query(uriPostal, accessor.getProjPostal(),
                     accessor.getQueryPostal(), null, null);
             if (postals != null) {
-                while (postals.moveToNext()) {
-                    accessor.addPostal(contact, postals, removeMatches);
+                try {
+                    if (postals.moveToFirst()) {
+                        do {
+                            accessor.addPostal(contact, postals, removeMatches);
+                        } while (postals.moveToNext());
+                    }
+                } finally {
+                    postals.close();
                 }
-                postals.close();
             }
         }
 
@@ -1828,15 +1948,14 @@ public class BaseActivity extends ActionBarActivity {
                 if (data != null) {
                     Uri uri = data.getData();
                     if (uri != null) {
-                        Cursor c = null;
-                        try {
-                            c = getContentResolver().query(uri, null, null, null, null);
-                            if (c != null && c.moveToFirst()) {
-                                contactLookupKey = c.getString(c
-                                        .getColumnIndexOrThrow(Data.LOOKUP_KEY));
-                            }
-                        } finally {
-                            if (c != null && !c.isClosed()) {
+                        Cursor c = getContentResolver().query(uri, null, null, null, null);
+                        if (c != null) {
+                            try {
+                                if (c.moveToFirst()) {
+                                    contactLookupKey = c.getString(c
+                                            .getColumnIndexOrThrow(Data.LOOKUP_KEY));
+                                }
+                            } finally {
                                 c.close();
                             }
                         }
@@ -1888,17 +2007,17 @@ public class BaseActivity extends ActionBarActivity {
                 if (data != null) {
                     Uri uri = data.getData();
                     if (uri != null) {
-                        Cursor c = null;
-                        try {
-                            c = getContentResolver().query(uri, null, null, null, null);
-                            if (c != null && c.moveToFirst()) {
-                                String number = c.getString(c.getColumnIndexOrThrow(Phone.NUMBER));
-                                mInviteContactLookupKey = c.getString(c
-                                        .getColumnIndexOrThrow(Phone.LOOKUP_KEY));
-                                sendInviteToSlingPhones(number);
-                            }
-                        } finally {
-                            if (c != null && !c.isClosed()) {
+                        Cursor c = getContentResolver().query(uri, null, null, null, null);
+                        if (c != null) {
+                            try {
+                                if (c.moveToFirst()) {
+                                    String number = c.getString(c
+                                            .getColumnIndexOrThrow(Phone.NUMBER));
+                                    mInviteContactLookupKey = c.getString(c
+                                            .getColumnIndexOrThrow(Phone.LOOKUP_KEY));
+                                    sendInviteToSlingPhones(number);
+                                }
+                            } finally {
                                 c.close();
                             }
                         }
@@ -1909,19 +2028,19 @@ public class BaseActivity extends ActionBarActivity {
                 if (data != null) {
                     Uri uri = data.getData();
                     if (uri != null) {
-                        Cursor c = null;
-                        try {
-                            c = getContentResolver().query(uri, null, null, null, null);
-                            if (c != null && c.moveToFirst()) {
-                                String address = c.getString(c.getColumnIndexOrThrow(Email.DATA));
-                                mInviteContactLookupKey = c.getString(c
-                                        .getColumnIndexOrThrow(Email.LOOKUP_KEY));
-                                sendInviteToSlingEmail(new String[] {
-                                    address
-                                });
-                            }
-                        } finally {
-                            if (c != null && !c.isClosed()) {
+                        Cursor c = getContentResolver().query(uri, null, null, null, null);
+                        if (c != null) {
+                            try {
+                                if (c.moveToFirst()) {
+                                    String address = c.getString(c
+                                            .getColumnIndexOrThrow(Email.DATA));
+                                    mInviteContactLookupKey = c.getString(c
+                                            .getColumnIndexOrThrow(Email.LOOKUP_KEY));
+                                    sendInviteToSlingEmail(new String[] {
+                                        address
+                                    });
+                                }
+                            } finally {
                                 c.close();
                             }
                         }

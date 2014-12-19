@@ -176,18 +176,8 @@ public class RecipientDbAdapter {
 
     private Cursor query(String table, String[] columns, String selection, String[] selectionArgs,
             String groupBy, String having, String orderBy) {
-
-        // TODO: Caused by: java.lang.IllegalStateException: attempt to re-open
-        // an already-closed object: SQLiteDatabase:
-        // /data/data/edu.cmu.cylab.starslinger/databases/safeslinger.recipient
         Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
                 orderBy);
-
-        // if (query != null) {
-        // MyLog.d(TAG, query.getCount() + " " + table + " " + selection + " " +
-        // selectionArgs
-        // + " " + groupBy + " " + having + " " + orderBy);
-        // }
         return query;
     }
 
@@ -195,11 +185,6 @@ public class RecipientDbAdapter {
             String[] selectionArgs, String groupBy, String having, String orderBy, String limit) {
         Cursor query = mDatabase.query(distinct, table, columns, selection, selectionArgs, groupBy,
                 having, orderBy, limit);
-        // if (query != null) {
-        // MyLog.d(TAG, query.getCount() + " " + table + " " + selection + " " +
-        // selectionArgs
-        // + " " + groupBy + " " + having + " " + orderBy + " " + limit);
-        // }
         return query;
     }
 
@@ -249,28 +234,28 @@ public class RecipientDbAdapter {
                 Cursor c = query(true, DATABASE_TABLE, new String[] {
                         KEY_ROWID, KEY_SOURCE
                 }, where.toString(), null, null, null, null, null);
-
                 if (c != null) {
-                    if (c.moveToFirst()) {
-                        long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
+                    try {
+                        if (c.moveToFirst()) {
+                            long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
 
-                        int source = c.getInt(c.getColumnIndexOrThrow(KEY_SOURCE));
-                        if (source == RECIP_SOURCE_EXCHANGE || source == RECIP_SOURCE_INTRODUCTION
-                                || source == RECIP_SOURCE_CONTACTSDB) {
-                            // invite is lower priority than exchange,
-                            // introduction, and address book
-                            c.close();
-                            return rowId;
-                        }
+                            int source = c.getInt(c.getColumnIndexOrThrow(KEY_SOURCE));
+                            if (source == RECIP_SOURCE_EXCHANGE
+                                    || source == RECIP_SOURCE_INTRODUCTION
+                                    || source == RECIP_SOURCE_CONTACTSDB) {
+                                // invite is lower priority than exchange,
+                                // introduction, and address book
+                                return rowId;
+                            }
 
-                        if (update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0) {
-                            c.close();
-                            return rowId;
+                            if (update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0) {
+                                return rowId;
+                            }
+                            return -1;
                         }
+                    } finally {
                         c.close();
-                        return -1;
                     }
-                    c.close();
                 }
             }
 
@@ -350,18 +335,18 @@ public class RecipientDbAdapter {
             Cursor c = query(true, DATABASE_TABLE, new String[] {
                     KEY_KEYID, KEY_ROWID, KEY_PUSHTOKEN
             }, where.toString(), null, null, null, null, null);
-
             if (c != null) {
-                if (c.moveToFirst()) {
-                    long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
-                    if (update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0) {
-                        c.close();
-                        return rowId;
+                try {
+                    if (c.moveToFirst()) {
+                        long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
+                        if (update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0) {
+                            return rowId;
+                        }
+                        return -1;
                     }
+                } finally {
                     c.close();
-                    return -1;
                 }
-                c.close();
             }
 
             // backward compatibility for upgraded databases....
@@ -442,24 +427,24 @@ public class RecipientDbAdapter {
                     KEY_KEYID, KEY_ROWID, KEY_SOURCE, KEY_PUSHTOKEN
             }, where.toString(), null, null, null, null, null);
             if (c != null) {
-                if (c.moveToFirst()) {
-                    long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
+                try {
+                    if (c.moveToFirst()) {
+                        long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
 
-                    int source = c.getInt(c.getColumnIndexOrThrow(KEY_SOURCE));
-                    if (source == RECIP_SOURCE_EXCHANGE) {
-                        // introduction is lower priority than exchange
-                        c.close();
-                        return rowId;
-                    }
+                        int source = c.getInt(c.getColumnIndexOrThrow(KEY_SOURCE));
+                        if (source == RECIP_SOURCE_EXCHANGE) {
+                            // introduction is lower priority than exchange
+                            return rowId;
+                        }
 
-                    if (update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0) {
-                        c.close();
-                        return rowId;
+                        if (update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0) {
+                            return rowId;
+                        }
+                        return -1;
                     }
+                } finally {
                     c.close();
-                    return -1;
                 }
-                c.close();
             }
 
             // backward compatibility for upgraded databases....
@@ -519,9 +504,12 @@ public class RecipientDbAdapter {
 
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }
@@ -543,10 +531,7 @@ public class RecipientDbAdapter {
                     KEY_APPVERSION, KEY_HISTDATE, KEY_ACTIVE, KEY_MYKEYID, KEY_KEYID,
                     KEY_INTROKEYID, KEY_NOTREGDATE, KEY_MYNOTIFY, KEY_MYPUSHTOKEN
             }, where.toString(), null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -568,10 +553,7 @@ public class RecipientDbAdapter {
                     KEY_APPVERSION, KEY_HISTDATE, KEY_ACTIVE, KEY_MYKEYID, KEY_KEYID,
                     KEY_INTROKEYID, KEY_NOTREGDATE, KEY_MYNOTIFY, KEY_MYPUSHTOKEN
             }, where.toString(), null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -596,10 +578,7 @@ public class RecipientDbAdapter {
                     KEY_APPVERSION, KEY_HISTDATE, KEY_ACTIVE, KEY_MYKEYID, KEY_KEYID,
                     KEY_INTROKEYID, KEY_NOTREGDATE, KEY_MYNOTIFY, KEY_MYPUSHTOKEN
             }, where.toString(), null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -619,10 +598,7 @@ public class RecipientDbAdapter {
                     KEY_APPVERSION, KEY_HISTDATE, KEY_ACTIVE, KEY_MYKEYID, KEY_KEYID,
                     KEY_INTROKEYID, KEY_NOTREGDATE, KEY_MYNOTIFY, KEY_MYPUSHTOKEN
             }, null, null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -631,10 +607,7 @@ public class RecipientDbAdapter {
             Cursor c = query(DATABASE_TABLE, new String[] {
                     KEY_ROWID, KEY_MYKEYIDLONG, KEY_KEYIDLONG
             }, null, null, null, null, null);
-            if (c != null) {
-                return c;
-            }
-            return null;
+            return c;
         }
     }
 
@@ -651,12 +624,7 @@ public class RecipientDbAdapter {
                     KEY_APPVERSION, KEY_HISTDATE, KEY_ACTIVE, KEY_MYKEYID, KEY_KEYID,
                     KEY_INTROKEYID, KEY_NOTREGDATE, KEY_MYNOTIFY, KEY_MYPUSHTOKEN
             }, where, null, null, null, null, null);
-            if (c != null) {
-                if (c.moveToFirst()) {
-                    return c;
-                }
-            }
-            return null;
+            return c;
         }
     }
 
@@ -672,12 +640,7 @@ public class RecipientDbAdapter {
                     KEY_APPVERSION, KEY_HISTDATE, KEY_ACTIVE, KEY_MYKEYID, KEY_KEYID,
                     KEY_INTROKEYID, KEY_NOTREGDATE, KEY_MYNOTIFY, KEY_MYPUSHTOKEN
             }, where.toString(), null, null, null, orderBy, null);
-            if (c != null) {
-                if (c.moveToFirst()) {
-                    return c;
-                }
-            }
-            return null;
+            return c;
         }
     }
 
@@ -766,9 +729,12 @@ public class RecipientDbAdapter {
             where.append(KEY_SOURCE + "!=" + RECIP_SOURCE_INVITED);
             Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
             if (c != null) {
-                int count = c.getCount();
-                c.close();
-                return count;
+                try {
+                    int count = c.getCount();
+                    return count;
+                } finally {
+                    c.close();
+                }
             }
             return -1;
         }

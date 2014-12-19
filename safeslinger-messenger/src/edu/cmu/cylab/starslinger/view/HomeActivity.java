@@ -1006,10 +1006,15 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             } else {
                 Cursor c = dbMessage.fetchMessageSmall(sendMsg.getRowId());
                 if (c != null) {
-                    MessageRow msg = new MessageRow(c, false);
-                    c.close();
-                    if (msg.getMessageAction() != MsgAction.MSG_EDIT) {
-                        return;
+                    try {
+                        if (c.moveToFirst()) {
+                            MessageRow msg = new MessageRow(c, false);
+                            if (msg.getMessageAction() != MsgAction.MSG_EDIT) {
+                                return;
+                            }
+                        }
+                    } finally {
+                        c.close();
                     }
                 }
 
@@ -1030,12 +1035,17 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // confirm msg is queued
             Cursor c = dbMessage.fetchMessageSmall(sendMsg.getRowId());
             if (c != null) {
-                MessageRow queued = new MessageRow(c, false);
-                c.close();
-                if (queued.getStatus() != MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
-                    showNote(R.string.error_UnableToUpdateMessageInDB);
-                    refreshView();
-                    return;
+                try {
+                    if (c.moveToFirst()) {
+                        MessageRow queued = new MessageRow(c, false);
+                        if (queued.getStatus() != MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
+                            showNote(R.string.error_UnableToUpdateMessageInDB);
+                            refreshView();
+                            return;
+                        }
+                    }
+                } finally {
+                    c.close();
                 }
             }
 
@@ -1158,10 +1168,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 MediaColumns.DISPLAY_NAME
             }, null, null, null);
             if (c != null) {
-                if (c.moveToFirst()) {
-                    name = c.getString(c.getColumnIndex(MediaColumns.DISPLAY_NAME));
+                try {
+                    if (c.moveToFirst()) {
+                        name = c.getString(c.getColumnIndex(MediaColumns.DISPLAY_NAME));
+                    }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         } catch (IllegalArgumentException e) {
             // column may not exist
@@ -1173,10 +1186,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 MediaColumns.SIZE
             }, null, null, null);
             if (c != null) {
-                if (c.moveToFirst()) {
-                    size = c.getInt(c.getColumnIndex(MediaColumns.SIZE));
+                try {
+                    if (c.moveToFirst()) {
+                        size = c.getInt(c.getColumnIndex(MediaColumns.SIZE));
+                    }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         } catch (IllegalArgumentException e) {
             // column may not exist
@@ -1188,10 +1204,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 MediaColumns.DATA
             }, null, null, null);
             if (c != null) {
-                if (c.moveToFirst()) {
-                    data = c.getString(c.getColumnIndex(MediaColumns.DATA));
+                try {
+                    if (c.moveToFirst()) {
+                        data = c.getString(c.getColumnIndex(MediaColumns.DATA));
+                    }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
         } catch (IllegalArgumentException e) {
             // column may not exist
@@ -1275,13 +1294,17 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         .openInstance(getApplicationContext());
                 Cursor c = dbRecipient.fetchRecipient(rowIdRecipient);
                 if (c != null) {
-                    d.setRecip(new RecipientRow(c));
-                    c.close();
+                    try {
+                        if (c.moveToFirst()) {
+                            d.setRecip(new RecipientRow(c));
+                        }
+                    } finally {
+                        c.close();
+                    }
                 } else {
                     showNote(R.string.error_InvalidRecipient);
                     return;
                 }
-
             }
         }
 
@@ -1305,10 +1328,15 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 } else {
                     Cursor c = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
                     if (c != null) {
-                        MessageRow msg = new MessageRow(c, false);
-                        c.close();
-                        if (msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_DRAFT) {
-                            break;
+                        try {
+                            if (c.moveToFirst()) {
+                                MessageRow msg = new MessageRow(c, false);
+                                if (msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_DRAFT) {
+                                    break;
+                                }
+                            }
+                        } finally {
+                            c.close();
                         }
                     }
 
@@ -1391,8 +1419,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         .openInstance(getApplicationContext());
                 Cursor c = dbRecipient.fetchRecipient(rowIdRecipient);
                 if (c != null) {
-                    recip = new RecipientRow(c);
-                    c.close();
+                    try {
+                        if (c.moveToFirst()) {
+                            recip = new RecipientRow(c);
+                        }
+                    } finally {
+                        c.close();
+                    }
                 } else {
                     showNote(R.string.error_InvalidRecipient);
                     return;
@@ -1424,10 +1457,15 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 } else {
                     Cursor c = dbMessage.fetchMessageSmall(saveMsg.getRowId());
                     if (c != null) {
-                        MessageRow msg = new MessageRow(c, false);
-                        c.close();
-                        if (msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_DRAFT) {
-                            break;
+                        try {
+                            if (c.moveToFirst()) {
+                                MessageRow msg = new MessageRow(c, false);
+                                if (msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_DRAFT) {
+                                    break;
+                                }
+                            }
+                        } finally {
+                            c.close();
                         }
                     }
 
@@ -1475,17 +1513,22 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 d.setSendMsgRowId(rowIdMessage);
                 Cursor cfm = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
                 if (cfm != null) {
-                    MessageRow edit = new MessageRow(cfm, false);
-                    cfm.close();
-                    d.setText(edit.getText());
                     try {
-                        if (!TextUtils.isEmpty(edit.getFileDir())) {
-                            doLoadAttachment(edit.getFileDir());
+                        if (cfm.moveToFirst()) {
+                            MessageRow edit = new MessageRow(cfm, false);
+                            d.setText(edit.getText());
+                            try {
+                                if (!TextUtils.isEmpty(edit.getFileDir())) {
+                                    doLoadAttachment(edit.getFileDir());
+                                }
+                            } catch (FileNotFoundException e) {
+                                showNote(e);
+                                refreshView();
+                                break;
+                            }
                         }
-                    } catch (FileNotFoundException e) {
-                        showNote(e);
-                        refreshView();
-                        break;
+                    } finally {
+                        cfm.close();
                     }
                 }
                 d.clearRecip();
@@ -1504,19 +1547,24 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 d.setSendMsgRowId(rowIdMessage);
                 Cursor cem = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
                 if (cem != null) {
-                    MessageRow edit = new MessageRow(cem, false);
-                    cem.close();
-                    d.setRecip(recip);
-                    d.setText(edit.getText());
-                    d.setKeyId(edit.getKeyId());
                     try {
-                        if (!TextUtils.isEmpty(edit.getFileDir())) {
-                            doLoadAttachment(edit.getFileDir());
+                        if (cem.moveToFirst()) {
+                            MessageRow edit = new MessageRow(cem, false);
+                            d.setRecip(recip);
+                            d.setText(edit.getText());
+                            d.setKeyId(edit.getKeyId());
+                            try {
+                                if (!TextUtils.isEmpty(edit.getFileDir())) {
+                                    doLoadAttachment(edit.getFileDir());
+                                }
+                            } catch (FileNotFoundException e) {
+                                showNote(e);
+                                refreshView();
+                                break;
+                            }
                         }
-                    } catch (FileNotFoundException e) {
-                        showNote(e);
-                        refreshView();
-                        break;
+                    } finally {
+                        cem.close();
                     }
                 }
                 setTab(Tabs.COMPOSE);
@@ -1640,8 +1688,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     if (rowIdRecipient1 > -1) {
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient1);
                         if (c != null) {
-                            recip1 = new RecipientRow(c);
-                            c.close();
+                            try {
+                                if (c.moveToFirst()) {
+                                    recip1 = new RecipientRow(c);
+                                }
+                            } finally {
+                                c.close();
+                            }
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             break;
@@ -1652,8 +1705,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     if (rowIdRecipient2 > -1) {
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient2);
                         if (c != null) {
-                            recip2 = new RecipientRow(c);
-                            c.close();
+                            try {
+                                if (c.moveToFirst()) {
+                                    recip2 = new RecipientRow(c);
+                                }
+                            } finally {
+                                c.close();
+                            }
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             break;
@@ -1917,21 +1975,25 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         long rowIdRecipient = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1L);
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient);
                         if (c != null) {
-                            d.setRecip(new RecipientRow(c));
-                            c.close();
+                            try {
+                                if (c.moveToFirst()) {
+                                    d.setRecip(new RecipientRow(c));
 
-                            CheckRegistrationStateTask task = new CheckRegistrationStateTask();
-                            task.execute(d.getRecip());
+                                    CheckRegistrationStateTask task = new CheckRegistrationStateTask();
+                                    task.execute(d.getRecip());
 
-                            setTab(Tabs.COMPOSE);
-                            refreshView();
+                                    setTab(Tabs.COMPOSE);
+                                    refreshView();
+                                }
+                            } finally {
+                                c.close();
+                            }
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             setTab(Tabs.COMPOSE);
                             refreshView();
                             break;
                         }
-
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
@@ -1960,9 +2022,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 .openInstance(getApplicationContext());
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient1);
                         if (c != null) {
-                            d.setRecip1(new RecipientRow(c));
-                            c.close();
-                            refreshView();
+                            try {
+                                if (c.moveToFirst()) {
+                                    d.setRecip1(new RecipientRow(c));
+                                    refreshView();
+                                }
+                            } finally {
+                                c.close();
+                            }
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             break;
@@ -1995,9 +2062,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 .openInstance(getApplicationContext());
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient2);
                         if (c != null) {
-                            d.setRecip2(new RecipientRow(c));
-                            c.close();
-                            refreshView();
+                            try {
+                                if (c.moveToFirst()) {
+                                    d.setRecip2(new RecipientRow(c));
+                                    refreshView();
+                                }
+                            } finally {
+                                c.close();
+                            }
                         } else {
                             showNote(R.string.error_InvalidRecipient);
                             break;
@@ -2110,17 +2182,22 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         Uri contactData = data.getData();
                         Cursor c = getContentResolver().query(contactData, null, null, null, null);
                         if (c != null) {
-                            if (c.moveToFirst()) {
-                                String contactLookupKey = c.getString(c
-                                        .getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY));
-                                String name = c.getString(c
-                                        .getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+                            try {
+                                if (c.moveToFirst()) {
+                                    String contactLookupKey = c.getString(c
+                                            .getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY));
+                                    String name = c
+                                            .getString(c
+                                                    .getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
-                                // save these for lookup and display purposes
-                                SafeSlingerPrefs.setContactLookupKey(contactLookupKey);
-                                SafeSlingerPrefs.setContactName(name);
+                                    // save these for lookup and display
+                                    // purposes
+                                    SafeSlingerPrefs.setContactLookupKey(contactLookupKey);
+                                    SafeSlingerPrefs.setContactName(name);
+                                }
+                            } finally {
+                                c.close();
                             }
-                            c.close();
                         }
                         refreshView();
                         break;
@@ -2248,47 +2325,53 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             Cursor c = dbInbox.fetchAllInboxDecryptPending();
             if (c != null) {
-                while (c.moveToNext()) {
-                    try {
-                        MessageData inRow = new MessageRow(c, true);
-                        StringBuilder keyidout = new StringBuilder();
-                        msg = new Message();
-                        msg.what = PROG_DECRYPTING;
-                        msg.arg1 = inRow.isInboxTable() ? 1 : 0;
-                        msg.arg2 = (int) inRow.getRowId();
-                        publishProgress(msg);
+                try {
+                    if (c.moveToFirst()) {
+                        do {
+                            try {
+                                MessageData inRow = new MessageRow(c, true);
+                                StringBuilder keyidout = new StringBuilder();
+                                msg = new Message();
+                                msg.what = PROG_DECRYPTING;
+                                msg.arg1 = inRow.isInboxTable() ? 1 : 0;
+                                msg.arg2 = (int) inRow.getRowId();
+                                publishProgress(msg);
 
-                        byte[] plain = CryptTools
-                                .decryptMessage(inRow.getEncBody(), pass, keyidout);
-                        MessagePacket push = new MessagePacket(plain);
+                                byte[] plain = CryptTools.decryptMessage(inRow.getEncBody(), pass,
+                                        keyidout);
+                                MessagePacket push = new MessagePacket(plain);
 
-                        // move encrypted message to decrypted storage...
-                        // add decrypted
-                        long rowIdMsg = dbMessage.createMessageDecrypted(inRow, push,
-                                keyidout.toString());
-                        if (rowIdMsg == -1) {
-                            return null; // unable to save progress
-                        } else {
-                            // remove encrypted
-                            dbInbox.deleteInbox(inRow.getRowId());
-                        }
-                        msg = new Message();
-                        msg.what = PROG_DECRYPTING_DONE;
-                        msg.arg1 = inRow.isInboxTable() ? 1 : 0;
-                        msg.arg2 = (int) inRow.getRowId();
-                        publishProgress(msg);
+                                // move encrypted message to decrypted
+                                // storage...
+                                // add decrypted
+                                long rowIdMsg = dbMessage.createMessageDecrypted(inRow, push,
+                                        keyidout.toString());
+                                if (rowIdMsg == -1) {
+                                    return null; // unable to save progress
+                                } else {
+                                    // remove encrypted
+                                    dbInbox.deleteInbox(inRow.getRowId());
+                                }
+                                msg = new Message();
+                                msg.what = PROG_DECRYPTING_DONE;
+                                msg.arg1 = inRow.isInboxTable() ? 1 : 0;
+                                msg.arg2 = (int) inRow.getRowId();
+                                publishProgress(msg);
 
-                    } catch (ClassNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (CryptoMsgException e) {
-                        e.printStackTrace();
-                    } catch (GeneralException e) {
-                        e.printStackTrace();
+                            } catch (ClassNotFoundException e) {
+                                e.printStackTrace();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            } catch (CryptoMsgException e) {
+                                e.printStackTrace();
+                            } catch (GeneralException e) {
+                                e.printStackTrace();
+                            }
+                        } while (c.moveToNext());
                     }
+                } finally {
+                    c.close();
                 }
-                c.close();
             }
             return null;
         }
@@ -2308,37 +2391,39 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private void doLoadAttachment(String path) throws FileNotFoundException {
         File phy = new File(path); // physical
         File vir = new File(path); // virtual, change if needed
-        FileInputStream is = new FileInputStream(phy.getAbsolutePath());
         DraftData d = DraftData.INSTANCE;
 
         try {
-            byte[] outFileData = new byte[is.available()];
-            is.read(outFileData);
-            d.setFileData(outFileData);
-            d.setFileSize(outFileData.length);
+            FileInputStream is = new FileInputStream(phy.getAbsolutePath());
+            try {
+                byte[] outFileData = new byte[is.available()];
+                is.read(outFileData);
+                d.setFileData(outFileData);
+                d.setFileSize(outFileData.length);
 
-            if (d.getFileSize() > SafeSlingerConfig.MAX_FILEBYTES) {
-                is.close();
-                showNote(String.format(getString(R.string.error_CannotSendFilesOver),
-                        SafeSlingerConfig.MAX_FILEBYTES));
-                refreshView();
-                return;
-            }
-
-            String type = URLConnection.guessContentTypeFromStream(is);
-            if (type != null)
-                d.setFileType(type);
-            else {
-                String extension = SSUtil.getFileExtensionOnly(vir.getName());
-                type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
-                if (type != null) {
-                    d.setFileType(type);
-                } else {
-                    d.setFileType(SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF);
+                if (d.getFileSize() > SafeSlingerConfig.MAX_FILEBYTES) {
+                    is.close();
+                    showNote(String.format(getString(R.string.error_CannotSendFilesOver),
+                            SafeSlingerConfig.MAX_FILEBYTES));
+                    refreshView();
+                    return;
                 }
-            }
-            is.close();
 
+                String type = URLConnection.guessContentTypeFromStream(is);
+                if (type != null)
+                    d.setFileType(type);
+                else {
+                    String extension = SSUtil.getFileExtensionOnly(vir.getName());
+                    type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+                    if (type != null) {
+                        d.setFileType(type);
+                    } else {
+                        d.setFileType(SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF);
+                    }
+                }
+            } finally {
+                is.close();
+            }
         } catch (OutOfMemoryError e) {
             showNote(R.string.error_OutOfMemoryError);
             refreshView();
@@ -2398,8 +2483,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         .openInstance(getApplicationContext());
                 Cursor cr = dbRecipient.fetchRecipientByKeyId(keyId);
                 if (cr != null) {
-                    recip = new RecipientRow(cr);
-                    cr.close();
+                    try {
+                        if (cr.moveToFirst()) {
+                            recip = new RecipientRow(cr);
+                        }
+                    } finally {
+                        cr.close();
+                    }
                 }
             }
 
@@ -2483,8 +2573,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
                 Cursor c = dbMessage.fetchMessageSmall(recvMsg.getRowId());
                 if (c != null) {
-                    inviteMsg = new MessageRow(c, false);
-                    c.close();
+                    try {
+                        if (c.moveToFirst()) {
+                            inviteMsg = new MessageRow(c, false);
+                        }
+                    } finally {
+                        c.close();
+                    }
                 }
                 if (inviteMsg == null) {
                     showNote(R.string.error_InvalidIncomingMessage);
@@ -2495,8 +2590,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         .openInstance(getApplicationContext());
                 Cursor cr = dbRecipient.fetchRecipientByKeyId(inviteMsg.getKeyId());
                 if (cr != null) {
-                    exchRecip = new RecipientRow(cr);
-                    cr.close();
+                    try {
+                        if (cr.moveToFirst()) {
+                            exchRecip = new RecipientRow(cr);
+                        }
+                    } finally {
+                        cr.close();
+                    }
                 }
                 if (exchRecip == null) {
                     showNote(R.string.error_InvalidRecipient);
@@ -3623,8 +3723,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
                 Cursor c = dbMessage.fetchMessageSmall(msgRowId);
                 if (c != null) {
-                    inviteMsg = new MessageRow(c, false);
-                    c.close();
+                    try {
+                        if (c.moveToFirst()) {
+                            inviteMsg = new MessageRow(c, false);
+                        }
+                    } finally {
+                        c.close();
+                    }
                 }
 
                 if (inviteMsg == null) {

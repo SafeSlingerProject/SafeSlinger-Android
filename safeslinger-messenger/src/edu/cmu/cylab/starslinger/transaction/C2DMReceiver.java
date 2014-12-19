@@ -187,8 +187,13 @@ public class C2DMReceiver extends C2DMBaseReceiver {
                     MessageData inRow = null;
                     Cursor c = dbInbox.fetchInboxSmall(rowIdInbox);
                     if (c != null) {
-                        inRow = new MessageRow(c, true);
-                        c.close();
+                        try {
+                            if (c.moveToFirst()) {
+                                inRow = new MessageRow(c, true);
+                            }
+                        } finally {
+                            c.close();
+                        }
                     }
                     if (inRow != null) {
                         // add decrypted

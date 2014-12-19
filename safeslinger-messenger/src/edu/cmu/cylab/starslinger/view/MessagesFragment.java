@@ -165,8 +165,13 @@ public class MessagesFragment extends Fragment {
             if (recipRowId != -1) {
                 Cursor c = dbRecipient.fetchRecipient(recipRowId);
                 if (c != null) {
-                    mRecip = new RecipientRow(c);
-                    c.close();
+                    try {
+                        if (c.moveToFirst()) {
+                            mRecip = new RecipientRow(c);
+                        }
+                    } finally {
+                        c.close();
+                    }
                 }
             } else if (msgRowId == -1) {
                 mRecip = null;
@@ -355,9 +360,15 @@ public class MessagesFragment extends Fragment {
                                 .openInstance(getActivity().getApplicationContext());
                         Cursor c = dbRecipient.fetchRecipientByKeyId(t.getMsgRow().getKeyId());
                         if (c != null) {
-                            // messages with matching key ids in database
-                            mRecip = new RecipientRow(c);
-                            c.close();
+                            try {
+                                if (c.moveToFirst()) {
+                                    // messages with matching key ids in
+                                    // database
+                                    mRecip = new RecipientRow(c);
+                                }
+                            } finally {
+                                c.close();
+                            }
                         } else {
                             // messages without matching key ids
                             mRecip = RecipientRow
@@ -462,13 +473,18 @@ public class MessagesFragment extends Fragment {
             cmi = dbInbox.fetchInboxRecent(mRecip.getKeyid());
         }
         if (cmi != null) {
-            totalThreads += cmi.getCount();
-            while (cmi.moveToNext()) {
-                MessageRow inboxRow = new MessageRow(cmi, true);
-                t = addInboxThread(inboxRow);
-                mergeInThreads(t);
+            try {
+                totalThreads += cmi.getCount();
+                if (cmi.moveToFirst()) {
+                    do {
+                        MessageRow inboxRow = new MessageRow(cmi, true);
+                        t = addInboxThread(inboxRow);
+                        mergeInThreads(t);
+                    } while (cmi.moveToNext());
+                }
+            } finally {
+                cmi.close();
             }
-            cmi.close();
         }
         // message threads
         Cursor cmt = null;
@@ -478,13 +494,18 @@ public class MessagesFragment extends Fragment {
             cmt = dbMessage.fetchMessageRecent(mRecip.getKeyid());
         }
         if (cmt != null) {
-            totalThreads += cmt.getCount();
-            while (cmt.moveToNext()) {
-                MessageRow messageRow = new MessageRow(cmt, false);
-                t = addMessageThread(messageRow);
-                mergeInThreads(t);
+            try {
+                totalThreads += cmt.getCount();
+                if (cmt.moveToFirst()) {
+                    do {
+                        MessageRow messageRow = new MessageRow(cmt, false);
+                        t = addMessageThread(messageRow);
+                        mergeInThreads(t);
+                    } while (cmt.moveToNext());
+                }
+            } finally {
+                cmt.close();
             }
-            cmt.close();
         }
 
         if (totalThreads <= 0) {
@@ -502,44 +523,56 @@ public class MessagesFragment extends Fragment {
             // encrypted msgs
             Cursor ci = dbInbox.fetchAllInboxByThread(mRecip.getKeyid());
             if (ci != null) {
-                while (ci.moveToNext()) {
-                    MessageRow inRow = new MessageRow(ci, true);
-                    if (mRecip != null) {
-                        inRow.setPhoto(mRecip.getPhoto());
+                try {
+                    if (ci.moveToFirst()) {
+                        do {
+                            MessageRow inRow = new MessageRow(ci, true);
+                            if (mRecip != null) {
+                                inRow.setPhoto(mRecip.getPhoto());
+                            }
+                            mMessageList.add(inRow);
+                        } while (ci.moveToNext());
                     }
-                    mMessageList.add(inRow);
+                } finally {
+                    ci.close();
                 }
-                ci.close();
             }
             // decrypted msgs and outbox msgs
             Cursor cm = dbMessage.fetchAllMessagesByThread(mRecip.getKeyid());
             if (cm != null) {
-                while (cm.moveToNext()) {
-                    MessageRow messageRow = new MessageRow(cm, false);
-                    if (!messageRow.isInbox()) {
-                        messageRow.setPhoto(myPhoto);
-                    } else {
-                        if (mRecip != null) {
-                            messageRow.setPhoto(mRecip.getPhoto());
-                        }
-                    }
+                try {
+                    if (cm.moveToFirst()) {
+                        do {
+                            MessageRow messageRow = new MessageRow(cm, false);
+                            if (!messageRow.isInbox()) {
+                                messageRow.setPhoto(myPhoto);
+                            } else {
+                                if (mRecip != null) {
+                                    messageRow.setPhoto(mRecip.getPhoto());
+                                }
+                            }
 
-                    if (mDraft == null
-                            && messageRow.getStatus() == MessageDbAdapter.MESSAGE_STATUS_DRAFT
-                            && TextUtils.isEmpty(messageRow.getFileName()) && mRecip.isSendable()) {
-                        // if recent draft, remove from list put in edit box
-                        mDraft = messageRow;
-                        mEditTextMessage.setTextKeepState(mDraft.getText());
-                        mEditTextMessage.forceLayout();
-                    } else if (mDraft != null && mDraft.getRowId() == messageRow.getRowId()) {
-                        // draft has already been updated
-                        continue;
-                    } else {
-                        // show message normally
-                        mMessageList.add(messageRow);
+                            if (mDraft == null
+                                    && messageRow.getStatus() == MessageDbAdapter.MESSAGE_STATUS_DRAFT
+                                    && TextUtils.isEmpty(messageRow.getFileName())
+                                    && mRecip.isSendable()) {
+                                // if recent draft, remove from list put in edit
+                                // box
+                                mDraft = messageRow;
+                                mEditTextMessage.setTextKeepState(mDraft.getText());
+                                mEditTextMessage.forceLayout();
+                            } else if (mDraft != null && mDraft.getRowId() == messageRow.getRowId()) {
+                                // draft has already been updated
+                                continue;
+                            } else {
+                                // show message normally
+                                mMessageList.add(messageRow);
+                            }
+                        } while (cm.moveToNext());
                     }
+                } finally {
+                    cm.close();
                 }
-                cm.close();
             }
             Collections.sort(mMessageList, new MessageDateAscendingComparator());
         } else {
@@ -608,14 +641,19 @@ public class MessagesFragment extends Fragment {
 
         Cursor cr = dbRecipient.fetchRecipientByKeyId(inboxRow.getKeyId());
         if (cr != null) {
-            recipientRow = new RecipientRow(cr);
-            cr.close();
-            person = recipientRow.getName();
+            try {
+                if (cr.moveToFirst()) {
+                    recipientRow = new RecipientRow(cr);
+                    person = recipientRow.getName();
 
-            int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
-            if (newerRecips > 0) {
-                // there are some newer keys, we should warn
-                newerExists = true;
+                    int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
+                    if (newerRecips > 0) {
+                        // there are some newer keys, we should warn
+                        newerExists = true;
+                    }
+                }
+            } finally {
+                cr.close();
             }
         }
 
@@ -642,14 +680,19 @@ public class MessagesFragment extends Fragment {
 
         Cursor cr = dbRecipient.fetchRecipientByKeyId(messageRow.getKeyId());
         if (cr != null) {
-            recipientRow = new RecipientRow(cr);
-            cr.close();
-            person = recipientRow.getName();
+            try {
+                if (cr.moveToFirst()) {
+                    recipientRow = new RecipientRow(cr);
+                    person = recipientRow.getName();
 
-            int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
-            if (newerRecips > 0) {
-                // there are some newer keys, we should warn
-                newerExists = true;
+                    int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
+                    if (newerRecips > 0) {
+                        // there are some newer keys, we should warn
+                        newerExists = true;
+                    }
+                }
+            } finally {
+                cr.close();
             }
         }
 
@@ -671,15 +714,20 @@ public class MessagesFragment extends Fragment {
         String person = null;
         Cursor cmt = dbMessage.fetchAllMessagesByThread(keyId);
         if (cmt != null) {
-            while (cmt.moveToNext()) {
-                if (TextUtils.isEmpty(person)) {
-                    MessageRow mr = new MessageRow(cmt, false);
-                    person = mr.getPerson();
-                } else {
-                    break;
+            try {
+                if (cmt.moveToFirst()) {
+                    do {
+                        if (TextUtils.isEmpty(person)) {
+                            MessageRow mr = new MessageRow(cmt, false);
+                            person = mr.getPerson();
+                        } else {
+                            break;
+                        }
+                    } while (cmt.moveToNext());
                 }
+            } finally {
+                cmt.close();
             }
-            cmt.close();
         }
         return person;
     }
@@ -873,13 +921,19 @@ public class MessagesFragment extends Fragment {
         int msgsInView = 0;
         Cursor ci = dbInbox.fetchAllInboxByThread(mRecip.getKeyid());
         if (ci != null) {
-            msgsInView += ci.getCount();
-            ci.close();
+            try {
+                msgsInView += ci.getCount();
+            } finally {
+                ci.close();
+            }
         }
         Cursor cm = dbMessage.fetchAllMessagesByThread(mRecip.getKeyid());
         if (cm != null) {
-            msgsInView += cm.getCount();
-            cm.close();
+            try {
+                msgsInView += cm.getCount();
+            } finally {
+                cm.close();
+            }
         }
         if (msgsInView == 0) {
             mRecip = null;
