@@ -432,15 +432,19 @@ public class MessageDbAdapter {
         }
     }
 
-    public Cursor fetchAllMessagesQueued() {
+    public Cursor fetchAllMessagesQueuedDraft() {
         synchronized (SafeSlinger.sDataLock) {
-            String where = KEY_STATUS + "=" + MESSAGE_STATUS_QUEUED;
+            StringBuilder where = new StringBuilder();
+            where.append(KEY_STATUS + "=" + MESSAGE_STATUS_DRAFT);
+            where.append(" OR ");
+            where.append(KEY_STATUS + "=" + MESSAGE_STATUS_QUEUED);
+
             Cursor c = query(true, DATABASE_TABLE, new String[] {
                     KEY_ROWID, KEY_DATE_RECV, KEY_DATE_SENT, KEY_ENCBODY, KEY_FILEDIR,
                     KEY_MSGHASH_BLOB, KEY_FILELEN, KEY_FILENAME, KEY_FILETYPE, KEY_KEYIDLONG,
                     KEY_PERSON, KEY_READ, KEY_SEEN, KEY_STATUS, KEY_TEXT, KEY_TYPE, KEY_KEYID,
                     KEY_MSGHASH, KEY_RETNOTIFY, KEY_RETPUSHTOKEN, KEY_RETRECEIPT
-            }, where, null, null, null, null, null);
+            }, where.toString(), null, null, null, null, null);
             if (c != null) {
                 if (c.moveToFirst()) {
                     return c;

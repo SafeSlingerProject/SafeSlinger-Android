@@ -177,7 +177,9 @@ public class MessagesAdapter extends BaseAdapter {
         StringBuilder fileInfo = new StringBuilder();
         if (!TextUtils.isEmpty(msg.getFileName()) || msg.getFileSize() > 0) {
             fileInfo.append(msg.getFileName());
-            if (msg.isInbox() && TextUtils.isEmpty(msg.getFileDir())) {
+            if (msg.isInbox() && TextUtils.isEmpty(msg.getFileDir())
+                    && msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_FILE_DECRYPTED) {
+                // time to expire/expired only needed before download
                 fileInfo.append(timeLeft);
             }
         }

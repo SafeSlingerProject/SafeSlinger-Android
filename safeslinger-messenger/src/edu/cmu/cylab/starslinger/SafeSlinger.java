@@ -687,26 +687,35 @@ public class SafeSlinger extends Application {
         @Override
         protected String doInBackground(String... arg0) {
             MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-            Cursor c = dbMessage.fetchAllMessagesQueued();
+            Cursor c = dbMessage.fetchAllMessagesQueuedDraft();
             if (c != null) {
                 while (c.moveToNext()) {
-                    try {
-                        MessageData sendMsg = new MessageRow(c, true);
+                    MessageData failMsg = new MessageRow(c, false);
+                    if (!failMsg.isInbox()) {
 
-                        // we can remove failed introductions, it is better if
-                        // the user starts over
-                        String[] types = sendMsg.getFileType().split("/");
-                        if (types.length == 2) {
-                            if (types[1]
-                                    .compareToIgnoreCase(SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO) == 0) {
-
-                                // queued draft should be removed
-                                dbMessage.deleteMessage(sendMsg.getRowId());
+                        if (failMsg.getStatus() == MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
+                            // queued messages should be converted back to
+                            // draft
+                            if (!dbMessage.updateDraftMessage(failMsg.getRowId(), null, failMsg)) {
+                                showNote(R.string.error_UnableToUpdateMessageInDB);
                             }
                         }
-                    } catch (OutOfMemoryError e) {
-                        e.printStackTrace();
+
+                        if (!TextUtils.isEmpty(failMsg.getFileType())) {
+                            // we can remove failed introductions, it is
+                            // better if the user starts over
+                            String[] types = failMsg.getFileType().split("/");
+                            if (types.length == 2) {
+                                if (types[1]
+                                        .compareToIgnoreCase(SafeSlingerConfig.MIMETYPE_FUNC_SECINTRO) == 0) {
+
+                                    // queued draft should be removed
+                                    dbMessage.deleteMessage(failMsg.getRowId());
+                                }
+                            }
+                        }
                     }
+
                 }
                 c.close();
             }
