@@ -86,6 +86,7 @@ public class PassPhraseActivity extends Activity {
     private Handler mHandler;
     private final static int mMsPollInterval = 1000;
     public static final int RESULT_CLOSEANDCONTINUE = 999;
+    public static final int RESULT_BACKPRESSED = 998;
     private ArrayList<UserData> mUsers;
     private UserAdapter mUserAdapter;
     private Spinner mSpinnerUser;
@@ -247,13 +248,12 @@ public class PassPhraseActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        SafeSlinger.activityResumed();
+        SafeSlinger.appRunning();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        SafeSlinger.activityPaused();
     }
 
     private void doUpdateUserSelection(int position) {
@@ -505,4 +505,10 @@ public class PassPhraseActivity extends Activity {
         return ad;
     }
 
+    @Override
+    public void onBackPressed() {
+        // eat the back key to find the manual vs auto close
+        setResult(RESULT_BACKPRESSED);
+        finish();
+    }
 }

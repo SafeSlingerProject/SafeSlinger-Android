@@ -1297,13 +1297,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     try {
                         if (c.moveToFirst()) {
                             d.setRecip(new RecipientRow(c));
+                        } else {
+                            showNote(R.string.error_InvalidRecipient);
+                            return;
                         }
                     } finally {
                         c.close();
                     }
-                } else {
-                    showNote(R.string.error_InvalidRecipient);
-                    return;
                 }
             }
         }
@@ -1422,13 +1422,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     try {
                         if (c.moveToFirst()) {
                             recip = new RecipientRow(c);
+                        } else {
+                            showNote(R.string.error_InvalidRecipient);
+                            return;
                         }
                     } finally {
                         c.close();
                     }
-                } else {
-                    showNote(R.string.error_InvalidRecipient);
-                    return;
                 }
             }
         }
@@ -1691,13 +1691,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             try {
                                 if (c.moveToFirst()) {
                                     recip1 = new RecipientRow(c);
+                                } else {
+                                    showNote(R.string.error_InvalidRecipient);
+                                    break;
                                 }
                             } finally {
                                 c.close();
                             }
-                        } else {
-                            showNote(R.string.error_InvalidRecipient);
-                            break;
                         }
                     }
 
@@ -1708,13 +1708,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             try {
                                 if (c.moveToFirst()) {
                                     recip2 = new RecipientRow(c);
+                                } else {
+                                    showNote(R.string.error_InvalidRecipient);
+                                    break;
                                 }
                             } finally {
                                 c.close();
                             }
-                        } else {
-                            showNote(R.string.error_InvalidRecipient);
-                            break;
                         }
                     }
 
@@ -1943,7 +1943,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 deleteUser(user);
                             }
                         }
-
+                        // this separate task is now finished
+                        showExit(RESULT_CANCELED);
+                        break;
+                    case PassPhraseActivity.RESULT_BACKPRESSED:
                         // this separate task is now finished
                         showExit(RESULT_CANCELED);
                         break;
@@ -1984,15 +1987,15 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
                                     setTab(Tabs.COMPOSE);
                                     refreshView();
+                                } else {
+                                    showNote(R.string.error_InvalidRecipient);
+                                    setTab(Tabs.COMPOSE);
+                                    refreshView();
+                                    break;
                                 }
                             } finally {
                                 c.close();
                             }
-                        } else {
-                            showNote(R.string.error_InvalidRecipient);
-                            setTab(Tabs.COMPOSE);
-                            refreshView();
-                            break;
                         }
                         break;
                     case Activity.RESULT_CANCELED:
@@ -2026,13 +2029,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 if (c.moveToFirst()) {
                                     d.setRecip1(new RecipientRow(c));
                                     refreshView();
+                                } else {
+                                    showNote(R.string.error_InvalidRecipient);
+                                    break;
                                 }
                             } finally {
                                 c.close();
                             }
-                        } else {
-                            showNote(R.string.error_InvalidRecipient);
-                            break;
                         }
                         break;
                     case Activity.RESULT_CANCELED:
@@ -2066,13 +2069,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 if (c.moveToFirst()) {
                                     d.setRecip2(new RecipientRow(c));
                                     refreshView();
+                                } else {
+                                    showNote(R.string.error_InvalidRecipient);
+                                    break;
                                 }
                             } finally {
                                 c.close();
                             }
-                        } else {
-                            showNote(R.string.error_InvalidRecipient);
-                            break;
                         }
                         break;
                     case Activity.RESULT_CANCELED:
@@ -2736,6 +2739,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     @Override
     protected void onPause() {
         super.onPause();
+
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH)
             SafeSlinger.getApplication().setMessageFragActive(false);
         // restoreView();
@@ -3440,6 +3444,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private void showExit(int resultCode) {
         setResult(resultCode);
         finish();
+        SafeSlinger.appClosing();
     }
 
     private void reInitForExit() {

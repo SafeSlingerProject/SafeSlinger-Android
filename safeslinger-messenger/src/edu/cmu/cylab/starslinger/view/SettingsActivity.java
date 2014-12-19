@@ -683,13 +683,12 @@ public class SettingsActivity extends PreferenceActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SafeSlinger.activityResumed();
+        SafeSlinger.appRunning();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        SafeSlinger.activityPaused();
 
         // exit and update timer when pass ttl changes
         if (sTtlChanged) {

@@ -1271,13 +1271,12 @@ public class BaseActivity extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SafeSlinger.activityResumed();
+        SafeSlinger.appRunning();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        SafeSlinger.activityPaused();
     }
 
     protected void showBackupQuery() {

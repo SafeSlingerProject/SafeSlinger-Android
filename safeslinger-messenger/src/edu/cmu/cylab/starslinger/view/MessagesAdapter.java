@@ -145,12 +145,10 @@ public class MessagesAdapter extends BaseAdapter {
                     + DateUtils.getRelativeTimeSpanString(mCtx, date).toString();
         }
         long diff = System.currentTimeMillis() - Long.valueOf(date);
-        if (msg.getStatus() == MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
-            if (!TextUtils.isEmpty(msg.getProgress())) {
-                tvDate.setText(msg.getProgress());
-            } else {
-                tvDate.setText(mCtx.getString(R.string.prog_pending));
-            }
+        if (!TextUtils.isEmpty(msg.getProgress())) {
+            tvDate.setText(msg.getProgress());
+        } else if (msg.getStatus() == MessageDbAdapter.MESSAGE_STATUS_QUEUED) {
+            tvDate.setText(mCtx.getString(R.string.prog_pending));
         } else {
             tvDate.setText(dateTime);
         }

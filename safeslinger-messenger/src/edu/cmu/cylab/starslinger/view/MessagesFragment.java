@@ -254,7 +254,7 @@ public class MessagesFragment extends Fragment {
             }
         });
 
-        updateMessageList(true);
+        updateMessageList(false);
 
         return vFrag;
     }
@@ -365,14 +365,14 @@ public class MessagesFragment extends Fragment {
                                     // messages with matching key ids in
                                     // database
                                     mRecip = new RecipientRow(c);
+                                } else {
+                                    // messages without matching key ids
+                                    mRecip = RecipientRow.createKeyIdOnlyRecipient(t.getMsgRow()
+                                            .getKeyId());
                                 }
                             } finally {
                                 c.close();
                             }
-                        } else {
-                            // messages without matching key ids
-                            mRecip = RecipientRow
-                                    .createKeyIdOnlyRecipient(t.getMsgRow().getKeyId());
                         }
                     }
                 } else {

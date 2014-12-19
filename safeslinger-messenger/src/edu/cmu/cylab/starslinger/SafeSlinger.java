@@ -461,11 +461,11 @@ public class SafeSlinger extends Application {
         return sAppVisible;
     }
 
-    synchronized public static void activityResumed() {
+    synchronized public static void appRunning() {
         sAppVisible = true;
     }
 
-    synchronized public static void activityPaused() {
+    synchronized public static void appClosing() {
         sAppVisible = false;
     }
 
