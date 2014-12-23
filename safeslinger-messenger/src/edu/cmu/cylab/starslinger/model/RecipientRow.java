@@ -76,7 +76,24 @@ public class RecipientRow extends RecipientData {
 
     public boolean hasMyKeyChanged() {
         String myKeyId = SafeSlingerPrefs.getKeyIdString();
-        return (myKeyId == null ? false : !(myKeyId.compareTo(mMyKeyId) == 0));
+        if (myKeyId == null) {
+            return false;
+        } else if (mMyKeyId == null) {
+            return myKeyId.equals(mMyKeyId);
+        } else {
+            return (myKeyId.compareTo(mMyKeyId) != 0);
+        }
+    }
+
+    public boolean hasMyPushRegChanged() {
+        String myPushReg = SafeSlingerPrefs.getPushRegistrationId();
+        if (myPushReg == null) {
+            return false;
+        } else if (mMyPushToken == null) {
+            return myPushReg.equals(mMyPushToken);
+        } else {
+            return (myPushReg.compareTo(mMyPushToken) != 0);
+        }
     }
 
     public boolean isDeprecated() {
@@ -107,7 +124,7 @@ public class RecipientRow extends RecipientData {
 
     public boolean isSendable() {
         return (mActive && isRegistered() && isPushable() && !isDeprecated()
-                && isFromTrustedSource() && !hasMyKeyChanged());
+                && isFromTrustedSource() && !hasMyKeyChanged() && !hasMyPushRegChanged());
     }
 
     public boolean isInvited() {

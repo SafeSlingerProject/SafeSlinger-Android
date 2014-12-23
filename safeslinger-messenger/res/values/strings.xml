@@ -335,6 +335,8 @@
     <string name="label_Device">Device:</string>
     <!-- screen label (match English casing); used in many UIs to show that receiving push messages is not supported. -->
     <string name="label_DeviceInSendOnlyMode">Send-only mode</string>
+    <!-- error message (sentence case, period); used to warn the user that the push registration ID in the Recipients list screen has been exchanged once before with a different push registration from this user. -->
+    <string name="label_DisabledExchPushRegChange">Your device has changed: Sling Keys again.</string>
     <!-- error message (sentence case, period); used to warn the user that the key in the Recipients list screen has been exchanged once before with a different key from this user. -->
     <string name="label_DisabledExchSourceKeyChange">Your key has changed: Sling Keys again.</string>
     <!-- screen label (match English casing); used to remind users that an invite is only the beginning, and to Sling Keys before communicating. -->

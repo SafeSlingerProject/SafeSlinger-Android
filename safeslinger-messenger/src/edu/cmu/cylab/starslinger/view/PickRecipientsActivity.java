@@ -386,9 +386,10 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     public void doRecipientSelection(RecipientRow recip) {
         boolean pushable = recip.isPushable();
         boolean fromExch = recip.isFromTrustedSource();
-        boolean secretChanged = recip.hasMyKeyChanged();
+        boolean keyChanged = recip.hasMyKeyChanged();
+        boolean pushChanged = recip.hasMyPushRegChanged();
         boolean deprecated = recip.isDeprecated();
-        boolean useableKey = pushable && !secretChanged && !deprecated && fromExch;
+        boolean useableKey = pushable && !keyChanged && !pushChanged && !deprecated && fromExch;
         if (useableKey) {
             Intent data = new Intent();
             data.putExtra(extra.RECIPIENT_ROW_ID, recip.getRowId());

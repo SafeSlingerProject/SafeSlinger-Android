@@ -103,10 +103,11 @@ public class RecipientAdapter extends BaseAdapter {
         // ensure only push-compatible recipients
         boolean pushable = recip.isPushable();
         boolean fromExch = recip.isFromTrustedSource();
-        boolean secretChanged = recip.hasMyKeyChanged();
+        boolean keyChanged = recip.hasMyKeyChanged();
+        boolean pushChanged = recip.hasMyPushRegChanged();
         boolean deprecated = recip.isDeprecated();
         boolean registered = recip.isRegistered();
-        boolean useableKey = pushable && !secretChanged && !deprecated && fromExch;
+        boolean useableKey = pushable && !keyChanged && !pushChanged && !deprecated && fromExch;
         boolean invited = recip.isInvited();
         StringBuilder detailStr = new StringBuilder();
 
@@ -200,7 +201,12 @@ public class RecipientAdapter extends BaseAdapter {
             err.append(" ");
             err.append(mContext.getText(R.string.label_TapToSlingKeys));
             tvError.setTextAppearance(mContext, R.style.fromDirectionAvailableText);
-        } else if (secretChanged) { // error: their key out of date
+        } else if (pushChanged) { // error: their push reg is out of date
+            if (err.length() > 0)
+                err.append("\n");
+            err.append(mContext.getText(R.string.label_DisabledExchPushRegChange));
+            tvError.setTextAppearance(mContext, R.style.fromFileExpiredText);
+        } else if (keyChanged) { // error: their key out of date
             if (err.length() > 0)
                 err.append("\n");
             err.append(mContext.getText(R.string.label_DisabledExchSourceKeyChange));

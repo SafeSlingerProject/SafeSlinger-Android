@@ -397,11 +397,15 @@ public class SafeSlingerPrefs {
     }
 
     public static String getPushRegistrationId() {
-        return getString(pref.PUSH_REGISTRATION_ID_DIRECT, null, false);
+        // add version to get updated push registration every new release
+        return getString(pref.PUSH_REGISTRATION_ID_DIRECT + SafeSlingerConfig.getVersionName(),
+                null, false);
     }
 
     public static void setPushRegistrationIdWriteOnlyC2dm(String registrationId) {
-        setString(pref.PUSH_REGISTRATION_ID_DIRECT, registrationId, false);
+        // add version to get updated push registration every new release
+        setString(pref.PUSH_REGISTRATION_ID_DIRECT + SafeSlingerConfig.getVersionName(),
+                registrationId, false);
     }
 
     public static long getBackupRequestDate() {
