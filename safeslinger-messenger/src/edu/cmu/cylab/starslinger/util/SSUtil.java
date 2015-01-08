@@ -32,6 +32,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
@@ -41,11 +42,17 @@ import a_vcard.android.syncml.pim.vcard.VCardComposer;
 import a_vcard.android.syncml.pim.vcard.VCardException;
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Build.VERSION;
+import android.os.Build.VERSION_CODES;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Base64;
@@ -462,4 +469,26 @@ public class SSUtil {
         return userNumber > 1 ? userNumber : 1;
     }
 
+    public static Intent updateIntentExplicitness(Context context, Intent implicitIntent) {
+        if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
+            // API 21 creates the need for explicit Intents,
+            // so make sure only one can answer
+            PackageManager pm = context.getPackageManager();
+            List<ResolveInfo> resolveInfo = pm.queryIntentServices(implicitIntent, 0);
+            if (resolveInfo == null || resolveInfo.size() != 1) {
+                return null;
+            }
+
+            ResolveInfo serviceInfo = resolveInfo.get(0);
+            String packageName = serviceInfo.serviceInfo.packageName;
+            String className = serviceInfo.serviceInfo.name;
+            ComponentName component = new ComponentName(packageName, className);
+
+            Intent explicitIntent = new Intent(implicitIntent);
+            explicitIntent.setComponent(component);
+            return explicitIntent;
+        } else {
+            return implicitIntent;
+        }
+    }
 }

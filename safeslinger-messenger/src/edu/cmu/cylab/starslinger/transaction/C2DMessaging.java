@@ -27,6 +27,7 @@ package edu.cmu.cylab.starslinger.transaction;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import edu.cmu.cylab.starslinger.util.SSUtil;
 
 /**
  * Utilities for device registration. Will keep track of the registration token
@@ -46,7 +47,7 @@ public class C2DMessaging {
         registrationIntent.putExtra(EXTRA_APPLICATION_PENDING_INTENT,
                 PendingIntent.getBroadcast(context, 0, new Intent(), 0));
         registrationIntent.putExtra(EXTRA_SENDER, senderId);
-        context.startService(registrationIntent);
+        context.startService(SSUtil.updateIntentExplicitness(context, registrationIntent));
     }
 
     /**
@@ -56,7 +57,7 @@ public class C2DMessaging {
         Intent regIntent = new Intent(REQUEST_UNREGISTRATION_INTENT);
         regIntent.putExtra(EXTRA_APPLICATION_PENDING_INTENT,
                 PendingIntent.getBroadcast(context, 0, new Intent(), 0));
-        context.startService(regIntent);
+        context.startService(SSUtil.updateIntentExplicitness(context, regIntent));
     }
 
 }
