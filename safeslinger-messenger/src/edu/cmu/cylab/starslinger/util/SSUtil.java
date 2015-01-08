@@ -180,6 +180,7 @@ public class SSUtil {
         return new File(dir, filename);
     }
 
+    @SuppressWarnings("deprecation")
     public static boolean isDayChanged(long lastScan) {
         Date last = new Date(lastScan);
         Date now = new Date();
@@ -251,6 +252,7 @@ public class SSUtil {
         return Uri.fromFile(dir);
     }
 
+    @SuppressWarnings("deprecation")
     public static String generateRecipientVCard(RecipientRow recip) throws VCardException {
 
         String token = recip.getPushtoken();
@@ -376,7 +378,7 @@ public class SSUtil {
             case SafeSlingerConfig.NOTIFY_AMAZONADM:
                 return ctx.getString(R.string.label_AmazonADMServiceName);
             default:
-                return String.format("%s %d", ctx.getString(R.string.label_Device), notify);
+                return String.format(Locale.getDefault(),"%s %d", ctx.getString(R.string.label_Device), notify);
         }
     }
 
@@ -399,7 +401,7 @@ public class SSUtil {
             case SafeSlingerConfig.NOTIFY_AMAZONADM:
                 return ctx.getString(R.string.label_AmazonFireOS);
             default:
-                return String.format("%s %d", ctx.getString(R.string.label_Device), notify);
+                return String.format(Locale.getDefault(),"%s %d", ctx.getString(R.string.label_Device), notify);
         }
     }
 
@@ -475,7 +477,7 @@ public class SSUtil {
             // so make sure only one can answer
             PackageManager pm = context.getPackageManager();
             List<ResolveInfo> resolveInfo = pm.queryIntentServices(implicitIntent, 0);
-            if (resolveInfo == null || resolveInfo.size() != 1) {
+            if (resolveInfo == null) {
                 return null;
             }
 
