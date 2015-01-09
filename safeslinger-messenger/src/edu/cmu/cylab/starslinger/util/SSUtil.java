@@ -378,7 +378,8 @@ public class SSUtil {
             case SafeSlingerConfig.NOTIFY_AMAZONADM:
                 return ctx.getString(R.string.label_AmazonADMServiceName);
             default:
-                return String.format(Locale.getDefault(),"%s %d", ctx.getString(R.string.label_Device), notify);
+                return String.format(Locale.getDefault(), "%s %d",
+                        ctx.getString(R.string.label_Device), notify);
         }
     }
 
@@ -401,7 +402,8 @@ public class SSUtil {
             case SafeSlingerConfig.NOTIFY_AMAZONADM:
                 return ctx.getString(R.string.label_AmazonFireOS);
             default:
-                return String.format(Locale.getDefault(),"%s %d", ctx.getString(R.string.label_Device), notify);
+                return String.format(Locale.getDefault(), "%s %d",
+                        ctx.getString(R.string.label_Device), notify);
         }
     }
 

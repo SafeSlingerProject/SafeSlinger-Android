@@ -87,39 +87,41 @@ public class ExchangeActivity extends BaseActivity {
 
         @Override
         public void run() {
+            if (mProt != null) {
+                int num = 0;
+                int numUsers = mProt.getNumUsers();
+                int numUsersMatchNonces = mProt.getNumUsersMatchNonces();
+                int numUsersKeyNodes = mProt.getNumUsersKeyNodes();
+                int numUsersSigs = mProt.getNumUsersSigs();
+                int numUsersData = mProt.getNumUsersData();
+                int numUsersCommit = mProt.getNumUsersCommit();
+                int total = numUsersCommit + numUsersData + numUsersSigs + numUsersKeyNodes
+                        + numUsersMatchNonces;
 
-            int num = 0;
-            int numUsers = mProt.getNumUsers();
-            int numUsersMatchNonces = mProt.getNumUsersMatchNonces();
-            int numUsersKeyNodes = mProt.getNumUsersKeyNodes();
-            int numUsersSigs = mProt.getNumUsersSigs();
-            int numUsersData = mProt.getNumUsersData();
-            int numUsersCommit = mProt.getNumUsersCommit();
-            int total = numUsersCommit + numUsersData + numUsersSigs + numUsersKeyNodes
-                    + numUsersMatchNonces;
+                if (numUsersMatchNonces > 0 && total > (4 * numUsers)) {
+                    num = numUsersMatchNonces;
+                } else if (numUsersKeyNodes > 2 && total > (3 * numUsers)) {
+                    num = numUsersKeyNodes;
+                } else if (numUsersSigs > 0 && total > (2 * numUsers)) {
+                    num = numUsersSigs;
+                } else if (numUsersData > 0 && total > (1 * numUsers)) {
+                    num = numUsersData;
+                } else if (numUsersCommit > 0 && total > (0 * numUsers)) {
+                    num = numUsersCommit;
+                }
 
-            if (numUsersMatchNonces > 0 && total > (4 * numUsers)) {
-                num = numUsersMatchNonces;
-            } else if (numUsersKeyNodes > 2 && total > (3 * numUsers)) {
-                num = numUsersKeyNodes;
-            } else if (numUsersSigs > 0 && total > (2 * numUsers)) {
-                num = numUsersSigs;
-            } else if (numUsersData > 0 && total > (1 * numUsers)) {
-                num = numUsersData;
-            } else if (numUsersCommit > 0 && total > (0 * numUsers)) {
-                num = numUsersCommit;
+                String msg;
+                if (num > 0) {
+                    String msgNRecvItems = String.format(getString(R.string.label_ReceivedNItems),
+                            num);
+                    msg = String.format("%s\n\n%s", mProgressMsg, msgNRecvItems);
+                } else {
+                    msg = mProgressMsg;
+                }
+
+                showProgressUpdate(msg);
+                mHandler.postDelayed(this, MS_POLL_INTERVAL);
             }
-
-            String msg;
-            if (num > 0) {
-                String msgNRecvItems = String.format(getString(R.string.label_ReceivedNItems), num);
-                msg = String.format("%s\n\n%s", mProgressMsg, msgNRecvItems);
-            } else {
-                msg = mProgressMsg;
-            }
-
-            showProgressUpdate(msg);
-            mHandler.postDelayed(this, MS_POLL_INTERVAL);
         }
     };
 
@@ -722,6 +724,7 @@ public class ExchangeActivity extends BaseActivity {
         }
         mDlgProg = new ProgressDialog(act);
         mDlgProg.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        mDlgProg.setTitle(mProt.getStatusBanner(ExchangeActivity.this));
         mDlgProg.setMessage(msg);
         mProgressMsg = msg;
         mDlgProg.setCancelable(true);
@@ -772,5 +775,15 @@ public class ExchangeActivity extends BaseActivity {
             outState.putString(extra.HOST_NAME, mHostName);
         }
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (mHandler != null) {
+            mHandler.removeCallbacks(mUpdateReceivedProg);
+        }
+        mProt.endProtocol();
     }
 }
