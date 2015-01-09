@@ -280,6 +280,7 @@ public class ComposeFragment extends Fragment {
         } else {
             mEditTextMessage.setTextKeepState("");
         }
+
     }
 
     private void doSave(String text) {

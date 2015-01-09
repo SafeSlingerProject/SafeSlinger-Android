@@ -24,6 +24,7 @@
 
 package edu.cmu.cylab.starslinger.view;
 
+import com.crashlytics.android.Crashlytics;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -465,6 +466,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
+        Crashlytics.start(this);
+     
 
         mViewPager = new ViewPager(this);
         mViewPager.setId(R.id.pager);
