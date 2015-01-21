@@ -24,7 +24,6 @@
 
 package edu.cmu.cylab.starslinger.view;
 
-import com.crashlytics.android.Crashlytics;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -41,7 +40,6 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-
 import a_vcard.android.syncml.pim.VDataBuilder;
 import a_vcard.android.syncml.pim.VNode;
 import a_vcard.android.syncml.pim.vcard.ContactStruct;
@@ -49,6 +47,7 @@ import a_vcard.android.syncml.pim.vcard.ContactStruct.ContactMethod;
 import a_vcard.android.syncml.pim.vcard.Name;
 import a_vcard.android.syncml.pim.vcard.VCardException;
 import a_vcard.android.syncml.pim.vcard.VCardParser;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -66,6 +65,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
@@ -90,7 +90,9 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
+import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
 import android.util.Base64;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
@@ -104,6 +106,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+import com.crashlytics.android.Crashlytics;
 import edu.cmu.cylab.starslinger.ExchangeException;
 import edu.cmu.cylab.starslinger.GeneralException;
 import edu.cmu.cylab.starslinger.MyLog;
@@ -149,6 +152,7 @@ import edu.cmu.cylab.starslinger.view.IntroductionFragment.OnIntroResultListener
 import edu.cmu.cylab.starslinger.view.MessagesFragment.OnMessagesResultListener;
 import edu.cmu.cylab.starslinger.view.SlingerFragment.OnSlingerResultListener;
 
+@SuppressLint("InflateParams")
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class HomeActivity extends BaseActivity implements OnComposeResultListener,
@@ -464,7 +468,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Theme_Safeslinger);
+//        setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
         Crashlytics.start(this);
      
@@ -827,22 +831,49 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        MenuItem iAdd = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+        MenuItem iAddMenuItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
                 R.drawable.ic_action_add_person);
-        MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
-
-        menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+        MenuCompat.setShowAsAction(iAddMenuItem, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
+        SpannableString spanString = new SpannableString(iAddMenuItem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        iAddMenuItem.setTitle(spanString);
+        
+        MenuItem iInviteItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
                 R.drawable.ic_action_add_person);
-        menu.add(0, MENU_SENDINTRO, 0, R.string.title_SecureIntroduction).setIcon(
+        spanString = new SpannableString(iInviteItem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        iInviteItem.setTitle(spanString);
+        
+        MenuItem sendIntroMenuItem = menu.add(0, MENU_SENDINTRO, 0, R.string.title_SecureIntroduction).setIcon(
                 R.drawable.ic_action_secintro);
-        menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
+        spanString = new SpannableString(sendIntroMenuItem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        sendIntroMenuItem.setTitle(spanString);
+        
+        MenuItem feedBackMenuitem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);
-        menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
+        spanString = new SpannableString(feedBackMenuitem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        feedBackMenuitem.setTitle(spanString);
+        
+        MenuItem logoutMenuItem = menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
                 android.R.drawable.ic_menu_close_clear_cancel);
-        menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
+        spanString = new SpannableString(logoutMenuItem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        logoutMenuItem.setTitle(spanString);
+        
+        MenuItem settingsItem = menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
                 android.R.drawable.ic_menu_preferences);
-        menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(android.R.drawable.ic_menu_help);
-
+        spanString = new SpannableString(settingsItem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        settingsItem.setTitle(spanString);
+        
+        
+        MenuItem helpItem = menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(android.R.drawable.ic_menu_help);
+        spanString = new SpannableString(helpItem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        helpItem.setTitle(spanString);
+        
         return true;
     }
 

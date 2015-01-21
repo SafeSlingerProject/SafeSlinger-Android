@@ -37,6 +37,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.SearchRecentSuggestions;
@@ -44,6 +45,8 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.SearchView.OnQueryTextListener;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
@@ -226,20 +229,30 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        MenuItem iAdd = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+        MenuItem iAddMenuItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
                 R.drawable.ic_action_add_person);
+        SpannableString spanString = new SpannableString(iAddMenuItem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        iAddMenuItem.setTitle(spanString);
+        
+        MenuItemCompat.setShowAsAction(iAddMenuItem, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
 
-        MenuItemCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
-
-        MenuItem iHelp = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
+        MenuItem iHelpmenuItem = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
                 R.drawable.ic_action_help);
-        MenuItemCompat.setShowAsAction(iHelp, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+        MenuItemCompat.setShowAsAction(iHelpmenuItem, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
 
-        menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+        MenuItem contactInviteMenuItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
                 R.drawable.ic_action_add_person);
-        menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
+        spanString = new SpannableString(contactInviteMenuItem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        contactInviteMenuItem.setTitle(spanString);
+        
+        MenuItem feedbackItem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);
-
+        spanString = new SpannableString(feedbackItem.getTitle().toString());
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        feedbackItem.setTitle(spanString);
+        
         return true;
     }
 
