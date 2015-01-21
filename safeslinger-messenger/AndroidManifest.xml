@@ -21,14 +21,12 @@
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
-
-
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.cmu.cylab.starslinger"
     android:versionCode="0x01080102"
-    android:versionName="1.8.1.2" >
+    android:versionName="1.8.1.2 PostRegistration Tests" >
 
     <!-- API 9 is the minimum required for password-based encryption PBKDF2WithHmacSHA1. -->
     <!-- API 8 is the minimum required to receive push messages. -->
@@ -159,8 +157,6 @@
         <!--
              Only C2DM servers can send messages for the app. If permission is 
 			not set - any other app can generate it
-
-
         -->
         <receiver
             android:name=".transaction.C2DMBroadcastReceiver"
@@ -229,10 +225,9 @@
             android:screenOrientation="portrait" >
         </activity>
 
-
-    
-
-    <meta-data android:name="com.crashlytics.ApiKey" android:value="a9f2629c171299fa2ff44a07abafb7652f4e1d5c"/>
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="a9f2629c171299fa2ff44a07abafb7652f4e1d5c" />
     </application>
 
 </manifest>
