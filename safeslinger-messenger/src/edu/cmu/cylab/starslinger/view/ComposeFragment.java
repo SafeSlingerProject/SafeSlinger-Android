@@ -43,6 +43,7 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -105,11 +106,13 @@ public class ComposeFragment extends Fragment {
     private long mRowIdRecipient = -1;
     private static OnComposeResultListener mResult;
 
+    private Handler mComposeTabHandler = new Handler();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        updateValues(savedInstanceState);
+        // updateValues(savedInstanceState);
     }
 
     @Override
@@ -130,7 +133,7 @@ public class ComposeFragment extends Fragment {
         mButtonSender = (Button) vFrag.findViewById(R.id.SendButtonSender);
         mButtonRecip = (Button) vFrag.findViewById(R.id.SendButtonRecipient);
 
-        updateValues(savedInstanceState);
+        // updateValues(savedInstanceState);
 
         OnClickListener clickFile = new OnClickListener() {
 
@@ -193,93 +196,101 @@ public class ComposeFragment extends Fragment {
     }
 
     public void updateValues(Bundle extras) {
-        String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
-        DraftData d = DraftData.INSTANCE;
+        mComposeTabHandler.removeCallbacks(null);
+        mComposeTabHandler.postDelayed(new Runnable() {
 
-        if (d.existsRecip()) {
-            mRowIdRecipient = d.getRecipRowId();
-        } else {
-            mRowIdRecipient = -1;
-        }
-        mFilePath = d.getFileName();
-        mFileSize = d.getFileSize();
-        mText = d.getText();
-        if (!TextUtils.isEmpty(d.getFileType()) && d.getFileType().contains("image")) {
-            mThumb = SSUtil.makeThumbnail(SafeSlinger.getApplication().getApplicationContext(),
-                    d.getFileData());
-        } else {
-            mThumb = null;
-        }
+            @Override
+            public void run() {
+                String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
+                DraftData d = DraftData.INSTANCE;
 
-        // make sure view is already inflated...
-        if (mTextViewSenderName == null) {
-            return;
-        }
-
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity());
-        mRecip = null;
-        Cursor c = dbRecipient.fetchRecipient(mRowIdRecipient);
-        if (c != null) {
-            try {
-                if (c.moveToFirst()) {
-                    mRecip = new RecipientRow(c);
+                if (d.existsRecip()) {
+                    mRowIdRecipient = d.getRecipRowId();
+                } else {
+                    mRowIdRecipient = -1;
                 }
-            } finally {
-                c.close();
+                mFilePath = d.getFileName();
+                mFileSize = d.getFileSize();
+                mText = d.getText();
+                if (!TextUtils.isEmpty(d.getFileType()) && d.getFileType().contains("image")) {
+                    mThumb = SSUtil.makeThumbnail(SafeSlinger.getApplication()
+                            .getApplicationContext(), d.getFileData());
+                } else {
+                    mThumb = null;
+                }
+
+                // make sure view is already inflated...
+                if (mTextViewSenderName == null) {
+                    return;
+                }
+
+                RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getActivity());
+                mRecip = null;
+                Cursor c = dbRecipient.fetchRecipient(mRowIdRecipient);
+                if (c != null) {
+                    try {
+                        if (c.moveToFirst()) {
+                            mRecip = new RecipientRow(c);
+                        }
+                    } finally {
+                        c.close();
+                    }
+                }
+
+                // load key here!
+                String myKeyId = SafeSlingerPrefs.getKeyIdString();
+                long myKeyDate = SafeSlingerPrefs.getKeyDate();
+
+                // sender
+                mImageViewSenderPhoto.setImageResource(0);
+                String name = SafeSlingerPrefs.getContactName();
+                if (!TextUtils.isEmpty(name)) {
+                    byte[] photo = ((BaseActivity) getActivity()).getContactPhoto(contactLookupKey);
+                    drawUserData(R.string.label_SendFrom, name, photo, mTextViewSenderName,
+                            mTextViewSenderKey, mImageViewSenderPhoto, myKeyId, myKeyDate);
+                } else {
+                    mTextViewRecipName.setTextColor(Color.GRAY);
+                    mTextViewSenderName.setText(R.string.label_UserName);
+                    mTextViewSenderKey.setText("");
+                    mImageViewSenderPhoto.setImageResource(R.drawable.ic_silhouette);
+                }
+
+                // recipient
+                mImageViewRecipPhoto.setImageResource(0);
+                if (mRecip != null) {
+                    drawUserData(R.string.label_SendTo, mRecip.getName(), mRecip.getPhoto(),
+                            mTextViewRecipName, mTextViewRecipKey, mImageViewRecipPhoto,
+                            mRecip.getKeyid(), mRecip.getKeydate());
+                    mTextViewRecipName.setTextColor(Color.BLACK);
+                } else {
+                    mTextViewRecipName.setTextColor(Color.GRAY);
+                    mTextViewRecipName.setText(R.string.label_SelectRecip);
+                    mTextViewRecipKey.setText("");
+                    mImageViewRecipPhoto.setImageResource(R.drawable.ic_silhouette_select);
+                }
+
+                // file
+                if (!(TextUtils.isEmpty(mFilePath))) {
+                    drawFileImage();
+                    drawFileData();
+                    mTextViewFile.setTextColor(Color.BLACK);
+                } else {
+                    mTextViewFile.setTextColor(Color.GRAY);
+                    mTextViewFile.setText(R.string.btn_SelectFile);
+                    mImageViewFile.setImageResource(R.drawable.ic_attachment_select);
+                    mTextViewFileSize.setText("");
+                }
+
+                // message
+                if (!TextUtils.isEmpty(mText)) {
+                    mEditTextMessage.setTextKeepState(mText);
+                    mEditTextMessage.forceLayout();
+                } else {
+                    mEditTextMessage.setTextKeepState("");
+                }
+
             }
-        }
-
-        // load key here!
-        String myKeyId = SafeSlingerPrefs.getKeyIdString();
-        long myKeyDate = SafeSlingerPrefs.getKeyDate();
-
-        // sender
-        mImageViewSenderPhoto.setImageResource(0);
-        String name = SafeSlingerPrefs.getContactName();
-        if (!TextUtils.isEmpty(name)) {
-            byte[] photo = ((BaseActivity) this.getActivity()).getContactPhoto(contactLookupKey);
-            drawUserData(R.string.label_SendFrom, name, photo, mTextViewSenderName,
-                    mTextViewSenderKey, mImageViewSenderPhoto, myKeyId, myKeyDate);
-        } else {
-            mTextViewRecipName.setTextColor(Color.GRAY);
-            mTextViewSenderName.setText(R.string.label_UserName);
-            mTextViewSenderKey.setText("");
-            mImageViewSenderPhoto.setImageResource(R.drawable.ic_silhouette);
-        }
-
-        // recipient
-        mImageViewRecipPhoto.setImageResource(0);
-        if (mRecip != null) {
-            drawUserData(R.string.label_SendTo, mRecip.getName(), mRecip.getPhoto(),
-                    mTextViewRecipName, mTextViewRecipKey, mImageViewRecipPhoto, mRecip.getKeyid(),
-                    mRecip.getKeydate());
-            mTextViewRecipName.setTextColor(Color.BLACK);
-        } else {
-            mTextViewRecipName.setTextColor(Color.GRAY);
-            mTextViewRecipName.setText(R.string.label_SelectRecip);
-            mTextViewRecipKey.setText("");
-            mImageViewRecipPhoto.setImageResource(R.drawable.ic_silhouette_select);
-        }
-
-        // file
-        if (!(TextUtils.isEmpty(mFilePath))) {
-            drawFileImage();
-            drawFileData();
-            mTextViewFile.setTextColor(Color.BLACK);
-        } else {
-            mTextViewFile.setTextColor(Color.GRAY);
-            mTextViewFile.setText(R.string.btn_SelectFile);
-            mImageViewFile.setImageResource(R.drawable.ic_attachment_select);
-            mTextViewFileSize.setText("");
-        }
-
-        // message
-        if (!TextUtils.isEmpty(mText)) {
-            mEditTextMessage.setTextKeepState(mText);
-            mEditTextMessage.forceLayout();
-        } else {
-            mEditTextMessage.setTextKeepState("");
-        }
+        }, 200);
 
     }
 

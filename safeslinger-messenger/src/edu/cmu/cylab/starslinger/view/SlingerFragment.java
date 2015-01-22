@@ -44,6 +44,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.ContactsContract.CommonDataKinds.Email;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.provider.ContactsContract.CommonDataKinds.StructuredPostal;
@@ -94,6 +95,7 @@ public class SlingerFragment extends Fragment {
     private Button mButtonStartExchange;
     private Button mButtonSender;
     private static OnSlingerResultListener mResult;
+    private Handler mSlingFragmentHandler = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -154,65 +156,75 @@ public class SlingerFragment extends Fragment {
         return vFrag;
     }
 
-    public void updateValues(Bundle extras) {
-        if (extras == null) {
-            mListTopOffset = 0;
-            mListVisiblePos = 0;
-        }
+    public void updateValues(final Bundle extras) {
 
-        // make sure view is already inflated...
-        if (mTextViewUserName == null) {
-            return;
-        }
+        mSlingFragmentHandler.removeCallbacks(null);
+        mSlingFragmentHandler.postDelayed(new Runnable() {
 
-        // init
-        mTextViewUserName.setText("");
+            @Override
+            public void run() {
 
-        String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
+                if (extras == null) {
+                    mListTopOffset = 0;
+                    mListVisiblePos = 0;
+                }
 
-        // valid key and push token is required
-        SlingerIdentity si = new SlingerIdentity(SafeSlingerPrefs.getPushRegistrationId(),
-                SSUtil.getLocalNotification(SafeSlinger.getApplication()),
-                SafeSlinger.getSenderKey());
-        String token = SlingerIdentity.sidPush2DBPush(si);
-        String pubkey = SlingerIdentity.sidKey2DBKey(si);
-        if (TextUtils.isEmpty(token)) {
-            return;
-        } else if (TextUtils.isEmpty(pubkey)) {
-            return;
-        }
+                // make sure view is already inflated...
+                if (mTextViewUserName == null) {
+                    return;
+                }
 
-        mImpps = new ArrayList<ImppValue>();
-        mImpps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUSHTOKEN, SSUtil.finalEncode(token
-                .getBytes())));
-        mImpps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUBKEY, SSUtil.finalEncode(pubkey
-                .getBytes())));
+                // init
+                mTextViewUserName.setText("");
 
-        mPreferredName = SafeSlingerPrefs.getContactName();
+                String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
 
-        // create a contact
-        mContact = new ContactStruct();
-        ContactStruct pref = new ContactStruct();
-        if (!TextUtils.isEmpty(mPreferredName)) {
-            pref.name = new Name(mPreferredName);
-        }
-        mContact = BaseActivity.loadContactDataNoDuplicates(getActivity(), contactLookupKey, pref,
-                false);
+                // valid key and push token is required
+                SlingerIdentity si = new SlingerIdentity(SafeSlingerPrefs.getPushRegistrationId(),
+                        SSUtil.getLocalNotification(SafeSlinger.getApplication()), SafeSlinger
+                                .getSenderKey());
+                String token = SlingerIdentity.sidPush2DBPush(si);
+                String pubkey = SlingerIdentity.sidKey2DBKey(si);
+                if (TextUtils.isEmpty(token)) {
+                    return;
+                } else if (TextUtils.isEmpty(pubkey)) {
+                    return;
+                }
 
-        // add custom IMPP values directly from third-party...
-        for (ImppValue impp : mImpps) {
-            mContact.addContactmethod(Contacts.KIND_IM, ContactMethodsColumns.TYPE_CUSTOM,
-                    new String(SSUtil.finalEncode(impp.v)), impp.k, false);
-        }
+                mImpps = new ArrayList<ImppValue>();
+                mImpps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUSHTOKEN, SSUtil
+                        .finalEncode(token.getBytes())));
+                mImpps.add(new ImppValue(SafeSlingerConfig.APP_KEY_PUBKEY, SSUtil
+                        .finalEncode(pubkey.getBytes())));
 
-        // we need a real persons name
-        if (mContact.name == null || mContact.name.toString() == null
-                || TextUtils.isEmpty(mContact.name.toString().trim())) {
-            showNote(R.string.error_InvalidContactName);
-            return;
-        }
+                mPreferredName = SafeSlingerPrefs.getContactName();
 
-        drawContactData(mTextViewUserName, mListViewContactFields, mImageViewPhoto);
+                // create a contact
+                mContact = new ContactStruct();
+                ContactStruct pref = new ContactStruct();
+                if (!TextUtils.isEmpty(mPreferredName)) {
+                    pref.name = new Name(mPreferredName);
+                }
+                mContact = BaseActivity.loadContactDataNoDuplicates(getActivity(),
+                        contactLookupKey, pref, false);
+
+                // add custom IMPP values directly from third-party...
+                for (ImppValue impp : mImpps) {
+                    mContact.addContactmethod(Contacts.KIND_IM, ContactMethodsColumns.TYPE_CUSTOM,
+                            new String(SSUtil.finalEncode(impp.v)), impp.k, false);
+                }
+
+                // we need a real persons name
+                if (mContact.name == null || mContact.name.toString() == null
+                        || TextUtils.isEmpty(mContact.name.toString().trim())) {
+                    showNote(R.string.error_InvalidContactName);
+                    return;
+                }
+
+                drawContactData(mTextViewUserName, mListViewContactFields, mImageViewPhoto);
+
+            }
+        }, 200);
     }
 
     private static void doChangeUser() {

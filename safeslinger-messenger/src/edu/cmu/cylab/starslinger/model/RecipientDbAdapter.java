@@ -515,6 +515,9 @@ public class RecipientDbAdapter {
         }
     }
 
+    /*
+     * TODO: updateValues PickRecipientsActivity
+     */
     public Cursor fetchAllRecipientsMessage(String myKeyId, String myPushToken, String contactName) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(contactName)) {
@@ -535,6 +538,15 @@ public class RecipientDbAdapter {
         }
     }
 
+    /*
+     * TODO: updateValues PickRecipientsActivity
+     */
+    /**
+     * @param myKeyId
+     * @param myPushToken
+     * @param contactName
+     * @return
+     */
     public Cursor fetchAllRecipientsIntro(String myKeyId, String myPushToken, String contactName) {
         synchronized (SafeSlinger.sDataLock) {
             if (TextUtils.isEmpty(contactName)) {

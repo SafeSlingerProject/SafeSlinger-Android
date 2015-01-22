@@ -75,7 +75,8 @@
             android:name=".view.HomeActivity"
             android:configChanges="locale"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.Safeslinger" >
+            android:theme="@style/Theme.Safeslinger"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

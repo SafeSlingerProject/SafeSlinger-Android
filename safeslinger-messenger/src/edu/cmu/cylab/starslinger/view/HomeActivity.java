@@ -189,7 +189,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     // static data
     private static ProgressDialog sProg = null;
-    private static Handler sHandler;
+    private static Handler sHandler = new Handler();
     private static String sProgressMsg = null;
 
     private ViewPager mViewPager;
@@ -439,7 +439,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             setTab(Tabs.SLINGKEYS);
             if (SafeSlingerPrefs.getShowWalkthrough()) {
-                BaseActivity.xshowWalkthrough(this).create().show();
+                // BaseActivity.xshowWalkthrough(this).create().show();
+                showWalkthroughDialog();
             }
 
         } else if (dbMessage.getAllMessageCount() == 0) {
@@ -534,7 +535,19 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
-    public static class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabListener,
+    private void showWalkthroughDialog() {
+        sHandler.removeCallbacks(null);
+        sHandler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                BaseActivity.xshowWalkthrough(HomeActivity.this).create().show();
+
+            }
+        }, 200);
+    }
+
+    public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabListener,
             ViewPager.OnPageChangeListener {
         private final FragmentActivity mActivity;
         private final ActionBar mActionBar;
@@ -548,7 +561,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             return mTabs;
         }
 
-        static final class TabInfo {
+        final class TabInfo {
             private final Class<?> clss;
             private Bundle args;
 
@@ -613,7 +626,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             ComposeFragment cf = (ComposeFragment) findFragmentByPosition(Tabs.COMPOSE
                                     .ordinal());
                             if (cf != null) {
-                                cf.updateKeypad();
+                                // cf.updateKeypad(); //Not needed to hide soft
+                                // input focus programmtically. Can be done via
+                                // manifest
                                 cf.updateValues(null);
                             }
                             break;
@@ -632,7 +647,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 sf.updateKeypad();
                                 sf.updateValues(null);
                                 if (SafeSlingerPrefs.getShowWalkthrough()) {
-                                    BaseActivity.xshowWalkthrough(mActivity).create().show();
+                                    // BaseActivity.xshowWalkthrough(mActivity).create().show();
+                                    showWalkthroughDialog();
                                 }
                             }
                             break;
@@ -834,57 +850,75 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            MenuItem iAdd = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
+                    .setIcon(R.drawable.ic_action_add_person);
+            MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
 
-        MenuItem iAddMenuItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
-                .setIcon(R.drawable.ic_action_add_person);
-        MenuCompat.setShowAsAction(iAddMenuItem, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
-        SpannableString spanString = new SpannableString(iAddMenuItem.getTitle().toString());
-        // fix the color to white
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-        iAddMenuItem.setTitle(spanString);
+            menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+                    R.drawable.ic_action_add_person);
+            menu.add(0, MENU_SENDINTRO, 0, R.string.title_SecureIntroduction).setIcon(
+                    R.drawable.ic_action_secintro);
+            menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
+                    android.R.drawable.ic_menu_send);
+            menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
+                    android.R.drawable.ic_menu_close_clear_cancel);
+            menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
+                    android.R.drawable.ic_menu_preferences);
+            menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(
+                    android.R.drawable.ic_menu_help);
+        } else {
+            MenuItem iAddMenuItem = menu
+                    .add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
+                            R.drawable.ic_action_add_person);
+            MenuCompat.setShowAsAction(iAddMenuItem, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
+            SpannableString spanString = new SpannableString(iAddMenuItem.getTitle().toString());
+            // fix the color to white
+            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
+            iAddMenuItem.setTitle(spanString);
 
-        MenuItem iInviteItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
-                .setIcon(R.drawable.ic_action_add_person);
-        spanString = new SpannableString(iInviteItem.getTitle().toString());
-        // fix the color to white
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-        iInviteItem.setTitle(spanString);
+            MenuItem iInviteItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
+                    .setIcon(R.drawable.ic_action_add_person);
+            spanString = new SpannableString(iInviteItem.getTitle().toString());
+            // fix the color to white
+            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
+            iInviteItem.setTitle(spanString);
 
-        MenuItem sendIntroMenuItem = menu.add(0, MENU_SENDINTRO, 0,
-                R.string.title_SecureIntroduction).setIcon(R.drawable.ic_action_secintro);
-        spanString = new SpannableString(sendIntroMenuItem.getTitle().toString());
-        // fix the color to white
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-        sendIntroMenuItem.setTitle(spanString);
+            MenuItem sendIntroMenuItem = menu.add(0, MENU_SENDINTRO, 0,
+                    R.string.title_SecureIntroduction).setIcon(R.drawable.ic_action_secintro);
+            spanString = new SpannableString(sendIntroMenuItem.getTitle().toString());
+            // fix the color to white
+            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
+            sendIntroMenuItem.setTitle(spanString);
 
-        MenuItem feedBackMenuitem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback)
-                .setIcon(android.R.drawable.ic_menu_send);
-        spanString = new SpannableString(feedBackMenuitem.getTitle().toString());
-        // fix the color to white
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-        feedBackMenuitem.setTitle(spanString);
+            MenuItem feedBackMenuitem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback)
+                    .setIcon(android.R.drawable.ic_menu_send);
+            spanString = new SpannableString(feedBackMenuitem.getTitle().toString());
+            // fix the color to white
+            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
+            feedBackMenuitem.setTitle(spanString);
 
-        MenuItem logoutMenuItem = menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
-                android.R.drawable.ic_menu_close_clear_cancel);
-        spanString = new SpannableString(logoutMenuItem.getTitle().toString());
-        // fix the color to white
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-        logoutMenuItem.setTitle(spanString);
+            MenuItem logoutMenuItem = menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
+                    android.R.drawable.ic_menu_close_clear_cancel);
+            spanString = new SpannableString(logoutMenuItem.getTitle().toString());
+            // fix the color to white
+            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
+            logoutMenuItem.setTitle(spanString);
 
-        MenuItem settingsItem = menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
-                android.R.drawable.ic_menu_preferences);
-        spanString = new SpannableString(settingsItem.getTitle().toString());
-        // fix the color to white
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-        settingsItem.setTitle(spanString);
+            MenuItem settingsItem = menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
+                    android.R.drawable.ic_menu_preferences);
+            spanString = new SpannableString(settingsItem.getTitle().toString());
+            // fix the color to white
+            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
+            settingsItem.setTitle(spanString);
 
-        MenuItem helpItem = menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(
-                android.R.drawable.ic_menu_help);
-        spanString = new SpannableString(helpItem.getTitle().toString());
-        // fix the color to white
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-        helpItem.setTitle(spanString);
-
+            MenuItem helpItem = menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(
+                    android.R.drawable.ic_menu_help);
+            spanString = new SpannableString(helpItem.getTitle().toString());
+            // fix the color to white
+            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
+            helpItem.setTitle(spanString);
+        }
         return true;
     }
 
@@ -2849,9 +2883,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     private void refreshView() {
         // pass is good, determine what view to see...
-        if (sHandler == null) {
-            sHandler = new Handler();
-        }
+        // if (sHandler == null) {
+        // sHandler = new Handler();
+        // }
         sHandler.removeCallbacks(updateMainView);
         sHandler.post(updateMainView);
     }

@@ -302,6 +302,9 @@ public class MessageDbAdapter {
         }
     }
 
+    /*
+     * TODO: MSgFragment doDecrypt
+     */
     public long createMessageDecrypted(MessageData data, MessagePacket msg, String keyid) {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
@@ -383,6 +386,9 @@ public class MessageDbAdapter {
         }
     }
 
+    /*
+     * TODO:MsgFragment doDecrypt
+     */
     /**
      * Deletes message
      */
@@ -502,28 +508,28 @@ public class MessageDbAdapter {
         }
     }
 
-    public long fetchLastRecentMessageTime() {
-        synchronized (SafeSlinger.sDataLock) {
-            /*
-             * SELECT MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
-             * FROM table ORDER BY MessageDbAdapter.KEY_ROWID DESC LIMIT 1;
-             */
-            Cursor c = query(DATABASE_TABLE, new String[] {
-                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
-            }, null, null, null, null, MessageDbAdapter.KEY_ROWID + " DESC", "1");
-            if (c != null) {
-                try {
-                    if (c.moveToFirst()) {
-                        long time = c.getLong(c.getColumnIndex(MessageDbAdapter.KEY_DATE_RECV));
-                        return time;
-                    }
-                } finally {
-                    c.close();
-                }
-            }
-            return -1;
-        }
-    }
+    // public long fetchLastRecentMessageTime() {
+    // synchronized (SafeSlinger.sDataLock) {
+    // /*
+    // * SELECT MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
+    // * FROM table ORDER BY MessageDbAdapter.KEY_ROWID DESC LIMIT 1;
+    // */
+    // Cursor c = query(DATABASE_TABLE, new String[] {
+    // MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
+    // }, null, null, null, null, MessageDbAdapter.KEY_ROWID + " DESC", "1");
+    // if (c != null) {
+    // try {
+    // if (c.moveToFirst()) {
+    // long time = c.getLong(c.getColumnIndex(MessageDbAdapter.KEY_DATE_RECV));
+    // return time;
+    // }
+    // } finally {
+    // c.close();
+    // }
+    // }
+    // return -1;
+    // }
+    // }
 
     public Cursor fetchMessageRecent(String keyId) {
         synchronized (SafeSlinger.sDataLock) {
