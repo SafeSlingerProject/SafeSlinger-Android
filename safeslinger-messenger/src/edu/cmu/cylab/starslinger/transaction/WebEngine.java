@@ -176,75 +176,31 @@ public class WebEngine {
         }
     }
 
-    /**
-     * put a file, its meta-data, and retrieval id on the server
-     * 
-     * @throws MessageNotFoundException
+    /***
+     * put a push registration id on the server with a submission token so the
+     * user of this key id can authenticate a change later if the registration
+     * id they use for the key changes due to migrating to a new device, service
+     * migration, registration expiration, others.
      */
-    @Deprecated
-    public byte[] postFileAndroidC2DM(byte[] msgHashBytes, byte[] msgData, byte[] fileData,
-            String recipientToken) throws ExchangeException, MessageNotFoundException {
-        handleSizeRestictions(fileData);
+    public byte[] postRegistration(String keyId, String submisisonToken, String senderPushRegId,
+            int notifyType) throws ExchangeException, MessageNotFoundException {
 
         int capacity = mVersionLen //
-                + 4 + msgHashBytes.length //
-                + 4 + recipientToken.length() //
-                + 4 + msgData.length //
-                + 4 + fileData.length;
+                + 4 + keyId.length() //
+                + 4 + submisisonToken.length() //
+                + 4 + senderPushRegId.length() //
+                + 4;
         ByteBuffer msg = ByteBuffer.allocate(capacity);
         msg.putInt(mVersion);
-        msg.putInt(msgHashBytes.length);
-        msg.put(msgHashBytes);
-        msg.putInt(recipientToken.length());
-        msg.put(recipientToken.getBytes());
-        msg.putInt(msgData.length);
-        msg.put(msgData);
-        msg.putInt(fileData.length);
-        msg.put(fileData);
+        msg.putInt(keyId.length());
+        msg.put(keyId.getBytes());
+        msg.putInt(submisisonToken.length());
+        msg.put(submisisonToken.getBytes());
+        msg.putInt(senderPushRegId.length());
+        msg.put(senderPushRegId.getBytes());
+        msg.putInt(notifyType);
 
-        mNotRegistered = false;
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/postFile1" + mUrlSuffix, msg.array());
-
-        mNotRegistered = isNotRegisteredErrorCodes(resp);
-
-        resp = handleResponseExceptions(resp, 0);
-
-        return resp;
-    }
-
-    /**
-     * put a file, its meta-data, and retrieval id on the server
-     * 
-     * @throws MessageNotFoundException
-     */
-    @Deprecated
-    public byte[] postFileAppleUA(byte[] msgHashBytes, byte[] msgData, byte[] fileData,
-            String recipientToken) throws ExchangeException, MessageNotFoundException {
-
-        handleSizeRestictions(fileData);
-
-        int capacity = mVersionLen //
-                + 4 + msgHashBytes.length //
-                + 4 + recipientToken.length() //
-                + 4 + msgData.length //
-                + 4 + fileData.length;
-        ByteBuffer msg = ByteBuffer.allocate(capacity);
-        msg.putInt(mVersion);
-        msg.putInt(msgHashBytes.length);
-        msg.put(msgHashBytes);
-        msg.putInt(recipientToken.length());
-        msg.put(recipientToken.getBytes());
-        msg.putInt(msgData.length);
-        msg.put(msgData);
-        msg.putInt(fileData.length);
-        msg.put(fileData);
-
-        mNotRegistered = false;
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/postFile2" + mUrlSuffix, msg.array());
-
-        mNotRegistered = isNotRegisteredErrorCodes(resp);
+        byte[] resp = doPost(mUrlPrefix + mHost + "/postRegistration" + mUrlSuffix, msg.array());
 
         resp = handleResponseExceptions(resp, 0);
 
@@ -257,14 +213,14 @@ public class WebEngine {
      * @throws MessageNotFoundException
      */
     public byte[] postMessage(byte[] msgHashBytes, byte[] msgData, byte[] fileData,
-            String recipientToken, int notifyType) throws ExchangeException,
+            String recipientPushRegId, int notifyType) throws ExchangeException,
             MessageNotFoundException {
 
         handleSizeRestictions(fileData);
 
         int capacity = mVersionLen //
                 + 4 + msgHashBytes.length //
-                + 4 + recipientToken.length() //
+                + 4 + recipientPushRegId.length() //
                 + 4 + msgData.length //
                 + 4 + fileData.length //
                 + 4;
@@ -272,8 +228,8 @@ public class WebEngine {
         msg.putInt(mVersion);
         msg.putInt(msgHashBytes.length);
         msg.put(msgHashBytes);
-        msg.putInt(recipientToken.length());
-        msg.put(recipientToken.getBytes());
+        msg.putInt(recipientPushRegId.length());
+        msg.put(recipientPushRegId.getBytes());
         msg.putInt(msgData.length);
         msg.put(msgData);
         msg.putInt(fileData.length);

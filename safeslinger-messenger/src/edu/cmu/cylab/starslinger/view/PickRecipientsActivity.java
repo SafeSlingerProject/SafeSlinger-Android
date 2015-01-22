@@ -229,30 +229,33 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        MenuItem iAddMenuItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
-                R.drawable.ic_action_add_person);
+        MenuItem iAddMenuItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
+                .setIcon(R.drawable.ic_action_add_person);
         SpannableString spanString = new SpannableString(iAddMenuItem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         iAddMenuItem.setTitle(spanString);
-        
+
         MenuItemCompat.setShowAsAction(iAddMenuItem, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
 
         MenuItem iHelpmenuItem = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
                 R.drawable.ic_action_help);
         MenuItemCompat.setShowAsAction(iHelpmenuItem, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
 
-        MenuItem contactInviteMenuItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
-                R.drawable.ic_action_add_person);
+        MenuItem contactInviteMenuItem = menu.add(0, MENU_CONTACTINVITE, 0,
+                R.string.menu_SelectShareApp).setIcon(R.drawable.ic_action_add_person);
         spanString = new SpannableString(contactInviteMenuItem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         contactInviteMenuItem.setTitle(spanString);
-        
+
         MenuItem feedbackItem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);
         spanString = new SpannableString(feedbackItem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         feedbackItem.setTitle(spanString);
-        
+
         return true;
     }
 
@@ -400,9 +403,8 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         boolean pushable = recip.isPushable();
         boolean fromExch = recip.isFromTrustedSource();
         boolean keyChanged = recip.hasMyKeyChanged();
-        boolean pushChanged = recip.hasMyPushRegChanged();
         boolean deprecated = recip.isDeprecated();
-        boolean useableKey = pushable && !keyChanged && !pushChanged && !deprecated && fromExch;
+        boolean useableKey = pushable && !keyChanged && !deprecated && fromExch;
         if (useableKey) {
             Intent data = new Intent();
             data.putExtra(extra.RECIPIENT_ROW_ID, recip.getRowId());

@@ -243,13 +243,13 @@ public abstract class C2DMBaseReceiver extends IntentService {
 
         if (unregistered != null) {
             // Remember we are unregistered
-            SafeSlingerPrefs.setPushRegistrationIdWriteOnlyC2dm(null); // clear
+            SafeSlingerPrefs.setPushRegistrationId(null); // clear
             SafeSlingerPrefs.setPusgRegBackoff(SafeSlingerPrefs.DEFAULT_PUSHREG_BACKOFF);
             onUnregistered(context);
             return;
         } else if (error != null) {
             // we are not registered, can try again
-            SafeSlingerPrefs.setPushRegistrationIdWriteOnlyC2dm(null); // clear
+            SafeSlingerPrefs.setPushRegistrationId(null); // clear
             // Registration failed
             MyLog.e(TAG, "push reg error: " + error);
 
@@ -272,7 +272,7 @@ public abstract class C2DMBaseReceiver extends IntentService {
                 SafeSlingerPrefs.setPusgRegBackoff(backoff);
             }
         } else {
-            SafeSlingerPrefs.setPushRegistrationIdWriteOnlyC2dm(registrationId);
+            SafeSlingerPrefs.setPushRegistrationId(registrationId);
             SafeSlingerPrefs.setPusgRegBackoff(SafeSlingerPrefs.DEFAULT_PUSHREG_BACKOFF);
             onRegistered(context, registrationId);
         }

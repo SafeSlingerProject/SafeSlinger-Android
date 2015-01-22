@@ -124,7 +124,7 @@ public class RecipientRow extends RecipientData {
 
     public boolean isSendable() {
         return (mActive && isRegistered() && isPushable() && !isDeprecated()
-                && isFromTrustedSource() && !hasMyKeyChanged() && !hasMyPushRegChanged());
+                && isFromTrustedSource() && !hasMyKeyChanged());
     }
 
     public boolean isInvited() {

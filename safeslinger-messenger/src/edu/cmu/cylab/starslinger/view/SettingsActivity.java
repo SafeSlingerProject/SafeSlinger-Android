@@ -139,7 +139,7 @@ public class SettingsActivity extends PreferenceActivity {
         mRemindBackupDelay = (CheckBoxPreference) findPreference(SafeSlingerPrefs.pref.REMIND_BACKUP_DELAY);
         mPassPhraseCacheTtl = (IntegerListPreference) findPreference(SafeSlingerPrefs.pref.PASSPHRASE_CACHE_TTL);
         mContactName = (EditTextPreference) findPreference(SafeSlingerPrefs.pref.CONTACT_NAME);
-        mContactPushToken = findPreference(SafeSlingerPrefs.pref.PUSH_REGISTRATION_ID_DIRECT);
+        mContactPushToken = findPreference(SafeSlingerPrefs.pref.PUSH_REG_ID_LINKED);
         mContactPubKeyId = findPreference(SafeSlingerPrefs.pref.KEYID_STRING);
         mBackupRequestDate = findPreference(SafeSlingerPrefs.pref.BACKUP_REQUEST_DATE);
         mBackupCompleteDate = findPreference(SafeSlingerPrefs.pref.BACKUP_COMPLETE_DATE);

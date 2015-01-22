@@ -40,6 +40,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
 import a_vcard.android.syncml.pim.VDataBuilder;
 import a_vcard.android.syncml.pim.VNode;
 import a_vcard.android.syncml.pim.vcard.ContactStruct;
@@ -106,7 +107,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+
 import com.crashlytics.android.Crashlytics;
+
 import edu.cmu.cylab.starslinger.ExchangeException;
 import edu.cmu.cylab.starslinger.GeneralException;
 import edu.cmu.cylab.starslinger.MyLog;
@@ -115,6 +118,7 @@ import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
+import edu.cmu.cylab.starslinger.SafeSlingerPrefs.pref;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.crypto.CryptToolsLegacy;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
@@ -137,6 +141,7 @@ import edu.cmu.cylab.starslinger.model.MessageTransport;
 import edu.cmu.cylab.starslinger.model.RecipientDatabaseHelper;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
+import edu.cmu.cylab.starslinger.model.SlingerIdentity;
 import edu.cmu.cylab.starslinger.model.UseContactItem;
 import edu.cmu.cylab.starslinger.model.UseContactItem.UCType;
 import edu.cmu.cylab.starslinger.model.UserData;
@@ -468,10 +473,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        setTheme(R.style.Theme_Safeslinger);
+        // setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
         Crashlytics.start(this);
-     
 
         mViewPager = new ViewPager(this);
         mViewPager.setId(R.id.pager);
@@ -831,49 +835,56 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        MenuItem iAddMenuItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
-                R.drawable.ic_action_add_person);
+        MenuItem iAddMenuItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
+                .setIcon(R.drawable.ic_action_add_person);
         MenuCompat.setShowAsAction(iAddMenuItem, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
         SpannableString spanString = new SpannableString(iAddMenuItem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         iAddMenuItem.setTitle(spanString);
-        
-        MenuItem iInviteItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
-                R.drawable.ic_action_add_person);
+
+        MenuItem iInviteItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
+                .setIcon(R.drawable.ic_action_add_person);
         spanString = new SpannableString(iInviteItem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         iInviteItem.setTitle(spanString);
-        
-        MenuItem sendIntroMenuItem = menu.add(0, MENU_SENDINTRO, 0, R.string.title_SecureIntroduction).setIcon(
-                R.drawable.ic_action_secintro);
+
+        MenuItem sendIntroMenuItem = menu.add(0, MENU_SENDINTRO, 0,
+                R.string.title_SecureIntroduction).setIcon(R.drawable.ic_action_secintro);
         spanString = new SpannableString(sendIntroMenuItem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         sendIntroMenuItem.setTitle(spanString);
-        
-        MenuItem feedBackMenuitem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
-                android.R.drawable.ic_menu_send);
+
+        MenuItem feedBackMenuitem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback)
+                .setIcon(android.R.drawable.ic_menu_send);
         spanString = new SpannableString(feedBackMenuitem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         feedBackMenuitem.setTitle(spanString);
-        
+
         MenuItem logoutMenuItem = menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
                 android.R.drawable.ic_menu_close_clear_cancel);
         spanString = new SpannableString(logoutMenuItem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         logoutMenuItem.setTitle(spanString);
-        
+
         MenuItem settingsItem = menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
                 android.R.drawable.ic_menu_preferences);
         spanString = new SpannableString(settingsItem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         settingsItem.setTitle(spanString);
-        
-        
-        MenuItem helpItem = menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(android.R.drawable.ic_menu_help);
+
+        MenuItem helpItem = menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(
+                android.R.drawable.ic_menu_help);
         spanString = new SpannableString(helpItem.getTitle().toString());
-        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0); //fix the color to white
+        // fix the color to white
+        spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
         helpItem.setTitle(spanString);
-        
+
         return true;
     }
 
@@ -1953,13 +1964,24 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 processIntent(getIntent());
                             }
 
-                            // if requested, and logged in, try to decrypt
-                            // messages
                             String passCached = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
                                     .getKeyIdString());
+
+                            // if requested, logged in, try to decrypt pending
                             if (SafeSlingerPrefs.getAutoDecrypt() && !TextUtils.isEmpty(passCached)) {
                                 DecryptPendingTask decryptPending = new DecryptPendingTask();
                                 decryptPending.execute(passCached);
+                            }
+
+                            // if logged in, post any pending registrations
+                            if (!TextUtils.isEmpty(passCached)) {
+                                String pushRegistrationId = SafeSlingerPrefs
+                                        .getPushRegistrationId();
+                                int notify = SafeSlingerConfig.NOTIFY_ANDROIDC2DM;
+                                SlingerIdentity myId = new SlingerIdentity(pushRegistrationId,
+                                        notify, null);
+                                UpdateServerRegistrationIdTask regUpdate = new UpdateServerRegistrationIdTask();
+                                regUpdate.execute(myId);
                             }
                         }
                         isSetupCheckComplete();
@@ -1994,7 +2016,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         break;
                     case RESULT_CANCELED:
                         SafeSlingerPrefs
-                                .setPushRegistrationIdWriteOnlyC2dm(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA);
+                                .setPushRegistrationId(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA);
                         isSetupCheckComplete();
                         break;
                 }
@@ -3296,6 +3318,104 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 showNote(error);
             }
             refreshView();
+        }
+    }
+
+    private class UpdateServerRegistrationIdTask extends AsyncTask<SlingerIdentity, String, String> {
+        private WebEngine mWeb = new WebEngine(HomeActivity.this,
+                SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
+
+        @Override
+        protected String doInBackground(SlingerIdentity... slingerIds) {
+            SlingerIdentity sid = slingerIds[0];
+            if (sid == null) {
+                return getString(R.string.error_InvalidRecipient);
+            }
+            try {
+                String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
+                if (!TextUtils.isEmpty(pass)) {
+                    CryptoMsgPrivateData mine = CryptTools.getSecretKey(pass);
+                    String keyId = mine.getKeyId();
+                    String submisisonToken = Base64.encodeToString(
+                            CryptTools.computeSha3Hash(mine.getSignPriKey().getBytes()),
+                            Base64.NO_WRAP);
+
+                    // is local old regs exist and have pass?
+                    List<String> oldRegIdKeys = new ArrayList<String>();
+                    if (SafeSlingerPrefs.existsPref(pref.PUSH_REG_ID_C2DM_INDIRECT, false)) {
+                        oldRegIdKeys.add(pref.PUSH_REG_ID_C2DM_INDIRECT);
+                    }
+                    if (SafeSlingerPrefs.existsPref(pref.PUSH_REG_ID_C2DM_DIRECT, false)) {
+                        oldRegIdKeys.add(pref.PUSH_REG_ID_C2DM_DIRECT);
+                    }
+                    if (SafeSlingerPrefs.existsPref(pref.PUSH_REG_ID_C2DM_DIRECT_1811, false)) {
+                        oldRegIdKeys.add(pref.PUSH_REG_ID_C2DM_DIRECT_1811);
+                    }
+                    if (SafeSlingerPrefs.existsPref(pref.PUSH_REG_ID_C2DM_DIRECT_1812, false)) {
+                        oldRegIdKeys.add(pref.PUSH_REG_ID_C2DM_DIRECT_1812);
+                    }
+                    boolean isOnlineUpdated = false;
+                    for (String oldRegIdKey : oldRegIdKeys) {
+                        if (!TextUtils.isEmpty(oldRegIdKey)
+                                && !oldRegIdKey.equals(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA)) {
+                            // fetch old local token
+                            String senderPushRegId = SafeSlingerPrefs.getString(oldRegIdKey, null,
+                                    false);
+                            int notifyType = SafeSlingerConfig.NOTIFY_ANDROIDC2DM;
+
+                            // post old regs
+                            byte[] result = mWeb.postRegistration(keyId, submisisonToken,
+                                    senderPushRegId, notifyType);
+
+                            // remove local old regs
+                            if (result != null) {
+                                // remove the pref so we won't try and add old
+                                // ids
+                                // online after this one time update
+                                SafeSlingerPrefs.removePref(oldRegIdKey, false);
+                                isOnlineUpdated = true;
+                            }
+                        }
+                    }
+
+                    // if we updated old reg ids online, we need to be sure last
+                    // online is recent one
+                    String senderPushRegId = sid.getToken();
+                    int notifyType = sid.getNotification();
+                    if ((isOnlineUpdated || !SafeSlingerPrefs.getPushRegistrationIdPosted())
+                            && notifyType != SafeSlingerConfig.NOTIFY_NOPUSH) {
+
+                        // post local active reg
+                        byte[] result = mWeb.postRegistration(keyId, submisisonToken,
+                                senderPushRegId, notifyType);
+
+                        // update local active regisLinked
+                        if (result != null) {
+                            SafeSlingerPrefs.setPushRegistrationIdPosted(true);
+                        } else {
+                            SafeSlingerPrefs.setPushRegistrationIdPosted(false);
+                        }
+                    }
+                }
+            } catch (ExchangeException e) {
+                return e.getLocalizedMessage();
+            } catch (MessageNotFoundException e) {
+                return e.getLocalizedMessage();
+            } catch (ClassNotFoundException e) {
+                return e.getLocalizedMessage();
+            } catch (IOException e) {
+                return e.getLocalizedMessage();
+            } catch (CryptoMsgException e) {
+                return e.getLocalizedMessage();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String error) {
+            if (!TextUtils.isEmpty(error)) {
+                showNote(error);
+            }
         }
     }
 

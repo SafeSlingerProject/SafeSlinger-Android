@@ -52,6 +52,7 @@ public class SafeSlingerPrefs {
     private static final boolean DEFAULT_AUTO_DECRYPT = true;
     private static final boolean DEFAULT_AUTO_RETRIEVAL = false;
     public static final String DEFAULT_LANGUAGE = "zz";
+    private static final boolean DEFAULT_PUSH_REG_ID_POSTED = false;
 
     public static final int NOTIFICATION_SLEEP_PERIOD = 5 * 1000;
     /**
@@ -74,6 +75,16 @@ public class SafeSlingerPrefs {
         public static final String CONTACT_PHONE = "ContactPhone";
         @Deprecated
         public static final String CONTACT_PHONE_TYPE = "ContactPhoneType";
+        @Deprecated
+        public static final String PUSH_REG_ID_C2DM_INDIRECT = "PushRegistrationId"; // pre-1.5.2
+        @Deprecated
+        public static final String PUSH_REG_ID_C2DM_DIRECT = "PushRegistrationIdDirect"; // pre-1.8.2
+        @Deprecated
+        public static final String PUSH_REG_ID_C2DM_DIRECT_1811 = PUSH_REG_ID_C2DM_DIRECT
+                + "1.8.1.1";
+        @Deprecated
+        public static final String PUSH_REG_ID_C2DM_DIRECT_1812 = PUSH_REG_ID_C2DM_DIRECT
+                + "1.8.1.2";
 
         public static final String ACCOUNT_NAME = "AccountName";
         public static final String ACCOUNT_TYPE = "AccountType";
@@ -93,12 +104,13 @@ public class SafeSlingerPrefs {
         public static final String FILEMANAGER_ROOTDIR = "fileManagerRootDir";
         public static final String FIRST_EXCH_COMPLETE = "firstExchangeComplete";
         public static final String FONT_SIZE = "fontSize172";
-        public static final String LANGUAGE = "language";
         public static final String HAS_SEEN_HELP = "seenHelp";
         public static final String KEYDATE = "KeyDate";
         public static final String KEYHARDNESS = "KeyHardness";
         public static final String KEYID_STRING = "KeyIdString";
         public static final String KEYSALT = "KeySalt";
+        public static final String LANGUAGE = "language";
+        public static final String LAST_MSG_STAMP = "lastMessageStamp";
         public static final String LOGOUT = "logout";
         public static final String MANAGE_PASSPHRASE = "managePassphrase";
         public static final String NEXT_PASS_ATTEMPT_DATE = "nextPassAttemptDate";
@@ -106,9 +118,10 @@ public class SafeSlingerPrefs {
         public static final String NOTIFICATION_VIBRATE = "vibrate_notification";
         public static final String PASS_BACKOFF_TIMEOUT = "passBackoffTimeout";
         public static final String PASSPHRASE_CACHE_TTL = "passPhraseCacheTtl";
+        public static final String PENDING_GETMSG_BACKOFF_TIMEOUT = "PendingGetMessageBackoff";
         public static final String PUSH_BACKOFF = "PushBackoff";
-        public static final String PUSH_REG_DEPRECATED_OLD = "PushRegistrationId"; // pre-1.5.2
-        public static final String PUSH_REGISTRATION_ID_DIRECT = "PushRegistrationIdDirect";
+        public static final String PUSH_REG_ID_LINKED = "PushRegistrationIdLinked";
+        public static final String PUSH_REG_ID_POSTED = "PushRegistrationIdPosted";
         public static final String PUSHREG_BACKOFF_TIMEOUT = "pushRegistrationBackoff";
         public static final String REMIND_BACKUP_DELAY = "RemindBackupDelay";
         public static final String RESTORE_COMPLETE_DATE = "restoreCompleteDate";
@@ -118,9 +131,6 @@ public class SafeSlingerPrefs {
         public static final String SHOW_SLING_KEYS_REMIND = "showSlingKeysReminder";
         public static final String SHOW_WALKTHROUGH = "ShowWalkthrough";
         public static final String TEMPKEY_SYNCACCOUNT_LIST = "keyTempListContactSyncAccount";
-        public static final String PENDING_GETMSG_BACKOFF_TIMEOUT = "PendingGetMessageBackoff";
-
-        public static final String PREF_LAST_MSG_STAMP = "lastMessageStamp";
     }
 
     public static final String PREFS_RECOVER_YES = "MyPrefsFile";
@@ -163,7 +173,7 @@ public class SafeSlingerPrefs {
         removePref(pref.KEYID_STRING + userNumber, true);
         removePref(pref.KEYSALT + userNumber, true);
         removePref(pref.PASSPHRASE_CACHE_TTL + userNumber, true);
-        removePref(pref.PREF_LAST_MSG_STAMP, false);
+        removePref(pref.LAST_MSG_STAMP, false);
     }
 
     // persist to backup account...
@@ -353,11 +363,11 @@ public class SafeSlingerPrefs {
     }
 
     public static long getLastTimeStamp() {
-        return getLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), 0, false);
+        return getLong(getUserKeyName(pref.LAST_MSG_STAMP), 0, false);
     }
 
     public static void setLastTimeStamp(long timeStamp) {
-        setLong(getUserKeyName(pref.PREF_LAST_MSG_STAMP), timeStamp, false);
+        setLong(getUserKeyName(pref.LAST_MSG_STAMP), timeStamp, false);
     }
 
     // do NOT persist to backup account...
@@ -396,16 +406,27 @@ public class SafeSlingerPrefs {
         setBoolean(pref.REMIND_BACKUP_DELAY, remindBackupDelay, false);
     }
 
-    public static String getPushRegistrationId() {
+    public static boolean getPushRegistrationIdPosted() {
         // add version to get updated push registration every new release
-        return getString(pref.PUSH_REGISTRATION_ID_DIRECT + SafeSlingerConfig.getVersionName(),
-                null, false);
+        return getBoolean(pref.PUSH_REG_ID_POSTED + SafeSlingerConfig.getVersionName(),
+                DEFAULT_PUSH_REG_ID_POSTED, false);
     }
 
-    public static void setPushRegistrationIdWriteOnlyC2dm(String registrationId) {
+    public static void setPushRegistrationIdPosted(boolean registrationIdPosted) {
         // add version to get updated push registration every new release
-        setString(pref.PUSH_REGISTRATION_ID_DIRECT + SafeSlingerConfig.getVersionName(),
-                registrationId, false);
+        setBoolean(pref.PUSH_REG_ID_POSTED + SafeSlingerConfig.getVersionName(),
+                registrationIdPosted, false);
+    }
+
+    public static String getPushRegistrationId() {
+        // add version to get updated push registration every new release
+        return getString(pref.PUSH_REG_ID_LINKED + SafeSlingerConfig.getVersionName(), null, false);
+    }
+
+    public static void setPushRegistrationId(String registrationId) {
+        // add version to get updated push registration every new release
+        setString(pref.PUSH_REG_ID_LINKED + SafeSlingerConfig.getVersionName(), registrationId,
+                false);
     }
 
     public static long getBackupRequestDate() {
@@ -518,7 +539,7 @@ public class SafeSlingerPrefs {
         setString(key, new String(encodedValue), recover);
     }
 
-    private static String getString(String key, String def, boolean recover) {
+    public static String getString(String key, String def, boolean recover) {
         Context ctx = SafeSlinger.getApplication();
         if (ctx == null) {
             return def;
@@ -614,7 +635,7 @@ public class SafeSlingerPrefs {
         }
     }
 
-    private static void removePref(String key, boolean recover) {
+    public static void removePref(String key, boolean recover) {
         Context ctx = SafeSlinger.getApplication();
         SharedPreferences settings = ctx.getSharedPreferences(getPrefsFileName(recover),
                 Context.MODE_PRIVATE);
@@ -627,6 +648,13 @@ public class SafeSlingerPrefs {
                 SafeSlinger.queueBackup();
             }
         }
+    }
+
+    public static boolean existsPref(String key, boolean recover) {
+        Context ctx = SafeSlinger.getApplication();
+        SharedPreferences settings = ctx.getSharedPreferences(getPrefsFileName(recover),
+                Context.MODE_PRIVATE);
+        return settings.contains(key);
     }
 
     private static String getUserKeyName(String key) {
