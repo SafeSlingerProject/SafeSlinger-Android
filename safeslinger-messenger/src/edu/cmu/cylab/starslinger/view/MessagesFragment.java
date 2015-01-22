@@ -103,6 +103,7 @@ public class MessagesFragment extends Fragment {
     private List<ThreadData> mThreadList = new ArrayList<ThreadData>();
     private List<MessageRow> mMessageList = new ArrayList<MessageRow>();
     private TextView mTvInstruct;
+    private LinearLayout mLayoutLoadProgress;
     private ListView mListViewMsgs;
     private ListView mListViewThreads;
     private MessagesAdapter mAdapterMsg;
@@ -204,6 +205,8 @@ public class MessagesFragment extends Fragment {
         View vFrag = inflater.inflate(R.layout.messagelist, container, false);
 
         mTvInstruct = (TextView) vFrag.findViewById(R.id.tvInstruct);
+
+        mLayoutLoadProgress = (LinearLayout) vFrag.findViewById(R.id.layoutLoadProgress);
 
         mListViewThreads = (ListView) vFrag.findViewById(R.id.listThread);
         mListViewThreads.setOnScrollListener(new OnScrollListener() {
@@ -505,6 +508,11 @@ public class MessagesFragment extends Fragment {
         protected void onPreExecute() {
             super.onPreExecute();
 
+            // show some progress when UI is slow to update
+            if (mLayoutLoadProgress != null) {
+                mLayoutLoadProgress.setVisibility(View.VISIBLE);
+            }
+
             // make sure view is already inflated...
             if (mListViewMsgs == null) {
                 cancel(true);
@@ -612,6 +620,11 @@ public class MessagesFragment extends Fragment {
         @Override
         protected void onPostExecute(Boolean result) {
             super.onPostExecute(result);
+
+            // remove progress, UI update complete
+            if (mLayoutLoadProgress != null) {
+                mLayoutLoadProgress.setVisibility(View.GONE);
+            }
 
             if (result) {
                 if (showCompose) {
