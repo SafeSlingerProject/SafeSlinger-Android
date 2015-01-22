@@ -29,7 +29,8 @@
     android:versionName="1.8.1.2 PostRegistration Tests" >
 
     <!-- API 9 is the minimum required for password-based encryption PBKDF2WithHmacSHA1. -->
-    <!-- API 8 is the minimum required to receive push messages. -->
+    <!-- API 9 is the minimum required to receive GCM push messages. -->
+    <!-- API 8 is the minimum required to receive C2DM push messages. -->
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="21" />

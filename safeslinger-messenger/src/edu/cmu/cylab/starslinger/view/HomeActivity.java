@@ -3356,24 +3356,27 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     }
                     boolean isOnlineUpdated = false;
                     for (String oldRegIdKey : oldRegIdKeys) {
-                        if (!TextUtils.isEmpty(oldRegIdKey)
-                                && !oldRegIdKey.equals(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA)) {
+                        if (!TextUtils.isEmpty(oldRegIdKey)) {
                             // fetch old local token
                             String senderPushRegId = SafeSlingerPrefs.getString(oldRegIdKey, null,
                                     false);
                             int notifyType = SafeSlingerConfig.NOTIFY_ANDROIDC2DM;
 
-                            // post old regs
-                            byte[] result = mWeb.postRegistration(keyId, submisisonToken,
-                                    senderPushRegId, notifyType);
+                            // only upload valid registration ids
+                            if (!TextUtils.isEmpty(senderPushRegId)
+                                    && !senderPushRegId
+                                            .equals(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA)) {
+                                // post old regs
+                                byte[] result = mWeb.postRegistration(keyId, submisisonToken,
+                                        senderPushRegId, notifyType);
 
-                            // remove local old regs
-                            if (result != null) {
-                                // remove the pref so we won't try and add old
-                                // ids
-                                // online after this one time update
-                                SafeSlingerPrefs.removePref(oldRegIdKey, false);
-                                isOnlineUpdated = true;
+                                // remove local old regs
+                                if (result != null) {
+                                    // remove the pref so we won't try and add
+                                    // online after this one time update
+                                    SafeSlingerPrefs.removePref(oldRegIdKey, false);
+                                    isOnlineUpdated = true;
+                                }
                             }
                         }
                     }
@@ -3382,18 +3385,22 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     // online is recent one
                     String senderPushRegId = sid.getToken();
                     int notifyType = sid.getNotification();
-                    if ((isOnlineUpdated || !SafeSlingerPrefs.getPushRegistrationIdPosted())
-                            && notifyType != SafeSlingerConfig.NOTIFY_NOPUSH) {
+                    if ((isOnlineUpdated || !SafeSlingerPrefs.getPushRegistrationIdPosted())) {
 
-                        // post local active reg
-                        byte[] result = mWeb.postRegistration(keyId, submisisonToken,
-                                senderPushRegId, notifyType);
+                        // only upload valid registration ids
+                        if (!TextUtils.isEmpty(senderPushRegId)
+                                && !senderPushRegId
+                                        .equals(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA)) {
+                            // post local active reg
+                            byte[] result = mWeb.postRegistration(keyId, submisisonToken,
+                                    senderPushRegId, notifyType);
 
-                        // update local active regisLinked
-                        if (result != null) {
-                            SafeSlingerPrefs.setPushRegistrationIdPosted(true);
-                        } else {
-                            SafeSlingerPrefs.setPushRegistrationIdPosted(false);
+                            // update local active regisLinked
+                            if (result != null) {
+                                SafeSlingerPrefs.setPushRegistrationIdPosted(true);
+                            } else {
+                                SafeSlingerPrefs.setPushRegistrationIdPosted(false);
+                            }
                         }
                     }
                 }
