@@ -3438,15 +3438,15 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         }
                     }
                 }
-            } catch (ExchangeException e) {
-                return e.getLocalizedMessage();
-            } catch (MessageNotFoundException e) {
-                return e.getLocalizedMessage();
             } catch (ClassNotFoundException e) {
                 return e.getLocalizedMessage();
             } catch (IOException e) {
                 return e.getLocalizedMessage();
             } catch (CryptoMsgException e) {
+                return e.getLocalizedMessage();
+            } catch (ExchangeException e) {
+                return e.getLocalizedMessage();
+            } catch (MessageNotFoundException e) {
                 return e.getLocalizedMessage();
             }
             return null;

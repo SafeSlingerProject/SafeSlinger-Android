@@ -24,6 +24,7 @@
 
 package edu.cmu.cylab.starslinger.transaction;
 
+import java.io.IOException;
 import java.util.Date;
 
 import android.app.AlarmManager;
@@ -32,10 +33,17 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.PowerManager;
+import android.text.TextUtils;
+import android.util.Base64;
 import android.widget.Toast;
+import edu.cmu.cylab.starslinger.ExchangeException;
 import edu.cmu.cylab.starslinger.MyLog;
+import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
+import edu.cmu.cylab.starslinger.crypto.CryptTools;
+import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
+import edu.cmu.cylab.starslinger.model.CryptoMsgPrivateData;
 
 /**
  * Base class for C2D message receiver. Includes constants for the strings used
@@ -274,9 +282,49 @@ public abstract class C2DMBaseReceiver extends IntentService {
                 SafeSlingerPrefs.setPusgRegBackoff(backoff);
             }
         } else {
+            // save incoming registration locally
             SafeSlingerPrefs.setPushRegistrationId(registrationId);
             SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
             SafeSlingerPrefs.setPusgRegBackoff(SafeSlingerPrefs.DEFAULT_PUSHREG_BACKOFF);
+
+            // save incoming registration on server
+            try {
+                WebEngine web = new WebEngine(context, SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
+                String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
+                // only update online if we are logged in
+                if (!TextUtils.isEmpty(pass)) {
+                    CryptoMsgPrivateData mine = CryptTools.getSecretKey(pass);
+                    String keyId = mine.getKeyId();
+                    String submisisonToken = Base64.encodeToString(
+                            CryptTools.computeSha3Hash(mine.getSignPriKey().getBytes()),
+                            Base64.NO_WRAP);
+                    // only upload valid registration ids
+                    if (!TextUtils.isEmpty(registrationId)) {
+                        // post local active reg
+                        byte[] result = web.postRegistration(keyId, submisisonToken,
+                                registrationId, SafeSlingerConfig.NOTIFY_ANDROIDC2DM);
+
+                        // update local active regisLinked
+                        if (result != null) {
+                            SafeSlingerPrefs.setPushRegistrationIdPosted(true);
+                        } else {
+                            SafeSlingerPrefs.setPushRegistrationIdPosted(false);
+                        }
+                    }
+                }
+            } catch (IOException e) {
+                showNote(e);
+            } catch (ClassNotFoundException e) {
+                showNote(e);
+            } catch (CryptoMsgException e) {
+                showNote(e);
+            } catch (ExchangeException e) {
+                showNote(e);
+            } catch (MessageNotFoundException e) {
+                showNote(e);
+            }
+
+            // notify UI that registration is complete for now...
             onRegistered(context, registrationId);
         }
     }
@@ -288,8 +336,10 @@ public abstract class C2DMBaseReceiver extends IntentService {
     }
 
     protected void showNote(int resId) {
-        MyLog.i(TAG, getString(resId));
-        Toast toast = Toast.makeText(getApplicationContext(), resId, Toast.LENGTH_LONG);
-        toast.show();
+        showNote(getString(resId));
+    }
+
+    protected void showNote(Exception e) {
+        showNote(e.getLocalizedMessage());
     }
 }
