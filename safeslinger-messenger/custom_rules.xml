@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="safeslinger-messenger" default="help">
+    <!-- See the instructions at the top of crashlytics_build.xml
+         for information about nonstandard builds. -->
+        <import file="../crashlytics/crashlytics_build.xml"/>
+</project>
