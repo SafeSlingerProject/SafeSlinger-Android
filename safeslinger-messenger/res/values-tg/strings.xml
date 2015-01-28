@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">Барнома SafeSlinger: %s</string>
     <string name="label_messageInviteSetupInst">Барои сабти пайваст паёмнависии эмин, ки мо метавонем дар як вақт Тугмаҳо фалахмон ба тасдиқи пайвастшавӣ ҷавобгӯ ё телефони дигар, ва он гоҳ фақат як бор.</string>
     <string name="label_messageInviteStartMsg">Оё мо паёмнависии эмин бо сарчашмаи кушода SafeSlinger iPhone ё Боргириҳои Android оғоз?</string>
-    <string name="label_messageYouAreVerified">%s, шумо тасдиқ кард.</string>
     <string name="label_minutes">дақиқа %d</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Танҳо аз ҳама охир</string>

@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger programa: %s</string>
     <string name="label_messageInviteSetupInst">Norėdami sukonfigūruoti saugaus keitimosi pranešimais ryšį, galime susitikti, arba telefonu tarpusavyje tuo pačiu metu, o tada Sling Keys tik vieną kartą patikrinti ryšį.</string>
     <string name="label_messageInviteStartMsg">Ar mes galime pradėti saugaus keitimosi pranešimais su atviro kodo SafeSlinger iPhone \'ar\' Android app?</string>
-    <string name="label_messageYouAreVerified">%s, jūs patikrinta.</string>
     <string name="label_minutes">%d minučių</string>
     <string name="label_mobiletag">Mobilus</string>
     <string name="label_MostRecentOnly">Naujausia tik</string>

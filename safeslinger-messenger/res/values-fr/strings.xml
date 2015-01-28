@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger application: %s</string>
     <string name="label_messageInviteSetupInst">Pour installer une connexion de messagerie sécurisée, nous pouvons répondre à ou par téléphone de l\'autre en même temps, puis Sling touches une seule fois pour vérifier la connexion.</string>
     <string name="label_messageInviteStartMsg">Pouvons-nous commencer la messagerie sécurisée à l\' open source SafeSlinger iPhone ou application Android?</string>
-    <string name="label_messageYouAreVerified">%s, vous vérifié.</string>
     <string name="label_minutes">%d minutes</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">La plus récente seulement</string>

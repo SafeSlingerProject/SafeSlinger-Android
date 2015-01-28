@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Mus teeb ib tug ruaj ntseg messaging kev twb kev txuas, peb yuav tau raws li los yog xov tooj txhua lwm yam nyob rau tib lub sij hawm, thiab ces pav Daws cia li ib zaug kom paub tseeb kev twb kev txuas.</string>
     <string name="label_messageInviteStartMsg">Peb yuav pib ruaj ntseg messaging nrog lub qhib qhov SafeSlinger iPhone los yog hauv xov tooj ntawd app?</string>
-    <string name="label_messageYouAreVerified">%s, koj yog tseeb.</string>
     <string name="label_minutes">%d feeb</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Feem ntau cov tsis ntev los no xwb</string>

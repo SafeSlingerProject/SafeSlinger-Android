@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">I setup cysylltiad negeseuon diogel, gallwn gwrdd neu ffoniwch â\'i gilydd ar yr un pryd, ac yna Keys Sling unwaith yn unig i wirio y cysylltiad.</string>
     <string name="label_messageInviteStartMsg">Gallwn ddechrau negeseuon diogel gyda\'r ffynhonnell agored SafeSlinger iPhone app Android neu?</string>
-    <string name="label_messageYouAreVerified">%s, rydych yn gwirio.</string>
     <string name="label_minutes">%d o munud</string>
     <string name="label_mobiletag">Symudol</string>
     <string name="label_MostRecentOnly">Mae\'r rhan fwyaf diweddar yn unig</string>

@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Vir die opstel van \'n veilige boodskap verband, kan ons ontmoet of telefoon mekaar op dieselfde tyd, en dan slinger Keys net een keer die verband te verifieer.</string>
     <string name="label_messageInviteStartMsg">Kan ons begin veilige boodskappe met die open source SafeSlinger iPhone of Android app?</string>
-    <string name="label_messageYouAreVerified">%s, is jy geverifieer.</string>
     <string name="label_minutes">%d minute</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Mees onlangse net</string>

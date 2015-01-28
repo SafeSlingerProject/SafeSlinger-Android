@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger ಅಪ್ಲಿಕೇಶನ್: %s</string>
     <string name="label_messageInviteSetupInst">ಸುರಕ್ಷಿತ ಸಂದೇಶ ಸಂಪರ್ಕವನ್ನು ಸೆಟಪ್, ನಾವು ಸಂಪರ್ಕ ಪರಿಶೀಲಿಸಲು ಕೇವಲ ಒಮ್ಮೆ ನಂತರ ಜೋಲಿ ಕೀಸ್ ಭೇಟಿ ಅಥವಾ ಫೋನ್ ಪರಸ್ಪರ ಅದೇ ಸಮಯದಲ್ಲಿ, ಮತ್ತು ಮಾಡಬಹುದು.</string>
     <string name="label_messageInviteStartMsg">ನಾವು ಮುಕ್ತ SafeSlinger ಐಫೋನ್ ಅಥವಾ ಆಂಡ್ರಾಯ್ಡ್ ಅಪ್ಲಿಕೇಶನ್ ಜೊತೆ ಸುರಕ್ಷಿತ ಸಂದೇಶ ಆರಂಭಿಸಬಹುದು?</string>
-    <string name="label_messageYouAreVerified">%s, ನೀವು ಪರಿಶೀಲಿಸಲಾಗಿದೆ.</string>
     <string name="label_minutes">%d ನಿಮಿಷಗಳ</string>
     <string name="label_mobiletag">ಮೊಬೈಲ್</string>
     <string name="label_MostRecentOnly">ಇತ್ತೀಚಿನ ಮಾತ್ರ</string>

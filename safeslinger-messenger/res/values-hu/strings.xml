@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Hogy telepítsék a biztonságos üzenetküldés kapcsolatot, találkozhatunk, vagy telefonon egymással egy időben, majd Sling Keys csak egyszer ellenőrizze a kapcsolatot.</string>
     <string name="label_messageInviteStartMsg">Tudunk majd biztonságos üzenetküldést a nyílt forráskódú SafeSlinger iPhone vagy Android app?</string>
-    <string name="label_messageYouAreVerified">%s, akkor ellenőrzik.</string>
     <string name="label_minutes">%d perc</string>
     <string name="label_mobiletag">Mozgó</string>
     <string name="label_MostRecentOnly">Legfrissebb csak</string>

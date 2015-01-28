@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Biex setup konnessjoni messaġġi siguri, nistgħu jissodisfaw jew telefon xulxin fl-istess ħin, u mbagħad Braga Keys darba biss biex tivverifika l-konnessjoni.</string>
     <string name="label_messageInviteStartMsg">Nistgħu tibda messaġġi siguri bil-sors miftuħ SafeSlinger iPhone jew Android app?</string>
-    <string name="label_messageYouAreVerified">%s, inti jiġu vverifikati.</string>
     <string name="label_minutes">%d minuti</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Aktar reċenti biss</string>

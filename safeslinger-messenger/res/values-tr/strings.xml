@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger uygulaması: %s</string>
     <string name="label_messageInviteSetupInst">Güvenli mesajlaşma bağlantı kurulumu için, biz bağlantıyı doğrulamak için sadece bir kez o Sapan Keys karşılamak veya telefon birbirlerine aynı anda ve edebilirsiniz.</string>
     <string name="label_messageInviteStartMsg">Biz açık kaynak SafeSlinger iPhone veya Android uygulaması ile güvenli mesajlaşma başlayabilir miyim?</string>
-    <string name="label_messageYouAreVerified">%s, sen doğrulanır.</string>
     <string name="label_minutes">%d dakika</string>
     <string name="label_mobiletag">Hareketli</string>
     <string name="label_MostRecentOnly">En yeni yalnızca</string>

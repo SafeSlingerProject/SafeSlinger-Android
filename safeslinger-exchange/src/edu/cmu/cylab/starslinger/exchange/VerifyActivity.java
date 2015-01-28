@@ -30,6 +30,8 @@ import java.util.Locale;
 
 import android.app.ActionBar;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -46,6 +48,7 @@ public class VerifyActivity extends BaseActivity {
     public static final int RESULT_CORRECTWORDLIST = 30;
     public static final int RESULT_DECOYWORDLIST1 = 31;
     public static final int RESULT_DECOYWORDLIST2 = 32;
+    private static final String PREF_SHOW_HELP = "prefAutoShowHelp";
     private int mCorrectButton;
     private int mDecoy1Button;
     private int mDecoy2Button;
@@ -77,7 +80,7 @@ public class VerifyActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case MENU_HELP:
-                showHelp(getString(R.string.title_verify), getString(R.string.help_verify));
+                showHelp();
                 return true;
             default:
                 break;
@@ -242,6 +245,16 @@ public class VerifyActivity extends BaseActivity {
                 finish();
             }
         });
+
+        // show help automatically only for first time installers
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        if (sharedPref.getBoolean(PREF_SHOW_HELP, true)) {
+            // show help, turn off for next time
+            showHelp();
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean(PREF_SHOW_HELP, false);
+            editor.commit();
+        }
     }
 
     @Override
@@ -273,5 +286,9 @@ public class VerifyActivity extends BaseActivity {
             outState.putInt(extra.NUM_USERS, mNumUsers);
         }
         super.onSaveInstanceState(outState);
+    }
+
+    private void showHelp() {
+        showHelp(getString(R.string.title_verify), getString(R.string.help_verify));
     }
 }

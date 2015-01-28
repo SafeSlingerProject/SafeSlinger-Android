@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger अनुप्रयोग: %s</string>
     <string name="label_messageInviteSetupInst">एक सुरक्षित संदेश जडान सेटअप गर्न, हामी जडान प्रमाणित गर्न एक पटक मात्र त ढेलवाँस तरिकाहरू मिलन या फोन प्रत्येक अन्य नै समय मा, र गर्न सक्छन्।</string>
     <string name="label_messageInviteStartMsg">हामी खुला स्रोत SafeSlinger iPhone वा एन्ड्रोइड अनुप्रयोग संग सुरक्षित संदेश सुरु गर्न सक्नुहुन्छ?</string>
-    <string name="label_messageYouAreVerified">%s, तपाईं प्रमाणित गर्दै छन्।</string>
     <string name="label_minutes">%d मिनेट</string>
     <string name="label_mobiletag">मोबाइल</string>
     <string name="label_MostRecentOnly">हाल मात्र</string>

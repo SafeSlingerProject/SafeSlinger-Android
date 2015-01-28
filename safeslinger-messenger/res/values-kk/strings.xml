@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger бағдарламасы: %s</string>
     <string name="label_messageInviteSetupInst">Орнату қауіпсіз хабар алмасу байланыс үшін, біз жауап немесе телефон бір-біріне бір мезгілде, содан кейін Sling кілті бір рет қосылымын тексеру болады.</string>
     <string name="label_messageInviteStartMsg">Біз ашық көзі SafeSlinger Iphone немесе Android бағдарламасымен қауіпсіз хабар алмасу бастауға болады?</string>
-    <string name="label_messageYouAreVerified">%s, сіз тексерілген.</string>
     <string name="label_minutes">%d минут</string>
     <string name="label_mobiletag">Жылжымалы</string>
     <string name="label_MostRecentOnly">Тек ең соңғы</string>

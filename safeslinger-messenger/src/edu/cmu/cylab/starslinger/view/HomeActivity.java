@@ -2594,8 +2594,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             MessageData sendMsg = new MessageData();
             // set sent time closest to UI command
             sendMsg.setDateSent(groupSentTime);
-            String message = String.format(getString(R.string.label_messageYouAreVerified),
-                    recip.getName());
+            String message = String.format(getString(R.string.label_messageAutomatedVerify),
+                    SafeSlingerPrefs.getContactName(), recip.getName());
             sendMsg.setText(message);
             // user wants to post the file and notify recipient
             if (recip.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {

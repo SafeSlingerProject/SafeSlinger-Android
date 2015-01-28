@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger એપ્લિકેશન: %s</string>
     <string name="label_messageInviteSetupInst">એક સુરક્ષિત મેસેજિંગ જોડાણ સુયોજિત કરવા માટે, અમે જોડાણ ચકાસવા માટે માત્ર એક વખત પછી Sling કી પૂરી અથવા ફોન એકબીજા તે જ સમયે, અને કરી શકે છે.</string>
     <string name="label_messageInviteStartMsg">અમે ઓપન સોર્સ SafeSlinger આઇફોન અથવા Android એપ્લિકેશન સાથે સુરક્ષિત મેસેજિંગ શરૂ કરી શકો છો?</string>
-    <string name="label_messageYouAreVerified">%s, તમે ચકાસણી કરવામાં આવે છે.</string>
     <string name="label_minutes">%d મિનિટ</string>
     <string name="label_mobiletag">મોબાઇલ</string>
     <string name="label_MostRecentOnly">સૌથી તાજેતરની જ</string>

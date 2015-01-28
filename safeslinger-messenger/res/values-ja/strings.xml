@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlingerアプリ： %s</string>
     <string name="label_messageInviteSetupInst">セットアップセキュアなメッセージング接続をするために、我々は会うか電話同士を同時にした後、スリングキーは一度だけ、接続を検証することができます。</string>
     <string name="label_messageInviteStartMsg">私たちは、オープンソースSafeSlinger iPhoneやAndroidアプリでセキュアなメッセージングを開始することはできますか？</string>
-    <string name="label_messageYouAreVerified">%s、あなたが検証されます。</string>
     <string name="label_minutes">%d分</string>
     <string name="label_mobiletag">携帯電話</string>
     <string name="label_MostRecentOnly">最新のみ</string>

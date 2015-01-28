@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger додаток: %s</string>
     <string name="label_messageInviteSetupInst">Для установки зв\'язку з безпечного обміну повідомленнями, ми можемо зустріти або по телефону один з одним, в той же час, а потім слінг ключів тільки один раз, щоб перевірити з\'єднання.</string>
     <string name="label_messageInviteStartMsg">Чи можемо ми почати безпечного обміну повідомленнями з відкритим вихідним кодом SafeSlinger iPhone або Android програми?</string>
-    <string name="label_messageYouAreVerified">%s, ви перевірена.</string>
     <string name="label_minutes">%d хвилин</string>
     <string name="label_mobiletag">Мобільний</string>
     <string name="label_MostRecentOnly">Самі останні тільки</string>

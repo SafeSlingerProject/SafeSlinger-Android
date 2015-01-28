@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Si Mudanayaasha xiriir ah ayaa fariin amaan ah, waxaan la kulmi kartaa ama telefoon kasta oo kale waqti isku mid ah, ka dibna shakaalka Furayaasha kaliya hal jeer si loo xaqiijiyo xiriir ah.</string>
     <string name="label_messageInviteStartMsg">Waxaan bilaabi karaa fariin amaan ah la il furan SafeSlinger iPhone ama Android app?</string>
-    <string name="label_messageYouAreVerified">%s, waxaad la xaqiijiyey.</string>
     <string name="label_minutes">%d daqiiqo</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Inta badan ugu dambeeyay oo kaliya</string>

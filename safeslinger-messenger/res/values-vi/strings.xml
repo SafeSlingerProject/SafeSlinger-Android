@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Để thiết lập một kết nối tin nhắn an toàn, chúng tôi có thể đáp ứng hay điện thoại cho nhau cùng một lúc, và sau đó Sling phím chỉ một lần để kiểm tra kết nối.</string>
     <string name="label_messageInviteStartMsg">Chúng ta có thể bắt đầu gửi tin nhắn an toàn với mã nguồn mở SafeSlinger iPhone hoặc ứng dụng Android?</string>
-    <string name="label_messageYouAreVerified">%s, đã được thẩm định.</string>
     <string name="label_minutes">%d phút</string>
     <string name="label_mobiletag">Di động</string>
     <string name="label_MostRecentOnly">Gần đây nhất chỉ</string>

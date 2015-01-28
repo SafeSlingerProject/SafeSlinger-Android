@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Za postavljanje sigurne veze poruka, možemo susresti ili telefona jedni druge u isto vrijeme, a zatim remen Tipke samo jednom kako bi provjerili vezu.</string>
     <string name="label_messageInviteStartMsg">Možemo početi sigurno slanje poruka s open source SafeSlinger iPhone ili Android app?</string>
-    <string name="label_messageYouAreVerified">%s, što su potvrdili.</string>
     <string name="label_minutes">%d minuta</string>
     <string name="label_mobiletag">Mobilan</string>
     <string name="label_MostRecentOnly">Najnovija samo</string>

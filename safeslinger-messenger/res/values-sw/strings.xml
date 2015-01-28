@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger programu: %s</string>
     <string name="label_messageInviteSetupInst">Kuanzisha salama ujumbe uhusiano, tunaweza kukutana au simu kila mmoja kwa wakati huo, na kisha Sling Keys mara moja tu ili kuthibitisha uhusiano.</string>
     <string name="label_messageInviteStartMsg">Je, tunaweza kuanza ujumbe salama na chanzo wazi SafeSlinger iPhone au Android programu?</string>
-    <string name="label_messageYouAreVerified">%s, wewe ni kuthibitishwa.</string>
     <string name="label_minutes">dakika %d</string>
     <string name="label_mobiletag">Simu</string>
     <string name="label_MostRecentOnly">Hivi karibuni tu</string>

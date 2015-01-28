@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger aplicació: %s</string>
     <string name="label_messageInviteSetupInst">Per configurar una connexió de missatgeria segura, podem fer front o per telèfon entre si, a la vegada, i després Sling tecles només una vegada per verificar la connexió.</string>
     <string name="label_messageInviteStartMsg">Podem començar de missatgeria segura amb la font oberta iPhone SafeSlinger o Android?</string>
-    <string name="label_messageYouAreVerified">%s, que es verifiquen.</string>
     <string name="label_minutes">%d minuts</string>
     <string name="label_mobiletag">Mòbil</string>
     <string name="label_MostRecentOnly">El més recent només</string>

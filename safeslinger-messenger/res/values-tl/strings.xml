@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Upang i-setup ng isang secure na koneksyon sa pagpapadala ng mensahe, maaari kaming matugunan o telepono sa isa\'t isa nang sabay-sabay, at pagkatapos ay tirador Keys isang beses lamang upang i-verify ang koneksyon.</string>
     <string name="label_messageInviteStartMsg">Puwede ba kaming magsimula secure na messaging kasama ang open source SafeSlinger iPhone o Android app?</string>
-    <string name="label_messageYouAreVerified">%s, ikaw ay na-verify.</string>
     <string name="label_minutes">%d minuto</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Pinakabagong lamang</string>

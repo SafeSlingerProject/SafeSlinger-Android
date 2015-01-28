@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger اپلی کیشن: %s</string>
     <string name="label_messageInviteSetupInst">ایک محفوظ پیغام رسانی کا کنکشن سیٹ اپ کرنے، ہم نے کنکشن کی تصدیق کرنے کا صرف ایک بار پھر پھینکیں چابیاں ملنے یا فون کو ایک دوسرے کے ایک ہی وقت میں، اور کر سکتے ہیں.</string>
     <string name="label_messageInviteStartMsg">ہم اوپن سورس SafeSlinger فون یا لوڈ، اتارنا Android اپلی کیشن کے ساتھ محفوظ پیغام رسانی شروع کر سکتے ہیں؟</string>
-    <string name="label_messageYouAreVerified">%s، آپ کو تصدیق کر رہے ہیں.</string>
     <string name="label_minutes">%d منٹ</string>
     <string name="label_mobiletag">موبائل</string>
     <string name="label_MostRecentOnly">سب سے حال ہی</string>

@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger ngwa: %s</string>
     <string name="label_messageInviteSetupInst">Iji ntọlite a ala ozi njikọ, anyị nwere ike izute ma ọ bụ ekwentị ọ bụla ọzọ na n\'otu oge ahụ, na mgbe ahụ èbè Igodo nanị otu ugboro iji nyochaa njikọ.</string>
     <string name="label_messageInviteStartMsg">Nwere ike anyị na-amalite ala ozi na-emeghe iyi SafeSlinger iPhone ma ọ bụ Android ngwa?</string>
-    <string name="label_messageYouAreVerified">%s, ị na-kwetakwara na ego.</string>
     <string name="label_minutes">%d nkeji</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Ọtụtụ na-adịbeghị anya naanị</string>

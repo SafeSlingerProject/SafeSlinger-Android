@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Nuntius nexum habeat ad securitatem, interdum inter nos congredi aut simul et semel unum coetum Funda Keys committeret.</string>
     <string name="label_messageInviteStartMsg">Numquid et nos satus cum aperta principium secure messaging SafeSlinger iPhone aut Android app?</string>
-    <string name="label_messageYouAreVerified">%s, te probabis.</string>
     <string name="label_minutes">%d minutes</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Novissima tantum</string>

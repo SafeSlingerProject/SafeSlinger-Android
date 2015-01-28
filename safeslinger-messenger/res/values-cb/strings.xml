@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Sa setup usa ka luwas nga messaging koneksyon, kita sa pagsugat o telepono sa usag usa sa mao nga panahon, ug unya lambuyog mga Yawe kausa lang sa pagsusi sa mga koneksyon.</string>
     <string name="label_messageInviteStartMsg">Makasugod ba kita luwas nga messaging sa mga dayag nga tinubdan SafeSlinger iPhone o Android app?</string>
-    <string name="label_messageYouAreVerified">%s, ikaw napamatud-an.</string>
     <string name="label_minutes">%d minutos</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Labing bag-o nga lamang</string>

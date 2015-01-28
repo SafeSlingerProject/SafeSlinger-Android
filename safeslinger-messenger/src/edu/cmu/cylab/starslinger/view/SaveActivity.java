@@ -41,8 +41,10 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.SyncAdapterType;
 import android.database.Cursor;
 import android.os.AsyncTask;
@@ -83,6 +85,7 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
     public static final int RESULT_SELNONE = 23;
     public static final int RESULT_SAVE = 24;
+    private static final String PREF_SHOW_HELP = "prefAutoShowHelp";
 
     private byte[][] mMemData;
     private List<ContactStruct> mContacts;
@@ -106,6 +109,7 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
     private TableLayout mTableLayoutSpin;
     private ProgressDialog mDlgProg;
     private String mProgressMsg = null;
+    private static boolean mCloseConfirmed;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -124,7 +128,7 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case MENU_HELP:
-                showHelp(getString(R.string.title_save), getString(R.string.help_save));
+                showHelp();
                 return true;
             case MENU_FEEDBACK:
                 SafeSlinger.getApplication().showFeedbackEmail(SaveActivity.this);
@@ -141,6 +145,7 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
         if (savedInstanceState == null) {
             mListTopOffset = 0;
             mListVisiblePos = 0;
+            mCloseConfirmed = false;
         }
 
         final ActionBar bar = getSupportActionBar();
@@ -255,6 +260,16 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
                 // this.
             }
         });
+
+        // show help automatically only for first time installers
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        if (sharedPref.getBoolean(PREF_SHOW_HELP, true)) {
+            // show help, turn off for next time
+            showHelp();
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean(PREF_SHOW_HELP, false);
+            editor.commit();
+        }
     }
 
     private class SaveSelectedContactsTask extends AsyncTask<String, String, String> {
@@ -379,6 +394,7 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
             return;
         }
 
+        mCloseConfirmed = true;
         if (selected == 0) {
             setResult(RESULT_SELNONE, data);
         } else {
@@ -442,13 +458,26 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
 
     @Override
     public void onBackPressed() {
-        showQuestion(getString(R.string.ask_QuitConfirmation));
+        if (!mCloseConfirmed) {
+            showQuestion(getString(R.string.ask_QuitConfirmation));
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        if (!mCloseConfirmed) {
+            showQuestion(getString(R.string.ask_QuitConfirmation));
+        }
+        super.onPause();
     }
 
     @Override
     public void onDestroy() {
         // Remove AccountManager callback
         AccountManager.get(this).removeOnAccountsUpdatedListener(this);
+        if (!mCloseConfirmed) {
+            showQuestion(getString(R.string.ask_QuitConfirmation));
+        }
         super.onDestroy();
     }
 
@@ -561,6 +590,7 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
 
             @Override
             public void onClick(DialogInterface dialog, int id) {
+                mCloseConfirmed = true;
                 dialog.dismiss();
                 setResult(RESULT_CANCELED);
                 finish();
@@ -626,4 +656,7 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
         }
     }
 
+    private void showHelp() {
+        showHelp(getString(R.string.title_save), getString(R.string.help_save));
+    }
 }

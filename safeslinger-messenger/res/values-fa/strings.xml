@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">برنامه SafeSlinger: %s</string>
     <string name="label_messageInviteSetupInst">Setup یک ارتباط پیام امن، ما می توانیم در همان زمان کلید رسن به منظور بررسی ارتباط ملاقات و یا تلفن به یکدیگر، و سپس فقط یک بار.</string>
     <string name="label_messageInviteStartMsg">آیا ما می توانیم پیام امن با منبع باز SafeSlinger آیفون و یا برنامه های آندروید شروع کنم؟</string>
-    <string name="label_messageYouAreVerified">%s، شما تأیید شده است.</string>
     <string name="label_minutes">دقیقه %d</string>
     <string name="label_mobiletag">سیار</string>
     <string name="label_MostRecentOnly">تنها ترین</string>

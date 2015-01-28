@@ -401,6 +401,8 @@
     <string name="label_mb" translatable="false">%.1f MB</string>
     <!-- screen label (match English casing); used on the secure introduction invitation dialog to indicate the one-hop trust relationship between the user (Me); the trusted person, and the new person. -->
     <string name="label_Me">Me</string>
+    <!-- screen label (match English casing); used as the automated test text message completing sling keys. %1$s = the name of the sender. %2$s = the name of the recipient. -->
+    <string name="label_messageAutomatedVerify">(%1$s has confirmed the key for %2$s.)</string>
     <!-- screen label (match English casing); used as the text message when sending secure introduction invitations. %s = the name of a person. -->
     <string name="label_messageIntroduceNameToYou">I would like to introduce %s to you.</string>
     <!-- screen label (match English casing); used as message text to show a user how to install SafeSlinger. %s = the main installation url for mobile devices -->
@@ -409,8 +411,6 @@
     <string name="label_messageInviteSetupInst">To setup a secure messaging connection, we can meet or phone each other at the same time, and then Sling Keys just once to verify the connection.</string>
     <!-- screen label (match English casing); used as message text to invite a contact to begin secure messaging. -->
     <string name="label_messageInviteStartMsg">Can we start secure messaging with the open source SafeSlinger iPhone or Android app?</string>
-    <!-- screen label (match English casing); used as the text message completing sling keys. %s = the name of a recipient. -->
-    <string name="label_messageYouAreVerified">%s, you are verified.</string>
     <!-- screen label (match English casing); used as a relative time label to the current time on the message list. %.0f = the number of whole minutes. -->
     <string name="label_minutes">%d minutes</string>
     <!-- screen label (match English casing); used to denote a 'mobile' type of email or phone contact type. iOS-only. -->

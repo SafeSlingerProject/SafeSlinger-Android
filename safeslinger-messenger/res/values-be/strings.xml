@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger прыкладанне: %s</string>
     <string name="label_messageInviteSetupInst">Для ўстаноўкі сувязі з бяспечнага абмену паведамленнямі, мы можам сустрэць або па тэлефоне адзін з адным, у той жа час, а затым сьлінг ключоў толькі адзін раз, каб праверыць злучэнне.</string>
     <string name="label_messageInviteStartMsg">Ці можам мы пачаць бяспечнага абмену паведамленнямі з адкрытым зыходным кодам SafeSlinger iPhone або Android прыкладання?</string>
-    <string name="label_messageYouAreVerified">%s, вы праверана.</string>
     <string name="label_minutes">%d хвілін</string>
     <string name="label_mobiletag">Мабільны</string>
     <string name="label_MostRecentOnly">Самыя апошнія толькі</string>

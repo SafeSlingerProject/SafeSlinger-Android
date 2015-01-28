@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">App SafeSlinger: %s</string>
     <string name="label_messageInviteSetupInst">ການຕິດຕັ້ງການເຊື່ອມຕໍ່ການສົ່ງຂໍ້ຄວາມປອດໄພ, ພວກເຮົາສາມາດຕອບສະຫນອງຫຼືໂທລະສັບອື່ນໆໃນແຕ່ລະໃນທີ່ໃຊ້ເວລາດຽວກັນ, ແລະຫຼັງຈາກນັ້ນຫຼັກ Sling ພຽງແຕ່ຄັ້ງດຽວເພື່ອກວດພິສູດການເຊື່ອມຕໍ່.</string>
     <string name="label_messageInviteStartMsg">ພວກເຮົາສາມາດເລີ່ມຕົ້ນການສົ່ງຂໍ້ຄວາມປອດໄພທີ່ມີແຫຼ່ງເປີດ SafeSlinger iPhone ຫຼື Android app?</string>
-    <string name="label_messageYouAreVerified">%s, ທ່ານໄດ້ຢັ້ງຢືນ.</string>
     <string name="label_minutes">%d ນາທີ</string>
     <string name="label_mobiletag">ໂທລະສັບມືຖື</string>
     <string name="label_MostRecentOnly">ສ່ວນຫຼາຍບໍ່ດົນມານີ້ພຽງແຕ່</string>

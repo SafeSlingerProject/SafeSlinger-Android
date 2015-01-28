@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Don saita da kafaffen saƙon dangane, za mu iya saduwa ko wayar juna a lokaci guda, sa\'an nan kuma majayijawa Kunamu kawai sau daya don tabbatar da dangane.</string>
     <string name="label_messageInviteStartMsg">Za mu iya fara amintattu saƙon tare da bude tushen SafeSlinger iPhone ko Android app?</string>
-    <string name="label_messageYouAreVerified">%s, kana tabbatar.</string>
     <string name="label_minutes">%d minti</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Kwanan nan kawai</string>

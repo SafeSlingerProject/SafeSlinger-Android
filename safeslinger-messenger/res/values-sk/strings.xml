@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Ak chcete nastaviť zabezpečené pripojenie správ, sa môžeme stretnúť alebo telefón navzájom v rovnakom čase, a potom Sling kľúče iba raz pre overenie pripojenia.</string>
     <string name="label_messageInviteStartMsg">Môžeme začať secure messaging s open source SafeSlinger iPhone alebo Android aplikácie?</string>
-    <string name="label_messageYouAreVerified">%s, tie sú overené.</string>
     <string name="label_minutes">%d minút</string>
     <string name="label_mobiletag">Mobilné</string>
     <string name="label_MostRecentOnly">Iba Posledný</string>

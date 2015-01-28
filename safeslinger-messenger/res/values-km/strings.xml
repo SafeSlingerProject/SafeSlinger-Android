@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">កម្មវិធី SafeSlinger: %s</string>
     <string name="label_messageInviteSetupInst">ដើម្បីដំឡើងការតភ្ជាប់សុវត្ថិភាពផ្ញើសារនោះយើងអាចជួបឬទូរស័ព្ទគ្នាក្នុងពេលតែមួយនោះហើយបន្ទាប់មក Sling គ្រាប់គ្រាន់តែម្តងដើម្បីផ្ទៀងផ្ទាត់ការតភ្ជាប់។</string>
     <string name="label_messageInviteStartMsg">យើងអាចចាប់ផ្តើមផ្ញើសារដែលមានសុវត្ថិភាពជាមួយកម្មវិធីប្រព័ន្ធប្រតិបត្តិការ Android ជាប្រភពបើកចំហ SafeSlinger iPhone ឬ?</string>
-    <string name="label_messageYouAreVerified">%s អ្នកត្រូវបានផ្ទៀងផ្ទាត់។</string>
     <string name="label_minutes">%d នាទី</string>
     <string name="label_mobiletag">ទូរស័ព្ទដៃ</string>
     <string name="label_MostRecentOnly">ថ្មីបំផុតតែមួយគត់</string>

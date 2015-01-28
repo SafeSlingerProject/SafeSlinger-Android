@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Konfigirasyon yon koneksyon an sekirite messagerie, nou ka satisfè oswa telefòn chak lòt nan menm tan an, ak Lè sa a Fistibal Keys sèlman yon fwa yo verifye koneksyon an.</string>
     <string name="label_messageInviteStartMsg">Èske nou ka kòmanse an sekirite messagerie ak sous la louvri SafeSlinger iPhone oswa android app?</string>
-    <string name="label_messageYouAreVerified">%s, w ap verifye.</string>
     <string name="label_minutes">%d minit</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Dènye sèlman</string>

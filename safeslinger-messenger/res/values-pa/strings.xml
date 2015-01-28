@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger ਅਨੁਪ੍ਰਯੋਗ: %s</string>
     <string name="label_messageInviteSetupInst">ਇੱਕ ਸੁਰੱਖਿਅਤ ਕੁਨੈਕਸ਼ਨ ਸੁਨੇਹਾ ਸੈੱਟਅੱਪ ਕਰਨ ਲਈ, ਸਾਨੂੰ ਕੁਨੈਕਸ਼ਨ ਦੀ ਤਸਦੀਕ ਕਰਨ ਲਈ, ਸਿਰਫ ਇਕ ਵਾਰ ਫਿਰ ਗੋਪੀਆ Keys ਮਿਲਣ ਜ ਫ਼ੋਨ ਇਕ-ਦੂਜੇ ਨੂੰ ਉਸੇ ਵੇਲੇ \'ਤੇ ਹੈ, ਅਤੇ ਹੋ ਸਕਦਾ ਹੈ.</string>
     <string name="label_messageInviteStartMsg">ਸਾਨੂੰ ਓਪਨ ਸਰੋਤ SafeSlinger ਆਈਫੋਨ ਜ ਛੁਪਾਓ ਅਨੁਪ੍ਰਯੋਗ ਦੇ ਨਾਲ ਸੁਰੱਖਿਅਤ ਸੁਨੇਹਾ ਸ਼ੁਰੂ ਕਰ ਸਕਦੇ ਹੋ?</string>
-    <string name="label_messageYouAreVerified">%s, ਤੁਹਾਨੂੰ ਤਸਦੀਕ ਕਰ ਰਹੇ ਹਨ.</string>
     <string name="label_minutes">%d ਮਿੰਟ</string>
     <string name="label_mobiletag">ਮੋਬਾਈਲ</string>
     <string name="label_MostRecentOnly">ਸਭ ਹਾਲ ਸਿਰਫ</string>

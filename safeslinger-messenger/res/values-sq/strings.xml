@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Të setup një lidhje të sigurt mesazheve, ne mund të takohen apo telefon njëri-tjetrin në të njëjtën kohë, dhe pastaj hobe Keys vetëm një herë për të verifikuar lidhjen.</string>
     <string name="label_messageInviteStartMsg">A mund të fillojmë mesazheve të sigurt me burim të hapur SafeSlinger iPhone apo app Android?</string>
-    <string name="label_messageYouAreVerified">%s, ju janë verifikuar.</string>
     <string name="label_minutes">%d minuta</string>
     <string name="label_mobiletag">I lëvizshëm</string>
     <string name="label_MostRecentOnly">Më të fundit vetëm</string>

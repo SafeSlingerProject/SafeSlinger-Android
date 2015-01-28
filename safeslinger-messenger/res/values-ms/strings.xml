@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Untuk setup sambungan mesej yang selamat, kami boleh memenuhi atau telefon antara satu sama lain pada masa yang sama, dan kemudian Sling Kekunci hanya sekali untuk mengesahkan sambungan.</string>
     <string name="label_messageInviteStartMsg">Bolehkah kita memulakan mesej selamat dengan sumber terbuka SafeSlinger iPhone atau Android app?</string>
-    <string name="label_messageYouAreVerified">%s, anda disahkan.</string>
     <string name="label_minutes">%d minit</string>
     <string name="label_mobiletag">Bergerak</string>
     <string name="label_MostRecentOnly">Paling baru sahaja</string>

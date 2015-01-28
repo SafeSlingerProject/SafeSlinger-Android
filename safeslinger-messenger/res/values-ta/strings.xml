@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger பயன்பாட்டை: %s</string>
     <string name="label_messageInviteSetupInst">ஒரு பாதுகாப்பான செய்தி இணைப்பு அமைப்புகள், நாம் இணைப்பை உறுதிப்படுத்த ஒரு முறை பின்னர் ஸ்லிங் விசைகள் சந்திக்க அல்லது தொலைபேசி ஒருவருக்கொருவர் அதே நேரத்தில், மற்றும் முடியும்.</string>
     <string name="label_messageInviteStartMsg">நாங்கள் திறந்த மூல SafeSlinger iPhone அல்லது Android பயன்பாட்டை பாதுகாப்பான செய்தி தொடங்க முடியுமா?</string>
-    <string name="label_messageYouAreVerified">%s, சரிபார்க்கப்பட்டது.</string>
     <string name="label_minutes">%d நிமிடங்கள்</string>
     <string name="label_mobiletag">மொபைல்</string>
     <string name="label_MostRecentOnly">மிக அண்மையில் மட்டும்</string>

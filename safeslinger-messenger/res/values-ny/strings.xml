@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger pulogalamu: %s</string>
     <string name="label_messageInviteSetupInst">Kuti dongosolo malo mauthenga kugwirizana, tikhoza kukumana kapena foni mnzake pa nthawi yomweyo, ndipo legeni Chinsinsi kamodzi kutsimikizira kugwirizana.</string>
     <string name="label_messageInviteStartMsg">Kodi tayamba otetezeka mauthenga ndi lotseguka gwero SafeSlinger iPhone kapena Android pulogalamu?</string>
-    <string name="label_messageYouAreVerified">%s, inu umboni.</string>
     <string name="label_minutes">%d Mphindi</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Ambiri posachedwapa okha</string>

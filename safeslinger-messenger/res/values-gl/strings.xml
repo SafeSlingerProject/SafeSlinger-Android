@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Para configurar unha conexión de envío seguro de mensaxes, podemos atender ou un do outro, á vez, e logo, Sling Chaves só unha vez para comprobar a conexión.</string>
     <string name="label_messageInviteStartMsg">Podemos empezar mensaxes seguras co código aberto iPhone SafeSlinger ou app Android?</string>
-    <string name="label_messageYouAreVerified">%s, vostede son verificados.</string>
     <string name="label_minutes">%d minutos</string>
     <string name="label_mobiletag">Móbil</string>
     <string name="label_MostRecentOnly">Última só</string>

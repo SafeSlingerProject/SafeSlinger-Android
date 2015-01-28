@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger অ্যাপ্লিকেশন: %s</string>
     <string name="label_messageInviteSetupInst">একটি নিরাপদ মেসেজিং সংযোগ সেটআপ করার জন্য, আমরা সংযোগ যাচাই করার জন্য শুধু একবার তারপর গুলতি কি পূরণ বা ফোন একে অপরের একই সময়ে, এবং পারেন.</string>
     <string name="label_messageInviteStartMsg">আমরা ওপেন সোর্স SafeSlinger আইফোন বা অ্যান্ড্রয়েড app এর সঙ্গে নিরাপদ মেসেজিং শুরু করতে পারেন?</string>
-    <string name="label_messageYouAreVerified">%s, আপনি যাচাই করা হয়.</string>
     <string name="label_minutes">%d মিনিট</string>
     <string name="label_mobiletag">মোবাইল</string>
     <string name="label_MostRecentOnly">সাম্প্রতিক শুধুমাত্র</string>

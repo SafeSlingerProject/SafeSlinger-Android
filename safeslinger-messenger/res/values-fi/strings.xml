@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Setup turvallisen viestit yhteyden, voimme tavata tai puhelimitse toisiaan samalla, ja sitten Sling avaimet vain kerran yhteyden vahvistamiseksi.</string>
     <string name="label_messageInviteStartMsg">Voimmeko aloittaa turvallisen messaging kanssa avoimen lähdekoodin SafeSlinger iPhone tai Android-sovellus?</string>
-    <string name="label_messageYouAreVerified">%s, olet varmistettu.</string>
     <string name="label_minutes">%d minuuttia</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Uusimmat vain</string>

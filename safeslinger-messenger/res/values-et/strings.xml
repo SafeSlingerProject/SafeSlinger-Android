@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Et setup turvaline sõnumivahetus seoses saame kokku või telefoni üksteist samal ajal ja siis pilduma Keys ainult üks kord ühenduse kontrollimiseks.</string>
     <string name="label_messageInviteStartMsg">Kas hakkame turvalise sõnumivahetuse avatud lähtekoodiga SafeSlinger iPhone või Android app?</string>
-    <string name="label_messageYouAreVerified">%s, olete kinnitatud.</string>
     <string name="label_minutes">%d minutit</string>
     <string name="label_mobiletag">Mobiilne</string>
     <string name="label_MostRecentOnly">Viimased ainult</string>

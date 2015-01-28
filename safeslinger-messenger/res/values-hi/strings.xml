@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger अनुप्रयोग: %s</string>
     <string name="label_messageInviteSetupInst">एक सुरक्षित संदेश कनेक्शन सेटअप करने के लिए, हम कनेक्शन सत्यापित करने के लिए सिर्फ एक बार फिर गोफन कुंजी मिलने या फोन एक दूसरे को एक ही समय में, और कर सकते हैं।</string>
     <string name="label_messageInviteStartMsg">हम खुले स्रोत SafeSlinger iPhone या Android app के साथ सुरक्षित संदेश शुरू कर सकते हैं?</string>
-    <string name="label_messageYouAreVerified">%s, आप सत्यापित कर रहे हैं।</string>
     <string name="label_minutes">%d मिनट</string>
     <string name="label_mobiletag">मोबाइल</string>
     <string name="label_MostRecentOnly">सबसे हाल ही</string>

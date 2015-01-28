@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger అనువర్తనం: %s</string>
     <string name="label_messageInviteSetupInst">సురక్షిత సందేశ కనెక్షన్ సెటప్, మేము కనెక్షన్ ధ్రువీకరించడం కేవలం ఒకసారి అప్పుడు స్లింగ్ కీస్ కలిసే లేదా ఫోన్ ప్రతి ఇతర అదే సమయంలో, మరియు చేయవచ్చు.</string>
     <string name="label_messageInviteStartMsg">మేము ఓపెన్ సోర్స్ SafeSlinger ఐఫోన్ లేదా Android అనువర్తనం తో సురక్షిత సందేశ ప్రారంభించవచ్చు?</string>
-    <string name="label_messageYouAreVerified">%s, మీరు తనిఖీ ఉంటాయి.</string>
     <string name="label_minutes">%d నిమిషాల</string>
     <string name="label_mobiletag">మొబైల్</string>
     <string name="label_MostRecentOnly">ఇటీవలి మాత్రమే</string>

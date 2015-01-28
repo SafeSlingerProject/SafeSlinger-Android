@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger ծրագիրը: %s</string>
     <string name="label_messageInviteSetupInst">To setup մի ապահով հաղորդագրությունների կապակցությամբ, մենք կարող ենք հանդիպել, կամ հեռախոս միմյանց հետ, միեւնույն ժամանակ, եւ ապա Պարսատիկ բանալիները միայն մեկ անգամ է ստուգել կապը.</string>
     <string name="label_messageInviteStartMsg">Կարող ենք սկսել ապահով հաղորդագրությունների հետ բաց աղբյուրներից SafeSlinger iPhone կամ Android Ծր?</string>
-    <string name="label_messageYouAreVerified">%s, դուք ստուգված է.</string>
     <string name="label_minutes">%d րոպե</string>
     <string name="label_mobiletag">Շարժական</string>
     <string name="label_MostRecentOnly">Ամենավերջին միայն</string>

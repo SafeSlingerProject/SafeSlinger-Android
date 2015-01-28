@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger fampiharana: %s</string>
     <string name="label_messageInviteSetupInst">Ny fanamboarana izay azo antoka hafatra fifandraisana, dia afaka mihaona na telefaonina tsirairay tamin\'izany andro izany, ary avy eo dia antsamotady fotsiny Fanalahidin\'ny indray mandeha mba hanamarinana ny fifandraisana.</string>
     <string name="label_messageInviteStartMsg">No manomboka azo antoka hafatra amin\'ny loharano misokatra SafeSlinger iPhone na Android fampiharana?</string>
-    <string name="label_messageYouAreVerified">%s, ianao voamarina.</string>
     <string name="label_minutes">%d minitra</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Vao haingana indrindra ihany</string>

@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Pikeun setelan sambungan olahtalatah aman, urang bisa minuhan atawa telepon nu séjén dina waktu nu bareng, terus aisan kenop ngan sakali pikeun mariksa sambungan.</string>
     <string name="label_messageInviteStartMsg">Bisa urang mimitian olahtalatah aman jeung open source SafeSlinger iPhone atawa Android app?</string>
-    <string name="label_messageYouAreVerified">%s, Anjeun diverifikasi.</string>
     <string name="label_minutes">%d menit</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Panganyarna ngan</string>

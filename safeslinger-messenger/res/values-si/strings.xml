@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger යෙදුම: %s</string>
     <string name="label_messageInviteSetupInst">සැකසුම සුරක්ෂිත පණිවුඩ සම්බන්ධයෙන් නම්, අප හමු හෝ දුරකතන එකිනෙකා එම අවස්ථාවේදීම, පසුව Sling යතුරු වරක් පමණක් ඇති සම්බන්ධය තහවුරු කිරීම සඳහා කළ හැකිය.</string>
     <string name="label_messageInviteStartMsg">අපි විවෘත මූලාශ්ර SafeSlinger iPhone හෝ ඇන්ඩ්රොයිඩ් ඇප් එක රන් කිරීම සමග ආරක්ෂිත පණිවිඩ ආරම්භ කළ හැකිද?</string>
-    <string name="label_messageYouAreVerified">%s, ඔබට තහවුරු කර ගෙන ඇත.</string>
     <string name="label_minutes">%d විනාඩි</string>
     <string name="label_mobiletag">ජංගම</string>
     <string name="label_MostRecentOnly">එකම වඩාත් ම මෑත</string>

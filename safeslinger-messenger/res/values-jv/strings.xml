@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Kanggo persiyapan sambungan olahpesen aman, kita bisa ketemu utawa telpon saben liyane ing wektu sing padha, lan banjur Sling Keys mung sapisan kanggo verifikasi sambungan.</string>
     <string name="label_messageInviteStartMsg">Kita bisa miwiti olahpesen aman karo mbukak sumber SafeSlinger iPhone utawa Android app?</string>
-    <string name="label_messageYouAreVerified">%s, sampeyan diverifikasi.</string>
     <string name="label_minutes">%d menit</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Paling anyar mung</string>

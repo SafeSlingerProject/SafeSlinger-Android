@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger التطبيق: %s</string>
     <string name="label_messageInviteSetupInst">لإعداد اتصال الرسائل آمنة، ونحن يمكن أن تلبي أو الهاتف بعضها البعض في نفس الوقت، وبعد ذلك رمى المفاتيح مرة واحدة فقط للتحقق من الاتصال.</string>
     <string name="label_messageInviteStartMsg">يمكن أن نبدأ الرسائل آمنة مع المصدر المفتوح SafeSlinger فون أو التطبيق الروبوت؟</string>
-    <string name="label_messageYouAreVerified">%s، يتم التحقق لك.</string>
     <string name="label_minutes">%d دقيقة</string>
     <string name="label_mobiletag">متحرك</string>
     <string name="label_MostRecentOnly">آخرها فقط</string>

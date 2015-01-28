@@ -29,6 +29,7 @@ import android.app.ActionBar;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -46,6 +47,7 @@ import edu.cmu.cylab.starslinger.exchange.ExchangeConfig.extra;
 public class GroupingActivity extends BaseActivity {
 
     private static final int MENU_HELP = 1;
+    private static final String PREF_SHOW_HELP = "prefAutoShowHelp";
     private Button mButtonOk;
     private TextView mTextViewInstruct;
     private TextView mTextViewUserId;
@@ -69,7 +71,7 @@ public class GroupingActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case MENU_HELP:
-                showHelp(getString(R.string.title_userid), getString(R.string.help_userid));
+                showHelp();
                 return true;
             default:
                 break;
@@ -162,6 +164,16 @@ public class GroupingActivity extends BaseActivity {
         mInputMgr = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
         mInputMgr.toggleSoftInput(InputMethodManager.SHOW_FORCED,
                 InputMethodManager.HIDE_IMPLICIT_ONLY);
+
+        // show help automatically only for first time installers
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        if (sharedPref.getBoolean(PREF_SHOW_HELP, true)) {
+            // show help, turn off for next time
+            showHelp();
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean(PREF_SHOW_HELP, false);
+            editor.commit();
+        }
     }
 
     @Override
@@ -192,5 +204,9 @@ public class GroupingActivity extends BaseActivity {
             mInputMgr.hideSoftInputFromWindow(mEditTextPrompt.getWindowToken(), 0);
         }
         super.onBackPressed();
+    }
+
+    private void showHelp() {
+        showHelp(getString(R.string.title_userid), getString(R.string.help_userid));
     }
 }

@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger стан: %s</string>
     <string name="label_messageInviteSetupInst">Да се постави на безбедна размена на пораки конекција, можеме да ги исполнуваат или телефон едни на други, во исто време, а потоа Прашка Копчиња само еднаш за проверка на врската.</string>
     <string name="label_messageInviteStartMsg">Можеме да почнеме безбедна размена на пораки со отворен код SafeSlinger iPhone или Андроид стан?</string>
-    <string name="label_messageYouAreVerified">%s, вие се потврдени.</string>
     <string name="label_minutes">%d минути</string>
     <string name="label_mobiletag">Мобилни</string>
     <string name="label_MostRecentOnly">Најновите само</string>

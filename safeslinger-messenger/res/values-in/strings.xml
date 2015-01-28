@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Untuk mengatur koneksi messaging aman, kita bisa bertemu atau telepon satu sama lain pada saat yang sama, dan kemudian Sling Keys hanya sekali untuk memverifikasi sambungan.</string>
     <string name="label_messageInviteStartMsg">Bisakah kita mulai pesan aman dengan open source SafeSlinger iPhone atau Android app?</string>
-    <string name="label_messageYouAreVerified">%s, Anda diverifikasi.</string>
     <string name="label_minutes">%d menit</string>
     <string name="label_mobiletag">Mobil</string>
     <string name="label_MostRecentOnly">Terbaru hanya</string>

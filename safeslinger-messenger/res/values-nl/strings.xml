@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Voor het opzetten van een beveiligde messaging-verbinding, kunnen we elkaar ontmoeten of telefoon op hetzelfde moment, en dan Sling sleutels maar één keer om de verbinding te controleren.</string>
     <string name="label_messageInviteStartMsg">Kunnen we beveiligde messaging met de open source SafeSlinger iPhone of Android app te starten?</string>
-    <string name="label_messageYouAreVerified">%s, wordt u gecontroleerd.</string>
     <string name="label_minutes">%d minuten</string>
     <string name="label_mobiletag">Mobiel</string>
     <string name="label_MostRecentOnly">Meest recente alleen</string>

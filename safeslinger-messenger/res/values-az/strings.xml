@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Təhlükəsiz mesajlaşma əlaqədar quraşdırma üçün, biz əlaqə yoxlamaq üçün yalnız bir dəfə sonra Sling Keys cavab və ya telefon bir-birinə eyni zamanda bilər.</string>
     <string name="label_messageInviteStartMsg">Biz açıq mənbə SafeSlinger iPhone və ya Android app ilə təhlükəsiz mesajlaşma başlaya bilərsiniz?</string>
-    <string name="label_messageYouAreVerified">%s, siz təsdiq edilir.</string>
     <string name="label_minutes">%d dəqiqə</string>
     <string name="label_mobiletag">Səyyar</string>
     <string name="label_MostRecentOnly">Ən son yalnız</string>

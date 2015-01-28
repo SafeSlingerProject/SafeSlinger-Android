@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger അപ്ലിക്കേഷൻ: %s</string>
     <string name="label_messageInviteSetupInst">സെറ്റപ്പ് ഒരു സുരക്ഷിത സന്ദേശമയയ്ക്കൽ കണക്ഷൻ, നമുക്ക് കാണാൻ അല്ലെങ്കിൽ ഫോൺ പരസ്പരം ഒരേ സമയം, തുടർന്ന് കവിണക്കല്ലു കീകൾ മാത്രം ഒരിക്കൽ കണക്ഷൻ പരിശോധിക്കുന്നതിന് കഴിയും.</string>
     <string name="label_messageInviteStartMsg">ഞങ്ങൾ ഓപ്പൺ സോഴ്സ് SafeSlinger iPhone അല്ലെങ്കിൽ Android അപ്ലിക്കേഷൻ സുരക്ഷിത സന്ദേശമയയ്ക്കൽ ആരംഭിക്കാൻ കഴിയും?</string>
-    <string name="label_messageYouAreVerified">%s, നിങ്ങൾ പരിശോധിച്ചു.</string>
     <string name="label_minutes">%d മിനിറ്റ്</string>
     <string name="label_mobiletag">മൊബൈൽ</string>
     <string name="label_MostRecentOnly">ഏറ്റവും സമീപകാല</string>

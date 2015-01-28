@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Za nastavitev varne povezave sporočanja, se lahko srečamo ali telefon seboj ob istem času, in nato Sling Keys samo enkrat, da preverite povezavo.</string>
     <string name="label_messageInviteStartMsg">Lahko začnemo varno sporočanje z odprtokodnim SafeSlinger iPhone ali Android?</string>
-    <string name="label_messageYouAreVerified">%s, ste preveriti.</string>
     <string name="label_minutes">%d minut</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Najnovejša samo</string>

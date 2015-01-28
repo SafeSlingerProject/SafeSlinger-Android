@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Al instalinstrukciojn sekuran mesaĝado rilato, ni povas renkonti aŭ telefono reciproke samtempe, kaj tiam Sling Keys nur unufoje por kontroli la konekton.</string>
     <string name="label_messageInviteStartMsg">Ĉu ni povas komenci sekura mensajería kun la malfermita fonto SafeSlinger iPhone aŭ Android app?</string>
-    <string name="label_messageYouAreVerified">%s, vi estas kontrolitaj.</string>
     <string name="label_minutes">%d minutoj</string>
     <string name="label_mobiletag">Poŝtelefono</string>
     <string name="label_MostRecentOnly">Plej freŝaj nur</string>

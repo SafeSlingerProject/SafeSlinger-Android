@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger App: %s</string>
     <string name="label_messageInviteSetupInst">Xavfsiz xabarlashish ulanish o\'rnatish uchun, biz ulanishni tekshirish uchun faqat bir marta, keyin Sling Qays qondirish yoki telefon bir-biriga bir vaqtning o\'zida, va mumkin.</string>
     <string name="label_messageInviteStartMsg">Biz ochiq manba SafeSlinger iPhone yoki Android App bilan xavfsiz xabar yozish boshlash mumkin?</string>
-    <string name="label_messageYouAreVerified">%s, siz tasdiqlanadigan.</string>
     <string name="label_minutes">%d daqiqa</string>
     <string name="label_mobiletag">Ko\'chma</string>
     <string name="label_MostRecentOnly">Eng so\'nggi faqat</string>

@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">סאַפעסלינגער אַפּ: %s</string>
     <string name="label_messageInviteSetupInst">צו סעטאַפּ אַ זיכער מעסידזשינג קשר, מיר קענען טרעפן אָדער טעלעפאָנירן יעדער אנדערע אין דער זעלביקער צייַט, און דעמאָלט וואַרפלקע קיז נאָר אַמאָל צו באַשטעטיקן די קשר.</string>
     <string name="label_messageInviteStartMsg">קענען מיר אָנהייבן זיכער מעסידזשינג מיט די עפענען מקור סאַפעסלינגער יפאָנע אָדער אַנדרויד אַפּ?</string>
-    <string name="label_messageYouAreVerified">%s, איר זענען וועראַפייד.</string>
     <string name="label_minutes">%d מינוט</string>
     <string name="label_mobiletag">רירעוודיק</string>
     <string name="label_MostRecentOnly">לעצטן בלויז</string>

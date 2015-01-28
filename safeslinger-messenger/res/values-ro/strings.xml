@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">App SafeSlinger: %s</string>
     <string name="label_messageInviteSetupInst">Pentru a seta o conexiune de mesagerie securizată, ne putem intalni sau telefonic reciproc, în același timp, și apoi Sling Taste doar o singură dată pentru a verifica conexiunea.</string>
     <string name="label_messageInviteStartMsg">Putem începe mesagerie securizată cu open source SafeSlinger iPhone sau Android App?</string>
-    <string name="label_messageYouAreVerified">%s, tu sunt verificate.</string>
     <string name="label_minutes">%d minute</string>
     <string name="label_mobiletag">Mobil</string>
     <string name="label_MostRecentOnly">Cea mai recentă numai</string>

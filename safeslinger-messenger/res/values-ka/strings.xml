@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">კონფიგურაცია უსაფრთხო შეტყობინებები დაკავშირებით, ჩვენ ვერ აკმაყოფილებს ან ტელეფონი ერთმანეთს, ამავე დროს, და შემდეგ Sling Keys მხოლოდ ერთხელ გადაამოწმონ კავშირი.</string>
     <string name="label_messageInviteStartMsg">შეგვიძლია დავიწყოთ უსაფრთხო შეტყობინებები ერთად ღია SafeSlinger iPhone ან Android app?</string>
-    <string name="label_messageYouAreVerified">%s, თქვენ დავადგინე.</string>
     <string name="label_minutes">%d-ე</string>
     <string name="label_mobiletag">მობილური</string>
     <string name="label_MostRecentOnly">ყველაზე ბოლო მხოლოდ</string>

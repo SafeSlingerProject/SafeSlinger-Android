@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Chun thus nasc teachtaireachtaí slán, is féidir linn freastal nó ar an bhfón a chéile ag an am céanna, agus ansin Eochracha Sling ach aon uair amháin chun a fhíorú an nasc.</string>
     <string name="label_messageInviteStartMsg">An féidir linn tús a chur teachtaireachtaí slán leis an foinse oscailte SafeSlinger iPhone nó Android app?</string>
-    <string name="label_messageYouAreVerified">%s, tá tú a fhíorú.</string>
     <string name="label_minutes">%d nóiméad</string>
     <string name="label_mobiletag">Soghluaiste</string>
     <string name="label_MostRecentOnly">An chuid is mó le déanaí amháin</string>

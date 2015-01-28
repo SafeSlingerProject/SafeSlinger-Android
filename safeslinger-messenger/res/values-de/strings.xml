@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger App: %s</string>
     <string name="label_messageInviteSetupInst">So richten Sie eine sichere Messaging-Verbindung, die wir in der gleichen Zeit treffen können oder Telefon gegenseitig, und dann Sling Keys nur einmal, um die Verbindung zu überprüfen.</string>
     <string name="label_messageInviteStartMsg">Können wir beginnen Secure Messaging mit dem Open-Source-SafeSlinger iPhone oder Android-App?</string>
-    <string name="label_messageYouAreVerified">%s, werden Sie überprüft.</string>
     <string name="label_minutes">%d Minuten</string>
     <string name="label_mobiletag">Handy</string>
     <string name="label_MostRecentOnly">Nur neueste</string>

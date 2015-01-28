@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app e: %s</string>
     <string name="label_messageInviteSetupInst">Ho seta e sireletsehileng melaetsa mabapi, re ka kopana hao kapa ya fono mong le e mong tse ling tse ka nako e tsoanang, \'me joale Sling Keys feela hang e le ho netefatsa ea kgokelo.</string>
     <string name="label_messageInviteStartMsg">Re ka qala sireletsehile melaetsa le le bulehileng mohloli SafeSlinger iPhone kapa Android app e?</string>
-    <string name="label_messageYouAreVerified">%s, o ba netefalitsoeng.</string>
     <string name="label_minutes">fihlela ho %d metsotso e</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Ka ho fetisisa morao tjena feela</string>

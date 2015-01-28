@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger ап: %s</string>
     <string name="label_messageInviteSetupInst">За да настроите една сигурна съобщения връзка, можем да се справяме или телефон помежду си по едно и също време, а след това Прашка Keys само веднъж, за да се провери връзката.</string>
     <string name="label_messageInviteStartMsg">Можем ли да започнем защитен обмен на съобщения с отворен код SafeSlinger iPhone или Android приложението?</string>
-    <string name="label_messageYouAreVerified">%s, можете да се верифицират.</string>
     <string name="label_minutes">%dминути</string>
     <string name="label_mobiletag">Подвижен</string>
     <string name="label_MostRecentOnly">Най-нови само</string>

@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger taupānga: %s</string>
     <string name="label_messageInviteSetupInst">Ki te tatūnga he hononga karere haumaru, e nehenehe tatou e te whakatau ranei waea ia te tahi i te wa ano, a ka kotaha Kī tika kotahi ki te manatoko i te hononga.</string>
     <string name="label_messageInviteStartMsg">Ka taea e tatou te tīmata karere haumaru ki te puna tuwhera SafeSlinger iPhone taupānga Android ranei?</string>
-    <string name="label_messageYouAreVerified">%s, e manatoko koe.</string>
     <string name="label_minutes">%d meneti</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Anake te nuinga o tata</string>

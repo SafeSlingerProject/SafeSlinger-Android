@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">אפליקציה SafeSlinger: %s</string>
     <string name="label_messageInviteSetupInst">להתקנת חיבור מסרים בטוח, אנחנו יכולים לפגוש אחד את השני או בטלפון באותו הזמן, ולאחר מכן קלע מפתחות רק פעם אחת כדי לבדוק את החיבור.</string>
     <string name="label_messageInviteStartMsg">אנחנו יכולים להתחיל מסרים בטוחים עם הקוד הפתוח SafeSlinger iPhone או האפליקציה אנדרואיד?</string>
-    <string name="label_messageYouAreVerified">%s, אתה מאומת.</string>
     <string name="label_minutes">%d דקות</string>
     <string name="label_mobiletag">נייד</string>
     <string name="label_MostRecentOnly">האחרון רק</string>

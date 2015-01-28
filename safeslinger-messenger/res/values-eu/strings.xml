@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger aplikazioa: %s</string>
     <string name="label_messageInviteSetupInst">Setup segurua mezularitza-konexioa, betetzen ahal dugu edo telefono elkarrengandik, aldi berean, eta, ondoren Sling Keys behin bakarrik konexioa egiaztatzeko.</string>
     <string name="label_messageInviteStartMsg">Ezin kode irekiko SafeSlinger iPhone edo Android aplikazioa mezularitza segurua hasten gara?</string>
-    <string name="label_messageYouAreVerified">%s, egiaztatu ari zaren.</string>
     <string name="label_minutes">%d minutu</string>
     <string name="label_mobiletag">Mugikorra</string>
     <string name="label_MostRecentOnly">Azken bakarrik</string>

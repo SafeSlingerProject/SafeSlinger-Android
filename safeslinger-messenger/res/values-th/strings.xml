@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger การตรวจสอบ: %s</string>
     <string name="label_messageInviteSetupInst">การติดตั้งการเชื่อมต่อส่งข้อความที่ปลอดภัยเราสามารถตอบสนองหรือโทรศัพท์แต่ละอื่น ๆ ในเวลาเดียวกันและจากนั้นคีย์สลิงเพียงครั้งเดียวเพื่อตรวจสอบการเชื่อมต่อ</string>
     <string name="label_messageInviteStartMsg">เราสามารถเริ่มต้นการส่งข้อความที่ปลอดภัยด้วยโอเพนซอร์ส SafeSlinger iPhone หรือ Android การตรวจสอบ?</string>
-    <string name="label_messageYouAreVerified">%s คุณจะได้รับการตรวจสอบแล้ว</string>
     <string name="label_minutes">%d นาที</string>
     <string name="label_mobiletag">โทรศัพท์มือถือ</string>
     <string name="label_MostRecentOnly">ส่วนใหญ่ที่ผ่านมาเท่านั้น</string>

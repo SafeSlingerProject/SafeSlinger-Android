@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app ကို: %s</string>
     <string name="label_messageInviteSetupInst">Setup ကိုဟာလုံခြုံတဲ့စာတိုပေးပို့ရေး connection ကမှကျနော်တို့ကိုခရီးဦးကြိုသို့မဟုတ်ဖုန်းအချင်းချင်းတစ်ချိန်တည်းမှာ, ပြီးတော့လောက်လွှဲနှင့်ပစ်သော့ချက်များ့တခါမှ connection ကို verify နိုင်ပါတယ်။</string>
     <string name="label_messageInviteStartMsg">ကျနော်တို့က open source SafeSlinger iPhone နှင့် Android app ကိုနှင့်အတူလုံခြုံသောစာတိုပေးပို့ရေးစတင်နိုင်သလား?</string>
-    <string name="label_messageYouAreVerified">%s, သင်မှန်ကန်ကြောင်းအတည်ပြုကြသည်။</string>
     <string name="label_minutes">%d မိနစ်</string>
     <string name="label_mobiletag">Mobile က</string>
     <string name="label_MostRecentOnly">သာအများစုမှာမကြာသေးမီ</string>

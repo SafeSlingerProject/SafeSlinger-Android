@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger应用程序： %s</string>
     <string name="label_messageInviteSetupInst">设置一个安全讯息管道，我们可以透过碰面或打电话给对方并进行一次金钥交换验证。</string>
     <string name="label_messageInviteStartMsg">可以使用SafeSlinger iPhone或Android程式开始你的安全通讯？</string>
-    <string name="label_messageYouAreVerified">%s，你验证。</string>
     <string name="label_minutes">%d分钟</string>
     <string name="label_mobiletag">行动电话</string>
     <string name="label_MostRecentOnly">仅显示最新</string>

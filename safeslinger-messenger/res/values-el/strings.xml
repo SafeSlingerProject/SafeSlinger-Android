@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Για να ρυθμίσουμε μια ασφαλή επικοινωνία μέσω μηνυμάτων, μπορούμε να ανταλλάξουμε κλειδιά από κοντά ή μέσω τηλεφώνου. Αυτό θα χρειαστεί μόνο μία φορά για να επικυρώσει την επικοινωνία.</string>
     <string name="label_messageInviteStartMsg">Μπορούμε να ξεκινήσουμε ασφαλή ανταλλαγή μηνυμάτων με την iPhone ή Android εφαρμογή SafeSlinger (ελεύθερο λογισμικό);</string>
-    <string name="label_messageYouAreVerified">%s, που επαληθεύονται.</string>
     <string name="label_minutes">%d λεπτά</string>
     <string name="label_mobiletag">Κινητό</string>
     <string name="label_MostRecentOnly">Μόνο πιο πρόσφατες</string>

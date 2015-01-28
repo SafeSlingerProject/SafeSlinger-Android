@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Å sette opp en sikker meldingstilkobling, kan vi møte eller telefon hverandre på samme tid, og deretter Sling Keys bare en gang for å bekrefte tilkoblingen.</string>
     <string name="label_messageInviteStartMsg">Kan vi begynne sikker meldings med åpen kildekode SafeSlinger iPhone eller Android app?</string>
-    <string name="label_messageYouAreVerified">%s, du er verifisert.</string>
     <string name="label_minutes">%d minutter</string>
     <string name="label_mobiletag">Mobil</string>
     <string name="label_MostRecentOnly">Nyeste bare</string>

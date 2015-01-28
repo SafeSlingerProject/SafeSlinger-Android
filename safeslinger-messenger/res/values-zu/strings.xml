@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Ukuze isethaphu a imiyalezo ukuxhumana okuphephile, singahlangabezana noma ifoni nomunye ngesikhathi esifanayo, bese isihlilingi Keys once nje ukuqinisekisa ukuxhumana.</string>
     <string name="label_messageInviteStartMsg">Ingabe siqale imiyalezo bephephile umthombo ovulekile SafeSlinger iPhone app noma Android?</string>
-    <string name="label_messageYouAreVerified">%s, wena iqinisekiswe.</string>
     <string name="label_minutes">imizuzu %d</string>
     <string name="label_mobiletag">Hambayo</string>
     <string name="label_MostRecentOnly">Iningi yamuva nje</string>

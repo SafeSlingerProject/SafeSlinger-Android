@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger апп: %s</string>
     <string name="label_messageInviteSetupInst">Аюулгүй зурвасын холболт тохиргоо тулд бид холболтыг шалгах нэг л удаа дараа Sling Товчнууд уулзаж, утасны бие биенээ энэ цаг үед хийж болох юм.</string>
     <string name="label_messageInviteStartMsg">Бид нээлттэй эх SafeSlinger Iphone болон Android апп нь аюулгүй зурвас илгээх эхлэх үү?</string>
-    <string name="label_messageYouAreVerified">%s, та нар шалгаж байна.</string>
     <string name="label_minutes">%d минут</string>
     <string name="label_mobiletag">Гар утас</string>
     <string name="label_MostRecentOnly">Хамгийн сүүлийн үеийн цорын ганц</string>

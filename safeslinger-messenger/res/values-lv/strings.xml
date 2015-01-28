@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Iestatīt drošu ziņojumapmaiņas savienojumu, mēs varam apmierināt vai tālruni otru tajā pašā laikā, un pēc tam linga Taustiņi tikai vienu reizi, lai pārbaudītu savienojumu.</string>
     <string name="label_messageInviteStartMsg">Vai mēs varam sākt drošas ziņojumapmaiņas ar atvērtā koda SafeSlinger iPhone vai Android app?</string>
-    <string name="label_messageYouAreVerified">%s, jums ir pārbaudīts.</string>
     <string name="label_minutes">%d minūtes</string>
     <string name="label_mobiletag">Mobils</string>
     <string name="label_MostRecentOnly">Jaunākais tikai</string>

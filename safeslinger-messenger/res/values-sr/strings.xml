@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">СафеСлингер апп: %s</string>
     <string name="label_messageInviteSetupInst">То сетуп сигурном порука везе, можемо једни друге састати или телефон у исто време, а онда Слинг Кеис само једном да потврди везу.</string>
     <string name="label_messageInviteStartMsg">Можемо ли почети Сецуре Мессагинг са опен соурце СафеСлингер иПхоне или Андроид апликације?</string>
-    <string name="label_messageYouAreVerified">%s, ви се утврди.</string>
     <string name="label_minutes">%d минута</string>
     <string name="label_mobiletag">Мобилни</string>
     <string name="label_MostRecentOnly">Најновија само</string>

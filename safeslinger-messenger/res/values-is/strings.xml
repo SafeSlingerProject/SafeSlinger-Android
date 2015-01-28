@@ -203,7 +203,6 @@
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Að skipulag örugga skilaboð tengingu, getum við að mæta eða síma hvor aðra á sama tíma, og þá Sling Lyklar bara einu sinni til að staðfesta tenginguna.</string>
     <string name="label_messageInviteStartMsg">Getum við byrjað örugga skilaboð með opinn uppspretta SafeSlinger iPhone eða Android app?</string>
-    <string name="label_messageYouAreVerified">%s, þú ert staðfest.</string>
     <string name="label_minutes">%d mínútur</string>
     <string name="label_mobiletag">Mobile</string>
     <string name="label_MostRecentOnly">Nýjasta aðeins</string>
