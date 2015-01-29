@@ -550,6 +550,8 @@ public class SafeSlinger extends Application {
         }
     };
 
+    private boolean isExchanging;
+
     private class GetPendingMessagesTask extends AsyncTask<String, String, String> {
 
         @Override
@@ -935,5 +937,14 @@ public class SafeSlinger extends Application {
 
     public void setMessageFragActive(boolean isMessageFragActive) {
         this.isTabContainerActive = isMessageFragActive;
+    }
+
+    public boolean isExchangeActive() {
+        return isExchanging;
+    }
+
+    public void setExchangeActive(boolean isExchangeActive) {
+        this.isExchanging = isExchangeActive;
+
     }
 }

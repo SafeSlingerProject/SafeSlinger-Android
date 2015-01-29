@@ -237,7 +237,6 @@ public class Service extends android.app.Service {
                 PendingIntent.FLAG_UPDATE_CURRENT);
         Context ctx = SafeSlinger.getApplication();
         NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx)//
-                .setContentIntent(contentIntent)//
                 .setSmallIcon(R.drawable.ic_stat_notify_backup)//
                 .setTicker(tickerText)//
                 .setWhen(request)//
@@ -245,6 +244,11 @@ public class Service extends android.app.Service {
                 .setContentTitle(contentTitle)//
                 .setContentText(contentText)//
                 .setVisibility(NotificationCompat.VISIBILITY_SECRET);
+
+        // prevent the intent from canceling active key exchange
+        if (!SafeSlinger.getApplication().isExchangeActive()) {
+            builder.setContentIntent(contentIntent);
+        }
 
         return builder.build();
     }
@@ -271,13 +275,17 @@ public class Service extends android.app.Service {
                 PendingIntent.FLAG_UPDATE_CURRENT);
         Context ctx = SafeSlinger.getApplication();
         NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx)//
-                .setContentIntent(contentIntent)//
                 .setSmallIcon(R.drawable.ic_stat_notify_cache)//
                 .setTicker(tickerText)//
                 .setContentTitle(contentTitle)//
                 .setContentText(contentText)//
                 .setWhen(0)//
                 .setVisibility(NotificationCompat.VISIBILITY_SECRET);
+
+        // prevent the intent from canceling active key exchange
+        if (!SafeSlinger.getApplication().isExchangeActive()) {
+            builder.setContentIntent(contentIntent);
+        }
 
         return builder.build();
     }
@@ -294,7 +302,6 @@ public class Service extends android.app.Service {
                 PendingIntent.FLAG_UPDATE_CURRENT);
         Context ctx = SafeSlinger.getApplication();
         NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx)//
-                .setContentIntent(contentIntent)//
                 .setSmallIcon(R.drawable.ic_stat_notify_msg)//
                 .setAutoCancel(true)//
                 .setTicker(tickerText)//
@@ -302,6 +309,11 @@ public class Service extends android.app.Service {
                 .setContentText(contentText)//
                 .setWhen(0)//
                 .setVisibility(NotificationCompat.VISIBILITY_SECRET);
+
+        // prevent the intent from canceling active key exchange
+        if (!SafeSlinger.getApplication().isExchangeActive()) {
+            builder.setContentIntent(contentIntent);
+        }
 
         return builder.build();
     }

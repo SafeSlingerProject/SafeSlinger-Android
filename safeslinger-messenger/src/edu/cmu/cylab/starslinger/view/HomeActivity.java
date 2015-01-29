@@ -750,6 +750,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         intent.putExtra(ExchangeConfig.extra.USER_DATA, userData);
         intent.putExtra(ExchangeConfig.extra.HOST_NAME, SafeSlingerConfig.HTTPURL_EXCHANGE_HOST);
         startActivityForResult(intent, VIEW_EXCHANGE_ID);
+        SafeSlinger.getApplication().setExchangeActive(true);
     }
 
     private void showSave(Bundle args) {
@@ -2238,7 +2239,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         showSave(data.getExtras());
                         break;
                     case ExchangeActivity.RESULT_EXCHANGE_CANCELED:
-                        refreshView();
+                        SafeSlinger.getApplication().setExchangeActive(false);
                         break;
                 }
                 break;
@@ -2246,6 +2247,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             case VIEW_SAVE_ID:
                 switch (resultCode) {
                     case SaveActivity.RESULT_SAVE:
+                        SafeSlinger.getApplication().setExchangeActive(false);
                         SafeSlingerPrefs.setFirstExchangeComplete(true);
                         // locally store trusted exchanged items
                         Bundle args = data.getExtras();
@@ -2254,15 +2256,18 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         importFromExchange.execute(args);
                         break;
                     case SaveActivity.RESULT_SELNONE:
+                        SafeSlinger.getApplication().setExchangeActive(false);
                         SafeSlingerPrefs.setFirstExchangeComplete(true);
                         int exchanged = data.getExtras().getInt(extra.EXCHANGED_TOTAL);
                         showNote(String.format(getString(R.string.state_SomeContactsImported), "0/"
                                 + exchanged));
                         break;
                     case RESULT_CANCELED:
+                        SafeSlinger.getApplication().setExchangeActive(false);
                         showNote(String.format(getString(R.string.state_SomeContactsImported), "0"));
                         break;
                     default:
+                        SafeSlinger.getApplication().setExchangeActive(false);
                         showNote(String.format(getString(R.string.state_SomeContactsImported), "?"));
                         break;
                 }

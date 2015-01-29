@@ -37,6 +37,7 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
@@ -63,6 +64,7 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
     @SuppressWarnings("deprecation")
     public static void doUnseenMessagesNotification(Context ctx, int msgCount,
             boolean giveNotificationFeedback) throws OutOfMemoryError {
+
         long when = System.currentTimeMillis(); // notification time
 
         // To create a status bar notification:
@@ -86,7 +88,6 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
         // configurations above
         int visibleMsgCount = msgCount != 1 ? msgCount : 0;
         NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx)//
-                .setContentIntent(contentIntent)//
                 .setSmallIcon(R.drawable.ic_stat_notify_msg)//
                 .setTicker(tickerText)//
                 .setWhen(when)//
@@ -95,6 +96,11 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
                 .setContentText(contentText)//
                 .setNumber(visibleMsgCount)//
                 .setVisibility(NotificationCompat.VISIBILITY_SECRET);
+
+        // prevent the intent from canceling active key exchange
+        if (!SafeSlinger.getApplication().isExchangeActive()) {
+            builder.setContentIntent(contentIntent);
+        }
 
         try {
             builder.setLargeIcon(BitmapFactory.decodeResource(ctx.getResources(),
