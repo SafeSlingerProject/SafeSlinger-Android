@@ -3438,7 +3438,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             if (result != null) {
                                 SafeSlingerPrefs.setPushRegistrationIdPosted(true);
                             } else {
-                                SafeSlingerPrefs.setPushRegistrationIdPosted(false);
+                                SafeSlingerPrefs.setPushRegistrationId(null); // clear
+                                SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
                             }
                         }
                     }
@@ -3450,8 +3451,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             } catch (CryptoMsgException e) {
                 return e.getLocalizedMessage();
             } catch (ExchangeException e) {
+                SafeSlingerPrefs.setPushRegistrationId(null); // clear
+                SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
                 return e.getLocalizedMessage();
             } catch (MessageNotFoundException e) {
+                SafeSlingerPrefs.setPushRegistrationId(null); // clear
+                SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
                 return e.getLocalizedMessage();
             }
             return null;

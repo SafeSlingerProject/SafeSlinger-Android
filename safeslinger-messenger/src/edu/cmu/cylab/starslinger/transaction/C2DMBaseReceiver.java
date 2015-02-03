@@ -308,7 +308,8 @@ public abstract class C2DMBaseReceiver extends IntentService {
                         if (result != null) {
                             SafeSlingerPrefs.setPushRegistrationIdPosted(true);
                         } else {
-                            SafeSlingerPrefs.setPushRegistrationIdPosted(false);
+                            SafeSlingerPrefs.setPushRegistrationId(null); // clear
+                            SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
                         }
                     }
                 }
@@ -319,8 +320,12 @@ public abstract class C2DMBaseReceiver extends IntentService {
             } catch (CryptoMsgException e) {
                 showNote(e);
             } catch (ExchangeException e) {
+                SafeSlingerPrefs.setPushRegistrationId(null); // clear
+                SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
                 showNote(e);
             } catch (MessageNotFoundException e) {
+                SafeSlingerPrefs.setPushRegistrationId(null); // clear
+                SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
                 showNote(e);
             }
 
