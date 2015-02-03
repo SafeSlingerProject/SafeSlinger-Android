@@ -121,18 +121,16 @@ public class SafeSlinger extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Crashlytics.start(this);
-
         sSafeSlinger = this;
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+        // we only want to run crashlytics in release, not debug
+        if (!SafeSlingerConfig.isDebug()) {
+            Crashlytics.start(this);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             registerActivityLifecycleCallbacks(new ActivityLifeCallbacks());
-        // Catching Unhandled Exceptions...
-        // We used to use UncaughtExceptionHandler to catch exceptions here,
-        // and send via email, however the android system has such a good
-        // feedback mechanism, that already takes pains to protect user privacy
-        // we prefer now to use the default method and let users decide when
-        // to submit anonymous error data that way.
+        }
 
         updateLanguage(SafeSlingerPrefs.getLanguage());
 
