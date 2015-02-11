@@ -226,10 +226,6 @@
             android:label="@string/lib_name"
             android:screenOrientation="portrait" >
         </activity>
-
-        <meta-data
-            android:name="com.crashlytics.ApiKey"
-            android:value="a9f2629c171299fa2ff44a07abafb7652f4e1d5c" />
     </application>
 
 </manifest>

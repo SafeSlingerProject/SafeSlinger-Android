@@ -107,9 +107,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
-
-import com.crashlytics.android.Crashlytics;
-
 import edu.cmu.cylab.starslinger.ExchangeException;
 import edu.cmu.cylab.starslinger.GeneralException;
 import edu.cmu.cylab.starslinger.MyLog;
@@ -476,7 +473,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     protected void onCreate(Bundle savedInstanceState) {
         // setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
-        Crashlytics.start(this);
 
         mViewPager = new ViewPager(this);
         mViewPager.setId(R.id.pager);

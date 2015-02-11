@@ -60,9 +60,6 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.widget.Toast;
-
-import com.crashlytics.android.Crashlytics;
-
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgPacketSizeException;
@@ -122,11 +119,6 @@ public class SafeSlinger extends Application {
     public void onCreate() {
         super.onCreate();
         sSafeSlinger = this;
-
-        // we only want to run crashlytics in release, not debug
-        if (!SafeSlingerConfig.isDebug()) {
-            Crashlytics.start(this);
-        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             registerActivityLifecycleCallbacks(new ActivityLifeCallbacks());
