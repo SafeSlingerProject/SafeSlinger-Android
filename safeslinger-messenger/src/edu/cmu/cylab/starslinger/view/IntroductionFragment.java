@@ -32,6 +32,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -78,6 +79,7 @@ public class IntroductionFragment extends Fragment {
     private Button mButtonRecip2;
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
     private static OnIntroResultListener mResult;
+    private Handler mIntroFragmentHandler = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -146,58 +148,69 @@ public class IntroductionFragment extends Fragment {
     }
 
     public void updateValues(Bundle extras) {
-        // general state
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getActivity());
-        DraftData d = DraftData.INSTANCE;
 
-        // make sure view is already inflated...
-        if (mEditTextMessage1 == null) {
-            return;
-        }
+        mIntroFragmentHandler.removeCallbacks(null);
+        mIntroFragmentHandler.postDelayed(new Runnable() {
 
-        // recipient 1
-        mImageViewRecipPhoto1.setImageResource(0);
-        RecipientRow r1 = d.getRecip1();
-        if (d.existsRecip1()) {
-            drawUserData(R.string.label_SendTo, r1.getName(), r1.getPhoto(), mTextViewRecipName1,
-                    mTextViewRecipKey1, mImageViewRecipPhoto1, r1.getKeyid(), r1.getKeydate());
-            mTextViewRecipName1.setTextColor(Color.BLACK);
-        } else {
-            mTextViewRecipName1.setTextColor(Color.GRAY);
-            mTextViewRecipName1.setText(R.string.label_SelectRecip);
-            mTextViewRecipKey1.setText("");
-            mImageViewRecipPhoto1.setImageResource(R.drawable.ic_silhouette_select);
-        }
+            @Override
+            public void run() {
 
-        // recipient 2
-        mImageViewRecipPhoto2.setImageResource(0);
-        RecipientRow r2 = d.getRecip2();
-        if (d.existsRecip2()) {
-            drawUserData(R.string.label_SendTo, r2.getName(), r2.getPhoto(), mTextViewRecipName2,
-                    mTextViewRecipKey2, mImageViewRecipPhoto2, r2.getKeyid(), r2.getKeydate());
-            mTextViewRecipName2.setTextColor(Color.BLACK);
-        } else {
-            mTextViewRecipName2.setTextColor(Color.GRAY);
-            mTextViewRecipName2.setText(R.string.label_SelectRecip);
-            mTextViewRecipKey2.setText("");
-            mImageViewRecipPhoto2.setImageResource(R.drawable.ic_silhouette_select);
-        }
+                // general state
+                RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getActivity());
+                DraftData d = DraftData.INSTANCE;
 
-        // message
-        if (d.existsRecip1() && d.existsRecip2()) {
-            // if recip1 and recip2
-            mEditTextMessage1.setVisibility(View.VISIBLE);
-            mEditTextMessage2.setVisibility(View.VISIBLE);
-            mEditTextMessage1.setText(String.format(
-                    getString(R.string.label_messageIntroduceNameToYou), r2.getName()));
-            mEditTextMessage2.setText(String.format(
-                    getString(R.string.label_messageIntroduceNameToYou), r1.getName()));
-        } else {
-            // if empty.recip1, hide
-            mEditTextMessage1.setVisibility(View.GONE);
-            // if empty.recip2, hide
-            mEditTextMessage2.setVisibility(View.GONE);
-        }
+                // make sure view is already inflated...
+                if (mEditTextMessage1 == null) {
+                    return;
+                }
+
+                // recipient 1
+                mImageViewRecipPhoto1.setImageResource(0);
+                RecipientRow r1 = d.getRecip1();
+                if (d.existsRecip1()) {
+                    drawUserData(R.string.label_SendTo, r1.getName(), r1.getPhoto(),
+                            mTextViewRecipName1, mTextViewRecipKey1, mImageViewRecipPhoto1,
+                            r1.getKeyid(), r1.getKeydate());
+                    mTextViewRecipName1.setTextColor(Color.BLACK);
+                } else {
+                    mTextViewRecipName1.setTextColor(Color.GRAY);
+                    mTextViewRecipName1.setText(R.string.label_SelectRecip);
+                    mTextViewRecipKey1.setText("");
+                    mImageViewRecipPhoto1.setImageResource(R.drawable.ic_silhouette_select);
+                }
+
+                // recipient 2
+                mImageViewRecipPhoto2.setImageResource(0);
+                RecipientRow r2 = d.getRecip2();
+                if (d.existsRecip2()) {
+                    drawUserData(R.string.label_SendTo, r2.getName(), r2.getPhoto(),
+                            mTextViewRecipName2, mTextViewRecipKey2, mImageViewRecipPhoto2,
+                            r2.getKeyid(), r2.getKeydate());
+                    mTextViewRecipName2.setTextColor(Color.BLACK);
+                } else {
+                    mTextViewRecipName2.setTextColor(Color.GRAY);
+                    mTextViewRecipName2.setText(R.string.label_SelectRecip);
+                    mTextViewRecipKey2.setText("");
+                    mImageViewRecipPhoto2.setImageResource(R.drawable.ic_silhouette_select);
+                }
+
+                // message
+                if (d.existsRecip1() && d.existsRecip2()) {
+                    // if recip1 and recip2
+                    mEditTextMessage1.setVisibility(View.VISIBLE);
+                    mEditTextMessage2.setVisibility(View.VISIBLE);
+                    mEditTextMessage1.setText(String.format(
+                            getString(R.string.label_messageIntroduceNameToYou), r2.getName()));
+                    mEditTextMessage2.setText(String.format(
+                            getString(R.string.label_messageIntroduceNameToYou), r1.getName()));
+                } else {
+                    // if empty.recip1, hide
+                    mEditTextMessage1.setVisibility(View.GONE);
+                    // if empty.recip2, hide
+                    mEditTextMessage2.setVisibility(View.GONE);
+                }
+            }
+        }, 200);
     }
 
     private void doClickRecipient1() {

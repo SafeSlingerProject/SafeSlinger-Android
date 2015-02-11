@@ -38,7 +38,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.DialogFragment;
@@ -121,18 +120,6 @@ public class MessagesFragment extends Fragment {
     private static MessageData mDraft;
     private Handler mMsgFragmentHandler = new Handler();
 
-    private boolean recentMsg = false;
-
-    private enum LIST_TYPE {
-        THREAD, MSG
-    }
-
-    private enum MESSAGE_OPERATIONS {
-        UPDATE_NOTIFICATION, //
-        ADD_DRAFT, //
-        REMOVE_DRAFT, //
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -193,9 +180,7 @@ public class MessagesFragment extends Fragment {
             }
         }
 
-        recentMsg = msgRowId != -1;
-        new UpdateListTask(recentMsg).execute();
-        recentMsg = false;
+        updateList(msgRowId != -1);
     }
 
     @Override
@@ -273,9 +258,7 @@ public class MessagesFragment extends Fragment {
             }
         });
 
-        recentMsg = false;
-        // updateMessageList(false);
-        // new UpdateListTask(false).execute();
+        // updateList(false);
         return vFrag;
     }
 
@@ -401,7 +384,7 @@ public class MessagesFragment extends Fragment {
                     mRecip = null;
                 }
 
-                new UpdateListTask(true).execute();
+                updateList(true);
             }
         });
     }
@@ -448,7 +431,7 @@ public class MessagesFragment extends Fragment {
                         break;
                 }
 
-                new UpdateListTask(false).execute();
+                updateList(false);
             }
         });
     }
@@ -460,319 +443,265 @@ public class MessagesFragment extends Fragment {
         setMessageListClickListener();
     }
 
-    private void setUpThreadListAdapters() {
+    private void setUpListAdapters() {
+
+        if ((getActivity()) == null) {
+            return;
+        }
+
+        synchronized (mThreadList) {
+            unregisterForContextMenu(mListViewThreads);
+            mAdapterThread = new ThreadsAdapter(getActivity(), mThreadList);
+            mListViewThreads.setAdapter(mAdapterThread);
+            if (mListThreadVisiblePos < mThreadList.size()) {
+                mListViewThreads.setSelectionFromTop(mListThreadVisiblePos, mListThreadTopOffset);
+            }
+            registerForContextMenu(mListViewThreads);
+        }
+        synchronized (mMessageList) {
+            unregisterForContextMenu(mListViewMsgs);
+            mAdapterMsg = new MessagesAdapter(getActivity(), mMessageList);
+            mListViewMsgs.setAdapter(mAdapterMsg);
+            if (mListMsgVisiblePos < mMessageList.size()) {
+                mListViewMsgs.setSelectionFromTop(mListMsgVisiblePos, mListMsgTopOffset);
+            }
+            registerForContextMenu(mListViewMsgs);
+        }
+    }
+
+    private void updateList(final boolean recentMsg) {
+
+        // show some progress when UI is slow to update
+        if (mLayoutLoadProgress != null) {
+            mLayoutLoadProgress.setVisibility(View.VISIBLE);
+        }
+
         mMsgFragmentHandler.removeCallbacks(null);
         mMsgFragmentHandler.postDelayed(new Runnable() {
-            // getActivity().runOnUiThread(new Runnable() {
 
             @Override
             public void run() {
 
+                boolean showCompose = false;
+                MessageDbAdapter dbMessage;
+                InboxDbAdapter dbInbox;
+                ThreadData t = null;
+                byte[] myPhoto = null;
+
+                dbMessage = MessageDbAdapter.openInstance(getActivity());
+                dbInbox = InboxDbAdapter.openInstance(getActivity());
+
+                // make sure view is already inflated...
+                if (mListViewMsgs == null) {
+                    return;
+                }
+
+                if ((getActivity()) == null) {
+                    return;
+                }
+
+                String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
+                myPhoto = ((BaseActivity) getActivity()).getContactPhoto(contactLookupKey);
+
+                if (isResumed() && mRecip != null) {
+                    // when shown, current thread all are now seen
+                    dbMessage.updateAllMessagesAsSeenByThread(mRecip.getKeyid());
+                    dbInbox.updateAllInboxAsSeenByThread(mRecip.getKeyid());
+
+                    // remove notify when every unseen thread has been seen
+                    int inCount = dbInbox.getUnseenInboxCount();
+                    int msgCount = dbMessage.getUnseenMessageCount();
+                    int allCount = inCount + msgCount;
+                    updateNotification(allCount);
+                }
+                manageInstructVisibility(View.GONE);
+
                 synchronized (mThreadList) {
-                    unregisterForContextMenu(mListViewThreads);
-                    mAdapterThread = new ThreadsAdapter(getActivity(), mThreadList);
-                    mListViewThreads.setAdapter(mAdapterThread);
-                    mListViewThreads.setSelectionFromTop(mListThreadVisiblePos,
-                            mListThreadTopOffset);
-                    registerForContextMenu(mListViewThreads);
+                    // draw threads list/title bar
+                    mThreadList.clear();
+                    int totalThreads = 0;
+                    // inbox threads
+                    Cursor cmi = null;
+                    if (mRecip == null) {
+                        cmi = dbInbox.fetchInboxRecentByUniqueKeyIds();
+                    } else {
+                        cmi = dbInbox.fetchInboxRecent(mRecip.getKeyid());
+                    }
+                    if (cmi != null) {
+                        try {
+                            totalThreads += cmi.getCount();
+                            if (cmi.moveToFirst()) {
+                                do {
+                                    MessageRow inboxRow = new MessageRow(cmi, true);
+                                    t = addInboxThread(inboxRow);
+                                    mergeInThreads(t);
+                                } while (cmi.moveToNext());
+                            }
+                        } finally {
+                            cmi.close();
+                        }
+                    }
+                    // message threads
+                    Cursor cmt = null;
+                    if (mRecip == null) {
+                        cmt = dbMessage.fetchMessagesRecentByUniqueKeyIds();
+                    } else {
+                        cmt = dbMessage.fetchMessageRecent(mRecip.getKeyid());
+                    }
+                    if (cmt != null) {
+                        try {
+                            totalThreads += cmt.getCount();
+                            if (cmt.moveToFirst()) {
+                                do {
+                                    MessageRow messageRow = new MessageRow(cmt, false);
+                                    t = addMessageThread(messageRow);
+                                    mergeInThreads(t);
+                                } while (cmt.moveToNext());
+                            }
+                        } finally {
+                            cmt.close();
+                        }
+                    }
+
+                    if (totalThreads <= 0) {
+                        manageInstructVisibility(View.VISIBLE);
+                    }
+
+                    Collections.sort(mThreadList, new ThreadDateDecendingComparator());
                 }
+
                 synchronized (mMessageList) {
-                    unregisterForContextMenu(mListViewMsgs);
-                    mAdapterMsg = new MessagesAdapter(getActivity(), mMessageList);
-                    mListViewMsgs.setAdapter(mAdapterMsg);
-                    mListViewMsgs.setSelectionFromTop(mListMsgVisiblePos, mListMsgTopOffset);
-                    registerForContextMenu(mListViewMsgs);
-                }
+                    mMessageList.clear();
+                    if (mRecip != null) {
+                        // recipient data
+                        if (mRecip != null && mRecip.isSendable() && t != null
+                                && !t.isNewerExists()) {
+                            showCompose = true;
+                        }
+                        // encrypted msgs
+                        Cursor ci = dbInbox.fetchAllInboxByThread(mRecip.getKeyid());
+                        if (ci != null) {
+                            try {
+                                if (ci.moveToFirst()) {
+                                    do {
+                                        MessageRow inRow = new MessageRow(ci, true);
+                                        if (mRecip != null) {
+                                            inRow.setPhoto(mRecip.getPhoto());
+                                        }
+                                        mMessageList.add(inRow);
+                                    } while (ci.moveToNext());
+                                }
+                            } finally {
+                                ci.close();
+                            }
+                        }
+                        // decrypted msgs and outbox msgs
+                        Cursor cm = dbMessage.fetchAllMessagesByThread(mRecip.getKeyid());
+                        if (cm != null) {
+                            try {
+                                if (cm.moveToFirst()) {
+                                    do {
+                                        MessageRow messageRow = new MessageRow(cm, false);
+                                        if (!messageRow.isInbox()) {
+                                            messageRow.setPhoto(myPhoto);
+                                        } else {
+                                            if (mRecip != null) {
+                                                messageRow.setPhoto(mRecip.getPhoto());
+                                            }
+                                        }
 
-            }
-        }, 225);
-        // });
-    }
+                                        if (mDraft == null
+                                                && messageRow.getStatus() == MessageDbAdapter.MESSAGE_STATUS_DRAFT
+                                                && TextUtils.isEmpty(messageRow.getFileName())
+                                                && mRecip.isSendable()) {
+                                            // if recent draft, remove from list
+                                            // put
+                                            // in edit box
+                                            mDraft = messageRow;
+                                            mEditTextMessage.setTextKeepState(mDraft.getText());
+                                            mEditTextMessage.forceLayout();
 
-    private class UpdateListTask extends AsyncTask<Void, Object, Boolean> {
+                                        } else if (mDraft != null
+                                                && mDraft.getRowId() == messageRow.getRowId()) {
+                                            // draft has already been updated
+                                            continue;
 
-        boolean showCompose = false;
-        MessageDbAdapter dbMessage;
-        InboxDbAdapter dbInbox;
-        ThreadData t = null;
-        byte[] myPhoto = null;
-        boolean recentMsg;
+                                        } else {
+                                            // show message normally
+                                            mMessageList.add(messageRow);
+                                        }
+                                    } while (cm.moveToNext());
+                                }
+                            } finally {
+                                cm.close();
+                            }
+                        }
 
-        public UpdateListTask(boolean recentMsg) {
-            dbMessage = MessageDbAdapter.openInstance(getActivity());
-            dbInbox = InboxDbAdapter.openInstance(getActivity());
-            this.recentMsg = recentMsg;
-        }
+                        Collections.sort(mMessageList, new MessageDateAscendingComparator());
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
+                    } else {
+                        // clear draft in thread view
+                        showCompose = false;
+                        doSave(mEditTextMessage.getText().toString(), true);
+                        mDraft = null;
+                        mEditTextMessage.setTextKeepState("");
+                    }
 
-            // show some progress when UI is slow to update
-            if (mLayoutLoadProgress != null) {
-                mLayoutLoadProgress.setVisibility(View.VISIBLE);
-            }
-
-            // make sure view is already inflated...
-            if (mListViewMsgs == null) {
-                cancel(true);
-                return;
-            }
-        }
-
-        @Override
-        protected Boolean doInBackground(Void... params) {
-
-            if (isCancelled())
-                return false;
-
-            String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
-            myPhoto = ((BaseActivity) getActivity()).getContactPhoto(contactLookupKey);
-
-            if (isResumed() && mRecip != null) {
-                // when shown, current thread all are now seen
-                dbMessage.updateAllMessagesAsSeenByThread(mRecip.getKeyid());
-                dbInbox.updateAllInboxAsSeenByThread(mRecip.getKeyid());
-
-                // remove notify when every unseen thread has been seen
-                int inCount = dbInbox.getUnseenInboxCount();
-                int msgCount = dbMessage.getUnseenMessageCount();
-                int allCount = inCount + msgCount;
-                publishProgress(MESSAGE_OPERATIONS.UPDATE_NOTIFICATION, allCount);
-            }
-            manageInstructVisibility(View.GONE);
-            setUpThreadList();
-            setUpMsgList();
-
-            return true;
-        }
-
-        @Override
-        protected void onProgressUpdate(final Object... values) {
-            super.onProgressUpdate(values);
-            if (values != null && values.length > 0) {
-                Object o = values[0];
-                if (o instanceof MESSAGE_OPERATIONS) {
-                    switch ((MESSAGE_OPERATIONS) o) {
-                        case UPDATE_NOTIFICATION:
-                            updateNotification((Integer) values[1]);
-                            break;
-                        case ADD_DRAFT:
-                            mEditTextMessage.setTextKeepState(mDraft.getText());
-                            mEditTextMessage.forceLayout();
-                            break;
-                        case REMOVE_DRAFT:
-                            doSave(mEditTextMessage.getText().toString(), true);
-                            mDraft = null;
-                            mEditTextMessage.setTextKeepState("");
-                            break;
+                    if (showCompose) {
+                        manageComposeVisibility(View.VISIBLE);
+                    } else {
+                        manageComposeVisibility(View.GONE);
                     }
                 }
-            }
-        }
 
-        @Override
-        protected void onPostExecute(Boolean result) {
-            super.onPostExecute(result);
-
-            // remove progress, UI update complete
-            if (mLayoutLoadProgress != null) {
-                mLayoutLoadProgress.setVisibility(View.GONE);
-            }
-
-            if (result) {
-                // set position to top when incoming message in foreground...
+                // set position to top when incoming message in
+                // foreground...
                 if (recentMsg) {
                     mListMsgTopOffset = 0;
                     mListMsgVisiblePos = mMessageList.size() - 1;
                 }
 
-                setUpThreadListAdapters();
+                setUpListAdapters();
+
+                // remove progress, UI update complete
+                if (mLayoutLoadProgress != null) {
+                    mLayoutLoadProgress.setVisibility(View.GONE);
+                }
+
+            }
+        }, 200);
+    }
+
+    private void updateNotification(int allCount) {
+        if (allCount == 0) {
+            mNm.cancel(HomeActivity.NOTIFY_NEW_MSG_ID);
+        }
+    }
+
+    private void manageInstructVisibility(final int visibility) {
+        mTvInstruct.setVisibility(visibility);
+    }
+
+    private void manageComposeVisibility(final int visibility) {
+        mComposeWidget.setVisibility(visibility);
+    }
+
+    private void mergeInThreads(ThreadData t1) {
+        boolean exists = false;
+        for (int i = 0; i < mThreadList.size(); i++) {
+            ThreadData t2 = mThreadList.get(i);
+
+            // if matching key is more recent use it
+            String k1 = "" + t2.getMsgRow().getKeyId();
+            String k2 = "" + t1.getMsgRow().getKeyId();
+            if (k1.equals(k2)) {
+                exists = true;
+                t2 = new ThreadData(t2, t1);
+                mThreadList.set(i, t2);
             }
         }
-
-        private void updateNotification(int allCount) {
-            if (allCount == 0) {
-                mNm.cancel(HomeActivity.NOTIFY_NEW_MSG_ID);
-            }
-        }
-
-        private void manageInstructVisibility(final int visibility) {
-            getActivity().runOnUiThread(new Runnable() {
-
-                @Override
-                public void run() {
-                    mTvInstruct.setVisibility(visibility);
-                }
-            });
-
-        }
-
-        private void manageComposeVisibility(final int visibility) {
-            getActivity().runOnUiThread(new Runnable() {
-
-                @Override
-                public void run() {
-                    mComposeWidget.setVisibility(visibility);
-                }
-            });
-
-        }
-
-        private void setUpThreadList() {
-            synchronized (mThreadList) {
-                // draw threads list/title bar
-                mThreadList.clear();
-                int totalThreads = 0;
-                // inbox threads
-                Cursor cmi = null;
-                if (mRecip == null) {
-                    cmi = dbInbox.fetchInboxRecentByUniqueKeyIds();
-                } else {
-                    cmi = dbInbox.fetchInboxRecent(mRecip.getKeyid());
-                }
-                if (cmi != null) {
-                    try {
-                        totalThreads += cmi.getCount();
-                        if (cmi.moveToFirst()) {
-                            do {
-                                MessageRow inboxRow = new MessageRow(cmi, true);
-                                t = addInboxThread(inboxRow);
-                                mergeInThreads(t);
-                            } while (cmi.moveToNext());
-                        }
-                    } finally {
-                        cmi.close();
-                    }
-                }
-                // message threads
-                Cursor cmt = null;
-                if (mRecip == null) {
-                    cmt = dbMessage.fetchMessagesRecentByUniqueKeyIds();
-                } else {
-                    cmt = dbMessage.fetchMessageRecent(mRecip.getKeyid());
-                }
-                if (cmt != null) {
-                    try {
-                        totalThreads += cmt.getCount();
-                        if (cmt.moveToFirst()) {
-                            do {
-                                MessageRow messageRow = new MessageRow(cmt, false);
-                                t = addMessageThread(messageRow);
-                                mergeInThreads(t);
-                            } while (cmt.moveToNext());
-                        }
-                    } finally {
-                        cmt.close();
-                    }
-                }
-
-                if (totalThreads <= 0) {
-                    manageInstructVisibility(View.VISIBLE);
-                }
-
-                Collections.sort(mThreadList, new ThreadDateDecendingComparator());
-            }
-        }
-
-        private void setUpMsgList() {
-            synchronized (mMessageList) {
-                mMessageList.clear();
-                if (mRecip != null) {
-                    // recipient data
-                    if (mRecip != null && mRecip.isSendable() && t != null && !t.isNewerExists()) {
-                        showCompose = true;
-                    }
-                    // encrypted msgs
-                    Cursor ci = dbInbox.fetchAllInboxByThread(mRecip.getKeyid());
-                    if (ci != null) {
-                        try {
-                            if (ci.moveToFirst()) {
-                                do {
-                                    MessageRow inRow = new MessageRow(ci, true);
-                                    if (mRecip != null) {
-                                        inRow.setPhoto(mRecip.getPhoto());
-                                    }
-                                    mMessageList.add(inRow);
-                                } while (ci.moveToNext());
-                            }
-                        } finally {
-                            ci.close();
-                        }
-                    }
-                    // decrypted msgs and outbox msgs
-                    Cursor cm = dbMessage.fetchAllMessagesByThread(mRecip.getKeyid());
-                    if (cm != null) {
-                        try {
-                            if (cm.moveToFirst()) {
-                                do {
-                                    MessageRow messageRow = new MessageRow(cm, false);
-                                    if (!messageRow.isInbox()) {
-                                        messageRow.setPhoto(myPhoto);
-                                    } else {
-                                        if (mRecip != null) {
-                                            messageRow.setPhoto(mRecip.getPhoto());
-                                        }
-                                    }
-
-                                    if (mDraft == null
-                                            && messageRow.getStatus() == MessageDbAdapter.MESSAGE_STATUS_DRAFT
-                                            && TextUtils.isEmpty(messageRow.getFileName())
-                                            && mRecip.isSendable()) {
-                                        // if recent draft, remove from list put
-                                        // in edit box
-                                        mDraft = messageRow;
-                                        publishProgress(MESSAGE_OPERATIONS.ADD_DRAFT);
-
-                                    } else if (mDraft != null
-                                            && mDraft.getRowId() == messageRow.getRowId()) {
-                                        // draft has already been updated
-                                        continue;
-
-                                    } else {
-                                        // show message normally
-                                        mMessageList.add(messageRow);
-                                    }
-                                } while (cm.moveToNext());
-                            }
-                        } finally {
-                            cm.close();
-                        }
-                    }
-
-                    Collections.sort(mMessageList, new MessageDateAscendingComparator());
-
-                } else {
-                    // clear draft in thread view
-                    showCompose = false;
-                    publishProgress(MESSAGE_OPERATIONS.REMOVE_DRAFT);
-                }
-
-                if (showCompose) {
-                    manageComposeVisibility(View.VISIBLE);
-                } else {
-                    manageComposeVisibility(View.GONE);
-                }
-            }
-        }
-
-        private void mergeInThreads(ThreadData t1) {
-            boolean exists = false;
-            for (int i = 0; i < mThreadList.size(); i++) {
-                ThreadData t2 = mThreadList.get(i);
-
-                // if matching key is more recent use it
-                String k1 = "" + t2.getMsgRow().getKeyId();
-                String k2 = "" + t1.getMsgRow().getKeyId();
-                if (k1.equals(k2)) {
-                    exists = true;
-                    t2 = new ThreadData(t2, t1);
-                    mThreadList.set(i, t2);
-                }
-            }
-            if (!exists) {
-                mThreadList.add(t1);
-            }
+        if (!exists) {
+            mThreadList.add(t1);
         }
     }
 
@@ -934,7 +863,7 @@ public class MessagesFragment extends Fragment {
         AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
         if (item.getItemId() == R.id.item_delete_message) {
             doDeleteMessage(mMessageList.get(info.position));
-            new UpdateListTask(false).execute();
+            updateList(false);
             return true;
         } else if (item.getItemId() == R.id.item_message_details) {
             String detailStr = BaseActivity.formatMessageDetails(getActivity(),
@@ -954,7 +883,7 @@ public class MessagesFragment extends Fragment {
             return true;
         } else if (item.getItemId() == R.id.item_delete_thread) {
             doDeleteThread(mThreadList.get(info.position).getMsgRow().getKeyId());
-            new UpdateListTask(false).execute();
+            updateList(false);
             return true;
         } else if (item.getItemId() == R.id.item_thread_details) {
             showHelp(getString(R.string.title_RecipientDetail),
@@ -1117,8 +1046,7 @@ public class MessagesFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-        new UpdateListTask(recentMsg).execute();
-        recentMsg = false;
+        updateList(false);
     }
 
     public interface OnMessagesResultListener {
@@ -1220,8 +1148,10 @@ public class MessagesFragment extends Fragment {
 
                         mAdapterThread = new ThreadsAdapter(this.getActivity(), mThreadList);
                         mListViewThreads.setAdapter(mAdapterThread);
-                        mListViewThreads.setSelectionFromTop(mListThreadVisiblePos,
-                                mListThreadTopOffset);
+                        if (mListThreadVisiblePos < mThreadList.size()) {
+                            mListViewThreads.setSelectionFromTop(mListThreadVisiblePos,
+                                    mListThreadTopOffset);
+                        }
                         break;
                     }
                 }
@@ -1243,14 +1173,17 @@ public class MessagesFragment extends Fragment {
 
                         mAdapterMsg = new MessagesAdapter(this.getActivity(), mMessageList);
                         mListViewMsgs.setAdapter(mAdapterMsg);
-                        mListViewMsgs.setSelectionFromTop(mListMsgVisiblePos, mListMsgTopOffset);
+                        if (mListMsgVisiblePos < mMessageList.size()) {
+                            mListViewMsgs
+                                    .setSelectionFromTop(mListMsgVisiblePos, mListMsgTopOffset);
+                        }
                         break;
                     }
                 }
             }
         }
         if (msg == null) {
-            new UpdateListTask(false).execute();
+            updateList(false);
         }
     }
 
