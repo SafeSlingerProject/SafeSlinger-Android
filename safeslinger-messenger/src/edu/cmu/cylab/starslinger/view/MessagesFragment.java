@@ -471,11 +471,6 @@ public class MessagesFragment extends Fragment {
 
     private void updateList(final boolean recentMsg) {
 
-        // show some progress when UI is slow to update
-        if (mLayoutLoadProgress != null) {
-            mLayoutLoadProgress.setVisibility(View.VISIBLE);
-        }
-
         mMsgFragmentHandler.removeCallbacks(null);
         mMsgFragmentHandler.postDelayed(new Runnable() {
 

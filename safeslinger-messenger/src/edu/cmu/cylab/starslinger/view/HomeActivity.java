@@ -102,6 +102,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.WindowManager.BadTokenException;
 import android.webkit.MimeTypeMap;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -3611,8 +3612,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         Bundle args = new Bundle();
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_ERREXIT);
-            showDialog(DIALOG_ERREXIT, args);
+            try {
+                removeDialog(DIALOG_ERREXIT);
+                showDialog(DIALOG_ERREXIT, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -3789,8 +3794,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         args.putString(extra.RESID_MSG, msg.toString());
         args.putBoolean(extra.ALLOW_DELETE, (recentKeys.size() != 0));
         if (!isFinishing()) {
-            removeDialog(DIALOG_MANAGE_PASS);
-            showDialog(DIALOG_MANAGE_PASS, args);
+            try {
+                removeDialog(DIALOG_MANAGE_PASS);
+                showDialog(DIALOG_MANAGE_PASS, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -3870,8 +3879,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         args.putByteArray(extra.INTRO_PUBKEY, introPubKey);
         args.putLong(extra.MESSAGE_ROW_ID, msgRowId);
         if (!isFinishing()) {
-            removeDialog(DIALOG_INTRO);
-            showDialog(DIALOG_INTRO, args);
+            try {
+                removeDialog(DIALOG_INTRO);
+                showDialog(DIALOG_INTRO, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -3988,8 +4001,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             }
         }
         if (!isFinishing()) {
-            removeDialog(DIALOG_USEROPTIONS);
-            showDialog(DIALOG_USEROPTIONS, args);
+            try {
+                removeDialog(DIALOG_USEROPTIONS);
+                showDialog(DIALOG_USEROPTIONS, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -4117,8 +4134,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         args.putInt(extra.MAX, 0);
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_PROGRESS);
-            showDialog(DIALOG_PROGRESS, args);
+            try {
+                removeDialog(DIALOG_PROGRESS);
+                showDialog(DIALOG_PROGRESS, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -4128,8 +4149,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         args.putInt(extra.MAX, maxValue);
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_PROGRESS);
-            showDialog(DIALOG_PROGRESS, args);
+            try {
+                removeDialog(DIALOG_PROGRESS);
+                showDialog(DIALOG_PROGRESS, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -4199,8 +4224,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         args.putInt(extra.REQUEST_CODE, requestCode);
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_QUESTION);
-            showDialog(DIALOG_QUESTION, args);
+            try {
+                removeDialog(DIALOG_QUESTION);
+                showDialog(DIALOG_QUESTION, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 

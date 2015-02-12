@@ -43,6 +43,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.WindowManager.BadTokenException;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListAdapter;
@@ -155,8 +156,12 @@ public class FileSaveActivity extends BaseActivity {
     private void showFileLoader() {
         MyLog.d(TAG, mPath.getAbsolutePath());
         if (!isFinishing()) {
-            removeDialog(DIALOG_LOAD_FILE);
-            showDialog(DIALOG_LOAD_FILE);
+            try {
+                removeDialog(DIALOG_LOAD_FILE);
+                showDialog(DIALOG_LOAD_FILE);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -240,8 +245,12 @@ public class FileSaveActivity extends BaseActivity {
         Intent intent = getIntent();
         Bundle args = intent.getExtras();
         if (!isFinishing()) {
-            removeDialog(DIALOG_TEXT_ENTRY);
-            showDialog(DIALOG_TEXT_ENTRY, args);
+            try {
+                removeDialog(DIALOG_TEXT_ENTRY);
+                showDialog(DIALOG_TEXT_ENTRY, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 

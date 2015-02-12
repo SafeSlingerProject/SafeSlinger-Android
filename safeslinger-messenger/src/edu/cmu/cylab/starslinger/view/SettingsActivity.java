@@ -55,6 +55,7 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.view.WindowManager.BadTokenException;
 import android.widget.Toast;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
@@ -329,8 +330,12 @@ public class SettingsActivity extends PreferenceActivity {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 if (!isFinishing()) {
-                    removeDialog(BaseActivity.DIALOG_ABOUT);
-                    showDialog(BaseActivity.DIALOG_ABOUT);
+                    try {
+                        removeDialog(BaseActivity.DIALOG_ABOUT);
+                        showDialog(BaseActivity.DIALOG_ABOUT);
+                    } catch (BadTokenException e) {
+                        e.printStackTrace();
+                    }
                 }
                 return false;
             }

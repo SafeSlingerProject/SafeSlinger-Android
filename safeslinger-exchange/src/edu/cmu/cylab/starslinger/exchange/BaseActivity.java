@@ -34,6 +34,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.WindowManager.BadTokenException;
 import android.widget.Toast;
 import edu.cmu.cylab.starslinger.exchange.ExchangeConfig.extra;
 
@@ -51,8 +52,12 @@ public class BaseActivity extends Activity {
         args.putString(extra.RESID_TITLE, title);
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_HELP);
-            showDialog(DIALOG_HELP, args);
+            try {
+                removeDialog(DIALOG_HELP);
+                showDialog(DIALOG_HELP, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 

@@ -59,6 +59,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager.BadTokenException;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
@@ -574,8 +575,12 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
         Bundle args = new Bundle();
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_QUESTION);
-            showDialog(DIALOG_QUESTION, args);
+            try {
+                removeDialog(DIALOG_QUESTION);
+                showDialog(DIALOG_QUESTION, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -610,8 +615,12 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
         Bundle args = new Bundle();
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_PROGRESS);
-            showDialog(DIALOG_PROGRESS, args);
+            try {
+                removeDialog(DIALOG_PROGRESS);
+                showDialog(DIALOG_PROGRESS, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 

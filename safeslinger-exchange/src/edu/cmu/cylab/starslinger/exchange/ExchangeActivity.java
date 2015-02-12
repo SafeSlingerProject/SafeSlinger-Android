@@ -52,6 +52,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.WindowManager.BadTokenException;
 import edu.cmu.cylab.starslinger.exchange.ExchangeConfig.extra;
 
 /***
@@ -542,8 +543,12 @@ public class ExchangeActivity extends BaseActivity {
         Bundle args = new Bundle();
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_ERROR);
-            showDialog(DIALOG_ERROR, args);
+            try {
+                removeDialog(DIALOG_ERROR);
+                showDialog(DIALOG_ERROR, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -575,8 +580,12 @@ public class ExchangeActivity extends BaseActivity {
 
     private void showGroupSizePicker() {
         if (!isFinishing()) {
-            removeDialog(DIALOG_GRP_SIZE);
-            showDialog(DIALOG_GRP_SIZE);
+            try {
+                removeDialog(DIALOG_GRP_SIZE);
+                showDialog(DIALOG_GRP_SIZE);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -673,8 +682,12 @@ public class ExchangeActivity extends BaseActivity {
         args.putInt(extra.REQUEST_CODE, requestCode);
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_QUESTION);
-            showDialog(DIALOG_QUESTION, args);
+            try {
+                removeDialog(DIALOG_QUESTION);
+                showDialog(DIALOG_QUESTION, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -709,8 +722,16 @@ public class ExchangeActivity extends BaseActivity {
         Bundle args = new Bundle();
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_PROGRESS);
-            showDialog(DIALOG_PROGRESS, args);
+            try {
+                try {
+                    removeDialog(DIALOG_PROGRESS);
+                    showDialog(DIALOG_PROGRESS, args);
+                } catch (BadTokenException e) {
+                    e.printStackTrace();
+                }
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -784,6 +805,5 @@ public class ExchangeActivity extends BaseActivity {
         if (mHandler != null) {
             mHandler.removeCallbacks(mUpdateReceivedProg);
         }
-        mProt.endProtocol();
     }
 }

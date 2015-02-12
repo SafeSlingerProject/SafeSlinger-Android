@@ -45,6 +45,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
+import android.view.WindowManager.BadTokenException;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -366,8 +367,12 @@ public class PassPhraseActivity extends Activity {
                 return true;
             case MENU_ABOUT:
                 if (!isFinishing()) {
-                    removeDialog(BaseActivity.DIALOG_ABOUT);
-                    showDialog(BaseActivity.DIALOG_ABOUT);
+                    try {
+                        removeDialog(BaseActivity.DIALOG_ABOUT);
+                        showDialog(BaseActivity.DIALOG_ABOUT);
+                    } catch (BadTokenException e) {
+                        e.printStackTrace();
+                    }
                 }
                 return true;
             default:
@@ -435,8 +440,12 @@ public class PassPhraseActivity extends Activity {
 
     protected void showForgot() {
         if (!isFinishing()) {
-            removeDialog(DIALOG_FORGOT);
-            showDialog(DIALOG_FORGOT);
+            try {
+                removeDialog(DIALOG_FORGOT);
+                showDialog(DIALOG_FORGOT);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -476,8 +485,12 @@ public class PassPhraseActivity extends Activity {
         args.putString(extra.RESID_TITLE, title);
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_HELP);
-            showDialog(DIALOG_HELP, args);
+            try {
+                removeDialog(DIALOG_HELP);
+                showDialog(DIALOG_HELP, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 

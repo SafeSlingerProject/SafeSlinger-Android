@@ -76,6 +76,7 @@ import android.text.TextUtils;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager.BadTokenException;
 import android.webkit.MimeTypeMap;
 import android.widget.CheckBox;
 import android.widget.SimpleAdapter;
@@ -625,8 +626,12 @@ public class BaseActivity extends ActionBarActivity {
         args.putString(extra.RESID_TITLE, title);
         args.putString(extra.RESID_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(DIALOG_HELP);
-            showDialog(DIALOG_HELP, args);
+            try {
+                removeDialog(DIALOG_HELP);
+                showDialog(DIALOG_HELP, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -700,8 +705,12 @@ public class BaseActivity extends ActionBarActivity {
 
     protected void showAbout() {
         if (!isFinishing()) {
-            removeDialog(DIALOG_ABOUT);
-            showDialog(DIALOG_ABOUT);
+            try {
+                removeDialog(DIALOG_ABOUT);
+                showDialog(DIALOG_ABOUT);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -1281,8 +1290,12 @@ public class BaseActivity extends ActionBarActivity {
 
     protected void showBackupQuery() {
         if (!isFinishing()) {
-            removeDialog(DIALOG_BACKUPQUERY);
-            showDialog(DIALOG_BACKUPQUERY);
+            try {
+                removeDialog(DIALOG_BACKUPQUERY);
+                showDialog(DIALOG_BACKUPQUERY);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -1350,8 +1363,12 @@ public class BaseActivity extends ActionBarActivity {
 
     protected void showReference() {
         if (!isFinishing()) {
-            removeDialog(DIALOG_REFERENCE);
-            showDialog(DIALOG_REFERENCE);
+            try {
+                removeDialog(DIALOG_REFERENCE);
+                showDialog(DIALOG_REFERENCE);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -1408,8 +1425,12 @@ public class BaseActivity extends ActionBarActivity {
 
     protected void showAddContactInvite() {
         if (!isFinishing()) {
-            removeDialog(DIALOG_CONTACTINVITE);
-            showDialog(DIALOG_CONTACTINVITE);
+            try {
+                removeDialog(DIALOG_CONTACTINVITE);
+                showDialog(DIALOG_CONTACTINVITE);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -1572,8 +1593,12 @@ public class BaseActivity extends ActionBarActivity {
         Bundle args = new Bundle();
         args.putInt(extra.RESULT_CODE, resultCode);
         if (!isFinishing()) {
-            removeDialog(DIALOG_CONTACTTYPE);
-            showDialog(DIALOG_CONTACTTYPE, args);
+            try {
+                removeDialog(DIALOG_CONTACTTYPE);
+                showDialog(DIALOG_CONTACTTYPE, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 

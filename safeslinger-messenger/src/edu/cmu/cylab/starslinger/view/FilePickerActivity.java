@@ -41,6 +41,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.WindowManager.BadTokenException;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
@@ -158,8 +159,12 @@ public class FilePickerActivity extends BaseActivity {
     private void showFilePicker() {
         MyLog.d(TAG, mPath.getAbsolutePath());
         if (!isFinishing()) {
-            removeDialog(DIALOG_LOAD_FILE);
-            showDialog(DIALOG_LOAD_FILE);
+            try {
+                removeDialog(DIALOG_LOAD_FILE);
+                showDialog(DIALOG_LOAD_FILE);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 

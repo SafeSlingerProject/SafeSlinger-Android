@@ -54,6 +54,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.WindowManager.BadTokenException;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
@@ -490,8 +491,12 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         args.putString(extra.RESID_MSG, msg);
         args.putInt(extra.POSITION, position);
         if (!isFinishing()) {
-            removeDialog(DIALOG_QUESTION);
-            showDialog(DIALOG_QUESTION, args);
+            try {
+                removeDialog(DIALOG_QUESTION);
+                showDialog(DIALOG_QUESTION, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 

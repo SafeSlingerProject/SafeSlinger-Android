@@ -48,6 +48,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager.BadTokenException;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -305,8 +306,12 @@ public class MainActivity extends ActionBarActivity {
         args.putString(EXTRA_TITLE, title);
         args.putString(EXTRA_MSG, msg);
         if (!isFinishing()) {
-            removeDialog(MENU_MSG);
-            showDialog(MENU_MSG, args);
+            try {
+                removeDialog(MENU_MSG);
+                showDialog(MENU_MSG, args);
+            } catch (BadTokenException e) {
+                e.printStackTrace();
+            }
         }
     }
 
