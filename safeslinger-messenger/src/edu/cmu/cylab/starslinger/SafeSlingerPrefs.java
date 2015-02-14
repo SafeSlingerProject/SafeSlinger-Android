@@ -121,6 +121,7 @@ public class SafeSlingerPrefs {
         public static final String PENDING_GETMSG_BACKOFF_TIMEOUT = "PendingGetMessageBackoff";
         public static final String PUSH_BACKOFF = "PushBackoff";
         public static final String PUSH_REG_ID_LINKED = "PushRegistrationIdLinked";
+        public static final String PUSH_REG_ID_LINKED_DISPLAY = "PushRegistrationIdLinkedDisplay";
         public static final String PUSH_REG_ID_POSTED = "PushRegistrationIdPosted";
         public static final String PUSHREG_BACKOFF_TIMEOUT = "pushRegistrationBackoff";
         public static final String REMIND_BACKUP_DELAY = "RemindBackupDelay";
@@ -420,7 +421,11 @@ public class SafeSlingerPrefs {
 
     public static String getPushRegistrationId() {
         // add version to get updated push registration every new release
-        return getString(pref.PUSH_REG_ID_LINKED + SafeSlingerConfig.getVersionName(), null, false);
+        final String registrationId = getString(
+                pref.PUSH_REG_ID_LINKED + SafeSlingerConfig.getVersionName(), null, false);
+        // set a simple display to allow preferences to view an accurate id
+        setString(pref.PUSH_REG_ID_LINKED_DISPLAY, registrationId, false);
+        return registrationId;
     }
 
     public static void setPushRegistrationId(String registrationId) {

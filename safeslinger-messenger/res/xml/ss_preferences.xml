@@ -95,7 +95,7 @@
             android:title="@string/menu_auto_attach_retrieval" />
         -->
         <Preference
-            android:key="PushRegistrationIdDirect"
+            android:key="PushRegistrationIdLinkedDisplay"
             android:persistent="false"
             android:title="@string/label_PushTokenID" />
         <Preference
