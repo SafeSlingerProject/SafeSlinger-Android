@@ -43,6 +43,8 @@ import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageRow;
+import edu.cmu.cylab.starslinger.util.AndroidEmoji;
+import edu.cmu.cylab.starslinger.util.Emoji;
 
 public class MessagesAdapter extends BaseAdapter {
     private Context mCtx;
@@ -155,7 +157,8 @@ public class MessagesAdapter extends BaseAdapter {
 
         // set text
         if (!TextUtils.isEmpty(msg.getText())) {
-            tvMessage.setText(msg.getText());
+            // convert emoticons to proper emoji unicode
+            tvMessage.setText(AndroidEmoji.ensure(Emoji.replaceInText(msg.getText()), mCtx));
             tvMessage.setVisibility(View.VISIBLE);
         }
 

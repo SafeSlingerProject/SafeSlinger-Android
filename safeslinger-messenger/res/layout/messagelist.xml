@@ -82,7 +82,7 @@
             android:gravity="left"
             android:hint="@string/label_ComposeHint"
             android:imeOptions="actionSend"
-            android:inputType="textCapSentences|textMultiLine|textLongMessage|textAutoCorrect"
+            android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
             android:maxLength="2000"
             android:maxLines="3"
             android:nextFocusRight="@+id/SendFrameButtonSend"

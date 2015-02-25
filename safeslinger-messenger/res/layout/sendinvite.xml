@@ -120,7 +120,7 @@
                 android:gravity="left"
                 android:hint="@string/label_ComposeHint"
                 android:imeOptions="actionNext"
-                android:inputType="textCapSentences|textMultiLine|textLongMessage|textAutoCorrect"
+                android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
                 android:maxLength="2000"
                 android:privateImeOptions="nm"
                 android:textSize="@dimen/text_size_msg" >
@@ -193,7 +193,7 @@
                 android:gravity="left"
                 android:hint="@string/label_ComposeHint"
                 android:imeOptions="actionSend"
-                android:inputType="textCapSentences|textMultiLine|textLongMessage|textAutoCorrect"
+                android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
                 android:maxLength="2000"
                 android:privateImeOptions="nm"
                 android:textSize="@dimen/text_size_msg" >
