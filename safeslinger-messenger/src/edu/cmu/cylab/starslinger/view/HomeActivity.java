@@ -24,7 +24,6 @@
 
 package edu.cmu.cylab.starslinger.view;
 
-import com.crashlytics.android.Crashlytics;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -49,6 +48,7 @@ import a_vcard.android.syncml.pim.vcard.ContactStruct.ContactMethod;
 import a_vcard.android.syncml.pim.vcard.Name;
 import a_vcard.android.syncml.pim.vcard.VCardException;
 import a_vcard.android.syncml.pim.vcard.VCardParser;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -92,6 +92,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -104,6 +105,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+
+import com.crashlytics.android.Crashlytics;
+
 import edu.cmu.cylab.starslinger.ExchangeException;
 import edu.cmu.cylab.starslinger.GeneralException;
 import edu.cmu.cylab.starslinger.MyLog;
@@ -142,6 +146,7 @@ import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
 import edu.cmu.cylab.starslinger.transaction.C2DMessaging;
 import edu.cmu.cylab.starslinger.transaction.MessageNotFoundException;
 import edu.cmu.cylab.starslinger.transaction.WebEngine;
+import edu.cmu.cylab.starslinger.util.FragmentCommunicationInterface;
 import edu.cmu.cylab.starslinger.util.NotificationPlayer;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 import edu.cmu.cylab.starslinger.view.ComposeFragment.OnComposeResultListener;
@@ -149,10 +154,11 @@ import edu.cmu.cylab.starslinger.view.IntroductionFragment.OnIntroResultListener
 import edu.cmu.cylab.starslinger.view.MessagesFragment.OnMessagesResultListener;
 import edu.cmu.cylab.starslinger.view.SlingerFragment.OnSlingerResultListener;
 
+@SuppressLint("InflateParams")
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class HomeActivity extends BaseActivity implements OnComposeResultListener,
-        OnMessagesResultListener, OnSlingerResultListener, OnIntroResultListener {
+        OnMessagesResultListener, OnSlingerResultListener, OnIntroResultListener, FragmentCommunicationInterface {
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
     // constants
@@ -186,8 +192,21 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
 
-    private enum Tabs {
-        MESSAGE, COMPOSE, SLINGKEYS, INTRO
+    public enum Tabs {
+        HOLDER("tag_holder"), COMPOSE("tag_compose"), SLINGKEYS("tag_slingkeys"), INTRO("tag_intro"), THREADS("tag_threads"), MESSAGE("tag_message");
+        
+        String tag;
+        
+        Tabs(String tag)
+        {
+            this.tag = tag;
+        }
+        
+        @Override
+        public String toString() {
+            // TODO Auto-generated method stub
+            return tag;
+        }
     }
 
     private Runnable updateMainView = new Runnable() {
@@ -267,10 +286,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             // update current message list if in view...
             final int position = getSupportActionBar().getSelectedNavigationIndex();
-            if (position == Tabs.MESSAGE.ordinal()) {
+            if (position == Tabs.HOLDER.ordinal()) {
                 if (mTabsAdapter != null) {
                     MessagesFragment mf = (MessagesFragment) mTabsAdapter
-                            .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+                            .findFragmentByPosition(Tabs.HOLDER.ordinal());
                     if (mf != null) {
                         mf.updateValues(intent.getExtras());
 
@@ -312,14 +331,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         public void onReceive(Context context, Intent intent) {
 
             // if message window in view, update messages immediately...
-            setTab(Tabs.MESSAGE);
+            setTab(Tabs.HOLDER);
 
             // update current message list if in view...
             final int position = getSupportActionBar().getSelectedNavigationIndex();
-            if (position == Tabs.MESSAGE.ordinal()) {
+            if (position == Tabs.HOLDER.ordinal()) {
                 if (mTabsAdapter != null) {
                     MessagesFragment mf = (MessagesFragment) mTabsAdapter
-                            .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+                            .findFragmentByPosition(Tabs.HOLDER.ordinal());
                     if (mf != null) {
                         mf.updateValues(intent.getExtras());
                     }
@@ -361,7 +380,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             int allCount = intent.getExtras().getInt(extra.NOTIFY_COUNT);
             if (allCount != 0
-                    && (getSupportActionBar().getSelectedNavigationIndex() == Tabs.MESSAGE
+                    && (getSupportActionBar().getSelectedNavigationIndex() == Tabs.HOLDER
                             .ordinal() && SafeSlinger.getApplication().isMessageFragActive())) {
                 abortBroadcast = true;
             }
@@ -389,7 +408,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // clicked on new message notifications window, show messages
             // collapse messages to threads when looking for new messages
             MessagesFragment.setRecip(null);
-            setTab(Tabs.MESSAGE);
+            setTab(Tabs.HOLDER);
             refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_BACKUPNOTIFY.equals(action)) {
@@ -439,7 +458,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             setTab(Tabs.COMPOSE);
         } else {
             // Messages should be the default when there are > 1 messages.
-            setTab(Tabs.MESSAGE);
+            setTab(Tabs.HOLDER);
         }
     }
 
@@ -481,8 +500,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
 
         mTabsAdapter = new TabsAdapter(this, bar, mViewPager);
+//        mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagListMessages),
+//                MessagesFragment.class, null);
+//        mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagListMessages),
+//                ThreadsFragment.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagListMessages),
-                MessagesFragment.class, null);
+                HolderTab.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagComposeMessage),
                 ComposeFragment.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagExchange), SlingerFragment.class,
@@ -609,12 +632,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                                 cf.updateValues(null);
                             }
                             break;
-                        case MESSAGE:
-                            MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
-                                    .ordinal());
+                        case HOLDER:
+//                            MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
+//                            ThreadsFragment mf = (ThreadsFragment) findFragmentByPosition(Tabs.MESSAGE
+//                                    .ordinal());
+                            HolderTab mf = (HolderTab) findFragmentByPosition(Tabs.HOLDER.ordinal());
                             if (mf != null) {
                                 mf.updateKeypad();
-                                mf.updateValues(null);
+                                mf.updateValues(null, Tabs.THREADS.toString());
                             }
                             break;
                         case SLINGKEYS:
@@ -641,10 +666,23 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     }
                 }
             }
+            
+            displayBackStack(mActivity.getSupportFragmentManager());
         }
 
         @Override
-        public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+        public void onTabUnselected(Tab tab, FragmentTransaction ft) 
+        {
+//            System.out.println(tab.getTag().toString());
+           if(Tabs.values()[tab.getPosition()] == Tabs.HOLDER)
+           {
+               HolderTab mf = (HolderTab) findFragmentByPosition(Tabs.HOLDER.ordinal());
+               if (mf != null && mf.getmCurrentTabTag() == Tabs.MESSAGE.toString())
+               {
+                   mActivity.getSupportFragmentManager().popBackStack();
+                   MessagesFragment.setRecip(null);
+               }
+           }
         }
 
         @Override
@@ -659,12 +697,15 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         cf.updateValues(null);
                     }
                     break;
-                case MESSAGE:
-                    MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
+                case HOLDER:
+//                    MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
+//                    ThreadsFragment mf = (ThreadsFragment) findFragmentByPosition(Tabs.MESSAGE
+//                            .ordinal());
+                    HolderTab mf = (HolderTab) findFragmentByPosition(Tabs.HOLDER
                             .ordinal());
                     if (mf != null) {
                         mf.updateKeypad();
-                        mf.updateValues(null);
+                        mf.updateValues(null, Tabs.THREADS.toString());
                     }
                     break;
                 case SLINGKEYS:
@@ -703,10 +744,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             if (cf != null) {
                 cf.updateValues(null);
             }
-            MessagesFragment mf = (MessagesFragment) mTabsAdapter
-                    .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+//            MessagesFragment mf = (MessagesFragment) mTabsAdapter
+//                    .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+            HolderTab mf = (HolderTab) mTabsAdapter
+                    .findFragmentByPosition(Tabs.HOLDER.ordinal());
             if (mf != null) {
-                mf.updateValues(null);
+                mf.updateValues(null, Tabs.THREADS.toString());
             }
             SlingerFragment sf = (SlingerFragment) mTabsAdapter
                     .findFragmentByPosition(Tabs.SLINGKEYS.ordinal());
@@ -804,7 +847,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
+        
 
         // save
         if (SafeSlinger.getTempCameraFileUri() != null) {
@@ -822,6 +865,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             outState.remove(extra.MAX);
             outState.remove(extra.RESID_MSG);
         }
+        super.onSaveInstanceState(outState);
     }
 
     @Override
@@ -1070,7 +1114,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         getApplicationContext().sendBroadcast(sendIntent);
 
         // switch to message tab
-        setTab(Tabs.MESSAGE);
+        setTab(Tabs.HOLDER);
         refreshView();
 
         // start background task to send
@@ -2447,7 +2491,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private void doSaveDownloadedFile(File file, MessageData recvMsg) {
         if (saveFileAtLocation(file, recvMsg)) {
             // back to messages, to tap for open...
-            setTab(Tabs.MESSAGE);
+            setTab(Tabs.HOLDER);
             refreshView();
         } else {
             showNote(String.format(getString(R.string.error_FileSave), recvMsg.getFileName()));
@@ -2807,7 +2851,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         try {
             if (mTabsAdapter != null) {
                 MessagesFragment mf = (MessagesFragment) mTabsAdapter
-                        .findFragmentByPosition(Tabs.MESSAGE.ordinal());
+                        .findFragmentByPosition(Tabs.HOLDER.ordinal());
                 if (mf != null) {
                     mf.postProgressMsgList(isInboxTable, rowId, msg);
                 }
@@ -2929,7 +2973,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         protected void onPostExecute(String error) {
             postProgressMsgList(mInbox.isInboxTable(), mRowId, null);
             if (TextUtils.isEmpty(error)) {
-                setTab(Tabs.MESSAGE);
+                setTab(Tabs.HOLDER);
                 refreshView();
             } else {
                 showNote(error);
@@ -3750,7 +3794,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 args.putString(extra.KEYID, inviteMsg.getKeyId());
                 ImportFromExchangeTask importFromExchange = new ImportFromExchangeTask();
                 importFromExchange.execute(args);
-                setTab(Tabs.MESSAGE);
+                setTab(Tabs.HOLDER);
                 refreshView();
             }
         });
@@ -4033,6 +4077,16 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         return ad;
     }
 
+    public static void displayBackStack(FragmentManager fm) {
+        int count = fm.getBackStackEntryCount();
+        Log.d("Backstack log", "There are " + count + " entries");
+        for(int i = 0; i<count; i++) {
+            // Display Backstack-entry data like
+            String name = fm.getBackStackEntryAt(i).getName();
+            Log.d("Backstack log", "entry " + i + ": " + name);
+        }
+    }
+    
     private boolean loadCurrentPassPhrase() {
         String currentPassPhrase = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
                 .getKeyIdString());
@@ -4042,16 +4096,31 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     @Override
     public void onBackPressed() {
 
+        displayBackStack(getSupportFragmentManager());
         final int position = getSupportActionBar().getSelectedNavigationIndex();
-        if (MessagesFragment.getRecip() != null && position == Tabs.MESSAGE.ordinal()) {
+        if (MessagesFragment.getRecip() != null && position == Tabs.HOLDER.ordinal()) 
+        { 
             // collapse messages to threads when in message view
             MessagesFragment.setRecip(null);
-            refreshView();
-        } else {
-            // exit when at top level of each tab
             super.onBackPressed();
+            displayBackStack(getSupportFragmentManager());
+        }
+        else 
+        {
+            // exit when at top level of each tab
+//            if(MessagesFragment.getRecip() != null)
+//            {
+//                MessagesFragment.setRecip(null);
+//                getSupportFragmentManager().popBackStack();
+//                displayBackStack(getSupportFragmentManager());
+//            }
+            super.onBackPressed();
+            displayBackStack(getSupportFragmentManager());
             showExit(RESULT_CANCELED);
         }
+
+        
+        
     }
 
     protected void showWebPage(String url) {
@@ -4092,5 +4161,17 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 return xshowCustomContactPicker(this, args).create();
         }
         return super.onCreateDialog(id);
+    }
+
+    @Override
+    public void onCommunicateData(Bundle bundle,String tag) {
+       
+        
+       if(Tabs.MESSAGE.toString().compareTo(tag) == 0 || Tabs.THREADS.toString().compareTo(tag) == 0)
+       {
+           HolderTab  fragment = (HolderTab)mTabsAdapter.findFragmentByPosition(Tabs.HOLDER.ordinal());
+           fragment.updateValues(bundle, tag);
+       }
+       
     }
 }

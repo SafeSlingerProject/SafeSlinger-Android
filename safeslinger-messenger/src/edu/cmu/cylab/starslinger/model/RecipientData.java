@@ -24,7 +24,10 @@
 
 package edu.cmu.cylab.starslinger.model;
 
-public class RecipientData {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class RecipientData implements Parcelable{
 
     protected long mRowId = -1;
     protected String mMyKeyId;
@@ -47,6 +50,19 @@ public class RecipientData {
     protected int mMyNotify;
     protected String mMyPushToken;
 
+    public static final Parcelable.Creator<RecipientData> CREATOR = new CreatorImplementation();
+    
+   
+    private static final class CreatorImplementation implements Parcelable.Creator<RecipientData> {
+        public RecipientData createFromParcel(Parcel in) {
+            return new RecipientData(in);
+        }
+
+        public RecipientData[] newArray(int size) {
+            return new RecipientData[size];
+        }
+    }
+    
     @Deprecated
     protected String mContactId;
     @Deprecated
@@ -56,6 +72,11 @@ public class RecipientData {
         super();
     }
 
+    public RecipientData(Parcel in)
+    {
+        readFromParcel(in);
+    }
+    
     // getters...
 
     public long getRowId() {
@@ -239,5 +260,67 @@ public class RecipientData {
     public void setMyNotify(int value) {
         mMyNotify = value;
     }
+
+    @Override
+    public int describeContents() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        
+        dest.writeLong(mRowId);
+        dest.writeLong(mExchDate);
+        dest.writeLong(mKeyDate);
+        dest.writeLong(mHistDate);
+        dest.writeLong(mNotRegDate);
+        
+        dest.writeString(mMyKeyId);
+        dest.writeString(mContactLu);
+        dest.writeString(mName);
+        dest.writeString(mKeyId);
+        dest.writeString(mKeyUserId);
+        dest.writeString(mPushToken);
+        dest.writeString(mIntroKeyId);
+        dest.writeString(mMyPushToken);
+        
+        dest.writeInt(mNotify);
+        dest.writeInt(mSource);
+        dest.writeInt(mAppVer);
+        dest.writeInt(mMyNotify);
+        dest.writeInt((mActive)?1 : 0);
+        
+        dest.writeByteArray(mPhoto);
+        dest.writeByteArray(mPubKey);
+    }
+    
+    public void readFromParcel(Parcel in)
+    {
+       mRowId = in.readLong();
+       mExchDate = in.readLong();
+       mKeyDate = in.readLong();
+       mHistDate = in.readLong();
+       mNotRegDate = in.readLong();
+      
+       mMyKeyId = in.readString();
+       mContactLu = in.readString();
+       mName = in.readString();
+       mKeyId = in.readString();
+       mKeyUserId = in.readString();
+       mPushToken = in.readString();
+       mIntroKeyId = in.readString();
+       mMyPushToken = in.readString();
+       
+       mNotify = in.readInt();
+       mSource = in.readInt();
+       mAppVer = in.readInt();
+       mMyNotify = in.readInt();
+       mActive = (in.readInt() == 1)? true : false;
+       
+       in.readByteArray(mPhoto);
+       in.readByteArray(mPubKey);
+    }
+   
 
 }

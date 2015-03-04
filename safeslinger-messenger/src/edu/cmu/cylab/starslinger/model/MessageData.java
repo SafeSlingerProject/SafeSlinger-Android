@@ -24,7 +24,10 @@
 
 package edu.cmu.cylab.starslinger.model;
 
-public class MessageData {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class MessageData implements Parcelable{
 
     protected String mMsgHash = null;
     protected int mFileSize = 0;
@@ -51,10 +54,27 @@ public class MessageData {
     protected String mProgress = null;
     protected boolean mIsInboxTable = false;
 
+    public static final Parcelable.Creator<MessageData> CREATOR = new CreatorImplementation();
+    
+    
+    private static final class CreatorImplementation implements Parcelable.Creator<MessageData> {
+        public MessageData createFromParcel(Parcel in) {
+            return new MessageData(in);
+        }
+
+        public MessageData[] newArray(int size) {
+            return new MessageData[size];
+        }
+    }
+    
     public MessageData() {
         super();
     }
 
+    public MessageData(Parcel in)
+    {
+        readFromParcel(in);
+    }
     // getters...
 
     public String getFileType() {
@@ -224,6 +244,78 @@ public class MessageData {
 
     public void removeText() {
         mText = null;
+    }
+
+    @Override
+    public int describeContents() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        
+        dest.writeString(mMsgHash);
+        dest.writeString(mFileName);
+        dest.writeString(mFileType);
+        dest.writeString(mText);
+        dest.writeString(mPerson);
+        dest.writeString(mKeyId);
+        dest.writeString(mFileDir);
+        dest.writeString(mRetPushToken);
+        dest.writeString(mRetReceipt);
+        dest.writeString(mProgress);
+        
+        dest.writeInt(mFileSize);
+        dest.writeInt(mStatus);
+        dest.writeInt(mRetNotify);
+        
+        dest.writeLong(mDateRecv);
+        dest.writeLong(mRowId);
+        dest.writeLong(mDateSent);
+        
+        dest.writeInt((mInbox)? 1 : 0);
+        dest.writeInt((mSeen)? 1 : 0);
+        dest.writeInt((mRead)? 1 : 0);
+        dest.writeInt((mIsInboxTable)? 1 : 0);
+        
+        dest.writeByteArray(mEncBody);
+        dest.writeByteArray(mPhoto);
+        dest.writeByteArray(mRawFile);
+        dest.writeByteArray(mFileHash);
+        
+    }
+    
+    public void readFromParcel(Parcel in)
+    {
+        mMsgHash = in.readString();
+        mFileName = in.readString();
+        mFileType = in.readString();
+        mText = in.readString();
+        mPerson = in.readString();
+        mKeyId = in.readString();
+        mFileDir = in.readString();
+        mRetPushToken = in.readString();
+        mRetReceipt = in.readString();
+        mProgress = in.readString();
+        
+        mFileSize = in.readInt();
+        mStatus = in.readInt();
+        mRetNotify = in.readInt();
+        
+        mDateRecv = in.readLong();
+        mRowId = in.readLong();
+        mDateSent = in.readLong();
+        
+        mInbox = (in.readInt() == 1)? true : false;
+        mSeen = (in.readInt() == 1)? true : false;
+        mRead = (in.readInt() == 1)? true : false;
+        mIsInboxTable = (in.readInt() == 1)? true : false;
+        
+        in.readByteArray(mEncBody);
+        in.readByteArray(mPhoto);
+        in.readByteArray(mRawFile);
+        in.readByteArray(mFileHash);
     }
 
 }

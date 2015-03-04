@@ -24,7 +24,10 @@
 
 package edu.cmu.cylab.starslinger.model;
 
-public class ThreadData {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class ThreadData  implements Parcelable{
 
     private MessageRow mMsgRow;
     private int mMsgCount;
@@ -36,6 +39,29 @@ public class ThreadData {
     private boolean mNewerExists;
     private String mProgress;
 
+    private static final Parcelable.Creator<ThreadData> CREATOR = new creatorImplementation();
+    
+    private static final class creatorImplementation implements Parcelable.Creator<ThreadData>
+    {
+
+        @Override
+        public ThreadData createFromParcel(Parcel source) {
+            return new ThreadData(source);
+        }
+
+        @Override
+        public ThreadData[] newArray(int size) {
+            
+            return new ThreadData[size];
+        }
+        
+    }
+    
+    public ThreadData(Parcel in)
+    {
+        readFromParcel(in);
+    }
+    
     /***
      * create raw thread
      */
@@ -106,5 +132,42 @@ public class ThreadData {
 
     public void setProgress(String msg) {
         mProgress = msg;
+    }
+
+    @Override
+    public int describeContents() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+       
+        dest.writeInt(mMsgCount);
+        dest.writeInt(mNewCount);
+        dest.writeString(mLastPerson);
+        dest.writeString(mProgress);
+        dest.writeInt((mIsDetail)? 1 : 0);
+        dest.writeInt((mHasDraft)? 1 : 0);
+        dest.writeInt((mNewerExists)? 1 : 0);
+        dest.writeParcelable(mMsgRow, flags);
+        dest.writeParcelable(mRecipient, flags);
+        
+    }
+    
+    public void readFromParcel(Parcel in)
+    {
+        mMsgCount = in.readInt();
+        mNewCount = in.readInt();
+        
+        mLastPerson = in.readString();
+        mProgress = in.readString();
+        
+        mIsDetail = (in.readInt() == 1)? true : false;
+        mHasDraft = (in.readInt() == 1)?true : false;
+        mNewerExists = (in.readInt() == 1)?  true: false;
+        
+        mMsgRow = in.readParcelable(MessageRow.class.getClassLoader());
+        mRecipient = in.readParcelable(RecipientRow.class.getClassLoader());
     }
 }

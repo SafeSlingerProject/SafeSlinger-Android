@@ -37,7 +37,6 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
@@ -85,7 +84,6 @@ import edu.cmu.cylab.starslinger.model.MessageRow.MsgAction;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.ThreadData;
-import edu.cmu.cylab.starslinger.model.ThreadDateDecendingComparator;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class MessagesFragment extends Fragment {
@@ -98,25 +96,27 @@ public class MessagesFragment extends Fragment {
     public static final int RESULT_SAVE = 7129;
     public static final int RESULT_PROCESS_SSMIME = 7130;
 
-    private List<ThreadData> mThreadList = new ArrayList<ThreadData>();
+//    private List<ThreadData> mThreadList = new ArrayList<ThreadData>();
     private List<MessageRow> mMessageList = new ArrayList<MessageRow>();
     private TextView mTvInstruct;
     private ListView mListViewMsgs;
-    private ListView mListViewThreads;
+//    private ListView mListViewThreads;
     private MessagesAdapter mAdapterMsg;
-    private ThreadsAdapter mAdapterThread;
+//    private ThreadsAdapter mAdapterThread;
     private NotificationManager mNm;
     private OnMessagesResultListener mResult;
     private static RecipientRow mRecip;
     private static int mListMsgVisiblePos;
     private static int mListMsgTopOffset;
-    private static int mListThreadVisiblePos;
-    private static int mListThreadTopOffset;
+//    private static int mListThreadVisiblePos;
+//    private static int mListThreadTopOffset;
     private static EditText mEditTextMessage;
     private Button mButtonSend;
     private LinearLayout mComposeWidget;
     private static MessageData mDraft;
 
+    private ThreadData mThreadData = null;
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,25 +141,69 @@ public class MessagesFragment extends Fragment {
         }
     }
 
+    public void onThreadItemClick(Bundle extras)
+    {
+        if(extras != null)
+        {
+            mThreadData = (ThreadData)extras.getParcelable("thread_data");
+            
+            if (mRecip == null) {
+                // requested messages list
+                // assign recipient
+                if (TextUtils.isEmpty(mThreadData.getMsgRow().getKeyId())) {
+                    // able to view null key id messages
+                    mRecip = RecipientRow.createEmptyRecipient();
+                } else {
+                    RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                            .openInstance(getActivity().getApplicationContext());
+                    Cursor c = dbRecipient.fetchRecipientByKeyId(mThreadData.getMsgRow().getKeyId());
+                    if (c != null) {
+                        try {
+                            if (c.moveToFirst()) {
+                                // messages with matching key ids in
+                                // database
+                                mRecip = new RecipientRow(c);
+                            } else {
+                                // messages without matching key ids
+                                mRecip = RecipientRow.createKeyIdOnlyRecipient(mThreadData.getMsgRow()
+                                        .getKeyId());
+                            }
+                        } finally {
+                            c.close();
+                        }
+                    }
+                }
+            } 
+//                else {
+//                // requested threads list
+//                // remove recipient
+//                mRecip = null;
+//            }
+            
+            updateMessageList(true);
+        }
+    }
+    
     public void updateValues(Bundle extras) {
         long msgRowId = -1;
         long recipRowId = 1;
 
         if (extras != null) {
             msgRowId = extras.getLong(extra.MESSAGE_ROW_ID, -1L);
+//            mThreadData = (ThreadData)extras.getParcelable("thread_data");
             recipRowId = extras.getLong(extra.RECIPIENT_ROW_ID, -1L);
 
             // set position to top when incoming message in
             // background...
-            InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this.getActivity());
-            MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this.getActivity());
-            int inCount = dbInbox.getUnseenInboxCount();
-            int msgCount = dbMessage.getUnseenMessageCount();
-            int allCount = inCount + msgCount;
-            if (allCount > 0) {
-                mListThreadTopOffset = 0;
-                mListThreadVisiblePos = 0;
-            }
+//            InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this.getActivity());
+//            MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this.getActivity());
+//            int inCount = dbInbox.getUnseenInboxCount();
+//            int msgCount = dbMessage.getUnseenMessageCount();
+//            int allCount = inCount + msgCount;
+//            if (allCount > 0) {
+//                mListThreadTopOffset = 0;
+//                mListThreadVisiblePos = 0;
+//            }
 
             RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity());
             if (recipRowId != -1) {
@@ -186,27 +230,7 @@ public class MessagesFragment extends Fragment {
         View vFrag = inflater.inflate(R.layout.messagelist, container, false);
 
         mTvInstruct = (TextView) vFrag.findViewById(R.id.tvInstruct);
-
-        mListViewThreads = (ListView) vFrag.findViewById(R.id.listThread);
-        mListViewThreads.setOnScrollListener(new OnScrollListener() {
-
-            @Override
-            public void onScrollStateChanged(AbsListView view, int scrollState) {
-                // nothing to do...
-            }
-
-            @Override
-            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount,
-                    int totalItemCount) {
-                // save list position
-                if (visibleItemCount != 0) {
-                    mListThreadVisiblePos = firstVisibleItem;
-                    View v = mListViewThreads.getChildAt(0);
-                    mListThreadTopOffset = (v == null) ? 0 : v.getTop();
-                }
-            }
-        });
-
+        vFrag.findViewById(R.id.listThread).setVisibility(View.GONE);
         mListViewMsgs = (ListView) vFrag.findViewById(R.id.listMessage);
         mListViewMsgs.setOnScrollListener(new OnScrollListener() {
 
@@ -253,8 +277,13 @@ public class MessagesFragment extends Fragment {
                 return false;
             }
         });
-
-        updateMessageList(false);
+//        if(getArguments() != null)
+//            mThreadData = getArguments().getParcelable("thread_data");
+        
+        if(getArguments() != null && getArguments().getBoolean("thread_click"))
+            onThreadItemClick(getArguments());
+        else
+            updateMessageList(false);
 
         return vFrag;
     }
@@ -342,50 +371,7 @@ public class MessagesFragment extends Fragment {
         sendResultToHost(RESULT_GETFILE, intent.getExtras());
     }
 
-    private void setThreadListClickListener() {
-        mListViewThreads.setOnItemClickListener(new OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
-
-                ThreadData t = mThreadList.get(pos);
-                if (mRecip == null) {
-                    // requested messages list
-                    // assign recipient
-                    if (TextUtils.isEmpty(t.getMsgRow().getKeyId())) {
-                        // able to view null key id messages
-                        mRecip = RecipientRow.createEmptyRecipient();
-                    } else {
-                        RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                                .openInstance(getActivity().getApplicationContext());
-                        Cursor c = dbRecipient.fetchRecipientByKeyId(t.getMsgRow().getKeyId());
-                        if (c != null) {
-                            try {
-                                if (c.moveToFirst()) {
-                                    // messages with matching key ids in
-                                    // database
-                                    mRecip = new RecipientRow(c);
-                                } else {
-                                    // messages without matching key ids
-                                    mRecip = RecipientRow.createKeyIdOnlyRecipient(t.getMsgRow()
-                                            .getKeyId());
-                                }
-                            } finally {
-                                c.close();
-                            }
-                        }
-                    }
-                } else {
-                    // requested threads list
-                    // remove recipient
-                    mRecip = null;
-                }
-                updateMessageList(true);
-            }
-        });
-    }
-
-    private void setMessageListClickListener() {
+     private void setMessageListClickListener() {
         mListViewMsgs.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
@@ -432,7 +418,7 @@ public class MessagesFragment extends Fragment {
         });
     }
 
-    private void updateMessageList(boolean recentMsg) {
+     private void updateMessageList(boolean recentMsg) {
         // make sure view is already inflated...
         if (mListViewMsgs == null) {
             return;
@@ -462,62 +448,62 @@ public class MessagesFragment extends Fragment {
         boolean showCompose = false;
 
         // draw threads list/title bar
-        mThreadList.clear();
-        ThreadData t = null;
-        int totalThreads = 0;
+//        mThreadList.clear();
+//        ThreadData t = null;
+//        int totalThreads = 0;
         // inbox threads
-        Cursor cmi = null;
-        if (mRecip == null) {
-            cmi = dbInbox.fetchInboxRecentByUniqueKeyIds();
-        } else {
-            cmi = dbInbox.fetchInboxRecent(mRecip.getKeyid());
-        }
-        if (cmi != null) {
-            try {
-                totalThreads += cmi.getCount();
-                if (cmi.moveToFirst()) {
-                    do {
-                        MessageRow inboxRow = new MessageRow(cmi, true);
-                        t = addInboxThread(inboxRow);
-                        mergeInThreads(t);
-                    } while (cmi.moveToNext());
-                }
-            } finally {
-                cmi.close();
-            }
-        }
+//        Cursor cmi = null;
+//        if (mRecip == null) {
+//            cmi = dbInbox.fetchInboxRecentByUniqueKeyIds();
+//        } else {
+//            cmi = dbInbox.fetchInboxRecent(mRecip.getKeyid());
+//        }
+//        if (cmi != null) {
+//            try {
+//                totalThreads += cmi.getCount();
+//                if (cmi.moveToFirst()) {
+//                    do {
+//                        MessageRow inboxRow = new MessageRow(cmi, true);
+//                        t = addInboxThread(inboxRow);
+//                        mergeInThreads(t);
+//                    } while (cmi.moveToNext());
+//                }
+//            } finally {
+//                cmi.close();
+//            }
+//        }
         // message threads
-        Cursor cmt = null;
-        if (mRecip == null) {
-            cmt = dbMessage.fetchMessagesRecentByUniqueKeyIds();
-        } else {
-            cmt = dbMessage.fetchMessageRecent(mRecip.getKeyid());
-        }
-        if (cmt != null) {
-            try {
-                totalThreads += cmt.getCount();
-                if (cmt.moveToFirst()) {
-                    do {
-                        MessageRow messageRow = new MessageRow(cmt, false);
-                        t = addMessageThread(messageRow);
-                        mergeInThreads(t);
-                    } while (cmt.moveToNext());
-                }
-            } finally {
-                cmt.close();
-            }
-        }
-
-        if (totalThreads <= 0) {
-            mTvInstruct.setVisibility(View.VISIBLE);
-        }
-        Collections.sort(mThreadList, new ThreadDateDecendingComparator());
+//        Cursor cmt = null;
+//        if (mRecip == null) {
+//            cmt = dbMessage.fetchMessagesRecentByUniqueKeyIds();
+//        } else {
+//            cmt = dbMessage.fetchMessageRecent(mRecip.getKeyid());
+//        }
+//        if (cmt != null) {
+//            try {
+//                totalThreads += cmt.getCount();
+//                if (cmt.moveToFirst()) {
+//                    do {
+//                        MessageRow messageRow = new MessageRow(cmt, false);
+//                        t = addMessageThread(messageRow);
+//                        mergeInThreads(t);
+//                    } while (cmt.moveToNext());
+//                }
+//            } finally {
+//                cmt.close();
+//            }
+//        }
+//
+//        if (totalThreads <= 0) {
+//            mTvInstruct.setVisibility(View.VISIBLE);
+//        }
+//        Collections.sort(mThreadList, new ThreadDateDecendingComparator());
 
         // draw messages list/compose draft
         mMessageList.clear();
         if (mRecip != null) {
             // recipient data
-            if (mRecip != null && mRecip.isSendable() && t != null && !t.isNewerExists()) {
+            if (mRecip != null && mRecip.isSendable() && mThreadData != null && !mThreadData.isNewerExists()) {
                 showCompose = true;
             }
             // encrypted msgs
@@ -595,13 +581,13 @@ public class MessagesFragment extends Fragment {
             mListMsgVisiblePos = mMessageList.size() - 1;
         }
 
-        unregisterForContextMenu(mListViewMsgs);
-        unregisterForContextMenu(mListViewThreads);
+//        unregisterForContextMenu(mListViewMsgs);
+//        unregisterForContextMenu(mListViewThreads);
 
-        mAdapterThread = new ThreadsAdapter(this.getActivity(), mThreadList);
-        mListViewThreads.setAdapter(mAdapterThread);
-        setThreadListClickListener();
-        mListViewThreads.setSelectionFromTop(mListThreadVisiblePos, mListThreadTopOffset);
+//        mAdapterThread = new ThreadsAdapter(this.getActivity(), mThreadList);
+//        mListViewThreads.setAdapter(mAdapterThread);
+//        setThreadListClickListener();
+//        mListViewThreads.setSelectionFromTop(mListThreadVisiblePos, mListThreadTopOffset);
 
         mAdapterMsg = new MessagesAdapter(this.getActivity(), mMessageList);
         mListViewMsgs.setAdapter(mAdapterMsg);
@@ -609,104 +595,7 @@ public class MessagesFragment extends Fragment {
         mListViewMsgs.setSelectionFromTop(mListMsgVisiblePos, mListMsgTopOffset);
 
         registerForContextMenu(mListViewMsgs);
-        registerForContextMenu(mListViewThreads);
-    }
-
-    private void mergeInThreads(ThreadData t1) {
-        boolean exists = false;
-        for (int i = 0; i < mThreadList.size(); i++) {
-            ThreadData t2 = mThreadList.get(i);
-
-            // if matching key is more recent use it
-            String k1 = "" + t2.getMsgRow().getKeyId();
-            String k2 = "" + t1.getMsgRow().getKeyId();
-            if (k1.equals(k2)) {
-                exists = true;
-                t2 = new ThreadData(t2, t1);
-                mThreadList.set(i, t2);
-            }
-        }
-        if (!exists) {
-            mThreadList.add(t1);
-        }
-    }
-
-    private ThreadData addInboxThread(MessageRow inboxRow) throws SQLException {
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity());
-        InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this.getActivity());
-        ThreadData t;
-        String person = null;
-        boolean newerExists = false;
-        RecipientRow recipientRow = null;
-
-        Cursor cr = dbRecipient.fetchRecipientByKeyId(inboxRow.getKeyId());
-        if (cr != null) {
-            try {
-                if (cr.moveToFirst()) {
-                    recipientRow = new RecipientRow(cr);
-                    person = recipientRow.getName();
-
-                    int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
-                    if (newerRecips > 0) {
-                        // there are some newer keys, we should warn
-                        newerExists = true;
-                    }
-                }
-            } finally {
-                cr.close();
-            }
-        }
-
-        int msgs = dbInbox.getAllInboxCountByThread(inboxRow.getKeyId());
-
-        if (TextUtils.isEmpty(person)) {
-            person = findMissingPersonName(inboxRow.getKeyId());
-        }
-
-        int newMsgs = dbInbox.getActionRequiredInboxCountByThread(inboxRow.getKeyId());
-        int draftMsgs = 0; // inbox does not store drafts
-        t = new ThreadData(inboxRow, msgs, newMsgs, draftMsgs > 0, person, mRecip != null,
-                newerExists, recipientRow);
-        return t;
-    }
-
-    private ThreadData addMessageThread(MessageRow messageRow) throws SQLException {
-        RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity());
-        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this.getActivity());
-        ThreadData t;
-        String person = null;
-        boolean newerExists = false;
-        RecipientRow recipientRow = null;
-
-        Cursor cr = dbRecipient.fetchRecipientByKeyId(messageRow.getKeyId());
-        if (cr != null) {
-            try {
-                if (cr.moveToFirst()) {
-                    recipientRow = new RecipientRow(cr);
-                    person = recipientRow.getName();
-
-                    int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
-                    if (newerRecips > 0) {
-                        // there are some newer keys, we should warn
-                        newerExists = true;
-                    }
-                }
-            } finally {
-                cr.close();
-            }
-        }
-
-        int msgs = dbMessage.getAllMessageCountByThread(messageRow.getKeyId());
-
-        if (TextUtils.isEmpty(person)) {
-            person = findMissingPersonName(messageRow.getKeyId());
-        }
-
-        int newMsgs = dbMessage.getActionRequiredMessageCountByThread(messageRow.getKeyId());
-        int draftMsgs = dbMessage.getDraftMessageCountByThread(messageRow.getKeyId());
-        t = new ThreadData(messageRow, msgs, newMsgs, draftMsgs > 0, person, mRecip != null,
-                newerExists, recipientRow);
-        return t;
+//        registerForContextMenu(mListViewThreads);
     }
 
     private String findMissingPersonName(String keyId) {
@@ -737,30 +626,7 @@ public class MessagesFragment extends Fragment {
         super.onCreateContextMenu(menu, v, menuInfo);
 
         AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
-        if (v.equals(mListViewThreads)) {
-            RecipientRow recip = mThreadList.get(info.position).getRecipient();
-            String delThreadStr = String.format(
-                    getString(R.string.menu_deleteThread),
-                    ThreadsAdapter.getBestIdentityName(getActivity(),
-                            mThreadList.get(info.position), recip));
-            menu.add(Menu.NONE, R.id.item_delete_thread, Menu.NONE, delThreadStr);
-            if (recip != null && recip.getRowId() > -1
-                    && recip.getSource() != RecipientDbAdapter.RECIP_SOURCE_INVITED) {
-                if (!recip.isValidContactLink()) {
-                    menu.add(Menu.NONE, R.id.item_link_contact_add, Menu.NONE,
-                            R.string.menu_link_contact_add);
-                } else {
-                    menu.add(Menu.NONE, R.id.item_link_contact_change, Menu.NONE,
-                            R.string.menu_link_contact_change);
-                }
-
-                if (recip.isValidContactLink()) {
-                    menu.add(Menu.NONE, R.id.item_edit_contact, Menu.NONE,
-                            R.string.menu_EditContact);
-                }
-            }
-            menu.add(Menu.NONE, R.id.item_thread_details, Menu.NONE, R.string.menu_Details);
-        } else if (v.equals(mListViewMsgs)) {
+        if (v.equals(mListViewMsgs)) {
             MenuInflater inflater = getActivity().getMenuInflater();
             inflater.inflate(R.layout.messagecontext, menu);
 
@@ -806,23 +672,6 @@ public class MessagesFragment extends Fragment {
             return true;
         } else if (item.getItemId() == R.id.item_debug_transcript) {
             doExportTranscript(mMessageList);
-            return true;
-        } else if (item.getItemId() == R.id.item_delete_thread) {
-            doDeleteThread(mThreadList.get(info.position).getMsgRow().getKeyId());
-            updateMessageList(false);
-            return true;
-        } else if (item.getItemId() == R.id.item_thread_details) {
-            showHelp(getString(R.string.title_RecipientDetail),
-                    BaseActivity.formatThreadDetails(getActivity(), mThreadList.get(info.position)));
-            return true;
-        } else if (item.getItemId() == R.id.item_link_contact_add
-                || item.getItemId() == R.id.item_link_contact_change) {
-            ((BaseActivity) getActivity()).showUpdateContactLink(mThreadList.get(info.position)
-                    .getRecipient().getRowId());
-            return true;
-        } else if (item.getItemId() == R.id.item_edit_contact) {
-            ((BaseActivity) getActivity()).showEditContact(mThreadList.get(info.position)
-                    .getRecipient().getContactlu());
             return true;
         } else {
             return super.onContextItemSelected(item);
@@ -1062,21 +911,7 @@ public class MessagesFragment extends Fragment {
     }
 
     public void postProgressMsgList(boolean isInboxTable, long msgRowId, String msg) {
-        if (mRecip == null) {
-            for (int i = 0; i < mThreadList.size(); i++) {
-                if (mThreadList.get(i).getMsgRow().getRowId() == msgRowId) {
-                    ThreadData t = mThreadList.get(i);
-                    t.setProgress(msg);
-                    mThreadList.set(i, t);
-
-                    mAdapterThread = new ThreadsAdapter(this.getActivity(), mThreadList);
-                    mListViewThreads.setAdapter(mAdapterThread);
-                    mListViewThreads.setSelectionFromTop(mListThreadVisiblePos,
-                            mListThreadTopOffset);
-                    break;
-                }
-            }
-        } else {
+       {
             for (int i = 0; i < mMessageList.size(); i++) {
                 if (mMessageList.get(i).isInboxTable() == isInboxTable
                         && mMessageList.get(i).getRowId() == msgRowId) {
