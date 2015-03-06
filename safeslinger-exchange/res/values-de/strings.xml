@@ -32,41 +32,41 @@
 
     <string name="choice_NumUsers">%d Benutzer</string>
 
-    <string name="error_AllMembersMustUpgrade">Einige Mitglieder sind mit einer älteren Version; Alle Mitglieder müssen auf die neueste Version zu aktualisieren.</string>
+    <string name="error_AllMembersMustUpgrade">Einige Mitglieder nutzen eine ältere Version; Alle Mitglieder müssen auf die neueste Version aktualisieren.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Alle Teilnehmer müssen die Software aktualisieren, manche verwenden ältere Formate zur Push Registrierung.</string>
     <string name="error_CorrectYourInternetConnection">Internet nicht verfügbar, überprüfen Sie Ihre Einstellungen.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Zeitüberschreitung beim Austausch. Beginnen Sie den Austausch noch einmal.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Zeitüberschreitung beim Austausch. Beginnen Sie den Austausch erneut.</string>
     <string name="error_HttpCode">Server HTTP-Fehler: %d</string>
-    <string name="error_InvalidCommitVerify">Falsche Daten im Austausch gefunden. Beginnen Sie den Austausch noch einmal.</string>
+    <string name="error_InvalidCommitVerify">Falsche Daten im Austausch gefunden. Beginnen Sie den Austausch erneut.</string>
     <string name="error_InvalidCommonUserId">Bitte geben Sie eine positive ganze Zahl ein.</string>
-    <string name="error_LocalGroupCommitDiffer">Sie haben unterschiedliche Sätze erhalten. Beginnen Sie den Austausch noch einmal.</string>
+    <string name="error_LocalGroupCommitDiffer">Sie haben unterschiedliche Sätze erhalten. Beginnen Sie den Austausch erneut.</string>
     <string name="error_MinUsersRequired">Ein Minimum von %d Teilnehmern wird benötigt, um Daten auszutauschen.</string>
-    <string name="error_MoreDataThanUsers">Unerwartete Daten im Austausch gefunden. Beginnen Sie den Austausch noch einmal.</string>
-    <string name="error_NoDataToExchange">Der Austausch ist erforderlich, Daten fehlen.</string>
+    <string name="error_MoreDataThanUsers">Unerwartete Daten im Austausch gefunden. Beginnen Sie den Austausch erneut.</string>
+    <string name="error_NoDataToExchange">Im Austausch fehlen erforderliche Daten.</string>
     <string name="error_NoWordListSelected">Sie müssen einen passenden Satz auswählen, um fortzufahren.</string>
-    <string name="error_OtherGroupCommitDiffer">Jemand hat keine passenden Sätze gemeldet. Beginnen Sie den Austausch noch einmal.</string>
+    <string name="error_OtherGroupCommitDiffer">Jemand hat keine passenden Sätze gemeldet. Beginnen Sie den Austausch erneut.</string>
     <string name="error_OutOfMemoryError">Der Speicher ist zu gering, um diesen Vorgang abzuschließen.</string>
     <string name="error_ServerAppMessage">Server Nachricht: %s</string>
     <string name="error_ServerNotResponding">Server meldet sich nicht.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Zeitüberschreitung beim Warten auf alle Teilnehmer.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Zeitüberschreitung beim Warten auf die Eingaben alle Teilnehmer.</string>
     <string name="error_WebCancelledByUser">Benutzer brach Serveranfrage ab.</string>
 
-    <string name="help_size">Wählen Sie die Anzahl der Teilnehmer, die Kontakte austauschen wollen, und drücken Sie OK.</string>
+    <string name="help_size">Wählen Sie die Anzahl der Teilnehmer, die Daten austauschen wollen, und drücken Sie OK.</string>
     <string name="help_userid">Diese Zahl auf diesem Bildschirm wird verwendet, um die Teilnehmer einer Gruppe zu identifizieren. Überprüfen Sie die Zahlen der anderen Teilnehmer, geben Sie die niedrigste Zahl ein, und drücken Sie OK.</string>
     <string name="help_verify">Nur einer der 3-Wort-Sätze oder Zahlen ist identisch mit allen anderen Teilnehmern. Bitte wählen sie den passenden Satz aus und drücken Sie auf Weiter.</string>
 
-    <string name="label_CompareScreensNDevices">Bildschirme Vergleichen Sie %s Geräte.</string>
+    <string name="label_CompareScreensNDevices">Vergleichen Sie die Bildschirme auf %s Geräten.</string>
     <string name="label_NumericModeHint">Keine Buchstaben</string>
-    <string name="label_PromptInstruct">Diese Zahl wird verwendet, um alle Teilnehmer zu gruppieren. Vergleichen Sie Ihre Zahl mit den anderen Teilnehmern, und geben Sie die niedrigste Zahl ein.</string>
+    <string name="label_PromptInstruct">Diese Zahl wird verwendet, um eine eindeutige Teilnehmergruppe zu erzeugen. Vergleichen Sie Ihre Zahl mit den anderen Teilnehmern, und geben Sie die niedrigste Zahl ein.</string>
     <string name="label_ReceivedNItems">%d Objekte erhalten</string>
     <string name="label_UserIdHint">Kleinste Zahl</string>
     <string name="label_VerifyInstruct">Alle Handys zeigen 3 Sätze mit je 3 Wörtern und Zahlen an. Suchen Sie den passenden Satz, der auf allen Handys übereinstimmt, und wählen Sie dann den gleichen Satz.</string>
 
-    <string name="lib_name">SafeSlinger Wechsel</string>
+    <string name="lib_name">SafeSlinger Austausch</string>
 
     <string name="prog_CollectingOthersCommitVerify">Warten auf Überprüfung von allen Teilnehmern…</string>
-    <string name="prog_CollectingOthersItems">Auf alle Teilnehmer warten…</string>
-    <string name="prog_ConstructingGroupKey">Gruppenschlüssel Erzeugung…</string>
+    <string name="prog_CollectingOthersItems">Auf Bestätigung aller Teilnehmer warten…</string>
+    <string name="prog_ConstructingGroupKey">Erzeuge Gruppenschlüssel…</string>
     <string name="prog_RequestingUserId">Teilnehmer Id wird angefordert…</string>
 
     <string name="title_size">Wie viele Teilnehmer beim Austausch?</string>

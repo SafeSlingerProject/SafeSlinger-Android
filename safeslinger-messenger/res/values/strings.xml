@@ -767,6 +767,8 @@
     <string name="title_ChooseDirectory">Choose Directory</string>
     <!-- title (title case); used at the top of the menu options when choosing among sources to pick an attachment. -->
     <string name="title_ChooseFileLoad">Choose Your Attachment</string>
+    <!-- title (title case); used in the Select File Option menu to clear the current attachment. -->
+    <string name="title_clear">Clear</string>
     <!-- title (title case); used as the Subject field of an email message for the user to send feedback to developers. Also used as the menu option to start the email. -->
     <string name="title_comments">Comments/Questions</string>
     <!-- title (title case); used at the top of the error dialog. -->
