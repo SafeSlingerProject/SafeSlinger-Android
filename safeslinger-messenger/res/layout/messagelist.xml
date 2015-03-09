@@ -89,25 +89,24 @@
             android:privateImeOptions="nm"
             android:textSize="@dimen/text_size_msg" />
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/SendFrameButtonSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="@dimen/size_5dp" >
+            android:layout_gravity="bottom"
+            android:orientation="vertical" >
 
-            <Button
+            <ImageButton
                 android:id="@+id/SendButtonSend"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_3d"
-                android:gravity="center"
-                android:paddingLeft="@dimen/button_side_margin"
-                android:paddingRight="@dimen/button_side_margin"
-                android:text="@string/btn_SendFile"
-                android:textIsSelectable="false"
-                android:textSize="@dimen/text_size_medium" />
-        </RelativeLayout>
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/button_side_margin"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/btn_SendFile"
+                android:drawablePadding="0dp"
+                android:src="@android:drawable/ic_menu_send" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

@@ -60,6 +60,8 @@
     <string name="btn_Continue">Continue</string>
     <!-- button (title case); the Create New Key button is paired with the Cancel button, and is used to affirm the creation of a new key and passphrase. -->
     <string name="btn_CreateNewKey">Create New Key</string>
+    <!-- button (title case); the Delete button is used to affirm the deletion of more a message. -->
+    <string name="btn_Delete">Delete</string>
     <!-- button (title case); the Create New Key button is paired with the Cancel button, and is used to affirm the deletion of more recent keys. -->
     <string name="btn_DeleteKeys">Delete Keys</string>
     <!-- button (title case); the Discard button is used to indicate the user wishes to exit the current screen without saving data, such as a voice memo. For non-Android use only, since Android uses the Back hardware button instead. -->
@@ -88,6 +90,8 @@
     <string name="btn_Reject" translatable="false">Reject</string>
     <!-- button (title case); the Remind button is paired with the Forget button and is used to indicate the user wishes to dismiss the current reminder of a potential error state, such as having backup or notification settings turned off, and does want to be reminded again later. -->
     <string name="btn_Remind">Remind</string>
+    <!-- button (title case); the Retry button is used to retry sending a message that has failed. -->
+    <string name="btn_Retry">Retry</string>
     <!-- button (title case); the Save button is used to indicate the data in question should be saved and persisted. -->
     <string name="btn_Save">Save</string>
     <!-- button (title case); the Add Attachment button is used on the Compose screen to allow the user to select the source of an attachment to the current message. -->
@@ -687,6 +691,8 @@
 
     <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm backup keys and settings have bee restored on re-install. -->
     <string name="state_BackupRestored">Backup restored.</string>
+    <!-- informational message (sentence case, period); used in a message instance to indicate that the message has not been sent to the destination. -->
+    <string name="state_FailedToSendMessage">Failed to send message. Touch and hold for options.</string>
     <!-- informational message (sentence case, period); used in an auto-dismissed message to confirm that a file has been deleted. %s = the file name of the deleted file. -->
     <string name="state_FileDeleted">Deleted file %s.</string>
     <!-- informational message (sentence case, period); TODO: This should be deprecated in favor 1 message push to messages tab (single thread) and >1 messages push to messages tab (all threads) with a toast of state_MessagesSent. -->
@@ -791,6 +797,8 @@
     <string name="title_language" translatable="false">Select language. Help us on transifex.com.</string>
     <!-- title (title case); used at the top of the dialog when viewing message details. -->
     <string name="title_MessageDetail">Message</string>
+    <!-- title (title case); used at the top of the dialog when viewing message options. -->
+    <string name="title_MessageOptions">Message Options</string>
     <!-- title (title case); used at the top of the message list screen. -->
     <string name="title_Messages">Messages</string>
     <!-- title (title case); used at the top of a menu when choosing to alter the users' contact: Edit, Create New, or Use Another. -->

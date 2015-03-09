@@ -118,6 +118,7 @@ public class BaseActivity extends ActionBarActivity {
     protected static final int MENU_REFERENCE = 470;
     protected static final int MENU_SENDINTRO = 480;
     protected static final int MENU_FEEDBACK = 490;
+    protected static final int MENU_NEWMESSAGE = 500;
     protected static final int DIALOG_HELP = 1;
     protected static final int DIALOG_ERREXIT = 2;
     protected static final int DIALOG_QUESTION = 3;

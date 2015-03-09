@@ -150,7 +150,6 @@ import edu.cmu.cylab.starslinger.transaction.MessageNotFoundException;
 import edu.cmu.cylab.starslinger.transaction.WebEngine;
 import edu.cmu.cylab.starslinger.util.NotificationPlayer;
 import edu.cmu.cylab.starslinger.util.SSUtil;
-import edu.cmu.cylab.starslinger.view.ComposeFragment.OnComposeResultListener;
 import edu.cmu.cylab.starslinger.view.IntroductionFragment.OnIntroResultListener;
 import edu.cmu.cylab.starslinger.view.MessagesFragment.OnMessagesResultListener;
 import edu.cmu.cylab.starslinger.view.SlingerFragment.OnSlingerResultListener;
@@ -158,15 +157,15 @@ import edu.cmu.cylab.starslinger.view.SlingerFragment.OnSlingerResultListener;
 @SuppressLint("InflateParams")
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-public class HomeActivity extends BaseActivity implements OnComposeResultListener,
-        OnMessagesResultListener, OnSlingerResultListener, OnIntroResultListener {
+public class HomeActivity extends BaseActivity implements OnMessagesResultListener,
+        OnSlingerResultListener, OnIntroResultListener {
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
     // constants
     private static final int RESULT_PICK_CONTACT_SENDER = 1;
     private static final int RESULT_ERROR = 9;
-    private static final int RESULT_PICK_MSGAPP = 13;
     private static final int REQUEST_QRECEIVE_MGS = 14;
+    private static final int VIEW_COMPOSE_ID = 110;
     private static final int VIEW_FILEATTACH_ID = 120;
     private static final int VIEW_FILESAVE_ID = 130;
     private static final int VIEW_RECIPSEL_ID = 140;
@@ -194,7 +193,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private TabsAdapter mTabsAdapter;
 
     private enum Tabs {
-        MESSAGE, COMPOSE, SLINGKEYS, INTRO
+        MESSAGE, //
+        SLINGKEYS, //
+        INTRO, //
     }
 
     private Runnable updateMainView = new Runnable() {
@@ -419,7 +420,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         } else if (Intent.ACTION_SEND.equals(action) || Intent.ACTION_SEND_MULTIPLE.equals(action)) {
             // clicked share externally, load file, show compose
             if (handleSendToAction()) {
-                setTab(Tabs.COMPOSE);
+                showCompose(VIEW_COMPOSE_ID);
             }
         } else {
             setProperDefaultTab();
@@ -441,10 +442,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 showWalkthroughDialog();
             }
 
-        } else if (dbMessage.getAllMessageCount() == 0) {
-            // Compose should be the default when there are > 1 keys and 0
-            // messages.
-            setTab(Tabs.COMPOSE);
         } else {
             // Messages should be the default when there are > 1 messages.
             setTab(Tabs.MESSAGE);
@@ -489,8 +486,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         mTabsAdapter = new TabsAdapter(this, bar, mViewPager);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagListMessages),
                 MessagesFragment.class, null);
-        mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagComposeMessage),
-                ComposeFragment.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagExchange), SlingerFragment.class,
                 null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_Introduction),
@@ -619,16 +614,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
                     // refresh all that matter
                     switch (Tabs.values()[tab.getPosition()]) {
-                        case COMPOSE:
-                            ComposeFragment cf = (ComposeFragment) findFragmentByPosition(Tabs.COMPOSE
-                                    .ordinal());
-                            if (cf != null) {
-                                // cf.updateKeypad(); //Not needed to hide soft
-                                // input focus programmtically. Can be done via
-                                // manifest
-                                cf.updateValues(null);
-                            }
-                            break;
                         case MESSAGE:
                             MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
                                     .ordinal());
@@ -672,14 +657,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         public void onTabReselected(Tab tab, FragmentTransaction ft) {
             // refresh all that matter
             switch (Tabs.values()[tab.getPosition()]) {
-                case COMPOSE:
-                    ComposeFragment cf = (ComposeFragment) findFragmentByPosition(Tabs.COMPOSE
-                            .ordinal());
-                    if (cf != null) {
-                        cf.updateKeypad();
-                        cf.updateValues(null);
-                    }
-                    break;
                 case MESSAGE:
                     MessagesFragment mf = (MessagesFragment) findFragmentByPosition(Tabs.MESSAGE
                             .ordinal());
@@ -719,11 +696,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     protected void restoreView() {
         // all tabs with data...
         if (mTabsAdapter != null) {
-            ComposeFragment cf = (ComposeFragment) mTabsAdapter.findFragmentByPosition(Tabs.COMPOSE
-                    .ordinal());
-            if (cf != null) {
-                cf.updateValues(null);
-            }
             MessagesFragment mf = (MessagesFragment) mTabsAdapter
                     .findFragmentByPosition(Tabs.MESSAGE.ordinal());
             if (mf != null) {
@@ -849,8 +821,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            MenuItem iAdd = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
-                    .setIcon(R.drawable.ic_action_add_person);
+            MenuItem iAdd = menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages).setIcon(
+                    android.R.drawable.ic_menu_send);
             MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
 
             menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
@@ -866,9 +838,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(
                     android.R.drawable.ic_menu_help);
         } else {
-            MenuItem iAddMenuItem = menu
-                    .add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
-                            R.drawable.ic_action_add_person);
+            MenuItem iAddMenuItem = menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages)
+                    .setIcon(android.R.drawable.ic_menu_send);
             MenuCompat.setShowAsAction(iAddMenuItem, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
             SpannableString spanString = new SpannableString(iAddMenuItem.getTitle().toString());
             // fix the color to white
@@ -941,6 +912,9 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 return true;
             case MENU_REFERENCE:
                 showReference();
+                return true;
+            case MENU_NEWMESSAGE:
+                showCompose(VIEW_COMPOSE_ID);
                 return true;
         }
         return false;
@@ -1045,8 +1019,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // must have either file or text to send
             if (TextUtils.isEmpty(sendMsg.getText()) && TextUtils.isEmpty(sendMsg.getFileName())) {
                 showNote(R.string.error_selectDataToSend);
-                setTab(Tabs.COMPOSE);
-                refreshView();
+                showCompose(VIEW_COMPOSE_ID);
                 return;
             }
 
@@ -1358,14 +1331,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         return d.getFileSize();
     }
 
-    @Override
-    public void onComposeResultListener(Bundle data) {
-        int resultCode = data.getInt(extra.RESULT_CODE);
+    private void handleComposeResult(int resultCode, Intent data) throws SQLException {
         DraftData d = DraftData.INSTANCE;
         String text = null;
         if (data != null) {
-            text = data.getString(extra.TEXT_MESSAGE);
-            long rowIdRecipient = data.getLong(extra.RECIPIENT_ROW_ID, -1L);
+            text = data.getExtras().getString(extra.TEXT_MESSAGE);
+            long rowIdRecipient = data.getExtras().getLong(extra.RECIPIENT_ROW_ID, -1L);
             if (rowIdRecipient > -1) {
                 RecipientDbAdapter dbRecipient = RecipientDbAdapter
                         .openInstance(getApplicationContext());
@@ -1386,11 +1357,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
 
         switch (resultCode) {
-            case ComposeFragment.RESULT_SAVE:
+            case ComposeActivity.RESULT_SAVE:
                 MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
                 d.setText(text);
                 if (d.getSendMsgRowId() < 0) {
-                    // create draft (need at least recipient(file) or text
+                    // create draft (need at least recipient(file) or
+                    // text
                     // chosen...
                     if (!TextUtils.isEmpty(d.getText()) || !TextUtils.isEmpty(d.getFileName())) {
                         long rowId = dbMessage.createDraftMessage(d.getRecip(), d.getSendMsg(),
@@ -1424,7 +1396,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             showNote(R.string.error_UnableToUpdateMessageInDB);
                         }
                     } else {
-                        // message is empty, we should remove from database...
+                        // message is empty, we should remove from
+                        // database...
                         if (!dbMessage.deleteMessage(d.getSendMsgRowId())) {
                             showNote(String.format(getString(R.string.state_MessagesDeleted), 0));
                         }
@@ -1433,7 +1406,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
 
                 break;
-            case ComposeFragment.RESULT_SEND:
+            case ComposeActivity.RESULT_SEND:
                 // create new
                 MessageData sendMsg = d.getSendMsg();
                 // set sent time closest to UI command
@@ -1455,25 +1428,24 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 // manual message, keep compose tab draft
                 doSendMessageStart(new MessageTransport(d.getRecip(), sendMsg, true));
                 break;
-            case ComposeFragment.RESULT_RESTART:
+            case ComposeActivity.RESULT_RESTART:
                 refreshView();
                 break;
-            case ComposeFragment.RESULT_USEROPTIONS:
+            case ComposeActivity.RESULT_USEROPTIONS:
                 showChangeSenderOptions();
                 break;
-            case ComposeFragment.RESULT_FILESEL:
+            case ComposeActivity.RESULT_FILESEL:
                 // user wants to pick a file to send
                 showFileAttach();
                 break;
-            case ComposeFragment.RESULT_RECIPSEL:
+            case ComposeActivity.RESULT_RECIPSEL:
                 // user wants to pick a recipient
                 showRecipientSelect(VIEW_RECIPSEL_ID);
                 break;
-            case ComposeFragment.RESULT_FILEREMOVE:
+            case ComposeActivity.RESULT_FILEREMOVE:
                 // user wants to remove file
                 d.removeFile();
-                setTab(Tabs.COMPOSE);
-                refreshView();
+                showCompose(VIEW_COMPOSE_ID);
                 break;
         }
     }
@@ -1616,8 +1588,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             System.currentTimeMillis());
                     d.setSendMsgRowId(rowId);
                 }
-                setTab(Tabs.COMPOSE);
-                refreshView();
+                showCompose(VIEW_COMPOSE_ID);
                 break;
             case MessagesFragment.RESULT_EDITMESSAGE:
                 d.clearSendMsg();
@@ -1644,8 +1615,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                         cem.close();
                     }
                 }
-                setTab(Tabs.COMPOSE);
-                refreshView();
+                showCompose(VIEW_COMPOSE_ID);
                 break;
             case MessagesFragment.RESULT_GETMESSAGE:
                 MessageData inbox = new MessageData();
@@ -2072,13 +2042,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
                                     CheckRegistrationStateTask task = new CheckRegistrationStateTask();
                                     task.execute(d.getRecip());
-
-                                    setTab(Tabs.COMPOSE);
-                                    refreshView();
+                                    showCompose(VIEW_COMPOSE_ID);
                                 } else {
                                     showNote(R.string.error_InvalidRecipient);
-                                    setTab(Tabs.COMPOSE);
-                                    refreshView();
+                                    showCompose(VIEW_COMPOSE_ID);
                                     break;
                                 }
                             } finally {
@@ -2089,8 +2056,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                     case Activity.RESULT_CANCELED:
                         // clear the selection
                         d.clearRecip();
-                        setTab(Tabs.COMPOSE);
-                        refreshView();
+                        showCompose(VIEW_COMPOSE_ID);
                         break;
                 }
                 break;
@@ -2353,28 +2319,23 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             refreshView();
                             break;
                         }
-
-                        setTab(Tabs.COMPOSE);
-                        refreshView();
+                        showCompose(VIEW_COMPOSE_ID);
                         break;
                     case RESULT_CANCELED:
                         d.removeFile();
-                        setTab(Tabs.COMPOSE);
-                        refreshView();
+                        showCompose(VIEW_COMPOSE_ID);
                         break;
                     default:
                         break;
                 }
                 break;
 
-            case RESULT_PICK_MSGAPP:
-                setTab(Tabs.COMPOSE);
-                refreshView();
-                break;
-
             case RESULT_ERROR:
                 showExit(RESULT_CANCELED);
                 break;
+
+            case VIEW_COMPOSE_ID:
+                handleComposeResult(resultCode, data);
 
         }
         super.onActivityResult(requestCode, resultCode, data);
@@ -3721,6 +3682,11 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         Intent intent = new Intent(HomeActivity.this, PickRecipientsActivity.class);
         intent.putExtra(extra.ALLOW_EXCH, true);
         intent.putExtra(extra.ALLOW_INTRO, true);
+        startActivityForResult(intent, requestCode);
+    }
+
+    private void showCompose(int requestCode) {
+        Intent intent = new Intent(HomeActivity.this, ComposeActivity.class);
         startActivityForResult(intent, requestCode);
     }
 

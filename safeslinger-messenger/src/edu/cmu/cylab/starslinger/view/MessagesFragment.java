@@ -60,8 +60,8 @@ import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -115,7 +115,7 @@ public class MessagesFragment extends Fragment {
     private static int mListThreadVisiblePos;
     private static int mListThreadTopOffset;
     private static EditText mEditTextMessage;
-    private Button mButtonSend;
+    private ImageButton mButtonSend;
     private LinearLayout mComposeWidget;
     private static MessageData mDraft;
     private Handler mMsgFragmentHandler = new Handler();
@@ -235,7 +235,7 @@ public class MessagesFragment extends Fragment {
 
         mEditTextMessage = (EditText) vFrag.findViewById(R.id.SendEditTextMessage);
 
-        mButtonSend = (Button) vFrag.findViewById(R.id.SendButtonSend);
+        mButtonSend = (ImageButton) vFrag.findViewById(R.id.SendButtonSend);
         mButtonSend.setOnClickListener(new OnClickListener() {
 
             @Override
