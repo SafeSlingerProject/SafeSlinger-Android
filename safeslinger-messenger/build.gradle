@@ -1,11 +1,12 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        minSdkVersion 8
+        applicationId "edu.cmu.cylab.starslinger"
+        minSdkVersion 9
         targetSdkVersion 21
     }
     sourceSets {
@@ -23,4 +24,11 @@ android {
             minifyEnabled false
         }
     }
+}
+
+dependencies {
+    compile project(':android-vcard')
+    compile project(':safeslinger-exchange')
+    compile 'com.android.support:appcompat-v7:19.1.0'
+    compile 'com.android.support:support-v4:21.0.3'
 }

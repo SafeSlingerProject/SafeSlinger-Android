@@ -1,12 +1,13 @@
-
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1'
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
 
     defaultConfig {
-        minSdkVersion 4
+        applicationId "edu.cmu.cylab.starslinger.demo"
+        minSdkVersion 8
+        targetSdkVersion 21
     }
     sourceSets {
         main {
@@ -18,7 +19,14 @@ android {
     lintOptions {
         abortOnError false
     }
-    dependencies {
-        compile project(':safeslinger-exchange')
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
     }
+}
+
+dependencies {
+    compile project(':safeslinger-exchange')
+    compile 'com.android.support:appcompat-v7:19.1.0'
 }

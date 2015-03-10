@@ -33,7 +33,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <application android:allowBackup="false" >
+    <application>
         <activity
             android:name="edu.cmu.cylab.starslinger.exchange.ExchangeActivity"
             android:label="@string/lib_name"

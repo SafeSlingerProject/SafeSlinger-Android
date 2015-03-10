@@ -433,7 +433,7 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.layout.recipcontext, menu);
+        inflater.inflate(R.menu.recipcontext, menu);
 
         AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
         menu.add(Menu.NONE, R.id.item_key_details, Menu.NONE, R.string.menu_Details);

@@ -24,3 +24,7 @@ android {
         }
     }
 }
+
+dependencies {
+    compile files('libs/commons-codec-1.4.jar')
+}
