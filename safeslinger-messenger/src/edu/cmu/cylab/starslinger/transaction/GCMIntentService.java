@@ -37,6 +37,11 @@ public class GCMIntentService extends IntentService
     
     private static WebEngine mWeb = null;
     
+    public GCMIntentService()
+    {
+    	super(C2DMessaging.SENDER_ID);
+    }
+    
 	public GCMIntentService(String name) {
 		super(name);
 	}
