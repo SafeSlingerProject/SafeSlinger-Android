@@ -321,26 +321,26 @@ public class WebEngine {
     private void handleMessagingErrorCodes(byte[] resp) throws ExchangeException,
             MessageNotFoundException {
         String checkError = new String(resp) + "";
-        if (checkError.contains(C2DMBaseReceiver.ERRMSG_ERROR_PREFIX)) {
-            if (checkError.contains(C2DMBaseReceiver.ERRMSG_QUOTA_EXCEEDED)) {
+        if (checkError.contains(C2DMessaging.ERRMSG_ERROR_PREFIX)) {
+            if (checkError.contains(C2DMessaging.ERRMSG_QUOTA_EXCEEDED)) {
                 throw new ExchangeException(mCtx.getString(R.string.error_PushMsgQuotaExceeded));
-            } else if (checkError.contains(C2DMBaseReceiver.ERRMSG_DEVICE_QUOTA_EXCEEDED)) {
+            } else if (checkError.contains(C2DMessaging.ERRMSG_DEVICE_QUOTA_EXCEEDED)) {
                 throw new ExchangeException(
                         mCtx.getString(R.string.error_PushMsgDeviceQuotaExceeded));
-            } else if (checkError.contains(C2DMBaseReceiver.ERRMSG_INVALID_REGISTRATION)) {
+            } else if (checkError.contains(C2DMessaging.ERRMSG_INVALID_REGISTRATION)) {
                 throw new ExchangeException(
                         mCtx.getString(R.string.error_PushMsgInvalidRegistration));
-            } else if (checkError.contains(C2DMBaseReceiver.ERRMSG_NOT_REGISTERED)) {
+            } else if (checkError.contains(C2DMessaging.ERRMSG_NOT_REGISTERED)) {
                 throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotRegistered));
-            } else if (checkError.contains(C2DMBaseReceiver.ERRMSG_MESSAGE_TOO_BIG)) {
+            } else if (checkError.contains(C2DMessaging.ERRMSG_MESSAGE_TOO_BIG)) {
                 throw new ExchangeException(mCtx.getString(R.string.error_PushMsgMessageTooBig));
-            } else if (checkError.contains(C2DMBaseReceiver.ERRMSG_MISSING_COLLAPSE_KEY)) {
+            } else if (checkError.contains(C2DMessaging.ERRMSG_MISSING_COLLAPSE_KEY)) {
                 throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
-            } else if (checkError.contains(C2DMBaseReceiver.ERRMSG_NOTIFCATION_FAIL)) {
+            } else if (checkError.contains(C2DMessaging.ERRMSG_NOTIFCATION_FAIL)) {
                 throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
-            } else if (checkError.contains(C2DMBaseReceiver.ERRMSG_SERVICE_FAIL)) {
+            } else if (checkError.contains(C2DMessaging.ERRMSG_SERVICE_FAIL)) {
                 throw new ExchangeException(mCtx.getString(R.string.error_PushMsgServiceFail));
-            } else if (checkError.contains(C2DMBaseReceiver.ERRMSG_MESSAGE_NOT_FOUND)) {
+            } else if (checkError.contains(C2DMessaging.ERRMSG_MESSAGE_NOT_FOUND)) {
                 throw new MessageNotFoundException(
                         mCtx.getString(R.string.error_PushMsgMessageNotFound));
             }
@@ -349,10 +349,10 @@ public class WebEngine {
 
     private boolean isNotRegisteredErrorCodes(byte[] resp) {
         String checkError = new String(resp) + "";
-        if (checkError.contains(C2DMBaseReceiver.ERRMSG_ERROR_PREFIX)) {
-            if (checkError.contains(C2DMBaseReceiver.ERRMSG_INVALID_REGISTRATION)) {
+        if (checkError.contains(C2DMessaging.ERRMSG_ERROR_PREFIX)) {
+            if (checkError.contains(C2DMessaging.ERRMSG_INVALID_REGISTRATION)) {
                 return true;
-            } else if (checkError.contains(C2DMBaseReceiver.ERRMSG_NOT_REGISTERED)) {
+            } else if (checkError.contains(C2DMessaging.ERRMSG_NOT_REGISTERED)) {
                 return true;
             }
         }

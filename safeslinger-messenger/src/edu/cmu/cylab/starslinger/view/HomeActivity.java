@@ -143,8 +143,6 @@ import edu.cmu.cylab.starslinger.model.SlingerIdentity;
 import edu.cmu.cylab.starslinger.model.UseContactItem;
 import edu.cmu.cylab.starslinger.model.UseContactItem.UCType;
 import edu.cmu.cylab.starslinger.model.UserData;
-import edu.cmu.cylab.starslinger.transaction.C2DMBaseReceiver;
-import edu.cmu.cylab.starslinger.transaction.C2DMReceiver;
 import edu.cmu.cylab.starslinger.transaction.C2DMessaging;
 import edu.cmu.cylab.starslinger.transaction.MessageNotFoundException;
 import edu.cmu.cylab.starslinger.transaction.WebEngine;
@@ -193,6 +191,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     private ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
 
+//    private GoogleCloudMessaging mGcm;
+    
     private enum Tabs {
         MESSAGE, COMPOSE, SLINGKEYS, INTRO
     }
@@ -228,29 +228,31 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
             String error = intent.getStringExtra(extra.ERROR);
             if (error != null) {
-                if (error.equals(C2DMBaseReceiver.ERRREG_SERVICE_NOT_AVAILABLE)) {
+                if (error.equals(C2DMessaging.ERRREG_SERVICE_NOT_AVAILABLE)) {
                     long backoff = SafeSlingerPrefs.getPusgRegBackoff();
                     showProgressUpdate(String.format(
                             getString(R.string.error_C2DMRegServiceNotAvailable),
                             backoff / 2 / 1000));
                     setProgressCancelHandler();
                     return;
-                } else if (error.equals(C2DMBaseReceiver.ERRREG_ACCOUNT_MISSING)) {
-                    showErrorExit(R.string.error_C2DMRegAccountMissing);
-                    return;
-                } else if (error.equals(C2DMBaseReceiver.ERRREG_INVALID_SENDER)) {
-                    showErrorExit(R.string.error_C2DMRegInvalidSender);
-                    return;
-                } else if (error.equals(C2DMBaseReceiver.ERRREG_AUTHENTICATION_FAILED)) {
-                    showErrorExit(R.string.error_C2DMRegAuthenticationFailed);
-                    return;
-                } else if (error.equals(C2DMBaseReceiver.ERRREG_TOO_MANY_REGISTRATIONS)) {
-                    showErrorExit(R.string.error_C2DMRegTooManyRegistrations);
-                    return;
-                } else if (error.equals(C2DMBaseReceiver.ERRREG_PHONE_REGISTRATION_ERROR)) {
-                    showErrorExit(R.string.error_C2DMRegPhoneRegistrationError);
-                    return;
-                } else {
+                } 
+//                else if (error.equals(C2DMBaseReceiver.ERRREG_ACCOUNT_MISSING)) {
+//                    showErrorExit(R.string.error_C2DMRegAccountMissing);
+//                    return;
+//                } else if (error.equals(C2DMBaseReceiver.ERRREG_INVALID_SENDER)) {
+//                    showErrorExit(R.string.error_C2DMRegInvalidSender);
+//                    return;
+//                } else if (error.equals(C2DMBaseReceiver.ERRREG_AUTHENTICATION_FAILED)) {
+//                    showErrorExit(R.string.error_C2DMRegAuthenticationFailed);
+//                    return;
+//                } else if (error.equals(C2DMBaseReceiver.ERRREG_TOO_MANY_REGISTRATIONS)) {
+//                    showErrorExit(R.string.error_C2DMRegTooManyRegistrations);
+//                    return;
+//                } else if (error.equals(C2DMBaseReceiver.ERRREG_PHONE_REGISTRATION_ERROR)) {
+//                    showErrorExit(R.string.error_C2DMRegPhoneRegistrationError);
+//                    return;
+//                } 
+                else {
                     // Unexpected registration errors.
                     showErrorExit(error);
                     return;
@@ -486,6 +488,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             bar.setSubtitle(String.format("(%s)", getString(R.string.label_DeviceInSendOnlyMode)));
         }
 
+//        mGcm = GoogleCloudMessaging.getInstance(this);
+        
+        String regid = C2DMessaging.getRegistrationId(this);
+
+        if (regid.isEmpty()) {
+            C2DMessaging.registerInBackground(this);
+        }
+        
         mTabsAdapter = new TabsAdapter(this, bar, mViewPager);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagListMessages),
                 MessagesFragment.class, null);
@@ -503,7 +513,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         // prepare for push registration...
-        registerReceiver(mPushRegReceiver, new IntentFilter(C2DMReceiver.PUSH_REGISTERED));
+        registerReceiver(mPushRegReceiver, new IntentFilter(C2DMessaging.PUSH_REGISTERED));
         IntentFilter intentFilter = new IntentFilter(
                 SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING);
         intentFilter.setPriority(2);
@@ -785,7 +795,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         // if push token bad....
         // ...request a push token... (restart)
         if (notify != SafeSlingerConfig.NOTIFY_NOPUSH) {
-            if (TextUtils.isEmpty(token) && notify == SafeSlingerConfig.NOTIFY_ANDROIDC2DM) {
+            if (TextUtils.isEmpty(token) && notify == SafeSlingerConfig.NOTIFY_ANDROIDGCM) {
                 // ensure that user has registered with push service...
                 doGetPushRegistration();
                 return false;
@@ -2009,7 +2019,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                             if (!TextUtils.isEmpty(passCached)) {
                                 String pushRegistrationId = SafeSlingerPrefs
                                         .getPushRegistrationId();
-                                int notify = SafeSlingerConfig.NOTIFY_ANDROIDC2DM;
+                                int notify = SafeSlingerConfig.NOTIFY_ANDROIDGCM;
                                 SlingerIdentity myId = new SlingerIdentity(pushRegistrationId,
                                         notify, null);
                                 UpdateServerRegistrationIdTask regUpdate = new UpdateServerRegistrationIdTask();
@@ -3357,6 +3367,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
     }
 
+    // Not changed Type here since, it looks like its updating old registration Ids associated with C2DM
     private class UpdateServerRegistrationIdTask extends AsyncTask<SlingerIdentity, String, String> {
         private WebEngine mWeb = new WebEngine(HomeActivity.this,
                 SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
@@ -3530,7 +3541,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
 
         showProgress(getString(R.string.prog_RequestingPushReg));
-        C2DMessaging.register(getApplicationContext(), SafeSlingerConfig.PUSH_SENDERID_EMAIL);
+//        C2DMessaging.register(getApplicationContext(), SafeSlingerConfig.PUSH_SENDERID_EMAIL);
+        C2DMessaging.registerInBackground(this);
     }
 
     private boolean saveFileAtLocation(File downloadedFile, MessageData recvMsg) {

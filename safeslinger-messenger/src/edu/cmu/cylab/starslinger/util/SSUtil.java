@@ -133,7 +133,7 @@ public class SSUtil {
         if (Build.VERSION.SDK_INT < 8 || !isGoogleAccountPresent(ctx)) {
             return SafeSlingerConfig.NOTIFY_NOPUSH;
         } else {
-            return SafeSlingerConfig.NOTIFY_ANDROIDC2DM;
+            return SafeSlingerConfig.NOTIFY_ANDROIDGCM;
         }
     }
 
