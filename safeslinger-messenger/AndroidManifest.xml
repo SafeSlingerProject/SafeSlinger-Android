@@ -20,7 +20,10 @@
     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-    THE SOFTWARE.
+    THE SOFTWARE.
+
+
+
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -158,7 +161,10 @@
 
         <!--
              Only GCM servers can send messages for the app. If permission is 
-			not set - any other app can generate it
+			not set - any other app can generate it
+
+
+
         -->
         <receiver
             android:name=".transaction.GCMBroadcaastReceiver"
