@@ -675,7 +675,7 @@ public class RecipientDbAdapter {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
             if (pushtoken.length() == 183 || pushtoken.length() == 119) {
-                values.put(KEY_NOTIFY, SafeSlingerConfig.NOTIFY_ANDROIDC2DM);
+                values.put(KEY_NOTIFY, SafeSlingerConfig.NOTIFY_ANDROIDGCM);
             } else if (pushtoken.length() == 64) {
                 values.put(KEY_NOTIFY, SafeSlingerConfig.NOTIFY_APPLEUA);
             } else {

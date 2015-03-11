@@ -33,7 +33,8 @@ import android.text.TextUtils;
 
 public class SafeSlingerConfig {
 
-    public static final String HTTPURL_PREFIX = "https://";
+//    public static final String HTTPURL_PREFIX = "https://";
+	public static final String HTTPURL_PREFIX = "https://01060000t-gcm-dot-";
     public static final String HTTPURL_MESSENGER_HOST = "starsling-server.appspot.com";
     public static final String HTTPURL_EXCHANGE_HOST = "keyslinger-server.appspot.com";
     public static final String HTTPURL_SUFFIX = "";
