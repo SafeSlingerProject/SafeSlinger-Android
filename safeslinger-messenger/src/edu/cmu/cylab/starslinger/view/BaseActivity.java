@@ -865,19 +865,6 @@ public class BaseActivity extends ActionBarActivity {
             }
         }
 
-        // correct invalid notification types...
-        for (int i = 0; i < contacts.size(); i++) {
-            RecipientRow r = contacts.get(i);
-
-            if (r != null) {
-                // find tokens that have been mis-labeled
-                String t = r.getPushtoken();
-                if (r.getNotify() <= SafeSlingerConfig.NOTIFY_NOPUSH && !TextUtils.isEmpty(t)) {
-                    dbRecipient.updateRecipientNotifyFromToken(r.getRowId(), t);
-                }
-            }
-        }
-
         // 1st sort by push token, remove older tokens...
         Collections.sort(contacts, new PushTokenKeyDateComparator());
         for (int i = 0; i < contacts.size(); i++) {

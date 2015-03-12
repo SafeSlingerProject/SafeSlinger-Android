@@ -671,21 +671,6 @@ public class RecipientDbAdapter {
         }
     }
 
-    public boolean updateRecipientNotifyFromToken(long rowId, String pushtoken) {
-        synchronized (SafeSlinger.sDataLock) {
-            ContentValues values = new ContentValues();
-            if (pushtoken.length() == 183 || pushtoken.length() == 119) {
-                values.put(KEY_NOTIFY, SafeSlingerConfig.NOTIFY_ANDROIDGCM);
-            } else if (pushtoken.length() == 64) {
-                values.put(KEY_NOTIFY, SafeSlingerConfig.NOTIFY_APPLEUA);
-            } else {
-                return false;
-            }
-
-            return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;
-        }
-    }
-
     public boolean updateRecipientRegistrationState(long rowId, boolean notreg) {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();

@@ -40,8 +40,6 @@ import a_vcard.android.syncml.pim.vcard.ContactStruct;
 import a_vcard.android.syncml.pim.vcard.Name;
 import a_vcard.android.syncml.pim.vcard.VCardComposer;
 import a_vcard.android.syncml.pim.vcard.VCardException;
-import android.accounts.Account;
-import android.accounts.AccountManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -130,22 +128,22 @@ public class SSUtil {
     }
 
     public static int getLocalNotification(Context ctx) {
-        if (Build.VERSION.SDK_INT < 8 || !isGoogleAccountPresent(ctx)) {
+        if (Build.VERSION.SDK_INT < 8) {
             return SafeSlingerConfig.NOTIFY_NOPUSH;
         } else {
             return SafeSlingerConfig.NOTIFY_ANDROIDGCM;
         }
     }
 
-    public static boolean isGoogleAccountPresent(Context ctx) {
-        AccountManager am = AccountManager.get(ctx);
-        Account[] accounts = am.getAccountsByType("com.google");
-        if (accounts == null || accounts.length == 0) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+    // public static boolean isGoogleAccountPresent(Context ctx) {
+    // AccountManager am = AccountManager.get(ctx);
+    // Account[] accounts = am.getAccountsByType("com.google");
+    // if (accounts == null || accounts.length == 0) {
+    // return false;
+    // } else {
+    // return true;
+    // }
+    // }
 
     public static File getOldDefaultDownloadPath(String mimeType, String filename) {
         if (TextUtils.isEmpty(mimeType)) {

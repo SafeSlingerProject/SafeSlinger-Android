@@ -108,6 +108,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+
 import edu.cmu.cylab.starslinger.ExchangeException;
 import edu.cmu.cylab.starslinger.GeneralException;
 import edu.cmu.cylab.starslinger.MyLog;
@@ -181,6 +185,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     public static final int NOTIFY_SLINGKEYS_REMIND_ID = 503;
 
     private static final int MS_POLL_INTERVAL = 500;
+    private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
     // static data
     private static ProgressDialog sProg = null;
@@ -190,8 +195,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     private ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
 
-//    private GoogleCloudMessaging mGcm;
-    
     private enum Tabs {
         MESSAGE, //
         SLINGKEYS, //
@@ -236,24 +239,22 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             backoff / 2 / 1000));
                     setProgressCancelHandler();
                     return;
-                } 
-//                else if (error.equals(C2DMBaseReceiver.ERRREG_ACCOUNT_MISSING)) {
-//                    showErrorExit(R.string.error_C2DMRegAccountMissing);
-//                    return;
-//                } else if (error.equals(C2DMBaseReceiver.ERRREG_INVALID_SENDER)) {
-//                    showErrorExit(R.string.error_C2DMRegInvalidSender);
-//                    return;
-//                } else if (error.equals(C2DMBaseReceiver.ERRREG_AUTHENTICATION_FAILED)) {
-//                    showErrorExit(R.string.error_C2DMRegAuthenticationFailed);
-//                    return;
-//                } else if (error.equals(C2DMBaseReceiver.ERRREG_TOO_MANY_REGISTRATIONS)) {
-//                    showErrorExit(R.string.error_C2DMRegTooManyRegistrations);
-//                    return;
-//                } else if (error.equals(C2DMBaseReceiver.ERRREG_PHONE_REGISTRATION_ERROR)) {
-//                    showErrorExit(R.string.error_C2DMRegPhoneRegistrationError);
-//                    return;
-//                } 
-                else {
+                } else if (error.equals(C2DMessaging.ERRREG_ACCOUNT_MISSING)) {
+                    showErrorExit(R.string.error_C2DMRegAccountMissing);
+                    return;
+                } else if (error.equals(C2DMessaging.ERRREG_INVALID_SENDER)) {
+                    showErrorExit(R.string.error_C2DMRegInvalidSender);
+                    return;
+                } else if (error.equals(C2DMessaging.ERRREG_AUTHENTICATION_FAILED)) {
+                    showErrorExit(R.string.error_C2DMRegAuthenticationFailed);
+                    return;
+                } else if (error.equals(C2DMessaging.ERRREG_TOO_MANY_REGISTRATIONS)) {
+                    showErrorExit(R.string.error_C2DMRegTooManyRegistrations);
+                    return;
+                } else if (error.equals(C2DMessaging.ERRREG_PHONE_REGISTRATION_ERROR)) {
+                    showErrorExit(R.string.error_C2DMRegPhoneRegistrationError);
+                    return;
+                } else {
                     // Unexpected registration errors.
                     showErrorExit(error);
                     return;
@@ -481,18 +482,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         final ActionBar bar = getSupportActionBar();
         bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         bar.setTitle(R.string.app_name);
-        if (!SSUtil.isGoogleAccountPresent(getApplicationContext())) {
-            bar.setSubtitle(String.format("(%s)", getString(R.string.label_DeviceInSendOnlyMode)));
-        }
+        // if (!SSUtil.isGoogleAccountPresent(getApplicationContext())) {
+        // bar.setSubtitle(String.format("(%s)",
+        // getString(R.string.label_DeviceInSendOnlyMode)));
+        // }
 
-//        mGcm = GoogleCloudMessaging.getInstance(this);
-        
-        String regid = C2DMessaging.getRegistrationId(this);
-
-        if (regid.isEmpty()) {
-            C2DMessaging.registerInBackground(this);
-        }
-        
         mTabsAdapter = new TabsAdapter(this, bar, mViewPager);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagListMessages),
                 MessagesFragment.class, null);
@@ -1989,7 +1983,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             if (!TextUtils.isEmpty(passCached)) {
                                 String pushRegistrationId = SafeSlingerPrefs
                                         .getPushRegistrationId();
-                                int notify = SafeSlingerConfig.NOTIFY_ANDROIDGCM;
+                                int notify = SSUtil.getLocalNotification(getApplicationContext());
                                 SlingerIdentity myId = new SlingerIdentity(pushRegistrationId,
                                         notify, null);
                                 UpdateServerRegistrationIdTask regUpdate = new UpdateServerRegistrationIdTask();
@@ -2770,6 +2764,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     @Override
     protected void onResume() {
         super.onResume();
+        checkPlayServices();
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH)
             SafeSlinger.getApplication().setMessageFragActive(true);
@@ -3328,7 +3323,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         }
     }
 
-    // Not changed Type here since, it looks like its updating old registration Ids associated with C2DM
     private class UpdateServerRegistrationIdTask extends AsyncTask<SlingerIdentity, String, String> {
         private WebEngine mWeb = new WebEngine(HomeActivity.this,
                 SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
@@ -3488,10 +3482,9 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
     private void doGetPushRegistration() {
 
-        // google account is required
-        if (!SSUtil.isGoogleAccountPresent(getApplicationContext())) {
-            showAccountsSettings();
-            showErrorExit(R.string.error_C2DMRegAccountMissing);
+        // play services is required
+        if (!checkPlayServices()) {
+            showErrorExit(R.string.error_C2DMRegPlayServicesMissing);
             return;
         }
 
@@ -3502,7 +3495,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         }
 
         showProgress(getString(R.string.prog_RequestingPushReg));
-//        C2DMessaging.register(getApplicationContext(), SafeSlingerConfig.PUSH_SENDERID_EMAIL);
+        // C2DMessaging.register(getApplicationContext(),
+        // SafeSlingerConfig.PUSH_SENDERID_EMAIL);
         C2DMessaging.registerInBackground(this);
     }
 
@@ -4268,6 +4262,20 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         } else {
             showNote(SafeSlinger.getUnsupportedFeatureString("View Web Page"));
         }
+    }
+
+    private boolean checkPlayServices() {
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
+                GooglePlayServicesUtil.getErrorDialog(resultCode, this,
+                        PLAY_SERVICES_RESOLUTION_REQUEST).show();
+            } else {
+                MyLog.i(TAG, "This device is not supported.");
+            }
+            return false;
+        }
+        return true;
     }
 
     @Override

@@ -322,6 +322,8 @@ public class WebEngine {
             MessageNotFoundException {
         String checkError = new String(resp) + "";
         if (checkError.contains(C2DMessaging.ERRMSG_ERROR_PREFIX)) {
+
+            // Errors possible with C2DM and GCM
             if (checkError.contains(C2DMessaging.ERRMSG_QUOTA_EXCEEDED)) {
                 throw new ExchangeException(mCtx.getString(R.string.error_PushMsgQuotaExceeded));
             } else if (checkError.contains(C2DMessaging.ERRMSG_DEVICE_QUOTA_EXCEEDED)) {
@@ -343,6 +345,24 @@ public class WebEngine {
             } else if (checkError.contains(C2DMessaging.ERRMSG_MESSAGE_NOT_FOUND)) {
                 throw new MessageNotFoundException(
                         mCtx.getString(R.string.error_PushMsgMessageNotFound));
+
+                // Errors possible with GCM only below...
+            } else if (checkError.contains(C2DMessaging.ERRMSG_DEVICE_MESSAGE_RATE_EXCEEDED)) {
+                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgQuotaExceeded));
+            } else if (checkError.contains(C2DMessaging.ERRMSG_INTERNAL_SERVER_ERROR)) {
+                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgServiceFail));
+            } else if (checkError.contains(C2DMessaging.ERRMSG_INVALID_DATA_KEY)) {
+                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgServiceFail));
+            } else if (checkError.contains(C2DMessaging.ERRMSG_INVALID_PACKAGE_NAME)) {
+                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
+            } else if (checkError.contains(C2DMessaging.ERRMSG_INVALID_TTL)) {
+                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
+            } else if (checkError.contains(C2DMessaging.ERRMSG_MISMATCH_SENDER_ID)) {
+                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
+            } else if (checkError.contains(C2DMessaging.ERRMSG_MISSING_REGISTRATION)) {
+                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotRegistered));
+            } else if (checkError.contains(C2DMessaging.ERRMSG_UNAVAILABLE)) {
+                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgServiceFail));
             }
         }
     }

@@ -42,4 +42,4 @@
 //        C2DMBaseReceiver.runIntentInService(context, intent);
 //        setResult(Activity.RESULT_OK, null /* data */, null /* extra */);
 //    }
-//}
+// }

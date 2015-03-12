@@ -21,15 +21,12 @@
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
-
-
-
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.cmu.cylab.starslinger"
     android:versionCode="0x01080201"
-    android:versionName="1.8.2.2" >
+    android:versionName="1.8.2.3" >
 
     <!-- API 9 is the minimum required for password-based encryption PBKDF2WithHmacSHA1. -->
     <!-- API 9 is the minimum required to receive GCM push messages. -->
@@ -163,14 +160,12 @@
         </activity>
 
         <service android:name=".Service" />
-<!--         <service android:name=".transaction.C2DMReceiver" /> -->
+        <!-- <service android:name=".transaction.C2DMReceiver" /> -->
+
 
         <!--
              Only GCM servers can send messages for the app. If permission is 
 			not set - any other app can generate it
-
-
-
         -->
         <receiver
             android:name=".transaction.GCMBroadcaastReceiver"
@@ -190,8 +185,13 @@
                 <category android:name="edu.cmu.cylab.starslinger" />
             </intent-filter>
         </receiver>
-        
+
         <service android:name=".transaction.GCMIntentService" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <!-- <receiver -->
         <!-- android:name=".transaction.C2DMBroadcastReceiver" -->
         <!-- android:permission="com.google.android.c2dm.permission.SEND" > -->
