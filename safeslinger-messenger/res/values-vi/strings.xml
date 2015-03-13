@@ -187,7 +187,6 @@
     <string name="label_hometag">Nhà</string>
     <string name="label_hours">%d giờ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud được kích hoạt. Chạm vào nút Done khi hoàn tất.</string>
-    <string name="label_InstNoMessages">Không có tin nhắn. Bạn có thể gửi một tin nhắn từ các tab Compose.</string>
     <string name="label_InstNoRecipients">Để thêm người nhận, đầu tiên Sling phím với một hoặc nhiều người sử dụng khác cùng một lúc bạn phải. Bạn cũng có thể gửi một Sling phím liên lạc mời từ menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Không ai trong số những người nhận hiện tại của bạn phù hợp với truy vấn tìm kiếm của bạn. Hãy thử một truy vấn khác nhau hoặc mời một số liên lạc mới.</string>
     <string name="label_InstNoSharedFile">Không chia sẻ tập tin. Kết nối điện thoại với iTunes và kéo tập tin vào thư mục chia sẻ.</string>

@@ -187,7 +187,6 @@
     <string name="label_hometag">Үй</string>
     <string name="label_hours">%d сағат</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud қосылады. Аяқталған кезде Дайын түймесін түртіңіз.</string>
-    <string name="label_InstNoMessages">Хабар жоқ. Сіз Құрастыру қойындысындағы хабар жібере алады.</string>
     <string name="label_InstNoRecipients">Алушыларды қосу үшін, сіз бір уақытта бір немесе бірнеше басқа пайдаланушылармен бірінші Sling Keys тиіс. Сондай-ақ, мәзірден салпыншақты кілті байланыс шақыруды жібере алады.</string>
     <string name="label_InstNoRecipientsMatchQuery">Сіздің ағымдағы алушылардың ешқайсысы сіздің іздеу сұрауын сәйкес. Түрлі Сұранымды көріңіз немесе жаңа контакт шақырамыз сұраймыз.</string>
     <string name="label_InstNoSharedFile">Ортақ файл жоқ. Itunes құрылғыны қосыңыз және ортақ қалтаға файлдарды сүйреп апарыңыз.</string>

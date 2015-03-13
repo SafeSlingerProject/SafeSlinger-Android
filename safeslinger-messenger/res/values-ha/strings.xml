@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d hours</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud aka sa. Matsa Anyi button a lokacin da ya gama.</string>
-    <string name="label_InstNoMessages">Babu saƙonnin. Za ka iya aika saƙo daga shafin rubuta.</string>
     <string name="label_InstNoRecipients">Don ƙara masu karɓa, dole ku farko majayijawa Kunamu da daya ko fiye da sauran masu amfani a lokaci guda. Za ka iya aika majayijawa Kunamu lamba gayyatar daga menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Babu wani daga your halin yanzu masu karɓa dace ka tambayar nema. Don Allah kokarin daban-daban query ko kira sabuwar lamba.</string>
     <string name="label_InstNoSharedFile">Babu shared fayil. Gama na\'urarka da iTunes da kuma ja fayiloli zuwa shared babban fayil.</string>

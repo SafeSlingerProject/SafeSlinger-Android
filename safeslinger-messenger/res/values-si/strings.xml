@@ -187,7 +187,6 @@
     <string name="label_hometag">මුල් පිටුව</string>
     <string name="label_hours">%d පැය</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud සක්රිය කර ඇත. අවසන් වන විට සිදු කරන බොත්තම තට්ටු කරන්න.</string>
-    <string name="label_InstNoMessages">පණිවිඩ නැත. ඔබ සම්පාදන ටැබ් පණිවිඩයක් යැවිය හැක.</string>
     <string name="label_InstNoRecipients">ලාභීන් එකතු කිරීම සඳහා, ඔබ විසින් ම එකක් හෝ ඊට වැඩි, වෙනත් භාවිතා කරන්නන් සමඟ පළමු Sling යතුරු විය යුතුය. එසේම ඔබට මෙනුව සිට Sling යතුරු සබඳතා ආරාධනය යැවිය හැක.</string>
     <string name="label_InstNoRecipientsMatchQuery">ඔබේ වත්මන් ලබන්නන් කිසිවක් ඔබගේ සෙවුම් විමසුමක් ගලපන්න. වෙනස් විමසුම් උත්සාහ හෝ නව සබඳතා ආරාධනා කරන්න.</string>
     <string name="label_InstNoSharedFile">හවුල් ගොනු නැත. අවපතනය කරගන්න අයිටියුන්ස් සමඟ ඔබේ උපාංගය සම්බන්ධ හා හවුල් ෆෝල්ඩරය ගොනු ඇදගෙන යන්න.</string>

@@ -187,7 +187,6 @@
     <string name="label_hometag">บ้าน</string>
     <string name="label_hours">%d ชั่วโมง</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ถูกเปิดใช้งาน แตะปุ่มเสร็จสิ้นเมื่อเสร็จแล้ว</string>
-    <string name="label_InstNoMessages">ไม่มีข้อความ คุณสามารถส่งข้อความจากแท็บเขียน</string>
     <string name="label_InstNoRecipients">ในการเพิ่มผู้รับคุณต้องคีย์สลิงครั้งแรกกับหนึ่งหรือมากกว่าผู้ใช้อื่น ๆ ในเวลาเดียวกัน นอกจากนี้คุณยังอาจส่งสลิงคีย์เชิญติดต่อจากเมนู</string>
     <string name="label_InstNoRecipientsMatchQuery">ไม่มีผู้รับปัจจุบันของคุณตรงกับคำค้นหาของคุณ โปรดลองแบบสอบถามที่แตกต่างกันหรือเชิญติดต่อใหม่</string>
     <string name="label_InstNoSharedFile">ไม่มีไฟล์ที่ใช้ร่วมกัน เชื่อมต่ออุปกรณ์ของคุณกับ iTunes และลากไฟล์ไปยังโฟลเดอร์ที่ใช้ร่วมกัน</string>

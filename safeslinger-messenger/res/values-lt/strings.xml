@@ -187,7 +187,6 @@
     <string name="label_hometag">Namo</string>
     <string name="label_hours">%d valandos</string>
     <string name="label_iCloudEnable">SafeSlinger icloud yra įjungtas. Bakstelėkite Atlikta mygtuką, kai baigsite.</string>
-    <string name="label_InstNoMessages">Nėra pranešimų. Jūs galite siųsti pranešimą iš skirtuką redagavimas.</string>
     <string name="label_InstNoRecipients">Norėdami pridėti gavėjų, pirmiausia Sling \'raktai su vienu ar daugiau kitų vartotojų tuo pačiu metu turi. Jūs taip pat gali siųsti Sling Keys adresų kvietimą iš meniu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Nė vienas iš jūsų dabartinių gavėjų atitinkančių jūsų paieškos užklausą. Bandykite kitą užklausą arba pakviesti naują adresatą.</string>
     <string name="label_InstNoSharedFile">Ne pasidalino failą. Prijunkite savo prietaisą su iTunes ir vilkite failus į bendrai naudojamą aplanką.</string>

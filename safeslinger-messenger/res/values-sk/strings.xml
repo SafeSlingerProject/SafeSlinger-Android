@@ -187,7 +187,6 @@
     <string name="label_hometag">Domáce</string>
     <string name="label_hours">%d hodín</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud je povolené. Po dokončení Kliknite na tlačidlo Hotovo.</string>
-    <string name="label_InstNoMessages">Žiadne správy. Môžete poslať správu na karte Compose.</string>
     <string name="label_InstNoRecipients">Ak chcete pridať príjemcu, musíte najprv Sling kľúče s jedným alebo viacerými inými užívateľmi súčasne. Môžete tiež poslať Sling Keys kontaktné pozvanie z ponuky.</string>
     <string name="label_InstNoRecipientsMatchQuery">Žiadny zo súčasných príjemcov zodpovedajúce vášmu vyhľadávaniu dotazu. Prosím, skúste iný dotaz alebo pozvať nový kontakt.</string>
     <string name="label_InstNoSharedFile">No zdieľaný súbor. Pripojte zariadenie s iTunes a pretiahnuť súbory do zdieľanej zložky.</string>

@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d wakati</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ti wa ni sise. Tẹ awọn bọtini šee nigba ti pari.</string>
-    <string name="label_InstNoMessages">Ko si awọn ifiranṣẹ. O le fi ifiranṣẹ kan ranṣẹ lati Pese taabu.</string>
     <string name="label_InstNoRecipients">Lati fi awọn olugba, o gbọdọ akọkọ Sling bọtini pẹlu ọkan tabi diẹ ẹ sii miiran awọn olumulo ni akoko kanna. O le tun fi a Sling iwole olubasọrọ pipe si lati akojọ.</string>
     <string name="label_InstNoRecipientsMatchQuery">Kò ti rẹ ti isiyi olugba baramu rẹ ìbéèrè àwárí. Jọwọ gbiyanju kan ti o yatọ query tabi pe a titun olubasọrọ.</string>
     <string name="label_InstNoSharedFile">Ko si pín faili. So ẹrọ rẹ pẹlu iTunes ati fa awọn faili si pín folda.</string>

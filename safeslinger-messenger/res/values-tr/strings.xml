@@ -187,7 +187,6 @@
     <string name="label_hometag">Ev</string>
     <string name="label_hours">%d saat</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud etkindir. Bittiğinde Bitti düğmesine dokunun.</string>
-    <string name="label_InstNoMessages">Hiçbir mesajlar. Sen Oluştur sekmesinden mesaj gönderebilirsiniz.</string>
     <string name="label_InstNoRecipients">Alıcı eklemek için, yapmanız gerekir ilk Sapan Keys aynı anda bir veya daha fazla diğer kullanıcılarla. Ayrıca menüden bir Sapan Keys kontak daveti gönderebilir.</string>
     <string name="label_InstNoRecipientsMatchQuery">Mevcut alıcıların hiçbiri arama sorgusuyla eşleşen. Farklı bir sorgu deneyin veya yeni bir kişiyi davet edin.</string>
     <string name="label_InstNoSharedFile">Hiçbir dosya paylaştı. Paylaşılan klasöre iTunes ve sürükle dosyaları ile cihazınızı bağlayın.</string>

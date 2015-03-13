@@ -187,7 +187,6 @@
     <string name="label_hometag">Uy</string>
     <string name="label_hours">%d soat</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud yoqadi. Bitirgandan keyin Donu tugmasini bosing.</string>
-    <string name="label_InstNoMessages">No xabarlar. Siz tuzish yorlig\'ini xabar yuborishingiz mumkin.</string>
     <string name="label_InstNoRecipients">Qabul qiluvchilarni qo\'shish uchun, siz kerak birinchi Sling Qays bir vaqtning o\'zida bir yoki bir necha boshqa foydalanuvchilar bilan. Bundan tashqari, menyudan palaxmon Tugmalar aloqa taklifini yuborishi mumkin.</string>
     <string name="label_InstNoRecipientsMatchQuery">Sizning joriy oluvchilar birortasi qidirish so\'rovi natijasida topilgan. Bir xil so\'rovlar urinib ko\'ring yoki yangi aloqani taklif qiling.</string>
     <string name="label_InstNoSharedFile">Fayl yo\'q o\'rtoqlashdi. Birgalikda papkaga iTunes va drag fayllar bilan ulang.</string>

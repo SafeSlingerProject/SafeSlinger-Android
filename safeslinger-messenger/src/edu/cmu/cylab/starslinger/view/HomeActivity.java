@@ -167,7 +167,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     private static final int RESULT_PICK_CONTACT_SENDER = 1;
     private static final int RESULT_ERROR = 9;
     private static final int REQUEST_QRECEIVE_MGS = 14;
-    private static final int VIEW_COMPOSE_ID = 110;
     private static final int VIEW_FILEATTACH_ID = 120;
     private static final int VIEW_FILESAVE_ID = 130;
     private static final int VIEW_RECIPSEL_ID = 140;
@@ -422,8 +421,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         } else if (Intent.ACTION_SEND.equals(action) || Intent.ACTION_SEND_MULTIPLE.equals(action)) {
             // clicked share externally, load file, show compose
+            DraftData d = DraftData.INSTANCE;
+            d.clearRecip();
+            d.clearSendMsg();
             if (handleSendToAction()) {
-                showCompose(VIEW_COMPOSE_ID);
+                showRecipientSelect(VIEW_RECIPSEL_ID);
             }
         } else {
             setProperDefaultTab();
@@ -615,6 +617,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             for (int i = 0; i < mTabs.size(); i++) {
                 if (mTabs.get(i) == tag) {
                     mViewPager.setCurrentItem(i);
+                    supportInvalidateOptionsMenu(); // update action bar options
 
                     // refresh all that matter
                     switch (Tabs.values()[tab.getPosition()]) {
@@ -659,6 +662,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         @Override
         public void onTabReselected(Tab tab, FragmentTransaction ft) {
+            supportInvalidateOptionsMenu(); // update action bar options
+
             // refresh all that matter
             switch (Tabs.values()[tab.getPosition()]) {
                 case MESSAGE:
@@ -824,11 +829,20 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            MenuItem iAdd = menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages).setIcon(
-                    android.R.drawable.ic_menu_send);
-            MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
+        final int position = getSupportActionBar().getSelectedNavigationIndex();
+        if (position == Tabs.MESSAGE.ordinal()) {
+            if (MessagesFragment.getRecip() != null) {
+                MenuItem iAdd = menu.add(0, MENU_ATTACH, 0, R.string.btn_SelectFile).setIcon(
+                        android.R.drawable.ic_menu_gallery);
+                MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+            } else {
+                MenuItem iAdd = menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages).setIcon(
+                        android.R.drawable.ic_menu_add);
+                MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+            }
+        }
 
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
                     R.drawable.ic_action_add_person);
             menu.add(0, MENU_SENDINTRO, 0, R.string.title_SecureIntroduction).setIcon(
@@ -842,13 +856,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(
                     android.R.drawable.ic_menu_help);
         } else {
-            MenuItem iAddMenuItem = menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages)
-                    .setIcon(android.R.drawable.ic_menu_send);
-            MenuCompat.setShowAsAction(iAddMenuItem, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
-            SpannableString spanString = new SpannableString(iAddMenuItem.getTitle().toString());
-            // fix the color to white
-            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            iAddMenuItem.setTitle(spanString);
+            SpannableString spanString;
 
             MenuItem iInviteItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
                     .setIcon(R.drawable.ic_action_add_person);
@@ -918,7 +926,13 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 showReference();
                 return true;
             case MENU_NEWMESSAGE:
-                showCompose(VIEW_COMPOSE_ID);
+                DraftData d = DraftData.INSTANCE;
+                d.clearRecip();
+                d.clearSendMsg();
+                showRecipientSelect(VIEW_RECIPSEL_ID);
+                return true;
+            case MENU_ATTACH:
+                showFileAttach();
                 return true;
         }
         return false;
@@ -1023,7 +1037,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             // must have either file or text to send
             if (TextUtils.isEmpty(sendMsg.getText()) && TextUtils.isEmpty(sendMsg.getFileName())) {
                 showNote(R.string.error_selectDataToSend);
-                showCompose(VIEW_COMPOSE_ID);
                 return;
             }
 
@@ -1335,125 +1348,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         return d.getFileSize();
     }
 
-    private void handleComposeResult(int resultCode, Intent data) throws SQLException {
-        DraftData d = DraftData.INSTANCE;
-        String text = null;
-        if (data != null) {
-            text = data.getExtras().getString(extra.TEXT_MESSAGE);
-            long rowIdRecipient = data.getExtras().getLong(extra.RECIPIENT_ROW_ID, -1L);
-            if (rowIdRecipient > -1) {
-                RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                        .openInstance(getApplicationContext());
-                Cursor c = dbRecipient.fetchRecipient(rowIdRecipient);
-                if (c != null) {
-                    try {
-                        if (c.moveToFirst()) {
-                            d.setRecip(new RecipientRow(c));
-                        } else {
-                            showNote(R.string.error_InvalidRecipient);
-                            return;
-                        }
-                    } finally {
-                        c.close();
-                    }
-                }
-            }
-        }
-
-        switch (resultCode) {
-            case ComposeActivity.RESULT_SAVE:
-                MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
-                d.setText(text);
-                if (d.getSendMsgRowId() < 0) {
-                    // create draft (need at least recipient(file) or
-                    // text
-                    // chosen...
-                    if (!TextUtils.isEmpty(d.getText()) || !TextUtils.isEmpty(d.getFileName())) {
-                        long rowId = dbMessage.createDraftMessage(d.getRecip(), d.getSendMsg(),
-                                System.currentTimeMillis());
-                        d.setSendMsgRowId(rowId);
-                        if (rowId < 0) {
-                            showNote(R.string.error_UnableToSaveMessageInDB);
-                        } else {
-                            showNote(R.string.state_MessageSavedAsDraft);
-                        }
-                    }
-                } else {
-                    Cursor c = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
-                    if (c != null) {
-                        try {
-                            if (c.moveToFirst()) {
-                                MessageRow msg = new MessageRow(c, false);
-                                if (msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_DRAFT) {
-                                    break;
-                                }
-                            }
-                        } finally {
-                            c.close();
-                        }
-                    }
-
-                    if (!TextUtils.isEmpty(d.getText()) || !TextUtils.isEmpty(d.getFileName())) {
-                        // update draft
-                        if (!dbMessage.updateDraftMessage(d.getSendMsgRowId(), d.getRecip(),
-                                d.getSendMsg())) {
-                            showNote(R.string.error_UnableToUpdateMessageInDB);
-                        }
-                    } else {
-                        // message is empty, we should remove from
-                        // database...
-                        if (!dbMessage.deleteMessage(d.getSendMsgRowId())) {
-                            showNote(String.format(getString(R.string.state_MessagesDeleted), 0));
-                        }
-                        d.clearSendMsg();
-                    }
-                }
-
-                break;
-            case ComposeActivity.RESULT_SEND:
-                // create new
-                MessageData sendMsg = d.getSendMsg();
-                // set sent time closest to UI command
-                sendMsg.setDateSent(System.currentTimeMillis());
-                sendMsg.setText(text);
-                // remove draft
-                d.clearSendMsg();
-                // user wants to post the file and notify recipient
-                if (!d.existsRecip()) {
-                    showNote(R.string.error_InvalidRecipient);
-                    refreshView();
-                    break;
-                }
-                if (d.getNotify() == SafeSlingerConfig.NOTIFY_NOPUSH) {
-                    showNote(R.string.error_InvalidRecipient);
-                    refreshView();
-                    break;
-                }
-                // manual message, keep compose tab draft
-                doSendMessageStart(new MessageTransport(d.getRecip(), sendMsg, true));
-                break;
-            case ComposeActivity.RESULT_RESTART:
-                refreshView();
-                break;
-            case ComposeActivity.RESULT_USEROPTIONS:
-                showChangeSenderOptions();
-                break;
-            case ComposeActivity.RESULT_FILESEL:
-                // user wants to pick a file to send
-                showFileAttach();
-                break;
-            case ComposeActivity.RESULT_RECIPSEL:
-                // user wants to pick a recipient
-                showRecipientSelect(VIEW_RECIPSEL_ID);
-                break;
-            case ComposeActivity.RESULT_FILEREMOVE:
-                // user wants to remove file
-                d.removeFile();
-                showCompose(VIEW_COMPOSE_ID);
-                break;
-        }
-    }
-
     @Override
     public void onMessageResultListener(Bundle data) {
         int resultCode = data.getInt(extra.RESULT_CODE);
@@ -1592,7 +1486,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             System.currentTimeMillis());
                     d.setSendMsgRowId(rowId);
                 }
-                showCompose(VIEW_COMPOSE_ID);
+                showRecipientSelect(VIEW_RECIPSEL_ID);
                 break;
             case MessagesFragment.RESULT_EDITMESSAGE:
                 d.clearSendMsg();
@@ -1619,7 +1513,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         cem.close();
                     }
                 }
-                showCompose(VIEW_COMPOSE_ID);
+                setTab(Tabs.MESSAGE);
+                refreshView();
                 break;
             case MessagesFragment.RESULT_GETMESSAGE:
                 MessageData inbox = new MessageData();
@@ -1676,6 +1571,16 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         refreshView();
                     }
                 }
+                break;
+            case MessagesFragment.RESULT_FILESEL:
+                // user wants to pick a file to send
+                showFileAttach();
+                break;
+            case MessagesFragment.RESULT_FILEREMOVE:
+                // user wants to remove file
+                d.removeFile();
+                setTab(Tabs.MESSAGE);
+                refreshView();
                 break;
         }
     }
@@ -2043,13 +1948,14 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             try {
                                 if (c.moveToFirst()) {
                                     d.setRecip(new RecipientRow(c));
-
                                     CheckRegistrationStateTask task = new CheckRegistrationStateTask();
                                     task.execute(d.getRecip());
-                                    showCompose(VIEW_COMPOSE_ID);
+                                    setTab(Tabs.MESSAGE);
+                                    refreshView();
                                 } else {
+                                    d.clearRecip();
                                     showNote(R.string.error_InvalidRecipient);
-                                    showCompose(VIEW_COMPOSE_ID);
+                                    showRecipientSelect(VIEW_RECIPSEL_ID);
                                     break;
                                 }
                             } finally {
@@ -2060,7 +1966,9 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     case Activity.RESULT_CANCELED:
                         // clear the selection
                         d.clearRecip();
-                        showCompose(VIEW_COMPOSE_ID);
+                        d.clearSendMsg();
+                        setTab(Tabs.MESSAGE);
+                        refreshView();
                         break;
                 }
                 break;
@@ -2323,23 +2231,21 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             refreshView();
                             break;
                         }
-                        showCompose(VIEW_COMPOSE_ID);
                         break;
                     case RESULT_CANCELED:
                         d.removeFile();
-                        showCompose(VIEW_COMPOSE_ID);
                         break;
                     default:
                         break;
+                }
+                if (!d.existsRecip()) {
+                    showRecipientSelect(VIEW_RECIPSEL_ID);
                 }
                 break;
 
             case RESULT_ERROR:
                 showExit(RESULT_CANCELED);
                 break;
-
-            case VIEW_COMPOSE_ID:
-                handleComposeResult(resultCode, data);
 
         }
         super.onActivityResult(requestCode, resultCode, data);
@@ -3691,11 +3597,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         startActivityForResult(intent, requestCode);
     }
 
-    private void showCompose(int requestCode) {
-        Intent intent = new Intent(HomeActivity.this, ComposeActivity.class);
-        startActivityForResult(intent, requestCode);
-    }
-
     private void showEditContact(int requestCode) {
         String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
         Uri personUri = getPersonUri(contactLookupKey);
@@ -4240,6 +4141,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
     @Override
     public void onBackPressed() {
+        supportInvalidateOptionsMenu(); // update action bar options
 
         final int position = getSupportActionBar().getSelectedNavigationIndex();
         if (MessagesFragment.getRecip() != null && position == Tabs.MESSAGE.ordinal()) {

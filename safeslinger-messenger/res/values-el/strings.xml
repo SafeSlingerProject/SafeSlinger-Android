@@ -187,7 +187,6 @@
     <string name="label_hometag">Σπίτι</string>
     <string name="label_hours">%d ώρες</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud είναι ενεργοποιημένο. Πατήστε το κουμπί Τέλος όταν τελειώσετε.</string>
-    <string name="label_InstNoMessages">Δεν υπάρχουν μηνύματα. Μπορείτε να στείλετε ένα μήνυμα πατώντας το κουμπί Σύνθεση Μηνύματος.</string>
     <string name="label_InstNoRecipients">Για να προσθέσετε παραλήπτες, πρέπει πρώτα να ανταλλάξετε κλειδιά με έναν ή περισσότερους άλλους χρήστες ταυτόχρονα. Μπορείτε επίσης να στείλετε μια πρόσκληση ανταλλαγής κλειδιών από το μενού.</string>
     <string name="label_InstNoRecipientsMatchQuery">Κανένας από τους σημερινούς δικαιούχους σας ταιριάζουν με το ερώτημα αναζήτησης. Παρακαλώ δοκιμάστε ένα διαφορετικό ερώτημα ή να καλέσει μια νέα επαφή.</string>
     <string name="label_InstNoSharedFile">Δεν υπάρχει κοινόχρηστο αρχείο. Συνδέστε τη συσκευή σας με το iTunes και εισάγετε αρχεία στον κοινόχρηστο φάκελο.</string>

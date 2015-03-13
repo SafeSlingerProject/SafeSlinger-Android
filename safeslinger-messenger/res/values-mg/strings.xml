@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d ora</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud no alefa. Nataon\'i ny hampiasa ny bokotra rehefa vita.</string>
-    <string name="label_InstNoMessages">No hafatra. Mety handefa hafatra avy any amin\'ny mamboatra kiheba.</string>
     <string name="label_InstNoRecipients">Manampy mpandray, tsy maintsy aloha amin\'ny Fanalahidin\'ny antsamotady iray na mihoatra ireo mpampiasa hafa tamin\'izany andro izany. Azonao atao koa ny mandefa ny antsamotady fifandraisana Fanalahidin\'ny fanasana avy amin\'ny menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Tsy nisy ny amin\'izao fotoana izao ny fikarohana mifanaraka mpandray fangatahanao. Mba manandrana fangataham-panazavana hafa na manasa fifandraisana vaovao.</string>
     <string name="label_InstNoSharedFile">No nizara rakitra. Hifandray ny fitaovana amin\'ny iTunes sy ny antontan-taratasy tarihiny ny nizara fampirimana.</string>

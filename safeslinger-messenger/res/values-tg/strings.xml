@@ -187,7 +187,6 @@
     <string name="label_hometag">Хона</string>
     <string name="label_hours">%d соат</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud фаъол карда мешавад. Ҷузъро тугмаи Шуд ҳангоми анҷом ёфт.</string>
-    <string name="label_InstNoMessages">Не паёмҳо. Шумо метавонед паёмро аз ҷадвали Эҷоди фиристед.</string>
     <string name="label_InstNoRecipients">Барои иловаи қабулкунандаҳо, ба шумо аввал Тугмаҳо фалахмон бо як ва ё зиёда корвандон дигар дар айни замон бояд. Шумо инчунин метавонед, ки даъвати тамос Тугмаҳо фалахмон аз менюи фиристед.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ҳеҷ яке аз гирандагони ҷорӣ шумо дархости шумо гайра. Лутфан, як пурсиш гуногун кӯшиш ё даъват мухотиб нав.</string>
     <string name="label_InstNoSharedFile">Не парванда мекушод. Дастгоҳи худро бо iTunes ва файлҳои кашолакунӣ ба феҳристи муштарак пайваст.</string>

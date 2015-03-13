@@ -187,7 +187,6 @@
     <string name="label_hometag">Tahanan</string>
     <string name="label_hours">%d oras</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ay pinagana. I-tap ang pindutan Tapos na kapag tapos na.</string>
-    <string name="label_InstNoMessages">Walang mga mensahe. Maaari kang magpadala ng mensahe mula sa tab Gumawa.</string>
     <string name="label_InstNoRecipients">Upang magdagdag ng tatanggap, dapat mo munang saklay Keys na may isa o higit pang ibang mga gumagamit nang sabay-sabay. Maaari mo ring magpadala ng imbitasyon sa tirador Keys contact mula sa menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Wala sa iyong mga kasalukuyang recipient tumutugma sa iyong query sa paghahanap. Mangyaring sumubok ng ibang query o mag-imbita ng bagong contact.</string>
     <string name="label_InstNoSharedFile">Walang mga ibinahaging file. Ikonekta ang iyong device gamit ang iTunes at i-drag ang mga file sa nakabahaging folder.</string>

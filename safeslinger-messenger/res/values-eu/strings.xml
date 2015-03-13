@@ -187,7 +187,6 @@
     <string name="label_hometag">Hasiera</string>
     <string name="label_hours">%d ordu</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud gaituta dago. Sakatu OK botoia amaitutakoan.</string>
-    <string name="label_InstNoMessages">Ez da mezurik. Mezu bat bidali ahal izango duzu konposaturiko fitxan from.</string>
     <string name="label_InstNoRecipients">Hartzaileak gehitzeko, lehenik Sling Keys aldi berean beste erabiltzaile bat edo gehiago egin beharko duzu. Halaber Sling Keys kontaktua gonbidapenak menuan bidali ahal izango duzu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Zure uneko hartzaile bat ere ez zure bilaketa etortzeko. Saiatu beste kontsulta bat edo kontaktu bat gonbidatu.</string>
     <string name="label_InstNoSharedFile">No partekatutako fitxategiak. Konektatu telefonoa iTunes eta arrastatu fitxategiak karpeta partekatuan batera.</string>

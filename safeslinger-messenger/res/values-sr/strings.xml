@@ -187,7 +187,6 @@
     <string name="label_hometag">Дом</string>
     <string name="label_hours">%d сати</string>
     <string name="label_iCloudEnable">СафеСлингер иЦлоуд је омогућено. Додирните дугме Доне када завршите.</string>
-    <string name="label_InstNoMessages">Нема порука. Можете послати поруку на картици Цомпосе.</string>
     <string name="label_InstNoRecipients">Да бисте додали примаоце, прво Слинг Кеис са једним или више других корисника у исто време мора. Такође можете послати Слинг Кеис позив пријатељства са менија.</string>
     <string name="label_InstNoRecipientsMatchQuery">Нико од ваших садашњих прималаца одговара вашем упит за претраживање. Пробајте са другим упит или позвати нови контакт.</string>
     <string name="label_InstNoSharedFile">Не дели датотеке. Повежите уређај са иТунес и драг досијеима дељене фасцикле.</string>

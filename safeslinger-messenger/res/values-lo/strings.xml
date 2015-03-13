@@ -187,7 +187,6 @@
     <string name="label_hometag">ຫນ້າທໍາອິດ</string>
     <string name="label_hours">%d ຊົ່ວໂມງ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ຖືກເປີດໃຫ້ໃຊ້ງານ. ປຸ່ມເຮັດໄດ້ໃນເວລາທີ່ສໍາເລັດການ.</string>
-    <string name="label_InstNoMessages">ບໍ່ມີຂໍ້ຄວາມ. ທ່ານອາດຈະສົ່ງຂໍ້ຄວາມຈາກແຖບ Compose.</string>
     <string name="label_InstNoRecipients">ການເພີ່ມຜູ້ຮັບ, ທ່ານທໍາອິດທີ່ Keys Sling ມີຫນຶ່ງຫຼືຫຼາຍຜູ້ໃຊ້ອື່ນໆທີ່ຢູ່ໃນທີ່ໃຊ້ເວລາດຽວກັນຕ້ອງ. ນອກນັ້ນທ່ານຍັງອາດຈະສົ່ງການເຊີນຕິດຕໍ່ Keys Sling ຈາກເມນູ.</string>
     <string name="label_InstNoRecipientsMatchQuery">None ການຂອງຜູ້ທີ່ໄດ້ຮັບຂອງທ່ານໃນປັດຈຸບັນຄໍາວ່າຄົ້ນຫາຂອງທ່ານ. ກະລຸນາພະຍາຍາມເປັນແບບສອບຖາມທີ່ແຕກຕ່າງກັນຫຼືເຊື້ອເຊີນການພົວພັນໃຫມ່.</string>
     <string name="label_InstNoSharedFile">ທີ່ໃຊ້ຮ່ວມກັນບໍ່ມີໄຟລ໌. ການເຊື່ອມຕໍ່ອຸປະກອນຂອງທ່ານກັບ iTunes ແລະໄຟ drag ກັບໂຟນເດີທີ່ໃຊ້ຮ່ວມກັນ.</string>

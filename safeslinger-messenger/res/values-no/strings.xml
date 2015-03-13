@@ -187,7 +187,6 @@
     <string name="label_hometag">Hjem</string>
     <string name="label_hours">%d timer</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud er aktivert. Pek på Ferdig-knappen når du er ferdig.</string>
-    <string name="label_InstNoMessages">Ingen meldinger. Du kan sende en melding fra kategorien Skriv.</string>
     <string name="label_InstNoRecipients">For å legge til mottakere, må du først Sling Keys med en eller flere andre brukere på samme tid. Du kan også sende en Sling Keys kontakt invitasjon fra menyen.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ingen av de nåværende mottakere matche søket. Vennligst prøv en annen spørring eller invitere en ny kontakt.</string>
     <string name="label_InstNoSharedFile">Ingen delte filen. Koble til enheten med iTunes og dra filer til den delte mappen.</string>

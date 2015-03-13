@@ -187,7 +187,6 @@
     <string name="label_hometag">خانه</string>
     <string name="label_hours">%d ساعت</string>
     <string name="label_iCloudEnable">SafeSlinger آیکلاد فعال است. را ضربه بزنید دکمه انجام می شود هنگامی که به پایان رسید.</string>
-    <string name="label_InstNoMessages">بدون پیام است. شما نمیتوانید پیام از تب نوشتن ارسال.</string>
     <string name="label_InstNoRecipients">برای افزودن گیرنده، ابتدا کلید رسن با یک یا چند کاربر دیگر در همان زمان باید. همچنین شما می توانید دعوت نامه تماس با کلید رسن از منوی ارسال.</string>
     <string name="label_InstNoRecipientsMatchQuery">هیچ یک از دریافت کنندگان فعلی خود را پرس و جو جستجو شما مطابقت ندارد. لطفا یک پرس و جو های مختلف را امتحان کنید و یا دعوت تماس با جدید.</string>
     <string name="label_InstNoSharedFile">بدون فایل به اشتراک گذاشته. دستگاه خود را با iTunes و فایل کشیدن به پوشه به اشتراک گذاشته وصل کنید.</string>

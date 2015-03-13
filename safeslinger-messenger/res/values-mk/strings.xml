@@ -187,7 +187,6 @@
     <string name="label_hometag">Почетна</string>
     <string name="label_hours">%d часа</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud е овозможено. Допрете го Готово копчето кога ќе заврши.</string>
-    <string name="label_InstNoMessages">Нема пораки. Може да ви испрати порака од табот Состави.</string>
     <string name="label_InstNoRecipients">За да додадете приматели, мора прво Прашка Копчиња со еден или повеќе корисници во исто време мора. Вие исто така може да испрати прашка Копчиња контакт покана од менито.</string>
     <string name="label_InstNoRecipientsMatchQuery">Никој од вашата актуелна примачи одговараат на вашите пребарување. Ве молиме обидете се со различни пребарување или покани нов контакт.</string>
     <string name="label_InstNoSharedFile">Не заедничка датотека. Поврзете го Вашиот уред со iTunes и повлечете датотеки во споделена папка.</string>

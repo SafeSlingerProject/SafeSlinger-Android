@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d ka oras</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ang nakahimo. Pindota ang Nabuhat button sa diha nga nahuman na.</string>
-    <string name="label_InstNoMessages">No mensahe. Ikaw mahimo nga mopadala sa usa ka mensahe gikan sa naglangkob tab.</string>
     <string name="label_InstNoRecipients">Aron sa pagdugang sa mga benepisyaryo, ikaw kinahanglan una nga lambuyog Yawe uban sa usa o labaw pa sa uban nga mga tiggamit sa mao nga panahon. Ikaw mahimo usab nga ipadala sa usa ka lambuyog Yawe contact nga pagdapit gikan sa menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Walay bisan kinsa sa imong kasamtangan nga mga nakadawat motukma sa imong pagpangita query. Palihug pagsulay sa usa ka lain-laing mga pangutana o dapita ang usa ka bag-o nga contact.</string>
     <string name="label_InstNoSharedFile">Walay mipakigbahin file. Ikonektar ang inyong device uban sa iTunes ug drag files ngadto sa mipakigbahin folder.</string>

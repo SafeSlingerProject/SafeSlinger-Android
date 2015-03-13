@@ -187,7 +187,6 @@
     <string name="label_hometag">Tsev</string>
     <string name="label_hours">%d teev</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud yog enabled. Coj mus rhaub Ua khawm thaum tiav lawm.</string>
-    <string name="label_InstNoMessages">Tsis muaj lus. Tej zaum koj yuav xa ib cov lus los ntawm cov ntseg tab.</string>
     <string name="label_InstNoRecipients">Ntxiv tau txais, koj yuav tsum thawj pav Daws nrog ib tug los yog ntau tshaj lwm cov neeg nyob rau tib lub sij hawm. Tej zaum koj yuav xa ib tug pav Daws hu caw los ntawm cov ntawv qhia zaub mov.</string>
     <string name="label_InstNoRecipientsMatchQuery">Tsis muaj leej twg ntawm koj tam sim no tau txais phim koj nrhiav cov lus nug. Thov koj sim ib tug txawv query los yog caw ib tug tshiab hu.</string>
     <string name="label_InstNoSharedFile">Tsis muaj qhia cov ntaub ntawv. Txuas koj ntaus ntawv nrog iTunes thiab luag cov ntaub ntawv mus rau lub qhia nplaub tshev.</string>

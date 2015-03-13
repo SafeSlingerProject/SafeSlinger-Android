@@ -187,7 +187,6 @@
     <string name="label_hometag">Нүүр хуудас</string>
     <string name="label_hours">%d цаг</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud идэвхжсэн. Дууссаны дараа үйлдэв товчлуур дээр дар.</string>
-    <string name="label_InstNoMessages">Ямар ч мэдэгдлүүд. Та зохиох гэж таб нь мессеж илгээж болно.</string>
     <string name="label_InstNoRecipients">Хүлээн авагч нэмэхийн тулд та ёстой хамгийн эхний Sling Товчнууд нь яг тэр үед нэг буюу түүнээс дээш хэрэглэгчидтэй. Та бас цэснээс нь Sling түлхүүр холбоо барих урилгыг илгээж болно.</string>
     <string name="label_InstNoRecipientsMatchQuery">Таны одоогийн хүлээн авагч аль нь ч таны хайлтын асуулга таарахгүй. Өөр хүсэлтийг оролдох, эсвэл шинэ холбоо урьж уу.</string>
     <string name="label_InstNoSharedFile">Ямар ч файлыг хуваалцсан юм. Хамтран эзэмших хавтаст Itunes болон татах файлууд нь холбо.</string>

@@ -187,7 +187,6 @@
     <string name="label_hometag">Huis</string>
     <string name="label_hours">%d uur</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud is aangeskakel. Tik die Klaar-knoppie wanneer jy klaar is.</string>
-    <string name="label_InstNoMessages">Geen boodskappe. Jy kan \'n boodskap van die blad Saamstel stuur.</string>
     <string name="label_InstNoRecipients">Ontvangers by te voeg, moet jy eers slinger Keys met een of meer ander gebruikers op dieselfde tyd. Jy kan ook \'n slinger Keys kontak uitnodiging van die spyskaart.</string>
     <string name="label_InstNoRecipientsMatchQuery">Nie een van jou huidige ontvangers ooreenstem met jou soektog. Probeer asseblief \'n ander vraag of nooi \'n nuwe kontak.</string>
     <string name="label_InstNoSharedFile">Geen gedeelde lêer. Sluit jou toestel met iTunes en sleep lêers na die gedeelde gids.</string>

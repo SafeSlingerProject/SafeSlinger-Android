@@ -187,7 +187,6 @@
     <string name="label_hometag">హోం</string>
     <string name="label_hours">%d గంటల</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ప్రారంభించబడింది. పూర్తవగానే పూర్తయింది బటన్ నొక్కండి.</string>
-    <string name="label_InstNoMessages">సందేశాలు లేవు. మీరు కంపోజ్ టాబ్ నుండి ఒక సందేశం పంపవచ్చు.</string>
     <string name="label_InstNoRecipients">గ్రహీతలను జోడించడానికి, మీరు వీటిని చెయ్యాలి మొదటి స్లింగ్ కీస్ అదే సమయంలో ఒకటి లేదా ఎక్కువ ఇతర వినియోగదారులతో. మీరు కూడా మెను నుండి ఏ స్లింగ్ కీస్ పరిచయం ఆహ్వానం పంపవచ్చు.</string>
     <string name="label_InstNoRecipientsMatchQuery">మీ ప్రస్తుత గ్రహీతలు ఏదీ మీ శోధన ప్రశ్నకు సరిపోలే. వేరే ప్రశ్న ప్రయత్నించండి లేదా ఒక కొత్త పరిచయం ఆహ్వానించండి దయచేసి.</string>
     <string name="label_InstNoSharedFile">ఏ ఫైల్ పంచుకున్నారు. షేర్డ్ ఫోల్డర్ ఐట్యూన్స్ మరియు డ్రాగ్ ఫైళ్లను మీ పరికరాన్ని కనెక్ట్ చేయండి.</string>

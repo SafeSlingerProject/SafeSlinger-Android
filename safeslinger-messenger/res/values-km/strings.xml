@@ -187,7 +187,6 @@
     <string name="label_hometag">ទំព័រដើម</string>
     <string name="label_hours">%d ម៉ោង</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ត្រូវបានបើក។ ប៉ះប៊ូតុងធ្វើនៅពេលបញ្ចប់។</string>
-    <string name="label_InstNoMessages">សារនោះទេ។ អ្នកអាចផ្ញើរសារពីផ្ទាំងតែង។</string>
     <string name="label_InstNoRecipients">ដើម្បីបន្ថែមអ្នកទទួលដំបូង Sling គ្រាប់ចុចជាមួយអ្នកប្រើមួយឬច្រើនផ្សេងទៀតនៅពេលជាមួយគ្នានោះអ្នកត្រូវ។ អ្នកក៏អាចផ្ញើការអញ្ជើញទំនាក់ទំនង Sling គ្រាប់ពីម៉ឺនុយនេះ។</string>
     <string name="label_InstNoRecipientsMatchQuery">គ្មានអ្នកទទួលបច្ចុប្បន្នរបស់អ្នកផ្គូផ្គងសំណួរស្វែងរករបស់អ្នក។ សូមព្យាយាមសំណួរផ្សេងគ្នាឬការអញ្ជើញទំនាក់ទំនងថ្មីមួយ។</string>
     <string name="label_InstNoSharedFile">ចែករំលែកឯកសារទេ។ ភជប់ឧបករណ៍របស់អ្នកជាមួយកម្មវិធី iTunes និងអូសឯកសារទៅថតដែលបានចែករំលែក។</string>

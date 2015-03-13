@@ -187,7 +187,6 @@
     <string name="label_hometag">Hafan</string>
     <string name="label_hours">%d o oriau</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud wedi ei alluogi. Tap y botwm Done ar ôl gorffen.</string>
-    <string name="label_InstNoMessages">Dim negeseuon. Efallai y byddwch yn anfon neges oddi wrth y tab Compose.</string>
     <string name="label_InstNoRecipients">I ychwanegu derbynwyr, rhaid i chi yn gyntaf Keys Sling gydag un neu fwy o ddefnyddwyr eraill ar yr un pryd. Gallwch chi hefyd gyflwyno cyswllt gwahoddiad Keys Sling o\'r ddewislen.</string>
     <string name="label_InstNoRecipientsMatchQuery">Nid oes yr un o\'ch derbynwyr presennol yn cyfateb i\'ch ymholiad chwilio. Os gwelwch yn dda rhowch gynnig ymholiad gwahanol neu wahodd gyswllt newydd.</string>
     <string name="label_InstNoSharedFile">Dim ffeil a rennir. Cysylltu eich dyfais gyda iTunes a ffeiliau llusgo i\'r ffolder a rennir.</string>

@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">masaa %d</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ni kuwezeshwa. Gonga kifungo Done wakati kumaliza.</string>
-    <string name="label_InstNoMessages">Hakuna ujumbe. Unaweza kutuma ujumbe kutoka tab kutunga.</string>
     <string name="label_InstNoRecipients">Kuongeza wapokeaji, lazima kwanza Sling Keys na moja au zaidi kwa watumiaji wengine wakati huo huo. Unaweza pia kutuma Sling Keys kuwasiliana mwaliko kutoka menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Hakuna wapokeaji yako sasa mechi hoja yako ya utafutaji. Tafadhali jaribu swala tofauti au kukaribisha jina jipya.</string>
     <string name="label_InstNoSharedFile">Hakuna pamoja file. Unganisha kifaa yako na iTunes na Drag files kwa folder ya pamoja.</string>

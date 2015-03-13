@@ -187,7 +187,6 @@
     <string name="label_hometag">Ngarep</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud diaktifake. Tutul tombol Rampung nalika rampung.</string>
-    <string name="label_InstNoMessages">Ora ana pesen. Sampeyan bisa ngirim pesen saka tab Tulis.</string>
     <string name="label_InstNoRecipients">Kanggo nambah panampa, sampeyan pisanan Sling Keys karo akun siji utawa luwih liyane kedhaftar ing wektu sing padha kudu. Sampeyan uga bisa ngirim kontak undhangan Sling Keys saka menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ana panampa saiki cocog pitakonan panelusuran Panjenengan. Mangga nglebokaké query beda utawa ngajak kontak anyar.</string>
     <string name="label_InstNoSharedFile">Ora Ana sambungan file. Sambungake piranti karo iTunes lan file seret menyang folder sambungan.</string>

@@ -24,6 +24,8 @@
 
 package edu.cmu.cylab.starslinger.model;
 
+import android.text.TextUtils;
+
 /***
  * This a simple, fast, and thread-safe singleton implementation for keeping
  * state of a user's draft data when constructing a invitation on the
@@ -54,6 +56,12 @@ public class DraftData {
 
     public void clearSendMsg() {
         mSendMsg = new MessageData();
+    }
+
+    public boolean existsSendMsg() {
+        return mSendMsg != null
+                && (TextUtils.isEmpty(mSendMsg.getText()) || TextUtils.isEmpty(mSendMsg
+                        .getFileName()));
     }
 
     public boolean existsRecip() {

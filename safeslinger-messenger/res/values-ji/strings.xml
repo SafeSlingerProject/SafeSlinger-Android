@@ -187,7 +187,6 @@
     <string name="label_hometag">היים</string>
     <string name="label_hours">%d שעה</string>
     <string name="label_iCloudEnable">סאַפעסלינגער יקלאָוד איז ענייבאַלד. טאַפּ די דאַן קנעפּל ווען פאַרטיק.</string>
-    <string name="label_InstNoMessages">ניט קיין אַרטיקלען. איר קען שיקן אַ אָנזאָג פון די קאָמפּאָסע קוויטל.</string>
     <string name="label_InstNoRecipients">צו לייגן ריסיפּיאַנץ, איר מוזן ערשטער וואַרפלקע קיז מיט איין אָדער מער אנדערע וסערס בייַ די זעלביקער צייַט. איר קען אויך שיקן אַ וואַרפלקע קיז קאָנטאַקט פאַרבעטונג פון די מעניו.</string>
     <string name="label_InstNoRecipientsMatchQuery">קיינער פון דיין קראַנט ריסיפּיאַנץ גלייַכן אייער זוכן אָנפֿרעג. ביטע פּרובירן אַ פאַרשידענע אָנפֿרעג אָדער פאַרבעטן אַ נייַ קאָנטאַקט.</string>
     <string name="label_InstNoSharedFile">ניט קיין שערד טעקע. פאַרבינדן דיין מיטל מיט יטונעס און שלעפּן טעקעס צו די שערד טעקע.</string>

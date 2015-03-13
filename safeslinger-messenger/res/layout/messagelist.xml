@@ -71,41 +71,112 @@
         android:id="@+id/ComposeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="vertical" >
 
-        <EditText
-            android:id="@+id/SendEditTextMessage"
-            android:layout_width="0dp"
+        <RelativeLayout
+            android:id="@+id/SendFrameButtonFile"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:hint="@string/label_ComposeHint"
-            android:imeOptions="actionSend"
-            android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
-            android:maxLength="2000"
-            android:maxLines="3"
-            android:nextFocusRight="@+id/SendFrameButtonSend"
-            android:privateImeOptions="nm"
-            android:textSize="@dimen/text_size_msg" />
+            android:layout_gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/SendButtonFile"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/text_size_medium" />
+
+            <LinearLayout
+                android:id="@+id/SendFrameFile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp" >
+
+                <ImageView
+                    android:id="@+id/SendImageViewFile"
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/label_Photo"
+                    android:src="@drawable/ic_attachment_select" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/SendTextViewFile"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="middle"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/btn_SelectFile"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:id="@+id/SendTextViewFileSize"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="middle"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/text_size_micro" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/SendFrameButtonSend"
-            android:layout_width="wrap_content"
+            android:id="@+id/ComposeLayoutNested"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:orientation="vertical" >
+            android:orientation="horizontal" >
 
-            <ImageButton
-                android:id="@+id/SendButtonSend"
-                style="?android:attr/borderlessButtonStyle"
+            <EditText
+                android:id="@+id/SendEditTextMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:hint="@string/label_ComposeHint"
+                android:imeOptions="actionSend"
+                android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+                android:maxLength="2000"
+                android:maxLines="3"
+                android:nextFocusRight="@+id/SendFrameButtonSend"
+                android:privateImeOptions="nm"
+                android:textSize="@dimen/text_size_msg" />
+
+            <LinearLayout
+                android:id="@+id/SendFrameButtonSend"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginLeft="@dimen/button_side_margin"
-                android:layout_weight="1.0"
-                android:contentDescription="@string/btn_SendFile"
-                android:drawablePadding="0dp"
-                android:src="@android:drawable/ic_menu_send" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/SendButtonSend"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/btn_SendFile"
+                    android:drawablePadding="0dp"
+                    android:src="@android:drawable/ic_menu_send" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

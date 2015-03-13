@@ -187,7 +187,6 @@
     <string name="label_hometag">Huis</string>
     <string name="label_hours">%d uur</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud is ingeschakeld. Tik op de knop Gereed als u klaar bent.</string>
-    <string name="label_InstNoMessages">Geen berichten. U kunt een bericht sturen via het tabblad Opstellen.</string>
     <string name="label_InstNoRecipients">Als u ontvangers wilt toevoegen, moet u eerst Sling Toetsen met een of meer andere gebruikers op hetzelfde moment. Je kan ook een Sling sleutels uitnodiging van het menu te sturen.</string>
     <string name="label_InstNoRecipientsMatchQuery">Geen van uw huidige ontvangers overeenkomen met uw zoekopdracht. Probeer een andere vraag of uit te nodigen een nieuw contact.</string>
     <string name="label_InstNoSharedFile">Geen gedeelde bestand. Sluit uw apparaat met iTunes en sleep bestanden naar de gedeelde map.</string>

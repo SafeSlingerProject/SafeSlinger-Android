@@ -187,7 +187,6 @@
     <string name="label_hometag">Rumah</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud diaktifkan. Tekan tombol Selesai setelah selesai.</string>
-    <string name="label_InstNoMessages">Tidak ada pesan. Anda dapat mengirim pesan dari tab Compose.</string>
     <string name="label_InstNoRecipients">Untuk menambahkan penerima, pertama Sling Keys dengan satu atau lebih pengguna lain pada saat yang sama harus. Anda juga dapat mengirim kontak undangan Sling Keys dari menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Tak satu pun dari penerima Anda saat ini sesuai dengan permintaan pencarian Anda. Silakan coba kueri yang berbeda atau mengundang kontak baru.</string>
     <string name="label_InstNoSharedFile">Tidak ada file berbagi. Hubungkan perangkat Anda dengan iTunes dan file drag ke folder bersama.</string>

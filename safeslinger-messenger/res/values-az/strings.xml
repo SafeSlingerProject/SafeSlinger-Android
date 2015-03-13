@@ -187,7 +187,6 @@
     <string name="label_hometag">Ev</string>
     <string name="label_hours">%d saat</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud effektiv. Başa zaman Done düyməsini dokunun.</string>
-    <string name="label_InstNoMessages">No messages. Siz Yarat nişanı bir mesaj göndərə bilər.</string>
     <string name="label_InstNoRecipients">Qəbul edən əlavə etmək üçün, ilk Sling Keys eyni zamanda bir və ya daha çox digər istifadəçilər ilə. Siz həmçinin menudan bir Sling Keys əlaqə dəvət göndərə bilər.</string>
     <string name="label_InstNoRecipientsMatchQuery">Cari alıcı heç biri sizin axtarış sorğu uyğun. Fərqli bir sorğu cəhd edin və ya yeni əlaqə dəvət edin.</string>
     <string name="label_InstNoSharedFile">No fayl paylaşdı. Paylaşılan qovluq üçün iTunes və drag faylları ilə cihaz qoşun.</string>

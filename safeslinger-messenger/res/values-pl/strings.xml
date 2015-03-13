@@ -187,7 +187,6 @@
     <string name="label_hometag">Dom</string>
     <string name="label_hours">%d godzin</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud jest włączony. Stuknij w przycisk Gotowe po zakończeniu.</string>
-    <string name="label_InstNoMessages">Brak wiadomości. Możesz wysłać wiadomość na karcie redagowania.</string>
     <string name="label_InstNoRecipients">Aby dodać odbiorców, należy najpierw Sling Keys z jednym lub większą liczbą innych użytkowników w tym samym czasie. Możesz również wysłać Sling Keys kontaktów zaproszenia z menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Żadna z dotychczasowych odbiorców pasuje do zapytania. Spróbuj innego zapytania lub zaprosić nowego kontaktu.</string>
     <string name="label_InstNoSharedFile">Nie wspólny plik. Podłącz urządzenie z iTunes i przeciągnij pliki do folderu udostępnionego.</string>

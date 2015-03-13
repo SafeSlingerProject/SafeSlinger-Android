@@ -187,7 +187,6 @@
     <string name="label_hometag">နေအိမ်</string>
     <string name="label_hours">%d နာရီ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ကို enable လုပ်ထားခြင်းဖြစ်သည်။ ပြီးသောအခါ Done ခလုတ်ကိုထိပုတ်ပါ။</string>
-    <string name="label_InstNoMessages">အဘယ်သူမျှမသတင်းစကားများ။ သင့်အနေဖြင့်ရေးတဲ့ tab ကနေ message ပို့နိုင်ပါသည်။</string>
     <string name="label_InstNoRecipients">လက်ခံတဲ့သူကိုထည့်သွင်းဖို့, သင်တစ်ချိန်တည်းမှာတစ်ခုသို့မဟုတ်တစ်ခုထက်ပိုသောအခြားအသုံးပြုသူများနှင့်အတူပထမဦးဆုံးလောက်လွှဲနှင့်ပစ်သော့ချက်များရပါမည်။ သင်သည်အစက menu ကနေတစ်ဦးလောက်လွှဲနှင့်ပစ်သော့ချက်များအဆက်အသွယ်ဖိတ်ကြားချက်ကိုပို့ပေးပါလိမ့်မည်။</string>
     <string name="label_InstNoRecipientsMatchQuery">သင့်ရဲ့လက်ရှိလက်ခံတဲ့သူ၏အဘယ်သူမျှမကသင့်ရဲ့ရှာဖွေရေး query ကို match ။ တစ်ဦးကွဲပြားခြားနား query ကိုကြိုးစားသို့မဟုတ်အဆက်အသွယ်အသစ်တစ်ခုဖိတ်ခေါ်ပေးပါဦး။</string>
     <string name="label_InstNoSharedFile">Shared ဖိုင်မျှမရှိ။ iTunes နှင့်သင့်ဖုန်းကိုချိတ်ပါနဲ့ shared folder ဖိုင်တွေကိုဆွဲယူပါ။</string>

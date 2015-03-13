@@ -374,7 +374,7 @@
     <!-- screen label (match English casing); used to indicate the backup will occur while on the Setup screen. iOS-only. -->
     <string name="label_iCloudEnable">SafeSlinger iCloud is enabled. Tap the Done button when finished.</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Message list screen in case of no recipients. -->
-    <string name="label_InstNoMessages">No messages. You may send a message from the Compose tab.</string>
+    <string name="label_InstNoMessages">No messages. To send a message, tap on the New Message icon at the top of your screen.</string>
     <!-- screen label (match English casing); used to instruct the user how to proceed on the Recipient list screen is case of no recipients. -->
     <string name="label_InstNoRecipients">To add recipients, you must first Sling Keys with one or more other users at the same time. You may also send a Sling Keys contact invitation from the menu.</string>
     <!-- screen label (match English casing); used to inform the user that no recipients match the search query. -->

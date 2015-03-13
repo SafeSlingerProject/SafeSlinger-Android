@@ -187,7 +187,6 @@
     <string name="label_hometag">家用電話</string>
     <string name="label_hours">%d小時</string>
     <string name="label_iCloudEnable">SafeSlinger的iClou備份已啟用。</string>
-    <string name="label_InstNoMessages">沒有訊息。您可以發送訊息，從主選單上選擇編輯新訊息。</string>
     <string name="label_InstNoRecipients">要添加收件人，您必須先與一個或多個用戶去交換金鑰。您也可以從選單中送出金鑰交換的邀請訊息。</string>
     <string name="label_InstNoRecipientsMatchQuery">無你目前的收件人符合您的搜索查詢。請嘗試不同的查詢或邀請新的聯繫人。</string>
     <string name="label_InstNoSharedFile">沒有共享的文件。連接您的設備並開啟iTunes，拖曳文件到共享文件夾。</string>

@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">fihlela ho %d lihora tse</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud e thusa. Tlanya ea Etsoa konopo ha qetile.</string>
-    <string name="label_InstNoMessages">Ha ho melaetsa. U ka \'na romela molaetsa ho tswa ho Compose tab ya.</string>
     <string name="label_InstNoRecipients">Ho eketsa baamohedi ba bang, u se pele Sling Keys le e mong kapa ho feta basebedisi ba bang ka ka nako e tsoanang nako eo. U ka ba romela Sling Keys kopana memo e tsoang ho ya menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Le ea mong oa ya hao ya hajwale baamohedi ba bang tšoanang le gago ya go tsoma kopo ena. Kopo, leka e fapaneng khwiri kapa mema mabitso.</string>
     <string name="label_InstNoSharedFile">Ha ho ba ile ba kopanela faele. Connect sesebediswa sa hao se le iTunes le hula ho ya difaele ho ea ba ile ba kopanela foldara.</string>

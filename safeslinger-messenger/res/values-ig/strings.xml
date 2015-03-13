@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d awa</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud na-nyeere. Kpatụ Emela bọtịnụ mgbe okokụre.</string>
-    <string name="label_InstNoMessages">Ọ dịghị ozi. Ị nwere ike izipu ozi site na ide taabụ.</string>
     <string name="label_InstNoRecipients">Ka ịgbakwunye ndị nnata, ị ga-akpa èbè Igodo na otu ma ọ bụ karịa ndị ọrụ ndị ọzọ n\'otu oge. Ị nwekwara ike izipu a èbè Igodo kọntaktị òkù si menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ọ dịghị onye n\'ime gị ugbu a nnata dakọtara gị search query. Biko agbalị a dị iche iche query ma ọ bụ na-agba ọhụrụ kọntaktị.</string>
     <string name="label_InstNoSharedFile">Ọ dịghị òkè faịlụ. Jikọọ na ngwaọrụ gị na iTunes na ikpuru faịlụ na-akọrọ nchekwa.</string>

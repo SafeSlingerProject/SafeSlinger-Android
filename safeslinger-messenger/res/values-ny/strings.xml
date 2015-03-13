@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d maola</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ndikoyambitsidwa. Dinani ndi yochita batani pamene anamaliza.</string>
-    <string name="label_InstNoMessages">No mauthenga. Mwina anatumiza uthenga kwa kulemba tabu.</string>
     <string name="label_InstNoRecipients">Kuwonjezera olandira, choyamba tiyenera gulaye Chinsinsi ndi mmodzi kapena kuposa ena owerenga pa nthawi yomweyo. Mukhozanso kutumiza gulaye Chinsinsi kukhudzana kuitana kwa menyu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Palibe wanu woyamba olandira zikugwirizana Lusaka kwanu. Chonde ina yothetsera afunsa kapena kuitana latsopano kukhudzana.</string>
     <string name="label_InstNoSharedFile">No nawo wapamwamba. Polumikiza wanu chipangizo ndi iTunes ndi kuukoka owona kwa nawo chikwatu.</string>

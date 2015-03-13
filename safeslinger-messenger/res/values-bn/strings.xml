@@ -187,7 +187,6 @@
     <string name="label_hometag">বাড়ি</string>
     <string name="label_hours">%d ঘন্টা</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud সক্রিয় করা হয়. কর্ম সমাপ্ত হলে সম্পন্ন বোতাম ট্যাপ.</string>
-    <string name="label_InstNoMessages">কোনো বার্তা. আপনি রচনা ট্যাব থেকে একটি বার্তা পাঠাতে পারে.</string>
     <string name="label_InstNoRecipients">প্রাপক যোগ করার জন্য, আপনাকে অবশ্যই প্রথম গুলতি কি একই সময়ে এক বা একাধিক অন্যান্য ব্যবহারকারীদের সাথে. এছাড়াও আপনি মেনু থেকে একটি গুলতি কি যোগাযোগ আমন্ত্রণ পাঠাতে পারে.</string>
     <string name="label_InstNoRecipientsMatchQuery">আপনার বর্তমান প্রাপক কেউ আপনার অনুসন্ধানের সাথে মেলে না. একটি ভিন্ন প্রশ্ন চেষ্টা করুন বা একটি নতুন যোগাযোগ আমন্ত্রণ করুন.</string>
     <string name="label_InstNoSharedFile">কোন ফাইল শেয়ার করা. শেয়ার করা ফোল্ডারের আই টিউনস এবং ড্র্যাগ ফাইল সঙ্গে আপনার ডিভাইসের সাথে সংযুক্ত করুন.</string>

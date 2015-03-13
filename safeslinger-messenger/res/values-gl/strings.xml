@@ -187,7 +187,6 @@
     <string name="label_hometag">Casa</string>
     <string name="label_hours">%d horas</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud está activado. Preme no botón Feito cando rematar.</string>
-    <string name="label_InstNoMessages">Ningunha mensaxe. Pode enviar unha mensaxe a partir da guía Compoñer.</string>
     <string name="label_InstNoRecipients">Para engadir destinatarios, ten que primeiro Sling Chaves cun ou máis usuarios á vez. Tamén podes enviar unha invitación a contacto Sling Chaves dende o menú.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ningún dos seus receptores actuais á consulta de busca. Por favor, ténteo unha consulta diferente ou invitar a un novo contacto.</string>
     <string name="label_InstNoSharedFile">Non compartido ficheiro. Conecte o dispositivo con iTunes e arrastra os arquivos ao cartafol compartido.</string>

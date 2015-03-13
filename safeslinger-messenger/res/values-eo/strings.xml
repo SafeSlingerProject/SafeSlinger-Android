@@ -187,7 +187,6 @@
     <string name="label_hometag">Hejmo</string>
     <string name="label_hours">%d horoj</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud estas ebligita. Frapetu la Done butonon kiam finita.</string>
-    <string name="label_InstNoMessages">Neniu mesaĝo. Vi povas sendi mesaĝon al la Compose langeto.</string>
     <string name="label_InstNoRecipients">Por aldoni ricevantoj, vi devas unue Sling Keys kun unu aŭ pli aliaj uzantoj samtempe. Vi povas ankaŭ sendi la jxetilo Keys kontakto invito de la menuo.</string>
     <string name="label_InstNoRecipientsMatchQuery">Neniu el viaj nunaj ricevantoj respondas al via pridemando. Bonvolu provi malsaman konsulto aŭ inviti nova kontakto.</string>
     <string name="label_InstNoSharedFile">Neniu komuna dosiero. Konekti vian aparaton kun iTunes kaj treni dosierojn al la dividitaj dosierujo.</string>

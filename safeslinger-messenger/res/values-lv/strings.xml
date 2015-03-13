@@ -187,7 +187,6 @@
     <string name="label_hometag">Mājas</string>
     <string name="label_hours">%d stundas</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ir iespējots. Pieskarieties Done pogu, kad pabeigta.</string>
-    <string name="label_InstNoMessages">Nav ziņas. Jūs varat nosūtīt ziņu no cilnes Rakstīt.</string>
     <string name="label_InstNoRecipients">Lai pievienotu adresātus, vispirms Sling atslēgas ar vienu vai vairākiem citiem lietotājiem, tajā pašā laikā. Jūs varat arī nosūtīt Sling Keys kontaktu uzaicinājumu no izvēlnes.</string>
     <string name="label_InstNoRecipientsMatchQuery">Neviena no jūsu pašreizējo saņēmēju atbilstu jūsu meklēšanu. Lūdzu, mēģiniet citu vaicājumu, vai uzaicināt jaunu kontaktu.</string>
     <string name="label_InstNoSharedFile">Nē dalīta failu. Savienojiet savu ierīci ar iTunes un vilkt failus uz koplietojamo mapi.</string>

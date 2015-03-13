@@ -187,7 +187,6 @@
     <string name="label_hometag">घर</string>
     <string name="label_hours">%d घण्टा</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud सक्षम छ। समाप्त जब लिइने ट्याप गर्नुहोस्।</string>
-    <string name="label_InstNoMessages">कुनै सन्देशहरू छैन। तपाईं रचना ट्याब देखि एक सन्देश पठाउन सक्छ।</string>
     <string name="label_InstNoRecipients">प्राप्तकर्ताओं थप्नका लागि, तपाईं पर्छ पहिलो ढेलवाँस तरिकाहरू नै समय मा एक वा बढी अरू प्रयोगकर्ताहरूसँग। तपाईं पनि मेनुबाट ढेलवाँस तरिकाहरू सम्पर्क निमन्त्रणा पठाउन सक्छ।</string>
     <string name="label_InstNoRecipientsMatchQuery">आफ्नो वर्तमान प्रापकको कुनै पनि तपाईंको खोज मेल खाँदैन। एक फरक प्रश्न प्रयास वा एक नयाँ सम्पर्क निमन्त्रणा गर्नुहोस्।</string>
     <string name="label_InstNoSharedFile">कुनै फाइल साझा। साझा फोल्डर लागि iTunes र फाइलहरू तान्नुहोस् आफ्नो यन्त्र जडान।</string>

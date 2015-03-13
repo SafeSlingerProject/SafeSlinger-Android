@@ -187,7 +187,6 @@
     <string name="label_hometag">Laman Utama</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud diaktifkan. Ketik butang Selesai apabila selesai.</string>
-    <string name="label_InstNoMessages">Tidak ada mesej. Anda boleh menghantar mesej daripada tab Karang.</string>
     <string name="label_InstNoRecipients">Untuk menambah penerima, anda mesti pertama Sling Kekunci dengan satu atau lebih pengguna lain pada masa yang sama. Anda juga boleh menghantar Sling Kekunci jemputan kenalan dari menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Tiada penerima semasa anda sepadan dengan pertanyaan carian anda. Sila cuba pertanyaan lain atau menjemput kenalan baru.</string>
     <string name="label_InstNoSharedFile">Tidak berkongsi fail. Sambungkan peranti anda dengan iTunes dan fail seret untuk folder yang dikongsi.</string>

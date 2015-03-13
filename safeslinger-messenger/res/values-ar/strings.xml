@@ -187,7 +187,6 @@
     <string name="label_hometag">منزل</string>
     <string name="label_hours">%d ساعات</string>
     <string name="label_iCloudEnable">يتم تمكين SafeSlinger iCloud. اضغط على زر تم عند الانتهاء.</string>
-    <string name="label_InstNoMessages">توجد رسائل. تستطيع إرسال رسالة من علامة التبويب إنشاء.</string>
     <string name="label_InstNoRecipients">لإضافة مستلمين، يجب عليك أولا الرافعة مفاتيح مع واحد أو أكثر من المستخدمين الآخرين في نفس الوقت. يمكنك أيضا إرسال دعوة الاتصال الرافعة مفاتيح من القائمة.</string>
     <string name="label_InstNoRecipientsMatchQuery">أيا من المتلقين الحالي تطابق بحثك. يرجى المحاولة استعلام مختلف أو دعوة جهة اتصال جديدة.</string>
     <string name="label_InstNoSharedFile">لا المشتركة الملف. ربط الجهاز مع اي تيونز وسحب الملفات إلى مجلد مشترك.</string>

@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d haora</string>
     <string name="label_iCloudEnable">Whakahohea SafeSlinger iCloud te. Tap te pātene meatia, ka mutu.</string>
-    <string name="label_InstNoMessages">No karere. Kia unga e koe he karere i te ripa Tito.</string>
     <string name="label_InstNoRecipients">Hei tāpiri kaiwhiwhi, te tuatahi te kotaha Kī ki tetahi atu ranei kaiwhakamahi atu i te wa ano e koe, me. Kia hoki e koe te tukua atu he kotaha Keys whakapā aniraa i te tahua.</string>
     <string name="label_InstNoRecipientsMatchQuery">Tetahi o koutou kaiwhiwhi o nāianei ōrite tou uiui rapu. Koa tamata i te rapu rerekē ani manihini i te hoapā hou ranei.</string>
     <string name="label_InstNoSharedFile">No ngā kōnae. Tūhono tō pūrere ki iTunes, me ngā kōnae tō ki te kōpaki tiri.</string>

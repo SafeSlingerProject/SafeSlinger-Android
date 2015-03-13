@@ -187,7 +187,6 @@
     <string name="label_hometag">홈</string>
     <string name="label_hours">%d 시간</string>
     <string name="label_iCloudEnable">SafeSlinger 아이 클라우드 를 사용할 수 있습니다. 완료되면 완료 버튼을 누릅니다.</string>
-    <string name="label_InstNoMessages">메시지가 없습니다. 홈 메뉴의 메시지 작성버튼으로 메시지를 보낼 수 있습니다.</string>
     <string name="label_InstNoRecipients">받는 사람을 추가하려면 먼저 동시에 하나 이상의 다른 사용자와 슬링 키 를 해야합니다. 또한 메뉴에서 슬링 키 연락처 초대를 보낼 수 있습니다.</string>
     <string name="label_InstNoRecipientsMatchQuery">현재받는 사람 중에 당신의 검색 쿼리와 일치하지 않습니다. 다른 쿼리를 시도하거나 새 연락처를 초대하십시오.</string>
     <string name="label_InstNoSharedFile">공유 파일이 없습니다. 단말기를 iTunes로 연결하여 파일을 공유폴더로 옮겨주십시오.</string>

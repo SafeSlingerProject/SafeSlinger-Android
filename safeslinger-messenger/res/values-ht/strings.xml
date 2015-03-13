@@ -187,7 +187,6 @@
     <string name="label_hometag">Kay</string>
     <string name="label_hours">%d èdtan</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud se pèmèt. Tape bouton an Fè lè fini.</string>
-    <string name="label_InstNoMessages">Pa gen mesaj. Ou ka voye yon mesaj ki soti nan tab la konpoze.</string>
     <string name="label_InstNoRecipients">Pou ajoute moun ki resevwa, ou dwe premye Fistibal Keys ak youn oswa plis itilizatè lòt nan menm tan an. Ou ka voye yon fistibal Keys kontak envitasyon soti nan meni an tou.</string>
     <string name="label_InstNoRecipientsMatchQuery">Okenn nan moun ki resevwa ou ye kounye a matche ak rechèch rechèch ou an. Tanpri eseye yon rechèch diferan oswa envite yon kontak nouvo.</string>
     <string name="label_InstNoSharedFile">Pa gen pataje dosye. Konekte aparèy ou an ak iTunes ak dosye trennen nan katab la pataje.</string>

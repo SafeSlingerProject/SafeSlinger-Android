@@ -187,7 +187,6 @@
     <string name="label_hometag">ホーム</string>
     <string name="label_hours">%d時間</string>
     <string name="label_iCloudEnable">SafeSlingerのiCloudが有効になっています。終了したら[完了]ボタンをタップします。</string>
-    <string name="label_InstNoMessages">メッセージがありません。あなたは、ホームメニューの メッセージ作成ボタンからメッセージを送ることができる。</string>
     <string name="label_InstNoRecipients">受信者を追加するには、まず、同時に1つ以上の他のユーザとスリングキーの必要があります。また、メニューからスリングキー接触の招待状を送ることができる。</string>
     <string name="label_InstNoRecipientsMatchQuery">あなたの現在の受信者のいずれも、検索クエリに一致しない。別のクエリを試すか、新しい連絡先を招待して下さい。</string>
     <string name="label_InstNoSharedFile">共有ファイルはありません。デバイスをiTunesに接続して、ファイルを共有フォルダにドラッグしてください。</string>

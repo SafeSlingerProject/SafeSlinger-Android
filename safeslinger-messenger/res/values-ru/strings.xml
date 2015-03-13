@@ -187,7 +187,6 @@
     <string name="label_hometag">Домашний</string>
     <string name="label_hours">%d часов</string>
     <string name="label_iCloudEnable">Резервное копирование iCloud включено. Нажмите кнопку Готово, когда закончите.</string>
-    <string name="label_InstNoMessages">Нет сообщений. Вы можете отправить сообщение из ‘Составьте сообщение’ в главном меню.</string>
     <string name="label_InstNoRecipients">Чтобы добавить получателей, необходимо сначала Слинг ключей с одним или несколькими другими пользователями одновременно. Вы также можете отправить Слинг Ключи контактную приглашение от меню.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ни один из ваших нынешних получателей не соответствует вашему поисковому запросу. Пожалуйста, попробуйте другой запрос или пригласить новый контакт.</string>
     <string name="label_InstNoSharedFile">Нет общих файлов. Подключите устройство к iTunes и перетащите файлы в общую папку.</string>

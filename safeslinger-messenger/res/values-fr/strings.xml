@@ -187,7 +187,6 @@
     <string name="label_hometag">Domicile</string>
     <string name="label_hours">%d heures</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud est activé. Appuyez sur le bouton «Terminé» lorsque vous avez terminé.</string>
-    <string name="label_InstNoMessages">Pas de messages. Vous pouvez envoyer un message à partir du bouton \'Rédiger un message\' dans le menu d\'accueil.</string>
     <string name="label_InstNoRecipients">Pour ajouter des destinataires, vous devez d\'abord Sling clés avec un ou plusieurs autres utilisateurs en même temps. Vous pouvez également envoyer un contact invitation Sling clés dans le menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Aucun de vos bénéficiaires actuels correspondent à votre requête de recherche. Se il vous plaît essayer une requête différente ou inviter un nouveau contact.</string>
     <string name="label_InstNoSharedFile">Aucun fichier partagé. Connectez votre appareil avec iTunes et faites glisser les fichiers dans le dossier partagé.</string>

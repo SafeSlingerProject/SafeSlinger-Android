@@ -187,7 +187,6 @@
     <string name="label_hometag">Casa</string>
     <string name="label_hours">%d hores</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud està habilitada. Toc en el botó Fet quan hagi acabat.</string>
-    <string name="label_InstNoMessages">No hi ha missatges. Vostè pot enviar un missatge de la fitxa Redactar.</string>
     <string name="label_InstNoRecipients">Per afegir destinataris, primer ha Sling Keys amb un o més d\'altres usuaris al mateix temps. Vostè també pot enviar una invitació de contacte Sling Keys al menú.</string>
     <string name="label_InstNoRecipientsMatchQuery">Cap dels destinataris actuals responen als seus criteris de cerca. Si us plau, proveu una consulta diferent o convidar a un nou contacte.</string>
     <string name="label_InstNoSharedFile">No arxiu compartit. Connecteu el dispositiu amb iTunes i arrossegar els arxius a la carpeta compartida.</string>

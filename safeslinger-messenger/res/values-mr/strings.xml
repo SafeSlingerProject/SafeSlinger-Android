@@ -187,7 +187,6 @@
     <string name="label_hometag">मुख्यपृष्ठ</string>
     <string name="label_hours">%d तास</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud सक्षम आहे. पूर्ण झाल्यावर पूर्ण झाले बटण टॅप करा.</string>
-    <string name="label_InstNoMessages">संदेश नाहीत. आपण तयार टॅब एक संदेश पाठवू शकतो.</string>
     <string name="label_InstNoRecipients">प्राप्तकर्ता समाविष्ट करण्यासाठी, आपण प्रथम गोफण की एकाच वेळी एक किंवा अधिक इतर वापरकर्त्यांसह. आपण मेनू एक गोफण की संपर्क आमंत्रण पाठवू शकता.</string>
     <string name="label_InstNoRecipientsMatchQuery">आपल्या वर्तमान प्राप्तकर्ता कोणतेही आपली शोध क्वेरी जुळत नाहीत. भिन्न क्वेरी प्रयत्न किंवा नवीन संपर्क आमंत्रित करा.</string>
     <string name="label_InstNoSharedFile">कोणतीही फाइल शेअर केला आहे. शेअर केलेल्या फोल्डरमध्ये iTunes आणि ड्रॅग फाइल आपल्या डिव्हाइस कनेक्ट करा.</string>

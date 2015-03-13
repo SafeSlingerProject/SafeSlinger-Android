@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d klst</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud er virkt. Pikkaðu á hnappinn Lokið þegar því er lokið.</string>
-    <string name="label_InstNoMessages">Engin skilaboð. Þú getur sent skilaboð frá semja flipanum.</string>
     <string name="label_InstNoRecipients">Til að bæta við viðtakendum, verður þú fyrst Sling Takkar með einum eða fleiri notendur á sama tíma. Þú getur einnig sent Sling Lyklar samskiptaupplýsingum boð frá the matseðill.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ekkert af núverandi viðtakenda passa leitarskilyrði. Vinsamlegast reyndu aðra fyrirspurn eða bjóða nýjan tengilið.</string>
     <string name="label_InstNoSharedFile">No hluti skrá. Tengdu tækið við iTunes og dregið skrár inn á hluti mappa.</string>

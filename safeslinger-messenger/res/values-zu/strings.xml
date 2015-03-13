@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">amahora %d</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud inikwe amandla. Thepha inkinobho Kwenziw uma usuqedile.</string>
-    <string name="label_InstNoMessages">Ayikho imiyalezo. Ungathumela umbiko ovela ithebhu Qamba.</string>
     <string name="label_InstNoRecipients">Ukwengeza abemukeli, kumelwe kuqala isihlilingi Keys nabanye abasebenzisi elilodwa noma ngaphezulu ngesikhathi esisodwa. Ungase futhi uthumele oxhumana isimemo indwayimane Keys kusukela menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Akekho abemukeli wakho wamanje afana nombuzo wakho wosesho. Sicela uzame umbuzo ehlukile noma umeme oxhumana naye omusha.</string>
     <string name="label_InstNoSharedFile">No okwabelwana ifayela. Xhuma idivayisi yakho nge iTunes kanye amafayela uwudonse kufolda okwabelwana.</string>

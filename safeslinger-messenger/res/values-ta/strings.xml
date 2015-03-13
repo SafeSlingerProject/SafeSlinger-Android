@@ -187,7 +187,6 @@
     <string name="label_hometag">முகப்பு</string>
     <string name="label_hours">%d மணி நேரம்</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud செயல்படுத்தப்படும். முடிந்ததும் முடிந்தது பொத்தான் தட்டவும்.</string>
-    <string name="label_InstNoMessages">செய்திகள் இல்லை. நீங்கள் உருவாக்கும் தாவலில் இருந்து ஒரு செய்தியை அனுப்ப வேண்டும்.</string>
     <string name="label_InstNoRecipients">பெற்றவர்கள் சேர்க்க, நீங்கள் வேண்டும் முதல் ஸ்லிங் விசைகள் அதே நேரத்தில் ஒன்று அல்லது அதற்கு மேற்பட்ட மற்ற பயனர்கள். நீங்கள் மெனுவிலிருந்து ஒரு ஸ்லிங் விசைகள் தொடர்பு அழைப்பிதழ் அனுப்ப வேண்டும்.</string>
     <string name="label_InstNoRecipientsMatchQuery">உங்கள் தற்போதைய பெறுநர்கள் உங்கள் தேடல் கேள்வியை பொருந்தும். வேறு வினவலை முயற்சிக்கவும் அல்லது ஒரு புதிய தொடர்பு அழைக்கவும்.</string>
     <string name="label_InstNoSharedFile">இல்லை கோப்பு பகிர்வு. பகிர்ந்த கோப்புறையில் ஐடியூன்ஸ் மற்றும் இழுவை கோப்புகளை உங்கள் சாதனத்தை இணைக்கவும்.</string>

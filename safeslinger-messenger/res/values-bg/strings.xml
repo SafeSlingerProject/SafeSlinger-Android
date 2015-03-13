@@ -187,7 +187,6 @@
     <string name="label_hometag">Дом</string>
     <string name="label_hours">%d часа</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud е активирана. Натиснете бутона Готово, когато приключите.</string>
-    <string name="label_InstNoMessages">Няма потребители. Можете да изпратите съобщение от раздела за съставяне на ново.</string>
     <string name="label_InstNoRecipients">За да добавите получатели, трябва първо Прашка Keys с един или повече други потребители по едно и също време. Можете също така да изпратите покана прашка Клавиши контакт от менюто.</string>
     <string name="label_InstNoRecipientsMatchQuery">Нито един от настоящите си получатели съответства на заявката си за търсене. Моля, опитайте с различна заявка или да покани на нов контакт.</string>
     <string name="label_InstNoSharedFile">Не сподели файл. Свържете вашето устройство с качи и плъзнете файлове в споделената папка.</string>

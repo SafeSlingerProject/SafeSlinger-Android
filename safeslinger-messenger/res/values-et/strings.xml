@@ -187,7 +187,6 @@
     <string name="label_hometag">Kodus</string>
     <string name="label_hours">%d tundi</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud on lubatud. Puuduta nuppu Valmis, kui olete lõpetanud.</string>
-    <string name="label_InstNoMessages">Ei sõnumeid. Võite saata sõnum Koosta alt.</string>
     <string name="label_InstNoRecipients">Adressaadi lisamiseks peate esmalt pilduma võtmed koos ühe või mitme muu kasutajad samal ajal. Võite saata pilduma Keys kontakt kutse menüüst.</string>
     <string name="label_InstNoRecipientsMatchQuery">Puudub oma praeguse saajad vastavad teie otsingu päring. Palun proovige erinevaid päringu või kutsuda uus kontakt.</string>
     <string name="label_InstNoSharedFile">No jagatud fail. Ühendage seade iTunesiga ja lohista failid jagatud kausta.</string>

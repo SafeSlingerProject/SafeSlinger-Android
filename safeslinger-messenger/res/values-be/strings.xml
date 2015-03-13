@@ -187,7 +187,6 @@
     <string name="label_hometag">Дадому</string>
     <string name="label_hours">%d гадзін</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud уключаны. Націсніце кнопку Гатова, калі скончыце.</string>
-    <string name="label_InstNoMessages">Няма паведамленняў. Вы можаце адправіць паведамленне на ўкладцы складаць.</string>
     <string name="label_InstNoRecipients">Каб дадаць атрымальнікаў, Вы павінны спачатку сьлінг ключоў з адным ці некалькімі іншымі карыстальнікамі адначасова. Вы таксама можаце адправіць Сьлінг Ключы кантактную запрашэнне з меню.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ні адзін з вашых цяперашніх атрымальнікаў не адпавядае вашаму пошукаваму запыту. Калі ласка, паспрабуйце іншы запыт або запрасіць новы кантакт.</string>
     <string name="label_InstNoSharedFile">Няма агульныя файлы. Падключыце прыладу з ITunes і перацягнуць файлы ў тэчку агульнага доступу.</string>

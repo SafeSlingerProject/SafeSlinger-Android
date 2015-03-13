@@ -187,7 +187,6 @@
     <string name="label_hometag">Otthon</string>
     <string name="label_hours">%d óra</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud engedélyezve van. Érintse meg a Kész gombot, ha végzett.</string>
-    <string name="label_InstNoMessages">Nincs üzenet. Küldhet egy üzenetet a lap írása.</string>
     <string name="label_InstNoRecipients">Címzettek, akkor először a Sling Keys egy vagy több más felhasználók egyidejűleg. Ön is küldhet Sling Keys contact meghívást a menüből.</string>
     <string name="label_InstNoRecipientsMatchQuery">Egyik az aktuális címzettek felel meg a keresési lekérdezést. Kérjük, próbálkozz egy másik lekérdezéssel, vagy kérj meg egy új kapcsolatot.</string>
     <string name="label_InstNoSharedFile">Nem megosztott fájlt. A készülék csatlakoztatása iTunes és húzza a fájlokat a megosztott mappa.</string>

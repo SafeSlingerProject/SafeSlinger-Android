@@ -24,6 +24,7 @@
 
 package edu.cmu.cylab.starslinger.view;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,12 +33,20 @@ import java.util.Date;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.database.SQLException;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.DialogFragment;
@@ -55,15 +64,19 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.webkit.MimeTypeMap;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
@@ -76,6 +89,7 @@ import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.crypto.CryptoMsgException;
+import edu.cmu.cylab.starslinger.model.DraftData;
 import edu.cmu.cylab.starslinger.model.InboxDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageData;
 import edu.cmu.cylab.starslinger.model.MessageDateAscendingComparator;
@@ -98,6 +112,8 @@ public class MessagesFragment extends Fragment {
     public static final int RESULT_SEND = 7128;
     public static final int RESULT_SAVE = 7129;
     public static final int RESULT_PROCESS_SSMIME = 7130;
+    public static final int RESULT_FILESEL = 7131;
+    public static final int RESULT_FILEREMOVE = 7132;
 
     private List<ThreadData> mThreadList = new ArrayList<ThreadData>();
     private List<MessageRow> mMessageList = new ArrayList<MessageRow>();
@@ -114,9 +130,20 @@ public class MessagesFragment extends Fragment {
     private static int mListMsgTopOffset;
     private static int mListThreadVisiblePos;
     private static int mListThreadTopOffset;
+
+    private TextView mTextViewFile;
+    private TextView mTextViewFileSize;
+    private ImageView mImageViewFile;
+    private Button mButtonFile;
+    private RelativeLayout mrlFile;
+    private String mFilePath = null;
+    private int mFileSize = 0;
+    private byte[] mThumb = null;
+
     private static EditText mEditTextMessage;
     private ImageButton mButtonSend;
     private LinearLayout mComposeWidget;
+
     private static MessageData mDraft;
     private Handler mMsgFragmentHandler = new Handler();
 
@@ -146,7 +173,7 @@ public class MessagesFragment extends Fragment {
     public void updateValues(Bundle extras) {
         long msgRowId = -1;
         long recipRowId = 1;
-
+        DraftData d = DraftData.INSTANCE;
         if (extras != null) {
             msgRowId = extras.getLong(extra.MESSAGE_ROW_ID, -1L);
             recipRowId = extras.getLong(extra.RECIPIENT_ROW_ID, -1L);
@@ -176,6 +203,12 @@ public class MessagesFragment extends Fragment {
                     }
                 }
             } else if (msgRowId == -1) {
+                mRecip = null;
+            }
+        } else {
+            if (d.existsRecip()) {
+                mRecip = d.getRecip();
+            } else {
                 mRecip = null;
             }
         }
@@ -233,9 +266,27 @@ public class MessagesFragment extends Fragment {
 
         mComposeWidget = (LinearLayout) vFrag.findViewById(R.id.ComposeLayout);
 
-        mEditTextMessage = (EditText) vFrag.findViewById(R.id.SendEditTextMessage);
+        mTextViewFile = (TextView) vFrag.findViewById(R.id.SendTextViewFile);
+        mTextViewFileSize = (TextView) vFrag.findViewById(R.id.SendTextViewFileSize);
+        mImageViewFile = (ImageView) vFrag.findViewById(R.id.SendImageViewFile);
+        mButtonFile = (Button) vFrag.findViewById(R.id.SendButtonFile);
+        mrlFile = (RelativeLayout) vFrag.findViewById(R.id.SendFrameButtonFile);
 
+        mEditTextMessage = (EditText) vFrag.findViewById(R.id.SendEditTextMessage);
         mButtonSend = (ImageButton) vFrag.findViewById(R.id.SendButtonSend);
+
+        mButtonFile.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.isEmpty(mFilePath)) {
+                    doFileSelect();
+                } else {
+                    showChangeFileOptions();
+                }
+            }
+        });
+
         mButtonSend.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -483,6 +534,9 @@ public class MessagesFragment extends Fragment {
                 ThreadData t = null;
                 byte[] myPhoto = null;
 
+                getActivity().supportInvalidateOptionsMenu();
+                // update action bar options
+
                 dbMessage = MessageDbAdapter.openInstance(getActivity());
                 dbInbox = InboxDbAdapter.openInstance(getActivity());
 
@@ -605,6 +659,17 @@ public class MessagesFragment extends Fragment {
                                             }
                                         }
 
+                                        // check if global draft has been set
+                                        // first
+                                        DraftData d = DraftData.INSTANCE;
+                                        if (d.existsRecip() && d.existsSendMsg()) {
+                                            mDraft = d.getSendMsg();
+                                            if (!TextUtils.isEmpty(mDraft.getText())) {
+                                                mEditTextMessage.setTextKeepState(mDraft.getText());
+                                                mEditTextMessage.forceLayout();
+                                            }
+                                        }
+
                                         if (mDraft == null
                                                 && messageRow.getStatus() == MessageDbAdapter.MESSAGE_STATUS_DRAFT
                                                 && TextUtils.isEmpty(messageRow.getFileName())
@@ -644,6 +709,31 @@ public class MessagesFragment extends Fragment {
 
                     if (showCompose) {
                         manageComposeVisibility(View.VISIBLE);
+                        mrlFile.setVisibility(View.GONE);
+                        if (mDraft != null) {
+                            // load file data if exists
+                            mFilePath = mDraft.getFileName();
+                            mFileSize = mDraft.getFileSize();
+                            if (!TextUtils.isEmpty(mDraft.getFileType())
+                                    && mDraft.getFileType().contains("image")) {
+                                mThumb = SSUtil.makeThumbnail(SafeSlinger.getApplication()
+                                        .getApplicationContext(), mDraft.getFileData());
+                            } else {
+                                mThumb = null;
+                            }
+                            // file
+                            if (!(TextUtils.isEmpty(mFilePath))) {
+                                drawFileImage();
+                                drawFileData();
+                                mTextViewFile.setTextColor(Color.BLACK);
+                                mrlFile.setVisibility(View.VISIBLE);
+                            } else {
+                                mTextViewFile.setTextColor(Color.GRAY);
+                                mTextViewFile.setText(R.string.btn_SelectFile);
+                                mImageViewFile.setImageResource(R.drawable.ic_attachment_select);
+                                mTextViewFileSize.setText("");
+                            }
+                        }
                     } else {
                         manageComposeVisibility(View.GONE);
                     }
@@ -1101,18 +1191,18 @@ public class MessagesFragment extends Fragment {
         Bundle args = new Bundle();
         args.putString(extra.RESID_TITLE, title);
         args.putString(extra.RESID_MSG, msg);
-        DialogFragment newFragment = MessagesAlertDialogFragment.newInstance(
+        DialogFragment newFragment = new MessagesAlertDialogFragment().newInstance(
                 BaseActivity.DIALOG_HELP, args);
         newFragment.show(getFragmentManager(), "dialog");
     }
 
-    public static class MessagesAlertDialogFragment extends DialogFragment {
+    public class MessagesAlertDialogFragment extends DialogFragment {
 
-        public static MessagesAlertDialogFragment newInstance(int id) {
+        public MessagesAlertDialogFragment newInstance(int id) {
             return newInstance(id, new Bundle());
         }
 
-        public static MessagesAlertDialogFragment newInstance(int id, Bundle args) {
+        public MessagesAlertDialogFragment newInstance(int id, Bundle args) {
             MessagesAlertDialogFragment frag = new MessagesAlertDialogFragment();
             args.putInt(extra.RESULT_CODE, id);
             frag.setArguments(args);
@@ -1125,6 +1215,8 @@ public class MessagesFragment extends Fragment {
             switch (id) {
                 case BaseActivity.DIALOG_HELP:
                     return BaseActivity.xshowHelp(getActivity(), getArguments()).create();
+                case BaseActivity.DIALOG_FILEOPTIONS:
+                    return xshowChangeFileOptions(getActivity()).create();
                 default:
                     break;
             }
@@ -1210,5 +1302,95 @@ public class MessagesFragment extends Fragment {
 
     private boolean isSendableText() {
         return TextUtils.getTrimmedLength(mEditTextMessage.getText()) != 0;
+    }
+
+    @SuppressWarnings("deprecation")
+    private void drawFileImage() {
+        String filenameArray[] = mFilePath.split("\\.");
+        String extension = filenameArray[filenameArray.length - 1];
+        String mime = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+
+        if (mThumb != null && mThumb.length > 0) {
+            ByteArrayInputStream in = new ByteArrayInputStream(mThumb);
+            BitmapDrawable tn = new BitmapDrawable(in);
+            mImageViewFile.setImageDrawable(tn);
+        } else {
+            Intent viewIntent = new Intent(Intent.ACTION_VIEW);
+            viewIntent.setType(mime);
+            PackageManager pm = getActivity().getPackageManager();
+            List<ResolveInfo> lract = pm.queryIntentActivities(viewIntent,
+                    PackageManager.MATCH_DEFAULT_ONLY);
+
+            boolean resolved = false;
+
+            for (ResolveInfo ri : lract) {
+                if (!resolved) {
+                    try {
+                        Drawable icon = pm.getApplicationIcon(ri.activityInfo.packageName);
+                        mImageViewFile.setImageDrawable(icon);
+                        resolved = true;
+                    } catch (NameNotFoundException e) {
+                        mImageViewFile.setImageDrawable(getResources().getDrawable(
+                                R.drawable.ic_menu_file));
+                    }
+                }
+            }
+
+        }
+    }
+
+    private void drawFileData() {
+        mTextViewFile.setText(mFilePath);
+        mTextViewFileSize.setText(" (" + SSUtil.getSizeString(getActivity(), mFileSize) + ")");
+    }
+
+    private void doFileRemove() {
+        Intent intent = new Intent();
+        sendResultToHost(RESULT_FILEREMOVE, intent.getExtras());
+    }
+
+    private void doFileSelect() {
+        Intent intent = new Intent();
+        sendResultToHost(RESULT_FILESEL, intent.getExtras());
+    }
+
+    private void showChangeFileOptions() {
+        DialogFragment newFragment = new MessagesAlertDialogFragment()
+                .newInstance(BaseActivity.DIALOG_FILEOPTIONS);
+        newFragment.show(getFragmentManager(), "dialog");
+    }
+
+    public AlertDialog.Builder xshowChangeFileOptions(Activity act) {
+        final CharSequence[] items = new CharSequence[] {
+                act.getText(R.string.menu_Remove), act.getText(R.string.menu_Change)
+        };
+        AlertDialog.Builder ad = new AlertDialog.Builder(act);
+        ad.setTitle(R.string.title_FileOptions);
+        ad.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                dialog.dismiss();
+                switch (item) {
+                    case 0: // remove
+                        doFileRemove();
+                        break;
+                    case 1: // change
+                        doFileSelect();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+        });
+        ad.setOnCancelListener(new DialogInterface.OnCancelListener() {
+
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                dialog.dismiss();
+            }
+        });
+        return ad;
     }
 }

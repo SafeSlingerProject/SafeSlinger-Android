@@ -187,7 +187,6 @@
     <string name="label_hometag">Shtëpi</string>
     <string name="label_hours">%d orë</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud është aktivizuar. Tap butonin Done kur mbaruar.</string>
-    <string name="label_InstNoMessages">Nuk ka mesazhe. Ju mund të dërgoni një mesazh nga tab kompozoj.</string>
     <string name="label_InstNoRecipients">Për të shtuar marrësit, ju duhet së pari hobe Keys me një ose më shumë përdorues të tjerë në të njëjtën kohë. Ju gjithashtu mund të dërgoni një Sling Keys ftesë miqve nga menuja.</string>
     <string name="label_InstNoRecipientsMatchQuery">Asnjë nga marrësit tuaja të tanishme të përputhen kerkimi. Ju lutemi të provoni një pyetje tjetër ose të ftojë një kontakt të ri.</string>
     <string name="label_InstNoSharedFile">Nuk ka fotografi të përbashkët. Lidhu pajisjen tuaj me iTunes dhe fotografi terhiq në dosje të përbashkët.</string>

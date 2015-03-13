@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d sigħat</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud hija ppermettiet. Tektek il-buttuna Magħmul meta lest.</string>
-    <string name="label_InstNoMessages">Ebda messaġġi. Inti tista \'tibgħat messaġġ mill-tab Ikteb.</string>
     <string name="label_InstNoRecipients">Biex iżżid riċevituri, inti trid l-ewwel Braga Keys ma \'wieħed jew aktar utenti oħra fl-istess ħin. Inti tista \'wkoll tibgħat stedina kuntatt Braga Keys mill-menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Xejn minn riċevituri attwali tiegħek jaqblu tfittxija query tiegħek. Jekk jogħġbok ipprova mistoqsija differenti jew jistiednu kuntatt ġdid.</string>
     <string name="label_InstNoSharedFile">Nru maqsuma fajl. Qabbad it-tagħmir tiegħek ma \'iTunes u fajls drag għall-folder maqsuma.</string>

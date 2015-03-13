@@ -187,7 +187,6 @@
     <string name="label_hometag">Տուն</string>
     <string name="label_hours">%d ժամ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud միացված. Թակել Կատարված կոճակը, երբ ավարտվել է.</string>
-    <string name="label_InstNoMessages">Ոչ հաղորդագրությունները. Դուք կարող եք ուղարկել հաղորդագրություն է Կազմել կոճակը.</string>
     <string name="label_InstNoRecipients">Հասցեատեր ավելացնելու պետք է նախ Պարսատիկ բանալիները մեկ կամ ավելի այլ օգտվողների միաժամանակ. Դուք կարող եք նաեւ ուղարկել Պարսատիկ Keys կոնտակտային հրավեր ցանկի մեջ.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ոչ մեկը ձեր ընթացիկ ստացողների համապատասխանի Ձեր որոնման հարցմանը. Խնդրում ենք փորձել այլ հարցմանը, կամ հրավիրում է նոր կոնտակտ.</string>
     <string name="label_InstNoSharedFile">Ոչ կիսեց ֆայլ. Միացրեք Ձեր սարքը iTunes եւ քաշել ֆայլերը կիսում թղթապանակում.</string>

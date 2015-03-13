@@ -187,7 +187,6 @@
     <string name="label_hometag">ઘર</string>
     <string name="label_hours">%d કલાક</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud સક્રિય થયેલ છે. જ્યારે સમાપ્ત થાય ત્યારે આ પૂર્ણ બટન ટેપ કરો.</string>
-    <string name="label_InstNoMessages">કોઈ સંદેશાઓ. તમે કમ્પોઝ ટેબમાંથી સંદેશ મોકલી શકીએ છીએ.</string>
     <string name="label_InstNoRecipients">પ્રાપ્તિકર્તાઓ ઉમેરવા માટે, તમારી પાસે પ્રથમ Sling કી એક જ સમયે એક અથવા વધુ અન્ય વપરાશકર્તાઓ સાથે. પણ તમે મેનુમાંથી યોગ્ય Sling કી સંપર્ક આમંત્રણ મોકલી શકે છે.</string>
     <string name="label_InstNoRecipientsMatchQuery">તમારી વર્તમાન પ્રાપ્તિકર્તાઓ કંઈ તમારી શોધ ક્વેરી સાથે મેળ. અલગ ક્વેરી પ્રયાસ કે નવું સંપર્ક આમંત્રિત કરો.</string>
     <string name="label_InstNoSharedFile">કોઈ ફાઇલ શેર કરી. વહેંચાયેલ ફોલ્ડર માટે આઇટ્યુન્સ અને ખેંચો ફાઈલો સાથે તમારા ઉપકરણ જોડાય છે.</string>

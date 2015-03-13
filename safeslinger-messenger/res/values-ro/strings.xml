@@ -187,7 +187,6 @@
     <string name="label_hometag">Acasă</string>
     <string name="label_hours">%d oră</string>
     <string name="label_iCloudEnable">SafeSlinger icloud este activat. Apăsați butonul Done când ați terminat.</string>
-    <string name="label_InstNoMessages">Niciun mesaj. Puteți trimite un mesaj de la fila compun.</string>
     <string name="label_InstNoRecipients">Pentru a adăuga destinatari, trebuie mai întâi să Sling Taste cu unul sau mai mulți utilizatori în același timp te. Puteți trimite, de asemenea, o Sling Keys contact de invitație din meniu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Nici unul dintre destinatarii circulante potrivească cu interogarea dvs. de căutare. Vă rugăm să încercați o interogare diferit sau invita un contact nou.</string>
     <string name="label_InstNoSharedFile">Nici un fișier împărtășit. Conectați dispozitivul cu iTunes și fișiere trageți în folderul partajat.</string>

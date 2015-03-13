@@ -187,7 +187,6 @@
     <string name="label_hometag">Baile</string>
     <string name="label_hours">%d uair an chloig</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud cumasaithe. Beartaíonn an cnaipe Arna dhéanamh nuair a críochnaithe.</string>
-    <string name="label_InstNoMessages">Uimh teachtaireachtaí. Is féidir leat teachtaireacht a chur as an cluaisín Cum.</string>
     <string name="label_InstNoRecipients">Chun faighteoirí chur leis, ní mór duit an chéad Eochracha Sling le húsáideoirí amháin nó níos mó ag an am céanna. Is féidir leat a sheoladh freisin cuireadh teagmhála Eochracha Sling ón roghchlár.</string>
     <string name="label_InstNoRecipientsMatchQuery">Níl aon cheann de do chuid fhaighteoirí reatha comhoiriúnach do cheist chuardaigh. Bain triail as ceist éagsúil nó cuireadh a thabhairt teagmhála nua.</string>
     <string name="label_InstNoSharedFile">Níl roinnte comhad. Ceangail do gléas le iTunes agus comhaid a tharraingt ar an fillteán roinnte.</string>

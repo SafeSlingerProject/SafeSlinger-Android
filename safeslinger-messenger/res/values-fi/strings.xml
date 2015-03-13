@@ -187,7 +187,6 @@
     <string name="label_hometag">Koti</string>
     <string name="label_hours">%d tuntia</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud on käytössä. Paina painiketta Valmis, kun olet valmis.</string>
-    <string name="label_InstNoMessages">Ei viestejä. Voit lähettää viestin Luo-välilehti.</string>
     <string name="label_InstNoRecipients">Voit lisätä vastaanottajia, on ensin Sling Keys yhden tai useamman käyttäjän samanaikaisesti. Voit myös lähettää Sling Keys yhteystiedot kutsu valikosta.</string>
     <string name="label_InstNoRecipientsMatchQuery">Mikään nykyinen vastaanottajat vastaavat hakukyselyysi. Yritä eri kyselyn tai kutsua uuden yhteystiedon.</string>
     <string name="label_InstNoSharedFile">Ei jaettu tiedosto. Liitä laite iTunesin kanssa ja vedä tiedostot jaettuun kansioon.</string>

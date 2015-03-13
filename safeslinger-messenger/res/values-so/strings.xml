@@ -187,7 +187,6 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d saacadood</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud waxaa karti. Taabo badhanka sameeyo marka dhammeeyey.</string>
-    <string name="label_InstNoMessages">No farriimaha. Waxaa laga yaabaa inaad fariin ka tab koobanahay ku soo diri.</string>
     <string name="label_InstNoRecipients">Si aad ku dari qaata, waa inaad marka hore shakaalka Furayaasha la mid ah ama ka badan kuwa kale ee isticmaala waqti isku mid ah. Sidoo kale waxaad soo diri kartaa xiriir martiqaad shakaalka Furayaasha ka menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ma jiro mid ka qaata aad hadda u dhigma goobitaankaaga. Fadlan isku day su\'aal ka duwan ama yeedhi xiriir cusub.</string>
     <string name="label_InstNoSharedFile">No wadaago file. Connect qalab aad la iTunes iyo faylasha jiidid si buugyaraha la wadaago.</string>

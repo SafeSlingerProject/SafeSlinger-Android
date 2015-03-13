@@ -187,7 +187,6 @@
     <string name="label_hometag">Додому</string>
     <string name="label_hours">%d годин</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud включений. Натисніть кнопку Готово, коли закінчите.</string>
-    <string name="label_InstNoMessages">Немає повідомлень. Ви можете відправити повідомлення на вкладці складати.</string>
     <string name="label_InstNoRecipients">Щоб додати одержувачів, Ви повинні спочатку слінг ключів з одним або декількома іншими користувачами одночасно. Ви також можете відправити Слінг Ключі контактну запрошення з меню.</string>
     <string name="label_InstNoRecipientsMatchQuery">Жоден з ваших нинішніх одержувачів не відповідає вашому пошуковому запиту. Будь ласка, спробуйте інший запит або запросити новий контакт.</string>
     <string name="label_InstNoSharedFile">Немає загальні файли. Підключіть пристрій з ITunes і перетягніть файли в папку загального доступу.</string>

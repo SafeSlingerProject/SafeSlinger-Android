@@ -187,7 +187,6 @@
     <string name="label_hometag">მთავარი</string>
     <string name="label_hours">%d საათი</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ჩართულია. ლიბერალიზაცია შესრულებულია ღილაკს, როდესაც დასრულდა.</string>
-    <string name="label_InstNoMessages">შეტყობინებები. თქვენ შეიძლება გაგზავნას გაგზავნა შექმნის tab.</string>
     <string name="label_InstNoRecipients">დაამატეთ ადრესატები, თქვენ უნდა პირველი Sling Keys ერთი ან მეტი სხვა წევრებს ამავე დროს. თქვენ შეიძლება ასევე Sling Keys კონტაქტი მოწვევა მენიუდან.</string>
     <string name="label_InstNoRecipientsMatchQuery">არც თქვენი მიმდინარე მიმღები ემთხვევა თქვენი ძებნა შეკითხვა. გთხოვთ სცადოთ სხვადასხვა query ან მოიწვიოს ახალი კონტაქტის.</string>
     <string name="label_InstNoSharedFile">არ გაიზიარა ფაილი. დაკავშირება თქვენი მოწყობილობა iTunes და გადაიტანეთ ფაილები საერთო საქაღალდეში.</string>

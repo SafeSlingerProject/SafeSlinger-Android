@@ -187,7 +187,6 @@
     <string name="label_hometag">Domov</string>
     <string name="label_hours">%d ur</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud je omogočeno. Tapnite gumb Končano, ko končate.</string>
-    <string name="label_InstNoMessages">Ni sporočil. Lahko pošljete sporočilo na zavihku Sestavi.</string>
     <string name="label_InstNoRecipients">Če želite dodati prejemnike, se morate najprej sling Tipke z enim ali več drugimi uporabniki hkrati. Lahko pošljete tudi Sling Keys kontaktne povabilo meniju.</string>
     <string name="label_InstNoRecipientsMatchQuery">Nobeden od vaših trenutnih prejemnikov se ujemajo z vašo poizvedbo. Prosimo, poskusite drugačno vprašanje ali povabiti nov stik.</string>
     <string name="label_InstNoSharedFile">Ne delijo datoteke. Napravo povežite z iTunes in povlecite datoteke v mapi v skupni rabi.</string>

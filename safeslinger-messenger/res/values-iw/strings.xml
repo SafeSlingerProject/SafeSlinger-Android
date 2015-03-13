@@ -187,7 +187,6 @@
     <string name="label_hometag">בית</string>
     <string name="label_hours">%d שעות</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud מופעל. הקש על לחצן סיום בסיום.</string>
-    <string name="label_InstNoMessages">אין הודעות. אתה יכול לשלוח הודעה מהכרטיסייה להלחין.</string>
     <string name="label_InstNoRecipients">כדי להוסיף נמענים, אתה צריך קודם קלע מפתחות עם משתמשים אחרים אחד או יותר באותו הזמן. אתה יכול גם לשלוח איש קשר הזמנת קלע מפתחות מהתפריט.</string>
     <string name="label_InstNoRecipientsMatchQuery">אף אחד מהמקבלים הנוכחיים שלך מתאים לשאילתא החיפוש שלך. אנא נסה שאילתא שונה או להזמין איש קשר חדש.</string>
     <string name="label_InstNoSharedFile">אין משותף קובץ. חבר את המכשיר שלך עם iTunes וקבצים לגרור לתיקייה המשותפת.</string>
