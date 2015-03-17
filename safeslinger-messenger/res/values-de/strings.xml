@@ -41,6 +41,7 @@
     <string name="btn_Close">Schließen</string>
     <string name="btn_Continue">Fortsetzen</string>
     <string name="btn_CreateNewKey">Neuen Schlüssel erstellen</string>
+    <string name="btn_Delete">Löschen</string>
     <string name="btn_DeleteKeys">Schlüssel löschen</string>
     <string name="btn_discard">Verwerfen</string>
     <string name="btn_Done">Fertig</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Verweigern</string>
     <string name="btn_Remind">Erinnern</string>
+    <string name="btn_Retry">Wiederholen</string>
     <string name="btn_Save">Speichern</string>
     <string name="btn_SelectFile">Datei anhängen</string>
     <string name="btn_SendFile">Senden</string>
@@ -340,6 +342,7 @@
     <string name="section_storage">Dateispeicher</string>
 
     <string name="state_BackupRestored">Sicherung wiederhergestellt.</string>
+    <string name="state_FailedToSendMessage">Fehler beim versenden. Drücken und halten Sie für die Optionen.</string>
     <string name="state_FileDeleted">Datei %s gelöscht.</string>
     <string name="state_FileSent">Nachricht gesendet.</string>
     <string name="state_InvitationAdded">Einladung hinzugefügt.</string>
@@ -379,6 +382,7 @@
     <string name="title_camera">Kamera</string>
     <string name="title_ChooseDirectory">Verzeichnis wählen</string>
     <string name="title_ChooseFileLoad">Wählen Sie Ihre Datei</string>
+    <string name="title_clear">Löschen</string>
     <string name="title_comments">Kommentare/Fragen</string>
     <string name="title_Error">Fehler</string>
     <string name="title_ExchangeWalkthrough">Begleittext zum Schlüssel Austausch</string>
@@ -388,6 +392,7 @@
     <string name="title_home">Austausch beginnen</string>
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">Nachricht</string>
+    <string name="title_MessageOptions">Nachricht Optionen</string>
     <string name="title_Messages">Nachrichten</string>
     <string name="title_MyIdentity">Persönlicher Kontakt</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Nachricht verfügbar</string>

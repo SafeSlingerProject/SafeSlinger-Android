@@ -1385,13 +1385,18 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         switch (resultCode) {
             case MessagesFragment.RESULT_SAVE:
                 MessageData saveMsg = new MessageData();
+                if (!TextUtils.isEmpty(d.getFileName())) {
+                    // set all file data if needed first
+                    saveMsg = d.getSendMsg();
+                }
                 saveMsg.setRowId(rowIdMessage);
                 saveMsg.setText(text);
                 if (saveMsg.getRowId() < 0) {
                     // create draft (need at least recipient(file) or text
                     // chosen...
-                    if (!TextUtils.isEmpty(saveMsg.getText())
-                            || !TextUtils.isEmpty(saveMsg.getFileName())) {
+                    if (recip != null
+                            && (!TextUtils.isEmpty(saveMsg.getText()) || !TextUtils.isEmpty(saveMsg
+                                    .getFileName()))) {
                         long rowId = dbMessage.createDraftMessage(recip, saveMsg,
                                 System.currentTimeMillis());
                         saveMsg.setRowId(rowId);
@@ -1437,6 +1442,10 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 break;
             case MessagesFragment.RESULT_SEND:
                 MessageData sendMsg = new MessageData();
+                if (!TextUtils.isEmpty(d.getFileName())) {
+                    // set all file data if needed
+                    sendMsg = d.getSendMsg();
+                }
                 // set sent time closest to UI command
                 sendMsg.setDateSent(System.currentTimeMillis());
                 sendMsg.setRowId(rowIdMessage);
@@ -1454,6 +1463,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 }
                 // manual message, keep message tab draft
                 doSendMessageStart(new MessageTransport(recip, sendMsg, true));
+                d.clearSendMsg();
                 break;
             case MessagesFragment.RESULT_FWDMESSAGE:
                 d.clearSendMsg();
@@ -1462,11 +1472,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 if (cfm != null) {
                     try {
                         if (cfm.moveToFirst()) {
-                            MessageRow edit = new MessageRow(cfm, false);
-                            d.setText(edit.getText());
+                            MessageRow fwd = new MessageRow(cfm, false);
+                            d.setText(fwd.getText());
                             try {
-                                if (!TextUtils.isEmpty(edit.getFileDir())) {
-                                    doLoadAttachment(edit.getFileDir());
+                                if (!TextUtils.isEmpty(fwd.getFileDir())) {
+                                    doLoadAttachment(fwd.getFileDir());
                                 }
                             } catch (FileNotFoundException e) {
                                 showNote(e);
@@ -2237,9 +2247,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         break;
                     default:
                         break;
-                }
-                if (!d.existsRecip()) {
-                    showRecipientSelect(VIEW_RECIPSEL_ID);
                 }
                 break;
 
@@ -4146,6 +4153,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         final int position = getSupportActionBar().getSelectedNavigationIndex();
         if (MessagesFragment.getRecip() != null && position == Tabs.MESSAGE.ordinal()) {
             // collapse messages to threads when in message view
+            DraftData.INSTANCE.clearRecip();
             MessagesFragment.setRecip(null);
             refreshView();
         } else {

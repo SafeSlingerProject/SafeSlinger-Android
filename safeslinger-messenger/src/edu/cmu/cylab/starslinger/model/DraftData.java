@@ -59,9 +59,8 @@ public class DraftData {
     }
 
     public boolean existsSendMsg() {
-        return mSendMsg != null
-                && (TextUtils.isEmpty(mSendMsg.getText()) || TextUtils.isEmpty(mSendMsg
-                        .getFileName()));
+        return (mSendMsg != null && !(TextUtils.isEmpty(mSendMsg.getText()) && TextUtils
+                .isEmpty(mSendMsg.getFileName())));
     }
 
     public boolean existsRecip() {

@@ -41,6 +41,7 @@
     <string name="btn_Close">Κλείσιμο</string>
     <string name="btn_Continue">Συνέχεια</string>
     <string name="btn_CreateNewKey">Δημιουργία νέου κλειδιού</string>
+    <string name="btn_Delete">Διαγραφή</string>
     <string name="btn_DeleteKeys">Διαγραφή Κλειδιών</string>
     <string name="btn_discard">Απόρριψη</string>
     <string name="btn_Done">Τέλος</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">ΟΚ</string>
     <string name="btn_Refuse">Απόρριψη</string>
     <string name="btn_Remind">Υπενθύμιση</string>
+    <string name="btn_Retry">Επανάληψη</string>
     <string name="btn_Save">Αποθήκευση</string>
     <string name="btn_SelectFile">Επιλέξτε Αρχείο</string>
     <string name="btn_SendFile">Αποστολή</string>
@@ -198,6 +200,7 @@
     <string name="label_Key">Κλειδί:</string>
     <string name="label_LastName">Επώνυμο</string>
     <string name="label_Me">Εγώ</string>
+    <string name="label_messageAutomatedVerify">(%1$s has confirmed the key for %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Θα ήθελα να γνωρίσω τον %s σε εσάς.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Για να ρυθμίσουμε μια ασφαλή επικοινωνία μέσω μηνυμάτων, μπορούμε να ανταλλάξουμε κλειδιά από κοντά ή μέσω τηλεφώνου. Αυτό θα χρειαστεί μόνο μία φορά για να επικυρώσει την επικοινωνία.</string>
@@ -339,6 +342,7 @@
     <string name="section_storage">Αποθήκευση</string>
 
     <string name="state_BackupRestored">Αντίγραφο ασφαλείας αποκαταστάθηκε.</string>
+    <string name="state_FailedToSendMessage">Αποτυχία να στείλετε μήνυμα. Αγγίξτε και κρατήστε το για επιλογές.</string>
     <string name="state_FileDeleted">Διαγραφή αρχείου %s.</string>
     <string name="state_FileSent">Το μήνυμα εστάλη.</string>
     <string name="state_InvitationAdded">Πρόσκληση πρόσθεσε.</string>
@@ -378,6 +382,7 @@
     <string name="title_camera">Φωτογραφική μηχανή</string>
     <string name="title_ChooseDirectory">Επιλέξτε Φάκελο</string>
     <string name="title_ChooseFileLoad">Επιλέξτε το αρχείο σας</string>
+    <string name="title_clear">Απαλοιφή</string>
     <string name="title_comments">Σχόλια/Ερωτήσεις</string>
     <string name="title_Error">Σφάλμα</string>
     <string name="title_ExchangeWalkthrough">Sling Βοηθός Κλειδιών</string>
@@ -387,6 +392,7 @@
     <string name="title_home">Ξεκινήστε Ανταλλαγή</string>
     <string name="title_HomePanel">Σπίτι</string>
     <string name="title_MessageDetail">Μήνυμα</string>
+    <string name="title_MessageOptions">Επιλογές μηνύματος</string>
     <string name="title_Messages">Μηνύματα</string>
     <string name="title_MyIdentity">Προσωπική Επικοινωνία</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Μήνυμα Διαθέσιμο</string>

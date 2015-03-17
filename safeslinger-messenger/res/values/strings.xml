@@ -29,11 +29,11 @@
     <string name="action_NewUserRequest">Add a Sling Keys contact invitation via…</string>
 
     <!-- application description (sentence case); the names of the individuals who helped develop the application. -->
-    <string name="app_DeveloperName" translatable="false">Bruno Nunes\nGurtej Singh Chandok\nJason Lee\nManish Burman\nMichael W Farb (Android Lead)\nVinay Ramkrishnan\nYue-Hsun Lin (iOS Lead)\n</string>
+    <string name="app_DeveloperName" translatable="false">Bruno Nunes\nGurtej Singh Chandok\nJason Lee\nMadhur Shrimal (JavaScript Lead)\nManish Burham\nMichael W Farb (Android Lead)\nVinay Ramkrishnan\nYue-Hsun Lin (iOS Lead)\n</string>
     <!-- application name (title case); used for home screen icons, at the top of many screens, and many other places in the application. -->
     <string name="app_name">SafeSlinger</string>
     <!-- application description (sentence case); the names of the individuals who translated and/or reviewed localizations. -->
-    <string name="app_TranslatorName" translatable="false">Adrian Perrig\nAkira Yamada\nAlbert Stroucken\nElli Fragkaki\nEmmanuel Owusu\nIrina Fudrow\nJens Höfflinger\nMatthias Beckerle\nMichael Stroucken\nNicolas Christin\nSteve Matsumoto\nYeon Yim\nYue-Hsun Lin\n</string>
+    <string name="app_TranslatorName" translatable="false">Adrian Perrig\nAkira Yamada\nAlbert Stroucken\nElli Fragkaki\nEmmanuel Owusu\nIrina Fudrow\nJens Höfflinger\nMatthias Beckerle\nMichael Stroucken\nNicolas Christin\nSteve Matsumoto\nWasilis Mandratzis-Walz\nYeon Yim\nYue-Hsun Lin\n</string>
 
     <!-- question message (sentence case, question mark); used to warn when the backup is off to confirm we should keep reminding the user. Used with Forget and Remind buttons. -->
     <string name="ask_BackupDisabledRemindLater">Backup is disabled. Do you want to adjust backup settings and keep this reminder?</string>

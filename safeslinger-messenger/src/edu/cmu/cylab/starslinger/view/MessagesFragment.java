@@ -159,7 +159,7 @@ public class MessagesFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        doSave(mEditTextMessage.getText().toString(), mRecip != null);
+        doSave(mRecip != null);
 
         // save
         if (mDraft != null && mDraft.getRowId() != -1) {
@@ -292,7 +292,7 @@ public class MessagesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // requested send from send button...
-                doSend(mEditTextMessage.getText().toString(), mRecip != null);
+                doSend(mRecip != null);
             }
         });
 
@@ -302,7 +302,7 @@ public class MessagesFragment extends Fragment {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEND) {
                     // requested send from keyboard...
-                    doSend(mEditTextMessage.getText().toString(), mRecip != null);
+                    doSend(mRecip != null);
                     return true;
                 }
                 return false;
@@ -313,7 +313,8 @@ public class MessagesFragment extends Fragment {
         return vFrag;
     }
 
-    private void doSave(String text, boolean save) {
+    private void doSave(boolean save) {
+        String text = mEditTextMessage.getText().toString();
         Intent intent = new Intent();
         if (save) {
             intent.putExtra(extra.TEXT_MESSAGE, text.trim());
@@ -324,7 +325,7 @@ public class MessagesFragment extends Fragment {
                 intent.putExtra(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
             }
             // always keep local version, unless we need to delete
-            if (mDraft != null && !isSendableText()) {
+            if (mDraft != null && !isSendableMessage()) {
                 mDraft = null;
                 mEditTextMessage.setTextKeepState("");
             }
@@ -332,9 +333,10 @@ public class MessagesFragment extends Fragment {
         }
     }
 
-    private void doSend(String text, boolean send) {
+    private void doSend(boolean send) {
+        String text = mEditTextMessage.getText().toString();
         Intent intent = new Intent();
-        if (send && isSendableText()) {
+        if (send && isSendableMessage()) {
             // recipient required to send anything
             if (mDraft != null) {
                 intent.putExtra(extra.MESSAGE_ROW_ID, mDraft.getRowId());
@@ -702,7 +704,7 @@ public class MessagesFragment extends Fragment {
                     } else {
                         // clear draft in thread view
                         showCompose = false;
-                        doSave(mEditTextMessage.getText().toString(), true);
+                        doSave(true);
                         mDraft = null;
                         mEditTextMessage.setTextKeepState("");
                     }
@@ -727,11 +729,6 @@ public class MessagesFragment extends Fragment {
                                 drawFileData();
                                 mTextViewFile.setTextColor(Color.BLACK);
                                 mrlFile.setVisibility(View.VISIBLE);
-                            } else {
-                                mTextViewFile.setTextColor(Color.GRAY);
-                                mTextViewFile.setText(R.string.btn_SelectFile);
-                                mImageViewFile.setImageResource(R.drawable.ic_attachment_select);
-                                mTextViewFileSize.setText("");
                             }
                         }
                     } else {
@@ -1115,16 +1112,18 @@ public class MessagesFragment extends Fragment {
     public void onPause() {
         super.onPause();
 
-        // if soft input open, close it...
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(
-                Context.INPUT_METHOD_SERVICE);
-        View focus = getActivity().getCurrentFocus();
-        if (focus != null) {
-            imm.hideSoftInputFromWindow(focus.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-        }
+        // // if soft input open, close it...
+        // InputMethodManager imm = (InputMethodManager)
+        // getActivity().getSystemService(
+        // Context.INPUT_METHOD_SERVICE);
+        // View focus = getActivity().getCurrentFocus();
+        // if (focus != null) {
+        // imm.hideSoftInputFromWindow(focus.getWindowToken(),
+        // InputMethodManager.HIDE_NOT_ALWAYS);
+        // }
 
         // save draft when view is lost
-        doSave(mEditTextMessage.getText().toString(), mRecip != null);
+        doSave(mRecip != null);
     }
 
     @Override
@@ -1300,8 +1299,9 @@ public class MessagesFragment extends Fragment {
         }
     }
 
-    private boolean isSendableText() {
-        return TextUtils.getTrimmedLength(mEditTextMessage.getText()) != 0;
+    private boolean isSendableMessage() {
+        return TextUtils.getTrimmedLength(mEditTextMessage.getText()) != 0
+                || (mDraft != null && !TextUtils.isEmpty(mDraft.getFileName()));
     }
 
     @SuppressWarnings("deprecation")
@@ -1315,6 +1315,10 @@ public class MessagesFragment extends Fragment {
             BitmapDrawable tn = new BitmapDrawable(in);
             mImageViewFile.setImageDrawable(tn);
         } else {
+            // default, there should always be some image
+            mImageViewFile.setImageDrawable(getResources().getDrawable(R.drawable.ic_menu_file));
+
+            // is there a more specific file type available?
             Intent viewIntent = new Intent(Intent.ACTION_VIEW);
             viewIntent.setType(mime);
             PackageManager pm = getActivity().getPackageManager();
@@ -1335,7 +1339,6 @@ public class MessagesFragment extends Fragment {
                     }
                 }
             }
-
         }
     }
 
