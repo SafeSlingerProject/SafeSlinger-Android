@@ -153,10 +153,9 @@ public class SafeSlingerConfig {
         public static final String ERROR = "Error";
         public static final String EXCH_NAME = "ExchName";
         public static final String EXCHANGED_TOTAL = "ExchangedTotal";
-        public static final String FILE_PATH = "FilePath";
         public static final String FIRSTLVL = "FirstLvl";
-        public static final String FNAME = "FILE NAME";
-        public static final String FPATH = "FILE PATH";
+        public static final String FNAME = "FileName";
+        public static final String FPATH = "FilePath";
         public static final String INTRO_NAME = "IntroName";
         public static final String MAX = "max";
         public static final String MESSAGE_ROW_ID = "MessageRowId";

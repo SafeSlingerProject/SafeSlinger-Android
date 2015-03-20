@@ -398,7 +398,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         if (SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING.equals(action)) {
             // clicked on new message notifications window, show messages
             // collapse messages to threads when looking for new messages
-            MessagesFragment.setRecip(null);
+            MessagesFragment.removeRecip();
             setTab(Tabs.MESSAGE);
             refreshView();
 
@@ -811,7 +811,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         // save
         if (SafeSlinger.getTempCameraFileUri() != null) {
-            outState.putString(extra.FILE_PATH, SafeSlinger.getTempCameraFileUri().getPath());
+            outState.putString(extra.FPATH, SafeSlinger.getTempCameraFileUri().getPath());
         }
         final int position = getSupportActionBar().getSelectedNavigationIndex();
         outState.putInt(extra.RECOVERY_TAB, position);
@@ -832,12 +832,19 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         final int position = getSupportActionBar().getSelectedNavigationIndex();
         if (position == Tabs.MESSAGE.ordinal()) {
             if (MessagesFragment.getRecip() != null) {
-                MenuItem iAdd = menu.add(0, MENU_ATTACH, 0, R.string.btn_SelectFile).setIcon(
-                        android.R.drawable.ic_menu_gallery);
-                MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+                RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
+                int newerRecips = dbRecipient.getAllNewerRecipients(MessagesFragment.getRecip(),
+                        true);
+                if (MessagesFragment.getRecip().isSendable() && newerRecips <= 0) {
+                    // user can attach when in conversation and not disabled
+                    MenuItem iAdd = menu.add(0, MENU_ATTACH, 0, R.string.btn_SelectFile).setIcon(
+                            R.drawable.ic_action_attach_file);
+                    MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+                }
             } else {
+                // user can add message from all threads view
                 MenuItem iAdd = menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages).setIcon(
-                        android.R.drawable.ic_menu_add);
+                        R.drawable.ic_action_add_message);
                 MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
             }
         }
@@ -1353,11 +1360,13 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         int resultCode = data.getInt(extra.RESULT_CODE);
         DraftData d = DraftData.INSTANCE;
         String text = null;
+        String fpath = null;
         RecipientRow recip = null;
         long rowIdMessage = -1;
         long rowIdInbox = -1;
         if (data != null) {
             text = data.getString(extra.TEXT_MESSAGE);
+            fpath = data.getString(extra.FPATH);
             rowIdMessage = data.getLong(extra.MESSAGE_ROW_ID, -1L);
             rowIdInbox = data.getLong(extra.INBOX_ROW_ID, -1L);
             long rowIdRecipient = data.getLong(extra.RECIPIENT_ROW_ID, -1L);
@@ -1385,18 +1394,27 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         switch (resultCode) {
             case MessagesFragment.RESULT_SAVE:
                 MessageData saveMsg = new MessageData();
-                if (!TextUtils.isEmpty(d.getFileName())) {
-                    // set all file data if needed first
-                    saveMsg = d.getSendMsg();
-                }
                 saveMsg.setRowId(rowIdMessage);
                 saveMsg.setText(text);
+                try {
+                    if (!TextUtils.isEmpty(fpath)) {
+                        doLoadAttachment(fpath);
+                        saveMsg.setFileDir(d.getFileDir());
+                        saveMsg.setFileName(d.getFileName());
+                        saveMsg.setFileType(d.getFileType());
+                        saveMsg.setFileData(d.getFileData());
+                        saveMsg.setFileSize(d.getFileSize());
+                    }
+                } catch (FileNotFoundException e) {
+                    showNote(e);
+                    refreshView();
+                    break;
+                }
                 if (saveMsg.getRowId() < 0) {
                     // create draft (need at least recipient(file) or text
                     // chosen...
                     if (recip != null
-                            && (!TextUtils.isEmpty(saveMsg.getText()) || !TextUtils.isEmpty(saveMsg
-                                    .getFileName()))) {
+                            && (!TextUtils.isEmpty(saveMsg.getText()) || saveMsg.getFileData() != null)) {
                         long rowId = dbMessage.createDraftMessage(recip, saveMsg,
                                 System.currentTimeMillis());
                         saveMsg.setRowId(rowId);
@@ -1421,8 +1439,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         }
                     }
 
-                    if (!TextUtils.isEmpty(saveMsg.getText())
-                            || !TextUtils.isEmpty(saveMsg.getFileName())) {
+                    if (!TextUtils.isEmpty(saveMsg.getText()) || saveMsg.getFileData() != null) {
                         // update draft
                         if (!dbMessage.updateDraftMessage(saveMsg.getRowId(), recip, saveMsg)) {
                             showNote(R.string.error_UnableToUpdateMessageInDB);
@@ -1442,14 +1459,24 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 break;
             case MessagesFragment.RESULT_SEND:
                 MessageData sendMsg = new MessageData();
-                if (!TextUtils.isEmpty(d.getFileName())) {
-                    // set all file data if needed
-                    sendMsg = d.getSendMsg();
-                }
                 // set sent time closest to UI command
                 sendMsg.setDateSent(System.currentTimeMillis());
                 sendMsg.setRowId(rowIdMessage);
                 sendMsg.setText(text);
+                try {
+                    if (!TextUtils.isEmpty(fpath)) {
+                        doLoadAttachment(fpath);
+                        sendMsg.setFileDir(d.getFileDir());
+                        sendMsg.setFileName(d.getFileName());
+                        sendMsg.setFileType(d.getFileType());
+                        sendMsg.setFileData(d.getFileData());
+                        sendMsg.setFileSize(d.getFileSize());
+                    }
+                } catch (FileNotFoundException e) {
+                    showNote(e);
+                    refreshView();
+                    break;
+                }
                 // user wants to post the file and notify recipient
                 if (recip == null) {
                     showNote(R.string.error_InvalidRecipient);
@@ -1467,7 +1494,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 break;
             case MessagesFragment.RESULT_FWDMESSAGE:
                 d.clearSendMsg();
-                d.setSendMsgRowId(rowIdMessage);
                 Cursor cfm = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
                 if (cfm != null) {
                     try {
@@ -1500,8 +1526,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 break;
             case MessagesFragment.RESULT_EDITMESSAGE:
                 d.clearSendMsg();
-                d.setSendMsgRowId(rowIdMessage);
-                Cursor cem = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
+                Cursor cem = dbMessage.fetchMessageSmall(rowIdMessage);
                 if (cem != null) {
                     try {
                         if (cem.moveToFirst()) {
@@ -1509,6 +1534,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             d.setRecip(recip);
                             d.setText(edit.getText());
                             d.setKeyId(edit.getKeyId());
+                            d.setSendMsgRowId(rowIdMessage);
                             try {
                                 if (!TextUtils.isEmpty(edit.getFileDir())) {
                                     doLoadAttachment(edit.getFileDir());
@@ -1523,8 +1549,12 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         cem.close();
                     }
                 }
-                setTab(Tabs.MESSAGE);
-                refreshView();
+                if (!d.existsRecip()) {
+                    showRecipientSelect(VIEW_RECIPSEL_ID);
+                } else {
+                    setTab(Tabs.MESSAGE);
+                    refreshView();
+                }
                 break;
             case MessagesFragment.RESULT_GETMESSAGE:
                 MessageData inbox = new MessageData();
@@ -1548,7 +1578,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 recvFile.setFileSize(data.getInt(extra.PUSH_FILE_SIZE, 0));
                 recvFile.setFileData(null);
 
-                if (recvFile.getMsgHash() != null && recvFile.getFileName() != null) {
+                if (recvFile.getMsgHash() != null && recvFile.getFileDir() != null) {
                     GetFileTask getFileTask = new GetFileTask();
                     getFileTask.execute(recvFile);
                 } else {
@@ -1573,7 +1603,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     // old ss-mime way: complete re-download
                     ssFile.setFileData(null);
 
-                    if (ssFile.getMsgHash() != null && ssFile.getFileName() != null) {
+                    if (ssFile.getMsgHash() != null && ssFile.getFileDir() != null) {
                         GetFileTask getFileTask = new GetFileTask();
                         getFileTask.execute(ssFile);
                     } else {
@@ -2378,7 +2408,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     is.close();
                     showNote(String.format(getString(R.string.error_CannotSendFilesOver),
                             SafeSlingerConfig.MAX_FILEBYTES));
-                    refreshView();
                     return;
                 }
 
@@ -2399,11 +2428,9 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             }
         } catch (OutOfMemoryError e) {
             showNote(R.string.error_OutOfMemoryError);
-            refreshView();
             return;
         } catch (IOException e) {
             showNote(e);
-            refreshView();
             return;
         }
         d.setFileName(vir.getName());
@@ -2750,7 +2777,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         // general state
         if (savedInstanceState != null) {
-            String filepath = savedInstanceState.getString(extra.FILE_PATH);
+            String filepath = savedInstanceState.getString(extra.FPATH);
             if (!TextUtils.isEmpty(filepath)) {
                 SafeSlinger.setTempCameraFileUri(Uri.fromFile(new File(filepath)));
             }
@@ -4153,8 +4180,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         final int position = getSupportActionBar().getSelectedNavigationIndex();
         if (MessagesFragment.getRecip() != null && position == Tabs.MESSAGE.ordinal()) {
             // collapse messages to threads when in message view
-            DraftData.INSTANCE.clearRecip();
-            MessagesFragment.setRecip(null);
+            MessagesFragment.removeRecip();
             refreshView();
         } else {
             // exit when at top level of each tab

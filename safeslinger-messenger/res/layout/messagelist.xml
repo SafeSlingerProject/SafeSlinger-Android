@@ -171,11 +171,10 @@
                     android:id="@+id/SendButtonSend"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
                     android:contentDescription="@string/btn_SendFile"
                     android:drawablePadding="0dp"
-                    android:src="@android:drawable/ic_menu_send" />
+                    android:src="@drawable/ic_send" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

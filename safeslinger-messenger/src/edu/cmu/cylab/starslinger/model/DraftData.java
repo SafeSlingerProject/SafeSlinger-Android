@@ -75,6 +75,10 @@ public class DraftData {
         return mRecip2 != null;
     }
 
+    public String getFileDir() {
+        return mSendMsg.getFileDir();
+    }
+
     public byte[] getFileData() {
         return mSendMsg.getFileData();
     }

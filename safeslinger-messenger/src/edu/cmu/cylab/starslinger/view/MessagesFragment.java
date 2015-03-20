@@ -124,7 +124,7 @@ public class MessagesFragment extends Fragment {
     private MessagesAdapter mAdapterMsg;
     private ThreadsAdapter mAdapterThread;
     private NotificationManager mNm;
-    private OnMessagesResultListener mResult;
+    private static OnMessagesResultListener mResult;
     private static RecipientRow mRecip;
     private static int mListMsgVisiblePos;
     private static int mListMsgTopOffset;
@@ -136,7 +136,7 @@ public class MessagesFragment extends Fragment {
     private ImageView mImageViewFile;
     private Button mButtonFile;
     private RelativeLayout mrlFile;
-    private String mFilePath = null;
+    private String mFileName = null;
     private int mFileSize = 0;
     private byte[] mThumb = null;
 
@@ -160,14 +160,6 @@ public class MessagesFragment extends Fragment {
         super.onSaveInstanceState(outState);
 
         doSave(mRecip != null);
-
-        // save
-        if (mDraft != null && mDraft.getRowId() != -1) {
-            outState.putLong(extra.MESSAGE_ROW_ID, mDraft.getRowId());
-        }
-        if (mRecip != null && mRecip.getRowId() != -1) {
-            outState.putLong(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
-        }
     }
 
     public void updateValues(Bundle extras) {
@@ -202,9 +194,10 @@ public class MessagesFragment extends Fragment {
                         c.close();
                     }
                 }
-            } else if (msgRowId == -1) {
-                mRecip = null;
             }
+            // else if (msgRowId == -1) {
+            // mRecip = null;
+            // }
         } else {
             if (d.existsRecip()) {
                 mRecip = d.getRecip();
@@ -212,6 +205,7 @@ public class MessagesFragment extends Fragment {
                 mRecip = null;
             }
         }
+        d.setRecip(mRecip);
 
         updateList(msgRowId != -1);
     }
@@ -279,7 +273,7 @@ public class MessagesFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(mFilePath)) {
+                if (TextUtils.isEmpty(mFileName)) {
                     doFileSelect();
                 } else {
                     showChangeFileOptions();
@@ -313,12 +307,13 @@ public class MessagesFragment extends Fragment {
         return vFrag;
     }
 
-    private void doSave(boolean save) {
+    private static void doSave(boolean save) {
         String text = mEditTextMessage.getText().toString();
         Intent intent = new Intent();
         if (save) {
             intent.putExtra(extra.TEXT_MESSAGE, text.trim());
             if (mDraft != null) {
+                intent.putExtra(extra.FPATH, mDraft.getFileDir());
                 intent.putExtra(extra.MESSAGE_ROW_ID, mDraft.getRowId());
             }
             if (mRecip != null) {
@@ -328,6 +323,7 @@ public class MessagesFragment extends Fragment {
             if (mDraft != null && !isSendableMessage()) {
                 mDraft = null;
                 mEditTextMessage.setTextKeepState("");
+                DraftData.INSTANCE.clearSendMsg();
             }
             sendResultToHost(RESULT_SAVE, intent.getExtras());
         }
@@ -339,6 +335,7 @@ public class MessagesFragment extends Fragment {
         if (send && isSendableMessage()) {
             // recipient required to send anything
             if (mDraft != null) {
+                intent.putExtra(extra.FPATH, mDraft.getFileDir());
                 intent.putExtra(extra.MESSAGE_ROW_ID, mDraft.getRowId());
             }
             intent.putExtra(extra.TEXT_MESSAGE, text.trim());
@@ -348,6 +345,7 @@ public class MessagesFragment extends Fragment {
             // remove local version after sending
             mDraft = null;
             mEditTextMessage.setTextKeepState("");
+            DraftData.INSTANCE.clearSendMsg();
             sendResultToHost(RESULT_SEND, intent.getExtras());
         }
     }
@@ -434,7 +432,7 @@ public class MessagesFragment extends Fragment {
                 } else {
                     // requested threads list
                     // remove recipient
-                    mRecip = null;
+                    removeRecip();
                 }
 
                 updateList(true);
@@ -529,12 +527,18 @@ public class MessagesFragment extends Fragment {
 
             @Override
             public void run() {
-
                 boolean showCompose = false;
                 MessageDbAdapter dbMessage;
                 InboxDbAdapter dbInbox;
                 ThreadData t = null;
                 byte[] myPhoto = null;
+
+                if ((getActivity()) == null) {
+                    return;
+                }
+
+                DraftData d = DraftData.INSTANCE;
+                d.setRecip(mRecip);
 
                 getActivity().supportInvalidateOptionsMenu();
                 // update action bar options
@@ -544,10 +548,6 @@ public class MessagesFragment extends Fragment {
 
                 // make sure view is already inflated...
                 if (mListViewMsgs == null) {
-                    return;
-                }
-
-                if ((getActivity()) == null) {
                     return;
                 }
 
@@ -613,6 +613,13 @@ public class MessagesFragment extends Fragment {
                             cmt.close();
                         }
                     }
+                    // add thread for draft thread state
+                    if (mRecip != null && t == null) {
+                        totalThreads += 1;
+                        t = new ThreadData(new MessageRow(null, false), 0, 0, false, mRecip
+                                .getName(), mRecip != null, false, mRecip);
+                        mergeInThreads(t);
+                    }
 
                     if (totalThreads <= 0) {
                         manageInstructVisibility(View.VISIBLE);
@@ -625,8 +632,7 @@ public class MessagesFragment extends Fragment {
                     mMessageList.clear();
                     if (mRecip != null) {
                         // recipient data
-                        if (mRecip != null && mRecip.isSendable() && t != null
-                                && !t.isNewerExists()) {
+                        if (mRecip.isSendable() && t != null && !t.isNewerExists()) {
                             showCompose = true;
                         }
                         // encrypted msgs
@@ -663,8 +669,7 @@ public class MessagesFragment extends Fragment {
 
                                         // check if global draft has been set
                                         // first
-                                        DraftData d = DraftData.INSTANCE;
-                                        if (d.existsRecip() && d.existsSendMsg()) {
+                                        if (d.existsSendMsg()) {
                                             mDraft = d.getSendMsg();
                                             if (!TextUtils.isEmpty(mDraft.getText())) {
                                                 mEditTextMessage.setTextKeepState(mDraft.getText());
@@ -674,11 +679,9 @@ public class MessagesFragment extends Fragment {
 
                                         if (mDraft == null
                                                 && messageRow.getStatus() == MessageDbAdapter.MESSAGE_STATUS_DRAFT
-                                                && TextUtils.isEmpty(messageRow.getFileName())
                                                 && mRecip.isSendable()) {
                                             // if recent draft, remove from list
-                                            // put
-                                            // in edit box
+                                            // put in edit box
                                             mDraft = messageRow;
                                             mEditTextMessage.setTextKeepState(mDraft.getText());
                                             mEditTextMessage.forceLayout();
@@ -705,8 +708,6 @@ public class MessagesFragment extends Fragment {
                         // clear draft in thread view
                         showCompose = false;
                         doSave(true);
-                        mDraft = null;
-                        mEditTextMessage.setTextKeepState("");
                     }
 
                     if (showCompose) {
@@ -714,7 +715,7 @@ public class MessagesFragment extends Fragment {
                         mrlFile.setVisibility(View.GONE);
                         if (mDraft != null) {
                             // load file data if exists
-                            mFilePath = mDraft.getFileName();
+                            mFileName = mDraft.getFileName();
                             mFileSize = mDraft.getFileSize();
                             if (!TextUtils.isEmpty(mDraft.getFileType())
                                     && mDraft.getFileType().contains("image")) {
@@ -724,7 +725,7 @@ public class MessagesFragment extends Fragment {
                                 mThumb = null;
                             }
                             // file
-                            if (!(TextUtils.isEmpty(mFilePath))) {
+                            if (!(TextUtils.isEmpty(mFileName))) {
                                 drawFileImage();
                                 drawFileData();
                                 mTextViewFile.setTextColor(Color.BLACK);
@@ -899,7 +900,9 @@ public class MessagesFragment extends Fragment {
                     getString(R.string.menu_deleteThread),
                     ThreadsAdapter.getBestIdentityName(getActivity(),
                             mThreadList.get(info.position), recip));
-            menu.add(Menu.NONE, R.id.item_delete_thread, Menu.NONE, delThreadStr);
+            if (mThreadList.get(info.position).getMsgCount() > 0) {
+                menu.add(Menu.NONE, R.id.item_delete_thread, Menu.NONE, delThreadStr);
+            }
             if (recip != null && recip.getRowId() > -1
                     && recip.getSource() != RecipientDbAdapter.RECIP_SOURCE_INVITED) {
                 if (!recip.isValidContactLink()) {
@@ -1094,6 +1097,7 @@ public class MessagesFragment extends Fragment {
         }
         if (msgsInView == 0) {
             mRecip = null;
+            DraftData.INSTANCE.clearRecip();
         }
     }
 
@@ -1149,7 +1153,7 @@ public class MessagesFragment extends Fragment {
         }
     }
 
-    private void sendResultToHost(int resultCode, Bundle args) {
+    private static void sendResultToHost(int resultCode, Bundle args) {
         if (args == null) {
             args = new Bundle();
         }
@@ -1273,8 +1277,10 @@ public class MessagesFragment extends Fragment {
         }
     }
 
-    public static void setRecip(RecipientRow recip) {
-        mRecip = recip;
+    public static void removeRecip() {
+        doSave(mRecip != null);
+        mRecip = null;
+        DraftData.INSTANCE.clearRecip();
     }
 
     public static RecipientRow getRecip() {
@@ -1299,14 +1305,14 @@ public class MessagesFragment extends Fragment {
         }
     }
 
-    private boolean isSendableMessage() {
+    private static boolean isSendableMessage() {
         return TextUtils.getTrimmedLength(mEditTextMessage.getText()) != 0
                 || (mDraft != null && !TextUtils.isEmpty(mDraft.getFileName()));
     }
 
     @SuppressWarnings("deprecation")
     private void drawFileImage() {
-        String filenameArray[] = mFilePath.split("\\.");
+        String filenameArray[] = mFileName.split("\\.");
         String extension = filenameArray[filenameArray.length - 1];
         String mime = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
 
@@ -1343,7 +1349,7 @@ public class MessagesFragment extends Fragment {
     }
 
     private void drawFileData() {
-        mTextViewFile.setText(mFilePath);
+        mTextViewFile.setText(mFileName);
         mTextViewFileSize.setText(" (" + SSUtil.getSizeString(getActivity(), mFileSize) + ")");
     }
 

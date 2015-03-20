@@ -112,7 +112,12 @@ public class ThreadsAdapter extends BaseAdapter {
         tvName.setText(getBestIdentityName(mCtx, t, recip));
 
         TextView tvCount = (TextView) convertView.findViewById(R.id.tvCount);
-        tvCount.setText(Integer.toString(t.getMsgCount()));
+        if (t.getMsgCount() > 0) {
+            tvCount.setVisibility(View.VISIBLE);
+            tvCount.setText(Integer.toString(t.getMsgCount()));
+        } else {
+            tvCount.setVisibility(View.GONE);
+        }
 
         TextView tvNew = (TextView) convertView.findViewById(R.id.tvNew);
         if (t.getNewCount() > 0) {
@@ -168,20 +173,21 @@ public class ThreadsAdapter extends BaseAdapter {
 
     public static String getBestIdentityName(Context ctx, ThreadData t, RecipientRow recip) {
         String person = null;
-        if (TextUtils.isEmpty(t.getMsgRow().getKeyId())) {
-            person = ctx.getString(R.string.label_undefinedTypeLabel);
-        } else {
-            if (recip == null) {
-                if (TextUtils.isEmpty(t.getLastPerson())) {
-                    // add unknown sender
-                    person = ctx.getString(R.string.label_UnknownSender) + " "
-                            + t.getMsgRow().getKeyId();
-                } else {
-                    person = t.getLastPerson();
-                }
-            } else {
+        if (recip != null) {
+            if (!TextUtils.isEmpty(recip.getName())) {
                 person = recip.getName();
             }
+        } else if (t != null) {
+            if (!TextUtils.isEmpty(t.getLastPerson())) {
+                person = t.getLastPerson();
+            } else if (!TextUtils.isEmpty(t.getMsgRow().getKeyId())) {
+                // add unknown sender
+                person = ctx.getString(R.string.label_UnknownSender) + " "
+                        + t.getMsgRow().getKeyId();
+            }
+        }
+        if (TextUtils.isEmpty(person)) {
+            person = ctx.getString(R.string.label_undefinedTypeLabel);
         }
         return person;
     }

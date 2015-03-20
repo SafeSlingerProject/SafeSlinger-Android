@@ -72,7 +72,9 @@ public class SSUtil {
     }
 
     public static byte[] makeThumbnail(Context ctx, byte[] imgData) {
-
+        if (imgData == null) {
+            return null;
+        }
         try {
             int dimension = (int) ctx.getResources().getDimension(R.dimen.avatar_size_list);
             Bitmap scaled = decodeSampledBitmapFromByte(imgData, dimension, dimension);

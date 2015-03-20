@@ -49,7 +49,9 @@ public class ThreadData {
         mHasDraft = hasDraft;
         mLastPerson = lastPerson;
         mNewerExists = newerExists;
-        mProgress = msgRow.getProgress();
+        if (mMsgRow != null) {
+            mProgress = msgRow.getProgress();
+        }
     }
 
     /***
