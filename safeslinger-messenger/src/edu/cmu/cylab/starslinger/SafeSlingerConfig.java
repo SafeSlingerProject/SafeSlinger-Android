@@ -81,8 +81,9 @@ public class SafeSlingerConfig {
     public static final int MS_READ_PER_CHAR = 50; // 50 msrpc ~ 20 cps
     public static final int MIN_PASSLEN = 8;
 
-    // TODO remove RECEIVE_DISABLED and send-only mode when GCM is in use
+    @Deprecated
     public static final String NOTIFY_NOPUSH_TOKENDATA = "RECEIVE_DISABLED";
+
     /***
      * This has no token type to receive messages. Messages cannot be received
      * by this type by any means. Define new types if there are other receiving

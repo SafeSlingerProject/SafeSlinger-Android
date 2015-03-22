@@ -166,7 +166,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     // constants
     private static final int RESULT_PICK_CONTACT_SENDER = 1;
     private static final int RESULT_ERROR = 9;
-    private static final int REQUEST_QRECEIVE_MGS = 14;
     private static final int VIEW_FILEATTACH_ID = 120;
     private static final int VIEW_FILESAVE_ID = 130;
     private static final int VIEW_RECIPSEL_ID = 140;
@@ -756,12 +755,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         // init local struct...
         int notify = SSUtil.getLocalNotification(getApplicationContext());
         String token = SafeSlingerPrefs.getPushRegistrationId();
-
-        // Determine if user wants to have a valid push token or not
-        if (notify == SafeSlingerConfig.NOTIFY_NOPUSH && TextUtils.isEmpty(token)) {
-            showQuestion(getString(R.string.ask_GoogleAccountToReceiveMsgs), REQUEST_QRECEIVE_MGS);
-            return false;
-        }
 
         // if push token bad....
         // ...request a push token... (restart)
@@ -1956,19 +1949,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     case PassPhraseActivity.RESULT_BACKPRESSED:
                         // this separate task is now finished
                         showExit(RESULT_CANCELED);
-                        break;
-                }
-                break;
-
-            case REQUEST_QRECEIVE_MGS:
-                switch (resultCode) {
-                    case RESULT_OK:
-                        doGetPushRegistration();
-                        break;
-                    case RESULT_CANCELED:
-                        SafeSlingerPrefs
-                                .setPushRegistrationId(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA);
-                        isSetupCheckComplete();
                         break;
                 }
                 break;
@@ -3330,9 +3310,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     if ((isOnlineUpdated || !SafeSlingerPrefs.getPushRegistrationIdPosted())) {
 
                         // only upload valid registration ids
-                        if (!TextUtils.isEmpty(senderPushRegId)
-                                && !senderPushRegId
-                                        .equals(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA)) {
+                        if (!TextUtils.isEmpty(senderPushRegId)) {
                             // post local active reg
                             byte[] result = mWeb.postRegistration(keyId, submisisonToken,
                                     senderPushRegId, notifyType);
