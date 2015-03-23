@@ -68,6 +68,7 @@ public class Service extends android.app.Service {
             if (airplaneOn) {
                 SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
                 stopForeground(true);
+                System.exit(0);
             }
         }
     };

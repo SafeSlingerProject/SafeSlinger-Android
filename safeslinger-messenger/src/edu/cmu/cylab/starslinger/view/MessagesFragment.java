@@ -308,9 +308,9 @@ public class MessagesFragment extends Fragment {
     }
 
     private static void doSave(boolean save) {
-        String text = mEditTextMessage.getText().toString();
-        Intent intent = new Intent();
         if (save) {
+            String text = mEditTextMessage.getText().toString();
+            Intent intent = new Intent();
             intent.putExtra(extra.TEXT_MESSAGE, text.trim());
             if (mDraft != null) {
                 intent.putExtra(extra.FPATH, mDraft.getFileDir());
@@ -330,9 +330,10 @@ public class MessagesFragment extends Fragment {
     }
 
     private void doSend(boolean send) {
-        String text = mEditTextMessage.getText().toString();
-        Intent intent = new Intent();
         if (send && isSendableMessage()) {
+            String text = mEditTextMessage.getText().toString();
+            Intent intent = new Intent();
+
             // recipient required to send anything
             if (mDraft != null) {
                 intent.putExtra(extra.FPATH, mDraft.getFileDir());

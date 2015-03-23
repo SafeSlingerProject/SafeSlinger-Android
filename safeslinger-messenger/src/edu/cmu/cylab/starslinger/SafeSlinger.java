@@ -317,6 +317,7 @@ public class SafeSlinger extends Application {
 
         for (String keyId : oldKeys) {
             mPassPhraseCache.remove(keyId);
+            System.exit(0);
         }
 
         return delay;

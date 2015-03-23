@@ -935,8 +935,9 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     private void doManualLogout() {
         reInitForExit();
         SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
-        SafeSlinger.startCacheService(HomeActivity.this);
-        showPassPhrase(false, false);
+        // SafeSlinger.startCacheService(HomeActivity.this);
+        // showPassPhrase(false, false);
+        System.exit(0);
     }
 
     private class CreateKeyTask extends AsyncTask<String, String, String> {
@@ -2136,8 +2137,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             case VIEW_SAVE_ID:
                 switch (resultCode) {
                     case SaveActivity.RESULT_SAVE:
-                        SafeSlinger.getApplication().setExchangeActive(false);
-                        SafeSlingerPrefs.setFirstExchangeComplete(true);
                         // locally store trusted exchanged items
                         Bundle args = data.getExtras();
                         args.putInt(extra.RECIP_SOURCE, RecipientDbAdapter.RECIP_SOURCE_EXCHANGE);
@@ -2145,19 +2144,19 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         importFromExchange.execute(args);
                         break;
                     case SaveActivity.RESULT_SELNONE:
-                        SafeSlinger.getApplication().setExchangeActive(false);
-                        SafeSlingerPrefs.setFirstExchangeComplete(true);
                         int exchanged = data.getExtras().getInt(extra.EXCHANGED_TOTAL);
                         showNote(String.format(getString(R.string.state_SomeContactsImported), "0/"
                                 + exchanged));
+                        SafeSlingerPrefs.setFirstExchangeComplete(true);
+                        SafeSlinger.getApplication().setExchangeActive(false);
                         break;
                     case RESULT_CANCELED:
-                        SafeSlinger.getApplication().setExchangeActive(false);
                         showNote(String.format(getString(R.string.state_SomeContactsImported), "0"));
+                        SafeSlinger.getApplication().setExchangeActive(false);
                         break;
                     default:
-                        SafeSlinger.getApplication().setExchangeActive(false);
                         showNote(String.format(getString(R.string.state_SomeContactsImported), "?"));
+                        SafeSlinger.getApplication().setExchangeActive(false);
                         break;
                 }
                 break;
@@ -2662,6 +2661,10 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
             backgroundSyncUpdates.execute(new String());
             refreshView();
+
+            // set the global completion here to be sure the
+            SafeSlinger.getApplication().setExchangeActive(false);
+            SafeSlingerPrefs.setFirstExchangeComplete(true);
         }
     }
 
