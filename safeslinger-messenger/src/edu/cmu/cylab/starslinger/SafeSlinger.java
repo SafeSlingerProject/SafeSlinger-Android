@@ -38,6 +38,7 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.Vector;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -47,6 +48,7 @@ import android.app.backup.BackupManager;
 import android.app.backup.RestoreObserver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -203,6 +205,11 @@ public class SafeSlinger extends Application {
     }
 
     public boolean isOnline() {
+        if (!doesUserHavePermission(Manifest.permission.ACCESS_NETWORK_STATE)) {
+            // users miss an early usability warning, but it is not critical
+            return true;
+        }
+
         boolean connected = false;
         if (mConnectivityManager == null) {
             mConnectivityManager = (ConnectivityManager) sSafeSlinger
@@ -212,6 +219,13 @@ public class SafeSlinger extends Application {
         NetworkInfo networkInfo = mConnectivityManager.getActiveNetworkInfo();
         connected = networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected();
         return connected;
+    }
+
+    public static boolean doesUserHavePermission(String permission) {
+        Context context = SafeSlinger.getApplication();
+        PackageManager pm = context.getPackageManager();
+        int result = pm.checkPermission(permission, context.getPackageName());
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     @SuppressWarnings("deprecation")

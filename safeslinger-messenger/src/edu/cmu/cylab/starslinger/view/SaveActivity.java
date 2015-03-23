@@ -32,6 +32,7 @@ import a_vcard.android.provider.Contacts;
 import a_vcard.android.syncml.pim.vcard.ContactStruct;
 import a_vcard.android.syncml.pim.vcard.ContactStruct.ContactMethod;
 import a_vcard.android.syncml.pim.vcard.Name;
+import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
@@ -244,7 +245,9 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
         // Prepare the system account manager. On registering the listener
         // below, we also ask for
         // an initial callback to pre-populate the account list.
-        AccountManager.get(this).addOnAccountsUpdatedListener(this, null, true);
+        if (SafeSlinger.doesUserHavePermission(Manifest.permission.GET_ACCOUNTS)) {
+            AccountManager.get(this).addOnAccountsUpdatedListener(this, null, true);
+        }
 
         // Register handlers for UI elements
         mAccountSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -316,6 +319,9 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
 
             boolean checked = SaveContactAdapter.isPositionChecked(i);
             if (checked && isValidContact(mem)) {
+                if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+                    continue;
+                }
                 Name name = mem.name;
                 if (name == null || name.toString() == null
                         || TextUtils.isEmpty(name.toString().trim())) {

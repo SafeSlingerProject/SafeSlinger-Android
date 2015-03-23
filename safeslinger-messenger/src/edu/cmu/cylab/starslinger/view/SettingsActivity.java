@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
+import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
@@ -189,8 +190,12 @@ public class SettingsActivity extends PreferenceActivity {
     }
 
     protected void setContactSyncAccount() {
-        AccountManager accountManager = AccountManager.get(getApplicationContext());
-        Account[] a = accountManager.getAccounts();
+        Account[] a;
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.GET_ACCOUNTS)) {
+            a = new Account[0];
+        } else {
+            a = AccountManager.get(getApplicationContext()).getAccounts();
+        }
 
         mAccounts.clear();
         AuthenticatorDescription[] accountTypes = AccountManager.get(this).getAuthenticatorTypes();

@@ -29,6 +29,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -237,7 +238,6 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
             MenuItem iHelp = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
                     R.drawable.ic_action_help);
-            MenuItemCompat.setShowAsAction(iHelp, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
 
             menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
                     R.drawable.ic_action_add_person);
@@ -256,7 +256,6 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
             MenuItem iHelpmenuItem = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
                     R.drawable.ic_action_help);
-            MenuItemCompat.setShowAsAction(iHelpmenuItem, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
 
             MenuItem contactInviteMenuItem = menu.add(0, MENU_CONTACTINVITE, 0,
                     R.string.menu_SelectShareApp).setIcon(R.drawable.ic_action_add_person);
@@ -359,12 +358,18 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
         }
 
         // display relative number of secured contacts...
-        int totalAdressBookContacts = getTotalUniqueAddressBookContacts();
         int totalRecipientContacts = getTotalUniqueRecipientContacts(mContacts);
-        if (totalAdressBookContacts > 0) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
             getSupportActionBar().setSubtitle(
-                    String.format("%s (%d/%d)", getText(R.string.title_PickRecipient),
-                            totalRecipientContacts, totalAdressBookContacts - 1));
+                    String.format("%s (%d)", getText(R.string.title_PickRecipient),
+                            totalRecipientContacts));
+        } else {
+            int totalAdressBookContacts = getTotalUniqueAddressBookContacts();
+            if (totalAdressBookContacts > 0) {
+                getSupportActionBar().setSubtitle(
+                        String.format("%s (%d/%d)", getText(R.string.title_PickRecipient),
+                                totalRecipientContacts, totalAdressBookContacts - 1));
+            }
         }
 
         // sort by name

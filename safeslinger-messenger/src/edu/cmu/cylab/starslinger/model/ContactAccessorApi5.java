@@ -36,6 +36,7 @@ import a_vcard.android.syncml.pim.vcard.ContactStruct.ContactMethod;
 import a_vcard.android.syncml.pim.vcard.ContactStruct.OrganizationData;
 import a_vcard.android.syncml.pim.vcard.ContactStruct.PhoneData;
 import a_vcard.android.syncml.pim.vcard.Name;
+import android.Manifest;
 import android.app.Activity;
 import android.content.ContentProviderOperation;
 import android.content.ContentProviderResult;
@@ -65,6 +66,7 @@ import android.text.TextUtils;
 import android.widget.Toast;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
@@ -83,6 +85,9 @@ public class ContactAccessorApi5 extends ContactAccessor {
     private final String NETMEETING = "NetMeeting";
 
     public Uri getDataUri(ContentResolver resolver, String contactLookupKey) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return null;
+        }
         Uri lookupUri = Uri.withAppendedPath(ContactsContract.Contacts.CONTENT_LOOKUP_URI,
                 contactLookupKey);
         if (lookupUri != null) {
@@ -590,6 +595,12 @@ public class ContactAccessorApi5 extends ContactAccessor {
     @Override
     public String insertNewContact(ContactStruct contact, String accountType, String accountName,
             Activity act) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return null;
+        }
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.WRITE_CONTACTS)) {
+            return null;
+        }
 
         // Note: We use RawContacts because this data must be associated with a
         // particular account.
@@ -713,6 +724,12 @@ public class ContactAccessorApi5 extends ContactAccessor {
     @Override
     public boolean updateOldContact(ContactStruct contact, Activity act, String selectedAcctType,
             String selectedAcctName, String rawContactId) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return true;
+        }
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.WRITE_CONTACTS)) {
+            return true;
+        }
 
         if (TextUtils.isEmpty(rawContactId))
             return false;

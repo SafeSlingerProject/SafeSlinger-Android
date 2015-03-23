@@ -41,6 +41,7 @@ import a_vcard.android.syncml.pim.vcard.ContactStruct;
 import a_vcard.android.syncml.pim.vcard.Name;
 import a_vcard.android.syncml.pim.vcard.VCardException;
 import a_vcard.android.syncml.pim.vcard.VCardParser;
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -116,7 +117,6 @@ public class BaseActivity extends ActionBarActivity {
     protected static final int MENU_CONTACTINVITE = 450;
     protected static final int MENU_SETTINGS = 460;
     protected static final int MENU_REFERENCE = 470;
-    protected static final int MENU_SENDINTRO = 480;
     protected static final int MENU_FEEDBACK = 490;
     protected static final int MENU_NEWMESSAGE = 500;
     protected static final int MENU_ATTACH = 510;
@@ -144,6 +144,9 @@ public class BaseActivity extends ActionBarActivity {
     private static long mContactLinkRecipientRowId;
 
     public Uri getPersonUri(String contactLookupKey) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return null;
+        }
         if (!TextUtils.isEmpty(contactLookupKey)) {
             Uri lookupUri = Uri.withAppendedPath(ContactsContract.Contacts.CONTENT_LOOKUP_URI,
                     contactLookupKey);
@@ -175,6 +178,9 @@ public class BaseActivity extends ActionBarActivity {
      */
     protected String getContactName(String contactLookupKey) {
         String name = "";
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return null;
+        }
         if (TextUtils.isEmpty(contactLookupKey)) {
             return null;
         }
@@ -213,6 +219,9 @@ public class BaseActivity extends ActionBarActivity {
      */
     protected byte[] getContactPhoto(String contactLookupKey) {
         byte[] photo = null;
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return photo;
+        }
         if (TextUtils.isEmpty(contactLookupKey)) {
             return photo;
         }
@@ -275,6 +284,9 @@ public class BaseActivity extends ActionBarActivity {
 
     protected int getTotalUniqueAddressBookContacts() {
         int count = 0;
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return count;
+        }
         Cursor c = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, null, null,
                 null, null);
         if (c != null) {
@@ -384,6 +396,9 @@ public class BaseActivity extends ActionBarActivity {
 
     private String getContactIdByLookup(String contactLookupKey) {
         String contactId = null;
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return contactId;
+        }
         if (TextUtils.isEmpty(contactLookupKey)) {
             return contactId;
         }
@@ -413,6 +428,9 @@ public class BaseActivity extends ActionBarActivity {
 
     private SlingerContact getContactByLookup(String contactLookupKey) {
         SlingerContact sc = null;
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return sc;
+        }
         if (TextUtils.isEmpty(contactLookupKey)) {
             return sc;
         }
@@ -443,6 +461,9 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     protected String getContactLookupKeyByContactId(String contactId) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return null;
+        }
         if (TextUtils.isEmpty(contactId)) {
             return null;
         }
@@ -467,6 +488,9 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     protected String getContactLookupKeyByRawContactId(String rawContactId) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return null;
+        }
         if (TextUtils.isEmpty(rawContactId)) {
             return null;
         }
@@ -495,6 +519,9 @@ public class BaseActivity extends ActionBarActivity {
         // TODO: is there is a better way to match names than literal match?
 
         String contactLookupKey = null;
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return contactLookupKey;
+        }
         if (TextUtils.isEmpty(name)) {
             return contactLookupKey;
         }
@@ -531,6 +558,9 @@ public class BaseActivity extends ActionBarActivity {
 
     protected ArrayList<UseContactItem> getUseContactItemsByName(String name) {
         ArrayList<UseContactItem> contacts = new ArrayList<UseContactItem>();
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return contacts;
+        }
         if (TextUtils.isEmpty(name)) {
             return contacts;
         }
@@ -568,6 +598,12 @@ public class BaseActivity extends ActionBarActivity {
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     protected UseContactItem getContactProfile() {
         UseContactItem profile = null;
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return profile;
+        }
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_PROFILE)) {
+            return profile;
+        }
 
         if (Build.VERSION.SDK_INT >= VERSION_CODES.ICE_CREAM_SANDWICH) {
             Cursor c = getContentResolver().query(ContactsContract.Profile.CONTENT_URI, null, null,
@@ -662,6 +698,9 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     private boolean doCleanupOldKeyData(String[] keyNames) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return true;
+        }
         if (keyNames == null || keyNames.length == 0)
             return false;
 
@@ -911,6 +950,9 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     private void doUpdateRecipientsFromContacts() throws SQLException {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            return;
+        }
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
         ArrayList<RecipientRow> contacts = new ArrayList<RecipientRow>();
 
@@ -1491,6 +1533,10 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     protected void showEditContact(String contactLookupKey) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            showNote(R.string.iOS_RequestPermissionContacts);
+            return;
+        }
         Uri personUri = getPersonUri(contactLookupKey);
         if (personUri != null) {
             Intent intent = new Intent(Intent.ACTION_EDIT, personUri);
@@ -1579,6 +1625,10 @@ public class BaseActivity extends ActionBarActivity {
     }
 
     private void showCustomContactPicker(int resultCode) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            showNote(R.string.iOS_RequestPermissionContacts);
+            return;
+        }
         Bundle args = new Bundle();
         args.putInt(extra.RESULT_CODE, resultCode);
         if (!isFinishing()) {

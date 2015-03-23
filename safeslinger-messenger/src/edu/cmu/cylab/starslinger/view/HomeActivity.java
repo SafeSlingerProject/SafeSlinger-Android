@@ -48,6 +48,7 @@ import a_vcard.android.syncml.pim.vcard.ContactStruct.ContactMethod;
 import a_vcard.android.syncml.pim.vcard.Name;
 import a_vcard.android.syncml.pim.vcard.VCardException;
 import a_vcard.android.syncml.pim.vcard.VCardParser;
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -483,10 +484,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         final ActionBar bar = getSupportActionBar();
         bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         bar.setTitle(R.string.app_name);
-        // if (!SSUtil.isGoogleAccountPresent(getApplicationContext())) {
-        // bar.setSubtitle(String.format("(%s)",
-        // getString(R.string.label_DeviceInSendOnlyMode)));
-        // }
 
         mTabsAdapter = new TabsAdapter(this, bar, mViewPager);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.menu_TagListMessages),
@@ -845,8 +842,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
                     R.drawable.ic_action_add_person);
-            menu.add(0, MENU_SENDINTRO, 0, R.string.title_SecureIntroduction).setIcon(
-                    R.drawable.ic_action_secintro);
+            menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages).setIcon(
+                    R.drawable.ic_action_add_message);
             menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                     android.R.drawable.ic_menu_send);
             menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
@@ -865,12 +862,12 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
             iInviteItem.setTitle(spanString);
 
-            MenuItem sendIntroMenuItem = menu.add(0, MENU_SENDINTRO, 0,
-                    R.string.title_SecureIntroduction).setIcon(R.drawable.ic_action_secintro);
-            spanString = new SpannableString(sendIntroMenuItem.getTitle().toString());
+            MenuItem newMessageMenuItem = menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages)
+                    .setIcon(R.drawable.ic_action_add_message);
+            spanString = new SpannableString(newMessageMenuItem.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            sendIntroMenuItem.setTitle(spanString);
+            newMessageMenuItem.setTitle(spanString);
 
             MenuItem feedBackMenuitem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback)
                     .setIcon(android.R.drawable.ic_menu_send);
@@ -915,9 +912,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 return true;
             case MENU_SETTINGS:
                 showSettings();
-                return true;
-            case MENU_SENDINTRO:
-                setTab(Tabs.INTRO);
                 return true;
             case MENU_FEEDBACK:
                 SafeSlinger.getApplication().showFeedbackEmail(HomeActivity.this);
@@ -1571,7 +1565,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 recvFile.setFileSize(data.getInt(extra.PUSH_FILE_SIZE, 0));
                 recvFile.setFileData(null);
 
-                if (recvFile.getMsgHash() != null && recvFile.getFileDir() != null) {
+                if (recvFile.getMsgHash() != null) {
                     GetFileTask getFileTask = new GetFileTask();
                     getFileTask.execute(recvFile);
                 } else {
@@ -3610,6 +3604,10 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     }
 
     private void showEditContact(int requestCode) {
+        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            showNote(R.string.iOS_RequestPermissionContacts);
+            return;
+        }
         String contactLookupKey = SafeSlingerPrefs.getContactLookupKey();
         Uri personUri = getPersonUri(contactLookupKey);
         if (personUri != null) {
@@ -3920,8 +3918,12 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             cLookupKey = args.getString(extra.CONTACT_LOOKUP_KEY + i);
         }
         items.add(new UseContactItem(act.getString(R.string.menu_UseNoContact), UCType.NONE));
-        items.add(new UseContactItem(act.getString(R.string.menu_UseAnother), UCType.ANOTHER));
-        items.add(new UseContactItem(act.getString(R.string.menu_CreateNew), UCType.NEW));
+
+        if (SafeSlinger.doesUserHavePermission(Manifest.permission.READ_CONTACTS)) {
+            items.add(new UseContactItem(act.getString(R.string.menu_UseAnother), UCType.ANOTHER));
+            items.add(new UseContactItem(act.getString(R.string.menu_CreateNew), UCType.NEW));
+        }
+
         items.add(new UseContactItem(act.getString(R.string.menu_EditName), UCType.EDIT_NAME));
         if (isContactInUse) {
             items.add(new UseContactItem(act.getString(R.string.menu_EditContact),
