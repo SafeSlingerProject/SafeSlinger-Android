@@ -26,7 +26,12 @@ package edu.cmu.cylab.starslinger.util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URLConnection;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
@@ -41,10 +46,12 @@ import a_vcard.android.syncml.pim.vcard.Name;
 import a_vcard.android.syncml.pim.vcard.VCardComposer;
 import a_vcard.android.syncml.pim.vcard.VCardException;
 import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -52,6 +59,7 @@ import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Environment;
+import android.provider.MediaStore.MediaColumns;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.webkit.MimeTypeMap;
@@ -59,6 +67,7 @@ import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
+import edu.cmu.cylab.starslinger.model.MessageData;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.SlingerIdentity;
 
@@ -494,5 +503,162 @@ public class SSUtil {
         } else {
             return implicitIntent;
         }
+    }
+
+    public static MessageData addAttachmentFromUri(Context ctx, MessageData draft, Uri uri,
+            String contentType) throws IOException {
+        String name = null;
+        try {
+            Cursor c = ctx.getContentResolver().query(uri, new String[] {
+                MediaColumns.DISPLAY_NAME
+            }, null, null, null);
+            if (c != null) {
+                try {
+                    if (c.moveToFirst()) {
+                        name = c.getString(c.getColumnIndex(MediaColumns.DISPLAY_NAME));
+                    }
+                } finally {
+                    c.close();
+                }
+            }
+        } catch (IllegalArgumentException e) {
+            // column may not exist
+        }
+
+        long size = -1;
+        try {
+            Cursor c = ctx.getContentResolver().query(uri, new String[] {
+                MediaColumns.SIZE
+            }, null, null, null);
+            if (c != null) {
+                try {
+                    if (c.moveToFirst()) {
+                        size = c.getInt(c.getColumnIndex(MediaColumns.SIZE));
+                    }
+                } finally {
+                    c.close();
+                }
+            }
+        } catch (IllegalArgumentException e) {
+            // column may not exist
+        }
+
+        String data = null;
+        try {
+            Cursor c = ctx.getContentResolver().query(uri, new String[] {
+                MediaColumns.DATA
+            }, null, null, null);
+            if (c != null) {
+                try {
+                    if (c.moveToFirst()) {
+                        data = c.getString(c.getColumnIndex(MediaColumns.DATA));
+                    }
+                } finally {
+                    c.close();
+                }
+            }
+        } catch (IllegalArgumentException e) {
+            // column may not exist
+        }
+
+        if (name == null) {
+            name = uri.getLastPathSegment();
+        }
+
+        File f = null;
+        if (size <= 0) {
+            String uriString = uri.toString();
+            if (uriString.startsWith("file://")) {
+                f = new File(uriString.substring("file://".length()));
+                size = f.length();
+            }
+        }
+
+        ContentResolver cr = ctx.getContentResolver();
+        InputStream is = null;
+        // read file bytes
+        try {
+            is = cr.openInputStream(uri);
+        } catch (FileNotFoundException e) {
+            if (!TextUtils.isEmpty(data)) {
+                is = new FileInputStream(data);
+            } else {
+                return draft; // unable to load file at all
+            }
+        }
+
+        if ((contentType != null) && (contentType.indexOf('*') != -1)) {
+            contentType = ctx.getContentResolver().getType(uri);
+        }
+
+        if (contentType == null) {
+            contentType = URLConnection.guessContentTypeFromStream(is);
+            if (contentType == null) {
+                String extension = SSUtil.getFileExtensionOnly(name);
+                contentType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+                if (contentType == null) {
+                    contentType = SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF;
+                }
+            }
+        }
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+        byte[] buf = new byte[4096];
+        while (is.read(buf) > -1) {
+            baos.write(buf);
+        }
+        baos.flush();
+
+        final byte[] fileBytes = baos.toByteArray();
+        draft.setFileData(fileBytes);
+        draft.setFileSize(fileBytes.length);
+        draft.setFileType(contentType);
+        draft.setFileName(name);
+        if (f != null && f.exists()) {
+            draft.setFileDir(f.getAbsolutePath());
+        } else if (!TextUtils.isEmpty(data)) {
+            draft.setFileDir(new File(data).getAbsolutePath());
+        }
+        return draft;
+    }
+
+    public static MessageData addAttachmentFromPath(MessageData draft, String path)
+            throws FileNotFoundException {
+        File phy = new File(path); // physical
+        File vir = new File(path); // virtual, change if needed
+
+        try {
+            FileInputStream is = new FileInputStream(phy.getAbsolutePath());
+            try {
+                byte[] outFileData = new byte[is.available()];
+                is.read(outFileData);
+                draft.setFileData(outFileData);
+                draft.setFileSize(outFileData.length);
+
+                String type = URLConnection.guessContentTypeFromStream(is);
+                if (type != null)
+                    draft.setFileType(type);
+                else {
+                    String extension = SSUtil.getFileExtensionOnly(vir.getName());
+                    type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+                    if (type != null) {
+                        draft.setFileType(type);
+                    } else {
+                        draft.setFileType(SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF);
+                    }
+                }
+            } finally {
+                is.close();
+            }
+        } catch (OutOfMemoryError e) {
+            return draft;
+        } catch (IOException e) {
+            return draft;
+        }
+        draft.setFileName(vir.getName());
+        draft.setFileDir(phy.getPath());
+        draft.setMsgHash(null);
+
+        return draft;
     }
 }

@@ -56,7 +56,6 @@ import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.crypto.CryptTools;
 import edu.cmu.cylab.starslinger.model.DraftData;
-import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 
 public class IntroductionFragment extends Fragment {
@@ -154,9 +153,11 @@ public class IntroductionFragment extends Fragment {
 
             @Override
             public void run() {
+                if ((getActivity()) == null) {
+                    return;
+                }
 
                 // general state
-                RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getActivity());
                 DraftData d = DraftData.INSTANCE;
 
                 // make sure view is already inflated...

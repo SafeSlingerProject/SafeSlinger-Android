@@ -163,6 +163,9 @@ public class SlingerFragment extends Fragment {
 
             @Override
             public void run() {
+                if ((getActivity()) == null) {
+                    return;
+                }
 
                 if (extras == null) {
                     mListTopOffset = 0;

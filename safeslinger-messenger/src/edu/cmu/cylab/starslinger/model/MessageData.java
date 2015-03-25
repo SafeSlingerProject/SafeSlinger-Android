@@ -214,7 +214,7 @@ public class MessageData {
     // Others...
 
     public void removeFile() {
-        mRawFile = new byte[0];
+        mRawFile = null;
         mFileSize = 0;
         mFileName = null;
         mFileDir = null;

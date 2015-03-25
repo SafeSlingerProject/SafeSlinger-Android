@@ -171,7 +171,7 @@
     <!-- error message (sentence case, period); used to warn during push registration: Incorrect phone registration with Google. This phone doesn't currently support C2DM. Android-only. -->
     <string name="error_C2DMRegPhoneRegistrationError">Incorrect device registration with Google. This device does not currently support push messaging.</string>
     <!-- error message (sentence case, period); used to warn during push registration: There is no Google Play Services on the phone. The application should ask the user to install Play Services. Fix on the device side. Android-only. -->
-    <string name="error_C2DMRegPlayServicesMissing">Play Services is required to recieve messages. Please install Google Play Services to continue.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Play Services is required to receive messages. Please install Google Play Services to continue.</string>
     <!-- error message (sentence case, period); used to warn during push registration: The device can't read the response, or there was a 500/503 from the server that can be retried later. The application should use exponential back off and retry. %d = the current number of seconds until the next push registration attempt. Android-only. -->
     <string name="error_C2DMRegServiceNotAvailable">Push registration service not available, scheduling retry in %d seconds.</string>
     <!-- error message (sentence case, period); used to warn during push registration: The user has too many applications registered. The application should tell the user to uninstall some other applications, let user retry manually. Fix on the device side. Android-only. -->

@@ -24,8 +24,6 @@
 
 package edu.cmu.cylab.starslinger.model;
 
-import android.text.TextUtils;
-
 /***
  * This a simple, fast, and thread-safe singleton implementation for keeping
  * state of a user's draft data when constructing a invitation on the
@@ -37,7 +35,6 @@ public class DraftData {
     private RecipientRow mRecip = null;
     private RecipientRow mRecip1 = null;
     private RecipientRow mRecip2 = null;
-    private MessageData mSendMsg = new MessageData();
 
     private DraftData() {
     }
@@ -54,15 +51,6 @@ public class DraftData {
         mRecip2 = null;
     }
 
-    public void clearSendMsg() {
-        mSendMsg = new MessageData();
-    }
-
-    public boolean existsSendMsg() {
-        return (mSendMsg != null && !(TextUtils.isEmpty(mSendMsg.getText()) && TextUtils
-                .isEmpty(mSendMsg.getFileName())));
-    }
-
     public boolean existsRecip() {
         return mRecip != null;
     }
@@ -73,26 +61,6 @@ public class DraftData {
 
     public boolean existsRecip2() {
         return mRecip2 != null;
-    }
-
-    public String getFileDir() {
-        return mSendMsg.getFileDir();
-    }
-
-    public byte[] getFileData() {
-        return mSendMsg.getFileData();
-    }
-
-    public String getFileName() {
-        return mSendMsg.getFileName();
-    }
-
-    public int getFileSize() {
-        return mSendMsg.getFileSize();
-    }
-
-    public String getFileType() {
-        return mSendMsg.getFileType();
     }
 
     public int getNotify() {
@@ -115,76 +83,16 @@ public class DraftData {
         return mRecip.getRowId();
     }
 
-    public MessageData getSendMsg() {
-        return mSendMsg;
+    public void setRecip(RecipientRow recip) {
+        mRecip = recip;
     }
 
-    public long getSendMsgRowId() {
-        return mSendMsg.getRowId();
-    }
-
-    public String getText() {
-        return mSendMsg.getText();
-    }
-
-    public void removeFile() {
-        mSendMsg.removeFile();
-    }
-
-    public void removeText() {
-        mSendMsg.removeText();
-    }
-
-    public void setFileData(byte[] data) {
-        mSendMsg.setFileData(data);
-    }
-
-    public void setFileDir(String fileDir) {
-        mSendMsg.setFileDir(fileDir);
-    }
-
-    public void setFileName(String fileName) {
-        mSendMsg.setFileName(fileName);
-    }
-
-    public void setFileSize(int fileSize) {
-        mSendMsg.setFileSize(fileSize);
-    }
-
-    public void setFileType(String fileType) {
-        mSendMsg.setFileType(fileType);
-    }
-
-    public void setKeyId(String keyId) {
-        mSendMsg.setKeyId(keyId);
-    }
-
-    public void setMsgHash(String msgHash) {
-        mSendMsg.setMsgHash(msgHash);
-    }
-
-    public void setRecip(RecipientRow recip2) {
-        mRecip = recip2;
-    }
-
-    public void setRecip1(RecipientRow recip1) {
-        mRecip1 = recip1;
+    public void setRecip1(RecipientRow recip) {
+        mRecip1 = recip;
     }
 
     public void setRecip2(RecipientRow recip) {
         mRecip2 = recip;
-    }
-
-    public void setSendMsg(MessageData sendMsg) {
-        mSendMsg = sendMsg;
-    }
-
-    public void setSendMsgRowId(long rowId) {
-        mSendMsg.setRowId(rowId);
-    }
-
-    public void setText(String text) {
-        mSendMsg.setText(text);
     }
 
     public RecipientRow getRecip1() {
@@ -193,10 +101,6 @@ public class DraftData {
 
     public RecipientRow getRecip2() {
         return mRecip2;
-    }
-
-    public void setDateSent(long dateSent) {
-        mSendMsg.setDateSent(dateSent);
     }
 
 }

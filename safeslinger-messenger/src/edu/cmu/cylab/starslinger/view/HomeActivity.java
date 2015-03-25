@@ -25,14 +25,10 @@
 package edu.cmu.cylab.starslinger.view;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URLConnection;
 import java.security.InvalidParameterException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -56,7 +52,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
@@ -81,7 +76,6 @@ import android.os.Parcelable;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
 import android.provider.MediaStore;
-import android.provider.MediaStore.MediaColumns;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -104,7 +98,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.WindowManager.BadTokenException;
-import android.webkit.MimeTypeMap;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
@@ -170,6 +163,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     private static final int VIEW_FILEATTACH_ID = 120;
     private static final int VIEW_FILESAVE_ID = 130;
     private static final int VIEW_RECIPSEL_ID = 140;
+    private static final int VIEW_RECIPSEL_FORFILE_ID = 150;
+    private static final int VIEW_RECIPSEL_FORFWD_ID = 155;
     private static final int VIEW_EXCHANGE_ID = 160;
     private static final int VIEW_RECIPSEL1 = 170;
     private static final int VIEW_RECIPSEL2 = 180;
@@ -190,6 +185,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     private static ProgressDialog sProg = null;
     private static Handler sHandler = new Handler();
     private static String sProgressMsg = null;
+    private static MessageData mImported = new MessageData();
 
     private ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
@@ -421,11 +417,9 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         } else if (Intent.ACTION_SEND.equals(action) || Intent.ACTION_SEND_MULTIPLE.equals(action)) {
             // clicked share externally, load file, show compose
-            DraftData d = DraftData.INSTANCE;
-            d.clearRecip();
-            d.clearSendMsg();
+            DraftData.INSTANCE.clearRecip();
             if (handleSendToAction()) {
-                showRecipientSelect(VIEW_RECIPSEL_ID);
+                showRecipientSelect(VIEW_RECIPSEL_FORFILE_ID);
             }
         } else {
             setProperDefaultTab();
@@ -833,8 +827,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 }
             } else {
                 // user can add message from all threads view
-                MenuItem iAdd = menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages).setIcon(
-                        R.drawable.ic_action_add_message);
+                MenuItem iAdd = menu.add(0, MENU_NEWMESSAGE, 0, R.string.menu_TagComposeMessage)
+                        .setIcon(R.drawable.ic_action_add_message);
                 MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
             }
         }
@@ -842,7 +836,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
                     R.drawable.ic_action_add_person);
-            menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages).setIcon(
+            menu.add(0, MENU_NEWMESSAGE, 0, R.string.menu_TagComposeMessage).setIcon(
                     R.drawable.ic_action_add_message);
             menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                     android.R.drawable.ic_menu_send);
@@ -862,8 +856,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
             iInviteItem.setTitle(spanString);
 
-            MenuItem newMessageMenuItem = menu.add(0, MENU_NEWMESSAGE, 0, R.string.title_Messages)
-                    .setIcon(R.drawable.ic_action_add_message);
+            MenuItem newMessageMenuItem = menu.add(0, MENU_NEWMESSAGE, 0,
+                    R.string.menu_TagComposeMessage).setIcon(R.drawable.ic_action_add_message);
             spanString = new SpannableString(newMessageMenuItem.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
@@ -920,9 +914,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 showReference();
                 return true;
             case MENU_NEWMESSAGE:
-                DraftData d = DraftData.INSTANCE;
-                d.clearRecip();
-                d.clearSendMsg();
+                DraftData.INSTANCE.clearRecip();
+                mImported = new MessageData();
                 showRecipientSelect(VIEW_RECIPSEL_ID);
                 return true;
             case MENU_ATTACH:
@@ -1012,6 +1005,53 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 showErrorExit(e);
             }
         }
+    }
+
+    private MessageData doSaveDraft(RecipientRow recip, MessageData saveMsg) throws SQLException {
+        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this);
+        if (saveMsg.getRowId() < 0) {
+            // create draft (need at least recipient(file) or text
+            // chosen...
+            if (recip != null
+                    && (!TextUtils.isEmpty(saveMsg.getText()) || saveMsg.getFileData() != null)) {
+                long rowId = dbMessage.createDraftMessage(recip, saveMsg,
+                        System.currentTimeMillis());
+                saveMsg.setRowId(rowId);
+                if (rowId < 0) {
+                    showNote(R.string.error_UnableToSaveMessageInDB);
+                } else {
+                    showNote(R.string.state_MessageSavedAsDraft);
+                }
+            }
+        } else {
+            Cursor c = dbMessage.fetchMessageSmall(saveMsg.getRowId());
+            if (c != null) {
+                try {
+                    if (c.moveToFirst()) {
+                        MessageRow msg = new MessageRow(c, false);
+                        if (msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_DRAFT) {
+                            return saveMsg;
+                        }
+                    }
+                } finally {
+                    c.close();
+                }
+            }
+
+            if (!TextUtils.isEmpty(saveMsg.getText()) || saveMsg.getFileData() != null) {
+                // update draft
+                if (!dbMessage.updateDraftMessage(saveMsg.getRowId(), recip, saveMsg)) {
+                    showNote(R.string.error_UnableToUpdateMessageInDB);
+                }
+            } else {
+                // message is empty, we should remove from database...
+                if (!dbMessage.deleteMessage(saveMsg.getRowId())) {
+                    showNote(String.format(getString(R.string.state_MessagesDeleted), 0));
+                }
+                saveMsg = new MessageData();
+            }
+        }
+        return saveMsg;
     }
 
     private void doSendMessageStart(MessageTransport... mts) {
@@ -1164,14 +1204,13 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         if (action != null) {
             if (action.equals(Intent.ACTION_SEND_MULTIPLE)) {
-
+                mImported = new MessageData();
                 showErrorExit(R.string.error_MultipleSendNotSupported);
                 return false;
 
             } else if (action.equals(Intent.ACTION_SEND)) {
-                DraftData d = DraftData.INSTANCE;
-
-                d.setMsgHash(null);
+                mImported = new MessageData();
+                mImported.setMsgHash(null);
 
                 String type = intent.getType();
                 Uri stream = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
@@ -1182,21 +1221,22 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     // Get resource path from intent caller
                     if (Intent.ACTION_SEND.equals(action)) {
                         if (stream != null) {
-                            filesize = getOutStreamSizeAndData(stream, type);
+                            mImported = SSUtil.addAttachmentFromUri(this, mImported, stream, type);
+                            filesize = mImported.getFileSize();
                         } else if (!TextUtils.isEmpty(extra_text)) {
                             filesize = extra_text.length();
                             if (filesize <= SafeSlingerConfig.MAX_TEXTMESSAGE) {
-                                d.removeFile();
-                                d.setText(extra_text.toString());
+                                mImported.removeFile();
+                                mImported.setText(extra_text.toString());
                             } else {
-                                d.setFileType("text/plain");
+                                mImported.setFileType("text/plain");
                                 final byte[] textBytes = extra_text.toString().getBytes();
-                                d.setFileData(textBytes);
-                                d.setFileSize(textBytes.length);
+                                mImported.setFileData(textBytes);
+                                mImported.setFileSize(textBytes.length);
                                 SimpleDateFormat sdf = new SimpleDateFormat(
                                         SafeSlingerConfig.DATETIME_FILENAME, Locale.US);
-                                d.setFileName(sdf.format(new Date()) + ".txt");
-                                d.removeText();
+                                mImported.setFileName(sdf.format(new Date()) + ".txt");
+                                mImported.removeText();
                             }
                         }
                     }
@@ -1222,131 +1262,9 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         return true;
     }
 
-    private long getOutStreamSizeAndData(Uri uri, String contentType) throws IOException {
-
-        String name = null;
-        try {
-            Cursor c = getContentResolver().query(uri, new String[] {
-                MediaColumns.DISPLAY_NAME
-            }, null, null, null);
-            if (c != null) {
-                try {
-                    if (c.moveToFirst()) {
-                        name = c.getString(c.getColumnIndex(MediaColumns.DISPLAY_NAME));
-                    }
-                } finally {
-                    c.close();
-                }
-            }
-        } catch (IllegalArgumentException e) {
-            // column may not exist
-        }
-
-        long size = -1;
-        try {
-            Cursor c = getContentResolver().query(uri, new String[] {
-                MediaColumns.SIZE
-            }, null, null, null);
-            if (c != null) {
-                try {
-                    if (c.moveToFirst()) {
-                        size = c.getInt(c.getColumnIndex(MediaColumns.SIZE));
-                    }
-                } finally {
-                    c.close();
-                }
-            }
-        } catch (IllegalArgumentException e) {
-            // column may not exist
-        }
-
-        String data = null;
-        try {
-            Cursor c = getContentResolver().query(uri, new String[] {
-                MediaColumns.DATA
-            }, null, null, null);
-            if (c != null) {
-                try {
-                    if (c.moveToFirst()) {
-                        data = c.getString(c.getColumnIndex(MediaColumns.DATA));
-                    }
-                } finally {
-                    c.close();
-                }
-            }
-        } catch (IllegalArgumentException e) {
-            // column may not exist
-        }
-
-        if (name == null) {
-            name = uri.getLastPathSegment();
-        }
-
-        File f = null;
-        if (size <= 0) {
-            String uriString = uri.toString();
-            if (uriString.startsWith("file://")) {
-                MyLog.v(TAG, uriString.substring("file://".length()));
-                f = new File(uriString.substring("file://".length()));
-                size = f.length();
-            } else {
-                MyLog.v(TAG, "not a file: " + uriString);
-            }
-        }
-
-        ContentResolver cr = getContentResolver();
-        InputStream is;
-        // read file bytes
-        try {
-            is = cr.openInputStream(uri);
-        } catch (FileNotFoundException e) {
-            if (!TextUtils.isEmpty(data)) {
-                is = new FileInputStream(data);
-            } else {
-                return -1; // unable to load file at all
-            }
-        }
-
-        if ((contentType != null) && (contentType.indexOf('*') != -1)) {
-            contentType = getContentResolver().getType(uri);
-        }
-
-        if (contentType == null) {
-            contentType = URLConnection.guessContentTypeFromStream(is);
-            if (contentType == null) {
-                String extension = SSUtil.getFileExtensionOnly(name);
-                contentType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
-                if (contentType == null) {
-                    contentType = SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF;
-                }
-            }
-        }
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-
-        byte[] buf = new byte[4096];
-        while (is.read(buf) > -1) {
-            baos.write(buf);
-        }
-        baos.flush();
-
-        final byte[] fileBytes = baos.toByteArray();
-        DraftData d = DraftData.INSTANCE;
-        d.setFileData(fileBytes);
-        d.setFileSize(fileBytes.length);
-        d.setFileType(contentType);
-        d.setFileName(name);
-        if (f != null && f.exists()) {
-            d.setFileDir(f.getAbsolutePath());
-        } else if (!TextUtils.isEmpty(data)) {
-            d.setFileDir(new File(data).getAbsolutePath());
-        }
-        return d.getFileSize();
-    }
-
     @Override
     public void onMessageResultListener(Bundle data) {
         int resultCode = data.getInt(extra.RESULT_CODE);
-        DraftData d = DraftData.INSTANCE;
         String text = null;
         String fpath = null;
         RecipientRow recip = null;
@@ -1386,64 +1304,15 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 saveMsg.setText(text);
                 try {
                     if (!TextUtils.isEmpty(fpath)) {
-                        doLoadAttachment(fpath);
-                        saveMsg.setFileDir(d.getFileDir());
-                        saveMsg.setFileName(d.getFileName());
-                        saveMsg.setFileType(d.getFileType());
-                        saveMsg.setFileData(d.getFileData());
-                        saveMsg.setFileSize(d.getFileSize());
+                        saveMsg = SSUtil.addAttachmentFromPath(saveMsg, fpath);
                     }
                 } catch (FileNotFoundException e) {
                     showNote(e);
                     refreshView();
                     break;
                 }
-                if (saveMsg.getRowId() < 0) {
-                    // create draft (need at least recipient(file) or text
-                    // chosen...
-                    if (recip != null
-                            && (!TextUtils.isEmpty(saveMsg.getText()) || saveMsg.getFileData() != null)) {
-                        long rowId = dbMessage.createDraftMessage(recip, saveMsg,
-                                System.currentTimeMillis());
-                        saveMsg.setRowId(rowId);
-                        if (rowId < 0) {
-                            showNote(R.string.error_UnableToSaveMessageInDB);
-                        } else {
-                            showNote(R.string.state_MessageSavedAsDraft);
-                        }
-                    }
-                } else {
-                    Cursor c = dbMessage.fetchMessageSmall(saveMsg.getRowId());
-                    if (c != null) {
-                        try {
-                            if (c.moveToFirst()) {
-                                MessageRow msg = new MessageRow(c, false);
-                                if (msg.getStatus() != MessageDbAdapter.MESSAGE_STATUS_DRAFT) {
-                                    break;
-                                }
-                            }
-                        } finally {
-                            c.close();
-                        }
-                    }
-
-                    if (!TextUtils.isEmpty(saveMsg.getText()) || saveMsg.getFileData() != null) {
-                        // update draft
-                        if (!dbMessage.updateDraftMessage(saveMsg.getRowId(), recip, saveMsg)) {
-                            showNote(R.string.error_UnableToUpdateMessageInDB);
-                        }
-                    } else {
-                        // message is empty, we should remove from database...
-                        if (!dbMessage.deleteMessage(saveMsg.getRowId())) {
-                            showNote(String.format(getString(R.string.state_MessagesDeleted), 0));
-                        }
-                        saveMsg = new MessageData();
-                    }
-                }
-                // update local as well
-                if (saveMsg.getRowId() > -1 && saveMsg.getRowId() == d.getSendMsgRowId()) {
-                    d.setSendMsg(saveMsg);
-                }
+                // save state for attachment updates
+                mImported = doSaveDraft(recip, saveMsg);
                 break;
             case MessagesFragment.RESULT_SEND:
                 MessageData sendMsg = new MessageData();
@@ -1453,12 +1322,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 sendMsg.setText(text);
                 try {
                     if (!TextUtils.isEmpty(fpath)) {
-                        doLoadAttachment(fpath);
-                        sendMsg.setFileDir(d.getFileDir());
-                        sendMsg.setFileName(d.getFileName());
-                        sendMsg.setFileType(d.getFileType());
-                        sendMsg.setFileData(d.getFileData());
-                        sendMsg.setFileSize(d.getFileSize());
+                        sendMsg = SSUtil.addAttachmentFromPath(sendMsg, fpath);
                     }
                 } catch (FileNotFoundException e) {
                     showNote(e);
@@ -1478,19 +1342,20 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 }
                 // manual message, keep message tab draft
                 doSendMessageStart(new MessageTransport(recip, sendMsg, true));
-                d.clearSendMsg();
+                mImported = new MessageData();
                 break;
             case MessagesFragment.RESULT_FWDMESSAGE:
-                d.clearSendMsg();
-                Cursor cfm = dbMessage.fetchMessageSmall(d.getSendMsgRowId());
+                mImported = new MessageData();
+                Cursor cfm = dbMessage.fetchMessageSmall(rowIdMessage);
                 if (cfm != null) {
                     try {
                         if (cfm.moveToFirst()) {
                             MessageRow fwd = new MessageRow(cfm, false);
-                            d.setText(fwd.getText());
+                            mImported.setText(fwd.getText());
                             try {
                                 if (!TextUtils.isEmpty(fwd.getFileDir())) {
-                                    doLoadAttachment(fwd.getFileDir());
+                                    mImported = SSUtil.addAttachmentFromPath(mImported,
+                                            fwd.getFileDir());
                                 }
                             } catch (FileNotFoundException e) {
                                 showNote(e);
@@ -1502,42 +1367,27 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         cfm.close();
                     }
                 }
-                d.clearRecip();
-
-                // create draft
-                if (!TextUtils.isEmpty(d.getText()) || !TextUtils.isEmpty(d.getFileName())) {
-                    long rowId = dbMessage.createDraftMessage(d.getRecip(), d.getSendMsg(),
-                            System.currentTimeMillis());
-                    d.setSendMsgRowId(rowId);
-                }
-                showRecipientSelect(VIEW_RECIPSEL_ID);
+                DraftData.INSTANCE.clearRecip();
+                showRecipientSelect(VIEW_RECIPSEL_FORFWD_ID);
                 break;
             case MessagesFragment.RESULT_EDITMESSAGE:
-                d.clearSendMsg();
                 Cursor cem = dbMessage.fetchMessageSmall(rowIdMessage);
                 if (cem != null) {
                     try {
                         if (cem.moveToFirst()) {
                             MessageRow edit = new MessageRow(cem, false);
-                            d.setRecip(recip);
-                            d.setText(edit.getText());
-                            d.setKeyId(edit.getKeyId());
-                            d.setSendMsgRowId(rowIdMessage);
-                            try {
-                                if (!TextUtils.isEmpty(edit.getFileDir())) {
-                                    doLoadAttachment(edit.getFileDir());
-                                }
-                            } catch (FileNotFoundException e) {
-                                showNote(e);
-                                refreshView();
-                                break;
+                            DraftData.INSTANCE.setRecip(recip);
+                            // "touch" the message to make it most recent draft
+                            edit.setDateSent(System.currentTimeMillis());
+                            if (!dbMessage.updateDraftMessage(edit.getRowId(), recip, edit)) {
+                                showNote(R.string.error_UnableToUpdateMessageInDB);
                             }
                         }
                     } finally {
                         cem.close();
                     }
                 }
-                if (!d.existsRecip()) {
+                if (!DraftData.INSTANCE.existsRecip()) {
                     showRecipientSelect(VIEW_RECIPSEL_ID);
                 } else {
                     setTab(Tabs.MESSAGE);
@@ -1606,7 +1456,31 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 break;
             case MessagesFragment.RESULT_FILEREMOVE:
                 // user wants to remove file
-                d.removeFile();
+                Cursor cfrm = dbMessage.fetchMessageSmall(rowIdMessage);
+                if (cfrm != null) {
+                    try {
+                        if (cfrm.moveToFirst()) {
+                            MessageRow rem = new MessageRow(cfrm, false);
+                            rem.removeFile();
+
+                            if (!TextUtils.isEmpty(rem.getText()) || rem.getFileData() != null) {
+                                // update draft
+                                if (!dbMessage.updateDraftMessage(rem.getRowId(), recip, rem)) {
+                                    showNote(R.string.error_UnableToUpdateMessageInDB);
+                                }
+                            } else {
+                                // message is empty, we should remove from
+                                // database...
+                                if (!dbMessage.deleteMessage(rem.getRowId())) {
+                                    showNote(String.format(
+                                            getString(R.string.state_MessagesDeleted), 0));
+                                }
+                            }
+                        }
+                    } finally {
+                        cfrm.close();
+                    }
+                }
                 setTab(Tabs.MESSAGE);
                 refreshView();
                 break;
@@ -1871,7 +1745,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        DraftData d = DraftData.INSTANCE;
 
         switch (requestCode) {
 
@@ -1949,6 +1822,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 break;
 
             case VIEW_RECIPSEL_ID:
+            case VIEW_RECIPSEL_FORFILE_ID:
+            case VIEW_RECIPSEL_FORFWD_ID:
                 switch (resultCode) {
                     case PickRecipientsActivity.RESULT_SLINGKEYS:
                         setTab(Tabs.SLINGKEYS);
@@ -1957,20 +1832,33 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         RecipientDbAdapter dbRecipient = RecipientDbAdapter
                                 .openInstance(getApplicationContext());
+                        MessageDbAdapter dbMessage = MessageDbAdapter
+                                .openInstance(getApplicationContext());
                         long rowIdRecipient = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1L);
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient);
                         if (c != null) {
                             try {
                                 if (c.moveToFirst()) {
-                                    d.setRecip(new RecipientRow(c));
+                                    RecipientRow recip = new RecipientRow(c);
+                                    DraftData.INSTANCE.setRecip(recip);
                                     CheckRegistrationStateTask task = new CheckRegistrationStateTask();
-                                    task.execute(d.getRecip());
+                                    task.execute(recip);
+                                    if (requestCode == VIEW_RECIPSEL_FORFILE_ID
+                                            || requestCode == VIEW_RECIPSEL_FORFWD_ID) {
+                                        // create draft
+                                        if (!TextUtils.isEmpty(mImported.getText())
+                                                || !TextUtils.isEmpty(mImported.getFileName())) {
+                                            long rowId = dbMessage.createDraftMessage(recip,
+                                                    mImported, System.currentTimeMillis());
+                                            mImported.setRowId(rowId);
+                                        }
+                                    }
                                     setTab(Tabs.MESSAGE);
                                     refreshView();
                                 } else {
-                                    d.clearRecip();
+                                    DraftData.INSTANCE.clearRecip();
                                     showNote(R.string.error_InvalidRecipient);
-                                    showRecipientSelect(VIEW_RECIPSEL_ID);
+                                    showRecipientSelect(requestCode);
                                     break;
                                 }
                             } finally {
@@ -1980,8 +1868,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
-                        d.clearRecip();
-                        d.clearSendMsg();
+                        DraftData.INSTANCE.clearRecip();
+                        mImported = new MessageData();
                         setTab(Tabs.MESSAGE);
                         refreshView();
                         break;
@@ -1997,7 +1885,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient1 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
 
-                        if (d.existsRecip2() && rowIdRecipient1 == d.getRecip2RowId()) {
+                        if (DraftData.INSTANCE.existsRecip2()
+                                && rowIdRecipient1 == DraftData.INSTANCE.getRecip2RowId()) {
                             showNote(R.string.error_InvalidRecipient);
                             break;
                         }
@@ -2008,7 +1897,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         if (c != null) {
                             try {
                                 if (c.moveToFirst()) {
-                                    d.setRecip1(new RecipientRow(c));
+                                    DraftData.INSTANCE.setRecip1(new RecipientRow(c));
                                     refreshView();
                                 } else {
                                     showNote(R.string.error_InvalidRecipient);
@@ -2021,7 +1910,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
-                        d.clearRecip1();
+                        DraftData.INSTANCE.clearRecip1();
                         setTab(Tabs.INTRO);
                         refreshView();
                         break;
@@ -2037,7 +1926,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient2 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
 
-                        if (d.existsRecip1() && rowIdRecipient2 == d.getRecip1RowId()) {
+                        if (DraftData.INSTANCE.existsRecip1()
+                                && rowIdRecipient2 == DraftData.INSTANCE.getRecip1RowId()) {
                             showNote(R.string.error_InvalidRecipient);
                             break;
                         }
@@ -2048,7 +1938,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         if (c != null) {
                             try {
                                 if (c.moveToFirst()) {
-                                    d.setRecip2(new RecipientRow(c));
+                                    DraftData.INSTANCE.setRecip2(new RecipientRow(c));
                                     refreshView();
                                 } else {
                                     showNote(R.string.error_InvalidRecipient);
@@ -2061,7 +1951,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
-                        d.clearRecip2();
+                        DraftData.INSTANCE.clearRecip2();
                         setTab(Tabs.INTRO);
                         refreshView();
                         break;
@@ -2205,7 +2095,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                 // capture camera data from 1st non-standard
                                 // return from hardware
                                 path = SafeSlinger.getTempCameraFileUri().getPath();
-                                doLoadAttachment(path);
+                                mImported = SSUtil.addAttachmentFromPath(mImported, path);
                             } else {
                                 String chosenFile = data.getStringExtra(extra.FNAME);
                                 String chosenPath = data.getStringExtra(extra.FPATH);
@@ -2213,12 +2103,14 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                 if (chosenFile != null || chosenPath != null) {
                                     // from our own File Manager
                                     path = chosenPath + File.separator + chosenFile;
-                                    doLoadAttachment(path);
+                                    mImported = SSUtil.addAttachmentFromPath(mImported, path);
                                 } else if (data.getData() != null) {
                                     // String action = data.getAction();
                                     // act=null
                                     // act=android.intent.action.GET_CONTENT
-                                    long filesize = getOutStreamSizeAndData(data.getData(), null);
+                                    mImported = SSUtil.addAttachmentFromUri(this, mImported,
+                                            data.getData(), null);
+                                    long filesize = mImported.getFileSize();
                                     if (filesize <= 0) {
                                         showNote(R.string.error_CannotSendEmptyFile);
                                         refreshView();
@@ -2228,8 +2120,16 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                     // capture camera data from 2nd non-standard
                                     // return from hardware
                                     path = SafeSlinger.getTempCameraFileUri().getPath();
-                                    doLoadAttachment(path);
+                                    mImported = SSUtil.addAttachmentFromPath(mImported, path);
                                 }
+                            }
+                            if (mImported.getFileSize() > SafeSlingerConfig.MAX_FILEBYTES) {
+                                showNote(String.format(
+                                        getString(R.string.error_CannotSendFilesOver),
+                                        SafeSlingerConfig.MAX_FILEBYTES));
+                            } else {
+                                // update draft
+                                mImported = doSaveDraft(DraftData.INSTANCE.getRecip(), mImported);
                             }
                         } catch (OutOfMemoryError e) {
                             showNote(R.string.error_OutOfMemoryError);
@@ -2246,7 +2146,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         }
                         break;
                     case RESULT_CANCELED:
-                        d.removeFile();
+                        mImported.removeFile();
                         break;
                     default:
                         break;
@@ -2362,53 +2262,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 postProgressMsgList(msg.arg1 == 1, msg.arg2, null);
             }
         }
-    }
-
-    private void doLoadAttachment(String path) throws FileNotFoundException {
-        File phy = new File(path); // physical
-        File vir = new File(path); // virtual, change if needed
-        DraftData d = DraftData.INSTANCE;
-
-        try {
-            FileInputStream is = new FileInputStream(phy.getAbsolutePath());
-            try {
-                byte[] outFileData = new byte[is.available()];
-                is.read(outFileData);
-                d.setFileData(outFileData);
-                d.setFileSize(outFileData.length);
-
-                if (d.getFileSize() > SafeSlingerConfig.MAX_FILEBYTES) {
-                    is.close();
-                    showNote(String.format(getString(R.string.error_CannotSendFilesOver),
-                            SafeSlingerConfig.MAX_FILEBYTES));
-                    return;
-                }
-
-                String type = URLConnection.guessContentTypeFromStream(is);
-                if (type != null)
-                    d.setFileType(type);
-                else {
-                    String extension = SSUtil.getFileExtensionOnly(vir.getName());
-                    type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
-                    if (type != null) {
-                        d.setFileType(type);
-                    } else {
-                        d.setFileType(SafeSlingerConfig.MIMETYPE_OPEN_ATTACH_DEF);
-                    }
-                }
-            } finally {
-                is.close();
-            }
-        } catch (OutOfMemoryError e) {
-            showNote(R.string.error_OutOfMemoryError);
-            return;
-        } catch (IOException e) {
-            showNote(e);
-            return;
-        }
-        d.setFileName(vir.getName());
-        d.setFileDir(phy.getPath());
-        d.setMsgHash(null);
     }
 
     private void doSaveDownloadedFile(File file, MessageData recvMsg) {
@@ -3228,7 +3081,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 if (mTotalMsgs == 1) {
                     // no confirmation message, message detail list is enough
                     // send complete, remove secret sent
-                    DraftData.INSTANCE.clearSendMsg();
+                    mImported = new MessageData();
                 } else {
                     // more than 1 msg, likely separate recipients, show message
                     showNote(String.format(getString(R.string.state_MessagesSent), mTotalMsgs));
@@ -3539,7 +3392,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         SafeSlingerPrefs.setPusgRegBackoff(SafeSlingerPrefs.DEFAULT_PUSHREG_BACKOFF);
         sProg = null;
         sProgressMsg = null;
-        DraftData.INSTANCE.clearSendMsg();
+        mImported = new MessageData();
     }
 
     private void showFileAttach() {
