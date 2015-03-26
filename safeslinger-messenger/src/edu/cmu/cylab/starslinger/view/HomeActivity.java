@@ -185,6 +185,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     private static ProgressDialog sProg = null;
     private static Handler sHandler = new Handler();
     private static String sProgressMsg = null;
+    private static DraftData d = DraftData.INSTANCE;
     private static MessageData mImported = new MessageData();
 
     private ViewPager mViewPager;
@@ -282,7 +283,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
                         // if not current recipient in thread, user must get
                         // written notice so do not abort
-                        RecipientRow r = MessagesFragment.getRecip();
+                        RecipientRow r = d.getRecip();
                         String inkey = intent.getExtras().getString(extra.KEYID);
                         if (abort && r != null && inkey != null) {
                             if (!inkey.equals(r.getKeyid())) {
@@ -417,7 +418,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         } else if (Intent.ACTION_SEND.equals(action) || Intent.ACTION_SEND_MULTIPLE.equals(action)) {
             // clicked share externally, load file, show compose
-            DraftData.INSTANCE.clearRecip();
+            d.clearRecip();
             if (handleSendToAction()) {
                 showRecipientSelect(VIEW_RECIPSEL_FORFILE_ID);
             }
@@ -815,11 +816,10 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     public boolean onCreateOptionsMenu(Menu menu) {
         final int position = getSupportActionBar().getSelectedNavigationIndex();
         if (position == Tabs.MESSAGE.ordinal()) {
-            if (MessagesFragment.getRecip() != null) {
+            if (d.existsRecip()) {
                 RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
-                int newerRecips = dbRecipient.getAllNewerRecipients(MessagesFragment.getRecip(),
-                        true);
-                if (MessagesFragment.getRecip().isSendable() && newerRecips <= 0) {
+                int newerRecips = dbRecipient.getAllNewerRecipients(d.getRecip(), true);
+                if (d.getRecip().isSendable() && newerRecips <= 0) {
                     // user can attach when in conversation and not disabled
                     MenuItem iAdd = menu.add(0, MENU_ATTACH, 0, R.string.btn_SelectFile).setIcon(
                             R.drawable.ic_action_attach_file);
@@ -914,7 +914,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 showReference();
                 return true;
             case MENU_NEWMESSAGE:
-                DraftData.INSTANCE.clearRecip();
+                d.clearRecip();
                 mImported = new MessageData();
                 showRecipientSelect(VIEW_RECIPSEL_ID);
                 return true;
@@ -1367,7 +1367,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         cfm.close();
                     }
                 }
-                DraftData.INSTANCE.clearRecip();
+                d.clearRecip();
                 showRecipientSelect(VIEW_RECIPSEL_FORFWD_ID);
                 break;
             case MessagesFragment.RESULT_EDITMESSAGE:
@@ -1376,7 +1376,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     try {
                         if (cem.moveToFirst()) {
                             MessageRow edit = new MessageRow(cem, false);
-                            DraftData.INSTANCE.setRecip(recip);
+                            d.setRecip(recip);
                             // "touch" the message to make it most recent draft
                             edit.setDateSent(System.currentTimeMillis());
                             if (!dbMessage.updateDraftMessage(edit.getRowId(), recip, edit)) {
@@ -1387,7 +1387,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         cem.close();
                     }
                 }
-                if (!DraftData.INSTANCE.existsRecip()) {
+                if (!d.existsRecip()) {
                     showRecipientSelect(VIEW_RECIPSEL_ID);
                 } else {
                     setTab(Tabs.MESSAGE);
@@ -1508,7 +1508,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     @Override
     public void onIntroResultListener(Bundle data) {
         int resultCode = data.getInt(extra.RESULT_CODE);
-        DraftData d = DraftData.INSTANCE;
 
         switch (resultCode) {
             case IntroductionFragment.RESULT_RECIPSEL1:
@@ -1840,7 +1839,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             try {
                                 if (c.moveToFirst()) {
                                     RecipientRow recip = new RecipientRow(c);
-                                    DraftData.INSTANCE.setRecip(recip);
+                                    d.setRecip(recip);
                                     CheckRegistrationStateTask task = new CheckRegistrationStateTask();
                                     task.execute(recip);
                                     if (requestCode == VIEW_RECIPSEL_FORFILE_ID
@@ -1856,7 +1855,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                     setTab(Tabs.MESSAGE);
                                     refreshView();
                                 } else {
-                                    DraftData.INSTANCE.clearRecip();
+                                    d.clearRecip();
                                     showNote(R.string.error_InvalidRecipient);
                                     showRecipientSelect(requestCode);
                                     break;
@@ -1868,7 +1867,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
-                        DraftData.INSTANCE.clearRecip();
+                        d.clearRecip();
                         mImported = new MessageData();
                         setTab(Tabs.MESSAGE);
                         refreshView();
@@ -1885,8 +1884,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient1 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
 
-                        if (DraftData.INSTANCE.existsRecip2()
-                                && rowIdRecipient1 == DraftData.INSTANCE.getRecip2RowId()) {
+                        if (d.existsRecip2() && rowIdRecipient1 == d.getRecip2RowId()) {
                             showNote(R.string.error_InvalidRecipient);
                             break;
                         }
@@ -1897,7 +1895,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         if (c != null) {
                             try {
                                 if (c.moveToFirst()) {
-                                    DraftData.INSTANCE.setRecip1(new RecipientRow(c));
+                                    d.setRecip1(new RecipientRow(c));
                                     refreshView();
                                 } else {
                                     showNote(R.string.error_InvalidRecipient);
@@ -1910,7 +1908,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
-                        DraftData.INSTANCE.clearRecip1();
+                        d.clearRecip1();
                         setTab(Tabs.INTRO);
                         refreshView();
                         break;
@@ -1926,8 +1924,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     case PickRecipientsActivity.RESULT_RECIPSEL:
                         long rowIdRecipient2 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
 
-                        if (DraftData.INSTANCE.existsRecip1()
-                                && rowIdRecipient2 == DraftData.INSTANCE.getRecip1RowId()) {
+                        if (d.existsRecip1() && rowIdRecipient2 == d.getRecip1RowId()) {
                             showNote(R.string.error_InvalidRecipient);
                             break;
                         }
@@ -1938,7 +1935,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         if (c != null) {
                             try {
                                 if (c.moveToFirst()) {
-                                    DraftData.INSTANCE.setRecip2(new RecipientRow(c));
+                                    d.setRecip2(new RecipientRow(c));
                                     refreshView();
                                 } else {
                                     showNote(R.string.error_InvalidRecipient);
@@ -1951,7 +1948,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         break;
                     case Activity.RESULT_CANCELED:
                         // clear the selection
-                        DraftData.INSTANCE.clearRecip2();
+                        d.clearRecip2();
                         setTab(Tabs.INTRO);
                         refreshView();
                         break;
@@ -2129,7 +2126,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                         SafeSlingerConfig.MAX_FILEBYTES));
                             } else {
                                 // update draft
-                                mImported = doSaveDraft(DraftData.INSTANCE.getRecip(), mImported);
+                                mImported = doSaveDraft(d.getRecip(), mImported);
                             }
                         } catch (OutOfMemoryError e) {
                             showNote(R.string.error_OutOfMemoryError);
@@ -2913,7 +2910,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
     private class SendMessageTask extends AsyncTask<MessageTransport, Message, String> {
         private Handler mHandler = new Handler();
-        private DraftData mDraft = DraftData.INSTANCE;
         private int mTxTotalSize = 0;
         private int mTotalMsgs = 0;
 
@@ -3049,8 +3045,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     // update recipient if no longer registered
                     boolean notreg = web.isNotRegistered();
                     if (notreg) {
-                        if (!dbRecipient.updateRecipientRegistrationState(mDraft.getRecipRowId(),
-                                notreg)) {
+                        if (!dbRecipient
+                                .updateRecipientRegistrationState(d.getRecipRowId(), notreg)) {
                             // failure to update database error, not as critical
                             // as the registration loss...
                         }
@@ -4014,7 +4010,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         supportInvalidateOptionsMenu(); // update action bar options
 
         final int position = getSupportActionBar().getSelectedNavigationIndex();
-        if (MessagesFragment.getRecip() != null && position == Tabs.MESSAGE.ordinal()) {
+        if (d.existsRecip() && position == Tabs.MESSAGE.ordinal()) {
             // collapse messages to threads when in message view
             MessagesFragment.removeRecip();
             refreshView();

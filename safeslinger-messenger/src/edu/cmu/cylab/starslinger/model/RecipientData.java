@@ -24,6 +24,11 @@
 
 package edu.cmu.cylab.starslinger.model;
 
+import android.text.TextUtils;
+import edu.cmu.cylab.starslinger.SafeSlingerConfig;
+import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
+import edu.cmu.cylab.starslinger.crypto.CryptTools;
+
 public class RecipientData {
 
     protected long mRowId = -1;
@@ -54,6 +59,68 @@ public class RecipientData {
 
     public RecipientData() {
         super();
+    }
+
+    public boolean hasMyKeyChanged() {
+        String myKeyId = SafeSlingerPrefs.getKeyIdString();
+        if (myKeyId == null) {
+            return false;
+        } else if (mMyKeyId == null) {
+            return myKeyId.equals(mMyKeyId);
+        } else {
+            return (myKeyId.compareTo(mMyKeyId) != 0);
+        }
+    }
+
+    public boolean hasMyPushRegChanged() {
+        String myPushReg = SafeSlingerPrefs.getPushRegistrationId();
+        if (myPushReg == null) {
+            return false;
+        } else if (mMyPushToken == null) {
+            return myPushReg.equals(mMyPushToken);
+        } else {
+            return (myPushReg.compareTo(mMyPushToken) != 0);
+        }
+    }
+
+    public boolean isDeprecated() {
+        if (mPubKey != null) {
+            return CryptTools.is64BitKeyId(new String(mPubKey));
+        } else {
+            return true;
+        }
+    }
+
+    public boolean isFromTrustedSource() {
+        // - direct from exchange ACL good
+        // - one hop trust ok
+        // - pulled from address book, only older versions good
+        return (mSource == RecipientDbAdapter.RECIP_SOURCE_EXCHANGE
+                || mSource == RecipientDbAdapter.RECIP_SOURCE_INTRODUCTION || mSource == RecipientDbAdapter.RECIP_SOURCE_CONTACTSDB);
+    }
+
+    public boolean isPushable() {
+        return mNotify != SafeSlingerConfig.NOTIFY_NOPUSH;
+    }
+
+    public boolean isRegistered() {
+        // if we have a date from the service returning a registration failure
+        // then we are no longer registered with the push service
+        return (mNotRegDate <= 0);
+    }
+
+    public boolean isSendable() {
+        return (mActive && isRegistered() && isPushable() && !isDeprecated()
+                && isFromTrustedSource() && !hasMyKeyChanged());
+    }
+
+    public boolean isInvited() {
+        return (mSource == RecipientDbAdapter.RECIP_SOURCE_INVITED);
+    }
+
+    public boolean isValidContactLink() {
+        return (TextUtils.isEmpty(mContactId) && TextUtils.isEmpty(mRawContactId) && !TextUtils
+                .isEmpty(mContactLu));
     }
 
     // getters...

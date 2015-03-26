@@ -97,6 +97,7 @@ import edu.cmu.cylab.starslinger.model.ContactNameMethodComparator;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageRow;
 import edu.cmu.cylab.starslinger.model.PushTokenKeyDateComparator;
+import edu.cmu.cylab.starslinger.model.RecipientData;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.SlingerContact;
@@ -1116,7 +1117,7 @@ public class BaseActivity extends ActionBarActivity {
 
         s.append(dat(act, R.string.title_MessageDetail, t.getMsgRow().getProbableDate()));
 
-        RecipientRow r = t.getRecipient();
+        RecipientData r = t.getRecipient();
         if (r != null) {
             writeRecipDetail(act, s, r);
         } else {
@@ -1126,7 +1127,7 @@ public class BaseActivity extends ActionBarActivity {
         return s.toString();
     }
 
-    private static void writeRecipDetail(Activity act, StringBuilder s, RecipientRow r) {
+    private static void writeRecipDetail(Activity act, StringBuilder s, RecipientData r) {
         switch (r.getSource()) {
             default:
             case RecipientDbAdapter.RECIP_SOURCE_CONTACTSDB:

@@ -39,7 +39,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
-import edu.cmu.cylab.starslinger.model.RecipientRow;
+import edu.cmu.cylab.starslinger.model.RecipientData;
 import edu.cmu.cylab.starslinger.model.ThreadData;
 import edu.cmu.cylab.starslinger.util.SSUtil;
 
@@ -85,7 +85,7 @@ public class ThreadsAdapter extends BaseAdapter {
     }
 
     private void drawThreadItem(View convertView, ThreadData t) {
-        RecipientRow recip = t.getRecipient();
+        RecipientData recip = t.getRecipient();
 
         ImageView ivAvatar = (ImageView) convertView.findViewById(R.id.imgAvatar);
         if (t.isDetail()) {
@@ -171,7 +171,7 @@ public class ThreadsAdapter extends BaseAdapter {
         }
     }
 
-    public static String getBestIdentityName(Context ctx, ThreadData t, RecipientRow recip) {
+    public static String getBestIdentityName(Context ctx, ThreadData t, RecipientData recip) {
         String person = null;
         if (recip != null) {
             if (!TextUtils.isEmpty(recip.getName())) {

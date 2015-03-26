@@ -30,7 +30,7 @@ public class ThreadData {
     private int mMsgCount;
     private int mNewCount;
     private boolean mIsDetail;
-    private RecipientRow mRecipient;
+    private RecipientData mRecipient;
     private boolean mHasDraft;
     private String mLastPerson;
     private boolean mNewerExists;
@@ -40,7 +40,7 @@ public class ThreadData {
      * create raw thread
      */
     public ThreadData(MessageRow msgRow, int msgs, int newMsgs, boolean hasDraft,
-            String lastPerson, boolean isDetail, boolean newerExists, RecipientRow recip) {
+            String lastPerson, boolean isDetail, boolean newerExists, RecipientData recip) {
         mMsgRow = msgRow;
         mMsgCount = msgs;
         mNewCount = newMsgs;
@@ -86,7 +86,7 @@ public class ThreadData {
         return mNewCount;
     }
 
-    public RecipientRow getRecipient() {
+    public RecipientData getRecipient() {
         return mRecipient;
     }
 
