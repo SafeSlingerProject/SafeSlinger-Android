@@ -1093,7 +1093,7 @@ public class MessagesFragment extends Fragment {
             }
         }
 
-        // if this was the last message, reset the recipient
+        // if this was the last message...
         int msgsInView = 0;
         RecipientData recip = d.getRecip();
         Cursor ci = dbInbox.fetchAllInboxByThread(recip.getKeyid());
@@ -1112,8 +1112,16 @@ public class MessagesFragment extends Fragment {
                 cm.close();
             }
         }
+        // remove recip when 0 msgs and not sendable
         if (msgsInView == 0) {
-            d.clearRecip();
+            if (d.existsRecip()) {
+                RecipientDbAdapter dbRecipient = RecipientDbAdapter
+                        .openInstance(this.getActivity());
+                int newerRecips = dbRecipient.getAllNewerRecipients(d.getRecip(), true);
+                if (!d.getRecip().isSendable() || newerRecips > 0) {
+                    d.clearRecip();
+                }
+            }
         }
     }
 
