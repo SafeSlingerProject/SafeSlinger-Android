@@ -411,7 +411,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_CHANGESETTINGS.equals(action)) {
-
             // clicked on pass cache notification
             showSettings();
             refreshView();
@@ -422,6 +421,10 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             if (handleSendToAction()) {
                 showRecipientSelect(VIEW_RECIPSEL_FORFILE_ID);
             }
+        } else if (SafeSlingerConfig.Intent.ACTION_LOGOUT.equals(action)) {
+            // clicked on logout
+            doManualLogout();
+
         } else {
             setProperDefaultTab();
         }

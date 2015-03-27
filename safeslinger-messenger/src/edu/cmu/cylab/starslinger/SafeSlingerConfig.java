@@ -133,6 +133,7 @@ public class SafeSlingerConfig {
         public static final String ACTION_BACKUPNOTIFY = "edu.cmu.cylab.starslinger.action.BACKUPREMINDER";
         public static final String ACTION_SLINGKEYSNOTIFY = "edu.cmu.cylab.starslinger.action.SLINGKEYSNOTIFY";
         public static final String ACTION_CHANGESETTINGS = "edu.cmu.cylab.starslinger.action.CHANGESETTINGS";
+        public static final String ACTION_LOGOUT = "edu.cmu.cylab.starslinger.action.LOGOUT";
     }
 
     /***
