@@ -77,47 +77,43 @@
             android:id="@+id/SendFrameButtonFile"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal" >
+            android:layout_gravity="center_horizontal"
+            android:gravity="fill_vertical" >
 
             <Button
                 android:id="@+id/SendButtonFile"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal"
+                android:layout_centerVertical="true"
                 android:textSize="@dimen/text_size_medium" />
 
             <LinearLayout
                 android:id="@+id/SendFrameFile"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="@dimen/size_5dp"
-                android:layout_marginTop="@dimen/size_5dp" >
+                android:layout_alignBottom="@+id/SendButtonFile"
+                android:layout_alignTop="@+id/SendButtonFile" >
 
                 <ImageView
                     android:id="@+id/SendImageViewFile"
                     android:layout_width="@dimen/size_50dp"
                     android:layout_height="@dimen/size_50dp"
                     android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/size_5dp"
                     android:contentDescription="@string/label_Photo"
                     android:src="@drawable/ic_attachment_select" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_height="match_parent"
                     android:orientation="vertical" >
 
                     <TextView
                         android:id="@+id/SendTextViewFile"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:ellipsize="middle"
-                        android:gravity="center_vertical"
                         android:singleLine="true"
                         android:text="@string/btn_SelectFile"
                         android:textIsSelectable="false"
@@ -127,11 +123,8 @@
                         android:id="@+id/SendTextViewFileSize"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:ellipsize="middle"
-                        android:gravity="center_vertical"
                         android:singleLine="true"
-                        android:textColor="@android:color/darker_gray"
                         android:textIsSelectable="false"
                         android:textSize="@dimen/text_size_micro" />
                 </LinearLayout>
