@@ -78,193 +78,81 @@
     </string-array>
     <string-array name="language_entries" translatable="false">
         <item>@string/choice_default</item>
-        <item>Afrikaans</item>
         <item>العربية</item>
-        <item>Azərbaycan</item>
-        <item>Беларуская</item>
         <item>Български</item>
         <item>বাঙ্গালী</item>
-        <item>Bosanski</item>
         <item>Català</item>
-        <item>Binisaya</item>
         <item>Čeština</item>
-        <item>Cymraeg</item>
         <item>Dansk</item>
         <item>Deutsch</item>
         <item>Ελληνικά</item>
         <item>English</item>
-        <item>Esperanto</item>
         <item>Español</item>
-        <item>Eesti</item>
-        <item>Euskera</item>
-        <item>فارسی</item>
         <item>Suomi</item>
         <item>Français</item>
-        <item>Gaeilge</item>
-        <item>Galego</item>
-        <item>ગુજરાતી</item>
-        <item>Hausa</item>
         <item>हिन्दी</item>
-        <item>Hmoob</item>
-        <item>Hrvatski</item>
-        <item>Kreyòl Ayisyen</item>
         <item>Magyar</item>
-        <item>Հայերեն</item>
-        <item>Igbo</item>
         <item>Bahasa Indonesia</item>
-        <item>Íslenska</item>
         <item>Italiano</item>
         <item>עברית</item>
         <item>日本の</item>
-        <item>ייִדיש</item>
         <item>Jawa</item>
-        <item>ქართული</item>
-        <item>қазақ</item>
-        <item>ខ្មែរ</item>
-        <item>ಕನ್ನಡ</item>
         <item>한국어</item>
-        <item>Latine</item>
-        <item>ພາສາລາວ</item>
-        <item>Lietuvių</item>
-        <item>Latviešu</item>
-        <item>Malagasy</item>
-        <item>te reo Māori</item>
-        <item>Македонски</item>
-        <item>മലയാളം</item>
-        <item>Монгол</item>
-        <item>मराठी</item>
-        <item>Melayu</item>
-        <item>Malti</item>
-        <item>ဗမာစာ</item>
-        <item>नेपाली</item>
         <item>Nederlands</item>
         <item>Norsk</item>
-        <item>Chinyanja</item>
         <item>ਪੰਜਾਬੀ</item>
         <item>Polski</item>
         <item>Português</item>
         <item>Română</item>
         <item>Русский</item>
-        <item>සිංහල</item>
         <item>Slovenčina</item>
-        <item>Slovenščina</item>
-        <item>Soomaaliga</item>
-        <item>Shqip</item>
         <item>Српски</item>
-        <item>Sesotho</item>
-        <item>Basa Sunda</item>
         <item>Svenska</item>
-        <item>Kiswahili</item>
-        <item>தமிழ்</item>
-        <item>తెలుగు</item>
-        <item>тоҷикӣ</item>
-        <item>ภาษาไทย</item>
-        <item>Tagalog</item>
         <item>Türkçe</item>
-        <item>Українська</item>
         <item>اردو</item>
-        <item>O‘zbek</item>
         <item>Việt</item>
-        <item>Yorùbá</item>
         <item>中文 (中国)</item>
         <item>中文 (台灣)</item>
         <item>中文 (官话)</item>
-        <item>isiZulu</item>
     </string-array>
     <string-array name="language_values" translatable="false">
         <item>zz</item>
-        <item>af</item>
         <item>ar</item>
-        <item>az</item>
-        <item>be</item>
         <item>bg</item>
         <item>bn</item>
-        <item>bs</item>
         <item>ca</item>
-        <item>cb</item>
         <item>cs</item>
-        <item>cy</item>
         <item>da</item>
         <item>de</item>
         <item>el</item>
         <item>en</item>
-        <item>eo</item>
         <item>es</item>
-        <item>et</item>
-        <item>eu</item>
-        <item>fa</item>
         <item>fi</item>
         <item>fr</item>
-        <item>ga</item>
-        <item>gl</item>
-        <item>gu</item>
-        <item>ha</item>
         <item>hi</item>
-        <item>hm</item>
-        <item>hr</item>
-        <item>ht</item>
         <item>hu</item>
-        <item>hy</item>
-        <item>ig</item>
         <item>in</item>
-        <item>is</item>
         <item>it</item>
         <item>iw</item>
         <item>ja</item>
-        <item>ji</item>
         <item>jv</item>
-        <item>ka</item>
-        <item>kk</item>
-        <item>km</item>
-        <item>kn</item>
         <item>ko</item>
-        <item>la</item>
-        <item>lo</item>
-        <item>lt</item>
-        <item>lv</item>
-        <item>mg</item>
-        <item>mi</item>
-        <item>mk</item>
-        <item>ml</item>
-        <item>mn</item>
-        <item>mr</item>
-        <item>ms</item>
-        <item>mt</item>
-        <item>my</item>
-        <item>ne</item>
         <item>nl</item>
         <item>no</item>
-        <item>ny</item>
         <item>pa</item>
         <item>pl</item>
         <item>pt</item>
         <item>ro</item>
         <item>ru</item>
-        <item>si</item>
         <item>sk</item>
-        <item>sl</item>
-        <item>so</item>
-        <item>sq</item>
         <item>sr</item>
-        <item>st</item>
-        <item>su</item>
         <item>sv</item>
-        <item>sw</item>
-        <item>ta</item>
-        <item>te</item>
-        <item>tg</item>
-        <item>th</item>
-        <item>tl</item>
         <item>tr</item>
-        <item>uk</item>
         <item>ur</item>
-        <item>uz</item>
         <item>vi</item>
-        <item>yo</item>
         <item>zh_CN</item>
         <item>zh_TW</item>
         <item>zh</item>
-        <item>zu</item>
     </string-array>
 
 </resources>
