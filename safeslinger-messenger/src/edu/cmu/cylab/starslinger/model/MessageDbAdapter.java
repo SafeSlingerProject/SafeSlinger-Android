@@ -205,6 +205,8 @@ public class MessageDbAdapter {
                 if (msg.getFileName() != null)
                     values.put(KEY_FILENAME, msg.getFileName()); // name of file
 
+                values.put(KEY_FILELEN, msg.getFileSize()); // len encoded file
+
                 if (msg.getFileType() != null)
                     values.put(KEY_FILETYPE, msg.getFileType()); // file mime
                                                                  // type
@@ -239,6 +241,8 @@ public class MessageDbAdapter {
             if (msg != null) {
                 if (msg.getFileName() != null)
                     values.put(KEY_FILENAME, msg.getFileName()); // name of file
+
+                values.put(KEY_FILELEN, msg.getFileSize()); // len encoded file
 
                 if (msg.getFileType() != null)
                     values.put(KEY_FILETYPE, msg.getFileType()); // file mime

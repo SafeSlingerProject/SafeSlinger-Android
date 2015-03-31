@@ -433,7 +433,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     public void setProperDefaultTab() throws SQLException {
         // if nothing else, make sure proper default tab is selected
         RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(getApplicationContext());
-        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(getApplicationContext());
 
         if (dbRecipient.getTrustedRecipientCount() == 0) {
             // Sling Keys should be the default when there are 0 keys
@@ -1842,7 +1841,17 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             try {
                                 if (c.moveToFirst()) {
                                     RecipientRow recip = new RecipientRow(c);
+                                    if (recip != null && recip.getNotRegDate() > 0) {
+                                        // reset registration to 0 to enable
+                                        // test reply
+                                        if (!dbRecipient.updateRecipientRegistrationState(
+                                                recip.getRowId(), true)) {
+                                            showNote(R.string.error_UnableToUpdateMessageInDB);
+                                        }
+                                        recip.setNotRegDate(0L);
+                                    }
                                     d.setRecip(recip);
+
                                     CheckRegistrationStateTask task = new CheckRegistrationStateTask();
                                     task.execute(recip);
                                     if (requestCode == VIEW_RECIPSEL_FORFILE_ID

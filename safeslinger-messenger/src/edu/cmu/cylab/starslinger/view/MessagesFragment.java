@@ -694,6 +694,13 @@ public class MessagesFragment extends Fragment {
 
                                         } else if (mDraft != null
                                                 && mDraft.getRowId() == messageRow.getRowId()) {
+                                            // file data must reloaded from db,
+                                            // text message is edited on this ui
+                                            mDraft.setFileData(messageRow.getFileData());
+                                            mDraft.setFileDir(messageRow.getFileDir());
+                                            mDraft.setFileName(messageRow.getFileName());
+                                            mDraft.setFileSize(messageRow.getFileSize());
+                                            mDraft.setFileType(messageRow.getFileType());
                                             // draft has already been updated
                                             continue;
 
