@@ -41,6 +41,7 @@
     <string name="btn_Close">নিকট</string>
     <string name="btn_Continue">দেখো</string>
     <string name="btn_CreateNewKey">নতুন কি তৈরি করুন</string>
+    <string name="btn_Delete">মুছে দিন</string>
     <string name="btn_DeleteKeys">কি মুছে দিন</string>
     <string name="btn_discard">অগ্রাহ্য করা</string>
     <string name="btn_Done">কৃত</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">ঠিক আছে</string>
     <string name="btn_Refuse">প্রত্যাখ্যান করা</string>
     <string name="btn_Remind">মনে করিয়ে দিন</string>
+    <string name="btn_Retry">পুনরায় চেষ্টা করা</string>
     <string name="btn_Save">সংরক্ষণ করুন</string>
     <string name="btn_SelectFile">সংযুক্তি যোগ করুন</string>
     <string name="btn_SendFile">পাঠান</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">নিবন্ধন অনুমোদন যাচাই না, পরে নিজে পুনরায় চেষ্টা করুন.</string>
     <string name="error_C2DMRegInvalidSender">নিবন্ধন এই সংস্করণের জন্য উপলব্ধ হয় না, একটি আপডেট করা সংস্করণ জন্য চেক করুন.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Google এর সাথে ভুল ডিভাইস নিবন্ধন. এই ডিভাইসটি বর্তমানে ধাক্কা মেসেজিং সমর্থন করে না.</string>
+    <string name="error_C2DMRegPlayServicesMissing">গুগল প্লে সার্ভিস বার্তা গ্রহণ করতে প্রয়োজন বোধ করা হয়. গুগল অবিরত সেবা বিনামূল্যে ইনস্টল করুন.</string>
     <string name="error_C2DMRegServiceNotAvailable">পুশ নিবন্ধন সেবা পাওয়া যায় না, সময় নির্ধারণ %d সেকেন্ডের মধ্যে আবার চেষ্টা করুন.</string>
     <string name="error_C2DMRegTooManyRegistrations">অনেক অ্যাপ্লিকেশন পুশ জন্য নিবন্ধিত করা হয়. কিছু অন্যান্য অ্যাপ্লিকেশন আনইনস্টল করুন এবং পুনরায় চেষ্টা করুন.</string>
     <string name="error_CannotSendEmptyFile">একটি খালি সংযুক্তি পাঠাতে পারবেন না.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">বাড়ি</string>
     <string name="label_hours">%d ঘন্টা</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud সক্রিয় করা হয়. কর্ম সমাপ্ত হলে সম্পন্ন বোতাম ট্যাপ.</string>
+    <string name="label_InstNoMessages">কোনো বার্তা. আপনার পর্দার উপরের অংশে নতুন বার্তা আইকনের উপর একটি বার্তা, কল পাঠাতে.</string>
     <string name="label_InstNoRecipients">প্রাপক যোগ করার জন্য, আপনাকে অবশ্যই প্রথম গুলতি কি একই সময়ে এক বা একাধিক অন্যান্য ব্যবহারকারীদের সাথে. এছাড়াও আপনি মেনু থেকে একটি গুলতি কি যোগাযোগ আমন্ত্রণ পাঠাতে পারে.</string>
     <string name="label_InstNoRecipientsMatchQuery">আপনার বর্তমান প্রাপক কেউ আপনার অনুসন্ধানের সাথে মেলে না. একটি ভিন্ন প্রশ্ন চেষ্টা করুন বা একটি নতুন যোগাযোগ আমন্ত্রণ করুন.</string>
     <string name="label_InstNoSharedFile">কোন ফাইল শেয়ার করা. শেয়ার করা ফোল্ডারের আই টিউনস এবং ড্র্যাগ ফাইল সঙ্গে আপনার ডিভাইসের সাথে সংযুক্ত করুন.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">কী:</string>
     <string name="label_LastName">নামের শেষাংশ</string>
     <string name="label_Me">আমাকে</string>
+    <string name="label_messageAutomatedVerify">(%1$s %2$s জন্য কি নিশ্চিত করেনি.)</string>
     <string name="label_messageIntroduceNameToYou">আমি আপনাকে %s পরিচয় করিয়ে দিতে চাই.</string>
     <string name="label_messageInviteInstall">SafeSlinger অ্যাপ্লিকেশন: %s</string>
     <string name="label_messageInviteSetupInst">একটি নিরাপদ মেসেজিং সংযোগ সেটআপ করার জন্য, আমরা সংযোগ যাচাই করার জন্য শুধু একবার তারপর গুলতি কি পূরণ বা ফোন একে অপরের একই সময়ে, এবং পারেন.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">সংগ্রহস্থল</string>
 
     <string name="state_BackupRestored">ব্যাকআপ পুনঃস্থাপন করা.</string>
+    <string name="state_FailedToSendMessage">বার্তা পাঠাতে ব্যর্থ হয়েছে. সংক্ষেপে আলোচনা করা এবং বিকল্প জন্য রাখা.</string>
     <string name="state_FileDeleted">মুছে ফেলা ফাইল %s.</string>
     <string name="state_FileSent">বার্তা পাঠানো হয়েছে.</string>
     <string name="state_InvitationAdded">আমন্ত্রণ করা হয়েছে.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">ক্যামেরা</string>
     <string name="title_ChooseDirectory">ডাইরেক্টরি চয়ন করুন</string>
     <string name="title_ChooseFileLoad">আপনার সংযুক্তি নির্বাচন করুন</string>
+    <string name="title_clear">পরিষ্কার</string>
     <string name="title_comments">মন্তব্য/প্রশ্ন</string>
     <string name="title_Error">ভুল</string>
     <string name="title_ExchangeWalkthrough">গুলতি কি সহকারী</string>
@@ -387,6 +394,7 @@
     <string name="title_home">বিনিময় শুরু করুন</string>
     <string name="title_HomePanel">বাড়ি</string>
     <string name="title_MessageDetail">বার্তা</string>
+    <string name="title_MessageOptions">বার্তা বিকল্প</string>
     <string name="title_Messages">বার্তা</string>
     <string name="title_MyIdentity">ব্যক্তিগত যোগাযোগ</string>
     <string name="title_NotifyFileAvailable">SafeSlinger বার্তা পাওয়া যায়</string>

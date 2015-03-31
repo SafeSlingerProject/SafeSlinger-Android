@@ -41,6 +41,7 @@
     <string name="btn_Close">關閉</string>
     <string name="btn_Continue">繼續</string>
     <string name="btn_CreateNewKey">產生新密鑰</string>
+    <string name="btn_Delete">刪除</string>
     <string name="btn_DeleteKeys">刪除密鑰</string>
     <string name="btn_discard">丟棄</string>
     <string name="btn_Done">完成</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">拒絕</string>
     <string name="btn_Remind">提醒</string>
+    <string name="btn_Retry">重試</string>
     <string name="btn_Save">儲存</string>
     <string name="btn_SelectFile">選擇檔案</string>
     <string name="btn_SendFile">傳送</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">訊息通知註冊未通過身份驗證，請稍後手動重試。</string>
     <string name="error_C2DMRegInvalidSender">此版本無法進行訊息通知註冊，請檢查新的版本並安裝。</string>
     <string name="error_C2DMRegPhoneRegistrationError">該設備在Google服務註冊失敗。目前此設備不支持訊息通知服務。</string>
+    <string name="error_C2DMRegPlayServicesMissing">谷歌播放服務需要接收消息。請安裝谷歌播放服務繼續。</string>
     <string name="error_C2DMRegServiceNotAvailable">目前訊息通知服務的註冊功能無法使用，請在%d秒後嘗試註冊。</string>
     <string name="error_C2DMRegTooManyRegistrations">太多的應用程序註冊訊息通知服務。請移除其他的應用程序，然後重試。</string>
     <string name="error_CannotSendEmptyFile">無法傳送空檔案。</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">家用電話</string>
     <string name="label_hours">%d小時</string>
     <string name="label_iCloudEnable">SafeSlinger的iClou備份已啟用。</string>
+    <string name="label_InstNoMessages">沒有任何消息。要發送信息，輕點新郵件圖標在屏幕的頂部。</string>
     <string name="label_InstNoRecipients">要添加收件人，您必須先與一個或多個用戶去交換金鑰。您也可以從選單中送出金鑰交換的邀請訊息。</string>
     <string name="label_InstNoRecipientsMatchQuery">無你目前的收件人符合您的搜索查詢。請嘗試不同的查詢或邀請新的聯繫人。</string>
     <string name="label_InstNoSharedFile">沒有共享的文件。連接您的設備並開啟iTunes，拖曳文件到共享文件夾。</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">金鑰日期:</string>
     <string name="label_LastName">姓</string>
     <string name="label_Me">我</string>
+    <string name="label_messageAutomatedVerify">（%1$s已確認的關鍵%2$s。）</string>
     <string name="label_messageIntroduceNameToYou">我想介紹%s給你。</string>
     <string name="label_messageInviteInstall">SafeSlinger應用程序： %s</string>
     <string name="label_messageInviteSetupInst">設置一個安全訊息管道，我們可以透過碰面或打電話給對方並進行一次金鑰交換驗證。</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">儲存管理</string>
 
     <string name="state_BackupRestored">備份恢復。</string>
+    <string name="state_FailedToSendMessage">消息發送失敗。觸摸並按住選項。</string>
     <string name="state_FileDeleted">刪除文件%s。</string>
     <string name="state_FileSent">訊息已傳送。</string>
     <string name="state_InvitationAdded">加入邀請訊息。</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">相機</string>
     <string name="title_ChooseDirectory">選擇目錄</string>
     <string name="title_ChooseFileLoad">選擇檔案</string>
+    <string name="title_clear">明確</string>
     <string name="title_comments">評論/問題</string>
     <string name="title_Error">錯誤</string>
     <string name="title_ExchangeWalkthrough">Sling Keys協助</string>
@@ -387,6 +394,7 @@
     <string name="title_home">開始交換</string>
     <string name="title_HomePanel">首頁</string>
     <string name="title_MessageDetail">訊息內容</string>
+    <string name="title_MessageOptions">郵件選項</string>
     <string name="title_Messages">訊息</string>
     <string name="title_MyIdentity">個人資訊</string>
     <string name="title_NotifyFileAvailable">SafeSlinger訊息通知</string>

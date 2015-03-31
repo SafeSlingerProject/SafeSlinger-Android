@@ -41,6 +41,7 @@
     <string name="btn_Close">Vicino</string>
     <string name="btn_Continue">Continuare</string>
     <string name="btn_CreateNewKey">Crea nuova chiave</string>
+    <string name="btn_Delete">Cancellare</string>
     <string name="btn_DeleteKeys">Eliminare le chiavi</string>
     <string name="btn_discard">Scartare</string>
     <string name="btn_Done">Fatto</string>
@@ -49,11 +50,12 @@
     <string name="btn_Import">Importazione</string>
     <string name="btn_Introduce">Introdurre</string>
     <string name="btn_No">No</string>
-    <string name="btn_NotNow">Non adesso</string>
+    <string name="btn_NotNow">Non Adesso</string>
     <string name="btn_NotRemind">Dimenticare</string>
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Rifiutare</string>
     <string name="btn_Remind">Ricordare</string>
+    <string name="btn_Retry">Riprova</string>
     <string name="btn_Save">Salva</string>
     <string name="btn_SelectFile">Aggiungi allegato</string>
     <string name="btn_SendFile">Inviare</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">La registrazione non autenticato, si prega di riprovare più tardi manualmente.</string>
     <string name="error_C2DMRegInvalidSender">La registrazione non è disponibile per questa versione, si prega di verificare la presenza di una versione aggiornata.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Registrazione del dispositivo non corretta con Google. Questo dispositivo non supporta la messaggistica push.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services è necessaria per ricevere i messaggi. Installare Google Play Servizi per continuare.</string>
     <string name="error_C2DMRegServiceNotAvailable">Servizio di registrazione push non è disponibile, la programmazione riprovare in %d secondi.</string>
     <string name="error_C2DMRegTooManyRegistrations">Troppe applicazioni sono registrati per Push. Disinstallare alcune altre applicazioni e riprovare.</string>
     <string name="error_CannotSendEmptyFile">Non è possibile inviare un allegato vuoto.</string>
@@ -168,7 +171,7 @@
     <string name="label_backupURL">URL Backup</string>
     <string name="label_ClickForNMsgs">Toccare per rivedere i %d messaggi</string>
     <string name="label_ComposeHint">Componi Messaggio</string>
-    <string name="label_ContactName">Il tuo nome</string>
+    <string name="label_ContactName">Il Tuo Nome</string>
     <string name="label_days">%d giorni</string>
     <string name="label_Device">Dispositivo:</string>
     <string name="label_DeviceInSendOnlyMode">Invia modalità solo</string>
@@ -180,13 +183,14 @@
     <string name="label_expired">scaduto</string>
     <string name="label_expires">scade %s</string>
     <string name="label_expiresIn">scade nel</string>
-    <string name="label_FileNameHint">Nome del file</string>
+    <string name="label_FileNameHint">Nome Del File</string>
     <string name="label_FindInstruct">Inserisci il tuo nome e una password per proteggere i dati:</string>
     <string name="label_FirstName">Nome</string>
     <string name="label_Home">Toccare il proprio nome per aggiungere o rimuovere i dati di contatto, controllare gli elementi che si desidera condividere e toccare Begin Exchange quando gli altri sono pronti a scambio:</string>
     <string name="label_hometag">Casa</string>
     <string name="label_hours">%d ore</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud è abilitato. Toccare il pulsante Fine al termine.</string>
+    <string name="label_InstNoMessages">Nessun messaggio. Per inviare un messaggio, toccare l\'icona Nuovo messaggio nella parte superiore dello schermo.</string>
     <string name="label_InstNoRecipients">Per aggiungere i destinatari, è necessario prima Sling Keys con uno o più altri utenti allo stesso tempo. Si può anche inviare un contatto Sling Keys invito dal menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Nessuno dei tuoi destinatari attuali corrisponde la query di ricerca. Prova con una query diversa o invitare un nuovo contatto.</string>
     <string name="label_InstNoSharedFile">Nessun file condiviso. Collegare il dispositivo con iTunes e trascinare i file nella cartella condivisa.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Chiave:</string>
     <string name="label_LastName">Cognome</string>
     <string name="label_Me">Me</string>
+    <string name="label_messageAutomatedVerify">(%1$s ha confermato la chiave per %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Vorrei presentarvi %s a voi.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Per configurare una connessione di messaggistica sicura, siamo in grado di soddisfare o telefono l\'altro, allo stesso tempo, e poi Sling chiavi solo una volta per verificare la connessione.</string>
@@ -211,7 +216,7 @@
     <string name="label_OldThreads">Vecchie Discussioni</string>
     <string name="label_othertag">Altro</string>
     <string name="label_PassHintBackoff">Riprova</string>
-    <string name="label_PassHintChange">Passphrase aggiornato</string>
+    <string name="label_PassHintChange">Passphrase Aggiornato</string>
     <string name="label_PassHintCreate">Creare passphrase</string>
     <string name="label_PassHintCurrent">Passphrase corrente</string>
     <string name="label_PassHintEnter">Passphrase</string>
@@ -227,7 +232,7 @@
     <string name="label_restoreCompleteDate">Ultimo Ripristino Completato</string>
     <string name="label_SafeSlingerBackupDelayed">Backup SafeSlinger ritardato</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
-    <string name="label_SaveAccount">Salva account</string>
+    <string name="label_SaveAccount">Salva Account</string>
     <string name="label_SaveInstruct">Controllare i contatti che si desidera aggiornare nella tua rubrica, quindi toccare Importa per salvare i contatti sicuri:</string>
     <string name="label_search_contacts_hint">Cerca contatti</string>
     <string name="label_seconds">%d secondi</string>
@@ -295,7 +300,7 @@
     <string name="menu_message_font_size">Messaggio Font Size</string>
     <string name="menu_messageCopyText">Copia testo</string>
     <string name="menu_messageForward">Avanti</string>
-    <string name="menu_PrivacyPolicy">Politica sulla riservatezza</string>
+    <string name="menu_PrivacyPolicy">Politica Sulla Riservatezza</string>
     <string name="menu_Remove">Rimuovere</string>
     <string name="menu_restore_default">Ripristina le impostazioni predefinite</string>
     <string name="menu_ringtone">Suono</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Immagazzinamento</string>
 
     <string name="state_BackupRestored">Backup restaurato.</string>
+    <string name="state_FailedToSendMessage">Impossibile inviare il messaggio. Toccare e tenere premuto per le opzioni.</string>
     <string name="state_FileDeleted">%s file eliminato.</string>
     <string name="state_FileSent">Messaggio inviato.</string>
     <string name="state_InvitationAdded">Invito aggiunto.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Macchina fotografica</string>
     <string name="title_ChooseDirectory">Scegli Directory</string>
     <string name="title_ChooseFileLoad">Scegli la tua Attachment</string>
+    <string name="title_clear">Chiaro</string>
     <string name="title_comments">Commenti/Domande</string>
     <string name="title_Error">Errore</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Inizia Scambio</string>
     <string name="title_HomePanel">Casa</string>
     <string name="title_MessageDetail">Messaggio</string>
+    <string name="title_MessageOptions">Opzioni messaggio</string>
     <string name="title_Messages">Messaggi</string>
     <string name="title_MyIdentity">Personale Contatto</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Messaggio Disponibile</string>
@@ -396,7 +404,7 @@
     <string name="title_photolibary">Photo Library</string>
     <string name="title_PickRecipient">Destinatari</string>
     <string name="title_Question">Domanda</string>
-    <string name="title_RecipientDetail">Dettaglio destinatario</string>
+    <string name="title_RecipientDetail">Dettaglio Destinatario</string>
     <string name="title_save">Fine di Exchange</string>
     <string name="title_SaveFileAs">Salva file con nome</string>
     <string name="title_SecureIntroduction">Introduzione sicuro</string>

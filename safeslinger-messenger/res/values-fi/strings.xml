@@ -41,6 +41,7 @@
     <string name="btn_Close">Lähellä</string>
     <string name="btn_Continue">Jatkaa</string>
     <string name="btn_CreateNewKey">Luo uusi avain</string>
+    <string name="btn_Delete">Poistaa</string>
     <string name="btn_DeleteKeys">Poista Keys</string>
     <string name="btn_discard">Hylätä</string>
     <string name="btn_Done">Tehty</string>
@@ -51,9 +52,10 @@
     <string name="btn_No">Ei</string>
     <string name="btn_NotNow">Not Now</string>
     <string name="btn_NotRemind">Unohtaa</string>
-    <string name="btn_OK">kunnossa</string>
+    <string name="btn_OK">Kunnossa</string>
     <string name="btn_Refuse">Kieltäytyä</string>
     <string name="btn_Remind">Muistuttaa</string>
+    <string name="btn_Retry">Yritä uudelleen</string>
     <string name="btn_Save">Tallenna</string>
     <string name="btn_SelectFile">Lisää liite</string>
     <string name="btn_SendFile">Lähettää</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Rekisteröinti ei todennettu, yritä uudelleen manuaalisesti myöhemmin.</string>
     <string name="error_C2DMRegInvalidSender">Rekisteröinti ei ole käytettävissä tässä versiossa, tarkista, onko päivitettyä versiota.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Virheellinen laitteen rekisteröinti Google. Tämä laite ei tue push messaging.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Palvelut vaaditaan vastaanottaa viestejä. Asenna Google Play Services jatkaa.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push rekisteröinti palvelu ei ole käytettävissä, aikataulujen yritä uudelleen %d sekuntia.</string>
     <string name="error_C2DMRegTooManyRegistrations">Liian monet sovellukset ovat rekisteröity Push. Ole hyvä ja poista joitakin muita sovelluksia ja yritä uudelleen.</string>
     <string name="error_CannotSendEmptyFile">Et voi lähettää tyhjän liitetiedostona.</string>
@@ -124,7 +127,7 @@
     <string name="error_PushMsgInvalidRegistration">Tämä vastaanottaja on puuttuva tai huono push rekisteröintiä. Sinun pitäisi lopettaa viestien lähettämistä tähän laitteeseen.</string>
     <string name="error_PushMsgMessageNotFound">Viesti päättynyt.</string>
     <string name="error_PushMsgMessageTooBig">Viesti on liian suuri. Pienennä viestin.</string>
-    <string name="error_PushMsgNotRegistered">Tämä vastaanottajan push rekisteröinti ei ole enää voimassa.Vastaanottaja voi poistanut SafeSlinger tai pois päältä ilmoituksia. Sinun pitäisi lopettaa viestien lähettämistä tähän laitteeseen.</string>
+    <string name="error_PushMsgNotRegistered">Tämä vastaanottajan push rekisteröinti ei ole enää voimassa. Vastaanottaja voi poistanut SafeSlinger tai pois päältä ilmoituksia. Sinun pitäisi lopettaa viestien lähettämistä tähän laitteeseen.</string>
     <string name="error_PushMsgNotSucceed">Virhe kommunikoida push ilmoituksen palvelun.</string>
     <string name="error_PushMsgQuotaExceeded">Olet ylittänyt viesti kiintiö tämän laitteen. Yritä myöhemmin uudelleen.</string>
     <string name="error_PushMsgServiceFail">Ilmoitus ei ole saatavissa tällä kertaa. Ole hyvä ja yritä lähettää viestin myöhemmin.</string>
@@ -141,7 +144,7 @@
     <string name="error_VcardParseFailure">Yhteystiedot Aineisto muotoiltu virheellisesti.</string>
 
     <string name="help_find">Käytä tätä näyttöä asettaa nimesi vaihtaa muiden kanssa, ja tunnuslause tietojen suojaamiseksi. Paina painiketta Valmis, kun olet valmis.</string>
-    <string name="help_home">Voit vaihtaa identiteettiä tietoja, että kaikki käyttäjät ovat lähellä tai puhelimessa.Aloita Exchange painike vaihtavat vain tarkistaa yhteystietoja.</string>
+    <string name="help_home">Voit vaihtaa identiteettiä tietoja, että kaikki käyttäjät ovat lähellä tai puhelimessa. Aloita Exchange painike vaihtavat vain tarkistaa yhteystietoja.</string>
     <string name="help_identity_menu">Voit myös vaihtaa henkilötietoja henkilöllisyytesi napauttamalla painiketta nimelläsi. Tämä näyttää valikon avulla voit muokata yhteystietoja, Luo uusi yhteyshenkilö tai muulla yhteystietoja.</string>
     <string name="help_Messages">Tämä näyttö näyttää kaikki ohi viestit ja liitetiedostot, jotka ovat vielä ladattavissa.</string>
     <string name="help_passphrase">Tässä näytössä kirjautua sovellus tunnuslauseen. Jos olet unohtanut tunnuslauseen, voit luoda uuden avaimen suojattu uuden tunnuslauseen napauttamalla Unohtuiko Tunnuslause? painiketta. Napauta käyttäjätunnus vaihtaa useita avaimia.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Koti</string>
     <string name="label_hours">%d tuntia</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud on käytössä. Paina painiketta Valmis, kun olet valmis.</string>
+    <string name="label_InstNoMessages">Ei viestejä. Jos haluat lähettää viestin, kosketa Uusi viesti yläkulmassa näytön.</string>
     <string name="label_InstNoRecipients">Voit lisätä vastaanottajia, on ensin Sling Keys yhden tai useamman käyttäjän samanaikaisesti. Voit myös lähettää Sling Keys yhteystiedot kutsu valikosta.</string>
     <string name="label_InstNoRecipientsMatchQuery">Mikään nykyinen vastaanottajat vastaavat hakukyselyysi. Yritä eri kyselyn tai kutsua uuden yhteystiedon.</string>
     <string name="label_InstNoSharedFile">Ei jaettu tiedosto. Liitä laite iTunesin kanssa ja vedä tiedostot jaettuun kansioon.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Avain:</string>
     <string name="label_LastName">Sukunimi</string>
     <string name="label_Me">Minua</string>
+    <string name="label_messageAutomatedVerify">(%1$s on vahvistanut avain %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Haluaisin esitellä %s teille.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Setup turvallisen viestit yhteyden, voimme tavata tai puhelimitse toisiaan samalla, ja sitten Sling avaimet vain kerran yhteyden vahvistamiseksi.</string>
@@ -227,7 +232,7 @@
     <string name="label_restoreCompleteDate">Viimeisen palautuspisteen Valmiit</string>
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger varmuuskopiointi myöhässä</string>
     <string name="label_safeslingered">(SafeSlinger Suora Exchange)</string>
-    <string name="label_SaveAccount">Säästä tili</string>
+    <string name="label_SaveAccount">Säästä Tili</string>
     <string name="label_SaveInstruct">Tarkista yhteystiedot haluat päivittää osoitekirjassa, napauta sitten Tuo säästää turvallinen yhteystiedot:</string>
     <string name="label_search_contacts_hint">Hae yhteystietoja</string>
     <string name="label_seconds">%d sekuntia</string>
@@ -254,7 +259,7 @@
     <string name="label_TapToResumeDraft">Jatka napauttamalla viestin luonnoksen</string>
     <string name="label_TapToSendCredentialUpdate">Kosketa ja pidä lähettää tilitietojen päivitys.</string>
     <string name="label_TapToSlingKeys">Napauttamalla Sling Keys.</string>
-    <string name="label_targetAccountLabel">Yhteydet tili</string>
+    <string name="label_targetAccountLabel">Yhteydet Tili</string>
     <string name="label_TouchToConfigureBackupSettings">Voit vaihtoehtoisesti mahdollistaa SafeSlinger iCloud varmuuskopiointi iOS Asetukset. Paina painiketta Valmis, kun olet valmis.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Kosketa määrittää varmuuskopioinnin asetuksia.</string>
     <string name="label_TouchToConfigureCacheTimeout">Kosketa määrittää välimuistin aikakatkaisuasetukset.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Varastointi</string>
 
     <string name="state_BackupRestored">Varmuuskopiointi palautettu.</string>
+    <string name="state_FailedToSendMessage">Epäonnistui lähetä viesti. Kosketa ja pidä vaihtoehtoja.</string>
     <string name="state_FileDeleted">Poistettu tiedosto %s.</string>
     <string name="state_FileSent">Viesti lähetetty.</string>
     <string name="state_InvitationAdded">Kutsu lisätty.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Kamera</string>
     <string name="title_ChooseDirectory">Valitse hakemisto</string>
     <string name="title_ChooseFileLoad">Valitse liitetiedosto</string>
+    <string name="title_clear">Kirkas</string>
     <string name="title_comments">Kommentit/kysymykset</string>
     <string name="title_Error">Virhe</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Aloita Exchange</string>
     <string name="title_HomePanel">Koti</string>
     <string name="title_MessageDetail">Viesti</string>
+    <string name="title_MessageOptions">Viestivaihtoehdot</string>
     <string name="title_Messages">Viestit</string>
     <string name="title_MyIdentity">Omat Yhteystiedot</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Viesti Saatavilla</string>
@@ -403,7 +411,7 @@
     <string name="title_SecureIntroductionInvite">Secure Johdanto Kutsu!</string>
     <string name="title_SelectSource">Lähetetään Vaihtoehdot:</string>
     <string name="title_SendFile">Lähettää</string>
-    <string name="title_sharingfolder">Jakaminen kansio</string>
+    <string name="title_sharingfolder">Jakaminen Kansio</string>
     <string name="title_soundrecoder">Sound Recorder</string>
     <string name="title_TextInviteMsg">SafeSlinger Kutsu</string>
     <string name="title_Threads">Langat</string>

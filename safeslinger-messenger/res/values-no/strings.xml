@@ -41,6 +41,7 @@
     <string name="btn_Close">Lukk</string>
     <string name="btn_Continue">Fortsette</string>
     <string name="btn_CreateNewKey">Opprett ny Key</string>
+    <string name="btn_Delete">Slett</string>
     <string name="btn_DeleteKeys">Slett Keys</string>
     <string name="btn_discard">Kast</string>
     <string name="btn_Done">Ferdig</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Nekte</string>
     <string name="btn_Remind">Minne</string>
+    <string name="btn_Retry">Prøv på nytt</string>
     <string name="btn_Save">Lagre</string>
     <string name="btn_SelectFile">Legg til vedlegg</string>
     <string name="btn_SendFile">Sende</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Registrering ikke godkjent, kan du prøve på nytt manuelt senere.</string>
     <string name="error_C2DMRegInvalidSender">Registrering er ikke tilgjengelig for denne versjonen, kan du finne en oppdatert versjon.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Feil enhetsregistrering med Google. Denne enheten støtter foreløpig ikke push-meldinger.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services kreves for å motta meldinger. Installer Google Play Services for å fortsette.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push registrering tjenesten ikke er tilgjengelig, planlegging prøve på nytt i %d sekunder.</string>
     <string name="error_C2DMRegTooManyRegistrations">For mange programmer er registrert for Push. Vennligst avinstallere noen andre programmer og prøv igjen.</string>
     <string name="error_CannotSendEmptyFile">Kan ikke sende en tom vedlegg.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Hjem</string>
     <string name="label_hours">%d timer</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud er aktivert. Pek på Ferdig-knappen når du er ferdig.</string>
+    <string name="label_InstNoMessages">Ingen meldinger. For å sende en melding, trykk på ikonet Ny melding på toppen av skjermen.</string>
     <string name="label_InstNoRecipients">For å legge til mottakere, må du først Sling Keys med en eller flere andre brukere på samme tid. Du kan også sende en Sling Keys kontakt invitasjon fra menyen.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ingen av de nåværende mottakere matche søket. Vennligst prøv en annen spørring eller invitere en ny kontakt.</string>
     <string name="label_InstNoSharedFile">Ingen delte filen. Koble til enheten med iTunes og dra filer til den delte mappen.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Etternavn</string>
     <string name="label_Me">Meg</string>
+    <string name="label_messageAutomatedVerify">(%1$s har bekreftet nøkkelen for %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Jeg ønsker å presentere %s til deg.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Å sette opp en sikker meldingstilkobling, kan vi møte eller telefon hverandre på samme tid, og deretter Sling Keys bare en gang for å bekrefte tilkoblingen.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Lagring</string>
 
     <string name="state_BackupRestored">Backup restaurert.</string>
+    <string name="state_FailedToSendMessage">Unnlatt å sende melding. Berør og hold for alternativer.</string>
     <string name="state_FileDeleted">Slettet fil %s.</string>
     <string name="state_FileSent">Melding sendt.</string>
     <string name="state_InvitationAdded">Invitasjon til.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Kamera</string>
     <string name="title_ChooseDirectory">Velg Directory</string>
     <string name="title_ChooseFileLoad">Velg din Vedlegg</string>
+    <string name="title_clear">Clear</string>
     <string name="title_comments">Kommentarer/Spørsmål</string>
     <string name="title_Error">Feil</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Begynn Veksling</string>
     <string name="title_HomePanel">Hjem</string>
     <string name="title_MessageDetail">Beskjed</string>
+    <string name="title_MessageOptions">Meldingsalternativer</string>
     <string name="title_Messages">Meldinger</string>
     <string name="title_MyIdentity">Personlig kontakt</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Tilgjengelig</string>

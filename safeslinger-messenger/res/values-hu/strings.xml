@@ -41,6 +41,7 @@
     <string name="btn_Close">Közel</string>
     <string name="btn_Continue">Folytatódik</string>
     <string name="btn_CreateNewKey">Create New Key</string>
+    <string name="btn_Delete">Töröl</string>
     <string name="btn_DeleteKeys">Törlés Keys</string>
     <string name="btn_discard">Dobja</string>
     <string name="btn_Done">Csinált</string>
@@ -51,9 +52,10 @@
     <string name="btn_No">Nincs</string>
     <string name="btn_NotNow">Nem most</string>
     <string name="btn_NotRemind">Elfelejt</string>
-    <string name="btn_OK">rendben</string>
+    <string name="btn_OK">Rendben</string>
     <string name="btn_Refuse">Hulladék</string>
     <string name="btn_Remind">Emlékeztet</string>
+    <string name="btn_Retry">Próbálja újra</string>
     <string name="btn_Save">Save</string>
     <string name="btn_SelectFile">Add Attachment</string>
     <string name="btn_SendFile">Küld</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Regisztráció nem hitelesített, kérjük, próbálja újra később manuálisan.</string>
     <string name="error_C2DMRegInvalidSender">A regisztráció nem elérhető ez a verzió, ellenőrizze a frissített változata.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Helytelen eszköz regisztrációs Google. Ez a készülék jelenleg nem támogatja a Push üzenetek.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services van szükség az üzenetek fogadására. Kérjük, telepítse a Google Play szolgáltatások folytatásához.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push regisztrációs szolgáltatás nem áll rendelkezésre, ütemezés újra a %d másodperc.</string>
     <string name="error_C2DMRegTooManyRegistrations">Túl sok alkalmazás regisztrált Push. Kérjük, távolítson el néhány más alkalmazások, és próbálja újra.</string>
     <string name="error_CannotSendEmptyFile">Nem lehet elküldeni egy üres mellékletet.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Otthon</string>
     <string name="label_hours">%d óra</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud engedélyezve van. Érintse meg a Kész gombot, ha végzett.</string>
+    <string name="label_InstNoMessages">Nincs üzenet. Az üzenetek elküldéséhez érintse meg a New Message ikonra a képernyő tetején.</string>
     <string name="label_InstNoRecipients">Címzettek, akkor először a Sling Keys egy vagy több más felhasználók egyidejűleg. Ön is küldhet Sling Keys contact meghívást a menüből.</string>
     <string name="label_InstNoRecipientsMatchQuery">Egyik az aktuális címzettek felel meg a keresési lekérdezést. Kérjük, próbálkozz egy másik lekérdezéssel, vagy kérj meg egy új kapcsolatot.</string>
     <string name="label_InstNoSharedFile">Nem megosztott fájlt. A készülék csatlakoztatása iTunes és húzza a fájlokat a megosztott mappa.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Vezetéknév</string>
     <string name="label_Me">Nekem</string>
+    <string name="label_messageAutomatedVerify">(%1$s megerősítette a gombot %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Szeretném bemutatni %s Önnek.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Hogy telepítsék a biztonságos üzenetküldés kapcsolatot, találkozhatunk, vagy telefonon egymással egy időben, majd Sling Keys csak egyszer ellenőrizze a kapcsolatot.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Tárolás</string>
 
     <string name="state_BackupRestored">Backup helyreállt.</string>
+    <string name="state_FailedToSendMessage">Nem sikerült elküldeni az üzenetet. Érintse meg és tartsa lehetőségeket.</string>
     <string name="state_FileDeleted">Törölt fájl %s.</string>
     <string name="state_FileSent">Üzenet elküldve.</string>
     <string name="state_InvitationAdded">Meghívó hozzá.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Kamera</string>
     <string name="title_ChooseDirectory">Válasszon Directory</string>
     <string name="title_ChooseFileLoad">Válassz Attachment</string>
+    <string name="title_clear">Világos</string>
     <string name="title_comments">Comments/Kérdések</string>
     <string name="title_Error">Hiba</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Kezdje Csere</string>
     <string name="title_HomePanel">Otthon</string>
     <string name="title_MessageDetail">Üzenet</string>
+    <string name="title_MessageOptions">Üzenet beállításai</string>
     <string name="title_Messages">Üzenetek</string>
     <string name="title_MyIdentity">Személyes kapcsolat</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Elérhető</string>

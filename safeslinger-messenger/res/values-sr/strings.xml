@@ -41,6 +41,7 @@
     <string name="btn_Close">Близу</string>
     <string name="btn_Continue">Наставити</string>
     <string name="btn_CreateNewKey">Цреате Нев Кеи</string>
+    <string name="btn_Delete">Избрисати</string>
     <string name="btn_DeleteKeys">Делете Кеис</string>
     <string name="btn_discard">Одбацити</string>
     <string name="btn_Done">Доне</string>
@@ -51,9 +52,10 @@
     <string name="btn_No">Не</string>
     <string name="btn_NotNow">Није Сада</string>
     <string name="btn_NotRemind">Заборавити</string>
-    <string name="btn_OK">у реду</string>
+    <string name="btn_OK">У реду</string>
     <string name="btn_Refuse">Одбити</string>
     <string name="btn_Remind">Подсетити</string>
+    <string name="btn_Retry">Поново судити</string>
     <string name="btn_Save">Саве</string>
     <string name="btn_SelectFile">Адд Аттацхмент</string>
     <string name="btn_SendFile">Послати</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Регистрација није овјерена, покушајте поново ручно касније.</string>
     <string name="error_C2DMRegInvalidSender">Регистрација није доступан за ову верзију, молимо вас да проверите да бисте добили последњу верзију.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Неправилно производње уређаја са Гоогле. Овај уређај тренутно не подржава пусх порука.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Гоогле Плаи Услуге је дужан да прима поруке. Молимо вас да инсталирате Гоогле Плаи Сервицес да наставе.</string>
     <string name="error_C2DMRegServiceNotAvailable">Пусх производње услуга није доступна, заказивање поново за %d секунди.</string>
     <string name="error_C2DMRegTooManyRegistrations">Превише апликације су регистрована за Пусх. Молимо вас да уклоните неке друге апликације и покушајте поново.</string>
     <string name="error_CannotSendEmptyFile">Не могу да пошаљите празан прилог.</string>
@@ -124,7 +127,7 @@
     <string name="error_PushMsgInvalidRegistration">То прималац има нестале или лоше пуш регистрацију. Требало би да престане слати поруке на овом уређају.</string>
     <string name="error_PushMsgMessageNotFound">Порука истекао.</string>
     <string name="error_PushMsgMessageTooBig">Порука је превелика. Смањити величину поруке.</string>
-    <string name="error_PushMsgNotRegistered">Пусх производње тог примаоца више не важи.Прималац може Деинсталирали СафеСлингер или искључен обавештења. Требало би да престане слати поруке на овом уређају.</string>
+    <string name="error_PushMsgNotRegistered">Пусх производње тог примаоца више не важи. Прималац може Деинсталирали СафеСлингер или искључен обавештења. Требало би да престане слати поруке на овом уређају.</string>
     <string name="error_PushMsgNotSucceed">Дошло је до грешке у комуникацији са пусх нотификације услугу.</string>
     <string name="error_PushMsgQuotaExceeded">Прекорачили сте поруку квоту за овај уређај. Покушајте поново касније.</string>
     <string name="error_PushMsgServiceFail">Обавештење услуга није доступна овај пут. Покушајте да пошаљете поруку касније.</string>
@@ -141,7 +144,7 @@
     <string name="error_VcardParseFailure">Контакт подаци су неправилно форматиран.</string>
 
     <string name="help_find">Користите овај екран да подесите своје име за размену са другима, и приступна фраза да заштитите своје податке. Додирните дугме Доне када завршите.</string>
-    <string name="help_home">За размену личних података, обезбеде сви корисници су у близини или на телефон.Дугме Бегин размена ће размењивати само проверене контакт податке.</string>
+    <string name="help_home">За размену личних података, обезбеде сви корисници су у близини или на телефон. Дугме Бегин размена ће размењивати само проверене контакт податке.</string>
     <string name="help_identity_menu">Такође можете променити личне податке о свом идентитету на овом екрану додиром на дугме са именом. Ово ће приказати мени који вам да Измена контакт, да креирате контакт, или користите неку другу контакт.</string>
     <string name="help_Messages">Овај екран приказује све из прошлости поруке и прилоге који су још увек доступан за преузимање.</string>
     <string name="help_passphrase">Користите овај екран да се пријавите на апликацију са вашом приступном фразом. Ако сте заборавили приступну фразу, можете направити нови кључ заштићена од нове фразе додиром Заборављена лозинке? дугме. Додирните корисничко име да бисте се пребацили између више тастера.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Дом</string>
     <string name="label_hours">%d сати</string>
     <string name="label_iCloudEnable">СафеСлингер иЦлоуд је омогућено. Додирните дугме Доне када завршите.</string>
+    <string name="label_InstNoMessages">Нема порука. Да бисте послали поруку, додирните на икону порука Нова на врху екрана.</string>
     <string name="label_InstNoRecipients">Да бисте додали примаоце, прво Слинг Кеис са једним или више других корисника у исто време мора. Такође можете послати Слинг Кеис позив пријатељства са менија.</string>
     <string name="label_InstNoRecipientsMatchQuery">Нико од ваших садашњих прималаца одговара вашем упит за претраживање. Пробајте са другим упит или позвати нови контакт.</string>
     <string name="label_InstNoSharedFile">Не дели датотеке. Повежите уређај са иТунес и драг досијеима дељене фасцикле.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Кеи:</string>
     <string name="label_LastName">Презиме</string>
     <string name="label_Me">Ме</string>
+    <string name="label_messageAutomatedVerify">(%1$s је потврдио кључ за %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Желео бих да представим %s вама.</string>
     <string name="label_messageInviteInstall">СафеСлингер апп: %s</string>
     <string name="label_messageInviteSetupInst">То сетуп сигурном порука везе, можемо једни друге састати или телефон у исто време, а онда Слинг Кеис само једном да потврди везу.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Складиштење</string>
 
     <string name="state_BackupRestored">Бацкуп обновљена.</string>
+    <string name="state_FailedToSendMessage">Фаилед то сенд мессаге. Додирните и задржите за опције.</string>
     <string name="state_FileDeleted">Избрисан фајл %s.</string>
     <string name="state_FileSent">Порука је послата.</string>
     <string name="state_InvitationAdded">Позив додао.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Камера</string>
     <string name="title_ChooseDirectory">Изаберите Каталог</string>
     <string name="title_ChooseFileLoad">Изаберите своју Аттацхмент</string>
+    <string name="title_clear">Јасно</string>
     <string name="title_comments">Коментари/Питања</string>
     <string name="title_Error">Грешка</string>
     <string name="title_ExchangeWalkthrough">Слинг Кеис Помоћник</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Бегин Екцханге</string>
     <string name="title_HomePanel">Дом</string>
     <string name="title_MessageDetail">Порука</string>
+    <string name="title_MessageOptions">Порука Опције</string>
     <string name="title_Messages">Поруке</string>
     <string name="title_MyIdentity">Лична Контакт</string>
     <string name="title_NotifyFileAvailable">СафеСлингер Порука Доступно</string>

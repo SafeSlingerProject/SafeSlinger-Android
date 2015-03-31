@@ -41,6 +41,7 @@
     <string name="btn_Close">Zavřít</string>
     <string name="btn_Continue">Pokračovat</string>
     <string name="btn_CreateNewKey">Vytvořte nový klíč</string>
+    <string name="btn_Delete">Vymazat</string>
     <string name="btn_DeleteKeys">Smazat klíče</string>
     <string name="btn_discard">Vyřadit</string>
     <string name="btn_Done">Hotový</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Odmítnout</string>
     <string name="btn_Remind">Připomenout</string>
+    <string name="btn_Retry">Opakovat</string>
     <string name="btn_Save">Save</string>
     <string name="btn_SelectFile">Přidat přílohu</string>
     <string name="btn_SendFile">Odeslat</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Registrace není ověřen, zkuste to prosím znovu později ručně.</string>
     <string name="error_C2DMRegInvalidSender">Registrace není k dispozici pro tuto verzi, prosím zkontrolujte aktualizovanou verzi.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Nesprávná registrace zařízení s firmou Google. Toto zařízení v současné době nepodporuje Push zpráv.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services je povinna přijímat zprávy. Prosím, nainstalujte Google Play služby, aby pokračovali.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push registrace služba není k dispozici, plánování znovu za %d sekund.</string>
     <string name="error_C2DMRegTooManyRegistrations">Příliš mnoho aplikací jsou registrovány pro Push. Prosím odinstalujte některé další aplikace a zkuste to znovu.</string>
     <string name="error_CannotSendEmptyFile">Nelze odeslat prázdný přílohu.</string>
@@ -124,7 +127,7 @@
     <string name="error_PushMsgInvalidRegistration">To má příjemce chybějící nebo špatné registraci tlačítka. Měli byste přestat posílat zprávy do tohoto zařízení.</string>
     <string name="error_PushMsgMessageNotFound">Zpráva vypršela.</string>
     <string name="error_PushMsgMessageTooBig">Zpráva je příliš velká. Snížit velikost zprávy.</string>
-    <string name="error_PushMsgNotRegistered">Registrace tlak tomuto příjemci již není platný.Příjemce může mít odinstalovat SafeSlinger nebo vypnout oznámení. Měli byste přestat posílat zprávy do tohoto zařízení.</string>
+    <string name="error_PushMsgNotRegistered">Registrace tlak tomuto příjemci již není platný. Příjemce může mít odinstalovat SafeSlinger nebo vypnout oznámení. Měli byste přestat posílat zprávy do tohoto zařízení.</string>
     <string name="error_PushMsgNotSucceed">Došlo k chybě při komunikaci s oznamovací Push služby.</string>
     <string name="error_PushMsgQuotaExceeded">Překročili jste kvótu zprávy pro toto zařízení. Zkuste to prosím později.</string>
     <string name="error_PushMsgServiceFail">Oznámení služba není k dispozici tentokrát. Prosím, zkuste odeslat zprávu později.</string>
@@ -141,7 +144,7 @@
     <string name="error_VcardParseFailure">Kontaktní údaje formátování nesprávně.</string>
 
     <string name="help_find">Pomocí této obrazovky nastavit jméno vyměňovat s ostatními, a heslo pro ochranu vašich dat. Po dokončení Klepněte na tlačítko Hotovo.</string>
-    <string name="help_home">Při výměně údajů o totožnosti, zajištění všichni uživatelé jsou v blízkosti, nebo na telefonu.Tlačítko Začněte Exchange vymění pouze zaškrtnuté kontaktní údaje.</string>
+    <string name="help_home">Při výměně údajů o totožnosti, zajištění všichni uživatelé jsou v blízkosti, nebo na telefonu. Tlačítko Začněte Exchange vymění pouze zaškrtnuté kontaktní údaje.</string>
     <string name="help_identity_menu">Můžete také změnit osobní údaje o své totožnosti na této obrazovce klepnutím na tlačítko s Vaším jménem. Tím se zobrazí menu umožňuje upravit svůj kontakt, Vytvořit nový kontakt, nebo použijte jiný kontakt.</string>
     <string name="help_Messages">Tato obrazovka zobrazuje všechny minulé zprávy a přílohy, které jsou stále k dispozici ke stažení.</string>
     <string name="help_passphrase">Na této obrazovce pro přihlášení do aplikace se vašeho hesla. Pokud jste zapomněli své přístupové heslo, můžete vygenerovat nový klíč chráněn novým přístupovým heslem poklepáním Zapomněli jste přístupové heslo? Tlačítko. Klepněte na uživatelské jméno pro přepínání mezi více klíčů.</string>
@@ -162,7 +165,7 @@
     <string name="iOS_RequestPermissionMicrophone">Můžete nahrát hlasovou zprávu pro své přátele a SafeSlinger zašifruje za vás. Chcete-li tuto funkci, musíte povolit SafeSlinger přístup k vašemu mikrofonu když zeptal se.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger je aplikace šifrované komunikaci a nemůže fungovat bez toho, aby příchozí zprávy z oznámení. Chcete-li povolit příchozí zprávy, je třeba povolit SafeSlinger o zaslání upozornění, když zeptal se.</string>
 
-    <string name="label_ago">před %s</string>
+    <string name="label_ago">Před %s</string>
     <string name="label_backupCompleteDate">Poslední zálohování bylo dokončeno</string>
     <string name="label_backupRequestDate">Poslední Backup Poptávka</string>
     <string name="label_backupURL">Backup URL</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Domácí</string>
     <string name="label_hours">%d hodin</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud je povoleno. Po dokončení Klepněte na tlačítko Hotovo.</string>
+    <string name="label_InstNoMessages">Žádné zprávy. Chcete-li odeslat zprávu, klepněte na ikonu Nová zpráva v horní části obrazovky.</string>
     <string name="label_InstNoRecipients">Chcete-li přidat příjemce, musíte nejprve Sling klíče s jedním nebo více jinými uživateli současně. Můžete také poslat Sling Keys kontaktní pozvání z nabídky.</string>
     <string name="label_InstNoRecipientsMatchQuery">Žádný ze stávajících příjemců odpovídající vašemu vyhledávání dotazu. Prosím, zkuste jiný dotaz nebo pozvat nový kontakt.</string>
     <string name="label_InstNoSharedFile">No sdílený soubor. Připojte zařízení s iTunes a přetáhnout soubory do sdílené složky.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Příjmení</string>
     <string name="label_Me">Mě</string>
+    <string name="label_messageAutomatedVerify">(%1$s potvrdila klíč pro %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Chtěl bych představit %s na vás.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Chcete-li nastavit zabezpečené připojení zpráv, se můžeme setkat nebo telefon navzájem ve stejnou dobu, a pak Sling klíče pouze jednou pro ověření připojení.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Skladování</string>
 
     <string name="state_BackupRestored">Obnovena Backup.</string>
+    <string name="state_FailedToSendMessage">Nepodařilo se odeslat zprávu. Dotkněte se a podržte možnosti.</string>
     <string name="state_FileDeleted">Smazaný soubor %s.</string>
     <string name="state_FileSent">Zpráva byla odeslána.</string>
     <string name="state_InvitationAdded">Pozvánka přidán.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Kamera</string>
     <string name="title_ChooseDirectory">Vyberte adresář</string>
     <string name="title_ChooseFileLoad">Vyberte si svůj přílohu</string>
+    <string name="title_clear">Jasný</string>
     <string name="title_comments">Komentáře/Otázky</string>
     <string name="title_Error">Chyba</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Začněte Exchange</string>
     <string name="title_HomePanel">Domácí</string>
     <string name="title_MessageDetail">Zpráva</string>
+    <string name="title_MessageOptions">Možnosti zprávy</string>
     <string name="title_Messages">Zprávy</string>
     <string name="title_MyIdentity">Osobní kontakt</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message dispozici</string>

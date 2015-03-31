@@ -41,6 +41,7 @@
     <string name="btn_Close">Close</string>
     <string name="btn_Continue">Terusake</string>
     <string name="btn_CreateNewKey">Gawe New Key</string>
+    <string name="btn_Delete">Busak</string>
     <string name="btn_DeleteKeys">Busak Keys</string>
     <string name="btn_discard">Buang</string>
     <string name="btn_Done">Done</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Nolak</string>
     <string name="btn_Remind">Ngelingake</string>
+    <string name="btn_Retry">Coba maneh</string>
     <string name="btn_Save">Simpen</string>
     <string name="btn_SelectFile">Tambah lampiran</string>
     <string name="btn_SendFile">Kirimi</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Situs ora authenticated, mangga retry kanthi manual mengko.</string>
     <string name="error_C2DMRegInvalidSender">Situs iki ora kasedhiya kanggo versi iki, mangga dipriksa kanggo versi dianyari.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Pendhaftaran piranti salah nganggo Google. Piranti iki ora saiki ndhukung push olahpesen.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play dibutuhake kanggo nampa pesen. Mangga nginstal Google Play terus.</string>
     <string name="error_C2DMRegServiceNotAvailable">Layanan Pendhaftaran Push ora kasedhiya, jadwal retry ing %d detik.</string>
     <string name="error_C2DMRegTooManyRegistrations">Keliwat akeh aplikasi sing kadhaftar kanggo Push. Mangga instal sawetara aplikasi liyane lan retry.</string>
     <string name="error_CannotSendEmptyFile">Ora bisa ngirim lampiran kosong.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Ngarep</string>
     <string name="label_hours">%d jam</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud diaktifake. Tutul tombol Rampung nalika rampung.</string>
+    <string name="label_InstNoMessages">Ora ana pesen. Kanggo ngirim pesen kasebut, tunyuk lambang New Message ing ndhuwur layar.</string>
     <string name="label_InstNoRecipients">Kanggo nambah panampa, sampeyan pisanan Sling Keys karo akun siji utawa luwih liyane kedhaftar ing wektu sing padha kudu. Sampeyan uga bisa ngirim kontak undhangan Sling Keys saka menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ana panampa saiki cocog pitakonan panelusuran Panjenengan. Mangga nglebokaké query beda utawa ngajak kontak anyar.</string>
     <string name="label_InstNoSharedFile">Ora Ana sambungan file. Sambungake piranti karo iTunes lan file seret menyang folder sambungan.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Jeneng Mburi</string>
     <string name="label_Me">Me</string>
+    <string name="label_messageAutomatedVerify">(%1$s wis dikonfirmasi ing tombol kanggo %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Aku kaya kanggo introduce %s kanggo sampeyan.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Kanggo persiyapan sambungan olahpesen aman, kita bisa ketemu utawa telpon saben liyane ing wektu sing padha, lan banjur Sling Keys mung sapisan kanggo verifikasi sambungan.</string>
@@ -254,7 +259,7 @@
     <string name="label_TapToResumeDraft">Tunyuk kanggo nerusake konsep pesen</string>
     <string name="label_TapToSendCredentialUpdate">Tutul terus kanggo ngirim nganyari credential.</string>
     <string name="label_TapToSlingKeys">Tunyuk kanggo Sling Keys.</string>
-    <string name="label_targetAccountLabel">Account kontak</string>
+    <string name="label_targetAccountLabel">Account Kontak</string>
     <string name="label_TouchToConfigureBackupSettings">Sampeyan optionally bisa ngaktifake SafeSlinger iCloud serep ing iOS Setelan. Tutul tombol Rampung nalika rampung.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Tutul kanggo ngatur setelan serep.</string>
     <string name="label_TouchToConfigureCacheTimeout">Tutul kanggo ngatur setelan wektu entek cache.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Panyimpenan</string>
 
     <string name="state_BackupRestored">Gawe serep dibalekno asline.</string>
+    <string name="state_FailedToSendMessage">Gagal kanggo ngirim pesen. Tutul terus kanggo opsi.</string>
     <string name="state_FileDeleted">Dibusak %s file.</string>
     <string name="state_FileSent">Pesen dikirim.</string>
     <string name="state_InvitationAdded">Undangan ditambahake.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Kamera</string>
     <string name="title_ChooseDirectory">Pilih Directory</string>
     <string name="title_ChooseFileLoad">Pilih Lampiran Panjenengan</string>
+    <string name="title_clear">Langit</string>
     <string name="title_comments">Komentar/Pitakonan</string>
     <string name="title_Error">Kesalahan</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Mulai Exchange</string>
     <string name="title_HomePanel">Ngarep</string>
     <string name="title_MessageDetail">Pesen</string>
+    <string name="title_MessageOptions">Pesen Pilihan</string>
     <string name="title_Messages">Pesen</string>
     <string name="title_MyIdentity">Contact pribadi</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Cepak</string>
@@ -404,7 +412,7 @@
     <string name="title_SelectSource">Ngirim Pilihan:</string>
     <string name="title_SendFile">Kirimi</string>
     <string name="title_sharingfolder">Nuduhake Folder</string>
-    <string name="title_soundrecoder">Recorder swara</string>
+    <string name="title_soundrecoder">Recorder Swara</string>
     <string name="title_TextInviteMsg">SafeSlinger Undangan</string>
     <string name="title_Threads">Utas</string>
     <string name="title_Warn">Warning</string>

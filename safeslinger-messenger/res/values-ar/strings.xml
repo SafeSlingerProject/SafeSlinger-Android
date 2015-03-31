@@ -41,6 +41,7 @@
     <string name="btn_Close">قريب</string>
     <string name="btn_Continue">استمر</string>
     <string name="btn_CreateNewKey">خلق مفتاح جديد</string>
+    <string name="btn_Delete">حذف</string>
     <string name="btn_DeleteKeys">حذف مفاتيح</string>
     <string name="btn_discard">نبذ</string>
     <string name="btn_Done">منته</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">حسنا</string>
     <string name="btn_Refuse">رفض</string>
     <string name="btn_Remind">ذكر</string>
+    <string name="btn_Retry">إعادة المحاولة</string>
     <string name="btn_Save">حفظ</string>
     <string name="btn_SelectFile">إضافة مرفق</string>
     <string name="btn_SendFile">إرسال</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">تسجيل لا مصادقة، يرجى إعادة المحاولة يدويا في وقت لاحق.</string>
     <string name="error_C2DMRegInvalidSender">تسجيل غير متوفر لهذا الإصدار، يرجى التحقق من وجود إصدار محدث.</string>
     <string name="error_C2DMRegPhoneRegistrationError">تسجيل جهاز غير صحيحة مع جوجل. لا يدعم هذا الجهاز حاليا دفعة الرسائل.</string>
+    <string name="error_C2DMRegPlayServicesMissing">مطلوب جوجل بلاي الخدمات لتلقي الرسائل. يرجى تثبيت Google الخدمات لمواصلة اللعب.</string>
     <string name="error_C2DMRegServiceNotAvailable">خدمة تسجيل دفع غير متوفرة، وجدولة إعادة المحاولة في %d ثانية.</string>
     <string name="error_C2DMRegTooManyRegistrations">يتم تسجيل عدد كبير جدا من طلبات دفع. يرجى إلغاء تثبيت بعض التطبيقات الأخرى وإعادة المحاولة.</string>
     <string name="error_CannotSendEmptyFile">لا يمكن إرسال مرفق فارغة.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">منزل</string>
     <string name="label_hours">%d ساعات</string>
     <string name="label_iCloudEnable">يتم تمكين SafeSlinger iCloud. اضغط على زر تم عند الانتهاء.</string>
+    <string name="label_InstNoMessages">توجد رسائل. لإرسال رسالة، انقر على أيقونة رسالة جديدة في الجزء العلوي من الشاشة.</string>
     <string name="label_InstNoRecipients">لإضافة مستلمين، يجب عليك أولا الرافعة مفاتيح مع واحد أو أكثر من المستخدمين الآخرين في نفس الوقت. يمكنك أيضا إرسال دعوة الاتصال الرافعة مفاتيح من القائمة.</string>
     <string name="label_InstNoRecipientsMatchQuery">أيا من المتلقين الحالي تطابق بحثك. يرجى المحاولة استعلام مختلف أو دعوة جهة اتصال جديدة.</string>
     <string name="label_InstNoSharedFile">لا المشتركة الملف. ربط الجهاز مع اي تيونز وسحب الملفات إلى مجلد مشترك.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">مفتاح:</string>
     <string name="label_LastName">اسم العائلة</string>
     <string name="label_Me">أنا</string>
+    <string name="label_messageAutomatedVerify">(وقد أكد %1$s مفتاح %2$s).</string>
     <string name="label_messageIntroduceNameToYou">أنا أود أن أعرض %s لك.</string>
     <string name="label_messageInviteInstall">SafeSlinger التطبيق: %s</string>
     <string name="label_messageInviteSetupInst">لإعداد اتصال الرسائل آمنة، ونحن يمكن أن تلبي أو الهاتف بعضها البعض في نفس الوقت، وبعد ذلك رمى المفاتيح مرة واحدة فقط للتحقق من الاتصال.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">تخزين</string>
 
     <string name="state_BackupRestored">استعادة النسخ الاحتياطي.</string>
+    <string name="state_FailedToSendMessage">فشل في إرسال الرسالة. لمس وعقد لمدة الخيارات.</string>
     <string name="state_FileDeleted">حذف %s الملف.</string>
     <string name="state_FileSent">أرسلت الرسالة.</string>
     <string name="state_InvitationAdded">وأضافت الدعوة.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">كاميرا</string>
     <string name="title_ChooseDirectory">اختيار دليل</string>
     <string name="title_ChooseFileLoad">اختيار تمسككم</string>
+    <string name="title_clear">واضح</string>
     <string name="title_comments">تعليقات/أسئلة</string>
     <string name="title_Error">خطأ</string>
     <string name="title_ExchangeWalkthrough">حبال مفاتيح مساعد</string>
@@ -387,6 +394,7 @@
     <string name="title_home">بدء صرف</string>
     <string name="title_HomePanel">منزل</string>
     <string name="title_MessageDetail">رسالة</string>
+    <string name="title_MessageOptions">خيارات الرسالة</string>
     <string name="title_Messages">الرسائل</string>
     <string name="title_MyIdentity">الاتصال الشخصي</string>
     <string name="title_NotifyFileAvailable">SafeSlinger رسالة متاح</string>

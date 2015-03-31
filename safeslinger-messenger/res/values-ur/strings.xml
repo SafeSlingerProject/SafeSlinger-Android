@@ -41,6 +41,7 @@
     <string name="btn_Close">بند کریں</string>
     <string name="btn_Continue">جاری رکھیں</string>
     <string name="btn_CreateNewKey">نئی چابی تیار</string>
+    <string name="btn_Delete">کو حذف کریں</string>
     <string name="btn_DeleteKeys">حذف کنجیوں</string>
     <string name="btn_discard">ضائع کر دیں</string>
     <string name="btn_Done">ہو گیا</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">اوکے</string>
     <string name="btn_Refuse">کوڑاکرٹ</string>
     <string name="btn_Remind">یاد دہانی کرائیں</string>
+    <string name="btn_Retry">دوبارہ کوشش</string>
     <string name="btn_Save">محفوظ کریں</string>
     <string name="btn_SelectFile">منسلکہ شامل کریں</string>
     <string name="btn_SendFile">ارسال</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">رجسٹریشن توثیق نہیں، بعد میں دستی طور پر دوبارہ کوشش کریں.</string>
     <string name="error_C2DMRegInvalidSender">رجسٹریشن اس ورژن کے لئے دستیاب نہیں ہے، ایک تازہ ترین ورژن کے لئے چیک کریں براہ مہربانی.</string>
     <string name="error_C2DMRegPhoneRegistrationError">گوگل کے ساتھ غلط آلہ رجسٹریشن. یہ آلہ فی الحال دھکا پیغام رسانی کی حمایت نہیں کرتا.</string>
+    <string name="error_C2DMRegPlayServicesMissing">گوگل کھیلیں سروسز پیغامات وصول کرنے کی ضرورت ہے. گوگل جاری رکھنے کے لئے گیمز کھیلیں انسٹال کریں.</string>
     <string name="error_C2DMRegServiceNotAvailable">پش رجسٹریشن کی خدمت دستیاب نہیں، شیڈیولنگ %d سیکنڈ میں دوبارہ کوشش.</string>
     <string name="error_C2DMRegTooManyRegistrations">بھی بہت سے ایپلی کیشنز کے دھکا کے لئے رجسٹرڈ ہیں. بعض دوسرے پروگراموں کو انسٹال کریں اور دوبارہ کوشش کریں.</string>
     <string name="error_CannotSendEmptyFile">ایک خالی لف دستاویز کو نہیں بھیج سکتے.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">ہوم</string>
     <string name="label_hours">%d گھنٹے</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud کے چالو حالت میں ہے. جب ختم ہوگیا بٹن ٹیپ.</string>
+    <string name="label_InstNoMessages">کوئی پیغام نہیں. آپ کی سکرین کے سب سے اوپر نئے پیغام کی آئکن پر ایک پیغام، نل بھیجنے کے لئے.</string>
     <string name="label_InstNoRecipients">وصول کنندگان کو شامل کرنے کے لئے، تو آپ لازمی سب سے پہلے پھینکیں چابیاں ایک ہی وقت میں ایک یا ایک سے زیادہ دوسرے صارفین کے ساتھ. آپ بھی مینو میں سے ایک گوفن چابیاں رابطے کی دعوت کو بھی بھیج سکتے ہیں.</string>
     <string name="label_InstNoRecipientsMatchQuery">آپ کی موجودہ وصول کنندگان میں سے کوئی بھی آپ کی تلاش کے سوال سے ملا. ایک مختلف استفسار کوشش کریں یا ایک نیا رابطہ دعوت دیتے ہیں براہ مہربانی.</string>
     <string name="label_InstNoSharedFile">کوئی فائل کا اشتراک کیا. مشترکہ فولڈر کو iTunes اور ڈریگ فائلوں کے ساتھ آپ کے آلہ مربوط.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">اہم:</string>
     <string name="label_LastName">آخری نام</string>
     <string name="label_Me">مجھ</string>
+    <string name="label_messageAutomatedVerify">(%1$s %2$s لئے اہم تصدیق کی ہے.)</string>
     <string name="label_messageIntroduceNameToYou">میں تم سے %s متعارف کرانے کا چاہتے.</string>
     <string name="label_messageInviteInstall">SafeSlinger اپلی کیشن: %s</string>
     <string name="label_messageInviteSetupInst">ایک محفوظ پیغام رسانی کا کنکشن سیٹ اپ کرنے، ہم نے کنکشن کی تصدیق کرنے کا صرف ایک بار پھر پھینکیں چابیاں ملنے یا فون کو ایک دوسرے کے ایک ہی وقت میں، اور کر سکتے ہیں.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">اسٹوریج</string>
 
     <string name="state_BackupRestored">بیک اپ کے بحال کیا.</string>
+    <string name="state_FailedToSendMessage">پیغام بھیجنے کے لئے میں ناکام رہے. چھو اور اختیارات کے لئے منعقد.</string>
     <string name="state_FileDeleted">خارج کر دیا فائل %s.</string>
     <string name="state_FileSent">پیغام بھیجا.</string>
     <string name="state_InvitationAdded">دعوت نامہ نے مزید کہا.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">کیمرے</string>
     <string name="title_ChooseDirectory">ڈائریکٹری اس میں سے انتخاب کریں</string>
     <string name="title_ChooseFileLoad">آپ منسلکہ انتخاب کریں</string>
+    <string name="title_clear">واضح</string>
     <string name="title_comments">تبصرے/سوالات</string>
     <string name="title_Error">میں خرابی</string>
     <string name="title_ExchangeWalkthrough">پھینکیں چابیاں اسسٹنٹ</string>
@@ -387,6 +394,7 @@
     <string name="title_home">ایکسچینج کے لئے شروع</string>
     <string name="title_HomePanel">ہوم</string>
     <string name="title_MessageDetail">پیغام</string>
+    <string name="title_MessageOptions">پیغام کے اختیارات</string>
     <string name="title_Messages">پیغامات</string>
     <string name="title_MyIdentity">شخصی رابطہ</string>
     <string name="title_NotifyFileAvailable">SafeSlinger پیغام دستیاب</string>

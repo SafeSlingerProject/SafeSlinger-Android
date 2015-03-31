@@ -41,6 +41,7 @@
     <string name="btn_Close">לסגור</string>
     <string name="btn_Continue">המשך</string>
     <string name="btn_CreateNewKey">צור מפתח החדש</string>
+    <string name="btn_Delete">מחק</string>
     <string name="btn_DeleteKeys">מחק מפתחות</string>
     <string name="btn_discard">בטל</string>
     <string name="btn_Done">עָשׂוּי</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">מסרב</string>
     <string name="btn_Remind">הזכר</string>
+    <string name="btn_Retry">נסה שוב</string>
     <string name="btn_Save">שמור</string>
     <string name="btn_SelectFile">להוסיף קבצים מצורפים</string>
     <string name="btn_SendFile">שלח</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">רישום לא מאומת, אנא נסה שוב מאוחר יותר באופן ידני.</string>
     <string name="error_C2DMRegInvalidSender">רישום אינו זמין עבור גרסה זו, אנא בדוק עבור גרסה מעודכנת.</string>
     <string name="error_C2DMRegPhoneRegistrationError">רישום התקנים שגוי עם Google. מכשיר זה אינו תומך כרגע בהודעות דחיפה.</string>
+    <string name="error_C2DMRegPlayServicesMissing">שירותי Play Google נדרשים לקבל הודעות. התקן את Google Play שירותים כדי להמשיך.</string>
     <string name="error_C2DMRegServiceNotAvailable">שירות רישום Push לא זמין, נסה שוב בתזמון %d שניות.</string>
     <string name="error_C2DMRegTooManyRegistrations">יישומים רבים מדי רשומים לPush. אנא, הסר חלק מיישומים אחרים ונסה שוב.</string>
     <string name="error_CannotSendEmptyFile">לא ניתן לשלוח קובץ מצורף ריק.</string>
@@ -141,7 +144,7 @@
     <string name="error_VcardParseFailure">הנתונים לתקשר היה מעוצבים בצורה לא נכונה.</string>
 
     <string name="help_find">השתמש במסך זה כדי להגדיר את השם שלך כדי להחליף עם אחרים, וביטוי סיסמא כדי להגן על הנתונים שלך. הקש על לחצן סיום בסיום.</string>
-    <string name="help_home">להחליף נתונים זהות, להבטיח שכל המשתמשים נמצאים בקרבת מקום או בטלפון.הכפתור בגין Exchange יחליף רק את נתוני קשר המסומנים.</string>
+    <string name="help_home">להחליף נתונים זהות, להבטיח שכל המשתמשים נמצאים בקרבת מקום או בטלפון. הכפתור בגין Exchange יחליף רק את נתוני קשר המסומנים.</string>
     <string name="help_identity_menu">אתה יכול גם לשנות את הנתונים אישיים על הזהות שלך במסך זה על ידי הקשה על הכפתור עם השם שלך. זה יציג תפריט שמאפשר לך לערוך את אנשי הקשר שלך, צור קשר חדש, או השתמש במגע נוסף.</string>
     <string name="help_Messages">מסך זה מציג הודעות כל עבר, וקבצים מצורפים שעדיין זמינים להורדה.</string>
     <string name="help_passphrase">השתמש במסך זה כדי להיכנס ליישום עם משפט הסיסמה שלך. אם שכחת את משפט הסיסמה שלך, אתה יכול ליצור מפתח חדש מוגן על ידי ביטוי סיסמה חדשה על ידי הקשה על משפט הסיסמה שכחתי? כפתור. הקש על שם המשתמש כדי לעבור בין מספר מפתחות.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">בית</string>
     <string name="label_hours">%d שעות</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud מופעל. הקש על לחצן סיום בסיום.</string>
+    <string name="label_InstNoMessages">אין הודעות. כדי לשלוח הודעה, הקש על סמל ההודעה החדש בחלק העליון של המסך.</string>
     <string name="label_InstNoRecipients">כדי להוסיף נמענים, אתה צריך קודם קלע מפתחות עם משתמשים אחרים אחד או יותר באותו הזמן. אתה יכול גם לשלוח איש קשר הזמנת קלע מפתחות מהתפריט.</string>
     <string name="label_InstNoRecipientsMatchQuery">אף אחד מהמקבלים הנוכחיים שלך מתאים לשאילתא החיפוש שלך. אנא נסה שאילתא שונה או להזמין איש קשר חדש.</string>
     <string name="label_InstNoSharedFile">אין משותף קובץ. חבר את המכשיר שלך עם iTunes וקבצים לגרור לתיקייה המשותפת.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">מפתח:</string>
     <string name="label_LastName">שם משפחה</string>
     <string name="label_Me">שלי</string>
+    <string name="label_messageAutomatedVerify">(%1$s אישר את המפתח ל%2$s.)</string>
     <string name="label_messageIntroduceNameToYou">אני רוצה להציג את %s לך.</string>
     <string name="label_messageInviteInstall">אפליקציה SafeSlinger: %s</string>
     <string name="label_messageInviteSetupInst">להתקנת חיבור מסרים בטוח, אנחנו יכולים לפגוש אחד את השני או בטלפון באותו הזמן, ולאחר מכן קלע מפתחות רק פעם אחת כדי לבדוק את החיבור.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">אחסון</string>
 
     <string name="state_BackupRestored">שוחזר גיבוי.</string>
+    <string name="state_FailedToSendMessage">נכשל ניסיון לשלוח הודעה. לחץ והחזקת לאפשרויות.</string>
     <string name="state_FileDeleted">%s קובץ שנמחק.</string>
     <string name="state_FileSent">הודעה נשלחה.</string>
     <string name="state_InvitationAdded">הזמנה הוסיפה.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">מצלמה</string>
     <string name="title_ChooseDirectory">בחר מדריך</string>
     <string name="title_ChooseFileLoad">בחר הקובץ המצורף שלך</string>
+    <string name="title_clear">ברור</string>
     <string name="title_comments">תגובות/שאלות</string>
     <string name="title_Error">שגיאה</string>
     <string name="title_ExchangeWalkthrough">קלע מפתחות עוזר</string>
@@ -387,6 +394,7 @@
     <string name="title_home">בגין Exchange</string>
     <string name="title_HomePanel">בית</string>
     <string name="title_MessageDetail">הודעה</string>
+    <string name="title_MessageOptions">אפשרויות הודעה</string>
     <string name="title_Messages">הודעות</string>
     <string name="title_MyIdentity">קשר אישי</string>
     <string name="title_NotifyFileAvailable">SafeSlinger מסר זמין</string>

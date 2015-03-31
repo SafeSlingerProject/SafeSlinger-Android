@@ -41,6 +41,7 @@
     <string name="btn_Close">ਬੰਦ ਕਰੋ</string>
     <string name="btn_Continue">ਜਾਰੀ ਰੱਖੋ</string>
     <string name="btn_CreateNewKey">ਨਿਊ ਕੁੰਜੀ ਬਣਾਓ</string>
+    <string name="btn_Delete">ਹਟਾਓ</string>
     <string name="btn_DeleteKeys">Keys ਹਟਾਓ</string>
     <string name="btn_discard">ਰੱਦ ਕਰੋ</string>
     <string name="btn_Done">ਸਮਾਪਤ</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">ਠੀਕ ਹੈ</string>
     <string name="btn_Refuse">ਇਨਕਾਰ</string>
     <string name="btn_Remind">ਯਾਦ</string>
+    <string name="btn_Retry">ਮੁੜ ਕੋਸ਼ਿਸ</string>
     <string name="btn_Save">ਸੰਭਾਲੋ</string>
     <string name="btn_SelectFile">ਲਗਾਵ ਸ਼ਾਮਲ ਕਰੋ</string>
     <string name="btn_SendFile">ਭੇਜੋ</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">ਰਜਿਸਟਰੇਸ਼ਨ ਪਰਮਾਣਿਤ ਨਾ, ਬਾਅਦ ਵਿੱਚ ਇਸ ਨੂੰ ਦਸਤੀ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜੀ.</string>
     <string name="error_C2DMRegInvalidSender">ਰਜਿਸਟਰੇਸ਼ਨ ਨੂੰ ਇਸ ਨੂੰ ਵਰਜਨ ਲਈ ਉਪਲੱਬਧ ਨਹੀ ਹੈ, ਇੱਕ ਅੱਪਡੇਟ ਵਰਜਨ ਲਈ ਚੈੱਕ ਕਰੋ ਜੀ.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Google ਦੇ ਨਾਲ ਗਲਤ ਜੰਤਰ ਨੂੰ ਰਜਿਸਟਰੇਸ਼ਨ. ਇਹ ਹੁਣ ਜੰਤਰ Push ਸੁਨੇਹਾ ਸਹਾਇਕ ਨਹੀ ਹੈ.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play ਸਰਵਿਸਿਜ਼ ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਕਰਨ ਦੀ ਲੋੜ ਹੈ. ਗੂਗਲ ਨੂੰ ਜਾਰੀ ਕਰਨ ਲਈ ਸਰਵਿਸ ਖੇਡੋ ਇੰਸਟਾਲ ਕਰੋ ਜੀ.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push ਰਜਿਸਟਰੇਸ਼ਨ ਸੇਵਾ ਉਪਲੱਬਧ ਨਾ, ਤਹਿ %d ਸਕਿੰਟ ਵਿੱਚ ਮੁੜ ਕੋਸ਼ਿਸ਼.</string>
     <string name="error_C2DMRegTooManyRegistrations">ਬਹੁਤ ਸਾਰੇ ਕਾਰਜ Push ਲਈ ਦਰਜ ਕੀਤੇ ਗਏ ਹਨ. ਕੁਝ ਹੋਰ ਕਾਰਜ ਅਨ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ ਕਰੋ ਜੀ.</string>
     <string name="error_CannotSendEmptyFile">ਇੱਕ ਖਾਲੀ ਲਗਾਵ ਭੇਜ ਸਕਦੇ ਹੋ.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Home</string>
     <string name="label_hours">%d ਘੰਟੇ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ਯੋਗ ਕੀਤੀ ਹੈ. ਨਿਬੇੜ ਕੇ ਸੰਪੰਨ ਬਟਨ ਟੈਪ ਕਰੋ.</string>
+    <string name="label_InstNoMessages">ਕੋਈ ਸੁਨੇਹਾ. ਤੁਹਾਡੀ ਸਕਰੀਨ ਦੇ ਸਿਖਰ \'ਤੇ ਹਨ ਨ੍ਯੂ ਸੁਨੇਹਾ ਆਈਕਾਨ ਤੇ ਇੱਕ ਸੁਨੇਹਾ, ਟੈਪ ਭੇਜਣ ਲਈ.</string>
     <string name="label_InstNoRecipients">ਪ੍ਰਾਪਤ ਕਰਤਾ ਸ਼ਾਮਿਲ ਕਰਨ ਲਈ, ਤੁਹਾਡੇ ਲਈ ਲਾਜ਼ਮੀ ਹੈ ਕਿ ਪਹਿਲੀ ਗੋਪੀਆ Keys ਉਸੇ ਵੇਲੇ \'ਤੇ ਇੱਕ ਜ ਵੱਧ ਹੋਰ ਯੂਜ਼ਰ ਦੇ ਨਾਲ. ਤੁਹਾਨੂੰ ਇਹ ਵੀ ਮੇਨੂ ਨੂੰ ਇੱਕ ਗੁਲੇਲ Keys ਸੰਪਰਕ ਨੂੰ ਸੱਦਾ ਭੇਜ ਸਕਦਾ ਹੈ.</string>
     <string name="label_InstNoRecipientsMatchQuery">ਤੁਹਾਡੀ ਮੌਜੂਦਾ ਕਰਤਾ ਦੀ ਕੋਈ ਵੀ ਤੁਹਾਡੀ ਖੋਜ ਨਾਲ ਮੇਲ-ਗਿੱਛ. ਇੱਕ ਵੱਖਰੇ ਕਿਊਰੀ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਅਤੇ ਇੱਕ ਸੰਪਰਕ ਨੂੰ ਸੱਦਾ ਕਰੋ ਜੀ.</string>
     <string name="label_InstNoSharedFile">ਕੋਈ ਫਾਇਲ ਸ਼ੇਅਰ. ਸ਼ੇਅਰ ਫੋਲਡਰ ਵਿੱਚ iTunes ਅਤੇ ਖਿੱਚੋ ਫਾਇਲ ਦੇ ਨਾਲ ਆਪਣੇ ਜੰਤਰ ਨਾਲ ਕੁਨੈਕਟ ਕਰੋ.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">ਕੁੰਜੀ:</string>
     <string name="label_LastName">ਆਖਰੀ ਨਾਂਮ</string>
     <string name="label_Me">ਮੇਰੇ</string>
+    <string name="label_messageAutomatedVerify">(%1$s %2$s ਲਈ ਕੁੰਜੀ ਦੀ ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ ਹੈ.)</string>
     <string name="label_messageIntroduceNameToYou">ਮੈਨੂੰ ਤੁਹਾਡੇ ਲਈ %s ਪੇਸ਼ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ.</string>
     <string name="label_messageInviteInstall">SafeSlinger ਅਨੁਪ੍ਰਯੋਗ: %s</string>
     <string name="label_messageInviteSetupInst">ਇੱਕ ਸੁਰੱਖਿਅਤ ਕੁਨੈਕਸ਼ਨ ਸੁਨੇਹਾ ਸੈੱਟਅੱਪ ਕਰਨ ਲਈ, ਸਾਨੂੰ ਕੁਨੈਕਸ਼ਨ ਦੀ ਤਸਦੀਕ ਕਰਨ ਲਈ, ਸਿਰਫ ਇਕ ਵਾਰ ਫਿਰ ਗੋਪੀਆ Keys ਮਿਲਣ ਜ ਫ਼ੋਨ ਇਕ-ਦੂਜੇ ਨੂੰ ਉਸੇ ਵੇਲੇ \'ਤੇ ਹੈ, ਅਤੇ ਹੋ ਸਕਦਾ ਹੈ.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">ਸਟੋਰੇਜ਼</string>
 
     <string name="state_BackupRestored">ਬੈਕਅੱਪ ਨੂੰ ਮੁੜ.</string>
+    <string name="state_FailedToSendMessage">ਸੁਨੇਹਾ ਭੇਜਣ ਲਈ ਫੇਲ੍ਹ ਹੈ. ਛੂਹੋ ਅਤੇ ਚੋਣ ਲਈ ਰੱਖੋ.</string>
     <string name="state_FileDeleted">ਹਟਾਈ ਗਈ ਫਾਇਲ %s.</string>
     <string name="state_FileSent">ਸੁਨੇਹਾ ਭੇਜਿਆ.</string>
     <string name="state_InvitationAdded">ਸੱਦਾ ਸ਼ਾਮਿਲ ਕੀਤਾ ਗਿਆ ਹੈ.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">ਕੈਮਰਾ</string>
     <string name="title_ChooseDirectory">ਡਾਇਰੈਕਟਰੀ ਚੁਣੋ</string>
     <string name="title_ChooseFileLoad">ਤੁਹਾਡਾ ਲਗਾਵ ਚੁਣੋ</string>
+    <string name="title_clear">ਆਸਮਾਨ ਸਾਫ</string>
     <string name="title_comments">ਟਿੱਪਣੀ/ਸਵਾਲ</string>
     <string name="title_Error">ਗਲਤੀ ਹੈ</string>
     <string name="title_ExchangeWalkthrough">ਗੋਪੀਆ Keys ਸਹਾਇਕ</string>
@@ -387,6 +394,7 @@
     <string name="title_home">ਐਕਸਚੇਜ਼ ਸ਼ੁਰੂ</string>
     <string name="title_HomePanel">Home</string>
     <string name="title_MessageDetail">ਸੁਨੇਹਾ</string>
+    <string name="title_MessageOptions">ਸੁਨੇਹਾ ਚੋਣ</string>
     <string name="title_Messages">ਸੁਨੇਹੇ</string>
     <string name="title_MyIdentity">ਨਿੱਜੀ ਸੰਪਰਕ</string>
     <string name="title_NotifyFileAvailable">SafeSlinger ਸੁਨੇਹਾ ਉਪਲਬਧ</string>

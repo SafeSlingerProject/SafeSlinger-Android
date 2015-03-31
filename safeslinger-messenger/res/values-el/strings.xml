@@ -96,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Η εγγραφή δεν ολοκληρώθηκε, δοκιμάστε ξανά αργότερα.</string>
     <string name="error_C2DMRegInvalidSender">Η εγγραφή δεν είναι διαθέσιμη για αυτήν την έκδοση, παρακαλούμε να ελέγξετε για μια ενημερωμένη έκδοση.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Εσφαλμένη εγγραφή της συσκευής με τη Google. Αυτή η συσκευή δεν υποστηρίζει push messaging.</string>
+    <string name="error_C2DMRegPlayServicesMissing">To Google Play Services απαιτείται για να λαμβάνετε μηνύματα. Παρακαλώ εγκαταστήστε το Google Play Services για να συνεχίσετε.</string>
     <string name="error_C2DMRegServiceNotAvailable">H υπηρεσία push registration δεν είναι διαθέσιμη, επανάληψη σε %d δευτερόλεπτα.</string>
     <string name="error_C2DMRegTooManyRegistrations">Πάρα πολλές εφαρμογές έχουν εγγραφεί για Push. Παρακαλούμε απεγκαταστήσετε μερικές άλλες εφαρμογές και δοκιμάστε ξανά.</string>
     <string name="error_CannotSendEmptyFile">Δεν μπορείτε να στείλετε ένα άδειο αρχείο.</string>
@@ -189,6 +190,7 @@
     <string name="label_hometag">Σπίτι</string>
     <string name="label_hours">%d ώρες</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud είναι ενεργοποιημένο. Πατήστε το κουμπί Τέλος όταν τελειώσετε.</string>
+    <string name="label_InstNoMessages">Δεν υπάρχουν μηνύματα. Για να στείλετε ένα μήνυμα, πατήστε το εικονίδιο Νέο μήνυμα στο πάνω μέρος της οθόνης σας.</string>
     <string name="label_InstNoRecipients">Για να προσθέσετε παραλήπτες, πρέπει πρώτα να ανταλλάξετε κλειδιά με έναν ή περισσότερους άλλους χρήστες ταυτόχρονα. Μπορείτε επίσης να στείλετε μια πρόσκληση ανταλλαγής κλειδιών από το μενού.</string>
     <string name="label_InstNoRecipientsMatchQuery">Κανένας από τους σημερινούς δικαιούχους σας ταιριάζουν με το ερώτημα αναζήτησης. Παρακαλώ δοκιμάστε ένα διαφορετικό ερώτημα ή να καλέσει μια νέα επαφή.</string>
     <string name="label_InstNoSharedFile">Δεν υπάρχει κοινόχρηστο αρχείο. Συνδέστε τη συσκευή σας με το iTunes και εισάγετε αρχεία στον κοινόχρηστο φάκελο.</string>
@@ -200,7 +202,7 @@
     <string name="label_Key">Κλειδί:</string>
     <string name="label_LastName">Επώνυμο</string>
     <string name="label_Me">Εγώ</string>
-    <string name="label_messageAutomatedVerify">(%1$s has confirmed the key for %2$s.)</string>
+    <string name="label_messageAutomatedVerify">(%1$s επιβεβαίωσε το κλειδί για %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Θα ήθελα να γνωρίσω τον %s σε εσάς.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Για να ρυθμίσουμε μια ασφαλή επικοινωνία μέσω μηνυμάτων, μπορούμε να ανταλλάξουμε κλειδιά από κοντά ή μέσω τηλεφώνου. Αυτό θα χρειαστεί μόνο μία φορά για να επικυρώσει την επικοινωνία.</string>

@@ -41,6 +41,7 @@
     <string name="btn_Close">閉じる</string>
     <string name="btn_Continue">続ける</string>
     <string name="btn_CreateNewKey">新しいキーを作成</string>
+    <string name="btn_Delete">削除</string>
     <string name="btn_DeleteKeys">キーを削除する</string>
     <string name="btn_discard">破棄</string>
     <string name="btn_Done">完了</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">拒否</string>
     <string name="btn_Remind">リマインド</string>
+    <string name="btn_Retry">再試行</string>
     <string name="btn_Save">保存</string>
     <string name="btn_SelectFile">ファイルの選択</string>
     <string name="btn_SendFile">送信</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">認証されていない登録、後で手動で再試行してください。</string>
     <string name="error_C2DMRegInvalidSender">登録は、このバージョンでは使用できません、更新されたバージョンを確認してください。</string>
     <string name="error_C2DMRegPhoneRegistrationError">Googleにデバイスが登録されていません。このデバイスは現在プッシュメッセージングをサポートしていません。</string>
+    <string name="error_C2DMRegPlayServicesMissing">グーグルプレイサービスは、メッセージを受信するために必要とされている。 Googleは継続するサービスを再生インストールしてください。</string>
     <string name="error_C2DMRegServiceNotAvailable">プッシュ登録サービスが利用できません。%d秒後に再試行します。</string>
     <string name="error_C2DMRegTooManyRegistrations">プッシュのために登録されているアプリケーションが多すぎます。他のアプリケーションをいくつかアンインストールしてから再試行してください。</string>
     <string name="error_CannotSendEmptyFile">空のファイルを送信することはできません。</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">ホーム</string>
     <string name="label_hours">%d時間</string>
     <string name="label_iCloudEnable">SafeSlingerのiCloudが有効になっています。終了したら[完了]ボタンをタップします。</string>
+    <string name="label_InstNoMessages">メッセージなし。画面の上部にある新規メッセージのアイコンにメッセージ、タップを送信するには。</string>
     <string name="label_InstNoRecipients">受信者を追加するには、まず、同時に1つ以上の他のユーザとスリングキーの必要があります。また、メニューからスリングキー接触の招待状を送ることができる。</string>
     <string name="label_InstNoRecipientsMatchQuery">あなたの現在の受信者のいずれも、検索クエリに一致しない。別のクエリを試すか、新しい連絡先を招待して下さい。</string>
     <string name="label_InstNoSharedFile">共有ファイルはありません。デバイスをiTunesに接続して、ファイルを共有フォルダにドラッグしてください。</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">鍵：</string>
     <string name="label_LastName">姓</string>
     <string name="label_Me">私</string>
+    <string name="label_messageAutomatedVerify">（%1$sは%2$sのキーを確認しています。）</string>
     <string name="label_messageIntroduceNameToYou">あなたに%sをご紹介したいと思います。</string>
     <string name="label_messageInviteInstall">SafeSlingerアプリ： %s</string>
     <string name="label_messageInviteSetupInst">セットアップセキュアなメッセージング接続をするために、我々は会うか電話同士を同時にした後、スリングキーは一度だけ、接続を検証することができます。</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">ストレージ</string>
 
     <string name="state_BackupRestored">復元されたバックアップ。</string>
+    <string name="state_FailedToSendMessage">メッセージの送信に失敗しました。タッチしてオプションを保持する。</string>
     <string name="state_FileDeleted">削除されたファイル%s。</string>
     <string name="state_FileSent">メッセージが送信されます。</string>
     <string name="state_InvitationAdded">招待状が追加されました。</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">カメラ</string>
     <string name="title_ChooseDirectory">ディレクトリ選択</string>
     <string name="title_ChooseFileLoad">ファイル選択</string>
+    <string name="title_clear">クリア</string>
     <string name="title_comments">コメント/質問</string>
     <string name="title_Error">エラー</string>
     <string name="title_ExchangeWalkthrough">スリングキーによるアシスタント</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Exchangeを開始</string>
     <string name="title_HomePanel">ホーム</string>
     <string name="title_MessageDetail">メッセージ</string>
+    <string name="title_MessageOptions">メッセージオプション</string>
     <string name="title_Messages">メッセージ</string>
     <string name="title_MyIdentity">コンタクト</string>
     <string name="title_NotifyFileAvailable">SafeSlingerによるメッセージ利用可能</string>

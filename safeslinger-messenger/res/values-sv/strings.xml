@@ -41,6 +41,7 @@
     <string name="btn_Close">Stäng</string>
     <string name="btn_Continue">Fortsätta</string>
     <string name="btn_CreateNewKey">Skapa nytt Key</string>
+    <string name="btn_Delete">Radera</string>
     <string name="btn_DeleteKeys">Delete</string>
     <string name="btn_discard">Kassera</string>
     <string name="btn_Done">Klar</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Vägra</string>
     <string name="btn_Remind">Påminn</string>
+    <string name="btn_Retry">Retry</string>
     <string name="btn_Save">Spara</string>
     <string name="btn_SelectFile">Lägg Attachment</string>
     <string name="btn_SendFile">Skicka</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Registrering är inte autentiserad, försök igen manuellt senare.</string>
     <string name="error_C2DMRegInvalidSender">Registrering är inte tillgängligt för denna version, vänligen kontrollera en uppdaterad version.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Felaktig registreringsenhet med Google. Denna enhet stöder för närvarande inte push-meddelanden.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services krävs för att ta emot meddelanden. Vänligen installera Google Play Services att fortsätta.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push registrering tjänsten är inte tillgänglig, schemaläggning igen i %d sekunder.</string>
     <string name="error_C2DMRegTooManyRegistrations">Alltför många program är registrerade för Push. Avinstallera några andra program och försök igen.</string>
     <string name="error_CannotSendEmptyFile">Det går inte att skicka ett tomt fastsättning.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Hem</string>
     <string name="label_hours">%d timmar</string>
     <string name="label_iCloudEnable">SafeSlinger icloud är aktiverat. Tryck på knappen Klar när du är klar.</string>
+    <string name="label_InstNoMessages">Inga meddelanden. Om du vill skicka ett meddelande, knacka på ikonen Nytt meddelande högst upp på skärmen.</string>
     <string name="label_InstNoRecipients">För att lägga till mottagare, måste du först Sling Keys med en eller flera andra användare samtidigt. Du kan också skicka ett Sling Keys kontakt inbjudan från menyn.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ingen av dina nuvarande mottagare matchar din sökfråga. Försök med en annan fråga eller bjuda in en ny kontakt.</string>
     <string name="label_InstNoSharedFile">Inga delade filen. Anslut enheten med iTunes och dra filer till den delade mappen.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Efternamn</string>
     <string name="label_Me">Mig</string>
+    <string name="label_messageAutomatedVerify">(%1$s har bekräftat nyckeln för %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Jag skulle vilja presentera %s till dig.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">För att ställa en säker meddelandehantering anslutning, kan vi träffas eller telefon varandra på samma gång, och sedan Sling Keys bara en gång för att bekräfta anslutningen.</string>
@@ -227,7 +232,7 @@
     <string name="label_restoreCompleteDate">Senast Återställ Avslutat</string>
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger backup fördröjd</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
-    <string name="label_SaveAccount">Spara konto</string>
+    <string name="label_SaveAccount">Spara Konto</string>
     <string name="label_SaveInstruct">Kontrollera kontakter du vill uppdatera i din adressbok, sedan på Importera för att spara säkra kontakter:</string>
     <string name="label_search_contacts_hint">Sök kontakter</string>
     <string name="label_seconds">%d sekunder</string>
@@ -254,7 +259,7 @@
     <string name="label_TapToResumeDraft">Tryck här för att återuppta meddelandeutkast</string>
     <string name="label_TapToSendCredentialUpdate">Tryck och håll för att skicka autentiserings uppdatering.</string>
     <string name="label_TapToSlingKeys">Tryck här för att Sling Keys.</string>
-    <string name="label_targetAccountLabel">Kontakter konto</string>
+    <string name="label_targetAccountLabel">Kontakter Konto</string>
     <string name="label_TouchToConfigureBackupSettings">Du kan välja att aktivera SafeSlinger icloud backup i iOS Inställningar. Tryck på knappen Klar när du är klar.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Tryck här för att konfigurera inställningar för säkerhetskopiering.</string>
     <string name="label_TouchToConfigureCacheTimeout">Tryck här för att konfigurera cache timeout inställningar.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Lagring</string>
 
     <string name="state_BackupRestored">Backup återställd.</string>
+    <string name="state_FailedToSendMessage">Det gick inte att skicka meddelandet. Tryck och håll för alternativ.</string>
     <string name="state_FileDeleted">Raderad fil %s.</string>
     <string name="state_FileSent">Meddelande som skickas.</string>
     <string name="state_InvitationAdded">Inbjudan sattes.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Kamera</string>
     <string name="title_ChooseDirectory">Välj register</string>
     <string name="title_ChooseFileLoad">Välj din Attachment</string>
+    <string name="title_clear">Klar</string>
     <string name="title_comments">Kommentarer/Frågor</string>
     <string name="title_Error">Fel</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistent</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Begin Exchange</string>
     <string name="title_HomePanel">Hem</string>
     <string name="title_MessageDetail">Meddelande</string>
+    <string name="title_MessageOptions">Meddelandealternativ</string>
     <string name="title_Messages">Meddelanden</string>
     <string name="title_MyIdentity">Personlig kontakt</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Meddelande Tillgänglig</string>

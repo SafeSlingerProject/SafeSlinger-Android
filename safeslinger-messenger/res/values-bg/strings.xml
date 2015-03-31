@@ -41,6 +41,7 @@
     <string name="btn_Close">Близо</string>
     <string name="btn_Continue">Продължавам</string>
     <string name="btn_CreateNewKey">Създаване на нов ключ</string>
+    <string name="btn_Delete">Изтривам</string>
     <string name="btn_DeleteKeys">Изтрий Keys</string>
     <string name="btn_discard">Изхвърлете</string>
     <string name="btn_Done">Свършен</string>
@@ -51,20 +52,21 @@
     <string name="btn_No">Не</string>
     <string name="btn_NotNow">Не сега</string>
     <string name="btn_NotRemind">Забравям</string>
-    <string name="btn_OK">добре</string>
+    <string name="btn_OK">Добре</string>
     <string name="btn_Refuse">Отказвам</string>
     <string name="btn_Remind">Напомням</string>
+    <string name="btn_Retry">Опитайте отново</string>
     <string name="btn_Save">Save</string>
     <string name="btn_SelectFile">Добавяне на приложение</string>
     <string name="btn_SendFile">Изпращам</string>
     <string name="btn_Yes">Да</string>
 
     <string name="choice_10mins">10 минути</string>
-    <string name="choice_1hour">един час</string>
+    <string name="choice_1hour">Един час</string>
     <string name="choice_1min">1 минути</string>
     <string name="choice_20mins">20 минути</string>
     <string name="choice_2hours">2часа</string>
-    <string name="choice_3mins">три минути</string>
+    <string name="choice_3mins">Три минути</string>
     <string name="choice_40mins">40 минута</string>
     <string name="choice_4hours">4 часа</string>
     <string name="choice_5mins">5 минути</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Регистрацията не парафира Моля, опитайте отново по-късно ръчно.</string>
     <string name="error_C2DMRegInvalidSender">Регистрацията не е на разположение за тази версия, моля, проверете за актуализирана версия.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Регистрация Неправилно устройство с Google. Това устройство в момента не поддържа натискане на съобщения.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services се изисква за получаване на съобщения. Моля инсталирайте Google Play Services, за да продължат.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push регистрация услугата не е налична, график, опитайте отново през %d секунди.</string>
     <string name="error_C2DMRegTooManyRegistrations">Твърде много приложения са регистрирани за Push. Моля деинсталирате някои други приложения и опитайте отново.</string>
     <string name="error_CannotSendEmptyFile">Не може да изпратите празен привързаност.</string>
@@ -162,7 +165,7 @@
     <string name="iOS_RequestPermissionMicrophone">Можете да записвате гласови съобщения за изпращане на вашите приятели и SafeSlinger ще го криптира за вас. За да активирате тази функция, трябва да се даде възможност SafeSlinger достъп до микрофона, когато поиска.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger е криптирана приложението Съобщения и не може да функционира, без да позволяват входящи съобщения от Notifications. За да се даде възможност на входящите съобщения, трябва да се даде възможност SafeSlinger да ви изпраща известия, когато поиска.</string>
 
-    <string name="label_ago">преди %s</string>
+    <string name="label_ago">Преди %s</string>
     <string name="label_backupCompleteDate">Последно Backup Завършен</string>
     <string name="label_backupRequestDate">Последно Backup Искане</string>
     <string name="label_backupURL">Backup URL</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Дом</string>
     <string name="label_hours">%d часа</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud е активирана. Натиснете бутона Готово, когато приключите.</string>
+    <string name="label_InstNoMessages">Няма потребители. За да изпратите съобщение, докоснете иконата New Message в горната част на екрана.</string>
     <string name="label_InstNoRecipients">За да добавите получатели, трябва първо Прашка Keys с един или повече други потребители по едно и също време. Можете също така да изпратите покана прашка Клавиши контакт от менюто.</string>
     <string name="label_InstNoRecipientsMatchQuery">Нито един от настоящите си получатели съответства на заявката си за търсене. Моля, опитайте с различна заявка или да покани на нов контакт.</string>
     <string name="label_InstNoSharedFile">Не сподели файл. Свържете вашето устройство с качи и плъзнете файлове в споделената папка.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Фамилия</string>
     <string name="label_Me">Ми</string>
+    <string name="label_messageAutomatedVerify">(%1$s потвърди ключът за %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Бих искал да Ви представим %s за вас.</string>
     <string name="label_messageInviteInstall">SafeSlinger ап: %s</string>
     <string name="label_messageInviteSetupInst">За да настроите една сигурна съобщения връзка, можем да се справяме или телефон помежду си по едно и също време, а след това Прашка Keys само веднъж, за да се провери връзката.</string>
@@ -227,7 +232,7 @@
     <string name="label_restoreCompleteDate">Последно Възстановяване Завършен</string>
     <string name="label_SafeSlingerBackupDelayed">SafeSlinger архивиране забавено</string>
     <string name="label_safeslingered">(SafeSlinger Direct Exchange)</string>
-    <string name="label_SaveAccount">Спестете акаунт</string>
+    <string name="label_SaveAccount">Спестете Акаунт</string>
     <string name="label_SaveInstruct">Проверете контактите, които искате да се актуализират в адресната си книга, след това натиснете Import да спаси сигурни контакти:</string>
     <string name="label_search_contacts_hint">Търсене на контакти</string>
     <string name="label_seconds">%dсекунди</string>
@@ -254,7 +259,7 @@
     <string name="label_TapToResumeDraft">Докоснете, за да се възобнови проекта на съобщение</string>
     <string name="label_TapToSendCredentialUpdate">Натиснете и задръжте, за да изпратите акредитивни писма актуализация.</string>
     <string name="label_TapToSlingKeys">Докоснете, за да Прашка Keys.</string>
-    <string name="label_targetAccountLabel">Контакти акаунт</string>
+    <string name="label_targetAccountLabel">Контакти Акаунт</string>
     <string name="label_TouchToConfigureBackupSettings">Ако искате може да се даде възможност на SafeSlinger iCloud резервно копие на iOS Settings. Натиснете бутона Готово, когато приключите.</string>
     <string name="label_TouchToConfigureBackupSettingsAndroid">Докоснете, за да изберете за архивиране на настройките.</string>
     <string name="label_TouchToConfigureCacheTimeout">Докоснете, за да конфигурирате настройките на кеша таймаут.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Съхранение</string>
 
     <string name="state_BackupRestored">Backup възстановено.</string>
+    <string name="state_FailedToSendMessage">Неуспешно изпращане на съобщение. Натиснете и задръжте, за опции.</string>
     <string name="state_FileDeleted">Изтрити файлове %s.</string>
     <string name="state_FileSent">Съобщението е изпратено.</string>
     <string name="state_InvitationAdded">Покана добавена.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Камера</string>
     <string name="title_ChooseDirectory">Изберете категория</string>
     <string name="title_ChooseFileLoad">Изберете прикачения файл</string>
+    <string name="title_clear">Ясно</string>
     <string name="title_comments">Коментари/Въпроси</string>
     <string name="title_Error">Грешка</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Започнете Exchange</string>
     <string name="title_HomePanel">Дом</string>
     <string name="title_MessageDetail">Съобщение</string>
+    <string name="title_MessageOptions">Опции за съобщения</string>
     <string name="title_Messages">Съобщения</string>
     <string name="title_MyIdentity">Личен контакт</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message Available</string>

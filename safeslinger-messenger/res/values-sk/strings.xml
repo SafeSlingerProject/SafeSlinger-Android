@@ -41,6 +41,7 @@
     <string name="btn_Close">Zavrieť</string>
     <string name="btn_Continue">Pokračovať</string>
     <string name="btn_CreateNewKey">Vytvorte nový kľúč</string>
+    <string name="btn_Delete">Vymazať</string>
     <string name="btn_DeleteKeys">Zmazať kľúče</string>
     <string name="btn_discard">Vyradiť</string>
     <string name="btn_Done">Hotový</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Odmietnuť</string>
     <string name="btn_Remind">Pripomenúť</string>
+    <string name="btn_Retry">Opakovať</string>
     <string name="btn_Save">Save</string>
     <string name="btn_SelectFile">Pridať prílohu</string>
     <string name="btn_SendFile">Odoslať</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Registrácia nie je overený, skúste to znova neskôr ručne.</string>
     <string name="error_C2DMRegInvalidSender">Registrácia nie je k dispozícii pre túto verziu, prosím skontrolujte aktualizovanú verziu.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Nesprávna registrácia zariadenia s firmou Google. Toto zariadenie v súčasnosti nepodporuje Push správ.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services je povinná prijímať správy. Prosím, nainštalujte Google Play služby, aby pokračovali.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push registrácia služba nie je k dispozícii, plánovanie znova za %d sekúnd.</string>
     <string name="error_C2DMRegTooManyRegistrations">Príliš veľa aplikácií sú registrované pre Push. Prosím odinštalujte niektoré ďalšie aplikácie a skúste to znova.</string>
     <string name="error_CannotSendEmptyFile">Nemožno odoslať prázdny prílohu.</string>
@@ -144,7 +147,7 @@
     <string name="help_home">Pri výmene údajov o totožnosti, zaistenie všetci užívatelia sú v blízkosti, alebo na telefóne. Tlačidlo Začnite Exchange vymenia iba zaškrtnuté kontaktné údaje.</string>
     <string name="help_identity_menu">Môžete tiež zmeniť osobné údaje o svojej totožnosti na tejto obrazovke kliknutím na tlačidlo s Vaším menom. Tým sa zobrazí menu umožňuje upraviť svoj kontakt, Vytvoriť nový kontakt, alebo použite iný kontakt.</string>
     <string name="help_Messages">Táto obrazovka zobrazuje všetky minulé správy a prílohy, ktoré sú stále k dispozícii na stiahnutie.</string>
-    <string name="help_passphrase">Na tejto obrazovke pre prihlásenie do aplikácie sa vášho hesla. Ak ste zabudli svoje heslo, môžete vygenerovať nový kľúč chránený novým prístupovým heslom poklepaním Zabudli ste prístupové heslo? tlačidlo. Kliknite na používateľské meno pre prepínanie medzi viacerými kľúčov.</string>
+    <string name="help_passphrase">Na tejto obrazovke pre prihlásenie do aplikácie sa vášho hesla. Ak ste zabudli svoje heslo, môžete vygenerovať nový kľúč chránený novým prístupovým heslom poklepaním Zabudli ste prístupové heslo? Tlačidlo. Kliknite na používateľské meno pre prepínanie medzi viacerými kľúčov.</string>
     <string name="help_passphrase_change">Pomocou tejto obrazovky zmeniť prístupové heslo zadaním svojej poslednej prístupové heslo pre potvrdenie a nového hesla.</string>
     <string name="help_PickRecip">Tu sa zobrazujú kontakty s SafeSlinger kľúče, vyberte, kto správu odoslať.</string>
     <string name="help_save">Po dokončení bude protokol odhalí zoznam údajov o totožnosti vymenené. Vyberte kontakty, ktoré chcete uložiť, a stlačte Import.</string>
@@ -162,7 +165,7 @@
     <string name="iOS_RequestPermissionMicrophone">Môžete nahrať hlasovú správu pre svojich priateľov a SafeSlinger zašifruje za vás. Ak chcete túto funkciu, musíte povoliť SafeSlinger prístup k vášmu mikrofónu keď spýtal sa.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger je aplikácia šifrované komunikáciu a nemôže fungovať bez toho, aby prichádzajúce správy z oznámenia. Ak chcete povoliť prichádzajúce správy, je potrebné povoliť SafeSlinger o zaslanie upozornenia, keď spýtal sa.</string>
 
-    <string name="label_ago">pred %s</string>
+    <string name="label_ago">Pred %s</string>
     <string name="label_backupCompleteDate">Posledné zálohovanie bolo dokončené</string>
     <string name="label_backupRequestDate">Posledná Backup Dopyt</string>
     <string name="label_backupURL">Backup URL</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Domáce</string>
     <string name="label_hours">%d hodín</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud je povolené. Po dokončení Kliknite na tlačidlo Hotovo.</string>
+    <string name="label_InstNoMessages">Žiadne správy. Ak chcete odoslať správu, kliknite na ikonu Nová správa v hornej časti obrazovky.</string>
     <string name="label_InstNoRecipients">Ak chcete pridať príjemcu, musíte najprv Sling kľúče s jedným alebo viacerými inými užívateľmi súčasne. Môžete tiež poslať Sling Keys kontaktné pozvanie z ponuky.</string>
     <string name="label_InstNoRecipientsMatchQuery">Žiadny zo súčasných príjemcov zodpovedajúce vášmu vyhľadávaniu dotazu. Prosím, skúste iný dotaz alebo pozvať nový kontakt.</string>
     <string name="label_InstNoSharedFile">No zdieľaný súbor. Pripojte zariadenie s iTunes a pretiahnuť súbory do zdieľanej zložky.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Priezvisko</string>
     <string name="label_Me">Ma</string>
+    <string name="label_messageAutomatedVerify">(%1$s potvrdila kľúč pre %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Chcel by som predstaviť %s na vás.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Ak chcete nastaviť zabezpečené pripojenie správ, sa môžeme stretnúť alebo telefón navzájom v rovnakom čase, a potom Sling kľúče iba raz pre overenie pripojenia.</string>
@@ -319,7 +324,7 @@
     <string name="prog_findingKey">nájsť kľúč…</string>
     <string name="prog_GeneratingKey">generovanie kľúča, môže to chvíľu trvať…</string>
     <string name="prog_generatingSignature">generovanie podpisu…</string>
-    <string name="prog_loadingContent">obsah sa načítava…</string>
+    <string name="prog_loadingContent">Obsah sa načítava…</string>
     <string name="prog_pending">čaká na…</string>
     <string name="prog_ReceivingFile">príjem zašifrovaný súbor…</string>
     <string name="prog_RequestingFile">žiadajúci zašifrovaný súbor…</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Skladovanie</string>
 
     <string name="state_BackupRestored">Obnovená Backup.</string>
+    <string name="state_FailedToSendMessage">Nepodarilo sa odoslať správu. Dotknite sa a podržte možnosti.</string>
     <string name="state_FileDeleted">Zmazaný súbor %s.</string>
     <string name="state_FileSent">Správa bola odoslaná.</string>
     <string name="state_InvitationAdded">Pozvánka pridaný.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Kamera</string>
     <string name="title_ChooseDirectory">Vyberte adresár</string>
     <string name="title_ChooseFileLoad">Vyberte si svoj prílohu</string>
+    <string name="title_clear">Jasný</string>
     <string name="title_comments">Komentáre/Otázky</string>
     <string name="title_Error">Chyba</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Začnite Exchange</string>
     <string name="title_HomePanel">Domáce</string>
     <string name="title_MessageDetail">Správa</string>
+    <string name="title_MessageOptions">Možnosti správy</string>
     <string name="title_Messages">Správy</string>
     <string name="title_MyIdentity">Osobný kontakt</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Message dispozícii</string>

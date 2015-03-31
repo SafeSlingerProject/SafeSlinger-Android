@@ -41,6 +41,7 @@
     <string name="btn_Close">Prop</string>
     <string name="btn_Continue">Continuar</string>
     <string name="btn_CreateNewKey">Crear nova clau</string>
+    <string name="btn_Delete">Esborrar</string>
     <string name="btn_DeleteKeys">Eliminar Keys</string>
     <string name="btn_discard">Descartar</string>
     <string name="btn_Done">Fet</string>
@@ -49,11 +50,12 @@
     <string name="btn_Import">Importació</string>
     <string name="btn_Introduce">Introduir</string>
     <string name="btn_No">No</string>
-    <string name="btn_NotNow">Ara no</string>
+    <string name="btn_NotNow">Ara No</string>
     <string name="btn_NotRemind">Oblidar</string>
-    <string name="btn_OK">Okay</string>
+    <string name="btn_OK">OKAY</string>
     <string name="btn_Refuse">Rebutjar</string>
     <string name="btn_Remind">Recordar</string>
+    <string name="btn_Retry">Torneu-ho a provar</string>
     <string name="btn_Save">Guardar</string>
     <string name="btn_SelectFile">Arxiu adjunt</string>
     <string name="btn_SendFile">Enviar</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">El registre no autenticat, si us plau torni a provar manualment més tard.</string>
     <string name="error_C2DMRegInvalidSender">El registre no està disponible per aquesta versió, comproveu per una versió actualitzada.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Registre del dispositiu incorrecta amb Google. Aquest dispositiu no admet actualment la missatgeria empenta.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Serveis es requereix per rebre missatges. Si us plau, instal Google Play Serveis per continuar.</string>
     <string name="error_C2DMRegServiceNotAvailable">Servei de registre d\'empenta no està disponible, la programació de reintent en %d segons.</string>
     <string name="error_C2DMRegTooManyRegistrations">Hi ha massa aplicacions estan registrats per Push. Si us plau, desinstal · lar altres aplicacions i torneu a intentar.</string>
     <string name="error_CannotSendEmptyFile">No es pot enviar un arxiu adjunt buit.</string>
@@ -162,13 +165,13 @@
     <string name="iOS_RequestPermissionMicrophone">Pot gravar un missatge de veu per enviar als teus amics i SafeSlinger xifrarà per vostè. Per activar aquesta funció, ha de permetre l\'accés SafeSlinger al seu micròfon quan se li va preguntar.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger és una aplicació de missatgeria encriptada i no pot funcionar sense permetre els missatges entrants de notificacions. Per activar els missatges entrants, ha de permetre SafeSlinger per enviar avisos quan se li va preguntar.</string>
 
-    <string name="label_ago">fa %s</string>
+    <string name="label_ago">Fa %s</string>
     <string name="label_backupCompleteDate">Última còpia de seguretat Completat</string>
     <string name="label_backupRequestDate">Darrera Sol·licitud de còpia de seguretat</string>
     <string name="label_backupURL">URL de còpia de seguretat</string>
     <string name="label_ClickForNMsgs">Toc per veure els teus missatges %d</string>
     <string name="label_ComposeHint">Compondre Missatge</string>
-    <string name="label_ContactName">El seu nom</string>
+    <string name="label_ContactName">El vostre nom</string>
     <string name="label_days">%d dies</string>
     <string name="label_Device">Dispositiu:</string>
     <string name="label_DeviceInSendOnlyMode">Enviar manera de només</string>
@@ -180,13 +183,14 @@
     <string name="label_expired">caducat</string>
     <string name="label_expires">expira %s</string>
     <string name="label_expiresIn">expira el</string>
-    <string name="label_FileNameHint">Nom del fitxer</string>
+    <string name="label_FileNameHint">Nom De l\'Arxiu</string>
     <string name="label_FindInstruct">Escrigui el seu nom i una contrasenya per protegir les seves dades:</string>
-    <string name="label_FirstName">Nom de pila</string>
+    <string name="label_FirstName">Nom De Pila</string>
     <string name="label_Home">Feu clic al nom per afegir o treure dades de contacte, comprovar elements que desitja compartir i premi Començar Exchange quan altres estan a punt per a l\'intercanvi:</string>
     <string name="label_hometag">Casa</string>
     <string name="label_hours">%d hores</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud està habilitada. Toc en el botó Fet quan hagi acabat.</string>
+    <string name="label_InstNoMessages">No hi ha missatges. Per enviar un missatge, toc a la icona de missatge nou a la part superior de la pantalla.</string>
     <string name="label_InstNoRecipients">Per afegir destinataris, primer ha Sling Keys amb un o més d\'altres usuaris al mateix temps. Vostè també pot enviar una invitació de contacte Sling Keys al menú.</string>
     <string name="label_InstNoRecipientsMatchQuery">Cap dels destinataris actuals responen als seus criteris de cerca. Si us plau, proveu una consulta diferent o convidar a un nou contacte.</string>
     <string name="label_InstNoSharedFile">No arxiu compartit. Connecteu el dispositiu amb iTunes i arrossegar els arxius a la carpeta compartida.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Clau:</string>
     <string name="label_LastName">Cognom</string>
     <string name="label_Me">Em</string>
+    <string name="label_messageAutomatedVerify">(%1$s ha confirmat la clau per %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">M\'agradaria presentar %s a vostè.</string>
     <string name="label_messageInviteInstall">SafeSlinger aplicació: %s</string>
     <string name="label_messageInviteSetupInst">Per configurar una connexió de missatgeria segura, podem fer front o per telèfon entre si, a la vegada, i després Sling tecles només una vegada per verificar la connexió.</string>
@@ -295,7 +300,7 @@
     <string name="menu_message_font_size">Missatge Mida de la Font</string>
     <string name="menu_messageCopyText">Copiar text</string>
     <string name="menu_messageForward">Endavant</string>
-    <string name="menu_PrivacyPolicy">Política de privacitat</string>
+    <string name="menu_PrivacyPolicy">Política De Privadesa</string>
     <string name="menu_Remove">Treure</string>
     <string name="menu_restore_default">Restablir ajustos predeterminats</string>
     <string name="menu_ringtone">Sonar</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Emmagatzematge</string>
 
     <string name="state_BackupRestored">Còpia de seguretat restaurada.</string>
+    <string name="state_FailedToSendMessage">No s\'ha pogut enviar el missatge. Toqueu per a les opcions.</string>
     <string name="state_FileDeleted">Suprimit %s arxiu.</string>
     <string name="state_FileSent">Missatge enviat.</string>
     <string name="state_InvitationAdded">Invitació afegit.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Cambra</string>
     <string name="title_ChooseDirectory">Triar directori</string>
     <string name="title_ChooseFileLoad">Triï el seu Adjunt</string>
+    <string name="title_clear">Clar</string>
     <string name="title_comments">Comentaris/Preguntes</string>
     <string name="title_Error">Error</string>
     <string name="title_ExchangeWalkthrough">Sling Tecles Auxiliar</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Comenceu Canvi</string>
     <string name="title_HomePanel">Casa</string>
     <string name="title_MessageDetail">Missatge</string>
+    <string name="title_MessageOptions">Opcions de missatges</string>
     <string name="title_Messages">Missatges</string>
     <string name="title_MyIdentity">Contacte Personal</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Missatge Disponible</string>

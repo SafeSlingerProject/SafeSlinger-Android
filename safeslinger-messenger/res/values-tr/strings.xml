@@ -41,6 +41,7 @@
     <string name="btn_Close">Yakın</string>
     <string name="btn_Continue">Devam etmek</string>
     <string name="btn_CreateNewKey">Yeni Key Oluştur</string>
+    <string name="btn_Delete">Silmek</string>
     <string name="btn_DeleteKeys">Tuşlar Sil</string>
     <string name="btn_discard">Iskarta</string>
     <string name="btn_Done">Tamam</string>
@@ -49,11 +50,12 @@
     <string name="btn_Import">Ithalat</string>
     <string name="btn_Introduce">Tanıtmak</string>
     <string name="btn_No">Hayır</string>
-    <string name="btn_NotNow">Şimdi değil</string>
+    <string name="btn_NotNow">Şimdi Değil</string>
     <string name="btn_NotRemind">Unutmak</string>
-    <string name="btn_OK">tamam</string>
+    <string name="btn_OK">TAMAM</string>
     <string name="btn_Refuse">Çöp</string>
     <string name="btn_Remind">Hatırlatmak</string>
+    <string name="btn_Retry">Tekrar dene</string>
     <string name="btn_Save">Kaydet</string>
     <string name="btn_SelectFile">Ek ekle</string>
     <string name="btn_SendFile">Göndermek</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Kayıt doğrulanmış değil, daha sonra elle yeniden deneyin lütfen.</string>
     <string name="error_C2DMRegInvalidSender">Kayıt Bu sürümü için geçerli değildir, güncelleştirilmiş bir sürümü olup olmadığını kontrol edin.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Google ile Yanlış cihaz kaydı. Bu cihaz şu anda itme mesajlaşma desteklemiyor.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Hizmetleri iletilerini almak için gereklidir. Google devam Hizmetleri Çal kurun.</string>
     <string name="error_C2DMRegServiceNotAvailable">İtme kayıt hizmeti kullanılabilir değil, zamanlama %d saniye içinde tekrar deneyin.</string>
     <string name="error_C2DMRegTooManyRegistrations">Çok fazla uygulama Basarak kayıtlıdır. Diğer bazı uygulamaları kaldırmak ve yeniden deneyin.</string>
     <string name="error_CannotSendEmptyFile">Boş bir eki göndermek olamaz.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Ev</string>
     <string name="label_hours">%d saat</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud etkindir. Bittiğinde Bitti düğmesine dokunun.</string>
+    <string name="label_InstNoMessages">Hiçbir mesajlar. Ekranın üst kısmında Yeni Mesaj simgesi bir mesaj dokunun göndermek için.</string>
     <string name="label_InstNoRecipients">Alıcı eklemek için, yapmanız gerekir ilk Sapan Keys aynı anda bir veya daha fazla diğer kullanıcılarla. Ayrıca menüden bir Sapan Keys kontak daveti gönderebilir.</string>
     <string name="label_InstNoRecipientsMatchQuery">Mevcut alıcıların hiçbiri arama sorgusuyla eşleşen. Farklı bir sorgu deneyin veya yeni bir kişiyi davet edin.</string>
     <string name="label_InstNoSharedFile">Hiçbir dosya paylaştı. Paylaşılan klasöre iTunes ve sürükle dosyaları ile cihazınızı bağlayın.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Anahtar:</string>
     <string name="label_LastName">Soyadı</string>
     <string name="label_Me">Beni</string>
+    <string name="label_messageAutomatedVerify">(%1$s %2$s için anahtar onaylamıştır.)</string>
     <string name="label_messageIntroduceNameToYou">Sana %s tanıtmak istiyoruz.</string>
     <string name="label_messageInviteInstall">SafeSlinger uygulaması: %s</string>
     <string name="label_messageInviteSetupInst">Güvenli mesajlaşma bağlantı kurulumu için, biz bağlantıyı doğrulamak için sadece bir kez o Sapan Keys karşılamak veya telefon birbirlerine aynı anda ve edebilirsiniz.</string>
@@ -278,7 +283,7 @@
     <string name="menu_delete">Silmek</string>
     <string name="menu_deleteThread">Konu %s Sil</string>
     <string name="menu_Details">Görünüm Detay</string>
-    <string name="menu_DownloadDirectory">Indir Dizini</string>
+    <string name="menu_DownloadDirectory">İndir Dizini</string>
     <string name="menu_Edit">Düzenle</string>
     <string name="menu_EditContact">Düzenle İletişim</string>
     <string name="menu_EditName">Adı Düzenle</string>
@@ -301,7 +306,7 @@
     <string name="menu_ringtone">Ses</string>
     <string name="menu_SelectShareApp">İletişim Davet ekle</string>
     <string name="menu_sendFeedback">Geri Bildirim Gönder</string>
-    <string name="menu_SendUpdate">Güncelleştirme gönder</string>
+    <string name="menu_SendUpdate">Güncelleştirme Gönder</string>
     <string name="menu_Settings">Ayarlar</string>
     <string name="menu_ShowTutorial">Göster Eğitimi</string>
     <string name="menu_TagComposeMessage">Oluşturmak</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Depolama</string>
 
     <string name="state_BackupRestored">Yedekleme restore.</string>
+    <string name="state_FailedToSendMessage">Mesajı göndermek için başarısız oldu. Dokunun ve seçenekler için basılı tutun.</string>
     <string name="state_FileDeleted">Silinen dosya %s.</string>
     <string name="state_FileSent">Mesaj gönderildi.</string>
     <string name="state_InvitationAdded">Gönderildi ilave edildi.</string>
@@ -376,8 +382,9 @@
 
     <string name="title_About">Hakkında</string>
     <string name="title_camera">Kamera</string>
-    <string name="title_ChooseDirectory">Dizin seçin</string>
+    <string name="title_ChooseDirectory">Dizin Seçin</string>
     <string name="title_ChooseFileLoad">Sizin Ek seçin</string>
+    <string name="title_clear">Açık</string>
     <string name="title_comments">Yorumlar/Sorular</string>
     <string name="title_Error">Hata</string>
     <string name="title_ExchangeWalkthrough">Sapan Keys Yardımcısı</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Alım Satım başlayın</string>
     <string name="title_HomePanel">Ev</string>
     <string name="title_MessageDetail">Mesaj</string>
+    <string name="title_MessageOptions">Mesaj Seçenekleri</string>
     <string name="title_Messages">Mesajlar</string>
     <string name="title_MyIdentity">Kişisel İletişim</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Mesaj Mevcut</string>

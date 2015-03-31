@@ -41,6 +41,7 @@
     <string name="btn_Close">Закрыть</string>
     <string name="btn_Continue">Продолжить</string>
     <string name="btn_CreateNewKey">Создать новый ключ</string>
+    <string name="btn_Delete">Удалять</string>
     <string name="btn_DeleteKeys">Удалять ключи</string>
     <string name="btn_discard">Отменить</string>
     <string name="btn_Done">Закончено</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Отказать</string>
     <string name="btn_Remind">Напомнить</string>
+    <string name="btn_Retry">Повторите</string>
     <string name="btn_Save">Сохранить</string>
     <string name="btn_SelectFile">Прикрепить файл</string>
     <string name="btn_SendFile">Отправить</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Регистрация не прошла проверку подлинности, повторите попытку позже вручную.</string>
     <string name="error_C2DMRegInvalidSender">Регистрация не доступна для этой версии, пожалуйста, проверьте есть ли новая версия.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Неправильная регистрация устройства с Google. Это устройство в настоящее время не поддерживает уведомления.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services требуется для приема сообщений. Пожалуйста, установите Google Play Services, чтобы продолжить.</string>
     <string name="error_C2DMRegServiceNotAvailable">Служба регистрации уведомлений не доступна, повторить через %d секунд.</string>
     <string name="error_C2DMRegTooManyRegistrations">Слишком много приложений, зарегистрированных для уведомлений. Пожалуйста, удалите некоторые другие приложения и повторите попытку.</string>
     <string name="error_CannotSendEmptyFile">Не удается отправить пустой файл.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Домашний</string>
     <string name="label_hours">%d часов</string>
     <string name="label_iCloudEnable">Резервное копирование iCloud включено. Нажмите кнопку Готово, когда закончите.</string>
+    <string name="label_InstNoMessages">Нет сообщений. Чтобы отправить сообщение, нажмите на значок нового сообщения в верхней части экрана.</string>
     <string name="label_InstNoRecipients">Чтобы добавить получателей, необходимо сначала Слинг ключей с одним или несколькими другими пользователями одновременно. Вы также можете отправить Слинг Ключи контактную приглашение от меню.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ни один из ваших нынешних получателей не соответствует вашему поисковому запросу. Пожалуйста, попробуйте другой запрос или пригласить новый контакт.</string>
     <string name="label_InstNoSharedFile">Нет общих файлов. Подключите устройство к iTunes и перетащите файлы в общую папку.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Ключ</string>
     <string name="label_LastName">Фамилия</string>
     <string name="label_Me">Я</string>
+    <string name="label_messageAutomatedVerify">(%1$s подтвердил ключ для %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Я хочу вам представить %s.</string>
     <string name="label_messageInviteInstall">SafeSlinger приложение: %s</string>
     <string name="label_messageInviteSetupInst">Для настройки соединения безопасное сообщениями, мы можем удовлетворить или телефон друга в то же время, а затем Слинг Ключи только один раз для проверки соединения.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Хранение</string>
 
     <string name="state_BackupRestored">Резервное копирование восстановлено.</string>
+    <string name="state_FailedToSendMessage">Не удалось отправить сообщение. Нажмите и удерживайте в течение возможностей.</string>
     <string name="state_FileDeleted">Файл %s удален.</string>
     <string name="state_FileSent">Сообщение отправлено.</string>
     <string name="state_InvitationAdded">Приглашение добавил.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Камера</string>
     <string name="title_ChooseDirectory">Выберите каталог</string>
     <string name="title_ChooseFileLoad">Выберите файл</string>
+    <string name="title_clear">Ясно</string>
     <string name="title_comments">Комментарии/вопросы</string>
     <string name="title_Error">Ошибка</string>
     <string name="title_ExchangeWalkthrough">SafeSlinger помощь</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Начать обмен</string>
     <string name="title_HomePanel">Основной экран</string>
     <string name="title_MessageDetail">Сообщение</string>
+    <string name="title_MessageOptions">Параметры сообщения</string>
     <string name="title_Messages">Сообщения</string>
     <string name="title_MyIdentity">Личный контакт</string>
     <string name="title_NotifyFileAvailable">Доступно сообщение SafeSligner</string>

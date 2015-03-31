@@ -96,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Registrierung nicht authentifiziert, bitte versuchen Sie es später nochmal.</string>
     <string name="error_C2DMRegInvalidSender">Die Registrierung dieser Version ist nicht verfügbar, überprüfen Sie bitte ob eine aktualisierte Version bereitsteht.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Registrierung dieses Gerätes bei Google fehlgeschlagen. Dieses Gerät unterstützt derzeit kein Push-Messaging.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services ist erforderlich, um Nachrichten zu empfangen. Bitte installieren Sie Google Play Services, um fortzufahren.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push Registration Service momentan nicht verfügbar, wird in %d Sekunden erneut versucht.</string>
     <string name="error_C2DMRegTooManyRegistrations">Zu viele Anwendungen sind für Push Service registriert. Bitte deinstallieren Sie einige andere Anwendungen und aktivieren Sie SafeSlinger dann wieder.</string>
     <string name="error_CannotSendEmptyFile">Ein leerer Anhang kann nicht gesendet werden.</string>
@@ -189,6 +190,7 @@
     <string name="label_hometag">Zuhause</string>
     <string name="label_hours">%d Stunden</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud ist aktiviert. Tippen Sie auf die Schaltfläche Fertig, wenn Sie fertig sind.</string>
+    <string name="label_InstNoMessages">Keine Nachrichten. Um eine Nachricht zu senden, tippen Sie auf das Symbol für neue Nachrichten am oberen Rand des Bildschirms.</string>
     <string name="label_InstNoRecipients">Um Empfänger hinzuzufügen, müssen Sie zuerst mit einem oder mehreren anderen Usern gleichzeitig Schlüssel austauschen. Sie können auch eine Sling Keys Kontakt Einladung aus dem Menü heraus verschicken.</string>
     <string name="label_InstNoRecipientsMatchQuery">Keine Ihrer aktuellen Empfänger entsprechen Ihren Suchkriterien. Bitte versuchen Sie eine andere Abfrage oder laden Sie einen neuen Kontakt ein.</string>
     <string name="label_InstNoSharedFile">Keine gemeinsame Datei. Verbinden Sie Ihr Gerät mit iTunes und bewegen Sie Dateien in den gemeinsamen Ordner.</string>

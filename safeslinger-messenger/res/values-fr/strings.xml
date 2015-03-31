@@ -41,6 +41,7 @@
     <string name="btn_Close">Fermer</string>
     <string name="btn_Continue">Continuer</string>
     <string name="btn_CreateNewKey">Créer une nouvelle clé</string>
+    <string name="btn_Delete">Effacer</string>
     <string name="btn_DeleteKeys">Supprimer des clés</string>
     <string name="btn_discard">Jeter</string>
     <string name="btn_Done">Terminé</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Refuser</string>
     <string name="btn_Remind">Rappeler</string>
+    <string name="btn_Retry">Refaire</string>
     <string name="btn_Save">Enregistrer</string>
     <string name="btn_SelectFile">Sélectionner Fichier</string>
     <string name="btn_SendFile">Envoyer</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Enregistrement non authentifié, s\'il vous plaît réessayer plus tard manuellement.</string>
     <string name="error_C2DMRegInvalidSender">L\'inscription n\'est pas disponible pour cette version, veuillez consulter la version mise à jour.</string>
     <string name="error_C2DMRegPhoneRegistrationError">L\'enregistrement de cet appareil avec Google n\'est pas correct. Cet appareil ne prend pas en charge la messagerie push.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play services est nécessaire pour recevoir des messages. Se il vous plaît installer Google Play services pour continuer.</string>
     <string name="error_C2DMRegServiceNotAvailable">Le service d\'enregistrement push n\'est pas disponible, nouvel essai dans %d secondes.</string>
     <string name="error_C2DMRegTooManyRegistrations">Trop d\'applications sont enregistrées sur le service Push. Désinstallez d\'autres applications et réessayez.</string>
     <string name="error_CannotSendEmptyFile">Impossible d\'envoyer un fichier vide.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Domicile</string>
     <string name="label_hours">%d heures</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud est activé. Appuyez sur le bouton «Terminé» lorsque vous avez terminé.</string>
+    <string name="label_InstNoMessages">Pas de messages. Pour envoyer un message, tapez sur l\'icône Nouveau message en haut de votre écran.</string>
     <string name="label_InstNoRecipients">Pour ajouter des destinataires, vous devez d\'abord Sling clés avec un ou plusieurs autres utilisateurs en même temps. Vous pouvez également envoyer un contact invitation Sling clés dans le menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Aucun de vos bénéficiaires actuels correspondent à votre requête de recherche. Se il vous plaît essayer une requête différente ou inviter un nouveau contact.</string>
     <string name="label_InstNoSharedFile">Aucun fichier partagé. Connectez votre appareil avec iTunes et faites glisser les fichiers dans le dossier partagé.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Clé:</string>
     <string name="label_LastName">Nom de famille</string>
     <string name="label_Me">Moi</string>
+    <string name="label_messageAutomatedVerify">(%1$s a confirmé la clé pour %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Je souhaite vous présenter %s.</string>
     <string name="label_messageInviteInstall">SafeSlinger application: %s</string>
     <string name="label_messageInviteSetupInst">Pour installer une connexion de messagerie sécurisée, nous pouvons répondre à ou par téléphone de l\'autre en même temps, puis Sling touches une seule fois pour vérifier la connexion.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Stockage</string>
 
     <string name="state_BackupRestored">Sauvegarde restaurée.</string>
+    <string name="state_FailedToSendMessage">Impossible d\'envoyer le message. Touchez et maintenez pour les options.</string>
     <string name="state_FileDeleted">Fichier %s supprimé.</string>
     <string name="state_FileSent">Message envoyé.</string>
     <string name="state_InvitationAdded">Invitation ajouté.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Appareil photo</string>
     <string name="title_ChooseDirectory">Choisir un répertoire</string>
     <string name="title_ChooseFileLoad">Choisissez votre fichier</string>
+    <string name="title_clear">Clair</string>
     <string name="title_comments">Commentaires/Questions</string>
     <string name="title_Error">Erreur</string>
     <string name="title_ExchangeWalkthrough">Assistant d\'échange de clés</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Commencez échange</string>
     <string name="title_HomePanel">Accueil</string>
     <string name="title_MessageDetail">Message</string>
+    <string name="title_MessageOptions">Options de message</string>
     <string name="title_Messages">Messages</string>
     <string name="title_MyIdentity">Contact personnel</string>
     <string name="title_NotifyFileAvailable">Message SafeSlinger disponible</string>

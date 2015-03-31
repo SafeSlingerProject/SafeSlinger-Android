@@ -41,6 +41,7 @@
     <string name="btn_Close">Gần</string>
     <string name="btn_Continue">Tiếp tục</string>
     <string name="btn_CreateNewKey">Tạo New Key</string>
+    <string name="btn_Delete">Xóa bỏ</string>
     <string name="btn_DeleteKeys">Xóa phím</string>
     <string name="btn_discard">Vứt bỏ</string>
     <string name="btn_Done">Làm xong</string>
@@ -51,9 +52,10 @@
     <string name="btn_No">Không</string>
     <string name="btn_NotNow">Không phải bây giờ</string>
     <string name="btn_NotRemind">Quên</string>
-    <string name="btn_OK">tốt</string>
+    <string name="btn_OK">Tốt</string>
     <string name="btn_Refuse">Từ chối</string>
     <string name="btn_Remind">Nhắc lại</string>
+    <string name="btn_Retry">Thử lại</string>
     <string name="btn_Save">Save</string>
     <string name="btn_SelectFile">Thêm tập tin đính kèm</string>
     <string name="btn_SendFile">Gởi</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Đăng ký không được xác thực, vui lòng thử lại bằng tay sau đó.</string>
     <string name="error_C2DMRegInvalidSender">Đăng ký là không có sẵn cho phiên bản này, xin vui lòng kiểm tra các phiên bản cập nhật.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Đăng ký thiết bị không đúng với Google. Thiết bị này hiện không hỗ trợ tin nhắn push.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services được yêu cầu để nhận tin nhắn. Vui lòng cài đặt dịch vụ để tiếp tục Google Play.</string>
     <string name="error_C2DMRegServiceNotAvailable">Dịch vụ đăng ký push không có sẵn, lên lịch thử lại trong %d giây.</string>
     <string name="error_C2DMRegTooManyRegistrations">Quá nhiều ứng dụng đã được đăng ký cho Push. Hãy gỡ bỏ cài đặt một số ứng dụng khác và thử lại.</string>
     <string name="error_CannotSendEmptyFile">Không thể gửi tập tin đính kèm sản phẩm nào.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Nhà</string>
     <string name="label_hours">%d giờ</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud được kích hoạt. Chạm vào nút Done khi hoàn tất.</string>
+    <string name="label_InstNoMessages">Không có tin nhắn. Để gửi một tin nhắn, bấm vào biểu tượng New Message ở trên cùng của màn hình của bạn.</string>
     <string name="label_InstNoRecipients">Để thêm người nhận, đầu tiên Sling phím với một hoặc nhiều người sử dụng khác cùng một lúc bạn phải. Bạn cũng có thể gửi một Sling phím liên lạc mời từ menu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Không ai trong số những người nhận hiện tại của bạn phù hợp với truy vấn tìm kiếm của bạn. Hãy thử một truy vấn khác nhau hoặc mời một số liên lạc mới.</string>
     <string name="label_InstNoSharedFile">Không chia sẻ tập tin. Kết nối điện thoại với iTunes và kéo tập tin vào thư mục chia sẻ.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Key:</string>
     <string name="label_LastName">Tên họ</string>
     <string name="label_Me">Tôi</string>
+    <string name="label_messageAutomatedVerify">(%1$s đã xác nhận chìa khóa cho %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Tôi xin giới thiệu với bạn %s.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Để thiết lập một kết nối tin nhắn an toàn, chúng tôi có thể đáp ứng hay điện thoại cho nhau cùng một lúc, và sau đó Sling phím chỉ một lần để kiểm tra kết nối.</string>
@@ -216,8 +221,8 @@
     <string name="label_PassHintCurrent">Cụm từ mật khẩu hiện tại</string>
     <string name="label_PassHintEnter">Cụm từ mật khẩu</string>
     <string name="label_PassHintRepeat">Lặp lại Passphrase</string>
-    <string name="label_passPhraseCacheTtl">Bộ nhớ cache passphrase</string>
-    <string name="label_PassPhraseIsCached">Cached passphrase</string>
+    <string name="label_passPhraseCacheTtl">Bộ nhớ cache Passphrase</string>
+    <string name="label_PassPhraseIsCached">Cached Passphrase</string>
     <string name="label_phoneOnly">điện thoại chỉ</string>
     <string name="label_Photo">Ảnh</string>
     <string name="label_PublicKeyID">ID Key</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Lưu trữ</string>
 
     <string name="state_BackupRestored">Sao lưu phục hồi.</string>
+    <string name="state_FailedToSendMessage">Không thể gửi tin nhắn. Chạm và giữ cho các tùy chọn.</string>
     <string name="state_FileDeleted">Xóa file %s.</string>
     <string name="state_FileSent">Tin nhắn được gửi.</string>
     <string name="state_InvitationAdded">Lời mời được thêm vào.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Máy chụp hình</string>
     <string name="title_ChooseDirectory">Chọn Thư mục</string>
     <string name="title_ChooseFileLoad">Chọn tập tin đính kèm của bạn</string>
+    <string name="title_clear">Trong sáng</string>
     <string name="title_comments">Bình luận/câu hỏi</string>
     <string name="title_Error">Lỗi</string>
     <string name="title_ExchangeWalkthrough">Sling phím Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Bắt đầu giao dịch</string>
     <string name="title_HomePanel">Nhà</string>
     <string name="title_MessageDetail">Thông điệp</string>
+    <string name="title_MessageOptions">Tùy chọn tin nhắn</string>
     <string name="title_Messages">Tin nhắn</string>
     <string name="title_MyIdentity">Cá nhân Liên hệ</string>
     <string name="title_NotifyFileAvailable">SafeSlinger tin nhắn có sẵn</string>

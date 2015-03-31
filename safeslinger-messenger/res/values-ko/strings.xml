@@ -41,6 +41,7 @@
     <string name="btn_Close">닫기</string>
     <string name="btn_Continue">계속</string>
     <string name="btn_CreateNewKey">키 만들기</string>
+    <string name="btn_Delete">삭제</string>
     <string name="btn_DeleteKeys">키 삭제</string>
     <string name="btn_discard">지우기</string>
     <string name="btn_Done">완료</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">예</string>
     <string name="btn_Refuse">거절하기</string>
     <string name="btn_Remind">알림켜기</string>
+    <string name="btn_Retry">다시 시도</string>
     <string name="btn_Save">저장</string>
     <string name="btn_SelectFile">파일 선택</string>
     <string name="btn_SendFile">보내기</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">인증되지 않은 등록입니다. 나중에 수동으로 다시 시도하시기 바랍니다.</string>
     <string name="error_C2DMRegInvalidSender">이 버전에서는 등록할 수 없습니다. 다음 버전을 확인하시기 바랍니다.</string>
     <string name="error_C2DMRegPhoneRegistrationError">구글의 기기 등록이 잘못되었습니다. 이 기기는 현재 메시지 보내기를 지원하지 않습니다.</string>
+    <string name="error_C2DMRegPlayServicesMissing">구글 플레이 서비스 메시지를 수신 할 필요가있다. 구글은 계속 서비스를 플레이 설치하십시오.</string>
     <string name="error_C2DMRegServiceNotAvailable">푸시 등록 서비스를 사용할 수 없습니다. %d 초 후에 다시 시도합니다.</string>
     <string name="error_C2DMRegTooManyRegistrations">너무 많은 응용 프로그램이 푸시에 등록되었습니다. 다른 응용 프로그램을 제거한 후 다시 시도하십시오.</string>
     <string name="error_CannotSendEmptyFile">비어있는 파일은 보낼 수 없습니다.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">홈</string>
     <string name="label_hours">%d 시간</string>
     <string name="label_iCloudEnable">SafeSlinger 아이 클라우드 를 사용할 수 있습니다. 완료되면 완료 버튼을 누릅니다.</string>
+    <string name="label_InstNoMessages">어떤 메시지가 없습니다. 화면의 상단에있는 새 메시지 아이콘에 메시지 탭을 보낼 수 있습니다.</string>
     <string name="label_InstNoRecipients">받는 사람을 추가하려면 먼저 동시에 하나 이상의 다른 사용자와 슬링 키 를 해야합니다. 또한 메뉴에서 슬링 키 연락처 초대를 보낼 수 있습니다.</string>
     <string name="label_InstNoRecipientsMatchQuery">현재받는 사람 중에 당신의 검색 쿼리와 일치하지 않습니다. 다른 쿼리를 시도하거나 새 연락처를 초대하십시오.</string>
     <string name="label_InstNoSharedFile">공유 파일이 없습니다. 단말기를 iTunes로 연결하여 파일을 공유폴더로 옮겨주십시오.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">키(열쇠):</string>
     <string name="label_LastName">성</string>
     <string name="label_Me">나</string>
+    <string name="label_messageAutomatedVerify">(%1$s는 %2$s의 키를 확인했습니다.)</string>
     <string name="label_messageIntroduceNameToYou">당신에게 %s을(를) 소개하고 싶습니다.</string>
     <string name="label_messageInviteInstall">SafeSlinger 응용 프로그램: %s</string>
     <string name="label_messageInviteSetupInst">설정보안 메시징 연결을 위해, 우리 는 만나거나 전화를 서로 같은 시간에, 다음 슬링 키 는 한 번만 연결 을 확인 할 수 있습니다.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">저장</string>
 
     <string name="state_BackupRestored">백업파일이 복원되었습니다.</string>
+    <string name="state_FailedToSendMessage">메시지를 보내지 못했습니다. 터치 옵션을 누르고 있습니다.</string>
     <string name="state_FileDeleted">%s 파일을 삭제했습니다.</string>
     <string name="state_FileSent">메시지를 보냈습니다.</string>
     <string name="state_InvitationAdded">초대 덧붙였다.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">카메라</string>
     <string name="title_ChooseDirectory">디렉토리 선택</string>
     <string name="title_ChooseFileLoad">파일 선택</string>
+    <string name="title_clear">명확한</string>
     <string name="title_comments">의견/질문</string>
     <string name="title_Error">오류</string>
     <string name="title_ExchangeWalkthrough">키 전송 도우미</string>
@@ -387,6 +394,7 @@
     <string name="title_home">교환시작</string>
     <string name="title_HomePanel">홈으로</string>
     <string name="title_MessageDetail">메시지</string>
+    <string name="title_MessageOptions">메시지 옵션</string>
     <string name="title_Messages">메시지</string>
     <string name="title_MyIdentity">개인 연락처</string>
     <string name="title_NotifyFileAvailable">SafeSlinger 메시지를 사용 가능합니다.</string>

@@ -41,6 +41,7 @@
     <string name="btn_Close">Închidere</string>
     <string name="btn_Continue">Continua</string>
     <string name="btn_CreateNewKey">Creați o nouă cheie</string>
+    <string name="btn_Delete">Șterge</string>
     <string name="btn_DeleteKeys">Delete</string>
     <string name="btn_discard">Arunca</string>
     <string name="btn_Done">Făcut</string>
@@ -51,9 +52,10 @@
     <string name="btn_No">Nu</string>
     <string name="btn_NotNow">Nu Acum</string>
     <string name="btn_NotRemind">Uita</string>
-    <string name="btn_OK">bINE</string>
+    <string name="btn_OK">BINE</string>
     <string name="btn_Refuse">Refuza</string>
     <string name="btn_Remind">Reaminti</string>
+    <string name="btn_Retry">Încercați din nou</string>
     <string name="btn_Save">Salvați</string>
     <string name="btn_SelectFile">Adăugați Atașament</string>
     <string name="btn_SendFile">Trimite</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Înregistrarea nu autentificată, vă rugăm să încercați din nou mai târziu manual.</string>
     <string name="error_C2DMRegInvalidSender">Înregistrarea nu este disponibil pentru această versiune, vă rugăm să verificați de o versiune actualizată.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Inregistrarea unui dispozitiv incorect cu Google. Acest aparat nu acceptă în prezent de mesaje împinge.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services este necesar pentru a primi mesaje. Vă rugăm să instalați Google Play Servicii pentru a continua.</string>
     <string name="error_C2DMRegServiceNotAvailable">Serviciu de inregistrare Push nu este disponibil, programarea încercați din nou în %d secunde.</string>
     <string name="error_C2DMRegTooManyRegistrations">Prea multe aplicații sunt înregistrate pentru Push. Vă rugăm să dezinstalați alte aplicații și încercați din nou.</string>
     <string name="error_CannotSendEmptyFile">Nu se poate trimite un atașament gol.</string>
@@ -162,7 +165,7 @@
     <string name="iOS_RequestPermissionMicrophone">Puteți înregistra un mesaj vocal pentru a trimite prietenilor tăi și SafeSlinger va cripta pentru tine. Pentru a activa această caracteristică, trebuie să permită accesul SafeSlinger la microfon dumneavoastră atunci când a cerut.</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger este o aplicație de mesagerie criptate și nu poate funcționa fără a permite mesajelor primite de la notificările. Pentru a activa mesajele primite, trebuie să permită SafeSlinger să vă trimită notificări atunci când a cerut.</string>
 
-    <string name="label_ago">în urmă %s</string>
+    <string name="label_ago">În urmă %s</string>
     <string name="label_backupCompleteDate">Ultima Backup Finalizat</string>
     <string name="label_backupRequestDate">Ultima cerere de Backup</string>
     <string name="label_backupURL">URL-ul Backup</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Acasă</string>
     <string name="label_hours">%d oră</string>
     <string name="label_iCloudEnable">SafeSlinger icloud este activat. Apăsați butonul Done când ați terminat.</string>
+    <string name="label_InstNoMessages">Niciun mesaj. Pentru a trimite un mesaj, apăsați pe pictograma Mesaj nou din partea de sus a ecranului.</string>
     <string name="label_InstNoRecipients">Pentru a adăuga destinatari, trebuie mai întâi să Sling Taste cu unul sau mai mulți utilizatori în același timp te. Puteți trimite, de asemenea, o Sling Keys contact de invitație din meniu.</string>
     <string name="label_InstNoRecipientsMatchQuery">Nici unul dintre destinatarii circulante potrivească cu interogarea dvs. de căutare. Vă rugăm să încercați o interogare diferit sau invita un contact nou.</string>
     <string name="label_InstNoSharedFile">Nici un fișier împărtășit. Conectați dispozitivul cu iTunes și fișiere trageți în folderul partajat.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Cheie:</string>
     <string name="label_LastName">Nume</string>
     <string name="label_Me">Mă</string>
+    <string name="label_messageAutomatedVerify">(%1$s a confirmat cheia pentru %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Aș dori să introducă %s pentru tine.</string>
     <string name="label_messageInviteInstall">App SafeSlinger: %s</string>
     <string name="label_messageInviteSetupInst">Pentru a seta o conexiune de mesagerie securizată, ne putem intalni sau telefonic reciproc, în același timp, și apoi Sling Taste doar o singură dată pentru a verifica conexiunea.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Depozitare</string>
 
     <string name="state_BackupRestored">Backup restaurat.</string>
+    <string name="state_FailedToSendMessage">Nu a reușit să trimite mesaj. Atingeți și țineți apăsat pentru opțiuni.</string>
     <string name="state_FileDeleted">Eliminat %s fișier.</string>
     <string name="state_FileSent">Mesajul a fost trimis.</string>
     <string name="state_InvitationAdded">Invitație adăugat.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Aparat foto</string>
     <string name="title_ChooseDirectory">Alege Directory</string>
     <string name="title_ChooseFileLoad">Alege atașamentul</string>
+    <string name="title_clear">Clar</string>
     <string name="title_comments">Comentarii/Intrebari</string>
     <string name="title_Error">Eroare</string>
     <string name="title_ExchangeWalkthrough">Sling Taste Asistent</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Începe schimb</string>
     <string name="title_HomePanel">Acasă</string>
     <string name="title_MessageDetail">Mesaj</string>
+    <string name="title_MessageOptions">Opțiuni pentru mesaje</string>
     <string name="title_Messages">Mesaje</string>
     <string name="title_MyIdentity">Personal Contact</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Mesaj disponibile</string>

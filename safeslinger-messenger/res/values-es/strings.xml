@@ -41,6 +41,7 @@
     <string name="btn_Close">Cerrar</string>
     <string name="btn_Continue">Continuar</string>
     <string name="btn_CreateNewKey">Crear nueva clave</string>
+    <string name="btn_Delete">Borrar</string>
     <string name="btn_DeleteKeys">Eliminar claves</string>
     <string name="btn_discard">Descartar</string>
     <string name="btn_Done">Hecho</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">Aceptar</string>
     <string name="btn_Refuse">Rechazar</string>
     <string name="btn_Remind">Recordar</string>
+    <string name="btn_Retry">Vuelva a intentarlo</string>
     <string name="btn_Save">Guardar</string>
     <string name="btn_SelectFile">Agregar Datos Adjuntos</string>
     <string name="btn_SendFile">Enviar</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Registro no autenticado, por favor vuelva a intentar manualmente más tarde.</string>
     <string name="error_C2DMRegInvalidSender">El registro no está disponible para esta versión, compruebe por una versión actualizada.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Registro del dispositivo incorrecto con Google. Este dispositivo no admite actualmente la mensajería de pulso.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Servicios se requiere para recibir mensajes. Por favor, instale Google Play Servicios para continuar.</string>
     <string name="error_C2DMRegServiceNotAvailable">Servicio de registro de pulso no disponible, reintento de programación en %d segundos.</string>
     <string name="error_C2DMRegTooManyRegistrations">Demasiadas aplicaciones están registradas para Pulsar. Por favor, desinstale algunas otras aplicaciones y vuelva a intentarlo.</string>
     <string name="error_CannotSendEmptyFile">No se puede enviar un archivo adjunto vacío.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Inicio</string>
     <string name="label_hours">%d horas</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud está habilitado. Pulse el botón Hecho cuando haya terminado.</string>
+    <string name="label_InstNoMessages">No hay mensajes. Para enviar un mensaje, toque en el icono de nuevo mensaje en la parte superior de la pantalla.</string>
     <string name="label_InstNoRecipients">Para agregar destinatarios, primero debe Sling Teclas con uno o más usuarios al mismo tiempo. Usted también puede enviar una invitación de contacto Sling Keys en el menú.</string>
     <string name="label_InstNoRecipientsMatchQuery">Ninguno de los destinatarios actuales responden a sus criterios de búsqueda. Por favor, intente una consulta diferente o invitar a un nuevo contacto.</string>
     <string name="label_InstNoSharedFile">Ningún archivo compartido. Conecte su dispositivo con iTunes y arrastre los archivos a la carpeta compartida.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Clave:</string>
     <string name="label_LastName">Apellido</string>
     <string name="label_Me">Me</string>
+    <string name="label_messageAutomatedVerify">(%1$s ha confirmado la clave para %2$s.)</string>
     <string name="label_messageIntroduceNameToYou">Me gustaría presentarles a %s a ustedes.</string>
     <string name="label_messageInviteInstall">SafeSlinger aplicación: %s</string>
     <string name="label_messageInviteSetupInst">Para configurar una conexión de mensajería segura, podemos hacer frente o por teléfono entre sí, al mismo tiempo, y después de la honda teclas sólo una vez para verificar la conexión.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Almacenamiento</string>
 
     <string name="state_BackupRestored">Copia de seguridad restaurada.</string>
+    <string name="state_FailedToSendMessage">No se pudo enviar el mensaje. Toque y mantenga para las opciones.</string>
     <string name="state_FileDeleted">Archivo borrado %s.</string>
     <string name="state_FileSent">Mensaje enviado.</string>
     <string name="state_InvitationAdded">Invitación agregó.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Cámara</string>
     <string name="title_ChooseDirectory">Elegir directorio</string>
     <string name="title_ChooseFileLoad">Escoja Su Adjunto</string>
+    <string name="title_clear">Claro</string>
     <string name="title_comments">Comentarios/Preguntas</string>
     <string name="title_Error">Error</string>
     <string name="title_ExchangeWalkthrough">Asistente de Claves en Cabestrillo</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Comience Intercambio</string>
     <string name="title_HomePanel">Inicio</string>
     <string name="title_MessageDetail">Mensaje</string>
+    <string name="title_MessageOptions">Opciones de mensajes</string>
     <string name="title_Messages">Mensajes</string>
     <string name="title_MyIdentity">Contacto Personal</string>
     <string name="title_NotifyFileAvailable">Mensaje SafeSlinger Disponible</string>

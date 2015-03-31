@@ -41,6 +41,7 @@
     <string name="btn_Close">Dicht</string>
     <string name="btn_Continue">Voortzetten</string>
     <string name="btn_CreateNewKey">Create New Key</string>
+    <string name="btn_Delete">Verwijderen</string>
     <string name="btn_DeleteKeys">Delete</string>
     <string name="btn_discard">Afdanken</string>
     <string name="btn_Done">Gedaan</string>
@@ -54,6 +55,7 @@
     <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Weigeren</string>
     <string name="btn_Remind">Herinneren</string>
+    <string name="btn_Retry">Opnieuw proberen</string>
     <string name="btn_Save">Opslaan</string>
     <string name="btn_SelectFile">Attachment Toevoegen</string>
     <string name="btn_SendFile">Sturen</string>
@@ -94,6 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">Registratie niet geverifieerd, gelieve later opnieuw te proberen handmatig.</string>
     <string name="error_C2DMRegInvalidSender">Registratie is niet beschikbaar voor deze versie, kijk dan voor een bijgewerkte versie.</string>
     <string name="error_C2DMRegPhoneRegistrationError">Onjuiste apparaat registratie bij Google. Dit apparaat ondersteunt momenteel geen push-berichten.</string>
+    <string name="error_C2DMRegPlayServicesMissing">Google Play Services is nodig om berichten te ontvangen. Installeer Google Play Services om verder te gaan.</string>
     <string name="error_C2DMRegServiceNotAvailable">Push-registratie service niet beschikbaar is, scheduling opnieuw proberen in %d seconden.</string>
     <string name="error_C2DMRegTooManyRegistrations">Te veel applicaties zijn geregistreerd voor Push. Deïnstalleer sommige andere toepassingen en probeer het opnieuw.</string>
     <string name="error_CannotSendEmptyFile">Kan een lege bijlage niet versturen.</string>
@@ -187,6 +190,7 @@
     <string name="label_hometag">Huis</string>
     <string name="label_hours">%d uur</string>
     <string name="label_iCloudEnable">SafeSlinger iCloud is ingeschakeld. Tik op de knop Gereed als u klaar bent.</string>
+    <string name="label_InstNoMessages">Geen berichten. Om een bericht, tikt u op het pictogram Nieuw bericht aan de bovenkant van je scherm te sturen.</string>
     <string name="label_InstNoRecipients">Als u ontvangers wilt toevoegen, moet u eerst Sling Toetsen met een of meer andere gebruikers op hetzelfde moment. Je kan ook een Sling sleutels uitnodiging van het menu te sturen.</string>
     <string name="label_InstNoRecipientsMatchQuery">Geen van uw huidige ontvangers overeenkomen met uw zoekopdracht. Probeer een andere vraag of uit te nodigen een nieuw contact.</string>
     <string name="label_InstNoSharedFile">Geen gedeelde bestand. Sluit uw apparaat met iTunes en sleep bestanden naar de gedeelde map.</string>
@@ -198,6 +202,7 @@
     <string name="label_Key">Toets:</string>
     <string name="label_LastName">Achternaam</string>
     <string name="label_Me">Mij</string>
+    <string name="label_messageAutomatedVerify">(%1$s heeft de sleutel voor %2$s bevestigd.)</string>
     <string name="label_messageIntroduceNameToYou">Ik wil graag %s aan u voor.</string>
     <string name="label_messageInviteInstall">SafeSlinger app: %s</string>
     <string name="label_messageInviteSetupInst">Voor het opzetten van een beveiligde messaging-verbinding, kunnen we elkaar ontmoeten of telefoon op hetzelfde moment, en dan Sling sleutels maar één keer om de verbinding te controleren.</string>
@@ -339,6 +344,7 @@
     <string name="section_storage">Opslagruimte</string>
 
     <string name="state_BackupRestored">Back-up hersteld.</string>
+    <string name="state_FailedToSendMessage">Nagelaten om bericht te sturen. Houd uw vinger op voor opties.</string>
     <string name="state_FileDeleted">Verwijderde bestand %s.</string>
     <string name="state_FileSent">Bericht verzonden.</string>
     <string name="state_InvitationAdded">Uitnodiging toegevoegd.</string>
@@ -378,6 +384,7 @@
     <string name="title_camera">Camera</string>
     <string name="title_ChooseDirectory">Kies Directory</string>
     <string name="title_ChooseFileLoad">Kies uw Attachment</string>
+    <string name="title_clear">Duidelijk</string>
     <string name="title_comments">Opmerkingen/Vragen</string>
     <string name="title_Error">Fout</string>
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -387,6 +394,7 @@
     <string name="title_home">Begin Exchange</string>
     <string name="title_HomePanel">Huis</string>
     <string name="title_MessageDetail">Bericht</string>
+    <string name="title_MessageOptions">Bericht Opties</string>
     <string name="title_Messages">Berichten</string>
     <string name="title_MyIdentity">Persoonlijk contact</string>
     <string name="title_NotifyFileAvailable">SafeSlinger Bericht Beschikbaar</string>
