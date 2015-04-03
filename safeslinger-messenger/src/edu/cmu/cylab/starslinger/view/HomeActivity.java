@@ -1176,7 +1176,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         // start background task to send
         SendMessageTask task = new SendMessageTask();
-        task.execute(mts);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+			task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, mts);
+		else
+			task.execute(mts);
+//        task.execute(mts);
     }
 
     private void setTab(Tabs tab) {
@@ -1403,7 +1407,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
                 if (inbox.getMsgHash() != null) {
                     GetMessageTask getMessageTask = new GetMessageTask();
-                    getMessageTask.execute(inbox);
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                    	getMessageTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, inbox);
+            		else
+            			getMessageTask.execute(inbox);
+//                    getMessageTask.execute(inbox);
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
                     refreshView();
@@ -1420,7 +1428,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
                 if (recvFile.getMsgHash() != null) {
                     GetFileTask getFileTask = new GetFileTask();
-                    getFileTask.execute(recvFile);
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                    	getFileTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, recvFile);
+            		else
+            			getFileTask.execute(recvFile);
+//                    getFileTask.execute(recvFile);
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
                     refreshView();
@@ -1761,7 +1773,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                 boolean preExistingKey = doPassEntryCheck(passNew, null, false);
                                 if (!preExistingKey) {
                                     CreateKeyTask createKey = new CreateKeyTask();
-                                    createKey.execute(passNew);
+                                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                                    	createKey.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, passNew);
+                            		else
+                            			createKey.execute(passNew);
+//                                    createKey.execute(passNew);
                                     break;
                                 }
                             } else if (requestCode == VIEW_PASSPHRASE_CHANGE_ID) {
@@ -1783,7 +1799,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             // if requested, logged in, try to decrypt pending
                             if (SafeSlingerPrefs.getAutoDecrypt() && !TextUtils.isEmpty(passCached)) {
                                 DecryptPendingTask decryptPending = new DecryptPendingTask();
-                                decryptPending.execute(passCached);
+                                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                                	decryptPending.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, passCached);
+                        		else
+                        			decryptPending.execute(passCached);
+//                                decryptPending.execute(passCached);
                             }
 
                             // if logged in, post any pending registrations
@@ -1794,7 +1814,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                 SlingerIdentity myId = new SlingerIdentity(pushRegistrationId,
                                         notify, null);
                                 UpdateServerRegistrationIdTask regUpdate = new UpdateServerRegistrationIdTask();
-                                regUpdate.execute(myId);
+                                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                                	regUpdate.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, myId);
+                        		else
+                        			regUpdate.execute(myId);
+//                                regUpdate.execute(myId);
                             }
                         }
                         isSetupCheckComplete();
@@ -1853,7 +1877,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                     d.setRecip(recip);
 
                                     CheckRegistrationStateTask task = new CheckRegistrationStateTask();
-                                    task.execute(recip);
+                                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                            			task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, recip);
+                            		else
+                            			task.execute(recip);
+//                                    task.execute(recip);
                                     if (requestCode == VIEW_RECIPSEL_FORFILE_ID
                                             || requestCode == VIEW_RECIPSEL_FORFWD_ID) {
                                         // create draft
