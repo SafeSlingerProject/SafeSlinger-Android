@@ -1,3 +1,7 @@
+Travis CI Build Status
+
+[![Build Status](https://travis-ci.org/SafeSlingerProject/SafeSlinger-Android.png?branch=master)](https://travis-ci.org/SafeSlingerProject/SafeSlinger-Android)
+
 SafeSlinger Android Client
 ===================
 The open source SafeSlinger Exchange library is a secure and easy to use method of exchanging public keys or other authentication data, with strong protection from Man-In-The-Middle (MITM) attacks. Our goal is to make exchanging public keys as simple as possible without sacrificing security. Our [research paper](http://sparrow.ece.cmu.edu/group/pub/farb_safeslinger_mobicom2013.pdf), presented at MobiCom '13, provides a technical analysis of SafeSlinger's key exchange properties.
