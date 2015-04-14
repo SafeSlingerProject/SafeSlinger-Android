@@ -34,8 +34,8 @@ import android.text.TextUtils;
 public class SafeSlingerConfig {
 
     public static final String HTTPURL_PREFIX = "https://";
-    public static final String HTTPURL_MESSENGER_HOST = "starsling-server.appspot.com";
-    public static final String HTTPURL_EXCHANGE_HOST = "keyslinger-server.appspot.com";
+    public static final String HTTPURL_MESSENGER_HOST = "safeslinger-messenger.appspot.com";
+    public static final String HTTPURL_EXCHANGE_HOST = "safeslinger-exchange.appspot.com";
     public static final String HTTPURL_SUFFIX = "";
     public static final String PUSH_SENDERID_EMAIL = "starslingerapp@gmail.com";
     public static final String KEY_COMMENT = "SafeSlinger";
