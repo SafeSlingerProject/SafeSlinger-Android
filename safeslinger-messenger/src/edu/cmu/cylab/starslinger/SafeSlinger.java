@@ -549,14 +549,14 @@ public class SafeSlinger extends Application {
     private Runnable getPendingMessageDownloads = new Runnable() {
 
         @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-		@Override
+        @Override
         public void run() {
             GetPendingMessagesTask getPendingMessages = new GetPendingMessagesTask();
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-            	getPendingMessages.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new String());
-    		else
-    			getPendingMessages.execute(new String());
-//            getPendingMessages.execute(new String());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                getPendingMessages.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new String());
+            else
+                getPendingMessages.execute(new String());
+            // getPendingMessages.execute(new String());
         }
     };
 

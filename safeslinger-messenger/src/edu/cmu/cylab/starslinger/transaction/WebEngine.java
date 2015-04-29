@@ -50,6 +50,7 @@ import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
+import edu.cmu.cylab.starslinger.crypto.CryptoMsgProvider;
 import edu.cmu.cylab.starslinger.exchange.CheckedHttpClient;
 
 /**
@@ -182,25 +183,41 @@ public class WebEngine {
      * id they use for the key changes due to migrating to a new device, service
      * migration, registration expiration, others.
      */
-    public byte[] postRegistration(String keyId, String submisisonToken, String senderPushRegId,
-            int notifyType) throws ExchangeException, MessageNotFoundException {
+    public byte[] postRegistration(String keyId, String senderPushRegId, int notifyType,
+            byte[] nonce, String pubSignKey, String priSignKey) throws ExchangeException,
+            MessageNotFoundException {
 
+        String subToken_Deprecated = new String(); // always empty
         int capacity = mVersionLen //
                 + 4 + keyId.length() //
-                + 4 + submisisonToken.length() //
+                + 4 + subToken_Deprecated.length() //
                 + 4 + senderPushRegId.length() //
-                + 4;
+                + 4 //
+                + 4 + nonce.length //
+                + 4 + pubSignKey.length();
         ByteBuffer msg = ByteBuffer.allocate(capacity);
         msg.putInt(mVersion);
+        // authentication fields type 1
         msg.putInt(keyId.length());
         msg.put(keyId.getBytes());
-        msg.putInt(submisisonToken.length());
-        msg.put(submisisonToken.getBytes());
+        msg.putInt(subToken_Deprecated.length());
+        msg.put(subToken_Deprecated.getBytes());
         msg.putInt(senderPushRegId.length());
         msg.put(senderPushRegId.getBytes());
         msg.putInt(notifyType);
+        // more authentication fields for type 2
+        msg.putInt(nonce.length);
+        msg.put(nonce);
+        msg.putInt(pubSignKey.length());
+        msg.put(pubSignKey.getBytes());
+        CryptoMsgProvider p = CryptoMsgProvider.createInstance(SafeSlinger.isLoggable());
+        byte[] sig = p.Sign(priSignKey, msg.array());
+        ByteBuffer msgSign = ByteBuffer.allocate(msg.capacity() + 4 + sig.length);
+        msgSign.put(msg.array());
+        msgSign.putInt(sig.length);
+        msgSign.put(sig);
 
-        byte[] resp = doPost(mUrlPrefix + mHost + "/postRegistration" + mUrlSuffix, msg.array());
+        byte[] resp = doPost(mUrlPrefix + mHost + "/postRegistration" + mUrlSuffix, msgSign.array());
 
         resp = handleResponseExceptions(resp, 0);
 

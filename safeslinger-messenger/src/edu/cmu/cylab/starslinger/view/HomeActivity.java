@@ -30,6 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.security.InvalidParameterException;
+import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -1176,11 +1177,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         // start background task to send
         SendMessageTask task = new SendMessageTask();
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-			task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, mts);
-		else
-			task.execute(mts);
-//        task.execute(mts);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+            task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, mts);
+        else
+            task.execute(mts);
+        // task.execute(mts);
     }
 
     private void setTab(Tabs tab) {
@@ -1407,11 +1408,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
                 if (inbox.getMsgHash() != null) {
                     GetMessageTask getMessageTask = new GetMessageTask();
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                    	getMessageTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, inbox);
-            		else
-            			getMessageTask.execute(inbox);
-//                    getMessageTask.execute(inbox);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                        getMessageTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, inbox);
+                    else
+                        getMessageTask.execute(inbox);
+                    // getMessageTask.execute(inbox);
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
                     refreshView();
@@ -1428,11 +1429,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
                 if (recvFile.getMsgHash() != null) {
                     GetFileTask getFileTask = new GetFileTask();
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                    	getFileTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, recvFile);
-            		else
-            			getFileTask.execute(recvFile);
-//                    getFileTask.execute(recvFile);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                        getFileTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, recvFile);
+                    else
+                        getFileTask.execute(recvFile);
+                    // getFileTask.execute(recvFile);
                 } else {
                     showNote(R.string.error_InvalidIncomingMessage);
                     refreshView();
@@ -1773,11 +1774,12 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                 boolean preExistingKey = doPassEntryCheck(passNew, null, false);
                                 if (!preExistingKey) {
                                     CreateKeyTask createKey = new CreateKeyTask();
-                                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                                    	createKey.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, passNew);
-                            		else
-                            			createKey.execute(passNew);
-//                                    createKey.execute(passNew);
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                                        createKey.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,
+                                                passNew);
+                                    else
+                                        createKey.execute(passNew);
+                                    // createKey.execute(passNew);
                                     break;
                                 }
                             } else if (requestCode == VIEW_PASSPHRASE_CHANGE_ID) {
@@ -1799,11 +1801,12 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             // if requested, logged in, try to decrypt pending
                             if (SafeSlingerPrefs.getAutoDecrypt() && !TextUtils.isEmpty(passCached)) {
                                 DecryptPendingTask decryptPending = new DecryptPendingTask();
-                                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                                	decryptPending.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, passCached);
-                        		else
-                        			decryptPending.execute(passCached);
-//                                decryptPending.execute(passCached);
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                                    decryptPending.executeOnExecutor(
+                                            AsyncTask.THREAD_POOL_EXECUTOR, passCached);
+                                else
+                                    decryptPending.execute(passCached);
+                                // decryptPending.execute(passCached);
                             }
 
                             // if logged in, post any pending registrations
@@ -1814,11 +1817,12 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                 SlingerIdentity myId = new SlingerIdentity(pushRegistrationId,
                                         notify, null);
                                 UpdateServerRegistrationIdTask regUpdate = new UpdateServerRegistrationIdTask();
-                                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                                	regUpdate.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, myId);
-                        		else
-                        			regUpdate.execute(myId);
-//                                regUpdate.execute(myId);
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                                    regUpdate.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,
+                                            myId);
+                                else
+                                    regUpdate.execute(myId);
+                                // regUpdate.execute(myId);
                             }
                         }
                         isSetupCheckComplete();
@@ -1877,11 +1881,12 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                     d.setRecip(recip);
 
                                     CheckRegistrationStateTask task = new CheckRegistrationStateTask();
-                                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                            			task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, recip);
-                            		else
-                            			task.execute(recip);
-//                                    task.execute(recip);
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                                        task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,
+                                                recip);
+                                    else
+                                        task.execute(recip);
+                                    // task.execute(recip);
                                     if (requestCode == VIEW_RECIPSEL_FORFILE_ID
                                             || requestCode == VIEW_RECIPSEL_FORFWD_ID) {
                                         // create draft
@@ -3144,9 +3149,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 if (!TextUtils.isEmpty(pass)) {
                     CryptoMsgPrivateData mine = CryptTools.getSecretKey(pass);
                     String keyId = mine.getKeyId();
-                    String submisisonToken = Base64.encodeToString(
-                            CryptTools.computeSha3Hash(mine.getSignPriKey().getBytes()),
-                            Base64.NO_WRAP);
+                    SecureRandom sr = new SecureRandom();
+                    byte[] nonce = new byte[32];
+                    sr.nextBytes(nonce);
+                    String pubkey = mine.getSignPubKey();
+                    String SignKey = mine.getSignPriKey();
 
                     // is local old regs exist and have pass?
                     List<String> oldRegIdKeys = new ArrayList<String>();
@@ -3175,8 +3182,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                     && !senderPushRegId
                                             .equals(SafeSlingerConfig.NOTIFY_NOPUSH_TOKENDATA)) {
                                 // post old regs
-                                byte[] result = mWeb.postRegistration(keyId, submisisonToken,
-                                        senderPushRegId, notifyType);
+                                byte[] result = mWeb.postRegistration(keyId, senderPushRegId,
+                                        notifyType, nonce, pubkey, SignKey);
 
                                 // remove local old regs
                                 if (result != null) {
@@ -3198,8 +3205,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         // only upload valid registration ids
                         if (!TextUtils.isEmpty(senderPushRegId)) {
                             // post local active reg
-                            byte[] result = mWeb.postRegistration(keyId, submisisonToken,
-                                    senderPushRegId, notifyType);
+                            byte[] result = mWeb.postRegistration(keyId, senderPushRegId,
+                                    notifyType, nonce, pubkey, SignKey);
 
                             // update local active regisLinked
                             if (result != null) {

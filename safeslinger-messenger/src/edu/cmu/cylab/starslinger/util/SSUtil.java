@@ -73,16 +73,15 @@ import edu.cmu.cylab.starslinger.model.SlingerIdentity;
 
 public class SSUtil {
 
-	
-//	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-//	public static void executeAsyncTask(Impork, Object params)
-//	{
-//		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-//			task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, params);
-//		else
-//			task.execute(params);
-//		
-//	}
+    // @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    // public static void executeAsyncTask(Impork, Object params)
+    // {
+    // if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+    // task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, params);
+    // else
+    // task.execute(params);
+    //
+    // }
     // or "ISO-8859-1" for ISO Latin 1
     private static CharsetEncoder asciiEncoder = Charset.forName("US-ASCII").newEncoder();
 

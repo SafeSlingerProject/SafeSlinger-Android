@@ -733,7 +733,7 @@ public abstract class CryptoMsgProvider {
 
     protected abstract String GetEncRKey();
 
-    protected abstract byte[] Sign(String prikey, byte[] text);
+    public abstract byte[] Sign(String prikey, byte[] text);
 
     protected abstract boolean Verify(String pubkey, byte[] text, byte[] signature);
 

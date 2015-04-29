@@ -786,7 +786,7 @@ public class JavaXCryptoWrapper extends CryptoMsgProvider {
     }
 
     @Override
-    protected byte[] Sign(String prikey, byte[] ptext) {
+    public byte[] Sign(String prikey, byte[] ptext) {
         try {
             CryptLog.i(DebugFlag, TAG, " Start Sign operation ..");
 

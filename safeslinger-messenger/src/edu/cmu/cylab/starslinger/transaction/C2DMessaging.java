@@ -25,6 +25,7 @@
 package edu.cmu.cylab.starslinger.transaction;
 
 import java.io.IOException;
+import java.security.SecureRandom;
 import java.util.Date;
 
 import android.app.AlarmManager;
@@ -33,7 +34,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.text.TextUtils;
-import android.util.Base64;
 import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
@@ -332,14 +332,16 @@ public class C2DMessaging {
                 if (!TextUtils.isEmpty(pass)) {
                     CryptoMsgPrivateData mine = CryptTools.getSecretKey(pass);
                     String keyId = mine.getKeyId();
-                    String submisisonToken = Base64.encodeToString(
-                            CryptTools.computeSha3Hash(mine.getSignPriKey().getBytes()),
-                            Base64.NO_WRAP);
+                    SecureRandom sr = new SecureRandom();
+                    byte[] nonce = new byte[32];
+                    sr.nextBytes(nonce);
+                    String pubkey = mine.getSignPubKey();
+                    String SignKey = mine.getSignPriKey();
                     // only upload valid registration ids
                     if (!TextUtils.isEmpty(registrationId)) {
                         // post local active reg
-                        byte[] result = web.postRegistration(keyId, submisisonToken,
-                                registrationId, SafeSlingerConfig.NOTIFY_ANDROIDGCM);
+                        byte[] result = web.postRegistration(keyId, registrationId,
+                                SafeSlingerConfig.NOTIFY_ANDROIDGCM, nonce, pubkey, SignKey);
 
                         // update local active regisLinked
                         if (result != null) {
