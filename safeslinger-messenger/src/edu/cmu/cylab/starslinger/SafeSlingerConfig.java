@@ -98,9 +98,10 @@ public class SafeSlingerConfig {
     public static final int NOTIFY_ANDROIDC2DM = 1;
     /***
      * This token type receives messages via Apple's Notification Service,
-     * through Urban Airship for iOS. Value: 2.
+     * through Urban Airship for iOS. This token type receives messages via
+     * Apple's Notification Service, directly through APNS for iOS. Value: 2.
      */
-    public static final int NOTIFY_APPLEUA = 2;
+    public static final int NOTIFY_APPLEAPNS = 2;
     /***
      * This token type receives messages via Google's Cloud Messaging Service
      * for Android. Value: 3.
@@ -117,10 +118,9 @@ public class SafeSlingerConfig {
      */
     public static final int NOTIFY_BLACKBERRYPS = 5;
     /***
-     * This token type receives messages via Apple's Notification Service,
-     * directly through APNS for iOS. Value: 6.
+     * Deprecated. Value: 6.
      */
-    public static final int NOTIFY_APPLEAPNS = 6;
+    public static final int NOTIFY_APPLE_DEP = 6;
     /***
      * This token type receives messages via Amazon Device Messaging for Amazon
      * Fire OS. Value: 7.

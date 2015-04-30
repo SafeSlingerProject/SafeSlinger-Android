@@ -385,8 +385,6 @@ public class SSUtil {
                 return ctx.getString(R.string.label_AndroidC2DMServiceName);
             case SafeSlingerConfig.NOTIFY_ANDROIDGCM:
                 return ctx.getString(R.string.label_AndroidGCMServiceName);
-            case SafeSlingerConfig.NOTIFY_APPLEUA:
-                return ctx.getString(R.string.label_iOSUAServiceName);
             case SafeSlingerConfig.NOTIFY_APPLEAPNS:
                 return ctx.getString(R.string.label_iOSAPNServiceName);
             case SafeSlingerConfig.NOTIFY_WINPHONEMPNS:
@@ -409,8 +407,6 @@ public class SSUtil {
                 return ctx.getString(R.string.label_AndroidOS);
             case SafeSlingerConfig.NOTIFY_ANDROIDGCM:
                 return ctx.getString(R.string.label_AndroidOS);
-            case SafeSlingerConfig.NOTIFY_APPLEUA:
-                return ctx.getString(R.string.label_iOS);
             case SafeSlingerConfig.NOTIFY_APPLEAPNS:
                 return ctx.getString(R.string.label_iOS);
             case SafeSlingerConfig.NOTIFY_WINPHONEMPNS:

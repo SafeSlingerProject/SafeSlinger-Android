@@ -1873,20 +1873,13 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                         // reset registration to 0 to enable
                                         // test reply
                                         if (!dbRecipient.updateRecipientRegistrationState(
-                                                recip.getRowId(), true)) {
+                                                recip.getRowId(), false)) {
                                             showNote(R.string.error_UnableToUpdateMessageInDB);
                                         }
                                         recip.setNotRegDate(0L);
                                     }
                                     d.setRecip(recip);
 
-                                    CheckRegistrationStateTask task = new CheckRegistrationStateTask();
-                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                                        task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,
-                                                recip);
-                                    else
-                                        task.execute(recip);
-                                    // task.execute(recip);
                                     if (requestCode == VIEW_RECIPSEL_FORFILE_ID
                                             || requestCode == VIEW_RECIPSEL_FORFWD_ID) {
                                         // create draft
@@ -3240,53 +3233,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         protected void onPostExecute(String error) {
             if (!TextUtils.isEmpty(error)) {
                 showNote(error);
-            }
-        }
-    }
-
-    private class CheckRegistrationStateTask extends AsyncTask<RecipientRow, String, String> {
-        private WebEngine mWeb = new WebEngine(HomeActivity.this,
-                SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
-        private long mRowId;
-
-        @Override
-        protected String doInBackground(RecipientRow... recips) {
-            RecipientRow recip = recips[0];
-            if (recip == null) {
-                return getString(R.string.error_InvalidRecipient);
-            }
-            mRowId = recip.getRowId();
-
-            try {
-                int notify = recip.getNotify();
-                switch (notify) {
-                    case SafeSlingerConfig.NOTIFY_APPLEUA:
-                        mWeb.checkStatusAppleUA(recip.getPushtoken());
-                        break;
-                    default:
-                        // do nothing for non-UA types
-                        break;
-                }
-            } catch (ExchangeException e) {
-                return e.getLocalizedMessage();
-            } catch (MessageNotFoundException e) {
-                return e.getLocalizedMessage();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String error) {
-            if (!TextUtils.isEmpty(error)) {
-                showNote(error);
-            }
-            boolean notreg = mWeb.isNotRegistered();
-            if (notreg) {
-                RecipientDbAdapter dbRecipient = RecipientDbAdapter
-                        .openInstance(getApplicationContext());
-                if (!dbRecipient.updateRecipientRegistrationState(mRowId, notreg)) {
-                    showNote(R.string.error_UnableToUpdateMessageInDB);
-                }
             }
         }
     }

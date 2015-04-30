@@ -265,34 +265,6 @@ public class WebEngine {
     }
 
     /**
-     * check for iOS activation
-     * 
-     * @throws MessageNotFoundException
-     */
-    public byte[] checkStatusAppleUA(String recipientToken) throws ExchangeException,
-            MessageNotFoundException {
-
-        int capacity = mVersionLen //
-                + 4 + recipientToken.length() //
-                + 4;
-        ByteBuffer msg = ByteBuffer.allocate(capacity);
-        msg.putInt(mVersion);
-        msg.putInt(recipientToken.length());
-        msg.put(recipientToken.getBytes());
-        msg.putInt(SafeSlingerConfig.NOTIFY_APPLEUA);
-
-        mNotRegistered = false;
-
-        byte[] resp = doPost(mUrlPrefix + mHost + "/checkStatus" + mUrlSuffix, msg.array());
-
-        mNotRegistered = isNotRegisteredErrorCodes(resp);
-
-        resp = handleResponseExceptions(resp, 0);
-
-        return resp;
-    }
-
-    /**
      * get a file, based on the retrieval id from the server
      * 
      * @throws MessageNotFoundException
