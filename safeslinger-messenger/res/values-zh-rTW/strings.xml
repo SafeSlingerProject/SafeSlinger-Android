@@ -88,7 +88,7 @@
     <string name="error_AudioPlayerDecodeError">解碼錯誤，無法播放錄音。</string>
     <string name="error_AudioPlayerError">無法播放錄音。</string>
     <string name="error_AudioRecorderEncodeError">錄音編碼錯誤。</string>
-    <string name="error_AudioRecorderPermissionError">麥克風的權限，需要記錄一個安全的語音留言。點擊%s按鈕SafeSlinger麥克風權限的詳細信息。</string>
+    <string name="error_AudioRecorderPermissionError">麥克風權限需要記錄一個安全的語音留言。點擊%s按鈕SafeSlinger麥克風權限的詳細信息。</string>
     <string name="error_BackupNotFound">無法找到備份。</string>
     <string name="error_BackupNotSupportedDevice">手機不支援備份還原。</string>
     <string name="error_BadCopyProtectUpgrade">由於Android 4.1的中程序錯誤，你必須移除並重新安裝SafeSlinger。</string>
@@ -96,7 +96,7 @@
     <string name="error_C2DMRegAuthenticationFailed">訊息通知註冊未通過身份驗證，請稍後手動重試。</string>
     <string name="error_C2DMRegInvalidSender">此版本無法進行訊息通知註冊，請檢查新的版本並安裝。</string>
     <string name="error_C2DMRegPhoneRegistrationError">該設備在Google服務註冊失敗。目前此設備不支持訊息通知服務。</string>
-    <string name="error_C2DMRegPlayServicesMissing">谷歌播放服務需要接收消息。請安裝谷歌播放服務繼續。</string>
+    <string name="error_C2DMRegPlayServicesMissing">谷歌播放服務是需要接收消息。請安裝谷歌播放服務繼續。</string>
     <string name="error_C2DMRegServiceNotAvailable">目前訊息通知服務的註冊功能無法使用，請在%d秒後嘗試註冊。</string>
     <string name="error_C2DMRegTooManyRegistrations">太多的應用程序註冊訊息通知服務。請移除其他的應用程序，然後重試。</string>
     <string name="error_CannotSendEmptyFile">無法傳送空檔案。</string>
@@ -155,12 +155,12 @@
     <string name="help_Send">該畫面允許你選擇資料與收件人來寄送訊息。完成後按下傳送按鈕寄送。</string>
     <string name="help_settings">這個畫面允許你改變應用程序的預設設置。</string>
 
-    <string name="iOS_cameraError">攝像機權限是必需的附加快照，以確保郵件。點擊%s按鈕SafeSlinger相機權限的詳細信息。</string>
-    <string name="iOS_contactError">聯繫人許可，才能進行安全地共享聯繫人卡片。點擊%s按鈕SafeSlinger聯繫人權限的詳細信息。</string>
+    <string name="iOS_cameraError">攝像頭權限是必需的附加快照，以確保郵件。點擊%s按鈕SafeSlinger相機權限的詳細信息。</string>
+    <string name="iOS_contactError">聯繫方式許可，才能進行安全地共享聯繫人卡片。點擊%s按鈕SafeSlinger聯繫人權限的詳細信息。</string>
     <string name="iOS_errorpushtoken">訊息通知辨識碼失效。</string>
-    <string name="iOS_notificationError1">對於任何警報或橫幅，徽章號碼通知的權限，都需要安全的信息傳遞。點擊%s按鈕SafeSlinger通知權限的詳細信息。</string>
+    <string name="iOS_notificationError1">對於任何警報或橫幅和徽章號通知允許，都需要安全的信息傳遞。點擊%s按鈕SafeSlinger通知權限的詳細信息。</string>
     <string name="iOS_oldOSWarn">SafeSlinger並沒有為iOS 5.x的設備進行優化。SafeSlinger需要iOS6或更高系統版本。</string>
-    <string name="iOS_photolibraryError">圖片庫的權限，需要附上圖片，以確保郵件。點擊%s按鈕SafeSlinger圖片庫權限的詳細信息。</string>
+    <string name="iOS_photolibraryError">圖片庫權限是必需的附加圖片，以確保郵件。點擊%s按鈕SafeSlinger圖片庫權限的詳細信息。</string>
     <string name="iOS_RequestPermissionContacts">您可以從手機裝置中選擇您的聯繫資料並發送您的朋友，訊息將被SafeSlinger加密保護。要啟用此功能，您必須在應用程式詢問時允許SafeSlinger存取聯絡資訊隱私權限。</string>
     <string name="iOS_RequestPermissionMicrophone">您可以錄製語音訊息並發送您的朋友，訊息將被SafeSlinger加密保護。要啟用此功能，您必須在應用程式詢問時允許SafeSlinger存取麥克風權限。</string>
     <string name="iOS_RequestPermissionNotifications">SafeSlinger是一個加密訊息應用程式，如果沒有允許訊息通知功能，程式將無法正常接受加密訊息。要啟用接收加密訊息功能，您必須在應用程式詢問時允許SafeSlinger使用訊息通知權限。</string>
@@ -190,7 +190,7 @@
     <string name="label_hometag">家用電話</string>
     <string name="label_hours">%d小時</string>
     <string name="label_iCloudEnable">SafeSlinger的iClou備份已啟用。</string>
-    <string name="label_InstNoMessages">沒有任何消息。要發送信息，輕點新郵件圖標在屏幕的頂部。</string>
+    <string name="label_InstNoMessages">沒有消息。要發送信息，請點擊上的新郵件圖標在屏幕的頂部。</string>
     <string name="label_InstNoRecipients">要添加收件人，您必須先與一個或多個用戶去交換金鑰。您也可以從選單中送出金鑰交換的邀請訊息。</string>
     <string name="label_InstNoRecipientsMatchQuery">無你目前的收件人符合您的搜索查詢。請嘗試不同的查詢或邀請新的聯繫人。</string>
     <string name="label_InstNoSharedFile">沒有共享的文件。連接您的設備並開啟iTunes，拖曳文件到共享文件夾。</string>
@@ -202,7 +202,7 @@
     <string name="label_Key">金鑰日期:</string>
     <string name="label_LastName">姓</string>
     <string name="label_Me">我</string>
-    <string name="label_messageAutomatedVerify">（%1$s已確認的關鍵%2$s。）</string>
+    <string name="label_messageAutomatedVerify">（%1$s已經確認鍵%2$s。）</string>
     <string name="label_messageIntroduceNameToYou">我想介紹%s給你。</string>
     <string name="label_messageInviteInstall">SafeSlinger應用程序： %s</string>
     <string name="label_messageInviteSetupInst">設置一個安全訊息管道，我們可以透過碰面或打電話給對方並進行一次金鑰交換驗證。</string>
@@ -241,7 +241,7 @@
     <string name="label_SendFrom">寄件人：</string>
     <string name="label_SendTo">收件人：</string>
     <string name="label_ShowHintAtLaunch">下一次顯示此提示</string>
-    <string name="label_SpeechRecognitionAlert">使用語音識別被禁用，因為它可能導致信息洩露</string>
+    <string name="label_SpeechRecognitionAlert">使用語音識別被禁用，因為它可能會導致信息洩露</string>
     <string name="label_step_1">第1步</string>
     <string name="label_step_2">第2步</string>
     <string name="label_step_3">第3步</string>
@@ -292,7 +292,7 @@
     <string name="menu_Help">協助</string>
     <string name="menu_Introduction">安全介紹</string>
     <string name="menu_language">語言</string>
-    <string name="menu_License">許可</string>
+    <string name="menu_License">許可證</string>
     <string name="menu_link_contact_add">加入收件人聯絡資訊</string>
     <string name="menu_link_contact_change">改變收件人聯絡資訊</string>
     <string name="menu_Logout">登出</string>
@@ -360,11 +360,11 @@
     <string name="text_About1">快速且方便地與其他人交換聯絡資訊</string>
     <string name="text_About2">安全地投遞(sling)文字相片甚至任何形式的資料！</string>
     <string name="text_About3">透過強健密碼系統保護你的個人資訊</string>
-    <string name="text_About_Short">SafeSlinger：說出3個字，並在和平永遠聊天。</string>
+    <string name="text_About_Short">SafeSlinger：講3個字，並在和平永遠聊天。</string>
     <string name="text_AboutEmail">電子郵件: %s</string>
     <string name="text_AboutFeat">特點:</string>
     <string name="text_AboutWeb">網頁: %s</string>
-    <string name="text_DevelopedBy">開發者：</string>
+    <string name="text_DevelopedBy">開發的：</string>
     <string name="text_KeywordExchange">交換</string>
     <string name="text_KeywordIdentity">特性</string>
     <string name="text_KeywordKey">關鍵字</string>

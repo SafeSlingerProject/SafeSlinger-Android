@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d χρήστες</string>
 
-    <string name="error_AllMembersMustUpgrade">Μερικά μέλη χρησιμοποιώντας μια παλαιότερη έκδοση? όλα τα μέλη πρέπει να αναβαθμίσουν στην τελευταία έκδοση.</string>
+    <string name="error_AllMembersMustUpgrade">Ορισμένα μέλη χρησιμοποιείτε μια παλαιότερη έκδοση? όλα τα μέλη πρέπει να αναβαθμίσουν στην τελευταία έκδοση.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Όλα τα μέλη πρέπει να αναβαθμίσουν, ορισμένα χρησιμοποιούν παλαιότερη έκδοση push registration.</string>
     <string name="error_CorrectYourInternetConnection">Το internet δεν είναι διαθέσιμo, ελέγξτε τις ρυθμίσεις σας.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Υπέρβαση χρονικού ορίου ανταλλαγής.Προσπαθήστε ξανά.</string>
@@ -62,7 +62,7 @@
     <string name="label_UserIdHint">Μικρότερος</string>
     <string name="label_VerifyInstruct">Όλα τα κινητά τηλέφωνα πρέπει να συφωνήσουν σε μια κοινη ομάδα 3 λέξεων. Συγκρίνετε και επιλέξτε την κοινή ομάδα.</string>
 
-    <string name="lib_name">SafeSlinger Exchange</string>
+    <string name="lib_name">SafeSlinger Ανταλλαγή</string>
 
     <string name="prog_CollectingOthersCommitVerify">αναμονή για επιβεβαίωση από όλα τα μέλη…</string>
     <string name="prog_CollectingOthersItems">αναμονή για σύνδεση όλων των χρηστών…</string>

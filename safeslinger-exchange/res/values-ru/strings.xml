@@ -30,19 +30,19 @@
     <string name="btn_Match">Далее</string>
     <string name="btn_NoMatch">Нет совпадений</string>
 
-    <string name="choice_NumUsers">Пользователей-%d</string>
+    <string name="choice_NumUsers">%d пользователей</string>
 
     <string name="error_AllMembersMustUpgrade">Некоторые члены используете старую версию; все члены должны обновить до последней версии.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Все члены должны обновить, некоторые используют устаревшие форматы ID уведомлений.</string>
     <string name="error_CorrectYourInternetConnection">Интернет не доступен, проверьте настройки.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Время ожидания про обмене превышено, начать обмен заново.</string>
     <string name="error_HttpCode">HTTP oшибка сервера: %d</string>
-    <string name="error_InvalidCommitVerify">Неправильные данные, найденные в результате обменных операций. Начните обмен снова.</string>
+    <string name="error_InvalidCommitVerify">Неправильные данные найдены в обмен. Начните обмен снова.</string>
     <string name="error_InvalidCommonUserId">Пожалуйста, введите целое положительное число.</string>
-    <string name="error_LocalGroupCommitDiffer">Вы заявили разницу в фразы. Начните обмен снова.</string>
+    <string name="error_LocalGroupCommitDiffer">Вы сообщили разницу в фраз. Начните обмен снова.</string>
     <string name="error_MinUsersRequired">Для обмена данными необходимо как минимум %d членов.</string>
-    <string name="error_MoreDataThanUsers">Неожиданные данные, найденные в результате обменных операций. Начните обмен снова.</string>
-    <string name="error_NoDataToExchange">Обмен отсутствуют необходимые данные.</string>
+    <string name="error_MoreDataThanUsers">Неожиданные данные найдены в обмен. Начните обмен снова.</string>
+    <string name="error_NoDataToExchange">Обмен отсутствует необходимые данные.</string>
     <string name="error_NoWordListSelected">Вы должны выбрать одну из фраз, прежде чем продолжить.</string>
     <string name="error_OtherGroupCommitDiffer">Кто-то сообщил разницу в фразы. Начните обмен снова.</string>
     <string name="error_OutOfMemoryError">Слишком мало памяти для выполнения этой команды.</string>
@@ -51,18 +51,18 @@
     <string name="error_TimeoutWaitingForAllMembers">Истек срок ожидания того, что некоторые члены группы добавят данные.</string>
     <string name="error_WebCancelledByUser">Пользователь отменил запрос к серверу.</string>
 
-    <string name="help_size">Выберите количество людей, которые пытаются обмениваться данными друг с другом, и нажмите OK.</string>
-    <string name="help_userid">Это число на экране используется для создания уникальной группы пользователей. Рассмотрите номера на экранах всех пользователей, затем все пользователи должны ввести самый низкий номер и нажать OK</string>
+    <string name="help_size">Выберите количество людей, которые пытаются обмениваться данными вместе и нажмите кнопку ОК.</string>
+    <string name="help_userid">Это число на экране используется для создания уникальной группы пользователей. Просмотрите номера на экранах всех пользователей, то все пользователи должны ввести тот же самый низкий номер и нажмите OK.</string>
     <string name="help_verify">Теперь вы должны соотнести одну из фраз из 3х слов со всеми пользователями. Каждый пользователь должен выбрать ту же общую фразу и нажать ‘Далее’.</string>
 
-    <string name="label_CompareScreensNDevices">Сравнение экранов на %s устройств.</string>
+    <string name="label_CompareScreensNDevices">Сравните экранов на %s устройств.</string>
     <string name="label_NumericModeHint">Не на английском языке</string>
     <string name="label_PromptInstruct">Этот номер используется для создания уникальной группы пользователей. Сравните, затем введите наименьший номер среди всех пользователей.</string>
-    <string name="label_ReceivedNItems">Полученных файлов-%d</string>
+    <string name="label_ReceivedNItems">получил %d пунктов</string>
     <string name="label_UserIdHint">Самый низкий</string>
     <string name="label_VerifyInstruct">У всех телефонов должна совпасть одна из фраз из трех слов. Сравните и выберите совпавшую фразу.</string>
 
-    <string name="lib_name">SafeSlinger биржа</string>
+    <string name="lib_name">SafeSlinger Обмен</string>
 
     <string name="prog_CollectingOthersCommitVerify">ожидается подтверждение от всех членов…</string>
     <string name="prog_CollectingOthersItems">ожидаем, чтобы присоединились все пользователи…</string>

@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d usuarios</string>
 
-    <string name="error_AllMembersMustUpgrade">Algunos miembros están utilizando una versión anterior; todos los miembros deben actualizar a la versión más nueva.</string>
+    <string name="error_AllMembersMustUpgrade">Algunos miembros están utilizando una versión anterior; todos los miembros deben actualizar a la versión más reciente.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Todos los miembros deben actualizar, algunos están utilizando los formatos antiguos de registro de pulso.</string>
     <string name="error_CorrectYourInternetConnection">El Internet no está disponible, compruebe sus configuraciones.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Tiempo de espera de intercambio excedido. Comience el intercambio de nuevo.</string>
@@ -46,19 +46,19 @@
     <string name="error_NoWordListSelected">Debe seleccionar una de las frases antes de proceder.</string>
     <string name="error_OtherGroupCommitDiffer">Alguien reportó una diferencia en frases. Comience el intercambio de nuevo.</string>
     <string name="error_OutOfMemoryError">La memoria es demasiado baja para completar esta operación.</string>
-    <string name="error_ServerAppMessage">Mensajes del servidor: %s</string>
+    <string name="error_ServerAppMessage">Mensaje del servidor: %s</string>
     <string name="error_ServerNotResponding">No hay respuesta del servidor.</string>
     <string name="error_TimeoutWaitingForAllMembers">Tiempo esperando que algunos miembros del grupo agreguen datos.</string>
     <string name="error_WebCancelledByUser">El usuario canceló la solicitud del servidor.</string>
 
-    <string name="help_size">Seleccione el número de personas que están tratando de intercambiar datos entre sí y pulse Aceptar.</string>
-    <string name="help_userid">Este número en esta pantalla se utiliza para crear un grupo único de usuarios. Revise los números en todas las pantallas de usuarios, luego todos los usuarios deben introducir el mismo número más bajo y pulsar Aceptar.</string>
-    <string name="help_verify">Ahora, debe coincidir una de estas frases de 3 palabras con todos los usuarios. Cada usuario debe seleccionar la misma frase común, y pulsar Siguiente.</string>
+    <string name="help_size">Seleccione el número de personas que están tratando de intercambiar datos juntos y pulse OK.</string>
+    <string name="help_userid">Este número en esta pantalla se utiliza para crear un grupo único de usuarios. Revise los números en las pantallas de todos los usuarios, a continuación, todos los usuarios deben introducir la misma bajo el número y pulse Aceptar.</string>
+    <string name="help_verify">Ahora, debe coincidir con una de estas frases de 3 palabras con todos los usuarios. Cada usuario debe seleccionar la misma frase común, y pulse Siguiente.</string>
 
     <string name="label_CompareScreensNDevices">Comparar pantallas en dispositivos %s.</string>
     <string name="label_NumericModeHint">No Inglés</string>
-    <string name="label_PromptInstruct">Este número se utiliza para crear un grupo único de usuarios. Compare, y luego, introduzca el número más bajo entre todos los usuarios.</string>
-    <string name="label_ReceivedNItems">recibido %d artículos</string>
+    <string name="label_PromptInstruct">Este número se utiliza para crear un grupo único de usuarios. Comparar y luego introduzca el número más bajo entre todos los usuarios.</string>
+    <string name="label_ReceivedNItems">recibió %d artículos</string>
     <string name="label_UserIdHint">El más bajo</string>
     <string name="label_VerifyInstruct">Todos los teléfonos deben coincidir con una de las frases de 3 palabras. Compare, y luego recoja la frase que coincida.</string>
 

@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d位成员</string>
 
-    <string name="error_AllMembersMustUpgrade">一些成员使用的是较旧的版本;所有成员都必须升级到最新版本。</string>
+    <string name="error_AllMembersMustUpgrade">一些成员使用的是旧版本;所有成员都必须升级到最新版本。</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">所有成员都必须升级，一些正在使用旧的讯息通知格式。</string>
     <string name="error_CorrectYourInternetConnection">网路不可使用，请检查您的网路设定。</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">金钥交换过程超时。重新开始交换金钥。</string>

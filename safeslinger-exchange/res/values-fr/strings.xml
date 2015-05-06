@@ -33,30 +33,30 @@
     <string name="choice_NumUsers">%d utilisateurs</string>
 
     <string name="error_AllMembersMustUpgrade">Certains membres utilisent une version antérieure; tous les membres doivent mettre à niveau vers la dernière version.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Tous les membres doivent mettre à niveau, certains utilisent les formats d\'enregistrement des poussoirs âgées.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tous les membres doivent mettre à niveau, certains utilisent des formats d\'enregistrement poussoirs âgées.</string>
     <string name="error_CorrectYourInternetConnection">Internet n\'est pas disponible, vérifiez vos paramètres.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Bourse délai dépassé. Recommencez l\'échange.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Échange délai dépassé. Recommencez l\'échange.</string>
     <string name="error_HttpCode">Erreur serveur HTTP: %d</string>
-    <string name="error_InvalidCommitVerify">Des données incorrectes trouvés en échange. Recommencez l\'échange.</string>
+    <string name="error_InvalidCommitVerify">Des données incorrectes ont trouvé en échange. Recommencez l\'échange.</string>
     <string name="error_InvalidCommonUserId">Entrez un nombre entier positif.</string>
-    <string name="error_LocalGroupCommitDiffer">Vous avez fait état d\'une différence de phrases. Recommencez l\'échange.</string>
+    <string name="error_LocalGroupCommitDiffer">Tu as signalé une différence dans les phrases. Recommencez l\'échange.</string>
     <string name="error_MinUsersRequired">Un minimum de %d membres est nécessaire pour échanger des données.</string>
-    <string name="error_MoreDataThanUsers">Données inattendues trouvés en échange. Recommencez l\'échange.</string>
+    <string name="error_MoreDataThanUsers">Données inattendues ont trouvé en échange. Recommencez l\'échange.</string>
     <string name="error_NoDataToExchange">L\'échange est manquant données requises.</string>
     <string name="error_NoWordListSelected">Vous devez sélectionner l\'une des phrases avant de poursuivre.</string>
     <string name="error_OtherGroupCommitDiffer">Quelqu\'un a signalé une différence dans les phrases. Recommencez l\'échange.</string>
     <string name="error_OutOfMemoryError">La mémoire est trop faible pour effectuer cette opération.</string>
-    <string name="error_ServerAppMessage">Message serveur: %s</string>
+    <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Le serveur n\'a pas répondu.</string>
     <string name="error_TimeoutWaitingForAllMembers">Le délai d\'attente donné aux membres du groupe pour ajouter des données a expiré.</string>
-    <string name="error_WebCancelledByUser">L\'utilisateur a annulé la demande du serveur.</string>
+    <string name="error_WebCancelledByUser">L\'utilisateur a annulé la demande de serveur.</string>
 
     <string name="help_size">Sélectionnez le nombre de personnes qui tentent d\'échanger des données ensemble et appuyez sur OK.</string>
-    <string name="help_userid">Le nombre sur cet écran est utilisé pour créer un groupe unique d\'utilisateurs. Passez en revue les chiffres présents sur les écrans de tous les utilisateurs. Tous les utilisateurs doivent saisir le même chiffre le plus bas et appuyer sur OK.</string>
-    <string name="help_verify">Maintenant, vous devez faire correspondre une de ces phrases de trois mots avec tous les utilisateurs. Chaque utilisateur doit sélectionner la même phrase commune, et appuyer sur Suivant.</string>
+    <string name="help_userid">Ce nombre sur cet écran est utilisé pour créer un groupe unique d\'utilisateurs. Passez en revue les numéros sur les écrans de tous les utilisateurs, tous les utilisateurs doivent entrer le même numéro le plus bas et appuyez sur OK.</string>
+    <string name="help_verify">Maintenant, vous devez correspondre à l\'une de ces 3 phrases de mots avec tous les utilisateurs. Chaque utilisateur doit sélectionner la même phrase commune, et appuyez sur Suivant.</string>
 
-    <string name="label_CompareScreensNDevices">Comparer les écrans des appareils de %s.</string>
-    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_CompareScreensNDevices">Comparer les écrans sur les dispositifs de %s.</string>
+    <string name="label_NumericModeHint">Non-anglais</string>
     <string name="label_PromptInstruct">Ce chiffre est utilisé pour créer un groupe unique d\'utilisateurs. Comparez, puis entrez le chiffre le plus bas parmi tous les utilisateurs.</string>
     <string name="label_ReceivedNItems">a reçu %d articles</string>
     <string name="label_UserIdHint">Le plus bas</string>
