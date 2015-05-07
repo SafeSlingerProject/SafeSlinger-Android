@@ -745,7 +745,9 @@ public class ExchangeActivity extends BaseActivity {
         }
         mDlgProg = new ProgressDialog(act);
         mDlgProg.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        mDlgProg.setTitle(mProt.getStatusBanner(ExchangeActivity.this));
+        if (mProt != null) {
+            mDlgProg.setTitle(mProt.getStatusBanner(ExchangeActivity.this));
+        }
         mDlgProg.setMessage(msg);
         mProgressMsg = msg;
         mDlgProg.setCancelable(true);
@@ -756,7 +758,9 @@ public class ExchangeActivity extends BaseActivity {
 
     private void showProgressUpdate(String msg) {
         if (mDlgProg != null) {
-            mDlgProg.setTitle(mProt.getStatusBanner(ExchangeActivity.this));
+            if (mProt != null) {
+                mDlgProg.setTitle(mProt.getStatusBanner(ExchangeActivity.this));
+            }
             if (msg != null) {
                 mDlgProg.setMessage(msg);
             }

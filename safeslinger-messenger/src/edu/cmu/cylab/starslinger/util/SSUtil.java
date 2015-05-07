@@ -629,6 +629,11 @@ public class SSUtil {
 
     public static MessageData addAttachmentFromPath(MessageData draft, String path)
             throws FileNotFoundException {
+
+        if (TextUtils.isEmpty(path)) {
+            throw new FileNotFoundException();
+        }
+
         File phy = new File(path); // physical
         File vir = new File(path); // virtual, change if needed
 

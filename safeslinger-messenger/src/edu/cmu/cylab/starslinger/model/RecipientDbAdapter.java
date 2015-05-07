@@ -151,6 +151,9 @@ public class RecipientDbAdapter {
     }
 
     private long insert(String table, String nullColumnHack, ContentValues values) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new RecipientDbAdapter(mContext);
+        }
         long insert = mDatabase.insert(table, nullColumnHack, values);
         if (insert != -1) { // when no errors, queue recipients backup...
             SafeSlinger.queueBackup();
@@ -159,6 +162,9 @@ public class RecipientDbAdapter {
     }
 
     private int update(String table, ContentValues values, String whereClause, String[] whereArgs) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new RecipientDbAdapter(mContext);
+        }
         int update = mDatabase.update(table, values, whereClause, whereArgs);
         if (update > 0) { // when any rows effected, queue recipients backup...
             SafeSlinger.queueBackup();
@@ -167,6 +173,9 @@ public class RecipientDbAdapter {
     }
 
     private int delete(String table, String whereClause, String[] whereArgs) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new RecipientDbAdapter(mContext);
+        }
         int delete = mDatabase.delete(table, whereClause, whereArgs);
         if (delete > 0) { // when any rows effected, queue recipients backup...
             SafeSlinger.queueBackup();
@@ -176,6 +185,9 @@ public class RecipientDbAdapter {
 
     private Cursor query(String table, String[] columns, String selection, String[] selectionArgs,
             String groupBy, String having, String orderBy) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new RecipientDbAdapter(mContext);
+        }
         Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
                 orderBy);
         return query;
@@ -183,6 +195,9 @@ public class RecipientDbAdapter {
 
     private Cursor query(boolean distinct, String table, String[] columns, String selection,
             String[] selectionArgs, String groupBy, String having, String orderBy, String limit) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new RecipientDbAdapter(mContext);
+        }
         Cursor query = mDatabase.query(distinct, table, columns, selection, selectionArgs, groupBy,
                 having, orderBy, limit);
         return query;

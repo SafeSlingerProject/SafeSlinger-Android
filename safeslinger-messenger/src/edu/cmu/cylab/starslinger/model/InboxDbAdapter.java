@@ -88,18 +88,27 @@ public class InboxDbAdapter {
     }
 
     private long insert(String table, String nullColumnHack, ContentValues values) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new InboxDbAdapter(mContext);
+        }
         long insert = mDatabase.insert(table, nullColumnHack, values);
         // no backup needed for messages...
         return insert;
     }
 
     private int update(String table, ContentValues values, String whereClause, String[] whereArgs) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new InboxDbAdapter(mContext);
+        }
         int update = mDatabase.update(table, values, whereClause, whereArgs);
         // no backup needed for messages...
         return update;
     }
 
     private int delete(String table, String whereClause, String[] whereArgs) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new InboxDbAdapter(mContext);
+        }
         int delete = mDatabase.delete(table, whereClause, whereArgs);
         // no backup needed for messages...
         return delete;
@@ -107,6 +116,9 @@ public class InboxDbAdapter {
 
     private Cursor query(String table, String[] columns, String selection, String[] selectionArgs,
             String groupBy, String having, String orderBy) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new InboxDbAdapter(mContext);
+        }
         Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
                 orderBy);
         return query;
@@ -114,6 +126,9 @@ public class InboxDbAdapter {
 
     private Cursor query(String table, String[] columns, String selection, String[] selectionArgs,
             String groupBy, String having, String orderBy, String limit) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new InboxDbAdapter(mContext);
+        }
         Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
                 orderBy, limit);
         return query;
@@ -121,6 +136,9 @@ public class InboxDbAdapter {
 
     private Cursor query(boolean distinct, String table, String[] columns, String selection,
             String[] selectionArgs, String groupBy, String having, String orderBy, String limit) {
+        if (!mDatabase.isOpen()) {
+            sInstance = new InboxDbAdapter(mContext);
+        }
         Cursor query = mDatabase.query(distinct, table, columns, selection, selectionArgs, groupBy,
                 having, orderBy, limit);
         return query;

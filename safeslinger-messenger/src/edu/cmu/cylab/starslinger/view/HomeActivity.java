@@ -3082,7 +3082,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
                     // update recipient if no longer registered
                     boolean notreg = web.isNotRegistered();
-                    if (notreg) {
+                    if (notreg && d.existsRecip()) {
                         if (!dbRecipient
                                 .updateRecipientRegistrationState(d.getRecipRowId(), notreg)) {
                             // failure to update database error, not as critical

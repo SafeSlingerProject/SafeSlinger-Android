@@ -389,7 +389,7 @@ public class MessagesFragment extends Fragment {
         sendResultToHost(RESULT_GETFILE, intent.getExtras());
     }
 
-    private void doFileRemove() {
+    private static void doFileRemove() {
         Intent intent = new Intent();
         if (mDraft != null) {
             intent.putExtra(extra.FPATH, mDraft.getFileDir());
@@ -408,7 +408,7 @@ public class MessagesFragment extends Fragment {
         sendResultToHost(RESULT_FILEREMOVE, intent.getExtras());
     }
 
-    private void doFileSelect() {
+    private static void doFileSelect() {
         Intent intent = new Intent();
         if (mDraft != null) {
             intent.putExtra(extra.MESSAGE_ROW_ID, mDraft.getRowId());
@@ -1230,7 +1230,7 @@ public class MessagesFragment extends Fragment {
         newFragment.show(getFragmentManager(), "dialog");
     }
 
-    public class MessagesAlertDialogFragment extends DialogFragment {
+    public static class MessagesAlertDialogFragment extends DialogFragment {
 
         public MessagesAlertDialogFragment newInstance(int id) {
             return newInstance(id, new Bundle());
@@ -1386,7 +1386,7 @@ public class MessagesFragment extends Fragment {
         newFragment.show(getFragmentManager(), "dialog");
     }
 
-    public AlertDialog.Builder xshowChangeFileOptions(Activity act) {
+    public static AlertDialog.Builder xshowChangeFileOptions(Activity act) {
         final CharSequence[] items = new CharSequence[] {
                 act.getText(R.string.menu_Remove), act.getText(R.string.menu_Change)
         };
