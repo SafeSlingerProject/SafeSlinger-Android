@@ -33,14 +33,13 @@ public class ThreadData {
     private RecipientData mRecipient;
     private boolean mHasDraft;
     private String mLastPerson;
-    private boolean mNewerExists;
     private String mProgress;
 
     /***
      * create raw thread
      */
     public ThreadData(MessageRow msgRow, int msgs, int newMsgs, boolean hasDraft,
-            String lastPerson, boolean isDetail, boolean newerExists, RecipientData recip) {
+            String lastPerson, boolean isDetail, RecipientData recip) {
         mMsgRow = msgRow;
         mMsgCount = msgs;
         mNewCount = newMsgs;
@@ -48,7 +47,6 @@ public class ThreadData {
         mRecipient = recip;
         mHasDraft = hasDraft;
         mLastPerson = lastPerson;
-        mNewerExists = newerExists;
         if (mMsgRow != null) {
             mProgress = msgRow.getProgress();
         }
@@ -66,7 +64,6 @@ public class ThreadData {
         mRecipient = old.getRecipient();
         mHasDraft = old.hasDraft() || up.hasDraft();
         mLastPerson = old.getLastPerson();
-        mNewerExists = old.isNewerExists() || up.isNewerExists();
         mProgress = old.getProgress() != null ? old.getProgress() : up.getProgress();
     }
 
@@ -96,10 +93,6 @@ public class ThreadData {
 
     public String getLastPerson() {
         return mLastPerson;
-    }
-
-    public boolean isNewerExists() {
-        return mNewerExists;
     }
 
     public String getProgress() {

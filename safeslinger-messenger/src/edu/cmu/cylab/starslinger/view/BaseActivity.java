@@ -99,6 +99,7 @@ import edu.cmu.cylab.starslinger.model.MessageRow;
 import edu.cmu.cylab.starslinger.model.PushTokenKeyDateComparator;
 import edu.cmu.cylab.starslinger.model.RecipientData;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
+import edu.cmu.cylab.starslinger.model.RecipientNameDevTypeKeyDateComparator;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.SlingerContact;
 import edu.cmu.cylab.starslinger.model.SlingerIdentity;
@@ -911,9 +912,9 @@ public class BaseActivity extends ActionBarActivity {
         for (int i = 0; i < contacts.size(); i++) {
             RecipientRow r = contacts.get(i);
             RecipientRow r2 = null;
-            if (i + 1 != contacts.size())
+            if (i + 1 != contacts.size()) {
                 r2 = contacts.get(i + 1);
-
+            }
             String t1 = r != null ? r.getPushtoken() : null;
             String t2 = r2 != null ? r2.getPushtoken() : null;
 
@@ -921,7 +922,6 @@ public class BaseActivity extends ActionBarActivity {
                 boolean pushable = r.isPushable();
                 boolean deprecated = r.isDeprecated();
                 boolean invited = r.isInvited();
-
                 if (invited) {
                     // invites are always active
                     dbRecipient.updateRecipientActiveState(r, RecipientDbAdapter.RECIP_IS_ACTIVE);
@@ -930,14 +930,11 @@ public class BaseActivity extends ActionBarActivity {
                         // unusable tokens should be removed...
                         dbRecipient.updateRecipientActiveState(r,
                                 RecipientDbAdapter.RECIP_IS_NOT_ACTIVE);
-
                     } else if (!TextUtils.isEmpty(t1) && !TextUtils.isEmpty(t2)
                             && t1.compareToIgnoreCase(t2) == 0) {
-                        // in date order, mark inactive only when previous was
-                        // active...
+                        // mark inactive only when previous was active...
                         dbRecipient.updateRecipientActiveState(r,
                                 RecipientDbAdapter.RECIP_IS_NOT_ACTIVE);
-
                     } else if (!TextUtils.isEmpty(t1)) {
                         // show the most recent one...
                         dbRecipient.updateRecipientActiveState(r,
@@ -947,7 +944,52 @@ public class BaseActivity extends ActionBarActivity {
             }
         }
 
+        // 2nd sort by name and device type, most recent keys date
+        Collections.sort(contacts, new RecipientNameDevTypeKeyDateComparator());
+        for (int i = 0; i < contacts.size(); i++) {
+            RecipientRow r = contacts.get(i);
+            RecipientRow r2 = null;
+            if (i + 1 != contacts.size()) {
+                r2 = contacts.get(i + 1);
+            }
+            String n1 = r != null ? getNameDeviceTypeLabel(r) : null;
+            String n2 = r2 != null ? getNameDeviceTypeLabel(r2) : null;
+
+            if (r != null) {
+                boolean invited = r.isInvited();
+                if (!invited && r.isActive()) {
+                    if (!TextUtils.isEmpty(n1) && !TextUtils.isEmpty(n2)
+                            && n1.compareToIgnoreCase(n2) == 0) {
+                        // mark inactive only when previous was active...
+                        dbRecipient.updateRecipientActiveState(r,
+                                RecipientDbAdapter.RECIP_IS_NOT_ACTIVE);
+                    } else if (!TextUtils.isEmpty(n1)) {
+                        // show the most recent one...
+                        dbRecipient.updateRecipientActiveState(r,
+                                RecipientDbAdapter.RECIP_IS_ACTIVE);
+                    }
+                }
+            }
+        }
+
         return true;
+    }
+
+    private static String getNameDeviceTypeLabel(RecipientRow r) {
+        int notify = r.getNotify();
+        // merge types that should be treated the same
+        switch (notify) {
+            case SafeSlingerConfig.NOTIFY_ANDROIDGCM:
+                notify = SafeSlingerConfig.NOTIFY_ANDROIDC2DM;
+                break;
+            case SafeSlingerConfig.NOTIFY_APPLE_DEP:
+                notify = SafeSlingerConfig.NOTIFY_APPLEAPNS;
+                break;
+            default:
+                // unchanged
+                break;
+        }
+        return r.getName().replaceAll(" ", "").trim() + notify;
     }
 
     private void doUpdateRecipientsFromContacts() throws SQLException {

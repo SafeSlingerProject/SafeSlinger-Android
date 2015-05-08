@@ -340,7 +340,8 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
                         boolean foundNewer = false;
                         // ignore if needed...
                         if (cbMostRecentOnly.isChecked() && !recipientRow.isInvited()) {
-                            int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
+                            int newerRecips = dbRecipient
+                                    .getAllNewerRecipients(recipientRow, false);
                             if (newerRecips > 0) {
                                 // there are some newer keys, this should not be
                                 foundNewer = true;
@@ -519,6 +520,11 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 dialog.dismiss();
+                // make database recipient active temporarily before selection,
+                // updates will revert it eventually...
+                RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(SafeSlinger
+                        .getApplication());
+                dbRecipient.updateRecipientActiveState(recip, RecipientDbAdapter.RECIP_IS_ACTIVE);
                 doRecipientSelection(recip);
             }
         });

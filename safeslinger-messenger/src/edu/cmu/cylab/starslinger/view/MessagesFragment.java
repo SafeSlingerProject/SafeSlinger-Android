@@ -636,7 +636,7 @@ public class MessagesFragment extends Fragment {
                     if (d.existsRecip() && t == null) {
                         totalThreads += 1;
                         t = new ThreadData(new MessageRow(null, false), 0, 0, false, recip
-                                .getName(), d.existsRecip(), false, recip);
+                                .getName(), d.existsRecip(), recip);
                         mergeInThreads(t);
                     }
 
@@ -651,7 +651,7 @@ public class MessagesFragment extends Fragment {
                     mMessageList.clear();
                     if (d.existsRecip()) {
                         // recipient data
-                        if (recip.isSendable() && t != null && !t.isNewerExists()) {
+                        if (recip.isSendable() && t != null) {
                             showCompose = true;
                         }
                         // encrypted msgs
@@ -825,12 +825,6 @@ public class MessagesFragment extends Fragment {
                 if (cr.moveToFirst()) {
                     recipientRow = new RecipientRow(cr);
                     person = recipientRow.getName();
-
-                    int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
-                    if (newerRecips > 0) {
-                        // there are some newer keys, we should warn
-                        newerExists = true;
-                    }
                 }
             } finally {
                 cr.close();
@@ -846,7 +840,7 @@ public class MessagesFragment extends Fragment {
         int newMsgs = dbInbox.getActionRequiredInboxCountByThread(inboxRow.getKeyId());
         int draftMsgs = 0; // inbox does not store drafts
         t = new ThreadData(inboxRow, msgs, newMsgs, draftMsgs > 0, person, d.existsRecip(),
-                newerExists, recipientRow);
+                recipientRow);
         return t;
     }
 
@@ -864,12 +858,6 @@ public class MessagesFragment extends Fragment {
                 if (cr.moveToFirst()) {
                     recipientRow = new RecipientRow(cr);
                     person = recipientRow.getName();
-
-                    int newerRecips = dbRecipient.getAllNewerRecipients(recipientRow, true);
-                    if (newerRecips > 0) {
-                        // there are some newer keys, we should warn
-                        newerExists = true;
-                    }
                 }
             } finally {
                 cr.close();
@@ -885,7 +873,7 @@ public class MessagesFragment extends Fragment {
         int newMsgs = dbMessage.getActionRequiredMessageCountByThread(messageRow.getKeyId());
         int draftMsgs = dbMessage.getDraftMessageCountByThread(messageRow.getKeyId());
         t = new ThreadData(messageRow, msgs, newMsgs, draftMsgs > 0, person, d.existsRecip(),
-                newerExists, recipientRow);
+                recipientRow);
         return t;
     }
 

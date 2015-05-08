@@ -821,7 +821,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         if (position == Tabs.MESSAGE.ordinal()) {
             if (d.existsRecip()) {
                 RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this);
-                int newerRecips = dbRecipient.getAllNewerRecipients(d.getRecip(), true);
+                int newerRecips = dbRecipient.getAllNewerRecipients(d.getRecip(), false);
                 if (d.getRecip().isSendable() && newerRecips <= 0) {
                     // user can attach when in conversation and not disabled
                     MenuItem iAdd = menu.add(0, MENU_ATTACH, 0, R.string.btn_SelectFile).setIcon(

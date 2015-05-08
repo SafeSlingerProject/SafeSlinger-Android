@@ -103,7 +103,7 @@ public class ThreadsAdapter extends BaseAdapter {
             } catch (OutOfMemoryError e) {
                 ivAvatar.setImageBitmap(null);
             }
-            if (recip == null || !recip.isSendable() || t.isNewerExists()) {
+            if (recip == null || !recip.isSendable()) {
                 ivAvatar.setAlpha(75);
             }
         }
