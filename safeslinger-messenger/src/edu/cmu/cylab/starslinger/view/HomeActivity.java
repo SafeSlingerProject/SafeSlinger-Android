@@ -785,6 +785,10 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         // now with contact, enter pass phrase and check
         if (!loadCurrentPassPhrase()) {
             if (!SafeSlinger.isPassphraseOpen()) {
+                // update incoming messages if needed
+                if (SafeSlingerPrefs.getMessagesIncoming() > 0) {
+                    SafeSlinger.getApplication().checkForMissedMessages();
+                }
                 showPassPhrase(false, false); // normal
             }
             return false;
@@ -1795,10 +1799,9 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                 processIntent(getIntent());
                             }
 
+                            // if requested, logged in, try to decrypt pending
                             String passCached = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs
                                     .getKeyIdString());
-
-                            // if requested, logged in, try to decrypt pending
                             if (SafeSlingerPrefs.getAutoDecrypt() && !TextUtils.isEmpty(passCached)) {
                                 DecryptPendingTask decryptPending = new DecryptPendingTask();
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
@@ -2588,6 +2591,10 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         if (CryptTools.existsSecretKey(getApplicationContext()) && !TextUtils.isEmpty(contactName)) {
             if (SafeSlinger.isCacheEmpty()) {
                 if (SafeSlinger.isAppVisible()) {
+                    // update incoming messages if needed
+                    if (SafeSlingerPrefs.getMessagesIncoming() > 0) {
+                        SafeSlinger.getApplication().checkForMissedMessages();
+                    }
                     showPassPhrase(false, false);
                     return true;
                 } else {

@@ -53,6 +53,7 @@ public class SafeSlingerPrefs {
     private static final boolean DEFAULT_AUTO_RETRIEVAL = false;
     public static final String DEFAULT_LANGUAGE = "zz";
     private static final boolean DEFAULT_PUSH_REG_ID_POSTED = false;
+    private static final int DEFAULT_INCOMING_COUNT = 0;
 
     public static final int NOTIFICATION_SLEEP_PERIOD = 5 * 1000;
     /**
@@ -132,6 +133,7 @@ public class SafeSlingerPrefs {
         public static final String SHOW_SLING_KEYS_REMIND = "showSlingKeysReminder";
         public static final String SHOW_WALKTHROUGH = "ShowWalkthrough";
         public static final String TEMPKEY_SYNCACCOUNT_LIST = "keyTempListContactSyncAccount";
+        public static final String INCOMING_COUNT = "incomingCount";
     }
 
     public static final String PREFS_RECOVER_YES = "MyPrefsFile";
@@ -528,6 +530,14 @@ public class SafeSlingerPrefs {
 
     public static void setLanguage(String language) {
         setString(pref.LANGUAGE, language, false);
+    }
+
+    public static int getMessagesIncoming() {
+        return getInt(pref.INCOMING_COUNT, DEFAULT_INCOMING_COUNT, false);
+    }
+
+    public static void setMessagesIncoming(int incoming) {
+        setInt(pref.INCOMING_COUNT, incoming, false);
     }
 
     // Generic getters and setters....

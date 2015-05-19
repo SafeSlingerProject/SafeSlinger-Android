@@ -190,10 +190,12 @@ public class SafeSlinger extends Application {
 
     private void checkForPendingMessages() throws SQLException {
         // only fetch encrypted, decrypted will always be locked on startup
+        int incoming = SafeSlingerPrefs.getMessagesIncoming();
         InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this);
         int inCount = dbInbox.getUnseenInboxCount();
-        if (inCount > 0) {
-            NotificationBroadcastReceiver.doUnseenMessagesNotification(this, inCount);
+        int allCount = inCount + incoming;
+        if (allCount > 0) {
+            NotificationBroadcastReceiver.doUnseenMessagesNotification(this, allCount);
         }
 
         // attempt to retry pending message downloads
@@ -573,6 +575,12 @@ public class SafeSlinger extends Application {
             int pendingDownloads = 0;
             int successDownloads = 0;
 
+            // check for any undownloaded first...
+            // decrement incoming when valid hash is written to database
+            if (SafeSlingerPrefs.getMessagesIncoming() > 0) {
+                findMissingMessageIdsOnline();
+            }
+
             Cursor c = dbInbox.fetchAllInboxGetMessagePending();
             if (c != null) {
                 try {
@@ -701,6 +709,53 @@ public class SafeSlinger extends Application {
             }
             return null;
         }
+    }
+
+    private static void findMissingMessageIdsOnline() {
+        InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(SafeSlinger.sSafeSlinger);
+        WebEngine web = new WebEngine(getApplication(), SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
+
+        byte[] resp = null;
+        try {
+            resp = web.getMessageNoncesByToken(SafeSlingerPrefs.getPushRegistrationId());
+        } catch (ExchangeException e) {
+            e.printStackTrace();
+        } catch (MessageNotFoundException e) {
+            e.printStackTrace();
+        }
+        if (resp == null || resp.length == 0) {
+            return;
+        }
+        ArrayList<String> ids = WebEngine.parseGetMessageIdsResponse(resp);
+        if (ids == null) {
+            return;
+        }
+
+        for (String msgHash : ids) {
+            MyLog.d(TAG, "msgid:" + msgHash);
+
+            if (TextUtils.isEmpty(msgHash)) {
+                continue; // ignore messages we are not expecting
+            }
+
+            // parse retrieval id
+            try {
+                Base64.decode(msgHash.getBytes(), Base64.NO_WRAP);
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+                continue; // ignore messages we are not expecting
+            }
+
+            // save retrieval id
+            long rowIdInbox = dbInbox.createRecvEncInbox(msgHash,
+                    MessageDbAdapter.MESSAGE_STATUS_GOTPUSH, MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
+            if (rowIdInbox == -1) {
+                continue; // ignore on error, perhaps duplicate
+            }
+        }
+
+        // now all pending tokens have been checked, reset the incoming counter
+        SafeSlingerPrefs.setMessagesIncoming(0);
     }
 
     private class CleanupFailedMessagesTask extends AsyncTask<String, String, String> {

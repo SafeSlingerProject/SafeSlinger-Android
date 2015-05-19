@@ -27,6 +27,7 @@ package edu.cmu.cylab.starslinger.transaction;
 import java.io.UnsupportedEncodingException;
 import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpVersion;
@@ -307,6 +308,31 @@ public class WebEngine {
         return resp;
     }
 
+    /**
+     * get pending messages from the server
+     * 
+     * @throws MessageNotFoundException
+     */
+    public byte[] getMessageNoncesByToken(String recipientPushRegId) throws ExchangeException,
+            MessageNotFoundException {
+
+        int capacity = mVersionLen //
+                + 4 + recipientPushRegId.length() //
+                + 4;
+        ByteBuffer msg = ByteBuffer.allocate(capacity);
+        msg.putInt(mVersion);
+        msg.putInt(recipientPushRegId.length());
+        msg.put(recipientPushRegId.getBytes());
+        msg.putInt(1); // numquery is deprecated
+
+        byte[] resp = doPost(mUrlPrefix + mHost + "/getMessageNoncesByToken" + mUrlSuffix,
+                msg.array());
+
+        resp = handleResponseExceptions(resp, 0);
+
+        return resp;
+    }
+
     private void handleMessagingErrorCodes(byte[] resp) throws ExchangeException,
             MessageNotFoundException {
         String checkError = new String(resp) + "";
@@ -441,7 +467,7 @@ public class WebEngine {
         return mRxCurrentBytes;
     }
 
-    public static byte[] parseMessageResponse(byte[] resp) throws BufferUnderflowException {
+    public static byte[] parseMessageResponse(byte[] resp) {
         ByteBuffer buffer = ByteBuffer.wrap(resp);
         byte[] encfile = null;
 
@@ -458,6 +484,24 @@ public class WebEngine {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static ArrayList<String> parseGetMessageIdsResponse(byte[] resp) {
+        ByteBuffer buffer = ByteBuffer.wrap(resp);
+        ArrayList<String> ids = new ArrayList<String>();
+
+        int errCode = buffer.getInt();
+        if (errCode != 1)
+            return null;
+
+        int numIds = buffer.getInt();
+        for (int i = 0; i < numIds; i++) {
+            int len = buffer.getInt();
+            byte[] msgHash = new byte[len];
+            buffer.get(msgHash);
+            ids.add(new String(msgHash));
+        }
+        return ids;
     }
 
     public boolean isNotRegistered() {

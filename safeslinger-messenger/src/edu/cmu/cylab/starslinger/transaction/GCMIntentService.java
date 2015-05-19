@@ -80,6 +80,10 @@ public class GCMIntentService extends IntentService {
             if (intent.getAction().equals(C2DMessaging.C2DM_RETRY)) {
                 C2DMessaging.registerInBackground(this);
             } else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.compareTo(messageType) == 0) {
+
+                // increment incoming before hash has been validated
+                SafeSlingerPrefs.setMessagesIncoming(SafeSlingerPrefs.getMessagesIncoming() + 1);
+
                 InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this);
                 MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this);
                 long rowIdInbox = 0;
@@ -93,7 +97,6 @@ public class GCMIntentService extends IntentService {
                     reattempt = false;
 
                     // Extract the payload from the message
-                    // Bundle extras = intent.getExtras();
                     if (extras == null) {
                         break; // we require message data
                     }
@@ -119,10 +122,12 @@ public class GCMIntentService extends IntentService {
                             MessageDbAdapter.MESSAGE_STATUS_GOTPUSH,
                             MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
                     if (rowIdInbox == -1) {
-                        // TODO: pre rowId, so provide notice that database
-                        // failed
                         break; // ignore on error, perhaps duplicate
                     }
+
+                    // decrement incoming when valid hash is written to database
+                    SafeSlingerPrefs
+                            .setMessagesIncoming(SafeSlingerPrefs.getMessagesIncoming() - 1);
 
                     long prevStamp = SafeSlingerPrefs.getLastTimeStamp();
                     SafeSlingerPrefs.setLastTimeStamp(System.currentTimeMillis());
@@ -134,29 +139,17 @@ public class GCMIntentService extends IntentService {
                         mWeb = new WebEngine(this, SafeSlingerConfig.HTTPURL_MESSENGER_HOST);
                     }
                     byte[] respGetMsg = null;
-                    String msgEnc = extras.getString("msgenc");
-                    if (!TextUtils.isEmpty(msgEnc)) {
-                        // try automatic parse of cipher
-                        try {
-                            respGetMsg = Base64.decode(msgEnc.getBytes(), Base64.NO_WRAP);
-                        } catch (IllegalArgumentException e) {
-                            e.printStackTrace(); // not fatal, try manual...
-                        }
-                    }
-                    if (respGetMsg == null) {
-                        // try manual download of cipher
-                        try {
-                            respGetMsg = mWeb.getMessage(msgHashBytes);
-                        } catch (ExchangeException e) {
-                            e.printStackTrace();
-                            SafeSlinger.getApplication().checkForMissedMessages();
-                            break;
-                        } catch (MessageNotFoundException e) {
-                            if (!dbInbox.updateInboxExpired(rowIdInbox)) {
-                                break;
-                            }
+                    try {
+                        respGetMsg = mWeb.getMessage(msgHashBytes);
+                    } catch (ExchangeException e) {
+                        e.printStackTrace();
+                        SafeSlinger.getApplication().checkForMissedMessages();
+                        break;
+                    } catch (MessageNotFoundException e) {
+                        if (!dbInbox.updateInboxExpired(rowIdInbox)) {
                             break;
                         }
+                        break;
                     }
                     if (respGetMsg == null || respGetMsg.length == 0) {
                         break; // invalid format
@@ -234,10 +227,11 @@ public class GCMIntentService extends IntentService {
                 }
 
                 // attempt to update messages if in view...
-                if (rowIdInbox > -1) {
+                int incoming = SafeSlingerPrefs.getMessagesIncoming();
+                if (rowIdInbox > -1 || incoming > 0) {
                     int inCount = dbInbox.getUnseenInboxCount();
                     int msgCount = dbMessage.getUnseenMessageCount();
-                    int allCount = inCount + msgCount;
+                    int allCount = inCount + msgCount + incoming;
                     if (allCount > 0) {
                         // attempt to notify if appropriate...
                         Intent updateIntent = new Intent(

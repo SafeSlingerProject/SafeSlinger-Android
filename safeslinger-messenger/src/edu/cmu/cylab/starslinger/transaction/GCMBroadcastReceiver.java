@@ -32,7 +32,7 @@ import android.content.Intent;
 import android.support.v4.content.WakefulBroadcastReceiver;
 import edu.cmu.cylab.starslinger.SafeSlinger;
 
-public class GCMBroadcaastReceiver extends WakefulBroadcastReceiver {
+public class GCMBroadcastReceiver extends WakefulBroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if (!SafeSlinger.doesUserHavePermission(Manifest.permission.WAKE_LOCK)) {

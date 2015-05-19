@@ -963,11 +963,9 @@ public class BaseActivity extends ActionBarActivity {
                         // mark inactive only when previous was active...
                         dbRecipient.updateRecipientActiveState(r,
                                 RecipientDbAdapter.RECIP_IS_NOT_ACTIVE);
-                    } else if (!TextUtils.isEmpty(n1)) {
-                        // show the most recent one...
-                        dbRecipient.updateRecipientActiveState(r,
-                                RecipientDbAdapter.RECIP_IS_ACTIVE);
                     }
+
+                    // don't set to active again, it will undo the sort above
                 }
             }
         }
