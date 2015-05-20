@@ -29,6 +29,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.provider.Settings;
 import android.text.TextUtils;
 
 public class SafeSlingerConfig {
@@ -207,6 +208,13 @@ public class SafeSlingerConfig {
                 return false;
         }
         return true;
+    }
+
+    public static String getDeviceId() {
+        Context ctx = SafeSlinger.getApplication();
+        String deviceId = Settings.Secure.getString(ctx.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        return deviceId;
     }
 
     public static String getVersionName() {

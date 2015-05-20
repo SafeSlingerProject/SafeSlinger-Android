@@ -411,20 +411,22 @@ public class SafeSlingerPrefs {
 
     public static boolean getPushRegistrationIdPosted() {
         // add version to get updated push registration every new release
-        return getBoolean(pref.PUSH_REG_ID_POSTED + SafeSlingerConfig.getVersionName(),
-                DEFAULT_PUSH_REG_ID_POSTED, false);
+        return getBoolean(pref.PUSH_REG_ID_POSTED + SafeSlingerConfig.getDeviceId()
+                + SafeSlingerConfig.getVersionName(), DEFAULT_PUSH_REG_ID_POSTED, false);
     }
 
     public static void setPushRegistrationIdPosted(boolean registrationIdPosted) {
         // add version to get updated push registration every new release
-        setBoolean(pref.PUSH_REG_ID_POSTED + SafeSlingerConfig.getVersionName(),
-                registrationIdPosted, false);
+        setBoolean(
+                pref.PUSH_REG_ID_POSTED + SafeSlingerConfig.getDeviceId()
+                        + SafeSlingerConfig.getVersionName(), registrationIdPosted, false);
     }
 
     public static String getPushRegistrationId() {
         // add version to get updated push registration every new release
         final String registrationId = getString(
-                pref.PUSH_REG_ID_LINKED + SafeSlingerConfig.getVersionName(), null, false);
+                pref.PUSH_REG_ID_LINKED + SafeSlingerConfig.getDeviceId()
+                        + SafeSlingerConfig.getVersionName(), null, false);
         // set a simple display to allow preferences to view an accurate id
         setString(pref.PUSH_REG_ID_LINKED_DISPLAY, registrationId, false);
         return registrationId;
@@ -432,8 +434,9 @@ public class SafeSlingerPrefs {
 
     public static void setPushRegistrationId(String registrationId) {
         // add version to get updated push registration every new release
-        setString(pref.PUSH_REG_ID_LINKED + SafeSlingerConfig.getVersionName(), registrationId,
-                false);
+        setString(
+                pref.PUSH_REG_ID_LINKED + SafeSlingerConfig.getDeviceId()
+                        + SafeSlingerConfig.getVersionName(), registrationId, false);
     }
 
     public static long getBackupRequestDate() {

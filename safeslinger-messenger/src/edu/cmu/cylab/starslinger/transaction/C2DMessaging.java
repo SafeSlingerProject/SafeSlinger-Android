@@ -34,7 +34,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.text.TextUtils;
-import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
@@ -353,19 +352,19 @@ public class C2DMessaging {
                     }
                 }
             } catch (IOException e) {
-                showNote(e, context);
+                e.printStackTrace();
             } catch (ClassNotFoundException e) {
-                showNote(e, context);
+                e.printStackTrace();
             } catch (CryptoMsgException e) {
-                showNote(e, context);
+                e.printStackTrace();
             } catch (ExchangeException e) {
                 SafeSlingerPrefs.setPushRegistrationId(null); // clear
                 SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
-                showNote(e, context);
+                e.printStackTrace();
             } catch (MessageNotFoundException e) {
                 SafeSlingerPrefs.setPushRegistrationId(null); // clear
                 SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
-                showNote(e, context);
+                e.printStackTrace();
             }
 
             // notify UI that registration is complete for now...
@@ -374,20 +373,6 @@ public class C2DMessaging {
         }
 
         return "";
-    }
-
-    protected static void showNote(String msg, Context context) {
-        MyLog.i(TAG, msg);
-        Toast toast = Toast.makeText(context, msg.trim(), Toast.LENGTH_LONG);
-        toast.show();
-    }
-
-    protected static void showNote(int resId, Context context) {
-        showNote(context.getString(resId), context);
-    }
-
-    protected static void showNote(Exception e, Context context) {
-        showNote(e.getLocalizedMessage(), context);
     }
 
 }

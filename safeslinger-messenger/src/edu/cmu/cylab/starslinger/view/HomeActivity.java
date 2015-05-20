@@ -225,13 +225,11 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            endProgress();
-
             String error = intent.getStringExtra(extra.ERROR);
             if (error != null) {
                 if (error.equals(C2DMessaging.ERRREG_SERVICE_NOT_AVAILABLE)) {
                     long backoff = SafeSlingerPrefs.getPusgRegBackoff();
-                    showProgressUpdate(String.format(
+                    MyLog.d(TAG, String.format(
                             getString(R.string.error_C2DMRegServiceNotAvailable),
                             backoff / 2 / 1000));
                     setProgressCancelHandler();
@@ -3219,19 +3217,19 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     }
                 }
             } catch (ClassNotFoundException e) {
-                return e.getLocalizedMessage();
+                e.printStackTrace();
             } catch (IOException e) {
-                return e.getLocalizedMessage();
+                e.printStackTrace();
             } catch (CryptoMsgException e) {
-                return e.getLocalizedMessage();
+                e.printStackTrace();
             } catch (ExchangeException e) {
                 SafeSlingerPrefs.setPushRegistrationId(null); // clear
                 SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
-                return e.getLocalizedMessage();
+                e.printStackTrace();
             } catch (MessageNotFoundException e) {
                 SafeSlingerPrefs.setPushRegistrationId(null); // clear
                 SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
-                return e.getLocalizedMessage();
+                e.printStackTrace();
             }
             return null;
         }
@@ -3258,9 +3256,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             return;
         }
 
-        showProgress(getString(R.string.prog_RequestingPushReg));
-        // C2DMessaging.register(getApplicationContext(),
-        // SafeSlingerConfig.PUSH_SENDERID_EMAIL);
         C2DMessaging.registerInBackground(this);
     }
 
@@ -3941,7 +3936,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         }
     }
 
-    protected void showProgressUpdate(String msg, int maxValue, int newValue) {
+    private void showProgressUpdate(String msg, int maxValue, int newValue) {
         if (sProg != null) {
             if (sProg.isIndeterminate()) {
                 // change from indeterminate

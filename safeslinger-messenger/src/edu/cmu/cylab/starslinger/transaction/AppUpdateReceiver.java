@@ -24,31 +24,23 @@
 
 package edu.cmu.cylab.starslinger.transaction;
 
-import android.Manifest;
-import android.app.Activity;
-import android.content.ComponentName;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.content.WakefulBroadcastReceiver;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 
-public class GCMBroadcastReceiver extends WakefulBroadcastReceiver {
+public class AppUpdateReceiver extends BroadcastReceiver {
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         MyLog.d(TAG, "onReceive: " + intent.getAction());
-        if (!SafeSlinger.doesUserHavePermission(Manifest.permission.WAKE_LOCK)) {
-            return;
-        }
-
-        // Explicitly specify that GcmIntentService will handle the intent.
-        ComponentName comp = new ComponentName(context.getPackageName(),
-                GCMIntentService.class.getName());
-        // Start the service, keeping the device awake while it is launching.
-        startWakefulService(context, (intent.setComponent(comp)));
-        setResultCode(Activity.RESULT_OK);
+        // if app was updated; it must clear the registration ID
+        // since the existing registration ID is not guaranteed to work with
+        // the new app version.
+        C2DMessaging.registerInBackground(SafeSlinger.getApplication());
     }
+
 }

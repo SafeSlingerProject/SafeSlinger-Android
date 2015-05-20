@@ -45,8 +45,8 @@ import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.view.HomeActivity;
 
 public class Service extends android.app.Service {
+    private static final String TAG = SafeSlingerConfig.LOG_TAG;
     private final IBinder mBinder = new LocalBinder();
-
     private long mPassPhraseCacheTtl = 15;
     private Handler mCacheHandler = new Handler();
     static private boolean mIsRunning = false;
@@ -55,6 +55,7 @@ public class Service extends android.app.Service {
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
         @Override
         public void onReceive(Context context, Intent intent) {
+            MyLog.d(TAG, "onReceive: " + intent.getAction());
             boolean airplaneOn = false;
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
                 airplaneOn = Settings.System.getInt(context.getContentResolver(),

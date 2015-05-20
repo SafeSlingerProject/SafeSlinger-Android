@@ -200,6 +200,24 @@
                 <category android:name="edu.cmu.cylab.starslinger" />
             </intent-filter>
         </receiver>
+        <receiver android:name=".transaction.AppUpdateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data
+                    android:path="edu.cmu.cylab.starslinger"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".transaction.AppUpdateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+
+                <data
+                    android:path="edu.cmu.cylab.starslinger"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
 
         <meta-data
             android:name="com.google.android.backup.api_key"
