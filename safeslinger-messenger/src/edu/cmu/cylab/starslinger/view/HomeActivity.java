@@ -3286,8 +3286,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 showNote(R.string.error_UnableToUpdateMessageInDB);
             }
 
-            // always show file automatically...
-            showFileActionChooser(saveFile, recvMsg.getFileType());
+            // with thumbnails, do not show automatically...
 
             return true;
         } catch (FileNotFoundException e) {

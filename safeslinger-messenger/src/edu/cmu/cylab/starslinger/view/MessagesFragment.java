@@ -745,11 +745,12 @@ public class MessagesFragment extends Fragment {
                                 } catch (FileNotFoundException e) {
                                     showNote(e);
                                 }
-                                thumb = SSUtil.makeThumbnail(SafeSlinger.getApplication()
-                                        .getApplicationContext(), mDraft.getFileData());
+                                int dimension = (int) SafeSlinger.getApplication().getResources()
+                                        .getDimension(R.dimen.avatar_size_list);
+                                thumb = SSUtil.makeThumbnail(mDraft.getFileData(), dimension);
                             }
                             if (!(TextUtils.isEmpty(mDraft.getFileName()))) {
-                                drawFileImage(mDraft, thumb);
+                                drawFileImage(getActivity(), mDraft, thumb, mImageViewFile);
                                 drawFileData(mDraft);
                                 mTextViewFile.setTextColor(Color.BLACK);
                                 mrlFile.setVisibility(View.VISIBLE);
@@ -1325,7 +1326,7 @@ public class MessagesFragment extends Fragment {
     }
 
     @SuppressWarnings("deprecation")
-    private void drawFileImage(MessageData draft, byte[] thumb) {
+    public static void drawFileImage(Context ctx, MessageData draft, byte[] thumb, ImageView iv) {
         String filenameArray[] = draft.getFileName().split("\\.");
         String extension = filenameArray[filenameArray.length - 1];
         String mime = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
@@ -1333,15 +1334,15 @@ public class MessagesFragment extends Fragment {
         if (thumb != null && thumb.length > 0) {
             ByteArrayInputStream in = new ByteArrayInputStream(thumb);
             BitmapDrawable tn = new BitmapDrawable(in);
-            mImageViewFile.setImageDrawable(tn);
+            iv.setImageDrawable(tn);
         } else {
             // default, there should always be some image
-            mImageViewFile.setImageDrawable(getResources().getDrawable(R.drawable.ic_menu_file));
+            iv.setImageDrawable(ctx.getResources().getDrawable(R.drawable.ic_menu_file));
 
             // is there a more specific file type available?
             Intent viewIntent = new Intent(Intent.ACTION_VIEW);
             viewIntent.setType(mime);
-            PackageManager pm = getActivity().getPackageManager();
+            PackageManager pm = ctx.getPackageManager();
             List<ResolveInfo> lract = pm.queryIntentActivities(viewIntent,
                     PackageManager.MATCH_DEFAULT_ONLY);
 
@@ -1351,11 +1352,10 @@ public class MessagesFragment extends Fragment {
                 if (!resolved) {
                     try {
                         Drawable icon = pm.getApplicationIcon(ri.activityInfo.packageName);
-                        mImageViewFile.setImageDrawable(icon);
+                        iv.setImageDrawable(icon);
                         resolved = true;
                     } catch (NameNotFoundException e) {
-                        mImageViewFile.setImageDrawable(getResources().getDrawable(
-                                R.drawable.ic_menu_file));
+                        iv.setImageDrawable(ctx.getResources().getDrawable(R.drawable.ic_menu_file));
                     }
                 }
             }

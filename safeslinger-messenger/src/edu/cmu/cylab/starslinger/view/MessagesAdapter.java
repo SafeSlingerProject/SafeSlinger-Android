@@ -24,6 +24,7 @@
 
 package edu.cmu.cylab.starslinger.view;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 import android.content.Context;
@@ -31,12 +32,16 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
+import android.util.DisplayMetrics;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
@@ -45,6 +50,7 @@ import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.MessageRow;
 import edu.cmu.cylab.starslinger.util.AndroidEmoji;
 import edu.cmu.cylab.starslinger.util.Emoji;
+import edu.cmu.cylab.starslinger.util.SSUtil;
 
 public class MessagesAdapter extends BaseAdapter {
     private Context mCtx;
@@ -95,12 +101,15 @@ public class MessagesAdapter extends BaseAdapter {
         ImageView ivAvatar = (ImageView) convertView.findViewById(R.id.imgAvatar);
         TextView tvMessage = (TextView) convertView.findViewById(R.id.tvMessage); // med
         TextView tvDirection = (TextView) convertView.findViewById(R.id.tvDirection); // sma
-        TextView tvFile = (TextView) convertView.findViewById(R.id.tvFileInfo); // mic
         TextView tvDate = (TextView) convertView.findViewById(R.id.tvTime1); // sma
+
+        LinearLayout llFile = (LinearLayout) convertView.findViewById(R.id.SendFrameFile);
+        ImageView ivFile = (ImageView) convertView.findViewById(R.id.SendImageViewFile);
+        TextView tvFile = (TextView) convertView.findViewById(R.id.tvFileInfo); // mic
 
         tvMessage.setVisibility(View.GONE);
         tvDirection.setVisibility(View.GONE);
-        tvFile.setVisibility(View.GONE);
+        llFile.setVisibility(View.GONE);
 
         float dimension;
         switch (SafeSlingerPrefs.getFontSize()) {
@@ -197,7 +206,8 @@ public class MessagesAdapter extends BaseAdapter {
                             tvFile.setTextAppearance(mCtx, R.style.fromDirectionAvailableText);
                         }
                     }
-                    tvFile.setVisibility(View.VISIBLE);
+                    ivFile.setVisibility(View.GONE);
+                    llFile.setVisibility(View.VISIBLE);
                 }
                 break;
             case FILE_DOWNLOAD_DECRYPT:
@@ -207,14 +217,12 @@ public class MessagesAdapter extends BaseAdapter {
 
                 tvFile.setText(fileInfo);
                 tvFile.setTextAppearance(mCtx, R.style.fromDirectionAvailableText);
-                tvFile.setVisibility(View.VISIBLE);
+                ivFile.setVisibility(View.GONE);
+                llFile.setVisibility(View.VISIBLE);
                 break;
             case FILE_OPEN:
-                tvDirection.setText(mCtx.getString(R.string.label_TapToOpenFile));
-                tvDirection.setVisibility(View.VISIBLE);
-
-                tvFile.setText(fileInfo);
-                tvFile.setVisibility(View.VISIBLE);
+                // no "tap to open", users will intuitively tap
+                drawFileImageIcon(mCtx, msg, llFile, ivFile, tvFile, fileInfo);
                 break;
             case MSG_DECRYPT:
                 tvDirection.setText(R.string.label_TapToDecryptMessage);
@@ -236,8 +244,7 @@ public class MessagesAdapter extends BaseAdapter {
                 tvDirection.setTextAppearance(mCtx, R.style.fromDirectionAvailableText);
                 tvDirection.setVisibility(View.VISIBLE);
 
-                tvFile.setText(fileInfo);
-                tvFile.setVisibility(View.VISIBLE);
+                drawFileImageIcon(mCtx, msg, llFile, ivFile, tvFile, fileInfo);
                 break;
             case MSG_PROGRESS:
                 tvFile.setText(fileInfo);
@@ -246,6 +253,37 @@ public class MessagesAdapter extends BaseAdapter {
                 break;
             default:
                 break;
+        }
+    }
+
+    private void drawFileImageIcon(Context ctx, MessageRow msg, LinearLayout llFile,
+            ImageView ivFile, TextView tvFile, StringBuilder fileInfo) {
+        llFile.setVisibility(View.VISIBLE);
+        byte[] thumb = null;
+        // load file data if exists
+        if (!TextUtils.isEmpty(msg.getFileType()) && msg.getFileType().contains("image")) {
+            try {
+                msg = (MessageRow) SSUtil.addAttachmentFromPath(msg, msg.getFileDir());
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            Display display = ((WindowManager) mCtx.getSystemService(Context.WINDOW_SERVICE))
+                    .getDefaultDisplay();
+            DisplayMetrics metrics = new DisplayMetrics();
+            display.getMetrics(metrics);
+
+            float scale = ctx.getResources().getDisplayMetrics().density;
+            int width = (int) (metrics.widthPixels * scale);
+            thumb = SSUtil.makeThumbnail(msg.getFileData(), width / 5);
+        } else {
+            // only non-images need filename
+            tvFile.setText(fileInfo);
+        }
+        if (!(TextUtils.isEmpty(msg.getFileName()))) {
+            MessagesFragment.drawFileImage(mCtx, msg, thumb, ivFile);
+            ivFile.setVisibility(View.VISIBLE);
+        } else {
+            ivFile.setVisibility(View.GONE);
         }
     }
 }

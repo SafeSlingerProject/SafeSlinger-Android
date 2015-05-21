@@ -54,6 +54,7 @@ import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Build.VERSION;
@@ -73,15 +74,6 @@ import edu.cmu.cylab.starslinger.model.SlingerIdentity;
 
 public class SSUtil {
 
-    // @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    // public static void executeAsyncTask(Impork, Object params)
-    // {
-    // if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-    // task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, params);
-    // else
-    // task.execute(params);
-    //
-    // }
     // or "ISO-8859-1" for ISO Latin 1
     private static CharsetEncoder asciiEncoder = Charset.forName("US-ASCII").newEncoder();
 
@@ -89,20 +81,25 @@ public class SSUtil {
         return asciiEncoder.canEncode(v);
     }
 
-    public static byte[] makeThumbnail(Context ctx, byte[] imgData) {
+    public static byte[] makeThumbnail(byte[] imgData, int pixelWidth) {
         if (imgData == null) {
             return null;
         }
         try {
-            int dimension = (int) ctx.getResources().getDimension(R.dimen.avatar_size_list);
-            Bitmap scaled = decodeSampledBitmapFromByte(imgData, dimension, dimension);
+            Bitmap scaled = decodeSampledBitmapFromByte(imgData, pixelWidth, pixelWidth);
             if (scaled != null) {
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                scaled.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-                return baos.toByteArray();
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                scaled.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                scaled.recycle();
+                scaled = null;
+                byte[] byteArray = stream.toByteArray();
+                stream.close();
+                return byteArray;
             }
         } catch (OutOfMemoryError e) {
             return null;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return null;
     }
@@ -124,7 +121,17 @@ public class SSUtil {
         // Decode bitmap with inSampleSize set
         options.inJustDecodeBounds = false;
         try {
-            return BitmapFactory.decodeByteArray(res, 0, res.length, options);
+            int rotation = Exif.getOrientation(res);
+            Bitmap b = BitmapFactory.decodeByteArray(res, 0, res.length, options);
+            if (rotation != 0f) {
+                Matrix matrix = new Matrix();
+                matrix.setRotate(rotation);
+                Bitmap br = Bitmap.createBitmap(b, 0, 0, b.getWidth(), b.getHeight(), matrix, true);
+                b.recycle();
+                return br;
+            } else {
+                return b;
+            }
         } catch (OutOfMemoryError e) {
             return null;
         }
@@ -154,16 +161,6 @@ public class SSUtil {
             return SafeSlingerConfig.NOTIFY_ANDROIDGCM;
         }
     }
-
-    // public static boolean isGoogleAccountPresent(Context ctx) {
-    // AccountManager am = AccountManager.get(ctx);
-    // Account[] accounts = am.getAccountsByType("com.google");
-    // if (accounts == null || accounts.length == 0) {
-    // return false;
-    // } else {
-    // return true;
-    // }
-    // }
 
     public static File getOldDefaultDownloadPath(String mimeType, String filename) {
         if (TextUtils.isEmpty(mimeType)) {

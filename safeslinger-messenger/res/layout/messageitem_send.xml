@@ -57,14 +57,32 @@
             android:textSize="@dimen/text_size_small"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvFileInfo"
+        <LinearLayout
+            android:id="@+id/SendFrameFile"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:textColor="@android:color/darker_gray"
-            android:textIsSelectable="false"
-            android:textSize="@dimen/text_size_micro" />
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvFileInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="middle"
+                android:gravity="right"
+                android:textColor="@android:color/darker_gray"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/text_size_micro" />
+
+            <ImageView
+                android:id="@+id/SendImageViewFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_1dp"
+                android:contentDescription="@string/label_TapToOpenFile"
+                android:gravity="right"
+                android:src="@drawable/ic_menu_file" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvTime1"
