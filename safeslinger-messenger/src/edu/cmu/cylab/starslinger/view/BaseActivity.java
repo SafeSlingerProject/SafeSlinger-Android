@@ -24,8 +24,10 @@
 
 package edu.cmu.cylab.starslinger.view;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -127,6 +129,7 @@ public class BaseActivity extends ActionBarActivity {
     protected static final int DIALOG_QUESTION = 3;
     protected static final int DIALOG_INTRO = 4;
     protected static final int DIALOG_ABOUT = 5;
+    protected static final int DIALOG_OSL = 6;
     protected static final int DIALOG_PROGRESS = 9;
     protected static final int DIALOG_USEROPTIONS = 10;
     protected static final int DIALOG_FILEOPTIONS = 11;
@@ -757,7 +760,7 @@ public class BaseActivity extends ActionBarActivity {
         }
     }
 
-    static AlertDialog.Builder xshowAbout(Activity act) {
+    public static AlertDialog.Builder xshowAbout(Activity act) {
         AlertDialog.Builder ad = new AlertDialog.Builder(act);
         View layout;
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
@@ -817,6 +820,55 @@ public class BaseActivity extends ActionBarActivity {
             }
         });
         return ad;
+    }
+
+    public static AlertDialog.Builder xshowOSL(Activity act) {
+        AlertDialog.Builder ad = new AlertDialog.Builder(act);
+        View layout;
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
+            layout = View.inflate(new ContextThemeWrapper(act, R.style.Theme_AppCompat),
+                    R.layout.about, null);
+        } else {
+            LayoutInflater inflater = (LayoutInflater) act
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            layout = inflater.inflate(R.layout.about, null);
+        }
+        TextView textViewAbout = (TextView) layout.findViewById(R.id.TextViewAbout);
+        ad.setTitle(R.string.title_Osl);
+        textViewAbout.setText(readTxt(act.getResources().openRawResource(R.raw.android_osl)));
+        ad.setView(layout);
+        ad.setCancelable(true);
+        ad.setNeutralButton(R.string.btn_Close, new OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        ad.setOnCancelListener(new OnCancelListener() {
+
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                dialog.dismiss();
+            }
+        });
+        return ad;
+    }
+
+    public static String readTxt(InputStream is) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        try {
+            byte[] buf = new byte[4096];
+            while (is.read(buf) > -1) {
+                baos.write(buf);
+            }
+            baos.flush();
+            is.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return baos.toString();
     }
 
     protected void showFileActionChooser(File downloadedFile, String fileType) {

@@ -89,6 +89,7 @@ public class SettingsActivity extends PreferenceActivity {
     private Preference mBackupRequestDate;
     private Preference mBackupCompleteDate;
     private Preference mRestoreCompleteDate;
+    private Preference mShowOSL;
     private Preference mShowLicense;
     private Preference mShowPrivacy;
     private CheckBoxPreference mShowTutorial;
@@ -131,6 +132,7 @@ public class SettingsActivity extends PreferenceActivity {
         mAccountNameType = (ListPreference) findPreference(SafeSlingerPrefs.pref.TEMPKEY_SYNCACCOUNT_LIST);
         mFileManagerDirectory = (ListPreference) findPreference(SafeSlingerPrefs.pref.FILEMANAGER_ROOTDIR);
         mShowAbout = findPreference(SafeSlingerPrefs.pref.SHOW_ABOUT);
+        mShowOSL = findPreference(SafeSlingerPrefs.pref.SHOW_OSL);
         mShowLicense = findPreference(SafeSlingerPrefs.pref.SHOW_LICENSE);
         mShowPrivacy = findPreference(SafeSlingerPrefs.pref.SHOW_PRIVACY);
         mChangePassphrase = findPreference(SafeSlingerPrefs.pref.CHANGE_PASSPHRASE);
@@ -165,6 +167,7 @@ public class SettingsActivity extends PreferenceActivity {
 
     private void setMessagePreferences() {
         setShowAbout();
+        setShowOSL();
         setShowLicense();
         setShowPrivacy();
         setChangePassphrase();
@@ -356,6 +359,25 @@ public class SettingsActivity extends PreferenceActivity {
         } else {
             showNote(SafeSlinger.getUnsupportedFeatureString("View Web Page"));
         }
+    }
+
+    protected void setShowOSL() {
+        mShowOSL.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+            @SuppressWarnings("deprecation")
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                if (!isFinishing()) {
+                    try {
+                        removeDialog(BaseActivity.DIALOG_OSL);
+                        showDialog(BaseActivity.DIALOG_OSL);
+                    } catch (BadTokenException e) {
+                        e.printStackTrace();
+                    }
+                }
+                return false;
+            }
+        });
     }
 
     protected void setShowLicense() {
@@ -666,6 +688,8 @@ public class SettingsActivity extends PreferenceActivity {
         switch (id) {
             case BaseActivity.DIALOG_ABOUT:
                 return BaseActivity.xshowAbout(SettingsActivity.this).create();
+            case BaseActivity.DIALOG_OSL:
+                return BaseActivity.xshowOSL(SettingsActivity.this).create();
             default:
                 break;
         }

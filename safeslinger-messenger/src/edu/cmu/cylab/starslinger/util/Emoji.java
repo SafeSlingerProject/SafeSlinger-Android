@@ -1,15 +1,12 @@
-
-package edu.cmu.cylab.starslinger.util;
-
 /**
  * Copyright 2014 www.delight.im <info@delight.im>
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,7 +14,7 @@ package edu.cmu.cylab.starslinger.util;
  * limitations under the License.
  */
 
-/** Source: <https://github.com/delight-im/Emoji> */
+package edu.cmu.cylab.starslinger.util;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,19 +28,20 @@ import java.util.regex.Pattern;
  */
 public class Emoji {
 
-    /** A character class containing special chars often used with emoticons */
-    private static final String REGEX_CLASS_SPECIAL_CHARS = "[-_)(;:*<>=/]";
+    /** Characters that may not occur immediately before or after an emoticon */
+    private static final String REGEX_SURROUNDING_CHARS_DISALLOWED = "[-_a-zA-Z0-9)(;:*<>=/]";
     /**
      * A negative look-behind ensuring that the match is not preceded by one of
-     * the special chars above
+     * the characters above
      */
-    private static final String REGEX_NEGATIVE_LOOKBEHIND = "(?<!" + REGEX_CLASS_SPECIAL_CHARS
-            + ")";
+    private static final String REGEX_NEGATIVE_LOOKBEHIND = "(?<!"
+            + REGEX_SURROUNDING_CHARS_DISALLOWED + ")";
     /**
      * A negative look-ahead ensuring that the match is not followed by one of
-     * the special chars above
+     * the characters above
      */
-    private static final String REGEX_NEGATIVE_LOOKAHEAD = "(?!" + REGEX_CLASS_SPECIAL_CHARS + ")";
+    private static final String REGEX_NEGATIVE_LOOKAHEAD = "(?!"
+            + REGEX_SURROUNDING_CHARS_DISALLOWED + ")";
 
     private static class ReplacementsMap extends HashMap<String, Integer> {
 

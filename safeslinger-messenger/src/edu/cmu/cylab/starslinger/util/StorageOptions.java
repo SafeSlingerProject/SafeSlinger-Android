@@ -1,26 +1,4 @@
-/*
- * The MIT License (MIT)
- * 
- * Copyright (c) 2010-2015 Carnegie Mellon University
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
+/* Original source from blog post: http://sapienmobile.com/?p=204. */
 
 package edu.cmu.cylab.starslinger.util;
 
@@ -28,12 +6,13 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import android.annotation.TargetApi;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.os.Environment;
 import edu.cmu.cylab.starslinger.R;
 
+@SuppressLint("NewApi")
 public class StorageOptions {
     public static String[] labels;
     public static String[] paths;
@@ -46,11 +25,23 @@ public class StorageOptions {
         sContext = context.getApplicationContext();
 
         readVoldFile();
+
         testAndCleanList();
+
         setProperties();
     }
 
     private static void readVoldFile() {
+        /*
+         * Scan the /system/etc/vold.fstab file and look for lines like this:
+         * dev_mount sdcard /mnt/sdcard 1
+         * /devices/platform/s3c-sdhci.0/mmc_host/mmc0 When one is found, split
+         * it into its elements and then pull out the path to the that mount
+         * point and add it to the arraylist some devices are missing the vold
+         * file entirely so we add a path here to make sure the list always
+         * includes the path to the first sdcard, whether real or emulated.
+         */
+
         sVold.add("/mnt/sdcard");
 
         try {
@@ -81,6 +72,12 @@ public class StorageOptions {
     }
 
     private static void testAndCleanList() {
+        /*
+         * Now that we have a cleaned list of mount paths, test each one to make
+         * sure it's a valid and available path. If it is not, remove it from
+         * the list.
+         */
+
         for (int i = 0; i < sVold.size(); i++) {
             String voldPath = sVold.get(i);
             File path = new File(voldPath);
@@ -89,8 +86,12 @@ public class StorageOptions {
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private static void setProperties() {
+        /*
+         * At this point all the paths in the list should be valid. Build the
+         * public properties.
+         */
+
         ArrayList<String> labelList = new ArrayList<String>();
 
         int j = 0;
@@ -129,6 +130,10 @@ public class StorageOptions {
 
         count = Math.min(labels.length, paths.length);
 
+        /*
+         * don't need these anymore, clear the lists to reduce memory use and to
+         * prepare them for the next time they're needed.
+         */
         sVold.clear();
     }
 }

@@ -781,7 +781,7 @@
     <string name="title_comments">Comments/Questions</string>
     <!-- title (title case); used at the top of the error dialog. -->
     <string name="title_Error">Error</string>
-    <!-- title (title case); used at the top of the license agreement dialog. NOTE: The license agreement itself is not localized. -->
+    <!-- title (title case); used at the top of the EU license agreement dialog. NOTE: The license agreement itself is not localized. -->
     <string name="title_Eula" translatable="false">End-User License Agreement</string>
     <!-- title (title case); used at the top of the dialog, which provides a walkthrough of the key exchange protocol. -->
     <string name="title_ExchangeWalkthrough">Sling Keys Assistant</string>
@@ -809,6 +809,8 @@
     <string name="title_NotifyFileAvailable">SafeSlinger Message Available</string>
     <!-- title (title case); used as the title of multiple incoming messages in the notification window. iOS-only. -->
     <string name="title_NotifyMulFileAvailable">%d SafeSlinger Messages Available</string>
+    <!-- title (title case); used at the top of the OS license agreement dialog. NOTE: The license agreement itself is not localized. -->
+    <string name="title_Osl" translatable="false">Open-Source Licenses</string>
     <!-- title (title case); used at the top of the passphrase screen where user will login. -->
     <string name="title_passphrase">Passphrase</string>
     <!-- menu option (title case); used in the Select File Option menu to select a picture from the photo album on iOS. -->

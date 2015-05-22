@@ -1,7 +1,4 @@
-
-package edu.cmu.cylab.starslinger.crypto;
-
-/* Below from http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html. */
+/* Original source from blog post: http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html. */
 
 /*
  * This software is provided 'as-is', without any express or implied
@@ -12,6 +9,8 @@ package edu.cmu.cylab.starslinger.crypto;
  * including commercial applications, and to alter it and redistribute it
  * freely, as long as the origin is not misrepresented.
  */
+
+package edu.cmu.cylab.starslinger.crypto;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;

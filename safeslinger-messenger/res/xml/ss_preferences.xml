@@ -153,8 +153,12 @@
             android:title="@string/menu_About" >
         </Preference>
         <Preference
+            android:key="showOSL"
+            android:title="@string/title_Osl" >
+        </Preference>
+        <Preference
             android:key="showLicense"
-            android:title="@string/menu_License" >
+            android:title="@string/title_Eula" >
         </Preference>
         <Preference
             android:key="showPrivacy"

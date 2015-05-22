@@ -1,6 +1,3 @@
-
-package edu.cmu.cylab.starslinger.util;
-
 /**
  * Copyright 2014 www.delight.im <info@delight.im>
  * 
@@ -17,7 +14,7 @@ package edu.cmu.cylab.starslinger.util;
  * limitations under the License.
  */
 
-/** Source: <https://github.com/delight-im/Emoji> */
+package edu.cmu.cylab.starslinger.util;
 
 import android.content.Context;
 import android.graphics.Paint;

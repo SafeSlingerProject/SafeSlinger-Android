@@ -1,6 +1,3 @@
-
-package edu.cmu.cylab.starslinger.model;
-
 /*
  * The MIT License (MIT)
  * 
@@ -24,6 +21,8 @@ package edu.cmu.cylab.starslinger.model;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
+package edu.cmu.cylab.starslinger.model;
 
 import java.util.Locale;
 
