@@ -149,6 +149,7 @@ import edu.cmu.cylab.starslinger.transaction.WebEngine;
 import edu.cmu.cylab.starslinger.util.FragmentCommunicationInterface;
 import edu.cmu.cylab.starslinger.util.NotificationPlayer;
 import edu.cmu.cylab.starslinger.util.SSUtil;
+import edu.cmu.cylab.starslinger.util.ThreadContent;
 import edu.cmu.cylab.starslinger.view.ComposeFragment.OnComposeResultListener;
 import edu.cmu.cylab.starslinger.view.IntroductionFragment.OnIntroResultListener;
 import edu.cmu.cylab.starslinger.view.MessagesFragment.OnMessagesResultListener;
@@ -667,7 +668,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 }
             }
             
-            displayBackStack(mActivity.getSupportFragmentManager());
+//            displayBackStack(mActivity.getSupportFragmentManager());
         }
 
         @Override
@@ -677,11 +678,19 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
            if(Tabs.values()[tab.getPosition()] == Tabs.HOLDER)
            {
                HolderTab mf = (HolderTab) findFragmentByPosition(Tabs.HOLDER.ordinal());
-               if (mf != null && mf.getmCurrentTabTag() == Tabs.MESSAGE.toString())
+               if (mf != null && ThreadContent.getInstance().getmCurrentTab() == Tabs.MESSAGE)
                {
-                   mActivity.getSupportFragmentManager().popBackStack();
+//                   mActivity.getSupportFragmentManager().popBackStack();
+            	   mf.getChildFragmentManager().popBackStack();
+            	   ft.remove(mf);
+//            	   FragmentTransaction childFt = mf.getChildFragmentManager().beginTransaction();
+//            	   MessagesFragment msgfrag = (MessagesFragment)mf.getChildFragmentManager().findFragmentByTag(Tabs.MESSAGE.toString());
+//       	   		   childFt.remove(msgfrag).commit();
                    MessagesFragment.setRecip(null);
+//                   mf.getChildFragmentManager().executePendingTransactions();
                }
+               
+               displayBackStack(mf.getChildFragmentManager());
            }
         }
 
@@ -4096,14 +4105,21 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     @Override
     public void onBackPressed() {
 
-        displayBackStack(getSupportFragmentManager());
+//        displayBackStack(getSupportFragmentManager());
         final int position = getSupportActionBar().getSelectedNavigationIndex();
         if (MessagesFragment.getRecip() != null && position == Tabs.HOLDER.ordinal()) 
-        { 
+        {
+        	HolderTab holderTab =  (HolderTab) mTabsAdapter.findFragmentByPosition(position); 
+        	if(holderTab != null && holderTab.getChildFragmentManager().getBackStackEntryCount() > 0)
+        		holderTab.getChildFragmentManager().popBackStack();
+        	else
+        		super.onBackPressed();
             // collapse messages to threads when in message view
             MessagesFragment.setRecip(null);
-            super.onBackPressed();
-            displayBackStack(getSupportFragmentManager());
+            ThreadContent.getInstance().setmSelectedPosition(0);
+            ThreadContent.getInstance().setmCurrentTab(Tabs.THREADS);
+            
+//            displayBackStack(getSupportFragmentManager());
         }
         else 
         {
@@ -4115,7 +4131,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 //                displayBackStack(getSupportFragmentManager());
 //            }
             super.onBackPressed();
-            displayBackStack(getSupportFragmentManager());
+//            displayBackStack(getSupportFragmentManager());
             showExit(RESULT_CANCELED);
         }
 

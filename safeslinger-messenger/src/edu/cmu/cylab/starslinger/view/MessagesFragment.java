@@ -147,7 +147,7 @@ public class MessagesFragment extends Fragment {
         {
             mThreadData = (ThreadData)extras.getParcelable("thread_data");
             
-            if (mRecip == null) {
+            if (mRecip == null || TextUtils.isEmpty(mRecip.getName()) || (mThreadData.getRecipient() == null || mRecip.getName().compareTo(mThreadData.getRecipient().getName()) != 0)) {
                 // requested messages list
                 // assign recipient
                 if (TextUtils.isEmpty(mThreadData.getMsgRow().getKeyId())) {
@@ -174,11 +174,6 @@ public class MessagesFragment extends Fragment {
                     }
                 }
             } 
-//                else {
-//                // requested threads list
-//                // remove recipient
-//                mRecip = null;
-//            }
             
             updateMessageList(true);
         }
@@ -204,7 +199,7 @@ public class MessagesFragment extends Fragment {
 //                mListThreadTopOffset = 0;
 //                mListThreadVisiblePos = 0;
 //            }
-
+            
             RecipientDbAdapter dbRecipient = RecipientDbAdapter.openInstance(this.getActivity());
             if (recipRowId != -1) {
                 Cursor c = dbRecipient.fetchRecipient(recipRowId);

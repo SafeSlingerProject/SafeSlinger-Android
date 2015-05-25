@@ -24,9 +24,7 @@
 
 package edu.cmu.cylab.starslinger.view;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -66,6 +64,7 @@ import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.ThreadData;
 import edu.cmu.cylab.starslinger.model.ThreadDateDecendingComparator;
 import edu.cmu.cylab.starslinger.util.FragmentCommunicationInterface;
+import edu.cmu.cylab.starslinger.util.ThreadContent;
 import edu.cmu.cylab.starslinger.view.HomeActivity.Tabs;
 
 public class ThreadsFragment extends Fragment {
@@ -78,7 +77,7 @@ public class ThreadsFragment extends Fragment {
     public static final int RESULT_SAVE = 7129;
     public static final int RESULT_PROCESS_SSMIME = 7130;
 
-    private List<ThreadData> mThreadList = new ArrayList<ThreadData>();
+//    private List<ThreadData> mThreadList = new ArrayList<ThreadData>();
 //    private List<MessageRow> mMessageList = new ArrayList<MessageRow>();
     private TextView mTvInstruct;
 //    private ListView mListViewMsgs;
@@ -204,52 +203,6 @@ public class ThreadsFragment extends Fragment {
             }
         });
         vFrag.findViewById(R.id.listMessage).setVisibility(View.GONE);
-//        mListViewMsgs = (ListView) vFrag.findViewById(R.id.listMessage);
-//        mListViewMsgs.setOnScrollListener(new OnScrollListener() {
-//
-//            @Override
-//            public void onScrollStateChanged(AbsListView view, int scrollState) {
-//                // nothing to do...
-//            }
-//
-//            @Override
-//            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount,
-//                    int totalItemCount) {
-//                // save list position
-//                if (visibleItemCount != 0) {
-//                    mListMsgVisiblePos = firstVisibleItem;
-//                    View v = mListViewMsgs.getChildAt(0);
-//                    mListMsgTopOffset = (v == null) ? 0 : v.getTop();
-//                }
-//            }
-//        });
-
-//        mComposeWidget = (LinearLayout) vFrag.findViewById(R.id.ComposeLayout);
-
-//        mEditTextMessage = (EditText) vFrag.findViewById(R.id.SendEditTextMessage);
-
-//        mButtonSend = (Button) vFrag.findViewById(R.id.SendButtonSend);
-//        mButtonSend.setOnClickListener(new OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                // requested send from send button...
-//                doSend(mEditTextMessage.getText().toString(), mRecip != null);
-//            }
-//        });
-
-//        mEditTextMessage.setOnEditorActionListener(new OnEditorActionListener() {
-//
-//            @Override
-//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-//                if (actionId == EditorInfo.IME_ACTION_SEND) {
-//                    // requested send from keyboard...
-//                    doSend(mEditTextMessage.getText().toString(), mRecip != null);
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
 
         updateMessageList(false);
 
@@ -345,8 +298,11 @@ public class ThreadsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
 
-                ThreadData t = mThreadList.get(pos);
+            	ThreadContent.getInstance().setmCurrentTab(Tabs.MESSAGE);
+            	ThreadContent.getInstance().setmSelectedPosition(pos);
+                ThreadData t = ThreadContent.getInstance().getmThreadList().get(pos);
                 Bundle bundle = new Bundle();
+                bundle.putInt("thread_pos", pos);
                 bundle.putParcelable("thread_data", t);
                 bundle.putBoolean("thread_click", true);
                 mListener.onCommunicateData(bundle, Tabs.MESSAGE.toString());
@@ -467,7 +423,7 @@ public class ThreadsFragment extends Fragment {
 //        boolean showCompose = false;
 
         // draw threads list/title bar
-        mThreadList.clear();
+        ThreadContent.getInstance().getmThreadList().clear();
         ThreadData t = null;
         int totalThreads = 0;
         // inbox threads
@@ -516,7 +472,7 @@ public class ThreadsFragment extends Fragment {
         if (totalThreads <= 0) {
             mTvInstruct.setVisibility(View.VISIBLE);
         }
-        Collections.sort(mThreadList, new ThreadDateDecendingComparator());
+        Collections.sort(ThreadContent.getInstance().getmThreadList(), new ThreadDateDecendingComparator());
 
         // draw messages list/compose draft
 //        mMessageList.clear();
@@ -604,7 +560,7 @@ public class ThreadsFragment extends Fragment {
 //        unregisterForContextMenu(mListViewMsgs);
         unregisterForContextMenu(mListViewThreads);
 
-        mAdapterThread = new ThreadsAdapter(this.getActivity(), mThreadList);
+        mAdapterThread = new ThreadsAdapter(this.getActivity(), ThreadContent.getInstance().getmThreadList());
         mListViewThreads.setAdapter(mAdapterThread);
         setThreadListClickListener();
         mListViewThreads.setSelectionFromTop(mListThreadVisiblePos, mListThreadTopOffset);
@@ -620,8 +576,8 @@ public class ThreadsFragment extends Fragment {
 
     private void mergeInThreads(ThreadData t1) {
         boolean exists = false;
-        for (int i = 0; i < mThreadList.size(); i++) {
-            ThreadData t2 = mThreadList.get(i);
+        for (int i = 0; i < ThreadContent.getInstance().getThreadsCount(); i++) {
+            ThreadData t2 = ThreadContent.getInstance().getmThreadList().get(i);
 
             // if matching key is more recent use it
             String k1 = "" + t2.getMsgRow().getKeyId();
@@ -629,11 +585,11 @@ public class ThreadsFragment extends Fragment {
             if (k1.equals(k2)) {
                 exists = true;
                 t2 = new ThreadData(t2, t1);
-                mThreadList.set(i, t2);
+                ThreadContent.getInstance().getmThreadList().set(i, t2);
             }
         }
         if (!exists) {
-            mThreadList.add(t1);
+        	ThreadContent.getInstance().getmThreadList().add(t1);
         }
     }
 
@@ -744,11 +700,11 @@ public class ThreadsFragment extends Fragment {
 
         AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
         if (v.equals(mListViewThreads)) {
-            RecipientRow recip = mThreadList.get(info.position).getRecipient();
+            RecipientRow recip = ThreadContent.getInstance().getmThreadList().get(info.position).getRecipient();
             String delThreadStr = String.format(
                     getString(R.string.menu_deleteThread),
                     ThreadsAdapter.getBestIdentityName(getActivity(),
-                            mThreadList.get(info.position), recip));
+                    		ThreadContent.getInstance().getmThreadList().get(info.position), recip));
             menu.add(Menu.NONE, R.id.item_delete_thread, Menu.NONE, delThreadStr);
             if (recip != null && recip.getRowId() > -1
                     && recip.getSource() != RecipientDbAdapter.RECIP_SOURCE_INVITED) {
@@ -816,20 +772,20 @@ public class ThreadsFragment extends Fragment {
 //            return true;
 //        } else if 
          if (item.getItemId() == R.id.item_delete_thread) {
-            doDeleteThread(mThreadList.get(info.position).getMsgRow().getKeyId());
+            doDeleteThread(ThreadContent.getInstance().getmThreadList().get(info.position).getMsgRow().getKeyId());
             updateMessageList(false);
             return true;
         } else if (item.getItemId() == R.id.item_thread_details) {
             showHelp(getString(R.string.title_RecipientDetail),
-                    BaseActivity.formatThreadDetails(getActivity(), mThreadList.get(info.position)));
+                    BaseActivity.formatThreadDetails(getActivity(), ThreadContent.getInstance().getmThreadList().get(info.position)));
             return true;
         } else if (item.getItemId() == R.id.item_link_contact_add
                 || item.getItemId() == R.id.item_link_contact_change) {
-            ((BaseActivity) getActivity()).showUpdateContactLink(mThreadList.get(info.position)
+            ((BaseActivity) getActivity()).showUpdateContactLink(ThreadContent.getInstance().getmThreadList().get(info.position)
                     .getRecipient().getRowId());
             return true;
         } else if (item.getItemId() == R.id.item_edit_contact) {
-            ((BaseActivity) getActivity()).showEditContact(mThreadList.get(info.position)
+            ((BaseActivity) getActivity()).showEditContact(ThreadContent.getInstance().getmThreadList().get(info.position)
                     .getRecipient().getContactlu());
             return true;
         } else {
@@ -1071,13 +1027,13 @@ public class ThreadsFragment extends Fragment {
 
     public void postProgressMsgList(boolean isInboxTable, long msgRowId, String msg) {
         if (mRecip == null) {
-            for (int i = 0; i < mThreadList.size(); i++) {
-                if (mThreadList.get(i).getMsgRow().getRowId() == msgRowId) {
-                    ThreadData t = mThreadList.get(i);
+            for (int i = 0; i < ThreadContent.getInstance().getThreadsCount(); i++) {
+                if (ThreadContent.getInstance().getmThreadList().get(i).getMsgRow().getRowId() == msgRowId) {
+                    ThreadData t = ThreadContent.getInstance().getmThreadList().get(i);
                     t.setProgress(msg);
-                    mThreadList.set(i, t);
+                    ThreadContent.getInstance().getmThreadList().set(i, t);
 
-                    mAdapterThread = new ThreadsAdapter(this.getActivity(), mThreadList);
+                    mAdapterThread = new ThreadsAdapter(this.getActivity(), ThreadContent.getInstance().getmThreadList());
                     mListViewThreads.setAdapter(mAdapterThread);
                     mListViewThreads.setSelectionFromTop(mListThreadVisiblePos,
                             mListThreadTopOffset);

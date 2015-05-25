@@ -8,7 +8,7 @@
         android:id="@+id/content"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.7" >
+        android:layout_weight="0.3" >
     </FrameLayout>
 
     <FrameLayout
@@ -16,7 +16,7 @@
         android:layout_width="0dp"
         android:visibility="gone"
         android:layout_height="match_parent"
-        android:layout_weight="0.3" >
+        android:layout_weight="0.7" >
     </FrameLayout>
 
 </LinearLayout>
