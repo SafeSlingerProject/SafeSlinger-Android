@@ -670,7 +670,7 @@ public class SafeSlinger extends Application {
                                 }
                             } catch (OutOfMemoryError e) {
                                 e.printStackTrace();
-                            } catch (ExchangeException e) {
+                            } catch (MessagingException e) {
                                 e.printStackTrace();
                             } catch (ClassNotFoundException e) {
                                 e.printStackTrace();
@@ -718,7 +718,7 @@ public class SafeSlinger extends Application {
         byte[] resp = null;
         try {
             resp = web.getMessageNoncesByToken(SafeSlingerPrefs.getPushRegistrationId());
-        } catch (ExchangeException e) {
+        } catch (MessagingException e) {
             e.printStackTrace();
         } catch (MessageNotFoundException e) {
             e.printStackTrace();

@@ -561,6 +561,8 @@ public class SSUtil {
             }
         } catch (IllegalArgumentException e) {
             // column may not exist
+        } catch (IllegalStateException e) {
+            // column may not exist
         }
 
         if (name == null) {

@@ -107,8 +107,8 @@ import android.widget.TextView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 
-import edu.cmu.cylab.starslinger.ExchangeException;
 import edu.cmu.cylab.starslinger.GeneralException;
+import edu.cmu.cylab.starslinger.MessagingException;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlinger;
@@ -2769,7 +2769,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
             } catch (OutOfMemoryError e) {
                 return getString(R.string.error_OutOfMemoryError);
-            } catch (ExchangeException e) {
+            } catch (MessagingException e) {
                 return e.getLocalizedMessage();
             } catch (FileNotFoundException e) {
                 return e.getLocalizedMessage();
@@ -2899,7 +2899,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
             } catch (OutOfMemoryError e) {
                 return getString(R.string.error_OutOfMemoryError);
-            } catch (ExchangeException e) {
+            } catch (MessagingException e) {
                 return e.getLocalizedMessage();
             } catch (FileNotFoundException e) {
                 return e.getLocalizedMessage();
@@ -3065,7 +3065,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
                 } catch (OutOfMemoryError e) {
                     error = getString(R.string.error_OutOfMemoryError);
-                } catch (ExchangeException e) {
+                } catch (MessagingException e) {
                     error = e.getLocalizedMessage();
                 } catch (IOException e) {
                     error = e.getLocalizedMessage();
@@ -3222,7 +3222,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 e.printStackTrace();
             } catch (CryptoMsgException e) {
                 e.printStackTrace();
-            } catch (ExchangeException e) {
+            } catch (MessagingException e) {
                 SafeSlingerPrefs.setPushRegistrationId(null); // clear
                 SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
                 e.printStackTrace();

@@ -24,12 +24,12 @@
 
 package edu.cmu.cylab.starslinger;
 
-public class ExchangeException extends Exception {
+public class MessagingException extends Exception {
 
-    public ExchangeException(String message) {
+    public MessagingException(String message) {
         super(message);
     }
 
-    private static final long serialVersionUID = -6470166486386837542L;
+    private static final long serialVersionUID = -6764998174539458563L;
 
 }

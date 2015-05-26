@@ -37,7 +37,7 @@ import android.text.TextUtils;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
-import edu.cmu.cylab.starslinger.ExchangeException;
+import edu.cmu.cylab.starslinger.MessagingException;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
@@ -357,7 +357,7 @@ public class C2DMessaging {
                 e.printStackTrace();
             } catch (CryptoMsgException e) {
                 e.printStackTrace();
-            } catch (ExchangeException e) {
+            } catch (MessagingException e) {
                 SafeSlingerPrefs.setPushRegistrationId(null); // clear
                 SafeSlingerPrefs.setPushRegistrationIdPosted(false); // reset
                 e.printStackTrace();

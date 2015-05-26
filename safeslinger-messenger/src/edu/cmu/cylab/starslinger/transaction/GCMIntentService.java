@@ -38,8 +38,8 @@ import android.util.Base64;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
-import edu.cmu.cylab.starslinger.ExchangeException;
 import edu.cmu.cylab.starslinger.GeneralException;
+import edu.cmu.cylab.starslinger.MessagingException;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
@@ -141,7 +141,7 @@ public class GCMIntentService extends IntentService {
                     byte[] respGetMsg = null;
                     try {
                         respGetMsg = mWeb.getMessage(msgHashBytes);
-                    } catch (ExchangeException e) {
+                    } catch (MessagingException e) {
                         e.printStackTrace();
                         SafeSlinger.getApplication().checkForMissedMessages();
                         break;

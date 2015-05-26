@@ -46,7 +46,7 @@ import android.content.Context;
 import android.net.TrafficStats;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import edu.cmu.cylab.starslinger.ExchangeException;
+import edu.cmu.cylab.starslinger.MessagingException;
 import edu.cmu.cylab.starslinger.MyLog;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlinger;
@@ -89,11 +89,11 @@ public class WebEngine {
         mVersion = SafeSlingerConfig.getVersionCode();
     }
 
-    private byte[] doPost(String uri, byte[] requestBody) throws ExchangeException {
+    private byte[] doPost(String uri, byte[] requestBody) throws MessagingException {
         mCancelable = false;
 
         if (!SafeSlinger.getApplication().isOnline()) {
-            throw new ExchangeException(
+            throw new MessagingException(
                     mCtx.getString(R.string.error_CorrectYourInternetConnection));
         }
 
@@ -165,7 +165,7 @@ public class WebEngine {
         }
 
         if (!TextUtils.isEmpty(error) || reqData == null) {
-            throw new ExchangeException(error);
+            throw new MessagingException(error);
         }
         return reqData;
     }
@@ -185,7 +185,7 @@ public class WebEngine {
      * migration, registration expiration, others.
      */
     public byte[] postRegistration(String keyId, String senderPushRegId, int notifyType,
-            byte[] nonce, String pubSignKey, String priSignKey) throws ExchangeException,
+            byte[] nonce, String pubSignKey, String priSignKey) throws MessagingException,
             MessageNotFoundException {
 
         String subToken_Deprecated = new String(); // always empty
@@ -231,7 +231,7 @@ public class WebEngine {
      * @throws MessageNotFoundException
      */
     public byte[] postMessage(byte[] msgHashBytes, byte[] msgData, byte[] fileData,
-            String recipientPushRegId, int notifyType) throws ExchangeException,
+            String recipientPushRegId, int notifyType) throws MessagingException,
             MessageNotFoundException {
 
         handleSizeRestictions(fileData);
@@ -270,7 +270,7 @@ public class WebEngine {
      * 
      * @throws MessageNotFoundException
      */
-    public byte[] getFile(byte[] msgHashBytes) throws ExchangeException, MessageNotFoundException {
+    public byte[] getFile(byte[] msgHashBytes) throws MessagingException, MessageNotFoundException {
 
         ByteBuffer msg = ByteBuffer.allocate(mVersionLen //
                 + 4 + msgHashBytes.length //
@@ -291,7 +291,7 @@ public class WebEngine {
      * 
      * @throws MessageNotFoundException
      */
-    public byte[] getMessage(byte[] msgHashBytes) throws ExchangeException,
+    public byte[] getMessage(byte[] msgHashBytes) throws MessagingException,
             MessageNotFoundException {
 
         ByteBuffer msg = ByteBuffer.allocate(mVersionLen //
@@ -313,7 +313,7 @@ public class WebEngine {
      * 
      * @throws MessageNotFoundException
      */
-    public byte[] getMessageNoncesByToken(String recipientPushRegId) throws ExchangeException,
+    public byte[] getMessageNoncesByToken(String recipientPushRegId) throws MessagingException,
             MessageNotFoundException {
 
         int capacity = mVersionLen //
@@ -333,51 +333,51 @@ public class WebEngine {
         return resp;
     }
 
-    private void handleMessagingErrorCodes(byte[] resp) throws ExchangeException,
+    private void handleMessagingErrorCodes(byte[] resp) throws MessagingException,
             MessageNotFoundException {
         String checkError = new String(resp) + "";
         if (checkError.contains(C2DMessaging.ERRMSG_ERROR_PREFIX)) {
 
             // Errors possible with C2DM and GCM
             if (checkError.contains(C2DMessaging.ERRMSG_QUOTA_EXCEEDED)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgQuotaExceeded));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgQuotaExceeded));
             } else if (checkError.contains(C2DMessaging.ERRMSG_DEVICE_QUOTA_EXCEEDED)) {
-                throw new ExchangeException(
+                throw new MessagingException(
                         mCtx.getString(R.string.error_PushMsgDeviceQuotaExceeded));
             } else if (checkError.contains(C2DMessaging.ERRMSG_INVALID_REGISTRATION)) {
-                throw new ExchangeException(
+                throw new MessagingException(
                         mCtx.getString(R.string.error_PushMsgInvalidRegistration));
             } else if (checkError.contains(C2DMessaging.ERRMSG_NOT_REGISTERED)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotRegistered));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgNotRegistered));
             } else if (checkError.contains(C2DMessaging.ERRMSG_MESSAGE_TOO_BIG)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgMessageTooBig));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgMessageTooBig));
             } else if (checkError.contains(C2DMessaging.ERRMSG_MISSING_COLLAPSE_KEY)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgNotSucceed));
             } else if (checkError.contains(C2DMessaging.ERRMSG_NOTIFCATION_FAIL)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgNotSucceed));
             } else if (checkError.contains(C2DMessaging.ERRMSG_SERVICE_FAIL)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgServiceFail));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgServiceFail));
             } else if (checkError.contains(C2DMessaging.ERRMSG_MESSAGE_NOT_FOUND)) {
                 throw new MessageNotFoundException(
                         mCtx.getString(R.string.error_PushMsgMessageNotFound));
 
                 // Errors possible with GCM only below...
             } else if (checkError.contains(C2DMessaging.ERRMSG_DEVICE_MESSAGE_RATE_EXCEEDED)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgQuotaExceeded));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgQuotaExceeded));
             } else if (checkError.contains(C2DMessaging.ERRMSG_INTERNAL_SERVER_ERROR)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgServiceFail));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgServiceFail));
             } else if (checkError.contains(C2DMessaging.ERRMSG_INVALID_DATA_KEY)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgServiceFail));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgServiceFail));
             } else if (checkError.contains(C2DMessaging.ERRMSG_INVALID_PACKAGE_NAME)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgNotSucceed));
             } else if (checkError.contains(C2DMessaging.ERRMSG_INVALID_TTL)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgNotSucceed));
             } else if (checkError.contains(C2DMessaging.ERRMSG_MISMATCH_SENDER_ID)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotSucceed));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgNotSucceed));
             } else if (checkError.contains(C2DMessaging.ERRMSG_MISSING_REGISTRATION)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgNotRegistered));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgNotRegistered));
             } else if (checkError.contains(C2DMessaging.ERRMSG_UNAVAILABLE)) {
-                throw new ExchangeException(mCtx.getString(R.string.error_PushMsgServiceFail));
+                throw new MessagingException(mCtx.getString(R.string.error_PushMsgServiceFail));
             }
         }
     }
@@ -394,17 +394,17 @@ public class WebEngine {
         return false;
     }
 
-    private byte[] handleResponseExceptions(byte[] resp, int errMax) throws ExchangeException,
+    private byte[] handleResponseExceptions(byte[] resp, int errMax) throws MessagingException,
             MessageNotFoundException {
 
         int firstInt = 0;
         ByteBuffer result = ByteBuffer.wrap(resp);
         if (mCancelable)
-            throw new ExchangeException(mCtx.getString(R.string.error_WebCancelledByUser));
+            throw new MessagingException(mCtx.getString(R.string.error_WebCancelledByUser));
         else if (resp == null)
-            throw new ExchangeException(mCtx.getString(R.string.error_ServerNotResponding));
+            throw new MessagingException(mCtx.getString(R.string.error_ServerNotResponding));
         else if (resp.length < 4)
-            throw new ExchangeException(mCtx.getString(R.string.error_ServerNotResponding));
+            throw new MessagingException(mCtx.getString(R.string.error_ServerNotResponding));
         else {
             firstInt = result.getInt();
             byte[] bytes = new byte[result.remaining()];
@@ -416,7 +416,7 @@ public class WebEngine {
                 handleMessagingErrorCodes(resp);
 
                 // second, use message directly from server
-                throw new ExchangeException(String.format(
+                throw new MessagingException(String.format(
                         mCtx.getString(R.string.error_ServerAppMessage), new String(bytes).trim()));
             }
             // else strip off server version
@@ -425,10 +425,10 @@ public class WebEngine {
         }
     }
 
-    private void handleSizeRestictions(byte[] fileData) throws ExchangeException {
+    private void handleSizeRestictions(byte[] fileData) throws MessagingException {
 
         if (fileData.length > SafeSlingerConfig.MAX_FILEBYTES)
-            throw new ExchangeException(String.format(
+            throw new MessagingException(String.format(
                     mCtx.getString(R.string.error_CannotSendFilesOver),
                     SafeSlingerConfig.MAX_FILEBYTES));
 
