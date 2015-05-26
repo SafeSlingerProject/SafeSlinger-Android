@@ -62,6 +62,7 @@ import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.LabeledIntent;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.graphics.Bitmap;
@@ -289,21 +290,34 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             final int position = getSupportActionBar().getSelectedNavigationIndex();
             if (position == Tabs.HOLDER.ordinal()) {
                 if (mTabsAdapter != null) {
-                    MessagesFragment mf = (MessagesFragment) mTabsAdapter
-                            .findFragmentByPosition(Tabs.HOLDER.ordinal());
-                    if (mf != null) {
-                        mf.updateValues(intent.getExtras());
+                	
+                	HolderTab holderFragment = (HolderTab) mTabsAdapter.findFragmentByPosition(Tabs.HOLDER.ordinal());
+                	
+                	if(holderFragment != null)
+                	{
+//                        if (mf != null) {
+                		if(holderFragment != null) {
+//                            mf.updateValues(intent.getExtras());
+                			if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+                				holderFragment.updateBothTabs(intent.getExtras());
+                			else
+                			{
+                				holderFragment.updateValues(intent.getExtras(), ThreadContent.getInstance().getmCurrentTab().toString(), intent.getAction());
+                                // if not current recipient in thread, user must get
+                                // written notice so do not abort
+                                RecipientRow r = MessagesFragment.getRecip();
+                                String inkey = intent.getExtras().getString(extra.KEYID);
+                                if (abort && r != null && inkey != null) {
+                                    if (!inkey.equals(r.getKeyid())) {
+                                        abort = false;
+                                    }
+                                }	
+                			}
+                			
 
-                        // if not current recipient in thread, user must get
-                        // written notice so do not abort
-                        RecipientRow r = MessagesFragment.getRecip();
-                        String inkey = intent.getExtras().getString(extra.KEYID);
-                        if (abort && r != null && inkey != null) {
-                            if (!inkey.equals(r.getKeyid())) {
-                                abort = false;
-                            }
                         }
-                    }
+                	}
+
                 }
             }
 
@@ -338,11 +352,16 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             final int position = getSupportActionBar().getSelectedNavigationIndex();
             if (position == Tabs.HOLDER.ordinal()) {
                 if (mTabsAdapter != null) {
-                    MessagesFragment mf = (MessagesFragment) mTabsAdapter
-                            .findFragmentByPosition(Tabs.HOLDER.ordinal());
-                    if (mf != null) {
-                        mf.updateValues(intent.getExtras());
-                    }
+//                    MessagesFragment mf = (MessagesFragment) mTabsAdapter
+//                            .findFragmentByPosition(Tabs.HOLDER.ordinal());
+//                    if (mf != null) {
+//                        mf.updateValues(intent.getExtras());
+//                    }
+                	HolderTab holderFragment = (HolderTab)mTabsAdapter
+                          .findFragmentByPosition(Tabs.HOLDER.ordinal());
+                	
+                	if(holderFragment != null)
+                		holderFragment.updateValues(intent.getExtras(), ThreadContent.getInstance().getmCurrentTab().toString(), intent.getAction());
                 }
             }
         }
@@ -2859,10 +2878,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     protected void postProgressMsgList(boolean isInboxTable, long rowId, String msg) {
         try {
             if (mTabsAdapter != null) {
-                MessagesFragment mf = (MessagesFragment) mTabsAdapter
+//                MessagesFragment mf = (MessagesFragment) mTabsAdapter
+//                        .findFragmentByPosition(Tabs.HOLDER.ordinal());
+            	HolderTab holderFragment = (HolderTab) mTabsAdapter
                         .findFragmentByPosition(Tabs.HOLDER.ordinal());
-                if (mf != null) {
-                    mf.postProgressMsgList(isInboxTable, rowId, msg);
+                if (holderFragment != null) {
+                	MessagesFragment mf = (MessagesFragment)holderFragment.getChildFragmentManager().findFragmentByTag(Tabs.MESSAGE.toString());
+                	if(mf != null)
+                		mf.postProgressMsgList(isInboxTable, rowId, msg);
                 }
             }
         } catch (IllegalStateException e) {

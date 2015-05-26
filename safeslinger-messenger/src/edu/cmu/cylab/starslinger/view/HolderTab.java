@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 import edu.cmu.cylab.starslinger.R;
+import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.util.ThreadContent;
 import edu.cmu.cylab.starslinger.view.HomeActivity.Tabs;
 
@@ -128,9 +129,31 @@ public class HolderTab extends Fragment {
 //    	outState.putString("current_tab", mCurrentTabTag);
     	outState.putSerializable("prev_tab", mPrevTab);
     }
-    public void updateValues(Bundle bundle, String tag) {
+    
+    public void updateValues(Bundle bundle, String tag)
+    {
+    	updateValues(bundle, tag, "");
+    }
+    
+    public void updateBothTabs(Bundle bundle)
+    {
+        ThreadsFragment frag = (ThreadsFragment) getChildFragmentManager()
+                .findFragmentByTag(Tabs.THREADS.toString());
+        if (frag != null) {
+            frag.updateValues(bundle);
+        }
+        
+        MessagesFragment msgFrag = (MessagesFragment) getChildFragmentManager()
+                .findFragmentByTag(Tabs.MESSAGE.toString());
+        
+        if(msgFrag != null)
+        {
+        	msgFrag.updateValues(bundle);
+        }
+    }
+    
+    public void updateValues(Bundle bundle, String tag, String action) {
     	
-//    	mSelectedPos = bundle.getInt("thread_pos", 0);
         if (Tabs.THREADS.toString().compareTo(tag) == 0) {
 //            setmCurrentTabTag(Tabs.THREADS.toString());
             ThreadsFragment frag = (ThreadsFragment) getChildFragmentManager()
@@ -150,7 +173,7 @@ public class HolderTab extends Fragment {
             MessagesFragment frag = (MessagesFragment) getChildFragmentManager()
                     .findFragmentByTag(tag);
             
-            if (frag == null || (frag != null && !dualPane)) {
+            if (frag == null || (frag != null && !dualPane && SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING.compareTo(action) != 0 && SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING.compareTo(action) != 0)) {
                 FragmentTransaction ft = getChildFragmentManager()
                         .beginTransaction();
                 MessagesFragment msgFrag = new MessagesFragment();
