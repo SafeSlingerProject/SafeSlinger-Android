@@ -32,7 +32,7 @@
 
     <string name="choice_NumUsers">%d Benutzer</string>
 
-    <string name="error_AllMembersMustUpgrade">Einige Mitglieder werden mit einer älteren Version; Alle Mitglieder müssen auf die neueste Version zu aktualisieren.</string>
+    <string name="error_AllMembersMustUpgrade">Einige Mitglieder nutzen eine ältere Version; alle Mitglieder müssen die neueste Version verwenden.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Alle Teilnehmer müssen die Software aktualisieren, manche verwenden ältere Formate zur Push Registrierung.</string>
     <string name="error_CorrectYourInternetConnection">Internet nicht verfügbar, überprüfen Sie Ihre Einstellungen.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Zeitüberschreitung beim Austausch. Beginnen Sie den Austausch erneut.</string>
@@ -42,11 +42,11 @@
     <string name="error_LocalGroupCommitDiffer">Sie haben unterschiedliche Sätze erhalten. Beginnen Sie den Austausch erneut.</string>
     <string name="error_MinUsersRequired">Ein Minimum von %d Teilnehmern wird benötigt, um Daten auszutauschen.</string>
     <string name="error_MoreDataThanUsers">Unerwartete Daten im Austausch gefunden. Beginnen Sie den Austausch erneut.</string>
-    <string name="error_NoDataToExchange">Der Austausch ist erforderlich, Daten fehlt.</string>
+    <string name="error_NoDataToExchange">Für den Austausch fehlen erforderliche Daten.</string>
     <string name="error_NoWordListSelected">Sie müssen einen passenden Satz auswählen, um fortzufahren.</string>
     <string name="error_OtherGroupCommitDiffer">Jemand hat keine passenden Sätze gemeldet. Beginnen Sie den Austausch erneut.</string>
     <string name="error_OutOfMemoryError">Der Speicher ist zu gering, um diesen Vorgang abzuschließen.</string>
-    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_ServerAppMessage">Server-Nachricht: %s</string>
     <string name="error_ServerNotResponding">Server meldet sich nicht.</string>
     <string name="error_TimeoutWaitingForAllMembers">Zeitüberschreitung beim Warten auf die Eingaben alle Teilnehmer.</string>
     <string name="error_WebCancelledByUser">Benutzer brach Serveranfrage ab.</string>
