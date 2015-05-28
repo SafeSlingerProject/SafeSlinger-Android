@@ -30,6 +30,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.os.Bundle;
@@ -95,7 +96,8 @@ public class ThreadsFragment extends Fragment {
 //    private Button mButtonSend;
 //    private LinearLayout mComposeWidget;
 //    private static MessageData mDraft;
-
+    private boolean mLoadMessagesTab = false;
+    
     private FragmentCommunicationInterface mListener;
     
     @Override
@@ -204,6 +206,9 @@ public class ThreadsFragment extends Fragment {
         });
         vFrag.findViewById(R.id.listMessage).setVisibility(View.GONE);
 
+        if(getArguments() != null)
+        	mLoadMessagesTab = getArguments().getBoolean("load_msg");
+        
         updateMessageList(false);
 
         return vFrag;
@@ -306,6 +311,7 @@ public class ThreadsFragment extends Fragment {
                 bundle.putParcelable("thread_data", t);
                 bundle.putBoolean("thread_click", true);
                 mListener.onCommunicateData(bundle, Tabs.MESSAGE.toString());
+                updateMessageList(false);
                 
 //                if (mRecip == null) {
 //                    // requested messages list
@@ -473,91 +479,15 @@ public class ThreadsFragment extends Fragment {
             mTvInstruct.setVisibility(View.VISIBLE);
         }
         Collections.sort(ThreadContent.getInstance().getmThreadList(), new ThreadDateDecendingComparator());
-
-        // draw messages list/compose draft
-//        mMessageList.clear();
-//        if (mRecip != null) {
-//            // recipient data
-//            if (mRecip != null && mRecip.isSendable() && t != null && !t.isNewerExists()) {
-//                showCompose = true;
-//            }
-//            // encrypted msgs
-//            Cursor ci = dbInbox.fetchAllInboxByThread(mRecip.getKeyid());
-//            if (ci != null) {
-//                try {
-//                    if (ci.moveToFirst()) {
-//                        do {
-//                            MessageRow inRow = new MessageRow(ci, true);
-//                            if (mRecip != null) {
-//                                inRow.setPhoto(mRecip.getPhoto());
-//                            }
-//                            mMessageList.add(inRow);
-//                        } while (ci.moveToNext());
-//                    }
-//                } finally {
-//                    ci.close();
-//                }
-//            }
-//            // decrypted msgs and outbox msgs
-//            Cursor cm = dbMessage.fetchAllMessagesByThread(mRecip.getKeyid());
-//            if (cm != null) {
-//                try {
-//                    if (cm.moveToFirst()) {
-//                        do {
-//                            MessageRow messageRow = new MessageRow(cm, false);
-//                            if (!messageRow.isInbox()) {
-//                                messageRow.setPhoto(myPhoto);
-//                            } else {
-//                                if (mRecip != null) {
-//                                    messageRow.setPhoto(mRecip.getPhoto());
-//                                }
-//                            }
-//
-//                            if (mDraft == null
-//                                    && messageRow.getStatus() == MessageDbAdapter.MESSAGE_STATUS_DRAFT
-//                                    && TextUtils.isEmpty(messageRow.getFileName())
-//                                    && mRecip.isSendable()) {
-//                                // if recent draft, remove from list put in edit
-//                                // box
-//                                mDraft = messageRow;
-//                                mEditTextMessage.setTextKeepState(mDraft.getText());
-//                                mEditTextMessage.forceLayout();
-//                            } else if (mDraft != null && mDraft.getRowId() == messageRow.getRowId()) {
-//                                // draft has already been updated
-//                                continue;
-//                            } else {
-//                                // show message normally
-//                                mMessageList.add(messageRow);
-//                            }
-//                        } while (cm.moveToNext());
-//                    }
-//                } finally {
-//                    cm.close();
-//                }
-//            }
-//            Collections.sort(mMessageList, new MessageDateAscendingComparator());
-//        } 
-//        else {
-//            // clear draft in thread view
-//            showCompose = false;
-//            doSave(mEditTextMessage.getText().toString(), true);
-//            mDraft = null;
-//            mEditTextMessage.setTextKeepState("");
-//        }
-
-//        if (showCompose) {
-//            mComposeWidget.setVisibility(View.VISIBLE);
-//        } else {
-//            mComposeWidget.setVisibility(View.GONE);
-//        }
-
-//        // set position to top when incoming message in foreground...
-//        if (recentMsg) {
-//            mListMsgTopOffset = 0;
-//            mListMsgVisiblePos = mMessageList.size() - 1;
-//        }
-
-//        unregisterForContextMenu(mListViewMsgs);
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && mLoadMessagesTab)
+        {
+        	mLoadMessagesTab = false;
+        	Bundle bundle = new Bundle();
+            bundle.putBoolean("load_msg", true);
+            mListener.onCommunicateData(bundle, Tabs.MESSAGE.toString());
+        }
+        
+        
         unregisterForContextMenu(mListViewThreads);
 
         mAdapterThread = new ThreadsAdapter(this.getActivity(), ThreadContent.getInstance().getmThreadList());
@@ -565,12 +495,6 @@ public class ThreadsFragment extends Fragment {
         setThreadListClickListener();
         mListViewThreads.setSelectionFromTop(mListThreadVisiblePos, mListThreadTopOffset);
 
-//        mAdapterMsg = new MessagesAdapter(this.getActivity(), mMessageList);
-//        mListViewMsgs.setAdapter(mAdapterMsg);
-//        setMessageListClickListener();
-//        mListViewMsgs.setSelectionFromTop(mListMsgVisiblePos, mListMsgTopOffset);
-
-//        registerForContextMenu(mListViewMsgs);
         registerForContextMenu(mListViewThreads);
     }
 
@@ -699,7 +623,7 @@ public class ThreadsFragment extends Fragment {
         super.onCreateContextMenu(menu, v, menuInfo);
 
         AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
-        if (v.equals(mListViewThreads)) {
+//        if (v.equals(mListViewThreads)) {
             RecipientRow recip = ThreadContent.getInstance().getmThreadList().get(info.position).getRecipient();
             String delThreadStr = String.format(
                     getString(R.string.menu_deleteThread),
@@ -722,7 +646,7 @@ public class ThreadsFragment extends Fragment {
                 }
             }
             menu.add(Menu.NONE, R.id.item_thread_details, Menu.NONE, R.string.menu_Details);
-        } 
+//        } 
 //        else if (v.equals(mListViewMsgs)) {
 //            MenuInflater inflater = getActivity().getMenuInflater();
 //            inflater.inflate(R.layout.messagecontext, menu);
@@ -750,27 +674,6 @@ public class ThreadsFragment extends Fragment {
     public boolean onContextItemSelected(MenuItem item) {
 
         AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
-//        if (item.getItemId() == R.id.item_delete_message) {
-//            doDeleteMessage(mMessageList.get(info.position));
-//            updateMessageList(false);
-//            return true;
-//        } else if (item.getItemId() == R.id.item_message_details) {
-//            String detailStr = BaseActivity.formatMessageDetails(getActivity(),
-//                    mMessageList.get(info.position));
-//            showHelp(getString(R.string.title_MessageDetail), detailStr);
-//            return true;
-//        } else if (item.getItemId() == R.id.item_message_copytext) {
-//            SafeSlinger.getApplication().copyPlainTextToClipboard(
-//                    mMessageList.get(info.position).getText());
-//            showNote(getString(R.string.state_TextCopiedToClipboard));
-//            return true;
-//        } else if (item.getItemId() == R.id.item_message_forward) {
-//            doForward(mMessageList.get(info.position));
-//            return true;
-//        } else if (item.getItemId() == R.id.item_debug_transcript) {
-//            doExportTranscript(mMessageList);
-//            return true;
-//        } else if 
          if (item.getItemId() == R.id.item_delete_thread) {
             doDeleteThread(ThreadContent.getInstance().getmThreadList().get(info.position).getMsgRow().getKeyId());
             updateMessageList(false);

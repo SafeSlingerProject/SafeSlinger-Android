@@ -10,7 +10,11 @@
         android:layout_height="match_parent"
         android:layout_weight="0.3" >
     </FrameLayout>
-
+	<View android:layout_width="2dp"
+	    android:layout_height="match_parent"
+	    android:id="@+id/separator"
+	    android:visibility="gone"
+	    android:background="@color/gray"/>
     <FrameLayout
         android:id="@+id/messageContent"
         android:layout_width="0dp"

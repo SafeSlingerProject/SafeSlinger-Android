@@ -36,6 +36,7 @@ import android.app.Dialog;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -84,7 +85,10 @@ import edu.cmu.cylab.starslinger.model.MessageRow.MsgAction;
 import edu.cmu.cylab.starslinger.model.RecipientDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.ThreadData;
+import edu.cmu.cylab.starslinger.util.FragmentCommunicationInterface;
 import edu.cmu.cylab.starslinger.util.SSUtil;
+import edu.cmu.cylab.starslinger.util.ThreadContent;
+import edu.cmu.cylab.starslinger.view.HomeActivity.Tabs;
 
 public class MessagesFragment extends Fragment {
     private static final String TAG = SafeSlingerConfig.LOG_TAG;
@@ -116,6 +120,7 @@ public class MessagesFragment extends Fragment {
     private static MessageData mDraft;
 
     private ThreadData mThreadData = null;
+    private FragmentCommunicationInterface mListener;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -256,6 +261,7 @@ public class MessagesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // requested send from send button...
+            	ThreadContent.getInstance().setmCurrentTab(Tabs.MESSAGE);
                 doSend(mEditTextMessage.getText().toString(), mRecip != null);
             }
         });
@@ -266,6 +272,7 @@ public class MessagesFragment extends Fragment {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEND) {
                     // requested send from keyboard...
+                	ThreadContent.getInstance().setmCurrentTab(Tabs.MESSAGE);
                     doSend(mEditTextMessage.getText().toString(), mRecip != null);
                     return true;
                 }
@@ -593,35 +600,12 @@ public class MessagesFragment extends Fragment {
 //        registerForContextMenu(mListViewThreads);
     }
 
-    private String findMissingPersonName(String keyId) {
-        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this.getActivity());
-        String person = null;
-        Cursor cmt = dbMessage.fetchAllMessagesByThread(keyId);
-        if (cmt != null) {
-            try {
-                if (cmt.moveToFirst()) {
-                    do {
-                        if (TextUtils.isEmpty(person)) {
-                            MessageRow mr = new MessageRow(cmt, false);
-                            person = mr.getPerson();
-                        } else {
-                            break;
-                        }
-                    } while (cmt.moveToNext());
-                }
-            } finally {
-                cmt.close();
-            }
-        }
-        return person;
-    }
-
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
 
         AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
-        if (v.equals(mListViewMsgs)) {
+//        if (v.equals(mListViewMsgs)) {
             MenuInflater inflater = getActivity().getMenuInflater();
             inflater.inflate(R.layout.messagecontext, menu);
 
@@ -641,7 +625,7 @@ public class MessagesFragment extends Fragment {
                 menu.add(Menu.NONE, R.id.item_debug_transcript, Menu.NONE,
                         R.string.menu_debugTranscript);
             }
-        }
+//        }
     }
 
     @Override
@@ -651,6 +635,12 @@ public class MessagesFragment extends Fragment {
         if (item.getItemId() == R.id.item_delete_message) {
             doDeleteMessage(mMessageList.get(info.position));
             updateMessageList(false);
+            if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+            {
+            	Bundle bundle  = new Bundle();
+            	bundle.putBoolean("update_threads", true);
+            	mListener.onCommunicateData(bundle, Tabs.THREADS.toString());
+            }
             return true;
         } else if (item.getItemId() == R.id.item_message_details) {
             String detailStr = BaseActivity.formatMessageDetails(getActivity(),
@@ -784,17 +774,6 @@ public class MessagesFragment extends Fragment {
         }
     }
 
-    public void doDeleteThread(String keyId) {
-        MessageDbAdapter dbMessage = MessageDbAdapter.openInstance(this.getActivity());
-        InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this.getActivity());
-        int deletedMsg = dbMessage.deleteThread(keyId);
-        int deletedIn = dbInbox.deleteThread(keyId);
-        int deleted = deletedMsg + deletedIn;
-        if (deleted > 0) {
-            showNote(String.format(getString(R.string.state_MessagesDeleted), deleted));
-        }
-    }
-
     @Override
     public void onPause() {
         super.onPause();
@@ -827,6 +806,7 @@ public class MessagesFragment extends Fragment {
 
         try {
             mResult = (OnMessagesResultListener) activity;
+            mListener = (FragmentCommunicationInterface) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString() + " must implement "
                     + OnMessagesResultListener.class.getSimpleName());

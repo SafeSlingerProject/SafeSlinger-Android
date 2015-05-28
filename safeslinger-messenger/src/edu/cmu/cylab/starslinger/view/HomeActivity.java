@@ -296,7 +296,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 	if(holderFragment != null)
                 	{
 //                        if (mf != null) {
-                		if(holderFragment != null) {
+//                		if(holderFragment != null) {
 //                            mf.updateValues(intent.getExtras());
                 			if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
                 				holderFragment.updateBothTabs(intent.getExtras());
@@ -315,7 +315,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 			}
                 			
 
-                        }
+//                        }
                 	}
 
                 }
@@ -361,7 +361,12 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                           .findFragmentByPosition(Tabs.HOLDER.ordinal());
                 	
                 	if(holderFragment != null)
-                		holderFragment.updateValues(intent.getExtras(), ThreadContent.getInstance().getmCurrentTab().toString(), intent.getAction());
+                	{
+//                		if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+//            				holderFragment.;
+////                		else
+                			holderFragment.updateValues(intent.getExtras(), ThreadContent.getInstance().getmCurrentTab().toString(), intent.getAction());
+                	}
                 }
             }
         }
@@ -699,17 +704,14 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                HolderTab mf = (HolderTab) findFragmentByPosition(Tabs.HOLDER.ordinal());
                if (mf != null && ThreadContent.getInstance().getmCurrentTab() == Tabs.MESSAGE)
                {
-//                   mActivity.getSupportFragmentManager().popBackStack();
+//            	   displayBackStack(mf.getChildFragmentManager());
             	   mf.getChildFragmentManager().popBackStack();
-            	   ft.remove(mf);
-//            	   FragmentTransaction childFt = mf.getChildFragmentManager().beginTransaction();
-//            	   MessagesFragment msgfrag = (MessagesFragment)mf.getChildFragmentManager().findFragmentByTag(Tabs.MESSAGE.toString());
-//       	   		   childFt.remove(msgfrag).commit();
+//            	   displayBackStack(mf.getChildFragmentManager());
                    MessagesFragment.setRecip(null);
-//                   mf.getChildFragmentManager().executePendingTransactions();
+                   mf.resetPrevTabs();
                }
                
-               displayBackStack(mf.getChildFragmentManager());
+//               displayBackStack(mf.getChildFragmentManager());
            }
         }
 
@@ -4206,10 +4208,23 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     public void onCommunicateData(Bundle bundle,String tag) {
        
         
-       if(Tabs.MESSAGE.toString().compareTo(tag) == 0 || Tabs.THREADS.toString().compareTo(tag) == 0)
+       if(Tabs.MESSAGE.toString().compareTo(tag) == 0)
        {
            HolderTab  fragment = (HolderTab)mTabsAdapter.findFragmentByPosition(Tabs.HOLDER.ordinal());
-           fragment.updateValues(bundle, tag);
+           if(bundle.getBoolean("load_msg"))
+        	   fragment.loadBasedOnConfiguration();
+           else
+        	   fragment.updateValues(bundle, tag);
+       }
+       else
+       {
+    	   HolderTab fragment = (HolderTab) mTabsAdapter.findFragmentByPosition(Tabs.HOLDER.ordinal());
+    	   if(fragment != null)
+    	   {
+    		   ThreadsFragment frag = (ThreadsFragment) fragment.getChildFragmentManager().findFragmentByTag(tag);
+    		   if(frag != null)
+    			   frag.updateValues(bundle);
+    	   }
        }
        
     }

@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 import edu.cmu.cylab.starslinger.util.ThreadContent;
@@ -18,11 +17,16 @@ import edu.cmu.cylab.starslinger.view.HomeActivity.Tabs;
 public class HolderTab extends Fragment {
 
     private FrameLayout mThreadContainer, mMessageContainer;
-
+    private View mSeparator;
 //    private String mCurrentTabTag = "";
     private boolean dualPane = false;
 //    private String mSinglePaneTab = "";
     private Tabs mPrevTab = Tabs.THREADS;
+    
+    public void resetPrevTabs()
+    {
+    	this.mPrevTab = Tabs.THREADS;
+    }
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,25 +40,28 @@ public class HolderTab extends Fragment {
     	View view = inflater.inflate(R.layout.message_container, container, false);
     	mThreadContainer = (FrameLayout) view.findViewById(R.id.content);
         mMessageContainer = (FrameLayout) view.findViewById(R.id.messageContent);
+        mSeparator = view.findViewById(R.id.separator);
         
     	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
     	{
     		dualPane = true;
     		mThreadContainer.setVisibility(View.VISIBLE);
         	mMessageContainer.setVisibility(View.VISIBLE);
+        	mSeparator.setVisibility(View.VISIBLE);
     	}
     	else
     	{
     		dualPane = false;
     		mThreadContainer.setVisibility(View.VISIBLE);
         	mMessageContainer.setVisibility(View.GONE);
+        	mSeparator.setVisibility(View.GONE);
     	}
    
         loadBasedOnConfiguration();
         return view;
     }
 
-    private void loadBasedOnConfiguration()
+    public void loadBasedOnConfiguration()
     {
     	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
     	{
@@ -63,29 +70,36 @@ public class HolderTab extends Fragment {
     		{
     			FragmentTransaction ft = getChildFragmentManager().beginTransaction();
                 ThreadsFragment frag = new ThreadsFragment();
+                Bundle bundle = new Bundle();
+                bundle.putBoolean("load_msg", true);
+                frag.setArguments(bundle);
                 ft.replace(R.id.content, frag, Tabs.THREADS.toString()).commit();
     		}
+    		else
+    		{
+    			MessagesFragment msgfrag = (MessagesFragment)getChildFragmentManager().findFragmentByTag(Tabs.MESSAGE.toString());
+    			if(msgfrag != null)
+    			{
+    				getChildFragmentManager().executePendingTransactions();
+    				getChildFragmentManager().popBackStack();
+                	mPrevTab = Tabs.MESSAGE;
+    			}
+        		else
+                	mPrevTab = Tabs.THREADS;
+                
+                msgfrag = new MessagesFragment();
+//                setmCurrentTabTag(Tabs.MESSAGE.toString());
+                
+              	int selectedPos = ThreadContent.getInstance().getmSelectedPosition();
+            	Bundle bundle = new Bundle();
+            	bundle.putParcelable("thread_data", ThreadContent.getInstance().getmThreadList().get(selectedPos));
+            	bundle.putBoolean("thread_click", true);
+                FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+                msgfrag.setArguments(bundle);
+                ft.replace(R.id.messageContent, msgfrag, Tabs.MESSAGE.toString()).commit();
+    		}
             
-    		MessagesFragment msgfrag = (MessagesFragment)getChildFragmentManager().findFragmentByTag(Tabs.MESSAGE.toString());
-    		getChildFragmentManager().executePendingTransactions();
-    		if(msgfrag != null && msgfrag.isAdded()) 
-            {
-            	getChildFragmentManager().popBackStack();
-            	mPrevTab = Tabs.MESSAGE;
-            }
-            else
-            	mPrevTab = Tabs.THREADS;
-            
-            msgfrag = new MessagesFragment();
-//            setmCurrentTabTag(Tabs.MESSAGE.toString());
-            
-          	int selectedPos = ThreadContent.getInstance().getmSelectedPosition();
-        	Bundle bundle = new Bundle();
-        	bundle.putParcelable("thread_data", ThreadContent.getInstance().getmThreadList().get(selectedPos));
-        	bundle.putBoolean("thread_click", true);
-            FragmentTransaction ft = getChildFragmentManager().beginTransaction();
-            msgfrag.setArguments(bundle);
-            ft.replace(R.id.messageContent, msgfrag, Tabs.MESSAGE.toString()).commit();
+    		
     	}
     	else
     	{
@@ -108,7 +122,7 @@ public class HolderTab extends Fragment {
             	bundle.putParcelable("thread_data", ThreadContent.getInstance().getmThreadList().get(selectedPos));
             	bundle.putBoolean("thread_click", true);
                 msgfrag.setArguments(bundle);
-    			ft.replace(R.id.content, msgfrag, Tabs.MESSAGE.toString()).addToBackStack(null).commit();
+    			ft.replace(R.id.content, msgfrag, Tabs.MESSAGE.toString()).addToBackStack(Tabs.MESSAGE.toString()).commit();
     		}
     		else
     		{
@@ -117,9 +131,6 @@ public class HolderTab extends Fragment {
     			ThreadsFragment frag = new ThreadsFragment();
     			ft.replace(R.id.content, frag, Tabs.THREADS.toString()).commit();
     		}
-            
-            
-            
     	}
     }
     
@@ -136,19 +147,19 @@ public class HolderTab extends Fragment {
     }
     
     public void updateBothTabs(Bundle bundle)
-    {
-        ThreadsFragment frag = (ThreadsFragment) getChildFragmentManager()
-                .findFragmentByTag(Tabs.THREADS.toString());
-        if (frag != null) {
-            frag.updateValues(bundle);
-        }
-        
+    {   
         MessagesFragment msgFrag = (MessagesFragment) getChildFragmentManager()
                 .findFragmentByTag(Tabs.MESSAGE.toString());
         
         if(msgFrag != null)
         {
         	msgFrag.updateValues(bundle);
+        }
+        
+        ThreadsFragment frag = (ThreadsFragment) getChildFragmentManager()
+                .findFragmentByTag(Tabs.THREADS.toString());
+        if (frag != null) {
+            frag.updateValues(bundle);
         }
     }
     
