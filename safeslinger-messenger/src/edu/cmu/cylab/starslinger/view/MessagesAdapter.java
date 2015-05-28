@@ -275,7 +275,8 @@ public class MessagesAdapter extends BaseAdapter {
             float scale = ctx.getResources().getDisplayMetrics().density;
             int width = (int) (metrics.widthPixels * scale);
             thumb = SSUtil.makeThumbnail(msg.getFileData(), width / 5);
-        } else {
+        }
+        if (thumb == null || thumb.length == 0) {
             // only non-images need filename
             tvFile.setText(fileInfo);
         }

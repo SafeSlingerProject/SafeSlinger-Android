@@ -1558,7 +1558,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     RecipientDbAdapter dbRecipient = RecipientDbAdapter
                             .openInstance(getApplicationContext());
                     // update
-                    long rowIdRecipient1 = data.getLong(extra.RECIPIENT_ROW_ID1, -1);
+                    long rowIdRecipient1 = data.getLong(extra.RECIPIENT_ROW_ID1, -1L);
                     if (rowIdRecipient1 > -1) {
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient1);
                         if (c != null) {
@@ -1575,7 +1575,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         }
                     }
 
-                    long rowIdRecipient2 = data.getLong(extra.RECIPIENT_ROW_ID2, -1);
+                    long rowIdRecipient2 = data.getLong(extra.RECIPIENT_ROW_ID2, -1L);
                     if (rowIdRecipient2 > -1) {
                         Cursor c = dbRecipient.fetchRecipient(rowIdRecipient2);
                         if (c != null) {
@@ -1921,7 +1921,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         refreshView();
                         break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
-                        long rowIdRecipient1 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
+                        long rowIdRecipient1 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1L);
 
                         if (d.existsRecip2() && rowIdRecipient1 == d.getRecip2RowId()) {
                             showNote(R.string.error_InvalidRecipient);
@@ -1961,7 +1961,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         refreshView();
                         break;
                     case PickRecipientsActivity.RESULT_RECIPSEL:
-                        long rowIdRecipient2 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1);
+                        long rowIdRecipient2 = data.getLongExtra(extra.RECIPIENT_ROW_ID, -1L);
 
                         if (d.existsRecip1() && rowIdRecipient2 == d.getRecip1RowId()) {
                             showNote(R.string.error_InvalidRecipient);
@@ -3623,7 +3623,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         final byte[] introPhoto = args.getByteArray(extra.PHOTO);
         final byte[] introPush = args.getByteArray(extra.PUSH_REGISTRATION_ID);
         final byte[] introPubKey = args.getByteArray(extra.INTRO_PUBKEY);
-        final long msgRowId = args.getLong(extra.MESSAGE_ROW_ID);
+        final long msgRowId = args.getLong(extra.MESSAGE_ROW_ID, -1L);
         AlertDialog.Builder ad = new AlertDialog.Builder(act);
         View layout;
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {

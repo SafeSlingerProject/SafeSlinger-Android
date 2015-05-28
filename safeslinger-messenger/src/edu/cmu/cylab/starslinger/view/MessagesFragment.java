@@ -162,8 +162,8 @@ public class MessagesFragment extends Fragment {
     }
 
     public void updateValues(Bundle extras) {
-        long msgRowId = -1;
-        long recipRowId = 1;
+        long msgRowId = -1L;
+        long recipRowId = -1L;
         if (extras != null) {
             msgRowId = extras.getLong(extra.MESSAGE_ROW_ID, -1L);
             recipRowId = extras.getLong(extra.RECIPIENT_ROW_ID, -1L);
@@ -192,10 +192,9 @@ public class MessagesFragment extends Fragment {
                         c.close();
                     }
                 }
+            } else if (msgRowId == -1) {
+                d.clearRecip();
             }
-            // else if (msgRowId == -1) {
-            // d.clearRecip();
-            // }
         }
         updateList(msgRowId != -1);
     }

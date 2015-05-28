@@ -26,16 +26,22 @@ package edu.cmu.cylab.starslinger.view;
 
 import java.util.List;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
@@ -108,7 +114,8 @@ public class ThreadsAdapter extends BaseAdapter {
             }
         }
 
-        TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
+        final TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
+        final LinearLayout llStats = (LinearLayout) convertView.findViewById(R.id.StatsFrame);
         tvName.setText(getBestIdentityName(mCtx, t, recip));
 
         TextView tvCount = (TextView) convertView.findViewById(R.id.tvCount);
@@ -168,6 +175,34 @@ public class ThreadsAdapter extends BaseAdapter {
             tvName.setTextColor(mCtx.getResources().getColor(android.R.color.white));
             tvNew.setTextColor(mCtx.getResources().getColor(android.R.color.white));
             tvNotify.setTextColor(mCtx.getResources().getColor(android.R.color.white));
+        }
+
+        llStats.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+        final int defsiz = llStats.getMeasuredWidth();
+        ViewTreeObserver vto = llStats.getViewTreeObserver();
+        OnGlobalLayoutListener listener = new OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                int actsiz = llStats.getWidth();
+                if (actsiz < defsiz) {
+                    // reset weight when message counts go out of view
+                    tvName.setLayoutParams(new LinearLayout.LayoutParams(
+                            android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
+                            android.view.ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+                }
+                removeOnGlobalLayoutListener(llStats, this);
+            }
+        };
+        vto.addOnGlobalLayoutListener(listener);
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    public static void removeOnGlobalLayoutListener(View v,
+            ViewTreeObserver.OnGlobalLayoutListener listener) {
+        if (Build.VERSION.SDK_INT < 16) {
+            v.getViewTreeObserver().removeGlobalOnLayoutListener(listener);
+        } else {
+            v.getViewTreeObserver().removeOnGlobalLayoutListener(listener);
         }
     }
 
