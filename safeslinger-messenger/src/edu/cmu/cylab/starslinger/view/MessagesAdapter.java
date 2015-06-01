@@ -243,13 +243,10 @@ public class MessagesAdapter extends BaseAdapter {
                 tvDirection.setText(R.string.label_TapToResumeDraft);
                 tvDirection.setTextAppearance(mCtx, R.style.fromDirectionAvailableText);
                 tvDirection.setVisibility(View.VISIBLE);
-
                 drawFileImageIcon(mCtx, msg, llFile, ivFile, tvFile, fileInfo);
                 break;
             case MSG_PROGRESS:
-                tvFile.setText(fileInfo);
-                tvFile.setVisibility(View.VISIBLE);
-
+                drawFileImageIcon(mCtx, msg, llFile, ivFile, tvFile, fileInfo);
                 break;
             default:
                 break;

@@ -44,7 +44,6 @@
             android:id="@+id/FirstFrame"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_margin="@dimen/size_5dp"
             android:layout_weight="1"
             android:orientation="vertical" >
 
@@ -110,9 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_gravity="bottom|right"
-                    android:layout_marginBottom="@dimen/size_5dp"
-                    android:layout_marginTop="@dimen/size_5dp" >
+                    android:layout_gravity="bottom|right" >
 
                     <Button
                         android:id="@+id/PassButtonForgot"
@@ -145,7 +142,6 @@
             android:id="@+id/SecondFrame"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_margin="@dimen/size_5dp"
             android:layout_weight="1"
             android:orientation="vertical" >
 
@@ -190,9 +186,7 @@
             <RelativeLayout
                 android:id="@+id/PassFrameButtonPass"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/size_5dp"
-                android:layout_marginTop="@dimen/size_5dp" >
+                android:layout_height="wrap_content" >
 
                 <Button
                     android:id="@+id/PassButtonOK"

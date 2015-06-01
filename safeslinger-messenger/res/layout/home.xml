@@ -32,8 +32,7 @@
         android:id="@+id/SendFrameButtonSender"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/size_60dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/size_5dp" >
+        android:layout_gravity="center_horizontal" >
 
         <Button
             android:id="@+id/HomeButtonSender"
@@ -91,7 +90,6 @@
         android:id="@+id/HomeTextViewInstructNumUsers"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/size_5dp"
         android:gravity="center"
         android:text="@string/label_Home"
         android:textSize="@dimen/text_size_medium" />
@@ -100,15 +98,16 @@
         android:id="@+id/HomeScrollViewFields"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/size_5dp"
+        android:layout_marginRight="@dimen/size_5dp"
         android:layout_weight="2" >
+
     </ListView>
 
     <RelativeLayout
         android:id="@+id/HomeFrameButtonStartExchangeProximity"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/size_5dp"
-        android:layout_marginTop="@dimen/size_5dp" >
+        android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/HomeButtonStartExchangeProximity"

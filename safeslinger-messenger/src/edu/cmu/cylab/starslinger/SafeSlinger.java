@@ -101,7 +101,7 @@ public class SafeSlinger extends Application {
     private Locale locale = null;
     private static Uri sTempCameraFileUri;
     private static String sSenderKey;
-
+    private boolean isExchanging = false;
     private boolean isTabContainerActive = false;
 
     @Override
@@ -561,8 +561,6 @@ public class SafeSlinger extends Application {
             // getPendingMessages.execute(new String());
         }
     };
-
-    private boolean isExchanging;
 
     private class GetPendingMessagesTask extends AsyncTask<String, String, String> {
 

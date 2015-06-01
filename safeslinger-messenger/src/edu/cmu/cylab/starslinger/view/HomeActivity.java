@@ -379,6 +379,13 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+
+        // prevent the intent from canceling active key exchange
+        if (SafeSlinger.getApplication().isExchangeActive()) {
+            finish();
+            return;
+        }
+
         setIntent(intent);
 
         // handle caller send action once send only
@@ -399,7 +406,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_BACKUPNOTIFY.equals(action)) {
-            // clicked on backup reminder notifications window, show reminder
+            // clicked on backup reminder notifications window, show
+            // reminder
             // query
             showBackupQuery();
             refreshView();
@@ -472,6 +480,12 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     protected void onCreate(Bundle savedInstanceState) {
         // setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
+
+        // prevent the intent from canceling active key exchange
+        if (SafeSlinger.getApplication().isExchangeActive()) {
+            finish();
+            return;
+        }
 
         mViewPager = new ViewPager(this);
         mViewPager.setId(R.id.pager);
@@ -3383,6 +3397,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         sProg = null;
         sProgressMsg = null;
         mImported = new MessageData();
+        SafeSlinger.getApplication().setExchangeActive(false);
     }
 
     private void showFileAttach() {

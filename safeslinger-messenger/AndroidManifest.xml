@@ -225,7 +225,6 @@
             android:name=".view.SaveActivity"
             android:configChanges="locale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
 

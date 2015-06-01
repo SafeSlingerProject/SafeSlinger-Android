@@ -1255,6 +1255,10 @@ public class MessagesFragment extends Fragment {
                         t.setProgress(msg);
                         mThreadList.set(i, t);
 
+                        // set top items as most recent
+                        mListThreadVisiblePos = 0;
+                        mListThreadTopOffset = 0;
+
                         mAdapterThread = new ThreadsAdapter(this.getActivity(), mThreadList);
                         mListViewThreads.setAdapter(mAdapterThread);
                         if (mListThreadVisiblePos < mThreadList.size()) {
@@ -1275,10 +1279,8 @@ public class MessagesFragment extends Fragment {
                         mMessageList.set(i, mr);
 
                         // ensure last item remains fully in view
-                        if (msgRowId == mMessageList.get(mMessageList.size() - 1).getRowId()) {
-                            mListMsgTopOffset = 0;
-                            mListMsgVisiblePos = mMessageList.size() - 1;
-                        }
+                        mListMsgTopOffset = 0;
+                        mListMsgVisiblePos = mMessageList.size() - 1;
 
                         mAdapterMsg = new MessagesAdapter(this.getActivity(), mMessageList);
                         mListViewMsgs.setAdapter(mAdapterMsg);

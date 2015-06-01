@@ -32,7 +32,6 @@
         android:id="@+id/SaveTextViewInstruct"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/size_5dp"
         android:gravity="center"
         android:text="@string/label_SaveInstruct"
         android:textSize="@dimen/text_size_medium" />
@@ -54,8 +53,7 @@
     <RelativeLayout
         android:id="@+id/SaveFrameButtonSave"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/size_5dp" >
+        android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/SaveButtonSave"

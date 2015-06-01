@@ -471,20 +471,9 @@ public class SaveActivity extends BaseActivity implements OnAccountsUpdateListen
     }
 
     @Override
-    protected void onPause() {
-        if (!mCloseConfirmed) {
-            showQuestion(getString(R.string.ask_QuitConfirmation));
-        }
-        super.onPause();
-    }
-
-    @Override
     public void onDestroy() {
         // Remove AccountManager callback
         AccountManager.get(this).removeOnAccountsUpdatedListener(this);
-        if (!mCloseConfirmed) {
-            showQuestion(getString(R.string.ask_QuitConfirmation));
-        }
         super.onDestroy();
     }
 

@@ -269,12 +269,29 @@ public class Service extends android.app.Service {
 
         // intent for changing timeout (main settings)
         String tickerText = getString(R.string.label_PassPhraseIsCached);
-        String contentTitle = String.format("%s: %s", getString(R.string.label_PassPhraseIsCached),
-                setting);
-        String contentText = getString(R.string.label_TouchToConfigureCacheTimeout);
+        // less than 4.1 has no sub-action, and should open settings
+        String contentTitle;
+        String contentText;
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+            contentTitle = String.format("%s: %s", getString(R.string.label_PassPhraseIsCached),
+                    setting);
+            contentText = getString(R.string.label_TouchToConfigureCacheTimeout);
+        } else {
+            contentTitle = getString(R.string.app_name);
+            contentText = String.format("%s: %s", getString(R.string.label_PassPhraseIsCached),
+                    setting);
+        }
+
+        Intent actionOpen = new Intent(Service.this, HomeActivity.class);
+        actionOpen.setAction(SafeSlingerConfig.Intent.ACTION_CHANGESETTINGS);
+        PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), 0,
+                actionOpen, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        // intent for easy settings action (add on)
+        String settingsText = getString(R.string.menu_Settings);
         Intent actionSettings = new Intent(Service.this, HomeActivity.class);
         actionSettings.setAction(SafeSlingerConfig.Intent.ACTION_CHANGESETTINGS);
-        PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), 0,
+        PendingIntent settIntent = PendingIntent.getActivity(getApplicationContext(), 0,
                 actionSettings, PendingIntent.FLAG_UPDATE_CURRENT);
 
         // intent for easy logout action (add on)
@@ -291,12 +308,16 @@ public class Service extends android.app.Service {
                 .setContentTitle(contentTitle)//
                 .setContentText(contentText)//
                 .setWhen(0)//
+                .addAction(android.R.drawable.ic_menu_preferences, settingsText, settIntent)//
                 .addAction(android.R.drawable.ic_menu_close_clear_cancel, logoutText, loIntent)//
                 .setVisibility(NotificationCompat.VISIBILITY_SECRET);
 
         // prevent the intent from canceling active key exchange
         if (!SafeSlinger.getApplication().isExchangeActive()) {
-            builder.setContentIntent(contentIntent);
+            // less than 4.1 has no sub-action, and should open settings
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+                builder.setContentIntent(contentIntent);
+            }
         }
 
         return builder.build();

@@ -32,7 +32,6 @@
         android:id="@+id/AddScrollView"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/size_5dp"
         android:layout_weight="2"
         android:fillViewport="true" >
 
@@ -48,7 +47,6 @@
                 android:id="@+id/tvInstruct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/size_5dp"
                 android:gravity="center"
                 android:text="@string/label_InstSendInvite"
                 android:textSize="@dimen/text_size_medium" />
@@ -57,8 +55,7 @@
                 android:id="@+id/SendFrameButtonRecipient1"
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/size_60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/size_5dp" >
+                android:layout_gravity="center_horizontal" >
 
                 <Button
                     android:id="@+id/SendButtonRecipient1"
@@ -116,7 +113,6 @@
                 android:id="@+id/TextView1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/size_5dp"
                 android:gravity="left"
                 android:hint="@string/label_ComposeHint"
                 android:imeOptions="actionNext"
@@ -130,8 +126,7 @@
                 android:id="@+id/SendFrameButtonRecipient2"
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/size_60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/size_5dp" >
+                android:layout_gravity="center_horizontal" >
 
                 <Button
                     android:id="@+id/SendButtonRecipient2"
@@ -189,7 +184,6 @@
                 android:id="@+id/TextView2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/size_5dp"
                 android:gravity="left"
                 android:hint="@string/label_ComposeHint"
                 android:imeOptions="actionSend"
@@ -204,8 +198,7 @@
     <RelativeLayout
         android:id="@+id/SendFrameButtonSend"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/size_5dp" >
+        android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/SendButtonSend"

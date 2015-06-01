@@ -28,6 +28,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center"
+    android:layout_margin="@dimen/size_5dp"
     android:background="@color/white"
     android:orientation="vertical" >
 
@@ -121,9 +122,7 @@
                 android:id="@+id/PassFrameButtonPass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:layout_marginBottom="@dimen/size_5dp"
-                android:layout_marginTop="@dimen/size_5dp" >
+                android:layout_gravity="bottom|right" >
 
                 <Button
                     android:id="@+id/PassButtonOK"
@@ -169,9 +168,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="@dimen/size_5dp"
-            android:layout_marginTop="@dimen/size_5dp" >
+            android:layout_gravity="bottom|right" >
 
             <Button
                 android:id="@+id/PassButtonForgot"

@@ -275,6 +275,9 @@ public class MessageDbAdapter {
     public boolean updateEnqueuedMessage(long rowId) {
         synchronized (SafeSlinger.sDataLock) {
             ContentValues values = new ContentValues();
+
+            // sent time should be updated, as user has edited draft
+            values.put(KEY_DATE_SENT, System.currentTimeMillis()); // Sent UTC
             values.put(KEY_STATUS, MESSAGE_STATUS_QUEUED); // complete/failed
 
             return update(DATABASE_TABLE, values, KEY_ROWID + "=" + rowId, null) > 0;
