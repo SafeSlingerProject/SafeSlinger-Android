@@ -406,8 +406,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             refreshView();
 
         } else if (SafeSlingerConfig.Intent.ACTION_BACKUPNOTIFY.equals(action)) {
-            // clicked on backup reminder notifications window, show
-            // reminder
+            // clicked on backup reminder notifications window, show reminder
             // query
             showBackupQuery();
             refreshView();
@@ -432,8 +431,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             // clicked on logout
             doManualLogout();
 
-        } else {
-            setProperDefaultTab();
         }
     }
 
@@ -444,13 +441,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         if (dbRecipient.getTrustedRecipientCount() == 0) {
             // Sling Keys should be the default when there are 0 keys
             // exchanged.
-
             setTab(Tabs.SLINGKEYS);
-            if (SafeSlingerPrefs.getShowWalkthrough()) {
-                // BaseActivity.xshowWalkthrough(this).create().show();
-                showWalkthroughDialog();
-            }
-
         } else {
             // Messages should be the default when there are > 1 messages.
             setTab(Tabs.MESSAGE);
@@ -641,10 +632,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                             if (sf != null) {
                                 sf.updateKeypad();
                                 sf.updateValues(null);
-                                if (SafeSlingerPrefs.getShowWalkthrough()) {
-                                    // BaseActivity.xshowWalkthrough(mActivity).create().show();
-                                    showWalkthroughDialog();
-                                }
                             }
                             break;
                         case INTRO:
@@ -785,6 +772,13 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
         if (!isUserLoggedIn()) {
             return false;
+        }
+
+        setProperDefaultTab();
+
+        if (SafeSlingerPrefs.getShowWalkthrough()) {
+            // BaseActivity.xshowWalkthrough(this).create().show();
+            showWalkthroughDialog();
         }
 
         return true;

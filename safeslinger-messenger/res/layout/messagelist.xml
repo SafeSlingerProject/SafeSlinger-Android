@@ -63,7 +63,7 @@
         android:layout_weight="2"
         android:fillViewport="true"
         android:stackFromBottom="true"
-        android:transcriptMode="normal" />
+        android:transcriptMode="alwaysScroll" />
 
     <LinearLayout
         android:id="@+id/ComposeLayout"
