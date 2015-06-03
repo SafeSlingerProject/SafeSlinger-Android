@@ -736,9 +736,9 @@ public class SettingsActivity extends PreferenceActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         menu.clear();
-        menu.add(0, MENU_RESTORE_DEFAULTS, 0, R.string.menu_restore_default).setIcon(
-                android.R.drawable.ic_menu_revert);
-        menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
+        MenuItem iDefault = menu.add(0, MENU_RESTORE_DEFAULTS, 0, R.string.menu_restore_default)
+                .setIcon(android.R.drawable.ic_menu_revert);
+        MenuItem iHelp = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);
         return true;
     }

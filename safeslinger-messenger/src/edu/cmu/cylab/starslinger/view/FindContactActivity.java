@@ -25,18 +25,23 @@
 package edu.cmu.cylab.starslinger.view;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.text.Html;
+import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
+import android.text.style.ForegroundColorSpan;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -60,6 +65,7 @@ import edu.cmu.cylab.starslinger.SafeSlingerConfig.extra;
 import edu.cmu.cylab.starslinger.SafeSlingerPrefs;
 
 public final class FindContactActivity extends BaseActivity {
+    private static final String TAG = SafeSlingerConfig.LOG_TAG;
 
     private EditText mEditTextName;
     private Button mButtonDone;
@@ -132,10 +138,14 @@ public final class FindContactActivity extends BaseActivity {
             @TargetApi(Build.VERSION_CODES.HONEYCOMB)
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long i) {
-
-                if (!codes.get(position).equals(SafeSlingerPrefs.getLanguage())) {
-                    SafeSlingerPrefs.setLanguage(codes.get(position));
-                    SafeSlinger.getApplication().updateLanguage(codes.get(position));
+                final String choice = codes.get(position);
+                final String saved = SafeSlingerPrefs.getLanguage();
+                Set<String> choices = new HashSet<String>();
+                choices.add("zz".equals(saved) ? "en" : saved);
+                choices.add("zz".equals(choice) ? "en" : choice);
+                if (choices.size() > 1) {
+                    SafeSlingerPrefs.setLanguage(choice);
+                    SafeSlinger.getApplication().updateLanguage(choice);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
                         recreate();
                     } else {
@@ -187,16 +197,28 @@ public final class FindContactActivity extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
-        MenuItem item = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
+        MenuItem iHelp = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
                 R.drawable.ic_action_help);
-        MenuCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+        MenuCompat.setShowAsAction(iHelp, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
 
-        menu.add(0, MENU_ABOUT, 0, R.string.menu_About).setIcon(
+        MenuItem iAbout = menu.add(0, MENU_ABOUT, 0, R.string.menu_About).setIcon(
                 android.R.drawable.ic_menu_info_details);
-        menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
+        MenuItem iFeedback = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
                 android.R.drawable.ic_menu_send);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            SpannableString spanString;
+
+            spanString = new SpannableString(iAbout.getTitle().toString());
+            // fix the color to white
+            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
+            iAbout.setTitle(spanString);
+
+            spanString = new SpannableString(iFeedback.getTitle().toString());
+            // fix the color to white
+            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
+            iFeedback.setTitle(spanString);
+        }
         return true;
     }
 

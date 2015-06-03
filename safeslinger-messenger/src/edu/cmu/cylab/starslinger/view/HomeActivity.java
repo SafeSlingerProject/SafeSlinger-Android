@@ -834,75 +834,63 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 int newerRecips = dbRecipient.getAllNewerRecipients(d.getRecip(), false);
                 if (d.getRecip().isSendable() && newerRecips <= 0) {
                     // user can attach when in conversation and not disabled
-                    MenuItem iAdd = menu.add(0, MENU_ATTACH, 0, R.string.btn_SelectFile).setIcon(
-                            R.drawable.ic_action_attach_file);
-                    MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+                    MenuItem iAttach = menu.add(0, MENU_ATTACH, 0, R.string.btn_SelectFile)
+                            .setIcon(R.drawable.ic_action_attach_file);
+                    MenuCompat.setShowAsAction(iAttach, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
                 }
             } else {
                 // user can add message from all threads view
-                MenuItem iAdd = menu.add(0, MENU_NEWMESSAGE, 0, R.string.menu_TagComposeMessage)
+                MenuItem iNewMsg = menu.add(0, MENU_NEWMESSAGE, 0, R.string.menu_TagComposeMessage)
                         .setIcon(R.drawable.ic_action_add_message);
-                MenuCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+                MenuCompat.setShowAsAction(iNewMsg, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
             }
         }
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
-                    R.drawable.ic_action_add_person);
-            menu.add(0, MENU_NEWMESSAGE, 0, R.string.menu_TagComposeMessage).setIcon(
-                    R.drawable.ic_action_add_message);
-            menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
-                    android.R.drawable.ic_menu_send);
-            menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
-                    android.R.drawable.ic_menu_close_clear_cancel);
-            menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
-                    android.R.drawable.ic_menu_preferences);
-            menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(
-                    android.R.drawable.ic_menu_help);
-        } else {
+        MenuItem iInvite = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
+                .setIcon(R.drawable.ic_action_add_person);
+        MenuItem iNewMsg = menu.add(0, MENU_NEWMESSAGE, 0, R.string.menu_TagComposeMessage)
+                .setIcon(R.drawable.ic_action_add_message);
+        MenuItem iFeedback = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
+                android.R.drawable.ic_menu_send);
+        MenuItem iLogout = menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
+                android.R.drawable.ic_menu_close_clear_cancel);
+        MenuItem iSettings = menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
+                android.R.drawable.ic_menu_preferences);
+        MenuItem iHelp = menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(
+                android.R.drawable.ic_menu_help);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             SpannableString spanString;
 
-            MenuItem iInviteItem = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
-                    .setIcon(R.drawable.ic_action_add_person);
-            spanString = new SpannableString(iInviteItem.getTitle().toString());
+            spanString = new SpannableString(iInvite.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            iInviteItem.setTitle(spanString);
+            iInvite.setTitle(spanString);
 
-            MenuItem newMessageMenuItem = menu.add(0, MENU_NEWMESSAGE, 0,
-                    R.string.menu_TagComposeMessage).setIcon(R.drawable.ic_action_add_message);
-            spanString = new SpannableString(newMessageMenuItem.getTitle().toString());
+            spanString = new SpannableString(iNewMsg.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            newMessageMenuItem.setTitle(spanString);
+            iNewMsg.setTitle(spanString);
 
-            MenuItem feedBackMenuitem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback)
-                    .setIcon(android.R.drawable.ic_menu_send);
-            spanString = new SpannableString(feedBackMenuitem.getTitle().toString());
+            spanString = new SpannableString(iFeedback.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            feedBackMenuitem.setTitle(spanString);
+            iFeedback.setTitle(spanString);
 
-            MenuItem logoutMenuItem = menu.add(0, MENU_LOGOUT, 0, R.string.menu_Logout).setIcon(
-                    android.R.drawable.ic_menu_close_clear_cancel);
-            spanString = new SpannableString(logoutMenuItem.getTitle().toString());
+            spanString = new SpannableString(iLogout.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            logoutMenuItem.setTitle(spanString);
+            iLogout.setTitle(spanString);
 
-            MenuItem settingsItem = menu.add(0, MENU_SETTINGS, 0, R.string.menu_Settings).setIcon(
-                    android.R.drawable.ic_menu_preferences);
-            spanString = new SpannableString(settingsItem.getTitle().toString());
+            spanString = new SpannableString(iSettings.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            settingsItem.setTitle(spanString);
+            iSettings.setTitle(spanString);
 
-            MenuItem helpItem = menu.add(0, MENU_REFERENCE, 0, R.string.menu_Help).setIcon(
-                    android.R.drawable.ic_menu_help);
-            spanString = new SpannableString(helpItem.getTitle().toString());
+            spanString = new SpannableString(iHelp.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            helpItem.setTitle(spanString);
+            iHelp.setTitle(spanString);
         }
         return true;
     }

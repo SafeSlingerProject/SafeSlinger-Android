@@ -857,18 +857,16 @@ public class BaseActivity extends ActionBarActivity {
 
     public static String readTxt(InputStream is) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        byte[] buffer = new byte[1024];
+        int length = 0;
         try {
-            byte[] buf = new byte[4096];
-            while (is.read(buf) > -1) {
-                baos.write(buf);
+            while ((length = is.read(buffer)) != -1) {
+                baos.write(buffer, 0, length);
             }
-            baos.flush();
-            is.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return baos.toString();
+        return new String(baos.toByteArray());
     }
 
     protected void showFileActionChooser(File downloadedFile, String fileType) {

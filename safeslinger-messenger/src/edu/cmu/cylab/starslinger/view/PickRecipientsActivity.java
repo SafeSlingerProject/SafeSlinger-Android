@@ -230,46 +230,27 @@ public class PickRecipientsActivity extends BaseActivity implements OnItemClickL
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            MenuItem iAdd = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
-                    .setIcon(R.drawable.ic_action_add_person);
+        MenuItem iInvite = menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp)
+                .setIcon(R.drawable.ic_action_add_person);
+        MenuItemCompat.setShowAsAction(iInvite, MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
 
-            MenuItemCompat.setShowAsAction(iAdd, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
+        MenuItem iHelp = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
+                R.drawable.ic_action_help);
+        MenuItem iFeedback = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
+                android.R.drawable.ic_menu_send);
 
-            MenuItem iHelp = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
-                    R.drawable.ic_action_help);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            SpannableString spanString;
 
-            menu.add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
-                    R.drawable.ic_action_add_person);
-            menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback).setIcon(
-                    android.R.drawable.ic_menu_send);
-        } else {
-            MenuItem iAddMenuItem = menu
-                    .add(0, MENU_CONTACTINVITE, 0, R.string.menu_SelectShareApp).setIcon(
-                            R.drawable.ic_action_add_person);
-            SpannableString spanString = new SpannableString(iAddMenuItem.getTitle().toString());
+            spanString = new SpannableString(iHelp.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            iAddMenuItem.setTitle(spanString);
+            iHelp.setTitle(spanString);
 
-            MenuItemCompat.setShowAsAction(iAddMenuItem, MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
-
-            MenuItem iHelpmenuItem = menu.add(0, MENU_HELP, 0, R.string.menu_Help).setIcon(
-                    R.drawable.ic_action_help);
-
-            MenuItem contactInviteMenuItem = menu.add(0, MENU_CONTACTINVITE, 0,
-                    R.string.menu_SelectShareApp).setIcon(R.drawable.ic_action_add_person);
-            spanString = new SpannableString(contactInviteMenuItem.getTitle().toString());
+            spanString = new SpannableString(iFeedback.getTitle().toString());
             // fix the color to white
             spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            contactInviteMenuItem.setTitle(spanString);
-
-            MenuItem feedbackItem = menu.add(0, MENU_FEEDBACK, 0, R.string.menu_sendFeedback)
-                    .setIcon(android.R.drawable.ic_menu_send);
-            spanString = new SpannableString(feedbackItem.getTitle().toString());
-            // fix the color to white
-            spanString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spanString.length(), 0);
-            feedbackItem.setTitle(spanString);
+            iFeedback.setTitle(spanString);
         }
         return true;
     }

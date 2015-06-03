@@ -439,15 +439,15 @@ public class RecipientDbAdapter {
             }
 
             Cursor c = query(true, DATABASE_TABLE, new String[] {
-                    KEY_KEYID, KEY_ROWID, KEY_SOURCE, KEY_PUSHTOKEN
+                    KEY_KEYID, KEY_ROWID, KEY_SOURCE, KEY_PUSHTOKEN, KEY_MYKEYID
             }, where.toString(), null, null, null, null, null);
             if (c != null) {
                 try {
                     if (c.moveToFirst()) {
                         long rowId = c.getLong(c.getColumnIndexOrThrow(KEY_ROWID));
-
                         int source = c.getInt(c.getColumnIndexOrThrow(KEY_SOURCE));
-                        if (source == RECIP_SOURCE_EXCHANGE) {
+                        String old_mykeyid = c.getString(c.getColumnIndexOrThrow(KEY_MYKEYID));
+                        if (source == RECIP_SOURCE_EXCHANGE && mykeyid.equals(old_mykeyid)) {
                             // introduction is lower priority than exchange
                             return rowId;
                         }
