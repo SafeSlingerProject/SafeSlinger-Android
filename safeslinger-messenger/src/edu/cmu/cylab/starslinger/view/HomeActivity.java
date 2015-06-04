@@ -2542,6 +2542,17 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                 showNote(result);
             }
 
+            // if requested, logged in, try to decrypt pending
+            String passCached = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
+            if (SafeSlingerPrefs.getAutoDecrypt() && !TextUtils.isEmpty(passCached)) {
+                DecryptPendingTask decryptPending = new DecryptPendingTask();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                    decryptPending.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, passCached);
+                else
+                    decryptPending.execute(passCached);
+                // decryptPending.execute(passCached);
+            }
+
             // updated databases, restart to use...
             BackgroundSyncUpdatesTask backgroundSyncUpdates = new BackgroundSyncUpdatesTask();
             backgroundSyncUpdates.execute(new String());
