@@ -181,7 +181,7 @@ public final class FindContactActivity extends BaseActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    doValidatePassphrase();
+                    onDoneButtonClicked();
                     return true;
                 }
                 return false;
