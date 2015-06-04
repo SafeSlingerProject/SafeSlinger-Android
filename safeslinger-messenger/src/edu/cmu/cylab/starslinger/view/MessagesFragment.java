@@ -41,7 +41,9 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.KeyEvent;
@@ -118,7 +120,8 @@ public class MessagesFragment extends Fragment {
     private Button mButtonSend;
     private LinearLayout mComposeWidget;
     private static MessageData mDraft;
-
+    private boolean mDraftSaved = false;
+    
     private ThreadData mThreadData = null;
     private FragmentCommunicationInterface mListener;
     
@@ -135,7 +138,8 @@ public class MessagesFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        doSave(mEditTextMessage.getText().toString(), mRecip != null);
+        if(!mDraftSaved)
+        	initiateSaveDraft();
 
         // save
         if (mDraft != null && mDraft.getRowId() != -1) {
@@ -254,7 +258,28 @@ public class MessagesFragment extends Fragment {
         mComposeWidget = (LinearLayout) vFrag.findViewById(R.id.ComposeLayout);
 
         mEditTextMessage = (EditText) vFrag.findViewById(R.id.SendEditTextMessage);
-
+        mEditTextMessage.addTextChangedListener(new TextWatcher() {
+			
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void afterTextChanged(Editable s) {
+				mDraftSaved = false;
+				
+			}
+		});
+        
         mButtonSend = (Button) vFrag.findViewById(R.id.SendButtonSend);
         mButtonSend.setOnClickListener(new OnClickListener() {
 
@@ -306,6 +331,8 @@ public class MessagesFragment extends Fragment {
                 mEditTextMessage.setTextKeepState("");
             }
             sendResultToHost(RESULT_SAVE, intent.getExtras());
+            if(!TextUtils.isEmpty(text.trim()))
+            	mDraftSaved = true;
         }
     }
 
@@ -540,19 +567,22 @@ public class MessagesFragment extends Fragment {
                                 }
                             }
 
-                            if (mDraft == null
+                            if ((mDraft == null
                                     && messageRow.getStatus() == MessageDbAdapter.MESSAGE_STATUS_DRAFT
                                     && TextUtils.isEmpty(messageRow.getFileName())
-                                    && mRecip.isSendable()) {
+                                    && mRecip.isSendable()) || (mDraft != null && mDraft.getRowId() == messageRow.getRowId() && TextUtils.isEmpty(mEditTextMessage.getText()))) {
                                 // if recent draft, remove from list put in edit
                                 // box
                                 mDraft = messageRow;
                                 mEditTextMessage.setTextKeepState(mDraft.getText());
                                 mEditTextMessage.forceLayout();
+                                mDraftSaved = false;
                             } else if (mDraft != null && mDraft.getRowId() == messageRow.getRowId()) {
                                 // draft has already been updated
+                            	mDraftSaved = false;
                                 continue;
-                            } else {
+                            }
+                            else {
                                 // show message normally
                                 mMessageList.add(messageRow);
                             }
@@ -787,9 +817,16 @@ public class MessagesFragment extends Fragment {
         }
 
         // save draft when view is lost
-        doSave(mEditTextMessage.getText().toString(), mRecip != null);
+//        doSave(mEditTextMessage.getText().toString(), mRecip != null);
+        initiateSaveDraft();
     }
 
+    public void initiateSaveDraft()
+    {
+    	doSave(mEditTextMessage.getText().toString(), mRecip != null);
+    	
+    }
+    
     @Override
     public void onResume() {
         super.onResume();

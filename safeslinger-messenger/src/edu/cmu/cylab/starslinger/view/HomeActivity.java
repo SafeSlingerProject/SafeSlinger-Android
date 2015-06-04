@@ -2880,8 +2880,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
     protected void postProgressMsgList(boolean isInboxTable, long rowId, String msg) {
         try {
             if (mTabsAdapter != null) {
-//                MessagesFragment mf = (MessagesFragment) mTabsAdapter
-//                        .findFragmentByPosition(Tabs.HOLDER.ordinal());
             	HolderTab holderFragment = (HolderTab) mTabsAdapter
                         .findFragmentByPosition(Tabs.HOLDER.ordinal());
                 if (holderFragment != null) {
@@ -4136,7 +4134,13 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         {
         	HolderTab holderTab =  (HolderTab) mTabsAdapter.findFragmentByPosition(position); 
         	if(holderTab != null && holderTab.getChildFragmentManager().getBackStackEntryCount() > 0)
+        	{
+        		MessagesFragment frag = (MessagesFragment)holderTab.getChildFragmentManager().findFragmentByTag(Tabs.MESSAGE.toString());
+        		if(frag != null)
+        			frag.initiateSaveDraft();
         		holderTab.getChildFragmentManager().popBackStack();
+        		
+        	}
         	else
         		super.onBackPressed();
             // collapse messages to threads when in message view

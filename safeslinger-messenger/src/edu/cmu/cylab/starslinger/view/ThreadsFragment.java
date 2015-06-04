@@ -312,89 +312,9 @@ public class ThreadsFragment extends Fragment {
                 bundle.putBoolean("thread_click", true);
                 mListener.onCommunicateData(bundle, Tabs.MESSAGE.toString());
                 updateMessageList(false);
-                
-//                if (mRecip == null) {
-//                    // requested messages list
-//                    // assign recipient
-//                    if (TextUtils.isEmpty(t.getMsgRow().getKeyId())) {
-//                        // able to view null key id messages
-//                        mRecip = RecipientRow.createEmptyRecipient();
-//                    } else {
-//                        RecipientDbAdapter dbRecipient = RecipientDbAdapter
-//                                .openInstance(getActivity().getApplicationContext());
-//                        Cursor c = dbRecipient.fetchRecipientByKeyId(t.getMsgRow().getKeyId());
-//                        if (c != null) {
-//                            try {
-//                                if (c.moveToFirst()) {
-//                                    // messages with matching key ids in
-//                                    // database
-//                                    mRecip = new RecipientRow(c);
-//                                } else {
-//                                    // messages without matching key ids
-//                                    mRecip = RecipientRow.createKeyIdOnlyRecipient(t.getMsgRow()
-//                                            .getKeyId());
-//                                }
-//                            } finally {
-//                                c.close();
-//                            }
-//                        }
-//                    }
-//                } else {
-//                    // requested threads list
-//                    // remove recipient
-//                    mRecip = null;
-//                }
-//                updateMessageList(true);
             }
         });
     }
-
-//    private void setMessageListClickListener() {
-//        mListViewMsgs.setOnItemClickListener(new OnItemClickListener() {
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
-//                String pass = SafeSlinger.getCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
-//
-//                // construct activity to download message...
-//                MessageRow msg = mMessageList.get(pos);
-//                MsgAction action = msg.getMessageAction();
-//
-//                // ensure last item remains fully in view
-//                if (pos == mMessageList.size() - 1) {
-//                    mListMsgTopOffset = 0;
-//                    mListMsgVisiblePos = pos;
-//                }
-//
-//                switch (action) {
-//                    case DISPLAY_ONLY:
-//                    case MSG_PROGRESS:
-//                    case MSG_EXPIRED:
-//                        // no action...
-//                        break;
-//                    case MSG_EDIT:
-//                        doEditMessage(msg);
-//                        break;
-//                    case MSG_DOWNLOAD:
-//                        doGetMessage(msg);
-//                        break;
-//                    case MSG_DECRYPT:
-//                        doDecryptMessage(pass, msg);
-//                        break;
-//                    case FILE_DOWNLOAD_DECRYPT:
-//                        doGetFile(msg);
-//                        break;
-//                    case FILE_OPEN:
-//                        doOpenFile(msg);
-//                        break;
-//                    default:
-//                        break;
-//                }
-//
-//                updateMessageList(false);
-//            }
-//        });
-//    }
 
     private void updateMessageList(boolean recentMsg) {
         // make sure view is already inflated...
@@ -837,7 +757,7 @@ public class ThreadsFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        updateMessageList(false);
+//        updateMessageList(false);
     }
 
     public interface OnMessagesResultListener {
