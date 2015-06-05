@@ -119,7 +119,7 @@ public class MessagesFragment extends Fragment {
     private static EditText mEditTextMessage;
     private Button mButtonSend;
     private LinearLayout mComposeWidget;
-    private static MessageData mDraft;
+    private MessageData mDraft;
     private boolean mDraftSaved = false;
     
     private ThreadData mThreadData = null;
@@ -476,58 +476,6 @@ public class MessagesFragment extends Fragment {
         mTvInstruct.setVisibility(View.GONE);
         boolean showCompose = false;
 
-        // draw threads list/title bar
-//        mThreadList.clear();
-//        ThreadData t = null;
-//        int totalThreads = 0;
-        // inbox threads
-//        Cursor cmi = null;
-//        if (mRecip == null) {
-//            cmi = dbInbox.fetchInboxRecentByUniqueKeyIds();
-//        } else {
-//            cmi = dbInbox.fetchInboxRecent(mRecip.getKeyid());
-//        }
-//        if (cmi != null) {
-//            try {
-//                totalThreads += cmi.getCount();
-//                if (cmi.moveToFirst()) {
-//                    do {
-//                        MessageRow inboxRow = new MessageRow(cmi, true);
-//                        t = addInboxThread(inboxRow);
-//                        mergeInThreads(t);
-//                    } while (cmi.moveToNext());
-//                }
-//            } finally {
-//                cmi.close();
-//            }
-//        }
-        // message threads
-//        Cursor cmt = null;
-//        if (mRecip == null) {
-//            cmt = dbMessage.fetchMessagesRecentByUniqueKeyIds();
-//        } else {
-//            cmt = dbMessage.fetchMessageRecent(mRecip.getKeyid());
-//        }
-//        if (cmt != null) {
-//            try {
-//                totalThreads += cmt.getCount();
-//                if (cmt.moveToFirst()) {
-//                    do {
-//                        MessageRow messageRow = new MessageRow(cmt, false);
-//                        t = addMessageThread(messageRow);
-//                        mergeInThreads(t);
-//                    } while (cmt.moveToNext());
-//                }
-//            } finally {
-//                cmt.close();
-//            }
-//        }
-//
-//        if (totalThreads <= 0) {
-//            mTvInstruct.setVisibility(View.VISIBLE);
-//        }
-//        Collections.sort(mThreadList, new ThreadDateDecendingComparator());
-
         // draw messages list/compose draft
         mMessageList.clear();
         if (mRecip != null) {
@@ -554,6 +502,12 @@ public class MessagesFragment extends Fragment {
             }
             // decrypted msgs and outbox msgs
             Cursor cm = dbMessage.fetchAllMessagesByThread(mRecip.getKeyid());
+            if(mDraft != null && mDraft.getKeyId() != mRecip.getKeyid())
+            {
+            	mEditTextMessage.setTextKeepState("");
+            	mDraft = null;
+            	mDraftSaved = false;//TODO: May be remove this part after testing
+            }
             if (cm != null) {
                 try {
                     if (cm.moveToFirst()) {
@@ -577,7 +531,8 @@ public class MessagesFragment extends Fragment {
                                 mEditTextMessage.setTextKeepState(mDraft.getText());
                                 mEditTextMessage.forceLayout();
                                 mDraftSaved = false;
-                            } else if (mDraft != null && mDraft.getRowId() == messageRow.getRowId()) {
+                            }
+                            else if (mDraft != null && mDraft.getRowId() == messageRow.getRowId()) {
                                 // draft has already been updated
                             	mDraftSaved = false;
                                 continue;

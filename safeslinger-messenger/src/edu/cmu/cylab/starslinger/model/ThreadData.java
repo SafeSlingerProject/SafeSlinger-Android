@@ -39,7 +39,8 @@ public class ThreadData  implements Parcelable{
     private boolean mNewerExists;
     private String mProgress;
 
-    private static final Parcelable.Creator<ThreadData> CREATOR = new creatorImplementation();
+    @SuppressWarnings("unused")
+	private static final Parcelable.Creator<ThreadData> CREATOR = new creatorImplementation();
     
     private static final class creatorImplementation implements Parcelable.Creator<ThreadData>
     {
