@@ -502,11 +502,11 @@ public class MessagesFragment extends Fragment {
             }
             // decrypted msgs and outbox msgs
             Cursor cm = dbMessage.fetchAllMessagesByThread(mRecip.getKeyid());
-            if(mDraft != null && mDraft.getKeyId() != mRecip.getKeyid())
+            if(mDraft != null && mDraft.getKeyId() != mRecip.getKeyid() || mDraft == null)
             {
             	mEditTextMessage.setTextKeepState("");
             	mDraft = null;
-            	mDraftSaved = false;//TODO: May be remove this part after testing
+            	mDraftSaved = false;
             }
             if (cm != null) {
                 try {

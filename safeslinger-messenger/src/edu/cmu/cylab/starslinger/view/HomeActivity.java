@@ -4146,6 +4146,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
             // collapse messages to threads when in message view
             MessagesFragment.setRecip(null);
             ThreadContent.getInstance().setmSelectedPosition(0);
+            ThreadContent.getInstance().setSelectedRecipientId("");
             ThreadContent.getInstance().setmCurrentTab(Tabs.THREADS);
             
 //            displayBackStack(getSupportFragmentManager());
@@ -4208,6 +4209,23 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         return super.onCreateDialog(id);
     }
 
+    private void checkAndUpdateDraft()
+    {
+    	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+    	{
+    		HolderTab holderTab = (HolderTab) mTabsAdapter.findFragmentByPosition(Tabs.HOLDER.ordinal());
+    		if(holderTab != null)
+    		{
+    			MessagesFragment frag = (MessagesFragment)holderTab.getChildFragmentManager().findFragmentByTag(Tabs.MESSAGE.toString());
+        		if(frag != null)
+        			frag.initiateSaveDraft();
+    		}
+    		
+    	}
+    	
+    }
+
+    
     @Override
     public void onCommunicateData(Bundle bundle,String tag) {
        
@@ -4218,7 +4236,10 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
            if(bundle.getBoolean("load_msg"))
         	   fragment.loadBasedOnConfiguration();
            else
+           {
+        	   checkAndUpdateDraft();
         	   fragment.updateValues(bundle, tag);
+           }
        }
        else
        {

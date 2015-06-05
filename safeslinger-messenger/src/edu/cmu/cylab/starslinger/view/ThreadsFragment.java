@@ -302,11 +302,16 @@ public class ThreadsFragment extends Fragment {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
-
+            	
             	ThreadContent.getInstance().setmCurrentTab(Tabs.MESSAGE);
             	ThreadContent.getInstance().setmSelectedPosition(pos);
-                ThreadData t = ThreadContent.getInstance().getmThreadList().get(pos);
-                Bundle bundle = new Bundle();
+            	ThreadData t = ThreadContent.getInstance().getmThreadList().get(pos);
+            	if(t.getRecipient() != null)
+            		ThreadContent.getInstance().setSelectedRecipientId(t.getRecipient().getKeyid());
+            	else
+            		ThreadContent.getInstance().setSelectedRecipientId("");
+            	
+            	Bundle bundle = new Bundle();
                 bundle.putInt("thread_pos", pos);
                 bundle.putParcelable("thread_data", t);
                 bundle.putBoolean("thread_click", true);

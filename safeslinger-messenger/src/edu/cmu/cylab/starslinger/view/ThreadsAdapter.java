@@ -27,6 +27,7 @@ package edu.cmu.cylab.starslinger.view;
 import java.util.List;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.TextUtils;
@@ -42,11 +43,12 @@ import edu.cmu.cylab.starslinger.model.MessageDbAdapter;
 import edu.cmu.cylab.starslinger.model.RecipientRow;
 import edu.cmu.cylab.starslinger.model.ThreadData;
 import edu.cmu.cylab.starslinger.util.SSUtil;
+import edu.cmu.cylab.starslinger.util.ThreadContent;
 
 public class ThreadsAdapter extends BaseAdapter {
     private Context mCtx;
     private List<ThreadData> mListThreads;
-
+    
     public ThreadsAdapter(Context context, List<ThreadData> list) {
         mCtx = context;
         mListThreads = list;
@@ -79,7 +81,13 @@ public class ThreadsAdapter extends BaseAdapter {
 
         // convertView.setTag(Long.valueOf(thread.getRowId()));
         drawThreadItem(convertView, t);
-
+        
+        if(t.getRecipient() != null && t.getRecipient().getKeyid().compareTo(ThreadContent.getInstance().getSelectedRecipientId()) == 0 && mCtx.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+        	convertView.setBackgroundColor(mCtx.getResources().getColor(R.color.gray));
+        else
+        	convertView.setBackgroundColor(mCtx.getResources().getColor(android.R.color.transparent));
+        
+        ((ViewGroup)convertView).setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
         // Return the view for rendering
         return convertView;
     }
@@ -110,7 +118,9 @@ public class ThreadsAdapter extends BaseAdapter {
 
         TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
         tvName.setText(getBestIdentityName(mCtx, t, recip));
-
+        tvName.setSelected(true);
+        
+        
         TextView tvCount = (TextView) convertView.findViewById(R.id.tvCount);
         tvCount.setText(Integer.toString(t.getMsgCount()));
 

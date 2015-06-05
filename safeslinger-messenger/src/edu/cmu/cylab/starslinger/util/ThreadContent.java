@@ -12,6 +12,7 @@ public class ThreadContent {
 	
     private List<ThreadData> mThreadList = new ArrayList<ThreadData>();
     private int mSelectedPosition = 0;
+    private String mSelectedRecipientId = "";
     
     private Tabs mCurrentTab = Tabs.THREADS;
     
@@ -28,6 +29,16 @@ public class ThreadContent {
 		return mInstance;
 	}
 
+	public String getSelectedRecipientId()
+	{
+		return this.mSelectedRecipientId;
+	}
+	
+	public void setSelectedRecipientId(String keyID)
+	{
+		this.mSelectedRecipientId = keyID;
+	}
+	
 	public List<ThreadData> getmThreadList() {
 		return mThreadList;
 	}
