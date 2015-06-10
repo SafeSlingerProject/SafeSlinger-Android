@@ -194,7 +194,6 @@ public class MessagesFragment extends Fragment {
 
         if (extras != null) {
             msgRowId = extras.getLong(extra.MESSAGE_ROW_ID, -1L);
-//            mThreadData = (ThreadData)extras.getParcelable("thread_data");
             recipRowId = extras.getLong(extra.RECIPIENT_ROW_ID, -1L);
 
             // set position to top when incoming message in
@@ -309,6 +308,8 @@ public class MessagesFragment extends Fragment {
         
         if(getArguments() != null && getArguments().getBoolean("thread_click"))
             onThreadItemClick(getArguments());
+        else if(getArguments() != null && getArguments().getBoolean("isOutGoing"))
+        	updateValues(getArguments());
         else
             updateMessageList(false);
 
@@ -449,7 +450,7 @@ public class MessagesFragment extends Fragment {
 
      private void updateMessageList(boolean recentMsg) {
         // make sure view is already inflated...
-        if (mListViewMsgs == null) {
+    	 if (mListViewMsgs == null) {
             return;
         }
 
@@ -480,7 +481,7 @@ public class MessagesFragment extends Fragment {
         mMessageList.clear();
         if (mRecip != null) {
             // recipient data
-            if (mRecip != null && mRecip.isSendable() && mThreadData != null && !mThreadData.isNewerExists()) {
+            if (mRecip != null && mRecip.isSendable() /*&& mThreadData != null && !mThreadData.isNewerExists()*/) {
                 showCompose = true;
             }
             // encrypted msgs
@@ -648,7 +649,8 @@ public class MessagesFragment extends Fragment {
         }
     }
 
-    private void doExportTranscript(List<MessageRow> msgs) {
+    @SuppressWarnings("deprecation")
+	private void doExportTranscript(List<MessageRow> msgs) {
         // in debug only, export fields useful for debugging message delivery
         StringBuilder debug = new StringBuilder();
         for (MessageRow m : msgs) {

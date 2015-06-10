@@ -125,26 +125,18 @@ public class ThreadsFragment extends Fragment {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
-//        doSave(mEditTextMessage.getText().toString(), mRecip != null);
-
-        // save
-//        if (mDraft != null && mDraft.getRowId() != -1) {
-//            outState.putLong(extra.MESSAGE_ROW_ID, mDraft.getRowId());
-//        }
-//        if (mRecip != null && mRecip.getRowId() != -1) {
-//            outState.putLong(extra.RECIPIENT_ROW_ID, mRecip.getRowId());
-//        }
     }
-
+  
     public void updateValues(Bundle extras) {
         long msgRowId = -1;
         long recipRowId = 1;
 
+//        mLoadMessagesTab = loadMsgTab; // TODO: remove if conflicts with other conditions
+        
         if (extras != null) {
             msgRowId = extras.getLong(extra.MESSAGE_ROW_ID, -1L);
             recipRowId = extras.getLong(extra.RECIPIENT_ROW_ID, -1L);
-
+            
             // set position to top when incoming message in
             // background...
             InboxDbAdapter dbInbox = InboxDbAdapter.openInstance(this.getActivity());
@@ -404,7 +396,7 @@ public class ThreadsFragment extends Fragment {
             mTvInstruct.setVisibility(View.VISIBLE);
         }
         Collections.sort(ThreadContent.getInstance().getmThreadList(), new ThreadDateDecendingComparator());
-        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && mLoadMessagesTab)
+        if((getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && mLoadMessagesTab))
         {
         	mLoadMessagesTab = false;
         	Bundle bundle = new Bundle();
@@ -476,7 +468,9 @@ public class ThreadsFragment extends Fragment {
 
         int newMsgs = dbInbox.getActionRequiredInboxCountByThread(inboxRow.getKeyId());
         int draftMsgs = 0; // inbox does not store drafts
-        t = new ThreadData(inboxRow, msgs, newMsgs, draftMsgs > 0, person, mRecip != null,
+//        t = new ThreadData(inboxRow, msgs, newMsgs, draftMsgs > 0, person, mRecip != null,
+//                newerExists, recipientRow);
+        t = new ThreadData(inboxRow, msgs, newMsgs, draftMsgs > 0, person, false,
                 newerExists, recipientRow);
         return t;
     }
@@ -515,7 +509,9 @@ public class ThreadsFragment extends Fragment {
 
         int newMsgs = dbMessage.getActionRequiredMessageCountByThread(messageRow.getKeyId());
         int draftMsgs = dbMessage.getDraftMessageCountByThread(messageRow.getKeyId());
-        t = new ThreadData(messageRow, msgs, newMsgs, draftMsgs > 0, person, mRecip != null,
+//        t = new ThreadData(messageRow, msgs, newMsgs, draftMsgs > 0, person, mRecip != null,
+//                newerExists, recipientRow);
+        t = new ThreadData(messageRow, msgs, newMsgs, draftMsgs > 0, person, false,
                 newerExists, recipientRow);
         return t;
     }

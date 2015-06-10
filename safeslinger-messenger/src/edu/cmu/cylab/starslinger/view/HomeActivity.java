@@ -362,9 +362,6 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
                 	
                 	if(holderFragment != null)
                 	{
-//                		if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
-//            				holderFragment.;
-////                		else
                 			holderFragment.updateValues(intent.getExtras(), ThreadContent.getInstance().getmCurrentTab().toString(), intent.getAction());
                 	}
                 }
@@ -1143,6 +1140,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         }
         getApplicationContext().sendBroadcast(sendIntent);
 
+//        resetThreadsRecpnt();
         // switch to message tab
         setTab(Tabs.HOLDER);
         refreshView();
@@ -1152,6 +1150,17 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         task.execute(mts);
     }
 
+//    private void resetThreadsRecpnt()
+//    {
+//    	HolderTab tab = (HolderTab)mTabsAdapter.findFragmentByPosition(Tabs.HOLDER.ordinal());
+//    	if(tab != null)
+//    	{
+//    		ThreadsFragment frag = (ThreadsFragment)tab.getChildFragmentManager().findFragmentByTag(Tabs.THREADS.toString());
+//    		if(frag != null)
+//    			ThreadsFragment.setRecip(null);
+//    	}
+//    }
+    
     private void setTab(Tabs tab) {
         try {
             final ActionBar ab = getSupportActionBar();

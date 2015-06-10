@@ -169,8 +169,31 @@ public class HolderTab extends Fragment {
 //            setmCurrentTabTag(Tabs.THREADS.toString());
             ThreadsFragment frag = (ThreadsFragment) getChildFragmentManager()
                     .findFragmentByTag(tag);
-            if (frag != null) {
-                frag.updateValues(bundle);
+            if(SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING.compareTo(action) == 0)
+            {
+            	 FragmentTransaction ft = getChildFragmentManager()
+                         .beginTransaction();
+               	MessagesFragment msgFrag = new MessagesFragment();
+                MessagesFragment.setRecip(null);
+                bundle.putBoolean("isOutGoing", true);
+                msgFrag.setArguments(bundle);
+               ft.replace(R.id.content, msgFrag, Tabs.MESSAGE.toString())
+                .addToBackStack(Tabs.MESSAGE.toString()).commit();
+//                msgFrag.updateValues(bundle);
+//            	MessagesFragment msgfrag = (MessagesFragment) getChildFragmentManager()
+//                        .findFragmentByTag(Tabs.MESSAGE.toString());
+//            	if(msgfrag != null)
+//            	{
+////            		ThreadsFragment.setRecip(null);
+//            		msgfrag.updateValues(bundle);
+//            	}
+            }
+            else if (frag != null) {
+//            		if(SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING.compareTo(action) == 0)
+//            			frag.updateValues(bundle, true);
+//            			ThreadsFragment.setRecip(null);
+//            		else
+            			frag.updateValues(bundle);
             }
         } else {
         	if(bundle == null)
@@ -184,11 +207,15 @@ public class HolderTab extends Fragment {
             MessagesFragment frag = (MessagesFragment) getChildFragmentManager()
                     .findFragmentByTag(tag);
             
-            if (frag == null || (frag != null && !dualPane && SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING.compareTo(action) != 0 && SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING.compareTo(action) != 0)) {
+            if (frag == null /*|| (frag != null && !dualPane && SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING.compareTo(action) != 0 && SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING.compareTo(action) != 0)*/) {
                 FragmentTransaction ft = getChildFragmentManager()
                         .beginTransaction();
                 MessagesFragment msgFrag = new MessagesFragment();
                 MessagesFragment.setRecip(null);
+                
+                if(SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING.compareTo(action) == 0)
+                	bundle.putBoolean("isOutGoing", true);
+                
                 msgFrag.setArguments(bundle);
                 int containerId = R.id.content;
                 if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
@@ -209,7 +236,6 @@ public class HolderTab extends Fragment {
             }
             else
                 frag.updateValues(bundle);
-//            setmCurrentTabTag(Tabs.MESSAGE.toString());
         }
 
     }
