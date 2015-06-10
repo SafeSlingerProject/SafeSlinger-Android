@@ -51,6 +51,16 @@ public class Service extends android.app.Service {
     private Handler mCacheHandler = new Handler();
     static private boolean mIsRunning = false;
 
+    private BroadcastReceiver mLogoutReceiver = new BroadcastReceiver() {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
+            stopForeground(true);
+            System.exit(0);
+        }
+    };
+
     private BroadcastReceiver mAirplaneModeReceiver = new BroadcastReceiver() {
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
         @Override
@@ -110,12 +120,12 @@ public class Service extends android.app.Service {
 
         registerReceiver(mAirplaneModeReceiver, new IntentFilter(
                 Intent.ACTION_AIRPLANE_MODE_CHANGED));
+        registerReceiver(mLogoutReceiver, new IntentFilter(SafeSlingerConfig.Intent.ACTION_LOGOUT));
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        stopForeground(true);
         mIsRunning = false;
 
         // attempt to unregister, however we can safely ignore the
@@ -123,6 +133,11 @@ public class Service extends android.app.Service {
         // some hardware experiences a race condition here.
         try {
             unregisterReceiver(mAirplaneModeReceiver);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+        try {
+            unregisterReceiver(mLogoutReceiver);
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
@@ -269,26 +284,11 @@ public class Service extends android.app.Service {
 
         // intent for changing timeout (main settings)
         String tickerText = getString(R.string.label_PassPhraseIsCached);
-        // less than 4.1 has no sub-action, and should open settings
-        String contentTitle;
-        String contentText;
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
-            contentTitle = String.format("%s: %s", getString(R.string.label_PassPhraseIsCached),
-                    setting);
-            contentText = getString(R.string.label_TouchToConfigureCacheTimeout);
-        } else {
-            contentTitle = getString(R.string.app_name);
-            contentText = String.format("%s: %s", getString(R.string.label_PassPhraseIsCached),
-                    setting);
-        }
-
-        Intent actionOpen = new Intent(Service.this, HomeActivity.class);
-        actionOpen.setAction(SafeSlingerConfig.Intent.ACTION_CHANGESETTINGS);
-        PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), 0,
-                actionOpen, PendingIntent.FLAG_UPDATE_CURRENT);
+        String contentTitle = String.format("%s: %s", getString(R.string.label_PassPhraseIsCached),
+                setting);
+        String contentText = getString(R.string.label_TouchToConfigureCacheTimeout);
 
         // intent for easy settings action (add on)
-        String settingsText = getString(R.string.menu_Settings);
         Intent actionSettings = new Intent(Service.this, HomeActivity.class);
         actionSettings.setAction(SafeSlingerConfig.Intent.ACTION_CHANGESETTINGS);
         PendingIntent settIntent = PendingIntent.getActivity(getApplicationContext(), 0,
@@ -296,9 +296,8 @@ public class Service extends android.app.Service {
 
         // intent for easy logout action (add on)
         String logoutText = getString(R.string.menu_Logout);
-        Intent actionLogout = new Intent(Service.this, HomeActivity.class);
-        actionLogout.setAction(SafeSlingerConfig.Intent.ACTION_LOGOUT);
-        PendingIntent loIntent = PendingIntent.getActivity(getApplicationContext(), 0,
+        Intent actionLogout = new Intent(SafeSlingerConfig.Intent.ACTION_LOGOUT);
+        PendingIntent loIntent = PendingIntent.getBroadcast(getApplicationContext(), 0,
                 actionLogout, PendingIntent.FLAG_UPDATE_CURRENT);
 
         Context ctx = SafeSlinger.getApplication();
@@ -308,16 +307,18 @@ public class Service extends android.app.Service {
                 .setContentTitle(contentTitle)//
                 .setContentText(contentText)//
                 .setWhen(0)//
-                .addAction(android.R.drawable.ic_menu_preferences, settingsText, settIntent)//
-                .addAction(android.R.drawable.ic_menu_close_clear_cancel, logoutText, loIntent)//
                 .setVisibility(NotificationCompat.VISIBILITY_SECRET);
 
         // prevent the intent from canceling active key exchange
         if (!SafeSlinger.getApplication().isExchangeActive()) {
-            // less than 4.1 has no sub-action, and should open settings
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
-                builder.setContentIntent(contentIntent);
-            }
+            builder.setContentIntent(settIntent);
+            builder.addAction(android.R.drawable.ic_menu_close_clear_cancel, logoutText, loIntent);
+        } else {
+            // temporary redirect to system screen to prevent closing the
+            // exchange
+            builder.setContentIntent(PendingIntent.getActivity(getApplicationContext(), 0,
+                    new Intent(android.provider.Settings.ACTION_SETTINGS),
+                    PendingIntent.FLAG_UPDATE_CURRENT));
         }
 
         return builder.build();

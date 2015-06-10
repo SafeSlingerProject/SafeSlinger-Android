@@ -79,8 +79,6 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
         String contentText = String.format(ctx.getString(R.string.label_ClickForNMsgs), msgCount);
 
         Intent intent = makeMessagesNotificationIntent(ctx);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP
-                | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent contentIntent = PendingIntent.getActivity(ctx, 0, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 

@@ -380,12 +380,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
 
-        // prevent the intent from canceling active key exchange
-        if (SafeSlinger.getApplication().isExchangeActive()) {
-            finish();
-            return;
-        }
-
         setIntent(intent);
 
         // handle caller send action once send only
@@ -396,8 +390,12 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     }
 
     public void processIntent(Intent intent) {
-        String action = intent.getAction();
+        // prevent the intent from canceling active key exchange
+        if (SafeSlinger.getApplication().isExchangeActive()) {
+            return;
+        }
 
+        String action = intent.getAction();
         if (SafeSlingerConfig.Intent.ACTION_MESSAGEINCOMING.equals(action)) {
             // clicked on new message notifications window, show messages
             // collapse messages to threads when looking for new messages
@@ -471,12 +469,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     protected void onCreate(Bundle savedInstanceState) {
         // setTheme(R.style.Theme_Safeslinger);
         super.onCreate(savedInstanceState);
-
-        // prevent the intent from canceling active key exchange
-        if (SafeSlinger.getApplication().isExchangeActive()) {
-            finish();
-            return;
-        }
 
         mViewPager = new ViewPager(this);
         mViewPager.setId(R.id.pager);
@@ -722,6 +714,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         intent.putExtra(ExchangeConfig.extra.HOST_NAME, SafeSlingerConfig.HTTPURL_EXCHANGE_HOST);
         startActivityForResult(intent, VIEW_EXCHANGE_ID);
         SafeSlinger.getApplication().setExchangeActive(true);
+        // update foreground notification to prevent closing exchange
+        SafeSlinger.startCacheService(HomeActivity.this);
     }
 
     private void showSave(Bundle args) {
@@ -2052,6 +2046,9 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         break;
                     case ExchangeActivity.RESULT_EXCHANGE_CANCELED:
                         SafeSlinger.getApplication().setExchangeActive(false);
+                        // update foreground notification to allow pending
+                        // intents
+                        SafeSlinger.startCacheService(HomeActivity.this);
                         break;
                 }
                 break;
@@ -2071,10 +2068,16 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                                 + exchanged));
                         SafeSlingerPrefs.setFirstExchangeComplete(true);
                         SafeSlinger.getApplication().setExchangeActive(false);
+                        // update foreground notification to allow pending
+                        // intents
+                        SafeSlinger.startCacheService(HomeActivity.this);
                         break;
                     case RESULT_CANCELED:
                         showNote(String.format(getString(R.string.state_SomeContactsImported), "0"));
                         SafeSlinger.getApplication().setExchangeActive(false);
+                        // update foreground notification to allow pending
+                        // intents
+                        SafeSlinger.startCacheService(HomeActivity.this);
                         break;
                     default:
                         showNote(String.format(getString(R.string.state_SomeContactsImported), "?"));
@@ -2561,6 +2564,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             // set the global completion here to be sure the
             SafeSlinger.getApplication().setExchangeActive(false);
             SafeSlingerPrefs.setFirstExchangeComplete(true);
+            // update foreground notification to allow pending intents
+            SafeSlinger.startCacheService(HomeActivity.this);
         }
     }
 
@@ -2577,6 +2582,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
     @Override
     protected void onResume() {
         super.onResume();
+
         checkPlayServices();
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH)
@@ -3391,6 +3397,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
         sProgressMsg = null;
         mImported = new MessageData();
         SafeSlinger.getApplication().setExchangeActive(false);
+        // update foreground notification to allow pending intents
+        SafeSlinger.startCacheService(HomeActivity.this);
     }
 
     private void showFileAttach() {

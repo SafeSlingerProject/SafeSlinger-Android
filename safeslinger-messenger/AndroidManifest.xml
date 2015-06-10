@@ -80,8 +80,9 @@
         android:restoreAnyVersion="true" >
         <activity
             android:name=".view.HomeActivity"
+            android:alwaysRetainTaskState="true"
             android:configChanges="locale"
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.Safeslinger"
             android:windowSoftInputMode="stateHidden|adjustPan" >
             <intent-filter>
@@ -99,16 +100,6 @@
                 <data android:mimeType="audio/*" />
                 <data android:mimeType="application/*" />
                 <data android:mimeType="text/*" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="edu.cmu.cylab.starslinger.action.MESSAGEINCOMING" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="edu.cmu.cylab.starslinger.action.BACKUPREMINDER" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
