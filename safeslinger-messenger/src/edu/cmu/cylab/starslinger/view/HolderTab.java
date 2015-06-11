@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
+import edu.cmu.cylab.starslinger.model.ThreadData;
 import edu.cmu.cylab.starslinger.util.ThreadContent;
 import edu.cmu.cylab.starslinger.view.HomeActivity.Tabs;
 
@@ -235,7 +236,16 @@ public class HolderTab extends Fragment {
             	frag.onThreadItemClick(bundle);
             }
             else
-                frag.updateValues(bundle);
+            {
+            	frag.updateValues(bundle);
+            	if(SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING.compareTo(action) == 0 && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+            	{
+//            		ThreadsFragment threadFrag = (ThreadsFragment) getChildFragmentManager()
+//                            .findFragmentByTag(tag);
+//            		if(threadFrag != null)
+            		ThreadContent.getInstance().setSelectedRecipientId(MessagesFragment.getRecip().getKeyid());	
+            	}
+            }
         }
 
     }

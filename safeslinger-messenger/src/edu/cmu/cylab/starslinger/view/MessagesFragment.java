@@ -215,6 +215,7 @@ public class MessagesFragment extends Fragment {
                     try {
                         if (c.moveToFirst()) {
                             mRecip = new RecipientRow(c);
+                            ThreadContent.getInstance().setSelectedRecipientId(mRecip.getKeyid());
                         }
                     } finally {
                         c.close();
