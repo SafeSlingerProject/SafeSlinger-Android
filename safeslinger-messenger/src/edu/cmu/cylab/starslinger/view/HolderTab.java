@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import edu.cmu.cylab.starslinger.R;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
-import edu.cmu.cylab.starslinger.model.ThreadData;
 import edu.cmu.cylab.starslinger.util.ThreadContent;
 import edu.cmu.cylab.starslinger.view.HomeActivity.Tabs;
 
@@ -20,7 +19,7 @@ public class HolderTab extends Fragment {
     private FrameLayout mThreadContainer, mMessageContainer;
     private View mSeparator;
 //    private String mCurrentTabTag = "";
-    private boolean dualPane = false;
+//    private boolean dualPane = false;
 //    private String mSinglePaneTab = "";
     private Tabs mPrevTab = Tabs.THREADS;
     
@@ -45,14 +44,14 @@ public class HolderTab extends Fragment {
         
     	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
     	{
-    		dualPane = true;
+//    		dualPane = true;
     		mThreadContainer.setVisibility(View.VISIBLE);
         	mMessageContainer.setVisibility(View.VISIBLE);
         	mSeparator.setVisibility(View.VISIBLE);
     	}
     	else
     	{
-    		dualPane = false;
+//    		dualPane = false;
     		mThreadContainer.setVisibility(View.VISIBLE);
         	mMessageContainer.setVisibility(View.GONE);
         	mSeparator.setVisibility(View.GONE);
