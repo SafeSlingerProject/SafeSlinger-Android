@@ -82,9 +82,13 @@ public class WebEngine {
 
     public WebEngine(Context ctx, String hostName) {
         mCtx = ctx;
-        mUrlPrefix = SafeSlingerConfig.HTTPURL_PREFIX;
         mHost = hostName;
         mUrlSuffix = SafeSlingerConfig.HTTPURL_SUFFIX;
+        if (SafeSlingerConfig.isDebug()) {
+            mUrlPrefix = SafeSlingerConfig.HTTPURL_PREFIX_BETA;
+        } else {
+            mUrlPrefix = SafeSlingerConfig.HTTPURL_PREFIX;
+        }
 
         mVersion = SafeSlingerConfig.getVersionCode();
     }

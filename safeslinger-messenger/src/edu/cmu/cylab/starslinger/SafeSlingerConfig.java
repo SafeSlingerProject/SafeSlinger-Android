@@ -54,6 +54,9 @@ public class SafeSlingerConfig {
     public static final String EULA_URL = "http://www.cylab.cmu.edu/safeslinger/eula.html";
     public static final String LOCALIZE_URL = "transifex.com/projects/p/safeslinger";
 
+    // special prefix to target test server
+    public static final String HTTPURL_PREFIX_BETA = "https://01060000t-dot-";
+
     @Deprecated
     public static final String APP_KEY_OLD1 = "StarSlingerKey";
     @Deprecated
@@ -218,14 +221,20 @@ public class SafeSlingerConfig {
     }
 
     public static String getVersionName() {
+        String ver = "0.0";
         Context ctx = SafeSlinger.getApplication();
         PackageManager pm = ctx.getPackageManager();
         PackageInfo pi;
         try {
             pi = pm.getPackageInfo(ctx.getPackageName(), PackageManager.GET_META_DATA);
-            return pi.versionName;
+            ver = pi.versionName;
         } catch (NameNotFoundException e) {
-            return "0.0";
+            e.printStackTrace();
+        }
+        if (isDebug()) {
+            return ver + "-beta";
+        } else {
+            return ver;
         }
     }
 

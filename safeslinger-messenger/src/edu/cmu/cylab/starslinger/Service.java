@@ -55,9 +55,7 @@ public class Service extends android.app.Service {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
-            stopForeground(true);
-            System.exit(0);
+            fullLogout();
         }
     };
 
@@ -77,9 +75,7 @@ public class Service extends android.app.Service {
 
             // logout when in airplane mode
             if (airplaneOn) {
-                SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
-                stopForeground(true);
-                System.exit(0);
+                fullLogout();
             }
         }
     };
@@ -350,6 +346,12 @@ public class Service extends android.app.Service {
         }
 
         return builder.build();
+    }
+
+    private void fullLogout() {
+        SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
+        stopForeground(true);
+        System.exit(0);
     }
 
 }

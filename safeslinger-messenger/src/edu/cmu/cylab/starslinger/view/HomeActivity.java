@@ -425,10 +425,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
             if (handleSendToAction()) {
                 showRecipientSelect(VIEW_RECIPSEL_FORFILE_ID);
             }
-        } else if (SafeSlingerConfig.Intent.ACTION_LOGOUT.equals(action)) {
-            // clicked on logout
-            doManualLogout();
-
         }
     }
 
@@ -922,10 +918,7 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
 
     private void doManualLogout() {
         reInitForExit();
-        SafeSlinger.removeCachedPassPhrase(SafeSlingerPrefs.getKeyIdString());
-        // SafeSlinger.startCacheService(HomeActivity.this);
-        // showPassPhrase(false, false);
-        System.exit(0);
+        sendBroadcast(new Intent(SafeSlingerConfig.Intent.ACTION_LOGOUT));
     }
 
     private class CreateKeyTask extends AsyncTask<String, String, String> {
@@ -3092,7 +3085,6 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                     error = e.getLocalizedMessage();
                 } finally {
                     mHandler.removeCallbacks(updateTxProgress);
-                    publish(sendMsg, 0);
                 }
 
                 if (!TextUtils.isEmpty(error)) {
@@ -3117,6 +3109,8 @@ public class HomeActivity extends BaseActivity implements OnMessagesResultListen
                         dbMessage.deleteMessage(sendMsg.getRowId());
                     }
                 }
+                // end progress after database/comm finished
+                publish(sendMsg, 0);
             } // end for
             return errorFinal;
         }

@@ -319,7 +319,7 @@ public class SafeSlinger extends Application {
 
         for (String keyId : oldKeys) {
             mPassPhraseCache.remove(keyId);
-            System.exit(0);
+            sSafeSlinger.sendBroadcast(new Intent(SafeSlingerConfig.Intent.ACTION_LOGOUT));
         }
 
         return delay;
