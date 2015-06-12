@@ -48,10 +48,12 @@ import edu.cmu.cylab.starslinger.util.ThreadContent;
 public class ThreadsAdapter extends BaseAdapter {
     private Context mCtx;
     private List<ThreadData> mListThreads;
+    private boolean mIsTablet = false;
     
     public ThreadsAdapter(Context context, List<ThreadData> list) {
         mCtx = context;
         mListThreads = list;
+        mIsTablet = mCtx.getResources().getBoolean(R.bool.is_tablet);
     }
 
     @Override
@@ -82,7 +84,7 @@ public class ThreadsAdapter extends BaseAdapter {
         // convertView.setTag(Long.valueOf(thread.getRowId()));
         drawThreadItem(convertView, t);
         
-        if(t.getRecipient() != null && t.getRecipient().getKeyid().compareTo(ThreadContent.getInstance().getSelectedRecipientId()) == 0 && mCtx.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+        if(t.getRecipient() != null && t.getRecipient().getKeyid().compareTo(ThreadContent.getInstance().getSelectedRecipientId()) == 0 && mCtx.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && mIsTablet)
         	convertView.setBackgroundColor(mCtx.getResources().getColor(R.color.gray));
         else
         	convertView.setBackgroundColor(mCtx.getResources().getColor(android.R.color.transparent));

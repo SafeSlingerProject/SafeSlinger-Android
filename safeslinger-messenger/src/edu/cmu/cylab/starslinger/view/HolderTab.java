@@ -42,7 +42,8 @@ public class HolderTab extends Fragment {
         mMessageContainer = (FrameLayout) view.findViewById(R.id.messageContent);
         mSeparator = view.findViewById(R.id.separator);
         
-    	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+        boolean isTablet = getResources().getBoolean(R.bool.is_tablet); 
+    	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && isTablet)
     	{
 //    		dualPane = true;
     		mThreadContainer.setVisibility(View.VISIBLE);
@@ -63,7 +64,8 @@ public class HolderTab extends Fragment {
 
     public void loadBasedOnConfiguration()
     {
-    	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+    	boolean isTablet = getResources().getBoolean(R.bool.is_tablet);
+    	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && isTablet)
     	{
     		
     		if(getChildFragmentManager().findFragmentByTag(Tabs.THREADS.toString()) == null)
@@ -165,6 +167,7 @@ public class HolderTab extends Fragment {
     
     public void updateValues(Bundle bundle, String tag, String action) {
     	
+    	boolean isTablet = getResources().getBoolean(R.bool.is_tablet);
         if (Tabs.THREADS.toString().compareTo(tag) == 0) {
 //            setmCurrentTabTag(Tabs.THREADS.toString());
             ThreadsFragment frag = (ThreadsFragment) getChildFragmentManager()
@@ -218,7 +221,8 @@ public class HolderTab extends Fragment {
                 
                 msgFrag.setArguments(bundle);
                 int containerId = R.id.content;
-                if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+                
+                if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && isTablet)
                 {
                 	containerId = R.id.messageContent;
                 	ft.replace(containerId, msgFrag, Tabs.MESSAGE.toString())
@@ -237,11 +241,8 @@ public class HolderTab extends Fragment {
             else
             {
             	frag.updateValues(bundle);
-            	if(SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING.compareTo(action) == 0 && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+            	if(SafeSlingerConfig.Intent.ACTION_MESSAGEOUTGOING.compareTo(action) == 0 && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && isTablet)
             	{
-//            		ThreadsFragment threadFrag = (ThreadsFragment) getChildFragmentManager()
-//                            .findFragmentByTag(tag);
-//            		if(threadFrag != null)
             		ThreadContent.getInstance().setSelectedRecipientId(MessagesFragment.getRecip().getKeyid());	
             	}
             }
@@ -249,22 +250,6 @@ public class HolderTab extends Fragment {
 
     }
 
-//    @Override
-//    public void onConfigurationChanged(Configuration newConfig) {
-//    	super.onConfigurationChanged(newConfig);
-//    	
-//    	if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE)
-//    	{
-//    		mThreadContainer.setVisibility(View.VISIBLE);
-//        	mMessageContainer.setVisibility(View.VISIBLE);
-//    	}
-//    	else
-//    	{
-//    		mThreadContainer.setVisibility(View.VISIBLE);
-//        	mMessageContainer.setVisibility(View.GONE);
-//    	}
-//    }
-    
     public void updateKeypad() {
         ThreadsFragment frag = (ThreadsFragment) getChildFragmentManager()
                 .findFragmentByTag(Tabs.THREADS.toString());

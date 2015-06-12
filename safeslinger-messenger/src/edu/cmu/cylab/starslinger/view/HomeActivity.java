@@ -285,7 +285,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
         public void onReceive(Context context, Intent intent) {
 
             boolean abort = abortNextBroadcast(intent);
-
+            boolean isTablet = getResources().getBoolean(R.bool.is_tablet);
             // update current message list if in view...
             final int position = getSupportActionBar().getSelectedNavigationIndex();
             if (position == Tabs.HOLDER.ordinal()) {
@@ -298,7 +298,7 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 //                        if (mf != null) {
 //                		if(holderFragment != null) {
 //                            mf.updateValues(intent.getExtras());
-                			if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+                			if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && isTablet)
                 				holderFragment.updateBothTabs(intent.getExtras());
                 			else
                 			{
@@ -4220,7 +4220,8 @@ public class HomeActivity extends BaseActivity implements OnComposeResultListene
 
     private void checkAndUpdateDraft()
     {
-    	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+    	boolean isTablet = getResources().getBoolean(R.bool.is_tablet);
+    	if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && isTablet)
     	{
     		HolderTab holderTab = (HolderTab) mTabsAdapter.findFragmentByPosition(Tabs.HOLDER.ordinal());
     		if(holderTab != null)

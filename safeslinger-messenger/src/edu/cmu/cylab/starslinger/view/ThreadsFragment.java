@@ -396,7 +396,8 @@ public class ThreadsFragment extends Fragment {
             mTvInstruct.setVisibility(View.VISIBLE);
         }
         Collections.sort(ThreadContent.getInstance().getmThreadList(), new ThreadDateDecendingComparator());
-        if((getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && mLoadMessagesTab))
+        boolean isTablet = getResources().getBoolean(R.bool.is_tablet);
+        if((getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && mLoadMessagesTab && isTablet))
         {
         	mLoadMessagesTab = false;
         	Bundle bundle = new Bundle();

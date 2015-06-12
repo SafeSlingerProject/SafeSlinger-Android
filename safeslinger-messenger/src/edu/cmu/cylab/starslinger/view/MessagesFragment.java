@@ -622,7 +622,8 @@ public class MessagesFragment extends Fragment {
         if (item.getItemId() == R.id.item_delete_message) {
             doDeleteMessage(mMessageList.get(info.position));
             updateMessageList(false);
-            if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+            boolean isTablet = getResources().getBoolean(R.bool.is_tablet);
+            if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && isTablet)
             {
             	Bundle bundle  = new Bundle();
             	bundle.putBoolean("update_threads", true);
