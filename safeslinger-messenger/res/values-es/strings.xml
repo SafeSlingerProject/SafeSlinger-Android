@@ -52,7 +52,7 @@
     <string name="btn_No">No</string>
     <string name="btn_NotNow">Ahora No</string>
     <string name="btn_NotRemind">Olvidar</string>
-    <string name="btn_OK">Bueno</string>
+    <string name="btn_OK">OK</string>
     <string name="btn_Refuse">Rechazar</string>
     <string name="btn_Remind">Recordar</string>
     <string name="btn_Retry">Reintente</string>
@@ -300,9 +300,9 @@
     <string name="menu_message_font_size">Mensaje Tamaño de la Fuente</string>
     <string name="menu_messageCopyText">Copiar texto</string>
     <string name="menu_messageForward">Reenviar</string>
-    <string name="menu_PrivacyPolicy">Política de Privacidad</string>
+    <string name="menu_PrivacyPolicy">Política De Privacidad</string>
     <string name="menu_Remove">Remover</string>
-    <string name="menu_restore_default">Restablecer ajustes predeterminados</string>
+    <string name="menu_restore_default">Restaurar La Configuración Predeterminada</string>
     <string name="menu_ringtone">Sonar</string>
     <string name="menu_SelectShareApp">Añadir Contacto Invitación</string>
     <string name="menu_sendFeedback">Enviar Comentarios</string>

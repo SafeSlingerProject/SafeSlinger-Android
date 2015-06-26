@@ -27,50 +27,50 @@
 
     <string name="ask_QuitConfirmation">چھوڑو؟ تمہیں یقین ہے؟</string>
 
-    <string name="btn_Match">اگلے</string>
+    <string name="btn_Match">اگلا</string>
     <string name="btn_NoMatch">کوئی مقابلہ</string>
 
-    <string name="choice_NumUsers">%d کے صارفین</string>
+    <string name="choice_NumUsers">%d صارفین</string>
 
     <string name="error_AllMembersMustUpgrade">کچھ اراکین ایک پرانا ورژن استعمال کر رہے ہیں؛ تمام ارکان سے نیا ورژن پر اپ گریڈ کرنا ہوگا.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">تمام اراکین سے کچھ بڑی عمر دھکا رجسٹریشن فارمیٹس استعمال کر رہے ہیں، بڑھانا چاہیے.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">تمام ارکان کچھ بڑی عمر دھکا رجسٹریشن فارمیٹس استعمال کر رہے ہیں، کو اپ گریڈ کرنا ہوگا.</string>
     <string name="error_CorrectYourInternetConnection">انٹرنیٹ دستیاب نہیں، آپ کی ترتیبات چیک کریں.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">ایکسچینج ٹائم آؤٹ سے تجاوز کر گئی. دوبارہ تبادلے کے لئے شروع.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">ایکسچینج ٹائم آؤٹ سے تجاوز کر گئی. دوبارہ تبادلے شروع.</string>
     <string name="error_HttpCode">سرور HTTP خرابی: %d</string>
-    <string name="error_InvalidCommitVerify">غلط ڈیٹا ایکسچینج میں پایا. دوبارہ تبادلے کے لئے شروع.</string>
+    <string name="error_InvalidCommitVerify">غلط اعداد و شمار بدلے میں پایا. دوبارہ تبادلے شروع.</string>
     <string name="error_InvalidCommonUserId">ایک مثبت عدد صحیح داخل کریں.</string>
-    <string name="error_LocalGroupCommitDiffer">آپ کو جملے میں فرق کی اطلاع دی ہے. دوبارہ تبادلے کے لئے شروع.</string>
+    <string name="error_LocalGroupCommitDiffer">تم جملے میں ایک فرق کی اطلاع دی ہے. دوبارہ تبادلے شروع.</string>
     <string name="error_MinUsersRequired">%d ارکان کی ایک کم از کم ڈیٹا کا تبادلہ کرنے کی ضرورت ہے.</string>
-    <string name="error_MoreDataThanUsers">غیر متوقع طور پر ڈیٹا ایکسچینج میں پایا. دوبارہ تبادلے کے لئے شروع.</string>
+    <string name="error_MoreDataThanUsers">غیر متوقع ڈیٹا ایکسچینج میں پایا. دوبارہ تبادلے شروع.</string>
     <string name="error_NoDataToExchange">زر مبادلہ کی مطلوبہ ڈیٹا غائب ہے.</string>
-    <string name="error_NoWordListSelected">آپ کو آگے بڑھنے سے پہلے جملے میں سے ایک کا انتخاب کرنا ہوگا.</string>
-    <string name="error_OtherGroupCommitDiffer">اگر کسی جملے میں فرق کی اطلاع دی. دوبارہ تبادلے کے لئے شروع.</string>
+    <string name="error_NoWordListSelected">تم نے آگے بڑھنے سے پہلے جملے میں سے ایک کا انتخاب کرنا ہوگا.</string>
+    <string name="error_OtherGroupCommitDiffer">کسی جملے میں ایک فرق کی اطلاع دی. دوبارہ تبادلے شروع.</string>
     <string name="error_OutOfMemoryError">یاد داشت اس آپریشن مکمل کرنے کے لئے بہت کم ہے.</string>
     <string name="error_ServerAppMessage">سرور پیغام: %s</string>
-    <string name="error_ServerNotResponding">سرور سے کوئی جواب نہیں ہے.</string>
-    <string name="error_TimeoutWaitingForAllMembers">بعض گروپ ارکان کے اعداد و شمار شامل کرنے کے لئے ٹائم آؤٹ انتظار کر رہے.</string>
+    <string name="error_ServerNotResponding">سرور سے کوئی جواب نہیں.</string>
+    <string name="error_TimeoutWaitingForAllMembers">کچھ گروپ کے ارکان کے اعداد و شمار شامل کرنے کے لئے وقت ختم انتظار کر رہے.</string>
     <string name="error_WebCancelledByUser">رکن کا سرور کی درخواست منسوخ.</string>
 
-    <string name="help_size">ایک دوسرے کے ساتھ کے اعداد و شمار اور بٹن دبائیں کا تبادلہ کرنے کی کوشش کر رہے ہیں جو لوگوں کی تعداد کو منتخب کریں.</string>
-    <string name="help_userid">اس کی سکرین پر اس نمبر کے صارفین کی ایک منفرد گروپ بنانے کے لئے استعمال کیا جاتا ہے. پھر تمام صارفین کو ایک ہی سب سے کم تعداد اور بٹن دبائیں درج کرنا چاہئے، تمام صارفین \'کی سکرین پر نمبر کا جائزہ لیں.</string>
-    <string name="help_verify">اب، آپ کو تمام صارفین کے ساتھ ان 3 لفظ کے جملے میں سے ایک مماثل ہونا چاہیے. ہر صارف ایک ہی عام جملے کا انتخاب، اور پریس کرنا ہوگا.</string>
+    <string name="help_size">ایک دوسرے کے ساتھ کے اعداد و شمار اور پریس OK کا تبادلہ کرنے کی کوشش کر رہے ہیں جو افراد کی تعداد کو منتخب کریں.</string>
+    <string name="help_userid">اس کی سکرین پر یہ نمبر صارفین کی ایک منفرد گروپ بنانے کے لئے استعمال کیا جاتا ہے. پھر تمام صارفین کو ایک ہی سب سے کم تعداد اور پریس OK درج کرنا چاہئے، تمام صارفین کی سکرین پر نمبروں کا جائزہ لیں.</string>
+    <string name="help_verify">اب، آپ کو تمام صارفین کے ساتھ ان 3 الفاظ کے جملے میں سے ایک سے مطابقت ضروری ہے. ہر صارف ایک ہی عام جملے کا انتخاب، اور اگلا پریس کرنا ہوگا.</string>
 
     <string name="label_CompareScreensNDevices">%s آلات پر اسکرینوں کا موازنہ کریں.</string>
     <string name="label_NumericModeHint">غیر انگریزی</string>
     <string name="label_PromptInstruct">یہ نمبر صارفین کی ایک منفرد گروپ بنانے کے لئے استعمال کیا جاتا ہے. کا موازنہ کریں، اور پھر تمام صارفین کے درمیان سب سے کم نمبر درج.</string>
-    <string name="label_ReceivedNItems">%d موصول ہونے والی اشیاء</string>
+    <string name="label_ReceivedNItems">%d اشیاء موصول</string>
     <string name="label_UserIdHint">سب سے کم</string>
-    <string name="label_VerifyInstruct">تمام فونز 3 لفظ کے جملے میں سے ایک مماثل ہونا چاہیے. کا موازنہ کریں، اور اس کے بعد کے ملاپ کے جملہ لینے.</string>
+    <string name="label_VerifyInstruct">تمام فونز 3 لفظ کے جملے میں سے ایک سے مطابقت ضروری ہے. کا موازنہ کریں، اور اس کے بعد کے ملاپ کے جملہ لینے.</string>
 
     <string name="lib_name">SafeSlinger ایکسچینج</string>
 
-    <string name="prog_CollectingOthersCommitVerify">تمام اراکین کی جانب سے تصدیق کے لئے انتظار کر…</string>
+    <string name="prog_CollectingOthersCommitVerify">تمام اراکین کی جانب سے تصدیق کے لئے انتظار کر رہے ہیں…</string>
     <string name="prog_CollectingOthersItems">تمام صارفین کے ساتھ شامل کرنے کے لئے انتظار کر رہے…</string>
     <string name="prog_ConstructingGroupKey">گروپ کی چابی کی تعمیر…</string>
-    <string name="prog_RequestingUserId">رکنیت کی درخواست…</string>
+    <string name="prog_RequestingUserId">رکنیت کی درخواست کی…</string>
 
-    <string name="title_size">کہ کتنے بدلے میں صارفین؟</string>
-    <string name="title_userid">گروہ بندی</string>
+    <string name="title_size">کتنے تبادلے میں صارفین؟</string>
+    <string name="title_userid">گروپ بندی</string>
     <string name="title_verify">تصدیق کریں</string>
 
 </resources>

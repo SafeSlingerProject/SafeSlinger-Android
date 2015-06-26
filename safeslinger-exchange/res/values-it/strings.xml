@@ -28,46 +28,46 @@
     <string name="ask_QuitConfirmation">Uscire? Sei sicuro?</string>
 
     <string name="btn_Match">Il Prossimo</string>
-    <string name="btn_NoMatch">No Match</string>
+    <string name="btn_NoMatch">Nessuna Corrispondenza</string>
 
     <string name="choice_NumUsers">%d utenti</string>
 
     <string name="error_AllMembersMustUpgrade">Alcuni membri utilizzano una versione precedente; tutti i membri devono aggiornare alla versione più recente.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Tutti i membri devono aggiornare, alcuni utilizzano più anziani formati di registrazione push.</string>
-    <string name="error_CorrectYourInternetConnection">Internet non disponibile, verificare le impostazioni.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout Scambio superato. Iniziare nuovamente lo scambio.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Tutti i membri devono aggiornare, alcuni stanno usando più anziani formati di registrazione push.</string>
+    <string name="error_CorrectYourInternetConnection">Internet non è disponibile, controllare le impostazioni.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Timeout scambio superato. Ricominciare lo scambio.</string>
     <string name="error_HttpCode">Errore HTTP Server: %d</string>
-    <string name="error_InvalidCommitVerify">Dati errati trovati in cambio. Iniziare nuovamente lo scambio.</string>
+    <string name="error_InvalidCommitVerify">Dati errati trovati in cambio. Ricominciare lo scambio.</string>
     <string name="error_InvalidCommonUserId">Inserisci un numero intero positivo.</string>
-    <string name="error_LocalGroupCommitDiffer">Hai segnalato una differenza di frasi. Iniziare nuovamente lo scambio.</string>
+    <string name="error_LocalGroupCommitDiffer">Hai segnalato una differenza di frasi. Ricominciare lo scambio.</string>
     <string name="error_MinUsersRequired">Un minimo di %d membri sono tenuti a scambiare dati.</string>
-    <string name="error_MoreDataThanUsers">Dati imprevisti trovati in cambio. Iniziare nuovamente lo scambio.</string>
-    <string name="error_NoDataToExchange">Lo scambio manca dati richiesti.</string>
+    <string name="error_MoreDataThanUsers">Dati imprevisti trovati in cambio. Ricominciare lo scambio.</string>
+    <string name="error_NoDataToExchange">Lo scambio Manca dati richiesti.</string>
     <string name="error_NoWordListSelected">È necessario selezionare una delle frasi prima di procedere.</string>
-    <string name="error_OtherGroupCommitDiffer">Qualcuno ha registrato una differenza di frasi. Iniziare nuovamente lo scambio.</string>
-    <string name="error_OutOfMemoryError">La memoria è troppo basso per completare questa operazione.</string>
+    <string name="error_OtherGroupCommitDiffer">Qualcuno ha registrato una differenza di frasi. Ricominciare lo scambio.</string>
+    <string name="error_OutOfMemoryError">La memoria è insufficiente per completare questa operazione.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nessuna risposta dal server.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout in attesa di alcuni membri del gruppo per aggiungere dati.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Timeout in attesa di alcuni membri del gruppo per aggiungere i dati.</string>
     <string name="error_WebCancelledByUser">L\'utente ha annullato richiesta del server.</string>
 
     <string name="help_size">Selezionare il numero di persone che cercano di scambiare dati insieme e premere OK.</string>
     <string name="help_userid">Questo numero in questa schermata è utilizzata per creare un unico gruppo di utenti. Esaminare i numeri sugli schermi di tutti gli utenti, tutti gli utenti devono inserire lo stesso numero più basso e premere OK.</string>
-    <string name="help_verify">Ora, è necessario corrispondere a uno di questi 3-parola frasi con tutti gli utenti. Ogni utente deve selezionare la stessa frase comune, e premere Avanti.</string>
+    <string name="help_verify">Ora, è necessario far corrispondere una di queste 3 parole frasi con tutti gli utenti. Ogni utente deve selezionare la stessa frase comune, e premere Avanti.</string>
 
     <string name="label_CompareScreensNDevices">Confronta schermi su dispositivi %s.</string>
     <string name="label_NumericModeHint">Non-Inglese</string>
-    <string name="label_PromptInstruct">Questo numero è utilizzato per creare un unico gruppo di utenti. Confronto, quindi inserire il numero più basso tra tutti gli utenti.</string>
+    <string name="label_PromptInstruct">Questo numero viene usato per creare un unico gruppo di utenti. Confronto, quindi inserire il numero più basso tra tutti gli utenti.</string>
     <string name="label_ReceivedNItems">ricevuto %d articoli</string>
     <string name="label_UserIdHint">Minore</string>
-    <string name="label_VerifyInstruct">Tutti i telefoni devono corrispondere una delle 3 parole frasi. Confronta, e poi scegliere l\'abbinamento frase.</string>
+    <string name="label_VerifyInstruct">Tutti i telefoni devono corrispondere una delle 3-parola frasi. Confronta, e poi scegliere l\'abbinamento frase.</string>
 
     <string name="lib_name">SafeSlinger Scambio</string>
 
     <string name="prog_CollectingOthersCommitVerify">in attesa di verifica di tutti i membri…</string>
-    <string name="prog_CollectingOthersItems">in attesa che tutti gli utenti di partecipare…</string>
-    <string name="prog_ConstructingGroupKey">costruendo chiave gruppo…</string>
-    <string name="prog_RequestingUserId">richiesta di adesione…</string>
+    <string name="prog_CollectingOthersItems">in attesa che tutti gli utenti di unirsi…</string>
+    <string name="prog_ConstructingGroupKey">costruire chiave gruppo…</string>
+    <string name="prog_RequestingUserId">richiesto la partecipazione…</string>
 
     <string name="title_size">Quanti utenti nello scambio?</string>
     <string name="title_userid">Raggruppamento</string>

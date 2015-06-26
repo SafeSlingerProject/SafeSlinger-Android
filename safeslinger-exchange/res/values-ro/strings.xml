@@ -28,41 +28,41 @@
     <string name="ask_QuitConfirmation">Părăsiți? Esti sigur?</string>
 
     <string name="btn_Match">Următorul</string>
-    <string name="btn_NoMatch">Nr meci</string>
+    <string name="btn_NoMatch">Nici un meci</string>
 
-    <string name="choice_NumUsers">%d de utilizatori</string>
+    <string name="choice_NumUsers">%d utilizatori</string>
 
-    <string name="error_AllMembersMustUpgrade">Unii membri folosesc o versiune mai veche; toți membrii trebuie să faceți upgrade la cea mai nouă versiune.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Toți membrii trebuie să faceți upgrade, unii folosesc formate mai mari de înmatriculare împinge.</string>
+    <string name="error_AllMembersMustUpgrade">Unii membri utilizați o versiune mai veche; toți membrii trebuie să faceți upgrade la cea mai nouă versiune.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Toți membrii trebuie să faceți upgrade, unele folosesc formate mai mari de înregistrare împinge.</string>
     <string name="error_CorrectYourInternetConnection">Internet nu este disponibil, verificați setările.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Schimb timeout depășit. Începe din nou schimbul.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Schimb timeout depășit. Începe din nou de schimb.</string>
     <string name="error_HttpCode">Server Error HTTP: %d</string>
-    <string name="error_InvalidCommitVerify">Date incorecte găsit în schimb. Începe din nou schimbul.</string>
+    <string name="error_InvalidCommitVerify">Date incorecte găsite în schimb. Începe din nou de schimb.</string>
     <string name="error_InvalidCommonUserId">Vă rugăm să introduceți un număr întreg pozitiv.</string>
-    <string name="error_LocalGroupCommitDiffer">Ai raportat o diferență în fraze. Începe din nou schimbul.</string>
-    <string name="error_MinUsersRequired">Sunt necesare un minim de %d de membri pentru a face schimb de date.</string>
-    <string name="error_MoreDataThanUsers">Date neașteptate găsit în schimb. Începe din nou schimbul.</string>
-    <string name="error_NoDataToExchange">Schimbul lipsește de date necesare.</string>
+    <string name="error_LocalGroupCommitDiffer">Ați raportat o diferență în fraze. Începe din nou de schimb.</string>
+    <string name="error_MinUsersRequired">Este necesar un minim de %d de membri pentru a face schimb de date.</string>
+    <string name="error_MoreDataThanUsers">Date neașteptate găsit în schimb. Începe din nou de schimb.</string>
+    <string name="error_NoDataToExchange">Schimbul lipsește date necesare.</string>
     <string name="error_NoWordListSelected">Trebuie să selectați una dintre frazele înainte de a continua.</string>
-    <string name="error_OtherGroupCommitDiffer">Cineva a raportat o diferență de fraze. Începe din nou schimbul.</string>
-    <string name="error_OutOfMemoryError">Memoria este prea mic pentru a finaliza această operație.</string>
-    <string name="error_ServerAppMessage">Server Message: %s</string>
+    <string name="error_OtherGroupCommitDiffer">Cineva a raportat o diferență în fraze. Începe din nou de schimb.</string>
+    <string name="error_OutOfMemoryError">Memoria este prea mică pentru a finaliza această operație.</string>
+    <string name="error_ServerAppMessage">Server mesaje: %s</string>
     <string name="error_ServerNotResponding">Nici un răspuns de la serverul.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout de așteptare pentru unii membrii grupului pentru a adăuga date.</string>
-    <string name="error_WebCancelledByUser">Utilizatorul anulat cerere de server.</string>
+    <string name="error_WebCancelledByUser">Utilizator anulat cererea de server.</string>
 
-    <string name="help_size">Selectați numărul de persoane care incearca sa schimbul de date împreună și apăsați OK.</string>
-    <string name="help_userid">Acest număr pe acest ecran este folosit pentru a crea un grup unic de utilizatori. Revizuirea numerele de pe ecranele tuturor utilizatorilor, atunci toți utilizatorii ar trebui să intre în aceeași cel mai mic număr și apăsați OK.</string>
-    <string name="help_verify">Acum, trebuie să se potrivească una dintre aceste fraze 3-sugerate, cu toți utilizatorii. Fiecare utilizator trebuie să selecteze aceeași frază comună, și apăsați Următorul.</string>
+    <string name="help_size">Selectați numărul de persoane care încearcă să facă schimb de date împreună și apăsați OK.</string>
+    <string name="help_userid">Acest număr pe acest ecran este folosit pentru a crea un grup unic de utilizatori. Revedeți numerele de pe ecranele tuturor utilizatorilor, atunci toți utilizatorii trebuie să introduceți aceeași cel mai mic număr și apăsați OK.</string>
+    <string name="help_verify">Acum, trebuie să se potrivească una dintre aceste fraze 3 cuvinte cu toți utilizatorii. Fiecare utilizator trebuie să selecteze aceeași frază comună, și apăsați Următorul.</string>
 
     <string name="label_CompareScreensNDevices">Compara ecrane pe dispozitive %s.</string>
-    <string name="label_NumericModeHint">Non-englez</string>
-    <string name="label_PromptInstruct">Acest număr este folosit pentru a crea un grup unic de utilizatori. Compara, iar apoi introduceți numărul cel mai mic dintre toți utilizatorii.</string>
-    <string name="label_ReceivedNItems">primit %d de articole</string>
+    <string name="label_NumericModeHint">Non-engleză</string>
+    <string name="label_PromptInstruct">Acest număr este folosit pentru a crea un grup unic de utilizatori. Compara, apoi introduceți numărul cel mai mic dintre toți utilizatorii.</string>
+    <string name="label_ReceivedNItems">primit %d articole</string>
     <string name="label_UserIdHint">Cel mai mic</string>
-    <string name="label_VerifyInstruct">Toate telefoanele trebuie să se potrivească una din frazele 3-cuvânt. Compara, iar apoi alege de Expresie potrivite.</string>
+    <string name="label_VerifyInstruct">Toate telefoanele trebuie să se potrivească una dintre frazele de 3 cuvinte. Compara, iar apoi alege de Expresie potrivite.</string>
 
-    <string name="lib_name">SafeSlinger de schimb</string>
+    <string name="lib_name">SafeSlinger schimb</string>
 
     <string name="prog_CollectingOthersCommitVerify">de așteptare pentru verificare de la toți membrii…</string>
     <string name="prog_CollectingOthersItems">de așteptare pentru toți utilizatorii să se alăture…</string>

@@ -28,20 +28,20 @@
     <string name="ask_QuitConfirmation">الإقلاع عن التدخين؟ هل أنت متأكد؟</string>
 
     <string name="btn_Match">التالى</string>
-    <string name="btn_NoMatch">ليس هناك ربط</string>
+    <string name="btn_NoMatch">لم المباراة</string>
 
     <string name="choice_NumUsers">%d مستخدمين</string>
 
     <string name="error_AllMembersMustUpgrade">بعض أعضاء تستخدم نسخة قديمة. يجب على جميع أعضاء الترقية إلى أحدث إصدار.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">ويجب على جميع أعضاء ترقية، تستخدم بعض كبار السن من صيغ تسجيل دفعة.</string>
-    <string name="error_CorrectYourInternetConnection">الإنترنت غير متوفر، والتحقق من الإعدادات الخاصة بك.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">يجب على جميع أعضاء الترقية، وبعضها باستخدام الأقدم صيغ تسجيل دفعة.</string>
+    <string name="error_CorrectYourInternetConnection">الإنترنت لم تكن متاحة، تحقق من إعداداتك.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">تجاوزت الصرف المهلة. بدء الصرف مرة أخرى.</string>
     <string name="error_HttpCode">خطأ HTTP الخادم: %d</string>
-    <string name="error_InvalidCommitVerify">وجدت بيانات غير صحيحة في الصرف. بدء الصرف مرة أخرى.</string>
+    <string name="error_InvalidCommitVerify">العثور على بيانات غير صحيحة في الصرف. بدء الصرف مرة أخرى.</string>
     <string name="error_InvalidCommonUserId">الرجاء إدخال عدد صحيح موجب.</string>
     <string name="error_LocalGroupCommitDiffer">لقد ذكرت اختلاف في العبارات. بدء الصرف مرة أخرى.</string>
-    <string name="error_MinUsersRequired">ويلزم ما لا يقل عن %d أعضاء لتبادل البيانات.</string>
-    <string name="error_MoreDataThanUsers">وجدت بيانات غير متوقع في الصرف. بدء الصرف مرة أخرى.</string>
+    <string name="error_MinUsersRequired">ويلزم ما لا يقل عن %d عضوا لتبادل البيانات.</string>
+    <string name="error_MoreDataThanUsers">العثور على بيانات غير متوقع في الصرف. بدء الصرف مرة أخرى.</string>
     <string name="error_NoDataToExchange">تبادل مفقود البيانات المطلوبة.</string>
     <string name="error_NoWordListSelected">يجب عليك اختيار واحد من العبارات قبل المتابعة.</string>
     <string name="error_OtherGroupCommitDiffer">وأفاد شخص اختلاف في العبارات. بدء الصرف مرة أخرى.</string>
@@ -51,25 +51,25 @@
     <string name="error_TimeoutWaitingForAllMembers">مهلة الانتظار لبعض أعضاء المجموعة لإضافة البيانات.</string>
     <string name="error_WebCancelledByUser">إلغاء طلب المعلن الخادم.</string>
 
-    <string name="help_size">حدد عدد الأشخاص الذين يحاولون لتبادل البيانات معا ثم اضغط موافق.</string>
-    <string name="help_userid">يتم استخدام هذا الرقم على هذه الشاشة لإنشاء مجموعة فريدة من المستخدمين. مراجعة الأرقام على شاشات جميع المستخدمين، ثم ينبغي لجميع المستخدمين إدخال نفس أقل عدد واضغط موافق.</string>
-    <string name="help_verify">الآن، يجب أن تتطابق مع واحدة من هذه العبارات 3-كلمة مع كافة المستخدمين. يجب على كل مستخدم اختيار نفس العبارة الشائعة، ثم اضغط التالي.</string>
+    <string name="help_size">حدد عدد الأشخاص الذين يحاولون تبادل البيانات معا ثم اضغط على OK.</string>
+    <string name="help_userid">ويستخدم هذا الرقم على هذه الشاشة لإنشاء مجموعة فريدة من المستخدمين. مراجعة الأرقام على شاشات جميع المستخدمين، ثم ينبغي لجميع المستخدمين إدخال نفس أقل عدد واضغط على OK.</string>
+    <string name="help_verify">الآن، يجب أن تتطابق مع واحدة من هذه العبارات 3-كلمة مع جميع المستخدمين. يجب على كل مستخدم اختيار نفس العبارة الشائعة، ثم اضغط التالي.</string>
 
-    <string name="label_CompareScreensNDevices">قارن شاشات على أجهزة %s.</string>
+    <string name="label_CompareScreensNDevices">مقارنة شاشات على أجهزة %s.</string>
     <string name="label_NumericModeHint">غير الإنجليزية</string>
-    <string name="label_PromptInstruct">يتم استخدام هذا الرقم لإنشاء مجموعة فريدة من المستخدمين. مقارنة، ومن ثم أدخل أقل عدد بين جميع المستخدمين.</string>
+    <string name="label_PromptInstruct">ويستخدم هذا الرقم لإنشاء مجموعة فريدة من المستخدمين. مقارنة، ومن ثم أدخل أقل عدد بين جميع المستخدمين.</string>
     <string name="label_ReceivedNItems">تلقى %d البنود</string>
     <string name="label_UserIdHint">أدنى</string>
-    <string name="label_VerifyInstruct">ويجب على جميع الهواتف مباراة واحدة من العبارات 3-كلمة. مقارنة، ومن ثم اختيار العبارة مطابقة.</string>
+    <string name="label_VerifyInstruct">يجب على جميع الهواتف مباراة واحدة من العبارات 3-كلمة. مقارنة، ومن ثم اختيار العبارة مطابقة.</string>
 
     <string name="lib_name">SafeSlinger تبادل</string>
 
     <string name="prog_CollectingOthersCommitVerify">في انتظار التحقق من جميع الأعضاء…</string>
-    <string name="prog_CollectingOthersItems">انتظار لجميع المستخدمين للانضمام…</string>
-    <string name="prog_ConstructingGroupKey">بناء مفتاح مجموعة…</string>
+    <string name="prog_CollectingOthersItems">الانتظار بالنسبة لجميع المستخدمين للانضمام…</string>
+    <string name="prog_ConstructingGroupKey">إنشاء مجموعة المفاتيح…</string>
     <string name="prog_RequestingUserId">طلب عضوية…</string>
 
-    <string name="title_size">كم عدد المستخدمين في الصرف؟</string>
+    <string name="title_size">عدد المستخدمين في الصرف؟</string>
     <string name="title_userid">تجمع</string>
     <string name="title_verify">تحقق من</string>
 

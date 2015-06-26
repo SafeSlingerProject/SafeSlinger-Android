@@ -27,49 +27,49 @@
 
     <string name="ask_QuitConfirmation">Ukončiť? Ste si istí?</string>
 
-    <string name="btn_Match">Ďalší</string>
+    <string name="btn_Match">Ďalšie</string>
     <string name="btn_NoMatch">No Match</string>
 
     <string name="choice_NumUsers">%d užívateľov</string>
 
-    <string name="error_AllMembersMustUpgrade">Niektorí členovia sú používate staršiu verziu; všetci členovia nutné vykonať upgrade na najnovšiu verziu.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Všetci členovia musia inovovať, niektorí využívajú staršie formáty registráciu Push.</string>
+    <string name="error_AllMembersMustUpgrade">Niektorí členovia používate staršiu verziu; všetci členovia musia upgradovať na najnovšiu verziu.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Všetci členovia musia inovovať, niektorí používajú staršie formáty registračné Push.</string>
     <string name="error_CorrectYourInternetConnection">Internet nie je k dispozícii, skontrolujte nastavenia.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout prekročená. Začnite výmenu znova.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange časový limit prekročený. Začnite výmenu znova.</string>
     <string name="error_HttpCode">Server HTTP Chyba: %d</string>
-    <string name="error_InvalidCommitVerify">Nesprávne údaje našiel výmenou. Začnite výmenu znova.</string>
+    <string name="error_InvalidCommitVerify">Nesprávne údaje nájdené v výmenou. Začnite výmenu znova.</string>
     <string name="error_InvalidCommonUserId">Prosím, zadajte kladné celé číslo.</string>
-    <string name="error_LocalGroupCommitDiffer">Ste hlásené rozdiel v fráz. Začnite výmenu znova.</string>
-    <string name="error_MinUsersRequired">Je potrebných minimálne %d členov pre výmenu dát.</string>
-    <string name="error_MoreDataThanUsers">Neočakávané údaje našiel výmenou. Začnite výmenu znova.</string>
-    <string name="error_NoDataToExchange">Výmena chýbajú potrebné údaje.</string>
-    <string name="error_NoWordListSelected">Musíte vybrať jednu z viet pred pokračovaním.</string>
+    <string name="error_LocalGroupCommitDiffer">Ste vykázala rozdiel v fráz. Začnite výmenu znova.</string>
+    <string name="error_MinUsersRequired">Sú potrebné minimálne %d členov pre výmenu dát.</string>
+    <string name="error_MoreDataThanUsers">Neočakávané údaje nájdené v výmenou. Začnite výmenu znova.</string>
+    <string name="error_NoDataToExchange">Výmena chýba požadované údaje.</string>
+    <string name="error_NoWordListSelected">Musíte vybrať jednu z fráz pred pokračovaním.</string>
     <string name="error_OtherGroupCommitDiffer">Niekto hlásené rozdiel v fráz. Začnite výmenu znova.</string>
     <string name="error_OutOfMemoryError">Pamäť je príliš nízka na dokončenie tejto operácie.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerNotResponding">Žiadna odpoveď zo servera.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout čakanie na niektorých členov skupiny pridať dáta.</string>
-    <string name="error_WebCancelledByUser">Používateľ zrušil požiadavku serveru.</string>
+    <string name="error_ServerNotResponding">Žiadna odozva zo servera.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Časový limit čakania na niektorých členov skupiny pridať dáta.</string>
+    <string name="error_WebCancelledByUser">Užívateľ zrušený požiadavka servera.</string>
 
-    <string name="help_size">Vyberte počet ľudí, ktorí sa snažia výmenu dát dohromady a stlačte tlačidlo OK.</string>
-    <string name="help_userid">Toto číslo na tejto obrazovke sa používa na vytvorenie jedinečného skupinu užívateľov. Prejdite si čísla na obrazovkách všetkých užívateľov, potom všetci užívatelia by mali vstúpiť rovnakú najnižšie číslo a stlačte tlačidlo OK.</string>
-    <string name="help_verify">Teraz musíte zodpovedať jednému z týchto 3 slovách so všetkými užívateľmi. Každý užívateľ musí zvoliť rovnaký spoločný frázu a stlačte tlačidlo Ďalej.</string>
+    <string name="help_size">Vyberte počet ľudí, ktorí sa pokúšajú vymieňať dáta dohromady a stlačte tlačidlo OK.</string>
+    <string name="help_userid">Toto číslo na tejto obrazovke slúžia na vytvorenie jedinečného skupinu používateľov. Skontrolujte čísla na obrazovkách všetkých používateľov, a potom všetci užívatelia by mali vstúpiť rovnakú najnižšie číslo a stlačte OK.</string>
+    <string name="help_verify">Teraz musíte zodpovedať jeden z týchto 3-slovo frázy so všetkými užívateľmi. Každý užívateľ musí zvoliť rovnaký spoločný frázu a stlačte tlačidlo Ďalšie.</string>
 
-    <string name="label_CompareScreensNDevices">Porovnať obrazoviek na %s zariadení.</string>
+    <string name="label_CompareScreensNDevices">Porovnajte obrazoviek na %s zariadeniach.</string>
     <string name="label_NumericModeHint">Non-anglický</string>
-    <string name="label_PromptInstruct">Toto číslo sa používa na vytvorenie unikátnej skupinu užívateľov. Porovnajte, a potom zadajte najnižšie číslo medzi všetkými užívateľmi.</string>
-    <string name="label_ReceivedNItems">dostal %d položiek</string>
-    <string name="label_UserIdHint">Najnižšie</string>
-    <string name="label_VerifyInstruct">Všetky telefóny sa musí zhodovať s jedným z 3-slovo frázy. Porovnajte, a potom vybrať zodpovedajúce výraz.</string>
+    <string name="label_PromptInstruct">Toto číslo sa používa na vytvorenie jedinečného skupinu používateľov. Porovnajte, a potom zadajte najnižšie číslo medzi všetkými užívateľmi.</string>
+    <string name="label_ReceivedNItems">obdržal %d položiek</string>
+    <string name="label_UserIdHint">Najnižšej</string>
+    <string name="label_VerifyInstruct">Všetky telefóny musia zodpovedať jednej z 3-slovo frázy. Porovnajte, a potom vybrať zodpovedajúce výraz.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">čakanie na overenie všetkých členov…</string>
-    <string name="prog_CollectingOthersItems">čakanie na všetkým užívateľom pripojiť sa…</string>
+    <string name="prog_CollectingOthersItems">čakanie na všetkých používateľov sa pripojiť…</string>
     <string name="prog_ConstructingGroupKey">konštrukciu Group Key…</string>
     <string name="prog_RequestingUserId">žiadajúce o členstvo…</string>
 
-    <string name="title_size">Koľko užívateľov pri výmene?</string>
+    <string name="title_size">Koľko užívateľov na burze?</string>
     <string name="title_userid">Zoskupenie</string>
     <string name="title_verify">Overiť</string>
 

@@ -25,48 +25,48 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">Lépni? Biztos vagy benne?</string>
+    <string name="ask_QuitConfirmation">Lépjen ki? Biztos benne?</string>
 
     <string name="btn_Match">Következő</string>
     <string name="btn_NoMatch">No Match</string>
 
     <string name="choice_NumUsers">%d felhasználók</string>
 
-    <string name="error_AllMembersMustUpgrade">Egyes tagok egy régebbi verzió; minden tagja kell frissíteni a legújabb verzióra.</string>
+    <string name="error_AllMembersMustUpgrade">Egyes tagok egy régebbi változata; minden tag köteles frissíteni a legújabb verzióra.</string>
     <string name="error_AllMembersMustUpgradeBadPushToken">Minden tag köteles frissíteni, néhány régebbi nyomja regisztráció formátumokat.</string>
     <string name="error_CorrectYourInternetConnection">Internet nincs, ellenőrizze a beállításokat.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">Az Exchange timeout meghaladta. Kezdje a csere újra.</string>
     <string name="error_HttpCode">Server HTTP Error: %d</string>
-    <string name="error_InvalidCommitVerify">Helytelen talált adatok cseréjét. Kezdje a csere újra.</string>
-    <string name="error_InvalidCommonUserId">Adjon meg egy pozitív egész szám.</string>
-    <string name="error_LocalGroupCommitDiffer">Ön arról számoltak be, a különbség a mondatok. Kezdje a csere újra.</string>
+    <string name="error_InvalidCommitVerify">Hibás adatok találhatók cserébe. Kezdje a csere újra.</string>
+    <string name="error_InvalidCommonUserId">Kérem adjon meg egy pozitív egész szám.</string>
+    <string name="error_LocalGroupCommitDiffer">Ön számolt különbség kifejezéseket. Kezdje a csere újra.</string>
     <string name="error_MinUsersRequired">Legalább %d tagjai kötelesek egymással kommunikálni.</string>
     <string name="error_MoreDataThanUsers">Váratlan talált adatok cseréjét. Kezdje a csere újra.</string>
-    <string name="error_NoDataToExchange">A csere Hiányzik a szükséges adatokat.</string>
-    <string name="error_NoWordListSelected">Ki kell választania az egyik mondatok előtt.</string>
-    <string name="error_OtherGroupCommitDiffer">Valaki jelentett a különbség a mondatok. Kezdje a csere újra.</string>
+    <string name="error_NoDataToExchange">A csere hiányzik a szükséges adatokat.</string>
+    <string name="error_NoWordListSelected">Ki kell választani az egyik mondatok előtt.</string>
+    <string name="error_OtherGroupCommitDiffer">Valaki jelentett különbséget a mondatok. Kezdje a csere újra.</string>
     <string name="error_OutOfMemoryError">Memória túl alacsony befejezni ezt a műveletet.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
     <string name="error_ServerNotResponding">Nem válaszol a szerver.</string>
     <string name="error_TimeoutWaitingForAllMembers">Timeout vár néhány csoport tagjai az adatok bevitelében.</string>
-    <string name="error_WebCancelledByUser">A felhasználó törli szerverkérés.</string>
+    <string name="error_WebCancelledByUser">A felhasználó megszakította a szerver kérést.</string>
 
     <string name="help_size">Válassza ki az embereknek a száma, akik megpróbálják adatcserét együtt, és nyomjuk meg az OK gombot.</string>
-    <string name="help_userid">Ez a szám a képernyőn létrehozásához használt egyedi felhasználói csoportnak. Nézze át a számokat az összes felhasználó képernyők, akkor minden felhasználó adja meg ugyanazt a legkevesebb, majd nyomja meg az OK gombot.</string>
-    <string name="help_verify">Most meg kell egyeznie a fenti 3 szavas mondatok minden felhasználó számára. Minden felhasználónak ki kell választani az azonos mondás, és kattintson a Tovább gombra.</string>
+    <string name="help_userid">Ez a szám a képernyőn létrehozásához használt egyedi csoportja számára. Nézze át a számokat az összes felhasználó képernyők, akkor minden felhasználó adja meg ugyanazt a legkevesebb, majd nyomja meg az OK gombot.</string>
+    <string name="help_verify">Most meg kell egyeznie a fenti 3 szavas mondatok minden felhasználó számára. Minden felhasználónak ki kell választani az azonos általános kifejezés, és kattintson a Tovább gombra.</string>
 
     <string name="label_CompareScreensNDevices">Hasonlítsa össze a képernyők %s eszközök.</string>
-    <string name="label_NumericModeHint">Nem angol nyelvű</string>
-    <string name="label_PromptInstruct">Ez a szám, hogy hozzon létre egy egyedi felhasználói csoportnak. Összehasonlítása, majd adja meg a legkevesebb felhasználók között.</string>
+    <string name="label_NumericModeHint">Non-English</string>
+    <string name="label_PromptInstruct">Ez a szám, hogy hozzon létre egy egyedi felhasználói csoportnak. Hasonlítsa össze, majd adja meg a legkevesebb felhasználók között.</string>
     <string name="label_ReceivedNItems">beérkezett %d példány</string>
     <string name="label_UserIdHint">Legalacsonyabb</string>
-    <string name="label_VerifyInstruct">Minden telefon kell egyeznie az egyik 3 szavas mondatok. Összehasonlítása, majd vedd a megfelelő kifejezést.</string>
+    <string name="label_VerifyInstruct">Minden telefon kell egyeznie az egyik a 3 szavas mondatok. Hasonlítsa össze, majd válasszon a megfelelő kifejezés.</string>
 
     <string name="lib_name">SafeSlinger Csere</string>
 
     <string name="prog_CollectingOthersCommitVerify">vár ellenőrzés minden tagja…</string>
-    <string name="prog_CollectingOthersItems">vár minden felhasználó számára, hogy csatlakozzon…</string>
-    <string name="prog_ConstructingGroupKey">építésének csoport gombot…</string>
+    <string name="prog_CollectingOthersItems">Sok szeretettel várunk minden felhasználó csatlakozhat…</string>
+    <string name="prog_ConstructingGroupKey">építési csoport gombot…</string>
     <string name="prog_RequestingUserId">kérő tagság…</string>
 
     <string name="title_size">Hány felhasználó a csere?</string>

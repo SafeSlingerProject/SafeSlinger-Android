@@ -25,7 +25,7 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">צא? האם אתה בטוח?</string>
+    <string name="ask_QuitConfirmation">צא? אתה בטוח?</string>
 
     <string name="btn_Match">הבא</string>
     <string name="btn_NoMatch">אין התאמה</string>
@@ -33,10 +33,10 @@
     <string name="choice_NumUsers">%d משתמשים</string>
 
     <string name="error_AllMembersMustUpgrade">חלק מהחברים משתמשים בגרסה ישנה יותר; כל החברים חייבים לשדרג לגרסה החדשה ביותר.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">כל החברים חייבים לשדרג, חלקם באמצעות פורמטי רישום דחיפה מבוגרים.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">כל החברים יש לשדרג, חלקם באמצעות פורמטי רישום דחיפה מבוגרים.</string>
     <string name="error_CorrectYourInternetConnection">אינטרנט אינו זמין, לבדוק את ההגדרות שלך.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">פסק זמן Exchange עלה. בגין התמורה שוב.</string>
-    <string name="error_HttpCode">שגיאת HTTP Server: %d</string>
+    <string name="error_HttpCode">שגיאת HTTP שרת: %d</string>
     <string name="error_InvalidCommitVerify">נתונים שגויים מצאו בתמורה. בגין התמורה שוב.</string>
     <string name="error_InvalidCommonUserId">נא להזין מספר חיובי.</string>
     <string name="error_LocalGroupCommitDiffer">דיווחת על הבדל בביטויים. בגין התמורה שוב.</string>
@@ -45,18 +45,18 @@
     <string name="error_NoDataToExchange">חילופי חסרים נתונים נדרשים.</string>
     <string name="error_NoWordListSelected">עליך לבחור אחד מהביטויים לפני שתמשיך.</string>
     <string name="error_OtherGroupCommitDiffer">מישהו דיווח הבדל בביטויים. בגין התמורה שוב.</string>
-    <string name="error_OutOfMemoryError">זיכרון הוא נמוך מדי כדי להשלים את הפעולה.</string>
+    <string name="error_OutOfMemoryError">זיכרון הוא נמוך מדי כדי להשלים פעולה זו.</string>
     <string name="error_ServerAppMessage">הודעת שרת: %s</string>
     <string name="error_ServerNotResponding">אין תגובה מהשרת.</string>
-    <string name="error_TimeoutWaitingForAllMembers">פסק זמן המתנה לחלק מחברי הקבוצה כדי להוסיף נתונים.</string>
-    <string name="error_WebCancelledByUser">משתמש ביטל את דרישת שרת.</string>
+    <string name="error_TimeoutWaitingForAllMembers">פסק זמן מחכה לחלק מחברי הקבוצה כדי להוסיף נתונים.</string>
+    <string name="error_WebCancelledByUser">משתמש בוטל בקשת שרת.</string>
 
     <string name="help_size">בחר את מספר האנשים שמנסים להחליף נתונים ביחד ולחץ על OK.</string>
-    <string name="help_userid">מספר זה על מסך זה משמש ליצירת קבוצה ייחודית של משתמשים. סקור את המספרים על המסכים של כל המשתמשים, ואז כל המשתמשים להזין את אותה אישור מספר ולחץ הנמוך ביותר.</string>
-    <string name="help_verify">עכשיו, אתה חייב להתאים לאחד מביטויים אלה 3-מילה עם כל המשתמשים. כל משתמש חייב לבחור את אותו ביטוי נפוץ, ולחץ על הבא.</string>
+    <string name="help_userid">מספר זה על מסך זה משמש ליצירת קבוצה ייחודית של משתמשים. סקור את המספרים על המסכים של כל המשתמשים, ואז כל המשתמשים צריכים להזין את אותו אישור המספר ולחץ הנמוך ביותר.</string>
+    <string name="help_verify">עכשיו, אתה חייב להתאים אחד ביטויים אלה 3-מילה עם כל המשתמשים. כל משתמש חייב לבחור את אותו ביטוי נפוץ, ולחץ על הבא.</string>
 
     <string name="label_CompareScreensNDevices">השוואת מסכים במכשירי %s.</string>
-    <string name="label_NumericModeHint">שאינה באנגלית</string>
+    <string name="label_NumericModeHint">ללא אנגלית</string>
     <string name="label_PromptInstruct">מספר זה משמש כדי ליצור קבוצה ייחודית של משתמשים. להשוות, ולאחר מכן הזן את המספר הנמוך ביותר בין כל המשתמשים.</string>
     <string name="label_ReceivedNItems">קיבל %d פריטים</string>
     <string name="label_UserIdHint">הנמוך ביותר</string>

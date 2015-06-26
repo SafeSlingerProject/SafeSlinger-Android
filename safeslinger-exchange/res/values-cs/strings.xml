@@ -32,44 +32,44 @@
 
     <string name="choice_NumUsers">%d uživatelů</string>
 
-    <string name="error_AllMembersMustUpgrade">Někteří členové jsou používáte starší verzi; všichni členové nutné provést upgrade na nejnovější verzi.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">Všichni členové musí inovovat, někteří využívají starší formáty registraci Push.</string>
+    <string name="error_AllMembersMustUpgrade">Někteří členové používáte starší verzi; všichni členové musí upgradovat na nejnovější verzi.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">Všichni členové musí inovovat, někteří používají starší formáty registrační Push.</string>
     <string name="error_CorrectYourInternetConnection">Internet není k dispozici, zkontrolujte nastavení.</string>
-    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange timeout překročena. Začněte výměnu znovu.</string>
+    <string name="error_ExchangeProtocolTimeoutExceeded">Exchange časový limit překročen. Začněte výměnu znovu.</string>
     <string name="error_HttpCode">Server HTTP Chyba: %d</string>
-    <string name="error_InvalidCommitVerify">Nesprávné údaje našel výměnou. Začněte výměnu znovu.</string>
+    <string name="error_InvalidCommitVerify">Nesprávné údaje nalezené v výměnou. Začněte výměnu znovu.</string>
     <string name="error_InvalidCommonUserId">Prosím, zadejte kladné celé číslo.</string>
-    <string name="error_LocalGroupCommitDiffer">Jste hlášeny rozdíl v frází. Začněte výměnu znovu.</string>
-    <string name="error_MinUsersRequired">Je potřeba minimálně %d členů pro výměnu dat.</string>
-    <string name="error_MoreDataThanUsers">Neočekávané údaje našel výměnou. Začněte výměnu znovu.</string>
-    <string name="error_NoDataToExchange">Výměna chybí potřebné údaje.</string>
-    <string name="error_NoWordListSelected">Musíte vybrat jednu z vět před pokračováním.</string>
+    <string name="error_LocalGroupCommitDiffer">Jste vykázala rozdíl v frází. Začněte výměnu znovu.</string>
+    <string name="error_MinUsersRequired">Jsou zapotřebí minimálně %d členů pro výměnu dat.</string>
+    <string name="error_MoreDataThanUsers">Neočekávané údaje nalezené v výměnou. Začněte výměnu znovu.</string>
+    <string name="error_NoDataToExchange">Výměna chybí požadované údaje.</string>
+    <string name="error_NoWordListSelected">Musíte vybrat jednu z frází před pokračováním.</string>
     <string name="error_OtherGroupCommitDiffer">Někdo hlášeny rozdíl v frází. Začněte výměnu znovu.</string>
     <string name="error_OutOfMemoryError">Paměť je příliš nízká na dokončení této operace.</string>
     <string name="error_ServerAppMessage">Server Message: %s</string>
-    <string name="error_ServerNotResponding">Žádná odpověď ze serveru.</string>
-    <string name="error_TimeoutWaitingForAllMembers">Timeout čekání na některé členy skupiny přidat data.</string>
-    <string name="error_WebCancelledByUser">Uživatel zrušil požadavek serveru.</string>
+    <string name="error_ServerNotResponding">Žádná odezva ze serveru.</string>
+    <string name="error_TimeoutWaitingForAllMembers">Časový limit čekání na některé členy skupiny přidat data.</string>
+    <string name="error_WebCancelledByUser">Uživatel zrušen požadavek serveru.</string>
 
-    <string name="help_size">Vyberte počet lidí, kteří se snaží výměnu dat dohromady a stiskněte tlačítko OK.</string>
-    <string name="help_userid">Toto číslo na této obrazovce se používá k vytvoření jedinečného skupinu uživatelů. Projděte si čísla na obrazovkách všech uživatelů, pak všichni uživatelé by měli vstoupit stejnou nejnižší číslo a stiskněte tlačítko OK.</string>
-    <string name="help_verify">Nyní musíte odpovídat jednomu z těchto 3 slovech se všemi uživateli. Každý uživatel musí zvolit stejný společný frázi a stiskněte tlačítko Další.</string>
+    <string name="help_size">Vyberte počet lidí, kteří se pokoušejí vyměňovat data dohromady a stiskněte tlačítko OK.</string>
+    <string name="help_userid">Toto číslo na této obrazovce slouží k vytvoření jedinečného skupinu uživatelů. Zkontrolujte čísla na obrazovkách všech uživatelů, a pak všichni uživatelé by měli vstoupit stejnou nejnižší číslo a stiskněte OK.</string>
+    <string name="help_verify">Nyní musíte odpovídat jeden z těchto 3-slovo fráze se všemi uživateli. Každý uživatel musí zvolit stejný společný frázi a stiskněte tlačítko Další.</string>
 
-    <string name="label_CompareScreensNDevices">Porovnat obrazovek na %s zařízení.</string>
+    <string name="label_CompareScreensNDevices">Porovnejte obrazovek na %s zařízeních.</string>
     <string name="label_NumericModeHint">Non-anglický</string>
-    <string name="label_PromptInstruct">Toto číslo se používá k vytvoření unikátní skupinu uživatelů. Porovnejte, a poté zadejte nejnižší číslo mezi všemi uživateli.</string>
+    <string name="label_PromptInstruct">Toto číslo se používá k vytvoření jedinečného skupinu uživatelů. Porovnejte, a poté zadejte nejnižší číslo mezi všemi uživateli.</string>
     <string name="label_ReceivedNItems">obdržel %d položek</string>
     <string name="label_UserIdHint">Nejnižší</string>
-    <string name="label_VerifyInstruct">Všechny telefony se musí shodovat s jedním z 3-slovo fráze. Porovnejte, a potom vybrat odpovídající výraz.</string>
+    <string name="label_VerifyInstruct">Všechny telefony musí odpovídat jedné ze 3-slovo fráze. Porovnejte, a potom vybrat odpovídající výraz.</string>
 
     <string name="lib_name">SafeSlinger Exchange</string>
 
     <string name="prog_CollectingOthersCommitVerify">čekání na ověření všech členů…</string>
-    <string name="prog_CollectingOthersItems">čekání na všem uživatelům připojit se…</string>
+    <string name="prog_CollectingOthersItems">čekání na všechny uživatele se připojit…</string>
     <string name="prog_ConstructingGroupKey">konstrukci Group Key…</string>
     <string name="prog_RequestingUserId">žádající o členství…</string>
 
-    <string name="title_size">Kolik uživatelů při výměně?</string>
+    <string name="title_size">Kolik uživatelů na burze?</string>
     <string name="title_userid">Seskupení</string>
     <string name="title_verify">Ověřit</string>
 

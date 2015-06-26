@@ -25,49 +25,49 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">প্রস্থান? আপনি কি নিশ্চিত?</string>
+    <string name="ask_QuitConfirmation">প্রস্থান? তুমি কি নিশ্চিত?</string>
 
     <string name="btn_Match">পরবর্তী</string>
-    <string name="btn_NoMatch">কোন ম্যাচ</string>
+    <string name="btn_NoMatch">মিল নেই</string>
 
     <string name="choice_NumUsers">%d ব্যবহারকারীদের</string>
 
-    <string name="error_AllMembersMustUpgrade">কিছু সদস্য পুরোনো সংস্করণ ব্যবহার করা হয়; সকল সদস্যদের নতুন সংস্করণে আপগ্রেড করতে হবে.</string>
-    <string name="error_AllMembersMustUpgradeBadPushToken">সকল সদস্য পুরোনো কিছু ধাক্কা নিবন্ধন বিন্যাস ব্যবহার করা হয়, আপগ্রেড করতে হবে.</string>
+    <string name="error_AllMembersMustUpgrade">কিছু সদস্যদের একটি পুরোনো সংস্করণ ব্যবহার করছেন; সকল সদস্যদের নতুন সংস্করণে আপগ্রেড করতে হবে.</string>
+    <string name="error_AllMembersMustUpgradeBadPushToken">সকল সদস্য কয়েকটি পুরোনো ধাক্কা রেজিস্ট্রেশন বিন্যাসের ব্যবহার করছেন, আপগ্রেড করতে হবে.</string>
     <string name="error_CorrectYourInternetConnection">ইন্টারনেট পাওয়া যায় না, আপনার সেটিংস চেক করুন.</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">বিনিময় সময়সীমার ছাড়িয়ে গেছে. আবার বিনিময় শুরু করুন.</string>
     <string name="error_HttpCode">সার্ভার HTTP ত্রুটি: %d</string>
-    <string name="error_InvalidCommitVerify">ভুল তথ্য বিনিময়ে পাওয়া যায় নি. আবার বিনিময় শুরু করুন.</string>
-    <string name="error_InvalidCommonUserId">একটি ধনাত্মক পূর্ণসংখ্যা ক্লিক করুন.</string>
-    <string name="error_LocalGroupCommitDiffer">আপনি বাক্যাংশ মধ্যে একটি পার্থক্য রিপোর্ট আছে. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_InvalidCommitVerify">ভুল তথ্য বিনিময়ে পাওয়া. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_InvalidCommonUserId">একটি ধনাত্মক পূর্ণসংখ্যা এখানে ক্লিক করুন.</string>
+    <string name="error_LocalGroupCommitDiffer">আপনি বাক্যাংশ একটি পার্থক্য প্রতিবেদন করেছ. আবার বিনিময় শুরু করুন.</string>
     <string name="error_MinUsersRequired">%d সদস্যদের একটি সর্বনিম্ন তথ্য বিনিময় করার প্রয়োজন হয়.</string>
-    <string name="error_MoreDataThanUsers">অপ্রত্যাশিত তথ্য বিনিময়ে পাওয়া যায় নি. আবার বিনিময় শুরু করুন.</string>
-    <string name="error_NoDataToExchange">বিনিময় প্রয়োজনীয় তথ্য অনুপস্থিত.</string>
-    <string name="error_NoWordListSelected">আপনি অগ্রসর হওয়ার আগে বাক্যাংশ এক নির্বাচন করতে হবে.</string>
-    <string name="error_OtherGroupCommitDiffer">কেউ কেউ বাক্যাংশ মধ্যে একটি পার্থক্য রিপোর্ট. আবার বিনিময় শুরু করুন.</string>
-    <string name="error_OutOfMemoryError">স্মৃতি এই অপারেশন সম্পূর্ণ অত্যন্ত কম.</string>
+    <string name="error_MoreDataThanUsers">অপ্রত্যাশিত তথ্য বিনিময়ে পাওয়া. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_NoDataToExchange">বিনিময় প্রয়োজনীয় তথ্য পাওয়া যাচ্ছে না.</string>
+    <string name="error_NoWordListSelected">অগ্রসর হবার আগে বাক্যাংশ এক নির্বাচন করতে হবে.</string>
+    <string name="error_OtherGroupCommitDiffer">কেউ বাক্যাংশ একটি পার্থক্য রিপোর্ট. আবার বিনিময় শুরু করুন.</string>
+    <string name="error_OutOfMemoryError">স্মৃতি এই অপারেশন সম্পন্ন খুব কম.</string>
     <string name="error_ServerAppMessage">সার্ভার বার্তা: %s</string>
-    <string name="error_ServerNotResponding">সার্ভার থেকে কোনো প্রতিক্রিয়া.</string>
-    <string name="error_TimeoutWaitingForAllMembers">কিছু দলের সদস্যদের তথ্য যোগ করার জন্য সময়সীমা সমাপ্ত অপেক্ষা করছে.</string>
+    <string name="error_ServerNotResponding">সার্ভার থেকে কোন প্রতিক্রিয়া.</string>
+    <string name="error_TimeoutWaitingForAllMembers">কিছু দলের সদস্যদের তথ্য যোগ করার জন্য সময়সীমা সমাপ্ত অপেক্ষা.</string>
     <string name="error_WebCancelledByUser">ব্যবহারকারী সার্ভারটি অনুরোধটি বাতিল.</string>
 
-    <string name="help_size">একসঙ্গে তথ্য এবং OK চাপুন বিনিময় করার চেষ্টা করছেন যারা মানুষের সংখ্যা নির্বাচন করুন.</string>
-    <string name="help_userid">এই পর্দায় এই সংখ্যা ব্যবহারকারীদের একটি অনন্য গ্রুপ তৈরি করতে ব্যবহার করা হয়. তারপর সব ব্যবহারকারীদের একই সর্বনিম্ন নম্বর এবং প্রেস ওকে লিখতে হবে, সব ব্যবহারকারীদের পর্দা সংখ্যা পর্যালোচনা করুন.</string>
-    <string name="help_verify">এখন, আপনি সমস্ত ব্যবহারকারীদের সাথে এই 3-শব্দ বাক্যাংশ এক মেলানো. প্রত্যেক ব্যবহারকারীর একই সাধারণ ফ্রেজ নির্বাচন করুন, এবং পরবর্তী প্রেস করতে হবে.</string>
+    <string name="help_size">একসঙ্গে তথ্য এবং OK টিপুন বিনিময় চেষ্টা চালিয়ে যাচ্ছেন এমন মানুষের সংখ্যা নির্বাচন করুন.</string>
+    <string name="help_userid">এই পর্দায় এই সংখ্যা ব্যবহারকারীদের একটি অনন্য গ্রুপ তৈরি করতে ব্যবহার করা হয়. তারপর সব ব্যবহারকারীদের একই সর্বনিম্ন নম্বর এবং OK টিপুন উচিত প্রবেশ করুন, সব ব্যবহারকারীদের স্ক্রিনে নম্বর পর্যালোচনা করুন.</string>
+    <string name="help_verify">এখন, আপনি সব ব্যবহারকারীদের সাথে এই 3-শব্দ বাক্যাংশ এক সাথে সুসংগত হওয়া আবশ্যক. প্রত্যেক ব্যবহারকারীর একই প্রচলিত শব্দবন্ধ নির্বাচন করুন, এবং পরবর্তী প্রেস করতে হবে.</string>
 
     <string name="label_CompareScreensNDevices">%s ডিভাইসের পর্দা তুলনা করুন.</string>
     <string name="label_NumericModeHint">অ ইংরেজি</string>
     <string name="label_PromptInstruct">এই সংখ্যা ব্যবহারকারীদের একটি অনন্য গ্রুপ তৈরি করতে ব্যবহার করা হয়. তুলনা, এবং তারপর সব ব্যবহারকারীদের মধ্যে সর্বনিম্ন নম্বর লিখুন.</string>
     <string name="label_ReceivedNItems">%d আইটেম প্রাপ্ত</string>
     <string name="label_UserIdHint">অধম</string>
-    <string name="label_VerifyInstruct">সব ফোন 3-শব্দ বাক্যাংশ এক মেলানো. তুলনা, এবং তারপর মিলে ফ্রেজ বাছাই.</string>
+    <string name="label_VerifyInstruct">সমস্ত ফোন 3-শব্দ বাক্যাংশ এক সাথে সুসংগত হওয়া আবশ্যক. তুলনা, এবং তারপর মিলে ফ্রেজ বাছাই.</string>
 
     <string name="lib_name">SafeSlinger এক্সচেঞ্জ</string>
 
     <string name="prog_CollectingOthersCommitVerify">সব সদস্যদের কাছ থেকে যাচাইয়ের জন্য অপেক্ষা…</string>
     <string name="prog_CollectingOthersItems">সব ব্যবহারকারীদের যোগদানের জন্য অপেক্ষা…</string>
     <string name="prog_ConstructingGroupKey">গ্রুপ কী নির্মাণের…</string>
-    <string name="prog_RequestingUserId">সদস্যপদ অনুরোধ…</string>
+    <string name="prog_RequestingUserId">সদস্যপদ অনুরোধ করা হচ্ছে…</string>
 
     <string name="title_size">কত বিনিময়ে ব্যবহারকারীদের?</string>
     <string name="title_userid">গোষ্ঠী</string>

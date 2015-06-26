@@ -25,9 +25,9 @@
 
 <resources>
 
-    <string name="ask_QuitConfirmation">छोड़ो? क्या आपको यकीन है?</string>
+    <string name="ask_QuitConfirmation">बाहर निकलें? क्या आपको यकीन है?</string>
 
-    <string name="btn_Match">अगली</string>
+    <string name="btn_Match">अगला</string>
     <string name="btn_NoMatch">कोई मुकाबला नहीं</string>
 
     <string name="choice_NumUsers">%d उपयोगकर्ताओं</string>
@@ -37,30 +37,30 @@
     <string name="error_CorrectYourInternetConnection">इंटरनेट उपलब्ध नहीं, अपनी सेटिंग्स की जाँच करें।</string>
     <string name="error_ExchangeProtocolTimeoutExceeded">एक्सचेंज मध्यांतर से अधिक था। फिर से आदान-प्रदान शुरू करो।</string>
     <string name="error_HttpCode">सर्वर HTTP त्रुटि: %d</string>
-    <string name="error_InvalidCommitVerify">गलत डेटा का आदान-प्रदान में पाया। फिर से आदान-प्रदान शुरू करो।</string>
+    <string name="error_InvalidCommitVerify">गलत डाटा एक्सचेंज में पाया। फिर से आदान-प्रदान शुरू करो।</string>
     <string name="error_InvalidCommonUserId">एक सकारात्मक पूर्णांक दर्ज करें।</string>
-    <string name="error_LocalGroupCommitDiffer">आप वाक्यांशों में एक अंतर की सूचना है। फिर से आदान-प्रदान शुरू करो।</string>
+    <string name="error_LocalGroupCommitDiffer">आप वाक्यांशों में एक अंतर की सूचना दी है। फिर से आदान-प्रदान शुरू करो।</string>
     <string name="error_MinUsersRequired">%d सदस्यों की एक न्यूनतम डेटा का आदान-प्रदान करने के लिए आवश्यक हैं।</string>
     <string name="error_MoreDataThanUsers">अप्रत्याशित डेटा का आदान-प्रदान में पाया। फिर से आदान-प्रदान शुरू करो।</string>
     <string name="error_NoDataToExchange">विनिमय आवश्यक डेटा याद आ रही है।</string>
-    <string name="error_NoWordListSelected">आप आगे बढ़ने से पहले वाक्यांशों में से एक का चयन करना होगा।</string>
-    <string name="error_OtherGroupCommitDiffer">किसी वाक्यांशों में एक फर्क सूचना दी। फिर से आदान-प्रदान शुरू करो।</string>
+    <string name="error_NoWordListSelected">आगे बढ़ने से पहले वाक्यांशों में से एक का चयन करना होगा।</string>
+    <string name="error_OtherGroupCommitDiffer">किसी प्रकार के वाक्यांशों में एक अंतर की सूचना दी। फिर से आदान-प्रदान शुरू करो।</string>
     <string name="error_OutOfMemoryError">स्मृति इस कार्य को पूरा करने के लिए बहुत कम है।</string>
     <string name="error_ServerAppMessage">सर्वर संदेश: %s</string>
     <string name="error_ServerNotResponding">सर्वर से कोई प्रतिक्रिया नहीं।</string>
     <string name="error_TimeoutWaitingForAllMembers">कुछ समूह के सदस्यों डेटा जोड़ने के लिए समय समाप्त कर रही है।</string>
     <string name="error_WebCancelledByUser">उपयोगकर्ता सर्वर अनुरोध को रद्द कर दिया।</string>
 
-    <string name="help_size">एक साथ डेटा और प्रेस ठीक विनिमय करने के लिए प्रयास कर रहे हैं जो लोगों की संख्या का चयन करें।</string>
-    <string name="help_userid">इस स्क्रीन पर यह संख्या प्रयोक्ताओं की एक अद्वितीय समूह बनाने के लिए प्रयोग किया जाता है। तो सभी उपयोगकर्ताओं को एक ही सबसे कम संख्या और प्रेस ठीक प्रवेश करना चाहिए, सभी उपयोगकर्ताओं की स्क्रीन पर संख्या की समीक्षा करें।</string>
-    <string name="help_verify">अब, आप सभी उपयोगकर्ताओं के साथ इन तीन शब्द वाक्यांश में से एक से मेल खाना चाहिए। प्रत्येक उपयोगकर्ता एक ही आम वाक्यांश का चयन करें, और अगला प्रेस चाहिए।</string>
+    <string name="help_size">एक साथ डेटा और प्रेस ठीक है का आदान-प्रदान करने के लिए प्रयास कर रहे हैं जो लोगों की संख्या का चयन करें।</string>
+    <string name="help_userid">इस स्क्रीन पर यह संख्या प्रयोक्ताओं की एक अद्वितीय समूह बनाने के लिए प्रयोग किया जाता है। उसके बाद सभी उपयोगकर्ताओं को एक ही सबसे कम संख्या और प्रेस ठीक प्रवेश करना चाहिए, सभी उपयोगकर्ताओं की स्क्रीन पर संख्या की समीक्षा करें।</string>
+    <string name="help_verify">अब, आप सभी उपयोगकर्ताओं के साथ इन 3 शब्द वाक्यांश में से एक से मेल खाना चाहिए। प्रत्येक उपयोगकर्ता एक ही आम वाक्यांश का चयन करें, और अगला प्रेस चाहिए।</string>
 
     <string name="label_CompareScreensNDevices">%s उपकरणों पर स्क्रीन की तुलना करें।</string>
     <string name="label_NumericModeHint">गैर-अंग्रेजी</string>
     <string name="label_PromptInstruct">यह संख्या प्रयोक्ताओं की एक अद्वितीय समूह बनाने के लिए प्रयोग किया जाता है। की तुलना करें, और उसके बाद सभी उपयोगकर्ताओं के बीच सबसे कम संख्या दर्ज करें।</string>
     <string name="label_ReceivedNItems">%d आइटम प्राप्त</string>
     <string name="label_UserIdHint">निम्नतम</string>
-    <string name="label_VerifyInstruct">सभी फोन 3-शब्द वाक्यांशों के एक मैच होगा। की तुलना करें, और उसके बाद मिलान वाक्य उठाओ।</string>
+    <string name="label_VerifyInstruct">सभी फोन 3-शब्द वाक्यांश में से एक से मेल खाना चाहिए। की तुलना करें, और उसके बाद मिलान वाक्य उठाओ।</string>
 
     <string name="lib_name">SafeSlinger एक्सचेंज</string>
 
@@ -70,7 +70,7 @@
     <string name="prog_RequestingUserId">सदस्यता का अनुरोध…</string>
 
     <string name="title_size">कितने विदेशी मुद्रा में उपयोगकर्ताओं?</string>
-    <string name="title_userid">दलबंदी</string>
+    <string name="title_userid">समूहन</string>
     <string name="title_verify">सत्यापित करें</string>
 
 </resources>
