@@ -52,6 +52,7 @@ import android.view.WindowManager.BadTokenException;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -76,7 +77,12 @@ public class MainActivity extends ActionBarActivity {
     private static Button buttonBeginExchange;
     private static EditText editTextMySecret;
     private static EditText editTextServerHostName;
+    private static EditText editTextGroupId;
+    private static SeekBar seekBarGroupSize;
+    private static TextView textViewGroupSizeStatus;
     private static TextView textViewWarning;
+    private static ToggleButton toggleButtonGroupSize;
+    private static ToggleButton toggleButtonGroupId;
     private static ToggleButton toggleButtonUseNfc;
 
     @Override
@@ -176,11 +182,21 @@ public class MainActivity extends ActionBarActivity {
             editTextServerHostName = (EditText) rootView.findViewById(R.id.editTextServerHostName);
             textViewWarning = (TextView) rootView.findViewById(R.id.textViewWarning);
             toggleButtonUseNfc = (ToggleButton) rootView.findViewById(R.id.toggleButtonUseNfc);
+            toggleButtonGroupSize = (ToggleButton) rootView
+                    .findViewById(R.id.toggleButtonGroupSize);
+            seekBarGroupSize = (SeekBar) rootView.findViewById(R.id.seekBarGroupSize);
+            textViewGroupSizeStatus = (TextView) rootView
+                    .findViewById(R.id.textViewGroupSizeStatus);
+            toggleButtonGroupId = (ToggleButton) rootView.findViewById(R.id.toggleButtonGroupId);
+            editTextGroupId = (EditText) rootView.findViewById(R.id.editTextGroupId);
+
             final SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
 
             // load simple prefs from last visit
             editTextMySecret.setText(sharedPref.getString(PREF_SECRET, null));
             editTextServerHostName.setText(sharedPref.getString(PREF_HOST, DEFAULT_HOST_NAME));
+            toggleButtonGroupSize.setChecked(false);
+            toggleButtonGroupId.setChecked(false);
 
             // enable hyperlinks
             textViewWarning.setMovementMethod(LinkMovementMethod.getInstance());
@@ -188,6 +204,40 @@ public class MainActivity extends ActionBarActivity {
             // NFC test
             updateNfcState(getActivity());
 
+            toggleButtonGroupSize
+                    .setOnCheckedChangeListener(new android.widget.CompoundButton.OnCheckedChangeListener() {
+
+                        @Override
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                            // save simple prefs from this visit
+                            if (isChecked) {
+                                seekBarGroupSize.setEnabled(true);
+                                textViewGroupSizeStatus.setEnabled(true);
+                            } else {
+                                seekBarGroupSize.setEnabled(false);
+                                seekBarGroupSize.setProgress(0);
+                                textViewGroupSizeStatus.setEnabled(false);
+                            }
+                        }
+                    });
+            
+            toggleButtonGroupId
+                    .setOnCheckedChangeListener(new android.widget.CompoundButton.OnCheckedChangeListener() {
+
+                        @Override
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                            // save simple prefs from this visit
+                            if (isChecked) {
+                                editTextGroupId.setEnabled(true);
+                            } else {
+                                editTextGroupId.setEnabled(false);
+                                editTextGroupId.setText("");
+                            }
+                        }
+                    });
+            
             toggleButtonUseNfc
                     .setOnCheckedChangeListener(new android.widget.CompoundButton.OnCheckedChangeListener() {
 
@@ -200,7 +250,7 @@ public class MainActivity extends ActionBarActivity {
                             editor.commit();
                         }
                     });
-
+            
             buttonBeginExchange.setOnClickListener(new android.view.View.OnClickListener() {
 
                 @Override

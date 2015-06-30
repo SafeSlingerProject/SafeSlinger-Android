@@ -33,7 +33,7 @@
         android:id="@+id/ScrollView1"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -41,7 +41,7 @@
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <TextView
@@ -82,11 +82,93 @@
                 android:hint="@string/dev_secret_hint"
                 android:inputType="textNoSuggestions"
                 android:privateImeOptions="nm" />
+
+            <TextView
+                android:id="@+id/textViewGroupSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Group Size"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <LinearLayout
+                android:id="@+id/frameGroupSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ToggleButton
+                    android:id="@+id/toggleButtonGroupSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textOff="Unknown"
+                    android:textOn="Known" />
+
+                <LinearLayout
+                    android:id="@+id/frameSeekBarGroupSize"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <SeekBar
+                        android:id="@+id/seekBarGroupSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:max="10" />
+
+                    <TextView
+                        android:id="@+id/textViewGroupSizeStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:gravity="center_horizontal"
+                        android:text="n Members"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewGroupId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Group ID"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <LinearLayout
+                android:id="@+id/frameGroupId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ToggleButton
+                    android:id="@+id/toggleButtonGroupId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textOff="Unknown"
+                    android:textOn="Known" />
+
+                <EditText
+                    android:id="@+id/editTextGroupId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:digits="0123456789"
+                    android:enabled="false"
+                    android:hint="a unique number"
+                    android:inputType="number|textNoSuggestions"
+                    android:privateImeOptions="nm"
+                    android:scrollHorizontally="true" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
-        android:id="@+id/Buttons"
+        android:id="@+id/frameButtons"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
@@ -96,6 +178,8 @@
             android:id="@+id/toggleButtonUseNfc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:enabled="false"
             android:textOff="@string/dev_button_nfc_off"
             android:textOn="@string/dev_button_nfc_on" />
 
@@ -103,6 +187,7 @@
             android:id="@+id/buttonBeginExchange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:text="@string/dev_button_begin_exchange" />
     </LinearLayout>
 
