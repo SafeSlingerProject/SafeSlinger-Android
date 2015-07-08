@@ -1,0 +1,3 @@
+[submodule "extern/exchange-android"]
+	path = extern/exchange-android
+	url = git://github.com/SafeSlingerProject/exchange-android.git

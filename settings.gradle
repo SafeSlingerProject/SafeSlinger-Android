@@ -2,3 +2,4 @@ include ':android-vcard'
 include ':safeslinger-exchange'
 include ':safeslinger-demo'
 include ':safeslinger-messenger'
+project(':safeslinger-exchange').projectDir = new File('extern/exchange-android/safeslinger-exchange')
