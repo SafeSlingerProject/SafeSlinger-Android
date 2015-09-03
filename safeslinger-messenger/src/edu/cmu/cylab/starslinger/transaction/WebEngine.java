@@ -96,11 +96,6 @@ public class WebEngine {
     private byte[] doPost(String uri, byte[] requestBody) throws MessagingException {
         mCancelable = false;
 
-        if (!SafeSlinger.getApplication().isOnline()) {
-            throw new MessagingException(
-                    mCtx.getString(R.string.error_CorrectYourInternetConnection));
-        }
-
         // sets up parameters
         HttpParams params = new BasicHttpParams();
         HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);

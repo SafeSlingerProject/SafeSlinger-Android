@@ -104,13 +104,6 @@
             android:title="@string/label_PublicKeyID" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/section_backup" >
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="RemindBackupDelay"
-            android:persistent="false"
-            android:summary="@string/label_summary_remind_backup_delay"
-            android:title="@string/label_RemindBackupDelay" />
-
         <Preference
             android:key="backupRequestDate"
             android:persistent="false"

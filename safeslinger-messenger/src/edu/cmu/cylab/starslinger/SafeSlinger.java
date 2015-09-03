@@ -147,11 +147,6 @@ public class SafeSlinger extends Application {
 
         startCacheService(this);
 
-        // notify user if there are connectivity issues...
-        if (!isOnline()) {
-            showNote(R.string.error_CorrectYourInternetConnection);
-        }
-
         if (isRestored()) {
             // we passed backup restore, now we can load databases...
             doUpgradeDatabaseInPlace();
@@ -775,7 +770,8 @@ public class SafeSlinger extends Application {
                                     // draft
                                     if (!dbMessage.updateDraftMessage(failMsg.getRowId(), null,
                                             failMsg)) {
-                                        showNote(R.string.error_UnableToUpdateMessageInDB);
+                                        MyLog.e(TAG,
+                                                getString(R.string.error_UnableToUpdateMessageInDB));
                                     }
                                 }
 

@@ -290,6 +290,12 @@ public class PassPhraseActivity extends Activity {
                 return;
             }
         }
+
+        // notify user if there are connectivity issues...
+        if (!SafeSlinger.getApplication().isOnline()) {
+            showNote(R.string.error_CorrectYourInternetConnection);
+        }
+
         Intent data = new Intent();
         if (mCreatePassPhrase) {
             data.putExtra(extra.PASS_PHRASE_NEW, passPhrase2);

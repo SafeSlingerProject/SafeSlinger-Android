@@ -80,7 +80,6 @@ public class SettingsActivity extends PreferenceActivity {
     public static final int RESULT_DELETE_KEYS = 8;
     private static final int MENU_FEEDBACK = 9;
     private IntegerListPreference mPassPhraseCacheTtl;
-    private CheckBoxPreference mRemindBackupDelay;
     private ListPreference mAccountNameType;
     private ListPreference mFileManagerDirectory;
     private EditTextPreference mContactName;
@@ -140,7 +139,6 @@ public class SettingsActivity extends PreferenceActivity {
         mLogout = findPreference(SafeSlingerPrefs.pref.LOGOUT);
         mChangeDownloadDir = findPreference(SafeSlingerPrefs.pref.DOWNLOAD_DIRECTORY);
         mShowTutorial = (CheckBoxPreference) findPreference(SafeSlingerPrefs.pref.SHOW_WALKTHROUGH);
-        mRemindBackupDelay = (CheckBoxPreference) findPreference(SafeSlingerPrefs.pref.REMIND_BACKUP_DELAY);
         mPassPhraseCacheTtl = (IntegerListPreference) findPreference(SafeSlingerPrefs.pref.PASSPHRASE_CACHE_TTL);
         mContactName = (EditTextPreference) findPreference(SafeSlingerPrefs.pref.CONTACT_NAME);
         mContactPushToken = findPreference(SafeSlingerPrefs.pref.PUSH_REG_ID_LINKED_DISPLAY);
@@ -175,7 +173,6 @@ public class SettingsActivity extends PreferenceActivity {
         setChangeDownloadDir();
         setShowTutorial();
         setPassPhraseCacheTtl();
-        setRemindBackupDelay();
         setContactPushToken();
         setContactPubKeyId();
         setBackupRequestDate();
@@ -470,20 +467,6 @@ public class SettingsActivity extends PreferenceActivity {
                 return false;
             }
         });
-    }
-
-    protected void setRemindBackupDelay() {
-        mRemindBackupDelay.setChecked(SafeSlingerPrefs.getRemindBackupDelay());
-        mRemindBackupDelay
-                .setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-
-                    @Override
-                    public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        mRemindBackupDelay.setChecked((Boolean) newValue);
-                        SafeSlingerPrefs.setRemindBackupDelay((Boolean) newValue);
-                        return false;
-                    }
-                });
     }
 
     protected void setPassPhraseCacheTtl() {
