@@ -93,19 +93,22 @@ public class MessageDatabaseHelper extends SQLiteOpenHelper {
             + MessageDbAdapter.KEY_RETRECEIPT + " text;";
 
     public static MessageDatabaseHelper getInstance(Context ctx) {
-        if (sInstance == null) {
-            // open for currently selected user
-            sUserNumber = SafeSlingerPrefs.getUser();
-            sInstance = new MessageDatabaseHelper(ctx.getApplicationContext());
-        } else {
-            // if user has changed in this instance, close instance and reopen
-            if (sUserNumber != SafeSlingerPrefs.getUser()) {
+        synchronized (SafeSlinger.sDataLock) {
+            if (sInstance == null) {
+                // open for currently selected user
                 sUserNumber = SafeSlingerPrefs.getUser();
-                sInstance.close();
                 sInstance = new MessageDatabaseHelper(ctx.getApplicationContext());
+            } else {
+                // if user has changed in this instance, close instance and
+                // reopen
+                if (sUserNumber != SafeSlingerPrefs.getUser()) {
+                    sUserNumber = SafeSlingerPrefs.getUser();
+                    sInstance.close();
+                    sInstance = new MessageDatabaseHelper(ctx.getApplicationContext());
+                }
             }
+            return sInstance;
         }
-        return sInstance;
     }
 
     private MessageDatabaseHelper(Context context) {
@@ -118,39 +121,43 @@ public class MessageDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        database.execSQL(DATABASE_CREATE);
+        synchronized (SafeSlinger.sDataLock) {
+            database.execSQL(DATABASE_CREATE);
+        }
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
-        MyLog.w(TAG, String.format(Locale.US, "Upgrading database from version %d to %d...",
-                oldVersion, newVersion));
-        switch (oldVersion) {
-            case 7:
-                database.execSQL(DATABASE_UPG7TO8_RETNOTIFY);
-                database.execSQL(DATABASE_UPG7TO8_RETPUSHTOKEN);
-                database.execSQL(DATABASE_UPG7TO8_RETRECEIPT);
-                break;
+        synchronized (SafeSlinger.sDataLock) {
+            MyLog.w(TAG, String.format(Locale.US, "Upgrading database from version %d to %d...",
+                    oldVersion, newVersion));
+            switch (oldVersion) {
+                case 7:
+                    database.execSQL(DATABASE_UPG7TO8_RETNOTIFY);
+                    database.execSQL(DATABASE_UPG7TO8_RETPUSHTOKEN);
+                    database.execSQL(DATABASE_UPG7TO8_RETRECEIPT);
+                    break;
 
-            case 6:
-                database.execSQL(DATABASE_UPG6TO7_MSGHASH);
-                database.execSQL(DATABASE_UPG7TO8_RETNOTIFY);
-                database.execSQL(DATABASE_UPG7TO8_RETPUSHTOKEN);
-                database.execSQL(DATABASE_UPG7TO8_RETRECEIPT);
-                break;
+                case 6:
+                    database.execSQL(DATABASE_UPG6TO7_MSGHASH);
+                    database.execSQL(DATABASE_UPG7TO8_RETNOTIFY);
+                    database.execSQL(DATABASE_UPG7TO8_RETPUSHTOKEN);
+                    database.execSQL(DATABASE_UPG7TO8_RETRECEIPT);
+                    break;
 
-            case 5:
-                database.execSQL(DATABASE_UPG5TO6_KEYID);
-                database.execSQL(DATABASE_UPG6TO7_MSGHASH);
-                database.execSQL(DATABASE_UPG7TO8_RETNOTIFY);
-                database.execSQL(DATABASE_UPG7TO8_RETPUSHTOKEN);
-                database.execSQL(DATABASE_UPG7TO8_RETRECEIPT);
-                break;
+                case 5:
+                    database.execSQL(DATABASE_UPG5TO6_KEYID);
+                    database.execSQL(DATABASE_UPG6TO7_MSGHASH);
+                    database.execSQL(DATABASE_UPG7TO8_RETNOTIFY);
+                    database.execSQL(DATABASE_UPG7TO8_RETPUSHTOKEN);
+                    database.execSQL(DATABASE_UPG7TO8_RETRECEIPT);
+                    break;
 
-            default:
-                database.execSQL("DROP TABLE IF EXISTS " + MessageDbAdapter.DATABASE_TABLE);
-                onCreate(database);
-                break;
+                default:
+                    database.execSQL("DROP TABLE IF EXISTS " + MessageDbAdapter.DATABASE_TABLE);
+                    onCreate(database);
+                    break;
+            }
         }
     }
 

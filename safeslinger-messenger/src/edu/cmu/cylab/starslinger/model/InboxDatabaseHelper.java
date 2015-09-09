@@ -30,6 +30,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import edu.cmu.cylab.starslinger.MyLog;
+import edu.cmu.cylab.starslinger.SafeSlinger;
 import edu.cmu.cylab.starslinger.SafeSlingerConfig;
 
 public class InboxDatabaseHelper extends SQLiteOpenHelper {
@@ -68,11 +69,13 @@ public class InboxDatabaseHelper extends SQLiteOpenHelper {
             + ");";
 
     public static InboxDatabaseHelper getInstance(Context ctx) {
-        // this is a central instance accessible to all users
-        if (sInstance == null) {
-            sInstance = new InboxDatabaseHelper(ctx.getApplicationContext());
+        synchronized (SafeSlinger.sDataLock) {
+            // this is a central instance accessible to all users
+            if (sInstance == null) {
+                sInstance = new InboxDatabaseHelper(ctx.getApplicationContext());
+            }
+            return sInstance;
         }
-        return sInstance;
     }
 
     private InboxDatabaseHelper(Context context) {
@@ -81,19 +84,24 @@ public class InboxDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        database.execSQL(DATABASE_CREATE);
+        synchronized (SafeSlinger.sDataLock) {
+            database.execSQL(DATABASE_CREATE);
+        }
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
-        MyLog.w(TAG, String.format(Locale.US, "Upgrading database from version %d to %d...",
-                oldVersion, newVersion));
-        switch (oldVersion) {
+        synchronized (SafeSlinger.sDataLock) {
+            MyLog.w(TAG, String.format(Locale.US, "Upgrading database from version %d to %d...",
+                    oldVersion, newVersion));
+            switch (oldVersion) {
 
-            default:
-                database.execSQL("DROP TABLE IF EXISTS " + InboxDbAdapter.DATABASE_TABLE);
-                onCreate(database);
-                break;
+                default:
+                    database.execSQL("DROP TABLE IF EXISTS " + InboxDbAdapter.DATABASE_TABLE);
+                    onCreate(database);
+                    break;
+            }
         }
     }
+
 }

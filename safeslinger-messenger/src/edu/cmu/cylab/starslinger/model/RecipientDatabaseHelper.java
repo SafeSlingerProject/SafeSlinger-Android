@@ -97,19 +97,22 @@ public class RecipientDatabaseHelper extends SQLiteOpenHelper {
             + RecipientDbAdapter.KEY_MYPUSHTOKEN + " text;";
 
     public static RecipientDatabaseHelper getInstance(Context ctx) {
-        if (sInstance == null) {
-            // open for currently selected user
-            sUserNumber = SafeSlingerPrefs.getUser();
-            sInstance = new RecipientDatabaseHelper(ctx.getApplicationContext());
-        } else {
-            // if user has changed in this instance, close instance and reopen
-            if (sUserNumber != SafeSlingerPrefs.getUser()) {
+        synchronized (SafeSlinger.sDataLock) {
+            if (sInstance == null) {
+                // open for currently selected user
                 sUserNumber = SafeSlingerPrefs.getUser();
-                sInstance.close();
                 sInstance = new RecipientDatabaseHelper(ctx.getApplicationContext());
+            } else {
+                // if user has changed in this instance, close instance and
+                // reopen
+                if (sUserNumber != SafeSlingerPrefs.getUser()) {
+                    sUserNumber = SafeSlingerPrefs.getUser();
+                    sInstance.close();
+                    sInstance = new RecipientDatabaseHelper(ctx.getApplicationContext());
+                }
             }
+            return sInstance;
         }
-        return sInstance;
     }
 
     private RecipientDatabaseHelper(Context context) {
@@ -122,40 +125,44 @@ public class RecipientDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        database.execSQL(DATABASE_CREATE);
+        synchronized (SafeSlinger.sDataLock) {
+            database.execSQL(DATABASE_CREATE);
+        }
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
-        MyLog.w(TAG, String.format(Locale.US, "Upgrading database from version %d to %d...",
-                oldVersion, newVersion));
-        switch (oldVersion) {
-            case 7:
-                database.execSQL(DATABASE_UPG7TO8_NOTREGDATE);
-                database.execSQL(DATABASE_UPG7TO8_MYNOTIFY);
-                database.execSQL(DATABASE_UPG7TO8_MYPUSHTOKEN);
-                break;
+        synchronized (SafeSlinger.sDataLock) {
+            MyLog.w(TAG, String.format(Locale.US, "Upgrading database from version %d to %d...",
+                    oldVersion, newVersion));
+            switch (oldVersion) {
+                case 7:
+                    database.execSQL(DATABASE_UPG7TO8_NOTREGDATE);
+                    database.execSQL(DATABASE_UPG7TO8_MYNOTIFY);
+                    database.execSQL(DATABASE_UPG7TO8_MYPUSHTOKEN);
+                    break;
 
-            case 6:
-                database.execSQL(DATABASE_UPG6TO7_INTROKEYID);
-                database.execSQL(DATABASE_UPG7TO8_NOTREGDATE);
-                database.execSQL(DATABASE_UPG7TO8_MYNOTIFY);
-                database.execSQL(DATABASE_UPG7TO8_MYPUSHTOKEN);
-                break;
+                case 6:
+                    database.execSQL(DATABASE_UPG6TO7_INTROKEYID);
+                    database.execSQL(DATABASE_UPG7TO8_NOTREGDATE);
+                    database.execSQL(DATABASE_UPG7TO8_MYNOTIFY);
+                    database.execSQL(DATABASE_UPG7TO8_MYPUSHTOKEN);
+                    break;
 
-            case 5:
-                database.execSQL(DATABASE_UPG5TO6_MYKEYID);
-                database.execSQL(DATABASE_UPG5TO6_KEYID);
-                database.execSQL(DATABASE_UPG6TO7_INTROKEYID);
-                database.execSQL(DATABASE_UPG7TO8_NOTREGDATE);
-                database.execSQL(DATABASE_UPG7TO8_MYNOTIFY);
-                database.execSQL(DATABASE_UPG7TO8_MYPUSHTOKEN);
-                break;
+                case 5:
+                    database.execSQL(DATABASE_UPG5TO6_MYKEYID);
+                    database.execSQL(DATABASE_UPG5TO6_KEYID);
+                    database.execSQL(DATABASE_UPG6TO7_INTROKEYID);
+                    database.execSQL(DATABASE_UPG7TO8_NOTREGDATE);
+                    database.execSQL(DATABASE_UPG7TO8_MYNOTIFY);
+                    database.execSQL(DATABASE_UPG7TO8_MYPUSHTOKEN);
+                    break;
 
-            default:
-                database.execSQL("DROP TABLE IF EXISTS " + RecipientDbAdapter.DATABASE_TABLE);
-                onCreate(database);
-                break;
+                default:
+                    database.execSQL("DROP TABLE IF EXISTS " + RecipientDbAdapter.DATABASE_TABLE);
+                    onCreate(database);
+                    break;
+            }
         }
     }
 

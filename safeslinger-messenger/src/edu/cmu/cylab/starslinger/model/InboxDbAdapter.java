@@ -49,10 +49,12 @@ public class InboxDbAdapter {
     private InboxDatabaseHelper mDbHelper;
 
     public static InboxDbAdapter openInstance(Context ctx) {
-        if (sInstance == null) {
-            sInstance = new InboxDbAdapter(ctx.getApplicationContext());
+        synchronized (SafeSlinger.sDataLock) {
+            if (sInstance == null) {
+                sInstance = new InboxDbAdapter(ctx.getApplicationContext());
+            }
+            return sInstance;
         }
-        return sInstance;
     }
 
     public static void closeInstance() {
@@ -64,8 +66,8 @@ public class InboxDbAdapter {
     }
 
     private InboxDbAdapter(Context context) {
-        mContext = context;
         synchronized (SafeSlinger.sDataLock) {
+            mContext = context;
             mDbHelper = InboxDatabaseHelper.getInstance(mContext);
             try {
                 mDatabase = mDbHelper.getWritableDatabase();
@@ -88,283 +90,279 @@ public class InboxDbAdapter {
     }
 
     private long insert(String table, String nullColumnHack, ContentValues values) {
-        if (!mDatabase.isOpen()) {
-            sInstance = new InboxDbAdapter(mContext);
+        synchronized (SafeSlinger.sDataLock) {
+            if (!mDatabase.isOpen()) {
+                sInstance = new InboxDbAdapter(mContext);
+            }
+            long insert = mDatabase.insert(table, nullColumnHack, values);
+            // no backup needed for messages...
+            return insert;
         }
-        long insert = mDatabase.insert(table, nullColumnHack, values);
-        // no backup needed for messages...
-        return insert;
     }
 
     private int update(String table, ContentValues values, String whereClause, String[] whereArgs) {
-        if (!mDatabase.isOpen()) {
-            sInstance = new InboxDbAdapter(mContext);
+        synchronized (SafeSlinger.sDataLock) {
+            if (!mDatabase.isOpen()) {
+                sInstance = new InboxDbAdapter(mContext);
+            }
+            int update = mDatabase.update(table, values, whereClause, whereArgs);
+            // no backup needed for messages...
+            return update;
         }
-        int update = mDatabase.update(table, values, whereClause, whereArgs);
-        // no backup needed for messages...
-        return update;
     }
 
     private int delete(String table, String whereClause, String[] whereArgs) {
-        if (!mDatabase.isOpen()) {
-            sInstance = new InboxDbAdapter(mContext);
+        synchronized (SafeSlinger.sDataLock) {
+            if (!mDatabase.isOpen()) {
+                sInstance = new InboxDbAdapter(mContext);
+            }
+            int delete = mDatabase.delete(table, whereClause, whereArgs);
+            // no backup needed for messages...
+            return delete;
         }
-        int delete = mDatabase.delete(table, whereClause, whereArgs);
-        // no backup needed for messages...
-        return delete;
     }
 
     private Cursor query(String table, String[] columns, String selection, String[] selectionArgs,
             String groupBy, String having, String orderBy) {
-        if (!mDatabase.isOpen()) {
-            sInstance = new InboxDbAdapter(mContext);
+        synchronized (SafeSlinger.sDataLock) {
+            if (!mDatabase.isOpen()) {
+                sInstance = new InboxDbAdapter(mContext);
+            }
+            Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy,
+                    having, orderBy);
+            return query;
         }
-        Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
-                orderBy);
-        return query;
     }
 
     private Cursor query(String table, String[] columns, String selection, String[] selectionArgs,
             String groupBy, String having, String orderBy, String limit) {
-        if (!mDatabase.isOpen()) {
-            sInstance = new InboxDbAdapter(mContext);
+        synchronized (SafeSlinger.sDataLock) {
+            if (!mDatabase.isOpen()) {
+                sInstance = new InboxDbAdapter(mContext);
+            }
+            Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy,
+                    having, orderBy, limit);
+            return query;
         }
-        Cursor query = mDatabase.query(table, columns, selection, selectionArgs, groupBy, having,
-                orderBy, limit);
-        return query;
     }
 
     private Cursor query(boolean distinct, String table, String[] columns, String selection,
             String[] selectionArgs, String groupBy, String having, String orderBy, String limit) {
-        if (!mDatabase.isOpen()) {
-            sInstance = new InboxDbAdapter(mContext);
+        synchronized (SafeSlinger.sDataLock) {
+            if (!mDatabase.isOpen()) {
+                sInstance = new InboxDbAdapter(mContext);
+            }
+            Cursor query = mDatabase.query(distinct, table, columns, selection, selectionArgs,
+                    groupBy, having, orderBy, limit);
+            return query;
         }
-        Cursor query = mDatabase.query(distinct, table, columns, selection, selectionArgs, groupBy,
-                having, orderBy, limit);
-        return query;
     }
 
     public long createRecvEncInbox(String msgHash, int status, int seen) {
-        synchronized (SafeSlinger.sDataLock) {
-            // ignore duplicate message identifiers...
-            String where = MessageDbAdapter.KEY_MSGHASH + "="
-                    + DatabaseUtils.sqlEscapeString("" + msgHash);
-            Cursor c = query(true, DATABASE_TABLE, new String[] {
-                MessageDbAdapter.KEY_MSGHASH
-            }, where, null, null, null, null, null);
-            if (c != null) {
-                try {
-                    if (c.getCount() > 0) {
-                        return -1;
-                    }
-                } finally {
-                    c.close();
+
+        // ignore duplicate message identifiers...
+        String where = MessageDbAdapter.KEY_MSGHASH + "="
+                + DatabaseUtils.sqlEscapeString("" + msgHash);
+        Cursor c = query(true, DATABASE_TABLE, new String[] {
+            MessageDbAdapter.KEY_MSGHASH
+        }, where, null, null, null, null, null);
+        if (c != null) {
+            try {
+                if (c.getCount() > 0) {
+                    return -1;
                 }
+            } finally {
+                c.close();
             }
-            ContentValues values = new ContentValues();
-            values.put(MessageDbAdapter.KEY_DATE_RECV, System.currentTimeMillis()); // Received
-            // UTC
-            values.put(MessageDbAdapter.KEY_READ, MessageDbAdapter.MESSAGE_IS_NOT_READ); // decoded
-            values.put(MessageDbAdapter.KEY_STATUS, status); // complete/failed
-            values.put(MessageDbAdapter.KEY_TYPE, MessageDbAdapter.MESSAGE_TYPE_INBOX); // inbox/sent
-            values.put(MessageDbAdapter.KEY_SEEN, seen); // seen in list
-            if (msgHash != null)
-                values.put(MessageDbAdapter.KEY_MSGHASH, msgHash); // file
-            // retrieval
-            // id
-            // backward compatibility for upgraded databases....
-            values.put(MessageDbAdapter.KEY_KEYIDLONG, 0);
-            return insert(DATABASE_TABLE, null, values);
         }
+        ContentValues values = new ContentValues();
+        values.put(MessageDbAdapter.KEY_DATE_RECV, System.currentTimeMillis()); // Received
+        // UTC
+        values.put(MessageDbAdapter.KEY_READ, MessageDbAdapter.MESSAGE_IS_NOT_READ); // decoded
+        values.put(MessageDbAdapter.KEY_STATUS, status); // complete/failed
+        values.put(MessageDbAdapter.KEY_TYPE, MessageDbAdapter.MESSAGE_TYPE_INBOX); // inbox/sent
+        values.put(MessageDbAdapter.KEY_SEEN, seen); // seen in list
+        if (msgHash != null)
+            values.put(MessageDbAdapter.KEY_MSGHASH, msgHash); // file
+        // retrieval
+        // id
+        // backward compatibility for upgraded databases....
+        values.put(MessageDbAdapter.KEY_KEYIDLONG, 0);
+        return insert(DATABASE_TABLE, null, values);
     }
 
     public boolean updateInboxExpired(long rowId) {
-        synchronized (SafeSlinger.sDataLock) {
-            ContentValues values = new ContentValues();
-            values.put(MessageDbAdapter.KEY_STATUS, MessageDbAdapter.MESSAGE_STATUS_EXPIRED); // complete/failed
-            return update(DATABASE_TABLE, values, MessageDbAdapter.KEY_ROWID + "=" + rowId, null) > 0;
-        }
+
+        ContentValues values = new ContentValues();
+        values.put(MessageDbAdapter.KEY_STATUS, MessageDbAdapter.MESSAGE_STATUS_EXPIRED); // complete/failed
+        return update(DATABASE_TABLE, values, MessageDbAdapter.KEY_ROWID + "=" + rowId, null) > 0;
     }
 
     public boolean updateInboxDownloaded(long rowId, byte[] encbody, int seen, String keyid) {
-        synchronized (SafeSlinger.sDataLock) {
-            ContentValues values = new ContentValues();
-            values.put(MessageDbAdapter.KEY_SEEN, seen); // seen in list
-            if (encbody != null)
-                values.put(MessageDbAdapter.KEY_ENCBODY, encbody); // encoded
-            // body
-            values.put(MessageDbAdapter.KEY_STATUS, MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG); // complete/failed
-            if (!TextUtils.isEmpty(keyid))
-                values.put(MessageDbAdapter.KEY_KEYID, keyid); // key id of the
-            // sig...
-            return update(DATABASE_TABLE, values, MessageDbAdapter.KEY_ROWID + "=" + rowId, null) > 0;
-        }
+
+        ContentValues values = new ContentValues();
+        values.put(MessageDbAdapter.KEY_SEEN, seen); // seen in list
+        if (encbody != null)
+            values.put(MessageDbAdapter.KEY_ENCBODY, encbody); // encoded
+        // body
+        values.put(MessageDbAdapter.KEY_STATUS, MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG); // complete/failed
+        if (!TextUtils.isEmpty(keyid))
+            values.put(MessageDbAdapter.KEY_KEYID, keyid); // key id of the
+        // sig...
+        return update(DATABASE_TABLE, values, MessageDbAdapter.KEY_ROWID + "=" + rowId, null) > 0;
     }
 
     /**
      * Deletes message
      */
     public boolean deleteInbox(long rowId) {
-        synchronized (SafeSlinger.sDataLock) {
-            return delete(DATABASE_TABLE, MessageDbAdapter.KEY_ROWID + "=" + rowId, null) > 0;
-        }
+
+        return delete(DATABASE_TABLE, MessageDbAdapter.KEY_ROWID + "=" + rowId, null) > 0;
     }
 
     public int deleteThread(String keyId) {
-        synchronized (SafeSlinger.sDataLock) {
-            StringBuilder where = new StringBuilder();
-            if (TextUtils.isEmpty(keyId)) {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
-                where.append(" OR ");
-                where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
-                where.append(")");
-            } else {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + "="
-                        + DatabaseUtils.sqlEscapeString("" + keyId));
-                where.append(")");
-            }
-            return delete(DATABASE_TABLE, where.toString(), null);
+
+        StringBuilder where = new StringBuilder();
+        if (TextUtils.isEmpty(keyId)) {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
+            where.append(" OR ");
+            where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
+            where.append(")");
+        } else {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + "="
+                    + DatabaseUtils.sqlEscapeString("" + keyId));
+            where.append(")");
         }
+        return delete(DATABASE_TABLE, where.toString(), null);
     }
 
     public Cursor fetchInboxSmall(long rowId) throws SQLException {
-        synchronized (SafeSlinger.sDataLock) {
-            String where = MessageDbAdapter.KEY_ROWID + "=" + rowId;
-            Cursor c = query(true, DATABASE_TABLE, new String[] {
-                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
-                    MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
-                    MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
-                    MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
-                    MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
-                    MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ,
-                    MessageDbAdapter.KEY_SEEN, MessageDbAdapter.KEY_STATUS,
-                    MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
-                    MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
-                    MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
-                    MessageDbAdapter.KEY_RETRECEIPT
-            }, where, null, null, null, null, null);
-            return c;
-        }
+
+        String where = MessageDbAdapter.KEY_ROWID + "=" + rowId;
+        Cursor c = query(true, DATABASE_TABLE, new String[] {
+                MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
+                MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
+                MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
+                MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
+                MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
+                MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ, MessageDbAdapter.KEY_SEEN,
+                MessageDbAdapter.KEY_STATUS, MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
+                MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
+                MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
+                MessageDbAdapter.KEY_RETRECEIPT
+        }, where, null, null, null, null, null);
+        return c;
     }
 
     public int getAllInboxCountByThread(String keyId) {
-        synchronized (SafeSlinger.sDataLock) {
-            StringBuilder where = new StringBuilder();
-            if (TextUtils.isEmpty(keyId)) {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
-                where.append(" OR ");
-                where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
-                where.append(")");
-            } else {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + "="
-                        + DatabaseUtils.sqlEscapeString("" + keyId));
-                where.append(")");
-            }
-            Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
-            if (c != null) {
-                try {
-                    int count = c.getCount();
-                    return count;
-                } finally {
-                    c.close();
-                }
-            }
-            return -1;
+
+        StringBuilder where = new StringBuilder();
+        if (TextUtils.isEmpty(keyId)) {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
+            where.append(" OR ");
+            where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
+            where.append(")");
+        } else {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + "="
+                    + DatabaseUtils.sqlEscapeString("" + keyId));
+            where.append(")");
         }
+        Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
+        if (c != null) {
+            try {
+                int count = c.getCount();
+                return count;
+            } finally {
+                c.close();
+            }
+        }
+        return -1;
     }
 
     public Cursor fetchAllInboxGetMessagePending() {
-        synchronized (SafeSlinger.sDataLock) {
-            StringBuilder where = new StringBuilder();
-            where.append("(");
-            where.append(MessageDbAdapter.KEY_TYPE + "=" + MessageDbAdapter.MESSAGE_TYPE_INBOX);
-            where.append(" AND ");
-            where.append(MessageDbAdapter.KEY_STATUS + "="
-                    + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
-            where.append(")");
-            Cursor c = query(true, DATABASE_TABLE, new String[] {
-                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
-                    MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
-                    MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
-                    MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
-                    MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
-                    MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ,
-                    MessageDbAdapter.KEY_SEEN, MessageDbAdapter.KEY_STATUS,
-                    MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
-                    MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
-                    MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
-                    MessageDbAdapter.KEY_RETRECEIPT
-            }, where.toString(), null, null, null, null, null);
-            return c;
-        }
+
+        StringBuilder where = new StringBuilder();
+        where.append("(");
+        where.append(MessageDbAdapter.KEY_TYPE + "=" + MessageDbAdapter.MESSAGE_TYPE_INBOX);
+        where.append(" AND ");
+        where.append(MessageDbAdapter.KEY_STATUS + "=" + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
+        where.append(")");
+        Cursor c = query(true, DATABASE_TABLE, new String[] {
+                MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
+                MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
+                MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
+                MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
+                MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
+                MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ, MessageDbAdapter.KEY_SEEN,
+                MessageDbAdapter.KEY_STATUS, MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
+                MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
+                MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
+                MessageDbAdapter.KEY_RETRECEIPT
+        }, where.toString(), null, null, null, null, null);
+        return c;
     }
 
     public Cursor fetchAllInboxDecryptPending() {
-        synchronized (SafeSlinger.sDataLock) {
-            StringBuilder where = new StringBuilder();
-            where.append("(");
-            where.append(MessageDbAdapter.KEY_TYPE + "=" + MessageDbAdapter.MESSAGE_TYPE_INBOX);
-            where.append(" AND ");
-            where.append(MessageDbAdapter.KEY_STATUS + "="
-                    + MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG);
-            where.append(" AND ");
-            where.append(MessageDbAdapter.KEY_READ + "=" + MessageDbAdapter.MESSAGE_IS_NOT_READ);
-            where.append(")");
-            Cursor c = query(true, DATABASE_TABLE, new String[] {
-                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
-                    MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
-                    MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
-                    MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
-                    MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
-                    MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ,
-                    MessageDbAdapter.KEY_SEEN, MessageDbAdapter.KEY_STATUS,
-                    MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
-                    MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
-                    MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
-                    MessageDbAdapter.KEY_RETRECEIPT
-            }, where.toString(), null, null, null, null, null);
-            return c;
-        }
+
+        StringBuilder where = new StringBuilder();
+        where.append("(");
+        where.append(MessageDbAdapter.KEY_TYPE + "=" + MessageDbAdapter.MESSAGE_TYPE_INBOX);
+        where.append(" AND ");
+        where.append(MessageDbAdapter.KEY_STATUS + "="
+                + MessageDbAdapter.MESSAGE_STATUS_COMPLETE_MSG);
+        where.append(" AND ");
+        where.append(MessageDbAdapter.KEY_READ + "=" + MessageDbAdapter.MESSAGE_IS_NOT_READ);
+        where.append(")");
+        Cursor c = query(true, DATABASE_TABLE, new String[] {
+                MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
+                MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
+                MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
+                MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
+                MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
+                MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ, MessageDbAdapter.KEY_SEEN,
+                MessageDbAdapter.KEY_STATUS, MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
+                MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
+                MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
+                MessageDbAdapter.KEY_RETRECEIPT
+        }, where.toString(), null, null, null, null, null);
+        return c;
     }
 
     public Cursor fetchAllInboxByThread(String keyId) {
-        synchronized (SafeSlinger.sDataLock) {
-            StringBuilder where = new StringBuilder();
-            if (TextUtils.isEmpty(keyId)) {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
-                where.append(" OR ");
-                where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
-                where.append(")");
-            } else {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + "="
-                        + DatabaseUtils.sqlEscapeString("" + keyId));
-                where.append(")");
-            }
-            Cursor c = query(true, DATABASE_TABLE, new String[] {
-                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
-                    MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
-                    MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
-                    MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
-                    MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
-                    MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ,
-                    MessageDbAdapter.KEY_SEEN, MessageDbAdapter.KEY_STATUS,
-                    MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
-                    MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
-                    MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
-                    MessageDbAdapter.KEY_RETRECEIPT
-            }, where.toString(), null, null, null, null, null);
-            return c;
+
+        StringBuilder where = new StringBuilder();
+        if (TextUtils.isEmpty(keyId)) {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
+            where.append(" OR ");
+            where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
+            where.append(")");
+        } else {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + "="
+                    + DatabaseUtils.sqlEscapeString("" + keyId));
+            where.append(")");
         }
+        Cursor c = query(true, DATABASE_TABLE, new String[] {
+                MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
+                MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
+                MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
+                MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
+                MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
+                MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ, MessageDbAdapter.KEY_SEEN,
+                MessageDbAdapter.KEY_STATUS, MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
+                MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
+                MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
+                MessageDbAdapter.KEY_RETRECEIPT
+        }, where.toString(), null, null, null, null, null);
+        return c;
     }
 
     // public long fetchLastRecentMessageTime() {
-    // synchronized (SafeSlinger.sDataLock) {
     // /*
     // * SELECT MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV
     // * FROM table ORDER BY MessageDbAdapter.KEY_ROWID DESC LIMIT 1;
@@ -384,159 +382,148 @@ public class InboxDbAdapter {
     // }
     // return -1;
     // }
-    // }
 
     public Cursor fetchInboxRecent(String keyId) {
-        synchronized (SafeSlinger.sDataLock) {
-            StringBuilder where = new StringBuilder();
-            if (TextUtils.isEmpty(keyId)) {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
-                where.append(" OR ");
-                where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
-                where.append(")");
-            } else {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + "="
-                        + DatabaseUtils.sqlEscapeString("" + keyId));
-                where.append(")");
-            }
-            String groupBy = MessageDbAdapter.KEY_KEYID;
-            Cursor c = query(DATABASE_TABLE, new String[] {
-                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
-                    MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
-                    MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
-                    MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
-                    MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
-                    MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ,
-                    MessageDbAdapter.KEY_SEEN, MessageDbAdapter.KEY_STATUS,
-                    MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
-                    MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
-                    MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
-                    MessageDbAdapter.KEY_RETRECEIPT
-            }, where.toString(), null, groupBy, null, null);
-            return c;
+
+        StringBuilder where = new StringBuilder();
+        if (TextUtils.isEmpty(keyId)) {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
+            where.append(" OR ");
+            where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
+            where.append(")");
+        } else {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + "="
+                    + DatabaseUtils.sqlEscapeString("" + keyId));
+            where.append(")");
         }
+        String groupBy = MessageDbAdapter.KEY_KEYID;
+        Cursor c = query(DATABASE_TABLE, new String[] {
+                MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
+                MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
+                MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
+                MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
+                MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
+                MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ, MessageDbAdapter.KEY_SEEN,
+                MessageDbAdapter.KEY_STATUS, MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
+                MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
+                MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
+                MessageDbAdapter.KEY_RETRECEIPT
+        }, where.toString(), null, groupBy, null, null);
+        return c;
     }
 
     public Cursor fetchInboxRecentByUniqueKeyIds() {
-        synchronized (SafeSlinger.sDataLock) {
-            String groupBy = MessageDbAdapter.KEY_KEYID;
-            Cursor c = query(DATABASE_TABLE, new String[] {
-                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
-                    MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
-                    MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
-                    MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
-                    MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
-                    MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ,
-                    MessageDbAdapter.KEY_SEEN, MessageDbAdapter.KEY_STATUS,
-                    MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
-                    MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
-                    MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
-                    MessageDbAdapter.KEY_RETRECEIPT
-            }, null, null, groupBy, null, null);
-            return c;
-        }
+
+        String groupBy = MessageDbAdapter.KEY_KEYID;
+        Cursor c = query(DATABASE_TABLE, new String[] {
+                MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_DATE_RECV,
+                MessageDbAdapter.KEY_DATE_SENT, MessageDbAdapter.KEY_ENCBODY,
+                MessageDbAdapter.KEY_FILEDIR, MessageDbAdapter.KEY_MSGHASH_BLOB,
+                MessageDbAdapter.KEY_FILELEN, MessageDbAdapter.KEY_FILENAME,
+                MessageDbAdapter.KEY_FILETYPE, MessageDbAdapter.KEY_KEYIDLONG,
+                MessageDbAdapter.KEY_PERSON, MessageDbAdapter.KEY_READ, MessageDbAdapter.KEY_SEEN,
+                MessageDbAdapter.KEY_STATUS, MessageDbAdapter.KEY_TEXT, MessageDbAdapter.KEY_TYPE,
+                MessageDbAdapter.KEY_KEYID, MessageDbAdapter.KEY_MSGHASH,
+                MessageDbAdapter.KEY_RETNOTIFY, MessageDbAdapter.KEY_RETPUSHTOKEN,
+                MessageDbAdapter.KEY_RETRECEIPT
+        }, null, null, groupBy, null, null);
+        return c;
     }
 
     public int getUnseenInboxCount() throws SQLException {
-        synchronized (SafeSlinger.sDataLock) {
-            StringBuilder where = new StringBuilder();
-            where.append("(");
-            where.append(MessageDbAdapter.KEY_SEEN + "=" + MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
-            where.append(" AND ");
-            where.append(MessageDbAdapter.KEY_STATUS + "!="
-                    + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
-            where.append(")");
-            Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
-            if (c != null) {
-                try {
-                    int count = c.getCount();
-                    return count;
-                } finally {
-                    c.close();
-                }
+
+        StringBuilder where = new StringBuilder();
+        where.append("(");
+        where.append(MessageDbAdapter.KEY_SEEN + "=" + MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
+        where.append(" AND ");
+        where.append(MessageDbAdapter.KEY_STATUS + "!=" + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
+        where.append(")");
+        Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
+        if (c != null) {
+            try {
+                int count = c.getCount();
+                return count;
+            } finally {
+                c.close();
             }
-            return -1;
         }
+        return -1;
     }
 
     public int getActionRequiredInboxCountByThread(String keyId) throws SQLException {
-        synchronized (SafeSlinger.sDataLock) {
-            StringBuilder where = new StringBuilder();
-            if (TextUtils.isEmpty(keyId)) {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
-                where.append(" OR ");
-                where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
-                where.append(")");
-            } else {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + "="
-                        + DatabaseUtils.sqlEscapeString("" + keyId));
-                where.append(")");
-            }
-            where.append(" AND ");
-            where.append(MessageDbAdapter.KEY_TYPE + "=" + MessageDbAdapter.MESSAGE_TYPE_INBOX);
-            where.append(" AND ");
+
+        StringBuilder where = new StringBuilder();
+        if (TextUtils.isEmpty(keyId)) {
             where.append("(");
-            where.append(MessageDbAdapter.KEY_SEEN + "=" + MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
+            where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
             where.append(" OR ");
-            where.append(MessageDbAdapter.KEY_STATUS + "="
-                    + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
+            where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
             where.append(")");
-            Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
-            if (c != null) {
-                try {
-                    int count = c.getCount();
-                    return count;
-                } finally {
-                    c.close();
-                }
-            }
-            return -1;
+        } else {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + "="
+                    + DatabaseUtils.sqlEscapeString("" + keyId));
+            where.append(")");
         }
+        where.append(" AND ");
+        where.append(MessageDbAdapter.KEY_TYPE + "=" + MessageDbAdapter.MESSAGE_TYPE_INBOX);
+        where.append(" AND ");
+        where.append("(");
+        where.append(MessageDbAdapter.KEY_SEEN + "=" + MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
+        where.append(" OR ");
+        where.append(MessageDbAdapter.KEY_STATUS + "=" + MessageDbAdapter.MESSAGE_STATUS_GOTPUSH);
+        where.append(")");
+        Cursor c = query(DATABASE_TABLE, null, where.toString(), null, null, null, null);
+        if (c != null) {
+            try {
+                int count = c.getCount();
+                return count;
+            } finally {
+                c.close();
+            }
+        }
+        return -1;
     }
 
     public void updateAllInboxAsSeenByThread(String keyId) throws SQLException {
-        synchronized (SafeSlinger.sDataLock) {
-            StringBuilder where = new StringBuilder();
-            if (TextUtils.isEmpty(keyId)) {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
-                where.append(" OR ");
-                where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
-                where.append(")");
-            } else {
-                where.append("(");
-                where.append(MessageDbAdapter.KEY_KEYID + "="
-                        + DatabaseUtils.sqlEscapeString("" + keyId));
-                where.append(")");
-            }
-            where.append(" AND ");
+
+        StringBuilder where = new StringBuilder();
+        if (TextUtils.isEmpty(keyId)) {
             where.append("(");
-            where.append(MessageDbAdapter.KEY_SEEN + "=" + MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
+            where.append(MessageDbAdapter.KEY_KEYID + " IS NULL");
+            where.append(" OR ");
+            where.append(MessageDbAdapter.KEY_KEYID + "=\'\'");
             where.append(")");
-            Cursor c = query(DATABASE_TABLE, new String[] {
-                    MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_SEEN,
-                    MessageDbAdapter.KEY_KEYID
-            }, where.toString(), null, null, null, null);
-            if (c != null) {
-                try {
-                    if (c.moveToFirst()) {
-                        ContentValues values = new ContentValues();
-                        values.put(MessageDbAdapter.KEY_SEEN, MessageDbAdapter.MESSAGE_IS_SEEN); // seen
-                        do {
-                            long rowId = c.getLong(c
-                                    .getColumnIndexOrThrow(MessageDbAdapter.KEY_ROWID));
-                            update(DATABASE_TABLE, values,
-                                    MessageDbAdapter.KEY_ROWID + "=" + rowId, null);
-                        } while (c.moveToNext());
-                    }
-                } finally {
-                    c.close();
+        } else {
+            where.append("(");
+            where.append(MessageDbAdapter.KEY_KEYID + "="
+                    + DatabaseUtils.sqlEscapeString("" + keyId));
+            where.append(")");
+        }
+        where.append(" AND ");
+        where.append("(");
+        where.append(MessageDbAdapter.KEY_SEEN + "=" + MessageDbAdapter.MESSAGE_IS_NOT_SEEN);
+        where.append(")");
+        Cursor c = query(DATABASE_TABLE, new String[] {
+                MessageDbAdapter.KEY_ROWID, MessageDbAdapter.KEY_SEEN, MessageDbAdapter.KEY_KEYID
+        }, where.toString(), null, null, null, null);
+        if (c != null) {
+            try {
+                if (c.moveToFirst()) {
+                    ContentValues values = new ContentValues();
+                    values.put(MessageDbAdapter.KEY_SEEN, MessageDbAdapter.MESSAGE_IS_SEEN); // seen
+                    do {
+                        long rowId = c.getLong(c.getColumnIndexOrThrow(MessageDbAdapter.KEY_ROWID));
+                        update(DATABASE_TABLE, values, MessageDbAdapter.KEY_ROWID + "=" + rowId,
+                                null);
+                    } while (c.moveToNext());
                 }
+            } finally {
+                c.close();
             }
         }
     }
+
 }
