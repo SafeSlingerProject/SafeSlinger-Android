@@ -315,6 +315,9 @@ public class WebEngine {
     public byte[] getMessageNoncesByToken(String recipientPushRegId) throws MessagingException,
             MessageNotFoundException {
 
+        if (TextUtils.isEmpty(recipientPushRegId)) {
+            return null;
+        }
         int capacity = mVersionLen //
                 + 4 + recipientPushRegId.length() //
                 + 4;
