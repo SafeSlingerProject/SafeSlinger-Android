@@ -33,7 +33,7 @@
     <!-- application name (title case); used for home screen icons, at the top of many screens, and many other places in the application. -->
     <string name="app_name">SafeSlinger</string>
     <!-- application description (sentence case); the names of the individuals who translated and/or reviewed localizations. -->
-    <string name="app_TranslatorName" translatable="false">Adrian Perrig\nAkira Yamada\nAlbert Stroucken\nElli Fragkaki\nEmmanuel Owusu\nEmre Kartal\nIrina Fudrow\nJens Höfflinger\nJens14L\nJoonas Tamminen\nMatthias Beckerle\nMichael Stroucken\nNicolas Christin\nSteve Matsumoto\nstrel\nWasilis Mandratzis-Walz\nYeon Yim\nYue-Hsun Lin\n</string>
+    <string name="app_TranslatorName" translatable="false">Adrian Perrig\nAkira Yamada\nAlbert Stroucken\nElli Fragkaki\nEmmanuel Owusu\nEmre Kartal\nIrina Fudrow\nJens Höfflinger\nJens14L\nJoonas Tamminen\nMatthias Beckerle\nMichael Stroucken\nNaofumi\nNicolas Christin\nSteve Matsumoto\nstrel\nWasilis Mandratzis-Walz\nYeon Yim\nYue-Hsun Lin\n</string>
 
     <!-- question message (sentence case, question mark); used to warn when the backup is off to confirm we should keep reminding the user. Used with Forget and Remind buttons. -->
     <string name="ask_BackupDisabledRemindLater">Backup is disabled. Do you want to adjust backup settings and keep this reminder?</string>
