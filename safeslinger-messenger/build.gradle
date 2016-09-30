@@ -20,6 +20,51 @@ android {
     lintOptions {
         abortOnError false
     }
+
+    /*
+     * For store release, create/add ~/.gradle/gradle.properties with this content:
+     * releaseMsgrKeyStoreLocation=/home/release.key.store
+     * releaseMsgrKeyStorePassword=xxxxxxxx
+     * releaseMsgrKeyAlias=key.alias
+     * releaseMsgrKeyPassword=xxxxxxxx
+     */
+    if (project.hasProperty('releaseMsgrKeyStoreLocation') &&
+            project.hasProperty('releaseMsgrKeyStorePassword') &&
+            project.hasProperty('releaseMsgrKeyAlias') &&
+            project.hasProperty('releaseMsgrKeyPassword')) {
+        println "Signing Messenger RELEASE build…"
+
+        signingConfigs {
+            release {
+                storeFile file(releaseMsgrKeyStoreLocation)
+                storePassword releaseMsgrKeyStorePassword
+                keyAlias releaseMsgrKeyAlias
+                keyPassword releaseMsgrKeyPassword
+            }
+        }
+
+        buildTypes.release.signingConfig = signingConfigs.release
+    } else {
+        buildTypes.release.signingConfig = null
+    }
+
+    /*
+     * For custom debug, create/add ~/.gradle/gradle.properties with this content:
+     * debugKeyStoreLocation=/home/debug.key.store
+     */
+    if (project.hasProperty('debugKeyStoreLocation')) {
+        println "Signing general DEBUG build…"
+
+        signingConfigs {
+            debug {
+                storeFile file(debugKeyStoreLocation)
+            }
+        }
+
+        buildTypes.debug.signingConfig = signingConfigs.debug
+    } else {
+        buildTypes.debug.signingConfig = null
+    }
 }
 
 dependencies {

@@ -19,6 +19,51 @@ android {
     lintOptions {
         abortOnError false
     }
+
+    /*
+     * For store release, create/add ~/.gradle/gradle.properties with this content:
+     * releaseDemoKeyStoreLocation=/home/release.key.store
+     * releaseDemoKeyStorePassword=xxxxxxxx
+     * releaseDemoKeyAlias=key.alias
+     * releaseDemoKeyPassword=xxxxxxxx
+     */
+    if (project.hasProperty('releaseDemoKeyStoreLocation') &&
+            project.hasProperty('releaseDemoKeyStorePassword') &&
+            project.hasProperty('releaseDemoKeyAlias') &&
+            project.hasProperty('releaseDemoKeyPassword')) {
+        println "Signing Demo RELEASE build…"
+
+        signingConfigs {
+            release {
+                storeFile file(releaseDemoKeyStoreLocation)
+                storePassword releaseDemoKeyStorePassword
+                keyAlias releaseDemoKeyAlias
+                keyPassword releaseDemoKeyPassword
+            }
+        }
+
+        buildTypes.release.signingConfig = signingConfigs.release
+    } else {
+        buildTypes.release.signingConfig = null
+    }
+
+    /*
+     * For custom debug, create/add ~/.gradle/gradle.properties with this content:
+     * debugKeyStoreLocation=/home/debug.key.store
+     */
+    if (project.hasProperty('debugKeyStoreLocation')) {
+        println "Signing general DEBUG build…"
+
+        signingConfigs {
+            debug {
+                storeFile file(debugKeyStoreLocation)
+            }
+        }
+
+        buildTypes.debug.signingConfig = signingConfigs.debug
+    } else {
+        buildTypes.debug.signingConfig = null
+    }
 }
 
 dependencies {
