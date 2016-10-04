@@ -87,7 +87,7 @@
                 android:id="@+id/textViewGroupSize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Group Size"
+                android:text="@string/dev_groupsize_title"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <LinearLayout
@@ -117,6 +117,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:enabled="false"
+                        android:progress="2"
                         android:max="10" />
 
                     <TextView
@@ -131,19 +132,19 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textViewGroupId"
+                android:id="@+id/textViewGroupName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Group ID"
+                android:text="@string/dev_groupname_title"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <LinearLayout
-                android:id="@+id/frameGroupId"
+                android:id="@+id/frameGroupName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
                 <ToggleButton
-                    android:id="@+id/toggleButtonGroupId"
+                    android:id="@+id/toggleButtonGroupName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -152,17 +153,42 @@
                     android:textOn="Known" />
 
                 <EditText
-                    android:id="@+id/editTextGroupId"
-                    android:layout_width="0dp"
+                    android:id="@+id/editTextGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dev_groupname_hint"
+                    android:inputType="textNoSuggestions"
+                    android:privateImeOptions="nm" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewAttemptName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dev_attemptname_title"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <LinearLayout
+                android:id="@+id/frameAttemptName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ToggleButton
+                    android:id="@+id/toggleButtonAttemptName"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:digits="0123456789"
-                    android:enabled="false"
-                    android:hint="a unique number"
-                    android:inputType="number|textNoSuggestions"
-                    android:privateImeOptions="nm"
-                    android:scrollHorizontally="true" />
+                    android:gravity="center_vertical"
+                    android:textOff="Unknown"
+                    android:textOn="Known" />
+
+                <EditText
+                    android:id="@+id/editTextAttemptName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dev_attemptname_hint"
+                    android:inputType="textNoSuggestions"
+                    android:privateImeOptions="nm" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

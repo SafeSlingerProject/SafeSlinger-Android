@@ -65,5 +65,15 @@
     <string name="dev_secret_hint" translatable="false">i.e. key, password, anything</string>
     <!-- dev; Title of secret data field. -->
     <string name="dev_secret_title" translatable="false">My Secret</string>
+    <!-- dev; Title of group size field. -->
+    <string name="dev_groupsize_title" translatable="false">Group Size</string>
+    <!-- dev; Hint for group name field. -->
+    <string name="dev_groupname_hint" translatable="false">i.e. Session UUID, Group UUID</string>
+    <!-- dev; Title of group name field. -->
+    <string name="dev_groupname_title" translatable="false">Group Name</string>
+    <!-- dev; Hint for attempt name field. -->
+    <string name="dev_attemptname_hint" translatable="false">a per-attempt unique synchonized value </string>
+    <!-- dev; Title of attempt name field. -->
+    <string name="dev_attemptname_title" translatable="false">Attempt Name</string>
 
 </resources>

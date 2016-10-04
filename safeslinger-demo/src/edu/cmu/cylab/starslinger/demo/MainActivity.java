@@ -56,6 +56,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
 import edu.cmu.cylab.starslinger.exchange.ExchangeActivity;
 import edu.cmu.cylab.starslinger.exchange.ExchangeConfig;
 
@@ -73,17 +74,21 @@ public class MainActivity extends ActionBarActivity {
     private static final String PREF_HOST = "HOST";
     private static final String PREF_SECRET = "SECRET";
     private static final String PREF_USENFC = "USENFC";
+    private static final String PREF_GROUP_SIZE = "GROUPSIZE";
+    private static final String PREF_GROUP_NAME = "GROUPNAME";
 
     private static Button buttonBeginExchange;
     private static EditText editTextMySecret;
     private static EditText editTextServerHostName;
-    private static EditText editTextGroupId;
     private static SeekBar seekBarGroupSize;
     private static TextView textViewGroupSizeStatus;
     private static TextView textViewWarning;
-    private static ToggleButton toggleButtonGroupSize;
-    private static ToggleButton toggleButtonGroupId;
     private static ToggleButton toggleButtonUseNfc;
+    private static ToggleButton toggleButtonGroupSize;
+    private static ToggleButton toggleButtonGroupName;
+    private static ToggleButton toggleButtonAttemptName;
+    private static EditText editTextGroupName;
+    private static EditText editTextAttemptName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -175,7 +180,7 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             buttonBeginExchange = (Button) rootView.findViewById(R.id.buttonBeginExchange);
             editTextMySecret = (EditText) rootView.findViewById(R.id.editTextMySecret);
@@ -187,16 +192,24 @@ public class MainActivity extends ActionBarActivity {
             seekBarGroupSize = (SeekBar) rootView.findViewById(R.id.seekBarGroupSize);
             textViewGroupSizeStatus = (TextView) rootView
                     .findViewById(R.id.textViewGroupSizeStatus);
-            toggleButtonGroupId = (ToggleButton) rootView.findViewById(R.id.toggleButtonGroupId);
-            editTextGroupId = (EditText) rootView.findViewById(R.id.editTextGroupId);
+            toggleButtonGroupName = (ToggleButton) rootView.findViewById(R.id.toggleButtonGroupName);
+            editTextGroupName = (EditText) rootView.findViewById(R.id.editTextGroupName);
+            toggleButtonAttemptName = (ToggleButton) rootView.findViewById(R.id.toggleButtonAttemptName);
+            editTextAttemptName = (EditText) rootView.findViewById(R.id.editTextAttemptName);
 
             final SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
 
             // load simple prefs from last visit
             editTextMySecret.setText(sharedPref.getString(PREF_SECRET, null));
             editTextServerHostName.setText(sharedPref.getString(PREF_HOST, DEFAULT_HOST_NAME));
+            seekBarGroupSize.setProgress(sharedPref.getInt(PREF_GROUP_SIZE, 0));
+            editTextGroupName.setText(sharedPref.getString(PREF_GROUP_NAME, null));
+            editTextAttemptName.setText("");
+
             toggleButtonGroupSize.setChecked(false);
-            toggleButtonGroupId.setChecked(false);
+            textViewGroupSizeStatus.setText(seekBarGroupSize.getProgress() + " Members");
+            toggleButtonGroupName.setChecked(false);
+            toggleButtonAttemptName.setChecked(false);
 
             // enable hyperlinks
             textViewWarning.setMovementMethod(LinkMovementMethod.getInstance());
@@ -221,8 +234,8 @@ public class MainActivity extends ActionBarActivity {
                             }
                         }
                     });
-            
-            toggleButtonGroupId
+
+            toggleButtonGroupName
                     .setOnCheckedChangeListener(new android.widget.CompoundButton.OnCheckedChangeListener() {
 
                         @Override
@@ -230,14 +243,47 @@ public class MainActivity extends ActionBarActivity {
 
                             // save simple prefs from this visit
                             if (isChecked) {
-                                editTextGroupId.setEnabled(true);
+                                editTextGroupName.setEnabled(true);
                             } else {
-                                editTextGroupId.setEnabled(false);
-                                editTextGroupId.setText("");
+                                editTextGroupName.setEnabled(false);
+                                editTextGroupName.setText("");
                             }
                         }
                     });
-            
+
+            toggleButtonAttemptName
+                    .setOnCheckedChangeListener(new android.widget.CompoundButton.OnCheckedChangeListener() {
+
+                        @Override
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                            // save simple prefs from this visit
+                            if (isChecked) {
+                                editTextAttemptName.setEnabled(true);
+                            } else {
+                                editTextAttemptName.setEnabled(false);
+                                editTextAttemptName.setText("");
+                            }
+                        }
+                    });
+
+            seekBarGroupSize.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    textViewGroupSizeStatus.setText(progress + " Members");
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+
+                }
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+
+                }
+            });
+
             toggleButtonUseNfc
                     .setOnCheckedChangeListener(new android.widget.CompoundButton.OnCheckedChangeListener() {
 
@@ -250,19 +296,24 @@ public class MainActivity extends ActionBarActivity {
                             editor.commit();
                         }
                     });
-            
+
             buttonBeginExchange.setOnClickListener(new android.view.View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
                     mMySecret = editTextMySecret.getText().toString().getBytes();
                     String server = editTextServerHostName.getText().toString();
-                    boolean useNfc = toggleButtonUseNfc.isChecked();
 
                     // save simple prefs from this visit
                     SharedPreferences.Editor editor = sharedPref.edit();
                     editor.putString(PREF_SECRET, new String(mMySecret));
                     editor.putString(PREF_HOST, server);
+                    if (toggleButtonGroupSize.isChecked()) {
+                        editor.putInt(PREF_GROUP_SIZE, seekBarGroupSize.getProgress());
+                    }
+                    if (toggleButtonGroupName.isChecked()) {
+                        editor.putString(PREF_GROUP_NAME, editTextGroupName.getText().toString());
+                    }
                     editor.commit();
 
                     // check online state
@@ -283,6 +334,17 @@ public class MainActivity extends ActionBarActivity {
             Intent intent = new Intent(getActivity(), ExchangeActivity.class);
             intent.putExtra(ExchangeConfig.extra.USER_DATA, mySecret);
             intent.putExtra(ExchangeConfig.extra.HOST_NAME, hostName);
+
+            if (toggleButtonGroupSize.isChecked()) {
+                intent.putExtra(ExchangeConfig.extra.NUM_USERS, seekBarGroupSize.getProgress());
+            }
+            if (toggleButtonGroupName.isChecked()) {
+                intent.putExtra(ExchangeConfig.extra.GROUP_NAME, editTextGroupName.getText().toString().getBytes());
+            }
+            if (toggleButtonAttemptName.isChecked()) {
+                intent.putExtra(ExchangeConfig.extra.ATTEMPT_NAME, editTextAttemptName.getText().toString().getBytes());
+            }
+
             startActivityForResult(intent, RESULT_EXCHANGE);
         }
 
@@ -302,11 +364,11 @@ public class MainActivity extends ActionBarActivity {
                             results.append(getText(R.string.dev_result_success));
                             results.append(" \n"
                                     + String.format(getString(R.string.dev_result_mine), 0,
-                                            new String(mMySecret)));
+                                    new String(mMySecret)));
                             for (int j = 0; j < theirSecrets.size(); j++) {
                                 results.append(" \n"
                                         + String.format(getString(R.string.dev_result_theirs),
-                                                j + 1, new String(theirSecrets.get(j))));
+                                        j + 1, new String(theirSecrets.get(j))));
                             }
                             break;
                         case ExchangeActivity.RESULT_EXCHANGE_CANCELED:
